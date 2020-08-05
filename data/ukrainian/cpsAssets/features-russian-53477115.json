@@ -1,0 +1,2958 @@
+{
+  "content":{
+    "blocks":[
+      {
+        "altText":"гройсман",
+        "copyrightHolder":"УНІАН",
+        "height":549,
+        "href":"http://c.files.bbci.co.uk/F19E/production/_113545816_861716.jpg",
+        "id":"113545816",
+        "path":"/cpsprodpb/F19E/production/_113545816_861716.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":976
+      },
+      {
+        "markupType":"plain_text",
+        "role":"introduction",
+        "text":"Украина уже живет с новым районным делением областей. Мы проанализировали, кто кого поглотил и за счет кого образовались новые радикально укрупненные районы страны.",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Верховная Рада более чем втрое сократила количество районов в Украине и существенно увеличила их размеры.",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вместо старых 490 районов теперь их будет 136 (17 из них - в аннексированном Крыму и на неподконтрольных Киеву территориях Донбасса).",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Несмотря на укрупнение, некоторые районы имеют более миллиона жителей, а некоторые - меньше ста тысяч.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "meta":[
+              {
+                "headlines":{
+                  "headline":"Новые районы Украины. Полный список",
+                  "overtyped":"Новые районы Украины. Полный список",
+                  "shortHeadline":"Новые районы Украины. Полный список"
+                },
+                "id":"urn:bbc:ares::asset:ukrainian/news-russian-53456042",
+                "language":"ru",
+                "locators":{
+                  "href":"https://www.bbc.com/ukrainian/news-russian-53456042"
+                },
+                "passport":{
+                  "category":{
+                    "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName":"News"
+                  },
+                  "taggings":[
+
+                  ]
+                },
+                "summary":"Количество районов уменьшилось почти в четыре раза - с 490 до 136. Рассказываем подробно, какие районы теперь будут в областях.",
+                "timestamp":1595072640000,
+                "type":"cps"
+              }
+            ],
+            "text":"<itemMeta>ukrainian/news-russian-53456042</itemMeta>",
+            "type":"listItem"
+          },
+          {
+            "markupType":"candy_xml",
+            "meta":[
+              {
+                "headlines":{
+                  "headline":"Украина готовится к переписи населения. Без Крыма и части Донбасса",
+                  "overtyped":"Украина готовится к переписи населения. Без Крыма и части Донбасса",
+                  "shortHeadline":"Украина готовится к переписи населения. Без Крыма и части Донбасса"
+                },
+                "id":"urn:bbc:ares::asset:ukrainian/features-russian-44889173",
+                "language":"ru",
+                "locators":{
+                  "href":"https://www.bbc.com/ukrainian/features-russian-44889173"
+                },
+                "passport":{
+                  "category":{
+                    "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName":"News"
+                  },
+                  "taggings":[
+
+                  ]
+                },
+                "summary":"В 2019 году в Киеве и области проведут пробную перепись населения. Это будет подготовка к большой всеукраинской переписи, которой не было уже 17 лет.",
+                "timestamp":1532007148000,
+                "type":"cps"
+              }
+            ],
+            "text":"<itemMeta>ukrainian/features-russian-44889173</itemMeta>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Крупнейшим районом стал Днепровский - 1,179 млн человек, а наименьшим - горный Верховинский с 30 тысячами.",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Еще до конца непонятны полномочия новых районов и их роль. На нынешних местных выборах в них точно выберут районные советы.",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"По замыслу децентрализации, роль объединенных территориальных общин должна расти, а роль районов существенно уменьшиться.",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"В районах, которые фактически отменили и присоединили к другим, сейчас много нареканий на реформу и существует непонимание цели объединения.",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Сейчас чиновники говорят, что укрупнение районов позволит уменьшить расходы на районные советы и администрации, большая часть из которых просто исчезнет.",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Как уверяют в правительстве, в ближайшие три года такая экономия составит около 1,5 млрд грн ежегодно.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"крим",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":997,
+        "href":"http://c.files.bbci.co.uk/1459A/production/_113545338_content_crimea.jpg",
+        "id":"113545338",
+        "path":"/cpsprodpb/1459A/production/_113545338_content_crimea.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1410
+      },
+      {
+        "markupType":"plain_text",
+        "text":"АР Крым",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"В аннексированном РФ Крыму также было проведено укрупнение районов и глубокая административная реформа. Она также должна заработать после возвращения Крыма, как и переименование в рамках декоммунизации.",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"На полуострове оставили десять районов из бывших 14.",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Среди них:",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Бахчисарайский район</bold>",
+            "type":"listItem"
+          },
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Белогорский район</bold> - объединил в себе прежние Белогорский и Нижнегорский районы.",
+            "type":"listItem"
+          },
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Джанкойский район</bold>",
+            "type":"listItem"
+          },
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Евпаторийский район </bold>- раньше его не было. Он объединил Черноморский и Сакский районы.",
+            "type":"listItem"
+          },
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Керченский район</bold> - присоединил Эдикуйский район (бывший Ленинский)",
+            "type":"listItem"
+          },
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Курманский район</bold> - объединили Курманский (бывший Красногвардейский) и Первомайский районы.",
+            "type":"listItem"
+          },
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Перекопский район</bold> - добавили Раздольненский район.",
+            "type":"listItem"
+          },
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Симферопольский район</bold>",
+            "type":"listItem"
+          },
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Феодосийский район</bold> - раньше его не было. Его создали и включили Судак, Феодосию и бывшие Ислямтерецкий (Кировский) и Ичкинский (Советский) районы.",
+            "type":"listItem"
+          },
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Ялтинский район</bold> - раньше его не было, в него вошли Ялта и Алушта.",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "altText":"вінниця",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":997,
+        "href":"http://c.files.bbci.co.uk/5F22/production/_113545342_content_vinnytsya.jpg",
+        "id":"113545342",
+        "path":"/cpsprodpb/5F22/production/_113545342_content_vinnytsya.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1410
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Винницкая область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Ранее в области было 27 районов, а осталось 6.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Винницкий район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли город Гнивань, Иллинецкий, Липовецкий, Литинский, Немировский, Оратовский, Погребищенский, Тывровский и Турбовский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Гайсинский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Бершадский район, город Ладыжин, Теплицкий, Тростянецкий и Чечельницкий районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Жмеринский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Барский район и Шаргородский район",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Могилев-Подольский</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Мурованокуриловецкий, Черновицкий и Ямпольский район.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Тульчинский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Брацлав, Вапнярка, Крыжопольский, Песчанский и Томашпольский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Хмельницкий район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Калиновский район и Казатинский район.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"волинь",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":997,
+        "href":"http://c.files.bbci.co.uk/FB62/production/_113545346_content_volyn.jpg",
+        "id":"113545346",
+        "path":"/cpsprodpb/FB62/production/_113545346_content_volyn.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1410
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Волынская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Ранее в области было 16 районов, а стало четыре.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Владимир-Волынский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Иваничевский, Гороховский и Нововолинский районы и Устилуг.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Камень-Каширский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Любашевский и Маневицкий район.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Ковельский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Любомльский, Ратновский, Старовижевский, Турийский и Шацкий районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Луцкий район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Берестечко, Гороховский, Киверцовский и Рожищенский районы, а также Олыка, Торчин и Цумань.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"дніпро",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":997,
+        "href":"http://c.files.bbci.co.uk/18D2/production/_113545360_content_dnipro.jpg",
+        "id":"113545360",
+        "path":"/cpsprodpb/18D2/production/_113545360_content_dnipro.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1410
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Днепропетровская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"В области было 22 района, а стало семь.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Днепровский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Крупнейший район страны - более миллиона населения.",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"В него вошли окрестные селения Новопокровское, Обуховка, Слобожанское, Подгородное и Петриковский и Царичанский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Каменский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Верхнеднепровский, Криничанский и Пятихатский район, а также Желтые Воды.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Криворожский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Апостоловский, Софиевский и Широковский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Никопольский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Марганец, Покровск и Тиомаковский район.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Новомосковский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Магдалиновский район и город Перещепино.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Павлоградский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли город Терновка и Юрьевский район.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Синельниковский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Васильковский район, город Первомайск, Петропавловский и Покровский районы.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"донецьк",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":997,
+        "href":"http://c.files.bbci.co.uk/B512/production/_113545364_content_don.jpg",
+        "id":"113545364",
+        "path":"/cpsprodpb/B512/production/_113545364_content_don.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1410
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Донецкая область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"В области было 18 районов, а стало 8. Примечательно, что при укрупнении сделали так, чтобы границы районов совпали с линией разграничения.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Бахмутский район</bold>",
+            "type":"listItem"
+          },
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Волновахский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошел Великоновоселковский район",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Горловский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Шахтерский район, Дебальцево, Енакиево и Снежное.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Донецкий район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Амвросиевский район, Иловайск, Макеевка, Харцызск и Ясиноватский район.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Кальмиусский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Бойкивский район, Новоазовский район, Старобешевский район и Докучаевск.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Краматорский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Дружковка, Константиновский, Лиманский, Александровский и Славянский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Мариупольский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Мангуский и Никольский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Покровский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Авдеевка, Добропольский район, Курахово и Марьинка.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"житомир",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":997,
+        "href":"http://c.files.bbci.co.uk/15152/production/_113545368_content_zhytom.jpg",
+        "id":"113545368",
+        "path":"/cpsprodpb/15152/production/_113545368_content_zhytom.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1410
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Житомирская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Здесь было 23 района, а стало - четыре.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Бердичевский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Андрушевский и Ружинский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Житомирский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Брусиловский, Коростышевский, Любарский, Попельнянский, Пулинский, Радомышльский, Романовский, Хорошевский, Черняховский и Чудновский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Коростенский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Лугинский, Малинский, Народицкий, Овручский и Олевский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Новоград-Волынский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Барановский и Емильчинский районы, Городница и Довбыш.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"закарпаття",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":997,
+        "href":"http://c.files.bbci.co.uk/6ADA/production/_113545372_content_zakarp.jpg",
+        "id":"113545372",
+        "path":"/cpsprodpb/6ADA/production/_113545372_content_zakarp.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1410
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Закарпатская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"В регионе было 13 районов, а стало шесть.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Береговский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"В состав вошел Виноградовский район.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Мукачевский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Воловецкий и Свалявский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Раховский район</bold>",
+            "type":"listItem"
+          },
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Тячевский район</bold>",
+            "type":"listItem"
+          },
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Ужгородский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошел Великоберезнянский и Перечинский район, а также город Чоп.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Хустский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Иршавский и Межгорский районы.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"запоріжжя",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":997,
+        "href":"http://c.files.bbci.co.uk/1071A/production/_113545376_content_zapor.jpg",
+        "id":"113545376",
+        "path":"/cpsprodpb/1071A/production/_113545376_content_zapor.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1410
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Запорожская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Здесь было 20 районов, а стало пять.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Бердянский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Приморский и Черниговский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"plain_text",
+            "text":"Васильевский район",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли город Энергодар, Каменско-Днепровский и Михайловский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Запорожский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Вольнянский и Новониколаевский район.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Мелитопольский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошел Веселовский, Акимовский и Приазовский район.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Пологовский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Бильмакский, Гуляйпольский, Ореховский, Розовский и Токмакский районы.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"франик",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":1556,
+        "href":"http://c.files.bbci.co.uk/01C6/production/_113545400_content_fran.jpg",
+        "id":"113545400",
+        "path":"/cpsprodpb/01C6/production/_113545400_content_fran.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1100
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Ивано-Франковская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Здесь было 14, а стало пять районов.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Верховинский район </bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Сохранил старые границы после протестов с аргументами, что высокогорный район надо оставить даже с мизерными 30 тысячами жителей.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Ивано-Франковский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Богородчанский, Галицкий, Рогатинский, Тисменицкий и Тлумацкий районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Кольский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Долинский и Рожнятовский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Коломыйский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Городенковский и Снятинский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Косовский район</bold>",
+            "type":"listItem"
+          },
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Надворнянский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли горные поселки Ворохта, Делятин и Яремче.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"київ",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":1556,
+        "href":"http://c.files.bbci.co.uk/9E06/production/_113545404_content_kyiv.jpg",
+        "id":"113545404",
+        "path":"/cpsprodpb/9E06/production/_113545404_content_kyiv.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1100
+      },
+      {
+        "markupType":"candy_xml",
+        "text":"<bold>Киевская область</bold>",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"В Киевской области было 25 районов, а стало семь.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Белоцерковский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Володарский, Рокитнянский, Сквирский, Ставищенский и Таращанский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Бориспольский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Переяславский и Яготинский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Броварской район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Барышевский и Згуровский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Бучанский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Бородянский район, Вишневое, Ирпенский и Макаровский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Вышгородский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Иванковский и Полесский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Обуховский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Богуславский, Васильковский, Кагарлыкский, Мироновский и Ржищевский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Фастовский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Боярка, Калиновка и Глеваха.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"кіровоградська",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":997,
+        "href":"http://c.files.bbci.co.uk/2CBE/production/_113545411_content_kirovo.jpg",
+        "id":"113545411",
+        "path":"/cpsprodpb/2CBE/production/_113545411_content_kirovo.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1410
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Кировоградская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Здесь был 21 район, а стало четыре.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Голованевский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Благовещенский, Ольшанский, Гайворонский и Новоархангельский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Кропивницкий район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошел Бобринецкий, Долинский, Знаменский, Компанеевский, Новгородковский, Александровский (поселок Александровка) и Устиновский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Новоукраинский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Добровеличковский, Маловисковский и Новомиргородский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Александрийский район</bold> (с центром в городе Александрия)",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Онуфриевский, Петровский и Светловодский районы.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"луганськ",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":997,
+        "href":"http://c.files.bbci.co.uk/C8FE/production/_113545415_content_luhan.jpg",
+        "id":"113545415",
+        "path":"/cpsprodpb/C8FE/production/_113545415_content_luhan.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1410
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Луганская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"В Луганской области было 18, а стало 8 районов.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Алчевский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Кадиевка и Зимогорьевский",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>До</bold><bold>л</bold><bold>жанский район</bold>",
+            "type":"listItem"
+          },
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Луганский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Лутугино и Молодогвардейск",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Ровеньковский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Антрацит, Ровеньки и Хрустальное.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Сватовский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошел Белокуракинский район.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Северодонецкий район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Горное, Креминский район, Лисичанск, Попаснянский район и Рубежное.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Старобельский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Беловодский, Марковский, Меловский и Новопсковский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Счастьенский район</bold> (с административным центром в поселке городского типа Новоайдар)",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Станично-Луганский район, Счастье и Новоайдар.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"львів",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":549,
+        "href":"http://c.files.bbci.co.uk/1653E/production/_113545419_content_lviv.jpg",
+        "id":"113545419",
+        "path":"/cpsprodpb/1653E/production/_113545419_content_lviv.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":976
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Львовская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Во Львовской области было 20 районов, а стало семь.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Дрогобычский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Борислав, Сходница и Трускавец.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Золочевский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Броды, Буск, Подкамень и Поморяны.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Львовский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Бобрка, Городок, Жовква, Каменка-Бугская, Перемышляны, Пустомыты и Рава-Русская.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Самборский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Добромиль, Старый Самбор и Хиров.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Стрыйский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Жидачев, Николаев, Моршин, Сколе, Славское и Ходоров.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Червоноградский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Белз, Радехов и Сокаль.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold> Яворовский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Мостиска, Новояворовск, Судовая Вишня и Шегини.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"миколаїв",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":997,
+        "href":"http://c.files.bbci.co.uk/9636/production/_113545483_content_mykol.jpg",
+        "id":"113545483",
+        "path":"/cpsprodpb/9636/production/_113545483_content_mykol.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1410
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Николаевская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Здесь было 19 районов, а стало 4.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Баштанский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Березнеговатский, Новобугский и Снигиревский район.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Вознесенский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Братский, Веселиновский, Доманевский и Еланецкий районы, а также Южноукраинск.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Николаевский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Березанский, Новоодесский и Очаковский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Первомайский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Арбузинский, Врадиевский и Кривоозерский районы.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"Одеса",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":1556,
+        "href":"http://c.files.bbci.co.uk/13276/production/_113545487_content_odesa.jpg",
+        "id":"113545487",
+        "path":"/cpsprodpb/13276/production/_113545487_content_odesa.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1100
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Одесская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Ранее было 26 районов, а стало семь.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Березовский район</bold> (с административным центром в городе Березовка)",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Николаевский и Ширяевский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Белгород-Днестровский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Саратский и Татарбунарский районы. Новый район состоит из территорий компактного проживания болгар. За что правительство Болгарии уже поблагодарило Украину.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Белгородской район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошел Арцизский и Тарутинский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Измаильский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Вилково, Килийский и Ренийский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Одесский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Беляевский, Овидиопольский и Черноморский районы, а также Южное.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Подольский район</bold> (с административным центром в городе Подольск)",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Ананьевский, Балтский, Кодымский, Любашевский, Окнянський и Савранский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Раздельнянский район</bold> (с административным центром в городе Раздельная)",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Великомихайловский, Захаровский и Лиманский районы.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"полтава",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":997,
+        "href":"http://c.files.bbci.co.uk/34F2/production/_113545531_content_poltava.jpg",
+        "id":"113545531",
+        "path":"/cpsprodpb/34F2/production/_113545531_content_poltava.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1410
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Полтавская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Здесь было 25 районов, а стало четыре.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Кременчугский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Глобино и Горишние Плавни.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Лубенский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Гребенка, Пирятин, Хорол и Чернухино.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Миргородский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Гадяч, Гоголевское, Лохвица, Ромодановское и Шишаки.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Полтавский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Диканька, Зеньков, Карловка, Кобеляки, Котельва, Новые Санжары, Опошня и Решетиловка.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"Рівне",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":1556,
+        "href":"http://c.files.bbci.co.uk/D132/production/_113545535_content_rivne.jpg",
+        "id":"113545535",
+        "path":"/cpsprodpb/D132/production/_113545535_content_rivne.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1100
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Ровенская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"В Ровенской области было 16, а стало четыре района.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Вара</bold><bold>шский</bold><bold> район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Владимерецкий и Заречненский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Дубенский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Демидовский, Млиновский и Радивиловский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Ровенский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Березновский, Гощанский, Здолбуновский районы, Клевань, Корецкий район, Костопольский и Острожский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold> Сарненский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Дубровицкий и Рокитновский районы, а также Клесов.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"суми",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":997,
+        "href":"http://c.files.bbci.co.uk/16D72/production/_113545539_content_sumy.jpg",
+        "id":"113545539",
+        "path":"/cpsprodpb/16D72/production/_113545539_content_sumy.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1410
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Сумская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Здесь было 18 районов, а стало пять.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Конотопский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Буринский, Кролевецкий и Путивльский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Ахтырский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Великописаревский и Тростянецкий районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Роменский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Липоводолинский и Недрыгайловский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Сумской район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Белопольский, Краснопольский и Лебединский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Шосткинский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Глуховский, Середино-Будский и Ямпольский районы.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"тернопіль",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":1556,
+        "href":"http://c.files.bbci.co.uk/8ECA/production/_113545563_content_ternop.jpg",
+        "id":"113545563",
+        "path":"/cpsprodpb/8ECA/production/_113545563_content_ternop.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1100
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Тернопольская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Было 17 районов, а осталось три.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Кременецкий район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Лановецкий район, город Почаев и Шумский район.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Тернопольский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Бережанский, Збаражский, Зборовский, Подволочиский, Подгаецкий и Теребовлянский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Чертковский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Борщевский, Бучацкий, Гусятинский, Залещицкий и Монастыриский районы.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"харків",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":997,
+        "href":"http://c.files.bbci.co.uk/12B0A/production/_113545567_content_khark.jpg",
+        "id":"113545567",
+        "path":"/cpsprodpb/12B0A/production/_113545567_content_khark.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1410
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Харьковская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Было 25 районов было, а стало семь.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Богодуховский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Валковский, Золочевский, Коломакский и Краснокутский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Изюмский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Балаклейский, Барвенковский и Боровский район.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Красноградский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Зачепиловский, Кегичевский и Сахновщинский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Купянский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Великобурлукский, Двуречанский и Шевченковский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Лозовский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Близнюковский и Первомайский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Харьковский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Дергачевский, Люботинский и Новомосковский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Чугуевский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Волчанский, Змиевский и Печенежский районы.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"херсон",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":997,
+        "href":"http://c.files.bbci.co.uk/487A/production/_113545581_content_kherson.jpg",
+        "id":"113545581",
+        "path":"/cpsprodpb/487A/production/_113545581_content_kherson.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1410
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Херсонская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Было 18 районов, а стало пять.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Бериславский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Великоалександровский, Высокопольский и Нововоронцовский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Генический район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Ивановский, Нижнесерогозский и Новотроицкий районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Каховский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Великолепетихский, Верхнерогачицкий, Каховский и Чаплинский районы, а также Новая Каховка.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Скадовский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Голопристанский и Каланчацкий районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Херсонский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Белозерский и Олешковский районы.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"хмельницька",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":1556,
+        "href":"http://c.files.bbci.co.uk/E4BA/production/_113545585_content_khmeln.jpg",
+        "id":"113545585",
+        "path":"/cpsprodpb/E4BA/production/_113545585_content_khmeln.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1100
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Хмельницкая область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Было 20 районов, а стало три.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Каменец-Подольский</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Дунаевецкий, Новоушицкий и Чемеровский район.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Хмельницкий район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Виньковецкий, Волочисский, Городецкий, Деражнянский, Каменец-Подольский, Летичевский, Староконстантиновский, Старосинявский, Теофипольский и Ярмолинский район.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Шепетовский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Белогорский, Изяславский и Славутский районы и город атомщиков Нетешин.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"черкаси",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":997,
+        "href":"http://c.files.bbci.co.uk/180FA/production/_113545589_content_cherk.jpg",
+        "id":"113545589",
+        "path":"/cpsprodpb/180FA/production/_113545589_content_cherk.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1410
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Черкасская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Черкасская область имела 20 районов, а получила четыре.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Звенигородский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Ватутино, Катеринопольский, Лисянский, Тальновский и Шполянский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Золотоношский район</bold> - единственный левобережный район Черкасской области",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Драбовский и Чернобаевский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Уманский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Жашковский, Маньковский, Монастырищенский и Христиновский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Черкасский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Городищенский, Каменский, Каневский, Корсунь-Шевченковский, Смелянский и Чигиринский районы.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"чернівці",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":997,
+        "href":"http://c.files.bbci.co.uk/7BA6/production/_113545613_content_chernivtsi.jpg",
+        "id":"113545613",
+        "path":"/cpsprodpb/7BA6/production/_113545613_content_chernivtsi.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1410
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Черновицкая область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"На Буковине было 11 районов, а стало три.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Вижницкий район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"К нему добавили еще Путильский район.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Днестровский район </bold>(с административным центром в поселке городского типа Кельменцы)",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Новоднестровск, Сокирянский и Хотинский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Черновицкий район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Герцаевский, Глыбокский, Заставновский, Кицманский, Новоселицкий и Сторожинецкий районы.",
+        "type":"paragraph"
+      },
+      {
+        "altText":"чернігів",
+        "copyrightHolder":"https://decentralization.gov.ua/",
+        "height":997,
+        "href":"http://c.files.bbci.co.uk/117E6/production/_113545617_content_chernihiv.jpg",
+        "id":"113545617",
+        "path":"/cpsprodpb/117E6/production/_113545617_content_chernihiv.jpg",
+        "positionHint":"full-width",
+        "subType":"body",
+        "type":"image",
+        "width":1410
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Черниговская область",
+        "type":"crosshead"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Здесь было 22 района, а стало пять.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Корюковский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Менский, Сновский и Сосницкий районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Нежинский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Батурин, Бахмач, Бобровицкий, Борзнянский и Носовский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Новгород-Северский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Присоединили Коропский и Семеновский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Прилуцкий район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Варвинский, Ичнянский, Сребнинский и Талалаевский районы.",
+        "type":"paragraph"
+      },
+      {
+        "items":[
+          {
+            "markupType":"candy_xml",
+            "text":"<bold>Черниговский район</bold>",
+            "type":"listItem"
+          }
+        ],
+        "numbered":false,
+        "type":"list"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Вошли Городнянский, Козелецкий, Куликовский и Репкинский районы.",
+        "type":"paragraph"
+      }
+    ]
+  },
+  "metadata":{
+    "analyticsLabels":{
+      "counterName":"ukrainian.russian_features.story.53477115.page",
+      "cps_asset_id":"53477115",
+      "cps_asset_type":"sty"
+    },
+    "atiAnalytics":{
+      "producerId":"94",
+      "producerName":"UKRAINIAN"
+    },
+    "blockTypes":[
+      "image",
+      "paragraph",
+      "list",
+      "crosshead"
+    ],
+    "createdBy":"ukrainian-v6",
+    "firstPublished":1595336409000,
+    "id":"urn:bbc:ares::asset:ukrainian/features-russian-53477115",
+    "includeComments":false,
+    "language":"ru",
+    "lastPublished":1595336409000,
+    "lastUpdated":1595336467568,
+    "locators":{
+      "assetId":"53477115",
+      "assetUri":"/ukrainian/features-russian-53477115",
+      "cpsUrn":"urn:bbc:content:assetUri:ukrainian/features-russian-53477115",
+      "curie":"http://www.bbc.co.uk/asset/307108d3-9bcc-4829-990c-4b42c1290258"
+    },
+    "options":{
+      "allowAdvertising":true,
+      "allowDateStamp":true,
+      "allowHeadline":true,
+      "allowPrintingSharingLinks":true,
+      "allowRelatedStoriesBox":true,
+      "allowRightHandSide":true,
+      "hasContentWarning":false,
+      "hasNewsTracker":false,
+      "includeComments":false,
+      "isBreakingNews":false,
+      "isFactCheck":false,
+      "isIgorSeoTagsEnabled":false,
+      "isKeyContent":false,
+      "suitableForSyndication":true
+    },
+    "passport":{
+      "campaigns":[
+        {
+          "campaignId":"5a988e4739461b000e9dabfc",
+          "campaignName":"WS - Update me"
+        }
+      ],
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName":"News"
+      },
+      "taggings":[
+
+      ]
+    },
+    "tags":{
+      "about":[
+        {
+          "curationList":[
+            {
+              "curationId":"f759bac1-d5c1-4b82-a023-7b4c0ca83e42",
+              "curationType":"vivo-stream"
+            }
+          ],
+          "thingEnglishLabel":"Society",
+          "thingId":"5307a8d9-f620-40f5-92d4-f99c919a6ffa",
+          "thingLabel":"Общество",
+          "thingSameAs":[
+            "http://dbpedia.org/resource/Society",
+            "http://www.wikidata.org/entity/Q8425"
+          ],
+          "thingType":[
+            "core:Theme",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "thingUri":"http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
+          "topicId":"c23520xyy61t",
+          "topicName":"Общество"
+        },
+        {
+          "curationList":[
+            {
+              "curationId":"189bf666-aa30-427d-9205-797bee5be79f",
+              "curationType":"vivo-stream"
+            }
+          ],
+          "thingEnglishLabel":"Politics",
+          "thingId":"75612fa6-147c-4a43-97fa-fcf70d9cced3",
+          "thingLabel":"Политика",
+          "thingSameAs":[
+            "http://dbpedia.org/resource/Politics"
+          ],
+          "thingType":[
+            "tagging:TagConcept",
+            "core:Theme",
+            "core:Thing"
+          ],
+          "thingUri":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+          "topicId":"cdlxq9krdmlt",
+          "topicName":"Политика"
+        },
+        {
+          "curationList":[
+            {
+              "curationId":"441b0194-0324-482d-bbf3-3b6954098189",
+              "curationType":"vivo-stream"
+            }
+          ],
+          "thingEnglishLabel":"Ukraine",
+          "thingId":"ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+          "thingLabel":"Украина",
+          "thingSameAs":[
+            "http://dbpedia.org/resource/Ukraine",
+            "http://www.wikidata.org/entity/Q212",
+            "http://sws.geonames.org/690791/"
+          ],
+          "thingType":[
+            "tagging:TagConcept",
+            "core:Thing",
+            "core:Place"
+          ],
+          "thingUri":"http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+          "topicId":"ckedrp5kd08t",
+          "topicName":"Украина"
+        }
+      ]
+    },
+    "timestamp":1595336409000,
+    "type":"STY",
+    "version":"v1.3.2"
+  },
+  "promo":{
+    "byline":{
+      "name":"Виталий Червоненко",
+      "persons":[
+        {
+          "function":"BBC News Україна",
+          "name":"Віталій Червоненко"
+        }
+      ],
+      "title":"BBC News Украина"
+    },
+    "headlines":{
+      "headline":"Карта новых районов Украины: кто и кого поглотил",
+      "shortHeadline":"Карта новых районов Украины: кто и кого поглотил"
+    },
+    "id":"urn:bbc:ares::asset:ukrainian/features-russian-53477115",
+    "indexImage":{
+      "altText":"гройсман",
+      "caption":"Укрупнення районів - це частина реформи децентралізації, розробленої урядом Володимира Гройсмана. Кількість районів у планах Гройсмана й зараз різняться на тридцять одиниць",
+      "copyrightHolder":"УНІАН",
+      "height":549,
+      "href":"http://c.files.bbci.co.uk/166CE/production/_113545819_861716.jpg",
+      "id":"113545819",
+      "path":"/cpsprodpb/166CE/production/_113545819_861716.jpg",
+      "subType":"index",
+      "type":"image",
+      "width":976
+    },
+    "language":"ru",
+    "locators":{
+      "assetId":"53477115",
+      "assetUri":"/ukrainian/features-russian-53477115",
+      "cpsUrn":"urn:bbc:content:assetUri:ukrainian/features-russian-53477115",
+      "curie":"http://www.bbc.co.uk/asset/307108d3-9bcc-4829-990c-4b42c1290258"
+    },
+    "passport":{
+      "campaigns":[
+        {
+          "campaignId":"5a988e4739461b000e9dabfc",
+          "campaignName":"WS - Update me"
+        }
+      ],
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName":"News"
+      },
+      "taggings":[
+
+      ]
+    },
+    "summary":"Украина уже живет с новым районным делением областей. Мы проанализировали, кто кого поглотил и за счет кого образовались новые радикально укрупненные районы страны.",
+    "timestamp":1595336409000,
+    "type":"cps"
+  },
+  "relatedContent":{
+    "groups":[
+      {
+        "promos":[
+          {
+            "cpsType":"STY",
+            "headlines":{
+              "headline":"Украина готовится к переписи населения. Без Крыма и части Донбасса",
+              "shortHeadline":"Украина готовится к переписи населения. Без Крыма и части Донбасса"
+            },
+            "id":"urn:bbc:ares::asset:ukrainian/features-russian-44889173",
+            "indexImage":{
+              "altText":"Перепис",
+              "copyrightHolder":"Getty Images",
+              "height":549,
+              "href":"http://c.files.bbci.co.uk/7ADA/production/_102605413_gettyimages-120906801.jpg",
+              "id":"102605413",
+              "path":"/cpsprodpb/7ADA/production/_102605413_gettyimages-120906801.jpg",
+              "subType":"index",
+              "type":"image",
+              "width":976
+            },
+            "language":"ru",
+            "locators":{
+              "assetUri":"/ukrainian/features-russian-44889173",
+              "cpsUrn":"urn:bbc:content:assetUri:/ukrainian/features-russian-44889173"
+            },
+            "summary":"В 2019 году в Киеве и области проведут пробную перепись населения. Это будет подготовка к большой всеукраинской переписи, которой не было уже 17 лет.",
+            "timestamp":1532007148000,
+            "type":"cps"
+          }
+        ],
+        "type":"see-alsos"
+      }
+    ],
+    "section":{
+      "name":"Подробно",
+      "subType":"index",
+      "type":"simple",
+      "uri":"/ukrainian/features_russian"
+    },
+    "site":{
+      "name":"BBC Україна",
+      "subType":"site",
+      "type":"simple",
+      "uri":"/ukrainian"
+    }
+  }
+}
