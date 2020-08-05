@@ -193,4 +193,6 @@ LiveRadioPage.propTypes = {
   }).isRequired,
 };
 
-export default applyBasicPageHandlers({ withVariant: false })(LiveRadioPage);
+export default applyBasicPageHandlers({ addVariantHandling: false })(
+  LiveRadioPage,
+);

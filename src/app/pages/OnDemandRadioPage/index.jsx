@@ -244,6 +244,6 @@ OnDemandRadioPage.propTypes = {
   }).isRequired,
 };
 
-export default applyBasicPageHandlers({ withVariant: false })(
+export default applyBasicPageHandlers({ addVariantHandling: false })(
   OnDemandRadioPage,
 );

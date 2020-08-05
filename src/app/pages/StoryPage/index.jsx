@@ -322,4 +322,4 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
 
 StoryPage.propTypes = cpsAssetPagePropTypes;
 
-export default applyBasicPageHandlers({ withVariant: false })(StoryPage);
+export default applyBasicPageHandlers({ addVariantHandling: false })(StoryPage);

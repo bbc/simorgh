@@ -150,5 +150,5 @@ ArticlePage.defaultProps = {
 };
 
 export default applyBasicPageHandlers({
-  withVariant: true,
+  addVariantHandling: true,
 })(ArticlePage);

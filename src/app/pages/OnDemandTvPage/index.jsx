@@ -262,4 +262,6 @@ OnDemandTvPage.propTypes = {
   }).isRequired,
 };
 
-export default applyBasicPageHandlers({ withVariant: false })(OnDemandTvPage);
+export default applyBasicPageHandlers({ addVariantHandling: false })(
+  OnDemandTvPage,
+);

@@ -120,4 +120,6 @@ const PhotoGalleryPage = ({ pageData }) => {
 
 PhotoGalleryPage.propTypes = cpsAssetPagePropTypes;
 
-export default applyBasicPageHandlers({ withVariant: false })(PhotoGalleryPage);
+export default applyBasicPageHandlers({ addVariantHandling: false })(
+  PhotoGalleryPage,
+);
