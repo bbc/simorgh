@@ -48,6 +48,11 @@ describe('withContexts HOC', () => {
     pageType: 'article',
     pathname: '/pathname',
     status: 200,
+    toggles: {
+      testToggle: {
+        enabled: false,
+      },
+    },
   };
 
   shouldMatchSnapshot(
@@ -84,6 +89,11 @@ describe('withContexts HOC', () => {
           pageType,
           pathname: '/pathname',
           status: 200,
+          toggles: {
+            testToggle: {
+              enabled: false,
+            },
+          },
         };
         render(<ContextsHOC {...fixture} />);
         expect(requestContextSpy).toHaveBeenCalled();
@@ -112,6 +122,11 @@ describe('withContexts HOC', () => {
         pathname: '/pathname',
         variant: 'trad',
         status: 200,
+        toggles: {
+          testToggle: {
+            enabled: false,
+          },
+        },
       };
 
       render(<ContextsHOC {...fixture} />);
