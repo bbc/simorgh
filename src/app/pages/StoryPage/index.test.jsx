@@ -57,7 +57,7 @@ const Page = ({ pageData, service, variant }) => (
           service={service}
           statusCode={200}
         >
-          <StoryPage service={service} pageData={pageData} />
+          <StoryPage service={service} pageData={pageData} variant={variant} />
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>
@@ -221,7 +221,6 @@ describe('Story Page', () => {
       path: '/some-cps-sty-path',
       service: 'ukrainian',
       pageType,
-      variant: 'ru-UA',
     });
 
     render(<Page pageData={pageData} service="ukrainian" variant="ru-UA" />);
