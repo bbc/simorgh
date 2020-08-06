@@ -40,7 +40,7 @@ export default async ({ path: pathname, pageType, service }) => {
           pageDataPromise,
           service,
           path: pathname,
-          radioService: getRadioService(service),
+          radioService: getRadioService({ service, pathname }),
         })
       : await pageDataPromise;
 

@@ -19,10 +19,7 @@ import getInitialData from '#app/routes/onDemandRadio/getInitialData';
 
 const Page = ({ pageData, service, isAmp = false, variant, lang }) => (
   <StaticRouter>
-    <ToggleContextProvider
-      service={service}
-      origin="https://www.test.bbc.co.uk"
-    >
+    <ToggleContextProvider>
       <ServiceContextProvider service={service} variant={variant} lang={lang}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"

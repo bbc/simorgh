@@ -218,7 +218,7 @@ export const service = {
       onIdxPage: true,
       idxPagePosition: 'Features',
       header: 'برنامه‌های رادیو',
-      durationLabel: 'مدت %duration%',
+      durationLabel: '%duration% المدة الزمنية',
     },
     recommendations: {
       hasStoryRecommendations: false,
