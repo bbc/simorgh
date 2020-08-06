@@ -28,8 +28,8 @@ it('should return "bangla" for the bengali service', () => {
   expect(actual).toEqual(expected);
 });
 
-it('should return undefined when a service is not included', () => {
+it('should return service passed in when there is no mapping', () => {
   const actual = getRadioService('pidgin');
 
-  expect(actual).toBeUndefined();
+  expect(actual).toEqual('pidgin');
 });
