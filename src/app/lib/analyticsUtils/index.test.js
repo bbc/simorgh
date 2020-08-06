@@ -24,11 +24,8 @@ const {
   getEventInfo,
   getComponentInfo,
   getThingAttributes,
-<<<<<<< HEAD
   getXtorMarketingString,
-=======
   getCampaignType,
->>>>>>> 5b2c6bf609d59b4480ca8f4b8cf7a918351e825d
 } = require('./index');
 
 let locServeCookieValue;

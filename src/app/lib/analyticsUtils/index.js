@@ -3,10 +3,7 @@ import uuid from 'uuid/v4';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import Url from 'url-parse';
-<<<<<<< HEAD
 
-=======
->>>>>>> 5b2c6bf609d59b4480ca8f4b8cf7a918351e825d
 import onClient from '../utilities/onClient';
 import {
   MEDIUM_CAMPAIGN_IDENTIFIER,
