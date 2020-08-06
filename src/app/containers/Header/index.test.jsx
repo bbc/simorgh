@@ -130,7 +130,7 @@ describe(`Header`, () => {
       expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
     });
 
-    it('should render header with lang when headerFooterLang is defined', () => {
+    it('should render header with lang when serviceLang is defined', () => {
       const { container } = render(
         HeaderContainerWithContext({
           pageType: 'IDX',

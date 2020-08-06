@@ -24,6 +24,9 @@ import pidginSecondaryColumnData from '#data/pidgin/secondaryColumn/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import igboMostReadData from '#data/igbo/mostRead/index.json';
 import igboSecondaryColumnData from '#data/igbo/secondaryColumn/index.json';
+import ukrainianInRussianPageData from '#data/ukrainian/cpsAssets/news-russian-23333960.json';
+import ukrainianSecondaryColumnData from '#data/ukrainian/secondaryColumn/index.json';
+import ukrainianMostReadData from '#data/ukrainian/mostRead/index.json';
 
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
 
@@ -41,7 +44,10 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
 const Page = ({ pageData, service }) => (
   <StaticRouter>
     <ToggleContextProvider toggles={toggleState}>
-      <ServiceContextProvider service={service}>
+      <ServiceContextProvider
+        pageLang={pageData.metadata.language}
+        service={service}
+      >
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
           isAmp={false}
@@ -194,5 +200,34 @@ describe('Story Page', () => {
     });
 
     await matchSnapshotAsync(<Page pageData={pageData} service="pidgin" />);
+  });
+
+  it('should render secondary column with lang attribute of `serviceLang` when a language override is present', async () => {
+    fetchMock.mock(
+      'http://localhost/some-cps-sty-path.json',
+      ukrainianInRussianPageData,
+    );
+    fetchMock.mock(
+      'http://localhost/ukrainian/sty-secondary-column.json',
+      ukrainianSecondaryColumnData,
+    );
+    fetchMock.mock(
+      'http://localhost/ukrainian/mostread.json',
+      ukrainianMostReadData,
+    );
+
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'ukrainian',
+      pageType,
+    });
+
+    render(<Page pageData={pageData} service="ukrainian" />);
+
+    const secondaryColumn = document.querySelector(
+      'div[class*="SecondaryColumn"]',
+    );
+
+    expect(secondaryColumn).toHaveAttribute('lang', 'uk');
   });
 });
