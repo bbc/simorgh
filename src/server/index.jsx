@@ -23,6 +23,7 @@ import {
   SERVER_SIDE_REQUEST_FAILED,
   ROUTING_INFORMATION,
 } from '#lib/logger.const';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { OK } from '#lib/statusCodes.const';
 import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
@@ -135,6 +136,8 @@ server
         // Set derivedPageType based on matched route
         derivedPageType = pageType || derivedPageType;
 
+        const toggles = await getToggles(service);
+
         const data = await getInitialData({
           path: url,
           service,
@@ -142,11 +145,11 @@ server
           pageType,
         });
 
-        const { status } = data;
-        const bbcOrigin = headers['bbc-origin'];
+        data.toggles = toggles;
         data.path = urlPath;
         data.timeOnServer = Date.now();
 
+        const { status } = data;
         // Set derivedPageType based on returned page data
         if (status === OK) {
           derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
@@ -159,6 +162,7 @@ server
           });
         }
 
+        const bbcOrigin = headers['bbc-origin'];
         const result = await renderDocument({
           bbcOrigin,
           data,

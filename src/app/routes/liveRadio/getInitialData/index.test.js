@@ -1,4 +1,4 @@
-import getInitialData, { hasRadioSchedule } from '.';
+import getInitialData, { hasRadioSchedule, getRadioService } from '.';
 import * as fetchPageData from '../../utils/fetchPageData';
 import liveRadioJson from '#data/korean/bbc_korean_radio/liveradio.json';
 import getConfig from '../../utils/getConfig';
@@ -86,5 +86,37 @@ describe('hasRadioSchedule', () => {
     }));
 
     expect(await hasRadioSchedule('mock-service')).toBe(false);
+  });
+});
+
+describe('getRadioService', () => {
+  it('should return persian for Persian Live Radio', () => {
+    const service = 'persian';
+    const pathname = 'bbc_persian_radio';
+    expect(getRadioService({ service, pathname })).toEqual('persian');
+  });
+
+  it('should return dari for Persian Dari Live Radio', () => {
+    const service = 'persian';
+    const pathname = 'bbc_dari_radio';
+    expect(getRadioService({ service, pathname })).toEqual('dari');
+  });
+
+  it('should return bangla for Bengali Live Radio', () => {
+    const service = 'bengali';
+    const pathname = 'bengali/bbc_bangla_radio';
+    expect(getRadioService({ service, pathname })).toEqual('bangla');
+  });
+
+  it('should return oromo for Afaanoromoo Live Radio', () => {
+    const service = 'afaanoromoo';
+    const pathname = 'afaanoromoo/bbc_afaanoromoo_radio';
+    expect(getRadioService({ service, pathname })).toEqual('oromo');
+  });
+
+  it('should return indonesian for Indonesia Live Radio', () => {
+    const service = 'indonesia';
+    const pathname = 'indonesia/bbc_indonesian_radio';
+    expect(getRadioService({ service, pathname })).toEqual('indonesian');
   });
 });

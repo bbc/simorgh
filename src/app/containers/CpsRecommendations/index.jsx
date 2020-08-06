@@ -5,7 +5,11 @@ import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import { StoryPromoLiBase, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { C_LUNAR, C_GHOST } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING, GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_HLF,
+  GEL_SPACING_TRPL,
+} from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 
 import StoryPromo from '../StoryPromo';
@@ -15,6 +19,7 @@ import useToggle from '#hooks/useToggle';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import Grid from '../../components/Grid';
 import SkipLinkWrapper from '../../components/SkipLinkWrapper';
+import { GridItemConstrainedMediumNoMargin } from '#lib/styledGrid';
 
 const StyledStoryPromoWrapper = styled.div`
   > div {
@@ -30,6 +35,7 @@ const StyledStoryPromoWrapper = styled.div`
 const RecommendationsWrapper = styled.div`
   background-color: ${C_LUNAR};
   padding-bottom: ${GEL_SPACING};
+  margin-bottom: ${GEL_SPACING_TRPL};
 `;
 
 const CpsRecommendations = ({ items, parentColumns }) => {
@@ -85,12 +91,12 @@ const CpsRecommendations = ({ items, parentColumns }) => {
   const listTransform = promoItems => (
     <Grid
       columns={{
-        group0: 6,
-        group1: 6,
-        group2: 6,
-        group3: 6,
-        group4: 6,
-        group5: 6,
+        group0: 1,
+        group1: 1,
+        group2: 1,
+        group3: 1,
+        group4: 1,
+        group5: 1,
       }}
       as={StoryPromoUl}
       enableGelGutters
@@ -100,12 +106,12 @@ const CpsRecommendations = ({ items, parentColumns }) => {
         <Grid
           item
           columns={{
-            group0: 6,
-            group1: 6,
-            group2: 6,
-            group3: 6,
-            group4: 6,
-            group5: 6,
+            group0: 1,
+            group1: 1,
+            group2: 1,
+            group3: 1,
+            group4: 1,
+            group5: 1,
           }}
           as={StoryPromoLiBase}
           border={false}
@@ -119,28 +125,30 @@ const CpsRecommendations = ({ items, parentColumns }) => {
   );
 
   return (
-    <SkipLinkWrapper
-      service={service}
-      endTextId={endTextId}
-      text={text}
-      endTextVisuallyHidden={endTextVisuallyHidden}
-      terms={skipLinkTerms}
-    >
-      <RecommendationsWrapper>
-        <CpsOnwardJourney
-          labelId="recommendations-heading"
-          title={title}
-          content={items}
-          parentColumns={parentColumns}
-          singleTransform={singleTransform}
-          listTransform={listTransform}
-          sectionLabelOverrideAs="strong"
-          sectionLabelBar={false}
-          sectionLabelBackground={C_LUNAR}
-          columnType="main"
-        />
-      </RecommendationsWrapper>
-    </SkipLinkWrapper>
+    <GridItemConstrainedMediumNoMargin>
+      <SkipLinkWrapper
+        service={service}
+        endTextId={endTextId}
+        text={text}
+        endTextVisuallyHidden={endTextVisuallyHidden}
+        terms={skipLinkTerms}
+      >
+        <RecommendationsWrapper>
+          <CpsOnwardJourney
+            labelId="recommendations-heading"
+            title={title}
+            content={items}
+            parentColumns={parentColumns}
+            singleTransform={singleTransform}
+            listTransform={listTransform}
+            sectionLabelOverrideAs="strong"
+            sectionLabelBar={false}
+            sectionLabelBackground={C_LUNAR}
+            columnType="main"
+          />
+        </RecommendationsWrapper>
+      </SkipLinkWrapper>
+    </GridItemConstrainedMediumNoMargin>
   );
 };
 
