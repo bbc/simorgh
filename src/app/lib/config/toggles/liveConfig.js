@@ -36,6 +36,9 @@ export default {
   mostRead: {
     enabled: true,
   },
+  mostWatched: {
+    enabled: false,
+  },
   navOnArticles: {
     enabled: true,
   },
