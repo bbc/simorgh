@@ -25,7 +25,8 @@ export default {
   },
   liveRadioSchedule: {
     enabled: true,
-    value: '(afrique|arabic|hausa|indonesia|korean|pashto|somali|swahili|urdu)',
+    value:
+      '(afrique|arabic|hausa|indonesia|korean|pashto|persian|somali|swahili|urdu)',
   },
   logMediaPlayerStatus: {
     enabled: false,
