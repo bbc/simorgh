@@ -3,8 +3,16 @@ import uuid from 'uuid/v4';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import Url from 'url-parse';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5b2c6bf609d59b4480ca8f4b8cf7a918351e825d
 import onClient from '../utilities/onClient';
+import {
+  MEDIUM_CAMPAIGN_IDENTIFIER,
+  XTOR_CAMPAIGN_IDENTIFIER,
+  SUPPORTED_MEDIUM_CAMPAIGN_TYPES,
+} from './analytics.const';
 
 export const getDestination = statsDestination => {
   const destinationIDs = {
@@ -293,6 +301,38 @@ export const getThingAttributes = (attribute, articleData) => {
 
     return attributes.join('~') || null;
   }
+
+  return null;
+};
+
+export const getCampaignType = () => {
+  if (!onClient()) return null;
+
+  // Gets the query string parameters from the current url parsing them as an object
+  const { query, hash } = new Url(window.location.href, true);
+
+  // Check for the presence of the `?at_medium` QS
+  const isMediumCampaign = Object.prototype.hasOwnProperty.call(
+    query,
+    MEDIUM_CAMPAIGN_IDENTIFIER,
+  );
+
+  // Checks for the presence of the `?xtor` WS or anchor e.g. `#xtor`
+  const isXtorCampaign =
+    Object.prototype.hasOwnProperty.call(query, XTOR_CAMPAIGN_IDENTIFIER) ||
+    hash.includes(XTOR_CAMPAIGN_IDENTIFIER);
+
+  if (isMediumCampaign) {
+    const isSupportedMediumCampaignType = SUPPORTED_MEDIUM_CAMPAIGN_TYPES.some(
+      type => query[MEDIUM_CAMPAIGN_IDENTIFIER].includes(type),
+    );
+
+    return isSupportedMediumCampaignType
+      ? query[MEDIUM_CAMPAIGN_IDENTIFIER]
+      : null;
+  }
+
+  if (isXtorCampaign) return 'XTOR';
 
   return null;
 };

@@ -1,5 +1,9 @@
 version: 0.2
 
+env:
+  variables:
+    LOG_LEVEL: 'error'
+
 phases:
   install:
     runtime-versions:

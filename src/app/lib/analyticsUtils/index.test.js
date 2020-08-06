@@ -24,7 +24,11 @@ const {
   getEventInfo,
   getComponentInfo,
   getThingAttributes,
+<<<<<<< HEAD
   getXtorMarketingString,
+=======
+  getCampaignType,
+>>>>>>> 5b2c6bf609d59b4480ca8f4b8cf7a918351e825d
 } = require('./index');
 
 let locServeCookieValue;
@@ -569,6 +573,41 @@ describe('getThingAttributes', () => {
     const thingAttributes = getThingAttributes('fooBar', {});
 
     expect(thingAttributes).toEqual(null);
+  });
+});
+
+describe('getCampaignType', () => {
+  const windowLocation = window.location;
+
+  afterEach(() => {
+    resetWindowValue('location', windowLocation);
+  });
+
+  test.each`
+    qsValue                   | expected
+    ${'?at_medium=email'}     | ${'email'}
+    ${'?at_medium=affiliate'} | ${'affiliate'}
+    ${'?at_medium=custom123'} | ${'custom123'}
+    ${'?at_medium=foo'}       | ${null}
+    ${'?xtor=123'}            | ${'XTOR'}
+  `('should return a campaign type of $expected', ({ qsValue, expected }) => {
+    setWindowValue('location', {
+      href: `https://www.bbc.com/mundo${qsValue}`,
+    });
+
+    const campaignType = getCampaignType();
+
+    expect(campaignType).toEqual(expected);
+  });
+
+  it('should return campaign type of XTOR', () => {
+    setWindowValue('location', {
+      href: 'https://www.bbc.com/mundo#xtor',
+    });
+
+    const campaignType = getCampaignType();
+
+    expect(campaignType).toEqual('XTOR');
   });
 });
 
