@@ -15,7 +15,5 @@ export const isScheduleDataComplete = ({
   // always a live program, in which case we show the most recently played program on demand.
   const latestProgramIndex = getLastProgramIndex({ schedules, currentTime });
 
-  return Boolean(
-    schedules[latestProgramIndex - 2] && schedules[latestProgramIndex + 1],
-  );
+  return schedules[latestProgramIndex - 2] && schedules[latestProgramIndex + 1];
 };

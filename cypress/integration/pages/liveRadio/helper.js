@@ -1,5 +1,4 @@
 import envConfig from '../../../support/config/envs';
-import { isScheduleDataComplete } from '../../../../src/app/containers/RadioSchedule/utilities/evaluateScheduleData';
 import serviceConfig from '../../../../src/server/utilities/serviceConfigs';
 
 // the externalId `bbc_oromo_radio` is overriden to `bbc_afaanoromoo` in production code
@@ -17,10 +16,6 @@ export const getEmbedUrl = (body, language) => {
     'liveradio',
     language,
   ].join('/');
-};
-
-export const isRadioScheduleComplete = schedules => {
-  return isScheduleDataComplete({ schedules });
 };
 
 export const serviceHasRadioSchedule = ({ service, variant }) => {

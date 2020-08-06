@@ -104,7 +104,7 @@ describe('processRadioSchedule', () => {
     });
 
     it('should return undefined when schedule data is incomplete', () => {
-      expect(programs).toBeFalsy();
+      expect(programs).toBeUndefined();
     });
   });
 });
