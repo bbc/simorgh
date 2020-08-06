@@ -105,14 +105,9 @@ const OnDemandRadioPage = ({ pageData }) => {
 
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
-  const {
-    dir,
-    liveRadioOverrides,
-    lang,
-    service,
-    translations,
-    radioSchedule,
-  } = useContext(ServiceContext);
+  const { dir, liveRadioOverrides, lang, service, translations } = useContext(
+    ServiceContext,
+  );
   const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
 
   const mediaId = getMediaId({
@@ -152,11 +147,11 @@ const OnDemandRadioPage = ({ pageData }) => {
     ['mediaAssetPage', 'audioPlayer'],
     translations,
   );
-  const { enabled, value } = useToggle('onDemandRadioSchedule');
+  const { enabled: radioScheduleIsEnabled, value } = useToggle(
+    'onDemandRadioSchedule',
+  );
   const radioScheduleData = path(['radioScheduleData'], pageData);
-  const radioScheduleOnPage = path(['onLiveRadioPage'], radioSchedule);
-  const showSchedule =
-    radioScheduleOnPage && enabled && RegExp(value).test(service);
+  const showSchedule = radioScheduleIsEnabled && RegExp(value).test(service);
 
   return (
     <>
