@@ -1,4 +1,4 @@
-const RADIO_SERVICES = {
+const RADIO_SERVICE_MAPPINGS = {
   indonesia: 'indonesian',
   persian: 'dari',
   afaanoromoo: 'oromo',
@@ -6,5 +6,5 @@ const RADIO_SERVICES = {
 };
 
 export default service => {
-  return RADIO_SERVICES[service];
+  return RADIO_SERVICE_MAPPINGS[service] || service;
 };
