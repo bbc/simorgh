@@ -2,14 +2,13 @@
 import React from 'react';
 import assocPath from 'ramda/src/assocPath';
 import { render, act } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import OnDemandTvPage from '.';
 import pashtoPageData from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { ToggleContext } from '#contexts/ToggleContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandTV/getInitialData';
 
 const Page = ({
@@ -19,11 +18,8 @@ const Page = ({
   darkModeEnabled = false,
 }) => (
   <StaticRouter>
-    <ToggleContext.Provider
-      value={{
-        toggleState: { cinemaModeTV: { enabled: darkModeEnabled } },
-        toggleDispatch: jest.fn(),
-      }}
+    <ToggleContextProvider
+      toggles={{ cinemaModeTV: { enabled: darkModeEnabled } }}
     >
       <ServiceContextProvider service={service}>
         <RequestContextProvider
@@ -37,7 +33,7 @@ const Page = ({
           <OnDemandTvPage service={service} pageData={pageData} />
         </RequestContextProvider>
       </ServiceContextProvider>
-    </ToggleContext.Provider>
+    </ToggleContextProvider>
   </StaticRouter>
 );
 

@@ -2,7 +2,6 @@ import React from 'react';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import CanonicalNavigation from './index.canonical';
 import {
   dropdownTestId,

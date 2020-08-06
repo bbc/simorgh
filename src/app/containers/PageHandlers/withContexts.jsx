@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, element, string, number } from 'prop-types';
+import { bool, element, string, number, object } from 'prop-types';
 import path from 'ramda/src/path';
 import variantPropType from '#models/propTypes/variants';
 import { pageDataPropType } from '#models/propTypes/data';
@@ -14,6 +14,7 @@ import { EventContextProvider } from '#contexts/EventContext';
 const WithContexts = Component => {
   const WithContextsContainer = props => {
     const {
+      toggles,
       bbcOrigin,
       status,
       id,
@@ -28,7 +29,7 @@ const WithContexts = Component => {
     } = props;
 
     return (
-      <ToggleContextProvider service={service} origin={bbcOrigin}>
+      <ToggleContextProvider toggles={toggles}>
         <ServiceContextProvider
           service={service}
           variant={variant}
@@ -69,6 +70,8 @@ const WithContexts = Component => {
     service: string.isRequired,
     variant: variantPropType,
     timeOnServer: number,
+    // eslint-disable-next-line react/forbid-prop-types
+    toggles: object.isRequired,
   };
 
   WithContextsContainer.defaultProps = {

@@ -5,6 +5,11 @@ exports[`Ad Container Snapshots should correctly render a Canonical leaderboard 
   <head>
     <script
       src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      type="module"
+    />
+    <script
+      nomodule="nomodule"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
     />
   </head>
   <body>
@@ -24,6 +29,7 @@ exports[`Ad Container Snapshots should correctly render a Canonical leaderboard 
         aria-hidden="true"
         aria-label="Publicidad"
         class="c0"
+        data-e2e="advertisement"
         role="region"
       >
         <div
@@ -41,6 +47,11 @@ exports[`Ad Container Snapshots should correctly render a Canonical mpu ad 1`] =
   <head>
     <script
       src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      type="module"
+    />
+    <script
+      nomodule="nomodule"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
     />
   </head>
   <body>
@@ -54,6 +65,7 @@ exports[`Ad Container Snapshots should correctly render a Canonical mpu ad 1`] =
         aria-hidden="true"
         aria-label="Publicidad 2"
         class="c0"
+        data-e2e="advertisement"
         role="region"
       >
         <div
@@ -154,6 +166,7 @@ exports[`Ad Container Snapshots should correctly render an AMP leaderboard ad 1`
         amp-access-hide="true"
         aria-hidden="true"
         aria-label="Publicidad"
+        data-e2e="advertisement"
         role="region"
       >
         <div
@@ -296,6 +309,7 @@ exports[`Ad Container Snapshots should correctly render an AMP mpu ad 1`] = `
         amp-access-hide="true"
         aria-hidden="true"
         aria-label="Publicidad 2"
+        data-e2e="advertisement"
         role="region"
       >
         <div
