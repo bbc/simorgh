@@ -57,10 +57,18 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         );
 
         if (isRadioScheduleOnPage) {
-          const schedulePath = Cypress.env('currentPath').replace(
+          let schedulePath = Cypress.env('currentPath').replace(
             'liveradio',
             'schedule.json',
           );
+
+          if (schedulePath.includes('bbc_afaanoromoo_radio')) {
+            // the schedule call for afaanoromoo is made to bbc_oromo_radio
+            schedulePath = schedulePath.replace(
+              'bbc_afaanoromoo_radio',
+              'bbc_oromo_radio',
+            );
+          }
 
           cy.request(schedulePath).then(({ body: scheduleJson }) => {
             const { schedules } = scheduleJson;
