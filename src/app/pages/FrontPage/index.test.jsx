@@ -5,24 +5,23 @@ import { BrowserRouter } from 'react-router-dom';
 import { render, act, waitFor } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContext } from '#contexts/ToggleContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+
 import pidginFrontPageData from '#data/pidgin/frontpage/index-light';
 import mundoFrontPageData from '#data/mundo/frontpage/index.json';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import getInitialData from '#app/routes/home/getInitialData';
 import { FrontPage } from '..';
 
-const mockToggleState = {
-  toggleState: {
-    ads: {
-      enabled: false,
-    },
-    mostRead: {
-      enabled: true,
-    },
-    comscoreAnalytics: {
-      enabled: true,
-    },
+const mockToggles = {
+  ads: {
+    enabled: false,
+  },
+  mostRead: {
+    enabled: true,
+  },
+  comscoreAnalytics: {
+    enabled: true,
   },
 };
 
@@ -30,11 +29,11 @@ const mockToggleState = {
 const FrontPageWithContext = ({
   isAmp = false,
   service = 'pidgin',
-  toggles = mockToggleState,
+  toggles = mockToggles,
   ...props
 }) => (
   <BrowserRouter>
-    <ToggleContext.Provider value={toggles}>
+    <ToggleContextProvider toggles={toggles}>
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"
         isAmp={isAmp}
@@ -47,7 +46,7 @@ const FrontPageWithContext = ({
           <FrontPage {...props} />
         </ServiceContextProvider>
       </RequestContextProvider>
-    </ToggleContext.Provider>
+    </ToggleContextProvider>
   </BrowserRouter>
 );
 
@@ -260,10 +259,8 @@ describe('Front Page', () => {
         JSON.stringify(mundoFrontPageData),
       );
       const adsToggles = {
-        toggleState: {
-          ads: {
-            enabled: true,
-          },
+        ads: {
+          enabled: true,
         },
       };
       const { pageData } = await getInitialData({
@@ -297,10 +294,8 @@ describe('Front Page', () => {
         service: 'mundo',
       });
       const adsToggles = {
-        toggleState: {
-          ads: {
-            enabled: false,
-          },
+        ads: {
+          enabled: false,
         },
       };
 
@@ -325,10 +320,8 @@ describe('Front Page', () => {
         service: 'mundo',
       });
       const adsToggles = {
-        toggleState: {
-          ads: {
-            enabled: true,
-          },
+        ads: {
+          enabled: true,
         },
       };
 
