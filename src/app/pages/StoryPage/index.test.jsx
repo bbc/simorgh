@@ -41,13 +41,12 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
-const Page = ({ pageData, service, variant }) => (
+const Page = ({ pageData, service }) => (
   <StaticRouter>
     <ToggleContextProvider toggles={toggleState}>
       <ServiceContextProvider
         pageLang={pageData.metadata.language}
         service={service}
-        variant={variant}
       >
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
@@ -57,7 +56,7 @@ const Page = ({ pageData, service, variant }) => (
           service={service}
           statusCode={200}
         >
-          <StoryPage service={service} pageData={pageData} variant={variant} />
+          <StoryPage service={service} pageData={pageData} />
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>
@@ -203,7 +202,7 @@ describe('Story Page', () => {
     await matchSnapshotAsync(<Page pageData={pageData} service="pidgin" />);
   });
 
-  it('should render secondary column div with lang attribute when officialLang is defined by a language override', async () => {
+  it('should render secondary column with lang attribute of `officialServiceLang` when a language override is present', async () => {
     fetchMock.mock(
       'http://localhost/some-cps-sty-path.json',
       ukrainianInRussianPageData,
@@ -223,7 +222,7 @@ describe('Story Page', () => {
       pageType,
     });
 
-    render(<Page pageData={pageData} service="ukrainian" variant="ru-UA" />);
+    render(<Page pageData={pageData} service="ukrainian" />);
 
     const secondaryColumn = document.querySelector(
       'div[class*="SecondaryColumn"]',
