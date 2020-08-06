@@ -36,10 +36,7 @@ platforms.forEach(platform => {
 
   mapMediaPlayerStories.add('default', () => {
     return (
-      <ToggleContextProvider
-        value={{ toggleState: defaultToggles }}
-        origin="https://www.bbc.com"
-      >
+      <ToggleContextProvider toggles={defaultToggles}>
         <ServiceContextProvider service="pidgin">
           <RequestContextProvider
             isAmp={isAmp(platform)}
