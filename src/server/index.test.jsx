@@ -4,6 +4,8 @@ import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
 import dotenv from 'dotenv';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
+import defaultToggles from '#lib/config/toggles';
 import Document from './Document/component';
 import routes from '../app/routes';
 import { localBaseUrl } from '../testHelpers/config';
@@ -53,6 +55,9 @@ jest.mock('@loadable/server', () => ({
 }));
 
 jest.mock('#app/routes/utils/fetchPageData/utils/getRouteProps');
+jest.mock('#app/lib/utilities/getToggles/withCache');
+
+getToggles.mockImplementation(() => defaultToggles.local);
 
 const mockRouteProps = ({
   id,

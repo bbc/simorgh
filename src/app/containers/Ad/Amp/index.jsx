@@ -101,6 +101,7 @@ const AmpAd = ({ slotType }) => {
     <AdSection
       aria-label={ariaLabel}
       role="region"
+      data-e2e="advertisement"
       amp-access="toggles.ads.enabled"
       amp-access-hide="true"
       aria-hidden="true"
