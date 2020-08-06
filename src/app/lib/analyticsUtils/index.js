@@ -539,22 +539,22 @@ export const getCustomMarketingString = href => {
     {
       description: 'at_custom_1 field',
       value: getMarketingUrlParam(query, 'at_custom_1'),
-      wrap: false,
+      wrap: true,
     },
     {
       description: 'at_custom_2 field',
       value: getMarketingUrlParam(query, 'at_custom_2'),
-      wrap: false,
+      wrap: true,
     },
     {
       description: 'at_custom_3 field',
       value: getMarketingUrlParam(query, 'at_custom_3'),
-      wrap: false,
+      wrap: true,
     },
     {
       description: 'at_custom_4 field',
       value: getMarketingUrlParam(query, 'at_custom_4'),
-      wrap: false,
+      wrap: true,
     },
   ]);
 };
