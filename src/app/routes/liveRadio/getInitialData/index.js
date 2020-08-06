@@ -27,9 +27,8 @@ export default async ({ path: pathname, pageType, service }) => {
     const liveRadioDataPath = overrideRendererOnTest(pathname);
 
     const pageHasRadioSchedule = await _hasRadioSchedule({
-      page: 'liveRadioPage',
+      pageType: 'liveRadio',
       service,
-      pathname,
     });
     const pageDataPromise = fetchPageData({
       path: liveRadioDataPath,

@@ -20,9 +20,8 @@ export default async ({ path: pathname, pageType, service }) => {
   try {
     const onDemandRadioDataPath = overrideRendererOnTest(pathname);
     const hasRadioSchedule = await _hasRadioSchedule({
-      page: 'onDemandRadioPage',
+      pageType: 'onDemandRadio',
       service,
-      pathname,
     });
     const pageDataPromise = await fetchPageData({
       path: onDemandRadioDataPath,

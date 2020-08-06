@@ -18,14 +18,6 @@ jest.mock('#app/routes/utils/getConfig', () => service => {
         onFrontPage: false,
       },
     },
-    persian: {
-      radioSchedule: {
-        hasRadioSchedule: true,
-        onLiveRadioPage: true,
-        onOnDemandRadioPage: true,
-        onFrontPage: true,
-      },
-    },
   };
 
   return Promise.resolve(mockConfigs[service]);
@@ -34,8 +26,7 @@ jest.mock('#app/routes/utils/getConfig', () => service => {
 it('should return true when radio schedule is enabled in the service and for the page type', async () => {
   const actual = await hasRadioService({
     service: 'afrique',
-    pathname: '/afrique/bbc_afrique_radio/w172x601yx5z2n1',
-    page: 'onDemandRadioPage',
+    pageType: 'onDemandRadio',
   });
   const expected = true;
 
@@ -45,8 +36,7 @@ it('should return true when radio schedule is enabled in the service and for the
 it('should return false when radio schedule is enabled in the service but not for the page type', async () => {
   const actual = await hasRadioService({
     service: 'afrique',
-    pathname: '/afrique/bbc_afrique_radio/w172x601yx5z2n1',
-    page: 'onFrontPage',
+    pageType: 'frontPage',
   });
   const expected = false;
 
@@ -56,19 +46,7 @@ it('should return false when radio schedule is enabled in the service but not fo
 it('should return false when radio schedule is not enabled in the service', async () => {
   const actual = await hasRadioService({
     service: 'pidgin',
-    pathname: '/pidgin',
-    page: 'onFrontPage',
-  });
-  const expected = false;
-
-  expect(actual).toEqual(expected);
-});
-
-it('should return false when radio schedule is enabled in the service but the pathname inclludes bbc_persian_radio', async () => {
-  const actual = await hasRadioService({
-    service: 'persian',
-    pathname: '/persian/bbc_persian_radio/liveradio',
-    page: 'onLiveRadioPage',
+    pageType: 'frontPage',
   });
   const expected = false;
 
