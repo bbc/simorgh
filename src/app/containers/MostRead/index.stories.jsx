@@ -16,7 +16,7 @@ const staticMostReadURL = (service, variant) =>
     : `./data/${service}/mostRead/index.json`;
 
 const renderMostReadContainer = (service, variant, columnLayout) => (
-  <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
+  <ToggleContextProvider>
     <RequestContextProvider
       bbcOrigin={`http://localhost/${service}/articles/c0000000000o`}
       id="c0000000000o"

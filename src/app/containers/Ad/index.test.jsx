@@ -23,6 +23,7 @@ const toggleContextMock = {
 describe('Ad Container', () => {
   beforeAll(() => {
     process.env.SIMORGH_CONFIG_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+
     window.dotcom = {
       bootstrap: jest.fn(),
       cmd: { push: jest.fn() },
