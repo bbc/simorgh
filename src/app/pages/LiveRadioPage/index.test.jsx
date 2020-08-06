@@ -135,7 +135,7 @@ describe('Radio Page Main', () => {
     expect(scheduleWrapper).not.toBeInTheDocument();
   });
 
-  it('should not show the radio schedule for services without schedules', async () => {
+  it('should not show the radio schedule for services without a schedule', async () => {
     renderPage({
       pageData: gahuzaPageData,
       service: 'gahuza',
