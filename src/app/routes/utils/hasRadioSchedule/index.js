@@ -9,15 +9,17 @@ export default async ({ service, pageType }) => {
     onDemandRadio: 'onOnDemandRadioPage',
   }[pageType];
 
-  const serviceHasRadioSchedule = path(
+  const radioScheduleIsEnabledForService = path(
     ['radioSchedule', 'hasRadioSchedule'],
     config,
   );
 
-  const radioScheduleIsEnabledOnPage = path(
+  const radioScheduleIsEnabledForPageType = path(
     ['radioSchedule', configKeyName],
     config,
   );
 
-  return Boolean(serviceHasRadioSchedule && radioScheduleIsEnabledOnPage);
+  return Boolean(
+    radioScheduleIsEnabledForService && radioScheduleIsEnabledForPageType,
+  );
 };
