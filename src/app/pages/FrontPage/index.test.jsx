@@ -24,7 +24,7 @@ const FrontPageWithContext = ({
   ...props
 }) => (
   <BrowserRouter>
-    <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
+    <ToggleContextProvider>
       <RequestContextProvider isAmp={isAmp} {...requestContextData}>
         <ServiceContextProvider service={service}>
           <FrontPage {...props} />

@@ -19,7 +19,7 @@ const Page = ({
   isAmp = false,
 }) => (
   <BrowserRouter>
-    <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
+    <ToggleContextProvider>
       <ServiceContextProvider service={service} lang={lang}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"

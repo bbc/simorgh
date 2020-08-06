@@ -20,10 +20,7 @@ const serviceContext = {
 const IdxPageWithContext = ({ service = 'persian', pageData }) => {
   return (
     <BrowserRouter>
-      <ToggleContextProvider
-        service={service}
-        origin="https://www.test.bbc.com"
-      >
+      <ToggleContextProvider>
         <RequestContextProvider
           pageType="IDX"
           service={service}

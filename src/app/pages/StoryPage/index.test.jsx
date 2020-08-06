@@ -11,7 +11,7 @@ import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 // contexts
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContext } from '#contexts/ToggleContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 // components to test
 import { StoryPage } from '..';
@@ -41,32 +41,28 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
-const Page = ({ pageData, service, variant }) => {
-  return (
-    <StaticRouter>
-      <ToggleContext.Provider
-        value={{ toggleState, toggleDispatch: jest.fn() }}
+const Page = ({ pageData, service, variant }) => (
+  <StaticRouter>
+    <ToggleContextProvider toggles={toggleState}>
+      <ServiceContextProvider
+        pageLang={pageData.metadata.language}
+        service={service}
+        variant={variant}
       >
-        <ServiceContextProvider
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          isAmp={false}
+          pageType={pageData.metadata.type}
+          pathname={pageData.metadata.locators.assetUri}
           service={service}
-          variant={variant}
-          pageLang={pageData.metadata.language}
+          statusCode={200}
         >
-          <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.co.uk"
-            isAmp={false}
-            pageType={pageData.metadata.type}
-            pathname={pageData.metadata.locators.assetUri}
-            service={service}
-            statusCode={200}
-          >
-            <StoryPage service={service} pageData={pageData} />
-          </RequestContextProvider>
-        </ServiceContextProvider>
-      </ToggleContext.Provider>
-    </StaticRouter>
-  );
-};
+          <StoryPage service={service} pageData={pageData} />
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ToggleContextProvider>
+  </StaticRouter>
+);
 
 jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (

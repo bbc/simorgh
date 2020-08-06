@@ -5,7 +5,9 @@ export default () => {
   runMainHeadingTests();
 
   describe('Sections', () => {
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll(
+      'section:not([data-e2e="advertisement"])',
+    );
 
     if (sections) {
       sections.forEach(section => {
@@ -93,7 +95,9 @@ export default () => {
 };
 
 describe('Story Promo', () => {
-  const section = document.querySelector('section');
+  const section = document.querySelector(
+    'section:not([data-e2e="advertisement"])',
+  );
 
   if (section) {
     it('should be in the document', () => {

@@ -1,146 +1,68 @@
-/* eslint-disable no-console */
 /* eslint react/prop-types: 0 */
 import React from 'react';
-import fetchMock from 'fetch-mock';
 import { renderHook, act } from '@testing-library/react-hooks';
 import useToggle from '.';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
-jest.mock('../../lib/config/toggles/index.js', () => ({
-  test: {
-    enableFetchingToggles: {
-      enabled: true,
-      value: 'mundo',
-    },
-    ads: {
-      enabled: true,
-    },
-  },
-}));
-
-const togglesUrl =
-  'https://mock-toggles-endpoint.bbc.co.uk/?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com';
-
-beforeEach(() => {
-  process.env.SIMORGH_APP_ENV = 'test';
-  process.env.SIMORGH_CONFIG_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
-
-  fetchMock.restore();
-});
-
 describe('useToggle custom hook', () => {
-  describe('Given ads toggle that is fetched from the toggle service is enabled', () => {
-    it('return enabled true', async () => {
-      fetchMock.mock(togglesUrl, {
-        toggles: {
-          ads: {
-            enabled: true,
-            value: '',
-          },
-        },
-      });
-      let result;
-      const wrapper = ({ children }) => (
-        <ToggleContextProvider
-          service="mundo"
-          origin="https://www.test.bbc.com"
-        >
-          {children}
-        </ToggleContextProvider>
-      );
+  it('should return enabled true if a toggle is true', async () => {
+    const mockToggles = {
+      testToggle: {
+        enabled: true,
+      },
+    };
 
-      await act(async () => {
-        result = renderHook(() => useToggle('ads'), { wrapper }).result;
-      });
+    let result;
+    const wrapper = ({ children }) => (
+      <ToggleContextProvider toggles={mockToggles}>
+        {children}
+      </ToggleContextProvider>
+    );
 
-      expect(result.current).toEqual({ enabled: true });
+    await act(async () => {
+      result = renderHook(() => useToggle('testToggle'), { wrapper }).result;
     });
+
+    expect(result.current).toEqual({ enabled: true });
   });
 
-  describe('Given ads toggle that is fetched from the toggle service is disabled', () => {
-    it('return enabled false', async () => {
-      fetchMock.mock(togglesUrl, {
-        toggles: {
-          ads: {
-            enabled: false,
-            value: '',
-          },
-        },
-      });
-      let result;
-      const wrapper = ({ children }) => (
-        <ToggleContextProvider
-          service="mundo"
-          origin="https://www.test.bbc.com"
-        >
-          {children}
-        </ToggleContextProvider>
-      );
+  it('should return enabled false if a toggle is false', async () => {
+    const mockToggles = {
+      testToggle: {
+        enabled: false,
+      },
+    };
+    let result;
+    const wrapper = ({ children }) => (
+      <ToggleContextProvider toggles={mockToggles}>
+        {children}
+      </ToggleContextProvider>
+    );
 
-      await act(async () => {
-        result = renderHook(() => useToggle('ads'), { wrapper }).result;
-      });
-
-      expect(result.current).toEqual({ enabled: false });
+    await act(async () => {
+      result = renderHook(() => useToggle('testToggle'), { wrapper }).result;
     });
+
+    expect(result.current).toEqual({ enabled: false });
   });
 
-  describe('Given ads toggle that is fetched from the toggle service does not exist', () => {
-    it('return enabled null', async () => {
-      fetchMock.mock(togglesUrl, {
-        toggles: {
-          ads: {
-            enabled: false,
-            value: '',
-          },
-        },
-      });
-      let result;
-      const wrapper = ({ children }) => (
-        <ToggleContextProvider
-          service="mundo"
-          origin="https://www.test.bbc.com"
-        >
-          {children}
-        </ToggleContextProvider>
-      );
+  it('should return enabled null if a toggle does not exist', async () => {
+    const mockToggles = {
+      testToggle: {
+        enabled: false,
+      },
+    };
+    let result;
+    const wrapper = ({ children }) => (
+      <ToggleContextProvider toggles={mockToggles}>
+        {children}
+      </ToggleContextProvider>
+    );
 
-      await act(async () => {
-        result = renderHook(() => useToggle('toggle-that-does-not-exist'), {
-          wrapper,
-        }).result;
-      });
-
-      expect(result.current).toEqual({ enabled: null });
+    await act(async () => {
+      result = renderHook(() => useToggle('notAToggle'), { wrapper }).result;
     });
-  });
 
-  describe('Given ads toggle that is fetched from the toggle service returns a 503', () => {
-    it('should log the fetch error', async () => {
-      console.error = jest.fn();
-      fetchMock.mock(togglesUrl, 503);
-      const wrapper = ({ children }) => (
-        <ToggleContextProvider
-          service="mundo"
-          origin="https://www.test.bbc.com"
-        >
-          {children}
-        </ToggleContextProvider>
-      );
-
-      await act(async () => {
-        renderHook(() => useToggle('ads'), {
-          wrapper,
-        });
-      });
-
-      expect(console.error).toHaveBeenCalledWith(
-        `error - ${JSON.stringify(
-          { event: 'toggle_fetch_error', message: {} },
-          null,
-          2,
-        )}`,
-      );
-    });
+    expect(result.current).toEqual({ enabled: null });
   });
 });
