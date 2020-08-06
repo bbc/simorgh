@@ -186,6 +186,11 @@ const baseServiceConfig = {
     hasMostRead: true,
     onIdxPage: false,
   },
+  mostWatched: {
+    header: 'Найпопулярніше',
+    numberOfItems: 5,
+    hasMostWatched: false,
+  },
   radioSchedule: {
     hasRadioSchedule: false,
     onIdxPage: false,
