@@ -19,6 +19,7 @@ import {
 import getPaths from './getPaths';
 import serviceHasPageType from './serviceHasPageType';
 import visitPage from './visitPage';
+import getAmpUrl from './getAmpUrl';
 
 // This function takes all types of tests we have and runs in this series of steps with the fewest possible page visits
 
@@ -84,7 +85,7 @@ const runTestsForPage = ({
         describe(`${pageType} - ${currentPath} - AMP`, () => {
           before(() => {
             Cypress.env('currentPath', currentPath);
-            visitPage(`${currentPath}.amp`, pageType);
+            visitPage(getAmpUrl(currentPath), pageType);
           });
 
           const testArgs = {
