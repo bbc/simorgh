@@ -167,18 +167,18 @@ export const service = {
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
-          text: 'Warning: Third party content may contain adverts',
+          textPrefixVisuallyHidden: 'వీడియో క్యాప్షన్, ',
+          text: 'హెచ్చరిక: థర్డ్ పార్టీ కంటెంట్‌లో ప్రకటనలు ఉండొచ్చు',
         },
         fallback: {
-          text: 'Content is not available',
-          linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
+          text: 'కంటెంట్ అందుబాటులో లేదు',
+          linkText: 'మరింత సమాచారం కోసం %provider_name%',
+          linkTextSuffixVisuallyHidden: ', ఇతర కథనాలు',
           warningText: 'ఇతర వెబ్‌సైట్లలో సమాచారానికి బీబీసీ బాధ్యత వహించదు.',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: 'పోస్ట్‌ %provider_name% స్కిప్ చేయండి',
+          endTextVisuallyHidden: 'పోస్ట్ of %provider_name% ముగిసింది',
         },
       },
       topStoriesTitle: 'ముఖ్యమైన కథనాలు',

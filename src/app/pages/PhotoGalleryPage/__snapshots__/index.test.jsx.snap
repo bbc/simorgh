@@ -1240,6 +1240,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
       sizes="152x152"
     />
     <link
+      href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link
       href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
       sizes="192x192"
@@ -2708,6 +2713,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
       sizes="152x152"
     />
     <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link
       href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
       sizes="192x192"
@@ -3153,17 +3163,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   padding: 0.5rem 0.25rem;
 }
 
-.c33 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
 .c34 {
   position: static;
   color: #222222;
@@ -3237,6 +3236,17 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 .c4 {
   padding-bottom: 1rem;
+}
+
+.c33 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 @media (max-width:37.4375rem) {
@@ -3727,20 +3737,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c33 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c33 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c37 {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -3839,6 +3835,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 @media (min-width:63rem) {
   .c4 {
     padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c33 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c33 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -4989,6 +4999,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
       sizes="152x152"
     />
     <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link
       href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
       sizes="192x192"
@@ -5663,6 +5678,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
       sizes="152x152"
     />
     <link
+      href="https://news.files.bbci.co.uk/include/articles/public/azeri/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link
       href="https://news.files.bbci.co.uk/include/articles/public/azeri/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
       sizes="192x192"
@@ -6324,17 +6344,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   padding: 0.5rem 0.25rem;
 }
 
-.c53 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
 .c54 {
   position: static;
   color: #222222;
@@ -6385,6 +6394,17 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 .c4 {
   padding-bottom: 1rem;
+}
+
+.c53 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 @media (max-width:37.4375rem) {
@@ -7025,20 +7045,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c53 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c53 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
 @media (max-width:63rem) {
   .c35 {
     grid-column: 1 / span 6;
@@ -7124,6 +7130,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @media (min-width:63rem) {
   .c4 {
     padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c53 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c53 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 

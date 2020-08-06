@@ -178,8 +178,8 @@ export const service = {
             'BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: 'Kauce wa %provider_name%',
+          endTextVisuallyHidden: 'Karshen labarin da aka sa a %provider_name%',
         },
       },
       topStoriesTitle: 'Babban Labari',

@@ -166,13 +166,13 @@ export const service = {
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
+          textPrefixVisuallyHidden: 'Wetin we call dis Video, ',
           text: 'Warning: Third party content may contain adverts',
         },
         fallback: {
           text: 'Content is not available',
           linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
+          linkTextSuffixVisuallyHidden: ', outside',
           warningText: 'De external site no concern BBC.',
         },
         skipLink: {

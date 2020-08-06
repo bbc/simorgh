@@ -201,8 +201,8 @@ export const service = {
     recommendations: {
       hasStoryRecommendations: true,
       skipLink: {
-        text: 'Skip %title% and continue reading',
-        endTextVisuallyHidden: 'End of %title%',
+        text: 'Haberin başlığını atlayın ve okumaya devam edin',
+        endTextVisuallyHidden: 'Haberin sonu',
       },
     },
     footer: {
