@@ -30,7 +30,6 @@ export default {
   },
   onDemandRadioSchedule: {
     enabled: true,
-    value: '(hausa|korean)',
   },
   logMediaPlayerStatus: {
     enabled: false,
