@@ -334,182 +334,229 @@ export const getCampaignType = () => {
   return null;
 };
 
-export const getUriField = (query, field) =>
+export const getMarketingUrlParam = (query, field) =>
   Object.prototype.hasOwnProperty.call(query, field) ? query[field] : '';
 
-export const getAffiliateMarketingString = href => {
-  const marketingStringValues = [
-    {
-      description: 'A',
-      value: 'A',
-    },
-    {
-      description: 'B',
-      value: 'B',
-    },
-    {
-      description: 'C',
-      value: 'C',
-    },
-    {
-      description: 'D',
-      value: 'D',
-    },
-    {
-      description: 'E',
-      value: '',
-    },
-    {
-      description: 'F',
-      value: 'F',
-    },
-    {
-      description: 'G',
-      value: '',
-    },
-  ];
+export const buildMarketingString = marketingValues =>
+  marketingValues
+    .map(({ value, wrap }) => (wrap && value ? `[${value}]` : value))
+    .join('-');
 
-  return marketingStringValues.map(({ value }) => value).join('-');
+export const getAffiliateMarketingString = href => {
+  const { query } = new Url(href, true);
+  return buildMarketingString([
+    {
+      description: ' affiliate campaign prefix',
+      value: 'al',
+      wrap: false,
+    },
+    {
+      description: 'at_campaign field',
+      value: getMarketingUrlParam(query, 'at_campaign'),
+      wrap: false,
+    },
+    {
+      description: 'at_type field',
+      value: getMarketingUrlParam(query, 'at_type'),
+      wrap: true,
+    },
+    {
+      description: 'at_identifier field',
+      value: getMarketingUrlParam(query, 'at_identifier'),
+      wrap: true,
+    },
+    {
+      description: 'at_format field',
+      value: getMarketingUrlParam(query, 'at_format'),
+      wrap: true,
+    },
+    {
+      description: 'at_creation field',
+      value: getMarketingUrlParam(query, 'at_creation'),
+      wrap: true,
+    },
+    {
+      description: 'at_variant field',
+      value: getMarketingUrlParam(query, 'at_variant'),
+      wrap: true,
+    },
+  ]);
 };
 
 export const getSLMarketingString = href => {
-  const marketingStringValues = [
+  const { query } = new Url(href, true);
+  return buildMarketingString([
     {
-      description: 'A',
-      value: 'A',
+      description: 'sponsored links campaign prefix',
+      value: 'SEC',
+      wrap: false,
     },
     {
-      description: 'B',
-      value: 'B',
+      description: 'at_campaign field',
+      value: getMarketingUrlParam(query, 'at_campaign'),
+      wrap: false,
     },
     {
-      description: 'C',
-      value: 'C',
+      description: 'at_platform field',
+      value: getMarketingUrlParam(query, 'at_platform'),
+      wrap: true,
     },
     {
-      description: 'D',
-      value: 'D',
+      description: 'at_creation field',
+      value: getMarketingUrlParam(query, 'at_creation'),
+      wrap: true,
     },
     {
-      description: 'E',
-      value: '',
+      description: 'at_variant field',
+      value: getMarketingUrlParam(query, 'at_variant'),
+      wrap: true,
     },
     {
-      description: 'F',
-      value: 'F',
+      description: 'at_network field',
+      value: {
+        search: 'F=S',
+        content: 'F=C',
+      }[getMarketingUrlParam(query, 'at_network')],
+      wrap: false,
     },
     {
-      description: 'G',
-      value: '',
+      description: 'at_term field',
+      value: getMarketingUrlParam(query, 'at_term'),
+      wrap: true,
     },
-  ];
-
-  return marketingStringValues.map(({ value }) => value).join('-');
+  ]);
 };
 
 export const getEmailMarketingString = href => {
-  const marketingStringValues = [
-    {
-      description: 'A',
-      value: 'A',
-    },
-    {
-      description: 'B',
-      value: 'B',
-    },
-    {
-      description: 'C',
-      value: 'C',
-    },
-    {
-      description: 'D',
-      value: 'D',
-    },
-    {
-      description: 'E',
-      value: '',
-    },
-    {
-      description: 'F',
-      value: 'F',
-    },
-    {
-      description: 'G',
-      value: '',
-    },
-  ];
+  const { query } = new Url(href, true);
+  const hasRecipientFields =
+    getMarketingUrlParam(query, 'at_recipient_id') &&
+    getMarketingUrlParam(query, 'at_recipient_list');
 
-  return marketingStringValues.map(({ value }) => value).join('-');
+  return buildMarketingString([
+    {
+      description:
+        'email campaign prefix depending on value of at_emailtype param',
+      value: {
+        acquisition: 'EREC',
+        retention: 'EPR',
+        promotion: 'ES',
+      }[getMarketingUrlParam(query, 'at_emailtype')],
+      wrap: false,
+    },
+    {
+      description: 'at_campaign field',
+      value: getMarketingUrlParam(query, 'at_campaign'),
+      wrap: false,
+    },
+    {
+      description: 'at_creation field',
+      value: getMarketingUrlParam(query, 'at_creation'),
+      wrap: true,
+    },
+    {
+      description: 'at_send_date field',
+      value: getMarketingUrlParam(query, 'at_send_date'),
+      wrap: false,
+    },
+    {
+      description: 'at_link field',
+      value: getMarketingUrlParam(query, 'at_link'),
+      wrap: true,
+    },
+    {
+      description: 'at_recipient_id + @ + at_recipient_list field',
+      value: hasRecipientFields
+        ? `${getMarketingUrlParam(
+            query,
+            'at_recipient_id',
+          )}@${getMarketingUrlParam(query, 'at_recipient_list')}`
+        : '',
+      wrap: false,
+    },
+  ]);
 };
 
 export const getDisplayMarketingString = href => {
-  const marketingStringValues = [
+  const { query } = new Url(href, true);
+  return buildMarketingString([
     {
-      description: 'A',
-      value: 'A',
+      description: 'display campaign prefix',
+      value: 'AD',
+      wrap: false,
     },
     {
-      description: 'B',
-      value: 'B',
+      description: 'at_campaign field',
+      value: getMarketingUrlParam(query, 'at_campaign'),
+      wrap: false,
     },
     {
-      description: 'C',
-      value: 'C',
+      description: 'at_creation field',
+      value: getMarketingUrlParam(query, 'at_creation'),
+      wrap: true,
     },
     {
-      description: 'D',
-      value: 'D',
+      description: 'at_variant field',
+      value: getMarketingUrlParam(query, 'at_variant'),
+      wrap: true,
     },
     {
-      description: 'E',
+      description: 'at_format field',
+      value: getMarketingUrlParam(query, 'at_format'),
+      wrap: true,
+    },
+    {
+      description: 'blank value (-)',
       value: '',
+      wrap: false,
     },
     {
-      description: 'F',
-      value: 'F',
+      description: 'at_general_placement field',
+      value: getMarketingUrlParam(query, 'at_general_placement'),
+      wrap: true,
     },
     {
-      description: 'G',
-      value: '',
+      description: 'at_detail_placement field',
+      value: getMarketingUrlParam(query, 'at_detail_placement'),
+      wrap: true,
     },
-  ];
-
-  return marketingStringValues.map(({ value }) => value).join('-');
+  ]);
 };
 
 export const getCustomMarketingString = href => {
-  const marketingStringValues = [
+  const { query } = new Url(href, true);
+  return buildMarketingString([
     {
-      description: 'A',
-      value: 'A',
+      description: 'custom campaign prefix',
+      value: 'CS',
+      wrap: false,
     },
     {
-      description: 'B',
-      value: 'B',
+      description: 'at_campaign field',
+      value: getMarketingUrlParam(query, 'at_campaign'),
+      wrap: false,
     },
     {
-      description: 'C',
-      value: 'C',
+      description: 'at_custom_1 field',
+      value: getMarketingUrlParam(query, 'at_custom_1'),
+      wrap: false,
     },
     {
-      description: 'D',
-      value: 'D',
+      description: 'at_custom_2 field',
+      value: getMarketingUrlParam(query, 'at_custom_2'),
+      wrap: false,
     },
     {
-      description: 'E',
-      value: '',
+      description: 'at_custom_3 field',
+      value: getMarketingUrlParam(query, 'at_custom_3'),
+      wrap: false,
     },
     {
-      description: 'F',
-      value: 'F',
+      description: 'at_custom_4 field',
+      value: getMarketingUrlParam(query, 'at_custom_4'),
+      wrap: false,
     },
-    {
-      description: 'G',
-      value: '',
-    },
-  ];
-
-  return marketingStringValues.map(({ value }) => value).join('-');
+  ]);
 };
 
 const parameteriseHash = hash => new Url(hash.replace('#', '?'), true).query;
@@ -519,12 +566,13 @@ export const getXtorMarketingString = href => {
   const field = 'xtor';
 
   const marketingString =
-    getUriField(query, field) || getUriField(parameteriseHash(hash), field);
+    getMarketingUrlParam(query, field) ||
+    getMarketingUrlParam(parameteriseHash(hash), field);
 
   return marketingString || null;
 };
 
-export const getATIMarketingString = href => {
+export const getATIMarketingString = (href, campaignType = 'custom123') => {
   const supportedCampaignMappings = {
     affiliate: () => getAffiliateMarketingString(href),
     sl: () => getSLMarketingString(href),
@@ -533,7 +581,6 @@ export const getATIMarketingString = href => {
     custom: () => getEmailMarketingString(href),
     xtor: () => getEmailMarketingString(href),
   };
-  const campaignType = 'custom123'; // getCampaignType(href);
 
   const IsSupportedCampaign = () => campaignMapping =>
     campaignType.startsWith(campaignMapping);
