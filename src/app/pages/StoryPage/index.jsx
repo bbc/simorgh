@@ -51,7 +51,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     mostRead: { header },
     script,
     service,
-    officialServiceLang,
+    serviceLang,
     lang,
   } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -288,9 +288,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           dir={dir}
           columns={gridColsSecondary}
           parentColumns={gridColumns}
-          // 'officialServiceLang' value is only available in the Ukrainian config as the ukraine_in_russian pages have
-          // Ukrainian text for the secondary column but Russian text for the main element.
-          lang={officialServiceLang}
+          // `serviceLang` is defined when the language the page is written in is different to the
+          // language of the service. `serviceLang` is used to override the page language.
+          lang={serviceLang}
         >
           {topStoriesInitialData && (
             <ResponsiveComponentWrapper>

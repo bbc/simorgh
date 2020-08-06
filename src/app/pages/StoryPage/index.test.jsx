@@ -202,7 +202,7 @@ describe('Story Page', () => {
     await matchSnapshotAsync(<Page pageData={pageData} service="pidgin" />);
   });
 
-  it('should render secondary column with lang attribute of `officialServiceLang` when a language override is present', async () => {
+  it('should render secondary column with lang attribute of `serviceLang` when a language override is present', async () => {
     fetchMock.mock(
       'http://localhost/some-cps-sty-path.json',
       ukrainianInRussianPageData,
