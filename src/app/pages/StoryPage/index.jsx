@@ -85,11 +85,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const recommendationsInitialData = path(['recommendations'], pageData);
-  // 'officialServiceLang' value is only available in the Ukrainian config as the ukraine_in_russian pages have
-  // Ukrainian text for the secondary column but Russian text for the main element.
-  const secondaryColumnLangAttribute = officialServiceLang && {
-    lang: officialServiceLang,
-  };
 
   const gridColumns = {
     group0: 8,
@@ -293,7 +288,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           dir={dir}
           columns={gridColsSecondary}
           parentColumns={gridColumns}
-          {...secondaryColumnLangAttribute}
+          // 'officialServiceLang' value is only available in the Ukrainian config as the ukraine_in_russian pages have
+          // Ukrainian text for the secondary column but Russian text for the main element.
+          lang={officialServiceLang}
         >
           {topStoriesInitialData && (
             <ResponsiveComponentWrapper>

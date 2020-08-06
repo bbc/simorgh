@@ -34,10 +34,8 @@ const HeaderContainer = () => {
   // 'officialServiceLang' value is only available in the Ukrainian config as our ukraine_in_russian pages will have
   // Ukrainian text for the header and footer but Russian text for the main element.
   // However, the skip to content link will also be in Russian, so we need to pass the `ru-UA` lang code to it.
-  const headerLangAttribute = officialServiceLang && {
-    lang: officialServiceLang,
-  };
-  const skipLinkLangAttribute = headerLangAttribute && { lang };
+
+  const skipLinkLangAttribute = officialServiceLang && { lang };
 
   const skipLink = !isOperaMini && (
     <SkipLink
@@ -52,7 +50,7 @@ const HeaderContainer = () => {
   );
 
   return (
-    <header role="banner" {...headerLangAttribute}>
+    <header role="banner" lang={officialServiceLang}>
       <ConsentBanner />
       <BrandContainer
         borderBottom={borderBottom}
