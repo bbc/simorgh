@@ -54,6 +54,8 @@ export const service = {
     frontPageTitle: 'Glavna stranica',
     lang: `sr-latn`,
     locale: `sr-latn`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'sr-Latn',
     noBylinesPolicy:
       'https://www.bbc.com/serbian/lat/institutional-50173730#authorexpertise',
     publishingPrinciples:
@@ -257,18 +259,18 @@ export const service = {
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
-          text: 'Warning: Third party content may contain adverts',
+          textPrefixVisuallyHidden: 'Potpis ispod videa, ',
+          text: 'Upozorenje: Sadržaj drugih sajtova može da sadrži i reklame',
         },
         fallback: {
-          text: 'Content is not available',
-          linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
+          text: 'Sadržaj nije dostupan',
+          linkText: 'Pogledajte više na %provider_name%',
+          linkTextSuffixVisuallyHidden: ', spoljna stranica',
           warningText: 'BBC nije odgovoran za sadržaj drugih sajtova.',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: 'Preskočite sadržaj sa %provider_name%',
+          endTextVisuallyHidden: 'Kraj sadržaja sa %provider_name%',
         },
       },
       topStoriesTitle: 'Najvažnije',
@@ -288,6 +290,8 @@ export const service = {
     frontPageTitle: 'Главна страница',
     lang: `sr-cyrl`,
     locale: `sr-cyrl`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'sr-Cyrl',
     noBylinesPolicy:
       'https://www.bbc.com/serbian/cyr/institutional-50173730#authorexpertise',
     publishingPrinciples:

@@ -1,6 +1,5 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import { BrowserRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -20,7 +19,7 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
 });
 
 const MostReadPageWithContext = () => (
-  <ToggleContextProvider service="pidgin" origin="https://www.test.bbc.com">
+  <ToggleContextProvider>
     <ServiceContextProvider service="pidgin">
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.com"

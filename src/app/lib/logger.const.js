@@ -27,6 +27,7 @@ const logCodes = {
   RADIO_MISSING_FIELD: 'radio_missing_field',
   EPISODE_EXPIRED: 'episode_expired',
   EPISODE_NOT_YET_AVAILABLE: 'episode_not_yet_available',
+  UNRECOGNISED_EPISODE_AVAILABILITY: 'unrecognised_episode_availability',
 
   // Translations
   NO_TRANSLATION_FOUND: 'no_translation_found',
@@ -45,6 +46,11 @@ const logCodes = {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED: 'ssr_request_received',
   SERVER_SIDE_REQUEST_FAILED: 'ssr_request_failed',
   SERVICE_WORKER_SENDFILE_ERROR: 'server_sendfile_error_sw',
+
+  // Config
+  CONFIG_REQUEST_RECEIVED: 'config_request_received',
+  CONFIG_FETCH_ERROR: 'config_fetch_error',
+  CONFIG_ERROR: 'config_error',
 
   // Block Types
   UNSUPPORTED_BLOCK_TYPE: 'unsupported_block_type',

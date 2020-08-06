@@ -1,0 +1,367 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP Sinhala Live Radio Page A11y I can see the skip to content link 1`] = `"අන්තර්ගතයට පිවිසෙන්න"`;
+
+exports[`AMP Sinhala Live Radio Page AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+  "policy": Object {
+    "default": Object {
+      "timeout": Object {
+        "fallbackAction": "reject",
+        "seconds": 0,
+      },
+      "waitFor": Object {
+        "user-consent": Array [],
+      },
+    },
+  },
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page Analytics ATI 1`] = `
+Object {
+  "requests": Object {
+    "base": "https://logws1363.ati-host.net?",
+    "pageview": "\${base}s=598343&s2=82&p=sinhala.bbc_sinhala_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares:ws_media:live:bbc_sinhala_radio]&x2=[amp]&x3=[news-sinhala]&x4=[si]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[බීබීසී+සිංහල+සංදේශය+-+BBC+News+සිංහල]&ref=\${documentReferrer}",
+  },
+  "transport": Object {
+    "beacon": false,
+    "image": true,
+    "xhrpost": false,
+  },
+  "triggers": Object {
+    "trackPageview": Object {
+      "on": "visible",
+      "request": "pageview",
+    },
+  },
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page Analytics chartbeat 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "player-live",
+    "domain": "test.bbc.co.uk",
+    "sections": "Sinhala, Sinhala - Radio",
+    "title": "බීබීසී සිංහල සංදේශය - BBC News සිංහල",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page Analytics comscore 1`] = `
+Object {
+  "extraUrlParams": Object {
+    "comscorekw": "amp",
+  },
+  "vars": Object {
+    "c2": "17986528",
+  },
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/sinhala"`;
+
+exports[`AMP Sinhala Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ. බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න."`;
+
+exports[`AMP Sinhala Live Radio Page Footer Link should match text and url 1`] = `
+Object {
+  "text": "BBC News, සිංහල",
+  "url": "/sinhala",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page Footer Link should match text and url 2`] = `
+Object {
+  "text": "ඔබට බීබීසී විශ්වාස කළ හැක්කේ ඇයි",
+  "url": "https://www.bbc.com/sinhala/institutional-50288553",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page Footer Link should match text and url 3`] = `
+Object {
+  "text": "භාවිතයේ කොන්දේසි",
+  "url": "https://www.bbc.com/sinhala/institutional-36017568",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page Footer Link should match text and url 4`] = `
+Object {
+  "text": "පෞද්ගලිකත්ව ප්‍රතිපත්තිය",
+  "url": "https://www.bbc.com/sinhala/institutional-36019591",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page Footer Link should match text and url 5`] = `
+Object {
+  "text": "කුකීස්",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page Footer Link should match text and url 6`] = `
+Object {
+  "text": "බීබීසී අමතන්න",
+  "url": "https://www.bbc.com/sinhala/institutional-36019593",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page Footer Link should match text and url 7`] = `
+Object {
+  "text": "AdChoices / Do Not Sell My Info",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page Footer Link should match text and url 8`] = `
+Object {
+  "text": "බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න.",
+  "url": "https://www.bbc.co.uk/help/web/links/",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page Header I can see the branding 1`] = `"BBC News, සිංහල"`;
+
+exports[`AMP Sinhala Live Radio Page Header Navigation link should match text and url 1`] = `
+Object {
+  "text": "මුල් පිටුව",
+  "url": "/sinhala",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page Header Navigation link should match text and url 2`] = `
+Object {
+  "text": "ශ්‍රී ලංකා",
+  "url": "/sinhala/sri_lanka",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page Header Navigation link should match text and url 3`] = `
+Object {
+  "text": "ලෝකය",
+  "url": "/sinhala/world",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page Header Navigation link should match text and url 4`] = `
+Object {
+  "text": "විශේෂාංග",
+  "url": "/sinhala/51727586",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page Main heading should match text 1`] = `"බීබීසී සිංහල සංදේශය"`;
+
+exports[`AMP Sinhala Live Radio Page Media Player a11y assistive technology can read the media player title 1`] = `"හඬ වාදකය"`;
+
+exports[`AMP Sinhala Live Radio Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_sinhala_radio/liveradio/si/amp?morph_env=live"`;
+
+exports[`AMP Sinhala Live Radio Page SEO Apple Touch Icon should match attributes 1`] = `
+Object {
+  "sizes": null,
+  "url": "http://localhost:7080/sinhala/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page SEO Apple Touch Icon should match attributes 2`] = `
+Object {
+  "sizes": "72x72",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page SEO Apple Touch Icon should match attributes 3`] = `
+Object {
+  "sizes": "96x96",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page SEO Apple Touch Icon should match attributes 4`] = `
+Object {
+  "sizes": "128x128",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page SEO Apple Touch Icon should match attributes 5`] = `
+Object {
+  "sizes": "144x144",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page SEO Apple Touch Icon should match attributes 6`] = `
+Object {
+  "sizes": "152x152",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page SEO Apple Touch Icon should match attributes 7`] = `
+Object {
+  "sizes": "180x180",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page SEO Apple Touch Icon should match attributes 8`] = `
+Object {
+  "sizes": "192x192",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page SEO Apple Touch Icon should match attributes 9`] = `
+Object {
+  "sizes": "384x384",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page SEO Apple Touch Icon should match attributes 10`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page SEO Canonical link 1`] = `"http://localhost:7080/sinhala/bbc_sinhala_radio/liveradio"`;
+
+exports[`AMP Sinhala Live Radio Page SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`AMP Sinhala Live Radio Page SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP Sinhala Live Radio Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP Sinhala Live Radio Page SEO Heading level 1 1`] = `"බීබීසී සිංහල සංදේශය"`;
+
+exports[`AMP Sinhala Live Radio Page SEO Lang attribute 1`] = `"si"`;
+
+exports[`AMP Sinhala Live Radio Page SEO Linked data should match text 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@graph": Array [
+    Object {
+      "@type": "RadioChannel",
+      "image": Object {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png",
+        "width": 1024,
+      },
+      "mainEntityOfPage": Object {
+        "@id": "http://localhost:7080/sinhala/bbc_sinhala_radio/liveradio",
+        "@type": "WebPage",
+        "name": "බීබීසී සිංහල සංදේශය",
+      },
+      "url": "http://localhost:7080/sinhala/bbc_sinhala_radio/liveradio",
+    },
+  ],
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page SEO OG description 1`] = `"බීබීසී සිංහල ඔස්සේ ශ්‍රී ලාංකීය, දකුණු ආසියාතික සහ ජාත්‍යන්තර පුවත්, විශ්ලේෂණ සහ ක්‍රීඩා පුවත්"`;
+
+exports[`AMP Sinhala Live Radio Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png"`;
+
+exports[`AMP Sinhala Live Radio Page SEO OG image alt 1`] = `"BBC News සිංහල"`;
+
+exports[`AMP Sinhala Live Radio Page SEO OG locale 1`] = `"si-LK"`;
+
+exports[`AMP Sinhala Live Radio Page SEO OG site name 1`] = `"BBC News සිංහල"`;
+
+exports[`AMP Sinhala Live Radio Page SEO OG title 1`] = `"බීබීසී සිංහල සංදේශය - BBC News සිංහල"`;
+
+exports[`AMP Sinhala Live Radio Page SEO OG type 1`] = `"website"`;
+
+exports[`AMP Sinhala Live Radio Page SEO OG url 1`] = `"http://localhost:7080/sinhala/bbc_sinhala_radio/liveradio"`;
+
+exports[`AMP Sinhala Live Radio Page SEO Page title 1`] = `"බීබීසී සිංහල සංදේශය - BBC News සිංහල"`;
+
+exports[`AMP Sinhala Live Radio Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP Sinhala Live Radio Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP Sinhala Live Radio Page SEO Twitter creator 1`] = `"@bbcsinhala"`;
+
+exports[`AMP Sinhala Live Radio Page SEO Twitter description 1`] = `"බීබීසී සිංහල ඔස්සේ ශ්‍රී ලාංකීය, දකුණු ආසියාතික සහ ජාත්‍යන්තර පුවත්, විශ්ලේෂණ සහ ක්‍රීඩා පුවත්"`;
+
+exports[`AMP Sinhala Live Radio Page SEO Twitter image alt 1`] = `"BBC News සිංහල"`;
+
+exports[`AMP Sinhala Live Radio Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png"`;
+
+exports[`AMP Sinhala Live Radio Page SEO Twitter site 1`] = `"@bbcsinhala"`;
+
+exports[`AMP Sinhala Live Radio Page SEO Twitter title 1`] = `"බීබීසී සිංහල සංදේශය - BBC News සිංහල"`;
+
+exports[`AMP Sinhala Live Radio Page Summary should match text 1`] = `"බීබීසී සිංහල ඔස්සේ ශ්‍රී ලාංකීය, දකුණු ආසියාතික සහ ජාත්‍යන්තර පුවත්, විශ්ලේෂණ සහ ක්‍රීඩා පුවත්"`;

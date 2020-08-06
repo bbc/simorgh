@@ -5,6 +5,11 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
   <head>
     <script
       src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      type="module"
+    />
+    <script
+      nomodule="nomodule"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
     />
   </head>
   <body>
@@ -14,14 +19,18 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
 }
 
 <div>
-      <div
+      <section
+        aria-hidden="true"
+        aria-label="Advertisement 2"
         class="c0"
+        data-e2e="advertisement"
+        role="region"
       >
         <div
           class="dotcom-ad"
           id="dotcom-mpu"
         />
-      </div>
+      </section>
     </div>
   </body>
 </html>
@@ -43,18 +52,27 @@ exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderb
   <head>
     <script
       src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      type="module"
+    />
+    <script
+      nomodule="nomodule"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
     />
   </head>
   <body>
     <div>
-      <div
+      <section
+        aria-hidden="true"
+        aria-label="Advertisement"
         class="c0"
+        data-e2e="advertisement"
+        role="region"
       >
         <div
           class="dotcom-ad"
           id="dotcom-leaderboard"
         />
-      </div>
+      </section>
     </div>
   </body>
 </html>

@@ -2,7 +2,6 @@ import React from 'react';
 import fetchMock from 'fetch-mock';
 import { render, act } from '@testing-library/react';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
-import '@testing-library/jest-dom/extend-expect';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 import CanonicalRadioSchedule from '.';

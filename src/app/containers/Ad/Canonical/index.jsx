@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { oneOf } from 'prop-types';
 import styled, { css } from 'styled-components';
 import { C_LUNAR_LIGHT } from '@bbc/psammead-styles/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import pathOr from 'ramda/src/pathOr';
+import { ServiceContext } from '#contexts/ServiceContext';
 import isLive from '#lib/utilities/isLive';
+import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 
 const LEADERBOARD_HEIGHT = '5.5rem';
 const LEADERBOARD_HEIGHT_GROUP_4_5 = '9rem';
@@ -23,20 +26,33 @@ const mpuStyles = css`
   min-height: ${MPU_HEIGHT};
 `;
 
-const AdContainer = styled.div`
+const AdContainer = styled.section`
   background-color: ${C_LUNAR_LIGHT};
   ${({ slotType }) => (slotType === 'mpu' ? mpuStyles : leaderboardStyles)}
 `;
 
-export const getBootsrapSrc = queryString => {
+export const getBootstrapSrc = (queryString, useLegacy = false) => {
+  const adsTestScript =
+    'https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js';
+  const adsLegacyTestScript =
+    'https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js';
+  const adsLiveScript =
+    'https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap.js';
+  const adsLegacyLiveScript =
+    'https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap-legacy.js';
   const useLiveSrc = isLive() || queryString.includes('ads-js-env=live');
-  const params = useLiveSrc ? '' : 'test/';
-  return `https://gn-web-assets.api.bbc.com/ngas/${params}dotcom-bootstrap.js`;
+  if (useLiveSrc) {
+    return useLegacy ? adsLegacyLiveScript : adsLiveScript;
+  }
+  return useLegacy ? adsLegacyTestScript : adsTestScript;
 };
 
 const CanonicalAd = ({ slotType }) => {
   const location = useLocation();
   const queryString = location.search;
+  const { ads, dir } = useContext(ServiceContext);
+  const adsLabel = pathOr('Advertisement', ['advertisementLabel'], ads);
+  const ariaLabel = getAdsAriaLabel(adsLabel, dir, slotType);
 
   useEffect(() => {
     if (window.dotcom) {
@@ -59,9 +75,16 @@ const CanonicalAd = ({ slotType }) => {
       {/* Loading dotcom-bootstrap.js here instead of CanonicalAdBootstrapJs to avoid it loading on live */}
       {/* This can be moved once we allow the script to load on live */}
       <Helmet>
-        <script src={getBootsrapSrc(queryString)} />
+        <script type="module" src={getBootstrapSrc(queryString)} />
+        <script nomodule="nomodule" src={getBootstrapSrc(queryString, true)} />
       </Helmet>
-      <AdContainer slotType={slotType}>
+      <AdContainer
+        slotType={slotType}
+        aria-label={ariaLabel}
+        aria-hidden="true"
+        role="region"
+        data-e2e="advertisement"
+      >
         <div id={`dotcom-${slotType}`} className="dotcom-ad" />
       </AdContainer>
     </>

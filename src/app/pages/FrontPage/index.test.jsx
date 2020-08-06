@@ -24,7 +24,7 @@ const FrontPageWithContext = ({
   ...props
 }) => (
   <BrowserRouter>
-    <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
+    <ToggleContextProvider>
       <RequestContextProvider isAmp={isAmp} {...requestContextData}>
         <ServiceContextProvider service={service}>
           <FrontPage {...props} />
@@ -47,6 +47,7 @@ beforeEach(async () => {
   const response = await getInitialData({
     path: 'some-front-page-path',
     service: 'pidgin',
+    pageType: 'frontPage',
   });
 
   pageData = response.pageData;
