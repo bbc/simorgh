@@ -12,15 +12,17 @@ const getCopyrightText = text => (
 );
 
 const FooterContainer = () => {
-  const { footer, service, officialLang } = useContext(ServiceContext);
+  const { footer, service, officialServiceLang } = useContext(ServiceContext);
 
   if (!footer) {
     return null;
   }
 
-  // 'officialLang' value is only available in the ukrainian config as our ukraine_in_russian pages will have
+  // 'officialServiceLang' value is only available in the ukrainian config as our ukraine_in_russian pages will have
   // ukrainian text for the header and footer but russian text for the main element
-  const footerLangAttribute = officialLang && { lang: officialLang };
+  const footerLangAttribute = officialServiceLang && {
+    lang: officialServiceLang,
+  };
 
   const { externalLink, links, copyrightText, trustProjectLink } = footer;
 

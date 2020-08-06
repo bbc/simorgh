@@ -46,7 +46,7 @@ const contextStub = {
 
 const contextStubWithFooterLang = {
   ...contextStub,
-  officialLang: 'uk',
+  officialServiceLang: 'uk',
 };
 
 const FooterWithContext = stub => (
@@ -116,7 +116,7 @@ describe(`FooterContainer`, () => {
       );
     });
 
-    it('should render footer with lang when officialLang is defined', () => {
+    it('should render footer with lang when officialServiceLang is defined', () => {
       const { container } = render(
         FooterWithContext(contextStubWithFooterLang),
       );
