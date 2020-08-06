@@ -9,6 +9,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import OnDemandRadioPage from '.';
 import pashtoPageData from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
 import koreanPageData from '#data/korean/bbc_korean_radio/w3ct0kn5';
+import koreanPageWithScheduleData from './fixtureData/korean.json';
 import zhongwenPageData from '#data/zhongwen/bbc_cantonese_radio/w172xf3r5x8hw4v';
 import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
 import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttnw';
@@ -16,13 +17,13 @@ import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandRadio/getInitialData';
 
-const Page = ({ pageData, service, isAmp = false, variant }) => (
+const Page = ({ pageData, service, isAmp = false, variant, lang }) => (
   <StaticRouter>
     <ToggleContextProvider
       service={service}
       origin="https://www.test.bbc.co.uk"
     >
-      <ServiceContextProvider service={service} variant={variant}>
+      <ServiceContextProvider service={service} variant={variant} lang={lang}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
           isAmp={isAmp}
@@ -38,7 +39,13 @@ const Page = ({ pageData, service, isAmp = false, variant }) => (
   </StaticRouter>
 );
 
-const renderPage = async ({ pageData, service, isAmp = false, variant }) => {
+const renderPage = async ({
+  pageData,
+  service,
+  isAmp = false,
+  variant,
+  lang = 'ko',
+}) => {
   let result;
   await act(async () => {
     result = await render(
@@ -47,6 +54,7 @@ const renderPage = async ({ pageData, service, isAmp = false, variant }) => {
         service={service}
         isAmp={isAmp}
         variant={variant}
+        lang={lang}
       />,
     );
   });
@@ -399,5 +407,47 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('title');
 
     expect(audioPlayerIframeTitle).toEqual('오디오 플레이어');
+  });
+
+  it('should show the radio schedule for the On Demand radio page on canonical', async () => {
+    await renderPage({
+      pageData: koreanPageWithScheduleData,
+      service: 'korean',
+    });
+
+    const scheduleWrapper = document.querySelector(
+      '[data-e2e="radio-schedule"]',
+    );
+
+    expect(scheduleWrapper).toBeInTheDocument();
+  });
+
+  it('should not show the radio schedule for the On Demand radio page on AMP', async () => {
+    renderPage({
+      pageData: koreanPageWithScheduleData,
+      service: 'korean',
+      lang: 'ko',
+      isAmp: true,
+    });
+
+    const scheduleWrapper = document.querySelector(
+      '[data-e2e="radio-schedule"]',
+    );
+
+    expect(scheduleWrapper).not.toBeInTheDocument();
+  });
+
+  it('should not show the radio schedule for services without schedules', async () => {
+    renderPage({
+      pageData: { ...koreanPageWithScheduleData, radioScheduleData: undefined },
+      service: 'korean',
+      lang: 'ko',
+    });
+
+    const scheduleWrapper = document.querySelector(
+      '[data-e2e="radio-schedule"]',
+    );
+
+    expect(scheduleWrapper).not.toBeInTheDocument();
   });
 });
