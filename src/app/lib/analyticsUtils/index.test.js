@@ -24,6 +24,7 @@ const {
   getEventInfo,
   getComponentInfo,
   getThingAttributes,
+  getXtorMarketingString,
 } = require('./index');
 
 let locServeCookieValue;
@@ -631,7 +632,29 @@ describe('getCustomMarketingString', () => {
 });
 
 describe('getXtorMarketingString', () => {
-  it('should return the value of the xtor field', () => {});
+  it.only('should return the value of the xtor field when it is a hash param', () => {
+    expect(
+      getXtorMarketingString(
+        'https://www.bbc.com/mundo/#at_medium=sl&xtor=AD-3030',
+      ),
+    ).toEqual('AD-3030');
+
+    expect(
+      getXtorMarketingString('https://www.bbc.com/mundo/#xtor=AD-3030'),
+    ).toEqual('AD-3030');
+  });
+  it.only('should return the value of the xtor field when it is a query param', () => {
+    expect(
+      getXtorMarketingString('https://www.bbc.com/mundo?xtor=AD-3030'),
+    ).toEqual('AD-3030');
+  });
+
+  it.only('should return null when xtor query is not available', () => {
+    expect(getXtorMarketingString('https://www.bbc.com/mundo#')).toEqual(null);
+    expect(
+      getXtorMarketingString('https://www.bbc.com/mundo#at_medium'),
+    ).toEqual(null);
+  });
 });
 
 describe('getATIMarketingString', () => {

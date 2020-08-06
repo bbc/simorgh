@@ -475,39 +475,16 @@ export const getCustomMarketingString = href => {
   return marketingStringValues.map(({ value }) => value).join('-');
 };
 
-export const getXtorMarketingString = href => {
-  const marketingStringValues = [
-    {
-      description: 'A',
-      value: 'A',
-    },
-    {
-      description: 'B',
-      value: 'B',
-    },
-    {
-      description: 'C',
-      value: 'C',
-    },
-    {
-      description: 'D',
-      value: 'D',
-    },
-    {
-      description: 'E',
-      value: '',
-    },
-    {
-      description: 'F',
-      value: 'F',
-    },
-    {
-      description: 'G',
-      value: '',
-    },
-  ];
+const parameteriseHash = hash => new Url(hash.replace('#', '?'), true).query;
 
-  return marketingStringValues.map(({ value }) => value).join('-');
+export const getXtorMarketingString = href => {
+  const { query, hash } = new Url(href, true);
+  const field = 'xtor';
+
+  const marketingString =
+    getUriField(query, field) || getUriField(parameteriseHash(hash), field);
+
+  return marketingString || null;
 };
 
 export const getATIMarketingString = href => {
