@@ -203,6 +203,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: false,
       header: 'রেডিও অনুষ্ঠান',
       durationLabel: 'স্থিতিকাল %duration%',
