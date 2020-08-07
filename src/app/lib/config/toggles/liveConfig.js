@@ -29,7 +29,7 @@ export default {
       '(afrique|arabic|hausa|indonesia|korean|pashto|persian|somali|swahili|urdu)',
   },
   onDemandRadioSchedule: {
-    enabled: true,
+    enabled: false,
   },
   logMediaPlayerStatus: {
     enabled: false,

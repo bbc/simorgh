@@ -31,6 +31,7 @@ import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import { EPISODE_STATUS } from '#lib/utilities/episodeAvailability';
+import useToggle from '#hooks/useToggle';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
@@ -148,6 +149,9 @@ const OnDemandRadioPage = ({ pageData }) => {
   );
 
   const radioScheduleData = path(['radioScheduleData'], pageData);
+  const { enabled: radioScheduleIsEnabled } = useToggle(
+    'onDemandRadioSchedule',
+  );
 
   return (
     <>
@@ -231,7 +235,7 @@ const OnDemandRadioPage = ({ pageData }) => {
           />
         </Grid>
       </StyledGelPageGrid>
-      {radioScheduleData.length && (
+      {radioScheduleIsEnabled && radioScheduleData.length && (
         <RadioScheduleContainer initialData={radioScheduleData} />
       )}
     </>
