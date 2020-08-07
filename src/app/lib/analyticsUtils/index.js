@@ -575,7 +575,9 @@ export const getXtorMarketingString = href => {
   return marketingString || null;
 };
 
-export const getATIMarketingString = (href, campaignType = 'custom123') => {
+export const getATIMarketingString = (href, campaignType) => {
+  if (!campaignType) return null;
+
   const supportedCampaignMappings = {
     affiliate: () => getAffiliateMarketingString(href),
     sl: () => getSLMarketingString(href),

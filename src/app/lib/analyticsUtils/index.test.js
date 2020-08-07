@@ -781,25 +781,21 @@ describe('getXtorMarketingString', () => {
 });
 
 describe('getATIMarketingString', () => {
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
-  describe('should construct ATI marketing string', () => {
-    it('for campaign type of "affiliate"', () => {});
-    it('for campaign type of "sl"', () => {});
-    it('for campaign type of "email"', () => {});
-    it('for campaign type of "display"', () => {});
-    it('for campaign type of "custom"', () => {});
-    it('for campaign type of "xtor"', () => {
-      const href =
-        'https://www.bbc.com/mundo#xtor=AD-3030-[ad_version7]-[without_text]-[468]-[www.bbc.com]-[GT]-[top_page]';
-      expect(getATIMarketingString(href, 'XTOR')).toEqual(
-        'AD-3030-[ad_version7]-[without_text]-[468]-[www.bbc.com]-[GT]-[top_page]',
-      );
-      expect(getXtorMarketingString).toHaveBeenCalled();
-    });
-  });
-  describe('should return null', () => {
-    it('for an unsupported campaign type', () => {});
-  });
+  it.each`
+    campaignType          | href                                                                                                                                                                                         | expectedValue
+    ${'affiliate'}        | ${'https://www.bbc.com/mundo?at_medium=affiliate&at_campaign=73&at_creation=wsmundo&at_format=Link&at_identifier=whatsapp&at_type=partner&at_variant=Editorial'}                             | ${'al-73-[partner]-[whatsapp]-[Link]-[wsmundo]-[Editorial]'}
+    ${'sl'}               | ${'https://www.bbc.com/mundo?at_medium=sl&at_term=article&at_network=search&at_creation=my_adgroup&at_variant=Editorial&at_platform=google&at_campaign=73'}                                  | ${'SEC-73-[google]-[my_adgroup]-[Editorial]-F=S-[article]'}
+    ${'email'}            | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_campaign=56&at_creation=wsmundo&at_send_date=20190401&at_link=cta_button&at_recipient_id=5633&at_recipient_list=200'} | ${'ES-56-[wsmundo]-20190401-[cta_button]-5633@200'}
+    ${'display'}          | ${'https://www.bbc.com/mundo?at_medium=display&at_campaign=56&at_creation=wsmundo&at_variant=Editorial&at_format=Link&at_general_placement=home&at_detail_placement=sidebar'}                | ${'AD-56-[wsmundo]-[Editorial]-[Link]--[home]-[sidebar]'}
+    ${'custom'}           | ${'https://www.bbc.com/mundo?at_medium=custom123&at_campaign=56&at_custom1=var_1&at_custom2=var_2&at_custom3=var_3&at_custom4=var_4'}                                                        | ${'CS123-56-[var_1]-[var_2]-[var_3]-[var_4]'}
+    ${'XTOR'}             | ${'https://www.bbc.com/mundo#xtor=AD-3030-[ad_version7]-[without_text]-[468]-[www.bbc.com]-[GT]-[top_page]'}                                                                                 | ${'AD-3030-[ad_version7]-[without_text]-[468]-[www.bbc.com]-[GT]-[top_page]'}
+    ${'unsupported-type'} | ${'https://www.bbc.com/mundo#at_medium=foo'}                                                                                                                                                 | ${null}
+    ${null}               | ${null}                                                                                                                                                                                      | ${null}
+    ${'XTOR'}             | ${null}                                                                                                                                                                                      | ${null}
+  `(
+    'should return $expectedValue for campaign type of $campaignType when href is $href',
+    ({ href, expectedValue, campaignType }) => {
+      expect(getATIMarketingString(href, campaignType)).toEqual(expectedValue);
+    },
+  );
 });
