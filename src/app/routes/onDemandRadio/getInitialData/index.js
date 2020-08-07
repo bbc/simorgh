@@ -22,7 +22,6 @@ export default async ({ path: pathname, pageType, service }) => {
     const hasRadioSchedule = await _hasRadioSchedule({
       pageType: 'onDemandRadio',
       service,
-      pathname,
     });
     const pageDataPromise = await fetchPageData({
       path: onDemandRadioDataPath,
@@ -34,7 +33,7 @@ export default async ({ path: pathname, pageType, service }) => {
           pageDataPromise,
           service,
           path: pathname,
-          radioService: getRadioService(service),
+          radioService: getRadioService({ service, pathname }),
         })
       : await pageDataPromise;
 

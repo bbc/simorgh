@@ -5,6 +5,9 @@ const RADIO_SERVICE_MAPPINGS = {
   bengali: 'bangla',
 };
 
-export default service => {
+export default ({ service, pathname }) => {
+  if (service === 'persian' && pathname.includes('bbc_persian_radio')) {
+    return 'persian';
+  }
   return RADIO_SERVICE_MAPPINGS[service] || service;
 };
