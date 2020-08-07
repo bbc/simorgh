@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import path from 'ramda/src/path';
 import { shape, string, number, oneOf } from 'prop-types';
 import {
   GEL_SPACING,
@@ -148,7 +147,8 @@ const OnDemandRadioPage = ({ pageData }) => {
     translations,
   );
 
-  const radioScheduleData = path(['radioScheduleData'], pageData);
+  const radioScheduleData = pathOr([], ['radioScheduleData'], pageData);
+  const hasRadioScheduleData = radioScheduleData.length;
   const { enabled: radioScheduleIsEnabled } = useToggle(
     'onDemandRadioSchedule',
   );
@@ -235,7 +235,7 @@ const OnDemandRadioPage = ({ pageData }) => {
           />
         </Grid>
       </StyledGelPageGrid>
-      {radioScheduleIsEnabled && radioScheduleData.length && (
+      {radioScheduleIsEnabled && hasRadioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />
       )}
     </>

@@ -82,7 +82,7 @@ export default async ({ path: pathname, pageType, service }) => {
           get(['promo', 'media', 'imageUrl'], LOG_LEVELS.INFO),
         ),
         episodeAvailability: getEpisodeAvailability(json),
-        radioScheduleData: getRadioScheduleData(json) || [],
+        radioScheduleData: getRadioScheduleData(json),
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
