@@ -201,6 +201,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Interactivity',
       frequenciesPageUrl: '/pashto/institutional/2012/03/000001_frequencies',
