@@ -334,10 +334,10 @@ export const getCampaignType = () => {
   return null;
 };
 
-export const getMarketingUrlParam = (query, field) =>
+const getMarketingUrlParam = (query, field) =>
   Object.prototype.hasOwnProperty.call(query, field) ? query[field] : '';
 
-export const buildMarketingString = marketingValues =>
+const buildMarketingString = marketingValues =>
   marketingValues
     .map(({ value, wrap }) => (wrap && value ? `[${value}]` : value))
     .join('-');
