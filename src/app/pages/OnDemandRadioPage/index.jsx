@@ -148,7 +148,7 @@ const OnDemandRadioPage = ({ pageData }) => {
   );
 
   const radioScheduleData = pathOr([], ['radioScheduleData'], pageData);
-  const hasRadioScheduleData = radioScheduleData.length;
+  const hasRadioScheduleData = Boolean(radioScheduleData.length);
   const { enabled: radioScheduleIsEnabled } = useToggle(
     'onDemandRadioSchedule',
   );
