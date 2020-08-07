@@ -1,6 +1,6 @@
 const SUPPORTED_MEDIUM_CAMPAIGN_TYPES = [
   'affiliate',
-  's1',
+  'sl',
   'email',
   'display',
   'custom',

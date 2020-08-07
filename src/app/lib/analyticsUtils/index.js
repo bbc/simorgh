@@ -528,7 +528,10 @@ export const getCustomMarketingString = href => {
   return buildMarketingString([
     {
       description: 'custom campaign prefix',
-      value: 'CS',
+      value: `CS${getMarketingUrlParam(query, 'at_medium').replace(
+        'custom',
+        '',
+      )}`,
       wrap: false,
     },
     {
@@ -537,23 +540,23 @@ export const getCustomMarketingString = href => {
       wrap: false,
     },
     {
-      description: 'at_custom_1 field',
-      value: getMarketingUrlParam(query, 'at_custom_1'),
+      description: 'at_custom1 field',
+      value: getMarketingUrlParam(query, 'at_custom1'),
       wrap: true,
     },
     {
-      description: 'at_custom_2 field',
-      value: getMarketingUrlParam(query, 'at_custom_2'),
+      description: 'at_custom2 field',
+      value: getMarketingUrlParam(query, 'at_custom2'),
       wrap: true,
     },
     {
       description: 'at_custom_3 field',
-      value: getMarketingUrlParam(query, 'at_custom_3'),
+      value: getMarketingUrlParam(query, 'at_custom3'),
       wrap: true,
     },
     {
       description: 'at_custom_4 field',
-      value: getMarketingUrlParam(query, 'at_custom_4'),
+      value: getMarketingUrlParam(query, 'at_custom4'),
       wrap: true,
     },
   ]);
@@ -577,9 +580,9 @@ export const getATIMarketingString = (href, campaignType = 'custom123') => {
     affiliate: () => getAffiliateMarketingString(href),
     sl: () => getSLMarketingString(href),
     email: () => getEmailMarketingString(href),
-    display: () => getEmailMarketingString(href),
-    custom: () => getEmailMarketingString(href),
-    xtor: () => getEmailMarketingString(href),
+    display: () => getDisplayMarketingString(href),
+    custom: () => getCustomMarketingString(href),
+    XTOR: () => getXtorMarketingString(href),
   };
 
   const IsSupportedCampaign = () => campaignMapping =>
@@ -589,7 +592,9 @@ export const getATIMarketingString = (href, campaignType = 'custom123') => {
     IsSupportedCampaign(campaignType),
   );
 
-  return supportedCampaignMappings[selectedCampaignType]() || null;
+  return supportedCampaignMappings[selectedCampaignType]
+    ? supportedCampaignMappings[selectedCampaignType]()
+    : null;
 };
 
 export const LIBRARY_VERSION = 'simorgh';
