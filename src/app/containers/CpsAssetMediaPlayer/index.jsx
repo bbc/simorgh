@@ -4,6 +4,7 @@ import { string, bool } from 'prop-types';
 import styled from 'styled-components';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
@@ -13,22 +14,26 @@ import {
 } from '@bbc/gel-foundations/spacings';
 
 import MediaPlayerContainer from '../MediaPlayer';
-import { GridItemConstrainedLarge } from '#lib/styledGrid';
+import { GridItemConstrainedLargeNoMargin } from '#lib/styledGrid';
 import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 
-const Wrapper = styled(GridItemConstrainedLarge)`
+const Wrapper = styled(GridItemConstrainedLargeNoMargin)`
   margin-top: ${GEL_SPACING};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_DBL};
   }
 
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    padding: 0 ${GEL_SPACING_DBL};
+  }
+
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-top: ${GEL_SPACING};
+    padding: ${GEL_SPACING} 0 0;
     margin-top: ${GEL_SPACING_QUAD};
   }
 

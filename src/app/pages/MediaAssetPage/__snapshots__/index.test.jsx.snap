@@ -440,27 +440,21 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 }
 
-@media (max-width:25rem) {
-  .c2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
 @media (min-width:25rem) {
   .c2 {
     margin-top: 1rem;
   }
 }
 
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:63rem) {
   .c2 {
-    padding-top: 0.5rem;
+    padding: 0.5rem 0 0;
     margin-top: 2rem;
   }
 }
@@ -1213,17 +1207,6 @@ exports[`Media Asset Page should render component 1`] = `
   padding: 0.5rem 0.25rem;
 }
 
-.c46 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
 .c47 {
   position: static;
   color: #222222;
@@ -1354,6 +1337,17 @@ exports[`Media Asset Page should render component 1`] = `
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+.c46 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -1870,20 +1864,6 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c46 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c46 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c49 {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -1929,27 +1909,21 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-@media (max-width:25rem) {
-  .c2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
 @media (min-width:25rem) {
   .c2 {
     margin-top: 1rem;
   }
 }
 
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:63rem) {
   .c2 {
-    padding-top: 0.5rem;
+    padding: 0.5rem 0 0;
     margin-top: 2rem;
   }
 }
@@ -2045,6 +2019,20 @@ exports[`Media Asset Page should render component 1`] = `
 @media (min-width:63rem) {
   .c12 {
     padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c46 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c46 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 

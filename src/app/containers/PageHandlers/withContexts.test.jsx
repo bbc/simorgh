@@ -49,6 +49,11 @@ describe('withContexts HOC', () => {
     pathname: '/pathname',
     status: 200,
     canAdvertise: true,
+    toggles: {
+      testToggle: {
+        enabled: false,
+      },
+    },
   };
 
   shouldMatchSnapshot(
@@ -86,6 +91,11 @@ describe('withContexts HOC', () => {
           pathname: '/pathname',
           status: 200,
           canAdvertise: true,
+          toggles: {
+            testToggle: {
+              enabled: false,
+            },
+          },
         };
         render(<ContextsHOC {...fixture} />);
         expect(requestContextSpy).toHaveBeenCalled();
@@ -115,6 +125,11 @@ describe('withContexts HOC', () => {
         variant: 'trad',
         status: 200,
         canAdvertise: true,
+        toggles: {
+          testToggle: {
+            enabled: false,
+          },
+        },
       };
 
       render(<ContextsHOC {...fixture} />);

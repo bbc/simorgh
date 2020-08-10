@@ -315,29 +315,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding: 0.5rem 0.25rem;
 }
 
-.c48 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  display: inline;
-}
-
-.c59 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
 .c49 {
   position: static;
   color: #222222;
@@ -515,6 +492,29 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+.c48 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  display: inline;
+}
+
+.c59 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -1074,34 +1074,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c48 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c48 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c59 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c59 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c60 {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -1161,27 +1133,21 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@media (max-width:25rem) {
-  .c27 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c27 {
-    padding: 0 1rem;
-  }
-}
-
 @media (min-width:25rem) {
   .c27 {
     margin-top: 1rem;
   }
 }
 
+@media (min-width:37.5rem) {
+  .c27 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:63rem) {
   .c27 {
-    padding-top: 0.5rem;
+    padding: 0.5rem 0 0;
     margin-top: 2rem;
   }
 }
@@ -1249,6 +1215,34 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @media (min-width:63rem) {
   .c43 {
     padding: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c48 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c48 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c59 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c59 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -3544,27 +3538,21 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
-@media (max-width:25rem) {
-  .c29 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c29 {
-    padding: 0 1rem;
-  }
-}
-
 @media (min-width:25rem) {
   .c29 {
     margin-top: 1rem;
   }
 }
 
+@media (min-width:37.5rem) {
+  .c29 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:63rem) {
   .c29 {
-    padding-top: 0.5rem;
+    padding: 0.5rem 0 0;
     margin-top: 2rem;
   }
 }
@@ -4512,29 +4500,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding: 0.5rem 0.25rem;
 }
 
-.c50 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  display: inline;
-}
-
-.c57 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
 .c51 {
   position: static;
   color: #222222;
@@ -4703,6 +4668,29 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+.c50 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  display: inline;
+}
+
+.c57 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -5276,34 +5264,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c50 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c50 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c57 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c57 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c58 {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -5349,27 +5309,21 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (max-width:25rem) {
-  .c29 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c29 {
-    padding: 0 1rem;
-  }
-}
-
 @media (min-width:25rem) {
   .c29 {
     margin-top: 1rem;
   }
 }
 
+@media (min-width:37.5rem) {
+  .c29 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:63rem) {
   .c29 {
-    padding-top: 0.5rem;
+    padding: 0.5rem 0 0;
     margin-top: 2rem;
   }
 }
@@ -5443,6 +5397,34 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @media (min-width:63rem) {
   .c45 {
     padding: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c50 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c50 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c57 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c57 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
