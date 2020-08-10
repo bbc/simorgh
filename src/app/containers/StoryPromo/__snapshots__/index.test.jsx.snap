@@ -48,36 +48,6 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c11 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c11:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c11:hover,
-.c11:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c11:visited {
-  color: #6E6E73;
-}
-
 .c14 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -149,6 +119,37 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c11 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c11:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c11:hover,
+.c11:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c11:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -433,36 +434,6 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   padding-bottom: 0.5rem;
 }
 
-.c11 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c11:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c11:hover,
-.c11:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c11:visited {
-  color: #6E6E73;
-}
-
 .c14 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -534,6 +505,37 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c11 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c11:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c11:hover,
+.c11:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c11:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -817,36 +819,6 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
   padding-bottom: 0.5rem;
 }
 
-.c3 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c3:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c3:hover,
-.c3:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c3:visited {
-  color: #6E6E73;
-}
-
 .c6 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -918,6 +890,37 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
+}
+
+.c3 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c3:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c3:hover,
+.c3:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c3:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -1208,36 +1211,6 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c11 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c11:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c11:hover,
-.c11:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c11:visited {
-  color: #6E6E73;
-}
-
 .c14 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -1309,6 +1282,37 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+}
+
+.c11 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c11:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c11:hover,
+.c11:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c11:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -1577,36 +1581,6 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   padding-bottom: 0.5rem;
 }
 
-.c10 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c10:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c10:hover,
-.c10:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c10:visited {
-  color: #6E6E73;
-}
-
 .c13 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -1674,6 +1648,37 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c10 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c10:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c10:hover,
+.c10:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c10:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -1947,36 +1952,6 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   padding-bottom: 0.5rem;
 }
 
-.c10 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c10:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c10:hover,
-.c10:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c10:visited {
-  color: #6E6E73;
-}
-
 .c13 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -2044,6 +2019,37 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c10 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c10:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c10:hover,
+.c10:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c10:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -2316,36 +2322,6 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
   padding-bottom: 0.5rem;
 }
 
-.c3 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c3:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c3:hover,
-.c3:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c3:visited {
-  color: #6E6E73;
-}
-
 .c6 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -2413,6 +2389,37 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
+}
+
+.c3 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c3:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c3:hover,
+.c3:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c3:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -2692,36 +2699,6 @@ exports[`StoryPromo Container should render audio with no duration promoType top
   padding-bottom: 0.5rem;
 }
 
-.c10 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c10:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c10:hover,
-.c10:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c10:visited {
-  color: #6E6E73;
-}
-
 .c13 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -2789,6 +2766,37 @@ exports[`StoryPromo Container should render audio with no duration promoType top
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+}
+
+.c10 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c10:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c10:hover,
+.c10:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c10:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -3037,36 +3045,6 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -3099,6 +3077,37 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -3311,36 +3320,6 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -3373,6 +3352,37 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -3584,36 +3594,6 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
   padding-bottom: 0.5rem;
 }
 
-.c3 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c3:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c3:hover,
-.c3:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c3:visited {
-  color: #6E6E73;
-}
-
 .c5 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -3646,6 +3626,37 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
+}
+
+.c3 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c3:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c3:hover,
+.c3:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c3:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -3864,36 +3875,6 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -3926,6 +3907,37 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -4122,36 +4134,6 @@ exports[`StoryPromo Container should render item without an image correctly for 
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -4184,6 +4166,37 @@ exports[`StoryPromo Container should render item without an image correctly for 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -4387,36 +4400,6 @@ exports[`StoryPromo Container should render item without an image correctly for 
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -4449,6 +4432,37 @@ exports[`StoryPromo Container should render item without an image correctly for 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -4656,36 +4670,6 @@ exports[`StoryPromo Container should render item without an image promoType lead
   padding-bottom: 0.5rem;
 }
 
-.c3 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c3:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c3:hover,
-.c3:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c3:visited {
-  color: #6E6E73;
-}
-
 .c5 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -4718,6 +4702,37 @@ exports[`StoryPromo Container should render item without an image promoType lead
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
+}
+
+.c3 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c3:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c3:hover,
+.c3:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c3:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -4927,36 +4942,6 @@ exports[`StoryPromo Container should render item without an image promoType top 
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -4989,6 +4974,37 @@ exports[`StoryPromo Container should render item without an image promoType top 
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -5176,36 +5192,6 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c8 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
@@ -5237,6 +5223,37 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -5439,36 +5456,6 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c8 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
@@ -5500,6 +5487,37 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -5701,36 +5719,6 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   padding-bottom: 0.5rem;
 }
 
-.c3 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c3:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c3:hover,
-.c3:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c3:visited {
-  color: #6E6E73;
-}
-
 .c4 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
@@ -5762,6 +5750,37 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
+}
+
+.c3 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c3:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c3:hover,
+.c3:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c3:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -5970,36 +5989,6 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c8 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
@@ -6031,6 +6020,37 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -6230,36 +6250,6 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -6376,6 +6366,37 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -6687,36 +6708,6 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c3 {
   position: relative;
   height: 0;
@@ -6739,6 +6730,37 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -6922,36 +6944,6 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c3 {
   position: relative;
   height: 0;
@@ -6974,6 +6966,37 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -7161,36 +7184,6 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
   padding-bottom: 0.5rem;
 }
 
-.c3 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c3:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c3:hover,
-.c3:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c3:visited {
-  color: #6E6E73;
-}
-
 .c7 {
   position: relative;
   height: 0;
@@ -7213,6 +7206,37 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
+}
+
+.c3 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c3:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c3:hover,
+.c3:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c3:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -7402,36 +7426,6 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c3 {
   position: relative;
   height: 0;
@@ -7454,6 +7448,37 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -7621,36 +7646,6 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -7683,6 +7678,37 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -7895,36 +7921,6 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -7957,6 +7953,37 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -8168,36 +8195,6 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
   padding-bottom: 0.5rem;
 }
 
-.c3 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c3:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c3:hover,
-.c3:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c3:visited {
-  color: #6E6E73;
-}
-
 .c5 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -8230,6 +8227,37 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
+}
+
+.c3 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c3:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c3:hover,
+.c3:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c3:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -8448,36 +8476,6 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -8510,6 +8508,37 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -8706,36 +8735,6 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -8768,6 +8767,37 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -8980,36 +9010,6 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -9042,6 +9042,37 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -9253,36 +9284,6 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
   padding-bottom: 0.5rem;
 }
 
-.c3 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c3:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c3:hover,
-.c3:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c3:visited {
-  color: #6E6E73;
-}
-
 .c5 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -9315,6 +9316,37 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
+}
+
+.c3 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c3:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c3:hover,
+.c3:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c3:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -9533,36 +9565,6 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -9595,6 +9597,37 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -9791,36 +9824,6 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -9853,6 +9856,37 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -10065,36 +10099,6 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -10127,6 +10131,37 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -10338,36 +10373,6 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
   padding-bottom: 0.5rem;
 }
 
-.c3 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c3:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c3:hover,
-.c3:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c3:visited {
-  color: #6E6E73;
-}
-
 .c5 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -10400,6 +10405,37 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
+}
+
+.c3 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c3:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c3:hover,
+.c3:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c3:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -10618,36 +10654,6 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
   padding-bottom: 0.5rem;
 }
 
-.c7 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c7:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:visited {
-  color: #6E6E73;
-}
-
 .c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -10680,6 +10686,37 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+}
+
+.c7 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c7:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -10885,36 +10922,6 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c11 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c11:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c11:hover,
-.c11:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c11:visited {
-  color: #6E6E73;
-}
-
 .c14 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -10986,6 +10993,37 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c11 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c11:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c11:hover,
+.c11:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c11:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -11267,36 +11305,6 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   padding-bottom: 0.5rem;
 }
 
-.c11 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c11:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c11:hover,
-.c11:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c11:visited {
-  color: #6E6E73;
-}
-
 .c14 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -11368,6 +11376,37 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c11 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c11:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c11:hover,
+.c11:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c11:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -11648,36 +11687,6 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   padding-bottom: 0.5rem;
 }
 
-.c3 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c3:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c3:hover,
-.c3:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c3:visited {
-  color: #6E6E73;
-}
-
 .c6 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -11749,6 +11758,37 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
+}
+
+.c3 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c3:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c3:hover,
+.c3:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c3:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -12036,36 +12076,6 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c11 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c11:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c11:hover,
-.c11:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c11:visited {
-  color: #6E6E73;
-}
-
 .c14 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -12137,6 +12147,37 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+}
+
+.c11 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c11:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c11:hover,
+.c11:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c11:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {

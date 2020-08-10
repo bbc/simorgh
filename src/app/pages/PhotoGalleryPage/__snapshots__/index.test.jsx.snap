@@ -3163,36 +3163,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   padding: 0.5rem 0.25rem;
 }
 
-.c34 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c34:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c34:hover,
-.c34:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c34:visited {
-  color: #6E6E73;
-}
-
 .c37 {
   color: #222222;
   background-color: #FFFFFF;
@@ -3247,6 +3217,37 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c34 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c34:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c34:hover,
+.c34:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c34:visited {
+  color: #6E6E73;
 }
 
 @media (max-width:37.4375rem) {
@@ -6344,36 +6345,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   padding: 0.5rem 0.25rem;
 }
 
-.c54 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c54:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c54:hover,
-.c54:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c54:visited {
-  color: #6E6E73;
-}
-
 .c35 {
   margin-bottom: 1rem;
 }
@@ -6405,6 +6376,37 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c54 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c54:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c54:hover,
+.c54:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c54:visited {
+  color: #6E6E73;
 }
 
 @media (max-width:37.4375rem) {

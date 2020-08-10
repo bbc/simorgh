@@ -315,36 +315,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding: 0.5rem 0.25rem;
 }
 
-.c49 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c49:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c49:hover,
-.c49:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c49:visited {
-  color: #6E6E73;
-}
-
 .c60 {
   color: #222222;
   background-color: #FFFFFF;
@@ -515,6 +485,37 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c49 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c49:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c49:hover,
+.c49:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c49:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -4512,36 +4513,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding: 0.5rem 0.25rem;
 }
 
-.c51 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c51:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c51:hover,
-.c51:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c51:visited {
-  color: #6E6E73;
-}
-
 .c58 {
   color: #222222;
   background-color: #FFFFFF;
@@ -4703,6 +4674,37 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c51 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c51:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c51:hover,
+.c51:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c51:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
