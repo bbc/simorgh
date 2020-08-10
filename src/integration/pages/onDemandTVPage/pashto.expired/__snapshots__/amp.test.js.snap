@@ -79,6 +79,14 @@ Object {
       "wf",
       "yt",
     ],
+    "gbOrUnknown": Array [
+      "gb",
+      "gg",
+      "im",
+      "je",
+      "uk",
+      "unknown",
+    ],
   },
 }
 `;
