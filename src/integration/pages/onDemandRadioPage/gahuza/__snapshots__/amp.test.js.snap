@@ -1,0 +1,388 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP On Demand Radio Page A11y I can see the skip to content link 1`] = `"Simbira ku birimwo"`;
+
+exports[`AMP On Demand Radio Page AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+  "policy": Object {
+    "default": Object {
+      "timeout": Object {
+        "fallbackAction": "reject",
+        "seconds": 0,
+      },
+      "waitFor": Object {
+        "user-consent": Array [],
+      },
+    },
+  },
+}
+`;
+
+exports[`AMP On Demand Radio Page AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP On Demand Radio Page Analytics ATI 1`] = `
+Object {
+  "requests": Object {
+    "base": "https://logws1363.ati-host.net?",
+    "pageview": "\${base}s=598343&s2=40&p=gahuza.bbc_gahuza_radio.w172x7rkcj6v0vz.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:pips:w172x7rkcj6v0vz]&x2=[amp]&x3=[news-gahuza]&x4=[rw]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[Amakuru+ya+Gahuzamiryango+-+BBC+News+Gahuza]&ref=\${documentReferrer}",
+  },
+  "transport": Object {
+    "beacon": false,
+    "image": true,
+    "xhrpost": false,
+  },
+  "triggers": Object {
+    "trackPageview": Object {
+      "on": "visible",
+      "request": "pageview",
+    },
+  },
+}
+`;
+
+exports[`AMP On Demand Radio Page Analytics chartbeat 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "player-episode",
+    "domain": "test.bbc.co.uk",
+    "sections": "Gahuza, Gahuza - Radio",
+    "title": "Amakuru ya Gahuzamiryango - BBC News Gahuza",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
+exports[`AMP On Demand Radio Page Analytics comscore 1`] = `
+Object {
+  "extraUrlParams": Object {
+    "comscorekw": "amp",
+  },
+  "vars": Object {
+    "c2": "17986528",
+  },
+}
+`;
+
+exports[`AMP On Demand Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
+
+exports[`AMP On Demand Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
+
+exports[`AMP On Demand Radio Page Footer Link should match text and url 1`] = `
+Object {
+  "text": "BBC News, Gahuza",
+  "url": "/gahuza",
+}
+`;
+
+exports[`AMP On Demand Radio Page Footer Link should match text and url 2`] = `
+Object {
+  "text": "Igituma ushobora kwizera BBC News",
+  "url": "https://www.bbc.com/gahuza/institutional-49283343",
+}
+`;
+
+exports[`AMP On Demand Radio Page Footer Link should match text and url 3`] = `
+Object {
+  "text": "Ingingo zo gukoresha urubuga",
+  "url": "https://www.bbc.com/gahuza/institutional-35754053",
+}
+`;
+
+exports[`AMP On Demand Radio Page Footer Link should match text and url 4`] = `
+Object {
+  "text": "Ibijanye na BBC",
+  "url": "https://www.bbc.com/gahuza/institutional-35754055",
+}
+`;
+
+exports[`AMP On Demand Radio Page Footer Link should match text and url 5`] = `
+Object {
+  "text": "Ibigenga n'ubuzima bwite",
+  "url": "https://www.bbc.com/gahuza/institutional-35754059",
+}
+`;
+
+exports[`AMP On Demand Radio Page Footer Link should match text and url 6`] = `
+Object {
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`AMP On Demand Radio Page Footer Link should match text and url 7`] = `
+Object {
+  "text": "Vugana na BBC",
+  "url": "https://www.bbc.com/gahuza/institutional-35754061",
+}
+`;
+
+exports[`AMP On Demand Radio Page Footer Link should match text and url 8`] = `
+Object {
+  "text": "AdChoices / Do Not Sell My Info",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+}
+`;
+
+exports[`AMP On Demand Radio Page Footer Link should match text and url 9`] = `
+Object {
+  "text": "Soma ibijanye n'aho duhagaze ku mihora ijana ahandi",
+  "url": "https://www.bbc.co.uk/help/web/links/",
+}
+`;
+
+exports[`AMP On Demand Radio Page Header I can see the branding 1`] = `"BBC News, Gahuza"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text and url 1`] = `
+Object {
+  "text": "Urupapuro rw'itangiriro",
+  "url": "/gahuza",
+}
+`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text and url 2`] = `
+Object {
+  "text": "Amakuru",
+  "url": "/gahuza/amakuru",
+}
+`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text and url 3`] = `
+Object {
+  "text": "Imikino",
+  "url": "/gahuza/imikino",
+}
+`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text and url 4`] = `
+Object {
+  "text": "Video",
+  "url": "/gahuza/media/video",
+}
+`;
+
+exports[`AMP On Demand Radio Page I can see the brand title 1`] = `"Amakuru ya Gahuzamiryango"`;
+
+exports[`AMP On Demand Radio Page I can see the episode summary 1`] = `"Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."`;
+
+exports[`AMP On Demand Radio Page I can see the episode title 1`] = `"6 Ukwa gatatu 2020"`;
+
+exports[`AMP On Demand Radio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b8lg4.png"`;
+
+exports[`AMP On Demand Radio Page SEO Apple Touch Icon should match attributes 1`] = `
+Object {
+  "sizes": null,
+  "url": "http://localhost:7080/gahuza/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP On Demand Radio Page SEO Apple Touch Icon should match attributes 2`] = `
+Object {
+  "sizes": "72x72",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/gahuza/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`AMP On Demand Radio Page SEO Apple Touch Icon should match attributes 3`] = `
+Object {
+  "sizes": "96x96",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/gahuza/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`AMP On Demand Radio Page SEO Apple Touch Icon should match attributes 4`] = `
+Object {
+  "sizes": "128x128",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/gahuza/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`AMP On Demand Radio Page SEO Apple Touch Icon should match attributes 5`] = `
+Object {
+  "sizes": "144x144",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/gahuza/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`AMP On Demand Radio Page SEO Apple Touch Icon should match attributes 6`] = `
+Object {
+  "sizes": "152x152",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/gahuza/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`AMP On Demand Radio Page SEO Apple Touch Icon should match attributes 7`] = `
+Object {
+  "sizes": "180x180",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/gahuza/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`AMP On Demand Radio Page SEO Apple Touch Icon should match attributes 8`] = `
+Object {
+  "sizes": "192x192",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/gahuza/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP On Demand Radio Page SEO Apple Touch Icon should match attributes 9`] = `
+Object {
+  "sizes": "384x384",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/gahuza/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`AMP On Demand Radio Page SEO Apple Touch Icon should match attributes 10`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/gahuza/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`AMP On Demand Radio Page SEO Canonical link 1`] = `"http://localhost:7080/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz"`;
+
+exports[`AMP On Demand Radio Page SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`AMP On Demand Radio Page SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP On Demand Radio Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP On Demand Radio Page SEO Heading level 1 1`] = `"Amakuru ya Gahuzamiryango, 6 Ukwa gatatu 2020"`;
+
+exports[`AMP On Demand Radio Page SEO Lang attribute 1`] = `"rw"`;
+
+exports[`AMP On Demand Radio Page SEO Linked data should match text 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@graph": Array [
+    Object {
+      "@type": "WebPage",
+      "image": Object {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+        "width": 1024,
+      },
+      "mainEntityOfPage": Object {
+        "@id": "http://localhost:7080/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz",
+        "@type": "WebPage",
+        "name": "Amakuru ya Gahuzamiryango",
+      },
+      "publisher": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+          "width": 1024,
+        },
+        "name": "BBC News Gahuza",
+        "publishingPrinciples": "https://www.bbc.com/gahuza/institutional-49283343",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+      "url": "http://localhost:7080/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz",
+    },
+  ],
+}
+`;
+
+exports[`AMP On Demand Radio Page SEO OG description 1`] = `"Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."`;
+
+exports[`AMP On Demand Radio Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png"`;
+
+exports[`AMP On Demand Radio Page SEO OG image alt 1`] = `"BBC News Gahuza"`;
+
+exports[`AMP On Demand Radio Page SEO OG locale 1`] = `"rw-RW"`;
+
+exports[`AMP On Demand Radio Page SEO OG site name 1`] = `"BBC News Gahuza"`;
+
+exports[`AMP On Demand Radio Page SEO OG title 1`] = `"Amakuru ya Gahuzamiryango - BBC News Gahuza"`;
+
+exports[`AMP On Demand Radio Page SEO OG type 1`] = `"website"`;
+
+exports[`AMP On Demand Radio Page SEO OG url 1`] = `"http://localhost:7080/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz"`;
+
+exports[`AMP On Demand Radio Page SEO Page title 1`] = `"Amakuru ya Gahuzamiryango - BBC News Gahuza"`;
+
+exports[`AMP On Demand Radio Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP On Demand Radio Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP On Demand Radio Page SEO Twitter creator 1`] = `"@bbcgahuza"`;
+
+exports[`AMP On Demand Radio Page SEO Twitter description 1`] = `"Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."`;
+
+exports[`AMP On Demand Radio Page SEO Twitter image alt 1`] = `"BBC News Gahuza"`;
+
+exports[`AMP On Demand Radio Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png"`;
+
+exports[`AMP On Demand Radio Page SEO Twitter site 1`] = `"@bbcgahuza"`;
+
+exports[`AMP On Demand Radio Page SEO Twitter title 1`] = `"Amakuru ya Gahuzamiryango - BBC News Gahuza"`;
+
+exports[`AMP On Demand Radio Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Amakuru ya Gahuzamiryango, 6 Ukwa gatatu 2020"`;

@@ -31,6 +31,9 @@ export default {
     value:
       '(afrique|arabic|hausa|indonesia|korean|pashto|persian|somali|swahili|urdu)',
   },
+  onDemandRadioSchedule: {
+    enabled: false,
+  },
   logMediaPlayerStatus: {
     enabled: false,
   },
