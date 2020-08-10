@@ -3,7 +3,6 @@ import uuid from 'uuid/v4';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import Url from 'url-parse';
-
 import onClient from '../utilities/onClient';
 import {
   MEDIUM_CAMPAIGN_IDENTIFIER,
@@ -346,7 +345,7 @@ export const getAffiliateMarketingString = href => {
   const { query } = new Url(href, true);
   return buildMarketingString([
     {
-      description: ' affiliate campaign prefix',
+      description: 'affiliate campaign prefix',
       value: 'al',
       wrap: false,
     },
@@ -562,6 +561,9 @@ export const getCustomMarketingString = href => {
   ]);
 };
 
+/* This transforms urls with a hash param to query params
+   ie. from bbc.com/mundo#some_param_1=24&some_param_2=48 to bbc.com/mundo?some_param_1=24&some_param_2=48
+*/
 const parameteriseHash = hash => new Url(hash.replace('#', '?'), true).query;
 
 export const getXtorMarketingString = href => {
