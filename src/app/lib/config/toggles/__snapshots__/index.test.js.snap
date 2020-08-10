@@ -41,6 +41,9 @@ Object {
   "mostRead": Object {
     "enabled": true,
   },
+  "mostWatched": Object {
+    "enabled": false,
+  },
   "navOnArticles": Object {
     "enabled": true,
   },
@@ -106,6 +109,9 @@ Object {
   "mostRead": Object {
     "enabled": true,
   },
+  "mostWatched": Object {
+    "enabled": true,
+  },
   "navOnArticles": Object {
     "enabled": true,
   },
@@ -169,6 +175,9 @@ Object {
     "enabled": true,
   },
   "mostRead": Object {
+    "enabled": true,
+  },
+  "mostWatched": Object {
     "enabled": true,
   },
   "navOnArticles": Object {
