@@ -72,7 +72,6 @@ module.exports = ({
         }),
       ],
       // specify min/max file sizes for each JS chunk for optimal performance
-      chunkIds: 'named',
       splitChunks: {
         chunks: 'initial',
         automaticNameDelimiter: '-',
@@ -80,6 +79,7 @@ module.exports = ({
         maxSize: 245760, // 240kb
         cacheGroups: {
           common: {
+            name: 'common',
             minChunks: 2,
             chunks: 'all',
           },
