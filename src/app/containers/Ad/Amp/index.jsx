@@ -14,6 +14,7 @@ import pathOr from 'ramda/src/pathOr';
 import { getMinion } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
+import useToggle from '#hooks/useToggle';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
 
@@ -95,6 +96,11 @@ const AmpAd = ({ slotType }) => {
   const { ads, dir, script, service } = useContext(ServiceContext);
   const label = pathOr('Advertisement', ['advertisementLabel'], ads);
   const ariaLabel = getAdsAriaLabel(label, dir, slotType);
+  const { enabled: ampAdsEnabled } = useToggle('ampAds');
+
+  if (!ampAdsEnabled) {
+    return null;
+  }
 
   return (
     // eslint-disable-next-line jsx-a11y/no-redundant-roles
