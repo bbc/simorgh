@@ -51,6 +51,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     mostRead: { header },
     script,
     service,
+    serviceLang,
     lang,
   } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -287,6 +288,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           dir={dir}
           columns={gridColsSecondary}
           parentColumns={gridColumns}
+          // `serviceLang` is defined when the language the page is written in is different to the
+          // language of the service. `serviceLang` is used to override the page language.
+          lang={serviceLang}
         >
           {topStoriesInitialData && (
             <ResponsiveComponentWrapper>

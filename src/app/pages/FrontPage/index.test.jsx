@@ -10,12 +10,12 @@ import pidginMostReadData from '#data/pidgin/mostRead';
 import getInitialData from '#app/routes/home/getInitialData';
 import { FrontPage } from '..';
 
-const requestContextData = {
+const requestContextData = ({ service = 'pidgin' }) => ({
   pageType: 'frontPage',
-  service: 'pidgin',
+  service,
   pathname: '/pathname',
   data: { status: 200 },
-};
+});
 
 // eslint-disable-next-line react/prop-types
 const FrontPageWithContext = ({
@@ -24,8 +24,11 @@ const FrontPageWithContext = ({
   ...props
 }) => (
   <BrowserRouter>
-    <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
-      <RequestContextProvider isAmp={isAmp} {...requestContextData}>
+    <ToggleContextProvider>
+      <RequestContextProvider
+        isAmp={isAmp}
+        {...requestContextData({ service })}
+      >
         <ServiceContextProvider service={service}>
           <FrontPage {...props} />
         </ServiceContextProvider>
