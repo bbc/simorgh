@@ -3,6 +3,9 @@ export default {
   ads: {
     enabled: false,
   },
+  ampAds: {
+    enabled: true,
+  },
   chartbeatAnalytics: {
     enabled: true,
   },
