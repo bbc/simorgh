@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP On Demand Radio Page AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+  "policy": Object {
+    "default": Object {
+      "timeout": Object {
+        "fallbackAction": "reject",
+        "seconds": 0,
+      },
+      "waitFor": Object {
+        "user-consent": Array [],
+      },
+    },
+  },
+}
+`;
+
+exports[`AMP On Demand Radio Page AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP On Demand Radio Page Analytics ATI 1`] = `
+Object {
+  "requests": Object {
+    "base": "https://logws1363.ati-host.net?",
+    "pageview": "\${base}s=598343&s2=40&p=gahuza.bbc_gahuza_radio.w172x7rkcj6v0vz.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:pips:w172x7rkcj6v0vz]&x2=[amp]&x3=[news-gahuza]&x4=[rw]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[Amakuru+ya+Gahuzamiryango+-+BBC+News+Gahuza]&ref=\${documentReferrer}",
+  },
+  "transport": Object {
+    "beacon": false,
+    "image": true,
+    "xhrpost": false,
+  },
+  "triggers": Object {
+    "trackPageview": Object {
+      "on": "visible",
+      "request": "pageview",
+    },
+  },
+}
+`;
+
+exports[`AMP On Demand Radio Page Analytics chartbeat 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "player-episode",
+    "domain": "test.bbc.co.uk",
+    "sections": "Gahuza, Gahuza - Radio",
+    "title": "Amakuru ya Gahuzamiryango - BBC News Gahuza",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
+exports[`AMP On Demand Radio Page Analytics comscore 1`] = `
+Object {
+  "extraUrlParams": Object {
+    "comscorekw": "amp",
+  },
+  "vars": Object {
+    "c2": "17986528",
+  },
+}
+`;
+
+exports[`AMP On Demand Radio Page Expired Episode I can see the 'Content is not available' placeholder 1`] = `"Ibi ntibikiboneka."`;
+
+exports[`AMP On Demand Radio Page Expired Episode I can see the brand title 1`] = `"Amakuru ya Gahuzamiryango"`;
+
+exports[`AMP On Demand Radio Page Expired Episode I can see the episode summary 1`] = `"Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."`;
+
+exports[`AMP On Demand Radio Page Expired Episode I can see the episode title 1`] = `"6 Ukwa gatatu 2020"`;
+
+exports[`AMP On Demand Radio Page Expired Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b8lg4.png"`;
+
+exports[`AMP On Demand Radio Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Amakuru ya Gahuzamiryango, 6 Ukwa gatatu 2020"`;
