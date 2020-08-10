@@ -5,9 +5,9 @@ Comscore Beacon source: https://sb.scorecardresearch.com/beacon.js
 We are self-hosting the comscore script and it should be available via this path:
 
 ```
-https://news.files.bbci.co.uk/include/articles/public/comscore/1.0.js on LIVE
-https://news.test.files.bbci.co.uk/include/articles/public/comscore/1.0.js on TEST
-http://localhost:7080/static/js/comscore/1.0.js on LOCAL
+https://news.files.bbci.co.uk/include/articles/public/comscore/main-1.0.js on LIVE
+https://news.test.files.bbci.co.uk/include/articles/public/comscore/main-1.0.js on TEST
+http://localhost:7080/static/js/comscore/main-1.0.js on LOCAL
 ```
 
 ## When to update comscore script
