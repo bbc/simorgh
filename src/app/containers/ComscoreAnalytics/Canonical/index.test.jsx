@@ -4,11 +4,6 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import ContextWrap from '../testHelper';
 import ComscoreAnalytics from '..';
 
-const expectedNoScriptContent = personalisationEnabled => {
-  const csUcfr = personalisationEnabled ? '1' : '0';
-  return `<img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=${csUcfr}&cv=2.0&cj=1" />`;
-};
-
 describe('Canonical Comscore Analytics ', () => {
   const toggleState = {
     comscoreAnalytics: {
@@ -32,7 +27,9 @@ describe('Canonical Comscore Analytics ', () => {
       expect(container).toBeEmptyDOMElement();
     });
 
-    it('should render the noscript with cs_ucfr=0', async () => {
+    it('should render canonical comscore with noscript and script element', async () => {
+      const noScriptContent = `<img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=0&cv=2.0&cj=1" />`;
+
       render(
         <ContextWrap
           platform="canonical"
@@ -46,22 +43,8 @@ describe('Canonical Comscore Analytics ', () => {
       await waitFor(() => {
         const noScriptEl = document.querySelector('noscript');
         expect(noScriptEl).toBeInTheDocument();
-        expect(noScriptEl.textContent).toEqual(expectedNoScriptContent(false));
-      });
-    });
+        expect(noScriptEl.textContent).toEqual(noScriptContent);
 
-    it('should render the canonical comscore script from self-hosted src', async () => {
-      render(
-        <ContextWrap
-          platform="canonical"
-          pageType="article"
-          origin="bbc.com"
-          toggleState={toggleState}
-        >
-          <ComscoreAnalytics />
-        </ContextWrap>,
-      );
-      await waitFor(() => {
         const scriptEl = document.querySelector('script');
         expect(scriptEl).toBeInTheDocument();
         expect(scriptEl).toHaveAttribute('async');
