@@ -39,6 +39,11 @@ const Document = ({
 
   // The JS to remove the no-js class will not run on AMP, therefore only add it to canonical
   const noJsHtmlAttrs = !isAmp && { className: 'no-js' };
+
+  // In order to block relevant components rendering until we have AMP GeoIP information, we need to add
+  // this class to the body of the document: https://amp.dev/documentation/components/amp-geo/#render-blocking
+  const ampGeoPendingAttrs = isAmp && { className: 'amp-geo-pending' };
+
   const scriptTags = (
     <>
       <IfAboveIE9>{scripts}</IfAboveIE9>
@@ -72,7 +77,7 @@ const Document = ({
           </>
         )}
       </head>
-      <body>
+      <body {...ampGeoPendingAttrs}>
         {/* disabling the rule that bans the use of dangerouslySetInnerHTML until a more appropriate implementation can be implemented */}
         {/* eslint-disable-next-line react/no-danger */}
         <StyledDiv id="root" dangerouslySetInnerHTML={{ __html: app }} />
