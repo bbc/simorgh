@@ -8,6 +8,7 @@ import runHeaderTests from './header';
 import runMainHeadingTests from './mainHeading';
 import runMediaPlayerEmbedTests from './mediaPlayerEmbed';
 import runPerformanceTests from './performance';
+import runRadioScheduleTests from './radioSchedule';
 import runSEOTests from './SEO';
 
 const runCommonCrossPlatformTests = service => {
@@ -30,5 +31,6 @@ export {
   runMainHeadingTests,
   runMediaPlayerEmbedTests,
   runPerformanceTests,
+  runRadioScheduleTests,
   runSEOTests,
 };
