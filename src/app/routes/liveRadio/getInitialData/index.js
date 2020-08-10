@@ -1,10 +1,10 @@
 import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
-import getConfig from '#app/routes/utils/getConfig';
+import _hasRadioSchedule from '../../utils/hasRadioSchedule';
+import getRadioService from '../../utils/getRadioService';
 
 const getLanguage = path(['metadata', 'language']);
 const getMetaDataId = path(['metadata', 'id']);
@@ -22,43 +22,14 @@ const getPageIdentifier = path([
 const getHeading = path(['content', 'blocks', 0, 'text']);
 const getBodySummary = path(['content', 'blocks', 1, 'text']);
 
-export const hasRadioSchedule = async service => {
-  const config = await getConfig(service);
-
-  const serviceHasRadioSchedule = pathOr(
-    false,
-    ['radioSchedule', 'hasRadioSchedule'],
-    config,
-  );
-
-  const radioScheduleOnLiveRadioPage = pathOr(
-    false,
-    ['radioSchedule', 'onLiveRadioPage'],
-    config,
-  );
-
-  return serviceHasRadioSchedule && radioScheduleOnLiveRadioPage;
-};
-
-const radioServices = {
-  indonesia: 'indonesian',
-  persian: 'dari',
-  afaanoromoo: 'oromo',
-  bengali: 'bangla',
-};
-
-export const getRadioService = ({ service, pathname }) => {
-  if (service === 'persian' && pathname.includes('bbc_persian_radio')) {
-    return 'persian';
-  }
-  return radioServices[service];
-};
-
 export default async ({ path: pathname, pageType, service }) => {
   try {
     const liveRadioDataPath = overrideRendererOnTest(pathname);
 
-    const pageHasRadioSchedule = await hasRadioSchedule(service);
+    const pageHasRadioSchedule = await _hasRadioSchedule({
+      pageType: 'liveRadio',
+      service,
+    });
     const pageDataPromise = fetchPageData({
       path: liveRadioDataPath,
       pageType,

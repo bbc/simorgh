@@ -25,7 +25,11 @@ export default {
   },
   liveRadioSchedule: {
     enabled: true,
-    value: '(hausa|korean)',
+    value:
+      '(afrique|arabic|hausa|indonesia|korean|pashto|persian|somali|swahili|urdu)',
+  },
+  onDemandRadioSchedule: {
+    enabled: false,
   },
   logMediaPlayerStatus: {
     enabled: false,
@@ -35,6 +39,9 @@ export default {
   },
   mostRead: {
     enabled: true,
+  },
+  mostWatched: {
+    enabled: false,
   },
   navOnArticles: {
     enabled: true,

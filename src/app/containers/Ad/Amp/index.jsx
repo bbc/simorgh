@@ -17,8 +17,23 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
 
-const FullWidthWrapper = styled.div`
+// styled-components removes non-standard attributes (such as AMP attributes) on
+// server rendering. spreading props like this allows us to add AMP attributes
+// to the element.
+const Section = props => <section {...props} />;
+
+// amp-geo adds geo group classes to the body of the document depending on
+// the user's location. It removes the `amp-geo-pending` class when geolocation
+// data is available.
+// setting display: none ensures ad requests within this component are not made.
+const AdSection = styled(Section)`
   background-color: ${C_LUNAR_LIGHT};
+
+  .amp-geo-pending &,
+  .amp-geo-group-gbOrUnknown & {
+    display: none;
+    visibility: hidden;
+  }
 `;
 
 const StyledWrapper = styled.div`
@@ -44,13 +59,13 @@ const StyledLink = styled.a.attrs({ tabIndex: '-1' })`
   text-transform: uppercase;
   display: block;
   padding: ${GEL_SPACING} 0;
-  
+
   text-align: ${({ dir }) => (dir === 'ltr' ? `right` : `left`)};
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     padding-top: ${GEL_SPACING_DBL};
   }
-  
+
   &:hover {
     text-decoration: underline;
   }
@@ -83,35 +98,34 @@ const AmpAd = ({ slotType }) => {
 
   return (
     // eslint-disable-next-line jsx-a11y/no-redundant-roles
-    <section
+    <AdSection
+      aria-label={ariaLabel}
+      role="region"
+      data-e2e="advertisement"
       amp-access="toggles.ads.enabled"
       amp-access-hide="true"
       aria-hidden="true"
-      aria-label={ariaLabel}
-      role="region"
     >
-      <FullWidthWrapper>
-        <StyledWrapper>
-          <Helmet>
-            {AMP_ADS_JS}
-            {AMP_ACCESS_JS}
-            {AMP_ACCESS_FETCH(service)}
-          </Helmet>
+      <StyledWrapper>
+        <Helmet>
+          {AMP_ADS_JS}
+          {AMP_ACCESS_JS}
+          {AMP_ACCESS_FETCH(service)}
+        </Helmet>
 
-          <StyledAd>
-            <StyledLink
-              href={LABEL_LINK}
-              script={script}
-              service={service}
-              dir={dir}
-            >
-              {label}
-            </StyledLink>
-            <AdSlot service={service} slotType={slotType} />
-          </StyledAd>
-        </StyledWrapper>
-      </FullWidthWrapper>
-    </section>
+        <StyledAd>
+          <StyledLink
+            href={LABEL_LINK}
+            script={script}
+            service={service}
+            dir={dir}
+          >
+            {label}
+          </StyledLink>
+          <AdSlot service={service} slotType={slotType} />
+        </StyledAd>
+      </StyledWrapper>
+    </AdSection>
   );
 };
 

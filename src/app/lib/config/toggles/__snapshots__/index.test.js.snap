@@ -27,7 +27,7 @@ Object {
   },
   "liveRadioSchedule": Object {
     "enabled": true,
-    "value": "(hausa|korean)",
+    "value": "(afrique|arabic|hausa|indonesia|korean|pashto|persian|somali|swahili|urdu)",
   },
   "logMediaPlayerStatus": Object {
     "enabled": false,
@@ -38,8 +38,14 @@ Object {
   "mostRead": Object {
     "enabled": true,
   },
+  "mostWatched": Object {
+    "enabled": false,
+  },
   "navOnArticles": Object {
     "enabled": true,
+  },
+  "onDemandRadioSchedule": Object {
+    "enabled": false,
   },
   "prerollAds": Object {
     "enabled": true,
@@ -97,7 +103,13 @@ Object {
   "mostRead": Object {
     "enabled": true,
   },
+  "mostWatched": Object {
+    "enabled": true,
+  },
   "navOnArticles": Object {
+    "enabled": true,
+  },
+  "onDemandRadioSchedule": Object {
     "enabled": true,
   },
   "prerollAds": Object {
@@ -156,7 +168,13 @@ Object {
   "mostRead": Object {
     "enabled": true,
   },
+  "mostWatched": Object {
+    "enabled": true,
+  },
   "navOnArticles": Object {
+    "enabled": true,
+  },
+  "onDemandRadioSchedule": Object {
     "enabled": true,
   },
   "prerollAds": Object {

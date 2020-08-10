@@ -19,7 +19,7 @@ const Page = ({
   isAmp = false,
 }) => (
   <BrowserRouter>
-    <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
+    <ToggleContextProvider>
       <ServiceContextProvider service={service} lang={lang}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"
@@ -135,7 +135,7 @@ describe('Radio Page Main', () => {
     expect(scheduleWrapper).not.toBeInTheDocument();
   });
 
-  it('should not show the radio schedule for services without schedules', async () => {
+  it('should not show the radio schedule for services without a schedule', async () => {
     renderPage({
       pageData: gahuzaPageData,
       service: 'gahuza',
