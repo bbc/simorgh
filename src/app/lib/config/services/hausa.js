@@ -193,9 +193,15 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Wadanda aka fi kallo',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Verticals',
       frequenciesPageUrl: '/hausa/institutional/2011/11/000001_mitocinmu',

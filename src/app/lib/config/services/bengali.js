@@ -195,9 +195,15 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'সবচেয়ে বেশি দেখা হয়েছে',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: false,
       header: 'রেডিও অনুষ্ঠান',
       durationLabel: 'স্থিতিকাল %duration%',

@@ -254,7 +254,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afrique/bbc_afrique_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/afrique/bbc_afrique_radio/liveradio?renderer_env=live'],
@@ -667,7 +667,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/arabic/bbc_arabic_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/arabic/bbc_arabic_radio/liveradio?renderer_env=live'],
@@ -2473,7 +2473,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/indonesia/bbc_indonesian_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -3913,7 +3913,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/pashto/bbc_pashto_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/pashto/bbc_pashto_radio/liveradio?renderer_env=live'],
@@ -4176,7 +4176,7 @@ module.exports = () => ({
               '/persian/bbc_persian_radio/liveradio',
               '/persian/bbc_dari_radio/liveradio',
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -5656,7 +5656,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/somali/bbc_somali_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/somali/bbc_somali_radio/liveradio?renderer_env=live'],
@@ -5914,7 +5914,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/swahili/bbc_swahili_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/swahili/bbc_swahili_radio/liveradio?renderer_env=live'],
@@ -7611,7 +7611,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/urdu/bbc_urdu_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/urdu/bbc_urdu_radio/liveradio?renderer_env=live'],
