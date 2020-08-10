@@ -20,6 +20,11 @@ const toggleState = {
   },
 };
 
+jest.mock('#containers/ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  return ChartbeatAnalytics;
+});
+
 const Page = ({ pageData, service }) => (
   <StaticRouter>
     <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
