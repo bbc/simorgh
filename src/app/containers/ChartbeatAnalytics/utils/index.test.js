@@ -77,6 +77,11 @@ describe('Chartbeat utilities', () => {
         expectedShortType: 'STY',
       },
       {
+        type: 'PGL',
+        expectedDefaultType: 'PGL',
+        expectedShortType: 'PGL',
+      },
+      {
         type: null,
         expectedDefaultType: null,
         expectedShortType: null,
@@ -356,6 +361,19 @@ describe('Chartbeat utilities', () => {
       };
 
       expect(getTitle({ pageType, pageData })).toBe('STY Page Title');
+    });
+
+    it('should return correct title when pageType is STY', () => {
+      const pageType = 'PGL';
+      const pageData = {
+        promo: {
+          headlines: {
+            headline: 'PGL Page Title',
+          },
+        },
+      };
+
+      expect(getTitle({ pageType, pageData })).toBe('PGL Page Title');
     });
   });
 
