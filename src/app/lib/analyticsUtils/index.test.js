@@ -650,14 +650,15 @@ describe('getSLMarketingString', () => {
   describe('should return the "SEC" prefix', () => {
     describe('with optional params', () => {
       it.each`
-        expectation                                                                   | href                                                               | expectedValue
-        ${'the value of the "at_campaign" field'}                                     | ${'https://www.bbc.com/mundo?at_medium=sl&at_campaign=73'}         | ${'SEC-73-----'}
-        ${'with the value of the "at_platform" field, wrapped in square brackets'}    | ${'https://www.bbc.com/mundo?at_medium=sl&at_platform=google'}     | ${'SEC--[google]----'}
-        ${'the value of the "at_creation" field, wrapped in square brackets'}         | ${'https://www.bbc.com/mundo?at_medium=sl&at_creation=my_adgroup'} | ${'SEC---[my_adgroup]---'}
-        ${'the value of the "at_variant" field, wrapped in square brackets'}          | ${'https://www.bbc.com/mundo?at_medium=sl&at_variant=Editorial'}   | ${'SEC----[Editorial]--'}
-        ${'the value of the "at_network" field when "at_network" field is "search"'}  | ${'https://www.bbc.com/mundo?at_medium=sl&at_network=search'}      | ${'SEC-----F=S-'}
-        ${'the value of the "at_network" field when "at_network" field is "content"'} | ${'https://www.bbc.com/mundo?at_medium=sl&at_network=content'}     | ${'SEC-----F=C-'}
-        ${'the value of the at_term field, wrapped in square brackets'}               | ${'https://www.bbc.com/mundo?at_medium=sl&at_term=article'}        | ${'SEC------[article]'}
+        expectation                                                                                       | href                                                               | expectedValue
+        ${'the value of the "at_campaign" field'}                                                         | ${'https://www.bbc.com/mundo?at_medium=sl&at_campaign=73'}         | ${'SEC-73-----'}
+        ${'with the value of the "at_platform" field, wrapped in square brackets'}                        | ${'https://www.bbc.com/mundo?at_medium=sl&at_platform=google'}     | ${'SEC--[google]----'}
+        ${'the value of the "at_creation" field, wrapped in square brackets'}                             | ${'https://www.bbc.com/mundo?at_medium=sl&at_creation=my_adgroup'} | ${'SEC---[my_adgroup]---'}
+        ${'the value of the "at_variant" field, wrapped in square brackets'}                              | ${'https://www.bbc.com/mundo?at_medium=sl&at_variant=Editorial'}   | ${'SEC----[Editorial]--'}
+        ${'the value of the "at_network" field when "at_network" field is "search"'}                      | ${'https://www.bbc.com/mundo?at_medium=sl&at_network=search'}      | ${'SEC-----F=S-'}
+        ${'the value of the "at_network" field when "at_network" field is "content"'}                     | ${'https://www.bbc.com/mundo?at_medium=sl&at_network=content'}     | ${'SEC-----F=C-'}
+        ${'the value of the "at_network" field when "at_network" field is neither "content" or "search"'} | ${'https://www.bbc.com/mundo?at_medium=sl&at_network=foobar'}      | ${'SEC------'}
+        ${'the value of the at_term field, wrapped in square brackets'}                                   | ${'https://www.bbc.com/mundo?at_medium=sl&at_term=article'}        | ${'SEC------[article]'}
       `(
         'should return marketing string for $expectation',
         ({ href, expectedValue }) => {
@@ -682,21 +683,21 @@ describe('getEmailMarketingString', () => {
   describe('should return the "SEC" prefix', () => {
     describe('with optional params', () => {
       it.each`
-        expectation                                                                                                       | href                                                                                                             | expectedValue
-        ${'the value of "at_emailtype" field when its value is "acquisition"'}                                            | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=acquisition'}                                          | ${'EREC-----'}
-        ${'the value of "at_emailtype" field when its value is "retention"'}                                              | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=retention'}                                            | ${'EPR-----'}
-        ${'the value of "at_emailtype" field when its value is "promotion"'}                                              | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion'}                                            | ${'ES-----'}
-        ${'the value of the "at_campaign" field'}                                                                         | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_campaign=56'}                             | ${'ES-56----'}
-        ${'the value of the "at_creation" field, wrapped in square brackets'}                                             | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_creation=wsmundo'}                        | ${'ES--[wsmundo]---'}
-        ${'the value of the at_send_date field'}                                                                          | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_send_date=20190401'}                      | ${'ES---20190401--'}
-        ${'the value of the at_link field, wrapped in square brackets'}                                                   | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_link=cta_button'}                         | ${'ES----[cta_button]-'}
-        ${'the value of the at_recipient_id field followed by the @ symbol and the value of the at_recipient_list field'} | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_recipient_id=5633&at_recipient_list=200'} | ${'ES-----5633@200'}
-      `(
-        'should return marketing string for $expectation',
-        ({ href, expectedValue }) => {
-          expect(getEmailMarketingString(href)).toEqual(expectedValue);
-        },
-      );
+        expectation                                                                                                                         | href                                                                                                             | expectedValue
+        ${'the value of "at_emailtype" field when its value is "acquisition"'}                                                              | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=acquisition'}                                          | ${'EREC-----@'}
+        ${'the value of "at_emailtype" field when its value is "retention"'}                                                                | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=retention'}                                            | ${'EPR-----@'}
+        ${'the value of "at_emailtype" field when its value is "promotion"'}                                                                | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion'}                                            | ${'ES-----@'}
+        ${'the value of "at_emailtype" field when its value is neither "promotion", "acquisition" or "retention"'}                          | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=foobar'}                                               | ${'-----@'}
+        ${'the value of the "at_campaign" field'}                                                                                           | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_campaign=56'}                             | ${'ES-56----@'}
+        ${'the value of the "at_creation" field, wrapped in square brackets'}                                                               | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_creation=wsmundo'}                        | ${'ES--[wsmundo]---@'}
+        ${'the value of the at_send_date field'}                                                                                            | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_send_date=20190401'}                      | ${'ES---20190401--@'}
+        ${'the value of the at_link field, wrapped in square brackets'}                                                                     | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_link=cta_button'}                         | ${'ES----[cta_button]-@'}
+        ${'the value of the at_recipient_id field followed by the @ symbol and the value of the at_recipient_list field'}                   | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_recipient_id=5633&at_recipient_list=200'} | ${'ES-----5633@200'}
+        ${'the value of the at_recipient_id field followed by the @ symbol when the value of the at_recipient_list field is not available'} | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_recipient_id=5633'}                       | ${'ES-----5633@'}
+        ${'the @ symbol followed by the value of the at_recipient_list field when the value of the at_recipient_id field is not available'} | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_recipient_list=200'}                      | ${'ES-----@200'}
+      `('should return $expectation', ({ href, expectedValue }) => {
+        expect(getEmailMarketingString(href)).toEqual(expectedValue);
+      });
     });
     describe('with all params', () => {
       it('should return all fields', () => {
@@ -781,21 +782,46 @@ describe('getXtorMarketingString', () => {
 });
 
 describe('getATIMarketingString', () => {
-  it.each`
-    campaignType          | href                                                                                                                                                                                         | expectedValue
-    ${'affiliate'}        | ${'https://www.bbc.com/mundo?at_medium=affiliate&at_campaign=73&at_creation=wsmundo&at_format=Link&at_identifier=whatsapp&at_type=partner&at_variant=Editorial'}                             | ${'al-73-[partner]-[whatsapp]-[Link]-[wsmundo]-[Editorial]'}
-    ${'sl'}               | ${'https://www.bbc.com/mundo?at_medium=sl&at_term=article&at_network=search&at_creation=my_adgroup&at_variant=Editorial&at_platform=google&at_campaign=73'}                                  | ${'SEC-73-[google]-[my_adgroup]-[Editorial]-F=S-[article]'}
-    ${'email'}            | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_campaign=56&at_creation=wsmundo&at_send_date=20190401&at_link=cta_button&at_recipient_id=5633&at_recipient_list=200'} | ${'ES-56-[wsmundo]-20190401-[cta_button]-5633@200'}
-    ${'display'}          | ${'https://www.bbc.com/mundo?at_medium=display&at_campaign=56&at_creation=wsmundo&at_variant=Editorial&at_format=Link&at_general_placement=home&at_detail_placement=sidebar'}                | ${'AD-56-[wsmundo]-[Editorial]-[Link]--[home]-[sidebar]'}
-    ${'custom'}           | ${'https://www.bbc.com/mundo?at_medium=custom123&at_campaign=56&at_custom1=var_1&at_custom2=var_2&at_custom3=var_3&at_custom4=var_4'}                                                        | ${'CS123-56-[var_1]-[var_2]-[var_3]-[var_4]'}
-    ${'XTOR'}             | ${'https://www.bbc.com/mundo#xtor=AD-3030-[ad_version7]-[without_text]-[468]-[www.bbc.com]-[GT]-[top_page]'}                                                                                 | ${'AD-3030-[ad_version7]-[without_text]-[468]-[www.bbc.com]-[GT]-[top_page]'}
-    ${'unsupported-type'} | ${'https://www.bbc.com/mundo#at_medium=foo'}                                                                                                                                                 | ${null}
-    ${null}               | ${null}                                                                                                                                                                                      | ${null}
-    ${'XTOR'}             | ${null}                                                                                                                                                                                      | ${null}
-  `(
-    'should return $expectedValue for campaign type of $campaignType when href is $href',
-    ({ href, expectedValue, campaignType }) => {
-      expect(getATIMarketingString(href, campaignType)).toEqual(expectedValue);
-    },
-  );
+  describe('for query params', () => {
+    it.each`
+      campaignType          | href                                                                                                                                                                                         | expectedValue
+      ${'affiliate'}        | ${'https://www.bbc.com/mundo?at_medium=affiliate&at_campaign=73&at_creation=wsmundo&at_format=Link&at_identifier=whatsapp&at_type=partner&at_variant=Editorial'}                             | ${'al-73-[partner]-[whatsapp]-[Link]-[wsmundo]-[Editorial]'}
+      ${'sl'}               | ${'https://www.bbc.com/mundo?at_medium=sl&at_term=article&at_network=search&at_creation=my_adgroup&at_variant=Editorial&at_platform=google&at_campaign=73'}                                  | ${'SEC-73-[google]-[my_adgroup]-[Editorial]-F=S-[article]'}
+      ${'email'}            | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_campaign=56&at_creation=wsmundo&at_send_date=20190401&at_link=cta_button&at_recipient_id=5633&at_recipient_list=200'} | ${'ES-56-[wsmundo]-20190401-[cta_button]-5633@200'}
+      ${'display'}          | ${'https://www.bbc.com/mundo?at_medium=display&at_campaign=56&at_creation=wsmundo&at_variant=Editorial&at_format=Link&at_general_placement=home&at_detail_placement=sidebar'}                | ${'AD-56-[wsmundo]-[Editorial]-[Link]--[home]-[sidebar]'}
+      ${'custom'}           | ${'https://www.bbc.com/mundo?at_medium=custom123&at_campaign=56&at_custom1=var_1&at_custom2=var_2&at_custom3=var_3&at_custom4=var_4'}                                                        | ${'CS123-56-[var_1]-[var_2]-[var_3]-[var_4]'}
+      ${'XTOR'}             | ${'https://www.bbc.com/mundo?xtor=AD-3030-[ad_version7]-[without_text]-[468]-[www.bbc.com]-[GT]-[top_page]'}                                                                                 | ${'AD-3030-[ad_version7]-[without_text]-[468]-[www.bbc.com]-[GT]-[top_page]'}
+      ${'unsupported-type'} | ${'https://www.bbc.com/mundo?at_medium=foo'}                                                                                                                                                 | ${null}
+      ${null}               | ${null}                                                                                                                                                                                      | ${null}
+      ${'XTOR'}             | ${null}                                                                                                                                                                                      | ${null}
+    `(
+      'should return $expectedValue for campaign type of $campaignType when href is $href',
+      ({ href, expectedValue, campaignType }) => {
+        expect(getATIMarketingString(href, campaignType)).toEqual(
+          expectedValue,
+        );
+      },
+    );
+  });
+  describe('for hash params params', () => {
+    it.each`
+      campaignType          | href                                                                                                                                                                                          | expectedValue
+      ${'affiliate'}        | ${'https://www.bbc.com/mundo#at_medium=affiliate&at_campaign=73&at_creation=wsmundo&at_format=Link&at_identifier=whatsapp&at_type=partner&at_variant=Editorial'}                              | ${'al-73-[partner]-[whatsapp]-[Link]-[wsmundo]-[Editorial]'}
+      ${'sl'}               | ${'https://www.bbc.com/mundo#at_medium=sl&at_term=article&at_network=search&at_creation=my_adgroup&at_variant=Editorial&at_platform=google&at_campaign=73'}                                   | ${'SEC-73-[google]-[my_adgroup]-[Editorial]-F=S-[article]'}
+      ${'email'}            | ${'https://www.bbc.com/mundo/#at_medium=email&at_emailtype=promotion&at_campaign=56&at_creation=wsmundo&at_send_date=20190401&at_link=cta_button&at_recipient_id=5633&at_recipient_list=200'} | ${'ES-56-[wsmundo]-20190401-[cta_button]-5633@200'}
+      ${'display'}          | ${'https://www.bbc.com/mundo#at_medium=display&at_campaign=56&at_creation=wsmundo&at_variant=Editorial&at_format=Link&at_general_placement=home&at_detail_placement=sidebar'}                 | ${'AD-56-[wsmundo]-[Editorial]-[Link]--[home]-[sidebar]'}
+      ${'custom'}           | ${'https://www.bbc.com/mundo/#at_medium=custom123&at_campaign=56&at_custom1=var_1&at_custom2=var_2&at_custom3=var_3&at_custom4=var_4'}                                                        | ${'CS123-56-[var_1]-[var_2]-[var_3]-[var_4]'}
+      ${'XTOR'}             | ${'https://www.bbc.com/mundo#xtor=AD-3030-[ad_version7]-[without_text]-[468]-[www.bbc.com]-[GT]-[top_page]'}                                                                                  | ${'AD-3030-[ad_version7]-[without_text]-[468]-[www.bbc.com]-[GT]-[top_page]'}
+      ${'unsupported-type'} | ${'https://www.bbc.com/mundo/#at_medium=foo'}                                                                                                                                                 | ${null}
+      ${null}               | ${null}                                                                                                                                                                                       | ${null}
+      ${'XTOR'}             | ${null}                                                                                                                                                                                       | ${null}
+    `(
+      'should return $expectedValue for campaign type of $campaignType when href is $href',
+      ({ href, expectedValue, campaignType }) => {
+        expect(getATIMarketingString(href, campaignType)).toEqual(
+          expectedValue,
+        );
+      },
+    );
+  });
 });
