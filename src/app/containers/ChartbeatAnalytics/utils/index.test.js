@@ -256,9 +256,12 @@ describe('Chartbeat utilities', () => {
         const pageData = {};
 
         const mockTitle = jest.fn().mockImplementation(() => pageTitle);
-        pageType === 'article'
-          ? (articleUtils.getPromoHeadline = mockTitle)
-          : (frontPageUtils.getPageTitle = mockTitle);
+
+        if (pageType === 'article') {
+          articleUtils.getPromoHeadline = mockTitle;
+        } else {
+          frontPageUtils.getPageTitle = mockTitle;
+        }
 
         expect(getTitle({ pageType, pageData, brandName })).toBe(pageTitle);
 
@@ -275,7 +278,7 @@ describe('Chartbeat utilities', () => {
       'should return correct title when pageType is $pageType $context',
       ({ pageType, pageTitle }) => {
         const pageData = {
-          pageTitle: pageTitle,
+          pageTitle,
         };
 
         expect(getTitle({ pageType, pageData })).toBe(pageTitle);
