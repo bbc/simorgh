@@ -232,113 +232,6 @@ describe('Chartbeat utilities', () => {
   });
 
   describe('Chartbeat Title', () => {
-    it('should call getPromoHeadline when pageType is article', () => {
-      const pageType = 'article';
-      const pageData = {};
-
-      const mockGetPromoHeadline = jest
-        .fn()
-        .mockImplementation(() => 'This is an article title');
-      articleUtils.getPromoHeadline = mockGetPromoHeadline;
-      expect(getTitle({ pageType, pageData })).toBe('This is an article title');
-      expect(mockGetPromoHeadline).toHaveBeenCalledTimes(1);
-    });
-
-    it('should call getPageTitle when pageType is frontPage', () => {
-      const pageType = 'frontPage';
-      const pageData = {};
-      const brandName = 'BBC News';
-
-      const mockGetPageTitle = jest
-        .fn()
-        .mockImplementation(() => 'This is a frontpage title');
-      frontPageUtils.getPageTitle = mockGetPageTitle;
-      expect(getTitle({ pageType, pageData, brandName })).toBe(
-        'This is a frontpage title',
-      );
-      expect(mockGetPageTitle).toHaveBeenCalledTimes(1);
-    });
-
-    it('should call getPageTitle when pageType is IDX', () => {
-      const pageType = 'IDX';
-      const pageData = {};
-      const brandName = 'BBC Persian';
-
-      const mockGetPageTitle = jest
-        .fn()
-        .mockImplementation(() => 'This is an IDX page title');
-      frontPageUtils.getPageTitle = mockGetPageTitle;
-      expect(getTitle({ pageType, pageData, brandName })).toBe(
-        'This is an IDX page title',
-      );
-      expect(mockGetPageTitle).toHaveBeenCalledTimes(1);
-    });
-
-    it('should call getPageTitle when pageType is index', () => {
-      const pageType = 'index';
-      const pageData = {};
-      const brandName = 'BBC News';
-
-      const mockGetPageTitle = jest
-        .fn()
-        .mockImplementation(() => 'This is an index page title');
-      frontPageUtils.getPageTitle = mockGetPageTitle;
-      expect(getTitle({ pageType, pageData, brandName })).toBe(
-        'This is an index page title',
-      );
-      expect(mockGetPageTitle).toHaveBeenCalledTimes(1);
-    });
-
-    it('should default to null when no matching pageType', () => {
-      const pageType = 'some page type';
-      const pageData = {};
-      const brandName = 'BBC News';
-
-      expect(getTitle({ pageType, pageData, brandName })).toBe(null);
-    });
-
-    it('should return correct title when pageType is MAP', () => {
-      const pageType = 'MAP';
-      const pageData = {
-        promo: {
-          headlines: {
-            headline: 'MAP Page Title',
-          },
-        },
-      };
-
-      expect(getTitle({ pageType, pageData })).toBe('MAP Page Title');
-    });
-
-    it('should return correct title when pageType is media (Live radio)', () => {
-      const pageType = 'media';
-      const pageData = {
-        pageTitle: 'Live Radio Page Title',
-      };
-
-      expect(getTitle({ pageType, pageData })).toBe('Live Radio Page Title');
-    });
-
-    it('should return correct title when pageType is media (onDemand radio)', () => {
-      const pageType = 'media';
-      const pageData = {
-        pageTitle: 'OnDemand Radio Page Title',
-      };
-
-      expect(getTitle({ pageType, pageData })).toBe(
-        'OnDemand Radio Page Title',
-      );
-    });
-
-    it('should return correct title when pageType is media (onDemand TV)', () => {
-      const pageType = 'media';
-      const pageData = {
-        pageTitle: 'OnDemand TV Page Title',
-      };
-
-      expect(getTitle({ pageType, pageData })).toBe('OnDemand TV Page Title');
-    });
-
     it('should return correct title when pageType is mostRead', () => {
       const pageType = 'mostRead';
       const pageData = {};
@@ -350,31 +243,64 @@ describe('Chartbeat utilities', () => {
       );
     });
 
-    it('should return correct title when pageType is STY', () => {
-      const pageType = 'STY';
-      const pageData = {
-        promo: {
-          headlines: {
-            headline: 'STY Page Title',
+    test.each`
+      pageType       | brandName        | pageTitle                        | expectedNumberOfCalls
+      ${'index'}     | ${'BBC News'}    | ${'This is an index page title'} | ${1}
+      ${'IDX'}       | ${'BBC Persian'} | ${'This is an IDX page title'}   | ${1}
+      ${'frontPage'} | ${'BBC News'}    | ${'This is a frontpage title'}   | ${1}
+      ${'article'}   | ${null}          | ${'This is an article title'}    | ${1}
+      ${'foo'}       | ${'BBC News'}    | ${null}                          | ${0}
+    `(
+      'should call getPageTitle when pageType is $pageType',
+      ({ brandName, pageType, pageTitle, expectedNumberOfCalls }) => {
+        const pageData = {};
+
+        const mockTitle = jest.fn().mockImplementation(() => pageTitle);
+        pageType === 'article'
+          ? (articleUtils.getPromoHeadline = mockTitle)
+          : (frontPageUtils.getPageTitle = mockTitle);
+
+        expect(getTitle({ pageType, pageData, brandName })).toBe(pageTitle);
+
+        expect(mockTitle).toHaveBeenCalledTimes(expectedNumberOfCalls);
+      },
+    );
+
+    test.each`
+      pageType   | context               | pageTitle
+      ${'media'} | ${'(onDemand TV)'}    | ${'OnDemand TV Page Title'}
+      ${'media'} | ${'(onDemand Radio)'} | ${'OnDemand TV Radio Title'}
+      ${'media'} | ${'(Live Radio)'}     | ${'Live Radio Title'}
+    `(
+      'should return correct title when pageType is $pageType $context',
+      ({ pageType, pageTitle }) => {
+        const pageData = {
+          pageTitle: pageTitle,
+        };
+
+        expect(getTitle({ pageType, pageData })).toBe(pageTitle);
+      },
+    );
+
+    test.each`
+      pageType | pageTitle
+      ${'PGL'} | ${'PGL Page Title'}
+      ${'STY'} | ${'STY Page Title'}
+      ${'MAP'} | ${'MAP Page Title'}
+    `(
+      'should return correct title when pageType is $pageType',
+      ({ pageType, pageTitle }) => {
+        const pageData = {
+          promo: {
+            headlines: {
+              headline: pageTitle,
+            },
           },
-        },
-      };
+        };
 
-      expect(getTitle({ pageType, pageData })).toBe('STY Page Title');
-    });
-
-    it('should return correct title when pageType is STY', () => {
-      const pageType = 'PGL';
-      const pageData = {
-        promo: {
-          headlines: {
-            headline: 'PGL Page Title',
-          },
-        },
-      };
-
-      expect(getTitle({ pageType, pageData })).toBe('PGL Page Title');
-    });
+        expect(getTitle({ pageType, pageData })).toBe(pageTitle);
+      },
+    );
   });
 
   describe('Chartbeat Config', () => {
