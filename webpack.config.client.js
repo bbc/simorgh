@@ -79,7 +79,7 @@ module.exports = ({
         maxSize: 245760, // 240kb
         cacheGroups: {
           common: {
-            name: 'common',
+            name: false,
             minChunks: 2,
             chunks: 'all',
           },
