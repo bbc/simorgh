@@ -1,10 +1,15 @@
 import runCrossPlatformTests from './crossPlatformTests';
-import { runCoreAmpTests, runAmpAnalyticsTests } from '../../common';
+import {
+  runCoreAmpTests,
+  runAmpAnalyticsTests,
+  runRadioScheduleTests,
+} from '../../common';
 
 export default () => {
   runCrossPlatformTests();
   runCoreAmpTests();
   runAmpAnalyticsTests();
+  runRadioScheduleTests({ isAmp: true });
 
   it('Media player image placeholder', () => {
     const audioPlaceholderImage = document.querySelector(
