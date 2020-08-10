@@ -155,10 +155,11 @@ export default server => {
       const dataFilePath = path.join(process.cwd(), 'data', idx, 'index.json');
       sendDataFile(res, dataFilePath, next);
     })
-    .get('/static/js/comscore-1.0.js', (req, res, next) => {
+    .get('/static/js/comscore/main-:version.js', ({ params }, res, next) => {
+      const { version } = params;
       const localComscorePath = path.join(
         process.cwd(),
-        '/public/static/js/comscore-1.0.js',
+        `/public/static/js/comscore/main-${version}.js`,
       );
       sendDataFile(res, localComscorePath, next);
     })
