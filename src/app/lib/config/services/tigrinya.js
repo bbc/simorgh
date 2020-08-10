@@ -182,6 +182,11 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'ብብዝሒ ዝተራእየ',
+      numberOfItems: 2,
+      hasMostWatched: false,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
