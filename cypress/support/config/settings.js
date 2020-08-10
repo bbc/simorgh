@@ -63,7 +63,9 @@ module.exports = () => ({
             enabled: true,
           },
           test: {
-            paths: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
+            paths: [
+              '/afaanoromoo/bbc_afaanoromoo_radio/liveradio?renderer_env=live',
+            ],
             enabled: true,
           },
           local: {
@@ -252,11 +254,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afrique/bbc_afrique_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/afrique/bbc_afrique_radio/liveradio'],
-            enabled: false,
+            paths: ['/afrique/bbc_afrique_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/afrique/bbc_afrique_radio/liveradio'],
@@ -476,7 +478,7 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/amharic/bbc_amharic_radio/liveradio'],
+            paths: ['/amharic/bbc_amharic_radio/liveradio?renderer_env=live'],
             enabled: false,
           },
           local: {
@@ -665,11 +667,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/arabic/bbc_arabic_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/arabic/bbc_arabic_radio/liveradio'],
-            enabled: false,
+            paths: ['/arabic/bbc_arabic_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/arabic/bbc_arabic_radio/liveradio'],
@@ -1024,7 +1026,7 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/bengali/bbc_bangla_radio/liveradio'],
+            paths: ['/bengali/bbc_bangla_radio/liveradio?renderer_env=live'],
             enabled: false,
           },
           local: {
@@ -1221,7 +1223,7 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/burmese/bbc_burmese_radio/liveradio'],
+            paths: ['/burmese/bbc_burmese_radio/liveradio?renderer_env=live'],
             enabled: false,
           },
           local: {
@@ -1510,7 +1512,7 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/gahuza/bbc_gahuza_radio/liveradio'],
+            paths: ['/gahuza/bbc_gahuza_radio/liveradio?renderer_env=live'],
             enabled: false,
           },
           local: {
@@ -1886,8 +1888,8 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/hausa/bbc_hausa_radio/liveradio'],
-            enabled: false,
+            paths: ['/hausa/bbc_hausa_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/hausa/bbc_hausa_radio/liveradio'],
@@ -2100,16 +2102,19 @@ module.exports = () => ({
       liveRadio: {
         environments: {
           live: {
-            paths: ['/hindi/bbc_hindi_radio/liveradio'],
+            paths: [],
+            // route deprecated - hindi/bbc_hindi_radio/* will 404
             enabled: false,
           },
           test: {
-            paths: ['/hindi/bbc_hindi_radio/liveradio'],
+            paths: [],
+            // route deprecated - hindi/bbc_hindi_radio/* will 404
             enabled: false,
           },
           local: {
-            paths: ['/hindi/bbc_hindi_radio/liveradio'],
-            enabled: true,
+            paths: [],
+            // route deprecated - hindi/bbc_hindi_radio/* will 404
+            enabled: false,
           },
         },
         smoke: false,
@@ -2468,11 +2473,13 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/indonesia/bbc_indonesian_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/indonesia/bbc_indonesian_radio/liveradio'],
-            enabled: false,
+            paths: [
+              '/indonesia/bbc_indonesian_radio/liveradio?renderer_env=live',
+            ],
+            enabled: true,
           },
           local: {
             paths: ['/indonesia/bbc_indonesian_radio/liveradio'],
@@ -2819,10 +2826,10 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/korean/bbc_korean_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
-            paths: ['/korean/bbc_korean_radio/liveradio'],
+            paths: ['/korean/bbc_korean_radio/liveradio?renderer_env=live'],
             enabled: true,
           },
           local: {
@@ -3014,7 +3021,7 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/kyrgyz/bbc_kyrgyz_radio/liveradio'],
+            paths: ['/kyrgyz/bbc_kyrgyz_radio/liveradio?renderer_env=live'],
             enabled: false,
           },
           local: {
@@ -3636,7 +3643,7 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/nepali/bbc_nepali_radio/liveradio'],
+            paths: ['/nepali/bbc_nepali_radio/liveradio?renderer_env=live'],
             enabled: false,
           },
           local: {
@@ -3906,11 +3913,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/pashto/bbc_pashto_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/pashto/bbc_pashto_radio/liveradio'],
-            enabled: false,
+            paths: ['/pashto/bbc_pashto_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/pashto/bbc_pashto_radio/liveradio'],
@@ -4173,8 +4180,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/persian/bbc_persian_radio/liveradio',
-              '/persian/bbc_dari_radio/liveradio',
+              '/persian/bbc_persian_radio/liveradio?renderer_env=live',
+              '/persian/bbc_dari_radio/liveradio?renderer_env=live',
             ],
             enabled: true,
           },
@@ -5457,7 +5464,7 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/sinhala/bbc_sinhala_radio/liveradio'],
+            paths: ['/sinhala/bbc_sinhala_radio/liveradio?renderer_env=live'],
             enabled: false,
           },
           local: {
@@ -5649,11 +5656,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/somali/bbc_somali_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/somali/bbc_somali_radio/liveradio'],
-            enabled: false,
+            paths: ['/somali/bbc_somali_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/somali/bbc_somali_radio/liveradio'],
@@ -5907,11 +5914,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/swahili/bbc_swahili_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/swahili/bbc_swahili_radio/liveradio'],
-            enabled: false,
+            paths: ['/swahili/bbc_swahili_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/swahili/bbc_swahili_radio/liveradio'],
@@ -6129,7 +6136,7 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/tamil/bbc_tamil_radio/liveradio'],
+            paths: ['/tamil/bbc_tamil_radio/liveradio?renderer_env=live'],
             enabled: false,
           },
           local: {
@@ -6697,7 +6704,7 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/tigrinya/bbc_tigrinya_radio/liveradio'],
+            paths: ['/tigrinya/bbc_tigrinya_radio/liveradio?renderer_env=live'],
             enabled: false,
           },
           local: {
@@ -7604,11 +7611,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/urdu/bbc_urdu_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/urdu/bbc_urdu_radio/liveradio'],
-            enabled: false,
+            paths: ['/urdu/bbc_urdu_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/urdu/bbc_urdu_radio/liveradio'],
@@ -7826,7 +7833,7 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/uzbek/bbc_uzbek_radio/liveradio'],
+            paths: ['/uzbek/bbc_uzbek_radio/liveradio?renderer_env=live'],
             enabled: false,
           },
           local: {

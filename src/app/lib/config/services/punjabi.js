@@ -181,6 +181,11 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'ਸਭ ਤੋਂ ਵੱਧ ਦੇਖਿਆ',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: false,
     },

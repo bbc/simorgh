@@ -18,7 +18,7 @@ const HeaderContainer = () => {
     dir,
     scriptLink,
     lang,
-    headerFooterLang,
+    serviceLang,
   } = useContext(ServiceContext);
   const { skipLinkText } = translations;
   const borderBottom = pageType !== 'frontPage';
@@ -31,26 +31,23 @@ const HeaderContainer = () => {
 
   const isOperaMini = onClient() && window.operamini;
 
-  // 'headerFooterLang' value is only available in the Ukrainian config as our ukraine_in_russian pages will have
-  // a Ukrainian text for the header and footer but a Russian text for the main element.
-  // However, the skip to content link will also be in Russian, so we need to pass the `ru-UA` lang code to it.
-  const headerLangAttribute = headerFooterLang && { lang: headerFooterLang };
-  const skipLinkLangAttribute = headerLangAttribute && { lang };
-
+  // `serviceLang` is defined when the language the page is written in is different to the
+  // language of the service. `serviceLang` is used to override the page language.
+  // However, the skip to content link remains set in the page language.
   const skipLink = !isOperaMini && (
     <SkipLink
       service={service}
       script={script}
       dir={dir}
       href="#content"
-      {...skipLinkLangAttribute}
+      lang={serviceLang && lang}
     >
       {skipLinkText}
     </SkipLink>
   );
 
   return (
-    <header role="banner" {...headerLangAttribute}>
+    <header role="banner" lang={serviceLang}>
       <ConsentBanner />
       <BrandContainer
         borderBottom={borderBottom}

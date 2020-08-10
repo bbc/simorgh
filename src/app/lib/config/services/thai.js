@@ -186,6 +186,11 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'มียอดชมมากที่สุด',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: false,
     },

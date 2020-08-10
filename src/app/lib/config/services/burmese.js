@@ -199,9 +199,15 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'လူကြည့်အများဆုံး',
+      numberOfItems: 5,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: false,
       header: 'နောက်ဆုံးလွှင့် အစီအစဉ်များ',
       durationLabel: 'ကြာမြင့်ချိန် %duration%',
