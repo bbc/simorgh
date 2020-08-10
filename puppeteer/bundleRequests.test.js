@@ -64,7 +64,7 @@ describe('Js bundle requests', () => {
                 .forEach(url => {
                   expect(url).toMatch(
                     new RegExp(
-                      `(\\/static\\/js\\/(main|vendor|comscore|${config[service].name})-\\w+\\.\\w+\\.js)`,
+                      `(\\/static\\/js\\/(?:comscore\\/)?(main|vendor|${config[service].name})-\\w+\\.\\w+\\.js)`,
                       'g',
                     ),
                   );
