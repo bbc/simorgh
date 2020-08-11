@@ -64,7 +64,7 @@ const StyledVideoPlayer = styled(AVPlayer)`
   }
 `;
 
-const OnDemandTvPage = ({ pageData, MediaError }) => {
+const OnDemandTvPage = ({ pageData, MediaError, mediaIsAvailable }) => {
   const {
     language,
     headline,
@@ -77,7 +77,6 @@ const OnDemandTvPage = ({ pageData, MediaError }) => {
     promoBrandTitle,
     thumbnailImageUrl,
     durationISO8601,
-    mediaIsAvailable,
   } = pageData;
 
   const {
@@ -202,6 +201,8 @@ const OnDemandTvPage = ({ pageData, MediaError }) => {
 };
 
 OnDemandTvPage.propTypes = {
+  mediaIsAvailable: bool,
+  mediaError: node,
   pageData: shape({
     language: string,
     headline: string,
@@ -214,8 +215,6 @@ OnDemandTvPage.propTypes = {
     promoBrandTitle: string,
     thumbnailImageUrl: string,
     durationISO8601: string,
-    mediaIsAvailable: bool,
-    mediaError: node,
   }).isRequired,
 };
 

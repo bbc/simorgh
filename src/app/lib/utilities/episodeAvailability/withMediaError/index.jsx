@@ -10,13 +10,15 @@ const withMediaError = PageComponent => props => {
   const mediaIsAvailable =
     episodeAvailability === EPISODE_STATUS.EPISODE_IS_AVAILABLE;
 
+  const ErrorComponent = errorProps => (
+    <ErrorMessage {...errorProps} episodeAvailability={episodeAvailability} />
+  );
+
   return (
     <PageComponent
       {...props}
       mediaIsAvailable={mediaIsAvailable}
-      MediaError={({ skin }) => (
-        <ErrorMessage episodeAvailability={episodeAvailability} skin={skin} />
-      )}
+      MediaError={mediaIsAvailable ? () => null : ErrorComponent}
     />
   );
 };
