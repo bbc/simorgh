@@ -8,7 +8,7 @@ import { render, waitFor } from '@testing-library/react';
 import fetchMock from 'fetch-mock';
 
 // components being tested
-import routes from './index';
+import _routes from './index';
 
 // mock data
 import liveRadioPageJson from '#data/korean/bbc_korean_radio/liveradio.json';
@@ -26,6 +26,17 @@ import indexPageJson from '#data/ukrainian/ukraine_in_russian';
 import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
+
+let routes;
+
+beforeAll(async () => {
+  routes = await Promise.all(
+    _routes.map(async ({ component, ...rest }) => ({
+      component: component.load ? (await component.load()).default : component,
+      ...rest,
+    })),
+  );
+});
 
 beforeEach(() => {
   // Mocks out CanonicalAdBootstrapJs script
