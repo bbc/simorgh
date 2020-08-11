@@ -64,7 +64,7 @@ const StyledVideoPlayer = styled(AVPlayer)`
   }
 `;
 
-const OnDemandTvPage = ({ pageData }) => {
+const OnDemandTvPage = ({ pageData, MediaError }) => {
   const {
     language,
     headline,
@@ -78,7 +78,6 @@ const OnDemandTvPage = ({ pageData }) => {
     thumbnailImageUrl,
     durationISO8601,
     mediaIsAvailable,
-    MediaError,
   } = pageData;
 
   const {

@@ -16,8 +16,8 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
 
-import { ServiceContext } from '../../../contexts/ServiceContext';
-import { EPISODE_STATUS } from '.';
+import { EPISODE_STATUS } from '..';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const AudioErrorWrapper = styled.div`
   position: relative;
@@ -47,7 +47,7 @@ const getErrorMessage = (status, translations) => {
   if (status === EPISODE_STATUS.EPISODE_IS_EXPIRED) {
     return pathOr(
       'This content is no longer available',
-      [['media', 'contentExpired']],
+      ['media', 'contentExpired'],
       translations,
     );
   }
@@ -74,29 +74,11 @@ const ErrorMessage = ({ episodeAvailability, skin }) => {
 
 ErrorMessage.propTypes = {
   episodeAvailability: oneOf(Object.values(EPISODE_STATUS)).isRequired,
-  skin: oneOf('audio', 'video'),
+  skin: oneOf(['audio', 'video']),
 };
 
 ErrorMessage.defaultProps = {
   skin: 'video',
 };
 
-const withMediaError = PageComponent => props => {
-  const {
-    pageData: { episodeAvailability },
-  } = props;
-
-  return (
-    <PageComponent
-      {...props}
-      mediaIsAvailable={
-        episodeAvailability === EPISODE_STATUS.EPISODE_IS_AVAILABLE
-      }
-      MediaError={({ skin }) => (
-        <ErrorMessage episodeAvailability={episodeAvailability} skin={skin} />
-      )}
-    />
-  );
-};
-
-export default withMediaError;
+export default ErrorMessage;
