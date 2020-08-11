@@ -19,7 +19,7 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
 });
 
 const MostReadPageWithContext = () => (
-  <ToggleContextProvider service="pidgin" origin="https://www.test.bbc.com">
+  <ToggleContextProvider>
     <ServiceContextProvider service="pidgin">
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.com"

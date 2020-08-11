@@ -7,6 +7,8 @@ import { matchPath } from 'react-router';
 import { render } from '@testing-library/react';
 import fetchMock from 'fetch-mock';
 
+import defaultToggles from '#lib/config/toggles';
+
 // components being tested
 import routes from './index';
 
@@ -71,6 +73,7 @@ const renderRouter = props =>
         bbcOrigin: 'https://www.bbc.com',
         isAmp: false,
         status: props.status || 200,
+        toggles: defaultToggles.local,
         ...props,
       })}
     </MemoryRouter>,
