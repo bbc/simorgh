@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { shape, string, number, bool, node } from 'prop-types';
+import { shape, string, number, bool, func } from 'prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -213,7 +213,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
 OnDemandRadioPage.propTypes = {
   mediaIsAvailable: bool.isRequired,
-  MediaError: node.isRequired,
+  MediaError: func.isRequired,
   pageData: shape({
     brandTitle: string,
     headline: string,

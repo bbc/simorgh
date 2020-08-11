@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import { shape, string, number, bool, node } from 'prop-types';
+import { shape, string, number, bool, func } from 'prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -202,7 +202,7 @@ const OnDemandTvPage = ({ pageData, MediaError, mediaIsAvailable }) => {
 
 OnDemandTvPage.propTypes = {
   mediaIsAvailable: bool.isRequired,
-  MediaError: node.isRequired,
+  MediaError: func.isRequired,
   pageData: shape({
     language: string,
     headline: string,
