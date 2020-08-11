@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import MostReadPage from '.';
+import MostReadPage from './MostReadPage';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';

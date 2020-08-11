@@ -64,7 +64,7 @@ describe('Js bundle requests', () => {
                 .forEach(url => {
                   expect(url).toMatch(
                     new RegExp(
-                      `(\\/static\\/js\\/(main|vendor|${config[service].name}|.+Page)-\\w+\\.\\w+\\.js)`,
+                      `(\\/static\\/js\\/(main|vendor|${config[service].name}|.+Page)-.+?.js)`,
                       'g',
                     ),
                   );
@@ -75,7 +75,7 @@ describe('Js bundle requests', () => {
               const serviceMatches = requests.filter(url =>
                 url.match(
                   new RegExp(
-                    `(\\/static\\/js\\/${config[service].name}-\\w+\\.\\w+\\.js)`,
+                    `(\\/static\\/js\\/${config[service].name}-.+?.js)`,
                     'g',
                   ),
                 ),

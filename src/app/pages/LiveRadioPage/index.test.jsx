@@ -5,7 +5,7 @@ import { render, act } from '@testing-library/react';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import LiveRadioPage from '.';
+import LiveRadioPage from './LiveRadioPage';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';

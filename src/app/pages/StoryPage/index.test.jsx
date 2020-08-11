@@ -14,7 +14,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 
 // components to test
-import { StoryPage } from '..';
+import StoryPage from '.';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
 // mock data
