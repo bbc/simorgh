@@ -284,7 +284,7 @@ describe('Front Page', () => {
           playerAds: false,
         }),
       );
-    });
+    }, 10000);
 
     it('should not create window.dotcomConfig when on Canonical and ads are disabled', async () => {
       fetchMock.mock(
@@ -310,7 +310,7 @@ describe('Front Page', () => {
       );
 
       await waitFor(() => expect(window.dotcomConfig).toBeUndefined());
-    });
+    }, 10000);
 
     it('should not create window.dotcomConfig when on Amp and ads are enabled', async () => {
       fetchMock.mock(
