@@ -8,7 +8,7 @@ import { render, waitFor } from '@testing-library/react';
 import fetchMock from 'fetch-mock';
 
 // components being tested
-import _routes from './index';
+import routes from './index';
 
 // mock data
 import liveRadioPageJson from '#data/korean/bbc_korean_radio/liveradio.json';
@@ -27,16 +27,20 @@ import storyPageRecommendationsData from '#data/mundo/recommendations/index.json
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 
-let routes;
-
-beforeAll(async () => {
-  routes = await Promise.all(
-    _routes.map(async ({ component, ...rest }) => ({
-      component: component.load ? (await component.load()).default : component,
-      ...rest,
-    })),
-  );
-});
+// mock pages/index.js to return a non async page component
+jest.mock('#pages/index.js', () => ({
+  StoryPage: jest.requireActual('#pages/StoryPage').default,
+  OnDemandTvPage: jest.requireActual('#pages/OnDemandTvPage').default,
+  PhotoGalleryPage: jest.requireActual('#pages/PhotoGalleryPage').default,
+  OnDemandRadioPage: jest.requireActual('#pages/OnDemandRadioPage').default,
+  MostReadPage: jest.requireActual('#pages/MostReadPage').default,
+  MediaAssetPage: jest.requireActual('#pages/MediaAssetPage').default,
+  LiveRadioPage: jest.requireActual('#pages/LiveRadioPage').default,
+  IdxPage: jest.requireActual('#pages/IdxPage').default,
+  FrontPage: jest.requireActual('#pages/FrontPage').default,
+  ErrorPage: jest.requireActual('#pages/ErrorPage').default,
+  ArticlePage: jest.requireActual('#pages/ArticlePage').default,
+}));
 
 beforeEach(() => {
   // Mocks out CanonicalAdBootstrapJs script
