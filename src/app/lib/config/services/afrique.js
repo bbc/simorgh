@@ -200,9 +200,15 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Les plus vus',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Features',
       frequenciesPageUrl:

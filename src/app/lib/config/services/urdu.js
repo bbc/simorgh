@@ -186,9 +186,15 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'سب سے زیادہ دیکھی گئی',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: false,
       header: 'ایف ایم بلیٹن',
       durationLabel: '%duration% دورانیہ',

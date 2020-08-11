@@ -194,6 +194,11 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Энг кўп кўрилган',
+      numberOfItems: 5,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: false,
     },

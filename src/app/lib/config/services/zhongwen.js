@@ -102,6 +102,11 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: '热播',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     navigation: [
       {
         title: '主页',
@@ -325,6 +330,11 @@ export const service = {
       lastUpdated: '最近更新：',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: '熱播',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     navigation: [
       {

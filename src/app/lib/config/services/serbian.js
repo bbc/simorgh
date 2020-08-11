@@ -111,6 +111,11 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Najgledanije',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     navigation: [
       {
         title: 'Početna strana',
@@ -346,6 +351,11 @@ export const service = {
       lastUpdated: 'Последњи пут ажурирано:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Најгледаније',
+      numberOfItems: 5,
+      hasMostWatched: true,
     },
     navigation: [
       {

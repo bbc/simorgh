@@ -187,9 +187,15 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Hedduu kan ilaalaman',
+      numberOfItems: 5,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: false,
       header: 'Dhaggeeffadhaa',
       durationLabel: 'Turtii %duration%',

@@ -197,6 +197,11 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'सबसे ज्यादा देखे गए',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: false,
     },

@@ -24,6 +24,12 @@ const mockToggles = {
     enabled: true,
   },
 };
+const requestContextData = ({ service = 'pidgin' }) => ({
+  pageType: 'frontPage',
+  service,
+  pathname: '/pathname',
+  data: { status: 200 },
+});
 
 // eslint-disable-next-line react/prop-types
 const FrontPageWithContext = ({
@@ -35,12 +41,8 @@ const FrontPageWithContext = ({
   <BrowserRouter>
     <ToggleContextProvider toggles={toggles}>
       <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
         isAmp={isAmp}
-        pageType="frontPage"
-        pathname="/pathname"
-        service={service}
-        statusCode={200}
+        {...requestContextData({ service })}
       >
         <ServiceContextProvider service={service}>
           <FrontPage {...props} />

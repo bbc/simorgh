@@ -184,6 +184,11 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Ən çox baxılanlar',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: false,
     },

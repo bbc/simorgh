@@ -3,6 +3,9 @@ export default {
   ads: {
     enabled: false,
   },
+  ampAds: {
+    enabled: false,
+  },
   chartbeatAnalytics: {
     enabled: true,
   },
@@ -28,6 +31,9 @@ export default {
     value:
       '(afrique|arabic|hausa|indonesia|korean|pashto|persian|somali|swahili|urdu)',
   },
+  onDemandRadioSchedule: {
+    enabled: false,
+  },
   logMediaPlayerStatus: {
     enabled: false,
   },
@@ -36,6 +42,9 @@ export default {
   },
   mostRead: {
     enabled: true,
+  },
+  mostWatched: {
+    enabled: false,
   },
   navOnArticles: {
     enabled: true,

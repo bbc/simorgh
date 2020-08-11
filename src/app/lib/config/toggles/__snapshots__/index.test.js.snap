@@ -6,6 +6,9 @@ Object {
   "ads": Object {
     "enabled": false,
   },
+  "ampAds": Object {
+    "enabled": false,
+  },
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
@@ -38,8 +41,14 @@ Object {
   "mostRead": Object {
     "enabled": true,
   },
+  "mostWatched": Object {
+    "enabled": false,
+  },
   "navOnArticles": Object {
     "enabled": true,
+  },
+  "onDemandRadioSchedule": Object {
+    "enabled": false,
   },
   "prerollAds": Object {
     "enabled": true,
@@ -64,6 +73,9 @@ Object {
   "_environment": "local",
   "ads": Object {
     "enabled": false,
+  },
+  "ampAds": Object {
+    "enabled": true,
   },
   "chartbeatAnalytics": Object {
     "enabled": true,
@@ -97,7 +109,13 @@ Object {
   "mostRead": Object {
     "enabled": true,
   },
+  "mostWatched": Object {
+    "enabled": true,
+  },
   "navOnArticles": Object {
+    "enabled": true,
+  },
+  "onDemandRadioSchedule": Object {
     "enabled": true,
   },
   "prerollAds": Object {
@@ -124,6 +142,9 @@ Object {
   "ads": Object {
     "enabled": false,
   },
+  "ampAds": Object {
+    "enabled": true,
+  },
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
@@ -156,7 +177,13 @@ Object {
   "mostRead": Object {
     "enabled": true,
   },
+  "mostWatched": Object {
+    "enabled": true,
+  },
   "navOnArticles": Object {
+    "enabled": true,
+  },
+  "onDemandRadioSchedule": Object {
     "enabled": true,
   },
   "prerollAds": Object {
