@@ -28,6 +28,7 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
+import ResourceHints from '#app/components/ResourceHints/index.jsx';
 
 const { logMediaPlayerStatus } = toggles[
   process.env.SIMORGH_APP_ENV || 'local'
@@ -169,6 +170,7 @@ const MediaPlayerContainer = ({
 
   return (
     <>
+      <ResourceHints assetOrigins={[embedSource]} />
       <Metadata aresMediaBlock={aresMediaBlock} embedSource={embedSource} />
       <Figure>
         {isAmp ? (
