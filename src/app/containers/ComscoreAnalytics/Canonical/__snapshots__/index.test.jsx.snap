@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Canonical Comscore Analytics  Snapshots should render comscore script when on canonical and toggle is enabled 1`] = `
+exports[`Canonical Comscore Analytics  Snapshots should render comscore script when on canonical 1`] = `
 <html>
   <head>
     <noscript>
@@ -8,7 +8,7 @@ exports[`Canonical Comscore Analytics  Snapshots should render comscore script w
     </noscript>
     <script
       async="true"
-      src="http://localhost:7080/static/js/comscore-1.0.js"
+      src="http://localhost:7080/static/js/comscore/main-1.0.js"
       type="text/javascript"
     />
   </head>
