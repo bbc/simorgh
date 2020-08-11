@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comscore Analytics Container AMP should render comscore amp-analytics component 1`] = `
+<amp-analytics
+  type="comscore"
+>
+  <script
+    type="application/json"
+  >
+    {"vars":{"c2":"17986528"},"extraUrlParams":{"comscorekw":"amp"}}
+  </script>
+</amp-analytics>
+`;
+
+exports[`Comscore Analytics Container Canonical should render comscore script when on canonical 1`] = `
+<amp-analytics
+  type="comscore"
+>
+  <script
+    type="application/json"
+  >
+    {"vars":{"c2":"17986528"},"extraUrlParams":{"comscorekw":"amp"}}
+  </script>
+</amp-analytics>
+`;

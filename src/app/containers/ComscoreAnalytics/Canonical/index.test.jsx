@@ -1,6 +1,5 @@
 import React from 'react';
 import { act, render, waitFor } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { UserContext } from '#contexts/UserContext';
 import CanonicalComscore from '.';
 
@@ -70,14 +69,5 @@ describe('Canonical Comscore Analytics ', () => {
         { c1: '2', c2: '17986528', cs_ucfr: '1' },
       ]);
     });
-  });
-
-  describe('Snapshots', () => {
-    shouldMatchSnapshot(
-      'should render comscore script when on canonical',
-      <UserContext.Provider value={{ personalisationEnabled: false }}>
-        <CanonicalComscore />
-      </UserContext.Provider>,
-    );
   });
 });

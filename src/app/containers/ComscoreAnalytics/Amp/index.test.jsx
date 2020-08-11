@@ -2,11 +2,18 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import AmpComscore from '.';
 
-describe('Snapshots', () => {
+describe('Assertions', () => {
   it('should render comscore amp-analytics component', () => {
-    const { container } = render(<AmpComscore />);
+    render(<AmpComscore />);
 
-    expect(container.firstChild).not.toBeNull();
-    expect(container.firstChild).toMatchSnapshot();
+    const ampAnalyticsEl = document.querySelector('amp-analytics');
+    const scriptEl = document.querySelector('script');
+    const scriptContent =
+      '{"vars":{"c2":"17986528"},"extraUrlParams":{"comscorekw":"amp"}}';
+
+    expect(ampAnalyticsEl).toBeInTheDocument();
+    expect(scriptEl).toBeInTheDocument();
+    expect(ampAnalyticsEl).toContainElement(scriptEl);
+    expect(scriptEl.textContent).toEqual(scriptContent);
   });
 });

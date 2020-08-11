@@ -1,17 +1,12 @@
 import React from 'react';
-import { node, string, shape } from 'prop-types';
+import { node, string, shape, bool } from 'prop-types';
 import { render } from '@testing-library/react';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { UserContext } from '#contexts/UserContext';
 import ComscoreAnalytics from '.';
-
-const defaultToggleState = {
-  comscoreAnalytics: {
-    enabled: false,
-  },
-};
 
 const mockToggleDispatch = jest.fn();
 
@@ -22,7 +17,7 @@ const ContextWrap = ({
   platform,
   origin,
   children,
-  toggleState,
+  comscoreAnalyticsToggle,
   personalisation,
 }) => (
   <RequestContextProvider
@@ -36,7 +31,11 @@ const ContextWrap = ({
     <ServiceContextProvider service="pidgin">
       <ToggleContext.Provider
         value={{
-          toggleState,
+          toggleState: {
+            comscoreAnalytics: {
+              enabled: comscoreAnalyticsToggle,
+            },
+          },
           toggleDispatch: mockToggleDispatch,
         }}
       >
@@ -53,29 +52,23 @@ ContextWrap.propTypes = {
   pageType: string.isRequired,
   origin: string.isRequired,
   platform: string.isRequired,
-  toggleState: shape({}),
+  comscoreAnalyticsToggle: bool.isRequired,
   personalisation: shape({}),
 };
 
 ContextWrap.defaultProps = {
-  toggleState: defaultToggleState,
   personalisation: defaultPersonalisation,
 };
 
 describe('Comscore Analytics Container', () => {
-  describe('Assertions - AMP', () => {
+  describe('AMP', () => {
     it('should return null when toggle is disabled', () => {
-      const toggleState = {
-        comscoreAnalytics: {
-          enabled: false,
-        },
-      };
       const { container } = render(
         <ContextWrap
           platform="amp"
           pageType="article"
           origin="bbc.com"
-          toggleState={toggleState}
+          comscoreAnalyticsToggle={false}
         >
           <ComscoreAnalytics />
         </ContextWrap>,
@@ -83,21 +76,44 @@ describe('Comscore Analytics Container', () => {
 
       expect(container).toBeEmptyDOMElement();
     });
+
+    it('should render comscore amp-analytics component', () => {
+      const { container } = render(
+        <ContextWrap
+          platform="amp"
+          pageType="article"
+          origin="bbc.com"
+          comscoreAnalyticsToggle
+        >
+          <ComscoreAnalytics />
+        </ContextWrap>,
+      );
+
+      expect(container.firstChild).not.toBeNull();
+      expect(container.firstChild).toMatchSnapshot();
+    });
   });
 
-  describe('Assertions - Canonical', () => {
+  describe('Canonical', () => {
+    shouldMatchSnapshot(
+      'should render comscore script when on canonical',
+      <ContextWrap
+        platform="amp"
+        pageType="article"
+        origin="bbc.com"
+        comscoreAnalyticsToggle
+      >
+        <ComscoreAnalytics />
+      </ContextWrap>,
+    );
+
     it('should return null when toggle is disabled', async () => {
-      const toggleState = {
-        comscoreAnalytics: {
-          enabled: false,
-        },
-      };
       const { container } = render(
         <ContextWrap
           platform="canonical"
           pageType="article"
           origin="bbc.com"
-          toggleState={toggleState}
+          comscoreAnalyticsToggle={false}
         >
           <ComscoreAnalytics />
         </ContextWrap>,
