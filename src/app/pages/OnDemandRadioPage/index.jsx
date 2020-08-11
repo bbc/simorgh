@@ -29,6 +29,8 @@ import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
+import useToggle from '#hooks/useToggle';
+import RadioScheduleContainer from '#containers/RadioSchedule';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -119,6 +121,12 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     translations,
   );
 
+  const radioScheduleData = pathOr([], ['radioScheduleData'], pageData);
+  const hasRadioScheduleData = Boolean(radioScheduleData.length);
+  const { enabled: radioScheduleIsEnabled } = useToggle(
+    'onDemandRadioSchedule',
+  );
+
   return (
     <>
       <ATIAnalytics data={pageData} />
@@ -196,6 +204,9 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           />
         </Grid>
       </StyledGelPageGrid>
+      {radioScheduleIsEnabled && hasRadioScheduleData && (
+        <RadioScheduleContainer initialData={radioScheduleData} />
+      )}
     </>
   );
 };
