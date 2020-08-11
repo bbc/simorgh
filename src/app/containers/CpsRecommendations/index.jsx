@@ -124,6 +124,14 @@ const CpsRecommendations = ({ items, parentColumns }) => {
     </Grid>
   );
 
+  listTransform.propTypes = {
+    content: arrayOf(shape(storyItem)),
+  };
+
+  listTransform.defaultProps = {
+    content: [],
+  };
+
   return (
     <GridItemConstrainedMediumNoMargin>
       <SkipLinkWrapper

@@ -33,6 +33,15 @@ const CpsRelatedContent = ({ content, parentColumns }) => {
     group5: 4,
   };
 
+  const singlePromoItemGridColumns = {
+    group0: 1,
+    group1: 1,
+    group2: 1,
+    group3: 1,
+    group4: 2,
+    group5: 2,
+  };
+
   return (
     <CpsOnwardJourney
       labelId="related-content-heading"
@@ -42,6 +51,7 @@ const CpsRelatedContent = ({ content, parentColumns }) => {
       singleTransform={SinglePromoItemGrid}
       listTransform={MultiplePromoItemsGrid}
       columnType="secondary"
+      singlePromoItemGridColumns={singlePromoItemGridColumns}
       storyPromoUlGridColumns={storyPromoUlGridColumns}
       storyPromoLiGridColumns={storyPromoLiGridColumns}
     />

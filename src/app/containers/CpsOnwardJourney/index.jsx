@@ -128,6 +128,7 @@ const CpsOnwardJourney = ({
   sectionLabelOverrideAs,
   sectionLabelBar,
   sectionLabelBackground,
+  singlePromoItemGridColumns,
   storyPromoLiGridColumns,
   storyPromoUlGridColumns,
   columnType,
@@ -195,6 +196,7 @@ const CpsOnwardJourney = ({
             promo: singleContent,
             displayImage,
             displaySummary,
+            singlePromoItemGridColumns,
           })}
         </SingleContentWrapper>
       ) : (
@@ -215,8 +217,8 @@ CpsOnwardJourney.propTypes = {
   labelId: string.isRequired,
   title: string.isRequired,
   content: arrayOf(shape(storyItem)),
-  displayImage: bool.isRequired,
-  displaySummary: bool.isRequired,
+  displayImage: bool,
+  displaySummary: bool,
   parentColumns: shape({
     group0: number,
     group1: number,
@@ -230,6 +232,30 @@ CpsOnwardJourney.propTypes = {
   sectionLabelOverrideAs: string,
   sectionLabelBar: bool,
   sectionLabelBackground: string,
+  singlePromoItemGridColumns: shape({
+    group0: number,
+    group1: number,
+    group2: number,
+    group3: number,
+    group4: number,
+    group5: number,
+  }),
+  storyPromoLiGridColumns: shape({
+    group0: number,
+    group1: number,
+    group2: number,
+    group3: number,
+    group4: number,
+    group5: number,
+  }),
+  storyPromoUlGridColumns: shape({
+    group0: number,
+    group1: number,
+    group2: number,
+    group3: number,
+    group4: number,
+    group5: number,
+  }),
   /* since this component is reused in both the main and secondary columns,
       the property below help ensure that it layss out properrly in both
       usages.
@@ -239,10 +265,15 @@ CpsOnwardJourney.propTypes = {
 
 CpsOnwardJourney.defaultProps = {
   content: [],
+  displayImage: true,
+  displaySummary: true,
   parentColumns: null,
   sectionLabelOverrideAs: null,
   sectionLabelBar: true,
   sectionLabelBackground: C_GHOST,
+  singlePromoItemGridColumns: null,
+  storyPromoLiGridColumns: null,
+  storyPromoUlGridColumns: null,
 };
 
 export default CpsOnwardJourney;

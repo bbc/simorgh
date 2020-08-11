@@ -6,38 +6,34 @@ import { storyItem } from '#models/propTypes/storyItem';
 import Grid from '../Grid';
 
 export const SinglePromoItem = ({
-  promo,
+  dir,
   displayImage,
   displaySummary,
-  dir,
+  promo,
 }) => {
   return (
     <StoryPromo
-      item={promo}
       dir={dir}
       displayImage={displayImage}
       displaySummary={displaySummary}
+      item={promo}
     />
   );
 };
 
-// currently have relatedContent grid - different to recommendations - TODO pass down as props)
-export const SinglePromoItemGrid = (props, { dir }) => (
-  <Grid
-    columns={{
-      group0: 1,
-      group1: 1,
-      group2: 1,
-      group3: 1,
-      group4: 2,
-      group5: 2,
-    }}
-    enableGelGutters
-    dir={dir}
-  >
-    {SinglePromoItem(props)}
-  </Grid>
-);
+export const SinglePromoItemGrid = ({
+  dir,
+  displayImage,
+  displaySummary,
+  promo,
+  singlePromoItemGridColumns,
+}) => {
+  return (
+    <Grid columns={singlePromoItemGridColumns} enableGelGutters dir={dir}>
+      {SinglePromoItem({ dir, promo, displayImage, displaySummary })}
+    </Grid>
+  );
+};
 
 export const MultiplePromoItems = ({
   content,
@@ -96,6 +92,34 @@ SinglePromoItem.propTypes = {
   displaySummary: bool,
 };
 
+SinglePromoItem.defaultProps = {
+  dir: string,
+  displayImage: true,
+  displaySummary: true,
+};
+
+SinglePromoItemGrid.propTypes = {
+  dir: string,
+  promo: shape({ storyItem }).isRequired,
+  displayImage: bool,
+  displaySummary: bool,
+  singlePromoItemGridColumns: shape({
+    group0: number,
+    group1: number,
+    group2: number,
+    group3: number,
+    group4: number,
+    group5: number,
+  }),
+};
+
+SinglePromoItemGrid.defaultProps = {
+  dir: string,
+  displayImage: true,
+  displaySummary: true,
+  singlePromoItemGridColumns: null,
+};
+
 MultiplePromoItems.propTypes = {
   content: arrayOf(shape(storyItem)).isRequired,
   dir: string.isRequired,
@@ -131,10 +155,4 @@ MultiplePromoItems.defaultProps = {
 
 MultiplePromoItemsGrid.defaultProps = {
   dir: 'ltr',
-};
-
-SinglePromoItem.defaultProps = {
-  dir: string,
-  displayImage: true,
-  displaySummary: true,
 };
