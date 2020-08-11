@@ -146,7 +146,7 @@ const MediaAssetPage = ({ pageData }) => {
       <StyledGrid as="main" role="main">
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledGrid>
-      <CpsRelatedContent content={relatedContent} isMapContent />
+      <CpsRelatedContent content={relatedContent} />
     </>
   );
 };
