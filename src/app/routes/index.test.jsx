@@ -392,7 +392,9 @@ it('should fallback to and render a 500 error page if there is a problem with pa
     pathname,
     pageType: 'frontPage',
     service: 'afrique',
-    error,
+    error: {
+      message: error,
+    },
     status,
     errorCode: 500,
   });
@@ -432,7 +434,9 @@ it('should render a 404 error page if a data fetch responds with a 404', async (
     pathname,
     pageType,
     status,
-    error,
+    error: {
+      message: error,
+    },
     errorCode: 404,
     service: 'pidgin',
   });
