@@ -3,7 +3,7 @@ import { MEDIA_PLAYER_STATUS } from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
-const logEmbedSourceStatus = async ({ url, embedUrl, assetType }) => {
+export const logEmbedSourceStatus = async ({ url, embedUrl, assetType }) => {
   const response = await fetch(embedUrl, { method: 'HEAD' });
   const { status } = response;
   const message = { url, embedUrl, status, assetType };
@@ -14,4 +14,8 @@ const logEmbedSourceStatus = async ({ url, embedUrl, assetType }) => {
   }
 };
 
-export default logEmbedSourceStatus;
+export const logMissingBlockId = ({ url, assetType }) => {
+  const blockIdError = 'Missing Block ID';
+  const message = { url, assetType, blockIdError };
+  logger.warn(MEDIA_PLAYER_STATUS, message);
+};

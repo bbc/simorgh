@@ -27,7 +27,10 @@ import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
-import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
+import {
+  logEmbedSourceStatus,
+  logMissingBlockId,
+} from './helpers/logEmbedSourceStatus';
 
 const { logMediaPlayerStatus } = toggles[
   process.env.SIMORGH_APP_ENV || 'local'
@@ -105,29 +108,12 @@ const MediaPlayerContainer = ({
     ),
   };
 
-  if (!(versionId || blockId)) {
-    return null; // this should be the holding image with an error overlay
-  }
-
   const placeholderSrcset = getPlaceholderSrcSet({ originCode, locator });
   const placeholderSrc = buildIChefURL({
     originCode,
     locator,
     resolution: DEFAULT_WIDTH,
   });
-
-  const embedSource = getEmbedUrl({
-    mediaId: `${assetId}/${isLegacyMedia ? blockId : versionId}/${lang}`,
-    type: assetType,
-    isAmp,
-    queryString: location.search,
-  });
-
-  const iframeTitle = pathOr(
-    'Media player',
-    ['mediaAssetPage', 'mediaPlayer'],
-    translations,
-  );
 
   const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
   const StyledMessageContainer = styled.div`
@@ -146,7 +132,10 @@ const MediaPlayerContainer = ({
     path(['media', 'contentExpired'], translations) ||
     contentNotAvailableMessage;
 
-  if (!available) {
+  if (!available || !blockId) {
+    if (!blockId) {
+      logMissingBlockId({ url: assetId, assetType });
+    }
     return (
       <StyledMessageContainer>
         <MediaMessage
@@ -158,6 +147,23 @@ const MediaPlayerContainer = ({
       </StyledMessageContainer>
     );
   }
+
+  if (!versionId) {
+    return null; // this should be the holding image with an error overlay
+  }
+
+  const embedSource = getEmbedUrl({
+    mediaId: `${assetId}/${isLegacyMedia ? blockId : versionId}/${lang}`,
+    type: assetType,
+    isAmp,
+    queryString: location.search,
+  });
+
+  const iframeTitle = pathOr(
+    'Media player',
+    ['mediaAssetPage', 'mediaPlayer'],
+    translations,
+  );
 
   if (!onClient() && logMediaPlayerStatus.enabled) {
     logEmbedSourceStatus({
