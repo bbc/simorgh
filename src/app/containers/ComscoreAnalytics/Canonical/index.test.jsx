@@ -1,5 +1,5 @@
 import React from 'react';
-import { act, render } from '@testing-library/react';
+import { act, render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { UserContext } from '#contexts/UserContext';
 import CanonicalComscore from '.';
@@ -24,24 +24,23 @@ describe('Canonical Comscore Analytics ', () => {
     it('should render canonical comscore with noscript and script element', async () => {
       const noScriptContent = `<img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=0&cv=2.0&cj=1" />`;
 
-      await act(async () => {
-        render(
-          <UserContext.Provider value={{ personalisationEnabled: false }}>
-            <CanonicalComscore />
-          </UserContext.Provider>,
+      render(
+        <UserContext.Provider value={{ personalisationEnabled: false }}>
+          <CanonicalComscore />
+        </UserContext.Provider>,
+      );
+      await waitFor(() => {
+        const noScriptEl = document.querySelector('noscript');
+        expect(noScriptEl).toBeInTheDocument();
+        expect(noScriptEl.textContent).toEqual(noScriptContent);
+
+        const scriptEl = document.querySelector('script');
+        expect(scriptEl).toBeInTheDocument();
+        expect(scriptEl).toHaveAttribute('async');
+        expect(scriptEl.src).toEqual(
+          'http://localhost:7080/static/js/comscore/main-1.0.js',
         );
       });
-
-      const noScriptEl = document.querySelector('noscript');
-      expect(noScriptEl).toBeInTheDocument();
-      expect(noScriptEl.textContent).toEqual(noScriptContent);
-
-      const scriptEl = document.querySelector('script');
-      expect(scriptEl).toBeInTheDocument();
-      expect(scriptEl).toHaveAttribute('async');
-      expect(scriptEl.src).toEqual(
-        'http://localhost:7080/static/js/comscore/main-1.0.js',
-      );
     });
 
     it('should create window._comscore without personalisation', async () => {
