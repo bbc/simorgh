@@ -201,8 +201,8 @@ const OnDemandTvPage = ({ pageData, MediaError, mediaIsAvailable }) => {
 };
 
 OnDemandTvPage.propTypes = {
-  mediaIsAvailable: bool,
-  mediaError: node,
+  mediaIsAvailable: bool.isRequired,
+  MediaError: node.isRequired,
   pageData: shape({
     language: string,
     headline: string,
