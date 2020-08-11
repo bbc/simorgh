@@ -365,6 +365,15 @@ describe('Chartbeat utilities', () => {
         virtualReferrer: 'test.bbc.com/previous-path',
       };
 
+      const mockTitle = jest
+        .fn()
+        .mockImplementation(() => 'This is an index page title');
+
+      frontPageUtils.getPageTitle = mockTitle;
+
+      const expectedCookieValue = 'foobar';
+      jest.spyOn(Cookie, 'get').mockImplementation(() => expectedCookieValue);
+
       expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
     });
 
@@ -712,6 +721,15 @@ describe('Chartbeat utilities', () => {
       useCanonical: true,
       virtualReferrer: 'test.bbc.com/previous-path',
     };
+
+    const mockTitle = jest
+      .fn()
+      .mockImplementation(() => 'This is an index page title');
+
+    frontPageUtils.getPageTitle = mockTitle;
+
+    const expectedCookieValue = 'foobar';
+    jest.spyOn(Cookie, 'get').mockImplementation(() => expectedCookieValue);
 
     expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
   });
