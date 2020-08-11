@@ -16,9 +16,11 @@ export default ({ service, pageType, variant }) => {
     });
     describe('Radio Schedule', () => {
       it('should be displayed if there is enough schedule data', () => {
+        const toggleKey = 'onOnDemandRadioPage';
         const isRadioScheduleOnPage = serviceHasRadioSchedule({
           service,
           variant,
+          toggleKey,
         });
         cy.log(
           `On Demand Radio Page configured for Radio Schedule? ${isRadioScheduleOnPage}`,
