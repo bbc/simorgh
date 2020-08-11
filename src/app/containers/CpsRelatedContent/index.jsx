@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number } from 'prop-types';
+import { arrayOf, shape, number, bool } from 'prop-types';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { pathOr } from 'ramda';
 
@@ -9,7 +9,7 @@ import StoryPromo from '../StoryPromo';
 import Grid from '../../components/Grid';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 
-const CpsRelatedContent = ({ content, parentColumns }) => {
+const CpsRelatedContent = ({ content, parentColumns, isMapContent }) => {
   const { dir, translations } = useContext(ServiceContext);
 
   const title = pathOr('Related Content', ['relatedContent'], translations);
@@ -53,14 +53,19 @@ const CpsRelatedContent = ({ content, parentColumns }) => {
             group1: 6,
             group2: 6,
             group3: 6,
-            group4: 4,
-            group5: 4,
+            group4: isMapContent ? 8 : 4,
+            group5: isMapContent ? 8 : 4,
           }}
           as={StoryPromoLi}
           key={item.id || item.uri}
           dir={dir}
         >
-          <StoryPromo item={item} dir={dir} displaySummary={false} />
+          <StoryPromo
+            item={item}
+            dir={dir}
+            displaySummary={false}
+            isFullColumn={isMapContent}
+          />
         </Grid>
       ))}
     </Grid>
@@ -92,11 +97,13 @@ CpsRelatedContent.propTypes = {
     group4: number,
     group5: number,
   }),
+  isMapContent: bool,
 };
 
 CpsRelatedContent.defaultProps = {
   content: [],
   parentColumns: null,
+  isMapContent: false,
 };
 
 export default CpsRelatedContent;
