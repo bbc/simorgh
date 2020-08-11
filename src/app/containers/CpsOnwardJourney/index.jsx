@@ -120,12 +120,16 @@ const CpsOnwardJourney = ({
   labelId,
   title,
   content,
+  displayImage,
+  displaySummary,
   parentColumns,
   listTransform,
   singleTransform,
   sectionLabelOverrideAs,
   sectionLabelBar,
   sectionLabelBackground,
+  storyPromoLiGridColumns,
+  storyPromoUlGridColumns,
   columnType,
 }) => {
   const a11yAttributes = {
@@ -186,10 +190,22 @@ const CpsOnwardJourney = ({
       </StyledSectionLabel>
       {hasSingleContent ? (
         <SingleContentWrapper columnType={columnType}>
-          {singleTransform(singleContent)}
+          {singleTransform({
+            dir,
+            promo: singleContent,
+            displayImage,
+            displaySummary,
+          })}
         </SingleContentWrapper>
       ) : (
-        listTransform(content)
+        listTransform({
+          content,
+          dir,
+          displayImage,
+          displaySummary,
+          storyPromoLiGridColumns,
+          storyPromoUlGridColumns,
+        })
       )}
     </CpsOnwardJourneyWrapper>
   );
@@ -199,6 +215,8 @@ CpsOnwardJourney.propTypes = {
   labelId: string.isRequired,
   title: string.isRequired,
   content: arrayOf(shape(storyItem)),
+  displayImage: bool.isRequired,
+  displaySummary: bool.isRequired,
   parentColumns: shape({
     group0: number,
     group1: number,

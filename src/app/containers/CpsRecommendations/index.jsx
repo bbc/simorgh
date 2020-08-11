@@ -88,7 +88,7 @@ const CpsRecommendations = ({ items, parentColumns }) => {
     );
   };
 
-  const listTransform = promoItems => (
+  const listTransform = ({ content }) => (
     <Grid
       columns={{
         group0: 1,
@@ -102,7 +102,7 @@ const CpsRecommendations = ({ items, parentColumns }) => {
       enableGelGutters
       dir={dir}
     >
-      {promoItems.map(item => (
+      {content.map(item => (
         <Grid
           item
           columns={{

@@ -21,7 +21,7 @@ export const SinglePromoItem = ({
   );
 };
 
-// related content grid: (different to recommendations - TODO pass down)
+// currently have relatedContent grid - different to recommendations - TODO pass down as props)
 export const SinglePromoItemGrid = (props, { dir }) => (
   <Grid
     columns={{

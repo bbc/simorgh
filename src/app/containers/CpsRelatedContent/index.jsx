@@ -1,70 +1,37 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, number } from 'prop-types';
-import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { pathOr } from 'ramda';
 
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
-import StoryPromo from '../StoryPromo';
-import Grid from '../../components/Grid';
 import CpsOnwardJourney from '../CpsOnwardJourney';
+import {
+  SinglePromoItemGrid,
+  MultiplePromoItemsGrid,
+} from '#app/components/StoryPromoItems';
 
 const CpsRelatedContent = ({ content, parentColumns }) => {
-  const { dir, translations } = useContext(ServiceContext);
+  const { translations } = useContext(ServiceContext);
 
   const title = pathOr('Related Content', ['relatedContent'], translations);
 
-  const singleTransform = promo => (
-    <Grid
-      columns={{
-        group0: 1,
-        group1: 1,
-        group2: 1,
-        group3: 1,
-        group4: 2,
-        group5: 2,
-      }}
-      enableGelGutters
-      dir={dir}
-    >
-      <StoryPromo item={promo} dir={dir} />
-    </Grid>
-  );
+  const storyPromoUlGridColumns = {
+    group0: 6,
+    group1: 6,
+    group2: 6,
+    group3: 6,
+    group4: 8,
+    group5: 8,
+  };
 
-  const listTransform = items => (
-    <Grid
-      columns={{
-        group0: 6,
-        group1: 6,
-        group2: 6,
-        group3: 6,
-        group4: 8,
-        group5: 8,
-      }}
-      as={StoryPromoUl}
-      enableGelGutters
-      dir={dir}
-    >
-      {items.map(item => (
-        <Grid
-          item
-          columns={{
-            group0: 6,
-            group1: 6,
-            group2: 6,
-            group3: 6,
-            group4: 4,
-            group5: 4,
-          }}
-          as={StoryPromoLi}
-          key={item.id || item.uri}
-          dir={dir}
-        >
-          <StoryPromo item={item} dir={dir} displaySummary={false} />
-        </Grid>
-      ))}
-    </Grid>
-  );
+  const storyPromoLiGridColumns = {
+    group0: 6,
+    group1: 6,
+    group2: 6,
+    group3: 6,
+    group4: 4,
+    group5: 4,
+  };
 
   return (
     <CpsOnwardJourney
@@ -72,9 +39,11 @@ const CpsRelatedContent = ({ content, parentColumns }) => {
       title={title}
       content={content}
       parentColumns={parentColumns}
-      singleTransform={singleTransform}
-      listTransform={listTransform}
+      singleTransform={SinglePromoItemGrid}
+      listTransform={MultiplePromoItemsGrid}
       columnType="secondary"
+      storyPromoUlGridColumns={storyPromoUlGridColumns}
+      storyPromoLiGridColumns={storyPromoLiGridColumns}
     />
   );
 };
