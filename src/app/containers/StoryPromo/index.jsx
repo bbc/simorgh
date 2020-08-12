@@ -29,7 +29,7 @@ const logger = loggerNode(__filename);
 
 const PROMO_TYPES = ['top', 'regular', 'leading'];
 
-const MapStoryPromo = styled(StoryPromo)`
+const SingleColumnStoryPromo = styled(StoryPromo)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     display: grid;
   }
@@ -93,7 +93,7 @@ const StoryPromoContainer = ({
   displayImage,
   displaySummary,
   isRecommendation,
-  isFullColumn,
+  isSingleColumnLayout,
 }) => {
   const {
     altCalendar,
@@ -264,7 +264,9 @@ const StoryPromoContainer = ({
     />
   );
 
-  const StoryPromoComponent = isFullColumn ? MapStoryPromo : StoryPromo;
+  const StoryPromoComponent = isSingleColumnLayout
+    ? SingleColumnStoryPromo
+    : StoryPromo;
 
   return (
     <StoryPromoComponent
@@ -286,7 +288,7 @@ StoryPromoContainer.propTypes = {
   displayImage: bool,
   displaySummary: bool,
   isRecommendation: bool,
-  isFullColumn: bool,
+  isSingleColumnLayout: bool,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -296,7 +298,7 @@ StoryPromoContainer.defaultProps = {
   displayImage: true,
   displaySummary: true,
   isRecommendation: false,
-  isFullColumn: false,
+  isSingleColumnLayout: false,
 };
 
 export default StoryPromoContainer;

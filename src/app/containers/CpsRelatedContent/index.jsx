@@ -64,7 +64,7 @@ const CpsRelatedContent = ({ content, parentColumns, isMapContent }) => {
             item={item}
             dir={dir}
             displaySummary={false}
-            isFullColumn={isMapContent}
+            isSingleColumnLayout={isMapContent}
           />
         </Grid>
       ))}

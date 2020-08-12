@@ -42,15 +42,8 @@ const fixtures = {
   podcastLink: podcastLinkItem,
 };
 
-const WrappedStoryPromo = ({
-  // eslint-disable-next-line react/prop-types
-  service,
-  // eslint-disable-next-line react/prop-types
-  isFullColumn,
-  // eslint-disable-next-line react/prop-types
-  platform,
-  ...props
-}) => (
+// eslint-disable-next-line react/prop-types
+const WrappedStoryPromo = ({ service, platform, ...props }) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
@@ -60,7 +53,6 @@ const WrappedStoryPromo = ({
       service={service}
       statusCode={200}
       pathname="/pathname"
-      isFullColumn={isFullColumn}
     >
       <StoryPromoContainer {...props} />
     </RequestContextProvider>
@@ -69,7 +61,6 @@ const WrappedStoryPromo = ({
 
 WrappedStoryPromo.defaultProps = {
   service: 'igbo',
-  isFullColumn: false,
 };
 
 describe('StoryPromo Container', () => {
@@ -109,7 +100,7 @@ describe('StoryPromo Container', () => {
       platform="canonical"
       item={completeItem}
       promoType="top"
-      isFullColumn
+      isSingleColumnLayout
     />,
   );
 
@@ -119,7 +110,7 @@ describe('StoryPromo Container', () => {
       platform="amp"
       item={completeItem}
       promoType="top"
-      isFullColumn
+      isSingleColumnLayout
     />,
   );
 
