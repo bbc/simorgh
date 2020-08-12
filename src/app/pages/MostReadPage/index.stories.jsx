@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
 import { getLocalMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
-import { MostReadPage } from '..';
+import MostReadPage from '.';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import zhongwenSimpData from '#data/zhongwen/mostRead/simp.json';
 

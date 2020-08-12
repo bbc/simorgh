@@ -8,14 +8,14 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import getInitialData from '#app/routes/home/getInitialData';
-import { FrontPage } from '..';
+import FrontPage from '.';
 
-const requestContextData = {
+const requestContextData = ({ service = 'pidgin' }) => ({
   pageType: 'frontPage',
-  service: 'pidgin',
+  service,
   pathname: '/pathname',
   data: { status: 200 },
-};
+});
 
 // eslint-disable-next-line react/prop-types
 const FrontPageWithContext = ({
@@ -25,7 +25,10 @@ const FrontPageWithContext = ({
 }) => (
   <BrowserRouter>
     <ToggleContextProvider>
-      <RequestContextProvider isAmp={isAmp} {...requestContextData}>
+      <RequestContextProvider
+        isAmp={isAmp}
+        {...requestContextData({ service })}
+      >
         <ServiceContextProvider service={service}>
           <FrontPage {...props} />
         </ServiceContextProvider>
