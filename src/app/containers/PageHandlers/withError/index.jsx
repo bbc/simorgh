@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, element, shape, number } from 'prop-types';
-import ErrorPage from '#pages/ErrorPage';
+import ErrorPage from '#pages/ErrorPage/ErrorPage';
 
 const WithError = Component => {
   const ErrorContainer = ({ error, status, ...props }) => {
