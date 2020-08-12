@@ -49,7 +49,13 @@ const galleryPromo = promoFixture('Gallery');
 const podcastPromo = promoFixture('Podcast');
 const recommendationPromo = storyFixture();
 
-const getStoryPromo = (platform, item, promoType, isRecommendation) => (
+const getStoryPromo = (
+  platform,
+  item,
+  promoType,
+  isRecommendation,
+  isSingleColumnLayout,
+) => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
@@ -63,6 +69,7 @@ const getStoryPromo = (platform, item, promoType, isRecommendation) => (
         item={item}
         promoType={promoType}
         isRecommendation={isRecommendation}
+        isSingleColumnLayout={isSingleColumnLayout}
       />
     </RequestContextProvider>
   </ServiceContextProvider>
@@ -72,13 +79,23 @@ const getCanonicalStoryPromo = (
   item,
   promoType = 'regular',
   isRecommendation = false,
-) => getStoryPromo('canonical', item, promoType, isRecommendation);
+  isSingleColumnLayout = false,
+) =>
+  getStoryPromo(
+    'canonical',
+    item,
+    promoType,
+    isRecommendation,
+    isSingleColumnLayout,
+  );
 
 const getAmpStoryPromo = (
   item,
   promoType = 'regular',
   isRecommendation = false,
-) => getStoryPromo('amp', item, promoType, isRecommendation);
+  isSingleColumnLayout = false,
+) =>
+  getStoryPromo('amp', item, promoType, isRecommendation, isSingleColumnLayout);
 
 storiesOf('Containers|Story Promo/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
@@ -91,6 +108,9 @@ storiesOf('Containers|Story Promo/Canonical', module)
   .add('Gallery link promo', () => getCanonicalStoryPromo(galleryPromo))
   .add('Podcast link promo', () => getCanonicalStoryPromo(podcastPromo))
   .add('Regular', () => getCanonicalStoryPromo(firstFixture))
+  .add('Regular Single Column Layout', () =>
+    getCanonicalStoryPromo(firstFixture, 'regular', false, true),
+  )
   .add('Leading', () => getCanonicalStoryPromo(firstFixture, 'leading'))
   .add('Top', () => getCanonicalStoryPromo(firstFixture, 'top'))
   .add('Guide promo', () => getCanonicalStoryPromo(guideLinkItem))
@@ -110,6 +130,9 @@ storiesOf('Containers|Story Promo/AMP', module)
   .add('Gallery link promo', () => getAmpStoryPromo(galleryPromo))
   .add('Podcast link promo', () => getAmpStoryPromo(podcastPromo))
   .add('Regular', () => getAmpStoryPromo(firstFixture))
+  .add('Regular Single Column Layout', () =>
+    getAmpStoryPromo(firstFixture, 'regular', false, true),
+  )
   .add('Leading', () => getAmpStoryPromo(firstFixture, 'leading'))
   .add('Top', () => getAmpStoryPromo(firstFixture, 'top'))
   .add('Guide promo', () => getAmpStoryPromo(guideLinkItem))
