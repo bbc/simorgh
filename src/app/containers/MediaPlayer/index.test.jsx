@@ -4,7 +4,6 @@ import {
   VideoCanonicalWithPlaceholder,
   VideoCanonicalNoPlaceholder,
   VideoAmp,
-  VideoCanonicalNoVersionId,
   VideoCanonicalToggledOff,
   VideoCanonicalWithCaption,
   VideoAmpWithCaption,
@@ -30,7 +29,6 @@ describe('MediaPlayer', () => {
   shouldMatchSnapshot('Renders the AMP player when platform is AMP', VideoAmp);
 
   describe('Fails and returns early when', () => {
-    isNull('there is no versionId', VideoCanonicalNoVersionId);
     isNull('component is toggled off', VideoCanonicalToggledOff);
   });
 });

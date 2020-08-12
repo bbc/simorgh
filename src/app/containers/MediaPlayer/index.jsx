@@ -130,7 +130,7 @@ const MediaPlayerContainer = ({
     path(['media', 'contentExpired'], translations) ||
     contentNotAvailableMessage;
 
-  if (!available || !blockId) {
+  if (!available || !(versionId || blockId)) {
     if (!blockId) {
       logMissingBlockId({ url: assetId, assetType });
     }
@@ -144,10 +144,6 @@ const MediaPlayerContainer = ({
         />
       </StyledMessageContainer>
     );
-  }
-
-  if (!versionId) {
-    return null; // this should be the holding image with an error overlay
   }
 
   const embedSource = getEmbedUrl({
