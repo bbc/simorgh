@@ -3,8 +3,8 @@ import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import {
   VideoCanonicalWithPlaceholder,
   VideoCanonicalNoPlaceholder,
-  VideoCanonicalNoVersionId,
   VideoAmp,
+  VideoCanonicalNoVersionId,
   VideoCanonicalToggledOff,
   VideoCanonicalWithCaption,
   VideoAmpWithCaption,
