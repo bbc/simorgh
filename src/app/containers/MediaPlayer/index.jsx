@@ -169,8 +169,6 @@ const MediaPlayerContainer = ({
     });
   }
 
-  console.log(`daplaceholder: ${placeholderSrc}`);
-
   return (
     <>
       <Helmet>
@@ -181,7 +179,28 @@ const MediaPlayerContainer = ({
             isLive() ? '' : 'stage.'
           }bbci.co.uk/emp/bump-4/bump-4.js`}
         />
-        <link as="image" rel="preload" href={placeholderSrc} />
+        {showPlaceholder ? (
+          <link as="image" rel="preload" href={placeholderSrc} />
+        ) : null}
+        <link as="document" rel="preload" href={embedSource} />
+        <link
+          rel="preconnect"
+          href="https://polling.test.bbc.co.uk"
+          crossOrigin="anonymous"
+        />
+        <link rel="dns-prefetch" href="https://polling.test.bbc.co.uk" />
+        <link
+          rel="preconnect"
+          href="https://emp.stage.bbc.co.uk"
+          crossOrigin="anonymous"
+        />
+        <link rel="dns-prefetch" href="https://emp.stage.bbc.co.uk" />
+        <link
+          rel="preconnect"
+          href="https://emp.stage.bbci.co.uk"
+          crossOrigin="anonymous"
+        />
+        <link rel="dns-prefetch" href="https://emp.stage.bbci.co.uk" />
       </Helmet>
       <Metadata aresMediaBlock={aresMediaBlock} embedSource={embedSource} />
       <Figure>
@@ -199,7 +218,7 @@ const MediaPlayerContainer = ({
             src={embedSource}
             placeholderSrc={placeholderSrc}
             placeholderSrcset={placeholderSrcset}
-            showPlaceholder={showPlaceholder}
+            showPlaceholder
             title={iframeTitle}
             service={service}
             mediaInfo={mediaInfo}
