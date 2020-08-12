@@ -148,7 +148,7 @@ server
         data.toggles = toggles;
         data.path = urlPath;
         data.timeOnServer = Date.now();
-        data.canAdvertise = headers['bbc-adverts'];
+        data.canAdvertise = headers['bbc-adverts'] === 'true';
 
         const { status } = data;
         // Set derivedPageType based on returned page data
