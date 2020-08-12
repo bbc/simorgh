@@ -2,13 +2,11 @@
 import React from 'react';
 import fetchMock from 'fetch-mock';
 import { BrowserRouter } from 'react-router-dom';
-import { render, act, waitFor } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-
 import pidginFrontPageData from '#data/pidgin/frontpage/index-light';
-import mundoFrontPageData from '#data/mundo/frontpage/index.json';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import getInitialData from '#app/routes/home/getInitialData';
 import { FrontPage } from '..';
@@ -237,106 +235,6 @@ describe('Front Page', () => {
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
-    });
-  });
-
-  describe('Ads', () => {
-    beforeEach(async () => {
-      window.dotcom = {
-        bootstrap: jest.fn(),
-        cmd: { push: jest.fn() },
-      };
-
-      process.env.SIMORGH_APP_ENV = 'test';
-    });
-
-    afterEach(() => {
-      window.dotcom = undefined;
-      window.dotcomConfig = undefined;
-    });
-
-    it('should create window.dotcomConfig when on Canonical and ads are enabled', async () => {
-      fetchMock.mock(
-        'http://localhost/some-front-page-path.json',
-        JSON.stringify(mundoFrontPageData),
-      );
-      const adsToggles = {
-        ads: {
-          enabled: true,
-        },
-      };
-      const { pageData } = await getInitialData({
-        path: 'some-front-page-path',
-        service: 'mundo',
-      });
-
-      render(
-        <FrontPageWithContext
-          service="mundo"
-          pageData={pageData}
-          toggles={adsToggles}
-        />,
-      );
-
-      await waitFor(() =>
-        expect(window.dotcomConfig).toEqual({
-          pageAds: true,
-          playerAds: false,
-        }),
-      );
-    }, 10000);
-
-    it('should not create window.dotcomConfig when on Canonical and ads are disabled', async () => {
-      fetchMock.mock(
-        'http://localhost/some-front-page-path.json',
-        JSON.stringify(mundoFrontPageData),
-      );
-      const { pageData } = await getInitialData({
-        path: 'some-front-page-path',
-        service: 'mundo',
-      });
-      const adsToggles = {
-        ads: {
-          enabled: false,
-        },
-      };
-
-      render(
-        <FrontPageWithContext
-          service="mundo"
-          pageData={pageData}
-          toggles={adsToggles}
-        />,
-      );
-
-      await waitFor(() => expect(window.dotcomConfig).toBeUndefined());
-    }, 10000);
-
-    it('should not create window.dotcomConfig when on Amp and ads are enabled', async () => {
-      fetchMock.mock(
-        'http://localhost/some-front-page-path.json',
-        JSON.stringify(mundoFrontPageData),
-      );
-      const { pageData } = await getInitialData({
-        path: 'some-front-page-path',
-        service: 'mundo',
-      });
-      const adsToggles = {
-        ads: {
-          enabled: true,
-        },
-      };
-
-      render(
-        <FrontPageWithContext
-          service="mundo"
-          pageData={pageData}
-          toggles={adsToggles}
-          isAmp
-        />,
-      );
-
-      await waitFor(() => expect(window.dotcomConfig).toBeUndefined());
     });
   });
 });
