@@ -3,6 +3,9 @@ export default {
   ads: {
     enabled: false,
   },
+  ampAds: {
+    enabled: true,
+  },
   chartbeatAnalytics: {
     enabled: true,
   },
@@ -38,6 +41,9 @@ export default {
     enabled: true,
   },
   mostRead: {
+    enabled: true,
+  },
+  mostWatched: {
     enabled: true,
   },
   navOnArticles: {
