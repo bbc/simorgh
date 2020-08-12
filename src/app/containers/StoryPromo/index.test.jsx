@@ -42,8 +42,15 @@ const fixtures = {
   podcastLink: podcastLinkItem,
 };
 
-// eslint-disable-next-line react/prop-types
-const WrappedStoryPromo = ({ service = 'igbo', platform, ...props }) => (
+const WrappedStoryPromo = ({
+  // eslint-disable-next-line react/prop-types
+  service,
+  // eslint-disable-next-line react/prop-types
+  isFullColumn,
+  // eslint-disable-next-line react/prop-types
+  platform,
+  ...props
+}) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
@@ -53,6 +60,7 @@ const WrappedStoryPromo = ({ service = 'igbo', platform, ...props }) => (
       service={service}
       statusCode={200}
       pathname="/pathname"
+      isFullColumn={isFullColumn}
     >
       <StoryPromoContainer {...props} />
     </RequestContextProvider>
@@ -61,6 +69,7 @@ const WrappedStoryPromo = ({ service = 'igbo', platform, ...props }) => (
 
 WrappedStoryPromo.defaultProps = {
   service: 'igbo',
+  isFullColumn: false,
 };
 
 describe('StoryPromo Container', () => {
@@ -91,6 +100,26 @@ describe('StoryPromo Container', () => {
       platform="canonical"
       item={indexAlsosItem}
       promoType="top"
+    />,
+  );
+
+  shouldMatchSnapshot(
+    `should render full width promos correctly for canonical`,
+    <WrappedStoryPromo
+      platform="canonical"
+      item={completeItem}
+      promoType="top"
+      isFullColumn
+    />,
+  );
+
+  shouldMatchSnapshot(
+    `should render full width promos correctly for amp`,
+    <WrappedStoryPromo
+      platform="amp"
+      item={completeItem}
+      promoType="top"
+      isFullColumn
     />,
   );
 
