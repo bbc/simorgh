@@ -887,7 +887,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 
 exports[`Media Asset Page should render component 1`] = `
 <DocumentFragment>
-  .c52 {
+  .c53 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -896,7 +896,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 0.75rem;
 }
 
-.c51 {
+.c52 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -997,7 +997,7 @@ exports[`Media Asset Page should render component 1`] = `
   padding-bottom: 1rem;
 }
 
-.c48 {
+.c49 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -1148,14 +1148,14 @@ exports[`Media Asset Page should render component 1`] = `
   padding: 0;
 }
 
-.c42 {
+.c43 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c45 {
+.c46 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -1166,16 +1166,16 @@ exports[`Media Asset Page should render component 1`] = `
   position: relative;
 }
 
-.c43 {
+.c44 {
   position: relative;
 }
 
-.c44 > * {
+.c45 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c47 {
+.c48 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1183,7 +1183,7 @@ exports[`Media Asset Page should render component 1`] = `
   overflow-wrap: break-word;
 }
 
-.c47:before {
+.c48:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1195,17 +1195,17 @@ exports[`Media Asset Page should render component 1`] = `
   z-index: 1;
 }
 
-.c47:hover,
-.c47:focus {
+.c48:hover,
+.c48:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c47:visited {
+.c48:visited {
   color: #6E6E73;
 }
 
-.c49 {
+.c50 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1216,7 +1216,7 @@ exports[`Media Asset Page should render component 1`] = `
   display: block;
 }
 
-.c50 {
+.c51 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1228,7 +1228,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 100%;
 }
 
-.c53 {
+.c54 {
   padding: 0 0.25rem;
 }
 
@@ -1339,7 +1339,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 100%;
 }
 
-.c46 {
+.c47 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1598,14 +1598,14 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c48 {
+  .c49 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c48 {
+  .c49 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -1727,27 +1727,27 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:63rem) {
-  .c42 {
+  .c43 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c42 {
+  .c43 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c45 {
+  .c46 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c45 {
+  .c46 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -1755,7 +1755,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c45 {
+  .c46 {
     display: block;
     width: initial;
     padding: initial;
@@ -1772,30 +1772,36 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c44 {
+  .c45 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c44 > * {
+  .c45 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c49 {
+  .c50 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c49 {
+  .c50 {
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c42 {
+    display: grid;
   }
 }
 
@@ -1844,7 +1850,7 @@ exports[`Media Asset Page should render component 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c40 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
     vertical-align: top;
@@ -1853,7 +1859,7 @@ exports[`Media Asset Page should render component 1`] = `
 
 @media (min-width:80rem) {
   .c40 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
     vertical-align: top;
@@ -2023,14 +2029,14 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c46 {
+  .c47 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c46 {
+  .c47 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
@@ -2681,14 +2687,14 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <div
-                      class="c41"
+                      class="c41 c42"
                     >
                       <div
-                        class="c42"
+                        class="c43"
                         dir="ltr"
                       >
                         <div
-                          class="c43"
+                          class="c44"
                         >
                           <div
                             class="c24"
@@ -2698,26 +2704,26 @@ exports[`Media Asset Page should render component 1`] = `
                             />
                           </div>
                           <div
-                            class="c44"
+                            class="c45"
                           />
                         </div>
                       </div>
                       <div
-                        class="c45"
+                        class="c46"
                         dir="ltr"
                       >
                         <h3
-                          class="c46"
+                          class="c47"
                         >
                           <a
-                            class="c47"
+                            class="c48"
                             href="/pidgin/tori-23145776"
                           >
                             Police Arrest 3 ontop Anambra Church Attack
                           </a>
                         </h3>
                         <time
-                          class="c48"
+                          class="c49"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -2731,14 +2737,14 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <div
-                      class="c41"
+                      class="c41 c42"
                     >
                       <div
-                        class="c42"
+                        class="c43"
                         dir="ltr"
                       >
                         <div
-                          class="c43"
+                          class="c44"
                         >
                           <div
                             class="c24"
@@ -2748,26 +2754,26 @@ exports[`Media Asset Page should render component 1`] = `
                             />
                           </div>
                           <div
-                            class="c44"
+                            class="c45"
                           />
                         </div>
                       </div>
                       <div
-                        class="c45"
+                        class="c46"
                         dir="ltr"
                       >
                         <h3
-                          class="c46"
+                          class="c47"
                         >
                           <a
-                            class="c47"
+                            class="c48"
                             href="/pidgin/tori-23143754"
                           >
                             Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
                           </a>
                         </h3>
                         <time
-                          class="c48"
+                          class="c49"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -2781,32 +2787,32 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <div
-                      class="c41"
+                      class="c41 c42"
                     >
                       <div
-                        class="c42"
+                        class="c43"
                         dir="ltr"
                       >
                         <div
-                          class="c43"
+                          class="c44"
                         >
                           <div
                             class="c7"
                           />
                           <div
-                            class="c44"
+                            class="c45"
                           >
                             <div
                               aria-hidden="true"
-                              class="c49"
+                              class="c50"
                               dir="ltr"
                             >
                               <div
-                                class="c50"
+                                class="c51"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="c51"
+                                  class="c52"
                                   focusable="false"
                                   height="13px"
                                   viewBox="0 0 32 26"
@@ -2827,14 +2833,14 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c45"
+                        class="c46"
                         dir="ltr"
                       >
                         <h3
-                          class="c46"
+                          class="c47"
                         >
                           <a
-                            class="c47"
+                            class="c48"
                             href="/pidgin/23146654"
                           >
                             <span
@@ -2852,7 +2858,7 @@ exports[`Media Asset Page should render component 1`] = `
                           </a>
                         </h3>
                         <time
-                          class="c48"
+                          class="c49"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -2866,14 +2872,14 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <div
-                      class="c41"
+                      class="c41 c42"
                     >
                       <div
-                        class="c42"
+                        class="c43"
                         dir="ltr"
                       >
                         <div
-                          class="c43"
+                          class="c44"
                         >
                           <div
                             class="c24"
@@ -2883,19 +2889,19 @@ exports[`Media Asset Page should render component 1`] = `
                             />
                           </div>
                           <div
-                            class="c44"
+                            class="c45"
                           >
                             <div
                               aria-hidden="true"
-                              class="c49"
+                              class="c50"
                               dir="ltr"
                             >
                               <div
-                                class="c50"
+                                class="c51"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="c52"
+                                  class="c53"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 13 12"
@@ -2909,7 +2915,7 @@ exports[`Media Asset Page should render component 1`] = `
                                   />
                                 </svg>
                                 <time
-                                  class="c53"
+                                  class="c54"
                                   datetime="PT15S"
                                 >
                                   0:15
@@ -2920,14 +2926,14 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c45"
+                        class="c46"
                         dir="ltr"
                       >
                         <h3
-                          class="c46"
+                          class="c47"
                         >
                           <a
-                            class="c47"
+                            class="c48"
                             href="/pidgin/media-23147054"
                           >
                             <span
@@ -2950,7 +2956,7 @@ exports[`Media Asset Page should render component 1`] = `
                           </a>
                         </h3>
                         <time
-                          class="c48"
+                          class="c49"
                           datetime="2017-08-17"
                         >
                           17th August 2017
