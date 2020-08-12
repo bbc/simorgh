@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import React, { memo } from 'react';
 import path from 'ramda/src/path';
 import pageIsSame from '../utils/pageIsSame';
 import getInitialData from './getInitialData';
@@ -28,9 +28,11 @@ const CpsAsset = props => {
     [FEATURE_INDEX_PAGE]: FrontPage,
   }[type];
 
-  return PageType
-    ? PageType({ ...props, pageType: type })
-    : ErrorPage({ ...props, pageType: 'error', errorCode: 404 });
+  return PageType ? (
+    <PageType {...props} pageType={type} />
+  ) : (
+    <ErrorPage {...props} pageType="error" errorCode={404} />
+  );
 };
 
 export default {
