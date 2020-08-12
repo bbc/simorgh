@@ -3,6 +3,7 @@ import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import {
   VideoCanonicalWithPlaceholder,
   VideoCanonicalNoPlaceholder,
+  VideoCanonicalNoVersionId,
   VideoAmp,
   VideoCanonicalToggledOff,
   VideoCanonicalWithCaption,
@@ -51,6 +52,13 @@ it('should render the iframe when showPlaceholder is set to false', () => {
   render(VideoCanonicalNoPlaceholder);
 
   expect(document.querySelector('iframe')).toBeInTheDocument();
+});
+
+it('should render the Media Message when there is no versionId', () => {
+  const { getByText } = render(VideoCanonicalNoVersionId);
+  const mediaMessage = `This content is no longer available`;
+
+  expect(getByText(mediaMessage)).toBeInTheDocument();
 });
 
 it('should not render the iframe when showPlaceholder is set to true', () => {
