@@ -43,7 +43,7 @@ const FrontPageMostReadSection = styled(MostReadSection)`
   }
 `;
 
-const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
+const negativeMargin = `
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     /* To remove GEL Margins */
     margin: ${GEL_SPACING_QUAD} -${GEL_MARGIN_BELOW_400PX} 0;
@@ -54,7 +54,14 @@ const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin: ${GEL_SPACING_TRPL} -${GEL_MARGIN_ABOVE_400PX} 0;
-  }
+  }`;
+
+const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
+  ${negativeMargin}
+`;
+
+const MPUContainer = styled(AdContainer)`
+  ${negativeMargin}
 `;
 
 const MostReadWrapper = ({ children }) => (
@@ -138,7 +145,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
                   />
                 )}
               <IndexPageSection group={group} sectionNumber={index} />
-              {group.type === 'top-stories' && <AdContainer slotType="mpu" />}
+              {group.type === 'top-stories' && <MPUContainer slotType="mpu" />}
             </Fragment>
           ))}
           {!hasUsefulLinks && renderMostRead(mostReadEndpointOverride)}
