@@ -209,6 +209,11 @@ export const service = {
       hasMostRead: true,
       onIdxPage: true,
     },
+    mostWatched: {
+      header: 'پربیننده ترین',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
