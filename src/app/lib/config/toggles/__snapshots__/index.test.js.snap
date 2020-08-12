@@ -48,7 +48,7 @@ Object {
     "enabled": true,
   },
   "onDemandRadioSchedule": Object {
-    "enabled": false,
+    "enabled": true,
   },
   "prerollAds": Object {
     "enabled": true,
