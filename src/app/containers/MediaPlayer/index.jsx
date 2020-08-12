@@ -218,7 +218,7 @@ const MediaPlayerContainer = ({
             src={embedSource}
             placeholderSrc={placeholderSrc}
             placeholderSrcset={placeholderSrcset}
-            showPlaceholder
+            showPlaceholder={showPlaceholder}
             title={iframeTitle}
             service={service}
             mediaInfo={mediaInfo}
