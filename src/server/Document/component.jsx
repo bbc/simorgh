@@ -26,7 +26,7 @@ const Document = ({
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
-  const links = helmet.link.toComponent();
+  const helmetLinkTags = helmet.link.toComponent();
   const headScript = helmet.script.toComponent();
   const serialisedData = serialiseForScript(data);
   const scriptsAllowed = !isAmp;
@@ -57,7 +57,7 @@ const Document = ({
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <ResourceHints assetOrigins={assetOrigins} />
         {title}
-        {links}
+        {helmetLinkTags}
         {styleTags}
         {headScript}
         {isAmp && (
