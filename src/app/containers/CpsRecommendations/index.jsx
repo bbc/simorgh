@@ -3,34 +3,18 @@ import { arrayOf, shape, number } from 'prop-types';
 import styled from 'styled-components';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import { StoryPromoLiBase, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import { C_LUNAR, C_GHOST } from '@bbc/psammead-styles/colours';
-import {
-  GEL_SPACING,
-  GEL_SPACING_HLF,
-  GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
-
-import StoryPromo from '../StoryPromo';
+import { C_LUNAR } from '@bbc/psammead-styles/colours';
+import { GEL_SPACING, GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import CpsOnwardJourney from '../CpsOnwardJourney';
-import Grid from '../../components/Grid';
 import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 import { GridItemConstrainedMediumNoMargin } from '#lib/styledGrid';
-
-const StyledStoryPromoWrapper = styled.div`
-  > div {
-    display: grid;
-    margin: ${GEL_SPACING_HLF} 0;
-    background-color: ${C_GHOST};
-    @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-      margin: ${GEL_SPACING_HLF} 0;
-    }
-  }
-`;
+import {
+  SinglePromoItemGrid,
+  MultiplePromoItemsGrid,
+} from '#app/components/StoryPromoItems';
 
 const RecommendationsWrapper = styled.div`
   background-color: ${C_LUNAR};
@@ -39,9 +23,7 @@ const RecommendationsWrapper = styled.div`
 `;
 
 const CpsRecommendations = ({ items, parentColumns }) => {
-  const { recommendations, dir, translations, service } = useContext(
-    ServiceContext,
-  );
+  const { recommendations, translations, service } = useContext(ServiceContext);
   const { enabled } = useToggle('cpsRecommendations');
 
   const { hasStoryRecommendations } = recommendations;
@@ -62,75 +44,32 @@ const CpsRecommendations = ({ items, parentColumns }) => {
 
   const endTextId = 'end-of-recommendations';
 
-  const singleTransform = item => {
-    return (
-      <Grid
-        columns={{
-          group0: 1,
-          group1: 1,
-          group2: 1,
-          group3: 1,
-          group4: 1,
-          group5: 1,
-        }}
-        enableGelGutters
-        dir={dir}
-      >
-        <StyledStoryPromoWrapper>
-          <StoryPromo
-            item={item}
-            dir={dir}
-            isRecommendation
-            displaySummary={false}
-          />
-        </StyledStoryPromoWrapper>
-      </Grid>
-    );
+  const storyPromoUlGridColumns = {
+    group0: 1,
+    group1: 1,
+    group2: 1,
+    group3: 1,
+    group4: 1,
+    group5: 1,
+  };
+  const storyPromoLiGridColumns = {
+    group0: 1,
+    group1: 1,
+    group2: 1,
+    group3: 1,
+    group4: 1,
+    group5: 1,
+  };
+  const singlePromoItemGridColumns = {
+    group0: 1,
+    group1: 1,
+    group2: 1,
+    group3: 1,
+    group4: 1,
+    group5: 1,
   };
 
-  const listTransform = ({ content }) => (
-    <Grid
-      columns={{
-        group0: 1,
-        group1: 1,
-        group2: 1,
-        group3: 1,
-        group4: 1,
-        group5: 1,
-      }}
-      as={StoryPromoUl}
-      enableGelGutters
-      dir={dir}
-    >
-      {content.map(item => (
-        <Grid
-          item
-          columns={{
-            group0: 1,
-            group1: 1,
-            group2: 1,
-            group3: 1,
-            group4: 1,
-            group5: 1,
-          }}
-          as={StoryPromoLiBase}
-          border={false}
-          key={item.id || item.uri}
-          dir={dir}
-        >
-          {singleTransform(item)}
-        </Grid>
-      ))}
-    </Grid>
-  );
-
-  listTransform.propTypes = {
-    content: arrayOf(shape(storyItem)),
-  };
-
-  listTransform.defaultProps = {
-    content: [],
-  };
+  const storyPromoBorder = false;
 
   return (
     <GridItemConstrainedMediumNoMargin>
@@ -147,11 +86,16 @@ const CpsRecommendations = ({ items, parentColumns }) => {
             title={title}
             content={items}
             parentColumns={parentColumns}
-            singleTransform={singleTransform}
-            listTransform={listTransform}
+            isRecommendation
+            singleTransform={SinglePromoItemGrid}
+            listTransform={MultiplePromoItemsGrid}
             sectionLabelOverrideAs="strong"
             sectionLabelBar={false}
             sectionLabelBackground={C_LUNAR}
+            storyPromoBorder={storyPromoBorder}
+            singlePromoItemGridColumns={singlePromoItemGridColumns}
+            storyPromoLiGridColumns={storyPromoLiGridColumns}
+            storyPromoUlGridColumns={storyPromoUlGridColumns}
             columnType="main"
           />
         </RecommendationsWrapper>

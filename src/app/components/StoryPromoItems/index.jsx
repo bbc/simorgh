@@ -1,14 +1,33 @@
 import React from 'react';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { arrayOf, shape, bool, string, number } from 'prop-types';
+import styled from 'styled-components';
+import { C_GHOST } from '@bbc/psammead-styles/colours';
+import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
+import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import StoryPromo from '#containers/StoryPromo';
 import { storyItem } from '#models/propTypes/storyItem';
 import Grid from '../Grid';
+
+const ConditionalStyleWrapper = ({ condition, wrapper, children }) =>
+  condition ? wrapper(children) : children;
+
+const StyledStoryPromoWrapper = styled.div`
+  > div {
+    display: grid;
+    margin: ${GEL_SPACING_HLF} 0;
+    background-color: ${C_GHOST};
+    @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+      margin: ${GEL_SPACING_HLF} 0;
+    }
+  }
+`;
 
 export const SinglePromoItem = ({
   dir,
   displayImage,
   displaySummary,
+  isRecommendation,
   promo,
 }) => {
   return (
@@ -16,6 +35,7 @@ export const SinglePromoItem = ({
       dir={dir}
       displayImage={displayImage}
       displaySummary={displaySummary}
+      isRecommendation={isRecommendation}
       item={promo}
     />
   );
@@ -25,12 +45,26 @@ export const SinglePromoItemGrid = ({
   dir,
   displayImage,
   displaySummary,
+  isRecommendation,
   promo,
   singlePromoItemGridColumns,
 }) => {
   return (
     <Grid columns={singlePromoItemGridColumns} enableGelGutters dir={dir}>
-      {SinglePromoItem({ dir, promo, displayImage, displaySummary })}
+      <ConditionalStyleWrapper
+        isRecommendation={isRecommendation}
+        wrapper={children => (
+          <StyledStoryPromoWrapper>{children}</StyledStoryPromoWrapper>
+        )}
+      >
+        {SinglePromoItem({
+          dir,
+          promo,
+          displayImage,
+          displaySummary,
+          isRecommendation,
+        })}
+      </ConditionalStyleWrapper>
     </Grid>
   );
 };
@@ -60,6 +94,7 @@ export const MultiplePromoItems = ({
 export const MultiplePromoItemsGrid = ({
   dir,
   content,
+  storyPromoBorder,
   storyPromoLiGridColumns,
   storyPromoUlGridColumns,
 }) => {
@@ -72,6 +107,7 @@ export const MultiplePromoItemsGrid = ({
     >
       {content.map(item => (
         <Grid
+          border={storyPromoBorder}
           item
           columns={storyPromoLiGridColumns}
           as={StoryPromoLi}
@@ -90,17 +126,20 @@ SinglePromoItem.propTypes = {
   promo: shape({ storyItem }).isRequired,
   displayImage: bool,
   displaySummary: bool,
+  isRecommendation: bool,
 };
 
 SinglePromoItem.defaultProps = {
   dir: string,
   displayImage: true,
   displaySummary: true,
+  isRecommendation: null,
 };
 
 SinglePromoItemGrid.propTypes = {
   dir: string,
   promo: shape({ storyItem }).isRequired,
+  isRecommendation: bool,
   displayImage: bool,
   displaySummary: bool,
   singlePromoItemGridColumns: shape({
@@ -117,6 +156,7 @@ SinglePromoItemGrid.defaultProps = {
   dir: string,
   displayImage: true,
   displaySummary: true,
+  isRecommendation: null,
   singlePromoItemGridColumns: null,
 };
 
@@ -130,6 +170,7 @@ MultiplePromoItems.propTypes = {
 MultiplePromoItemsGrid.propTypes = {
   dir: string,
   content: arrayOf(shape(storyItem)).isRequired,
+  storyPromoBorder: bool,
   storyPromoLiGridColumns: shape({
     group0: number,
     group1: number,
@@ -155,4 +196,5 @@ MultiplePromoItems.defaultProps = {
 
 MultiplePromoItemsGrid.defaultProps = {
   dir: 'ltr',
+  storyPromoBorder: null,
 };

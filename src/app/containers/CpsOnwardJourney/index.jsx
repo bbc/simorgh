@@ -123,11 +123,13 @@ const CpsOnwardJourney = ({
   displayImage,
   displaySummary,
   parentColumns,
+  isRecommendation,
   listTransform,
   singleTransform,
   sectionLabelOverrideAs,
   sectionLabelBar,
   sectionLabelBackground,
+  storyPromoBorder,
   singlePromoItemGridColumns,
   storyPromoLiGridColumns,
   storyPromoUlGridColumns,
@@ -193,6 +195,7 @@ const CpsOnwardJourney = ({
         <SingleContentWrapper columnType={columnType}>
           {singleTransform({
             dir,
+            isRecommendation,
             promo: singleContent,
             displayImage,
             displaySummary,
@@ -205,6 +208,7 @@ const CpsOnwardJourney = ({
           dir,
           displayImage,
           displaySummary,
+          storyPromoBorder,
           storyPromoLiGridColumns,
           storyPromoUlGridColumns,
         })
@@ -219,6 +223,7 @@ CpsOnwardJourney.propTypes = {
   content: arrayOf(shape(storyItem)),
   displayImage: bool,
   displaySummary: bool,
+  isRecommendation: bool,
   parentColumns: shape({
     group0: number,
     group1: number,
@@ -232,6 +237,7 @@ CpsOnwardJourney.propTypes = {
   sectionLabelOverrideAs: string,
   sectionLabelBar: bool,
   sectionLabelBackground: string,
+  storyPromoBorder: bool,
   singlePromoItemGridColumns: shape({
     group0: number,
     group1: number,
@@ -267,10 +273,12 @@ CpsOnwardJourney.defaultProps = {
   content: [],
   displayImage: true,
   displaySummary: true,
+  isRecommendation: null,
   parentColumns: null,
   sectionLabelOverrideAs: null,
   sectionLabelBar: true,
   sectionLabelBackground: C_GHOST,
+  storyPromoBorder: null,
   singlePromoItemGridColumns: null,
   storyPromoLiGridColumns: null,
   storyPromoUlGridColumns: null,
