@@ -3,12 +3,12 @@
  * @pathname /gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz
  */
 
-import runCrossPlatformTests from '../crossPlatformTests';
+import runExpiredEpisodeTests from '../expiredEpisodeTests';
 import runCanonicalTests from '../canonicalTests';
 
 describe('Canonical', () => {
   describe(pageType, () => {
-    runCrossPlatformTests();
+    runExpiredEpisodeTests();
     runCanonicalTests();
   });
 });
