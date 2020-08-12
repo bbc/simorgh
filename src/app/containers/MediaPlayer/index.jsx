@@ -27,10 +27,8 @@ import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
-import {
-  logEmbedSourceStatus,
-  logMissingBlockId,
-} from './helpers/logEmbedSourceStatus';
+import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
+import logMissingBlockId from './helpers/logMissingBlockId';
 
 const { logMediaPlayerStatus } = toggles[
   process.env.SIMORGH_APP_ENV || 'local'
