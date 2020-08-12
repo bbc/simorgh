@@ -56,20 +56,6 @@ const Document = ({
         {meta}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <ResourceHints assetOrigins={assetOrigins} />
-        {/* 
-        <link
-          rel="preload"
-          href="https://emp.stage.bbci.co.uk/emp/bump-4/bump-4.js"
-          as="script"
-        />
-        <link
-          rel="preconnect"
-          href="https://emp.stage.bbci.co.uk/emp/bump-4/bump-4.js"
-        />
-        <link
-          rel="dns-prefetch"
-          href="https://emp.stage.bbci.co.uk/emp/bump-4/bump-4.js"
-        /> */}
         {title}
         {links}
         {styleTags}
