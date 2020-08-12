@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import ErrorPage from '.';
+import ErrorPage from './ErrorPage';
 
 storiesOf('Pages|Error Page', module)
   .add('404', () => (

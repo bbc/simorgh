@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "Simorgh",
   "main": "./src/client.js",
+  "resolutions": {
+    "prismjs": "^1.21.0"
+  },
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
     "bbcA11y": "wait-on -t 20000 http://localhost:7080/status && bbc-a11y",
     "bbcA11y:ci": "wait-on -t 20000 http://localhost:7080/status && xvfb-run -a bbc-a11y",
     "build:local": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack",
-    "build": "npm run build:local && node ./scripts/bundleSize.js",
+    "build": "npm run build:local && node ./scripts/bundleSize/index.js",
     "build:profile": "rm -rf build && cp envConfig/local.env .env && IS_PROD_PROFILE=true NODE_ENV=production webpack",
     "build:live": "cp envConfig/live.env .env && NODE_ENV=production webpack",
     "build:live:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/live.env > .env && NODE_ENV=production webpack",
@@ -172,6 +176,7 @@
     "bbc-a11y": "^2.4.2",
     "brotli-webpack-plugin": "^1.1.0",
     "chalk": "^4.1.0",
+    "cli-table": "^0.3.1",
     "chrome-launcher": "^0.13.4",
     "compression-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^6.0.3",
@@ -214,6 +219,7 @@
     "retry": "^0.12.0",
     "start-server-webpack-plugin": "^2.2.5",
     "storybook-chromatic": "^4.0.2",
+    "strip-ansi": "^6.0.0",
     "stylelint": "^13.6.1",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",

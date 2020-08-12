@@ -10,7 +10,7 @@ import { service as arabicConfig } from '#lib/config/services/arabic';
 import { service as igboConfig } from '#lib/config/services/igbo';
 import { service as serbianConfig } from '#lib/config/services/serbian';
 import { getLocalMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
-import { FrontPage } from '..';
+import FrontPage from '.';
 
 const serviceDataSets = {
   arabic: { default: arabicData },
