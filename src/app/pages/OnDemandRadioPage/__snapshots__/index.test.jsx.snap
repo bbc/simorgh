@@ -222,19 +222,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
     </script>
   </head>
   <body>
-    .c6 {
-  font-size: 2rem;
-  line-height: 2.625rem;
-  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  display: block;
-  margin: 0;
-  padding: 2rem 0;
-}
-
-.c9 {
+    .c9 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -244,6 +232,24 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+}
+
+.c15 {
+  height: 165px;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.c6 {
+  font-size: 2rem;
+  line-height: 2.625rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
 }
 
 .c8 {
@@ -277,12 +283,6 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   margin: 0;
 }
 
-.c15 {
-  height: 165px;
-  position: relative;
-  margin-bottom: 1rem;
-}
-
 .c13 {
   padding: 2rem 0 1.5rem;
   padding-left: 1rem;
@@ -304,6 +304,12 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 .c14 iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
+}
+
+@media (min-width:63rem) {
+  .c15 {
+    margin-bottom: 2rem;
+  }
 }
 
 @supports (display:grid) {
@@ -569,12 +575,6 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 @media (max-width:62.9375rem) {
   .c11 {
     padding-bottom: 0.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c15 {
-    margin-bottom: 2rem;
   }
 }
 
@@ -755,16 +755,10 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 `;
 
 exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
-.c6 {
-  font-size: 2rem;
-  line-height: 2.625rem;
-  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
+.c14 {
   display: block;
-  margin: 0;
-  padding: 2rem 0;
+  width: 100%;
+  visibility: visible;
 }
 
 .c9 {
@@ -777,6 +771,24 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+}
+
+.c16 {
+  height: 165px;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.c6 {
+  font-size: 2rem;
+  line-height: 2.625rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
 }
 
 .c8 {
@@ -810,18 +822,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   margin: 0;
 }
 
-.c14 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.c16 {
-  height: 165px;
-  position: relative;
-  margin-bottom: 1rem;
-}
-
 .c13 {
   padding: 2rem 0 1.5rem;
   padding-left: 1rem;
@@ -853,6 +853,12 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+@media (min-width:63rem) {
+  .c16 {
+    margin-bottom: 2rem;
+  }
 }
 
 @supports (display:grid) {
@@ -1118,12 +1124,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 @media (max-width:62.9375rem) {
   .c11 {
     padding-bottom: 0.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c16 {
-    margin-bottom: 2rem;
   }
 }
 
@@ -1495,16 +1495,10 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 `;
 
 exports[`OnDemand Radio Page  should show the 'content not yet available' message if episode is not yet available 1`] = `
-.c6 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
+.c14 {
   display: block;
-  margin: 0;
-  padding: 2rem 0;
+  width: 100%;
+  visibility: visible;
 }
 
 .c9 {
@@ -1517,43 +1511,6 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   position: absolute;
   width: 1px;
   margin: 0;
-}
-
-.c8 {
-  display: inline-block;
-  width: 100%;
-  padding-bottom: 0.5rem;
-  word-break: break-word;
-}
-
-.c10 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin: 0;
-}
-
-.c7 {
-  padding: 2rem 0 1rem;
-}
-
-.c11 {
-  font-size: 1rem;
-  line-height: 1.375rem;
-  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.c14 {
-  display: block;
-  width: 100%;
-  visibility: visible;
 }
 
 .c16 {
@@ -1589,15 +1546,52 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   border-bottom: 0.0625rem solid transparent;
 }
 
+.c6 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c8 {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+.c10 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+.c7 {
+  padding: 2rem 0 1rem;
+}
+
+.c11 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
 .c13 {
   padding: 2rem 0 1.5rem;
   padding-right: 1rem;
-}
-
-.c15 {
-  position: relative;
-  min-height: 165px;
-  margin-bottom: 2rem;
 }
 
 .c1 {
@@ -1606,6 +1600,36 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c15 {
+  position: relative;
+  min-height: 165px;
+  margin-bottom: 2rem;
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c17 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c18 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c18 {
+    padding: 1rem;
+  }
 }
 
 @supports (display:grid) {
@@ -1871,30 +1895,6 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 @media (max-width:62.9375rem) {
   .c11 {
     padding-bottom: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c17 {
-    font-size: 0.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c17 {
-    background-color: transparent;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c18 {
-    background-color: window;
-  }
-}
-
-@media (min-width:25rem) {
-  .c18 {
-    padding: 1rem;
   }
 }
 
@@ -2032,16 +2032,10 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 `;
 
 exports[`OnDemand Radio Page  should show the expired content message if episode is expired 1`] = `
-.c6 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
+.c14 {
   display: block;
-  margin: 0;
-  padding: 2rem 0;
+  width: 100%;
+  visibility: visible;
 }
 
 .c9 {
@@ -2054,43 +2048,6 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   position: absolute;
   width: 1px;
   margin: 0;
-}
-
-.c8 {
-  display: inline-block;
-  width: 100%;
-  padding-bottom: 0.5rem;
-  word-break: break-word;
-}
-
-.c10 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin: 0;
-}
-
-.c7 {
-  padding: 2rem 0 1rem;
-}
-
-.c11 {
-  font-size: 1rem;
-  line-height: 1.375rem;
-  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.c14 {
-  display: block;
-  width: 100%;
-  visibility: visible;
 }
 
 .c16 {
@@ -2126,15 +2083,52 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   border-bottom: 0.0625rem solid transparent;
 }
 
+.c6 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c8 {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+.c10 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+.c7 {
+  padding: 2rem 0 1rem;
+}
+
+.c11 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
 .c13 {
   padding: 2rem 0 1.5rem;
   padding-right: 1rem;
-}
-
-.c15 {
-  position: relative;
-  min-height: 165px;
-  margin-bottom: 2rem;
 }
 
 .c1 {
@@ -2143,6 +2137,36 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c15 {
+  position: relative;
+  min-height: 165px;
+  margin-bottom: 2rem;
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c17 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c18 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c18 {
+    padding: 1rem;
+  }
 }
 
 @supports (display:grid) {
@@ -2408,30 +2432,6 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 @media (max-width:62.9375rem) {
   .c11 {
     padding-bottom: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c17 {
-    font-size: 0.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c17 {
-    background-color: transparent;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c18 {
-    background-color: window;
-  }
-}
-
-@media (min-width:25rem) {
-  .c18 {
-    padding: 1rem;
   }
 }
 
