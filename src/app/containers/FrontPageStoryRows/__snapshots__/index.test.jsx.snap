@@ -5,13 +5,16 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   padding: 0.5rem 0 1rem;
 }
 
+.c0:last-child {
+  border: none;
+}
+
 .c0:first-child {
   padding-top: 0;
 }
 
 .c0:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c21 {
@@ -69,17 +72,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 .c18 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
-}
-
-.c23 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
 }
 
 .c24 {
@@ -269,6 +261,17 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   height: 100%;
 }
 
+.c23 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
 @supports (display:grid) {
   .c1 {
     display: block;
@@ -361,20 +364,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   .c18 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c23 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c23 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
   }
 }
 
@@ -531,6 +520,20 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   .c19 {
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c23 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
   }
 }
 
@@ -702,13 +705,16 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   padding: 0.5rem 0 1rem;
 }
 
+.c0:last-child {
+  border: none;
+}
+
 .c0:first-child {
   padding-top: 0;
 }
 
 .c0:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c17 {
@@ -772,28 +778,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 .c14 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
-}
-
-.c4 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-}
-
-.c19 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
 }
 
 .c20 {
@@ -881,6 +865,28 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 100%;
+}
+
+.c4 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+}
+
+.c19 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 @supports (display:grid) {
@@ -1040,34 +1046,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c19 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c19 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c20 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
@@ -1120,6 +1098,34 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   .c15 {
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c19 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1263,13 +1269,16 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   padding: 0.5rem 0 1rem;
 }
 
+.c0:last-child {
+  border: none;
+}
+
 .c0:first-child {
   padding-top: 0;
 }
 
 .c0:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c20 {
@@ -1327,17 +1336,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 .c17 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
-}
-
-.c22 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
 }
 
 .c23 {
@@ -1527,6 +1525,17 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   height: 100%;
 }
 
+.c22 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
 @supports (display:grid) {
   .c1 {
     display: block;
@@ -1613,20 +1622,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   .c17 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c22 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
   }
 }
 
@@ -1783,6 +1778,20 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   .c18 {
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c22 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c22 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
   }
 }
 
@@ -2064,13 +2073,16 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   padding: 0.5rem 0 1rem;
 }
 
+.c0:last-child {
+  border: none;
+}
+
 .c0:first-child {
   padding-top: 0;
 }
 
 .c0:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c13 {
@@ -2107,17 +2119,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 .c6 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
-}
-
-.c8 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
 }
 
 .c14 {
@@ -2205,6 +2206,17 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 100%;
+}
+
+.c8 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 @supports (display:grid) {
@@ -2297,20 +2309,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c14 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
@@ -2363,6 +2361,20 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   .c11 {
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -2606,17 +2618,24 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   padding: 0.5rem 0 1rem;
 }
 
+.c0:last-child {
+  border: none;
+}
+
 .c0:first-child {
   padding-top: 0;
 }
 
 .c0:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c20 {
   padding: 0.5rem 0 1rem;
+}
+
+.c20:last-child {
+  border: none;
 }
 
 .c20:first-child {
@@ -2625,7 +2644,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 .c20:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c17 {
@@ -2681,18 +2699,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 .c13 {
   position: relative;
-}
-
-.c18 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
-  display: inline;
 }
 
 .c7 {
@@ -2860,6 +2866,18 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   height: 100%;
 }
 
+.c18 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  display: inline;
+}
+
 @supports (display:grid) {
   .c1 {
     display: block;
@@ -2887,18 +2905,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c20 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c20 {
-    border-bottom: none;
   }
 }
 
@@ -2949,20 +2955,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c18 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c18 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
   }
 }
 
@@ -3091,6 +3083,20 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   .c15 {
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c18 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c18 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
   }
 }
 
@@ -3299,17 +3305,24 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   padding: 0.5rem 0 1rem;
 }
 
+.c0:last-child {
+  border: none;
+}
+
 .c0:first-child {
   padding-top: 0;
 }
 
 .c0:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c10 {
   padding: 0.5rem 0 1rem;
+}
+
+.c10:last-child {
+  border: none;
 }
 
 .c10:first-child {
@@ -3318,7 +3331,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 
 .c10:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c9 {
@@ -3353,18 +3365,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 
 .c2 {
   position: relative;
-}
-
-.c4 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  display: inline;
 }
 
 .c5 {
@@ -3432,6 +3432,18 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   height: 100%;
 }
 
+.c4 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  display: inline;
+}
+
 @supports (display:grid) {
   .c1 {
     display: block;
@@ -3459,18 +3471,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c10 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c10 {
-    border-bottom: none;
   }
 }
 
@@ -3525,20 +3525,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c6 {
     font-size: 0.875rem;
     line-height: 1.125rem;
@@ -3563,6 +3549,20 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   .c7 {
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -3724,13 +3724,16 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
   padding: 0.5rem 0 1rem;
 }
 
+.c0:last-child {
+  border: none;
+}
+
 .c0:first-child {
   padding-top: 0;
 }
 
 .c0:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c12 {
@@ -4102,13 +4105,16 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
   padding: 0.5rem 0 1rem;
 }
 
+.c0:last-child {
+  border: none;
+}
+
 .c0:first-child {
   padding-top: 0;
 }
 
 .c0:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c3 {
@@ -4140,17 +4146,6 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 .c6 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
-}
-
-.c8 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
 }
 
 .c9 {
@@ -4204,6 +4199,17 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.c8 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 @supports (display:grid) {
@@ -4287,20 +4293,6 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c10 {
     font-size: 0.875rem;
     line-height: 1.125rem;
@@ -4311,6 +4303,20 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
   .c10 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c8 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 }
 

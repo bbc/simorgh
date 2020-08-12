@@ -186,6 +186,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Подпись, ',
     imageCopyrightOffscreenText: 'Автор фото, ',
     locale: `ru-RU`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ru',
     datetimeLocale: `ru`,
     service: 'russian',
     serviceName: 'Russian',
@@ -210,6 +212,11 @@ export const service = {
       lastUpdated: 'Последнее обновление:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Самое популярное видео',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
@@ -255,7 +262,7 @@ export const service = {
         },
       ],
       copyrightText:
-        'BBC. Би-би-си на несет ответственности за содержание других сайтов.',
+        'BBC. Би-би-си не несет ответственности за содержание других сайтов.',
     },
     fonts: [
       F_REITH_SANS_BOLD,

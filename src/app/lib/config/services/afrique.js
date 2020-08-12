@@ -31,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Légende, ',
     imageCopyrightOffscreenText: 'Crédit photo, ',
     locale: `fr`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'fr',
     datetimeLocale: `fr`,
     service: 'afrique',
     serviceName: 'Afrique',
@@ -199,8 +201,15 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Les plus vus',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Features',
       frequenciesPageUrl:

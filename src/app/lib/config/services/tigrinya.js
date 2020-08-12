@@ -35,6 +35,8 @@ export const service = {
     defaultCaptionOffscreenText: 'መግለጺ, ',
     imageCopyrightOffscreenText: 'ምንጪ ስእሊ, ',
     locale: `ti-ET`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ti',
     datetimeLocale: `ti`,
     service: 'tigrinya',
     serviceName: 'Tigrinya',
@@ -149,22 +151,21 @@ export const service = {
         listen: 'ስምዑ',
         watch: 'ተዓዘቡ',
         liveLabel: 'ቀጥታ',
-        nextLabel: 'NEXT',
+        nextLabel: 'ዝቕጽል',
         previousRadioShow: 'ኣቐዲሙ ዝነበረ ፈነወ ራድዮ',
         nextRadioShow: 'ዝቕጽል ፈነወ ራድዮ',
         duration: 'ዕምሪ ፈነወ',
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
+          textPrefixVisuallyHidden: 'መግለጺ ቪድዮ፡, ',
           text: 'Warning: Third party content may contain adverts',
         },
         fallback: {
           text: 'Content is not available',
           linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
-          warningText:
-            'BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.',
+          linkTextSuffixVisuallyHidden: ', ደጋዊ',
+          warningText: 'ቢቢሲ፡ ንትሕዝቶ ካልኦት መርበባት ሓበሬታ ሓላፍነት ኣይወስድን።',
         },
         skipLink: {
           text: 'Skip %provider_name% post',
@@ -181,10 +182,18 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'ብብዝሒ ዝተራእየ',
+      numberOfItems: 2,
+      hasMostWatched: false,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
+      onOnDemandRadioPage: false,
       onFrontPage: false,
-      durationLabel: 'Duration %duration%',
+      header: 'ስምዑ',
+      durationLabel: 'ዕምሪ ፈነወ %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

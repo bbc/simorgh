@@ -186,6 +186,11 @@ const baseServiceConfig = {
     hasMostRead: true,
     onIdxPage: false,
   },
+  mostWatched: {
+    header: 'Найпопулярніше',
+    numberOfItems: 5,
+    hasMostWatched: false,
+  },
   radioSchedule: {
     hasRadioSchedule: false,
     onIdxPage: false,
@@ -275,6 +280,8 @@ export const service = {
     ...baseServiceConfig,
     datetimeLocale: 'uk',
     locale: 'uk_UA',
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'uk',
     lang: 'uk',
   },
   'ru-UA': {
@@ -285,8 +292,10 @@ export const service = {
     },
     datetimeLocale: 'ru',
     locale: 'ru_UA',
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ru',
     lang: 'ru-UA',
-    headerFooterLang: 'uk',
+    serviceLang: 'uk',
   },
 };
 

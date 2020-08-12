@@ -32,6 +32,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Chụp lại, ',
     imageCopyrightOffscreenText: 'Nguồn hình ảnh, ',
     locale: `vi-VN`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'vi',
     datetimeLocale: `vi`,
     service: 'vietnamese',
     serviceName: 'Tiếng Việt',
@@ -180,6 +182,11 @@ export const service = {
       lastUpdated: 'Cập nhật gần nhất:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Nghe nhiều nhất',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

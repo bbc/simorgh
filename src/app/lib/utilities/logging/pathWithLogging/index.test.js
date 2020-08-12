@@ -36,7 +36,7 @@ describe('pathWithLogging', () => {
       'a-different-url',
       'a-different-log-category',
       fixtureData,
-    )(['metadata', 'also-does-not-exist'], { logLevel: LOG_LEVELS.WARN });
+    )(['metadata', 'also-does-not-exist'], LOG_LEVELS.WARN);
 
     expect(loggerMock.warn).toHaveBeenCalledWith('a-different-log-category', {
       url: `a-different-url`,

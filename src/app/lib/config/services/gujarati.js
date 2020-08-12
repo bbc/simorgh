@@ -31,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'કૅપ્શન, ',
     imageCopyrightOffscreenText: 'ઇમેજ સ્રોત, ',
     locale: `gu-IN`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'gu',
     datetimeLocale: `gu`,
     service: 'gujarati',
     serviceName: 'Gujarati',
@@ -187,6 +189,11 @@ export const service = {
       lastUpdated: 'લાસ્ટ અપડેટ:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'સૌથી વધુ જોવાયેલ',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

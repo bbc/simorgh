@@ -35,6 +35,8 @@ export const service = {
     defaultCaptionOffscreenText: 'التعليق، ',
     imageCopyrightOffscreenText: 'صدر الصورة، ',
     locale: 'ar',
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ar',
     datetimeLocale: 'ar',
     service: 'arabic',
     serviceName: 'Arabic',
@@ -54,6 +56,7 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      recommendationTitle: 'مواضيع قد تهمك',
       seeAll: 'المزيد',
       home: 'الرئيسية',
       currentPage: 'الصفحة الحالية',
@@ -193,8 +196,15 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'الأكثر مشاهدة',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Features',
       frequenciesPageUrl:
@@ -205,6 +215,10 @@ export const service = {
     },
     recommendations: {
       hasStoryRecommendations: true,
+      skipLink: {
+        text: 'تخطى %title% وواصل القراءة',
+        endTextVisuallyHidden: '%title% نهاية',
+      },
     },
     footer: {
       trustProjectLink: {

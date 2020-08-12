@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
-import { string } from 'prop-types';
+import { string, number } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { GEL_SPACING_QUIN } from '@bbc/gel-foundations/spacings';
@@ -16,7 +16,7 @@ const Include = styled.div`
   margin-bottom: ${GEL_SPACING_QUIN};
 `;
 
-const CanonicalIncludeContainer = ({ html, type }) => {
+const CanonicalIncludeContainer = ({ html, type, index }) => {
   const supportedTypes = ['idt1', 'vj'];
 
   if (!html || !supportedTypes.includes(type)) return null;
@@ -53,6 +53,8 @@ const CanonicalIncludeContainer = ({ html, type }) => {
       <Include
         suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: html }}
+        id={`include-${index + 1}`}
+        tabIndex="-1"
       />
     </IncludeGrid>
   );
@@ -61,6 +63,7 @@ const CanonicalIncludeContainer = ({ html, type }) => {
 CanonicalIncludeContainer.propTypes = {
   html: string,
   type: string.isRequired,
+  index: number.isRequired,
 };
 
 CanonicalIncludeContainer.defaultProps = {

@@ -20,6 +20,7 @@ import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/CpsText';
 import image from '#containers/Image';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import CpsAssetMediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
@@ -40,6 +41,7 @@ const isLegacyMediaAssetPage = url => url.split('/').length > 7;
 const MediaAssetPage = ({ pageData }) => {
   const requestContext = useContext(RequestContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
+  const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
   const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
@@ -75,14 +77,28 @@ const MediaAssetPage = ({ pageData }) => {
     // This is not something we currently support, so we return an error message
     video: isLegacyMediaAssetPage(requestContext.canonicalLink)
       ? MediaMessage
-      : props => <CpsAssetMediaPlayer {...props} assetUri={assetUri} />,
+      : props => (
+          // eslint-disable-next-line react/jsx-indent
+          <CpsAssetMediaPlayer
+            {...props}
+            assetUri={assetUri}
+            showLoadingImage
+          />
+        ),
 
     legacyMedia: props => (
-      <CpsAssetMediaPlayer {...props} assetUri={assetUri} isLegacyMedia />
+      <CpsAssetMediaPlayer
+        {...props}
+        assetUri={assetUri}
+        isLegacyMedia
+        showLoadingImage
+      />
     ),
 
     // "Versions" are live streams
-    version: props => <CpsAssetMediaPlayer {...props} assetUri={assetUri} />,
+    version: props => (
+      <CpsAssetMediaPlayer {...props} assetUri={assetUri} showLoadingImage />
+    ),
     unavailableMedia: MediaMessage,
   };
 
@@ -105,8 +121,10 @@ const MediaAssetPage = ({ pageData }) => {
   return (
     <>
       <ChartbeatAnalytics data={pageData} />
+      <ComscoreAnalytics />
       <CpsMetadata
         title={title}
+        shortHeadline={shortHeadline}
         language={metadata.language}
         description={summary}
         firstPublished={firstPublished}

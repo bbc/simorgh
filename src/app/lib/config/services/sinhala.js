@@ -35,6 +35,8 @@ export const service = {
     defaultCaptionOffscreenText: 'ශීර්ෂ වැකිය, ',
     imageCopyrightOffscreenText: 'ඡායාරූප මූලාශ්‍රය, ',
     locale: `si-LK`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'si',
     datetimeLocale: `si`,
     service: 'sinhala',
     serviceName: 'Sinhala',
@@ -193,6 +195,11 @@ export const service = {
       lastUpdated: 'අවසන් යාවත්කාලීනවීම:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'වැඩියෙන්ම නැරඹූ',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

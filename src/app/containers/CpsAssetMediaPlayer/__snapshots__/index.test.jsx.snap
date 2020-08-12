@@ -25,6 +25,7 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c0 {
@@ -33,6 +34,12 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
 
 .c0 figure {
   padding-bottom: 0;
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (max-width:63rem) {
@@ -53,27 +60,21 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
   }
 }
 
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
 @media (min-width:25rem) {
   .c0 {
     margin-top: 1rem;
   }
 }
 
+@media (min-width:37.5rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:63rem) {
   .c0 {
-    padding-top: 0.5rem;
+    padding: 0.5rem 0 0;
     margin-top: 2rem;
   }
 }
@@ -137,6 +138,7 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c0 {
@@ -157,6 +159,12 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
   height: 100%;
 }
 
+@media (min-width:63rem) {
+  .c2 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (max-width:63rem) {
   .c0 {
     grid-column: 1 / span 6;
@@ -175,27 +183,21 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
   }
 }
 
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
 @media (min-width:25rem) {
   .c0 {
     margin-top: 1rem;
   }
 }
 
+@media (min-width:37.5rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:63rem) {
   .c0 {
-    padding-top: 0.5rem;
+    padding: 0.5rem 0 0;
     margin-top: 2rem;
   }
 }
@@ -252,6 +254,7 @@ exports[`MediaPlayer render the amp player 1`] = `
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c0 {
@@ -260,6 +263,12 @@ exports[`MediaPlayer render the amp player 1`] = `
 
 .c0 figure {
   padding-bottom: 0;
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (max-width:63rem) {
@@ -280,27 +289,21 @@ exports[`MediaPlayer render the amp player 1`] = `
   }
 }
 
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
 @media (min-width:25rem) {
   .c0 {
     margin-top: 1rem;
   }
 }
 
+@media (min-width:37.5rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:63rem) {
   .c0 {
-    padding-top: 0.5rem;
+    padding: 0.5rem 0 0;
     margin-top: 2rem;
   }
 }
@@ -355,6 +358,7 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c0 {
@@ -375,6 +379,12 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
   height: 100%;
 }
 
+@media (min-width:63rem) {
+  .c2 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (max-width:63rem) {
   .c0 {
     grid-column: 1 / span 6;
@@ -393,27 +403,21 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
   }
 }
 
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
 @media (min-width:25rem) {
   .c0 {
     margin-top: 1rem;
   }
 }
 
+@media (min-width:37.5rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:63rem) {
   .c0 {
-    padding-top: 0.5rem;
+    padding: 0.5rem 0 0;
     margin-top: 2rem;
   }
 }

@@ -9,30 +9,67 @@ const isSmoke = true;
 const baseUrl = 'http://localhost:7080';
 
 /**
- * Suppress iframe errors -> '//div[@id='root']/main/div/div/div/div/iframe'
- * To be fixed in https://github.com/bbc/bbc-a11y/issues/298
  *
  * Suppress errors in scrollable navigation for RTL languages -> '//div[@id='root']/header/nav/div/div[1]/div/ul'
  * To be fixed in https://github.com/bbc/simorgh/issues/5222
  */
 
+const mediaEmbedErrorsToSuppress = [
+  // * Design: Content resizing: Text must be styled with units that are resizable in all browsers
+  "Text styled with px unit: //button[@id='p_audioui_backInterval']/div/div[1]",
+  "Text styled with px unit: //button[@id='p_audioui_backInterval']/div/div[2]",
+  "Text styled with px unit: //button[@id='p_audioui_forwardInterval']/div/div[1]",
+  "Text styled with px unit: //button[@id='p_audioui_forwardInterval']/div/div[2]",
+  "Text styled with px unit: //div[@id='p_audioui_backToStartButton_text']",
+  "Text styled with px unit: //div[@id='p_audioui_toLiveButton_text']",
+
+  // * Design: Content resizing: Text cannot be too small
+  "Text size too small (10px): //div[@id='p_audioui_backToStartButton_text']",
+  "Text size too small (10px): //div[@id='p_audioui_toLiveButton_text']",
+
+  // * Editorial: Indicating language: Html must have lang attribute
+  'html tag has no lang attribute: /html',
+
+  // * Forms: Labelling form controls: Fields must have labels or titles
+  "Button has no text: //button[@id='p_audioui_playpause']",
+  "Button has no text: //button[@id='p_audioui_previousButton']",
+  "Button has no text: //button[@id='p_audioui_nextButton']",
+  "Button has no text: //div[@id='p_audioui_container']/div[2]/button",
+  "Button has no text: //button[@id='p_audioui_playbackSettingsButton']",
+  "Button has no text: //div[@id='p_audioui_container']/div[4]/button",
+];
+
+const advertisementErrorsToSuppress = [
+  // Principles: All documents must have a W3C recommended doctype
+  // Editorial: Indicating language: Html must have lang attribute
+  '/iframe',
+
+  // Design: Content resizing: Text must be styled with units that are resizable in all browsers
+  "//div[@id='dotcom-leaderboard']/div/div[1]/a",
+  "//div[@id='dotcom-mpu']/div/div[1]/a",
+];
+
 const pageTypes = {
-  frontPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
+  frontPage: [
+    "//div[@id='root']/header/nav/div/div[1]/div/ul",
+    ...advertisementErrorsToSuppress,
+  ],
   articles: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   liveRadio: [
-    "//div[@id='root']/main/div/div/div/iframe",
+    ...mediaEmbedErrorsToSuppress,
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
   ],
   photoGalleryPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   mostReadPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   storyPage: [
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
-    '/iframe', // known issue above with iframes should be revisited once https://github.com/bbc/bbc-a11y/issues/298 is resolved
+    '/iframe', // same issues as in mediaEmbedErrorsToSuppress but the DOM path is different
     "//div[@id='root']/div/div[1]/main/div[37]/div/div/div", // issue with IDT2 includes
+    "//div[@id='ns_datapic_royal-engagements']",
+    "//div[@id='responsive-embed-newsspec-21841-green-diet-app-core-content']",
   ],
   onDemandRadio: [
-    '/iframe', // Can be removed once https://github.com/bbc/bbc-a11y/issues/298 is resolved
-    "//div[@id='root']/main/div/div/div/iframe",
+    ...mediaEmbedErrorsToSuppress,
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
   ],
   idxPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],

@@ -8,7 +8,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     ads: {
-      hasAds: true,
+      hasAds: false,
       advertisementLabel: 'Tori we dem pay for',
     },
     lang: 'pcm',
@@ -167,13 +167,13 @@ export const service = {
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
+          textPrefixVisuallyHidden: 'Wetin we call dis Video, ',
           text: 'Warning: Third party content may contain adverts',
         },
         fallback: {
           text: 'Content is not available',
           linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
+          linkTextSuffixVisuallyHidden: ', outside',
           warningText: 'De external site no concern BBC.',
         },
         skipLink: {
@@ -189,6 +189,11 @@ export const service = {
       lastUpdated: 'De one we dem update for:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'De one we dem don look',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

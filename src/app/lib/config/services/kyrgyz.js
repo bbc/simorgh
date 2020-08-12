@@ -31,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Түшүндүрмө, ',
     imageCopyrightOffscreenText: 'Сүрөттүн булагы, ',
     locale: `ky-KG`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ky',
     datetimeLocale: `ky`,
     service: 'kyrgyz',
     serviceName: 'News Кыргыз КызMATы',
@@ -192,6 +194,11 @@ export const service = {
       lastUpdated: 'Акыркы жаңылоо:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Эң көп көрүлгөндөр',
+      numberOfItems: 5,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

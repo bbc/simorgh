@@ -31,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Qoraal, ',
     imageCopyrightOffscreenText: 'Xigashada Sawirka, ',
     locale: `so-SO`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'so',
     datetimeLocale: `so`,
     service: 'somali',
     serviceName: 'Somali',
@@ -198,8 +200,15 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Ugu daawasho badan',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Features',
       header: 'Barnaamijyada Idaacadda',

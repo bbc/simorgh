@@ -31,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Keterangan, ',
     imageCopyrightOffscreenText: 'Sumber gambar, ',
     locale: `id-ID`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'id',
     datetimeLocale: `id`,
     service: 'indonesia',
     serviceName: 'Indonesia',
@@ -153,7 +155,7 @@ export const service = {
         listen: 'Dengar',
         watch: 'Tonton',
         liveLabel: 'LANGSUNG',
-        nextLabel: 'NEXT',
+        nextLabel: 'BERIKUTNYA',
         previousRadioShow: 'Siaran radio sebelumnya',
         nextRadioShow: 'Siaran radio berikutnya',
         duration: 'Durasi',
@@ -185,10 +187,18 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Terpopuler',
+      numberOfItems: 5,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: false,
-      durationLabel: 'Duration %duration%',
+      header: 'Siaran radio',
+      durationLabel: 'Durasi %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

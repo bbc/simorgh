@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import VjAmp from './VjAmp';
 
 const vjProps = {
@@ -16,5 +16,23 @@ describe('VJ include container on Amp', () => {
     expect(container.querySelector('amp-iframe')).toBeInTheDocument();
     expect(container.querySelector('amp-img')).toBeInTheDocument();
     expect(container).toMatchSnapshot();
+  });
+
+  it(`should add amp-iframe extension script to page head`, async () => {
+    render(<VjAmp ampMetadata={vjProps} />);
+
+    await waitFor(() => {
+      const scripts = Array.from(document.querySelectorAll('head script'));
+
+      expect(scripts).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            src: `https://cdn.ampproject.org/v0/amp-iframe-0.1.js`,
+          }),
+        ]),
+      );
+
+      expect(scripts).toHaveLength(1);
+    });
   });
 });

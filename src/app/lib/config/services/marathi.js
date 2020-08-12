@@ -31,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'कॅप्शन, ',
     imageCopyrightOffscreenText: 'फोटो स्रोत, ',
     locale: `mr-IN`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'mr',
     datetimeLocale: `mr`,
     service: 'marathi',
     serviceName: 'Marathi',
@@ -187,6 +189,11 @@ export const service = {
       lastUpdated: 'शेवटचा अपडेट:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'सर्वाधिक पाहिलेले',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

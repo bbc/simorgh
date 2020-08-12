@@ -31,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Altyazı, ',
     imageCopyrightOffscreenText: 'Şəklin mənbəyi, ',
     locale: `az-AZ`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'az',
     datetimeLocale: `az`,
     service: 'azeri',
     serviceName: 'Azərbaycanca',
@@ -182,6 +184,11 @@ export const service = {
       lastUpdated: 'Ən son yeniləmə:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Ən çox baxılanlar',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

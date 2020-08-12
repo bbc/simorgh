@@ -2,7 +2,522 @@
 
 exports[`Media Asset Page AV player should render version (live audio stream) 1`] = `
 <DocumentFragment>
-  <div
+  .c9 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c15 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.c11 {
+  grid-column: 1 / span 6;
+}
+
+.c21 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+.c14 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c16 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c16:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c16:focus,
+.c16:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.c3 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.c1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c24 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  background-color: rgba(34,34,34,0.75);
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 0.25rem 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+}
+
+.c7 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c23 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c13 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 0.25rem;
+}
+
+.c13:last-child {
+  padding-bottom: 1rem;
+}
+
+.c4 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.c18 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 0;
+  list-style-type: none;
+}
+
+.c18 > li::before {
+  content: ' ';
+  padding-left: 1.75rem;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
+  margin-left: -2rem;
+}
+
+.c19 {
+  margin-bottom: 1rem;
+}
+
+.c17 {
+  margin-bottom: 1.5rem;
+}
+
+.c2 {
+  margin-top: 0.5rem;
+}
+
+.c2 figure {
+  padding-bottom: 0;
+}
+
+.c10 {
+  padding: 0.5rem 0 2rem;
+}
+
+.c0 {
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+.c12 {
+  padding-bottom: 1rem;
+}
+
+.c6 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c5 {
+  z-index: 1;
+  border: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c9 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (max-width:25rem) {
+  .c11 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c11 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c11 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c11 {
+    max-width: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c8 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c8 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c8 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c8 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c8 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c20 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c20 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c20 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c22 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c22 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c22 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c22 {
+    grid-column: 1 / span 12;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c25 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c25 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c25 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:80rem) {
+  .c25 {
+    grid-column: 1 / span 10;
+  }
+}
+
+@media (max-width:79.9375rem) {
+  .c21 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c21 {
+    grid-template-columns: repeat(12,1fr);
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c13 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c18 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c18 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c2 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (min-width:25rem) {
+  .c2 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    padding: 0.5rem 0 0;
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c10 {
+    padding: 1rem 0 2.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c12 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+<div
     id="ContextsContainer"
   >
     <div
@@ -19,62 +534,69 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
           >
             <noscript />
             <main
-              class="GridWrapper-sc-12lwanc-0 StyledGrid-oo43dv-0 jHslwF"
+              class="c0"
               role="main"
             >
               <h1
-                class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                class="c1"
                 id="content"
                 tabindex="-1"
               >
                 Ўзбек деҳқонининг косаси нега оқармайдиshort
               </h1>
               <div
-                class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-7tc6v2-0 kvwPKI"
+                class="c2"
               >
                 <figure
-                  class="Figure-sc-6a3dhy-0 gJUCFc"
+                  class="c3"
                 >
                   <div
-                    class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK"
+                    class="c4"
                   >
                     <iframe
                       allow="autoplay; fullscreen"
                       allowfullscreen=""
-                      class="StyledIframe-fuo2ed-0 dIyDYU"
+                      class="c5"
                       scrolling="no"
                       src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
                       title="Медиа плейер"
                     />
+                    <div
+                      class="c6"
+                    >
+                      <div
+                        class="c7"
+                      />
+                    </div>
                     <noscript />
                   </div>
                 </figure>
               </div>
               <div
-                class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae"
+                class="c8"
               >
                 <strong
                   aria-hidden="true"
-                  class="Headline-sc-1kh1qhu-0 hzbExq StyledFauxHeadline-sc-15zvetq-0 jJBkMr"
+                  class="c9 c10"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайдиshort
                 </strong>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-oo43dv-1 jqCfrG"
+                class="c11 c12"
               >
                 <time
-                  class="StyledTimestamp-um718p-0 bAgcOD"
+                  class="c13"
                   datetime="2019-09-13"
                 >
                   13 сентябр 2019
                 </time>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   <b>
                     Ўзбек деҳқонининг косаси нега оқармайди
@@ -82,10 +604,10 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   <b>
                     Ўзбек деҳқонининг косаси нега оқармайди
@@ -96,20 +618,20 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   <i
-                    class="italic-sc-1a0jt7x-0 bbwGZK"
+                    class="c15"
                   >
                     <b>
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </b>
                   </i>
                   <i
-                    class="italic-sc-1a0jt7x-0 bbwGZK"
+                    class="c15"
                   >
                     <b>
                        heading
@@ -118,10 +640,10 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   <b>
                     Ўзбек деҳқонининг косаси нега оқармайди
@@ -132,14 +654,14 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   Шу йил апрел ойида Ўзбекистон Президенти Ислом 
                   <a
-                    class="InlineLink-hkwpaz-0 idscKS"
+                    class="c16"
                     href="https://bbc.com/uzbek"
                   >
                     Каримов ўзининг
@@ -148,10 +670,10 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   Шу вақтгача ҳам ўзбекистонлик деҳқонлар ўз маҳсулотларини хорижга олиб 
                   <b>
@@ -161,66 +683,66 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   Ўз мева-сабзавотини Россияга олиб чиқишда бу компания ёрдамига умид қилган боғбонларнинг гилослари бузила бошлагани ҳақидаги хабарлар ҳам тарқалди..
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   Ҳозирда Ўзбекистонда айни пишиқчилик ва етиштирилган маҳсулот учун кенгроқ бозор топиш масаласи яна долзарб турар экан, мамлакат раҳбарининг сўзларидан сўнг вазият нақадар ўзгарган?
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   Би-би-си билан суҳбатда иқтисодий таҳлилчи Анвар Ҳусаиновнинг айтишича, юқори минбардан айтилган сўзларга қарамай, қишлоқ хўжалиги маҳсулотларини хорижга, жумладан Россия бозорига олиб чиқишда ҳануз кўплаб муаммолар мавжуд.
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   "Албатта ўтган йилларга қараганда маҳсулотлар экспорти анча кўпайган. Россиядан юк машиналари келиб, тўғридан-тўғри деҳқонлардан нақд пулга 
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <div
-                  class="Wrapper-e2169q-0 kopXQT"
+                  class="c17"
                 >
                   <ul
-                    class="BulletedList-sc-13z0d8v-0 vJhtt"
+                    class="c18"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c19"
                       role="listitem"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c19"
                       role="listitem"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c19"
                       role="listitem"
                     >
                       <b>
@@ -228,7 +750,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                       </b>
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c19"
                       role="listitem"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
@@ -237,55 +759,55 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </div>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <div
-                  class="Wrapper-e2169q-0 kopXQT"
+                  class="c17"
                 >
                   <ul
-                    class="BulletedList-sc-13z0d8v-0 vJhtt"
+                    class="c18"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c19"
                       role="listitem"
                     >
                       <a
-                        class="InlineLink-hkwpaz-0 idscKS"
+                        class="c16"
                         href="https://bbc.com/uzbek"
                       >
                         Ўзбек деҳқонининг косаси нега оқармайди
                       </a>
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c19"
                       role="listitem"
                     >
                       <a
-                        class="InlineLink-hkwpaz-0 idscKS"
+                        class="c16"
                         href="https://bbc.com/uzbek"
                       >
                         Ўзбек деҳқонининг косаси нега оқармайди
                       </a>
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c19"
                       role="listitem"
                     >
                       <a
-                        class="InlineLink-hkwpaz-0 idscKS"
+                        class="c16"
                         href="https://bbc.com/uzbek"
                       >
                         Ўзбек деҳқонининг косаси нега оқармайди
                       </a>
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c19"
                       role="listitem"
                     >
                       <a
-                        class="InlineLink-hkwpaz-0 idscKS"
+                        class="c16"
                         href="https://bbc.com/uzbek"
                       >
                         Ўзбек деҳқонининг косаси нега оқармайди
@@ -295,30 +817,30 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </div>
               </div>
               <div
-                class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK"
+                class="c20"
               >
                 <figure
-                  class="Figure-sc-6a3dhy-0 gJUCFc"
+                  class="c3"
                 >
                   <div
-                    class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX"
+                    class="c21"
                   >
                     <div
-                      class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa"
+                      class="c22"
                     >
                       <div
-                        class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                        class="c23"
                       >
                         <div
                           class="lazyload-placeholder"
                         />
                         <noscript />
                         <p
-                          class="Copyright-sc-11lgtw-0 hDvIfz"
+                          class="c24"
                           role="text"
                         >
                           <span
-                            class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                            class="c1"
                           >
                             Сурат манбаси, 
                           </span>
@@ -331,25 +853,25 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                       </div>
                     </div>
                     <div
-                      class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL"
+                      class="c25"
                     />
                   </div>
                 </figure>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайди transmission info 
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайди footer 
                 </p>
@@ -365,7 +887,1156 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 
 exports[`Media Asset Page should render component 1`] = `
 <DocumentFragment>
-  <div
+  .c52 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
+}
+
+.c51 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 0.8125rem;
+}
+
+.c9 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c15 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding: 1.5rem 0;
+}
+
+.c20 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.c28 {
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.c11 {
+  grid-column: 1 / span 6;
+}
+
+.c22 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+.c14 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c19 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c19:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c19:focus,
+.c19:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.c3 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.c1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c25 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  background-color: rgba(34,34,34,0.75);
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 0.25rem 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+}
+
+.c27 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #6E6E73;
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+}
+
+.c27 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c27 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c27 i {
+  font-style: normal;
+}
+
+.c7 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c24 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c13 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 0.25rem;
+}
+
+.c13:last-child {
+  padding-bottom: 1rem;
+}
+
+.c48 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c4 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.c34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c35 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c36 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c32 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c30 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+}
+
+.c33 {
+  margin: 0;
+  padding: 0;
+}
+
+.c39 {
+  padding: 0.5rem 0 1rem;
+}
+
+.c39:last-child {
+  border: none;
+}
+
+.c39:first-child {
+  padding-top: 0;
+}
+
+.c39:last-child {
+  padding-bottom: 0;
+}
+
+.c37 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c42 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+.c45 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c41 {
+  position: relative;
+}
+
+.c43 {
+  position: relative;
+}
+
+.c44 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c47 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+.c47:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c47:hover,
+.c47:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c47:visited {
+  color: #6E6E73;
+}
+
+.c49 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: block;
+}
+
+.c50 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.c53 {
+  padding: 0 0.25rem;
+}
+
+.c17 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 0;
+  list-style-type: none;
+}
+
+.c17 > li::before {
+  content: ' ';
+  padding-left: 1.75rem;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
+  margin-left: -2rem;
+}
+
+.c18 {
+  margin-bottom: 1rem;
+}
+
+.c16 {
+  margin-bottom: 1.5rem;
+}
+
+.c2 {
+  margin-top: 0.5rem;
+}
+
+.c2 figure {
+  padding-bottom: 0;
+}
+
+.c29 {
+  margin-bottom: 1rem;
+}
+
+.c31 {
+  margin-top: 0;
+}
+
+.c10 {
+  padding: 0.5rem 0 2rem;
+}
+
+.c0 {
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+.c12 {
+  padding-bottom: 1rem;
+}
+
+.c6 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c5 {
+  z-index: 1;
+  border: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c46 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c9 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c15 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c28 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c28 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c28 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c28 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c28 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c28 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:25rem) {
+  .c11 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c11 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c11 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c11 {
+    max-width: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c8 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c8 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c8 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c8 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c8 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c21 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c21 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c21 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c23 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c23 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c23 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c23 {
+    grid-column: 1 / span 12;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c26 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c26 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c26 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:80rem) {
+  .c26 {
+    grid-column: 1 / span 10;
+  }
+}
+
+@media (max-width:79.9375rem) {
+  .c22 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c22 {
+    grid-template-columns: repeat(12,1fr);
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c27 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c27 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c27 {
+    padding: 0.5rem 1rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c27 {
+    padding: 0.5rem 0 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c13 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c48 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c48 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c38 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c40 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c40 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c40 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c40 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c40 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c40 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c40 {
+    display: block;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c35 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c36 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c36 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c36 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c36 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c32 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c32 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c30 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c30 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c39 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c39 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c39:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c42 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c42 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c45 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c45 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c45 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c41 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c44 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c44 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c49 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c49 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c17 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c2 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (min-width:25rem) {
+  .c2 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    padding: 0.5rem 0 0;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c29 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c29 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c29 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c29 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c29 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c29 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c10 {
+    padding: 1rem 0 2.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c12 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c46 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c46 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+<div
     id="ContextsContainer"
   >
     <div
@@ -382,59 +2053,66 @@ exports[`Media Asset Page should render component 1`] = `
           >
             <noscript />
             <main
-              class="GridWrapper-sc-12lwanc-0 StyledGrid-oo43dv-0 jHslwF"
+              class="c0"
               role="main"
             >
               <h1
-                class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                class="c1"
                 id="content"
                 tabindex="-1"
               >
                 Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
               </h1>
               <div
-                class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-7tc6v2-0 kvwPKI"
+                class="c2"
               >
                 <figure
-                  class="Figure-sc-6a3dhy-0 gJUCFc"
+                  class="c3"
                 >
                   <div
-                    class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK"
+                    class="c4"
                   >
                     <iframe
                       allow="autoplay; fullscreen"
                       allowfullscreen=""
-                      class="StyledIframe-fuo2ed-0 dIyDYU"
+                      class="c5"
                       scrolling="no"
                       src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
                       title="Media player"
                     />
+                    <div
+                      class="c6"
+                    >
+                      <div
+                        class="c7"
+                      />
+                    </div>
                     <noscript />
                   </div>
                 </figure>
               </div>
               <div
-                class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae"
+                class="c8"
               >
                 <strong
                   aria-hidden="true"
-                  class="Headline-sc-1kh1qhu-0 hzbExq StyledFauxHeadline-sc-15zvetq-0 jJBkMr"
+                  class="c9 c10"
                 >
                   Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
                 </strong>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-oo43dv-1 jqCfrG"
+                class="c11 c12"
               >
                 <time
-                  class="StyledTimestamp-um718p-0 bAgcOD"
+                  class="c13"
                   datetime="2019-09-13"
                 >
                   13 September 2019
                 </time>
                 <div>
                   <time
-                    class="StyledTimestamp-um718p-0 bAgcOD"
+                    class="c13"
                     datetime="2019-11-20"
                   >
                     New Informate 20 November 2019
@@ -442,10 +2120,10 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   <b>
                     This is an introduction in bold. & &lt; &gt;
@@ -453,10 +2131,10 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <h2
-                  class="SubHeading-sc-1kh1qhu-1 jHLqCp"
+                  class="c15"
                   id="This-is-a-heading-<->"
                   tabindex="-1"
                 >
@@ -464,10 +2142,10 @@ exports[`Media Asset Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <h2
-                  class="SubHeading-sc-1kh1qhu-1 jHLqCp"
+                  class="c15"
                   id="This-is-a-subheading-<->"
                   tabindex="-1"
                 >
@@ -475,10 +2153,10 @@ exports[`Media Asset Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <h2
-                  class="SubHeading-sc-1kh1qhu-1 jHLqCp"
+                  class="c15"
                   id="This-is-a-crosshead-<->"
                   tabindex="-1"
                 >
@@ -486,95 +2164,95 @@ exports[`Media Asset Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   Bulleted list:
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <div
-                  class="Wrapper-e2169q-0 kopXQT"
+                  class="c16"
                 >
                   <ul
-                    class="BulletedList-sc-13z0d8v-0 vJhtt"
+                    class="c17"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c18"
                       role="listitem"
                     >
                       <a
-                        class="InlineLink-hkwpaz-0 idscKS"
+                        class="c19"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c18"
                       role="listitem"
                     >
                       <a
-                        class="InlineLink-hkwpaz-0 idscKS"
+                        class="c19"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c18"
                       role="listitem"
                     >
                       <a
-                        class="InlineLink-hkwpaz-0 idscKS"
+                        class="c19"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c18"
                       role="listitem"
                     >
                       <a
-                        class="InlineLink-hkwpaz-0 idscKS"
+                        class="c19"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
                       </a>
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c18"
                       role="listitem"
                     >
                       <a
-                        class="InlineLink-hkwpaz-0 idscKS"
+                        class="c19"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
                       </a>
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c18"
                       role="listitem"
                     >
                       <a
-                        class="InlineLink-hkwpaz-0 idscKS"
+                        class="c19"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
@@ -584,86 +2262,86 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   Numbered list:
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <div
-                  class="Wrapper-e2169q-0 kopXQT"
+                  class="c16"
                 >
                   <ul
-                    class="BulletedList-sc-13z0d8v-0 vJhtt"
+                    class="c17"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c18"
                       role="listitem"
                     >
                       <a
-                        class="InlineLink-hkwpaz-0 idscKS"
+                        class="c19"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c18"
                       role="listitem"
                     >
                       <a
-                        class="InlineLink-hkwpaz-0 idscKS"
+                        class="c19"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c18"
                       role="listitem"
                     >
                       <a
-                        class="InlineLink-hkwpaz-0 idscKS"
+                        class="c19"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c18"
                       role="listitem"
                     >
                       <a
-                        class="InlineLink-hkwpaz-0 idscKS"
+                        class="c19"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
                       </a>
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c18"
                       role="listitem"
                     >
                       <a
-                        class="InlineLink-hkwpaz-0 idscKS"
+                        class="c19"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
                       </a>
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c18"
                       role="listitem"
                     >
                       <a
-                        class="InlineLink-hkwpaz-0 idscKS"
+                        class="c19"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
@@ -673,10 +2351,10 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   Lorem ipsum dolor sit amet, 
                   <b>
@@ -688,13 +2366,13 @@ exports[`Media Asset Page should render component 1`] = `
                   </b>
                   ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                   <i
-                    class="italic-sc-1a0jt7x-0 bbwGZK"
+                    class="c20"
                   >
                      in voluptate velit esse cillum 
                   </i>
                   dolore "eu fugiat nulla" pariatur. 
                   <a
-                    class="InlineLink-hkwpaz-0 idscKS"
+                    class="c19"
                     href="https://bbc.com/pidgin"
                   >
                     Excepteur
@@ -703,86 +2381,86 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   Testing special characters: !"£$%^&*()_+=-{}[]:@~;'#&lt;&gt;?,./\\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   Table:
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   Social media embed:
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   Quote box:
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   Correspondent quote box:
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   Fact box:
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   ­
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   Lorem ipsum
                   <a
-                    class="InlineLink-hkwpaz-0 idscKS"
+                    class="c19"
                     href="https://bbc.com/pidgin"
                   >
                      dolor sit amet
@@ -791,30 +2469,30 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK"
+                class="c21"
               >
                 <figure
-                  class="Figure-sc-6a3dhy-0 gJUCFc"
+                  class="c3"
                 >
                   <div
-                    class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX"
+                    class="c22"
                   >
                     <div
-                      class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa"
+                      class="c23"
                     >
                       <div
-                        class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                        class="c24"
                       >
                         <div
                           class="lazyload-placeholder"
                         />
                         <noscript />
                         <p
-                          class="Copyright-sc-11lgtw-0 hDvIfz"
+                          class="c25"
                           role="text"
                         >
                           <span
-                            class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                            class="c1"
                           >
                             Wia dis foto come from, 
                           </span>
@@ -827,13 +2505,13 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                     </div>
                     <div
-                      class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL"
+                      class="c26"
                     >
                       <figcaption
-                        class="Caption-sc-16x70so-0 bjgllj"
+                        class="c27"
                       >
                         <span
-                          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                          class="c1"
                         >
                           Wetin we call dis foto, 
                         </span>
@@ -846,30 +2524,30 @@ exports[`Media Asset Page should render component 1`] = `
                 </figure>
               </div>
               <div
-                class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK"
+                class="c21"
               >
                 <figure
-                  class="Figure-sc-6a3dhy-0 gJUCFc"
+                  class="c3"
                 >
                   <div
-                    class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX"
+                    class="c22"
                   >
                     <div
-                      class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa"
+                      class="c23"
                     >
                       <div
-                        class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                        class="c24"
                       >
                         <div
                           class="lazyload-placeholder"
                         />
                         <noscript />
                         <p
-                          class="Copyright-sc-11lgtw-0 hDvIfz"
+                          class="c25"
                           role="text"
                         >
                           <span
-                            class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                            class="c1"
                           >
                             Wia dis foto come from, 
                           </span>
@@ -882,13 +2560,13 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                     </div>
                     <div
-                      class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL"
+                      class="c26"
                     >
                       <figcaption
-                        class="Caption-sc-16x70so-0 bjgllj"
+                        class="c27"
                       >
                         <span
-                          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                          class="c1"
                         >
                           Wetin we call dis foto, 
                         </span>
@@ -901,36 +2579,36 @@ exports[`Media Asset Page should render component 1`] = `
                 </figure>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <div
-                  class="Wrapper-e2169q-0 kopXQT"
+                  class="c16"
                 >
                   <ul
-                    class="BulletedList-sc-13z0d8v-0 vJhtt"
+                    class="c17"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c18"
                       role="listitem"
                     >
                       sunt in culpa qui officia deserunt mollit anim id est laborum
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c18"
                       role="listitem"
                     >
                       sunt in culpa qui officia deserunt mollit anim id est laborum
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c18"
                       role="listitem"
                     >
                       sunt in culpa qui officia deserunt mollit anim id est laborum
                     </li>
                     <li
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      class="c18"
                       role="listitem"
                     >
                       v3 draft
@@ -939,19 +2617,19 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   This is transmission info 
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="c11"
               >
                 <p
-                  class="Paragraph-k859h4-0 hymSIv"
+                  class="c14"
                 >
                   This is the footer 
                 </p>
@@ -959,30 +2637,30 @@ exports[`Media Asset Page should render component 1`] = `
             </main>
             <section
               aria-labelledby="related-content-heading"
-              class="GridWrapper-sc-12lwanc-0 hgpaqH"
+              class="c28"
               data-e2e="related-content"
               role="region"
             >
               <div
-                class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
+                class="c29"
               >
                 <div
-                  class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD StyledSectionLabel-opyob2-2 jpnPtT"
+                  class="c30 c31"
                 >
                   <div
-                    class="Bar-sc-1x4gwjz-0 jsgdXU"
+                    class="c32"
                   />
                   <h2
-                    class="Heading-sc-1x4gwjz-2 eZofTG"
+                    class="c33"
                   >
                     <span
-                      class="FlexColumn-wx5kdp-0 dgpsiS"
+                      class="c34"
                     >
                       <span
-                        class="FlexRow-wx5kdp-2 dVBNyZ"
+                        class="c35"
                       >
                         <span
-                          class="Title-wx5kdp-4 cERxQI"
+                          class="c36"
                           dir="ltr"
                           id="related-content-heading"
                         >
@@ -993,58 +2671,53 @@ exports[`Media Asset Page should render component 1`] = `
                   </h2>
                 </div>
                 <ul
-                  class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                  class="c37 c38"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                    class="c39 c40"
                     dir="ltr"
                     role="listitem"
                   >
                     <div
-                      class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                      class="c41"
                     >
                       <div
-                        class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                        class="c42"
                         dir="ltr"
                       >
                         <div
-                          class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                          class="c43"
                         >
                           <div
-                            class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                            class="c24"
                           >
                             <div
                               class="lazyload-placeholder"
                             />
                           </div>
                           <div
-                            class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                            class="c44"
                           />
                         </div>
                       </div>
                       <div
-                        class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                        class="c45"
                         dir="ltr"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-3 hSJrur"
+                          class="c46"
                         >
                           <a
-                            class="Link-sc-1dvfmi3-5 jeUMCT"
+                            class="c47"
                             href="/pidgin/tori-23145776"
                           >
                             Police Arrest 3 ontop Anambra Church Attack
                           </a>
                         </h3>
-                        <p
-                          class="Summary-sc-1dvfmi3-4 eaCWBB"
-                        >
-                          Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp
-                        </p>
                         <time
-                          class="StyledTimestamp-um718p-0 kVWTyt"
+                          class="c48"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -1053,53 +2726,48 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                    class="c39 c40"
                     dir="ltr"
                     role="listitem"
                   >
                     <div
-                      class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                      class="c41"
                     >
                       <div
-                        class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                        class="c42"
                         dir="ltr"
                       >
                         <div
-                          class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                          class="c43"
                         >
                           <div
-                            class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                            class="c24"
                           >
                             <div
                               class="lazyload-placeholder"
                             />
                           </div>
                           <div
-                            class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                            class="c44"
                           />
                         </div>
                       </div>
                       <div
-                        class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                        class="c45"
                         dir="ltr"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-3 hSJrur"
+                          class="c46"
                         >
                           <a
-                            class="Link-sc-1dvfmi3-5 jeUMCT"
+                            class="c47"
                             href="/pidgin/tori-23143754"
                           >
                             Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
                           </a>
                         </h3>
-                        <p
-                          class="Summary-sc-1dvfmi3-4 eaCWBB"
-                        >
-                          The men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.
-                        </p>
                         <time
-                          class="StyledTimestamp-um718p-0 kVWTyt"
+                          class="c48"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -1108,37 +2776,37 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                    class="c39 c40"
                     dir="ltr"
                     role="listitem"
                   >
                     <div
-                      class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                      class="c41"
                     >
                       <div
-                        class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                        class="c42"
                         dir="ltr"
                       >
                         <div
-                          class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                          class="c43"
                         >
                           <div
-                            class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                            class="c7"
                           />
                           <div
-                            class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                            class="c44"
                           >
                             <div
                               aria-hidden="true"
-                              class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                              class="c49"
                               dir="ltr"
                             >
                               <div
-                                class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                                class="c50"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                                  class="c51"
                                   focusable="false"
                                   height="13px"
                                   viewBox="0 0 32 26"
@@ -1159,21 +2827,21 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                        class="c45"
                         dir="ltr"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-3 hSJrur"
+                          class="c46"
                         >
                           <a
-                            class="Link-sc-1dvfmi3-5 jeUMCT"
+                            class="c47"
                             href="/pidgin/23146654"
                           >
                             <span
                               role="text"
                             >
                               <span
-                                class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                                class="c1"
                               >
                                 Image gallery, 
                               </span>
@@ -1183,13 +2851,8 @@ exports[`Media Asset Page should render component 1`] = `
                             </span>
                           </a>
                         </h3>
-                        <p
-                          class="Summary-sc-1dvfmi3-4 eaCWBB"
-                        >
-                          This na some of the picture wey our eye see as Kenya people go vote for election today
-                        </p>
                         <time
-                          class="StyledTimestamp-um718p-0 kVWTyt"
+                          class="c48"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -1198,41 +2861,41 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                    class="c39 c40"
                     dir="ltr"
                     role="listitem"
                   >
                     <div
-                      class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                      class="c41"
                     >
                       <div
-                        class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                        class="c42"
                         dir="ltr"
                       >
                         <div
-                          class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                          class="c43"
                         >
                           <div
-                            class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                            class="c24"
                           >
                             <div
                               class="lazyload-placeholder"
                             />
                           </div>
                           <div
-                            class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                            class="c44"
                           >
                             <div
                               aria-hidden="true"
-                              class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                              class="c49"
                               dir="ltr"
                             >
                               <div
-                                class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                                class="c50"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
+                                  class="c52"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 13 12"
@@ -1246,7 +2909,7 @@ exports[`Media Asset Page should render component 1`] = `
                                   />
                                 </svg>
                                 <time
-                                  class="StyledTime-jpt91x-0 bYtFje"
+                                  class="c53"
                                   datetime="PT15S"
                                 >
                                   0:15
@@ -1257,21 +2920,21 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                        class="c45"
                         dir="ltr"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-3 hSJrur"
+                          class="c46"
                         >
                           <a
-                            class="Link-sc-1dvfmi3-5 jeUMCT"
+                            class="c47"
                             href="/pidgin/media-23147054"
                           >
                             <span
                               role="text"
                             >
                               <span
-                                class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                                class="c1"
                               >
                                 Audio, 
                               </span>
@@ -1279,20 +2942,15 @@ exports[`Media Asset Page should render component 1`] = `
                                 BBC News Pidgin One Minute News
                               </span>
                               <span
-                                class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                                class="c1"
                               >
                                 , 0,15
                               </span>
                             </span>
                           </a>
                         </h3>
-                        <p
-                          class="Summary-sc-1dvfmi3-4 eaCWBB"
-                        >
-                          All di local and world tori wey you suppose know in 60 seconds!
-                        </p>
                         <time
-                          class="StyledTimestamp-um718p-0 kVWTyt"
+                          class="c48"
                           datetime="2017-08-17"
                         >
                           17th August 2017
