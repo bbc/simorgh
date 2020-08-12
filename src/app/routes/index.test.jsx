@@ -29,6 +29,21 @@ import storyPageRecommendationsData from '#data/mundo/recommendations/index.json
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 
+// mock pages/index.js to return a non async page component
+jest.mock('#pages/index.js', () => ({
+  StoryPage: jest.requireActual('#pages/StoryPage').default,
+  OnDemandTvPage: jest.requireActual('#pages/OnDemandTvPage').default,
+  PhotoGalleryPage: jest.requireActual('#pages/PhotoGalleryPage').default,
+  OnDemandRadioPage: jest.requireActual('#pages/OnDemandRadioPage').default,
+  MostReadPage: jest.requireActual('#pages/MostReadPage').default,
+  MediaAssetPage: jest.requireActual('#pages/MediaAssetPage').default,
+  LiveRadioPage: jest.requireActual('#pages/LiveRadioPage').default,
+  IdxPage: jest.requireActual('#pages/IdxPage').default,
+  FrontPage: jest.requireActual('#pages/FrontPage').default,
+  ErrorPage: jest.requireActual('#pages/ErrorPage').default,
+  ArticlePage: jest.requireActual('#pages/ArticlePage').default,
+}));
+
 beforeEach(() => {
   // Mocks out CanonicalAdBootstrapJs script
   window.dotcom = {
@@ -51,26 +66,15 @@ const getMatchingRoute = pathname =>
     }),
   );
 
-const renderRouter = ({
-  pathname,
-  pageData,
-  pageType,
-  service,
-  status,
-  errorCode,
-}) =>
+const renderRouter = props =>
   render(
-    <MemoryRouter initialEntries={[pathname]}>
+    <MemoryRouter initialEntries={[props.pathname]}>
       {renderRoutes(routes, {
         bbcOrigin: 'https://www.bbc.com',
-        pathname,
-        pageData,
-        pageType,
-        service,
         isAmp: false,
-        status: status || 200,
+        status: props.status || 200,
         toggles: defaultToggles.local,
-        ...(errorCode && { errorCode }),
+        ...props,
       })}
     </MemoryRouter>,
   );
@@ -132,7 +136,6 @@ it('should route to and render the onDemand Radio page', async () => {
     pageData,
     pageType,
     service: 'indonesia',
-    toggles: null,
   });
 
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Dunia Pagi Ini';
@@ -380,13 +383,23 @@ it('should route to and render a 500 error page', async () => {
 });
 
 it('should fallback to and render a 500 error page if there is a problem with page data', async () => {
-  fetch.mockResponse(undefined);
   const pathname = '/afrique';
+  fetchMock.mock(`http://localhost${pathname}.json`, 500);
+
+  const { pageType, getInitialData } = getMatchingRoute(pathname);
+  const { status, error } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
-    pageData: undefined,
     pageType: 'frontPage',
     service: 'afrique',
+    error: {
+      message: error,
+    },
+    status,
+    errorCode: 500,
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '500';
 
@@ -416,7 +429,7 @@ it('should render a 404 error page if a data fetch responds with a 404', async (
   fetchMock.mock(`http://localhost${pathname}.json`, 404);
 
   const { pageType, getInitialData } = getMatchingRoute(pathname);
-  const { status } = await getInitialData({
+  const { status, error } = await getInitialData({
     path: pathname,
     pageType,
   });
@@ -424,6 +437,10 @@ it('should render a 404 error page if a data fetch responds with a 404', async (
     pathname,
     pageType,
     status,
+    error: {
+      message: error,
+    },
+    errorCode: 404,
     service: 'pidgin',
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
