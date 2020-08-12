@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { string, bool } from 'prop-types';
 import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
@@ -28,7 +29,7 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
-import ResourceHints from '#app/components/ResourceHints/index.jsx';
+import isLive from '#lib/utilities/isLive';
 
 const { logMediaPlayerStatus } = toggles[
   process.env.SIMORGH_APP_ENV || 'local'
@@ -168,9 +169,20 @@ const MediaPlayerContainer = ({
     });
   }
 
+  console.log(`daplaceholder: ${placeholderSrc}`);
+
   return (
     <>
-      <ResourceHints assetOrigins={[embedSource]} />
+      <Helmet>
+        <link
+          as="script"
+          rel="preload"
+          href={`https://emp.${
+            isLive() ? '' : 'stage.'
+          }bbci.co.uk/emp/bump-4/bump-4.js`}
+        />
+        <link as="image" rel="preload" href={placeholderSrc} />
+      </Helmet>
       <Metadata aresMediaBlock={aresMediaBlock} embedSource={embedSource} />
       <Figure>
         {isAmp ? (
