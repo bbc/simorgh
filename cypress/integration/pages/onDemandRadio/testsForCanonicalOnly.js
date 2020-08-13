@@ -27,16 +27,19 @@ export default ({ service, pageType, variant }) => {
         );
 
         if (isRadioScheduleOnPage) {
-          const schedulePath = Cypress.env('currentPath');
-          const index = schedulePath.lastIndexOf('_radio/');
-          let newUrl = `${schedulePath.substring(
-            0,
-            index + 6,
-          )}/schedule.json?renderer_env=live`;
-          newUrl = newUrl.replace('bbc_afaanoromoo_radio', 'bbc_oromo_radio');
-          cy.log(newUrl);
+          const currentPath = Cypress.env('currentPath');
 
-          cy.request(newUrl).then(({ body: scheduleJson }) => {
+          const masterBrand = currentPath.split('/')[2];
+
+          let schedulePath = `/${service}/${masterBrand}/schedule.json`.replace(
+            'bbc_afaanoromoo_radio',
+            'bbc_oromo_radio',
+          );
+          if (Cypress.env('APP_ENV') === 'test') {
+            schedulePath += '?renderer_env=live';
+          }
+
+          cy.request(schedulePath).then(({ body: scheduleJson }) => {
             const { schedules } = scheduleJson;
 
             const isRadioScheduleDataComplete = isScheduleDataComplete({
