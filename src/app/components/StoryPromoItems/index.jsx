@@ -99,6 +99,7 @@ export const MultiplePromoItems = ({
 export const MultiplePromoItemsGrid = ({
   dir,
   content,
+  displayImage,
   displaySummary,
   isRecommendation,
   singlePromoItemGridColumns,
@@ -123,13 +124,21 @@ export const MultiplePromoItemsGrid = ({
           key={item.id || item.uri}
           dir={dir}
         >
-          {SinglePromoItemGrid({
-            dir,
-            displaySummary,
-            isRecommendation,
-            promo: item,
-            singlePromoItemGridColumns,
-          })}
+          {isRecommendation
+            ? SinglePromoItemGrid({
+                dir,
+                displaySummary,
+                isRecommendation,
+                promo: item,
+                singlePromoItemGridColumns,
+              })
+            : SinglePromoItem({
+                dir,
+                displayImage,
+                displaySummary,
+                isRecommendation,
+                promo: item,
+              })}
         </Grid>
       ))}
     </Grid>
@@ -184,6 +193,7 @@ MultiplePromoItems.propTypes = {
 
 MultiplePromoItemsGrid.propTypes = {
   dir: string,
+  displayImage: bool,
   displaySummary: bool,
   content: arrayOf(shape(storyItem)).isRequired,
   isRecommendation: bool,
@@ -221,6 +231,7 @@ MultiplePromoItems.defaultProps = {
 
 MultiplePromoItemsGrid.defaultProps = {
   dir: 'ltr',
+  displayImage: true,
   displaySummary: true,
   isRecommendation: null,
   storyPromoBorder: null,

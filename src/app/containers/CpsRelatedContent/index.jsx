@@ -44,6 +44,7 @@ const CpsRelatedContent = ({ content, parentColumns, isMapContent }) => {
 
   return (
     <CpsOnwardJourney
+      displaySummary={false}
       labelId="related-content-heading"
       title={title}
       content={content}
