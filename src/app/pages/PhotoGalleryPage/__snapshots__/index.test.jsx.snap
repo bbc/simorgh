@@ -555,6 +555,9 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
             id="DataContainer"
           >
             <noscript />
+            <div>
+              chartbeat
+            </div>
             <main
               class="c0"
               role="main"
@@ -2021,6 +2024,9 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                 id="DataContainer"
               >
                 <noscript />
+                <div>
+                  chartbeat
+                </div>
                 <main
                   class="c0"
                   role="main"
@@ -3869,6 +3875,9 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                 id="DataContainer"
               >
                 <noscript />
+                <div>
+                  chartbeat
+                </div>
                 <main
                   class="c0"
                   role="main"
@@ -5196,6 +5205,9 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                 id="DataContainer"
               >
                 <noscript />
+                <div>
+                  chartbeat
+                </div>
                 <main
                   class="c0"
                   role="main"
@@ -7164,6 +7176,9 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                 id="DataContainer"
               >
                 <noscript />
+                <div>
+                  chartbeat
+                </div>
                 <main
                   class="c0"
                   role="main"
