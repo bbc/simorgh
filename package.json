@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Simorgh",
   "main": "./src/client.js",
+  "resolutions": {
+    "prismjs": "^1.21.0"
+  },
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
     "bbcA11y": "wait-on -t 20000 http://localhost:7080/status && bbc-a11y",
     "bbcA11y:ci": "wait-on -t 20000 http://localhost:7080/status && xvfb-run -a bbc-a11y",
@@ -180,7 +184,7 @@
     "cypress-multi-reporters": "^1.4.0",
     "depcheck": "^1.0.0",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-adapter-react-16": "^1.15.3",
     "enzyme-to-json": "^3.5.0",
     "eslint": "^7.6.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -188,7 +192,7 @@
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-cypress": "^2.11.1",
     "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-json": "^2.1.1",
+    "eslint-plugin-json": "^2.1.2",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.0",
@@ -203,7 +207,7 @@
     "jest-serializer-html": "^7.0.0",
     "jest-silent-reporter": "^0.2.1",
     "jest-styled-components": "^6.3.4",
-    "jsdom": "^16.3.0",
+    "jsdom": "^16.4.0",
     "lint-staged": "^10.2.11",
     "minimist": "^1.2.5",
     "mocha": "^8.1.0",
