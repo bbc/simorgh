@@ -46,14 +46,14 @@ const LEADERBOARD_HEIGHTS = {
   the 'ADVERTISEMENT' Label (dotcom-ad-text) already has margin-top of 0.5rem,
   hence the padding is set such that this is accounted for.
 */
-const ADSLOT_PADDING = '0.5rem'; // 8px
+const AD_SLOT_PADDING = '0.5rem'; // 8px
 
 export const leaderboardStyles = css`
   display: none;
   visibility: hidden;
   @media (min-width: ${LEADERBOARD_WIDTH_MIN}) {
     min-height: ${LEADERBOARD_HEIGHTS.GROUP_1};
-    padding: 0rem ${ADSLOT_PADDING};
+    padding: 0rem ${AD_SLOT_PADDING};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,7 +67,7 @@ export const leaderboardStyles = css`
   }
   @media (min-width: ${LARGE_LEADERBOARD_WIDTH_MIN}) {
     min-height: ${LEADERBOARD_HEIGHTS.GROUP_4};
-    padding: 0 ${ADSLOT_PADDING} ${ADSLOT_PADDING} ${ADSLOT_PADDING};
+    padding: 0 ${AD_SLOT_PADDING} ${AD_SLOT_PADDING} ${AD_SLOT_PADDING};
   }
 `;
 
@@ -76,7 +76,7 @@ export const mpuStyles = css`
   visibility: hidden;
   @media (min-width: ${MPU_WIDTH_MIN}) {
     min-height: ${MPU_HEIGHTS.GROUP_1};
-    padding: 0rem ${ADSLOT_PADDING};
+    padding: 0rem ${AD_SLOT_PADDING};
     display: block;
     visibility: visible;
   }
