@@ -64,6 +64,7 @@ const LiveRadioPage = ({ pageData }) => {
     masterBrand,
   } = pageData;
   const radioScheduleData = path(['radioScheduleData'], pageData);
+  const hasRadioScheduleData = Boolean(radioScheduleData);
   const {
     script,
     service,
@@ -97,7 +98,7 @@ const LiveRadioPage = ({ pageData }) => {
 
   const { enabled, value } = useToggle('liveRadioSchedule');
 
-  const showSchedule =
+  const radioScheduleIsEnabled =
     radioScheduleOnPage && enabled && RegExp(value).test(service);
 
   return (
@@ -170,7 +171,7 @@ const LiveRadioPage = ({ pageData }) => {
           />
         </Grid>
       </StyledGelPageGrid>
-      {showSchedule && (
+      {radioScheduleIsEnabled && hasRadioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />
       )}
     </>
