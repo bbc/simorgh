@@ -7,6 +7,7 @@ import { C_LUNAR_LIGHT } from '@bbc/psammead-styles/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 
@@ -48,6 +49,7 @@ export const getBootstrapSrc = (queryString, useLegacy = false) => {
 };
 
 const CanonicalAd = ({ slotType }) => {
+  const { showAdsBasedOnLocation } = useContext(RequestContext);
   const location = useLocation();
   const queryString = location.search;
   const { translations, dir } = useContext(ServiceContext);
@@ -73,6 +75,10 @@ const CanonicalAd = ({ slotType }) => {
       }
     };
   }, [slotType, location]);
+
+  if (!showAdsBasedOnLocation) {
+    return null;
+  }
 
   return (
     <>

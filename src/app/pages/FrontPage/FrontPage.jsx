@@ -94,7 +94,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const radioScheduleData = path(['radioScheduleData'], pageData);
   const radioScheduleOnPage = path(['onFrontPage'], radioSchedule);
   const radioSchedulePosition = path(['frontPagePosition'], radioSchedule);
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
 
   const offScreenText = (
     // eslint-disable-next-line jsx-a11y/aria-role
@@ -110,7 +110,9 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   return (
     <>
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
-      {adsEnabled && !isAmp && <CanonicalAdBootstrapJs />}
+      {adsEnabled && showAdsBasedOnLocation && !isAmp && (
+        <CanonicalAdBootstrapJs />
+      )}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
