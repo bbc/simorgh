@@ -1,5 +1,13 @@
 import React from 'react';
-import { any, bool, string, number, objectOf } from 'prop-types';
+import {
+  bool,
+  string,
+  number,
+  shape,
+  arrayOf,
+  oneOfType,
+  object,
+} from 'prop-types';
 import FigureContainer from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -181,7 +189,11 @@ const GenerateFixtureData = ({
 );
 
 GenerateFixtureData.propTypes = {
-  caption: objectOf(any),
+  caption: shape({
+    model: shape({
+      blocks: arrayOf(oneOfType([string, object])),
+    }),
+  }),
   copyright: string,
   lazyLoad: bool,
   platform: string,
