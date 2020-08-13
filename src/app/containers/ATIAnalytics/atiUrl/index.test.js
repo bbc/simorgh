@@ -19,6 +19,8 @@ const analyticsUtilFunctions = [
   { name: 'getHref', source: genericLabelHelpers },
   { name: 'getReferrer', source: genericLabelHelpers },
   { name: 'getAtUserId', source: genericLabelHelpers },
+  { name: 'getCampaignType', source: genericLabelHelpers },
+  { name: 'getATIMarketingString,', source: genericLabelHelpers },
   { name: 'isLocServeCookieSet', source: genericLabelHelpers },
   { name: 'sanitise', source: genericLabelHelpers },
 ];
