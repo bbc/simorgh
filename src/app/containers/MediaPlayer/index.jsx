@@ -130,7 +130,8 @@ const MediaPlayerContainer = ({
     path(['media', 'contentExpired'], translations) ||
     contentNotAvailableMessage;
 
-  if (!available || !(versionId || blockId)) {
+  const mediaIsValid = available && (versionId || blockId);
+  if (!mediaIsValid) {
     if (!blockId) {
       logMissingBlockId({ url: assetId, assetType });
     }
