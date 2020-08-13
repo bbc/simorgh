@@ -197,7 +197,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onOnDemandRadioPage: false,
+      onOnDemandRadioPage: true,
       onLiveRadioPage: true,
       onFrontPage: false,
       header: 'पछिल्लो कार्यक्रम सुन्नुहोस्',
