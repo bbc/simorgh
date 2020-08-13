@@ -19,7 +19,7 @@ Given you are using Chrome browser.
 
 1. Download [ModHeader Chrome extention](https://www.google.com/search?q=modheader+chrome+pass+boolean&rlz=1C5CHFA_enGB762GB762&oq=modheader&aqs=chrome.0.69i59l2j69i57j69i60j69i61j69i60j69i65l2.1039j0j7&sourceid=chrome&ie=UTF-8)
 2. Run local environment (`cd simorgh && npm run dev`)
-3. Visit the home page of one of the services with Ads enabled and append this query string to the url: `?adUnit=/4817/bbccom.test.site.flash/news_homepage_int&ads-debug=true`
+3. Visit the home page of one of the services with Ads enabled and append this query string to the url: `?site=test&ads-debug=true`
 
    i.e http://localhost:7080/mundo?site=test&ads-debug=true
 
