@@ -6,6 +6,12 @@ import '@bbc/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
 import { mainTranslations as russianMainTranslations } from './russian';
 
+const secondaryColumnTranslations = {
+  relatedContent: 'Статті на цю ж тему',
+  topStoriesTitle: 'Головне',
+  featuresAnalysisTitle: 'Докладно',
+};
+
 const baseServiceConfig = {
   ads: {
     hasAds: false,
@@ -50,7 +56,6 @@ const baseServiceConfig = {
     home: 'Головна',
     currentPage: 'Поточна сторінка',
     skipLinkText: 'Перейти до змісту',
-    relatedContent: 'Статті на цю ж тему',
     navMenuText: 'Розділи',
     mediaAssetPage: {
       mediaPlayer: 'Медіаплеєр',
@@ -175,8 +180,7 @@ const baseServiceConfig = {
         endTextVisuallyHidden: 'Кінець %provider_name% допису',
       },
     },
-    topStoriesTitle: 'Головне',
-    featuresAnalysisTitle: 'Докладно',
+    ...secondaryColumnTranslations,
   },
   brandSVG,
   mostRead: {
@@ -289,6 +293,7 @@ export const service = {
     translations: {
       ...baseServiceConfig.translations,
       ...russianMainTranslations,
+      ...secondaryColumnTranslations,
     },
     datetimeLocale: 'ru',
     locale: 'ru_UA',
