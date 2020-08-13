@@ -99,7 +99,6 @@ const CanonicalMostRead = ({
   }
 
   const locale = serviceDatetimeLocale || datetimeLocale;
-  console.log('locale most read', locale);
 
   return (
     <Wrapper>
