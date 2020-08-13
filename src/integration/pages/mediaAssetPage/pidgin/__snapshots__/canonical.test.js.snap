@@ -141,7 +141,7 @@ exports[`Canonical Media Asset Page I can see related content: Lagos 'Gay' men A
 
 exports[`Canonical Media Asset Page I can see related content: Police Arrest 3 ontop Anambra Church Attack 1`] = `"/pidgin/tori-23145776"`;
 
-exports[`Canonical Media Asset Page I can see the headline 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
+exports[`Canonical Media Asset Page I can see the headline 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh  & < >"`;
 
 exports[`Canonical Media Asset Page I can see the placeholder loading image 1`] = `
 <div
@@ -237,7 +237,7 @@ exports[`Canonical Media Asset Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`Canonical Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Media Asset Page SEO Heading level 1 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
+exports[`Canonical Media Asset Page SEO Heading level 1 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh  & < >"`;
 
 exports[`Canonical Media Asset Page SEO Lang attribute 1`] = `"pcm"`;
 
@@ -260,7 +260,7 @@ Object {
       },
       "dateModified": "2019-11-20T12:24:25.000Z",
       "datePublished": "2019-09-13T15:31:44.000Z",
-      "headline": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+      "headline": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh  & < >",
       "image": Object {
         "@type": "ImageObject",
         "height": 576,
@@ -270,7 +270,7 @@ Object {
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/pidgin/23248703",
         "@type": "WebPage",
-        "name": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+        "name": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh  & < >",
       },
       "publisher": Object {
         "@type": "NewsMediaOrganization",
@@ -319,7 +319,7 @@ exports[`Canonical Media Asset Page SEO OG type 1`] = `"article"`;
 
 exports[`Canonical Media Asset Page SEO OG url 1`] = `"http://localhost:7080/pidgin/23248703"`;
 
-exports[`Canonical Media Asset Page SEO Page title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
+exports[`Canonical Media Asset Page SEO Page title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh  & < > - BBC News Pidgin"`;
 
 exports[`Canonical Media Asset Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
 
