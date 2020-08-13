@@ -17,7 +17,7 @@ Afrique, Arabic, Hindi, Mundo, Portuguese, Russian, Zhongwen
 
 Given you are using Chrome browser.
 
-1. Download [ModHeader Chrome extention](https://www.google.com/search?q=modheader+chrome+pass+boolean&rlz=1C5CHFA_enGB762GB762&oq=modheader&aqs=chrome.0.69i59l2j69i57j69i60j69i61j69i60j69i65l2.1039j0j7&sourceid=chrome&ie=UTF-8)
+1. Download [ModHeader Chrome extension](https://www.google.com/search?q=modheader+chrome+pass+boolean&rlz=1C5CHFA_enGB762GB762&oq=modheader&aqs=chrome.0.69i59l2j69i57j69i60j69i61j69i60j69i65l2.1039j0j7&sourceid=chrome&ie=UTF-8)
 2. With the ModHeader extenion, add a header of `BBC-Adverts` with the value `true`.
 
    i.e: ![image](https://user-images.githubusercontent.com/30599794/90151074-40bd7f80-dd7e-11ea-985d-902ed04641ac.png)
