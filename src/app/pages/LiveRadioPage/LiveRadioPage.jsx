@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string, shape, object } from 'prop-types';
+import { string, shape } from 'prop-types';
 import styled from 'styled-components';
 import path from 'ramda/src/path';
 import {
@@ -180,8 +180,7 @@ const LiveRadioPage = ({ pageData }) => {
 LiveRadioPage.propTypes = {
   pageData: shape({
     metadata: shape({
-      id: string,
-      tags: object,
+      type: string,
     }),
     language: string,
     name: string,
