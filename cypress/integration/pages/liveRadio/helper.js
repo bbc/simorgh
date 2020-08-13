@@ -18,6 +18,6 @@ export const getEmbedUrl = (body, language) => {
   ].join('/');
 };
 
-export const serviceHasRadioSchedule = ({ service, variant }) => {
-  return serviceConfig[service][variant].radioSchedule.onLiveRadioPage;
+export const serviceHasRadioSchedule = ({ service, variant, toggleKey }) => {
+  return serviceConfig[service][variant].radioSchedule[toggleKey];
 };
