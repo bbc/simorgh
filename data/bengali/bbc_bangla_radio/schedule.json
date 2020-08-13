@@ -1,249 +1,249 @@
 {
   "schedules": [
     {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_bangla_radio",
-      "serviceId": "bbc_bangla_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570800409000,
-      "publishedTimeStart": 1571751000000,
-      "publishedTimeEnd": 1571752770000,
-      "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1571751000000,
-      "transmissionTimeEnd": 1571752770000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msgslsmjngs5l.imi:ws.bbc.co.uk/BENGA1571751000",
-        "pid": "p07qt9vy"
-      },
       "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
         "pid": "p030vjwg",
-        "title": "প্রবাহ",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
         "synopses": {
-          "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
-          "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
-        }
+          "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
+          "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
+        },
+        "title": "প্রবাহ"
       },
-      "episode": {
-        "pid": "w172wnt20c6sgy2",
-        "presentationTitle": "22/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
-        "synopses": {
-          "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
-          "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
-        }
-      },
-      "version": {
-        "pid": "w1msgslsmjngs5l"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_bangla_radio",
-      "serviceId": "bbc_bangla_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570843521000,
-      "publishedTimeStart": 1571794170000,
-      "publishedTimeEnd": 1571795970000,
-      "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1571794170000,
-      "transmissionTimeEnd": 1571795970000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msgslcx5c5kwj.imi:ws.bbc.co.uk/BENGA1571794170",
-        "pid": "p07qw4rd"
-      },
-      "brand": {
-        "pid": "p030vjwl",
-        "title": "প্রত্যুষা",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
-        "synopses": {
-          "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা আর সংবাদপত্র পর্যালোচনা",
-          "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা আর সংবাদপত্র পর্যালোচনা"
-        }
+        "bid": "w1mshks64vp83k5.imi:ws.bbc.co.uk/BENGA1597239000",
+        "pid": "p08mfwlk"
       },
       "episode": {
-        "pid": "w172wnsn8zxh8n0",
-        "presentationTitle": "23/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+        "pid": "w172xdwnn9psb9n",
+        "presentationTitle": "12/08/2020 GMT",
         "synopses": {
-          "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা আর সংবাদপত্র পর্যালোচনা ",
-          "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা আর সংবাদপত্র পর্যালোচনা "
+          "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
+          "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
         }
       },
-      "version": {
-        "pid": "w1msgslcx5c5kwj"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_bangla_radio",
-      "serviceId": "bbc_bangla_radio",
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
       "partnerId": "s0000001",
-      "updateTime": 1570886746000,
-      "publishedTimeStart": 1571837400000,
-      "publishedTimeEnd": 1571839170000,
       "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1571837400000,
-      "transmissionTimeEnd": 1571839170000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msgslsmjnkp2p.imi:ws.bbc.co.uk/BENGA1571837400",
-        "pid": "p07qx28k"
-      },
-      "brand": {
-        "pid": "p030vjwg",
-        "title": "প্রবাহ",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
-        "synopses": {
-          "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
-          "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
-        }
-      },
-      "episode": {
-        "pid": "w172wnt20c6wcv5",
-        "presentationTitle": "23/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
-        "synopses": {
-          "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
-          "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
-        }
-      },
+      "publishedTimeEnd": 1597240770000,
+      "publishedTimeStart": 1597239000000,
+      "serviceId": "bbc_bangla_radio",
+      "transmissionTimeEnd": 1597240770000,
+      "transmissionTimeStart": 1597239000000,
+      "updateTime": 1596245874000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_bangla_radio",
       "version": {
-        "pid": "w1msgslsmjnkp2p"
+        "pid": "w1mshks64vp83k5"
       }
     },
     {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_bangla_radio",
-      "serviceId": "bbc_bangla_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570929929000,
-      "publishedTimeStart": 1571880570000,
-      "publishedTimeEnd": 1571882370000,
-      "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1571880570000,
-      "transmissionTimeEnd": 1571882370000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msgslcx5c8gsm.imi:ws.bbc.co.uk/BENGA1571880570",
-        "pid": "p07qxvwf"
-      },
       "brand": {
-        "pid": "p030vjwl",
-        "title": "প্রত্যুষা",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+        "pid": "p030vjwm",
         "synopses": {
-          "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা আর সংবাদপত্র পর্যালোচনা",
-          "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা আর সংবাদপত্র পর্যালোচনা"
-        }
+          "medium": "সংবাদ বুলেটিনসহ সমসাময়িক ঘটনা নিয়ে দৈনিক অনুষ্ঠান, সাথে সাপ্তাহিক ফোন-ইন, বিতর্ক ও ফিচার",
+          "short": "সংবাদ বুলেটিনসহ সমসাময়িক ঘটনা নিয়ে দৈনিক অনুষ্ঠান, সাথে সাপ্তাহিক ফোন-ইন, বিতর্ক ও ফিচার"
+        },
+        "title": "পরিক্রমা"
+      },
+      "broadcast": {
+        "bid": "w1mshkrsfhcxtkx.imi:ws.bbc.co.uk/BENGA1597249800",
+        "pid": "p08mgz2r"
       },
       "episode": {
-        "pid": "w172wnsn8zxl5k3",
-        "presentationTitle": "24/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+        "pid": "w172xdw7xydg1bd",
+        "presentationTitle": "12/08/2020 GMT",
         "synopses": {
-          "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা আর সংবাদপত্র পর্যালোচনা ",
-          "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা আর সংবাদপত্র পর্যালোচনা "
+          "medium": "সংবাদ বুলেটিনসহ সমসাময়িক ঘটনা নিয়ে দৈনিক অনুষ্ঠান, সাথে সাপ্তাহিক ফোন-ইন, বিতর্ক ও ফিচার",
+          "short": "সংবাদ বুলেটিনসহ সমসাময়িক ঘটনা নিয়ে দৈনিক অনুষ্ঠান, সাথে সাপ্তাহিক ফোন-ইন, বিতর্ক ও ফিচার"
         }
       },
-      "version": {
-        "pid": "w1msgslcx5c8gsm"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_bangla_radio",
-      "serviceId": "bbc_bangla_radio",
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
       "partnerId": "s0000001",
-      "updateTime": 1570973147000,
-      "publishedTimeStart": 1571923800000,
-      "publishedTimeEnd": 1571925570000,
       "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1571923800000,
-      "transmissionTimeEnd": 1571925570000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msgslsmjnnkzs.imi:ws.bbc.co.uk/BENGA1571923800",
-        "pid": "p07qymcr"
-      },
-      "brand": {
-        "pid": "p030vjwg",
-        "title": "প্রবাহ",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
-        "synopses": {
-          "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
-          "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
-        }
-      },
-      "episode": {
-        "pid": "w172wnt20c6z8r8",
-        "presentationTitle": "24/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
-        "synopses": {
-          "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
-          "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
-        }
-      },
+      "publishedTimeEnd": 1597251570000,
+      "publishedTimeStart": 1597249800000,
+      "serviceId": "bbc_bangla_radio",
+      "transmissionTimeEnd": 1597251570000,
+      "transmissionTimeStart": 1597249800000,
+      "updateTime": 1596289045000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_bangla_radio",
       "version": {
-        "pid": "w1msgslsmjnnkzs"
+        "pid": "w1mshkrsfhcxtkx"
       }
     },
     {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_bangla_radio",
-      "serviceId": "bbc_bangla_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1893488400000,
-      "publishedTimeStart": 1893488400000,
-      "publishedTimeEnd": 1893490200000,
-      "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1893488400000,
-      "transmissionTimeEnd": 1893490200000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msgslcx5cccpq.imi:ws.bbc.co.uk/BENGA1571966970",
-        "pid": "p07qzgm7"
-      },
       "brand": {
-        "pid": "p030vjwl",
-        "title": "প্রত্যুষা",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+        "pid": "p030vjwg",
         "synopses": {
-          "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা আর সংবাদপত্র পর্যালোচনা",
-          "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা আর সংবাদপত্র পর্যালোচনা"
-        }
+          "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
+          "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
+        },
+        "title": "প্রবাহ"
+      },
+      "broadcast": {
+        "bid": "w1mshks64vpc0g8.imi:ws.bbc.co.uk/BENGA1597325400",
+        "pid": "p08mj3nk"
       },
       "episode": {
-        "pid": "w172wnsn8zxp2g6",
-        "presentationTitle": "01/01/2030 09:00 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+        "pid": "w172xdwnn9pw76r",
+        "presentationTitle": "13/08/2020 GMT",
         "synopses": {
-          "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা আর সংবাদপত্র পর্যালোচনা ",
-          "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা আর সংবাদপত্র পর্যালোচনা "
+          "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
+          "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
         }
       },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT29M30S",
+      "publishedTimeEnd": 1597327170000,
+      "publishedTimeStart": 1597325400000,
+      "serviceId": "bbc_bangla_radio",
+      "transmissionTimeEnd": 1597327170000,
+      "transmissionTimeStart": 1597325400000,
+      "updateTime": 1596332264000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_bangla_radio",
       "version": {
-        "pid": "w1msgslcx5cccpq"
+        "pid": "w1mshks64vpc0g8"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+        "pid": "p030vjwm",
+        "synopses": {
+          "medium": "সংবাদ বুলেটিনসহ সমসাময়িক ঘটনা নিয়ে দৈনিক অনুষ্ঠান, সাথে সাপ্তাহিক ফোন-ইন, বিতর্ক ও ফিচার",
+          "short": "সংবাদ বুলেটিনসহ সমসাময়িক ঘটনা নিয়ে দৈনিক অনুষ্ঠান, সাথে সাপ্তাহিক ফোন-ইন, বিতর্ক ও ফিচার"
+        },
+        "title": "পরিক্রমা"
+      },
+      "broadcast": {
+        "bid": "w1mshkrsfhd0qh0.imi:ws.bbc.co.uk/BENGA1597336200",
+        "pid": "p08mjyzw"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+        "pid": "w172xdw7xydjy7h",
+        "presentationTitle": "13/08/2020 GMT",
+        "synopses": {
+          "medium": "সংবাদ বুলেটিনসহ সমসাময়িক ঘটনা নিয়ে দৈনিক অনুষ্ঠান, সাথে সাপ্তাহিক ফোন-ইন, বিতর্ক ও ফিচার",
+          "short": "সংবাদ বুলেটিনসহ সমসাময়িক ঘটনা নিয়ে দৈনিক অনুষ্ঠান, সাথে সাপ্তাহিক ফোন-ইন, বিতর্ক ও ফিচার"
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT29M30S",
+      "publishedTimeEnd": 1597337970000,
+      "publishedTimeStart": 1597336200000,
+      "serviceId": "bbc_bangla_radio",
+      "transmissionTimeEnd": 1597337970000,
+      "transmissionTimeStart": 1597336200000,
+      "updateTime": 1596375443000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_bangla_radio",
+      "version": {
+        "pid": "w1mshkrsfhd0qh0"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+        "pid": "p030vjwg",
+        "synopses": {
+          "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
+          "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
+        },
+        "title": "প্রবাহ"
+      },
+      "broadcast": {
+        "bid": "w1mshks64vpfxcc.imi:ws.bbc.co.uk/BENGA1597411800",
+        "pid": "p08mktwg"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+        "pid": "w172xdwnn9pz43v",
+        "presentationTitle": "14/08/2020 GMT",
+        "synopses": {
+          "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
+          "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT29M30S",
+      "publishedTimeEnd": 1597413570000,
+      "publishedTimeStart": 1597411800000,
+      "serviceId": "bbc_bangla_radio",
+      "transmissionTimeEnd": 1597413570000,
+      "transmissionTimeStart": 1597411800000,
+      "updateTime": 1596418674000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_bangla_radio",
+      "version": {
+        "pid": "w1mshks64vpfxcc"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+        "pid": "p030vjwm",
+        "synopses": {
+          "medium": "সংবাদ বুলেটিনসহ সমসাময়িক ঘটনা নিয়ে দৈনিক অনুষ্ঠান, সাথে সাপ্তাহিক ফোন-ইন, বিতর্ক ও ফিচার",
+          "short": "সংবাদ বুলেটিনসহ সমসাময়িক ঘটনা নিয়ে দৈনিক অনুষ্ঠান, সাথে সাপ্তাহিক ফোন-ইন, বিতর্ক ও ফিচার"
+        },
+        "title": "পরিক্রমা"
+      },
+      "broadcast": {
+        "bid": "w1mshkrsfhd3md3.imi:ws.bbc.co.uk/BENGA1597422600",
+        "pid": "p08mms5g"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+        "pid": "w172xdw7xydmv4l",
+        "presentationTitle": "14/08/2020 GMT",
+        "synopses": {
+          "medium": "সংবাদ বুলেটিনসহ সমসাময়িক ঘটনা নিয়ে দৈনিক অনুষ্ঠান, সাথে সাপ্তাহিক ফোন-ইন, বিতর্ক ও ফিচার",
+          "short": "সংবাদ বুলেটিনসহ সমসাময়িক ঘটনা নিয়ে দৈনিক অনুষ্ঠান, সাথে সাপ্তাহিক ফোন-ইন, বিতর্ক ও ফিচার"
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT29M30S",
+      "publishedTimeEnd": 1597424370000,
+      "publishedTimeStart": 1597422600000,
+      "serviceId": "bbc_bangla_radio",
+      "transmissionTimeEnd": 1597424370000,
+      "transmissionTimeStart": 1597422600000,
+      "updateTime": 1596461844000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_bangla_radio",
+      "version": {
+        "pid": "w1mshkrsfhd3md3"
       }
     }
   ]
