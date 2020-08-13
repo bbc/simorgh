@@ -50,7 +50,7 @@ const input = {
   pathname: '/current-path',
   previousPath: '/previous-path',
   variant: 'simp',
-  canAdvertise: true,
+  showAdsBasedOnLocation: true,
 };
 
 const expectedOutput = {
@@ -73,7 +73,7 @@ const expectedOutput = {
   ampUkLink: 'ampUkLink',
   canonicalNonUkLink: 'canonicalNonUkLink',
   ampNonUkLink: 'ampNonUkLink',
-  canAdvertise: input.canAdvertise,
+  showAdsBasedOnLocation: input.showAdsBasedOnLocation,
 };
 
 describe('RequestContext', () => {

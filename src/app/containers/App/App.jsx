@@ -23,7 +23,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     status,
     error,
     timeOnServer,
-    canAdvertise,
+    showAdsBasedOnLocation,
   } = initialData;
 
   const [state, setState] = useState({
@@ -131,7 +131,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   return renderRoutes(routes, {
     ...state,
     bbcOrigin,
-    canAdvertise,
+    showAdsBasedOnLocation,
     pathname: location.pathname,
     previousPath,
   });

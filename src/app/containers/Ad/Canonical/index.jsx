@@ -49,7 +49,7 @@ export const getBootstrapSrc = (queryString, useLegacy = false) => {
 };
 
 const CanonicalAd = ({ slotType }) => {
-  const { canAdvertise } = useContext(RequestContext);
+  const { showAdsBasedOnLocation } = useContext(RequestContext);
   const location = useLocation();
   const queryString = location.search;
   const { ads, dir } = useContext(ServiceContext);
@@ -72,7 +72,7 @@ const CanonicalAd = ({ slotType }) => {
     };
   }, [slotType, location]);
 
-  if (!canAdvertise) {
+  if (!showAdsBasedOnLocation) {
     return null;
   }
 

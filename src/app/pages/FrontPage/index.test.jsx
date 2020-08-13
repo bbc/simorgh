@@ -15,7 +15,7 @@ const requestContextData = ({ service = 'pidgin' }) => ({
   service,
   pathname: '/pathname',
   data: { status: 200 },
-  canAdvertise: true,
+  showAdsBasedOnLocation: true,
 });
 
 // eslint-disable-next-line react/prop-types

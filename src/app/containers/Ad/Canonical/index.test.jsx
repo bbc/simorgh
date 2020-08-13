@@ -7,7 +7,7 @@ import isLive from '#lib/utilities/isLive';
 import CanonicalAd, { getBootstrapSrc } from '.';
 
 const defaultRequestContextData = {
-  canAdvertise: true,
+  showAdsBasedOnLocation: true,
 };
 
 /* eslint-disable react/prop-types */
@@ -35,9 +35,9 @@ describe('CanonicalAds Ads', () => {
   });
 
   describe('Assertions', () => {
-    it('should return null when canAdvertise is false', () => {
+    it('should return null when showAdsBasedOnLocation is false', () => {
       const requestContext = {
-        canAdvertise: false,
+        showAdsBasedOnLocation: false,
       };
 
       const { container } = render(

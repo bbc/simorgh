@@ -48,7 +48,7 @@ describe('withContexts HOC', () => {
     pageType: 'article',
     pathname: '/pathname',
     status: 200,
-    canAdvertise: true,
+    showAdsBasedOnLocation: true,
     toggles: {
       testToggle: {
         enabled: false,
@@ -90,7 +90,7 @@ describe('withContexts HOC', () => {
           pageType,
           pathname: '/pathname',
           status: 200,
-          canAdvertise: true,
+          showAdsBasedOnLocation: true,
           toggles: {
             testToggle: {
               enabled: false,
@@ -124,7 +124,7 @@ describe('withContexts HOC', () => {
         pathname: '/pathname',
         variant: 'trad',
         status: 200,
-        canAdvertise: true,
+        showAdsBasedOnLocation: true,
         toggles: {
           testToggle: {
             enabled: false,
