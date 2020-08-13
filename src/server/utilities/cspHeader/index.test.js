@@ -259,6 +259,7 @@ describe('cspHeader', () => {
         'https://cookie-oven.api.bbc.co.uk',
         'https://cookie-oven.test.api.bbc.com',
         'https://cookie-oven.test.api.bbc.co.uk',
+        'https://www.bbc.com',
         'https://www.bbc.co.uk',
         'https://news.files.bbci.co.uk',
         'https://news.test.files.bbci.co.uk',
