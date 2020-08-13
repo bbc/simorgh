@@ -5,7 +5,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
-import ArticlePage from '.';
+import ArticlePage from './ArticlePage';
 
 // article c5jje4ejkqvo contains a Headline, a Paragraph, a timestamp
 // a Portrait Image with Caption, a Landscape Image with Caption and Square Image with Caption.
