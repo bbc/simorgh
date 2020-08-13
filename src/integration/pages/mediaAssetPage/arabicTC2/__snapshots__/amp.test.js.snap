@@ -428,7 +428,7 @@ Object {
 
 exports[`AMP Media Asset Page SEO OG description 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
-exports[`AMP Media Asset Page SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_arabic/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg"`;
+exports[`AMP Media Asset Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
 
 exports[`AMP Media Asset Page SEO OG image alt 1`] = `"BBC News عربي"`;
 
@@ -454,7 +454,7 @@ exports[`AMP Media Asset Page SEO Twitter description 1`] = `"شركة شارب 
 
 exports[`AMP Media Asset Page SEO Twitter image alt 1`] = `"BBC News عربي"`;
 
-exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_arabic/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg"`;
+exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
 
 exports[`AMP Media Asset Page SEO Twitter site 1`] = `"@BBCArabic"`;
 

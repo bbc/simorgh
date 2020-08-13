@@ -53,9 +53,18 @@ const MediaAssetPage = ({ pageData }) => {
     pageData,
   );
   const indexImagePath = path(['promo', 'indexImage', 'path'], pageData);
-  const indexImageLocator = indexImagePath
-    ? getImageParts(indexImagePath)[1]
-    : null;
+
+  const getIndexImageLocator = () => {
+    const imageParts = indexImagePath && getImageParts(indexImagePath);
+
+    if (isLegacyMediaAssetPage(requestContext.canonicalLink)) {
+      return null;
+    }
+
+    return imageParts && imageParts[1];
+  };
+
+  const indexImageLocator = getIndexImageLocator();
   const indexImageAltText = path(['promo', 'indexImage', 'altText'], pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
