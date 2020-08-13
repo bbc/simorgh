@@ -1,5 +1,13 @@
 import React from 'react';
-import { string, number, objectOf, any, bool } from 'prop-types';
+import {
+  string,
+  number,
+  shape,
+  arrayOf,
+  oneOfType,
+  object,
+  bool,
+} from 'prop-types';
 import Figure from '@bbc/psammead-figure';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
@@ -93,7 +101,11 @@ const ArticleFigure = ({
 
 ArticleFigure.propTypes = {
   alt: string.isRequired,
-  captionBlock: objectOf(any),
+  captionBlock: shape({
+    model: shape({
+      blocks: arrayOf(oneOfType([string, object])),
+    }),
+  }),
   copyright: string,
   height: number,
   fade: bool,
