@@ -49,6 +49,11 @@ describe('ATI Analytics Container', () => {
     jest.clearAllMocks();
   });
 
+  delete window.location;
+  window.location = new URL(
+    'https://localhost/foo?at_medium=email&at_emailtype=acquisition&at_creation=my_creation',
+  );
+
   describe('pageType article', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
       const pageviewParams = [
@@ -63,7 +68,7 @@ describe('ATI Analytics Container', () => {
         'x2=[responsive]',
         'x3=[news]',
         'x4=[en-gb]',
-        'x5=[http%253A%252F%252Flocalhost%252F]',
+        'x5=[https%253A%252F%252Flocalhost%252Ffoo%253Fat_medium%253Demail%2526at_emailtype%253Dacquisition%2526at_creation%253Dmy_creation]',
         'x7=[article]',
         'x8=[simorgh]',
         'x9=[Article+Headline+for+SEO]',
@@ -71,6 +76,7 @@ describe('ATI Analytics Container', () => {
         'x12=[1970-01-01T00:00:00.000Z]',
         'x13=[Royal+Wedding+2018~Duchess+of+Sussex]',
         'x14=[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]',
+        'xto=EREC--[my_creation]---@',
       ].join('&');
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       canonical.default = mockCanonical;
@@ -108,6 +114,7 @@ describe('ATI Analytics Container', () => {
         'x12=[1970-01-01T00:00:00.000Z]',
         'x13=[Royal+Wedding+2018~Duchess+of+Sussex]',
         'x14=[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]',
+        'xto=-----@',
         `ref=\${documentReferrer}`,
       ].join('&');
 
@@ -138,11 +145,12 @@ describe('ATI Analytics Container', () => {
         'lng=en-US',
         'x2=[responsive]',
         'x3=[news]',
-        'x5=[http%253A%252F%252Flocalhost%252F]',
+        'x5=[https%253A%252F%252Flocalhost%252Ffoo%253Fat_medium%253Demail%2526at_emailtype%253Dacquisition%2526at_creation%253Dmy_creation]',
         'x7=[index-home]',
         'x8=[simorgh]',
         'x11=[1970-01-01T00:00:00.000Z]',
         'x12=[1970-01-01T00:00:00.000Z]',
+        'xto=EREC--[my_creation]---@',
       ].join('&');
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       canonical.default = mockCanonical;
@@ -175,6 +183,7 @@ describe('ATI Analytics Container', () => {
         'x8=[simorgh]',
         'x11=[1970-01-01T00:00:00.000Z]',
         'x12=[1970-01-01T00:00:00.000Z]',
+        'xto=-----@',
         `ref=\${documentReferrer}`,
       ].join('&');
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
@@ -206,7 +215,7 @@ describe('ATI Analytics Container', () => {
         'x2=[responsive]',
         'x3=[news]',
         'x4=[pcm]',
-        'x5=[http%253A%252F%252Flocalhost%252F]',
+        'x5=[https%253A%252F%252Flocalhost%252Ffoo%253Fat_medium%253Demail%2526at_emailtype%253Dacquisition%2526at_creation%253Dmy_creation]',
         'x7=[article-media-asset]',
         'x8=[simorgh]',
         'x9=[Simorgh:+Media+Pod+Build+First+CPS+Media+Asset+Page+in+Simorgh+with+the+Help+of+Drew+',
@@ -215,6 +224,7 @@ describe('ATI Analytics Container', () => {
         'x12=[1970-01-01T00:00:00.000Z]',
         'x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]',
         'x17=[Opinion]',
+        'xto=EREC--[my_creation]---@',
       ].join('&');
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       canonical.default = mockCanonical;
@@ -253,6 +263,7 @@ describe('ATI Analytics Container', () => {
         'x12=[1970-01-01T00:00:00.000Z]',
         'x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]',
         'x17=[Opinion]',
+        'xto=-----@',
         `ref=\${documentReferrer}`,
       ].join('&');
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
@@ -284,7 +295,7 @@ describe('ATI Analytics Container', () => {
         'x2=[responsive]',
         'x3=[news]',
         'x4=[az]',
-        'x5=[http%253A%252F%252Flocalhost%252F]',
+        'x5=[https%253A%252F%252Flocalhost%252Ffoo%253Fat_medium%253Demail%2526at_emailtype%253Dacquisition%2526at_creation%253Dmy_creation]',
         'x7=[article-photo-gallery]',
         'x8=[simorgh]',
         'x9=[Azərbaycan+Xalq+Cümhuriyyəti+-+Fotolarda+-+BBC+News]',
@@ -293,6 +304,7 @@ describe('ATI Analytics Container', () => {
         'x13=[History~Azerbaijan~Society~Culture~Politics~Human+rights~Azerbaijan+Democratic+Republic+100th+anniversary~Caucasus~Law+and+order]',
         'x14=[03eb3674-6190-4cd7-8104-1a00991d67a3~0f8e45e2-6499-44b1-be1f-1a3dd81e8af7~5307a8d9-f620-40f5-92d4-f99c919a6ffa~6a73afa3-ea6b-45c1-80bb-49060b99f864~75612fa6-147c-4a43-97fa-fcf70d9cced3~8b04c2e8-5409-4e7d-9877-3ccaf04727af~9e6f8e15-894a-45cb-9db9-d8881e8e6ae2~a86bc15e-ccd0-4ea9-9903-df3d4575a176~d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa]',
         'x17=[News]',
+        'xto=EREC--[my_creation]---@',
       ].join('&');
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       canonical.default = mockCanonical;
@@ -331,6 +343,7 @@ describe('ATI Analytics Container', () => {
         'x13=[History~Azerbaijan~Society~Culture~Politics~Human+rights~Azerbaijan+Democratic+Republic+100th+anniversary~Caucasus~Law+and+order]',
         'x14=[03eb3674-6190-4cd7-8104-1a00991d67a3~0f8e45e2-6499-44b1-be1f-1a3dd81e8af7~5307a8d9-f620-40f5-92d4-f99c919a6ffa~6a73afa3-ea6b-45c1-80bb-49060b99f864~75612fa6-147c-4a43-97fa-fcf70d9cced3~8b04c2e8-5409-4e7d-9877-3ccaf04727af~9e6f8e15-894a-45cb-9db9-d8881e8e6ae2~a86bc15e-ccd0-4ea9-9903-df3d4575a176~d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa]',
         'x17=[News]',
+        'xto=-----@',
         `ref=\${documentReferrer}`,
       ].join('&');
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
@@ -362,7 +375,7 @@ describe('ATI Analytics Container', () => {
         'x2=[responsive]',
         'x3=[news]',
         'x4=[es]',
-        'x5=[http%253A%252F%252Flocalhost%252F]',
+        'x5=[https%253A%252F%252Flocalhost%252Ffoo%253Fat_medium%253Demail%2526at_emailtype%253Dacquisition%2526at_creation%253Dmy_creation]',
         'x7=[article]',
         'x8=[simorgh]',
         'x9=[WS+STY+TEST+-+Full+Headline+-+BBC+News]',
@@ -372,6 +385,7 @@ describe('ATI Analytics Container', () => {
         'x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]',
         'x16=[Amuse%20me]',
         'x17=[News]',
+        'xto=EREC--[my_creation]---@',
       ].join('&');
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       canonical.default = mockCanonical;
@@ -411,6 +425,7 @@ describe('ATI Analytics Container', () => {
         'x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]',
         'x16=[Amuse%20me]',
         'x17=[News]',
+        'xto=-----@',
         `ref=\${documentReferrer}`,
       ].join('&');
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
@@ -440,7 +455,7 @@ describe('ATI Analytics Container', () => {
         'x2=[responsive]',
         'x3=[news-ukrainian]',
         'x4=[uk]',
-        'x5=[http%253A%252F%252Flocalhost%252F]',
+        'x5=[https%253A%252F%252Flocalhost%252Ffoo%253Fat_medium%253Demail%2526at_emailtype%253Dacquisition%2526at_creation%253Dmy_creation]',
         'x7=[article]',
         'x8=[simorgh]',
         'x9=[Виробництво+героїну+зросло+завдяки+сонячним+батареям.+Погляд+з+Британії+-+BBC+News+Україна]',
@@ -450,6 +465,7 @@ describe('ATI Analytics Container', () => {
         'x14=[1a5696c5-07d0-4a08-8b54-41ad5cd534b6~37cd3473-7b24-44b0-84c1-bf3c4801df5e~4b4cca1c-d458-4310-819e-dd48572b12c4~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]',
         'x16=[WS%20-%20Educate%20me]',
         'x17=[News]',
+        'xto=EREC--[my_creation]---@',
       ].join('&');
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       canonical.default = mockCanonical;
@@ -489,6 +505,7 @@ describe('ATI Analytics Container', () => {
         'x14=[1a5696c5-07d0-4a08-8b54-41ad5cd534b6~37cd3473-7b24-44b0-84c1-bf3c4801df5e~4b4cca1c-d458-4310-819e-dd48572b12c4~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]',
         'x16=[WS%20-%20Educate%20me]',
         'x17=[News]',
+        'xto=-----@',
         `ref=\${documentReferrer}`,
       ].join('&');
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
@@ -518,7 +535,7 @@ describe('ATI Analytics Container', () => {
         'x2=[responsive]',
         'x3=[news-ukrainian]',
         'x4=[ru]',
-        'x5=[http%253A%252F%252Flocalhost%252F]',
+        'x5=[https%253A%252F%252Flocalhost%252Ffoo%253Fat_medium%253Demail%2526at_emailtype%253Dacquisition%2526at_creation%253Dmy_creation]',
         'x7=[article]',
         'x8=[simorgh]',
         'x9=[Карта+новых+районов+Украины:+кто+и+кого+поглотил+-+BBC+News+Україна]',
@@ -528,6 +545,7 @@ describe('ATI Analytics Container', () => {
         'x14=[5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]',
         'x16=[WS%20-%20Update%20me]',
         'x17=[News]',
+        'xto=EREC--[my_creation]---@',
       ].join('&');
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       canonical.default = mockCanonical;
@@ -567,6 +585,7 @@ describe('ATI Analytics Container', () => {
         'x14=[5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]',
         'x16=[WS%20-%20Update%20me]',
         'x17=[News]',
+        'xto=-----@',
         `ref=\${documentReferrer}`,
       ].join('&');
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
