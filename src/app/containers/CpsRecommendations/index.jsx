@@ -85,6 +85,7 @@ const CpsRecommendations = ({ items, parentColumns }) => {
             labelId="recommendations-heading"
             title={title}
             content={items}
+            displaySummary={false}
             parentColumns={parentColumns}
             isRecommendation
             singleTransform={SinglePromoItemGrid}

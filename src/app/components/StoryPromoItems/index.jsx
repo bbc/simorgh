@@ -99,7 +99,9 @@ export const MultiplePromoItems = ({
 export const MultiplePromoItemsGrid = ({
   dir,
   content,
+  displaySummary,
   isRecommendation,
+  singlePromoItemGridColumns,
   storyPromoBorder,
   storyPromoLiGridColumns,
   storyPromoUlGridColumns,
@@ -121,14 +123,13 @@ export const MultiplePromoItemsGrid = ({
           key={item.id || item.uri}
           dir={dir}
         >
-          <ConditionalStyleWrapper
-            condition={isRecommendation}
-            wrapper={children => (
-              <StyledStoryPromoWrapper>{children}</StyledStoryPromoWrapper>
-            )}
-          >
-            <StoryPromo item={item} dir={dir} displaySummary={false} />
-          </ConditionalStyleWrapper>
+          {SinglePromoItemGrid({
+            dir,
+            displaySummary,
+            isRecommendation,
+            promo: item,
+            singlePromoItemGridColumns,
+          })}
         </Grid>
       ))}
     </Grid>
@@ -183,6 +184,7 @@ MultiplePromoItems.propTypes = {
 
 MultiplePromoItemsGrid.propTypes = {
   dir: string,
+  displaySummary: bool,
   content: arrayOf(shape(storyItem)).isRequired,
   isRecommendation: bool,
   storyPromoBorder: bool,
@@ -202,6 +204,14 @@ MultiplePromoItemsGrid.propTypes = {
     group4: number,
     group5: number,
   }).isRequired,
+  singlePromoItemGridColumns: shape({
+    group0: number,
+    group1: number,
+    group2: number,
+    group3: number,
+    group4: number,
+    group5: number,
+  }).isRequired,
 };
 
 MultiplePromoItems.defaultProps = {
@@ -211,6 +221,7 @@ MultiplePromoItems.defaultProps = {
 
 MultiplePromoItemsGrid.defaultProps = {
   dir: 'ltr',
+  displaySummary: true,
   isRecommendation: null,
   storyPromoBorder: null,
 };
