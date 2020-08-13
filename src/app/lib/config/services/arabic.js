@@ -196,9 +196,15 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'الأكثر مشاهدة',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Features',
       frequenciesPageUrl:
@@ -210,8 +216,8 @@ export const service = {
     recommendations: {
       hasStoryRecommendations: true,
       skipLink: {
-        text: 'Skip %title% and continue reading',
-        endTextVisuallyHidden: 'End of %title%',
+        text: 'تخطى %title% وواصل القراءة',
+        endTextVisuallyHidden: '%title% نهاية',
       },
     },
     footer: {

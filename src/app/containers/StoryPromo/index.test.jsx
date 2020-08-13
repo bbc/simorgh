@@ -2,7 +2,6 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import deepClone from 'ramda/src/clone';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import '@testing-library/jest-dom/extend-expect';
 import loggerMock from '#testHelpers/loggerMock';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -44,7 +43,7 @@ const fixtures = {
 };
 
 // eslint-disable-next-line react/prop-types
-const WrappedStoryPromo = ({ service = 'igbo', platform, ...props }) => (
+const WrappedStoryPromo = ({ service, platform, ...props }) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
@@ -92,6 +91,26 @@ describe('StoryPromo Container', () => {
       platform="canonical"
       item={indexAlsosItem}
       promoType="top"
+    />,
+  );
+
+  shouldMatchSnapshot(
+    `should render full width promos correctly for canonical`,
+    <WrappedStoryPromo
+      platform="canonical"
+      item={completeItem}
+      promoType="top"
+      isSingleColumnLayout
+    />,
+  );
+
+  shouldMatchSnapshot(
+    `should render full width promos correctly for amp`,
+    <WrappedStoryPromo
+      platform="amp"
+      item={completeItem}
+      promoType="top"
+      isSingleColumnLayout
     />,
   );
 

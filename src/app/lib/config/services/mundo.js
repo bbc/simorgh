@@ -171,7 +171,7 @@ export const service = {
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Título del video: ',
+          textPrefixVisuallyHidden: 'Título del video, ',
           text:
             'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
         },
@@ -197,14 +197,19 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Más vistos',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
     recommendations: {
       hasStoryRecommendations: true,
       skipLink: {
-        text: 'Skip %title% and continue reading',
-        endTextVisuallyHidden: 'End of %title%',
+        text: 'Saltar %title% y continuar leyendo',
+        endTextVisuallyHidden: 'Final de %title%',
       },
     },
     footer: {

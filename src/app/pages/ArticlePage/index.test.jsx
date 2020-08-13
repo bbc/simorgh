@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
-import ArticlePage from '.';
+import ArticlePage from './ArticlePage';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -26,7 +26,7 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
 
 // eslint-disable-next-line react/prop-types
 const Context = ({ service, children }) => (
-  <ToggleContextProvider service={service} origin="https://www.test.bbc.co.uk">
+  <ToggleContextProvider>
     <ServiceContextProvider service={service}>
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"

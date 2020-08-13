@@ -158,18 +158,18 @@ export const service = {
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
-          text: 'Warning: Third party content may contain adverts',
+          textPrefixVisuallyHidden: 'የቪዲዮ መግለጫ, ',
+          text: 'ማሳሰቢያ፡ የሦስተኛ ወገን ይዘቶች ማስታወቂያ ሊኖራቸው ይችላል',
         },
         fallback: {
-          text: 'Content is not available',
-          linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
+          text: 'የሚፈልጉት ይዘት የለም',
+          linkText: 'በ %provider_name% ተጨማሪ ይመልከቱ',
+          linkTextSuffixVisuallyHidden: ', ውጫዊ',
           warningText: 'ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም.',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: 'የ %provider_name% ይዘትን ይለፉት',
+          endTextVisuallyHidden: 'የ %provider_name% ይዘት መጨረሻ',
         },
       },
       topStoriesTitle: 'እንዳያመልጥዎ',
@@ -182,9 +182,15 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'በብዛት የታዩ',
+      numberOfItems: 5,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
+      onOnDemandRadioPage: false,
       onFrontPage: false,
       header: 'ያድምጡ',
       durationLabel: 'ርዝመት %duration%',

@@ -196,14 +196,19 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'En fazla izlenilen içerek',
+      numberOfItems: 5,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
     recommendations: {
       hasStoryRecommendations: true,
       skipLink: {
-        text: 'Skip %title% and continue reading',
-        endTextVisuallyHidden: 'End of %title%',
+        text: 'Haberin başlığını atlayın ve okumaya devam edin',
+        endTextVisuallyHidden: 'Haberin sonu',
       },
     },
     footer: {

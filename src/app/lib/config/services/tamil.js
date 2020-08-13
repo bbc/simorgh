@@ -185,8 +185,8 @@ export const service = {
             'வெளியார் இணைய தளங்களின் உள்ளடக்கத்துக்கு பிபிசி பொறுப்பாகாது.',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: '%provider_name% பதிவை கடந்து செல்ல',
+          endTextVisuallyHidden: '%provider_name% பதிவின் முடிவு',
         },
       },
       topStoriesTitle: 'முக்கிய செய்திகள்',
@@ -198,6 +198,11 @@ export const service = {
       lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'அதிகம் பார்க்கப்பட்டது',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

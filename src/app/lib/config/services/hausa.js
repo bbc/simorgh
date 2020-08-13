@@ -179,8 +179,8 @@ export const service = {
             'BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: 'Kauce wa %provider_name%',
+          endTextVisuallyHidden: 'Karshen labarin da aka sa a %provider_name%',
         },
       },
       topStoriesTitle: 'Babban Labari',
@@ -193,9 +193,15 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Wadanda aka fi kallo',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Verticals',
       frequenciesPageUrl: '/hausa/institutional/2011/11/000001_mitocinmu',

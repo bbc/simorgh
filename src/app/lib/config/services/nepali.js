@@ -159,7 +159,7 @@ export const service = {
         listen: 'सुन्नुहोस्',
         watch: 'हेर्नुहोस्',
         liveLabel: 'प्रत्यक्ष प्रसारण',
-        nextLabel: 'NEXT',
+        nextLabel: 'अर्को',
         previousRadioShow: 'पछिल्लो रेडिओ कार्यक्रम',
         nextRadioShow: 'अघिल्लो रेडिओ कार्यक्रम',
         duration: 'समयावधि',
@@ -190,8 +190,18 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'धेरै हेरिएको',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
+      onOnDemandRadioPage: false,
+      onLiveRadioPage: true,
+      onFrontPage: false,
+      header: 'पछिल्लो कार्यक्रम सुन्नुहोस्',
+      durationLabel: 'अवधि %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

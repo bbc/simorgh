@@ -7,7 +7,7 @@ import { service as ukrainianConfig } from '#lib/config/services/ukrainian';
 import { service as persianConfig } from '#lib/config/services/persian';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { UserContextProvider } from '#contexts/UserContext';
-import IdxPage from '#pages/IdxPage';
+import IdxPage from '#pages/IdxPage/IdxPage';
 
 const radioServiceOverride = 'dari';
 
@@ -20,10 +20,7 @@ const serviceContext = {
 const IdxPageWithContext = ({ service = 'persian', pageData }) => {
   return (
     <BrowserRouter>
-      <ToggleContextProvider
-        service={service}
-        origin="https://www.test.bbc.com"
-      >
+      <ToggleContextProvider>
         <RequestContextProvider
           pageType="IDX"
           service={service}

@@ -198,14 +198,19 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'सबसे ज्यादा देखे गए',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
     recommendations: {
       hasStoryRecommendations: true,
       skipLink: {
-        text: 'Skip %title% and continue reading',
-        endTextVisuallyHidden: 'End of %title%',
+        text: 'छोड़कर %title% आगे बढ़ें',
+        endTextVisuallyHidden: 'समाप्त',
       },
     },
     footer: {

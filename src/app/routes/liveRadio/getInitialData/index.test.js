@@ -1,7 +1,6 @@
-import getInitialData, { hasRadioSchedule } from '.';
+import getInitialData from '.';
 import * as fetchPageData from '../../utils/fetchPageData';
 import liveRadioJson from '#data/korean/bbc_korean_radio/liveradio.json';
-import getConfig from '../../utils/getConfig';
 
 fetch.mockResponse(JSON.stringify(liveRadioJson));
 const { env } = process;
@@ -51,40 +50,5 @@ describe('Get initial data for live radio', () => {
       path: 'mock-live-radio-path',
       pageType,
     });
-  });
-});
-
-describe('hasRadioSchedule', () => {
-  it('should return true if the service has the radio schedule on the live radio page', async () => {
-    getConfig.mockImplementationOnce(() => ({
-      radioSchedule: {
-        hasRadioSchedule: true,
-        onLiveRadioPage: true,
-      },
-    }));
-
-    expect(await hasRadioSchedule('mock-service')).toBe(true);
-  });
-
-  it('should return false if the service does not have the radio schedule on the live radio page', async () => {
-    getConfig.mockImplementationOnce(() => ({
-      radioSchedule: {
-        hasRadioSchedule: true,
-        onLiveRadioPage: false,
-      },
-    }));
-
-    expect(await hasRadioSchedule('mock-service')).toBe(false);
-  });
-
-  it('should return false if the service does not have the radio schedule enabled on any page', async () => {
-    getConfig.mockImplementationOnce(() => ({
-      radioSchedule: {
-        hasRadioSchedule: false,
-        onLiveRadioPage: false,
-      },
-    }));
-
-    expect(await hasRadioSchedule('mock-service')).toBe(false);
   });
 });

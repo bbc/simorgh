@@ -170,11 +170,11 @@ export const service = {
           linkText: '%provider_name% مزید دیکھنے کے لیے',
           linkTextSuffixVisuallyHidden: ', بیرونی مواد',
           warningText:
-            ' بی بی سی. بی بی سی بیرونی سائٹس پر شائع شدہ مواد کی ذمہ دار نہیں ہے.',
+            'بی بی سی. بی بی سی بیرونی سائٹس پر شائع شدہ مواد کی ذمہ دار نہیں ہے.',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: '%provider_name% پوسٹ نظرانداز کریں',
+          endTextVisuallyHidden: '%provider_name% پوسٹ کا اختتام',
         },
       },
       topStoriesTitle: 'اہم خبریں',
@@ -187,9 +187,15 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'سب سے زیادہ دیکھی گئی',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: false,
       header: 'ایف ایم بلیٹن',
       durationLabel: '%duration% دورانیہ',

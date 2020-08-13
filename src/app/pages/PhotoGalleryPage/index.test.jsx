@@ -3,12 +3,11 @@ import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import assocPath from 'ramda/src/assocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import { PhotoGalleryPage } from '..';
+import PhotoGalleryPage from '.';
 import noOnwardJourneys from '#data/pidgin/cpsAssets/sport-23252855';
 import someCpsOnwardJourneys from '#data/azeri/cpsAssets/azerbaijan-44208474.json';
 import allCpsOnwardJourneys from '#data/pidgin/cpsAssets/tori-49221071.json';
@@ -21,7 +20,12 @@ const toggleState = {
   },
 };
 
-const createAssetPage = ({ pageData }, service) => (
+jest.mock('#containers/ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  return ChartbeatAnalytics;
+});
+
+const Page = ({ pageData, service }) => (
   <StaticRouter>
     <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
       <ServiceContextProvider service={service}>
@@ -100,8 +104,7 @@ describe('Photo Gallery Page', () => {
         path: 'some-cps-pgl-path',
         pageType,
       });
-      const page = createAssetPage({ pageData }, 'pidgin');
-      await matchSnapshotAsync(page);
+      await matchSnapshotAsync(<Page pageData={pageData} service="pidgin" />);
     });
 
     it('should match snapshot for PGL with about tags', async () => {
@@ -110,8 +113,9 @@ describe('Photo Gallery Page', () => {
         path: 'some-cps-pgl-path',
         pageType,
       });
-      const page = createAssetPage({ pageData }, 'afaanoromoo');
-      await matchSnapshotAsync(page);
+      await matchSnapshotAsync(
+        <Page pageData={pageData} service="afaanoromoo" />,
+      );
     });
 
     it('should match snapshot for PGL with non-CPS onward journeys filtered', async () => {
@@ -120,8 +124,7 @@ describe('Photo Gallery Page', () => {
         path: 'some-cps-pgl-path',
         pageType,
       });
-      const page = createAssetPage({ pageData }, 'azeri');
-      await matchSnapshotAsync(page);
+      await matchSnapshotAsync(<Page pageData={pageData} service="azeri" />);
     });
 
     it('should match snapshot for PGL with all CPS onward journeys', async () => {
@@ -130,8 +133,7 @@ describe('Photo Gallery Page', () => {
         path: 'some-cps-pgl-path',
         pageType,
       });
-      const page = createAssetPage({ pageData }, 'pidgin');
-      await matchSnapshotAsync(page);
+      await matchSnapshotAsync(<Page pageData={pageData} service="pidgin" />);
     });
   });
 
@@ -141,7 +143,9 @@ describe('Photo Gallery Page', () => {
       path: 'some-cps-pgl-path',
       pageType,
     });
-    const { getByText } = render(createAssetPage({ pageData }, 'afaanoromoo'));
+    const { getByText } = render(
+      <Page pageData={pageData} service="afaanoromoo" />,
+    );
     expect(getByText('21 Fuulbaana 2017')).toBeInTheDocument();
   });
 
@@ -157,7 +161,7 @@ describe('Photo Gallery Page', () => {
       pageData,
     );
     const { asFragment } = render(
-      createAssetPage({ pageData: pageDataWithHiddenTimestamp }, 'afaanoromoo'),
+      <Page pageData={pageDataWithHiddenTimestamp} service="afaanoromoo" />,
     );
 
     expect(document.querySelector('main time')).toBeNull();

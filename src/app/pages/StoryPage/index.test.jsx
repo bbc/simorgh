@@ -5,17 +5,16 @@ import { StaticRouter } from 'react-router-dom';
 // test helpers
 import { render } from '@testing-library/react';
 import assocPath from 'ramda/src/assocPath';
-import '@testing-library/jest-dom/extend-expect';
 import fetchMock from 'fetch-mock';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 
 // contexts
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContext } from '#contexts/ToggleContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 // components to test
-import { StoryPage } from '..';
+import StoryPage from '.';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
 // mock data
@@ -25,6 +24,9 @@ import pidginSecondaryColumnData from '#data/pidgin/secondaryColumn/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import igboMostReadData from '#data/igbo/mostRead/index.json';
 import igboSecondaryColumnData from '#data/igbo/secondaryColumn/index.json';
+import ukrainianInRussianPageData from '#data/ukrainian/cpsAssets/news-russian-23333960.json';
+import ukrainianSecondaryColumnData from '#data/ukrainian/secondaryColumn/index.json';
+import ukrainianMostReadData from '#data/ukrainian/mostRead/index.json';
 
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
 
@@ -39,10 +41,13 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
-const createAssetPage = ({ pageData }, service) => (
+const Page = ({ pageData, service }) => (
   <StaticRouter>
-    <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
-      <ServiceContextProvider service={service}>
+    <ToggleContextProvider toggles={toggleState}>
+      <ServiceContextProvider
+        pageLang={pageData.metadata.language}
+        service={service}
+      >
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
           isAmp={false}
@@ -54,7 +59,7 @@ const createAssetPage = ({ pageData }, service) => (
           <StoryPage service={service} pageData={pageData} />
         </RequestContextProvider>
       </ServiceContextProvider>
-    </ToggleContext.Provider>
+    </ToggleContextProvider>
   </StaticRouter>
 );
 
@@ -133,8 +138,7 @@ describe('Story Page', () => {
         pageType,
       });
 
-      const page = createAssetPage({ pageData }, 'pidgin');
-      await matchSnapshotAsync(page);
+      await matchSnapshotAsync(<Page pageData={pageData} service="pidgin" />);
     });
   });
 
@@ -152,7 +156,7 @@ describe('Story Page', () => {
       pageType,
     });
 
-    const { getByText } = render(createAssetPage({ pageData }, 'igbo'));
+    const { getByText } = render(<Page pageData={pageData} service="igbo" />);
     expect(getByText('23 Ọktọba 2019')).toBeInTheDocument();
   });
 
@@ -177,7 +181,7 @@ describe('Story Page', () => {
     );
 
     const { asFragment } = render(
-      createAssetPage({ pageData: pageDataWithHiddenTimestamp }, 'pidgin'),
+      <Page pageData={pageDataWithHiddenTimestamp} service="pidgin" />,
     );
 
     expect(document.querySelector('main time')).toBeNull();
@@ -195,7 +199,35 @@ describe('Story Page', () => {
       pageType,
     });
 
-    const page = createAssetPage({ pageData }, 'pidgin');
-    await matchSnapshotAsync(page);
+    await matchSnapshotAsync(<Page pageData={pageData} service="pidgin" />);
+  });
+
+  it('should render secondary column with lang attribute of `serviceLang` when a language override is present', async () => {
+    fetchMock.mock(
+      'http://localhost/some-cps-sty-path.json',
+      ukrainianInRussianPageData,
+    );
+    fetchMock.mock(
+      'http://localhost/ukrainian/sty-secondary-column.json',
+      ukrainianSecondaryColumnData,
+    );
+    fetchMock.mock(
+      'http://localhost/ukrainian/mostread.json',
+      ukrainianMostReadData,
+    );
+
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'ukrainian',
+      pageType,
+    });
+
+    render(<Page pageData={pageData} service="ukrainian" />);
+
+    const secondaryColumn = document.querySelector(
+      'div[class*="SecondaryColumn"]',
+    );
+
+    expect(secondaryColumn).toHaveAttribute('lang', 'uk');
   });
 });
