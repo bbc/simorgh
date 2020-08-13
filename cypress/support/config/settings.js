@@ -60,17 +60,17 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
               '/afaanoromoo/bbc_afaanoromoo_radio/liveradio?renderer_env=live',
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,

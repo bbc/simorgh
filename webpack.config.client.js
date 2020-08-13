@@ -15,7 +15,6 @@ if (DOT_ENV_CONFIG.error) {
 
 module.exports = ({
   resolvePath,
-  IS_CI,
   IS_PROD,
   START_DEV_SERVER,
   IS_PROD_PROFILE,
@@ -79,6 +78,11 @@ module.exports = ({
         minSize: 184320, // 180kb
         maxSize: 245760, // 240kb
         cacheGroups: {
+          common: {
+            name: false,
+            minChunks: 2,
+            chunks: 'all',
+          },
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendor',
@@ -176,7 +180,7 @@ module.exports = ({
       }),
     );
   }
-  if (!IS_CI && IS_PROD) {
+  if (IS_PROD) {
     const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line
     /**
      * Visualize size of webpack output files with an interactive zoomable treemap.
