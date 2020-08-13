@@ -33,6 +33,7 @@ export const SinglePromoItem = ({
   displayImage,
   displaySummary,
   isRecommendation,
+  isSingleColumnLayout,
   promo,
 }) => {
   return (
@@ -41,6 +42,7 @@ export const SinglePromoItem = ({
       displayImage={displayImage}
       displaySummary={displaySummary}
       isRecommendation={isRecommendation}
+      isSingleColumnLayout={isSingleColumnLayout}
       item={promo}
     />
   );
@@ -51,6 +53,7 @@ export const SinglePromoItemGrid = ({
   displayImage,
   displaySummary,
   isRecommendation,
+  isSingleColumnLayout,
   promo,
   singlePromoItemGridColumns,
 }) => {
@@ -68,6 +71,7 @@ export const SinglePromoItemGrid = ({
           displayImage,
           displaySummary,
           isRecommendation,
+          isSingleColumnLayout,
         })}
       </ConditionalStyleWrapper>
     </Grid>
@@ -102,6 +106,7 @@ export const MultiplePromoItemsGrid = ({
   displayImage,
   displaySummary,
   isRecommendation,
+  isSingleColumnLayout,
   singlePromoItemGridColumns,
   storyPromoBorder,
   storyPromoLiGridColumns,
@@ -137,6 +142,7 @@ export const MultiplePromoItemsGrid = ({
                 displayImage,
                 displaySummary,
                 isRecommendation,
+                isSingleColumnLayout,
                 promo: item,
               })}
         </Grid>
@@ -151,6 +157,7 @@ SinglePromoItem.propTypes = {
   displayImage: bool,
   displaySummary: bool,
   isRecommendation: bool,
+  isSingleColumnLayout: bool,
 };
 
 SinglePromoItem.defaultProps = {
@@ -158,12 +165,14 @@ SinglePromoItem.defaultProps = {
   displayImage: true,
   displaySummary: true,
   isRecommendation: null,
+  isSingleColumnLayout: null,
 };
 
 SinglePromoItemGrid.propTypes = {
   dir: string,
   promo: shape({ storyItem }).isRequired,
   isRecommendation: bool,
+  isSingleColumnLayout: bool,
   displayImage: bool,
   displaySummary: bool,
   singlePromoItemGridColumns: shape({
@@ -181,6 +190,7 @@ SinglePromoItemGrid.defaultProps = {
   displayImage: true,
   displaySummary: true,
   isRecommendation: null,
+  isSingleColumnLayout: null,
   singlePromoItemGridColumns: null,
 };
 
@@ -197,6 +207,7 @@ MultiplePromoItemsGrid.propTypes = {
   displaySummary: bool,
   content: arrayOf(shape(storyItem)).isRequired,
   isRecommendation: bool,
+  isSingleColumnLayout: bool,
   storyPromoBorder: bool,
   storyPromoLiGridColumns: shape({
     group0: number,
@@ -234,5 +245,6 @@ MultiplePromoItemsGrid.defaultProps = {
   displayImage: true,
   displaySummary: true,
   isRecommendation: null,
+  isSingleColumnLayout: null,
   storyPromoBorder: null,
 };

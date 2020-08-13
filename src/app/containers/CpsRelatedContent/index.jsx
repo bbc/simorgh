@@ -48,6 +48,7 @@ const CpsRelatedContent = ({ content, parentColumns, isMapContent }) => {
       labelId="related-content-heading"
       title={title}
       content={content}
+      isSingleColumnLayout={isMapContent}
       parentColumns={parentColumns}
       singleTransform={SinglePromoItemGrid}
       listTransform={MultiplePromoItemsGrid}
