@@ -1,8 +1,26 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import CanonicalAd, { getBootstrapSrc } from '.';
+
+const defaultRequestContextData = {
+  showAdsBasedOnLocation: true,
+};
+
+/* eslint-disable react/prop-types */
+const CanonicalAdWithContext = ({
+  slotType,
+  requestContext = defaultRequestContextData,
+}) => (
+  <BrowserRouter>
+    <RequestContext.Provider value={requestContext}>
+      <CanonicalAd slotType={slotType} />
+    </RequestContext.Provider>
+  </BrowserRouter>
+);
 
 describe('CanonicalAds Ads', () => {
   beforeEach(() => {
@@ -16,19 +34,32 @@ describe('CanonicalAds Ads', () => {
     window.dotcom = undefined;
   });
 
+  describe('Assertions', () => {
+    it('should return null when showAdsBasedOnLocation is false', () => {
+      const requestContext = {
+        showAdsBasedOnLocation: false,
+      };
+
+      const { container } = render(
+        <CanonicalAdWithContext
+          slotType="leaderboard"
+          requestContext={requestContext}
+        />,
+      );
+
+      expect(container).toBeEmptyDOMElement();
+    });
+  });
+
   describe('Snapshots', () => {
     shouldMatchSnapshot(
       'should correctly render an Canonical leaderboard ad with dotcom-bootstrap script',
-      <BrowserRouter>
-        <CanonicalAd slotType="leaderboard" />
-      </BrowserRouter>,
+      <CanonicalAdWithContext slotType="leaderboard" />,
     );
 
     shouldMatchSnapshot(
       'should correctly render a Canonical mpu ad with dotcom-bootstrap script',
-      <BrowserRouter>
-        <CanonicalAd slotType="mpu" />
-      </BrowserRouter>,
+      <CanonicalAdWithContext slotType="mpu" />,
     );
   });
 });
