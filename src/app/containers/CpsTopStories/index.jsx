@@ -9,7 +9,7 @@ import StoryPromo from '../StoryPromo';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 
 const TopStories = ({ content, parentColumns }) => {
-  const { dir, translations, secondaryDatetimeLocale = null } = useContext(
+  const { dir, translations, serviceDatetimeLocale = null } = useContext(
     ServiceContext,
   );
 
@@ -21,7 +21,7 @@ const TopStories = ({ content, parentColumns }) => {
       dir={dir}
       displayImage={false}
       displaySummary={false}
-      secondaryDatetimeLocale={secondaryDatetimeLocale}
+      serviceDatetimeLocale={serviceDatetimeLocale}
     />
   );
 

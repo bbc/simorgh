@@ -9,7 +9,7 @@ import StoryPromo from '../StoryPromo';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 
 const FeaturesAnalysis = ({ content, parentColumns }) => {
-  const { dir, translations, secondaryDatetimeLocale = null } = useContext(
+  const { dir, translations, serviceDatetimeLocale = null } = useContext(
     ServiceContext,
   );
 
@@ -24,7 +24,7 @@ const FeaturesAnalysis = ({ content, parentColumns }) => {
       item={promo}
       dir={dir}
       displayImage
-      secondaryDatetimeLocale={secondaryDatetimeLocale}
+      serviceDatetimeLocale={serviceDatetimeLocale}
     />
   );
 
@@ -37,7 +37,7 @@ const FeaturesAnalysis = ({ content, parentColumns }) => {
             dir={dir}
             displayImage
             displaySummary={false}
-            secondaryDatetimeLocale={secondaryDatetimeLocale}
+            serviceDatetimeLocale={serviceDatetimeLocale}
           />
         </StoryPromoLi>
       ))}

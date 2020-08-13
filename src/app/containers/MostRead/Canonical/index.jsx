@@ -34,7 +34,7 @@ const CanonicalMostRead = ({
     script,
     dir,
     datetimeLocale,
-    secondaryDatetimeLocale = null,
+    serviceDatetimeLocale = null,
     timezone,
     mostRead: { lastUpdated, numberOfItems },
   } = useContext(ServiceContext);
@@ -98,7 +98,7 @@ const CanonicalMostRead = ({
     return null;
   }
 
-  const locale = secondaryDatetimeLocale || datetimeLocale;
+  const locale = serviceDatetimeLocale || datetimeLocale;
   console.log('locale most read', locale);
 
   return (

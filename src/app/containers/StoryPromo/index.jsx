@@ -94,7 +94,7 @@ const StoryPromoContainer = ({
   displaySummary,
   isRecommendation,
   isSingleColumnLayout,
-  secondaryDatetimeLocale,
+  serviceDatetimeLocale,
 }) => {
   const {
     altCalendar,
@@ -184,7 +184,7 @@ const StoryPromoContainer = ({
     `}
   `;
 
-  const locale = secondaryDatetimeLocale || datetimeLocale;
+  const locale = serviceDatetimeLocale || datetimeLocale;
 
   const Info = (
     <>
@@ -292,7 +292,7 @@ StoryPromoContainer.propTypes = {
   displaySummary: bool,
   isRecommendation: bool,
   isSingleColumnLayout: bool,
-  secondaryDatetimeLocale: string,
+  serviceDatetimeLocale: string,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -303,7 +303,7 @@ StoryPromoContainer.defaultProps = {
   displaySummary: true,
   isRecommendation: false,
   isSingleColumnLayout: false,
-  secondaryDatetimeLocale: null,
+  serviceDatetimeLocale: null,
 };
 
 export default StoryPromoContainer;

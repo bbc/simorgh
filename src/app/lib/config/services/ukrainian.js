@@ -296,7 +296,7 @@ export const service = {
       ...secondaryColumnTranslations,
     },
     datetimeLocale: 'ru',
-    secondaryDatetimeLocale: 'uk',
+    serviceDatetimeLocale: 'uk',
     locale: 'ru_UA',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'ru',
