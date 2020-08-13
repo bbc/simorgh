@@ -2067,7 +2067,7 @@ exports[`Media Asset Page should render component 1`] = `
                 id="content"
                 tabindex="-1"
               >
-                Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
+                Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & &lt; &gt;
               </h1>
               <div
                 class="c2"
@@ -2104,7 +2104,7 @@ exports[`Media Asset Page should render component 1`] = `
                   aria-hidden="true"
                   class="c9 c10"
                 >
-                  Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
+                  Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & &lt; &gt;
                 </strong>
               </div>
               <div
