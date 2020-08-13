@@ -18,8 +18,12 @@ Afrique, Arabic, Hindi, Mundo, Portuguese, Russian, Zhongwen
 Given you are using Chrome browser.
 
 1. Download [ModHeader Chrome extention](https://www.google.com/search?q=modheader+chrome+pass+boolean&rlz=1C5CHFA_enGB762GB762&oq=modheader&aqs=chrome.0.69i59l2j69i57j69i60j69i61j69i60j69i65l2.1039j0j7&sourceid=chrome&ie=UTF-8)
-2. Run local environment (`cd simorgh && npm run dev`)
-3. Visit the home page of one of the services with Ads enabled and append this query string to the url: `?site=test&ads-debug=true`
+2. With the ModHeader extenion, add a header of `BBC-Adverts` with the value `true`.
+
+   i.e: ![image](https://user-images.githubusercontent.com/30599794/90151074-40bd7f80-dd7e-11ea-985d-902ed04641ac.png)
+
+3. Run local environment (`cd simorgh && npm run dev`)
+4. Visit the home page of one of the services with Ads enabled and append this query string to the url: `?site=test&ads-debug=true`
 
    i.e http://localhost:7080/mundo?site=test&ads-debug=true
 
