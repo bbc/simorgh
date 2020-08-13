@@ -208,6 +208,7 @@ const CpsOnwardJourney = ({
           dir,
           displayImage,
           displaySummary,
+          isRecommendation,
           storyPromoBorder,
           storyPromoLiGridColumns,
           storyPromoUlGridColumns,

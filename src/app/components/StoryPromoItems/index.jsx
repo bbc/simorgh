@@ -1,5 +1,9 @@
 import React from 'react';
-import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import {
+  StoryPromoLi,
+  StoryPromoUl,
+  StoryPromoLiBase,
+} from '@bbc/psammead-story-promo-list';
 import { arrayOf, shape, bool, string, number } from 'prop-types';
 import styled from 'styled-components';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
@@ -9,8 +13,9 @@ import StoryPromo from '#containers/StoryPromo';
 import { storyItem } from '#models/propTypes/storyItem';
 import Grid from '../Grid';
 
-const ConditionalStyleWrapper = ({ condition, wrapper, children }) =>
-  condition ? wrapper(children) : children;
+const ConditionalStyleWrapper = ({ condition, wrapper, children }) => {
+  return condition ? wrapper(children) : children;
+};
 
 const StyledStoryPromoWrapper = styled.div`
   > div {
@@ -52,7 +57,7 @@ export const SinglePromoItemGrid = ({
   return (
     <Grid columns={singlePromoItemGridColumns} enableGelGutters dir={dir}>
       <ConditionalStyleWrapper
-        isRecommendation={isRecommendation}
+        condition={isRecommendation}
         wrapper={children => (
           <StyledStoryPromoWrapper>{children}</StyledStoryPromoWrapper>
         )}
@@ -94,10 +99,12 @@ export const MultiplePromoItems = ({
 export const MultiplePromoItemsGrid = ({
   dir,
   content,
+  isRecommendation,
   storyPromoBorder,
   storyPromoLiGridColumns,
   storyPromoUlGridColumns,
 }) => {
+  const storyPromoList = isRecommendation ? StoryPromoLiBase : StoryPromoLi;
   return (
     <Grid
       columns={storyPromoUlGridColumns}
@@ -110,11 +117,18 @@ export const MultiplePromoItemsGrid = ({
           border={storyPromoBorder}
           item
           columns={storyPromoLiGridColumns}
-          as={StoryPromoLi}
+          as={storyPromoList}
           key={item.id || item.uri}
           dir={dir}
         >
-          <StoryPromo item={item} dir={dir} displaySummary={false} />
+          <ConditionalStyleWrapper
+            condition={isRecommendation}
+            wrapper={children => (
+              <StyledStoryPromoWrapper>{children}</StyledStoryPromoWrapper>
+            )}
+          >
+            <StoryPromo item={item} dir={dir} displaySummary={false} />
+          </ConditionalStyleWrapper>
         </Grid>
       ))}
     </Grid>
@@ -170,6 +184,7 @@ MultiplePromoItems.propTypes = {
 MultiplePromoItemsGrid.propTypes = {
   dir: string,
   content: arrayOf(shape(storyItem)).isRequired,
+  isRecommendation: bool,
   storyPromoBorder: bool,
   storyPromoLiGridColumns: shape({
     group0: number,
@@ -196,5 +211,6 @@ MultiplePromoItems.defaultProps = {
 
 MultiplePromoItemsGrid.defaultProps = {
   dir: 'ltr',
+  isRecommendation: null,
   storyPromoBorder: null,
 };
