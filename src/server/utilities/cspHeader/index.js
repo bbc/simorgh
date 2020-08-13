@@ -66,6 +66,7 @@ const directives = {
       'https://cookie-oven.api.bbc.co.uk', // Cookie banner
       'https://cookie-oven.test.api.bbc.com', // Cookie banner
       'https://cookie-oven.test.api.bbc.co.uk', // Cookie banner
+      'https://www.bbc.com', // ads
       'https://www.bbc.co.uk', // STY include indepthtoolkit
       'https://news.files.bbci.co.uk', // STY include
       'https://news.test.files.bbci.co.uk', // STY include
@@ -79,6 +80,7 @@ const directives = {
       'https://securepubads.g.doubleclick.net', // ads
       'https://pagead2.googlesyndication.com', // ads
       'https://tpc.googlesyndication.com', // ads
+      'https://static.files.bbci.co.uk', // ads
       'https://mybbc-analytics.files.bbci.co.uk',
       "'self'",
     ],

@@ -1,3 +1,5 @@
 public/favicon.ico 
 server.js
 server.js.map
+public/static/js/comscore/CHANGELOG.md
+public/static/js/comscore/README.md
