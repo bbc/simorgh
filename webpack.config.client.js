@@ -1,4 +1,5 @@
 /* eslint-disable global-require */
+const crypto = require('crypto');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const LoadablePlugin = require('@loadable/webpack-plugin');
@@ -34,7 +35,7 @@ module.exports = ({
           './src/poly',
           './src/client',
         ]
-      : ['./src/poly', './src/client'],
+      : ['./src/client'],
     devServer: {
       host: 'localhost',
       port: webpackDevServerPort,
@@ -73,21 +74,63 @@ module.exports = ({
       ],
       // specify min/max file sizes for each JS chunk for optimal performance
       splitChunks: {
-        chunks: 'initial',
+        chunks: 'all',
         automaticNameDelimiter: '-',
-        minSize: 184320, // 180kb
         maxSize: 245760, // 240kb
         cacheGroups: {
-          common: {
-            name: false,
-            minChunks: 2,
+          default: false,
+          vendors: false,
+          framework: {
+            name: 'framework',
             chunks: 'all',
+            test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+            priority: 40,
           },
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendor',
+          lib: {
+            test(module) {
+              return (
+                module.size() > 160000 &&
+                /node_modules[/\\]/.test(module.identifier())
+              );
+            },
+            name(module) {
+              const rawRequest =
+                module.rawRequest &&
+                module.rawRequest.replace(/^@(\w+)[/\\]/, '$1-');
+              if (rawRequest) return rawRequest;
+
+              const identifier = module.identifier();
+              const trimmedIdentifier = /(?:^|[/\\])node_modules[/\\](.*)/.exec(
+                identifier,
+              );
+              const processedIdentifier =
+                trimmedIdentifier &&
+                trimmedIdentifier[1].replace(/^@(\w+)[/\\]/, '$1-');
+
+              return processedIdentifier || identifier;
+            },
+            priority: 30,
+            minChunks: 1,
+            reuseExistingChunk: true,
+          },
+          shared: {
+            name(module, chunks) {
+              return crypto
+                .createHash('sha1')
+                .update(
+                  chunks.reduce((acc, chunk) => {
+                    return acc + chunk.name;
+                  }, ''),
+                )
+                .digest('base64')
+                .replace(/\//g, '');
+            },
+            priority: 10,
+            minChunks: 2,
+            reuseExistingChunk: true,
           },
         },
+        maxInitialRequests: 20,
       },
     },
     node: {

@@ -31,7 +31,7 @@ const getPageBundleData = jsFiles => {
       },
     );
     const mainBundleData = getBundleData({
-      regex: `^main`,
+      regex: `(^main|^framework|^moment)`,
       jsFiles,
     });
     const vendorBundleData = getBundleData({
