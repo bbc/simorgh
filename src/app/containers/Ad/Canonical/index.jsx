@@ -7,6 +7,7 @@ import { C_LUNAR_LIGHT } from '@bbc/psammead-styles/colours';
 import pathOr from 'ramda/src/pathOr';
 import { leaderboardStyles, mpuStyles } from '../utilities/adSlotStyles';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 
@@ -32,6 +33,7 @@ export const getBootstrapSrc = (queryString, useLegacy = false) => {
 };
 
 const CanonicalAd = ({ slotType, className }) => {
+  const { showAdsBasedOnLocation } = useContext(RequestContext);
   const location = useLocation();
   const queryString = location.search;
   const { ads, dir } = useContext(ServiceContext);
@@ -53,6 +55,10 @@ const CanonicalAd = ({ slotType, className }) => {
       }
     };
   }, [slotType, location]);
+
+  if (!showAdsBasedOnLocation) {
+    return null;
+  }
 
   return (
     <>

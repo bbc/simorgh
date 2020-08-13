@@ -26,6 +26,7 @@ const WithContexts = Component => {
       variant,
       timeOnServer,
       pageData,
+      showAdsBasedOnLocation,
     } = props;
 
     return (
@@ -46,6 +47,7 @@ const WithContexts = Component => {
             previousPath={previousPath}
             variant={variant}
             timeOnServer={timeOnServer}
+            showAdsBasedOnLocation={showAdsBasedOnLocation}
           >
             <EventContextProvider>
               <UserContextProvider>
@@ -70,6 +72,7 @@ const WithContexts = Component => {
     service: string.isRequired,
     variant: variantPropType,
     timeOnServer: number,
+    showAdsBasedOnLocation: bool,
     // eslint-disable-next-line react/forbid-prop-types
     toggles: object.isRequired,
   };
@@ -82,6 +85,7 @@ const WithContexts = Component => {
     previousPath: null,
     variant: null,
     timeOnServer: null,
+    showAdsBasedOnLocation: false,
   };
 
   return WithContextsContainer;
