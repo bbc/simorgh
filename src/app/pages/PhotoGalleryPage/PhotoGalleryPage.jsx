@@ -20,6 +20,7 @@ import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import ATIAnalytics from '#containers/ATIAnalytics';
+import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
@@ -108,6 +109,7 @@ const PhotoGalleryPage = ({ pageData }) => {
         aboutTags={aboutTags}
       />
       <ATIAnalytics data={pageData} />
+      <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
       <StyledGrid as="main" role="main">
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
