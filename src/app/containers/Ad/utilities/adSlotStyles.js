@@ -14,19 +14,31 @@ const LARGE_LEADERBOARD_WIDTH_MIN = '58.75rem'; // 940px
 // Ad Slot Heights
 /*
   The height of the Ad Slot Label is taken into account for the total max height
-  of the Ad Slot.
+  of the Ad Slot. As of 13/08/2020, there are shared values between the MPU and Leaderboard heights,
+  however this may be subject to change in the future, hence the duplication.
 */
-const ADSLOT_LABEL_HEIGHT = 1.5625; // 25px
+const AD_SLOT_LABEL_HEIGHT = 1.5625; // 25px
 
-const ADSLOT_HEIGHTS = {
-  GROUP_1: `${3.125 + ADSLOT_LABEL_HEIGHT}rem`,
-  // 50px + ADSLOT_LABEL_HEIGHT = 75px
-  GROUP_2_LEADERBOARD: `${3.75 + ADSLOT_LABEL_HEIGHT}rem`,
-  // 60px + ADSLOT_LABEL_HEIGHT = 85px
-  GROUP_3_LEADERBOARD: `${5.625 + ADSLOT_LABEL_HEIGHT}rem`,
-  // 90px + ADSLOT_LABEL_HEIGHT = 115px
-  GROUP_4: `${15.625 + ADSLOT_LABEL_HEIGHT}rem`,
-  // 250px + ADSLOT_LABEL_HEIGHT = 275px
+const MPU_HEIGHTS = {
+  GROUP_1: `${3.125 + AD_SLOT_LABEL_HEIGHT}rem`,
+  // 50px + AD_SLOT_LABEL_HEIGHT = 75px
+  GROUP_2: `${3.125 + AD_SLOT_LABEL_HEIGHT}rem`,
+  // 50px + AD_SLOT_LABEL_HEIGHT = 75px
+  GROUP_3: `${15.625 + AD_SLOT_LABEL_HEIGHT}rem`,
+  // 250px + AD_SLOT_LABEL_HEIGHT = 275px
+  GROUP_4: `${15.625 + AD_SLOT_LABEL_HEIGHT}rem`,
+  // 250px + AD_SLOT_LABEL_HEIGHT = 275px
+};
+
+const LEADERBOARD_HEIGHTS = {
+  GROUP_1: `${3.125 + AD_SLOT_LABEL_HEIGHT}rem`,
+  // 50px + AD_SLOT_LABEL_HEIGHT = 75px
+  GROUP_2: `${3.75 + AD_SLOT_LABEL_HEIGHT}rem`,
+  // 60px + AD_SLOT_LABEL_HEIGHT = 85px
+  GROUP_3: `${5.625 + AD_SLOT_LABEL_HEIGHT}rem`,
+  // 90px + AD_SLOT_LABEL_HEIGHT = 115px
+  GROUP_4: `${15.625 + AD_SLOT_LABEL_HEIGHT}rem`,
+  // 250px + AD_SLOT_LABEL_HEIGHT = 275px
 };
 
 /*
@@ -40,7 +52,7 @@ export const leaderboardStyles = css`
   display: none;
   visibility: hidden;
   @media (min-width: ${LEADERBOARD_WIDTH_MIN}) {
-    min-height: ${ADSLOT_HEIGHTS.GROUP_1};
+    min-height: ${LEADERBOARD_HEIGHTS.GROUP_1};
     padding: 0rem ${ADSLOT_PADDING};
     display: flex;
     flex-direction: column;
@@ -48,13 +60,13 @@ export const leaderboardStyles = css`
     visibility: visible;
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    min-height: ${ADSLOT_HEIGHTS.GROUP_2_LEADERBOARD};
+    min-height: ${LEADERBOARD_HEIGHTS.GROUP_2};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    min-height: ${ADSLOT_HEIGHTS.GROUP_3_LEADERBOARD};
+    min-height: ${LEADERBOARD_HEIGHTS.GROUP_3};
   }
   @media (min-width: ${LARGE_LEADERBOARD_WIDTH_MIN}) {
-    min-height: ${ADSLOT_HEIGHTS.GROUP_4};
+    min-height: ${LEADERBOARD_HEIGHTS.GROUP_4};
     padding: 0 ${ADSLOT_PADDING} ${ADSLOT_PADDING} ${ADSLOT_PADDING};
   }
 `;
@@ -63,12 +75,12 @@ export const mpuStyles = css`
   display: none;
   visibility: hidden;
   @media (min-width: ${MPU_WIDTH_MIN}) {
-    min-height: ${ADSLOT_HEIGHTS.GROUP_1};
+    min-height: ${MPU_HEIGHTS.GROUP_1};
     padding: 0rem ${ADSLOT_PADDING};
     display: block;
     visibility: visible;
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    min-height: ${ADSLOT_HEIGHTS.GROUP_4};
+    min-height: ${MPU_HEIGHTS.GROUP_3};
   }
 `;
