@@ -9,7 +9,9 @@ import StoryPromo from '../StoryPromo';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 
 const FeaturesAnalysis = ({ content, parentColumns }) => {
-  const { dir, translations } = useContext(ServiceContext);
+  const { dir, translations, secondaryDatetimeLocale = null } = useContext(
+    ServiceContext,
+  );
 
   const title = pathOr(
     'Features & Analysis',
@@ -18,7 +20,12 @@ const FeaturesAnalysis = ({ content, parentColumns }) => {
   );
 
   const singleTransform = promo => (
-    <StoryPromo item={promo} dir={dir} displayImage />
+    <StoryPromo
+      item={promo}
+      dir={dir}
+      displayImage
+      secondaryDatetimeLocale={secondaryDatetimeLocale}
+    />
   );
 
   const listTransform = items => (
@@ -30,6 +37,7 @@ const FeaturesAnalysis = ({ content, parentColumns }) => {
             dir={dir}
             displayImage
             displaySummary={false}
+            secondaryDatetimeLocale={secondaryDatetimeLocale}
           />
         </StoryPromoLi>
       ))}

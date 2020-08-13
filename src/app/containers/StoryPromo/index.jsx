@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { shape, bool, oneOf, oneOfType } from 'prop-types';
+import { shape, bool, oneOf, oneOfType, string } from 'prop-types';
 import styled from 'styled-components';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
@@ -94,6 +94,7 @@ const StoryPromoContainer = ({
   displaySummary,
   isRecommendation,
   isSingleColumnLayout,
+  secondaryDatetimeLocale,
 }) => {
   const {
     altCalendar,
@@ -183,6 +184,9 @@ const StoryPromoContainer = ({
     `}
   `;
 
+  const locale = secondaryDatetimeLocale || datetimeLocale;
+  console.log('locale', locale);
+
   const Info = (
     <>
       {headline && (
@@ -223,7 +227,7 @@ const StoryPromoContainer = ({
       {displayTimestamp && (
         <Timestamp
           altCalendar={altCalendar}
-          locale={datetimeLocale}
+          locale={locale}
           timestamp={timestamp}
           dateTimeFormat="YYYY-MM-DD"
           format="LL"
@@ -289,6 +293,7 @@ StoryPromoContainer.propTypes = {
   displaySummary: bool,
   isRecommendation: bool,
   isSingleColumnLayout: bool,
+  secondaryDatetimeLocale: string,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -299,6 +304,7 @@ StoryPromoContainer.defaultProps = {
   displaySummary: true,
   isRecommendation: false,
   isSingleColumnLayout: false,
+  secondaryDatetimeLocale: null,
 };
 
 export default StoryPromoContainer;

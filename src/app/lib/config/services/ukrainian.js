@@ -7,7 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 import { mainTranslations as russianMainTranslations } from './russian';
 
 const secondaryColumnTranslations = {
-  relatedContent: 'Статті на цю ж тему',
   topStoriesTitle: 'Головне',
   featuresAnalysisTitle: 'Докладно',
 };
@@ -180,6 +179,7 @@ const baseServiceConfig = {
         endTextVisuallyHidden: 'Кінець %provider_name% допису',
       },
     },
+    relatedContent: 'Статті на цю ж тему',
     ...secondaryColumnTranslations,
   },
   brandSVG,
@@ -296,6 +296,7 @@ export const service = {
       ...secondaryColumnTranslations,
     },
     datetimeLocale: 'ru',
+    secondaryDatetimeLocale: 'uk',
     locale: 'ru_UA',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'ru',
