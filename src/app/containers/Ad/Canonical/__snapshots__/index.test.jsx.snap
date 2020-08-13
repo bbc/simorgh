@@ -14,7 +14,7 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
   </head>
   <body>
     .c0 {
-  background-color: #F6F6F6;
+  background-color: #F8F8F8;
   display: none;
   visibility: hidden;
 }
@@ -54,7 +54,7 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
 
 exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderboard ad with dotcom-bootstrap script 1`] = `
 .c0 {
-  background-color: #F6F6F6;
+  background-color: #F8F8F8;
   display: none;
   visibility: hidden;
 }
