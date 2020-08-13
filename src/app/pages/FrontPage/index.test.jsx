@@ -8,13 +8,14 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import getInitialData from '#app/routes/home/getInitialData';
-import { FrontPage } from '..';
+import FrontPage from '.';
 
 const requestContextData = ({ service = 'pidgin' }) => ({
   pageType: 'frontPage',
   service,
   pathname: '/pathname',
   data: { status: 200 },
+  showAdsBasedOnLocation: true,
 });
 
 // eslint-disable-next-line react/prop-types

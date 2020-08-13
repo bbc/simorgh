@@ -29,6 +29,12 @@ const logger = loggerNode(__filename);
 
 const PROMO_TYPES = ['top', 'regular', 'leading'];
 
+const SingleColumnStoryPromo = styled(StoryPromo)`
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    display: grid;
+  }
+`;
+
 const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
   if (!imageValues) {
     const landscapeRatio = (9 / 16) * 100;
@@ -87,6 +93,7 @@ const StoryPromoContainer = ({
   displayImage,
   displaySummary,
   isRecommendation,
+  isSingleColumnLayout,
 }) => {
   const {
     altCalendar,
@@ -261,8 +268,12 @@ const StoryPromoContainer = ({
     />
   );
 
+  const StoryPromoComponent = isSingleColumnLayout
+    ? SingleColumnStoryPromo
+    : StoryPromo;
+
   return (
-    <StoryPromo
+    <StoryPromoComponent
       image={Image}
       info={Info}
       mediaIndicator={MediaIndicator}
@@ -281,6 +292,7 @@ StoryPromoContainer.propTypes = {
   displayImage: bool,
   displaySummary: bool,
   isRecommendation: bool,
+  isSingleColumnLayout: bool,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -290,6 +302,7 @@ StoryPromoContainer.defaultProps = {
   displayImage: true,
   displaySummary: true,
   isRecommendation: false,
+  isSingleColumnLayout: false,
 };
 
 export default StoryPromoContainer;
