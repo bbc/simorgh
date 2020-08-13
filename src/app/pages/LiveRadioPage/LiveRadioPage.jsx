@@ -38,6 +38,7 @@ const StyledGelPageGrid = styled(GelPageGrid)`
 
 const StyledAudioPlayer = styled(AVPlayer)`
   amp-iframe {
+    overflow: visible !important;
     width: calc(100% + ${GEL_SPACING_DBL});
     @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
       width: calc(100% + ${GEL_SPACING_QUAD});
