@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string, shape, object } from 'prop-types';
+import { string, shape } from 'prop-types';
 import styled from 'styled-components';
 import path from 'ramda/src/path';
 import {
@@ -64,6 +64,7 @@ const LiveRadioPage = ({ pageData }) => {
     masterBrand,
   } = pageData;
   const radioScheduleData = path(['radioScheduleData'], pageData);
+  const hasRadioScheduleData = Boolean(radioScheduleData);
   const {
     script,
     service,
@@ -97,7 +98,7 @@ const LiveRadioPage = ({ pageData }) => {
 
   const { enabled, value } = useToggle('liveRadioSchedule');
 
-  const showSchedule =
+  const radioScheduleIsEnabled =
     radioScheduleOnPage && enabled && RegExp(value).test(service);
 
   return (
@@ -170,7 +171,7 @@ const LiveRadioPage = ({ pageData }) => {
           />
         </Grid>
       </StyledGelPageGrid>
-      {showSchedule && (
+      {radioScheduleIsEnabled && hasRadioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />
       )}
     </>
@@ -180,8 +181,7 @@ const LiveRadioPage = ({ pageData }) => {
 LiveRadioPage.propTypes = {
   pageData: shape({
     metadata: shape({
-      id: string,
-      tags: object,
+      type: string,
     }),
     language: string,
     name: string,
