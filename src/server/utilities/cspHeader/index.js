@@ -80,6 +80,7 @@ const directives = {
       'https://securepubads.g.doubleclick.net', // ads
       'https://pagead2.googlesyndication.com', // ads
       'https://tpc.googlesyndication.com', // ads
+      'https://static.files.bbci.co.uk', // ads
       'https://mybbc-analytics.files.bbci.co.uk',
       "'self'",
     ],
