@@ -185,7 +185,6 @@ const StoryPromoContainer = ({
   `;
 
   const locale = secondaryDatetimeLocale || datetimeLocale;
-  console.log('locale', locale);
 
   const Info = (
     <>
