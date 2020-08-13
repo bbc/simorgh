@@ -48,9 +48,11 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     });
     describe('Radio Schedule', () => {
       it('should be displayed if there is enough schedule data', () => {
+        const toggleKey = 'onLiveRadioPage';
         const isRadioScheduleOnPage = serviceHasRadioSchedule({
           service,
           variant,
+          toggleKey,
         });
         cy.log(
           `Live Radio Page configured for Radio Schedule? ${isRadioScheduleOnPage}`,
