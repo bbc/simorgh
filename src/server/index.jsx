@@ -148,6 +148,7 @@ server
         data.toggles = toggles;
         data.path = urlPath;
         data.timeOnServer = Date.now();
+        data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
 
         const { status } = data;
         // Set derivedPageType based on returned page data
