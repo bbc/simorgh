@@ -260,6 +260,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
 }
 
 .c5 amp-iframe {
+  overflow: visible !important;
   width: calc(100% + 1rem);
 }
 
@@ -912,6 +913,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 .c5 amp-iframe {
+  overflow: visible !important;
   width: calc(100% + 1rem);
 }
 
