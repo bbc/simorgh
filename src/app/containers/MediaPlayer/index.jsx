@@ -28,7 +28,7 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
-import logMissingBlockId from './helpers/logMissingBlockId';
+import logMissingMediaId from './helpers/logMissingMediaId';
 
 const { logMediaPlayerStatus } = toggles[
   process.env.SIMORGH_APP_ENV || 'local'
@@ -132,8 +132,8 @@ const MediaPlayerContainer = ({
 
   const mediaIsValid = available && (versionId || blockId);
   if (!mediaIsValid) {
-    if (!blockId) {
-      logMissingBlockId({ url: assetId, assetType });
+    if (!(versionId || blockId)) {
+      logMissingMediaId({ url: assetId, assetType });
     }
     return (
       <StyledMessageContainer>

@@ -10,12 +10,12 @@ import {
   VideoAmpWithCaption,
 } from './fixtureData';
 import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
-import logMissingBlockId from './helpers/logMissingBlockId';
+import logMissingMediaId from './helpers/logMissingMediaId';
 import defaultToggles from '#lib/config/toggles';
 import onClient from '#lib/utilities/onClient';
 
 jest.mock('./helpers/logEmbedSourceStatus');
-jest.mock('./helpers/logMissingBlockId');
+jest.mock('./helpers/llogMissingMediaId');
 jest.mock('#lib/utilities/onClient');
 
 describe('MediaPlayer', () => {
@@ -59,7 +59,7 @@ it('should render the iframe when showPlaceholder is set to false', () => {
 it('should render the Media Message when there is no versionId', () => {
   const { getByText } = render(VideoCanonicalNoVersionId);
   const mediaMessage = `This content is no longer available`;
-  expect(logMissingBlockId).toHaveBeenCalledTimes(1);
+  expect(logMissingMediaId).toHaveBeenCalledTimes(1);
   expect(getByText(mediaMessage)).toBeInTheDocument();
 });
 
