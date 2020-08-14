@@ -5,6 +5,7 @@ import {
   VideoCanonicalNoPlaceholder,
   VideoAmp,
   VideoCanonicalNoVersionId,
+  VideoAmpNoBlockId,
   VideoCanonicalToggledOff,
   VideoCanonicalWithCaption,
   VideoAmpWithCaption,
@@ -65,7 +66,16 @@ it('should render the Media Message when the video is no longer available', () =
 });
 
 it('should render the Media Message when there is no versionId', () => {
+  jest.clearAllMocks();
   const { getByText } = render(VideoCanonicalNoVersionId);
+  const mediaMessage = `This content is no longer available`;
+  expect(logMissingMediaId).toHaveBeenCalledTimes(1);
+  expect(getByText(mediaMessage)).toBeInTheDocument();
+});
+
+it('should render the Media Message when there is no blockId', () => {
+  jest.clearAllMocks();
+  const { getByText } = render(VideoAmpNoBlockId);
   const mediaMessage = `This content is no longer available`;
   expect(logMissingMediaId).toHaveBeenCalledTimes(1);
   expect(getByText(mediaMessage)).toBeInTheDocument();

@@ -284,6 +284,55 @@ const missingVpidBlocks = [
   },
 ];
 
+const missingBlockId = [
+  captionBlock,
+  {
+    model: {
+      blocks: [
+        {
+          blockId: 'urn:bbc:ares::clip:p01k6msm',
+          model: {
+            advertising: true,
+            embedding: true,
+            format: 'audio_video',
+            id: 'p01k6msm',
+            imageCopyright: 'BBC',
+            imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+            subType: 'clip',
+            syndication: { destinations: [] },
+            synopses: {
+              short:
+                'They may be tiny, but us humans could learn a thing or two from ants.',
+            },
+            title: 'Five things ants can teach us about management',
+            versions: [
+              {
+                availableFrom: 1540218932000,
+                availableTerritories: { nonUk: true, uk: true },
+                duration: 191,
+                durationISO8601: 'PT3M11S',
+                types: ['Original'],
+                blockId: '',
+                warnings: {
+                  long: 'Contains strong language and adult humour.',
+                  short: 'Contains strong language and adult humour.',
+                },
+              },
+            ],
+          },
+          type: 'aresMediaMetadata',
+          id: 'bede042c-ec9c-4462-8338-4b6fd9cde35d',
+          position: [4, 2, 1],
+        },
+        imageBlock,
+      ],
+    },
+    type: 'aresMedia',
+    id: 'e91c1a38-641d-4787-bec3-4f3783bb4b45',
+    position: [4, 2],
+  },
+];
+
 export const validAresMetadataBlock = {
   blockId: 'urn:bbc:ares::clip:p01k6msm',
   model: {
@@ -477,6 +526,16 @@ export const VideoAmp = (
   <GenerateFixtureData
     platform="amp"
     blocks={[validAresMediaVideoBlock]}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
+  />
+);
+
+export const VideoAmpNoBlockId = (
+  <GenerateFixtureData
+    platform="amp"
+    blocks={missingBlockId}
     assetType="articles"
     assetId="c123456789o"
     showPlaceholder
