@@ -584,6 +584,17 @@ export const UnavailableVideoCanonical = (
   />
 );
 
+export const UnavailableVideoAmp = (
+  <GenerateFixtureData
+    platform="amp"
+    blocks={validVideoWithCaptionBlock}
+    assetType="articles"
+    assetId="c123456789o"
+    available={false}
+    showPlaceholder
+  />
+);
+
 export const VideoAmpWithCaption = (
   <GenerateFixtureData
     platform="amp"

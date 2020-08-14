@@ -10,6 +10,7 @@ import {
   VideoCanonicalWithCaption,
   VideoAmpWithCaption,
   UnavailableVideoCanonical,
+  UnavailableVideoAmp,
 } from './fixtureData';
 import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
 import logMissingMediaId from './helpers/logMissingMediaId';
@@ -58,8 +59,15 @@ it('should render the iframe when showPlaceholder is set to false', () => {
   expect(document.querySelector('iframe')).toBeInTheDocument();
 });
 
-it('should render the Media Message when the video is no longer available', () => {
+it('should render the Media Message when the video is no longer available Canonical', () => {
   const { getByText } = render(UnavailableVideoCanonical);
+  const mediaMessage = `This content is no longer available`;
+  expect(logMissingMediaId).toHaveBeenCalledTimes(0);
+  expect(getByText(mediaMessage)).toBeInTheDocument();
+});
+
+it('should render the Media Message when the video is no longer available AMP', () => {
+  const { getByText } = render(UnavailableVideoAmp);
   const mediaMessage = `This content is no longer available`;
   expect(logMissingMediaId).toHaveBeenCalledTimes(0);
   expect(getByText(mediaMessage)).toBeInTheDocument();
