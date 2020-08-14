@@ -80,6 +80,7 @@ const directives = {
       'https://securepubads.g.doubleclick.net', // ads
       'https://pagead2.googlesyndication.com', // ads
       'https://tpc.googlesyndication.com', // ads
+      'https://static.files.bbci.co.uk', // ads
       'https://mybbc-analytics.files.bbci.co.uk',
       "'self'",
     ],
@@ -251,7 +252,6 @@ const directives = {
       'https://static.bbci.co.uk',
       'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
-      'http://www.instagram.com', // Social Embeds
       'https://cdn.syndication.twimg.com', // Social Embeds
       'https://static.bbc.co.uk', // STY include
       'https://www.bbc.co.uk', // STY include
@@ -281,7 +281,6 @@ const directives = {
       'http://localhost:1124', // for localhost canonical JavaScript
       'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
-      'http://www.instagram.com', // Social Embeds
       'https://cdn.syndication.twimg.com', // Social Embeds
       'https://static.bbc.co.uk', // STY include
       'http://static.bbc.co.uk', // for localhost STY include
