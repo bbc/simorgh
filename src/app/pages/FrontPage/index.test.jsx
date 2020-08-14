@@ -1,15 +1,27 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import fetchMock from 'fetch-mock';
 import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
+import pidginFrontPageData from '#data/pidgin/frontpage/index-light';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import getInitialData from '#app/routes/home/getInitialData';
 import FrontPage from '.';
 
+const mockToggles = {
+  ads: {
+    enabled: false,
+  },
+  mostRead: {
+    enabled: true,
+  },
+  comscoreAnalytics: {
+    enabled: true,
+  },
+};
 const requestContextData = ({ service = 'pidgin' }) => ({
   pageType: 'frontPage',
   service,
@@ -22,10 +34,11 @@ const requestContextData = ({ service = 'pidgin' }) => ({
 const FrontPageWithContext = ({
   isAmp = false,
   service = 'pidgin',
+  toggles = mockToggles,
   ...props
 }) => (
   <BrowserRouter>
-    <ToggleContextProvider>
+    <ToggleContextProvider toggles={toggles}>
       <RequestContextProvider
         isAmp={isAmp}
         {...requestContextData({ service })}
@@ -37,32 +50,6 @@ const FrontPageWithContext = ({
     </ToggleContextProvider>
   </BrowserRouter>
 );
-
-let pageData;
-
-beforeEach(async () => {
-  window.dotcom = {
-    bootstrap: jest.fn(),
-    cmd: { push: jest.fn() },
-  };
-
-  fetch.mockResponse(JSON.stringify(frontPageDataPidgin));
-
-  const response = await getInitialData({
-    path: 'some-front-page-path',
-    service: 'pidgin',
-    pageType: 'frontPage',
-  });
-
-  pageData = response.pageData;
-
-  fetch.mockResponse(JSON.stringify(pidginMostReadData));
-});
-
-afterEach(() => {
-  window.dotcom = undefined;
-  window.dotcomConfig = undefined;
-});
 
 jest.mock('uuid', () => {
   let x = 1;
@@ -137,27 +124,71 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 });
 
 describe('Front Page', () => {
+  afterEach(() => {
+    fetchMock.restore();
+  });
+
   describe('snapshots', () => {
     it('should render a pidgin frontpage correctly', async () => {
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(pidginFrontPageData),
+      );
+      fetchMock.mock(
+        ' /pidgin/mostread.json',
+        JSON.stringify(pidginMostReadData),
+      );
+      const { pageData } = await getInitialData({
+        path: 'some-front-page-path',
+        service: 'pidgin',
+      });
+
       let container;
       await act(async () => {
         container = render(<FrontPageWithContext pageData={pageData} />)
           .container;
       });
-
       expect(container).toMatchSnapshot();
     });
 
     it('should render a pidgin amp frontpage', async () => {
-      const { container } = render(
-        <FrontPageWithContext pageData={pageData} isAmp />,
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(pidginFrontPageData),
       );
+      fetchMock.mock(
+        '/pidgin/mostread.json',
+        JSON.stringify(pidginMostReadData),
+      );
+      const { pageData } = await getInitialData({
+        path: 'some-front-page-path',
+        service: 'pidgin',
+      });
+
+      let container;
+      await act(async () => {
+        container = render(<FrontPageWithContext pageData={pageData} isAmp />)
+          .container;
+      });
       expect(container).toMatchSnapshot();
     });
   });
 
   describe('Assertions', () => {
     it('should render visually hidden text as h1', async () => {
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(pidginFrontPageData),
+      );
+      const { pageData } = await getInitialData({
+        path: 'some-front-page-path',
+        service: 'pidgin',
+      });
+      fetchMock.mock(
+        ' /pidgin/mostread.json',
+        JSON.stringify(pidginMostReadData),
+      );
+
       let container;
       await act(async () => {
         container = render(<FrontPageWithContext pageData={pageData} />)
@@ -181,6 +212,19 @@ describe('Front Page', () => {
     });
 
     it('should render front page sections', async () => {
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(pidginFrontPageData),
+      );
+      fetchMock.mock(
+        '/pidgin/mostread.json',
+        JSON.stringify(pidginMostReadData),
+      );
+      const { pageData } = await getInitialData({
+        path: 'some-front-page-path',
+        service: 'pidgin',
+      });
+
       let container;
       await act(async () => {
         container = render(<FrontPageWithContext pageData={pageData} />)
@@ -192,35 +236,6 @@ describe('Front Page', () => {
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
-    });
-
-    it('should create window.dotcomConfig when on Canonical and hasAds is true', async () => {
-      await act(async () => {
-        render(<FrontPageWithContext service="mundo" pageData={pageData} />);
-      });
-
-      expect(window.dotcomConfig).toEqual({
-        pageAds: true,
-        playerAds: false,
-      });
-    });
-
-    it('should create window.dotcomConfig when on Canonical and hasAds is false', async () => {
-      await act(async () => {
-        render(<FrontPageWithContext service="japanese" pageData={pageData} />);
-      });
-
-      expect(window.dotcomConfig).toBeFalsy();
-    });
-
-    it('should not create window.dotcomConfig when on Amp and hasAds is true', async () => {
-      await act(async () => {
-        render(
-          <FrontPageWithContext service="mundo" pageData={pageData} isAmp />,
-        );
-      });
-
-      expect(window.dotcomConfig).toBeFalsy();
     });
   });
 });

@@ -293,36 +293,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   padding-bottom: 0.5rem;
 }
 
-.c24 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c24:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c24:hover,
-.c24:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c24:visited {
-  color: #6E6E73;
-}
-
 .c25 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -691,6 +661,37 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-style: normal;
   font-size: 1rem;
   line-height: 1.625rem;
+}
+
+.c24 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c24:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c24:hover,
+.c24:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c24:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -3848,36 +3849,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   padding-bottom: 0.5rem;
 }
 
-.c18 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c18:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c18:hover,
-.c18:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c18:visited {
-  color: #6E6E73;
-}
-
 .c13 {
   padding: 0.5rem 0 1rem;
 }
@@ -3962,6 +3933,37 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+}
+
+.c18 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c18:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c18:hover,
+.c18:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c18:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
