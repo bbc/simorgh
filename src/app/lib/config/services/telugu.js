@@ -8,10 +8,6 @@ import 'moment/locale/te';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'వ్యాపార ప్రకటన',
-    },
     lang: `te`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'అప్‌డేట్ అయ్యింది',
@@ -53,6 +49,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'వ్యాపార ప్రకటన',
+      },
       seeAll: 'అన్నీ చూడండి',
       home: 'హోమ్',
       currentPage: 'ప్రస్తుత పేజీ',
