@@ -3,6 +3,11 @@ import chalk from 'chalk';
 import { readdirSync, statSync } from 'fs';
 import stripAnsi from 'strip-ansi';
 
+jest.mock('./pageTypeBundleExtractor');
+
+jest.mock('../../reports/webpackBundleReport.json', () => {}, {
+  virtual: true,
+});
 jest.mock('ora');
 jest.mock('chalk', () => ({
   red: a => a,
