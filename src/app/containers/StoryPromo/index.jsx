@@ -186,6 +186,10 @@ const StoryPromoContainer = ({
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
+  const StyledLink = styled(Link)`
+    overflow-wrap: anywhere;
+  `;
+
   const Info = (
     <>
       {headline && (
@@ -196,7 +200,7 @@ const StoryPromoContainer = ({
           promoHasImage={displayImage}
           as={headingTagOverride}
         >
-          <Link href={url}>
+          <StyledLink href={url}>
             {isLive ? (
               <LiveLabel
                 service={service}
@@ -210,7 +214,7 @@ const StoryPromoContainer = ({
             ) : (
               linkcontents
             )}
-          </Link>
+          </StyledLink>
         </StyledHeadline>
       )}
       {promoSummary && displaySummary && !isRecommendation && (
