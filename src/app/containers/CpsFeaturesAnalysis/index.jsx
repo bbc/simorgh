@@ -9,7 +9,7 @@ import StoryPromo from '../StoryPromo';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 
 const FeaturesAnalysis = ({ content, parentColumns }) => {
-  const { dir, translations, serviceDatetimeLocale = null } = useContext(
+  const { dir, translations, serviceDatetimeLocale } = useContext(
     ServiceContext,
   );
 
