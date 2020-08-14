@@ -15,7 +15,7 @@ import defaultToggles from '#lib/config/toggles';
 import onClient from '#lib/utilities/onClient';
 
 jest.mock('./helpers/logEmbedSourceStatus');
-jest.mock('./helpers/llogMissingMediaId');
+jest.mock('./helpers/logMissingMediaId');
 jest.mock('#lib/utilities/onClient');
 
 describe('MediaPlayer', () => {
