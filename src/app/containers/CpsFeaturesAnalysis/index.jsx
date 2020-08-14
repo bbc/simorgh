@@ -1,39 +1,19 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, number } from 'prop-types';
-import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { pathOr } from 'ramda';
 
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
-import StoryPromo from '../StoryPromo';
 import CpsOnwardJourney from '../CpsOnwardJourney';
+import FeaturesAnalysisPromo from './FeaturesAnalysisPromo';
+import FeaturesAnalysisPromoList from './FeaturesAnalysisPromoList';
 
 const FeaturesAnalysis = ({ content, parentColumns }) => {
-  const { dir, translations } = useContext(ServiceContext);
-
+  const { translations } = useContext(ServiceContext);
   const title = pathOr(
     'Features & Analysis',
     ['featuresAnalysisTitle'],
     translations,
-  );
-
-  const singleTransform = promo => (
-    <StoryPromo item={promo} dir={dir} displayImage />
-  );
-
-  const listTransform = items => (
-    <StoryPromoUl>
-      {items.map(item => (
-        <StoryPromoLi key={item.id || item.uri}>
-          <StoryPromo
-            item={item}
-            dir={dir}
-            displayImage
-            displaySummary={false}
-          />
-        </StoryPromoLi>
-      ))}
-    </StoryPromoUl>
   );
 
   return (
@@ -42,8 +22,8 @@ const FeaturesAnalysis = ({ content, parentColumns }) => {
       title={title}
       content={content}
       parentColumns={parentColumns}
-      singleTransform={singleTransform}
-      listTransform={listTransform}
+      promoComponent={FeaturesAnalysisPromo}
+      promoListComponent={FeaturesAnalysisPromoList}
       columnType="secondary"
     />
   );

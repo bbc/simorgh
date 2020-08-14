@@ -121,8 +121,8 @@ const CpsOnwardJourney = ({
   title,
   content,
   parentColumns,
-  listTransform,
-  singleTransform,
+  promoListComponent,
+  promoComponent,
   sectionLabelOverrideAs,
   sectionLabelBar,
   sectionLabelBackground,
@@ -186,10 +186,10 @@ const CpsOnwardJourney = ({
       </StyledSectionLabel>
       {hasSingleContent ? (
         <SingleContentWrapper columnType={columnType}>
-          {singleTransform(singleContent)}
+          {promoComponent(singleContent)}
         </SingleContentWrapper>
       ) : (
-        listTransform(content)
+        promoListComponent(content)
       )}
     </CpsOnwardJourneyWrapper>
   );
@@ -207,8 +207,8 @@ CpsOnwardJourney.propTypes = {
     group4: number,
     group5: number,
   }),
-  listTransform: func.isRequired,
-  singleTransform: func.isRequired,
+  promoListComponent: func.isRequired,
+  promoComponent: func.isRequired,
   sectionLabelOverrideAs: string,
   sectionLabelBar: bool,
   sectionLabelBackground: string,
