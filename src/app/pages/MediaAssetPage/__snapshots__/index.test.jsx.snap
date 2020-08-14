@@ -1175,36 +1175,6 @@ exports[`Media Asset Page should render component 1`] = `
   padding: 0.5rem 0.25rem;
 }
 
-.c48 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c48:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c48:hover,
-.c48:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c48:visited {
-  color: #6E6E73;
-}
-
 .c50 {
   color: #222222;
   background-color: #FFFFFF;
@@ -1348,6 +1318,37 @@ exports[`Media Asset Page should render component 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c48 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c48:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c48:hover,
+.c48:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c48:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
