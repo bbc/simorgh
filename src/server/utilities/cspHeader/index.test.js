@@ -272,6 +272,7 @@ describe('cspHeader', () => {
         'https://securepubads.g.doubleclick.net',
         'https://pagead2.googlesyndication.com',
         'https://tpc.googlesyndication.com',
+        'https://static.files.bbci.co.uk',
         'https://mybbc-analytics.files.bbci.co.uk',
         "'self'",
       ],
