@@ -401,6 +401,7 @@ const GenerateFixtureData = ({
   blocks,
   assetType,
   assetId,
+  available,
   showPlaceholder,
 }) => (
   <RequestContextProvider
@@ -421,6 +422,7 @@ const GenerateFixtureData = ({
             blocks={blocks}
             assetId={assetId}
             assetType={assetType}
+            available={available}
             showPlaceholder={showPlaceholder}
           />
         </BrowserRouter>
@@ -442,11 +444,13 @@ GenerateFixtureData.propTypes = {
   ).isRequired,
   assetType: string.isRequired,
   assetId: string.isRequired,
+  available: bool,
   showPlaceholder: bool.isRequired,
 };
 
 GenerateFixtureData.defaultProps = {
   toggleState: defaultToggles,
+  available: true,
 };
 
 export const VideoCanonicalWithPlaceholder = (
@@ -506,6 +510,17 @@ export const VideoCanonicalWithCaption = (
     blocks={validVideoWithCaptionBlock}
     assetType="articles"
     assetId="c123456789o"
+    showPlaceholder
+  />
+);
+
+export const UnavailableVideoCanonical = (
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={validVideoWithCaptionBlock}
+    assetType="articles"
+    assetId="c123456789o"
+    available={false}
     showPlaceholder
   />
 );

@@ -8,6 +8,7 @@ import {
   VideoCanonicalToggledOff,
   VideoCanonicalWithCaption,
   VideoAmpWithCaption,
+  UnavailableVideoCanonical,
 } from './fixtureData';
 import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
 import logMissingMediaId from './helpers/logMissingMediaId';
@@ -54,6 +55,13 @@ it('should render the iframe when showPlaceholder is set to false', () => {
   render(VideoCanonicalNoPlaceholder);
 
   expect(document.querySelector('iframe')).toBeInTheDocument();
+});
+
+it('should render the Media Message when the video is no longer available', () => {
+  const { getByText } = render(UnavailableVideoCanonical);
+  const mediaMessage = `This content is no longer available`;
+  expect(logMissingMediaId).toHaveBeenCalledTimes(0);
+  expect(getByText(mediaMessage)).toBeInTheDocument();
 });
 
 it('should render the Media Message when there is no versionId', () => {
