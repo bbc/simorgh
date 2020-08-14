@@ -19,9 +19,9 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
   visibility: hidden;
 }
 
-@media (min-width:18.75rem) {
+@media (min-width:19.75rem) {
   .c0 {
-    min-height: 4.6875rem;
+    min-height: 5.1875rem;
     padding: 0rem 0.5rem;
     display: block;
     visibility: visible;
@@ -30,7 +30,7 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
 
 @media (min-width:37.5rem) {
   .c0 {
-    min-height: 17.1875rem;
+    min-height: 17.6875rem;
   }
 }
 
@@ -59,9 +59,9 @@ exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderb
   visibility: hidden;
 }
 
-@media (min-width:20rem) {
+@media (min-width:21rem) {
   .c0 {
-    min-height: 4.6875rem;
+    min-height: 5.1875rem;
     padding: 0rem 0.5rem;
     display: -webkit-box;
     display: -webkit-flex;
@@ -80,20 +80,20 @@ exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderb
 
 @media (min-width:25rem) {
   .c0 {
-    min-height: 5.3125rem;
+    min-height: 5.8125rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c0 {
-    min-height: 7.1875rem;
+    min-height: 7.6875rem;
   }
 }
 
 @media (min-width:58.75rem) {
   .c0 {
-    min-height: 17.1875rem;
-    padding: 0 0.5rem 0.5rem 0.5rem;
+    min-height: 17.6875rem;
+    padding: 0.5rem 1rem;
   }
 }
 
