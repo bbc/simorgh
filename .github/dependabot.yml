@@ -8,6 +8,7 @@ updates:
   open-pull-requests-limit: 10
   labels:
   - dependencies
+  milestone: 107
   versioning-strategy: increase
   ignore:
   - dependency-name: "@bbc/psammead-story-promo-list"
