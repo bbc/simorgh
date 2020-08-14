@@ -31,4 +31,14 @@ Given you are using Chrome browser.
 
 Given you do not have any ad blocking extensions in your browser.
 
-1. Use a proxy to set your location outside the UK, visiting https://www.bbc.com/userinfo should show `"X-Ip_is_advertise_combined": "yes"`
+1. Use a proxy to set your location outside the UK, visiting https://www.test.bbc.com/userinfo should show `"X-Ip_is_advertise_combined": "yes"`
+
+2. If you would like to see the ads with the debugger tool you can append this query string to the url: `?ads-debug=true`
+
+   i.e https://www.test.bbc.com/mundo?ads-debug=true
+
+## Additional Query Strings
+
+You can append this query string `?ads-js-env=live` to your URL to load the LIVE `dotcom-bootstrap` for canonical pages only.
+
+    i.e https://www.test.bbc.com/mundo?ads-js-env=live
