@@ -4138,36 +4138,6 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
   padding-bottom: 0.5rem;
 }
 
-.c8 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c8:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c8:hover,
-.c8:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c8:visited {
-  color: #6E6E73;
-}
-
 .c10 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -4200,6 +4170,37 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+}
+
+.c8 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c8:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c8:hover,
+.c8:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c8:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -4406,36 +4407,6 @@ exports[`StoryPromo Container should render full width promos correctly for cano
   padding-bottom: 0.5rem;
 }
 
-.c8 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c8:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c8:hover,
-.c8:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c8:visited {
-  color: #6E6E73;
-}
-
 .c10 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -4468,6 +4439,37 @@ exports[`StoryPromo Container should render full width promos correctly for cano
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+}
+
+.c8 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c8:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c8:hover,
+.c8:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c8:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
