@@ -11,10 +11,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'ማስታወቂያ',
-    },
     lang: `am`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ተሻሽሏል',
@@ -56,6 +52,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'ማስታወቂያ',
+      },
       seeAll: 'ሁሉንም ይመልከቱ',
       home: 'ዜና',
       currentPage: 'መነሻ ገፅ',
@@ -190,7 +189,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
-      onOnDemandRadioPage: false,
+      onOnDemandRadioPage: true,
       onFrontPage: false,
       header: 'ያድምጡ',
       durationLabel: 'ርዝመት %duration%',

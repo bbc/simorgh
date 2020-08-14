@@ -29,7 +29,7 @@ export default {
   liveRadioSchedule: {
     enabled: true,
     value:
-      '(afrique|arabic|hausa|indonesia|korean|pashto|persian|somali|swahili|urdu)',
+      '(afaanoromoo|afrique|amharic|arabic|bengali|burmese|hausa|indonesia|korean|nepali|pashto|persian|somali|swahili|tigrinya|urdu)',
   },
   onDemandRadioSchedule: {
     enabled: true,
