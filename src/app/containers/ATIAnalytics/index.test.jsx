@@ -653,7 +653,7 @@ describe('ATI Analytics Container', () => {
 
     it('should not include the xto marketing string when a campaign type is not specfied', () => {
       setWindowValue('location', {
-        href: 'http%253A%252F%252Flocalhost%253Ffoo%253Dbar',
+        href: 'http://localhost?foo=bar',
       });
       const pageviewParams = [
         's=598286',
@@ -667,7 +667,7 @@ describe('ATI Analytics Container', () => {
         'x2=[responsive]',
         'x3=[news]',
         'x4=[es]',
-        'x5=[https%253A%252F%252Flocalhost]',
+        'x5=[http%253A%252F%252Flocalhost%253Ffoo%253Dbar]',
         'x7=[article]',
         'x8=[simorgh]',
         'x9=[WS+STY+TEST+-+Full+Headline+-+BBC+News]',
