@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, shape, arrayOf, object, bool } from 'prop-types';
+import { string, shape, arrayOf, object, bool, oneOfType } from 'prop-types';
 import { BrowserRouter } from 'react-router-dom';
 import { singleTextBlock } from '#models/blocks';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -449,7 +449,14 @@ const GenerateFixtureData = ({
 GenerateFixtureData.propTypes = {
   platform: string.isRequired,
   toggleState: shape({}),
-  blocks: arrayOf(object).isRequired,
+  blocks: arrayOf(
+    shape({
+      type: string.isRequired,
+      model: shape({
+        blocks: arrayOf(oneOfType([string, object])),
+      }),
+    }),
+  ).isRequired,
   assetType: string.isRequired,
   assetId: string.isRequired,
   showPlaceholder: bool.isRequired,
