@@ -15,10 +15,6 @@ import 'moment/locale/cy';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Advertisement',
-    },
     lang: `cy`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Wedi ei ddiweddaru',
@@ -58,6 +54,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Advertisement',
+      },
       seeAll: 'Gweld y cyfan',
       home: 'Hafan',
       currentPage: 'Y dudalen bresennol',
@@ -171,6 +170,11 @@ export const service = {
       lastUpdated: 'Diweddariad diwethaf:',
       numberOfItems: 5,
       hasMostRead: false,
+    },
+    mostWatched: {
+      header: 'Mwyaf poblogaidd',
+      numberOfItems: 5,
+      hasMostWatched: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,

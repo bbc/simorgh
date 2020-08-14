@@ -10,14 +10,32 @@ import getEpisodeAvailability, {
   getUrl,
 } from '#lib/utilities/episodeAvailability';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
+import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
+import _hasRadioSchedule from '../../utils/hasRadioSchedule';
+import getRadioService from '../../utils/getRadioService';
 
-export default async ({ path: pathname, pageType }) => {
+const getRadioScheduleData = path(['radioScheduleData']);
+
+export default async ({ path: pathname, pageType, service }) => {
   try {
     const onDemandRadioDataPath = overrideRendererOnTest(pathname);
-    const { json, status } = await fetchPageData({
+    const hasRadioSchedule = await _hasRadioSchedule({
+      pageType: 'onDemandRadio',
+      service,
+    });
+    const pageDataPromise = await fetchPageData({
       path: onDemandRadioDataPath,
       pageType,
     });
+
+    const { json, status } = hasRadioSchedule
+      ? await withRadioSchedule({
+          pageDataPromise,
+          service,
+          path: pathname,
+          radioService: getRadioService({ service, pathname }),
+        })
+      : await pageDataPromise;
 
     const withLogging = pathWithLogging(
       getUrl(json),
@@ -63,6 +81,7 @@ export default async ({ path: pathname, pageType }) => {
           get(['promo', 'media', 'imageUrl'], LOG_LEVELS.INFO),
         ),
         episodeAvailability: getEpisodeAvailability(json),
+        radioScheduleData: getRadioScheduleData(json),
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {

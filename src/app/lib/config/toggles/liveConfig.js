@@ -3,6 +3,9 @@ export default {
   ads: {
     enabled: false,
   },
+  ampAds: {
+    enabled: false,
+  },
   chartbeatAnalytics: {
     enabled: true,
   },
@@ -16,7 +19,7 @@ export default {
     enabled: false,
   },
   enableFetchingToggles: {
-    enabled: false,
+    enabled: true,
     value:
       '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)',
   },
@@ -26,7 +29,10 @@ export default {
   liveRadioSchedule: {
     enabled: true,
     value:
-      '(afrique|arabic|hausa|indonesia|korean|pashto|persian|somali|swahili|urdu)',
+      '(afaanoromoo|afrique|amharic|arabic|bengali|burmese|hausa|indonesia|korean|nepali|pashto|persian|somali|swahili|tigrinya|urdu)',
+  },
+  onDemandRadioSchedule: {
+    enabled: true,
   },
   logMediaPlayerStatus: {
     enabled: false,
@@ -36,6 +42,9 @@ export default {
   },
   mostRead: {
     enabled: true,
+  },
+  mostWatched: {
+    enabled: false,
   },
   navOnArticles: {
     enabled: true,

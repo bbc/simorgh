@@ -81,6 +81,14 @@ Object {
       "wf",
       "yt",
     ],
+    "gbOrUnknown": Array [
+      "gb",
+      "gg",
+      "im",
+      "je",
+      "uk",
+      "unknown",
+    ],
   },
 }
 `;
@@ -101,6 +109,19 @@ Object {
       "on": "visible",
       "request": "pageview",
     },
+  },
+}
+`;
+
+exports[`AMP Photo Gallery Page Analytics chartbeat 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "PGL",
+    "domain": "test.bbc.co.uk",
+    "sections": "Mundo, Mundo - PGL",
+    "title": "Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
   },
 }
 `;

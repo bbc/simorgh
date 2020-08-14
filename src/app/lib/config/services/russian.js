@@ -73,6 +73,9 @@ const headerFooterTranslations = {
 
 // Translations used in the main element of the page
 export const mainTranslations = {
+  ads: {
+    advertisementLabel: 'Реклама',
+  },
   seeAll: 'Посмотреть все',
   skipLinkText: 'Перейти к содержанию',
   relatedContent: 'Новости по теме',
@@ -162,10 +165,6 @@ export const mainTranslations = {
 export const service = {
   default: {
     translations: { ...mainTranslations, ...headerFooterTranslations },
-    ads: {
-      hasAds: true,
-      advertisementLabel: 'Реклама',
-    },
     lang: `ru`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Обновлено',
@@ -212,6 +211,11 @@ export const service = {
       lastUpdated: 'Последнее обновление:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Самое популярное видео',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Beeksiisa',
-    },
     lang: `om`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Haaromsameera',
@@ -54,6 +50,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Beeksiisa',
+      },
       seeAll: 'Hunda ilaali',
       home: 'Oduu',
       currentPage: 'Fuula kan ammaa',
@@ -147,7 +146,7 @@ export const service = {
       },
       media: {
         noJs: "Meeshaan kee Miidiyaa taphachiisuu hin danda'u",
-        contentExpired: 'This content is no longer available',
+        contentExpired: 'Qabiyyee kun hinjiraatu',
         contentNotYetAvailable:
           'Qabiyyeen kun taphachuu kan hin jire dha ammayyuu.',
         audio: 'Sagalee',
@@ -188,9 +187,15 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Hedduu kan ilaalaman',
+      numberOfItems: 5,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: false,
       header: 'Dhaggeeffadhaa',
       durationLabel: 'Turtii %duration%',

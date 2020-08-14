@@ -15,10 +15,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Advertisement',
-    },
     lang: 'en-GB',
     articleAuthor: `https://www.facebook.com/bbcscotland`,
     articleTimestampPrefix: 'Updated',
@@ -58,6 +54,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Advertisement',
+      },
       home: 'Home',
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
@@ -167,6 +166,11 @@ export const service = {
       lastUpdated: 'Last updated:',
       numberOfItems: 5,
       hasMostRead: false,
+    },
+    mostWatched: {
+      header: 'Most watched',
+      numberOfItems: 10,
+      hasMostWatched: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,

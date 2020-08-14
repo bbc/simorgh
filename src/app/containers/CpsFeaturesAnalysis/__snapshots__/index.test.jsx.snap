@@ -51,36 +51,6 @@ exports[`CpsRelatedContent should render Story Feature components when given app
   padding: 0.5rem 0.25rem;
 }
 
-.c18 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c18:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c18:hover,
-.c18:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c18:visited {
-  color: #6E6E73;
-}
-
 .c19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -191,6 +161,37 @@ exports[`CpsRelatedContent should render Story Feature components when given app
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c18 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c18:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c18:hover,
+.c18:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c18:visited {
+  color: #6E6E73;
 }
 
 @media (max-width:62.9375rem) {
@@ -625,36 +626,6 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   padding-bottom: 0.5rem;
 }
 
-.c17 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c17:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c17:hover,
-.c17:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c17:visited {
-  color: #6E6E73;
-}
-
 .c19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -765,6 +736,37 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c17 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c17:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c17:hover,
+.c17:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c17:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
