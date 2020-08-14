@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/" 
+    schedule:
+      interval: "daily" #testing with a high frequency
+      time: "16:00"
+      # interval: "weekly"
+      # day: "sunday"
+    labels:
+      - "cross-team"
+      - "dependencies"
+    milestone: 107
+    open-pull-requests-limit: 1
