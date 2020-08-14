@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'विज्ञापन',
-    },
     lang: `ne`,
     articleAuthor: `http://www.facebook.com/bbcnews`,
     articleTimestampPrefix: '',
@@ -52,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'विज्ञापन',
+      },
       seeAll: 'सबै हेर्नुहोस्',
       home: 'होमपेज',
       currentPage: 'अहिलेको पृष्ठ',
@@ -190,8 +189,14 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'धेरै हेरिएको',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
+      onOnDemandRadioPage: true,
       onLiveRadioPage: true,
       onFrontPage: false,
       header: 'पछिल्लो कार्यक्रम सुन्नुहोस्',

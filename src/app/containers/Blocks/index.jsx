@@ -1,5 +1,13 @@
 import React from 'react';
-import { objectOf, arrayOf, func, shape, string, any } from 'prop-types';
+import {
+  objectOf,
+  arrayOf,
+  func,
+  shape,
+  string,
+  oneOfType,
+  object,
+} from 'prop-types';
 
 const Blocks = ({ blocks, componentsToRender }) =>
   blocks.map((block, index) => {
@@ -31,7 +39,9 @@ Blocks.propTypes = {
   blocks: arrayOf(
     shape({
       type: string.isRequired,
-      model: objectOf(any).isRequired,
+      model: shape({
+        blocks: arrayOf(oneOfType([string, object])),
+      }).isRequired,
     }),
   ).isRequired,
   componentsToRender: objectOf(func).isRequired,

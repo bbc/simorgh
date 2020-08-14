@@ -8,10 +8,6 @@ import 'moment/locale/my';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'ကြော်ငြာ',
-    },
     lang: `my`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'အသစ်တင်ချိန်',
@@ -54,6 +50,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'ကြော်ငြာ',
+      },
       seeAll: 'အားလုံးကြည့်ရန်',
       home: 'ပင်မစာမျက်နှာ',
       currentPage: 'လက်ရှိကြည့်နေသော စာမျက်နှာ',
@@ -199,9 +198,15 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'လူကြည့်အများဆုံး',
+      numberOfItems: 5,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: false,
       header: 'နောက်ဆုံးလွှင့် အစီအစဉ်များ',
       durationLabel: 'ကြာမြင့်ချိန် %duration%',

@@ -16,10 +16,6 @@ import 'moment/locale/tr';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Reklam',
-    },
     lang: `tr`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Güncelleme',
@@ -61,6 +57,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Reklam',
+      },
       recommendationTitle: 'Bunlar da ilginizi çekebilir',
       seeAll: 'Hepsini görüntüle',
       home: 'Ana sayfa',
@@ -195,6 +194,11 @@ export const service = {
       lastUpdated: 'Son güncelleme:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'En fazla izlenilen içerek',
+      numberOfItems: 5,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

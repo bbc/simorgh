@@ -12,10 +12,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'اعلان',
-    },
     lang: 'ps',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -58,6 +54,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'اعلان',
+      },
       seeAll: 'ټول وګورئ',
       home: 'کور پاڼه',
       currentPage: 'اوسنۍ پاڼه',
@@ -198,9 +197,15 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'تر ټولو ډېر لیدل شوی',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Interactivity',
       frequenciesPageUrl: '/pashto/institutional/2012/03/000001_frequencies',

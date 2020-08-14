@@ -7,10 +7,6 @@ import 'moment/locale/ko';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: '광고',
-    },
     lang: `ko`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: '에 업데이트됨',
@@ -52,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: '광고',
+      },
       seeAll: '모든 기사 보기',
       home: '홈',
       currentPage: '현재 페이지',
@@ -184,9 +183,15 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: '인기 콘텐츠',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Section 1',
       header: 'BBC 코리아 라디오',

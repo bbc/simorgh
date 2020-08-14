@@ -46,10 +46,6 @@ const baseServiceConfig = {
 export const service = {
   simp: {
     ...baseServiceConfig,
-    ads: {
-      hasAds: true,
-      advertisementLabel: '广告',
-    },
     externalLinkText: ', 外部链接',
     frontPageTitle: '主页',
     lang: `zh-hans`,
@@ -106,6 +102,11 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: '热播',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     navigation: [
       {
         title: '主页',
@@ -149,6 +150,9 @@ export const service = {
       variant: 'trad',
     },
     translations: {
+      ads: {
+        advertisementLabel: '广告',
+      },
       seeAll: '浏览全部',
       home: '主页',
       currentPage: '目前页面',
@@ -271,10 +275,6 @@ export const service = {
   },
   trad: {
     ...baseServiceConfig,
-    ads: {
-      hasAds: true,
-      advertisementLabel: '廣告',
-    },
     lang: `zh-hant`,
     locale: `zh-hant`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
@@ -331,6 +331,11 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: '熱播',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     navigation: [
       {
         title: '主頁',
@@ -374,6 +379,9 @@ export const service = {
       variant: 'simp',
     },
     translations: {
+      ads: {
+        advertisementLabel: '廣告',
+      },
       seeAll: '瀏覽全部',
       home: '主頁',
       currentPage: '目前頁面',

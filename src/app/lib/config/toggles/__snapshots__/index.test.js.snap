@@ -6,6 +6,9 @@ Object {
   "ads": Object {
     "enabled": false,
   },
+  "ampAds": Object {
+    "enabled": false,
+  },
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
@@ -19,7 +22,7 @@ Object {
     "enabled": false,
   },
   "enableFetchingToggles": Object {
-    "enabled": false,
+    "enabled": true,
     "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
   },
   "include": Object {
@@ -27,7 +30,7 @@ Object {
   },
   "liveRadioSchedule": Object {
     "enabled": true,
-    "value": "(afrique|arabic|hausa|indonesia|korean|pashto|persian|somali|swahili|urdu)",
+    "value": "(afaanoromoo|afrique|amharic|arabic|bengali|burmese|hausa|indonesia|korean|nepali|pashto|persian|somali|swahili|tigrinya|urdu)",
   },
   "logMediaPlayerStatus": Object {
     "enabled": false,
@@ -38,7 +41,13 @@ Object {
   "mostRead": Object {
     "enabled": true,
   },
+  "mostWatched": Object {
+    "enabled": false,
+  },
   "navOnArticles": Object {
+    "enabled": true,
+  },
+  "onDemandRadioSchedule": Object {
     "enabled": true,
   },
   "prerollAds": Object {
@@ -65,6 +74,9 @@ Object {
   "ads": Object {
     "enabled": false,
   },
+  "ampAds": Object {
+    "enabled": true,
+  },
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
@@ -97,7 +109,13 @@ Object {
   "mostRead": Object {
     "enabled": true,
   },
+  "mostWatched": Object {
+    "enabled": true,
+  },
   "navOnArticles": Object {
+    "enabled": true,
+  },
+  "onDemandRadioSchedule": Object {
     "enabled": true,
   },
   "prerollAds": Object {
@@ -124,6 +142,9 @@ Object {
   "ads": Object {
     "enabled": false,
   },
+  "ampAds": Object {
+    "enabled": true,
+  },
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
@@ -156,7 +177,13 @@ Object {
   "mostRead": Object {
     "enabled": true,
   },
+  "mostWatched": Object {
+    "enabled": true,
+  },
   "navOnArticles": Object {
+    "enabled": true,
+  },
+  "onDemandRadioSchedule": Object {
     "enabled": true,
   },
   "prerollAds": Object {
