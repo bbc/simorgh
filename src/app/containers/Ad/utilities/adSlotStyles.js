@@ -5,9 +5,9 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 
 // Ad Slot Widths for custom breakpoints
-const MPU_WIDTH_MIN = '18.75rem'; // 300px
+const MPU_WIDTH_MIN = '19.75rem'; // 316px
 
-const LEADERBOARD_WIDTH_MIN = '20rem'; // 320px
+const LEADERBOARD_WIDTH_MIN = '21rem'; // 336px
 
 const LARGE_LEADERBOARD_WIDTH_MIN = '58.75rem'; // 940px
 
@@ -17,28 +17,28 @@ const LARGE_LEADERBOARD_WIDTH_MIN = '58.75rem'; // 940px
   of the Ad Slot. As of 13/08/2020, there are shared values between the MPU and Leaderboard heights,
   however this may be subject to change in the future, hence the duplication.
 */
-const AD_SLOT_LABEL_HEIGHT = 1.5625; // 25px
+const AD_UNIT_MARGIN = 2.0625; // 25px
 
 const MPU_HEIGHTS = {
-  GROUP_1: `${3.125 + AD_SLOT_LABEL_HEIGHT}rem`,
-  // 50px + AD_SLOT_LABEL_HEIGHT = 75px
-  GROUP_2: `${3.125 + AD_SLOT_LABEL_HEIGHT}rem`,
-  // 50px + AD_SLOT_LABEL_HEIGHT = 75px
-  GROUP_3: `${15.625 + AD_SLOT_LABEL_HEIGHT}rem`,
-  // 250px + AD_SLOT_LABEL_HEIGHT = 275px
-  GROUP_4: `${15.625 + AD_SLOT_LABEL_HEIGHT}rem`,
-  // 250px + AD_SLOT_LABEL_HEIGHT = 275px
+  GROUP_1: `${3.125 + AD_UNIT_MARGIN}rem`,
+  // 50px + AD_UNIT_MARGIN = 75px
+  GROUP_2: `${3.125 + AD_UNIT_MARGIN}rem`,
+  // 50px + AD_UNIT_MARGIN = 75px
+  GROUP_3: `${15.625 + AD_UNIT_MARGIN}rem`,
+  // 250px + AD_UNIT_MARGIN = 275px
+  GROUP_4: `${15.625 + AD_UNIT_MARGIN}rem`,
+  // 250px + AD_UNIT_MARGIN = 275px
 };
 
 const LEADERBOARD_HEIGHTS = {
-  GROUP_1: `${3.125 + AD_SLOT_LABEL_HEIGHT}rem`,
-  // 50px + AD_SLOT_LABEL_HEIGHT = 75px
-  GROUP_2: `${3.75 + AD_SLOT_LABEL_HEIGHT}rem`,
-  // 60px + AD_SLOT_LABEL_HEIGHT = 85px
-  GROUP_3: `${5.625 + AD_SLOT_LABEL_HEIGHT}rem`,
-  // 90px + AD_SLOT_LABEL_HEIGHT = 115px
-  GROUP_4: `${15.625 + AD_SLOT_LABEL_HEIGHT}rem`,
-  // 250px + AD_SLOT_LABEL_HEIGHT = 275px
+  GROUP_1: `${3.125 + AD_UNIT_MARGIN}rem`,
+  // 50px + AD_UNIT_MARGIN = 75px
+  GROUP_2: `${3.75 + AD_UNIT_MARGIN}rem`,
+  // 60px + AD_UNIT_MARGIN = 85px
+  GROUP_3: `${5.625 + AD_UNIT_MARGIN}rem`,
+  // 90px + AD_UNIT_MARGIN = 115px
+  GROUP_4: `${15.625 + AD_UNIT_MARGIN}rem`,
+  // 250px + AD_UNIT_MARGIN = 275px
 };
 
 /*
@@ -46,14 +46,19 @@ const LEADERBOARD_HEIGHTS = {
   the 'ADVERTISEMENT' Label (dotcom-ad-text) already has margin-top of 0.5rem,
   hence the padding is set such that this is accounted for.
 */
-const AD_SLOT_PADDING = '0.5rem'; // 8px
+const AD_SLOT_PADDING = {
+  DEFAULT: '0.5rem',
+  // 8px
+  LEADERBOARD: '1rem',
+  // 16px
+};
 
 export const leaderboardStyles = css`
   display: none;
   visibility: hidden;
   @media (min-width: ${LEADERBOARD_WIDTH_MIN}) {
     min-height: ${LEADERBOARD_HEIGHTS.GROUP_1};
-    padding: 0rem ${AD_SLOT_PADDING};
+    padding: 0rem ${AD_SLOT_PADDING.DEFAULT};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,7 +72,7 @@ export const leaderboardStyles = css`
   }
   @media (min-width: ${LARGE_LEADERBOARD_WIDTH_MIN}) {
     min-height: ${LEADERBOARD_HEIGHTS.GROUP_4};
-    padding: 0 ${AD_SLOT_PADDING} ${AD_SLOT_PADDING} ${AD_SLOT_PADDING};
+    padding: ${AD_SLOT_PADDING.DEFAULT} ${AD_SLOT_PADDING.LEADERBOARD};
   }
 `;
 
@@ -76,7 +81,7 @@ export const mpuStyles = css`
   visibility: hidden;
   @media (min-width: ${MPU_WIDTH_MIN}) {
     min-height: ${MPU_HEIGHTS.GROUP_1};
-    padding: 0rem ${AD_SLOT_PADDING};
+    padding: 0rem ${AD_SLOT_PADDING.DEFAULT};
     display: block;
     visibility: visible;
   }

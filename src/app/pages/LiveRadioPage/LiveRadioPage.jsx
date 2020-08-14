@@ -177,6 +177,7 @@ const LiveRadioPage = ({ pageData }) => {
     </>
   );
 };
+
 LiveRadioPage.propTypes = {
   pageData: shape({
     metadata: shape({
@@ -190,4 +191,5 @@ LiveRadioPage.propTypes = {
     masterBrand: string,
   }).isRequired,
 };
+
 export default LiveRadioPage;
