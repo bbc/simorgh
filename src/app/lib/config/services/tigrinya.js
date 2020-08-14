@@ -189,7 +189,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
-      onOnDemandRadioPage: false,
+      onOnDemandRadioPage: true,
       onFrontPage: false,
       header: 'ስምዑ',
       durationLabel: 'ዕምሪ ፈነወ %duration%',
