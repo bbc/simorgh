@@ -59,7 +59,7 @@ const runTests = () =>
     );
     child.on('exit', code => {
       if (code === 1) {
-        reject(code);
+        reject();
       } else {
         resolve();
       }
