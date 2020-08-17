@@ -7,7 +7,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import ConsentBanner from '../ConsentBanner';
 import ScriptLink from './ScriptLink';
 import useToggle from '#hooks/useToggle';
-import onClient from '#lib/utilities/onClient';
+import OperaMiniDetection from '#hooks/OperaMiniDetection';
 
 const HeaderContainer = () => {
   const { pageType } = useContext(RequestContext);
@@ -29,7 +29,7 @@ const HeaderContainer = () => {
   // All other page types show the nav bar at all times
   const showNav = showNavOnArticles || pageType !== 'article';
 
-  const isOperaMini = onClient() && window.operamini;
+  const isOperaMini = OperaMiniDetection();
 
   // `serviceLang` is defined when the language the page is written in is different to the
   // language of the service. `serviceLang` is used to override the page language.
