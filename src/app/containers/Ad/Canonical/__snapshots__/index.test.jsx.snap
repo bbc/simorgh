@@ -22,7 +22,7 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
 @media (min-width:19.75rem) {
   .c0 {
     min-height: 5.1875rem;
-    padding: 0rem 0.5rem;
+    padding: 0 0.5rem;
     display: block;
     visibility: visible;
   }
@@ -62,7 +62,7 @@ exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderb
 @media (min-width:21rem) {
   .c0 {
     min-height: 5.1875rem;
-    padding: 0rem 0.5rem;
+    padding: 0 0.5rem;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;

@@ -300,7 +300,7 @@ exports[`Ad Container Snapshots Canonical should correctly render a leaderboard 
 @media (min-width:21rem) {
   .c0 {
     min-height: 5.1875rem;
-    padding: 0rem 0.5rem;
+    padding: 0 0.5rem;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -375,7 +375,7 @@ exports[`Ad Container Snapshots Canonical should correctly render an mpu ad 1`] 
 @media (min-width:19.75rem) {
   .c0 {
     min-height: 5.1875rem;
-    padding: 0rem 0.5rem;
+    padding: 0 0.5rem;
     display: block;
     visibility: visible;
   }
