@@ -14,8 +14,16 @@ export default ({ service, pageType, variant, isAmp }) => {
         cy.request(
           `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
         ).then(({ body: jsonData }) => {
-          if (!isAvailable(jsonData)) {
-            return cy.log(`Episode unavailable: ${Cypress.env('currentPath')}`);
+          const episodeAvailability = isAvailable(jsonData);
+          if (episodeAvailability !== 'available') {
+            if (episodeAvailability === 'future') {
+              throw new Error('Episode is in the future');
+            }
+            return cy.log(
+              `Episode is ${episodeAvailability}: ${Cypress.env(
+                'currentPath',
+              )}`,
+            );
           }
 
           const language = appConfig[service][variant].lang;

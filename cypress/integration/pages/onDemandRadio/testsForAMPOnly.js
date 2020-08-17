@@ -1,7 +1,7 @@
 /* eslint-disable consistent-return */
 import envConfig from '../../../support/config/envs';
 import {
-  isAvailable,
+  isAvailableOld,
   dataEndpointOverride,
 } from '../../../support/helpers/onDemandRadioTv';
 
@@ -12,7 +12,9 @@ export default ({ service, pageType }) => {
         cy.request(
           `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
         ).then(({ body: jsonData }) => {
-          if (!isAvailable(jsonData)) {
+          if (!isAvailableOld(jsonData)) {
+            cy.log(`${Cypress.env('currentPath')}
+            `);
             return cy.log(`Episode unavailable: ${Cypress.env('currentPath')}`);
           }
 

@@ -86,8 +86,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/afaanoromoo/bbc_afaanoromoo_radio/programmes/w13xttnw?renderer_env=live', // Brand
-              '/afaanoromoo/bbc_afaanoromoo_radio/w3ct0lb4?renderer_env=live', // Episode
+              '/afaanoromoo/bbc_afaanoromoo_radio/programmes/w13xttnw', // Brand
+              '/afaanoromoo/bbc_afaanoromoo_radio/w3ct0lb4', // Episode
             ],
             enabled: true,
           },
