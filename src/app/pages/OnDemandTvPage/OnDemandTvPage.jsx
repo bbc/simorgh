@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import { shape, string, number, oneOf } from 'prop-types';
+import { shape, string, number, bool, func } from 'prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
@@ -16,7 +15,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import { MediaMessage } from '@bbc/psammead-media-player';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
@@ -34,25 +32,6 @@ import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import DarkModeGlobalStyles from '#lib/utilities/darkMode';
 import AVPlayer from '#containers/AVPlayer';
 import useToggle from '#hooks/useToggle';
-import { EPISODE_STATUS } from '#lib/utilities/episodeAvailability';
-
-const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
-const StyledMessageContainer = styled.div`
-  margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING_TRPL};
-  padding-top: ${landscapeRatio};
-  position: relative;
-  overflow: hidden;
-
-  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    margin-top: ${GEL_SPACING_DBL};
-  }
-  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    margin: ${GEL_SPACING_DBL} -${GEL_SPACING_DBL} 0;
-  }
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    margin: ${GEL_SPACING} -${GEL_SPACING} 0;
-  }
-`;
 
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
@@ -84,7 +63,7 @@ const StyledVideoPlayer = styled(AVPlayer)`
   }
 `;
 
-const OnDemandTvPage = ({ pageData }) => {
+const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   const {
     language,
     headline,
@@ -94,7 +73,6 @@ const OnDemandTvPage = ({ pageData }) => {
     masterBrand,
     episodeId,
     imageUrl,
-    episodeAvailability,
     promoBrandTitle,
     thumbnailImageUrl,
     durationISO8601,
@@ -129,24 +107,6 @@ const OnDemandTvPage = ({ pageData }) => {
     queryString: location.search,
   });
 
-  const episodeIsAvailable =
-    episodeAvailability === EPISODE_STATUS.EPISODE_IS_AVAILABLE;
-
-  const getEpisodeNotAvailableMessage = () => {
-    if (episodeAvailability === EPISODE_STATUS.EPISODE_IS_EXPIRED) {
-      return pathOr(
-        'This content is no longer available',
-        ['media', 'contentExpired'],
-        translations,
-      );
-    }
-    return pathOr(
-      'This content is not yet available',
-      ['media', 'contentNotYetAvailable'],
-      translations,
-    );
-  };
-
   const iframeTitle = pathOr(
     'Video player',
     ['mediaAssetPage', 'videoPlayer'],
@@ -169,7 +129,7 @@ const OnDemandTvPage = ({ pageData }) => {
         type="WebPage"
         seoTitle={headline}
         entities={
-          episodeIsAvailable
+          mediaIsAvailable
             ? [
                 {
                   '@type': 'VideoObject',
@@ -202,7 +162,7 @@ const OnDemandTvPage = ({ pageData }) => {
             {/* these must be concatenated for screen reader UX - #7062 */}
             {`${brandTitle}, ${formattedTimestamp}`}
           </VisuallyHiddenText>
-          {episodeIsAvailable ? (
+          {mediaIsAvailable ? (
             <StyledVideoPlayer
               embedUrl={embedUrl}
               assetId={episodeId}
@@ -212,12 +172,7 @@ const OnDemandTvPage = ({ pageData }) => {
               iframeTitle={iframeTitle}
             />
           ) : (
-            <StyledMessageContainer>
-              <MediaMessage
-                service={service}
-                message={getEpisodeNotAvailableMessage()}
-              />
-            </StyledMessageContainer>
+            <MediaError skin="video" />
           )}
 
           <StyledTvHeadingContainer
@@ -245,6 +200,8 @@ const OnDemandTvPage = ({ pageData }) => {
 };
 
 OnDemandTvPage.propTypes = {
+  MediaError: func.isRequired,
+  mediaIsAvailable: bool.isRequired,
   pageData: shape({
     language: string,
     headline: string,
@@ -254,7 +211,6 @@ OnDemandTvPage.propTypes = {
     masterBrand: string,
     episodeId: string,
     imageUrl: string,
-    episodeAvailability: oneOf(Object.values(EPISODE_STATUS)),
     promoBrandTitle: string,
     thumbnailImageUrl: string,
     durationISO8601: string,
