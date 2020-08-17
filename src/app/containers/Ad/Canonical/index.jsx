@@ -7,6 +7,7 @@ import { C_LUNAR_LIGHT } from '@bbc/psammead-styles/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 
@@ -48,11 +49,16 @@ export const getBootstrapSrc = (queryString, useLegacy = false) => {
 };
 
 const CanonicalAd = ({ slotType }) => {
+  const { showAdsBasedOnLocation } = useContext(RequestContext);
   const location = useLocation();
   const queryString = location.search;
-  const { ads, dir } = useContext(ServiceContext);
-  const adsLabel = pathOr('Advertisement', ['advertisementLabel'], ads);
-  const ariaLabel = getAdsAriaLabel(adsLabel, dir, slotType);
+  const { translations, dir } = useContext(ServiceContext);
+  const label = pathOr(
+    'Advertisement',
+    ['ads', 'advertisementLabel'],
+    translations,
+  );
+  const ariaLabel = getAdsAriaLabel(label, dir, slotType);
 
   useEffect(() => {
     if (window.dotcom) {
@@ -69,6 +75,10 @@ const CanonicalAd = ({ slotType }) => {
       }
     };
   }, [slotType, location]);
+
+  if (!showAdsBasedOnLocation) {
+    return null;
+  }
 
   return (
     <>

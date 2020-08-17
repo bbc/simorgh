@@ -49,36 +49,6 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   position: relative;
 }
 
-.c14 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c14:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c14:hover,
-.c14:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c14:visited {
-  color: #6E6E73;
-}
-
 .c15 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -177,6 +147,37 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   font-size: 0.9375rem;
   line-height: 1.25rem;
   display: inline;
+}
+
+.c14 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c14:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c14:hover,
+.c14:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c14:visited {
+  color: #6E6E73;
 }
 
 @media (max-width:62.9375rem) {
@@ -533,36 +534,6 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   position: relative;
 }
 
-.c13 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c13:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c13:hover,
-.c13:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c13:visited {
-  color: #6E6E73;
-}
-
 .c14 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -661,6 +632,37 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   font-size: 0.9375rem;
   line-height: 1.25rem;
   display: inline;
+}
+
+.c13 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c13:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c13:hover,
+.c13:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c13:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
