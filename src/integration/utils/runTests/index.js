@@ -51,14 +51,19 @@ const startApp = () => {
 };
 
 const runTests = () =>
-  new Promise(resolve => {
+  new Promise((resolve, reject) => {
     const child = spawn(
       'jest',
       [filesToTest, '--runInBand', '--colors', ...getJestArgs()],
       { stdio: 'inherit' },
     );
-
-    child.on('exit', resolve);
+    child.on('exit', code => {
+      if (code === 1) {
+        reject(code);
+      } else {
+        resolve();
+      }
+    });
   });
 
 if (isCI) {
@@ -90,5 +95,9 @@ if (isCI) {
         }),
     )
     .then(runTests)
-    .then(stopApp);
+    .then(stopApp)
+    .catch(async () => {
+      await stopApp();
+      process.exit(1);
+    });
 }
