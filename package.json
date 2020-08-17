@@ -200,7 +200,7 @@
     "history": "^4.10.1",
     "husky": "^4.2.5",
     "inspectpack": "^4.5.2",
-    "jest": "^26.2.2",
+    "jest": "^26.4.0",
     "jest-fetch-mock": "^3.0.3",
     "jest-junit": "^11.1.0",
     "jest-serializer-html": "^7.0.0",
