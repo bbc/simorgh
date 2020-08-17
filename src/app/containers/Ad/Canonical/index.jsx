@@ -79,7 +79,7 @@ const CanonicalAd = ({ slotType }) => {
 
   const operaMini = IsOperaMini();
 
-  if (!showAdsBasedOnLocation || !operaMini) {
+  if (!showAdsBasedOnLocation || operaMini) {
     return null;
   }
 
