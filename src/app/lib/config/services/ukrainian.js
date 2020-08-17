@@ -6,6 +6,11 @@ import '@bbc/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
 import { mainTranslations as russianMainTranslations } from './russian';
 
+const secondaryColumnTranslations = {
+  topStoriesTitle: 'Головне',
+  featuresAnalysisTitle: 'Докладно',
+};
+
 const baseServiceConfig = {
   articleAuthor: `http://www.facebook.com/bbcnews`,
   articleTimestampPrefix: 'Оновлення даних: ',
@@ -49,7 +54,6 @@ const baseServiceConfig = {
     home: 'Головна',
     currentPage: 'Поточна сторінка',
     skipLinkText: 'Перейти до змісту',
-    relatedContent: 'Статті на цю ж тему',
     navMenuText: 'Розділи',
     mediaAssetPage: {
       mediaPlayer: 'Медіаплеєр',
@@ -174,8 +178,8 @@ const baseServiceConfig = {
         endTextVisuallyHidden: 'Кінець %provider_name% допису',
       },
     },
-    topStoriesTitle: 'Головне',
-    featuresAnalysisTitle: 'Докладно',
+    relatedContent: 'Статті на цю ж тему',
+    ...secondaryColumnTranslations,
   },
   brandSVG,
   mostRead: {
@@ -288,8 +292,10 @@ export const service = {
     translations: {
       ...baseServiceConfig.translations,
       ...russianMainTranslations,
+      ...secondaryColumnTranslations,
     },
     datetimeLocale: 'ru',
+    serviceDatetimeLocale: 'uk',
     locale: 'ru_UA',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'ru',
