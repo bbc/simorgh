@@ -132,7 +132,7 @@ const MediaPlayerContainer = ({
 
   const mediaIsValid = available && (versionId || blockId);
   if (!mediaIsValid) {
-    if (!(versionId || blockId)) {
+    if (isLegacyMedia && available) {
       logMissingMediaId({ url: assetId, assetType });
     }
     return (

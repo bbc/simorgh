@@ -77,7 +77,7 @@ it('should render the Media Message when there is no versionId', () => {
   jest.clearAllMocks();
   const { getByText } = render(VideoCanonicalNoVersionId);
   const mediaMessage = `This content is no longer available`;
-  expect(logMissingMediaId).toHaveBeenCalledTimes(1);
+  expect(logMissingMediaId).toHaveBeenCalledTimes(0);
   expect(getByText(mediaMessage)).toBeInTheDocument();
 });
 

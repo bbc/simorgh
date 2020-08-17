@@ -452,6 +452,7 @@ const GenerateFixtureData = ({
   assetId,
   available,
   showPlaceholder,
+  isLegacyMedia,
 }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
@@ -473,6 +474,7 @@ const GenerateFixtureData = ({
             assetType={assetType}
             available={available}
             showPlaceholder={showPlaceholder}
+            isLegacyMedia={isLegacyMedia}
           />
         </BrowserRouter>
       </ToggleContext.Provider>
@@ -494,12 +496,14 @@ GenerateFixtureData.propTypes = {
   assetType: string.isRequired,
   assetId: string.isRequired,
   available: bool,
+  isLegacyMedia: bool,
   showPlaceholder: bool.isRequired,
 };
 
 GenerateFixtureData.defaultProps = {
   toggleState: defaultToggles,
   available: true,
+  isLegacyMedia: false,
 };
 
 export const VideoCanonicalWithPlaceholder = (
@@ -539,6 +543,7 @@ export const VideoAmpNoBlockId = (
     assetType="articles"
     assetId="c123456789o"
     showPlaceholder
+    isLegacyMedia
   />
 );
 
