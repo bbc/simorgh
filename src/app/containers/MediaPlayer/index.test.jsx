@@ -5,15 +5,20 @@ import {
   VideoCanonicalNoPlaceholder,
   VideoAmp,
   VideoCanonicalNoVersionId,
+  VideoAmpNoBlockId,
   VideoCanonicalToggledOff,
   VideoCanonicalWithCaption,
   VideoAmpWithCaption,
+  UnavailableVideoCanonical,
+  UnavailableVideoAmp,
 } from './fixtureData';
 import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
+import logMissingMediaId from './helpers/logMissingMediaId';
 import defaultToggles from '#lib/config/toggles';
 import onClient from '#lib/utilities/onClient';
 
 jest.mock('./helpers/logEmbedSourceStatus');
+jest.mock('./helpers/logMissingMediaId');
 jest.mock('#lib/utilities/onClient');
 
 describe('MediaPlayer', () => {
@@ -30,7 +35,6 @@ describe('MediaPlayer', () => {
   shouldMatchSnapshot('Renders the AMP player when platform is AMP', VideoAmp);
 
   describe('Fails and returns early when', () => {
-    isNull('there is no versionId', VideoCanonicalNoVersionId);
     isNull('component is toggled off', VideoCanonicalToggledOff);
   });
 });
@@ -53,6 +57,36 @@ it('should render the iframe when showPlaceholder is set to false', () => {
   render(VideoCanonicalNoPlaceholder);
 
   expect(document.querySelector('iframe')).toBeInTheDocument();
+});
+
+it('should render the Media Message when the video is no longer available Canonical', () => {
+  const { getByText } = render(UnavailableVideoCanonical);
+  const mediaMessage = `This content is no longer available`;
+  expect(logMissingMediaId).toHaveBeenCalledTimes(0);
+  expect(getByText(mediaMessage)).toBeInTheDocument();
+});
+
+it('should render the Media Message when the video is no longer available AMP', () => {
+  const { getByText } = render(UnavailableVideoAmp);
+  const mediaMessage = `This content is no longer available`;
+  expect(logMissingMediaId).toHaveBeenCalledTimes(0);
+  expect(getByText(mediaMessage)).toBeInTheDocument();
+});
+
+it('should render the Media Message when there is no versionId', () => {
+  jest.clearAllMocks();
+  const { getByText } = render(VideoCanonicalNoVersionId);
+  const mediaMessage = `This content is no longer available`;
+  expect(logMissingMediaId).toHaveBeenCalledTimes(0);
+  expect(getByText(mediaMessage)).toBeInTheDocument();
+});
+
+it('should render the Media Message when there is no blockId', () => {
+  jest.clearAllMocks();
+  const { getByText } = render(VideoAmpNoBlockId);
+  const mediaMessage = `This content is no longer available`;
+  expect(logMissingMediaId).toHaveBeenCalledTimes(1);
+  expect(getByText(mediaMessage)).toBeInTheDocument();
 });
 
 it('should not render the iframe when showPlaceholder is set to true', () => {
