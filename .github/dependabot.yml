@@ -4,6 +4,7 @@ updates:
   directory: "/"
   schedule:
     interval: weekly
+    day: "sunday"
     time: "03:00"
   open-pull-requests-limit: 100
   labels:
