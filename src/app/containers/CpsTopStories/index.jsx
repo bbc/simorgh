@@ -9,7 +9,9 @@ import StoryPromo from '../StoryPromo';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 
 const TopStories = ({ content, parentColumns }) => {
-  const { dir, translations } = useContext(ServiceContext);
+  const { dir, translations, serviceDatetimeLocale } = useContext(
+    ServiceContext,
+  );
 
   const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
 
@@ -19,6 +21,7 @@ const TopStories = ({ content, parentColumns }) => {
       dir={dir}
       displayImage={false}
       displaySummary={false}
+      serviceDatetimeLocale={serviceDatetimeLocale}
     />
   );
 

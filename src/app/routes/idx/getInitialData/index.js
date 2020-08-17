@@ -47,6 +47,7 @@ export default async ({ path, service, variant, pageType }) => {
           service,
           path,
           radioService: 'dari',
+          pageType: 'IDX',
         })
       : await pageDataPromise;
 

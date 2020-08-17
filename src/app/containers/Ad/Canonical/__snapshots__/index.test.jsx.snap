@@ -14,8 +14,24 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
   </head>
   <body>
     .c0 {
-  background-color: #F6F6F6;
-  min-height: 15.625rem;
+  background-color: #F8F8F8;
+  display: none;
+  visibility: hidden;
+}
+
+@media (min-width:19.75rem) {
+  .c0 {
+    min-height: 5.1875rem;
+    padding: 0 0.5rem;
+    display: block;
+    visibility: visible;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    min-height: 17.6875rem;
+  }
 }
 
 <div>
@@ -38,13 +54,46 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
 
 exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderboard ad with dotcom-bootstrap script 1`] = `
 .c0 {
-  background-color: #F6F6F6;
-  min-height: 5.5rem;
+  background-color: #F8F8F8;
+  display: none;
+  visibility: hidden;
 }
 
-@media (min-width:63rem) {
+@media (min-width:21rem) {
   .c0 {
-    min-height: 9rem;
+    min-height: 5.1875rem;
+    padding: 0 0.5rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    visibility: visible;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    min-height: 5.8125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    min-height: 7.6875rem;
+  }
+}
+
+@media (min-width:58.75rem) {
+  .c0 {
+    min-height: 17.6875rem;
+    padding: 0.5rem 1rem;
   }
 }
 
