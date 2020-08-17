@@ -177,7 +177,7 @@
     "chalk": "^4.1.0",
     "chrome-launcher": "^0.13.4",
     "cli-table": "^0.3.1",
-    "compression-webpack-plugin": "^4.0.0",
+    "compression-webpack-plugin": "^4.0.1",
     "copy-webpack-plugin": "^6.0.3",
     "cypress": "^4.12.1",
     "cypress-multi-reporters": "^1.4.0",
