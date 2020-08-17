@@ -42,7 +42,12 @@ export default async ({ path, service, variant, pageType }) => {
     const pageDataPromise = fetchPageData({ path, pageType });
 
     const { json, status } = pageHasRadioSchedule
-      ? await withRadioSchedule({ pageDataPromise, service, path })
+      ? await withRadioSchedule({
+          pageDataPromise,
+          service,
+          path,
+          pageType: 'Home',
+        })
       : await pageDataPromise;
 
     return {

@@ -34,6 +34,7 @@ export default async ({ path: pathname, pageType, service }) => {
           service,
           path: pathname,
           radioService: getRadioService({ service, pathname }),
+          pageType: 'OnDemandRadio',
         })
       : await pageDataPromise;
 
