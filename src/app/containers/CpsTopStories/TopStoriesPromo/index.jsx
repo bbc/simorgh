@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { shape, string } from 'prop-types';
 import StoryPromo from '../../StoryPromo';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { storyItem } from '#models/propTypes/storyItem';
 
-const TopStoriesPromo = promo => {
-  const { dir } = useContext(ServiceContext); // TODO pass down in props?
+const TopStoriesPromo = ({ promo, dir }) => {
   return (
     <StoryPromo
       item={promo}
@@ -12,6 +12,11 @@ const TopStoriesPromo = promo => {
       displaySummary={false}
     />
   );
+};
+
+TopStoriesPromo.propTypes = {
+  dir: string.isRequired,
+  promo: shape({ storyItem }).isRequired,
 };
 
 export default TopStoriesPromo;

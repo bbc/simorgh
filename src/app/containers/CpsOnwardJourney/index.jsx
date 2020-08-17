@@ -120,6 +120,7 @@ const CpsOnwardJourney = ({
   labelId,
   title,
   content,
+  isMapContent,
   parentColumns,
   promoListComponent,
   promoComponent,
@@ -186,10 +187,10 @@ const CpsOnwardJourney = ({
       </StyledSectionLabel>
       {hasSingleContent ? (
         <SingleContentWrapper columnType={columnType}>
-          {promoComponent(singleContent)}
+          {promoComponent({ promo: singleContent, dir })}
         </SingleContentWrapper>
       ) : (
-        promoListComponent(content)
+        promoListComponent({ promoItems: content, isMapContent })
       )}
     </CpsOnwardJourneyWrapper>
   );
@@ -199,6 +200,7 @@ CpsOnwardJourney.propTypes = {
   labelId: string.isRequired,
   title: string.isRequired,
   content: arrayOf(shape(storyItem)),
+  isMapContent: bool,
   parentColumns: shape({
     group0: number,
     group1: number,
@@ -221,6 +223,7 @@ CpsOnwardJourney.propTypes = {
 
 CpsOnwardJourney.defaultProps = {
   content: [],
+  isMapContent: false,
   parentColumns: null,
   sectionLabelOverrideAs: null,
   sectionLabelBar: true,

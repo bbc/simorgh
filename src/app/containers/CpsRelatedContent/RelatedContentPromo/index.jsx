@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
-import { ServiceContext } from '#contexts/ServiceContext';
+import React from 'react';
+import { shape, string } from 'prop-types';
 import Grid from '../../../components/Grid';
 import StoryPromo from '../../StoryPromo';
+import { storyItem } from '#models/propTypes/storyItem';
 
-const RelatedContentPromo = promo => {
-  const { dir } = useContext(ServiceContext);
+const RelatedContentPromo = ({ promo, dir }) => {
   return (
     <Grid
       columns={{
@@ -21,6 +21,11 @@ const RelatedContentPromo = promo => {
       <StoryPromo item={promo} dir={dir} />
     </Grid>
   );
+};
+
+RelatedContentPromo.propTypes = {
+  dir: string.isRequired,
+  promo: shape({ storyItem }).isRequired,
 };
 
 export default RelatedContentPromo;

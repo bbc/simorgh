@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number } from 'prop-types';
+import { arrayOf, shape, number, bool } from 'prop-types';
 import { pathOr } from 'ramda';
 
 import { storyItem } from '#models/propTypes/storyItem';
@@ -8,7 +8,7 @@ import CpsOnwardJourney from '../CpsOnwardJourney';
 import RelatedContentPromo from './RelatedContentPromo';
 import RelatedContentPromoList from './RelatedContentPromoList';
 
-const CpsRelatedContent = ({ content, parentColumns }) => {
+const CpsRelatedContent = ({ content, parentColumns, isMapContent }) => {
   const { translations } = useContext(ServiceContext);
 
   const title = pathOr('Related Content', ['relatedContent'], translations);
@@ -18,6 +18,7 @@ const CpsRelatedContent = ({ content, parentColumns }) => {
       labelId="related-content-heading"
       title={title}
       content={content}
+      isMapContent={isMapContent}
       parentColumns={parentColumns}
       promoComponent={RelatedContentPromo}
       promoListComponent={RelatedContentPromoList}
@@ -39,11 +40,13 @@ CpsRelatedContent.propTypes = {
     group4: number,
     group5: number,
   }),
+  isMapContent: bool,
 };
 
 CpsRelatedContent.defaultProps = {
   content: [],
   parentColumns: null,
+  isMapContent: false,
 };
 
 export default CpsRelatedContent;

@@ -1,10 +1,19 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { shape, oneOf } from 'prop-types';
 import StoryPromo from '../../StoryPromo';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { storyItem } from '#models/propTypes/storyItem';
 
-const FeaturesAnalysisPromo = promo => {
-  const { dir } = useContext(ServiceContext); // TODO could this be passed in?
+const FeaturesAnalysisPromo = ({ promo, dir }) => {
   return <StoryPromo item={promo} dir={dir} displayImage />;
+};
+
+FeaturesAnalysisPromo.propTypes = {
+  dir: oneOf(['ltr', 'rtl']),
+  promo: shape({ storyItem }).isRequired,
+};
+
+FeaturesAnalysisPromo.defaultProps = {
+  dir: 'ltr',
 };
 
 export default FeaturesAnalysisPromo;

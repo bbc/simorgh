@@ -1,13 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { StoryPromoLiBase, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-
-import { ServiceContext } from '#contexts/ServiceContext';
+import { arrayOf, shape, string } from 'prop-types';
+import { storyItem } from '#models/propTypes/storyItem';
 import Grid from '../../../components/Grid';
 import RecommendationsPromo from '../RecommendationsPromo';
 
-const RecommendationsPromoList = promoItems => {
-  const { dir } = useContext(ServiceContext); // TODO pass in?
-
+const RecommendationsPromoList = ({ promoItems, dir }) => {
   return (
     <Grid
       columns={{
@@ -38,11 +36,16 @@ const RecommendationsPromoList = promoItems => {
           key={item.id || item.uri}
           dir={dir}
         >
-          {RecommendationsPromo(item)}
+          {RecommendationsPromo({ promo: item, dir })}
         </Grid>
       ))}
     </Grid>
   );
+};
+
+RecommendationsPromoList.propTypes = {
+  dir: string.isRequired,
+  promoItems: arrayOf(shape(storyItem)).isRequired,
 };
 
 export default RecommendationsPromoList;

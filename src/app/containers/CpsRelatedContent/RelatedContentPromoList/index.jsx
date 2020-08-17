@@ -1,12 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { arrayOf, bool, shape, string } from 'prop-types';
 import Grid from '../../../components/Grid';
 import StoryPromo from '../../StoryPromo';
+import { storyItem } from '#models/propTypes/storyItem';
 
-const RelatedContentPromoList = items => {
-  const { dir } = useContext(ServiceContext); // TODO pass in?
-  const isMapContent = false; // TODO pass in
+const RelatedContentPromoList = ({ promoItems, dir, isMapContent }) => {
   return (
     <Grid
       columns={{
@@ -21,7 +20,7 @@ const RelatedContentPromoList = items => {
       enableGelGutters
       dir={dir}
     >
-      {items.map(item => (
+      {promoItems.map(item => (
         <Grid
           item
           columns={{
@@ -46,6 +45,16 @@ const RelatedContentPromoList = items => {
       ))}
     </Grid>
   );
+};
+
+RelatedContentPromoList.propTypes = {
+  dir: string.isRequired,
+  isMapContent: bool,
+  promoItems: arrayOf(shape(storyItem)).isRequired,
+};
+
+RelatedContentPromoList.defaultProps = {
+  isMapContent: false,
 };
 
 export default RelatedContentPromoList;

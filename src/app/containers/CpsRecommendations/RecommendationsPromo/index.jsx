@@ -1,12 +1,12 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import styled from 'styled-components';
+import { shape, string } from 'prop-types';
 import Grid from '../../../components/Grid';
 import StoryPromo from '../../StoryPromo';
-
-import { ServiceContext } from '#contexts/ServiceContext';
+import { storyItem } from '#models/propTypes/storyItem';
 
 const StyledStoryPromoWrapper = styled.div`
   > div {
@@ -19,8 +19,7 @@ const StyledStoryPromoWrapper = styled.div`
   }
 `;
 
-const RecommendationsPromo = item => {
-  const { dir } = useContext(ServiceContext); // TODO pass in?
+const RecommendationsPromo = ({ promo, dir }) => {
   return (
     <Grid
       columns={{
@@ -36,7 +35,7 @@ const RecommendationsPromo = item => {
     >
       <StyledStoryPromoWrapper>
         <StoryPromo
-          item={item}
+          item={promo}
           dir={dir}
           isRecommendation
           displaySummary={false}
@@ -44,6 +43,11 @@ const RecommendationsPromo = item => {
       </StyledStoryPromoWrapper>
     </Grid>
   );
+};
+
+RecommendationsPromo.propTypes = {
+  dir: string.isRequired,
+  promo: shape({ storyItem }).isRequired,
 };
 
 export default RecommendationsPromo;

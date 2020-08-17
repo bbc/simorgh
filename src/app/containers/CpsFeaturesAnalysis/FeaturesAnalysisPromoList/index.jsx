@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import { arrayOf, shape, string } from 'prop-types';
 import StoryPromo from '../../StoryPromo';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { storyItem } from '#models/propTypes/storyItem';
 
-const FeaturesAnalysisPromoList = items => {
-  const { dir } = useContext(ServiceContext); // TODO could this be passed in?
+const FeaturesAnalysisPromoList = ({ promoItems, dir }) => {
   return (
     <StoryPromoUl>
-      {items.map(item => (
+      {promoItems.map(item => (
         <StoryPromoLi key={item.id || item.uri}>
           <StoryPromo
             item={item}
@@ -19,6 +19,11 @@ const FeaturesAnalysisPromoList = items => {
       ))}
     </StoryPromoUl>
   );
+};
+
+FeaturesAnalysisPromoList.propTypes = {
+  dir: string.isRequired,
+  promoItems: arrayOf(shape(storyItem)).isRequired,
 };
 
 export default FeaturesAnalysisPromoList;
