@@ -19,11 +19,15 @@ const analyticsUtilFunctions = [
   { name: 'getHref', source: genericLabelHelpers },
   { name: 'getReferrer', source: genericLabelHelpers },
   { name: 'getAtUserId', source: genericLabelHelpers },
-  { name: 'getCampaignType', source: genericLabelHelpers },
   { name: 'getATIMarketingString,', source: genericLabelHelpers },
   { name: 'isLocServeCookieSet', source: genericLabelHelpers },
   { name: 'sanitise', source: genericLabelHelpers },
 ];
+
+const marketingCampaignFunc = {
+  name: 'getCampaignType',
+  source: genericLabelHelpers,
+};
 
 describe('getThingAttributes', () => {
   beforeEach(() => {
@@ -31,6 +35,9 @@ describe('getThingAttributes', () => {
   });
 
   it('should not add empty or null values', () => {
+    analyticsUtilFunctions.push(marketingCampaignFunc);
+
+    mockAndSet(marketingCampaignFunc, 'email');
     analyticsUtilFunctions.forEach(func => {
       mockAndSet(func, null);
     });
@@ -46,6 +53,8 @@ describe('getThingAttributes', () => {
     analyticsUtilFunctions.forEach(func => {
       mockAndSet(func, null);
     });
+
+    mockAndSet(marketingCampaignFunc, 'sl');
 
     const queryParams = buildATIPageTrackPath({
       appName: 'appName',
@@ -74,16 +83,19 @@ describe('getThingAttributes', () => {
       'x12=[timeUpdated]',
       'x13=[ldpThingLabels]',
       'x14=[ldpThingIds]',
+      'xto=SEC------',
     ];
 
     expect(queryParamsArray).toHaveLength(expectedValues.length);
     expectedValues.forEach(value => expect(queryParamsArray).toContain(value));
   });
 
-  it('should call relevant functions when', () => {
+  it('should call relevant functions', () => {
     analyticsUtilFunctions.forEach(func => {
       mockAndSet(func, func.name);
     });
+
+    mockAndSet(marketingCampaignFunc, 'email');
 
     const queryParams = buildATIPageTrackPath({
       pageTitle: 'pageTitle',
@@ -105,6 +117,7 @@ describe('getThingAttributes', () => {
       'x6=[getReferrer]',
       'x9=[sanitise]',
       'x18=[isLocServeCookieSet]',
+      'xto=-----@',
       'ref=getReferrer',
     ];
 
