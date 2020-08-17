@@ -1,0 +1,170 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://www.bbc.co.uk/persian/meta/dps/2013/04/emp/130429_l42_vid_afgh_corruption.emp.xml",
+        "id": "",
+        "image": {
+          "altText": "",
+          "copyrightHolder": "",
+          "height": 360,
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/04/29/130429184426_khalil_roman_iv_640x360_bbc_nocredit.jpg",
+          "id": "",
+          "path": "/amz/worldservice/live/assets/images/2013/04/29/130429184426_khalil_roman_iv_640x360_bbc_nocredit.jpg",
+          "subType": "thumbnail",
+          "type": "image",
+          "width": 640
+        },
+        "live": false,
+        "playlist": [
+          {
+            "bitrate": "168000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/persian/dps/2013/04/29apr13_afgh_corruption_16x9_lo.mp4"
+          },
+          {
+            "bitrate": "320000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/persian/dps/2013/04/29apr13_afgh_corruption_16x9_med.mp4"
+          },
+          {
+            "bitrate": "904000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/persian/dps/2013/04/29apr13_afgh_corruption_16x9_hi.mp4"
+          }
+        ],
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "ماموران سازمان اطلاعات مرکزی آمریکا ،سیا ،میلیونها دلار پول نقد را در چمدانها، کیفهای دستی و حتی کیسه های پلاستیکی قرار داده اند و ماهانه به کارمندان دفتر ریاست جمهوری و اداره امنیت ملی افغانستان پرداخته اند. این ادعای روزنامه نیویورک تایمز را حامد کرزی رد نکرد . او گفت این کمک ها کم اما مفید بوده و ما از آن تشکر میکنیم. در گذشته هم ، آقای کرزی تایید کرده بود که یکی از کارمندان دفترش صدها هزار یورو پول نقد را در کیسه هایی پلاستیکی از سفیر ایران دریافت کرده. ولی چرا این پولها به مرکزی ترین حلقه تصمیم گیری رسمی درافغانستان به شکلی غیر رسمی و پنهان پرداخت می شود و چقدر قابل حسابرسی است؟",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "ویندوز میدیا پلیر نسخه ۹",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "فلش پلیر نسخه ۹.۰.۱۱۵.۰ برای پخش ویدیوی فرمت h.۲۶۴",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "اگر مشکلی با تماشای ویدیوها داشتید با ایمیل persian@bbc.co.uk با ما تماس بگیرید یا از طریق صفحه \n<link type=\"page\"><caption>\n\nتماس با ما</caption><url href=\"http://www.bbc.co.uk/persian/institutional/2011/04/000001_contactus.shtml\" platform=\"highweb\"/></link> پیام خود را ارسال کنید.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": { "cps_asset_type": "map" },
+    "atiAnalytics": {},
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "createdBy": "persian",
+    "firstPublished": 1367260417000,
+    "id": "urn:bbc:ares::asset:persian/afghanistan/2013/04/130429_l42_vid_afgh_corruption",
+    "includeComments": false,
+    "language": "fa",
+    "lastPublished": 1367261763000,
+    "lastUpdated": 1597128249903,
+    "locators": {
+      "assetUri": "/persian/afghanistan/2013/04/130429_l42_vid_afgh_corruption",
+      "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan/2013/04/130429_l42_vid_afgh_corruption",
+      "curie": "http://www.bbc.co.uk/asset/8f5da870-b0fb-11e2-83aa-25d13db9bd6e"
+    },
+    "options": {
+      "allowAdvertising": false,
+      "allowDateStamp": true,
+      "includeComments": false,
+      "suitableForSyndication": false
+    },
+    "readTime": 1,
+    "tags": {},
+    "timestamp": 1367261763000,
+    "type": "MAP",
+    "version": "v1.3.5"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "گفت‌وگو با کارمند پيشين دفتر رياست جمهوری افغانستان",
+      "shortHeadline": "گفت‌وگو با کارمند پيشين دفتر رياست جمهوری افغانستان"
+    },
+    "id": "urn:bbc:ares::asset:persian/afghanistan/2013/04/130429_l42_vid_afgh_corruption",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "",
+      "height": 63,
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/04/29/130429184426_khalil_roman_iv_112x63_bbc_nocredit.jpg",
+      "id": "d5e223",
+      "path": "/amz/worldservice/live/assets/images/2013/04/29/130429184426_khalil_roman_iv_112x63_bbc_nocredit.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 112
+    },
+    "language": "fa",
+    "locators": {
+      "assetUri": "/persian/afghanistan/2013/04/130429_l42_vid_afgh_corruption",
+      "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan/2013/04/130429_l42_vid_afgh_corruption",
+      "curie": "http://www.bbc.co.uk/asset/8f5da870-b0fb-11e2-83aa-25d13db9bd6e"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://www.bbc.co.uk/persian/meta/dps/2013/04/emp/130429_l42_vid_afgh_corruption.emp.xml",
+      "id": "",
+      "image": {
+        "altText": "",
+        "copyrightHolder": "",
+        "height": 360,
+        "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/04/29/130429184426_khalil_roman_iv_640x360_bbc_nocredit.jpg",
+        "id": "",
+        "path": "/amz/worldservice/live/assets/images/2013/04/29/130429184426_khalil_roman_iv_640x360_bbc_nocredit.jpg",
+        "subType": "thumbnail",
+        "type": "image",
+        "width": 640
+      },
+      "live": false,
+      "playlist": [
+        {
+          "bitrate": "168000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/persian/dps/2013/04/29apr13_afgh_corruption_16x9_lo.mp4"
+        },
+        {
+          "bitrate": "320000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/persian/dps/2013/04/29apr13_afgh_corruption_16x9_med.mp4"
+        },
+        {
+          "bitrate": "904000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/persian/dps/2013/04/29apr13_afgh_corruption_16x9_hi.mp4"
+        }
+      ],
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "summary": "ماموران سازمان اطلاعات مرکزی آمریکا ،سیا ،میلیونها دلار پول نقد را در چمدانها، کیفهای دستی و حتی کیسه های پلاستیکی قرار داده اند و ماهانه به کارمندان دفتر ریاست جمهوری و اداره امنیت ملی افغانستان پرداخته اند.",
+    "timestamp": 1367261763000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "افغانستان",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/persian"
+    },
+    "site": {
+      "name": "BBCPersian.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/persian"
+    }
+  }
+}
