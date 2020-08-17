@@ -651,7 +651,7 @@ describe('ATI Analytics Container', () => {
       });
     });
 
-    it('should not include the xto marketing string when a campaign type is not specfied', () => {
+    it('should not include the xto marketing string when a campaign type is not specified', () => {
       setWindowValue('location', {
         href: 'http://localhost?foo=bar',
       });
