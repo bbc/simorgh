@@ -12,6 +12,10 @@ export default () => {
       expect(idAttr).toEqual('content');
     });
 
+    it('TESTING THAT THIS WILL FAIL CI', () => {
+      expect(idAttr).toEqual('BLAH');
+    });
+
     it('should contain text', () => {
       expect(mainHeadingText).toBeTruthy();
     });
