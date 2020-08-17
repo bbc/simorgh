@@ -5,7 +5,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 
-// Ad Slot widths for custom breakpoints
+// Ad Slot Widths (for custom breakpoints)
 /*
   These have an extra 16px (1rem) added in order to account for the padding on both the left and
   right sides of 8px (0.5rem) in order to account for the padding requirement of having 0.5rem
@@ -33,11 +33,7 @@ const AD_UNIT_MARGIN = 2.0625; // 33px
 const MPU_HEIGHTS = {
   GROUP_1: `${3.125 + AD_UNIT_MARGIN}rem`,
   // 50px + AD_UNIT_MARGIN = 75px
-  GROUP_2: `${3.125 + AD_UNIT_MARGIN}rem`,
-  // 50px + AD_UNIT_MARGIN = 75px
   GROUP_3: `${15.625 + AD_UNIT_MARGIN}rem`,
-  // 250px + AD_UNIT_MARGIN = 275px
-  GROUP_4: `${15.625 + AD_UNIT_MARGIN}rem`,
   // 250px + AD_UNIT_MARGIN = 275px
 };
 
@@ -63,7 +59,7 @@ export const leaderboardStyles = css`
   visibility: hidden;
   @media (min-width: ${LEADERBOARD_WIDTH_MIN}) {
     min-height: ${LEADERBOARD_HEIGHTS.GROUP_1};
-    padding: 0rem ${GEL_SPACING};
+    padding: 0 ${GEL_SPACING};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,7 +82,7 @@ export const mpuStyles = css`
   visibility: hidden;
   @media (min-width: ${MPU_WIDTH_MIN}) {
     min-height: ${MPU_HEIGHTS.GROUP_1};
-    padding: 0rem ${GEL_SPACING};
+    padding: 0 ${GEL_SPACING};
     display: block;
     visibility: visible;
   }
