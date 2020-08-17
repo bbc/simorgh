@@ -2,7 +2,7 @@
 
 exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
 .c0 {
-  background-color: #F6F6F6;
+  background-color: #F8F8F8;
 }
 
 .amp-geo-pending .c0,
@@ -168,7 +168,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
   </head>
   <body>
     .c0 {
-  background-color: #F6F6F6;
+  background-color: #F8F8F8;
 }
 
 .amp-geo-pending .c0,
