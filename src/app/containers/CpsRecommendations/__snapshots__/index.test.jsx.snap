@@ -137,28 +137,11 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0;
 }
 
-.c0 {
-  grid-column: 1 / span 6;
-}
-
-.c4 {
-  margin-bottom: 1rem;
-  padding: 0 1rem;
-}
-
-.c6 {
-  margin-top: 0;
-  margin: 0;
-}
-
-.c1 {
+.c3 {
   position: relative;
 }
 
-.c2 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
+.c4 {
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
@@ -175,7 +158,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 10;
 }
 
-.c2:not(:focus):not(:active) {
+.c4:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -199,13 +182,27 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   margin: 0;
 }
 
+.c0 {
+  grid-column: 1 / span 6;
+}
+
+.c2 {
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.c6 {
+  margin-top: 0;
+  margin: 0;
+}
+
 .c12 > div {
   display: grid;
   margin: 0.25rem 0;
   background-color: #FDFDFD;
 }
 
-.c3 {
+.c1 {
   background-color: #F2F2F2;
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
@@ -336,6 +333,18 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.8125rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c0 {
     grid-column: 1 / span 5;
@@ -364,19 +373,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (max-width:25rem) {
-  .c4 {
+  .c2 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
+  .c2 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c2 {
     margin-bottom: 1.5rem;
   }
 }
@@ -384,18 +393,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 @media (min-width:37.5rem) {
   .c6 {
     padding: 1rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 0.8125rem;
   }
 }
 
@@ -432,21 +429,21 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
     <div
       class="c1"
     >
-      <a
+      <section
+        aria-labelledby="recommendations-heading"
         class="c2"
-        href="#end-of-recommendations"
+        data-e2e="related-content"
+        role="region"
       >
-        Saltar Quizás también te interese y continuar leyendo
-      </a>
-      <div
-        class="c3"
-      >
-        <section
-          aria-labelledby="recommendations-heading"
-          class="c4"
-          data-e2e="related-content"
-          role="region"
+        <div
+          class="c3"
         >
+          <a
+            class="c4"
+            href="#end-of-recommendations"
+          >
+            Saltar Quizás también te interese y continuar leyendo
+          </a>
           <div
             class="c5 c6"
           >
@@ -521,15 +518,15 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </div>
           </div>
-        </section>
-      </div>
-      <p
-        class="c21"
-        id="end-of-recommendations"
-        tabindex="-1"
-      >
-        Final de Quizás también te interese
-      </p>
+          <p
+            class="c21"
+            id="end-of-recommendations"
+            tabindex="-1"
+          >
+            Final de Quizás también te interese
+          </p>
+        </div>
+      </section>
     </div>
   </div>
 </div>
@@ -676,28 +673,11 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0;
 }
 
-.c0 {
-  grid-column: 1 / span 6;
-}
-
-.c4 {
-  margin-bottom: 1rem;
-  padding: 0 1rem;
-}
-
-.c6 {
-  margin-top: 0;
-  margin: 0;
-}
-
-.c1 {
+.c3 {
   position: relative;
 }
 
-.c2 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
+.c4 {
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
@@ -714,7 +694,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 10;
 }
 
-.c2:not(:focus):not(:active) {
+.c4:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -738,13 +718,27 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   margin: 0;
 }
 
+.c0 {
+  grid-column: 1 / span 6;
+}
+
+.c2 {
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.c6 {
+  margin-top: 0;
+  margin: 0;
+}
+
 .c16 > div {
   display: grid;
   margin: 0.25rem 0;
   background-color: #FDFDFD;
 }
 
-.c3 {
+.c1 {
   background-color: #F2F2F2;
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
@@ -990,6 +984,18 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.8125rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c0 {
     grid-column: 1 / span 5;
@@ -1018,19 +1024,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (max-width:25rem) {
-  .c4 {
+  .c2 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
+  .c2 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c2 {
     margin-bottom: 1.5rem;
   }
 }
@@ -1038,18 +1044,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 @media (min-width:37.5rem) {
   .c6 {
     padding: 1rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 0.8125rem;
   }
 }
 
@@ -1086,21 +1080,21 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
     <div
       class="c1"
     >
-      <a
+      <section
+        aria-labelledby="recommendations-heading"
         class="c2"
-        href="#end-of-recommendations"
+        data-e2e="related-content"
+        role="region"
       >
-        Saltar Quizás también te interese y continuar leyendo
-      </a>
-      <div
-        class="c3"
-      >
-        <section
-          aria-labelledby="recommendations-heading"
-          class="c4"
-          data-e2e="related-content"
-          role="region"
+        <div
+          class="c3"
         >
+          <a
+            class="c4"
+            href="#end-of-recommendations"
+          >
+            Saltar Quizás también te interese y continuar leyendo
+          </a>
           <div
             class="c5 c6"
           >
@@ -1342,15 +1336,15 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
           </ul>
-        </section>
-      </div>
-      <p
-        class="c25"
-        id="end-of-recommendations"
-        tabindex="-1"
-      >
-        Final de Quizás también te interese
-      </p>
+          <p
+            class="c25"
+            id="end-of-recommendations"
+            tabindex="-1"
+          >
+            Final de Quizás también te interese
+          </p>
+        </div>
+      </section>
     </div>
   </div>
 </div>
@@ -1510,28 +1504,11 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0;
 }
 
-.c0 {
-  grid-column: 1 / span 6;
-}
-
-.c4 {
-  margin-bottom: 1rem;
-  padding: 0 1rem;
-}
-
-.c6 {
-  margin-top: 0;
-  margin: 0;
-}
-
-.c1 {
+.c3 {
   position: relative;
 }
 
-.c2 {
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
+.c4 {
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
@@ -1548,7 +1525,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 10;
 }
 
-.c2:not(:focus):not(:active) {
+.c4:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -1572,13 +1549,27 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   margin: 0;
 }
 
+.c0 {
+  grid-column: 1 / span 6;
+}
+
+.c2 {
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.c6 {
+  margin-top: 0;
+  margin: 0;
+}
+
 .c16 > div {
   display: grid;
   margin: 0.25rem 0;
   background-color: #FDFDFD;
 }
 
-.c3 {
+.c1 {
   background-color: #F2F2F2;
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
@@ -1824,6 +1815,18 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.8125rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c0 {
     grid-column: 1 / span 5;
@@ -1852,19 +1855,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (max-width:25rem) {
-  .c4 {
+  .c2 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
+  .c2 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c2 {
     margin-bottom: 1.5rem;
   }
 }
@@ -1872,18 +1875,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 @media (min-width:37.5rem) {
   .c6 {
     padding: 1rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 0.8125rem;
   }
 }
 
@@ -1920,21 +1911,21 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
     <div
       class="c1"
     >
-      <a
+      <section
+        aria-labelledby="recommendations-heading"
         class="c2"
-        href="#end-of-recommendations"
+        data-e2e="related-content"
+        role="region"
       >
-        تخطى مواضيع قد تهمك وواصل القراءة
-      </a>
-      <div
-        class="c3"
-      >
-        <section
-          aria-labelledby="recommendations-heading"
-          class="c4"
-          data-e2e="related-content"
-          role="region"
+        <div
+          class="c3"
         >
+          <a
+            class="c4"
+            href="#end-of-recommendations"
+          >
+            تخطى مواضيع قد تهمك وواصل القراءة
+          </a>
           <div
             class="c5 c6"
           >
@@ -2176,15 +2167,15 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
           </ul>
-        </section>
-      </div>
-      <p
-        class="c26"
-        id="end-of-recommendations"
-        tabindex="-1"
-      >
-        مواضيع قد تهمك نهاية
-      </p>
+          <p
+            class="c26"
+            id="end-of-recommendations"
+            tabindex="-1"
+          >
+            مواضيع قد تهمك نهاية
+          </p>
+        </div>
+      </section>
     </div>
   </div>
 </div>

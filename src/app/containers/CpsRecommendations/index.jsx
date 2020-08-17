@@ -18,7 +18,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import Grid from '../../components/Grid';
-import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 import { GridItemConstrainedMediumNoMargin } from '#lib/styledGrid';
 
 const StyledStoryPromoWrapper = styled.div`
@@ -39,9 +38,7 @@ const RecommendationsWrapper = styled.div`
 `;
 
 const CpsRecommendations = ({ items, parentColumns }) => {
-  const { recommendations, dir, translations, service } = useContext(
-    ServiceContext,
-  );
+  const { recommendations, dir, translations } = useContext(ServiceContext);
   const { enabled } = useToggle('cpsRecommendations');
 
   const { hasStoryRecommendations } = recommendations;
@@ -126,28 +123,25 @@ const CpsRecommendations = ({ items, parentColumns }) => {
 
   return (
     <GridItemConstrainedMediumNoMargin>
-      <SkipLinkWrapper
-        service={service}
-        endTextId={endTextId}
-        text={text}
-        endTextVisuallyHidden={endTextVisuallyHidden}
-        terms={skipLinkTerms}
-      >
-        <RecommendationsWrapper>
-          <CpsOnwardJourney
-            labelId="recommendations-heading"
-            title={title}
-            content={items}
-            parentColumns={parentColumns}
-            singleTransform={singleTransform}
-            listTransform={listTransform}
-            sectionLabelOverrideAs="strong"
-            sectionLabelBar={false}
-            sectionLabelBackground={C_LUNAR}
-            columnType="main"
-          />
-        </RecommendationsWrapper>
-      </SkipLinkWrapper>
+      <RecommendationsWrapper>
+        <CpsOnwardJourney
+          labelId="recommendations-heading"
+          title={title}
+          content={items}
+          parentColumns={parentColumns}
+          singleTransform={singleTransform}
+          listTransform={listTransform}
+          sectionLabelOverrideAs="strong"
+          sectionLabelBar={false}
+          sectionLabelBackground={C_LUNAR}
+          columnType="main"
+          hasSkipLnk
+          endTextId={endTextId}
+          skipText={text}
+          endTextVisuallyHidden={endTextVisuallyHidden}
+          skipLinkTerms={skipLinkTerms}
+        />
+      </RecommendationsWrapper>
     </GridItemConstrainedMediumNoMargin>
   );
 };

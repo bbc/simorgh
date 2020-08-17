@@ -23,6 +23,7 @@ import {
 import Grid from '@bbc/psammead-grid';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 
+import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import {
@@ -116,6 +117,56 @@ const SingleContentWrapper = styled.div`
   `}
 `;
 
+const OptionallyRenderedSkipWrapper = ({
+  hasSkipLnk,
+  service,
+  skipLinkTerms,
+  endTextVisuallyHidden,
+  endTextId,
+  skipText,
+  children,
+}) =>
+  hasSkipLnk ? (
+    <SkipLinkWrapper
+      service={service}
+      endTextId={endTextId}
+      text={skipText}
+      endTextVisuallyHidden={endTextVisuallyHidden}
+      terms={skipLinkTerms}
+    >
+      {children}
+    </SkipLinkWrapper>
+  ) : (
+    children
+  );
+
+const optionalSkipLinkProps = {
+  hasSkipLnk: bool,
+  skipLinkTerms: shape({}),
+  endTextVisuallyHidden: string,
+  endTextId: string,
+  skipText: string,
+};
+
+const optionalSkipLinkDefaultProps = {
+  hasSkipLnk: false,
+  skipLinkTerms: {},
+  endTextVisuallyHidden: null,
+  endTextId: null,
+  skipText: null,
+};
+
+OptionallyRenderedSkipWrapper.propTypes = {
+  service: string,
+  children: node.isRequired,
+  ...optionalSkipLinkProps,
+};
+
+OptionallyRenderedSkipWrapper.defaultProps = {
+  service: '',
+  ...optionalSkipLinkDefaultProps,
+};
+
 const CpsOnwardJourney = ({
   labelId,
   title,
@@ -127,6 +178,11 @@ const CpsOnwardJourney = ({
   sectionLabelBar,
   sectionLabelBackground,
   columnType,
+  hasSkipLnk,
+  endTextId,
+  skipText,
+  endTextVisuallyHidden,
+  skipLinkTerms,
 }) => {
   const a11yAttributes = {
     as: 'section',
@@ -172,25 +228,33 @@ const CpsOnwardJourney = ({
 
   return (
     <CpsOnwardJourneyWrapper>
-      <StyledSectionLabel
-        script={script}
-        service={service}
-        dir={dir}
-        labelId={labelId}
-        columnType={columnType}
-        overrideHeadingAs={sectionLabelOverrideAs}
-        bar={sectionLabelBar}
-        backgroundColor={sectionLabelBackground}
+      <OptionallyRenderedSkipWrapper
+        hasSkipLnk={hasSkipLnk}
+        endTextId={endTextId}
+        skipText={skipText}
+        endTextVisuallyHidden={endTextVisuallyHidden}
+        skipLinkTerms={skipLinkTerms}
       >
-        {title}
-      </StyledSectionLabel>
-      {hasSingleContent ? (
-        <SingleContentWrapper columnType={columnType}>
-          {singleTransform(singleContent)}
-        </SingleContentWrapper>
-      ) : (
-        listTransform(content)
-      )}
+        <StyledSectionLabel
+          script={script}
+          service={service}
+          dir={dir}
+          labelId={labelId}
+          columnType={columnType}
+          overrideHeadingAs={sectionLabelOverrideAs}
+          bar={sectionLabelBar}
+          backgroundColor={sectionLabelBackground}
+        >
+          {title}
+        </StyledSectionLabel>
+        {hasSingleContent ? (
+          <SingleContentWrapper columnType={columnType}>
+            {singleTransform(singleContent)}
+          </SingleContentWrapper>
+        ) : (
+          listTransform(content)
+        )}
+      </OptionallyRenderedSkipWrapper>
     </CpsOnwardJourneyWrapper>
   );
 };
@@ -217,6 +281,7 @@ CpsOnwardJourney.propTypes = {
       usages.
   */
   columnType: oneOf(['main', 'secondary']).isRequired,
+  ...optionalSkipLinkProps,
 };
 
 CpsOnwardJourney.defaultProps = {
@@ -225,6 +290,7 @@ CpsOnwardJourney.defaultProps = {
   sectionLabelOverrideAs: null,
   sectionLabelBar: true,
   sectionLabelBackground: C_GHOST,
+  ...optionalSkipLinkDefaultProps,
 };
 
 export default CpsOnwardJourney;
