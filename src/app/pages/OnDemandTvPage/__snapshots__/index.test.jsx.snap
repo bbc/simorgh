@@ -13,13 +13,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   margin: 0;
 }
 
-.c5 {
-  padding-top: 56.25%;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 1rem;
-}
-
 .c7 {
   font-size: 2rem;
   line-height: 2.625rem;
@@ -63,6 +56,13 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   margin: 0;
 }
 
+.c5 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
 .c1 {
   padding-bottom: 2rem;
   width: 100%;
@@ -80,12 +80,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-@media (min-width:63rem) {
-  .c5 {
-    margin-bottom: 1.5rem;
-  }
 }
 
 @supports (display:grid) {
@@ -300,6 +294,12 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 @media (max-width:62.9375rem) {
   .c12 {
     padding-bottom: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c5 {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -427,39 +427,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
   margin: 0;
 }
 
-.c5 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.c6 {
-  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34,34,34,0.75);
-}
-
-.c7 {
-  display: block;
-  font-weight: normal;
-  bottom: 0;
-  position: absolute;
-  padding: 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
-}
-
 .c8 {
   font-size: 2rem;
   line-height: 2.625rem;
@@ -503,11 +470,37 @@ exports[`should show the expired content message if episode is expired 1`] = `
   margin: 0;
 }
 
-.c4 {
-  margin: 2.5rem 0 1.5rem;
-  padding-top: 56.25%;
-  position: relative;
-  overflow: hidden;
+.c5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c6 {
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.0625rem solid transparent;
+  color: #FFFFFF;
+  background-color: rgba(34,34,34,0.75);
+}
+
+.c7 {
+  display: block;
+  font-weight: normal;
+  bottom: 0;
+  position: absolute;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .c1 {
@@ -519,28 +512,11 @@ exports[`should show the expired content message if episode is expired 1`] = `
   flex-grow: 1;
 }
 
-@media (min-width:37.5rem) {
-  .c6 {
-    font-size: 0.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c6 {
-    background-color: transparent;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c7 {
-    background-color: window;
-  }
-}
-
-@media (min-width:25rem) {
-  .c7 {
-    padding: 1rem;
-  }
+.c4 {
+  margin: 2.5rem 0 1.5rem;
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
 }
 
 @supports (display:grid) {
@@ -758,6 +734,44 @@ exports[`should show the expired content message if episode is expired 1`] = `
   }
 }
 
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c6 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c7 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c7 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @media (max-width:62.9375rem) {
   .c4 {
     margin-top: 1rem;
@@ -773,20 +787,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
 @media (max-width:24.9375rem) {
   .c4 {
     margin: 0.5rem -0.5rem 0;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 80rem;
   }
 }
 
@@ -876,39 +876,6 @@ exports[`should show the future content message if episode is not yet available 
   margin: 0;
 }
 
-.c5 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.c6 {
-  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34,34,34,0.75);
-}
-
-.c7 {
-  display: block;
-  font-weight: normal;
-  bottom: 0;
-  position: absolute;
-  padding: 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
-}
-
 .c8 {
   font-size: 2rem;
   line-height: 2.625rem;
@@ -952,11 +919,37 @@ exports[`should show the future content message if episode is not yet available 
   margin: 0;
 }
 
-.c4 {
-  margin: 2.5rem 0 1.5rem;
-  padding-top: 56.25%;
-  position: relative;
-  overflow: hidden;
+.c5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c6 {
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.0625rem solid transparent;
+  color: #FFFFFF;
+  background-color: rgba(34,34,34,0.75);
+}
+
+.c7 {
+  display: block;
+  font-weight: normal;
+  bottom: 0;
+  position: absolute;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .c1 {
@@ -968,28 +961,11 @@ exports[`should show the future content message if episode is not yet available 
   flex-grow: 1;
 }
 
-@media (min-width:37.5rem) {
-  .c6 {
-    font-size: 0.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c6 {
-    background-color: transparent;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c7 {
-    background-color: window;
-  }
-}
-
-@media (min-width:25rem) {
-  .c7 {
-    padding: 1rem;
-  }
+.c4 {
+  margin: 2.5rem 0 1.5rem;
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
 }
 
 @supports (display:grid) {
@@ -1207,6 +1183,44 @@ exports[`should show the future content message if episode is not yet available 
   }
 }
 
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c6 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c7 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c7 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @media (max-width:62.9375rem) {
   .c4 {
     margin-top: 1rem;
@@ -1222,20 +1236,6 @@ exports[`should show the future content message if episode is not yet available 
 @media (max-width:24.9375rem) {
   .c4 {
     margin: 0.5rem -0.5rem 0;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 80rem;
   }
 }
 
@@ -1325,39 +1325,6 @@ exports[`should show the future content message if episode is pending 1`] = `
   margin: 0;
 }
 
-.c5 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.c6 {
-  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34,34,34,0.75);
-}
-
-.c7 {
-  display: block;
-  font-weight: normal;
-  bottom: 0;
-  position: absolute;
-  padding: 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
-}
-
 .c8 {
   font-size: 2rem;
   line-height: 2.625rem;
@@ -1401,11 +1368,37 @@ exports[`should show the future content message if episode is pending 1`] = `
   margin: 0;
 }
 
-.c4 {
-  margin: 2.5rem 0 1.5rem;
-  padding-top: 56.25%;
-  position: relative;
-  overflow: hidden;
+.c5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c6 {
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.0625rem solid transparent;
+  color: #FFFFFF;
+  background-color: rgba(34,34,34,0.75);
+}
+
+.c7 {
+  display: block;
+  font-weight: normal;
+  bottom: 0;
+  position: absolute;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .c1 {
@@ -1417,28 +1410,11 @@ exports[`should show the future content message if episode is pending 1`] = `
   flex-grow: 1;
 }
 
-@media (min-width:37.5rem) {
-  .c6 {
-    font-size: 0.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c6 {
-    background-color: transparent;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c7 {
-    background-color: window;
-  }
-}
-
-@media (min-width:25rem) {
-  .c7 {
-    padding: 1rem;
-  }
+.c4 {
+  margin: 2.5rem 0 1.5rem;
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
 }
 
 @supports (display:grid) {
@@ -1656,6 +1632,44 @@ exports[`should show the future content message if episode is pending 1`] = `
   }
 }
 
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c6 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c7 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c7 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @media (max-width:62.9375rem) {
   .c4 {
     margin-top: 1rem;
@@ -1671,20 +1685,6 @@ exports[`should show the future content message if episode is pending 1`] = `
 @media (max-width:24.9375rem) {
   .c4 {
     margin: 0.5rem -0.5rem 0;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 80rem;
   }
 }
 
