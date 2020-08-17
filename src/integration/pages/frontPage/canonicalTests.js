@@ -1,5 +1,6 @@
 import runCrossPlatformTests from './crossPlatformTests';
-import AdContainer from '../../../../src/app/containers/Ad';
+import CanonicalAd from '../../../../src/app/containers/Ad/Canonical';
+import { ServiceContext } from '../../../../src/app/contexts/ServiceContext';
 import {
   runCoreCanonicalTests,
   runCanonicalAnalyticsTests,
@@ -28,9 +29,9 @@ export default () => {
   describe('Ads', () => {
     const hasAds = service === 'arabic';
     const id = document.getElementById('google_image_div');
-    jest.mock('AdContainer', () => ({ leaderboard }) => ({
-      isAmp: '1',
-      adsEnabled: true,
+    jest.mock('CanonicalAd', () => ({ leaderboard }) => ({
+      showAdsBasedOnLocation: true,
+      queryString: '',
     }));
 
     if (hasAds) {
