@@ -10,7 +10,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
-import onClient from '#lib/utilities/onClient';
+import IsOperaMini from '#lib/utilities/IsOperaMini';
 
 const LEADERBOARD_HEIGHT = '5.5rem';
 const LEADERBOARD_HEIGHT_GROUP_4_5 = '9rem';
@@ -77,9 +77,9 @@ const CanonicalAd = ({ slotType }) => {
     };
   }, [slotType, location]);
 
-  const isOperaMini = onClient() && window.operamini;
+  const operaMini = IsOperaMini();
 
-  if (!showAdsBasedOnLocation || !isOperaMini) {
+  if (!showAdsBasedOnLocation || !operaMini) {
     return null;
   }
 
