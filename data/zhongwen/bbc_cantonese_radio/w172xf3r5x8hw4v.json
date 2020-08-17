@@ -7,7 +7,7 @@
     },
     "type": "WSRADIO",
     "createdBy": "bbc_cantonese_radio",
-    "language": "am",
+    "language": "zh",
     "lastUpdated": 1591787694237,
     "firstPublished": 1591488372000,
     "lastPublished": 1591488372000,
@@ -30,6 +30,7 @@
   "content": {
     "blocks": [
       {
+        "availability": "available",
         "id": "w172xf3r5x8hw4v",
         "subType": "episode",
         "format": "Audio",

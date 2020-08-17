@@ -229,12 +229,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+                        "text": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & < >",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+                              "text": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & < >",
                               "attributes": []
                             },
                             "id": "c35b60e9-e983-4558-b93e-79286d4dc52f",
@@ -334,12 +334,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+                        "text": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & < >",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+                              "text": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & < >",
                               "attributes": []
                             },
                             "id": "75c2e76b-18d0-4e7e-9d7a-a98285ce1fbb",
@@ -1860,7 +1860,7 @@
   },
   "promo": {
     "headlines": {
-      "headline": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+      "headline": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & < >",
       "shortHeadline": "First CPS Media Asset Pages Appear on Heloo"
     },
     "id": "urn:bbc:ares::asset:pidgin/23248703",

@@ -81,6 +81,14 @@ Object {
       "wf",
       "yt",
     ],
+    "gbOrUnknown": Array [
+      "gb",
+      "gg",
+      "im",
+      "je",
+      "uk",
+      "unknown",
+    ],
   },
 }
 `;
@@ -118,49 +126,155 @@ Object {
 }
 `;
 
+exports[`AMP Media Asset Page Analytics comscore 1`] = `
+Object {
+  "extraUrlParams": Object {
+    "comscorekw": "amp",
+  },
+  "vars": Object {
+    "c2": "17986528",
+  },
+}
+`;
+
 exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
 exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 1`] = `"BBC News, عربي - /arabic"`;
+exports[`AMP Media Asset Page Footer Link should match text and url 1`] = `
+Object {
+  "text": "BBC News, عربي",
+  "url": "/arabic",
+}
+`;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 2`] = `"لماذا يمكنك الاعتماد على أخبار بي بي سي - https://www.bbc.com/arabic/institutional-49283069"`;
+exports[`AMP Media Asset Page Footer Link should match text and url 2`] = `
+Object {
+  "text": "لماذا يمكنك الاعتماد على أخبار بي بي سي",
+  "url": "https://www.bbc.com/arabic/institutional-49283069",
+}
+`;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 3`] = `"شروط الاستخدام - https://www.bbc.com/arabic/institutional-37731351"`;
+exports[`AMP Media Asset Page Footer Link should match text and url 3`] = `
+Object {
+  "text": "شروط الاستخدام",
+  "url": "https://www.bbc.com/arabic/institutional-37731351",
+}
+`;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 4`] = `"عن بي بي سي - https://www.bbc.com/arabic/institutional-37731352"`;
+exports[`AMP Media Asset Page Footer Link should match text and url 4`] = `
+Object {
+  "text": "عن بي بي سي",
+  "url": "https://www.bbc.com/arabic/institutional-37731352",
+}
+`;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 5`] = `"سياسة الخصوصية - https://www.bbc.com/arabic/institutional-37731353"`;
+exports[`AMP Media Asset Page Footer Link should match text and url 5`] = `
+Object {
+  "text": "سياسة الخصوصية",
+  "url": "https://www.bbc.com/arabic/institutional-37731353",
+}
+`;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 6`] = `"ملفات الارتباط Cookies - https://www.bbc.com/usingthebbc/cookies/"`;
+exports[`AMP Media Asset Page Footer Link should match text and url 6`] = `
+Object {
+  "text": "ملفات الارتباط Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 7`] = `"اتصل بـ بي بي سي - https://www.bbc.com/arabic/institutional-37731355"`;
+exports[`AMP Media Asset Page Footer Link should match text and url 7`] = `
+Object {
+  "text": "اتصل بـ بي بي سي",
+  "url": "https://www.bbc.com/arabic/institutional-37731355",
+}
+`;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`AMP Media Asset Page Footer Link should match text and url 8`] = `
+Object {
+  "text": "AdChoices / Do Not Sell My Info",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+}
+`;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 9`] = `"سياستنا بخصوص الروابط الخارجية. - https://www.bbc.co.uk/help/web/links/"`;
+exports[`AMP Media Asset Page Footer Link should match text and url 9`] = `
+Object {
+  "text": "سياستنا بخصوص الروابط الخارجية.",
+  "url": "https://www.bbc.co.uk/help/web/links/",
+}
+`;
 
 exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 1`] = `"رئيسية - /arabic"`;
+exports[`AMP Media Asset Page Header Navigation link should match text and url 1`] = `
+Object {
+  "text": "رئيسية",
+  "url": "/arabic",
+}
+`;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 2`] = `"شرق أوسط - /arabic/middleeast"`;
+exports[`AMP Media Asset Page Header Navigation link should match text and url 2`] = `
+Object {
+  "text": "شرق أوسط",
+  "url": "/arabic/middleeast",
+}
+`;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 3`] = `"عالم - /arabic/world"`;
+exports[`AMP Media Asset Page Header Navigation link should match text and url 3`] = `
+Object {
+  "text": "عالم",
+  "url": "/arabic/world",
+}
+`;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 4`] = `"علوم وتكنولوجيا - /arabic/scienceandtech"`;
+exports[`AMP Media Asset Page Header Navigation link should match text and url 4`] = `
+Object {
+  "text": "علوم وتكنولوجيا",
+  "url": "/arabic/scienceandtech",
+}
+`;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 5`] = `"صحة - /arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+exports[`AMP Media Asset Page Header Navigation link should match text and url 5`] = `
+Object {
+  "text": "صحة",
+  "url": "/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+}
+`;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 6`] = `"فيديو - /arabic/media"`;
+exports[`AMP Media Asset Page Header Navigation link should match text and url 6`] = `
+Object {
+  "text": "فيديو",
+  "url": "/arabic/media",
+}
+`;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 7`] = `"صحافة - /arabic/inthepress"`;
+exports[`AMP Media Asset Page Header Navigation link should match text and url 7`] = `
+Object {
+  "text": "صحافة",
+  "url": "/arabic/inthepress",
+}
+`;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 8`] = `"ترند - /arabic/trending"`;
+exports[`AMP Media Asset Page Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "ترند",
+  "url": "/arabic/trending",
+}
+`;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 9`] = `"تحقيقات - /arabic/tv-and-radio-42414864"`;
+exports[`AMP Media Asset Page Header Navigation link should match text and url 9`] = `
+Object {
+  "text": "تحقيقات",
+  "url": "/arabic/tv-and-radio-42414864",
+}
+`;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 10`] = `"برامجنا - /arabic/tv-and-radio-37728883"`;
+exports[`AMP Media Asset Page Header Navigation link should match text and url 10`] = `
+Object {
+  "text": "برامجنا",
+  "url": "/arabic/tv-and-radio-37728883",
+}
+`;
 
 exports[`AMP Media Asset Page I can see the headline 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
@@ -169,6 +283,76 @@ exports[`AMP Media Asset Page I can see the timestamp 1`] = `"20 نوفمبر/ �
 exports[`AMP Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"مشغل وسائط"`;
 
 exports[`AMP Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar/amp"`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
+Object {
+  "sizes": null,
+  "url": "http://localhost:7080/arabic/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 2`] = `
+Object {
+  "sizes": "72x72",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 3`] = `
+Object {
+  "sizes": "96x96",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 4`] = `
+Object {
+  "sizes": "128x128",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 5`] = `
+Object {
+  "sizes": "144x144",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 6`] = `
+Object {
+  "sizes": "152x152",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 7`] = `
+Object {
+  "sizes": "180x180",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 8`] = `
+Object {
+  "sizes": "192x192",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 9`] = `
+Object {
+  "sizes": "384x384",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 10`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-512x512.png",
+}
+`;
 
 exports[`AMP Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av"`;
 

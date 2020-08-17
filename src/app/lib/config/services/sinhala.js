@@ -11,10 +11,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'වෙළෙඳ දැන්වීමක් ',
-    },
     lang: `si`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'යාවත්කාලීනවී ඇත',
@@ -35,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'ශීර්ෂ වැකිය, ',
     imageCopyrightOffscreenText: 'ඡායාරූප මූලාශ්‍රය, ',
     locale: `si-LK`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'si',
     datetimeLocale: `si`,
     service: 'sinhala',
     serviceName: 'Sinhala',
@@ -54,6 +52,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'වෙළෙඳ දැන්වීමක් ',
+      },
       seeAll: 'සියල්ල දැකගන්න',
       home: 'මුල් පිටුව',
       currentPage: 'දැන් සිටින පිටුව',
@@ -193,6 +194,11 @@ export const service = {
       lastUpdated: 'අවසන් යාවත්කාලීනවීම:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'වැඩියෙන්ම නැරඹූ',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

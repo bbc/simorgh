@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: true,
-      advertisementLabel: 'विज्ञापन',
-    },
     lang: `hi`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'अपडेटेड',
@@ -31,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'कैप्शन, ',
     imageCopyrightOffscreenText: 'इमेज स्रोत, ',
     locale: `hi-IN`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'hi',
     datetimeLocale: `hi`,
     service: 'hindi',
     serviceName: 'Hindi',
@@ -51,6 +49,10 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'विज्ञापन',
+      },
+      recommendationTitle: 'और ये भी पढ़ें',
       seeAll: 'सब देखें',
       home: 'होम पेज',
       currentPage: 'मौजूदा पन्ना',
@@ -195,11 +197,20 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'सबसे ज्यादा देखे गए',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
     recommendations: {
       hasStoryRecommendations: true,
+      skipLink: {
+        text: 'छोड़कर %title% आगे बढ़ें',
+        endTextVisuallyHidden: 'समाप्त',
+      },
     },
     footer: {
       trustProjectLink: {

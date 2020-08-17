@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
 import { shape, bool, oneOf, oneOfType } from 'prop-types';
+import styled from 'styled-components';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
+import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
 import LiveLabel from '@bbc/psammead-live-label';
@@ -26,6 +29,12 @@ const logger = loggerNode(__filename);
 
 const PROMO_TYPES = ['top', 'regular', 'leading'];
 
+const SingleColumnStoryPromo = styled(StoryPromo)`
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    display: grid;
+  }
+`;
+
 const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
   if (!imageValues) {
     const landscapeRatio = (9 / 16) * 100;
@@ -41,7 +50,7 @@ const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
   const srcset = createSrcset(originCode, locator, width, imageResolutions);
   const sizes = useLargeImages
     ? '(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px'
-    : '(max-width: 1008px) 33vw, 237px';
+    : '(max-width: 1008px) 33vw, 321px';
   const DEFAULT_IMAGE_RES = 660;
   const src = `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}${path}`;
 
@@ -84,6 +93,7 @@ const StoryPromoContainer = ({
   displayImage,
   displaySummary,
   isRecommendation,
+  isSingleColumnLayout,
 }) => {
   const {
     altCalendar,
@@ -107,6 +117,7 @@ const StoryPromoContainer = ({
   const isContentTypeGuide =
     isAssetTypeCode === 'PRO' &&
     pathOr(null, ['contentType'], item) === 'Guide';
+  const isLtr = dir === 'ltr';
 
   const { headline, url, isLive } = getHeadlineUrlAndLive(
     item,
@@ -156,17 +167,37 @@ const StoryPromoContainer = ({
   const headingTagOverride =
     isRecommendation || isContentTypeGuide ? 'div' : null;
 
+  const StyledHeadline = styled(Headline)`
+    ${() =>
+      isRecommendation &&
+      `
+      padding: ${GEL_SPACING} ${isLtr ? GEL_SPACING : 0} ${GEL_SPACING} ${
+        isLtr ? 0 : GEL_SPACING
+      };
+
+      @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+        padding: ${GEL_SPACING} ${
+        isLtr ? GEL_SPACING_DBL : 0
+      } ${GEL_SPACING_DBL} ${isLtr ? 0 : GEL_SPACING_DBL};
+      }
+    `}
+  `;
+
+  const StyledLink = styled(Link)`
+    overflow-wrap: anywhere;
+  `;
+
   const Info = (
     <>
       {headline && (
-        <Headline
+        <StyledHeadline
           script={script}
           service={service}
           promoType={promoType}
           promoHasImage={displayImage}
           as={headingTagOverride}
         >
-          <Link href={url}>
+          <StyledLink href={url}>
             {isLive ? (
               <LiveLabel
                 service={service}
@@ -180,8 +211,8 @@ const StoryPromoContainer = ({
             ) : (
               linkcontents
             )}
-          </Link>
-        </Headline>
+          </StyledLink>
+        </StyledHeadline>
       )}
       {promoSummary && displaySummary && !isRecommendation && (
         <Summary
@@ -237,8 +268,12 @@ const StoryPromoContainer = ({
     />
   );
 
+  const StoryPromoComponent = isSingleColumnLayout
+    ? SingleColumnStoryPromo
+    : StoryPromo;
+
   return (
-    <StoryPromo
+    <StoryPromoComponent
       image={Image}
       info={Info}
       mediaIndicator={MediaIndicator}
@@ -257,6 +292,7 @@ StoryPromoContainer.propTypes = {
   displayImage: bool,
   displaySummary: bool,
   isRecommendation: bool,
+  isSingleColumnLayout: bool,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -266,6 +302,7 @@ StoryPromoContainer.defaultProps = {
   displayImage: true,
   displaySummary: true,
   isRecommendation: false,
+  isSingleColumnLayout: false,
 };
 
 export default StoryPromoContainer;

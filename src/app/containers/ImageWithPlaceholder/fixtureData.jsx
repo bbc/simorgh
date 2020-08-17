@@ -1,5 +1,13 @@
 import React from 'react';
-import { any, bool, string, number, objectOf } from 'prop-types';
+import {
+  bool,
+  string,
+  number,
+  shape,
+  arrayOf,
+  oneOfType,
+  object,
+} from 'prop-types';
 import FigureContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -26,7 +34,11 @@ const WrappedImageWithPlaceholder = ({ isAmp, ...otherProps }) => (
 );
 
 WrappedImageWithPlaceholder.propTypes = {
-  caption: objectOf(any),
+  caption: shape({
+    model: shape({
+      blocks: arrayOf(oneOfType([string, object])),
+    }),
+  }),
   copyright: string,
   lazyLoad: bool,
   isAmp: bool,

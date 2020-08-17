@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page A11y I can see the skip to content link 1`] = `"Перейти до змісту"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page A11y I can see the skip to content link 1`] = `"Перейти к содержанию"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page AMP Consent config 1`] = `
 Object {
@@ -81,6 +81,14 @@ Object {
       "wf",
       "yt",
     ],
+    "gbOrUnknown": Array [
+      "gb",
+      "gg",
+      "im",
+      "je",
+      "uk",
+      "unknown",
+    ],
   },
 }
 `;
@@ -118,47 +126,217 @@ Object {
 }
 `;
 
+exports[`AMP ukrainian/ukraine_in_russian IDX page Analytics comscore 1`] = `
+Object {
+  "extraUrlParams": Object {
+    "comscorekw": "amp",
+  },
+  "vars": Object {
+    "c2": "17986528",
+  },
+}
+`;
+
 exports[`AMP ukrainian/ukraine_in_russian IDX page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/ukrainian"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. ВВС не несе відповідальності за контент інших сайтів. Ознайомтеся з нашими правилами зовнішніх посилань."`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC не несе відповідальності за контент інших сайтів. Ознайомтеся з нашими правилами зовнішніх посилань."`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 1`] = `"BBC News, Україна - /ukrainian"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 1`] = `
+Object {
+  "text": "BBC News, Україна",
+  "url": "/ukrainian",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 2`] = `"Чому BBC заслуговує на довіру - https://www.bbc.com/ukrainian/institutional-50170368"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 2`] = `
+Object {
+  "text": "Чому BBC заслуговує на довіру",
+  "url": "https://www.bbc.com/ukrainian/institutional-50170368",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 3`] = `"Правила користування - https://www.bbc.com/ukrainian/institutional-38144387"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 3`] = `
+Object {
+  "text": "Правила користування",
+  "url": "https://www.bbc.com/ukrainian/institutional-38144387",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 4`] = `"Особисті дані - https://www.bbc.com/ukrainian/institutional-38144827"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 4`] = `
+Object {
+  "text": "Особисті дані",
+  "url": "https://www.bbc.com/ukrainian/institutional-38144827",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 5`] = `"Cookies - https://www.bbc.com/usingthebbc/cookies/"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 5`] = `
+Object {
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 6`] = `"Зв'язатися з BBC - https://www.bbc.com/ukrainian/institutional-38146278"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 6`] = `
+Object {
+  "text": "Зв'язатися з BBC",
+  "url": "https://www.bbc.com/ukrainian/institutional-38146278",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 7`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 7`] = `
+Object {
+  "text": "AdChoices / Do Not Sell My Info",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 8`] = `"Ознайомтеся з нашими правилами зовнішніх посилань. - https://www.bbc.co.uk/help/web/links/"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 8`] = `
+Object {
+  "text": "Ознайомтеся з нашими правилами зовнішніх посилань.",
+  "url": "https://www.bbc.co.uk/help/web/links/",
+}
+`;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer lang code should match text 1`] = `"uk"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header I can see the branding 1`] = `"BBC News, Україна"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 1`] = `"Новини - /ukrainian"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 1`] = `
+Object {
+  "text": "Новини",
+  "url": "/ukrainian",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 2`] = `"Коронавірус - /ukrainian/52118881"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 2`] = `
+Object {
+  "text": "Коронавірус",
+  "url": "/ukrainian/52118881",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 3`] = `"Наука - /ukrainian/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 3`] = `
+Object {
+  "text": "Наука",
+  "url": "/ukrainian/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 4`] = `"Технології - /ukrainian/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 4`] = `
+Object {
+  "text": "Технології",
+  "url": "/ukrainian/topics/31684f19-84d6-41f6-b033-7ae08098572a",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 5`] = `"Здоров’я - /ukrainian/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 5`] = `
+Object {
+  "text": "Здоров’я",
+  "url": "/ukrainian/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 6`] = `"Журнал - /ukrainian/magazine"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 6`] = `
+Object {
+  "text": "Журнал",
+  "url": "/ukrainian/magazine",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 7`] = `"Книга року ВВС - /ukrainian/features-50320117"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 7`] = `
+Object {
+  "text": "Книга року BBC",
+  "url": "/ukrainian/features-50320117",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 8`] = `"Блоги - /ukrainian/blogs"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "Блоги",
+  "url": "/ukrainian/blogs",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 9`] = `"Поточна сторінка, РУС - /ukrainian/ukraine_in_russian"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 9`] = `
+Object {
+  "text": "Поточна сторінка, РУС",
+  "url": "/ukrainian/ukraine_in_russian",
+}
+`;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header lang code should match text 1`] = `"uk"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Main heading should match text 1`] = `"РУС"`;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 1`] = `
+Object {
+  "sizes": null,
+  "url": "http://localhost:7080/ukrainian/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 2`] = `
+Object {
+  "sizes": "72x72",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 3`] = `
+Object {
+  "sizes": "96x96",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 4`] = `
+Object {
+  "sizes": "128x128",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 5`] = `
+Object {
+  "sizes": "144x144",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 6`] = `
+Object {
+  "sizes": "152x152",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 7`] = `
+Object {
+  "sizes": "180x180",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 8`] = `
+Object {
+  "sizes": "192x192",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 9`] = `
+Object {
+  "sizes": "384x384",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 10`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-512x512.png",
+}
+`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Canonical link 1`] = `"http://localhost:7080/ukrainian/ukraine_in_russian"`;
 
@@ -170,7 +348,7 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page SEO FB app ID 1`] = `"1609039
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Heading level 1 1`] = `"РУС"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Lang attribute 1`] = `"ru"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Lang attribute 1`] = `"ru-UA"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Linked data should match text 1`] = `
 Object {
@@ -213,7 +391,7 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page SEO OG image 1`] = `"https://
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO OG image alt 1`] = `"BBC News Україна"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page SEO OG locale 1`] = `"uk-UA"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page SEO OG locale 1`] = `"ru_UA"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO OG site name 1`] = `"BBC News Україна"`;
 
@@ -241,11 +419,11 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Twitter site 1`] = `"@BBC
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Twitter title 1`] = `"РУС - BBC News Україна"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 1`] = `"BBC ЖурналПодивитись все"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 1`] = `"BBC ЖурналПосмотреть все"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 2`] = `"Статьи"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 3`] = `"Фото дняПодивитись все"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 3`] = `"Фото дняПосмотреть все"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 4`] = `"Подробно"`;
 

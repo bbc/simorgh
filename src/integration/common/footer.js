@@ -39,7 +39,10 @@ export default () => {
         });
 
         it('should match text and url', () => {
-          expect(`${linkText} - ${linkUrl}`).toMatchSnapshot();
+          expect({
+            text: linkText,
+            url: linkUrl,
+          }).toMatchSnapshot();
         });
       });
     });

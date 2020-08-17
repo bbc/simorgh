@@ -11,10 +11,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'বিজ্ঞাপন',
-    },
     lang: `bn`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'আপডেট হয়েছে',
@@ -35,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'ক্যাপশান, ',
     imageCopyrightOffscreenText: 'ছবির উৎস, ',
     locale: `bn-BD`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'bn',
     datetimeLocale: `bn`,
     service: 'bengali',
     serviceName: 'Bengali',
@@ -55,6 +53,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'বিজ্ঞাপন',
+      },
       seeAll: 'সবগুলো খবর দেখুন',
       home: 'মূলপাতা',
       currentPage: 'বর্তমান পেজ',
@@ -161,10 +162,10 @@ export const service = {
         listen: 'শুনুন',
         watch: 'দেখুন',
         liveLabel: 'লাইভ',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'পরবর্তী',
+        previousRadioShow: 'পূর্ববর্তী রেডিও অনুষ্ঠান',
+        nextRadioShow: 'পরবর্তী রেডিও অনুষ্ঠান',
+        duration: 'স্থিতিকাল',
       },
       socialEmbed: {
         caption: {
@@ -193,10 +194,18 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'সবচেয়ে বেশি দেখা হয়েছে',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: false,
-      durationLabel: 'Duration %duration%',
+      header: 'রেডিও অনুষ্ঠান',
+      durationLabel: 'স্থিতিকাল %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

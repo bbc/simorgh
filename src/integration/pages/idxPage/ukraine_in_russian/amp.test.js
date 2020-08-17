@@ -4,5 +4,11 @@
  */
 
 import runAmpTests from '../ampTests';
+import runHeaderTests from './header';
+import runFooterTests from './footer';
 
-describe('AMP ukrainian/ukraine_in_russian IDX page', runAmpTests);
+describe('AMP ukrainian/ukraine_in_russian IDX page', () => {
+  runAmpTests();
+  runHeaderTests();
+  runFooterTests();
+});

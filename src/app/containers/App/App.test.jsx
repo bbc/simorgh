@@ -7,8 +7,10 @@ import reactRouterConfig from 'react-router-config';
 import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 import { App } from './App';
+import getToggles from '#app/lib/utilities/getToggles';
 
 jest.mock('react-router-config');
+jest.mock('#app/lib/utilities/getToggles');
 
 describe('App', () => {
   let wrapper;
@@ -16,6 +18,9 @@ describe('App', () => {
   const initialData = {
     pageData: 'Some initial data',
     timeOnServer,
+    toggles: {
+      mockToggle: { enabled: true },
+    },
   };
   const error = 'Error!';
   const match = {
@@ -34,6 +39,9 @@ describe('App', () => {
     <h1>{initialData.pageData}</h1>,
   );
 
+  const updatedToggles = { mockToggle: { enabled: false } };
+  getToggles.mockReturnValue(updatedToggles);
+
   beforeAll(() => {
     wrapper = mount(
       <App
@@ -51,8 +59,10 @@ describe('App', () => {
     expect(route.getInitialData).not.toHaveBeenCalled();
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledTimes(1);
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledWith([], {
+      assetUri: undefined,
       bbcOrigin: 'https://www.bbc.co.uk',
       pageData: initialData.pageData,
+      toggles: initialData.toggles,
       error: undefined,
       errorCode: undefined,
       id: undefined,
@@ -60,6 +70,7 @@ describe('App', () => {
       loading: false,
       pageType: 'article',
       service: 'ukchina',
+      status: undefined,
       pathname: 'pathnameOne',
       previousPath: null,
       variant: 'simp',
@@ -79,8 +90,9 @@ describe('App', () => {
             history: { action: 'PUSH' },
           });
 
-          expect.assertions(2);
+          expect.assertions(3);
           expect(route.getInitialData).not.toHaveBeenCalled();
+          expect(getToggles).not.toHaveBeenCalled();
           expect(reactRouterConfig.renderRoutes).not.toHaveBeenCalled();
         });
       });
@@ -109,6 +121,8 @@ describe('App', () => {
             });
           });
 
+          getToggles.mockImplementation(() => updatedToggles);
+
           await act(async () => {
             wrapper.setProps({ location: { pathname: 'pathnameTwo' } });
           });
@@ -121,7 +135,9 @@ describe('App', () => {
             2,
             [],
             {
+              assetUri: undefined,
               bbcOrigin: 'https://www.bbc.co.uk',
+              toggles: initialData.toggles,
               pageData: null,
               status: null,
               error: null,
@@ -143,8 +159,10 @@ describe('App', () => {
             3,
             [],
             {
+              assetUri: undefined,
               bbcOrigin: 'https://www.bbc.co.uk',
               pageData: null,
+              toggles: updatedToggles,
               status: null,
               error,
               errorCode: null,
@@ -188,6 +206,7 @@ describe('App', () => {
             path: pathname,
             service: 'ukchina',
             variant: 'simp',
+            pageType: 'article',
           });
 
           // start data fetch and set loading to true
@@ -195,9 +214,11 @@ describe('App', () => {
             2,
             [],
             {
+              assetUrl: undefined,
               bbcOrigin: 'https://www.bbc.co.uk',
               pageData: null,
               status: null,
+              toggles: initialData.toggles,
               error: null,
               errorCode: null,
               id: undefined,
@@ -217,8 +238,10 @@ describe('App', () => {
             3,
             [],
             {
+              assetUri: undefined,
               bbcOrigin: 'https://www.bbc.co.uk',
               pageData: data.pageData,
+              toggles: updatedToggles,
               status: data.status,
               error: undefined,
               errorCode: null,
@@ -230,6 +253,7 @@ describe('App', () => {
               pathname: 'pathnameThree',
               previousPath: 'pathnameTwo',
               variant: 'simp',
+              timeOnServer: undefined,
             },
           );
         });

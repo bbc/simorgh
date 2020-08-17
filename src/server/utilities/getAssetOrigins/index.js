@@ -5,9 +5,11 @@ const FONTS_ORIGINS = [
   'https://gel.files.bbci.co.uk',
   'https://ws-downloads.files.bbci.co.uk',
 ];
+const COOKIE_ORIGIN = 'https://cookie-oven.api.bbc.co.uk';
 
 const getAssetOrigins = service => {
   const assetOrigins = [
+    COOKIE_ORIGIN,
     IMAGES_ORIGIN,
     process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
     process.env.SIMORGH_ATI_BASE_URL,

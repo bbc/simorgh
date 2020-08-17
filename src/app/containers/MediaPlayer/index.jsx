@@ -40,6 +40,7 @@ const MediaPlayerContainer = ({
   showPlaceholder,
   available,
   isLegacyMedia,
+  showLoadingImage,
 }) => {
   const { isAmp } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
@@ -190,6 +191,7 @@ const MediaPlayerContainer = ({
             mediaInfo={mediaInfo}
             noJsMessage={translatedNoJSMessage}
             noJsClassName="no-js"
+            showLoadingImage={showLoadingImage}
           />
         )}
         {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
@@ -205,11 +207,13 @@ MediaPlayerContainer.propTypes = {
   showPlaceholder: bool.isRequired,
   available: bool,
   isLegacyMedia: bool,
+  showLoadingImage: bool,
 };
 MediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
   available: true,
   isLegacyMedia: false,
+  showLoadingImage: false,
 };
 
 export default MediaPlayerContainer;

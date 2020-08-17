@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { cleanup, render, waitFor } from '@testing-library/react';
+import { cleanup, render, waitFor, act } from '@testing-library/react';
 import services from '#server/utilities/serviceConfigs';
 
 // Unmock service context which is mocked globally in jest-setup.js
@@ -71,5 +71,66 @@ describe('ServiceContextProvider', () => {
 
       expect(container.querySelector('span')).toBeNull();
     });
+  });
+
+  describe('should load ukrainian config with lang override', () => {
+    [
+      {
+        description:
+          'should load russian translations for main body translations',
+        service: 'ukrainian',
+        variant: undefined,
+        pageLang: 'ru',
+        expectedTranslation: 'Главное',
+        assertionValue: 'topStoriesTitle',
+      },
+      {
+        description:
+          'should load ukrainian translations for header/footer translations',
+        service: 'ukrainian',
+        variant: undefined,
+        pageLang: 'ru',
+        expectedTranslation: 'Розділи',
+        assertionValue: 'navMenuText',
+      },
+      {
+        description: 'should load default ukrainian translations',
+        service: 'ukrainian',
+        variant: undefined,
+        pageLang: 'uk',
+        expectedTranslation: 'Головне',
+        assertionValue: 'topStoriesTitle',
+      },
+    ].forEach(
+      ({
+        description,
+        service,
+        pageLang,
+        expectedTranslation,
+        assertionValue,
+      }) => {
+        it(description, async () => {
+          // eslint-disable-next-line global-require
+          const { ServiceContext, ServiceContextProvider } = require('./index');
+
+          const Component = () => {
+            const { translations } = useContext(ServiceContext);
+
+            return <span>{translations[assertionValue]}</span>;
+          };
+
+          let container;
+          await act(async () => {
+            container = await render(
+              <ServiceContextProvider service={service} pageLang={pageLang}>
+                <Component />
+              </ServiceContextProvider>,
+            ).container;
+          });
+
+          expect(container.firstChild.innerHTML).toEqual(expectedTranslation);
+        });
+      },
+    );
   });
 });

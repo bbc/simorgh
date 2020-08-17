@@ -192,5 +192,27 @@ export default () => {
         });
       });
     });
+
+    describe('Apple Touch Icon', () => {
+      const touchIconScript = document.querySelectorAll(
+        'head > link[rel="apple-touch-icon"]',
+      );
+
+      touchIconScript.forEach(script => {
+        const url = script.getAttribute('href');
+        const sizes = script.getAttribute('sizes');
+
+        it('should be in the document', () => {
+          expect(script).toBeInTheDocument();
+        });
+
+        it(`should match attributes`, () => {
+          expect({
+            url,
+            sizes,
+          }).toMatchSnapshot();
+        });
+      });
+    });
   });
 };

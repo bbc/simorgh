@@ -8,10 +8,6 @@ import 'moment/locale/my';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'ကြော်ငြာ',
-    },
     lang: `my`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'အသစ်တင်ချိန်',
@@ -32,6 +28,8 @@ export const service = {
     defaultCaptionOffscreenText: 'ပုံစာ, ',
     imageCopyrightOffscreenText: 'ဓာတ်ပုံ ရင်းမြစ်, ',
     locale: `my-MM`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'my',
     datetimeLocale: `my`,
     service: 'burmese',
     serviceName: 'Burmese',
@@ -52,6 +50,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'ကြော်ငြာ',
+      },
       seeAll: 'အားလုံးကြည့်ရန်',
       home: 'ပင်မစာမျက်နှာ',
       currentPage: 'လက်ရှိကြည့်နေသော စာမျက်နှာ',
@@ -164,7 +165,7 @@ export const service = {
         listen: 'နားဆငျရနျ',
         watch: 'ကြည့်ရှုရန်',
         liveLabel: 'တိုက်ရိုက်ထုတ်လွှင့်မှု',
-        nextLabel: 'NEXT',
+        nextLabel: 'နောက်တစ်ခုသို့',
         previousRadioShow: 'ယခင် ရေဒီယိုအစီအစဉ်',
         nextRadioShow: 'နောက် ရေဒီယိုအစီအစဉ်',
         duration: 'ကြာမြင့်ချိန်',
@@ -197,10 +198,18 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'လူကြည့်အများဆုံး',
+      numberOfItems: 5,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: false,
-      durationLabel: 'Duration %duration%',
+      header: 'နောက်ဆုံးလွှင့် အစီအစဉ်များ',
+      durationLabel: 'ကြာမြင့်ချိန် %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

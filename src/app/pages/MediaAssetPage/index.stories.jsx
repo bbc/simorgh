@@ -5,7 +5,7 @@ import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { MediaAssetPage } from '..';
+import MediaAssetPage from '.';
 import pageData from './fixtureData';
 
 const defaultToggles = {
@@ -31,11 +31,7 @@ platforms.forEach(platform => {
 
   mapStories.add('default', () => {
     return (
-      <ToggleContextProvider
-        value={{ toggleState: defaultToggles }}
-        service="pidgin"
-        origin="https://www.test.bbc.com"
-      >
+      <ToggleContextProvider toggles={defaultToggles}>
         <BrowserRouter>
           <MediaAssetPage
             pageType="MAP"

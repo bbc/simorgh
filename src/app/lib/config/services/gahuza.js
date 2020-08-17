@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Kwamamaza',
-    },
     lang: `rw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Vyavuguruwe ',
@@ -31,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Insiguro, ',
     imageCopyrightOffscreenText: 'Ahavuye isanamu, ',
     locale: `rw-RW`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'rw',
     datetimeLocale: `rw`,
     service: 'gahuza',
     serviceName: 'Gahuza',
@@ -50,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Kwamamaza',
+      },
       seeAll: 'Raba vyose',
       home: `Urupapuro rw'itangiriro`,
       currentPage: 'Uru rupapuro',
@@ -155,8 +156,8 @@ export const service = {
         },
         listen: 'Umviriza',
         watch: 'Raba',
-        liveLabel: 'LIVE',
-        nextLabel: 'NEXT',
+        liveLabel: 'IKIBIRIRAHO',
+        nextLabel: 'IBIKURIKIRA',
         previousRadioShow: 'Ikiganiro ca radiyo giheruka',
         nextRadioShow: 'Ikiganiro ca radiyo gikurikira',
         duration: 'Umwanya bimara',
@@ -187,10 +188,16 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Ivyarabwe cane',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
-      durationLabel: 'Umwanya, %duration%',
+      header: 'Ibiganiro bishya',
+      durationLabel: 'Umwanya bimara %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

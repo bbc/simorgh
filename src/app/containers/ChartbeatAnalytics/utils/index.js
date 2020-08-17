@@ -39,6 +39,8 @@ export const getType = (pageType, shorthand = false) => {
       return 'Most Read';
     case 'STY':
       return 'STY';
+    case 'PGL':
+      return 'PGL';
     default:
       return null;
   }
@@ -113,6 +115,8 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
       return `${title} - ${brandName}`;
     case 'STY':
       return path(['promo', 'headlines', 'headline'], pageData);
+    case 'PGL':
+      return path(['promo', 'headlines', 'headline'], pageData);
     default:
       return null;
   }
@@ -133,7 +137,9 @@ export const getConfig = ({
   chartbeatDomain,
   mostReadTitle,
 }) => {
-  const referrer = getReferrer(platform, origin, previousPath);
+  const referrer =
+    previousPath || isAmp ? getReferrer(platform, origin, previousPath) : null;
+
   const title = getTitle({
     pageType,
     pageData: data,

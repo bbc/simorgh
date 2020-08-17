@@ -81,6 +81,14 @@ Object {
       "wf",
       "yt",
     ],
+    "gbOrUnknown": Array [
+      "gb",
+      "gg",
+      "im",
+      "je",
+      "uk",
+      "unknown",
+    ],
   },
 }
 `;
@@ -118,47 +126,213 @@ Object {
 }
 `;
 
+exports[`AMP Story Page Analytics comscore 1`] = `
+Object {
+  "extraUrlParams": Object {
+    "comscorekw": "amp",
+  },
+  "vars": Object {
+    "c2": "17986528",
+  },
+}
+`;
+
 exports[`AMP Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
 
 exports[`AMP Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
-exports[`AMP Story Page Footer Link should match text and url 1`] = `"BBC News, Кыргыз КызMATы - /kyrgyz"`;
+exports[`AMP Story Page Footer Link should match text and url 1`] = `
+Object {
+  "text": "BBC News, Кыргыз КызMATы",
+  "url": "/kyrgyz",
+}
+`;
 
-exports[`AMP Story Page Footer Link should match text and url 2`] = `"Эмнеге BBC News ишенсе болот? - https://www.bbc.com/kyrgyz/institutional-49677275"`;
+exports[`AMP Story Page Footer Link should match text and url 2`] = `
+Object {
+  "text": "Эмнеге BBC News ишенсе болот?",
+  "url": "https://www.bbc.com/kyrgyz/institutional-49677275",
+}
+`;
 
-exports[`AMP Story Page Footer Link should match text and url 3`] = `"Колдонуу эрежелери - https://www.bbc.com/kyrgyz/institutional-38157280"`;
+exports[`AMP Story Page Footer Link should match text and url 3`] = `
+Object {
+  "text": "Колдонуу эрежелери",
+  "url": "https://www.bbc.com/kyrgyz/institutional-38157280",
+}
+`;
 
-exports[`AMP Story Page Footer Link should match text and url 4`] = `"Би-Би-Си жөнүндө - https://www.bbc.com/kyrgyz/institutional-38157281"`;
+exports[`AMP Story Page Footer Link should match text and url 4`] = `
+Object {
+  "text": "Би-Би-Си жөнүндө",
+  "url": "https://www.bbc.com/kyrgyz/institutional-38157281",
+}
+`;
 
-exports[`AMP Story Page Footer Link should match text and url 5`] = `"Купуялык - https://www.bbc.com/kyrgyz/institutional-38157282"`;
+exports[`AMP Story Page Footer Link should match text and url 5`] = `
+Object {
+  "text": "Купуялык",
+  "url": "https://www.bbc.com/kyrgyz/institutional-38157282",
+}
+`;
 
-exports[`AMP Story Page Footer Link should match text and url 6`] = `"Cookies - https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"`;
+exports[`AMP Story Page Footer Link should match text and url 6`] = `
+Object {
+  "text": "Cookies",
+  "url": "https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html",
+}
+`;
 
-exports[`AMP Story Page Footer Link should match text and url 7`] = `"Би-Би-Си менен байланышыңыз - https://www.bbc.com/kyrgyz/institutional-38157284"`;
+exports[`AMP Story Page Footer Link should match text and url 7`] = `
+Object {
+  "text": "Би-Би-Си менен байланышыңыз",
+  "url": "https://www.bbc.com/kyrgyz/institutional-38157284",
+}
+`;
 
-exports[`AMP Story Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`AMP Story Page Footer Link should match text and url 8`] = `
+Object {
+  "text": "AdChoices / Do Not Sell My Info",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+}
+`;
 
-exports[`AMP Story Page Footer Link should match text and url 9`] = `"Башка интернет сайттардын мазмуну боюнча биздин позиция. - https://www.bbc.co.uk/help/web/links/"`;
+exports[`AMP Story Page Footer Link should match text and url 9`] = `
+Object {
+  "text": "Башка интернет сайттардын мазмуну боюнча биздин позиция.",
+  "url": "https://www.bbc.co.uk/help/web/links/",
+}
+`;
 
 exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
-exports[`AMP Story Page Header Navigation link should match text and url 1`] = `"Башталгыч бет - /kyrgyz"`;
+exports[`AMP Story Page Header Navigation link should match text and url 1`] = `
+Object {
+  "text": "Башталгыч бет",
+  "url": "/kyrgyz",
+}
+`;
 
-exports[`AMP Story Page Header Navigation link should match text and url 2`] = `"Кыргызстан - /kyrgyz/kyrgyzstan"`;
+exports[`AMP Story Page Header Navigation link should match text and url 2`] = `
+Object {
+  "text": "Кыргызстан",
+  "url": "/kyrgyz/kyrgyzstan",
+}
+`;
 
-exports[`AMP Story Page Header Navigation link should match text and url 3`] = `"Дүйнө - /kyrgyz/world"`;
+exports[`AMP Story Page Header Navigation link should match text and url 3`] = `
+Object {
+  "text": "Дүйнө",
+  "url": "/kyrgyz/world",
+}
+`;
 
-exports[`AMP Story Page Header Navigation link should match text and url 4`] = `"Сапар TV - /kyrgyz/sapartv"`;
+exports[`AMP Story Page Header Navigation link should match text and url 4`] = `
+Object {
+  "text": "Сапар TV",
+  "url": "/kyrgyz/sapartv",
+}
+`;
 
-exports[`AMP Story Page Header Navigation link should match text and url 5`] = `"Видео - /kyrgyz/media/video"`;
+exports[`AMP Story Page Header Navigation link should match text and url 5`] = `
+Object {
+  "text": "Видео",
+  "url": "/kyrgyz/media/video",
+}
+`;
 
-exports[`AMP Story Page Header Navigation link should match text and url 6`] = `"Маданият/Илим - /kyrgyz/entertainment"`;
+exports[`AMP Story Page Header Navigation link should match text and url 6`] = `
+Object {
+  "text": "Маданият/Илим",
+  "url": "/kyrgyz/entertainment",
+}
+`;
 
-exports[`AMP Story Page Header Navigation link should match text and url 7`] = `"Журнал - /kyrgyz/magazine"`;
+exports[`AMP Story Page Header Navigation link should match text and url 7`] = `
+Object {
+  "text": "Журнал",
+  "url": "/kyrgyz/magazine",
+}
+`;
 
-exports[`AMP Story Page Header Navigation link should match text and url 8`] = `"Блог - /kyrgyz/blog"`;
+exports[`AMP Story Page Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "Блог",
+  "url": "/kyrgyz/blog",
+}
+`;
 
 exports[`AMP Story Page Lead image I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 1`] = `
+Object {
+  "sizes": null,
+  "url": "http://localhost:7080/kyrgyz/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 2`] = `
+Object {
+  "sizes": "72x72",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/kyrgyz/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 3`] = `
+Object {
+  "sizes": "96x96",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/kyrgyz/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 4`] = `
+Object {
+  "sizes": "128x128",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/kyrgyz/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 5`] = `
+Object {
+  "sizes": "144x144",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/kyrgyz/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 6`] = `
+Object {
+  "sizes": "152x152",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/kyrgyz/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 7`] = `
+Object {
+  "sizes": "180x180",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/kyrgyz/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 8`] = `
+Object {
+  "sizes": "192x192",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/kyrgyz/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 9`] = `
+Object {
+  "sizes": "384x384",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/kyrgyz/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`AMP Story Page SEO Apple Touch Icon should match attributes 10`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/kyrgyz/images/icons/icon-512x512.png",
+}
+`;
 
 exports[`AMP Story Page SEO Canonical link 1`] = `"http://localhost:7080/kyrgyz/23292889"`;
 

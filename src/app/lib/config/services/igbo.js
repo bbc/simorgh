@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Mgbasa ozi',
-    },
     lang: 'ig',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Mgbe ikpeazụ e tinyere ya ozi ọhụrụ',
@@ -54,6 +50,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Mgbasa ozi',
+      },
       seeAll: 'Lee ha niile',
       home: 'Akụkọ',
       currentPage: 'Peegi ị nọ ugbua',
@@ -169,7 +168,7 @@ export const service = {
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
+          textPrefixVisuallyHidden: 'Aha onyonyo, ',
           text: 'Warning: Third party content may contain adverts',
         },
         fallback: {
@@ -192,6 +191,11 @@ export const service = {
       lastUpdated: 'Emelitere ikpeazụ na:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Elelere',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

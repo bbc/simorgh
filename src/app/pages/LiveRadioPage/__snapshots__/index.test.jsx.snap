@@ -4,80 +4,90 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
 <html
   amp=""
   dir="ltr"
-  lang="am"
+  lang="fr"
 >
   <head>
     <title>
-      ያድምጡ - BBC News አማርኛ
+      BBC Afrique Radio - BBC News Afrique
     </title>
     <link
       href="https://www.test.bbc.com/pathname"
       rel="canonical"
     />
     <link
-      href="http://localhost:7080/amharic/images/icons/icon-192x192.png"
+      href="https://www.test.bbc.com/pathname"
+      hreflang="fr"
+      rel="alternate"
+    />
+    <link
+      href="http://localhost:7080/afrique/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-72x72.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-72x72.png"
       rel="apple-touch-icon"
       sizes="72x72"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-96x96.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-96x96.png"
       rel="apple-touch-icon"
       sizes="96x96"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-128x128.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-128x128.png"
       rel="apple-touch-icon"
       sizes="128x128"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-144x144.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-144x144.png"
       rel="apple-touch-icon"
       sizes="144x144"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-152x152.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-152x152.png"
       rel="apple-touch-icon"
       sizes="152x152"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-192x192.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
       sizes="192x192"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-384x384.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-384x384.png"
       rel="apple-touch-icon"
       sizes="384x384"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-512x512.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-512x512.png"
       rel="apple-touch-icon"
       sizes="512x512"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-72x72.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-72x72.png"
       rel="icon"
       sizes="72x72"
       type="image/png"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-96x96.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-96x96.png"
       rel="icon"
       sizes="96x96"
       type="image/png"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-192x192.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-192x192.png"
       rel="icon"
       sizes="192x192"
       type="image/png"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-512x512.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-512x512.png"
       rel="apple-touch-startup-image"
     />
     <link
@@ -105,15 +115,15 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
       name="viewport"
     />
     <meta
-      content="BBC News አማርኛ"
+      content="BBC News Afrique"
       name="apple-mobile-web-app-title"
     />
     <meta
-      content="BBC News አማርኛ"
+      content="BBC News Afrique"
       name="application-name"
     />
     <meta
-      content="ዝግጅቶቻችንን’"
+      content="Infos, musique et sports"
       name="description"
     />
     <meta
@@ -137,31 +147,31 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
       name="msapplication-TileColor"
     />
     <meta
-      content="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-144x144.png"
+      content="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-144x144.png"
       name="msapplication-TileImage"
     />
     <meta
-      content="ዝግጅቶቻችንን’"
+      content="Infos, musique et sports"
       property="og:description"
     />
     <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png"
       property="og:image"
     />
     <meta
-      content="BBC News አማርኛ"
+      content="BBC News Afrique"
       property="og:image:alt"
     />
     <meta
-      content="am-ET"
+      content="fr"
       property="og:locale"
     />
     <meta
-      content="BBC News አማርኛ"
+      content="BBC News Afrique"
       property="og:site_name"
     />
     <meta
-      content="ያድምጡ - BBC News አማርኛ"
+      content="BBC Afrique Radio - BBC News Afrique"
       property="og:title"
     />
     <meta
@@ -177,33 +187,33 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
       name="twitter:card"
     />
     <meta
-      content="@bbcnews"
+      content="@bbcafrique"
       name="twitter:creator"
     />
     <meta
-      content="ዝግጅቶቻችንን’"
+      content="Infos, musique et sports"
       name="twitter:description"
     />
     <meta
-      content="BBC News አማርኛ"
+      content="BBC News Afrique"
       name="twitter:image:alt"
     />
     <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png"
       name="twitter:image:src"
     />
     <meta
-      content="@bbcnews"
+      content="@bbcafrique"
       name="twitter:site"
     />
     <meta
-      content="ያድምጡ - BBC News አማርኛ"
+      content="BBC Afrique Radio - BBC News Afrique"
       name="twitter:title"
     />
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@graph":[{"@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"ያድምጡ"}}]}
+      {"@context":"http://schema.org","@graph":[{"@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"BBC Afrique Radio"}}]}
     </script>
     <script
       async="true"
@@ -214,8 +224,8 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   <body>
     .c3 {
   font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  line-height: 2.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
@@ -225,9 +235,9 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
 }
 
 .c4 {
-  font-size: 1rem;
-  line-height: 1.375rem;
-  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -247,6 +257,11 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c5 amp-iframe {
+  overflow: visible !important;
+  width: calc(100% + 1rem);
 }
 
 .c5 iframe {
@@ -277,14 +292,14 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c4 {
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c4 {
     font-size: 1rem;
-    line-height: 1.75rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -386,6 +401,12 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:25rem) {
+  .c5 amp-iframe {
+    width: calc(100% + 2rem);
+  }
+}
+
+@media (min-width:25rem) {
   .c5 iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
@@ -397,12 +418,21 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
         <script
           type="application/json"
         >
-          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"pageview":"\${base}s=598343&s2=4&p=amharic.bbc_amharic_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares:ws_media:live:bbc_amharic_radio]&x2=[amp]&x3=[news-amharic]&x4=[am]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[ያድምጡ+-+BBC+News+አማርኛ]&ref=\${documentReferrer}"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"pageview":"\${base}s=598343&s2=3&p=afrique.bbc_afrique_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares:ws_media:live:bbc_afrique_radio]&x2=[amp]&x3=[news-afrique]&x4=[fr]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[BBC+Afrique+Radio+-+BBC+News+Afrique]&ref=\${documentReferrer}"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
         </script>
       </amp-analytics>
       <div>
         chartbeat
       </div>
+      <amp-analytics
+        type="comscore"
+      >
+        <script
+          type="application/json"
+        >
+          {"vars":{"c2":"17986528"},"extraUrlParams":{"comscorekw":"amp"}}
+        </script>
+      </amp-analytics>
       <main
         class="c0 c1"
         dir="ltr"
@@ -417,12 +447,12 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
             id="content"
             tabindex="-1"
           >
-            ያድምጡ
+            BBC Afrique Radio
           </h1>
           <p
             class="c4"
           >
-            ዝግጅቶቻችንን’
+            Infos, musique et sports
           </p>
           <div
             class="c5"
@@ -436,8 +466,8 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
                 layout="fill"
                 sandbox="allow-scripts allow-same-origin"
                 scrolling="no"
-                src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp?morph_env=live"
-                title="Audio player"
+                src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr/amp?morph_env=live"
+                title="Lecteur audio"
               >
                 <amp-img
                   alt=""
@@ -460,10 +490,28 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
 `;
 
 exports[`Radio Page Main should match snapshot for Canonical 1`] = `
+.c23 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.725rem;
+  height: 0.725rem;
+}
+
+.c36 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
+}
+
 .c3 {
   font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  line-height: 2.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
@@ -473,14 +521,381 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 .c4 {
-  font-size: 1rem;
-  line-height: 1.375rem;
-  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
+}
+
+.c30 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c32 {
+  color: #3F3F42;
+  padding: 0.5rem 0;
+  display: inline-block;
+  width: 100%;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.c40 {
+  color: #6E6E73;
+  padding: 0.5rem 0;
+  display: inline-block;
+  width: 100%;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.c29 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+.c29:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c29:hover,
+.c29:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c29:visited {
+  color: #6E6E73;
+}
+
+.c29:hover .c31 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c29:focus .c31 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c26 {
+  padding-top: 0.5rem;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  outline: 0.0625rem solid transparent;
+  height: 100%;
+}
+
+.c27 {
+  padding: 0 0.5rem;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c28 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #222222;
+  margin: 0;
+}
+
+.c38 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #6E6E73;
+  margin: 0;
+}
+
+.c39 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #11708C;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.c33 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+.c34 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.5rem;
+  background-color: #222222;
+  outline: 0.0625rem solid transparent;
+  color: #FFFFFF;
+}
+
+.c41 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.5rem;
+  background-color: #FFFFFF;
+  outline: 0.0625rem solid transparent;
+  color: #11708C;
+}
+
+.c35 > svg {
+  color: #FFFFFF;
+  fill: currentColor;
+  width: 1.0625rem;
+  height: 0.75rem;
+  margin: 0;
+}
+
+.c42 > svg {
+  color: #11708C;
+  fill: currentColor;
+  width: 1.0625rem;
+  height: 0.75rem;
+  margin: 0;
+}
+
+.c37 {
+  padding-left: 0.5rem;
+}
+
+.c25 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: 0.25rem;
+}
+
+.c22 > svg {
+  color: #5A5A5A;
+  margin: 0;
+  overflow: visible;
+}
+
+.c24 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+}
+
+.c24 > time {
+  color: #5A5A5A;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c24::after {
+  content: '';
+  border-top: 0.0625rem solid #AEAEB5;
+  top: 1rem;
+  margin-left: 0.625rem;
+  width: 100%;
+}
+
+.c20 {
+  padding-bottom: 0.5rem;
+}
+
+.c17 {
+  padding: 0;
+  margin: 0;
+}
+
+.c19 {
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c14 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #F2F2F2;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c9 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+}
+
+.c11 {
+  margin: 0;
+  padding: 0;
+}
+
+.c8 {
+  background-color: #F2F2F2;
+  padding: 0 1rem;
+}
+
+.c15 {
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.c10 {
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 0.5rem;
+}
+
+.c43 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c43:hover,
+.c43:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c43:visited {
+  color: #6E6E73;
 }
 
 .c6 {
@@ -495,6 +910,11 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c5 amp-iframe {
+  overflow: visible !important;
+  width: calc(100% + 1rem);
 }
 
 .c5 iframe {
@@ -535,14 +955,14 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c4 {
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c4 {
     font-size: 1rem;
-    line-height: 1.75rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -623,6 +1043,344 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c16 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c16 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c16 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c16 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c18 {
+    width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c18 {
+    width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c18 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c18 {
+    width: calc(3/6*(100% - 6 * 1rem) + 2 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c18 {
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c18 {
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c18 {
+    display: block;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c32 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c32 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c40 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c40 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c28 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c28 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c38 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c39 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c33 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c33 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c34 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c34 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c34 {
+    background-color: transparent;
+    outline: none;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c41 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c41 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c41 {
+    background-color: transparent;
+    outline: none;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c25 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c25 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c24 > time {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c24 > time {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c19 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c14 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14 {
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c15 {
+    max-width: 63rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    padding-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c10 {
+    max-width: 63rem;
+    padding-top: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c43 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c43 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
 @media (min-width:63rem) {
   .c6 {
     margin-bottom: 2rem;
@@ -644,6 +1402,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:25rem) {
+  .c5 amp-iframe {
+    width: calc(100% + 2rem);
+  }
+}
+
+@media (min-width:25rem) {
   .c5 iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
@@ -652,84 +1416,94 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 
 <html
   dir="ltr"
-  lang="am"
+  lang="fr"
 >
   <head>
     <title>
-      ያድምጡ - BBC News አማርኛ
+      BBC Afrique Radio - BBC News Afrique
     </title>
     <link
       href="https://www.test.bbc.com/pathname"
       rel="canonical"
     />
     <link
+      href="https://www.test.bbc.com/pathname"
+      hreflang="fr"
+      rel="alternate"
+    />
+    <link
       href="https://www.test.bbc.com/pathname.amp"
       rel="amphtml"
     />
     <link
-      href="http://localhost:7080/amharic/images/icons/icon-192x192.png"
+      href="http://localhost:7080/afrique/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-72x72.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-72x72.png"
       rel="apple-touch-icon"
       sizes="72x72"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-96x96.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-96x96.png"
       rel="apple-touch-icon"
       sizes="96x96"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-128x128.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-128x128.png"
       rel="apple-touch-icon"
       sizes="128x128"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-144x144.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-144x144.png"
       rel="apple-touch-icon"
       sizes="144x144"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-152x152.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-152x152.png"
       rel="apple-touch-icon"
       sizes="152x152"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-192x192.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
       sizes="192x192"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-384x384.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-384x384.png"
       rel="apple-touch-icon"
       sizes="384x384"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-512x512.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-512x512.png"
       rel="apple-touch-icon"
       sizes="512x512"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-72x72.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-72x72.png"
       rel="icon"
       sizes="72x72"
       type="image/png"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-96x96.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-96x96.png"
       rel="icon"
       sizes="96x96"
       type="image/png"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-192x192.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-192x192.png"
       rel="icon"
       sizes="192x192"
       type="image/png"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-512x512.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-512x512.png"
       rel="apple-touch-startup-image"
     />
     <link
@@ -757,15 +1531,15 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
       name="viewport"
     />
     <meta
-      content="BBC News አማርኛ"
+      content="BBC News Afrique"
       name="apple-mobile-web-app-title"
     />
     <meta
-      content="BBC News አማርኛ"
+      content="BBC News Afrique"
       name="application-name"
     />
     <meta
-      content="ዝግጅቶቻችንን’"
+      content="Infos, musique et sports"
       name="description"
     />
     <meta
@@ -789,31 +1563,31 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
       name="msapplication-TileColor"
     />
     <meta
-      content="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-144x144.png"
+      content="https://news.files.bbci.co.uk/include/articles/public/afrique/images/icons/icon-144x144.png"
       name="msapplication-TileImage"
     />
     <meta
-      content="ዝግጅቶቻችንን’"
+      content="Infos, musique et sports"
       property="og:description"
     />
     <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png"
       property="og:image"
     />
     <meta
-      content="BBC News አማርኛ"
+      content="BBC News Afrique"
       property="og:image:alt"
     />
     <meta
-      content="am-ET"
+      content="fr"
       property="og:locale"
     />
     <meta
-      content="BBC News አማርኛ"
+      content="BBC News Afrique"
       property="og:site_name"
     />
     <meta
-      content="ያድምጡ - BBC News አማርኛ"
+      content="BBC Afrique Radio - BBC News Afrique"
       property="og:title"
     />
     <meta
@@ -829,33 +1603,41 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
       name="twitter:card"
     />
     <meta
-      content="@bbcnews"
+      content="@bbcafrique"
       name="twitter:creator"
     />
     <meta
-      content="ዝግጅቶቻችንን’"
+      content="Infos, musique et sports"
       name="twitter:description"
     />
     <meta
-      content="BBC News አማርኛ"
+      content="BBC News Afrique"
       name="twitter:image:alt"
     />
     <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png"
       name="twitter:image:src"
     />
     <meta
-      content="@bbcnews"
+      content="@bbcafrique"
       name="twitter:site"
     />
     <meta
-      content="ያድምጡ - BBC News አማርኛ"
+      content="BBC Afrique Radio - BBC News Afrique"
       name="twitter:title"
+    />
+    <noscript>
+      &lt;img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=0&cv=2.0&cj=1" /&gt;
+    </noscript>
+    <script
+      async="true"
+      src="http://localhost:7080/static/js/comscore/main-1.0.js"
+      type="text/javascript"
     />
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@graph":[{"@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"ያድምጡ"}}]}
+      {"@context":"http://schema.org","@graph":[{"@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"BBC Afrique Radio"}}]}
     </script>
   </head>
   <body>
@@ -878,12 +1660,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
             id="content"
             tabindex="-1"
           >
-            ያድምጡ
+            BBC Afrique Radio
           </h1>
           <p
             class="c4"
           >
-            ዝግጅቶቻችንን’
+            Infos, musique et sports
           </p>
           <div
             class="c5"
@@ -896,14 +1678,569 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 allowfullscreen=""
                 class="c7"
                 scrolling="no"
-                src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am?morph_env=live"
-                title="Audio player"
+                src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live"
+                title="Lecteur audio"
               />
               <noscript />
             </div>
           </div>
         </div>
       </main>
+      <section
+        aria-labelledby="Radio-Schedule"
+        class="c8"
+        role="region"
+      >
+        <div
+          class="c9 c10"
+        >
+          <h2
+            class="c11"
+          >
+            <span
+              class="c12"
+            >
+              <span
+                class="c13"
+              >
+                <span
+                  class="c14"
+                  dir="ltr"
+                  id="Radio-Schedule"
+                >
+                  Journaux et Magazines
+                </span>
+              </span>
+            </span>
+          </h2>
+        </div>
+        <div
+          class="c15"
+          data-e2e="radio-schedule"
+        >
+          <ul
+            class="c16 c17"
+            dir="ltr"
+            role="list"
+          >
+            <li
+              class="c18 c19"
+              data-e2e="onDemand"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c20"
+              >
+                <div
+                  class="c21"
+                >
+                  <span
+                    class="c22"
+                    dir="ltr"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="c23"
+                      focusable="false"
+                      height="13"
+                      viewBox="0 0 13 13"
+                      width="13"
+                    >
+                      <path
+                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+                      />
+                      <path
+                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="c24"
+                    dir="ltr"
+                  >
+                    <time
+                      class="c25"
+                      datetime="2020-03-26"
+                    >
+                      05:30
+                    </time>
+                  </span>
+                </div>
+              </div>
+              <div
+                class="c26"
+              >
+                <div
+                  class="c27"
+                >
+                  <h3
+                    class="c28"
+                  >
+                    <a
+                      class="c29"
+                      href="/afrique/bbc_afrique_radio/w172x371xccjp2q"
+                    >
+                      <span
+                        class=""
+                        role="text"
+                      >
+                        Actu Monde
+                        <span
+                          class="c30"
+                        >
+                          , 
+                          05:30
+                          , 
+                        </span>
+                        <span
+                          class="c31 c32"
+                        >
+                          26 mars 2020
+                        </span>
+                      </span>
+                    </a>
+                  </h3>
+                  <p
+                    class="c33"
+                  >
+                    C'est la principale tranche dédiée à l'actualité internationale. De 5H 30 à 6H 30, des interviews d'analystes et des information
+                  </p>
+                </div>
+                <div
+                  class="c34"
+                >
+                  <span
+                    class="c35"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="c36"
+                      focusable="false"
+                      height="12px"
+                      viewBox="0 0 13 12"
+                      width="13px"
+                    >
+                      <path
+                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                      />
+                      <path
+                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                      />
+                    </svg>
+                  </span>
+                  <time
+                    class="c37"
+                    datetime="PT6M"
+                    dir="ltr"
+                  >
+                    <span
+                      class="c30"
+                    >
+                       Durée 06,00 
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class=""
+                    >
+                      06:00
+                    </span>
+                  </time>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c18 c19"
+              data-e2e="onDemand"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c20"
+              >
+                <div
+                  class="c21"
+                >
+                  <span
+                    class="c22"
+                    dir="ltr"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="c23"
+                      focusable="false"
+                      height="13"
+                      viewBox="0 0 13 13"
+                      width="13"
+                    >
+                      <path
+                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+                      />
+                      <path
+                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="c24"
+                    dir="ltr"
+                  >
+                    <time
+                      class="c25"
+                      datetime="2020-03-26"
+                    >
+                      05:16
+                    </time>
+                  </span>
+                </div>
+              </div>
+              <div
+                class="c26"
+              >
+                <div
+                  class="c27"
+                >
+                  <h3
+                    class="c28"
+                  >
+                    <a
+                      class="c29"
+                      href="/afrique/bbc_afrique_radio/w172x6djbb3rg44"
+                    >
+                      <span
+                        class=""
+                        role="text"
+                      >
+                        Reportage
+                        <span
+                          class="c30"
+                        >
+                          , 
+                          05:16
+                          , 
+                        </span>
+                        <span
+                          class="c31 c32"
+                        >
+                          26 mars 2020
+                        </span>
+                      </span>
+                    </a>
+                  </h3>
+                  <p
+                    class="c33"
+                  >
+                    Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.
+                  </p>
+                </div>
+                <div
+                  class="c34"
+                >
+                  <span
+                    class="c35"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="c36"
+                      focusable="false"
+                      height="12px"
+                      viewBox="0 0 13 12"
+                      width="13px"
+                    >
+                      <path
+                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                      />
+                      <path
+                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                      />
+                    </svg>
+                  </span>
+                  <time
+                    class="c37"
+                    datetime="PT8M"
+                    dir="ltr"
+                  >
+                    <span
+                      class="c30"
+                    >
+                       Durée 08,00 
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class=""
+                    >
+                      08:00
+                    </span>
+                  </time>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c18 c19"
+              data-e2e="onDemand"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c20"
+              >
+                <div
+                  class="c21"
+                >
+                  <span
+                    class="c22"
+                    dir="ltr"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="c23"
+                      focusable="false"
+                      height="13"
+                      viewBox="0 0 13 13"
+                      width="13"
+                    >
+                      <path
+                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+                      />
+                      <path
+                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="c24"
+                    dir="ltr"
+                  >
+                    <time
+                      class="c25"
+                      datetime="2020-03-26"
+                    >
+                      05:15
+                    </time>
+                  </span>
+                </div>
+              </div>
+              <div
+                class="c26"
+              >
+                <div
+                  class="c27"
+                >
+                  <h3
+                    class="c28"
+                  >
+                    <a
+                      class="c29"
+                      href="/afrique/bbc_afrique_radio/w172x5n20y5f68g"
+                    >
+                      <span
+                        class=""
+                        role="text"
+                      >
+                        Bulletin D'informations
+                        <span
+                          class="c30"
+                        >
+                          , 
+                          05:15
+                          , 
+                        </span>
+                        <span
+                          class="c31 c32"
+                        >
+                          26 mars 2020
+                        </span>
+                      </span>
+                    </a>
+                  </h3>
+                  <p
+                    class="c33"
+                  >
+                    Le tour du monde de l'actualité en 2 minutes 
+                  </p>
+                </div>
+                <div
+                  class="c34"
+                >
+                  <span
+                    class="c35"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="c36"
+                      focusable="false"
+                      height="12px"
+                      viewBox="0 0 13 12"
+                      width="13px"
+                    >
+                      <path
+                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                      />
+                      <path
+                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                      />
+                    </svg>
+                  </span>
+                  <time
+                    class="c37"
+                    datetime="PT1M"
+                    dir="ltr"
+                  >
+                    <span
+                      class="c30"
+                    >
+                       Durée 01,00 
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class=""
+                    >
+                      01:00
+                    </span>
+                  </time>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c18 c19"
+              data-e2e="next"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c20"
+              >
+                <div
+                  class="c21"
+                >
+                  <span
+                    class="c22"
+                    dir="ltr"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="c23"
+                      focusable="false"
+                      height="13"
+                      viewBox="0 0 13 13"
+                      width="13"
+                    >
+                      <path
+                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+                      />
+                      <path
+                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="c24"
+                    dir="ltr"
+                  >
+                    <time
+                      class="c25"
+                      datetime="2030-01-01"
+                    >
+                      09:00
+                    </time>
+                  </span>
+                </div>
+              </div>
+              <div
+                class="c26"
+              >
+                <div
+                  class="c27"
+                >
+                  <h3
+                    class="c38"
+                  >
+                    <span
+                      class=""
+                      role="text"
+                    >
+                      <span
+                        class="c39"
+                        dir="ltr"
+                      >
+                        SUIVANT 
+                      </span>
+                      A Vous L'antenne
+                      <span
+                        class="c30"
+                      >
+                        , 
+                        09:00
+                        , 
+                      </span>
+                      <span
+                        class="c31 c40"
+                      >
+                        1 janvier 2030
+                      </span>
+                    </span>
+                  </h3>
+                  <p
+                    class="c33"
+                  >
+                    Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité 
+                  </p>
+                </div>
+                <div
+                  class="c41"
+                >
+                  <span
+                    class="c42"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="c36"
+                      focusable="false"
+                      height="12px"
+                      viewBox="0 0 13 12"
+                      width="13px"
+                    >
+                      <path
+                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                      />
+                      <path
+                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                      />
+                    </svg>
+                  </span>
+                  <time
+                    class="c37"
+                    datetime="PT15M"
+                    dir="ltr"
+                  >
+                    <span
+                      class="c30"
+                    >
+                       Durée 15,00 
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class=""
+                    >
+                      15:00
+                    </span>
+                  </time>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <a
+            class="c43"
+            href="/afrique/institutionelles/2010/12/000000_schedules_frequencies_afrique"
+          >
+            Nos fréquences
+          </a>
+        </div>
+      </section>
     </div>
   </body>
 </html>

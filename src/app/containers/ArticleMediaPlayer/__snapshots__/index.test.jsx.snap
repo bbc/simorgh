@@ -25,10 +25,17 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c0 {
   grid-column: 1 / span 6;
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (min-width:37.5rem) {
@@ -230,6 +237,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c0 {
@@ -263,6 +271,12 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 @media (min-width:25rem) {
   .c6 {
     padding: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    margin-bottom: 1.5rem;
   }
 }
 

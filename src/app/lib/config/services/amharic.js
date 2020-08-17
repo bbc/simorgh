@@ -11,10 +11,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'ማስታወቂያ',
-    },
     lang: `am`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ተሻሽሏል',
@@ -35,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'መግለጫ, ',
     imageCopyrightOffscreenText: 'የፎቶው ባለመብት, ',
     locale: `am-ET`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'am',
     datetimeLocale: 'am',
     service: 'amharic',
     serviceName: 'Amharic',
@@ -54,6 +52,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'ማስታወቂያ',
+      },
       seeAll: 'ሁሉንም ይመልከቱ',
       home: 'ዜና',
       currentPage: 'መነሻ ገፅ',
@@ -149,25 +150,25 @@ export const service = {
         listen: 'ያድምጡ',
         watch: 'ተመልከት',
         liveLabel: 'ቀጥታ',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'ቀጣይ',
+        previousRadioShow: 'ያለፈ የሬዲዮ ስርጭት',
+        nextRadioShow: 'ቀጣይ የሬዲዮ ስርጭት',
+        duration: 'ርዝመት',
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
-          text: 'Warning: Third party content may contain adverts',
+          textPrefixVisuallyHidden: 'የቪዲዮ መግለጫ, ',
+          text: 'ማሳሰቢያ፡ የሦስተኛ ወገን ይዘቶች ማስታወቂያ ሊኖራቸው ይችላል',
         },
         fallback: {
-          text: 'Content is not available',
-          linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
+          text: 'የሚፈልጉት ይዘት የለም',
+          linkText: 'በ %provider_name% ተጨማሪ ይመልከቱ',
+          linkTextSuffixVisuallyHidden: ', ውጫዊ',
           warningText: 'ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም.',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: 'የ %provider_name% ይዘትን ይለፉት',
+          endTextVisuallyHidden: 'የ %provider_name% ይዘት መጨረሻ',
         },
       },
       topStoriesTitle: 'እንዳያመልጥዎ',
@@ -180,10 +181,18 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'በብዛት የታዩ',
+      numberOfItems: 5,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: false,
-      durationLabel: 'Duration %duration%',
+      header: 'ያድምጡ',
+      durationLabel: 'ርዝመት %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

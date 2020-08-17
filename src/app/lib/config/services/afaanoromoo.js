@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Beeksiisa',
-    },
     lang: `om`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Haaromsameera',
@@ -32,6 +28,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Ibsa suuraa/viidiyoo, ',
     imageCopyrightOffscreenText: 'Madda suuraa, ',
     locale: `om-ET`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'om',
     datetimeLocale: `om`,
     service: 'afaanoromoo',
     serviceName: 'Afaan Oromoo',
@@ -52,6 +50,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Beeksiisa',
+      },
       seeAll: 'Hunda ilaali',
       home: 'Oduu',
       currentPage: 'Fuula kan ammaa',
@@ -145,7 +146,7 @@ export const service = {
       },
       media: {
         noJs: "Meeshaan kee Miidiyaa taphachiisuu hin danda'u",
-        contentExpired: 'This content is no longer available',
+        contentExpired: 'Qabiyyee kun hinjiraatu',
         contentNotYetAvailable:
           'Qabiyyeen kun taphachuu kan hin jire dha ammayyuu.',
         audio: 'Sagalee',
@@ -154,26 +155,26 @@ export const service = {
         listen: 'Dhaggeeffadhaa',
         watch: 'Daawwadhu',
         liveLabel: 'KALLATTIIN',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'KAN ITTAANU',
+        previousRadioShow: 'Sagantaa raadiyoo dabre',
+        nextRadioShow: 'Sagantaa raadiyoo itti aanu',
+        duration: 'Turtii',
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
-          text: 'Warning: Third party content may contain adverts',
+          textPrefixVisuallyHidden: "Ibsa waa'ee viidiyoo, ",
+          text: 'Hubachiisa: qabiyyeen qaama sadaffaa beeksisa qabaachuu malu',
         },
         fallback: {
-          text: 'Content is not available',
-          linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
+          text: 'Qabiyyeen kun hin argamne',
+          linkText: 'irratti dabalatan ilaali %provider_name%',
+          linkTextSuffixVisuallyHidden: ', alaan',
           warningText:
             "Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti.",
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: 'Maxxansa %provider_name% irra dabri',
+          endTextVisuallyHidden: 'Xumura maxxansa %provider_name%',
         },
       },
       topStoriesTitle: 'Isin hin darbiin',
@@ -186,10 +187,18 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Hedduu kan ilaalaman',
+      numberOfItems: 5,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
+      onOnDemandRadioPage: true,
       onFrontPage: false,
-      durationLabel: 'Duration %duration%',
+      header: 'Dhaggeeffadhaa',
+      durationLabel: 'Turtii %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

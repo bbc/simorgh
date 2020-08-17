@@ -1,41 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Ad Container Snapshots should correctly render a Canonical ad 1`] = `
-<html>
-  <head>
-    <script
-      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
-    />
-  </head>
-  <body>
-    .c0 {
-  background-color: #F6F6F6;
-  min-height: 5.5rem;
-}
-
-@media (min-width:63rem) {
-  .c0 {
-    min-height: 9rem;
-  }
-}
-
-<div>
-      <div
-        class="c0"
-      >
-        <div
-          class="dotcom-ad"
-          id="dotcom-leaderboard"
-        />
-      </div>
-    </div>
-  </body>
-</html>
-`;
-
-exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
+exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`] = `
 .c0 {
   background-color: #F6F6F6;
+}
+
+.amp-geo-pending .c0,
+.amp-geo-group-gbOrUnknown .c0 {
+  display: none;
+  visibility: hidden;
 }
 
 .c1 {
@@ -51,7 +24,7 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
 .c3 {
   font-size: 0.75rem;
   line-height: 1rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #5A5A5A;
@@ -111,67 +84,274 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
       id="amp-access"
       type="application/json"
     >
-      {"authorization":"https://mock-toggles-endpoint.bbc.co.uk?application=simorgh&service=pidgin","noPingback":true,"authorizationFallbackResponse":{"error":true}}
+      {"authorization":"https://mock-toggles-endpoint.bbc.co.uk?application=simorgh&service=mundo","noPingback":true,"authorizationFallbackResponse":{"error":true}}
     </script>
   </head>
   <body>
     <div>
-      <div
+      <section
         amp-access="toggles.ads.enabled"
         amp-access-hide="true"
+        aria-hidden="true"
+        aria-label="Publicidad"
+        class="c0"
+        data-e2e="advertisement"
+        role="region"
       >
         <div
-          class="c0"
+          class="c1"
         >
           <div
-            class="c1"
+            class="c2"
           >
-            <div
-              class="c2"
+            <a
+              class="c3"
+              dir="ltr"
+              href="https://www.bbc.com/usingthebbc/cookies/"
+              tabindex="-1"
             >
-              <a
-                class="c3"
-                dir="ltr"
-                href="https://www.bbc.com/usingthebbc/cookies/"
-                tabindex="-1"
-              >
-                Tori we dem pay for
-              </a>
-              <amp-ad
-                data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
-                data-amp-slot-index="0"
-                data-block-on-consent="default"
-                data-multi-size="320x50,300x50"
-                data-npa-on-unknown-consent="true"
-                data-slot="/4817/bbcworldservice.test.site.pidgin"
-                height="50"
-                json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"pidgin\\"}}"
-                media="(max-width: 62.9375rem)"
-                type="doubleclick"
-                width="320"
-              />
-              <amp-ad
-                data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
-                data-amp-slot-index="0"
-                data-block-on-consent="default"
-                data-multi-size="970x250,728x90"
-                data-npa-on-unknown-consent="true"
-                data-slot="/4817/bbcworldservice.test.site.pidgin"
-                height="250"
-                json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"pidgin\\"}}"
-                media="(min-width: 63rem)"
-                type="doubleclick"
-                width="970"
-              />
-            </div>
+              Publicidad
+            </a>
+            <amp-ad
+              data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
+              data-amp-slot-index="0"
+              data-block-on-consent="default"
+              data-multi-size="320x50,300x50"
+              data-npa-on-unknown-consent="true"
+              data-slot="/4817/bbccom.test.site.amp.news"
+              height="50"
+              json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"mundo\\"}}"
+              media="(max-width: 62.9375rem)"
+              type="doubleclick"
+              width="320"
+            />
+            <amp-ad
+              data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
+              data-amp-slot-index="0"
+              data-block-on-consent="default"
+              data-multi-size="970x250,728x90"
+              data-npa-on-unknown-consent="true"
+              data-slot="/4817/bbccom.test.site.amp.news"
+              height="250"
+              json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"mundo\\"}}"
+              media="(min-width: 63rem)"
+              type="doubleclick"
+              width="970"
+            />
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </body>
 </html>
 `;
 
-exports[`Ad Container Snapshots should not render a Canonical ad for News 1`] = `<div />`;
+exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
+<html>
+  <head>
+    <script
+      async="true"
+      custom-element="amp-ad"
+      src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
+    />
+    <script
+      async="true"
+      custom-element="amp-access"
+      src="https://cdn.ampproject.org/v0/amp-access-0.1.js"
+    />
+    <script
+      id="amp-access"
+      type="application/json"
+    >
+      {"authorization":"https://mock-toggles-endpoint.bbc.co.uk?application=simorgh&service=mundo","noPingback":true,"authorizationFallbackResponse":{"error":true}}
+    </script>
+  </head>
+  <body>
+    .c0 {
+  background-color: #F6F6F6;
+}
 
-exports[`Ad Container Snapshots should not render an AMP ad for News 1`] = `<div />`;
+.amp-geo-pending .c0,
+.amp-geo-group-gbOrUnknown .c0 {
+  display: none;
+  visibility: hidden;
+}
+
+.c1 {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+.c2 {
+  display: inline-block;
+}
+
+.c3 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #5A5A5A;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  padding: 0.5rem 0;
+  text-align: right;
+}
+
+.c3:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (min-width:63rem) {
+  .c1 {
+    padding-bottom: 1rem;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c3 {
+    padding-top: 1rem;
+  }
+}
+
+<div>
+      <section
+        amp-access="toggles.ads.enabled"
+        amp-access-hide="true"
+        aria-hidden="true"
+        aria-label="Publicidad 2"
+        class="c0"
+        data-e2e="advertisement"
+        role="region"
+      >
+        <div
+          class="c1"
+        >
+          <div
+            class="c2"
+          >
+            <a
+              class="c3"
+              dir="ltr"
+              href="https://www.bbc.com/usingthebbc/cookies/"
+              tabindex="-1"
+            >
+              Publicidad
+            </a>
+            <amp-ad
+              data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
+              data-amp-slot-index="0"
+              data-block-on-consent="default"
+              data-multi-size="300x250"
+              data-npa-on-unknown-consent="true"
+              data-slot="/4817/bbccom.test.site.amp.news"
+              height="250"
+              json="{\\"targeting\\":{\\"slot\\":\\"mpu\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"mundo\\"}}"
+              type="doubleclick"
+              width="300"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Ad Container Snapshots Canonical should correctly render a leaderboard ad 1`] = `
+<html>
+  <head>
+    <script
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      type="module"
+    />
+    <script
+      nomodule="nomodule"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
+    />
+  </head>
+  <body>
+    .c0 {
+  background-color: #F6F6F6;
+  min-height: 5.5rem;
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    min-height: 9rem;
+  }
+}
+
+<div>
+      <section
+        aria-hidden="true"
+        aria-label="Publicidad"
+        class="c0"
+        data-e2e="advertisement"
+        role="region"
+      >
+        <div
+          class="dotcom-ad"
+          id="dotcom-leaderboard"
+        />
+      </section>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Ad Container Snapshots Canonical should correctly render an mpu ad 1`] = `
+<html>
+  <head>
+    <script
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      type="module"
+    />
+    <script
+      nomodule="nomodule"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
+    />
+  </head>
+  <body>
+    .c0 {
+  background-color: #F6F6F6;
+  min-height: 15.625rem;
+}
+
+<div>
+      <section
+        aria-hidden="true"
+        aria-label="Publicidad 2"
+        class="c0"
+        data-e2e="advertisement"
+        role="region"
+      >
+        <div
+          class="dotcom-ad"
+          id="dotcom-mpu"
+        />
+      </section>
+    </div>
+  </body>
+</html>
+`;

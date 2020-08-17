@@ -1,0 +1,403 @@
+{
+    "content": {
+      "blocks": [
+        {
+          "altText": "Obbo Jawaar Mohaammadiifi Obbo Baqqalaa Garbaa",
+          "copyrightHolder": "BBC",
+          "height": 549,
+          "href": "http://c.files.bbci.co.uk/F76D/production/_113214336_45c93613-41f9-405e-befc-fcb03087ad9d.jpg",
+          "id": "113214336",
+          "path": "/cpsprodpb/F76D/production/_113214336_45c93613-41f9-405e-befc-fcb03087ad9d.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Obbo Jawaar Mohammadiifi Obbo Baqqalaa Garbaa Guyyaa haraa Finfinnee naannoo Goorgiis kan jiru Mana Murtii Federaalaa sadarkaa jalqabaatti dhiyaat",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Ajjeechaa Art. Haacaaluu Hundeessaan walqabatee Kibxata darbe to'annoo jala kan oolaan Obbo Jawaar Mohaammadiifi Obbo Baqqalaa Garbaa Mana hidhaa ''Soostanyaa Poolis Xaabiyaa'' jedhamu akka jiran Dooche Weeleen gabaaseera.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Obbo Jawaariifi Obbo Baqqalaan guyyaa har'aa mana murtiitti yeroo dhiyaatan abookaatoo maleedha.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Manni murtichaas Obbo Baqqalaa guyyyaa 11 booda, obbo Jawaar Mohaammad ammoo guyyoota 13 bood mana murtiitti akka dhiyaatan beellamee mana hidhaatti akka deebi'an ajajuu DW gabaaseera.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Ajjeechaa Art. Haacaaluu Hundeessaaf shakkamanii to'annoo jala kan oolaan dhirri lamaafi dubartiin tokkos har'a mana murtiitti dhiyaachuun beekameera.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Obbo Jawaariifi Obbo Baqqalaa dabalatee Kibaxata namootni 35 to'annoo jala oolfaman yakka maaliin shakkamanii akka to'ataman Poolisiin Federaalaa ibsa Waxabajjii 30 Adoolessa tokko kenneen ibseera. ",
+          "type": "paragraph"
+        },
+        {
+          "items": [
+            {
+              "markupType": "candy_xml",
+              "meta": [
+                {
+                  "headlines": {
+                    "headline": "'Jawaar, Baqqalaa fi kaan aanga'oota mootummaa ajjeesuuf turan' - Poolisii Federaalaa",
+                    "overtyped": "'Jawaar, Baqqalaa fi kaan aanga'oota mootummaa ajjeesuuf turan'",
+                    "shortHeadline": "'Jawaar, Baqqalaa fi kaan aanga'oota mootummaa ajjeesuuf turan'"
+                  },
+                  "id": "urn:bbc:ares::asset:afaanoromoo/oduu-53231475",
+                  "language": "om",
+                  "locators": {
+                    "href": "http://www.bbc.com/afaanoromoo/oduu-53231475"
+                  },
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                      "categoryName": "News"
+                    },
+                    "taggings": []
+                  },
+                  "summary": "Jawaariifi aanga'oonni KFO isa waliin to'ataman jiddugala Aadaa Oromootti aanga'oota mootummaa olaanoo walgahiirra turan ajjeesuun ajjeechaa Waxabajjii 15 kan baraa darbee irra deebi'uuf yaalii godhanii turan jedhe poolisiin Federaalaa. Iskindirri Nagaa ammoo garee hundeessuun magaalaa finfinnee keessatti halleellaa gagggeesuuf qindeessaa ture jedhame.",
+                  "timestamp": 1593632761000,
+                  "type": "cps"
+                }
+              ],
+              "text": "<itemMeta>afaanoromoo/oduu-53231475</itemMeta>",
+              "type": "listItem"
+            },
+            {
+              "markupType": "candy_xml",
+              "meta": [
+                {
+                  "headlines": {
+                    "headline": "Ajjeechaa Haacaaluu: Rakkoo nageenyaa tibbanaan walqabatee Oromiyaafi Finfinneen maal keessa jiru?",
+                    "overtyped": "Rakkoo nageenyaa tibbanaan walqabatee Oromiyaafi Finfinneen maal keessa jiru?",
+                    "shortHeadline": "Rakkoo nageenyaa tibbanaan walqabatee Oromiyaafi Finfinneen maal keessa jiru?"
+                  },
+                  "id": "urn:bbc:ares::asset:afaanoromoo/oduu-53264851",
+                  "language": "om",
+                  "locators": {
+                    "href": "http://www.bbc.com/afaanoromoo/oduu-53264851"
+                  },
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                      "categoryName": "News"
+                    },
+                    "taggings": []
+                  },
+                  "summary": "Weellisaa Haacaaluu Hundeessaa ajjeefamuu hordofee Kutaalee Oromiyaa garaagaraa keessatti hookkara dhalateen lubbuun namoota 80 olii darbuu mootummaan ibseera.",
+                  "timestamp": 1593693608000,
+                  "type": "cps"
+                }
+              ],
+              "text": "<itemMeta>afaanoromoo/oduu-53264851</itemMeta>",
+              "type": "listItem"
+            }
+          ],
+          "numbered": false,
+          "type": "list"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "''Jawaar Mohaammad, Baqqalaa Garbaafi kaanneen isaan waliin to'ataman jiddugala Aadaa Oromootti aanga'oota mootummaa olaanoo walgahiirra turan ajjeesuun ajjeechaa Waxabajjii 15 kan baraa darbee irra deebi'uuf yaalii godhanii turan jedhe Foolisiin Federaalaa.  ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Ibsa kana miidiyaaleef kan kennan Komishinara Itti-aanaa Poolisii Federaalaa Komishinar Zalaalam Mangisteeti.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "  ''Fincila Finfinnee keessatti kaafnee Finfinneedhuma keessatti goolabna jedhanii miidiyaa irratti dhaadataa turan,'' jechuunis ibsan.     ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Waxabajjii 30 ibsa Komishiniin Poolisii Oromiyaafi Komishiniin Poolisii Federaalaa waliin kennaniin ammoo ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "''Gareen Obbo Jawaariifi Obbo Baqqalaa'' reeffa Art. Haacaaluu fedha maatii malee Finfinneetti deebisanii, Poolisii  tokkos ajjeesan jechuun isaan himatan.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "  ''Reeffa Haacaaluu humnaan karaarraa deebisanii waajjira PP damee Oromiyaatti galchanii, poolisii humna addaa Oromiyaa eegumsarra ture tokko rasaasaan dhahanii ajjeesaniiru,&quot; jedhan.",
+          "type": "paragraph"
+        },
+        {
+          "items": [
+            {
+              "markupType": "candy_xml",
+              "meta": [
+                {
+                  "headlines": {
+                    "headline": "Ajjeechaa Hacaaluu Hundeessaa: 'Hidhamuun Miseensota Olaanoo KFO nu yaaddessa' - KFO",
+                    "overtyped": "'Hidhamuun Miseensota Olaanoo KFO nu yaaddessa' - KFO",
+                    "shortHeadline": "'Hidhamuun Miseensota Olaanoo KFO nu yaaddessa' - KFO"
+                  },
+                  "id": "urn:bbc:ares::asset:afaanoromoo/oduu-53249190",
+                  "language": "om",
+                  "locators": {
+                    "href": "http://www.bbc.com/afaanoromoo/oduu-53249190"
+                  },
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                      "categoryName": "News"
+                    },
+                    "taggings": []
+                  },
+                  "summary": "Hidhamuun miseensota olaanoo paartichaa akka isa yaaddesse Koongirasiin Federaalawaa Oromoo KFO beeksise.",
+                  "timestamp": 1593605276000,
+                  "type": "cps"
+                }
+              ],
+              "text": "<itemMeta>afaanoromoo/oduu-53249190</itemMeta>",
+              "type": "listItem"
+            }
+          ],
+          "numbered": false,
+          "type": "list"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "''Kana Jawaarfaatu raawwate. Kanaan shakkamanii to'atamani...namni kamuu seeraa ol miti,''  jedhanii ture Komishinarri Komishinii Poolisii Oromiyaa Araarsaa Mardaasaa.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Ajjeechaa Art. Haacaaluu Hundeessaan walqabatee magaalaa Finfinnee keessatti qaamolee nageenyaa lama dabalatee namootni 10 akka ajjeefaman mootummaan ibseera.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Oromiyaa keessatti balaaleffannaa ajjeechaa Haacaaluun namootni 80 ta'an akka ajjeefaman Kominikeeshiniin Poolisii Oromiyaa ibseera.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Ajjeechaawwan Oromiyaa keessatti raawwataman hedduun isaanii dhukaasa qaamolee nageenyaan akka raawwataman jiraattotaafi maddeen Hospitaalaarraa hubanneerra.an.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    "metadata": {
+      "analyticsLabels": {
+        "counterName": "afaanoromoo.news.story.53268428.page",
+        "cps_asset_id": "53268428",
+        "cps_asset_type": "sty"
+      },
+      "atiAnalytics": {
+        "producerId": "2",
+        "producerName": "AFAAN_OROMOO"
+      },
+      "blockTypes": [
+        "image",
+        "paragraph",
+        "list"
+      ],
+      "createdBy": "afaan-oromoo-v6",
+      "firstPublished": 1593699056000,
+      "id": "urn:bbc:ares::asset:afaanoromoo/oduu-53268428",
+      "includeComments": false,
+      "language": "om",
+      "lastPublished": 1593699056000,
+      "lastUpdated": 1593699390126,
+      "locators": {
+        "assetId": "53268428",
+        "assetUri": "/afaanoromoo/oduu-53268428",
+        "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-53268428",
+        "curie": "http://www.bbc.co.uk/asset/df062bf0-4002-4eea-b912-beb1ec2acaef"
+      },
+      "options": {
+        "allowAdvertising": true,
+        "allowDateStamp": true,
+        "allowHeadline": true,
+        "allowPrintingSharingLinks": true,
+        "allowRelatedStoriesBox": true,
+        "allowRightHandSide": true,
+        "hasContentWarning": false,
+        "hasNewsTracker": false,
+        "includeComments": false,
+        "isBreakingNews": false,
+        "isFactCheck": false,
+        "isIgorSeoTagsEnabled": false,
+        "isKeyContent": false,
+        "suitableForSyndication": true
+      },
+      "tags": {},
+      "timestamp": 1593699056000,
+      "type": "STY",
+      "version": "v1.3.2"
+    },
+    "promo": {
+      "headlines": {
+        "headline": "Obbo Jawaariifi Obbo Baqqaalaan mana murtiitti dhiyaatanii guyyaa gara garaatti bellamaman",
+        "shortHeadline": "Obbo Jawaariifi Obbo Baqqaalaan mana murtiitti dhiyaatanii guyyaa gara garaatti bellamaman"
+      },
+      "id": "urn:bbc:ares::asset:afaanoromoo/oduu-53268428",
+      "indexImage": {
+        "altText": "Obbo Jawaar Mohaammadiifi Obbo Baqqalaa Garbaa",
+        "copyrightHolder": "BBC",
+        "height": 549,
+        "href": "http://c.files.bbci.co.uk/F76D/production/_113214336_45c93613-41f9-405e-befc-fcb03087ad9d.jpg",
+        "id": "113214336",
+        "path": "/cpsprodpb/F76D/production/_113214336_45c93613-41f9-405e-befc-fcb03087ad9d.jpg",
+        "subType": "index",
+        "type": "image",
+        "width": 976
+      },
+      "language": "om",
+      "locators": {
+        "assetId": "53268428",
+        "assetUri": "/afaanoromoo/oduu-53268428",
+        "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-53268428",
+        "curie": "http://www.bbc.co.uk/asset/df062bf0-4002-4eea-b912-beb1ec2acaef"
+      },
+      "summary": "Obbo Jawaariifi Obbo Baqqaalaan mana murtiitti dhiyaatanii guyyaa gara garaatti bellamaman",
+      "timestamp": 1593699056000,
+      "type": "cps"
+    },
+    "relatedContent": {
+      "groups": [
+        {
+          "promos": [
+            {
+              "cpsType": "STY",
+              "headlines": {
+                "headline": "'Jawaar, Baqqalaa fi kaan aanga'oota mootummaa ajjeesuuf turan' - Poolisii Federaalaa",
+                "shortHeadline": "'Jawaar, Baqqalaa fi kaan aanga'oota mootummaa ajjeesuuf turan'"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-53231475",
+              "indexImage": {
+                "altText": "Jawaar Mahaamadiifi Baqqalaa Garbaa",
+                "copyrightHolder": "BBC",
+                "height": 549,
+                "href": "http://c.files.bbci.co.uk/AD26/production/_113162344_bekelejawar.jpg",
+                "id": "113162344",
+                "path": "/cpsprodpb/AD26/production/_113162344_bekelejawar.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 976
+              },
+              "language": "om",
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-53231475",
+                "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-53231475"
+              },
+              "summary": "Jawaariifi aanga'oonni KFO isa waliin to'ataman jiddugala Aadaa Oromootti aanga'oota mootummaa olaanoo walgahiirra turan ajjeesuun ajjeechaa Waxabajjii 15 kan baraa darbee irra deebi'uuf yaalii godhanii turan jedhe poolisiin Federaalaa. Iskindirri Nagaa ammoo garee hundeessuun magaalaa finfinnee keessatti halleellaa gagggeesuuf qindeessaa ture jedhame.",
+              "timestamp": 1593632761000,
+              "type": "cps"
+            },
+            {
+              "cpsType": "STY",
+              "headlines": {
+                "headline": "Haacaaluu Hundeessaa: ''Haacaaluun gaafan du'u Ambotti na awwaalaa jedhee ture''",
+                "shortHeadline": "''Haacaaluun gaafan du'u Ambotti na awwaalaa jedhee ture''"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-53260895",
+              "indexImage": {
+                "altText": "Haacaaluu Hundeessaa",
+                "copyrightHolder": "Dagi Pictures",
+                "height": 549,
+                "href": "http://c.files.bbci.co.uk/5A45/production/_113190132_3b72282f-1b6c-4ead-87dd-65467a7def4e.jpg",
+                "id": "113190132",
+                "path": "/cpsprodpb/5A45/production/_113190132_3b72282f-1b6c-4ead-87dd-65467a7def4e.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 976
+              },
+              "language": "om",
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-53260895",
+                "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-53260895"
+              },
+              "summary": "Sirni awwaalchaa artisti Haacaaluu Hundeessaa iddoo dhaloota isaa magaalaa Ambootti raawwataa jira.",
+              "timestamp": 1593672918000,
+              "type": "cps"
+            },
+            {
+              "cpsType": "STY",
+              "headlines": {
+                "headline": "Ajjeechaa Haacaaluu: Rakkoo nageenyaa tibbanaan walqabatee Oromiyaafi Finfinneen maal keessa jiru?",
+                "shortHeadline": "Rakkoo nageenyaa tibbanaan walqabatee Oromiyaafi Finfinneen maal keessa jiru?"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-53264851",
+              "indexImage": {
+                "altText": "Magaalaa Finfinnee",
+                "copyrightHolder": "Bulchiinsa Magaalaa Finfinnee",
+                "height": 549,
+                "href": "http://c.files.bbci.co.uk/14026/production/_113185918_finfinne.jpg",
+                "id": "113185918",
+                "path": "/cpsprodpb/14026/production/_113185918_finfinne.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 976
+              },
+              "language": "om",
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-53264851",
+                "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-53264851"
+              },
+              "summary": "Weellisaa Haacaaluu Hundeessaa ajjeefamuu hordofee Kutaalee Oromiyaa garaagaraa keessatti hookkara dhalateen lubbuun namoota 80 olii darbuu mootummaan ibseera.",
+              "timestamp": 1593693608000,
+              "type": "cps"
+            },
+            {
+              "cpsType": "STY",
+              "headlines": {
+                "headline": "Ajjeechaa Hacaaluu Hundeessaa: 'Hidhamuun Miseensota Olaanoo KFO nu yaaddessa' - KFO",
+                "shortHeadline": "'Hidhamuun Miseensota Olaanoo KFO nu yaaddessa' - KFO"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-53249190",
+              "indexImage": {
+                "altText": "Paartii Kongirasii Federaalistii Oromoo",
+                "copyrightHolder": "KFO",
+                "height": 405,
+                "href": "http://c.files.bbci.co.uk/7AEB/production/_113176413_kfologo.jpg",
+                "id": "113176413",
+                "path": "/cpsprodpb/7AEB/production/_113176413_kfologo.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 720
+              },
+              "language": "om",
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-53249190",
+                "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-53249190"
+              },
+              "summary": "Hidhamuun miseensota olaanoo paartichaa akka isa yaaddesse Koongirasiin Federaalawaa Oromoo KFO beeksise.",
+              "timestamp": 1593605276000,
+              "type": "cps"
+            }
+          ],
+          "type": "see-alsos"
+        }
+      ],
+      "section": {
+        "name": "Oduu",
+        "subType": "index",
+        "type": "simple",
+        "uri": "/afaanoromoo/oduu"
+      },
+      "site": {
+        "name": "BBC Afaan Oromoo",
+        "subType": "site",
+        "type": "simple",
+        "uri": "/afaanoromoo"
+      }
+    }
+  }

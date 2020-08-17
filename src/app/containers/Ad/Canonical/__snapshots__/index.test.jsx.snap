@@ -1,5 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad with dotcom-bootstrap script 1`] = `
+<html>
+  <head>
+    <script
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      type="module"
+    />
+    <script
+      nomodule="nomodule"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
+    />
+  </head>
+  <body>
+    .c0 {
+  background-color: #F6F6F6;
+  min-height: 15.625rem;
+}
+
+<div>
+      <section
+        aria-hidden="true"
+        aria-label="Advertisement 2"
+        class="c0"
+        data-e2e="advertisement"
+        role="region"
+      >
+        <div
+          class="dotcom-ad"
+          id="dotcom-mpu"
+        />
+      </section>
+    </div>
+  </body>
+</html>
+`;
+
 exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderboard ad with dotcom-bootstrap script 1`] = `
 .c0 {
   background-color: #F6F6F6;
@@ -16,18 +52,27 @@ exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderb
   <head>
     <script
       src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      type="module"
+    />
+    <script
+      nomodule="nomodule"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
     />
   </head>
   <body>
     <div>
-      <div
+      <section
+        aria-hidden="true"
+        aria-label="Advertisement"
         class="c0"
+        data-e2e="advertisement"
+        role="region"
       >
         <div
           class="dotcom-ad"
           id="dotcom-leaderboard"
         />
-      </div>
+      </section>
     </div>
   </body>
 </html>

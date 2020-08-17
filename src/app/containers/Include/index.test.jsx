@@ -5,6 +5,7 @@ import IncludeContainer from '.';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import * as idt2Amp from './amp/Idt2Amp';
+import * as vjAmp from './amp/VjAmp';
 import * as canonical from './canonical';
 import { INCLUDE_RENDERED } from '#lib/logger.const';
 
@@ -48,6 +49,7 @@ const includeProps = {
     },
   },
   type: 'idt2',
+  isAmpSupported: true,
   href: '/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6',
 };
 
@@ -158,5 +160,64 @@ describe('IncludeContainer', () => {
     expect(container).toMatchSnapshot();
     expect(mockIdt2Amp).not.toHaveBeenCalled();
     expect(loggerMock.info).not.toHaveBeenCalled();
+  });
+
+  it('should render a VJ include on an Amp page with toggles enabled', () => {
+    const vjProps = {
+      src:
+        'https://news.files.bbci.co.uk/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+      image:
+        'https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_cv_table_ws_640_3x-nc_v0mmu.png',
+      imageHeight: '360',
+      imageWidth: '640',
+      href:
+        '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+      isAmpSupported: true,
+      type: 'vj',
+    };
+
+    const mockVjAmp = jest.fn().mockReturnValue('VJ-Amp-component');
+    vjAmp.default = mockVjAmp;
+
+    const { container } = render(
+      <IncludeContainerWithMockContext
+        toggleState={defaultToggleState}
+        isAmp
+        {...vjProps}
+      />,
+    );
+
+    expect(container).toMatchSnapshot();
+    expect(mockVjAmp).toHaveBeenCalledTimes(1);
+    expect(mockVjAmp).toHaveBeenCalledWith(vjProps, {});
+    expect(loggerMock.info).toHaveBeenCalledTimes(1);
+    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
+      type: 'vj',
+      includeUrl:
+        '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+    });
+  });
+
+  it('should render a fallback for VJs on an Amp page when isAmpSupported is set to false', () => {
+    const vjProps = {
+      href:
+        '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+      index: 0,
+      isAmpSupported: false,
+      type: 'vj',
+    };
+
+    const mockAmpFallback = jest.fn().mockReturnValue('VJ-Amp-fallback');
+    vjAmp.default = mockAmpFallback;
+
+    const { container } = render(
+      <IncludeContainerWithMockContext
+        toggleState={defaultToggleState}
+        isAmp
+        {...vjProps}
+      />,
+    );
+
+    expect(container).toMatchSnapshot();
   });
 });

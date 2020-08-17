@@ -79,6 +79,14 @@ Object {
       "wf",
       "yt",
     ],
+    "gbOrUnknown": Array [
+      "gb",
+      "gg",
+      "im",
+      "je",
+      "uk",
+      "unknown",
+    ],
   },
 }
 `;
@@ -112,6 +120,17 @@ Object {
     "title": "وروستي خبرونه - BBC News پښتو",
     "uid": 50924,
     "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
+exports[`AMP On Demand Radio Page Analytics comscore 1`] = `
+Object {
+  "extraUrlParams": Object {
+    "comscorekw": "amp",
+  },
+  "vars": Object {
+    "c2": "17986528",
   },
 }
 `;

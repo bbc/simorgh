@@ -1,23 +1,22 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import '@testing-library/jest-dom/extend-expect';
 import AdSlot, { getDataSlot } from './AdSlot';
 
 describe('Amp AdSlot', () => {
   describe('Snapshots', () => {
     shouldMatchSnapshot(
       'should correctly render a leaderboard AdSlot',
-      <AdSlot service="pidgin" slotType="leaderboard" />,
+      <AdSlot service="mundo" slotType="leaderboard" />,
     );
     shouldMatchSnapshot(
       'should correctly render a mpu AdSlot',
-      <AdSlot service="pidgin" slotType="mpu" />,
+      <AdSlot service="mundo" slotType="mpu" />,
     );
   });
 });
 
 describe('getDataSlot', () => {
-  const service = 'pidgin';
+  const service = 'mundo';
 
   afterEach(() => {
     delete process.env.SIMORGH_APP_ENV;
@@ -27,7 +26,7 @@ describe('getDataSlot', () => {
     process.env.SIMORGH_APP_ENV = 'local';
 
     const actual = getDataSlot(service);
-    const expected = '/4817/bbcworldservice.test.site.pidgin';
+    const expected = '/4817/bbccom.test.site.amp.news';
     expect(actual).toEqual(expected);
   });
 
@@ -35,7 +34,7 @@ describe('getDataSlot', () => {
     process.env.SIMORGH_APP_ENV = 'test';
 
     const actual = getDataSlot(service);
-    const expected = '/4817/bbcworldservice.test.site.pidgin';
+    const expected = '/4817/bbccom.test.site.amp.news';
     expect(actual).toEqual(expected);
   });
 
@@ -43,7 +42,7 @@ describe('getDataSlot', () => {
     process.env.SIMORGH_APP_ENV = 'live';
 
     const actual = getDataSlot(service);
-    const expected = '/4817/bbcworldservice.live.site.pidgin';
+    const expected = '/4817/bbcworldservice.live.site.mundo';
     expect(actual).toEqual(expected);
   });
 });

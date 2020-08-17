@@ -89,14 +89,14 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   font-style: normal;
 }
 
-.c1 {
+.c0 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-.c0 {
+.c1 {
   margin: 0 0.5rem;
   padding-top: 0.5rem;
   padding-bottom: 2rem;
@@ -293,31 +293,31 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c0 {
+  .c1 {
     margin: 0 1rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c0 {
+  .c1 {
     padding-top: 1rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c0 {
+  .c1 {
     padding-bottom: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c0 {
+  .c1 {
     padding-top: 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c0 {
+  .c1 {
     padding-bottom: 2.5rem;
   }
 }
@@ -418,6 +418,11 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
       href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png"
       rel="apple-touch-icon"
       sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
     />
     <link
       href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
@@ -576,6 +581,14 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
       content="De one we dem de read well well - BBC News Pidgin"
       name="twitter:title"
     />
+    <noscript>
+      &lt;img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=0&cv=2.0&cj=1" /&gt;
+    </noscript>
+    <script
+      async="true"
+      src="http://localhost:7080/static/js/comscore/main-1.0.js"
+      type="text/javascript"
+    />
     <script
       type="application/ld+json"
     >
@@ -584,17 +597,17 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   </head>
   <body>
     <div>
-      <div
+      <noscript />
+      <div>
+        chartbeat
+      </div>
+      <main
         class="c0"
+        data-e2e="most-read"
+        role="main"
       >
-        <noscript />
-        <div>
-          chartbeat
-        </div>
-        <main
+        <div
           class="c1"
-          data-e2e="most-read"
-          role="main"
         >
           <h1
             class="c2"
@@ -1034,8 +1047,8 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
               </div>
             </div>
           </div>
-        </main>
-      </div>
+        </div>
+      </main>
     </div>
   </body>
 </html>

@@ -1,29 +1,26 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import assocPath from 'ramda/src/assocPath';
-import clone from 'ramda/src/clone';
 import { render, act } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import OnDemandRadioPage from '.';
+import OnDemandRadioPage from './OnDemandRadioPage';
 import pashtoPageData from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
 import koreanPageData from '#data/korean/bbc_korean_radio/w3ct0kn5';
+import koreanPageWithScheduleData from './fixtureData/korean.json';
+import zhongwenPageData from '#data/zhongwen/bbc_cantonese_radio/w172xf3r5x8hw4v';
 import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
 import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttnw';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandRadio/getInitialData';
 
-const Page = ({ pageData, service, isAmp = false }) => (
+const Page = ({ pageData, service, isAmp = false, variant, lang }) => (
   <StaticRouter>
-    <ToggleContextProvider
-      service={service}
-      origin="https://www.test.bbc.co.uk"
-    >
-      <ServiceContextProvider service={service}>
+    <ToggleContextProvider>
+      <ServiceContextProvider service={service} variant={variant} lang={lang}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
           isAmp={isAmp}
@@ -39,11 +36,23 @@ const Page = ({ pageData, service, isAmp = false }) => (
   </StaticRouter>
 );
 
-const renderPage = async ({ pageData, service, isAmp = false }) => {
+const renderPage = async ({
+  pageData,
+  service,
+  isAmp = false,
+  variant,
+  lang = 'ko',
+}) => {
   let result;
   await act(async () => {
     result = await render(
-      <Page pageData={pageData} service={service} isAmp={isAmp} />,
+      <Page
+        pageData={pageData}
+        service={service}
+        isAmp={isAmp}
+        variant={variant}
+        lang={lang}
+      />,
     );
   });
 
@@ -60,9 +69,11 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
 const { env } = process;
 
 const getAvailableEpisode = assocPath(
-  ['content', 'blocks', 0, 'versions'],
-  [{ availableFrom: 1583496180000, availableUntil: 9999999999999 }],
+  ['content', 'blocks', 0, 'availability'],
+  'available',
 );
+
+const pageType = 'media';
 
 describe('OnDemand Radio Page ', () => {
   beforeEach(() => {
@@ -76,7 +87,10 @@ describe('OnDemand Radio Page ', () => {
     fetch.mockResponse(JSON.stringify(pashtoPageDataWithAvailableEpisode));
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-radio-path',
+      pageType,
+    });
 
     await matchSnapshotAsync(<Page pageData={pageData} service="pashto" />);
   });
@@ -88,7 +102,10 @@ describe('OnDemand Radio Page ', () => {
     fetch.mockResponse(JSON.stringify(pashtoPageDataWithAvailableEpisode));
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-radio-path',
+      pageType,
+    });
 
     await matchSnapshotAsync(
       <Page pageData={pageData} service="pashto" isAmp />,
@@ -98,9 +115,10 @@ describe('OnDemand Radio Page ', () => {
   it('should show the brand title for OnDemand Radio Pages', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-    const { pageData: pageDataWithWithoutVideo } = await getInitialData(
-      'some-ondemand-radio-path',
-    );
+    const { pageData: pageDataWithWithoutVideo } = await getInitialData({
+      path: 'some-ondemand-radio-path',
+      pageType,
+    });
     const { getByText } = await renderPage({
       pageData: pageDataWithWithoutVideo,
       service: 'pashto',
@@ -112,8 +130,10 @@ describe('OnDemand Radio Page ', () => {
   it('should show the datestamp correctly for Pashto OnDemand Radio Pages', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-    const { pageData } = await getInitialData('some-ondemand-radio-path');
-    // Check destructuring like this works & amend for other tests
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-radio-path',
+      pageType,
+    });
     const { getByText } = await renderPage({
       pageData,
       service: 'pashto',
@@ -125,9 +145,10 @@ describe('OnDemand Radio Page ', () => {
   it('should show the datestamp correctly for Korean OnDemand Radio Pages', async () => {
     fetch.mockResponse(JSON.stringify(koreanPageData));
 
-    const { pageData: pageDataWithWithoutVideo } = await getInitialData(
-      'some-ondemand-radio-path',
-    );
+    const { pageData: pageDataWithWithoutVideo } = await getInitialData({
+      path: 'some-ondemand-radio-path',
+      pageType,
+    });
     const { getByText } = await renderPage({
       pageData: pageDataWithWithoutVideo,
       service: 'korean',
@@ -139,9 +160,10 @@ describe('OnDemand Radio Page ', () => {
   it('should show the datestamp correctly for Indonesian OnDemand Radio Pages', async () => {
     fetch.mockResponse(JSON.stringify(indonesiaPageData));
 
-    const { pageData: pageDataWithWithoutVideo } = await getInitialData(
-      'some-ondemand-radio-path',
-    );
+    const { pageData: pageDataWithWithoutVideo } = await getInitialData({
+      path: 'some-ondemand-radio-path',
+      pageType,
+    });
     const { getByText } = await renderPage({
       pageData: pageDataWithWithoutVideo,
       service: 'indonesia',
@@ -150,12 +172,30 @@ describe('OnDemand Radio Page ', () => {
     expect(getByText('27 April 2020')).toBeInTheDocument();
   });
 
+  it('should show the datestamp correctly for Zhongwen OnDemand Radio Pages', async () => {
+    fetch.mockResponse(JSON.stringify(zhongwenPageData));
+
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-radio-path',
+      pageType,
+    });
+
+    const { getByText } = await renderPage({
+      pageData,
+      variant: 'trad',
+      service: 'zhongwen',
+    });
+
+    expect(getByText('2020年6月6日')).toBeInTheDocument();
+  });
+
   it('should show the summary for OnDemand Radio Pages', async () => {
     fetch.mockResponse(JSON.stringify(indonesiaPageData));
 
-    const { pageData: pageDataWithWithoutVideo } = await getInitialData(
-      'some-ondemand-radio-path',
-    );
+    const { pageData: pageDataWithWithoutVideo } = await getInitialData({
+      path: 'some-ondemand-radio-path',
+      pageType,
+    });
     const { getByText } = await renderPage({
       pageData: pageDataWithWithoutVideo,
       service: 'indonesia',
@@ -173,7 +213,10 @@ describe('OnDemand Radio Page ', () => {
       koreanPageData,
     );
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
-    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-radio-path',
+      pageType,
+    });
     const { container } = await renderPage({ pageData, service: 'korean' });
     const audioPlayerIframeSrc = container
       .querySelector('iframe')
@@ -190,7 +233,10 @@ describe('OnDemand Radio Page ', () => {
       koreanPageData,
     );
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
-    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-radio-path',
+      pageType,
+    });
     const { container } = await renderPage({ pageData, service: 'korean' });
     const audioPlayerIframeSrc = container
       .querySelector('iframe')
@@ -206,7 +252,10 @@ describe('OnDemand Radio Page ', () => {
       koreanPageData,
     );
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
-    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-radio-path',
+      pageType,
+    });
     const { container } = await renderPage({
       pageData,
       service: 'korean',
@@ -227,7 +276,10 @@ describe('OnDemand Radio Page ', () => {
       koreanPageData,
     );
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
-    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-radio-path',
+      pageType,
+    });
     const { container } = await renderPage({
       pageData,
       service: 'korean',
@@ -243,11 +295,11 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the expired content message if episode is expired', async () => {
-    const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions = [];
-    const koreanPageDataWithExpiredEpisode = clonedKoreanPageData;
-    fetch.mockResponse(JSON.stringify(koreanPageDataWithExpiredEpisode));
-    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    fetch.mockResponse(JSON.stringify(koreanPageData));
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-radio-path',
+      pageType,
+    });
     const { container, getByText } = await renderPage({
       pageData,
       service: 'korean',
@@ -261,16 +313,19 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it("should show the 'content not yet available' message if episode is not yet available", async () => {
-    const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0] = {
-      availableFrom: 9999999999999,
-      availableUntil: 9999999999999,
-    };
-    const koreanPageDataWithNotYetAvailableEpisode = clonedKoreanPageData;
+    const koreanPageDataWithNotYetAvailableEpisode = assocPath(
+      ['content', 'blocks', 0, 'availability'],
+      'future',
+      koreanPageData,
+    );
+
     fetch.mockResponse(
       JSON.stringify(koreanPageDataWithNotYetAvailableEpisode),
     );
-    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-radio-path',
+      pageType,
+    });
     const { container, getByText } = await renderPage({
       pageData,
       service: 'korean',
@@ -290,7 +345,10 @@ describe('OnDemand Radio Page ', () => {
       afaanoromooPageData,
     );
     fetch.mockResponse(JSON.stringify(afaanPageDataWithAvailableEpisode));
-    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-radio-path',
+      pageType,
+    });
     const { container } = await renderPage({
       pageData,
       service: 'afaanoromoo',
@@ -309,7 +367,10 @@ describe('OnDemand Radio Page ', () => {
       afaanoromooPageData,
     );
     fetch.mockResponse(JSON.stringify(afaanPageDataWithAvailableEpisode));
-    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-radio-path',
+      pageType,
+    });
     const { container } = await renderPage({
       pageData,
       service: 'afaanoromoo',
@@ -329,7 +390,10 @@ describe('OnDemand Radio Page ', () => {
       koreanPageData,
     );
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
-    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-radio-path',
+      pageType,
+    });
     const { container } = await renderPage({
       pageData,
       service: 'korean',
@@ -340,5 +404,47 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('title');
 
     expect(audioPlayerIframeTitle).toEqual('오디오 플레이어');
+  });
+
+  it('should show the radio schedule for the On Demand radio page on canonical', async () => {
+    await renderPage({
+      pageData: koreanPageWithScheduleData,
+      service: 'korean',
+    });
+
+    const scheduleWrapper = document.querySelector(
+      '[data-e2e="radio-schedule"]',
+    );
+
+    expect(scheduleWrapper).toBeInTheDocument();
+  });
+
+  it('should not show the radio schedule for the On Demand radio page on AMP', async () => {
+    renderPage({
+      pageData: koreanPageWithScheduleData,
+      service: 'korean',
+      lang: 'ko',
+      isAmp: true,
+    });
+
+    const scheduleWrapper = document.querySelector(
+      '[data-e2e="radio-schedule"]',
+    );
+
+    expect(scheduleWrapper).not.toBeInTheDocument();
+  });
+
+  it('should not show the radio schedule for services without schedules', async () => {
+    renderPage({
+      pageData: { ...koreanPageWithScheduleData, radioScheduleData: undefined },
+      service: 'korean',
+      lang: 'ko',
+    });
+
+    const scheduleWrapper = document.querySelector(
+      '[data-e2e="radio-schedule"]',
+    );
+
+    expect(scheduleWrapper).not.toBeInTheDocument();
   });
 });

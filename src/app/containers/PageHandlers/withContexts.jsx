@@ -1,5 +1,6 @@
 import React from 'react';
-import { bool, element, string, number } from 'prop-types';
+import { bool, element, string, number, object } from 'prop-types';
+import path from 'ramda/src/path';
 import variantPropType from '#models/propTypes/variants';
 import { pageDataPropType } from '#models/propTypes/data';
 
@@ -13,6 +14,7 @@ import { EventContextProvider } from '#contexts/EventContext';
 const WithContexts = Component => {
   const WithContextsContainer = props => {
     const {
+      toggles,
       bbcOrigin,
       status,
       id,
@@ -23,11 +25,17 @@ const WithContexts = Component => {
       previousPath,
       variant,
       timeOnServer,
+      pageData,
+      showAdsBasedOnLocation,
     } = props;
 
     return (
-      <ToggleContextProvider service={service} origin={bbcOrigin}>
-        <ServiceContextProvider service={service} variant={variant}>
+      <ToggleContextProvider toggles={toggles}>
+        <ServiceContextProvider
+          service={service}
+          variant={variant}
+          pageLang={path(['metadata', 'language'], pageData)}
+        >
           <RequestContextProvider
             bbcOrigin={bbcOrigin}
             id={id}
@@ -39,6 +47,7 @@ const WithContexts = Component => {
             previousPath={previousPath}
             variant={variant}
             timeOnServer={timeOnServer}
+            showAdsBasedOnLocation={showAdsBasedOnLocation}
           >
             <EventContextProvider>
               <UserContextProvider>
@@ -63,6 +72,9 @@ const WithContexts = Component => {
     service: string.isRequired,
     variant: variantPropType,
     timeOnServer: number,
+    showAdsBasedOnLocation: bool,
+    // eslint-disable-next-line react/forbid-prop-types
+    toggles: object.isRequired,
   };
 
   WithContextsContainer.defaultProps = {
@@ -73,6 +85,7 @@ const WithContexts = Component => {
     previousPath: null,
     variant: null,
     timeOnServer: null,
+    showAdsBasedOnLocation: false,
   };
 
   return WithContextsContainer;

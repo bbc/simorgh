@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 const appDirectory = fs.realpathSync(process.cwd());
-const resolvePath = (relativePath) => path.resolve(appDirectory, relativePath);
+const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
 module.exports = {
   webpackDirAlias: {
@@ -16,6 +16,7 @@ module.exports = {
     '#pages': resolvePath('src/app/pages/'),
     '#testHelpers': resolvePath('src/testHelpers/'),
     '#server': resolvePath('src/server/'),
+    '#utils': resolvePath('src/app/routes/utils/'),
   },
   jestDirAlias: {
     '^#app(.*)$': '<rootDir>/src/app$1',
@@ -28,6 +29,7 @@ module.exports = {
     '^#pages(.*)$': '<rootDir>/src/app/pages$1',
     '^#testHelpers(.*)$': '<rootDir>/src/testHelpers$1',
     '^#server(.*)$': '<rootDir>/src/server$1',
+    '^#utils(.*)$': '<rootDir>/src/app/routes/utils$1',
   },
   eslintDirAlias: {
     map: [
@@ -41,6 +43,7 @@ module.exports = {
       ['#pages', './src/app/pages'],
       ['#testHelpers', './src/testHelpers'],
       ['#server', './src/server'],
+      ['#utils', './src/app/routes/utils'],
     ],
     extensions: ['.js', '.jsx', '.json'],
   },

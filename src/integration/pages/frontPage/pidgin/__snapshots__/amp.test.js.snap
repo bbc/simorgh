@@ -83,6 +83,14 @@ Object {
       "wf",
       "yt",
     ],
+    "gbOrUnknown": Array [
+      "gb",
+      "gg",
+      "im",
+      "je",
+      "uk",
+      "unknown",
+    ],
   },
 }
 `;
@@ -120,6 +128,17 @@ Object {
 }
 `;
 
+exports[`AMP Front Page Analytics comscore 1`] = `
+Object {
+  "extraUrlParams": Object {
+    "comscorekw": "amp",
+  },
+  "vars": Object {
+    "c2": "17986528",
+  },
+}
+`;
+
 exports[`AMP Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
 exports[`AMP Front Page Footer I can click on the BBC branding and it would take me to the homepage 2`] = `"/pidgin"`;
@@ -128,77 +147,247 @@ exports[`AMP Front Page Footer I can see the footer copyright and external linki
 
 exports[`AMP Front Page Footer I can see the footer copyright and external linking text 2`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
-exports[`AMP Front Page Footer Link should match text and url 1`] = `"BBC News, Pidgin - /pidgin"`;
+exports[`AMP Front Page Footer Link should match text and url 1`] = `
+Object {
+  "text": "BBC News, Pidgin",
+  "url": "/pidgin",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 2`] = `"Why you fit trust BBC News - https://www.bbc.com/pidgin/institutional-48528766"`;
+exports[`AMP Front Page Footer Link should match text and url 2`] = `
+Object {
+  "text": "Why you fit trust BBC News",
+  "url": "https://www.bbc.com/pidgin/institutional-48528766",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 3`] = `"How dem dey take use am - https://www.bbc.co.uk/usingthebbc/terms/"`;
+exports[`AMP Front Page Footer Link should match text and url 3`] = `
+Object {
+  "text": "How dem dey take use am",
+  "url": "https://www.bbc.co.uk/usingthebbc/terms/",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 4`] = `"As e concern BBC - https://www.bbc.co.uk/aboutthebbc"`;
+exports[`AMP Front Page Footer Link should match text and url 4`] = `
+Object {
+  "text": "As e concern BBC",
+  "url": "https://www.bbc.co.uk/aboutthebbc",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 5`] = `"Privacy Policy - https://www.bbc.co.uk/usingthebbc/privacy/"`;
+exports[`AMP Front Page Footer Link should match text and url 5`] = `
+Object {
+  "text": "Privacy Policy",
+  "url": "https://www.bbc.co.uk/usingthebbc/privacy/",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 6`] = `"Cookies - https://www.bbc.co.uk/usingthebbc/cookies/"`;
+exports[`AMP Front Page Footer Link should match text and url 6`] = `
+Object {
+  "text": "Cookies",
+  "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 7`] = `"Call BBC - https://www.bbc.com/pidgin/institutional-42188215"`;
+exports[`AMP Front Page Footer Link should match text and url 7`] = `
+Object {
+  "text": "Call BBC",
+  "url": "https://www.bbc.com/pidgin/institutional-42188215",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`AMP Front Page Footer Link should match text and url 8`] = `
+Object {
+  "text": "AdChoices / Do Not Sell My Info",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 9`] = `"De way wey we de take go external link. - https://www.bbc.co.uk/help/web/links/"`;
+exports[`AMP Front Page Footer Link should match text and url 9`] = `
+Object {
+  "text": "De way wey we de take go external link.",
+  "url": "https://www.bbc.co.uk/help/web/links/",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 10`] = `"BBC News, Pidgin - /pidgin"`;
+exports[`AMP Front Page Footer Link should match text and url 10`] = `
+Object {
+  "text": "BBC News, Pidgin",
+  "url": "/pidgin",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 11`] = `"Why you fit trust BBC News - https://www.bbc.com/pidgin/institutional-48528766"`;
+exports[`AMP Front Page Footer Link should match text and url 11`] = `
+Object {
+  "text": "Why you fit trust BBC News",
+  "url": "https://www.bbc.com/pidgin/institutional-48528766",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 12`] = `"How dem dey take use am - https://www.bbc.co.uk/usingthebbc/terms/"`;
+exports[`AMP Front Page Footer Link should match text and url 12`] = `
+Object {
+  "text": "How dem dey take use am",
+  "url": "https://www.bbc.co.uk/usingthebbc/terms/",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 13`] = `"As e concern BBC - https://www.bbc.co.uk/aboutthebbc"`;
+exports[`AMP Front Page Footer Link should match text and url 13`] = `
+Object {
+  "text": "As e concern BBC",
+  "url": "https://www.bbc.co.uk/aboutthebbc",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 14`] = `"Privacy Policy - https://www.bbc.co.uk/usingthebbc/privacy/"`;
+exports[`AMP Front Page Footer Link should match text and url 14`] = `
+Object {
+  "text": "Privacy Policy",
+  "url": "https://www.bbc.co.uk/usingthebbc/privacy/",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 15`] = `"Cookies - https://www.bbc.co.uk/usingthebbc/cookies/"`;
+exports[`AMP Front Page Footer Link should match text and url 15`] = `
+Object {
+  "text": "Cookies",
+  "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 16`] = `"Call BBC - https://www.bbc.com/pidgin/institutional-42188215"`;
+exports[`AMP Front Page Footer Link should match text and url 16`] = `
+Object {
+  "text": "Call BBC",
+  "url": "https://www.bbc.com/pidgin/institutional-42188215",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 17`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`AMP Front Page Footer Link should match text and url 17`] = `
+Object {
+  "text": "AdChoices / Do Not Sell My Info",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 18`] = `"De way wey we de take go external link. - https://www.bbc.co.uk/help/web/links/"`;
+exports[`AMP Front Page Footer Link should match text and url 18`] = `
+Object {
+  "text": "De way wey we de take go external link.",
+  "url": "https://www.bbc.co.uk/help/web/links/",
+}
+`;
 
 exports[`AMP Front Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
 exports[`AMP Front Page Header I can see the branding 2`] = `"BBC News, Pidgin"`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 1`] = `"Page where you dey, Home - /pidgin"`;
+exports[`AMP Front Page Header Navigation link should match text and url 1`] = `
+Object {
+  "text": "Page where you dey, Home",
+  "url": "/pidgin",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 2`] = `"Nigeria - /pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"`;
+exports[`AMP Front Page Header Navigation link should match text and url 2`] = `
+Object {
+  "text": "Nigeria",
+  "url": "/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 3`] = `"Africa - /pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"`;
+exports[`AMP Front Page Header Navigation link should match text and url 3`] = `
+Object {
+  "text": "Africa",
+  "url": "/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 4`] = `"World - /pidgin/world"`;
+exports[`AMP Front Page Header Navigation link should match text and url 4`] = `
+Object {
+  "text": "World",
+  "url": "/pidgin/world",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 5`] = `"Video - /pidgin/media/video"`;
+exports[`AMP Front Page Header Navigation link should match text and url 5`] = `
+Object {
+  "text": "Video",
+  "url": "/pidgin/media/video",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 6`] = `"Sport - /pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
+exports[`AMP Front Page Header Navigation link should match text and url 6`] = `
+Object {
+  "text": "Sport",
+  "url": "/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 7`] = `"Entertainment - /pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"`;
+exports[`AMP Front Page Header Navigation link should match text and url 7`] = `
+Object {
+  "text": "Entertainment",
+  "url": "/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 8`] = `"Most popular - /pidgin/popular/read"`;
+exports[`AMP Front Page Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "Most popular",
+  "url": "/pidgin/popular/read",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 9`] = `"Page where you dey, Home - /pidgin"`;
+exports[`AMP Front Page Header Navigation link should match text and url 9`] = `
+Object {
+  "text": "Page where you dey, Home",
+  "url": "/pidgin",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 10`] = `"Nigeria - /pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"`;
+exports[`AMP Front Page Header Navigation link should match text and url 10`] = `
+Object {
+  "text": "Nigeria",
+  "url": "/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 11`] = `"Africa - /pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"`;
+exports[`AMP Front Page Header Navigation link should match text and url 11`] = `
+Object {
+  "text": "Africa",
+  "url": "/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 12`] = `"World - /pidgin/world"`;
+exports[`AMP Front Page Header Navigation link should match text and url 12`] = `
+Object {
+  "text": "World",
+  "url": "/pidgin/world",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 13`] = `"Video - /pidgin/media/video"`;
+exports[`AMP Front Page Header Navigation link should match text and url 13`] = `
+Object {
+  "text": "Video",
+  "url": "/pidgin/media/video",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 14`] = `"Sport - /pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
+exports[`AMP Front Page Header Navigation link should match text and url 14`] = `
+Object {
+  "text": "Sport",
+  "url": "/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 15`] = `"Entertainment - /pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"`;
+exports[`AMP Front Page Header Navigation link should match text and url 15`] = `
+Object {
+  "text": "Entertainment",
+  "url": "/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 16`] = `"Most popular - /pidgin/popular/read"`;
+exports[`AMP Front Page Header Navigation link should match text and url 16`] = `
+Object {
+  "text": "Most popular",
+  "url": "/pidgin/popular/read",
+}
+`;
 
 exports[`AMP Front Page Index Alsos should match visually hidden text 1`] = `"Another thing we de for inside dis tori"`;
 
@@ -207,6 +396,146 @@ exports[`AMP Front Page Index Alsos should match visually hidden text 2`] = `"An
 exports[`AMP Front Page Main heading should match text 1`] = `"BBC News, Pidgin - Home"`;
 
 exports[`AMP Front Page Main heading should match text 2`] = `"BBC News, Pidgin - Home"`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 1`] = `
+Object {
+  "sizes": null,
+  "url": "http://localhost:7080/pidgin/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 2`] = `
+Object {
+  "sizes": "72x72",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 3`] = `
+Object {
+  "sizes": "96x96",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 4`] = `
+Object {
+  "sizes": "128x128",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 5`] = `
+Object {
+  "sizes": "144x144",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 6`] = `
+Object {
+  "sizes": "152x152",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 7`] = `
+Object {
+  "sizes": "180x180",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 8`] = `
+Object {
+  "sizes": "192x192",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 9`] = `
+Object {
+  "sizes": "384x384",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 10`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 11`] = `
+Object {
+  "sizes": null,
+  "url": "http://localhost:7080/pidgin/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 12`] = `
+Object {
+  "sizes": "72x72",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 13`] = `
+Object {
+  "sizes": "96x96",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 14`] = `
+Object {
+  "sizes": "128x128",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 15`] = `
+Object {
+  "sizes": "144x144",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 16`] = `
+Object {
+  "sizes": "152x152",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 17`] = `
+Object {
+  "sizes": "180x180",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 18`] = `
+Object {
+  "sizes": "192x192",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 19`] = `
+Object {
+  "sizes": "384x384",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 20`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png",
+}
+`;
 
 exports[`AMP Front Page SEO Canonical link 1`] = `"http://localhost:7080/pidgin"`;
 
