@@ -9,7 +9,7 @@ import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
 
 const TopStories = ({ content, parentColumns }) => {
-  const { translations } = useContext(ServiceContext);
+  const { translations, serviceDatetimeLocale } = useContext(ServiceContext);
 
   const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
 
@@ -25,6 +25,7 @@ const TopStories = ({ content, parentColumns }) => {
           dir={dir}
           displayImage={false}
           displaySummary={false}
+          serviceDatetimeLocale={serviceDatetimeLocale}
         />
       )}
       promoListComponent={({ promoItems, dir }) => (
@@ -36,6 +37,7 @@ const TopStories = ({ content, parentColumns }) => {
                 dir={dir}
                 displayImage={false}
                 displaySummary={false}
+                serviceDatetimeLocale={serviceDatetimeLocale}
               />
             </StoryPromoLi>
           ))}
