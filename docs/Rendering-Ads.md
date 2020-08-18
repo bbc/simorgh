@@ -33,9 +33,7 @@ Given you are using Chrome browser.
 
 Given you do not have any ad blocking extensions in your browser.
 
-1. Use a proxy to set your location outside the UK
-
-   Visiting https://www.test.bbc.com/userinfo should show `"X-Ip_is_advertise_combined": "yes"`. And when you visit https://www.test.bbc.com/mundo you should be able to see an advert.
+1. Use a proxy to set your location outside the UK. Visiting https://www.test.bbc.com/userinfo should show `"X-Ip_is_advertise_combined": "yes"`. And when you visit https://www.test.bbc.com/mundo you should be able to see an advert.
 
 2. If you would like to see the ads with the debugger tool you can append this query string to the url: `?ads-debug=true`
 
