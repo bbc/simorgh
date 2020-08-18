@@ -190,7 +190,7 @@ const CpsOnwardJourney = ({
           {promoComponent({ promo: singleContent, dir })}
         </SingleContentWrapper>
       ) : (
-        promoListComponent({ promoItems: content, isMapContent })
+        promoListComponent({ promoItems: content, dir, isMapContent })
       )}
     </CpsOnwardJourneyWrapper>
   );

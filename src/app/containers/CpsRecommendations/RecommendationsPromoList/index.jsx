@@ -40,6 +40,7 @@ const RecommendationsPromoList = ({ promoItems, dir }) => (
     ))}
   </Grid>
 );
+
 RecommendationsPromoList.propTypes = {
   dir: string.isRequired,
   promoItems: arrayOf(shape(storyItem)).isRequired,
