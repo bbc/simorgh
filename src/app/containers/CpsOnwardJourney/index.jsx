@@ -117,35 +117,6 @@ const SingleContentWrapper = styled.div`
   `}
 `;
 
-const OptionallyRenderedSkipWrapper = ({ skipLink, service, children }) =>
-  skipLink ? (
-    <SkipLinkWrapper service={service} {...skipLink}>
-      {children}
-    </SkipLinkWrapper>
-  ) : (
-    children
-  );
-
-const optionalSkipLinkProps = {
-  terms: shape({
-    '%title%': string,
-  }),
-  endTextVisuallyHidden: string,
-  endTextId: string,
-  text: string,
-};
-
-OptionallyRenderedSkipWrapper.propTypes = {
-  service: string,
-  children: node.isRequired,
-  skipLink: shape(optionalSkipLinkProps),
-};
-
-OptionallyRenderedSkipWrapper.defaultProps = {
-  service: '',
-  skipLink: null,
-};
-
 const CpsOnwardJourney = ({
   labelId,
   title,
@@ -203,7 +174,7 @@ const CpsOnwardJourney = ({
 
   return (
     <CpsOnwardJourneyWrapper>
-      <OptionallyRenderedSkipWrapper skipLink={skipLink} service={service}>
+      <SkipLinkWrapper {...skipLink} service={service}>
         <StyledSectionLabel
           script={script}
           service={service}
@@ -223,7 +194,7 @@ const CpsOnwardJourney = ({
         ) : (
           listTransform(content)
         )}
-      </OptionallyRenderedSkipWrapper>
+      </SkipLinkWrapper>
     </CpsOnwardJourneyWrapper>
   );
 };
@@ -250,7 +221,14 @@ CpsOnwardJourney.propTypes = {
       usages.
   */
   columnType: oneOf(['main', 'secondary']).isRequired,
-  skipLink: shape(optionalSkipLinkProps),
+  skipLink: shape({
+    terms: shape({
+      '%title%': string,
+    }),
+    endTextVisuallyHidden: string,
+    endTextId: string,
+    text: string,
+  }),
 };
 
 CpsOnwardJourney.defaultProps = {
