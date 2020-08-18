@@ -28,6 +28,7 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
+import logMissingMediaId from './helpers/logMissingMediaId';
 
 const { logMediaPlayerStatus } = toggles[
   process.env.SIMORGH_APP_ENV || 'local'
@@ -105,29 +106,12 @@ const MediaPlayerContainer = ({
     ),
   };
 
-  if (!(versionId || blockId)) {
-    return null; // this should be the holding image with an error overlay
-  }
-
   const placeholderSrcset = getPlaceholderSrcSet({ originCode, locator });
   const placeholderSrc = buildIChefURL({
     originCode,
     locator,
     resolution: DEFAULT_WIDTH,
   });
-
-  const embedSource = getEmbedUrl({
-    mediaId: `${assetId}/${isLegacyMedia ? blockId : versionId}/${lang}`,
-    type: assetType,
-    isAmp,
-    queryString: location.search,
-  });
-
-  const iframeTitle = pathOr(
-    'Media player',
-    ['mediaAssetPage', 'mediaPlayer'],
-    translations,
-  );
 
   const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
   const StyledMessageContainer = styled.div`
@@ -146,7 +130,11 @@ const MediaPlayerContainer = ({
     path(['media', 'contentExpired'], translations) ||
     contentNotAvailableMessage;
 
-  if (!available) {
+  const mediaIsValid = available && (versionId || blockId);
+  if (!mediaIsValid) {
+    if (isLegacyMedia && available) {
+      logMissingMediaId({ url: assetId, assetType });
+    }
     return (
       <StyledMessageContainer>
         <MediaMessage
@@ -158,6 +146,19 @@ const MediaPlayerContainer = ({
       </StyledMessageContainer>
     );
   }
+
+  const embedSource = getEmbedUrl({
+    mediaId: `${assetId}/${isLegacyMedia ? blockId : versionId}/${lang}`,
+    type: assetType,
+    isAmp,
+    queryString: location.search,
+  });
+
+  const iframeTitle = pathOr(
+    'Media player',
+    ['mediaAssetPage', 'mediaPlayer'],
+    translations,
+  );
 
   if (!onClient() && logMediaPlayerStatus.enabled) {
     logEmbedSourceStatus({
