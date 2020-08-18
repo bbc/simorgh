@@ -1,11 +1,12 @@
 /* eslint-disable consistent-return */
 import {
   getEpisodeAvailability,
-  dataEndpointOverride,
   getEmbedUrl,
   isBrand,
 } from '../../../support/helpers/onDemandRadioTv';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
+// eslint-disable-next-line import/no-named-as-default
+import dataEndpointOverride from '../../../support/helpers/visitPage';
 
 export default ({ service, pageType, variant, isAmp }) => {
   describe(`Tests for ${service} ${pageType}`, () => {

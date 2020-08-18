@@ -1,7 +1,6 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
 import { getEmbedUrl, serviceHasRadioSchedule } from './helper';
-import { dataEndpointOverride } from '../../../support/helpers/onDemandRadioTv';
 import { isScheduleDataComplete } from '../../../../src/app/containers/RadioSchedule/utilities/evaluateScheduleData';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 
@@ -61,7 +60,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
         if (isRadioScheduleOnPage) {
           const schedulePath = Cypress.env('currentPath')
-            .concat(dataEndpointOverride())
+
             .replace('liveradio', 'schedule.json')
             // the schedule call for afaanoromoo is made to bbc_oromo_radio
             .replace('bbc_afaanoromoo_radio', 'bbc_oromo_radio');

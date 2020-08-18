@@ -23,6 +23,22 @@ export default ({ service, pageType, variant, isAmp }) => {
       });
     });
 
+    it('Brand page should not display a future episode', () => {
+      cy.request(
+        `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
+      ).then(({ body: jsonData }) => {
+        const episodeAvailability = getEpisodeAvailability(jsonData);
+        if (episodeAvailability !== 'available') {
+          if (episodeAvailability === 'future') {
+            throw new Error('Episode is in the future');
+          }
+          return cy.log(
+            `Episode is ${episodeAvailability}: ${Cypress.env('currentPath')}`,
+          );
+        }
+      });
+    });
+
     describe('Audio Player', () => {
       it('should render an iframe with a valid URL', () => {
         cy.request(

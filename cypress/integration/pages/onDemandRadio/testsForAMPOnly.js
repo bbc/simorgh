@@ -13,8 +13,6 @@ export default ({ service, pageType }) => {
           `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
         ).then(({ body: jsonData }) => {
           if (!isAvailable(jsonData)) {
-            cy.log(`${Cypress.env('currentPath')}
-            `);
             return cy.log(`Episode unavailable: ${Cypress.env('currentPath')}`);
           }
 
