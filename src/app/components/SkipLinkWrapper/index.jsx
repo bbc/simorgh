@@ -45,8 +45,8 @@ const SkipLinkWrapper = ({
   text,
   endTextVisuallyHidden,
   terms,
-}) =>
-  text ? (
+}) => {
+  return (
     <Wrapper>
       <SkipLink service={service} href={`#${endTextId}`}>
         {detokenise(text, terms)}
@@ -56,24 +56,16 @@ const SkipLinkWrapper = ({
         {detokenise(endTextVisuallyHidden, terms)}
       </EndText>
     </Wrapper>
-  ) : (
-    children
   );
+};
 
 SkipLinkWrapper.propTypes = {
   service: string.isRequired,
   children: node.isRequired,
-  endTextId: string,
-  text: string,
-  endTextVisuallyHidden: string,
-  terms: shape({}),
-};
-
-SkipLinkWrapper.defaultProps = {
-  endTextId: null,
-  text: null,
-  endTextVisuallyHidden: null,
-  terms: null,
+  endTextId: string.isRequired,
+  text: string.isRequired,
+  endTextVisuallyHidden: string.isRequired,
+  terms: shape({}).isRequired,
 };
 
 export default SkipLinkWrapper;
