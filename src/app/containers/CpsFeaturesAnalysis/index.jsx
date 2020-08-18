@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import { arrayOf, shape, number } from 'prop-types';
 import { pathOr } from 'ramda';
 
+import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
-import FeaturesAnalysisPromo from './FeaturesAnalysisPromo';
-import FeaturesAnalysisPromoList from './FeaturesAnalysisPromoList';
+import StoryPromo from '../StoryPromo';
 
 const FeaturesAnalysis = ({ content, parentColumns }) => {
   const { translations } = useContext(ServiceContext);
@@ -22,8 +22,23 @@ const FeaturesAnalysis = ({ content, parentColumns }) => {
       title={title}
       content={content}
       parentColumns={parentColumns}
-      promoComponent={FeaturesAnalysisPromo}
-      promoListComponent={FeaturesAnalysisPromoList}
+      promoComponent={({ promo, dir }) => (
+        <StoryPromo item={promo} dir={dir} displayImage />
+      )}
+      promoListComponent={({ promoItems, dir }) => (
+        <StoryPromoUl>
+          {promoItems.map(item => (
+            <StoryPromoLi key={item.id || item.uri}>
+              <StoryPromo
+                item={item}
+                dir={dir}
+                displayImage
+                displaySummary={false}
+              />
+            </StoryPromoLi>
+          ))}
+        </StoryPromoUl>
+      )}
       columnType="secondary"
     />
   );

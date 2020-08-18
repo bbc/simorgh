@@ -3,7 +3,7 @@ import { C_GHOST } from '@bbc/psammead-styles/colours';
 import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import styled from 'styled-components';
-import { shape, string } from 'prop-types';
+import { shape, string, oneOfType } from 'prop-types';
 import Grid from '../../../components/Grid';
 import StoryPromo from '../../StoryPromo';
 import { storyItem } from '#models/propTypes/storyItem';
@@ -47,7 +47,7 @@ const RecommendationsPromo = ({ promo, dir }) => {
 
 RecommendationsPromo.propTypes = {
   dir: string.isRequired,
-  promo: shape({ storyItem }).isRequired,
+  promo: oneOfType([shape(storyItem)]).isRequired,
 };
 
 export default RecommendationsPromo;
