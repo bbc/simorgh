@@ -5,12 +5,17 @@ import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import Figure from '@bbc/psammead-figure';
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '@bbc/gel-foundations/spacings';
 import styled from 'styled-components';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
   MediaMessage,
 } from '@bbc/psammead-media-player';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import Caption from '../Caption';
 import Metadata from './Metadata';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
@@ -116,8 +121,12 @@ const MediaPlayerContainer = ({
   const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
   const StyledMessageContainer = styled.div`
     padding-top: ${landscapeRatio};
+    margin-bottom: ${GEL_SPACING_DBL};
     position: relative;
     overflow: hidden;
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      padding-bottom: ${GEL_SPACING_TRPL};
+    }
   `;
 
   const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
