@@ -34,6 +34,7 @@ const CanonicalMostRead = ({
     script,
     dir,
     datetimeLocale,
+    serviceDatetimeLocale,
     timezone,
     mostRead: { lastUpdated, numberOfItems },
   } = useContext(ServiceContext);
@@ -97,6 +98,8 @@ const CanonicalMostRead = ({
     return null;
   }
 
+  const locale = serviceDatetimeLocale || datetimeLocale;
+
   return (
     <Wrapper>
       <MostReadList
@@ -133,7 +136,7 @@ const CanonicalMostRead = ({
                   script={script}
                   service={service}
                   timestamp={item.timestamp}
-                  locale={datetimeLocale}
+                  locale={locale}
                   timezone={timezone}
                 />
               )}

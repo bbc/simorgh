@@ -61,7 +61,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
         if (isRadioScheduleOnPage) {
           const schedulePath = Cypress.env('currentPath')
-            .concat(`${dataEndpointOverride()}`)
+            .concat(dataEndpointOverride())
             .replace('liveradio', 'schedule.json')
             // the schedule call for afaanoromoo is made to bbc_oromo_radio
             .replace('bbc_afaanoromoo_radio', 'bbc_oromo_radio');
