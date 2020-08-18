@@ -68,6 +68,7 @@ export default async ({ path: pathname, service, variant, pageType }) => {
       json,
       service,
       variant,
+      pathname,
     );
 
     return {

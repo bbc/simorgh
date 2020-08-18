@@ -16,6 +16,7 @@ const pageTypeUrls = async (
   variant,
   assetUri,
   pageData,
+  pathname,
 ) => {
   switch (assetType) {
     case STORY_PAGE:
@@ -28,7 +29,7 @@ const pageTypeUrls = async (
           name: 'secondaryColumn',
           path: getSecondaryColumnUrl({ service, variant }),
         },
-        (await hasRecommendations(service, variant, pageData))
+        (await hasRecommendations(service, variant, pageData, pathname))
           ? {
               name: 'recommendations',
               path: getRecommendationsUrl({ assetUri, variant }),
@@ -53,7 +54,7 @@ const fetchUrl = ({ name, path }) =>
     .then(response => validateResponse(response, name))
     .catch(noop);
 
-const getAdditionalPageData = async (pageData, service, variant) => {
+const getAdditionalPageData = async (pageData, service, variant, pathname) => {
   const assetType = getAssetType(pageData);
   const assetUri = getAssetUri(pageData);
 
@@ -63,6 +64,7 @@ const getAdditionalPageData = async (pageData, service, variant) => {
     variant,
     assetUri,
     pageData,
+    pathname,
   );
 
   if (urlsToFetch) {
