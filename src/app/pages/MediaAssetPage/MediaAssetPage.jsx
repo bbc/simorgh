@@ -52,15 +52,14 @@ const MediaAssetPage = ({ pageData }) => {
     ['relatedContent', 'groups', 0, 'promos'],
     pageData,
   );
-  const indexImagePath = path(['promo', 'indexImage', 'path'], pageData);
 
   const getIndexImageLocator = () => {
-    const imageParts = indexImagePath && getImageParts(indexImagePath);
-
     if (isLegacyMediaAssetPage(requestContext.canonicalLink)) {
       return null;
     }
 
+    const indexImagePath = path(['promo', 'indexImage', 'path'], pageData);
+    const imageParts = indexImagePath && getImageParts(indexImagePath);
     return imageParts && imageParts[1];
   };
 
