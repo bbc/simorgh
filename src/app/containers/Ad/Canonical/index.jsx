@@ -1,30 +1,15 @@
 import React, { useEffect, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { oneOf } from 'prop-types';
-import styled, { css } from 'styled-components';
+import { oneOf, string } from 'prop-types';
+import styled from 'styled-components';
 import { C_LUNAR_LIGHT } from '@bbc/psammead-styles/colours';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
+import { leaderboardStyles, mpuStyles } from '../utilities/adSlotStyles';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
-
-const LEADERBOARD_HEIGHT = '5.5rem';
-const LEADERBOARD_HEIGHT_GROUP_4_5 = '9rem';
-const MPU_HEIGHT = '15.625rem';
-
-const leaderboardStyles = css`
-  min-height: ${LEADERBOARD_HEIGHT};
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    min-height: ${LEADERBOARD_HEIGHT_GROUP_4_5};
-  }
-`;
-
-const mpuStyles = css`
-  min-height: ${MPU_HEIGHT};
-`;
 
 const AdContainer = styled.section`
   background-color: ${C_LUNAR_LIGHT};
@@ -47,12 +32,17 @@ export const getBootstrapSrc = (queryString, useLegacy = false) => {
   return useLegacy ? adsLegacyTestScript : adsTestScript;
 };
 
-const CanonicalAd = ({ slotType }) => {
+const CanonicalAd = ({ slotType, className }) => {
+  const { showAdsBasedOnLocation } = useContext(RequestContext);
   const location = useLocation();
   const queryString = location.search;
-  const { ads, dir } = useContext(ServiceContext);
-  const adsLabel = pathOr('Advertisement', ['advertisementLabel'], ads);
-  const ariaLabel = getAdsAriaLabel(adsLabel, dir, slotType);
+  const { translations, dir } = useContext(ServiceContext);
+  const label = pathOr(
+    'Advertisement',
+    ['ads', 'advertisementLabel'],
+    translations,
+  );
+  const ariaLabel = getAdsAriaLabel(label, dir, slotType);
 
   useEffect(() => {
     if (window.dotcom) {
@@ -70,6 +60,10 @@ const CanonicalAd = ({ slotType }) => {
     };
   }, [slotType, location]);
 
+  if (!showAdsBasedOnLocation) {
+    return null;
+  }
+
   return (
     <>
       {/* Loading dotcom-bootstrap.js here instead of CanonicalAdBootstrapJs to avoid it loading on live */}
@@ -84,6 +78,7 @@ const CanonicalAd = ({ slotType }) => {
         aria-hidden="true"
         role="region"
         data-e2e="advertisement"
+        className={className}
       >
         <div id={`dotcom-${slotType}`} className="dotcom-ad" />
       </AdContainer>
@@ -93,6 +88,11 @@ const CanonicalAd = ({ slotType }) => {
 
 CanonicalAd.propTypes = {
   slotType: oneOf(['leaderboard', 'mpu']).isRequired,
+  className: string,
+};
+
+CanonicalAd.defaultProps = {
+  className: null,
 };
 
 export default CanonicalAd;

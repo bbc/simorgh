@@ -34,36 +34,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0.5rem 0.25rem;
 }
 
-.c20 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c20:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c20:hover,
-.c20:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c20:visited {
-  color: #6E6E73;
-}
-
 .c16 {
   position: relative;
   height: 0;
@@ -218,6 +188,37 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   font-size: 0.9375rem;
   line-height: 1.25rem;
   padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.c20 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c20:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c20:hover,
+.c20:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c20:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -570,36 +571,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0.5rem 0.25rem;
 }
 
-.c24 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c24:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c24:hover,
-.c24:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c24:visited {
-  color: #6E6E73;
-}
-
 .c20 {
   position: relative;
   height: 0;
@@ -754,6 +725,37 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   font-size: 0.9375rem;
   line-height: 1.25rem;
   padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.c24 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c24:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c24:hover,
+.c24:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c24:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
@@ -1388,36 +1390,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0.5rem 0.25rem;
 }
 
-.c24 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c24:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c24:hover,
-.c24:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c24:visited {
-  color: #6E6E73;
-}
-
 .c25 {
   position: relative;
   height: 0;
@@ -1585,6 +1557,37 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   font-size: 1rem;
   line-height: 1.625rem;
   padding: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.c24 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c24:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c24:hover,
+.c24:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c24:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:63rem) {
