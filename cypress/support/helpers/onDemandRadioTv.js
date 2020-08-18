@@ -33,12 +33,12 @@ export const getEmbedUrl = ({ body, language, isAmp }) => {
   return isAmp ? `${embedUrl}/amp` : embedUrl;
 };
 
-export const isAvailableOld = pathEq(
+export const isAvailable = pathEq(
   ['content', 'blocks', '0', 'availability'],
   'available',
 );
 
-export const isAvailable = jsonData => {
+export const getEpisodeAvailability = jsonData => {
   const availabilityStatus = jsonData.content.blocks[0].availability;
 
   return availabilityStatus;
