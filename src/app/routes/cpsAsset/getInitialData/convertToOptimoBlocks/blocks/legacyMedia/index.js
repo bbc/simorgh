@@ -1,14 +1,7 @@
 import path from 'ramda/src/path';
 
-const getImageUrl = block => {
-  let imageURL = path(['image', 'href'], block);
-
-  if (imageURL) {
-    imageURL = imageURL.replace('http://', 'https://');
-  }
-
-  return imageURL;
-};
+const getImageUrl = block =>
+  pathOr('', ['image', 'href'], block).replace('http://', 'https://');
 
 const generateVideoBlock = (block, json) => {
   const generatedBlock = {
