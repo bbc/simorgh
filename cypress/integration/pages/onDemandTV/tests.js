@@ -1,5 +1,6 @@
 /* eslint-disable consistent-return */
 import {
+  isAvailable,
   getEpisodeAvailability,
   getEmbedUrl,
   isBrand,
@@ -11,7 +12,7 @@ import dataEndpointOverride from '../../../support/helpers/visitPage';
 export default ({ service, pageType, variant, isAmp }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
     describe('Video Player', () => {
-      it('should render an iframe with a valid URL', () => {
+      it('Brand page should not display a future episode', () => {
         cy.request(
           `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
         ).then(({ body: jsonData }) => {
@@ -24,6 +25,17 @@ export default ({ service, pageType, variant, isAmp }) => {
               `Episode is ${episodeAvailability}: ${Cypress.env(
                 'currentPath',
               )}`,
+            );
+          }
+        });
+      });
+      it('should render an iframe with a valid URL', () => {
+        cy.request(
+          `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
+        ).then(({ body: jsonData }) => {
+          if (!isAvailable) {
+            return cy.log(
+              `Episode is not available: ${Cypress.env('currentPath')}`,
             );
           }
 

@@ -1,5 +1,6 @@
 /* eslint-disable consistent-return */
 import {
+  isAvailable,
   getEpisodeAvailability,
   dataEndpointOverride,
   getEmbedUrl,
@@ -44,15 +45,9 @@ export default ({ service, pageType, variant, isAmp }) => {
         cy.request(
           `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
         ).then(({ body: jsonData }) => {
-          const episodeAvailability = getEpisodeAvailability(jsonData);
-          if (episodeAvailability !== 'available') {
-            if (episodeAvailability === 'future') {
-              throw new Error('Episode is in the future');
-            }
+          if (!isAvailable) {
             return cy.log(
-              `Episode is ${episodeAvailability}: ${Cypress.env(
-                'currentPath',
-              )}`,
+              `Episode is not available: ${Cypress.env('currentPath')}`,
             );
           }
 
