@@ -53,11 +53,18 @@ const CpsRecommendations = ({ items, parentColumns }) => {
 
   const { text, endTextVisuallyHidden } = path(['skipLink'], recommendations);
 
-  const skipLinkTerms = {
+  const terms = {
     '%title%': title,
   };
 
   const endTextId = 'end-of-recommendations';
+
+  const skipLinkProps = {
+    endTextId,
+    terms,
+    text,
+    endTextVisuallyHidden,
+  };
 
   const singleTransform = item => {
     return (
@@ -135,11 +142,7 @@ const CpsRecommendations = ({ items, parentColumns }) => {
           sectionLabelBar={false}
           sectionLabelBackground={C_LUNAR}
           columnType="main"
-          hasSkipLnk
-          endTextId={endTextId}
-          skipText={text}
-          endTextVisuallyHidden={endTextVisuallyHidden}
-          skipLinkTerms={skipLinkTerms}
+          skipLink={skipLinkProps}
         />
       </RecommendationsWrapper>
     </GridItemConstrainedMediumNoMargin>

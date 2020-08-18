@@ -117,23 +117,9 @@ const SingleContentWrapper = styled.div`
   `}
 `;
 
-const OptionallyRenderedSkipWrapper = ({
-  hasSkipLnk,
-  service,
-  skipLinkTerms,
-  endTextVisuallyHidden,
-  endTextId,
-  skipText,
-  children,
-}) =>
-  hasSkipLnk ? (
-    <SkipLinkWrapper
-      service={service}
-      endTextId={endTextId}
-      text={skipText}
-      endTextVisuallyHidden={endTextVisuallyHidden}
-      terms={skipLinkTerms}
-    >
+const OptionallyRenderedSkipWrapper = ({ skipLink, service, children }) =>
+  skipLink ? (
+    <SkipLinkWrapper service={service} {...skipLink}>
       {children}
     </SkipLinkWrapper>
   ) : (
@@ -141,30 +127,23 @@ const OptionallyRenderedSkipWrapper = ({
   );
 
 const optionalSkipLinkProps = {
-  hasSkipLnk: bool,
-  skipLinkTerms: shape({}),
+  terms: shape({
+    '%title%': string,
+  }),
   endTextVisuallyHidden: string,
   endTextId: string,
-  skipText: string,
-};
-
-const optionalSkipLinkDefaultProps = {
-  hasSkipLnk: false,
-  skipLinkTerms: {},
-  endTextVisuallyHidden: null,
-  endTextId: null,
-  skipText: null,
+  text: string,
 };
 
 OptionallyRenderedSkipWrapper.propTypes = {
   service: string,
   children: node.isRequired,
-  ...optionalSkipLinkProps,
+  skipLink: shape(optionalSkipLinkProps),
 };
 
 OptionallyRenderedSkipWrapper.defaultProps = {
   service: '',
-  ...optionalSkipLinkDefaultProps,
+  skipLink: null,
 };
 
 const CpsOnwardJourney = ({
@@ -178,11 +157,7 @@ const CpsOnwardJourney = ({
   sectionLabelBar,
   sectionLabelBackground,
   columnType,
-  hasSkipLnk,
-  endTextId,
-  skipText,
-  endTextVisuallyHidden,
-  skipLinkTerms,
+  skipLink,
 }) => {
   const a11yAttributes = {
     as: 'section',
@@ -228,13 +203,7 @@ const CpsOnwardJourney = ({
 
   return (
     <CpsOnwardJourneyWrapper>
-      <OptionallyRenderedSkipWrapper
-        hasSkipLnk={hasSkipLnk}
-        endTextId={endTextId}
-        skipText={skipText}
-        endTextVisuallyHidden={endTextVisuallyHidden}
-        skipLinkTerms={skipLinkTerms}
-      >
+      <OptionallyRenderedSkipWrapper skipLink={skipLink} service={service}>
         <StyledSectionLabel
           script={script}
           service={service}
@@ -281,7 +250,7 @@ CpsOnwardJourney.propTypes = {
       usages.
   */
   columnType: oneOf(['main', 'secondary']).isRequired,
-  ...optionalSkipLinkProps,
+  skipLink: shape(optionalSkipLinkProps),
 };
 
 CpsOnwardJourney.defaultProps = {
@@ -290,7 +259,7 @@ CpsOnwardJourney.defaultProps = {
   sectionLabelOverrideAs: null,
   sectionLabelBar: true,
   sectionLabelBackground: C_GHOST,
-  ...optionalSkipLinkDefaultProps,
+  skipLink: null,
 };
 
 export default CpsOnwardJourney;
