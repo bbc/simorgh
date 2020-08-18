@@ -325,7 +325,7 @@ describe('StoryPromo Container', () => {
         cpsItem.timestamp = 1565035200000;
       });
 
-      it('should show the correct local date', () => {
+      it('should show the correct local date without an overriden datetime locale', () => {
         const { container: newsContainer } = render(
           <WrappedStoryPromo item={cpsItem} service="news" />,
         );
@@ -345,6 +345,36 @@ describe('StoryPromo Container', () => {
           dateTime: bengaliDate,
         } = bengaliContainer.querySelector('time');
         expect(bengaliTime).toEqual('৬ অগাস্ট ২০১৯');
+        expect(bengaliDate).toEqual('2019-08-06');
+      });
+      it('should show the correct local date with an overidden datetime locale', () => {
+        const { container: newsContainer } = render(
+          <WrappedStoryPromo
+            item={cpsItem}
+            service="news"
+            serviceDatetimeLocale="fa"
+          />,
+        );
+        const {
+          textContent: newsTime,
+          dateTime: newsDate,
+        } = newsContainer.querySelector('time');
+
+        expect(newsTime).toEqual('۵ اوت ۲۰۱۹');
+        expect(newsDate).toEqual('2019-08-05');
+
+        const { container: bengaliContainer } = render(
+          <WrappedStoryPromo
+            item={cpsItem}
+            service="bengali"
+            serviceDatetimeLocale="uk"
+          />,
+        );
+        const {
+          textContent: bengaliTime,
+          dateTime: bengaliDate,
+        } = bengaliContainer.querySelector('time');
+        expect(bengaliTime).toEqual('6 серпня 2019');
         expect(bengaliDate).toEqual('2019-08-06');
       });
     });
