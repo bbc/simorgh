@@ -37,7 +37,6 @@ describe('getThingAttributes', () => {
   it('should not add empty or null values', () => {
     analyticsUtilFunctions.push(marketingCampaignFunc);
 
-    mockAndSet(marketingCampaignFunc, 'email');
     analyticsUtilFunctions.forEach(func => {
       mockAndSet(func, null);
     });
