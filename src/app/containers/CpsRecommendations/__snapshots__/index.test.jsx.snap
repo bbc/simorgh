@@ -112,6 +112,9 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 .c4 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
@@ -649,6 +652,9 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 .c4 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
@@ -1481,6 +1487,9 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 .c4 {
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
