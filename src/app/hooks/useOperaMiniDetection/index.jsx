@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const OperaMiniDetection = () => {
+const useOperaMiniDetection = () => {
   const [isOperaMini, setIsOperaMini] = useState(false);
 
   useEffect(() => {
@@ -12,4 +12,4 @@ const OperaMiniDetection = () => {
   return isOperaMini;
 };
 
-export default OperaMiniDetection;
+export default useOperaMiniDetection;

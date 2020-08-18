@@ -10,7 +10,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
-import OperaMiniDetection from '#hooks/OperaMiniDetection';
+import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 
 const AdContainer = styled.section`
   background-color: ${C_LUNAR_LIGHT};
@@ -61,7 +61,7 @@ const CanonicalAd = ({ slotType, className }) => {
     };
   }, [slotType, location]);
 
-  const isOperaMini = OperaMiniDetection();
+  const isOperaMini = useOperaMiniDetection();
 
   if (!showAdsBasedOnLocation || isOperaMini) {
     return null;
