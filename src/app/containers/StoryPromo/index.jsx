@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { shape, bool, oneOf, oneOfType } from 'prop-types';
+import { shape, bool, oneOf, oneOfType, string } from 'prop-types';
 import styled from 'styled-components';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
@@ -28,6 +28,12 @@ import { MEDIA_MISSING } from '#lib/logger.const';
 const logger = loggerNode(__filename);
 
 const PROMO_TYPES = ['top', 'regular', 'leading'];
+
+const SingleColumnStoryPromo = styled(StoryPromo)`
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    display: grid;
+  }
+`;
 
 const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
   if (!imageValues) {
@@ -87,6 +93,8 @@ const StoryPromoContainer = ({
   displayImage,
   displaySummary,
   isRecommendation,
+  isSingleColumnLayout,
+  serviceDatetimeLocale,
 }) => {
   const {
     altCalendar,
@@ -176,6 +184,12 @@ const StoryPromoContainer = ({
     `}
   `;
 
+  const locale = serviceDatetimeLocale || datetimeLocale;
+
+  const StyledLink = styled(Link)`
+    overflow-wrap: anywhere;
+  `;
+
   const Info = (
     <>
       {headline && (
@@ -186,7 +200,7 @@ const StoryPromoContainer = ({
           promoHasImage={displayImage}
           as={headingTagOverride}
         >
-          <Link href={url}>
+          <StyledLink href={url}>
             {isLive ? (
               <LiveLabel
                 service={service}
@@ -200,7 +214,7 @@ const StoryPromoContainer = ({
             ) : (
               linkcontents
             )}
-          </Link>
+          </StyledLink>
         </StyledHeadline>
       )}
       {promoSummary && displaySummary && !isRecommendation && (
@@ -216,7 +230,7 @@ const StoryPromoContainer = ({
       {displayTimestamp && (
         <Timestamp
           altCalendar={altCalendar}
-          locale={datetimeLocale}
+          locale={locale}
           timestamp={timestamp}
           dateTimeFormat="YYYY-MM-DD"
           format="LL"
@@ -257,8 +271,12 @@ const StoryPromoContainer = ({
     />
   );
 
+  const StoryPromoComponent = isSingleColumnLayout
+    ? SingleColumnStoryPromo
+    : StoryPromo;
+
   return (
-    <StoryPromo
+    <StoryPromoComponent
       image={Image}
       info={Info}
       mediaIndicator={MediaIndicator}
@@ -277,6 +295,8 @@ StoryPromoContainer.propTypes = {
   displayImage: bool,
   displaySummary: bool,
   isRecommendation: bool,
+  isSingleColumnLayout: bool,
+  serviceDatetimeLocale: string,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -286,6 +306,8 @@ StoryPromoContainer.defaultProps = {
   displayImage: true,
   displaySummary: true,
   isRecommendation: false,
+  isSingleColumnLayout: false,
+  serviceDatetimeLocale: null,
 };
 
 export default StoryPromoContainer;

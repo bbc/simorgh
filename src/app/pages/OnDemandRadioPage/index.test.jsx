@@ -6,7 +6,7 @@ import { StaticRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import OnDemandRadioPage from '.';
+import _OnDemandRadioPage from './OnDemandRadioPage';
 import pashtoPageData from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
 import koreanPageData from '#data/korean/bbc_korean_radio/w3ct0kn5';
 import koreanPageWithScheduleData from './fixtureData/korean.json';
@@ -16,6 +16,9 @@ import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttn
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandRadio/getInitialData';
+import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
+
+const OnDemandRadioPage = withMediaError(_OnDemandRadioPage);
 
 const Page = ({ pageData, service, isAmp = false, variant, lang }) => (
   <StaticRouter>
