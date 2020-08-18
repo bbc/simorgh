@@ -2,7 +2,7 @@
 
 exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`] = `
 .c0 {
-  background-color: #F8F8F8;
+  background-color: #F6F6F6;
 }
 
 .amp-geo-pending .c0,
@@ -168,7 +168,7 @@ exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
   </head>
   <body>
     .c0 {
-  background-color: #F8F8F8;
+  background-color: #F6F6F6;
 }
 
 .amp-geo-pending .c0,
@@ -292,7 +292,7 @@ exports[`Ad Container Snapshots Canonical should correctly render a leaderboard 
   </head>
   <body>
     .c0 {
-  background-color: #F8F8F8;
+  background-color: #F6F6F6;
   display: none;
   visibility: hidden;
 }
@@ -367,7 +367,7 @@ exports[`Ad Container Snapshots Canonical should correctly render an mpu ad 1`] 
   </head>
   <body>
     .c0 {
-  background-color: #F8F8F8;
+  background-color: #F6F6F6;
   display: none;
   visibility: hidden;
 }
