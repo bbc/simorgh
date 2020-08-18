@@ -14,9 +14,13 @@ import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 
 */
 
-const MPU_WIDTH_MIN = '19.75rem'; // 316px
+const MPU_WIDTH_MIN = '18.75rem'; // 300px
 
-const LEADERBOARD_WIDTH_MIN = '21rem'; // 336px
+const MPU_WIDTH_MIN_PADDING = '19.75rem'; // 316px
+
+const LEADERBOARD_WIDTH_MIN = '20rem'; // 320px
+
+const LEADERBOARD_WIDTH_MIN_PADDING = '21rem'; // 336px
 
 const LARGE_LEADERBOARD_WIDTH_MIN = '58.75rem'; // 940px
 
@@ -58,12 +62,15 @@ export const leaderboardStyles = css`
   display: none;
   visibility: hidden;
   @media (min-width: ${LEADERBOARD_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING};
     min-height: ${LEADERBOARD_HEIGHTS.GROUP_1};
-    padding: 0 ${GEL_SPACING};
     display: flex;
     flex-direction: column;
     justify-content: center;
     visibility: visible;
+  }
+  @media (min-width: ${LEADERBOARD_WIDTH_MIN_PADDING}) {
+    padding: 0 ${GEL_SPACING};
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     min-height: ${LEADERBOARD_HEIGHTS.GROUP_2};
@@ -80,11 +87,16 @@ export const leaderboardStyles = css`
 export const mpuStyles = css`
   display: none;
   visibility: hidden;
+  padding: 0;
   @media (min-width: ${MPU_WIDTH_MIN}) {
     min-height: ${MPU_HEIGHTS.GROUP_1};
-    padding: 0 ${GEL_SPACING};
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     visibility: visible;
+  }
+  @media (min-width: ${MPU_WIDTH_MIN_PADDING}) {
+    padding: 0 ${GEL_SPACING};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     min-height: ${MPU_HEIGHTS.GROUP_3};
