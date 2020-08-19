@@ -7,11 +7,11 @@ import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 
 // Ad Slot Widths (for custom breakpoints)
 /*
-  These have an extra 16px (1rem) added in order to account for the padding on both the left and
-  right sides of 8px (0.5rem) in order to account for the padding requirement of having 0.5rem
-  around the container at the smallest breakpoint for both MPUs and Leaderboards.
+  These have an extra 16px (1rem) variant added in order to account for the padding on both the left and
+  right sides of 8px (0.5rem) due to the requirement of having 0.5rem around the container at the smallest
+  breakpoint for both MPUs and Leaderboards. This requirement is ignored between 320px - 336px
+  for Leaderboards and 300px - 316px for MPUs as the padding makes the Ad overflow in these breakpoints.
   Further details can be found here: https://github.com/bbc/simorgh/pull/7480#discussion_r471376726
-
 */
 
 const MPU_WIDTH_MIN = '18.75rem'; // 300px

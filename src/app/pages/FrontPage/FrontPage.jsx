@@ -55,7 +55,7 @@ const negativeMargin = `
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin: ${GEL_SPACING_TRPL} -${GEL_MARGIN_ABOVE_400PX} 0;
   }
- `;
+`;
 
 const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
   ${negativeMargin}
