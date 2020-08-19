@@ -173,8 +173,8 @@ export const service = {
       },
       include: {
         errorMessage:
-          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-        linkText: 'View the full version of the page to see all the content.',
+          'ይቅርታ፤ የዚህን ይዘት የተወሰነ ክፍል ለሞባይል አመቺ በሆነ መልክ ልናቀርብ አልቻልንም።',
+        linkText: 'በገጹ ላይ ያሉትን ሁሉንም ይዘቶች ለማየት ሙሉውን ይዘት ይመልከቱ  ',
       },
       topStoriesTitle: 'እንዳያመልጥዎ',
       featuresAnalysisTitle: 'ከየፈርጁ',
