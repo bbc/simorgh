@@ -10,6 +10,8 @@ import {
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 
 import pathOr from 'ramda/src/pathOr';
+import pipe from 'ramda/src/pipe';
+import last from 'ramda/src/last';
 import MediaMessage from './MediaMessage';
 import { GridWrapper } from '#lib/styledGrid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
@@ -33,13 +35,13 @@ import {
   getLastPublished,
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
-
 import { RequestContext } from '#contexts/RequestContext';
-
-const isLegacyMediaAssetPage = url => url.split('/').length > 7;
 
 const MediaAssetPage = ({ pageData }) => {
   const requestContext = useContext(RequestContext);
+  const isLegacyMediaAssetPage = () =>
+    requestContext.canonicalLink.split('/').length > 7;
+
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
@@ -54,24 +56,17 @@ const MediaAssetPage = ({ pageData }) => {
   );
 
   const getIndexImageLocator = () => {
-    if (isLegacyMediaAssetPage(requestContext.canonicalLink)) {
-      return null;
-    }
-
-    const indexImagePath = path(['promo', 'indexImage', 'path'], pageData);
-
-    if (indexImagePath) {
-      const imageParts = getImageParts(indexImagePath);
-
-      if (imageParts && imageParts.length >= 2) {
-        return imageParts[1];
-      }
-    }
-
-    return null;
+    const indexImagePath = pathOr(
+      '',
+      ['promo', 'indexImage', 'path'],
+      pageData,
+    );
+    return last(getImageParts(indexImagePath));
   };
 
-  const indexImageLocator = getIndexImageLocator();
+  const indexImageLocator = isLegacyMediaAssetPage()
+    ? null
+    : getIndexImageLocator();
   const indexImageAltText = path(['promo', 'indexImage', 'altText'], pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
@@ -91,7 +86,7 @@ const MediaAssetPage = ({ pageData }) => {
 
     // There are niche scenarios where we receive legacy MAPs that contain modern video blocks
     // This is not something we currently support, so we return an error message
-    video: isLegacyMediaAssetPage(requestContext.canonicalLink)
+    video: isLegacyMediaAssetPage()
       ? MediaMessage
       : props => (
           // eslint-disable-next-line react/jsx-indent
