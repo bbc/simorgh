@@ -50,7 +50,7 @@ const advertisingDirectives = {
     'https://cdn.ampproject.org',
     'https://collector.effectivemeasure.net',
     'https://me-ssl.effectivemeasure.net',
-    'https://pixel.adsafeprotected.com/',
+    'https://pixel.adsafeprotected.com',
     'https://privacy.crwdcntrl.net',
     'https://sb.scorecardresearch.com',
     'https://*.g.doubleclick.net',
