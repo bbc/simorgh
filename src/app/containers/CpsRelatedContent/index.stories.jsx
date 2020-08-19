@@ -34,62 +34,30 @@ const ampRelatedContent = getRelatedContent('amp');
 storiesOf('Containers|CPS Related Content/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .add('pidgin (ltr)', () =>
-    canonicalRelatedContent({
-      service: 'pidgin',
-      dir: 'ltr',
-      data: pidginRelatedContentData,
-    }),
+    canonicalRelatedContent('pidgin', 'ltr', pidginRelatedContentData),
   )
   .add('arabic (rtl)', () =>
-    canonicalRelatedContent({
-      service: 'arabic',
-      dir: 'rtl',
-      data: arabicRelatedContentData,
-    }),
+    canonicalRelatedContent('arabic', 'rtl', arabicRelatedContentData),
   )
   .add('pidgin (ltr) with one item', () =>
-    canonicalRelatedContent({
-      service: 'pidgin',
-      dir: 'ltr',
-      data: [pidginRelatedContentData[0]],
-    }),
+    canonicalRelatedContent('pidgin', 'ltr', [pidginRelatedContentData[0]]),
   )
   .add('arabic (rtl) with one item', () =>
-    canonicalRelatedContent({
-      service: 'arabic',
-      dir: 'rtl',
-      data: [arabicRelatedContentData[0]],
-    }),
+    canonicalRelatedContent('arabic', 'rtl', [arabicRelatedContentData[0]]),
   );
 
 storiesOf('Containers|CPS Related Content/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
   .add('pidgin (ltr) - amp', () =>
-    ampRelatedContent({
-      service: 'pidgin',
-      dir: 'ltr',
-      data: pidginRelatedContentData,
-    }),
+    ampRelatedContent('pidgin', 'ltr', pidginRelatedContentData),
   )
   .add('arabic (rtl) - amp', () =>
-    ampRelatedContent({
-      service: 'arabic',
-      dir: 'rtl',
-      data: arabicRelatedContentData,
-    }),
+    ampRelatedContent('arabic', 'rtl', arabicRelatedContentData),
   )
   .add('pidgin (ltr) with one item', () =>
-    canonicalRelatedContent({
-      service: 'pidgin',
-      dir: 'ltr',
-      data: [pidginRelatedContentData[0]],
-    }),
+    canonicalRelatedContent('pidgin', 'ltr', [pidginRelatedContentData[0]]),
   )
   .add('arabic (rtl) with one item', () =>
-    canonicalRelatedContent({
-      service: 'arabic',
-      dir: 'rtl',
-      data: [arabicRelatedContentData[0]],
-    }),
+    canonicalRelatedContent('arabic', 'rtl', [arabicRelatedContentData[0]]),
   );
