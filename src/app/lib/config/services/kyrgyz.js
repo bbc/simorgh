@@ -185,9 +185,8 @@ export const service = {
         },
       },
       include: {
-        errorMessage:
-          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-        linkText: 'View the full version of the page to see all the content.',
+        errorMessage: 'Кечиресиз, бул баракча мобилдик телефондо ачылбайт',
+        linkText: 'Башкы беттин толук версиясын ачыңыз',
       },
       topStoriesTitle: 'Башкы кабарлар',
       featuresAnalysisTitle: 'Редактордун тандоосу',
