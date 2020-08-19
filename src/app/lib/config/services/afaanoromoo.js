@@ -177,6 +177,11 @@ export const service = {
           endTextVisuallyHidden: 'Xumura maxxansa %provider_name%',
         },
       },
+      include: {
+        errorMessage:
+          'Dhiifama, odeessa kana keessaa kutaa kana, moobaayilarratti agarsiisuu hin dandeenyu',
+        linkText: 'Guutuu qabiyyee ilaaluuf fuula cufa ilaali',
+      },
       topStoriesTitle: 'Isin hin darbiin',
       featuresAnalysisTitle: `Maaltu haasa'ama?`,
     },

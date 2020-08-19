@@ -184,6 +184,10 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% посттун аягы',
         },
       },
+      include: {
+        errorMessage: 'Кечиресиз, бул баракча мобилдик телефондо ачылбайт',
+        linkText: 'Башкы беттин толук версиясын ачыңыз',
+      },
       topStoriesTitle: 'Башкы кабарлар',
       featuresAnalysisTitle: 'Редактордун тандоосу',
     },
