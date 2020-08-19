@@ -180,8 +180,9 @@ const baseServiceConfig = {
     },
     include: {
       errorMessage:
-        'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-      linkText: 'View the full version of the page to see all the content.',
+        'Вибачте, ми не можемо відобразити цю частину сторінки у мобільній версії.',
+      linkText:
+        'Перегляньте повну версію сторінки, щоб побачити увесь контент.',
     },
     relatedContent: 'Статті на цю ж тему',
     ...secondaryColumnTranslations,
