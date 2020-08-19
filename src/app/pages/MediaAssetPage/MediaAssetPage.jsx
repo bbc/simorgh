@@ -59,8 +59,16 @@ const MediaAssetPage = ({ pageData }) => {
     }
 
     const indexImagePath = path(['promo', 'indexImage', 'path'], pageData);
-    const imageParts = indexImagePath && getImageParts(indexImagePath);
-    return imageParts && imageParts[1];
+
+    if (indexImagePath) {
+      const imageParts = getImageParts(indexImagePath);
+
+      if (imageParts && imageParts.length >= 2) {
+        return imageParts[1];
+      }
+    }
+
+    return null;
   };
 
   const indexImageLocator = getIndexImageLocator();
