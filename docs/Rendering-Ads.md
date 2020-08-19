@@ -41,19 +41,21 @@ Given you do not have any ad blocking extensions in your browser.
 
 ## Rendering Ads on an a11y device
 
-If you are unable to set a proxy on one of the Windows a11y laptops, you won't be able to see ads within the UK. For this reason you'll have to run Simorgh locally in your working machine and access to it from the Windows laptop following these steps:
+If you are unable to set a proxy on one of the Windows a11y laptops, you won't be able to see ads within the UK. For this reason, you'll have to run Simorgh locally in your working machine and access to it from the Windows laptop following these steps:
 
-1. Update the `SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN` url in the [local.env](https://github.com/bbc/simorgh/blob/latest/envConfig/local.env#L3) file with the IP address of your machine
+1. Connect both devices to the same network
+
+2. Update the `SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN` url in the [local.env](https://github.com/bbc/simorgh/blob/latest/envConfig/local.env#L3) file with the IP address of your machine
 
    i.e `SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN=http://192.168.0.50:7080`
 
-2. Disable the `upgrade-insecure-requests` directive from the [cspHeader](https://github.com/bbc/simorgh/blob/latest/src/server/utilities/cspHeader/index.js#L419)
+3. Disable the `upgrade-insecure-requests` directive from the [cspHeader](https://github.com/bbc/simorgh/blob/latest/src/server/utilities/cspHeader/index.js#L419)
 
-3. If you can't set the `BBC-Adverts` header in the Windows laptop, you will need to remove [this](https://github.com/bbc/simorgh/blob/latest/src/app/containers/Ad/Canonical/index.jsx#L63) condition from the codebase to be able to render the ad
+4. If you can't set the `BBC-Adverts` header in the Windows laptop, you will need to remove [this](https://github.com/bbc/simorgh/blob/latest/src/app/containers/Ad/Canonical/index.jsx#L63) condition from the codebase to be able to render the ad
 
-4. Run Simorgh with a production build `npm run build && npm run start`
+5. Run Simorgh with a production build `npm run build && npm run start`
 
-5. Access to your machine from the Windows laptop
+6. Access to your machine from the Windows laptop
 
    i.e `http://192.168.0.50:7080/mundo?site=test&ads-debug=true`
 
