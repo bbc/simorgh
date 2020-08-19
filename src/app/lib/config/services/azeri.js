@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Reklam',
-    },
     lang: `az`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Yeniləndi',
@@ -52,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Reklam',
+      },
       seeAll: 'Hamısına baxın',
       home: 'Xəbərlər',
       currentPage: 'Hazırda olduğunuz səhifə',
@@ -174,6 +173,11 @@ export const service = {
           text: 'Paylaşımını ötürün %provider_name%',
           endTextVisuallyHidden: 'Paylaşımın sonu %provider_name%',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: 'Bu günün xəbərləri',
       featuresAnalysisTitle: 'Bunları da oxuyun',

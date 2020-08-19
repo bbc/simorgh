@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { any, arrayOf, shape, string } from 'prop-types';
+import { oneOfType, object, arrayOf, shape, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '@bbc/psammead-caption';
 import pathOr from 'ramda/src/pathOr';
@@ -77,7 +77,7 @@ const CaptionContainer = ({ block, type }) => {
 CaptionContainer.propTypes = {
   block: shape({
     model: shape({
-      blocks: arrayOf(any).isRequired,
+      blocks: arrayOf(oneOfType([string, object])).isRequired,
     }).isRequired,
   }).isRequired,
   type: string.isRequired,

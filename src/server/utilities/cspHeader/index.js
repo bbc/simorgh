@@ -9,14 +9,66 @@ import getOriginContext from '#contexts/RequestContext/getOriginContext';
  * View the developer console for errors.
  */
 
+const advertisingDirectives = {
+  connectSrc: [
+    'https://csi.gstatic.com',
+    'https://experience.tinypass.com',
+    'https://pagead2.googlesyndication.com',
+    'https://securepubads.g.doubleclick.net',
+    'https://static.test.files.bbci.co.uk',
+    'https://static.files.bbci.co.uk',
+    'https://survey.effectivemeasure.net',
+    'https://collector.effectivemeasure.net',
+    'https://detect-survey.effectivemeasure.net',
+    'https://www.live.bbc.co.uk',
+    'https://adservice.google.com',
+    'https://tpc.googlesyndication.com',
+  ],
+  frameSrc: [
+    'https://securepubads.g.doubleclick.net',
+    'https://tpc.googlesyndication.com',
+    'https://bcp.crwdcntrl.net',
+    'https://edigitalsurvey.com',
+    'https://*.safeframe.googlesyndication.com',
+  ],
+  imgSrc: [
+    'https://collector.effectivemeasure.net',
+    'https://csi.gstatic.com',
+    'https://pagead2.googlesyndication.com',
+    'https://sb.scorecardresearch.com',
+    'https://secure-us.imrworldwide.com',
+    'https://securepubads.g.doubleclick.net',
+    'https://tpc.googlesyndication.com',
+    'https://www.google.com',
+  ],
+  scriptSrc: [
+    'https://ad.crwdcntrl.net',
+    'https://adservice.google.co.uk',
+    'https://adservice.google.com',
+    'https://bbc.gscontxt.net',
+    'https://bcp.crwdcntrl.net',
+    'https://cdn.ampproject.org',
+    'https://collector.effectivemeasure.net',
+    'https://me-ssl.effectivemeasure.net',
+    'https://privacy.crwdcntrl.net',
+    'https://sb.scorecardresearch.com',
+    'https://securepubads.g.doubleclick.net',
+    'https://t.effectivemeasure.net',
+    'https://tags.crwdcntrl.net',
+    'https://tpc.googlesyndication.com',
+    'https://gn-web-assets.api.bbc.com',
+    'https://www.googletagservices.com',
+  ],
+  defaultSrc: [
+    'https://tpc.googlesyndication.com',
+    'https://*.safeframe.googlesyndication.com',
+  ],
+};
+
 const directives = {
   connectSrc: {
     ampLive: [
       'https://*.akamaihd.net',
-      'https://adservice.google.com', // ads
-      'https://securepubads.g.doubleclick.net', // ads
-      'https://pagead2.googlesyndication.com', // ads
-      'https://tpc.googlesyndication.com', // ads
       'https://a1.api.bbc.co.uk/hit.xiti', // ATI
       'https://config.api.bbci.co.uk', // Toggles service
       'https://cdn.ampproject.org', // AMP
@@ -25,14 +77,11 @@ const directives = {
       'https://www.bbc.co.uk', // STY include indepthtoolkit
       'https://platform.twitter.com', // Social Embeds, <amp-twitter />
       'https://mybbc-analytics.files.bbci.co.uk',
+      ...advertisingDirectives.connectSrc,
       "'self'",
     ],
     canonicalLive: [
       'https://*.akamaihd.net',
-      'https://adservice.google.com', // ads
-      'https://securepubads.g.doubleclick.net', // ads
-      'https://pagead2.googlesyndication.com', // ads
-      'https://tpc.googlesyndication.com', // ads
       'https://a1.api.bbc.co.uk/hit.xiti', // ATI
       'https://config.api.bbci.co.uk', // Toggles service
       'https://cookie-oven.api.bbc.com', // Cookie banner
@@ -40,14 +89,11 @@ const directives = {
       'https://www.bbc.co.uk', // STY include indepthtoolkit
       'https://news.files.bbci.co.uk', // STY include
       'https://mybbc-analytics.files.bbci.co.uk',
+      ...advertisingDirectives.connectSrc,
       "'self'",
     ],
     ampNonLive: [
       'https://*.akamaihd.net',
-      'https://adservice.google.com', // ads
-      'https://securepubads.g.doubleclick.net', // ads
-      'https://pagead2.googlesyndication.com', // ads
-      'https://tpc.googlesyndication.com', // ads
       'https://cdn.ampproject.org',
       'https://*.ampproject.net', // Social Embeds
       'https://amp-error-reporting.appspot.com',
@@ -56,6 +102,7 @@ const directives = {
       'https://www.bbc.co.uk', // STY include indepthtoolkit
       'https://platform.twitter.com', // Social Embeds, <amp-twitter />
       'https://mybbc-analytics.files.bbci.co.uk',
+      ...advertisingDirectives.connectSrc,
       "'self'",
     ],
     canonicalNonLive: [
@@ -66,38 +113,27 @@ const directives = {
       'https://cookie-oven.api.bbc.co.uk', // Cookie banner
       'https://cookie-oven.test.api.bbc.com', // Cookie banner
       'https://cookie-oven.test.api.bbc.co.uk', // Cookie banner
+      'https://www.bbc.com', // ads
       'https://www.bbc.co.uk', // STY include indepthtoolkit
       'https://news.files.bbci.co.uk', // STY include
       'https://news.test.files.bbci.co.uk', // STY include
-      'https://csi.gstatic.com', // ads
-      'https://experience.tinypass.com', // ads
-      'https://static.test.files.bbci.co.uk', // ads
-      'https://survey.effectivemeasure.net', // ads
-      'https://detect-survey.effectivemeasure.net', // ads
-      'https://collector.effectivemeasure.net', // ads
-      'https://adservice.google.com', // ads
-      'https://securepubads.g.doubleclick.net', // ads
-      'https://pagead2.googlesyndication.com', // ads
-      'https://tpc.googlesyndication.com', // ads
       'https://mybbc-analytics.files.bbci.co.uk',
+      ...advertisingDirectives.connectSrc,
       "'self'",
     ],
   },
   frameSrc: {
     ampLive: [
       'https://polling.bbc.co.uk', // Media page
-      'https://securepubads.g.doubleclick.net', // ads
-      'https://tpc.googlesyndication.com', // ads
       'https://www.youtube.com', // Social Embeds, <amp-youtube />
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.ampproject.net', // Social Embeds
       'https://news.files.bbci.co.uk', // STY include
+      ...advertisingDirectives.frameSrc,
       "'self'",
     ],
     canonicalLive: [
       'https://polling.bbc.co.uk', // Media page
-      'https://securepubads.g.doubleclick.net', // ads
-      'https://tpc.googlesyndication.com', // ads
       'https://emp.bbc.com',
       'https://emp.bbc.co.uk',
       'https://chartbeat.com',
@@ -109,18 +145,18 @@ const directives = {
       'https://news.files.bbci.co.uk', // STY include
       'https://www.bbc.co.uk', // STY include
       'https://bbc-maps.carto.com', // STY include maps
+      ...advertisingDirectives.frameSrc,
       "'self'",
     ],
     ampNonLive: [
       'https://polling.bbc.co.uk', // Media page
       'https://polling.test.bbc.co.uk', // Media page
-      'https://securepubads.g.doubleclick.net', // ads
-      'https://tpc.googlesyndication.com', // ads
       'https://www.youtube.com', // Social Embeds, <amp-youtube />
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.ampproject.net', // Social Embeds
       'https://news.files.bbci.co.uk', // STY include
       'https://news.test.files.bbci.co.uk', // STY include
+      ...advertisingDirectives.frameSrc,
       "'self'",
     ],
     canonicalNonLive: [
@@ -138,11 +174,8 @@ const directives = {
       'https://www.bbc.co.uk', // STY include
       'http://www.bbc.co.uk', // for localhost STY include
       'https://bbc-maps.carto.com', // STY include maps
-      'https://bcp.crwdcntrl.net', // ads
-      'https://edigitalsurvey.com', // ads
-      'https://securepubads.g.doubleclick.net', // ads
-      'https://tpc.googlesyndication.com', // ads
       'https://news.test.files.bbci.co.uk',
+      ...advertisingDirectives.frameSrc,
       "'self'",
     ],
   },
@@ -153,14 +186,10 @@ const directives = {
       'https://a1.api.bbc.co.uk/hit.xiti',
       'https://news.files.bbci.co.uk',
       'https://r.bbci.co.uk',
-      'https://pagead2.googlesyndication.com', // ads
-      'https://securepubads.g.doubleclick.net', // ads
-      'https://sb.scorecardresearch.com', // ads
-      'https://tpc.googlesyndication.com', // ads
-      'https://www.google.com', // ads
       'https://i.ytimg.com', // Social Embeds, <amp-youtube />
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.cdninstagram.com', // Social Embeds, <amp-instagram />
+      ...advertisingDirectives.imgSrc,
       "data: 'self'",
     ],
     canonicalLive: [
@@ -169,10 +198,6 @@ const directives = {
       'https://a1.api.bbc.co.uk/hit.xiti',
       'https://news.files.bbci.co.uk',
       'https://r.bbci.co.uk',
-      'https://pagead2.googlesyndication.com', // ads
-      'https://securepubads.g.doubleclick.net', // ads
-      'https://tpc.googlesyndication.com', // ads
-      'https://www.google.com', // ads
       'https://syndication.twitter.com', // Social Embeds
       'https://platform.twitter.com', // Social Embeds
       'https://pbs.twimg.com', // Social Embeds
@@ -180,6 +205,7 @@ const directives = {
       'https://ton.twimg.com', // Social Embeds
       'https://news.bbcimg.co.uk', // STY include
       'https://static.bbc.co.uk', // STY include
+      ...advertisingDirectives.imgSrc,
       "data: 'self'", // needed at the end to maintain proper order
     ],
     ampNonLive: [
@@ -191,16 +217,12 @@ const directives = {
       'https://news.files.bbci.co.uk', // Static Assets
       'https://news.test.files.bbci.co.uk', // Static Assets
       'https://r.bbci.co.uk',
-      'https://pagead2.googlesyndication.com', // ads
-      'https://securepubads.g.doubleclick.net', // ads
-      'https://sb.scorecardresearch.com', // ads
-      'https://tpc.googlesyndication.com', // ads
-      'https://www.google.com', // ads
       'http://b.files.bbci.co.uk', // localhost http connection for image
       'http://ping.chartbeat.net', // localhost prod build
       'https://i.ytimg.com', // Social Embeds, <amp-youtube />
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.cdninstagram.com', // Social Embeds, <amp-instagram />
+      ...advertisingDirectives.imgSrc,
       "data: 'self'",
     ],
     canonicalNonLive: [
@@ -212,10 +234,6 @@ const directives = {
       'https://news.files.bbci.co.uk', // Static Assets
       'https://news.test.files.bbci.co.uk', // Static Assets
       'https://r.bbci.co.uk',
-      'https://pagead2.googlesyndication.com', // ads
-      'https://securepubads.g.doubleclick.net', // ads
-      'https://tpc.googlesyndication.com', // ads
-      'https://www.google.com', // ads
       'http://b.files.bbci.co.uk', // localhost http connection for image
       'http://ping.chartbeat.net', // localhost prod build
       'https://syndication.twitter.com', // Social Embeds
@@ -226,10 +244,7 @@ const directives = {
       'https://news.bbcimg.co.uk', // STY include
       'https://static.bbc.co.uk', // STY include
       'http://static.bbc.co.uk', // localhost STY include
-      'https://collector.effectivemeasure.net', // ads
-      'https://csi.gstatic.com', // ads
-      'https://sb.scorecardresearch.com', // ads
-      'https://secure-us.imrworldwide.com', // ads
+      ...advertisingDirectives.imgSrc,
       "data: 'self'", // needed at the end to maintain proper order
     ],
   },
@@ -250,13 +265,13 @@ const directives = {
       'https://static.bbci.co.uk',
       'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
-      'http://www.instagram.com', // Social Embeds
       'https://cdn.syndication.twimg.com', // Social Embeds
       'https://static.bbc.co.uk', // STY include
       'https://www.bbc.co.uk', // STY include
       'https://passport-control.int.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - int
       'https://passport-control.test.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - test
       'https://passport-control.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - live
+      ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
     ],
@@ -280,7 +295,6 @@ const directives = {
       'http://localhost:1124', // for localhost canonical JavaScript
       'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
-      'http://www.instagram.com', // Social Embeds
       'https://cdn.syndication.twimg.com', // Social Embeds
       'https://static.bbc.co.uk', // STY include
       'http://static.bbc.co.uk', // for localhost STY include
@@ -288,22 +302,7 @@ const directives = {
       'https://passport-control.int.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - int
       'https://passport-control.test.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - test
       'https://passport-control.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - live
-      'https://ad.crwdcntrl.net', // ads
-      'https://adservice.google.co.uk', // ads
-      'https://adservice.google.com', // ads
-      'https://bbc.gscontxt.net', // ads
-      'https://bcp.crwdcntrl.net', // ads
-      'https://cdn.ampproject.org', // ads
-      'https://collector.effectivemeasure.net', // ads
-      'https://me-ssl.effectivemeasure.net', // ads
-      'https://privacy.crwdcntrl.net', // ads
-      'https://sb.scorecardresearch.com', // ads
-      'https://securepubads.g.doubleclick.net', // ads
-      'https://t.effectivemeasure.net', // ads
-      'https://tags.crwdcntrl.net', // ads
-      'https://tpc.googlesyndication.com', // ads
-      'https://gn-web-assets.api.bbc.com', // ads
-      'https://www.googletagservices.com', // ads
+      ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
     ],
@@ -347,13 +346,6 @@ const directives = {
       'https://static.bbci.co.uk', // STY includes
     ],
   },
-  defaultSrc: {
-    canonicalNonLive: [
-      'https://*.safeframe.googlesyndication.com',
-      'https://tpc.googlesyndication.com',
-      "'self'",
-    ],
-  },
 };
 
 export const generateChildSrc = ({ isAmp }) => (isAmp ? ['blob:'] : ["'self'"]);
@@ -365,9 +357,8 @@ export const generateConnectSrc = ({ isAmp, isLive }) => {
   return directives.connectSrc.canonicalLive;
 };
 
-export const generateDefaultSrc = ({ isAmp, isLive }) => {
-  if (!isLive && !isAmp) return directives.defaultSrc.canonicalNonLive;
-  return ["'self'"];
+export const generateDefaultSrc = () => {
+  return [...advertisingDirectives.defaultSrc, "'self'"];
 };
 
 export const generateFontSrc = ({ isAmp }) =>

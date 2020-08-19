@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Iklan',
-    },
     lang: `id`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Diperbarui',
@@ -53,6 +49,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Iklan',
+      },
       seeAll: 'Lihat semua',
       home: 'Berita',
       currentPage: 'Halaman saat ini',
@@ -176,6 +175,11 @@ export const service = {
           text: 'Hentikan %provider_name% pesan',
           endTextVisuallyHidden: 'Lompati %provider_name% pesan',
         },
+      },
+      include: {
+        errorMessage:
+          'Maaf, kami tidak dapat menampilkan bagian dari berita ini dalam versi ramah mobile',
+        linkText: 'Lihat versi lengkap di laman untuk melihat seluruh konten',
       },
       topStoriesTitle: 'Berita Utama',
       featuresAnalysisTitle: 'Majalah',

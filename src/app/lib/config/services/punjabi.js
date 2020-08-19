@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'ਇਸ਼ਤਿਹਾਰ',
-    },
     lang: `pa`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ਅਪਡੇਟ',
@@ -52,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'ਇਸ਼ਤਿਹਾਰ',
+      },
       seeAll: 'ਸਭ ਦੋਖੇ',
       home: 'ਹੋਮ ਪੇਜ',
       currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
@@ -170,6 +169,11 @@ export const service = {
           text: 'Skip %provider_name% post',
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: 'ਤਾਜ਼ਾ ਘਟਨਾਕ੍ਰਮ',
       featuresAnalysisTitle: 'ਦ੍ਰਿਸ਼ਟੀਕੋਣ',

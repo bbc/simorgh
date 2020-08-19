@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { shape, bool, oneOf, oneOfType } from 'prop-types';
+import { shape, bool, oneOf, oneOfType, string } from 'prop-types';
 import styled from 'styled-components';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
@@ -94,6 +94,7 @@ const StoryPromoContainer = ({
   displaySummary,
   isRecommendation,
   isSingleColumnLayout,
+  serviceDatetimeLocale,
 }) => {
   const {
     altCalendar,
@@ -183,6 +184,12 @@ const StoryPromoContainer = ({
     `}
   `;
 
+  const locale = serviceDatetimeLocale || datetimeLocale;
+
+  const StyledLink = styled(Link)`
+    overflow-wrap: anywhere;
+  `;
+
   const Info = (
     <>
       {headline && (
@@ -193,7 +200,7 @@ const StoryPromoContainer = ({
           promoHasImage={displayImage}
           as={headingTagOverride}
         >
-          <Link href={url}>
+          <StyledLink href={url}>
             {isLive ? (
               <LiveLabel
                 service={service}
@@ -207,7 +214,7 @@ const StoryPromoContainer = ({
             ) : (
               linkcontents
             )}
-          </Link>
+          </StyledLink>
         </StyledHeadline>
       )}
       {promoSummary && displaySummary && !isRecommendation && (
@@ -223,7 +230,7 @@ const StoryPromoContainer = ({
       {displayTimestamp && (
         <Timestamp
           altCalendar={altCalendar}
-          locale={datetimeLocale}
+          locale={locale}
           timestamp={timestamp}
           dateTimeFormat="YYYY-MM-DD"
           format="LL"
@@ -289,6 +296,7 @@ StoryPromoContainer.propTypes = {
   displaySummary: bool,
   isRecommendation: bool,
   isSingleColumnLayout: bool,
+  serviceDatetimeLocale: string,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -299,6 +307,7 @@ StoryPromoContainer.defaultProps = {
   displaySummary: true,
   isRecommendation: false,
   isSingleColumnLayout: false,
+  serviceDatetimeLocale: null,
 };
 
 export default StoryPromoContainer;

@@ -7,10 +7,6 @@ import 'moment/locale/ko';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: '광고',
-    },
     lang: `ko`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: '에 업데이트됨',
@@ -52,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: '광고',
+      },
       seeAll: '모든 기사 보기',
       home: '홈',
       currentPage: '현재 페이지',
@@ -173,6 +172,11 @@ export const service = {
           text: '%provider_name% 포스트 건너뛰기',
           endTextVisuallyHidden: '%provider_name% 포스트 마침',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: '주요뉴스',
       featuresAnalysisTitle: '이 시간 이슈',

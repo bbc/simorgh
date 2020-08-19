@@ -7,7 +7,7 @@ import topStoriesRtl from '#pages/StoryPage/topStoriesRtl.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
 
-const getTopStories = platform => ({ service, dir, data }) => (
+const getTopStories = platform => (service, dir, data) => (
   <div dir={dir}>
     {/* The above simulates dir being added at the page level */}
     <ServiceContextProvider service={service}>
@@ -29,63 +29,27 @@ const ampTopStories = getTopStories('amp');
 
 storiesOf('Containers|CPS Top Stories/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
-  .add('igbo (ltr)', () =>
-    canonicalTopStories({
-      service: 'igbo',
-      dir: 'ltr',
-      data: topStories,
-    }),
-  )
+  .add('igbo (ltr)', () => canonicalTopStories('igbo', 'ltr', topStories))
   .add('arabic (rtl)', () =>
-    canonicalTopStories({
-      service: 'arabic',
-      dir: 'rtl',
-      data: topStoriesRtl,
-    }),
+    canonicalTopStories('arabic', 'rtl', topStoriesRtl),
   )
   .add('igbo (ltr) with one item', () =>
-    canonicalTopStories({
-      service: 'igbo',
-      dir: 'ltr',
-      data: [topStories[0]],
-    }),
+    canonicalTopStories('igbo', 'ltr', [topStories[0]]),
   )
   .add('arabic (rtl) with one item', () =>
-    canonicalTopStories({
-      service: 'arabic',
-      dir: 'rtl',
-      data: [topStoriesRtl[0]],
-    }),
+    canonicalTopStories('arabic', 'rtl', [topStoriesRtl[0]]),
   );
 
 storiesOf('Containers|CPS Top Stories/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
-  .add('igbo (ltr) - amp', () =>
-    ampTopStories({
-      service: 'igbo',
-      dir: 'ltr',
-      data: topStories,
-    }),
-  )
+  .add('igbo (ltr) - amp', () => ampTopStories('igbo', 'ltr', topStories))
   .add('arabic (rtl) - amp', () =>
-    ampTopStories({
-      service: 'arabic',
-      dir: 'rtl',
-      data: topStoriesRtl,
-    }),
+    ampTopStories('arabic', 'rtl', topStoriesRtl),
   )
   .add('igbo (ltr) with one item', () =>
-    canonicalTopStories({
-      service: 'igbo',
-      dir: 'ltr',
-      data: [topStories[0]],
-    }),
+    canonicalTopStories('igbo', 'ltr', [topStories[0]]),
   )
   .add('arabic (rtl) with one item', () =>
-    canonicalTopStories({
-      service: 'arabic',
-      dir: 'rtl',
-      data: [topStoriesRtl[0]],
-    }),
+    canonicalTopStories('arabic', 'rtl', [topStoriesRtl[0]]),
   );

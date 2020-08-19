@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
 import { string, node } from 'prop-types';
 import path from 'ramda/src/path';
@@ -20,6 +19,7 @@ import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
+import useToggle from '#hooks/useToggle';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
@@ -43,7 +43,7 @@ const FrontPageMostReadSection = styled(MostReadSection)`
   }
 `;
 
-const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
+const negativeMargin = `
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     /* To remove GEL Margins */
     margin: ${GEL_SPACING_QUAD} -${GEL_MARGIN_BELOW_400PX} 0;
@@ -54,7 +54,14 @@ const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin: ${GEL_SPACING_TRPL} -${GEL_MARGIN_ABOVE_400PX} 0;
-  }
+  }`;
+
+const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
+  ${negativeMargin}
+`;
+
+const MPUContainer = styled(AdContainer)`
+  ${negativeMargin}
 `;
 
 const MostReadWrapper = ({ children }) => (
@@ -78,7 +85,6 @@ MostReadWrapper.propTypes = {
 
 const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
-    ads,
     product,
     serviceLocalizedName,
     translations,
@@ -86,7 +92,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     radioSchedule,
   } = useContext(ServiceContext);
 
-  const hasAds = path(['hasAds'], ads);
+  const { enabled: adsEnabled } = useToggle('ads');
   const home = path(['home'], translations);
   const groups = path(['content', 'groups'], pageData);
   const lang = path(['metadata', 'language'], pageData);
@@ -95,10 +101,10 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const radioScheduleData = path(['radioScheduleData'], pageData);
   const radioScheduleOnPage = path(['onFrontPage'], radioSchedule);
   const radioSchedulePosition = path(['frontPagePosition'], radioSchedule);
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
 
-  // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
+    // eslint-disable-next-line jsx-a11y/aria-role
     <span role="text">
       <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
     </span>
@@ -111,7 +117,9 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   return (
     <>
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
-      {hasAds && !isAmp && <CanonicalAdBootstrapJs />}
+      {adsEnabled && showAdsBasedOnLocation && !isAmp && (
+        <CanonicalAdBootstrapJs />
+      )}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
@@ -138,7 +146,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
                   />
                 )}
               <IndexPageSection group={group} sectionNumber={index} />
-              {group.type === 'top-stories' && <AdContainer slotType="mpu" />}
+              {group.type === 'top-stories' && <MPUContainer slotType="mpu" />}
             </Fragment>
           ))}
           {!hasUsefulLinks && renderMostRead(mostReadEndpointOverride)}

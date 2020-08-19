@@ -11,10 +11,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: true,
-      advertisementLabel: 'إعلان',
-    },
     lang: 'ar',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'جدّد في',
@@ -56,6 +52,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'إعلان',
+      },
       recommendationTitle: 'مواضيع قد تهمك',
       seeAll: 'المزيد',
       home: 'الرئيسية',
@@ -185,6 +184,11 @@ export const service = {
           text: 'أهمل %provider_name% مشاركة',
           endTextVisuallyHidden: 'نهاية %provider_name% مشاركة',
         },
+      },
+      include: {
+        errorMessage:
+          'للأسف ليس بمقدورنا إظهار هذا الجزء من القصة على هذه الصفحة الخفيفة من الموبايل ',
+        linkText: 'انظر في السخة الكاملة لترى المحتوى بأكمله',
       },
       topStoriesTitle: 'الخبر الرئيسي',
       featuresAnalysisTitle: 'اخترنا لكم',
