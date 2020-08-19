@@ -51,7 +51,7 @@ const MostWatched = ({ initialData, hasHeader }) => {
     });
   }, [numberOfItems, isAmp, service, variant]);
 
-  if (!hasMostWatched) {
+  if (!hasMostWatched || !mostWatchedItems.length) {
     return null;
   }
 
@@ -139,7 +139,7 @@ MostWatched.propTypes = {
 };
 
 MostWatched.defaultProps = {
-  initialData: [],
+  initialData: null,
   hasHeader: true,
 };
 
