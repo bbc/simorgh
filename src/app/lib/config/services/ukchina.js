@@ -245,6 +245,11 @@ export const service = {
           endTextVisuallyHidden: '结尾 %provider_name% 帖子 ',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: '头条内容',
       featuresAnalysisTitle: '特别推荐',
     },
@@ -452,6 +457,11 @@ export const service = {
           text: '跳過 %provider_name% 帖子',
           endTextVisuallyHidden: '結尾 %provider_name% 帖子',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: '頭條內容',
       featuresAnalysisTitle: '特別推薦',
