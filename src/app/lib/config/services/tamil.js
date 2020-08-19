@@ -188,6 +188,12 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% பதிவின் முடிவு',
         },
       },
+      include: {
+        errorMessage:
+          'மன்னிக்கவும், குறைந்த இணையத்தை பயன்படுத்தும் இந்த பக்கத்தில் கட்டுரையின் இந்த பகுதியை காணவியலாது. ',
+        linkText:
+          'முழு உள்ளடக்கத்தையும் காண இந்த பக்கத்தின் அசல் வடிவத்தை காணவும்.',
+      },
       topStoriesTitle: 'முக்கிய செய்திகள்',
       featuresAnalysisTitle: 'சிறப்புச் செய்திகள்',
     },

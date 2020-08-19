@@ -186,6 +186,12 @@ export const service = {
           endTextVisuallyHidden: 'Fin del contenido de %provider_name%',
         },
       },
+      include: {
+        errorMessage:
+          'Lo sentimos, no podemos mostrar esta parte de la historia en esta página adaptada para los dispositivos móviles.',
+        linkText:
+          'Ver la versión completa de la página para visualizar todo el contenido.',
+      },
       topStoriesTitle: 'Principales noticias',
       featuresAnalysisTitle: 'No te lo pierdas',
     },
