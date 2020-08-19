@@ -187,8 +187,8 @@ export const service = {
       },
       include: {
         errorMessage:
-          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-        linkText: 'View the full version of the page to see all the content.',
+          'Maalesef haberin bu bölümünü mobil sayfada görüntüleyemiyoruz',
+        linkText: 'Tüm içeriği görmek için sayfanın tüm sürümünü görüntüleyin ',
       },
       topStoriesTitle: 'Manşet haber',
       featuresAnalysisTitle: 'Aramızda Kalmasın',
