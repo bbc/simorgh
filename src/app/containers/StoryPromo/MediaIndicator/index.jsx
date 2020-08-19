@@ -31,7 +31,7 @@ const getCpsMediaTypes = item => {
   const hasMediaInfo = path(['media'], item);
 
   // Only build a media indicator if this is a photo gallery or media item
-  if (!isPGL && (!isCpsMedia || !hasMediaInfo)) {
+  if (!isPGL && !(isCpsMedia || hasMediaInfo)) {
     return null;
   }
   const type = isPGL ? 'photogallery' : path(['media', 'format'], item);

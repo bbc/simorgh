@@ -172,18 +172,20 @@ const CpsOnwardJourney = ({
 
   return (
     <CpsOnwardJourneyWrapper>
-      <StyledSectionLabel
-        script={script}
-        service={service}
-        dir={dir}
-        labelId={labelId}
-        columnType={columnType}
-        overrideHeadingAs={sectionLabelOverrideAs}
-        bar={sectionLabelBar}
-        backgroundColor={sectionLabelBackground}
-      >
-        {title}
-      </StyledSectionLabel>
+      {title ? (
+        <StyledSectionLabel
+          script={script}
+          service={service}
+          dir={dir}
+          labelId={labelId}
+          columnType={columnType}
+          overrideHeadingAs={sectionLabelOverrideAs}
+          bar={sectionLabelBar}
+          backgroundColor={sectionLabelBackground}
+        >
+          {title}
+        </StyledSectionLabel>
+      ) : null}
       {hasSingleContent ? (
         <SingleContentWrapper columnType={columnType}>
           {singleTransform(singleContent)}
@@ -197,7 +199,7 @@ const CpsOnwardJourney = ({
 
 CpsOnwardJourney.propTypes = {
   labelId: string.isRequired,
-  title: string.isRequired,
+  title: string,
   content: arrayOf(shape(storyItem)),
   parentColumns: shape({
     group0: number,
@@ -221,6 +223,7 @@ CpsOnwardJourney.propTypes = {
 
 CpsOnwardJourney.defaultProps = {
   content: [],
+  title: '',
   parentColumns: null,
   sectionLabelOverrideAs: null,
   sectionLabelBar: true,
