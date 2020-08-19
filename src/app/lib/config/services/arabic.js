@@ -187,8 +187,8 @@ export const service = {
       },
       include: {
         errorMessage:
-          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-        linkText: 'View the full version of the page to see all the content.',
+          'للأسف ليس بمقدورنا إظهار هذا الجزء من القصة على هذه الصفحة الخفيفة من الموبايل ',
+        linkText: 'انظر في السخة الكاملة لترى المحتوى بأكمله',
       },
       topStoriesTitle: 'الخبر الرئيسي',
       featuresAnalysisTitle: 'اخترنا لكم',
