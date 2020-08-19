@@ -1,4 +1,5 @@
 import React from 'react';
+import { shape, oneOf } from 'prop-types';
 import { EPISODE_STATUS } from '..';
 import ErrorMessage from '../ErrorMessage';
 
@@ -21,6 +22,12 @@ const withMediaError = PageComponent => props => {
       MediaError={mediaIsAvailable ? () => null : ErrorComponent}
     />
   );
+};
+
+withMediaError.propTypes = {
+  pageData: shape({
+    episodeAvailability: oneOf(Object.values(EPISODE_STATUS)).isRequired,
+  }),
 };
 
 export default withMediaError;
