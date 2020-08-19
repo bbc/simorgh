@@ -13,7 +13,7 @@ export default {
     enabled: true,
   },
   comscoreAnalytics: {
-    enabled: false,
+    enabled: true,
   },
   cpsRecommendations: {
     enabled: false,

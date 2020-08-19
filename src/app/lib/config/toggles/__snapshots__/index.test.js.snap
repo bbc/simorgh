@@ -16,7 +16,7 @@ Object {
     "enabled": true,
   },
   "comscoreAnalytics": Object {
-    "enabled": false,
+    "enabled": true,
   },
   "cpsRecommendations": Object {
     "enabled": false,
