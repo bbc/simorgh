@@ -64,6 +64,11 @@ const mostReadItems = ({ data, isAmp, numberOfItems, service }) => {
     service,
     popularType: 'mostRead',
   });
+
+  if (!filteredData) {
+    return null;
+  }
+
   const records = pathOr([], ['records'], filteredData);
 
   const items = [];
