@@ -12,9 +12,6 @@ Object {
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
-  "cinemaModeTV": Object {
-    "enabled": true,
-  },
   "comscoreAnalytics": Object {
     "enabled": false,
   },
@@ -80,9 +77,6 @@ Object {
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
-  "cinemaModeTV": Object {
-    "enabled": true,
-  },
   "comscoreAnalytics": Object {
     "enabled": true,
   },
@@ -146,9 +140,6 @@ Object {
     "enabled": true,
   },
   "chartbeatAnalytics": Object {
-    "enabled": true,
-  },
-  "cinemaModeTV": Object {
     "enabled": true,
   },
   "comscoreAnalytics": Object {

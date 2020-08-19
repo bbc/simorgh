@@ -88,7 +88,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
-  const darkMode = useToggle('cinemaModeTV').enabled;
+  const darkMode = true;
 
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,
@@ -115,7 +115,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
   return (
     <>
-      {darkMode && <DarkModeGlobalStyles />}
+      <DarkModeGlobalStyles />
       <ChartbeatAnalytics data={pageData} />
       <ATIAnalytics data={pageData} />
       <ComscoreAnalytics />

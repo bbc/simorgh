@@ -14,16 +14,9 @@ import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 
 const OnDemandTvPage = withMediaError(_OnDemandTvPage);
 
-const Page = ({
-  pageData,
-  service,
-  isAmp = false,
-  darkModeEnabled = false,
-}) => (
+const Page = ({ pageData, service, isAmp = false }) => (
   <StaticRouter>
-    <ToggleContextProvider
-      toggles={{ cinemaModeTV: { enabled: darkModeEnabled } }}
-    >
+    <ToggleContextProvider>
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
@@ -40,21 +33,11 @@ const Page = ({
   </StaticRouter>
 );
 
-const renderPage = async ({
-  pageData,
-  service,
-  isAmp = false,
-  darkModeEnabled = false,
-}) => {
+const renderPage = async ({ pageData, service, isAmp = false }) => {
   let result;
   await act(async () => {
     result = await render(
-      <Page
-        pageData={pageData}
-        service={service}
-        isAmp={isAmp}
-        darkModeEnabled={darkModeEnabled}
-      />,
+      <Page pageData={pageData} service={service} isAmp={isAmp} />,
     );
   });
 
@@ -145,7 +128,7 @@ describe('OnDemand TV Brand Page ', () => {
     expect(container.querySelector('h1#content')).toBeDefined();
   });
 
-  it('Dark Mode Design - should match snapshot', async () => {
+  it('Dark Mode Design - always enabled - should match snapshot', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
     const { pageData } = await getInitialData({
@@ -155,7 +138,6 @@ describe('OnDemand TV Brand Page ', () => {
     const { container } = await renderPage({
       pageData,
       service: 'pashto',
-      darkModeEnabled: true,
     });
 
     expect(container).toMatchSnapshot();
