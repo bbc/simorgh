@@ -185,6 +185,11 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% paylaşımının sonu',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'Manşet haber',
       featuresAnalysisTitle: 'Aramızda Kalmasın',
     },

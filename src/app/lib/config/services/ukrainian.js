@@ -178,6 +178,11 @@ const baseServiceConfig = {
         endTextVisuallyHidden: 'Кінець %provider_name% допису',
       },
     },
+    include: {
+      errorMessage:
+        'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+      linkText: 'View the full version of the page to see all the content.',
+    },
     relatedContent: 'Статті на цю ж тему',
     ...secondaryColumnTranslations,
   },

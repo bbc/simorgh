@@ -187,6 +187,11 @@ export const service = {
           endTextVisuallyHidden: 'د ‍پوسټ %provider_name% پای',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'مهم خبرونه',
       featuresAnalysisTitle: 'ځانګړي مطالب',
     },

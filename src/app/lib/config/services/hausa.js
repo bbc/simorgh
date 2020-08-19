@@ -182,6 +182,11 @@ export const service = {
           endTextVisuallyHidden: 'Karshen labarin da aka sa a %provider_name%',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'Babban Labari',
       featuresAnalysisTitle: 'Minti Daya Da BBC',
     },

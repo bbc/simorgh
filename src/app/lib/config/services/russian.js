@@ -158,6 +158,11 @@ export const mainTranslations = {
       endTextVisuallyHidden: 'Контент из %provider_name% окончен',
     },
   },
+  include: {
+    errorMessage:
+      'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+    linkText: 'View the full version of the page to see all the content.',
+  },
   topStoriesTitle: 'Главное',
   featuresAnalysisTitle: 'Журнал',
 };

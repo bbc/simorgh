@@ -278,6 +278,11 @@ export const service = {
           endTextVisuallyHidden: 'Kraj sadržaja sa %provider_name%',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'Najvažnije',
       featuresAnalysisTitle: 'Reportaže',
     },
@@ -518,6 +523,11 @@ export const service = {
           text: 'Skip %provider_name% post',
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: 'Најважније',
       featuresAnalysisTitle: 'Репортаже',

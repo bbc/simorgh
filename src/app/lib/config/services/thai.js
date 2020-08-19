@@ -175,6 +175,11 @@ export const service = {
           endTextVisuallyHidden: 'สิ้นสุด %provider_name% โพสต์',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'ข่าวเด่น',
       featuresAnalysisTitle: 'เรื่องน่าสนใจ',
     },
