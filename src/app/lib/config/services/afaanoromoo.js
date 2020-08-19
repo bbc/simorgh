@@ -179,8 +179,8 @@ export const service = {
       },
       include: {
         errorMessage:
-          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-        linkText: 'View the full version of the page to see all the content.',
+          'Dhiifama, odeessa kana keessaa kutaa kana, moobaayilarratti agarsiisuu hin dandeenyu',
+        linkText: 'Guutuu qabiyyee ilaaluuf fuula cufa ilaali',
       },
       topStoriesTitle: 'Isin hin darbiin',
       featuresAnalysisTitle: `Maaltu haasa'ama?`,
