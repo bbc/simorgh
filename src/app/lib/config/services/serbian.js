@@ -280,8 +280,9 @@ export const service = {
       },
       include: {
         errorMessage:
-          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-        linkText: 'View the full version of the page to see all the content.',
+          'Izvinite, ovaj deo teksta ne može da bude prikazan na mobilnom telefonu.',
+        linkText:
+          'Pogledajte punu verziju stranice da biste videli čitav sadržaj.',
       },
       topStoriesTitle: 'Najvažnije',
       featuresAnalysisTitle: 'Reportaže',
@@ -526,8 +527,9 @@ export const service = {
       },
       include: {
         errorMessage:
-          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-        linkText: 'View the full version of the page to see all the content.',
+          'Извините, овај део текста не може да буде приказан на мобилном телефону.',
+        linkText:
+          'Погледајте пуну верзију странице да бисте видели читав садржај.',
       },
       topStoriesTitle: 'Најважније',
       featuresAnalysisTitle: 'Репортаже',
