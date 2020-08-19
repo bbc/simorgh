@@ -178,8 +178,8 @@ export const service = {
       },
       include: {
         errorMessage:
-          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-        linkText: 'View the full version of the page to see all the content.',
+          'Maaf, kami tidak dapat menampilkan bagian dari berita ini dalam versi ramah mobile',
+        linkText: 'Lihat versi lengkap di laman untuk melihat seluruh konten',
       },
       topStoriesTitle: 'Berita Utama',
       featuresAnalysisTitle: 'Majalah',
