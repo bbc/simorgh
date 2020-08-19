@@ -177,8 +177,8 @@ export const service = {
       },
       include: {
         errorMessage:
-          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-        linkText: 'View the full version of the page to see all the content.',
+          'ขออภัย เราไม่สามารถแสดงส่วนนี้ของเรื่องได้บนหน้าโทรศัพท์ที่ใช้แอปอย่างง่าย',
+        linkText: 'ดูแบบเต็มเพื่อดูเนื้อหาทั้งหมด',
       },
       topStoriesTitle: 'ข่าวเด่น',
       featuresAnalysisTitle: 'เรื่องน่าสนใจ',
