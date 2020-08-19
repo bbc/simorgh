@@ -1,9 +1,5 @@
 import loggerMock from '#testHelpers/loggerMock'; // Must be imported before convertToOptimoBlocks
 import { CPSMediaBlock, optimoVideoBlock } from './blocks/media/fixtures';
-import {
-  legacyMediaBlock,
-  legacyOptimoVideoBlock,
-} from './blocks/legacyMedia/fixtures';
 import { CPSVersionBlock, optimoVersionBlock } from './blocks/version/fixtures';
 import {
   CPSUnorderedListBlock,
@@ -41,7 +37,6 @@ describe('convertToOptimoBlocks', () => {
           CPSVersionBlock,
           CPSUnorderedListBlock,
           CPSOrderedListBlock,
-          legacyMediaBlock,
         ],
       },
     };
@@ -112,7 +107,6 @@ describe('convertToOptimoBlocks', () => {
             optimoVersionBlock,
             optimoUnorderedListBlock,
             optimoOrderedListBlock,
-            legacyOptimoVideoBlock,
           ],
         },
       },
