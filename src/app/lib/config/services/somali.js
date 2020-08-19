@@ -191,8 +191,8 @@ export const service = {
       },
       include: {
         errorMessage:
-          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-        linkText: 'View the full version of the page to see all the content.',
+          'Waanu ka xunnahay, qeybta kuma soo bandhigi karno bogga mobile-kaan',
+        linkText: 'Eeg qeybta bogga oo dhan, si xogta oo dhan aad u aragto.',
       },
       topStoriesTitle: 'Wararka ugu waaweyn',
       featuresAnalysisTitle: 'Xul',
