@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 
 const getImageUrl = block =>
   pathOr('', ['image', 'href'], block).replace('http://', 'https://');
