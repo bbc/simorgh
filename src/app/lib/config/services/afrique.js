@@ -191,9 +191,9 @@ export const service = {
         },
       },
       include: {
-        errorMessage:
-          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-        linkText: 'View the full version of the page to see all the content.',
+        errorMessage: `Désolé, nous ne pouvons pas afficher cette partie de l'article sur cette page mobile légère.`,
+        linkText:
+          'Consultez la version complète de la page pour voir tout le contenu.',
       },
       topStoriesTitle: 'À la une',
       featuresAnalysisTitle: 'Le choix de la rédaction',
