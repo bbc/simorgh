@@ -15,15 +15,6 @@ const withMediaError = PageComponent => {
       <ErrorMessage {...errorProps} episodeAvailability={episodeAvailability} />
     );
 
-    ErrorComponent.propTypes = {
-      pageData: shape({
-        episodeAvailability: oneOf(Object.values(EPISODE_STATUS)).isRequired,
-      }),
-    };
-
-    ErrorComponent.defaultProps = {
-      pageData: null,
-    };
     return (
       <PageComponent
         {...props}
@@ -42,6 +33,7 @@ const withMediaError = PageComponent => {
   MediaErrorComponent.defaultProps = {
     pageData: null,
   };
+
   return MediaErrorComponent;
 };
 
