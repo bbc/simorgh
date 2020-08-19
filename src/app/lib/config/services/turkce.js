@@ -185,6 +185,11 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% paylaşımının sonu',
         },
       },
+      include: {
+        errorMessage:
+          'Maalesef haberin bu bölümünü mobil sayfada görüntüleyemiyoruz',
+        linkText: 'Tüm içeriği görmek için sayfanın tüm sürümünü görüntüleyin ',
+      },
       topStoriesTitle: 'Manşet haber',
       featuresAnalysisTitle: 'Aramızda Kalmasın',
     },

@@ -172,6 +172,10 @@ export const service = {
           endTextVisuallyHidden: 'Cuối %provider_name% tin',
         },
       },
+      include: {
+        errorMessage: 'Xin lỗi, không thể hiện thị phần này ở trang mobile.',
+        linkText: 'Xin xem bản đầy đủ.',
+      },
       topStoriesTitle: 'Tin chính',
       featuresAnalysisTitle: 'Góc nhìn và chuyên mục',
     },

@@ -179,6 +179,10 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% पोस्ट समाप्त',
         },
       },
+      include: {
+        errorMessage: 'मोबाइलपेजमा सामग्रीको यो भाग देखाउन हामी असमर्थ छौँ।',
+        linkText: 'पूरा सामग्री हेर्न यो पेजको पूर्ण संस्करण हेर्नुहोस्।',
+      },
       topStoriesTitle: 'मुख्य समाचार',
       featuresAnalysisTitle: 'अन‌ि यो पनि',
     },
