@@ -10,7 +10,6 @@ import {
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 
 import pathOr from 'ramda/src/pathOr';
-import pipe from 'ramda/src/pipe';
 import last from 'ramda/src/last';
 import MediaMessage from './MediaMessage';
 import { GridWrapper } from '#lib/styledGrid';
