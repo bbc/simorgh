@@ -173,9 +173,8 @@ export const service = {
         },
       },
       include: {
-        errorMessage:
-          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-        linkText: 'View the full version of the page to see all the content.',
+        errorMessage: 'Xin lỗi, không thể hiện thị phần này ở trang mobile.',
+        linkText: 'Xin xem bản đầy đủ.',
       },
       topStoriesTitle: 'Tin chính',
       featuresAnalysisTitle: 'Góc nhìn và chuyên mục',
