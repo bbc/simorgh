@@ -44,7 +44,11 @@ const FrontPageMostReadSection = styled(MostReadSection)`
 `;
 
 const negativeMargin = ` 
-  /* To remove GEL Margins */
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    /* To remove GEL Margins */
+    margin: ${GEL_SPACING_QUAD} -${GEL_MARGIN_BELOW_400PX} 0;
+    padding: 0 ${GEL_MARGIN_BELOW_400PX};
+  }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     margin: ${GEL_SPACING_QUAD} -${GEL_MARGIN_ABOVE_400PX} 0;
   }
@@ -54,19 +58,15 @@ const negativeMargin = `
  `;
 
 const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    margin: ${GEL_SPACING_QUAD} -${GEL_MARGIN_BELOW_400PX} 0;
-    padding: 0 ${GEL_MARGIN_BELOW_400PX};
-  }
   ${negativeMargin}
 `;
 
 const MPUContainer = styled(AdContainer)`
+  ${negativeMargin}
+  /* MPU gets misaligned with the original padding at smaller breakpoints */
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    margin: ${GEL_SPACING_QUAD} -${GEL_MARGIN_BELOW_400PX} 0;
     padding: 0;
   }
-  ${negativeMargin}
 `;
 
 const MostReadWrapper = ({ children }) => (
