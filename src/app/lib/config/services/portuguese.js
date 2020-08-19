@@ -191,8 +191,9 @@ export const service = {
       },
       include: {
         errorMessage:
-          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-        linkText: 'View the full version of the page to see all the content.',
+          'Desculpe, mas não é possível exibir esta parte da história nesta página de acesso resumido de celular.',
+        linkText:
+          'Acesse a visão integral da página para visualizar todo o conteúdo.',
       },
       topStoriesTitle: 'Principais notícias',
       featuresAnalysisTitle: 'Leia mais',
