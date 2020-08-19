@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import styled from 'styled-components';
+import { pathOr } from 'ramda';
 
 import EmbedError from '@bbc/psammead-embed-error';
 import nodeLogger from '#lib/logger.node';
@@ -33,8 +34,10 @@ const FallbackGrid = styled(GridItemConstrainedMedium)`
 `;
 
 const IncludeContainer = props => {
-  const { isAmp, canonicalLink } = useContext(RequestContext);
+  const { isAmp, canonicalLink, translations } = useContext(RequestContext);
   const { enabled } = useToggle('include');
+
+  const message = pathOr('Top Stories', ['topStoriesTitle'], translations);
 
   if (!enabled) return null;
   const { isAmpSupported, href, type, index } = props;
@@ -43,7 +46,7 @@ const IncludeContainer = props => {
     return (
       <FallbackGrid>
         <EmbedError
-          message="Sorry, we can’t display this part of the story on this lightweight mobile page."
+          message={message}
           link={{
             text: 'View the full version of the page to see all the content.',
             href: `${canonicalLink}#include-${index + 1}`,
