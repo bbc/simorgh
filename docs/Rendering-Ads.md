@@ -41,7 +41,7 @@ Given you do not have any ad blocking extensions in your browser.
 
 ## Rendering Ads on an a11y device
 
-If you are unable to set a proxy on one of the Windows a11y laptops, you won't be able to see ads within the UK. For this reason, you'll have to run Simorgh locally in your working machine and access to it from the Windows laptop following these steps:
+If you are unable to set a proxy on one of the Windows a11y laptops, you won't be able to see ads within the UK. For this reason, you'll have to run Simorgh locally on your working machine and allow the Windows laptop to connect to it over LAN with the following steps:
 
 1. Connect both devices to the same network
 
@@ -55,7 +55,7 @@ If you are unable to set a proxy on one of the Windows a11y laptops, you won't b
 
 5. Run Simorgh with a production build `npm run build && npm run start`
 
-6. Access to your machine from the Windows laptop
+6. Connect to your machine running Simorgh using the Windows laptop by visiting the IP address of it appended with the correct query strings
 
    i.e `http://192.168.0.50:7080/mundo?site=test&ads-debug=true`
 
