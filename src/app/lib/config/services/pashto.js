@@ -189,8 +189,8 @@ export const service = {
       },
       include: {
         errorMessage:
-          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-        linkText: 'View the full version of the page to see all the content.',
+          'وبښئ، په لایټ وېټ موبایل صفحې موږ د کیسې دا برخه نه شو ښودلی.',
+        linkText: 'د پاڼې بشپړه بڼه وښایاست چې ټوله منځپانګه یې ولیدله شي.',
       },
       topStoriesTitle: 'مهم خبرونه',
       featuresAnalysisTitle: 'ځانګړي مطالب',
