@@ -40,12 +40,16 @@ const IncludeContainer = props => {
   const { enabled } = useToggle('include');
 
   const errorMessage = pathOr(
-    'Test',
+    'Sorry, we can’t display this part of the story on this lightweight mobile page.',
     ['include', 'errorMessage'],
     translations,
   );
 
-  const linkText = pathOr('Test', ['include', 'linkText'], translations);
+  const linkText = pathOr(
+    'View the full version of the page to see all the content.',
+    ['include', 'linkText'],
+    translations,
+  );
 
   if (!enabled) return null;
   const { isAmpSupported, href, type, index } = props;
