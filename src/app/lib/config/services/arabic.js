@@ -185,6 +185,10 @@ export const service = {
           endTextVisuallyHidden: 'نهاية %provider_name% مشاركة',
         },
       },
+      include: {
+        errorMessage: '',
+        linkText: '',
+      },
       topStoriesTitle: 'الخبر الرئيسي',
       featuresAnalysisTitle: 'اخترنا لكم',
     },

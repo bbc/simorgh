@@ -171,6 +171,10 @@ export const service = {
           endTextVisuallyHidden: 'የ %provider_name% ይዘት መጨረሻ',
         },
       },
+      include: {
+        errorMessage: '',
+        linkText: '',
+      },
       topStoriesTitle: 'እንዳያመልጥዎ',
       featuresAnalysisTitle: 'ከየፈርጁ',
     },

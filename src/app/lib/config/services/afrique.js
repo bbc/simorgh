@@ -190,6 +190,10 @@ export const service = {
           endTextVisuallyHidden: 'Fin de %provider_name% publication',
         },
       },
+      include: {
+        errorMessage: '',
+        linkText: '',
+      },
       topStoriesTitle: 'À la une',
       featuresAnalysisTitle: 'Le choix de la rédaction',
     },
