@@ -3,8 +3,8 @@ import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
-import _hasRadioSchedule from '../../utils/hasRadioSchedule';
 import getRadioService from '../../utils/getRadioService';
+import getToggles from '#lib/utilities/getToggles';
 
 const getLanguage = path(['metadata', 'language']);
 const getMetaDataId = path(['metadata', 'id']);
@@ -26,16 +26,14 @@ export default async ({ path: pathname, pageType, service }) => {
   try {
     const liveRadioDataPath = overrideRendererOnTest(pathname);
 
-    const pageHasRadioSchedule = await _hasRadioSchedule({
-      pageType: 'liveRadio',
-      service,
-    });
     const pageDataPromise = fetchPageData({
       path: liveRadioDataPath,
       pageType,
     });
 
-    const { json, status } = pageHasRadioSchedule
+    const { liveRadioSchedule } = await getToggles(service);
+
+    const { json, status } = liveRadioSchedule.enabled
       ? await withRadioSchedule({
           pageDataPromise,
           service,
