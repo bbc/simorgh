@@ -67,6 +67,19 @@ const noDurationItem = {
   },
 };
 
+const externalVpidNoCpsTypeItem = {
+  headlines: {
+    headline: 'A video item',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  media: {
+    format: 'video',
+    type: 'external_vpid',
+  },
+};
+
 const noMediaObject = {
   headlines: {
     headline: 'A video item',
@@ -141,6 +154,16 @@ describe('Story Promo Media Indicator', () => {
     <MediaIndicator
       dir="ltr"
       item={noDurationItem}
+      script={latin}
+      service="news"
+    />,
+  );
+
+  shouldMatchSnapshot(
+    'should render correctly even without duration and cps type',
+    <MediaIndicator
+      dir="ltr"
+      item={externalVpidNoCpsTypeItem}
       script={latin}
       service="news"
     />,

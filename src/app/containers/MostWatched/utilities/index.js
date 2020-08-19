@@ -1,3 +1,5 @@
+import pathOr from 'ramda/src/pathOr';
+import filterPopularStaleData from '#app/lib/utilities/filterPopularStaleData';
 import {
   MOST_WATCHED_CLIENT_REQUEST,
   MOST_WATCHED_FETCH_ERROR,
@@ -7,7 +9,26 @@ import nodeLogger from '#lib/logger.node';
 
 const logger = nodeLogger(__filename);
 
-const getMostWatchedData = async ({ service, variant }) => {
+export const processMostWatched = ({ data, isAmp, numberOfItems, service }) => {
+  if (!data) {
+    return null;
+  }
+  const filteredData = filterPopularStaleData({
+    data,
+    isAmp,
+    service,
+    popularType: 'mostWatched',
+  });
+
+  if (!filteredData) {
+    return null;
+  }
+
+  const records = pathOr([], ['records'], filteredData);
+  return records.slice(0, numberOfItems).map(item => item.promo);
+};
+
+export const getMostWatchedData = async ({ service, variant }) => {
   const endpoint = getMostWatchedEndpoint({ service, variant });
   logger.info(MOST_WATCHED_CLIENT_REQUEST, { url: endpoint });
 
@@ -25,8 +46,6 @@ const getMostWatchedData = async ({ service, variant }) => {
       url: endpoint,
       error: error.toString(),
     });
-    return [];
+    return null;
   }
 };
-
-export default getMostWatchedData;

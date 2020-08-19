@@ -10,8 +10,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import StoryPromo from '../StoryPromo';
 import Grid from '../../components/Grid';
 import CpsOnwardJourney from '../CpsOnwardJourney';
-import getMostWatchedData from './utilities/getMostWatchedData';
-import processMostWatched from './utilities/processMostWatched';
+import { getMostWatchedData, processMostWatched } from './utilities';
 
 const MostWatched = ({ initialData, hasHeader }) => {
   const { dir, mostWatched, service } = useContext(ServiceContext);
@@ -51,7 +50,7 @@ const MostWatched = ({ initialData, hasHeader }) => {
     });
   }, [numberOfItems, isAmp, service, variant]);
 
-  if (!hasMostWatched || !mostWatchedItems.length) {
+  if (!hasMostWatched || !mostWatchedItems) {
     return null;
   }
 
