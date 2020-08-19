@@ -21,13 +21,13 @@ Given you are using Chrome browser.
 
 2. With the ModHeader extension, add a header of `BBC-Adverts` with the value `true`.
 
-   i.e: ![image](https://user-images.githubusercontent.com/30599794/90151074-40bd7f80-dd7e-11ea-985d-902ed04641ac.png)
+   e.g. ![image](https://user-images.githubusercontent.com/30599794/90151074-40bd7f80-dd7e-11ea-985d-902ed04641ac.png)
 
 3. Run local environment: `npm run dev`. If you would like to run with Simorgh's CSP Headers, run the following command: `npm run build && npm run start`
 
 4. Visit the home page of one of the services with Ads enabled and append this query string to the url: `?site=test&ads-debug=true`
 
-   i.e http://localhost:7080/mundo?site=test&ads-debug=true
+   e.g. http://localhost:7080/mundo?site=test&ads-debug=true
 
 ## Rendering Ads on test environment
 
@@ -37,7 +37,7 @@ Given you do not have any ad blocking extensions in your browser.
 
 2. If you would like to see the ads with the debugger tool you can append this query string to the url: `?ads-debug=true`
 
-   i.e https://www.test.bbc.com/mundo?ads-debug=true
+   e.g. https://www.test.bbc.com/mundo?ads-debug=true
 
 ## Rendering Ads on an a11y device
 
@@ -47,7 +47,7 @@ If you are unable to set a proxy on one of the Windows a11y laptops, you won't b
 
 2. Update the `SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN` url in the [local.env](https://github.com/bbc/simorgh/blob/latest/envConfig/local.env#L3) file with the IP address of your machine
 
-   i.e `SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN=http://192.168.0.50:7080`
+   e.g. `SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN=http://192.168.0.50:7080`
 
 3. Disable the `upgrade-insecure-requests` directive from the [cspHeader](https://github.com/bbc/simorgh/blob/latest/src/server/utilities/cspHeader/index.js#L419)
 
@@ -57,10 +57,10 @@ If you are unable to set a proxy on one of the Windows a11y laptops, you won't b
 
 6. Connect to your machine running Simorgh using the Windows laptop by visiting the IP address of it appended with the correct query strings
 
-   i.e `http://192.168.0.50:7080/mundo?site=test&ads-debug=true`
+   e.g. `http://192.168.0.50:7080/mundo?site=test&ads-debug=true`
 
 ## Additional Query Strings
 
 You can append this query string `?ads-js-env=live` to your URL to load the LIVE `dotcom-bootstrap` for canonical pages only.
 
-    i.e https://www.test.bbc.com/mundo?ads-js-env=live
+e.g. https://www.test.bbc.com/mundo?ads-js-env=live
