@@ -160,8 +160,8 @@ export const mainTranslations = {
   },
   include: {
     errorMessage:
-      'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-    linkText: 'View the full version of the page to see all the content.',
+      'К сожалению, мы не можем показать вам эту часть истории из-за малого объема мобильной страницы.',
+    linkText: 'Откройте полную версию страницы, чтобы увидеть весь контент.',
   },
   topStoriesTitle: 'Главное',
   featuresAnalysisTitle: 'Журнал',
