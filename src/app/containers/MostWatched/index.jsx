@@ -6,7 +6,7 @@ import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-// import useToggle from '#hooks/useToggle';
+import useToggle from '#hooks/useToggle';
 import StoryPromo from '../StoryPromo';
 import Grid from '../../components/Grid';
 import CpsOnwardJourney from '../CpsOnwardJourney';
@@ -25,9 +25,9 @@ const MostWatched = ({ initialData, hasHeader }) => {
   const { header, numberOfItems, hasMostWatched } =
     mostWatched || defaultMostWatchedConfig;
 
-  // const { enabled } = useToggle('mostWatched');
+  const { enabled } = useToggle('mostWatched');
 
-  // const isMostWatchedEnabled = enabled && hasMostWatched;
+  const isMostWatchedEnabled = enabled && hasMostWatched;
 
   const visibleItems = processMostWatched({
     data: initialData,
@@ -50,7 +50,7 @@ const MostWatched = ({ initialData, hasHeader }) => {
     });
   }, [numberOfItems, isAmp, service, variant]);
 
-  if (!hasMostWatched || !mostWatchedItems) {
+  if (!isMostWatchedEnabled || !mostWatchedItems) {
     return null;
   }
 
