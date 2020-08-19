@@ -187,8 +187,8 @@ export const service = {
       },
       include: {
         errorMessage:
-          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-        linkText: 'View the full version of the page to see all the content.',
+          'කණගාටුයි, මෙම සැහැල්ලු ජංගම පිටුව තුළ අපට ලිපියේ මෙම කොටස පෙන්විය නොහැක.',
+        linkText: 'අන්තර්ගතයේ සියල්ල දැක ගැනීමට පිටුවේ සම්පූර්ණ අනුවාදය බලන්න',
       },
       topStoriesTitle: 'ප්‍රධාන පුවත',
       featuresAnalysisTitle: 'දැක්ම',
