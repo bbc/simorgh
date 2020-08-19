@@ -184,8 +184,9 @@ export const service = {
       },
       include: {
         errorMessage:
-          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-        linkText: 'View the full version of the page to see all the content.',
+          'Yi hakuri, ba zamu iya nuna wannan bangaren na labarin a irin wannan karamar wayar',
+        linkText:
+          'Bude babban shafin domin kallon duka abubuwan da muka wallafa',
       },
       topStoriesTitle: 'Babban Labari',
       featuresAnalysisTitle: 'Minti Daya Da BBC',
