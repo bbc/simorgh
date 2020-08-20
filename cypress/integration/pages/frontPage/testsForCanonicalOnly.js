@@ -19,7 +19,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   describe('Ads', () => {
     if (serviceHasAds(service) && Cypress.env('APP_ENV') !== 'local') {
       it('should render an ad slot', () => {
-        cy.get('[data-e2e=advertisment]').should('be.visible');
+        cy.get('[data-e2e=advertisement]').should('be.visible');
       });
     }
   });
