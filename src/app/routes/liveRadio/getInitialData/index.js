@@ -20,6 +20,7 @@ const getPageIdentifier = path([
 
 const getHeading = path(['content', 'blocks', 0, 'text']);
 const getBodySummary = path(['content', 'blocks', 1, 'text']);
+const getScheduleToggle = path(['liveRadioSchedule', 'enabled']);
 
 export default async ({ path: pathname, pageType, service, toggles }) => {
   try {
@@ -30,9 +31,9 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
       pageType,
     });
 
-    const { liveRadioSchedule } = toggles;
+    const scheduleIsEnabled = getScheduleToggle(toggles);
 
-    const { json, status } = liveRadioSchedule.enabled
+    const { json, status } = scheduleIsEnabled
       ? await withRadioSchedule({
           pageDataPromise,
           service,
