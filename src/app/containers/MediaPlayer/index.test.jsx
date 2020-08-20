@@ -86,6 +86,10 @@ it('should render the Media Message when there is no blockId', () => {
   const { getByText } = render(VideoAmpNoBlockId);
   const mediaMessage = `This content is no longer available`;
   expect(logMissingMediaId).toHaveBeenCalledTimes(1);
+  expect(logMissingMediaId).toHaveBeenCalledWith({
+    url: 'persian/afghanistan/2013/04/130429_l42_vid_afgh_corruption',
+    assetType: 'legacy',
+  });
   expect(getByText(mediaMessage)).toBeInTheDocument();
 });
 
