@@ -53,6 +53,7 @@ const advertisingDirectives = {
     'https://pixel.adsafeprotected.com',
     'https://privacy.crwdcntrl.net',
     'https://sb.scorecardresearch.com',
+    'https://static.adsafeprotected.com',
     'https://*.g.doubleclick.net',
     'https://t.effectivemeasure.net',
     'https://tags.crwdcntrl.net',
