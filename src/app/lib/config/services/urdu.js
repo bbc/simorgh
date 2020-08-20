@@ -176,6 +176,11 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% پوسٹ کا اختتام',
         },
       },
+      include: {
+        errorMessage:
+          'ہم معذرت خواہ ہیں کہ ہم کہانی کے اس حصے کو اس لائٹ ویٹ موبائل صفحے پر نہیں دکھا سکتے',
+        linkText: 'تمام مواد دیکھنے کے لیے اس صفحے کا مکمل ورژن دیکھیں',
+      },
       topStoriesTitle: 'اہم خبریں',
       featuresAnalysisTitle: 'فیچر اور تجزیے',
     },
