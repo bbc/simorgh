@@ -178,6 +178,12 @@ const baseServiceConfig = {
         endTextVisuallyHidden: 'Кінець %provider_name% допису',
       },
     },
+    include: {
+      errorMessage:
+        'Вибачте, ми не можемо відобразити цю частину сторінки у мобільній версії.',
+      linkText:
+        'Перегляньте повну версію сторінки, щоб побачити увесь контент.',
+    },
     relatedContent: 'Статті на цю ж тему',
     ...secondaryColumnTranslations,
   },

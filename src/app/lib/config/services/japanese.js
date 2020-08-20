@@ -171,6 +171,11 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% の投稿の終わり',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'トップ記事',
       featuresAnalysisTitle: '読み物・解説',
     },

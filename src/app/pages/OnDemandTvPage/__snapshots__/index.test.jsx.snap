@@ -500,7 +500,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
   bottom: 0;
   position: absolute;
   padding: 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
 }
 
 .c1 {
@@ -949,7 +948,6 @@ exports[`should show the future content message if episode is not yet available 
   bottom: 0;
   position: absolute;
   padding: 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
 }
 
 .c1 {
@@ -1398,7 +1396,6 @@ exports[`should show the future content message if episode is pending 1`] = `
   bottom: 0;
   position: absolute;
   padding: 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
 }
 
 .c1 {

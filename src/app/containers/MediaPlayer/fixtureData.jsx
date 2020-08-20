@@ -432,6 +432,23 @@ export const validAresMediaLiveAudioBlock = {
   position: [2, 1, 1],
 };
 
+export const validLegacyAresMetadataBlock = {
+  type: 'aresMediaMetadata',
+  blockId: `urn:bbc:ares::primary:43703851`,
+  model: {
+    available: true,
+    blockId: '43703851',
+    format: 'audio_video',
+    imageUrl:
+      'https://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/05/160505093650_freediving_640x360_bbc_nocredit.jpg',
+    synopses: {
+      short: 'Новый рекорд во фридайвинге: 124 метра под водой без акваланга',
+    },
+    title: 'Новый рекорд фридайвинга: 124 метра под водой без акваланга',
+    firstPublished: 1462441945000,
+  },
+};
+
 export const defaultToggles = {
   mediaPlayer: {
     enabled: true,
@@ -540,8 +557,8 @@ export const VideoAmpNoBlockId = (
   <GenerateFixtureData
     platform="amp"
     blocks={missingBlockId}
-    assetType="articles"
-    assetId="c123456789o"
+    assetType="legacy"
+    assetId="persian/afghanistan/2013/04/130429_l42_vid_afgh_corruption"
     showPlaceholder
     isLegacyMedia
   />

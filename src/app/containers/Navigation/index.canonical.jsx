@@ -9,7 +9,7 @@ import {
   CanonicalMenuButton,
 } from '@bbc/psammead-navigation/dropdown';
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/dist/breakpoints';
-import useMediaQuery from '#lib/utilities/useMediaQuery';
+import useMediaQuery from '#hooks/useMediaQuery';
 
 const ScrollableWrapper = styled.div`
   position: relative;
