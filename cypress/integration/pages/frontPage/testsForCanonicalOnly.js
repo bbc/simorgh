@@ -1,5 +1,7 @@
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
+const serviceHasAds = service => service === 'afrique';
+
 export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForCanonicalOnly to run for ${service} ${pageType}`, () => {});
 };
@@ -8,12 +10,20 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
 export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
   pageType,
-}) =>
+}) => {
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
     it('should not have an AMP attribute', () => {
       cy.get('html').should('not.have.attr', 'amp');
     });
   });
+  describe('Ads', () => {
+    if (serviceHasAds(service) && Cypress.env('APP_ENV') !== 'local') {
+      it('should render an ad slot', () => {
+        cy.get('[data-e2e=advertisment]').should('be.visible');
+      });
+    }
+  });
+};
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = ({
