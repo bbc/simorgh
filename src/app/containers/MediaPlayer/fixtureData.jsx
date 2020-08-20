@@ -557,8 +557,8 @@ export const VideoAmpNoBlockId = (
   <GenerateFixtureData
     platform="amp"
     blocks={missingBlockId}
-    assetType="articles"
-    assetId="c123456789o"
+    assetType="legacy"
+    assetId="persian/afghanistan/2013/04/130429_l42_vid_afgh_corruption"
     showPlaceholder
     isLegacyMedia
   />
