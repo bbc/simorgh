@@ -105,7 +105,7 @@ exports[`Canonical Korean Live Radio Page Main heading should match text 1`] = `
 
 exports[`Canonical Korean Live Radio Page Media Player a11y assistive technology can read the media player title 1`] = `"오디오 플레이어"`;
 
-exports[`Canonical Korean Live Radio Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko?morph_env=live"`;
+exports[`Canonical Korean Live Radio Page Media Player iframe with valid URL should be rendered 1`] = `"https://test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko?morph_env=live"`;
 
 exports[`Canonical Korean Live Radio Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {

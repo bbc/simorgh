@@ -159,7 +159,7 @@ exports[`Canonical Media Asset Page I can see the timestamp 1`] = `"20 نوفم�
 
 exports[`Canonical Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"مشغل وسائط"`;
 
-exports[`Canonical Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar"`;
+exports[`Canonical Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://test.bbc.co.uk/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar"`;
 
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -298,7 +298,7 @@ Object {
   "@type": "VideoObject",
   "description": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
   "duration": null,
-  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar",
+  "embedURL": "https://test.bbc.co.uk/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar",
   "name": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
   "thumbnailUrl": "https://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
   "uploadDate": "2015-11-20T10:09:33.000Z",
@@ -345,7 +345,7 @@ exports[`Canonical Media Asset Page outer iframe has z-index of 1 1`] = `
   allowfullscreen=""
   class="StyledIframe-fuo2ed-1 lfcupi"
   scrolling="no"
-  src="https://polling.test.bbc.co.uk/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar"
+  src="https://test.bbc.co.uk/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar"
   title="مشغل وسائط"
 />
 `;

@@ -87,7 +87,7 @@ describe('Radio Page Main', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live',
+      'https://test.bbc.co.uk/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live',
     );
   });
 

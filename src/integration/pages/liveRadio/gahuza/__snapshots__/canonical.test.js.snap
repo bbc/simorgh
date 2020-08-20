@@ -208,9 +208,9 @@ exports[`Canonical Live Radio Media Player a11y assistive technology can read th
 
 exports[`Canonical Live Radio Media Player a11y assistive technology can read the media player title 2`] = `"Kina amajwi"`;
 
-exports[`Canonical Live Radio Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_gahuza_radio/liveradio/rw?morph_env=live"`;
+exports[`Canonical Live Radio Media Player iframe with valid URL should be rendered 1`] = `"https://test.bbc.co.uk/ws/av-embeds/media/bbc_gahuza_radio/liveradio/rw?morph_env=live"`;
 
-exports[`Canonical Live Radio Media Player iframe with valid URL should be rendered 2`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_gahuza_radio/liveradio/rw?morph_env=live"`;
+exports[`Canonical Live Radio Media Player iframe with valid URL should be rendered 2`] = `"https://test.bbc.co.uk/ws/av-embeds/media/bbc_gahuza_radio/liveradio/rw?morph_env=live"`;
 
 exports[`Canonical Live Radio SEO Apple Touch Icon should match attributes 1`] = `
 Object {
