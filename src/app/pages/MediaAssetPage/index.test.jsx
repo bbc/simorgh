@@ -138,7 +138,6 @@ describe('Media Asset Page', () => {
       service: 'pidgin',
       pageData: mapPageData,
     });
-    console.log(response);
 
     pageData = response.pageData;
 
