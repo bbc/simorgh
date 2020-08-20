@@ -44,6 +44,7 @@ import {
 import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
+import AdContainer from '#containers/Ad';
 
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
@@ -262,6 +263,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
+      <AdContainer slotType="leaderboard" />
       <StoryPageGrid
         dir={dir}
         columns={gridColumns}
