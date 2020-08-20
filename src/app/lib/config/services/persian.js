@@ -197,6 +197,11 @@ export const service = {
           endTextVisuallyHidden: 'پایان پست %provider_name%',
         },
       },
+      include: {
+        errorMessage:
+          'متأسفانه امکان نمایش این بخش از صفحه در موبایل وجود ندارد',
+        linkText: 'نسخه کامل و تمامی محتوا را ببینید',
+      },
       topStoriesTitle: 'مهمترین خبرها',
       featuresAnalysisTitle: 'گزارش و تحلیل',
     },

@@ -173,6 +173,11 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% 포스트 마침',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: '주요뉴스',
       featuresAnalysisTitle: '이 시간 이슈',
     },

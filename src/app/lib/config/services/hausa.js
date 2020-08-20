@@ -182,6 +182,12 @@ export const service = {
           endTextVisuallyHidden: 'Karshen labarin da aka sa a %provider_name%',
         },
       },
+      include: {
+        errorMessage:
+          'Yi hakuri, ba zamu iya nuna wannan bangaren na labarin a irin wannan karamar wayar',
+        linkText:
+          'Bude babban shafin domin kallon duka abubuwan da muka wallafa',
+      },
       topStoriesTitle: 'Babban Labari',
       featuresAnalysisTitle: 'Minti Daya Da BBC',
     },
