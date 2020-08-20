@@ -128,7 +128,7 @@ describe('OnDemand TV Brand Page ', () => {
     expect(container.querySelector('h1#content')).toBeDefined();
   });
 
-  it('Dark Mode Design - always enabled - should match snapshot', async () => {
+  it('Dark Mode Design - should match snapshot', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
     const { pageData } = await getInitialData({

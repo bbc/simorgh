@@ -31,7 +31,6 @@ import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import DarkModeGlobalStyles from '#lib/utilities/darkMode';
 import AVPlayer from '#containers/AVPlayer';
-import useToggle from '#hooks/useToggle';
 
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
