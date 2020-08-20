@@ -59,14 +59,14 @@ it('should render the iframe when showPlaceholder is set to false', () => {
   expect(document.querySelector('iframe')).toBeInTheDocument();
 });
 
-it('should render the Media Message when the video is no longer available Canonical', () => {
+it('should render the Media Message when the video is not available Canonical', () => {
   const { getByText } = render(UnavailableVideoCanonical);
   const mediaMessage = `This content is no longer available`;
   expect(logMissingMediaId).toHaveBeenCalledTimes(0);
   expect(getByText(mediaMessage)).toBeInTheDocument();
 });
 
-it('should render the Media Message when the video is no longer available AMP', () => {
+it('should render the Media Message when the video is not available AMP', () => {
   const { getByText } = render(UnavailableVideoAmp);
   const mediaMessage = `This content is no longer available`;
   expect(logMissingMediaId).toHaveBeenCalledTimes(0);
@@ -86,6 +86,10 @@ it('should render the Media Message when there is no blockId', () => {
   const { getByText } = render(VideoAmpNoBlockId);
   const mediaMessage = `This content is no longer available`;
   expect(logMissingMediaId).toHaveBeenCalledTimes(1);
+  expect(logMissingMediaId).toHaveBeenCalledWith({
+    url: 'persian/afghanistan/2013/04/130429_l42_vid_afgh_corruption',
+    assetType: 'legacy',
+  });
   expect(getByText(mediaMessage)).toBeInTheDocument();
 });
 
