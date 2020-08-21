@@ -175,6 +175,11 @@ export const service = {
           endTextVisuallyHidden: 'สิ้นสุด %provider_name% โพสต์',
         },
       },
+      include: {
+        errorMessage:
+          'ขออภัย เราไม่สามารถแสดงส่วนนี้ของเรื่องได้บนหน้าโทรศัพท์ที่ใช้แอปอย่างง่าย',
+        linkText: 'ดูแบบเต็มเพื่อดูเนื้อหาทั้งหมด',
+      },
       topStoriesTitle: 'ข่าวเด่น',
       featuresAnalysisTitle: 'เรื่องน่าสนใจ',
     },

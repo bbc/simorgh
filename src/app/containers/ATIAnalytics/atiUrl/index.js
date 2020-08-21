@@ -13,6 +13,8 @@ import {
   getAtiUrl,
   getEventInfo,
   getProducer,
+  getCampaignType,
+  getATIMarketingString,
 } from '#lib/analyticsUtils';
 
 const spaceRegex = / /g;
@@ -43,13 +45,17 @@ export const buildATIPageTrackPath = ({
   campaigns,
 }) => {
   const href = getHref(platform);
+  const decodedHref = decodeURIComponent(href);
   const referrer = getReferrer(platform, origin, previousPath);
+  const campaignType = getCampaignType();
 
   // We use amp variable substitutes to get the href and referrer and these cannot be manipulated
   // For canonical, we have a requirement to encode the x5 and x6 value twice. Source issue: https://github.com/bbc/simorgh/pull/6593
   const x5Value = platform === 'amp' ? href : href && encodeURIComponent(href);
   const x6Value =
     platform === 'amp' ? referrer : referrer && encodeURIComponent(referrer);
+
+  const shouldIncludeMarketingString = process.env.SIMORGH_APP_ENV !== 'live';
 
   const pageViewBeaconValues = [
     {
@@ -182,6 +188,14 @@ export const buildATIPageTrackPath = ({
       description: 'boolean - if locserve cookie value is defined',
       value: isLocServeCookieSet(),
       wrap: true,
+    },
+    {
+      key: 'xto',
+      description: 'marketing campaign',
+      value: shouldIncludeMarketingString
+        ? getATIMarketingString(decodedHref, campaignType)
+        : null,
+      wrap: false,
     },
     {
       key: 'ref',

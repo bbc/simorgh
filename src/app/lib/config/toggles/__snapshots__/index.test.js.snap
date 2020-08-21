@@ -25,10 +25,6 @@ Object {
   "include": Object {
     "enabled": true,
   },
-  "liveRadioSchedule": Object {
-    "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|bengali|burmese|hausa|indonesia|korean|nepali|pashto|persian|somali|swahili|tigrinya|urdu)",
-  },
   "logMediaPlayerStatus": Object {
     "enabled": false,
   },
@@ -93,10 +89,6 @@ Object {
   "include": Object {
     "enabled": true,
   },
-  "liveRadioSchedule": Object {
-    "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|bengali|burmese|hausa|indonesia|korean|nepali|pashto|persian|somali|swahili|tigrinya|urdu)",
-  },
   "logMediaPlayerStatus": Object {
     "enabled": false,
   },
@@ -157,10 +149,6 @@ Object {
   },
   "include": Object {
     "enabled": true,
-  },
-  "liveRadioSchedule": Object {
-    "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|bengali|burmese|hausa|indonesia|korean|nepali|pashto|persian|somali|swahili|tigrinya|urdu)",
   },
   "logMediaPlayerStatus": Object {
     "enabled": false,

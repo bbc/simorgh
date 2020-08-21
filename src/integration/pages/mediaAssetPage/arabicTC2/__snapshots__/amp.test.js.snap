@@ -419,16 +419,18 @@ exports[`AMP Media Asset Page SEO Linked data should match text 2`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "VideoObject",
+  "description": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
   "duration": null,
   "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar/amp",
-  "thumbnailUrl": "https://",
-  "uploadDate": "1970-01-01T00:00:00.000Z",
+  "name": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+  "thumbnailUrl": "https://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+  "uploadDate": "2015-11-20T10:09:33.000Z",
 }
 `;
 
 exports[`AMP Media Asset Page SEO OG description 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
-exports[`AMP Media Asset Page SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_arabic/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg"`;
+exports[`AMP Media Asset Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
 
 exports[`AMP Media Asset Page SEO OG image alt 1`] = `"BBC News عربي"`;
 
@@ -454,7 +456,7 @@ exports[`AMP Media Asset Page SEO Twitter description 1`] = `"شركة شارب 
 
 exports[`AMP Media Asset Page SEO Twitter image alt 1`] = `"BBC News عربي"`;
 
-exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_arabic/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg"`;
+exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
 
 exports[`AMP Media Asset Page SEO Twitter site 1`] = `"@BBCArabic"`;
 
