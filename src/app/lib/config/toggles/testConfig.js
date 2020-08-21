@@ -9,9 +9,6 @@ export default {
   chartbeatAnalytics: {
     enabled: true,
   },
-  comscoreAnalytics: {
-    enabled: true,
-  },
   cpsRecommendations: {
     enabled: true,
   },

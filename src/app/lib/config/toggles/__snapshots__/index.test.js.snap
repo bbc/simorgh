@@ -12,9 +12,6 @@ Object {
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
-  "comscoreAnalytics": Object {
-    "enabled": false,
-  },
   "cpsRecommendations": Object {
     "enabled": false,
   },
@@ -132,9 +129,6 @@ Object {
     "enabled": true,
   },
   "chartbeatAnalytics": Object {
-    "enabled": true,
-  },
-  "comscoreAnalytics": Object {
     "enabled": true,
   },
   "cpsRecommendations": Object {
