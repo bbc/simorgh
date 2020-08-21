@@ -29,14 +29,13 @@ export default ({ service, pageType, variant, isAmp }) => {
         `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
       ).then(({ body: jsonData }) => {
         const episodeAvailability = getEpisodeAvailability(jsonData);
-        if (episodeAvailability !== 'available') {
-          if (episodeAvailability === 'future') {
-            throw new Error('Episode is in the future');
-          }
-          return cy.log(
-            `Episode is ${episodeAvailability}: ${Cypress.env('currentPath')}`,
-          );
+
+        if (episodeAvailability === 'future') {
+          throw new Error('Episode is in the future');
         }
+        return cy.log(
+          `Episode is ${episodeAvailability}: ${Cypress.env('currentPath')}`,
+        );
       });
     });
 
@@ -45,7 +44,7 @@ export default ({ service, pageType, variant, isAmp }) => {
         cy.request(
           `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
         ).then(({ body: jsonData }) => {
-          if (!isAvailable) {
+          if (!isAvailable(jsonData)) {
             return cy.log(
               `Episode is not available: ${Cypress.env('currentPath')}`,
             );

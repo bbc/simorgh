@@ -4,7 +4,7 @@ export default (path, pageType) => {
   const expectedStatus = isErrorPage ? 404 : 200;
   const failOnStatusCode = !isErrorPage;
   cy.testResponseCodeAndType(path, expectedStatus, expectedContentType);
-  cy.log(path);
+
   cy.visit(path, {
     failOnStatusCode,
   });
