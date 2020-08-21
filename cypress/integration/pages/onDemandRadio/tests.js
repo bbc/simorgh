@@ -2,7 +2,7 @@
 import {
   isAvailable,
   getEpisodeAvailability,
-  dataEndpointOverride,
+  overrideRendererOnTest,
   getEmbedUrl,
   isBrand,
 } from '../../../support/helpers/onDemandRadioTv';
@@ -26,7 +26,7 @@ export default ({ service, pageType, variant, isAmp }) => {
 
     it('Brand page should not display a future episode', () => {
       cy.request(
-        `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
+        `${Cypress.env('currentPath')}.json${overrideRendererOnTest()}`,
       ).then(({ body: jsonData }) => {
         const episodeAvailability = getEpisodeAvailability(jsonData);
 
@@ -42,7 +42,7 @@ export default ({ service, pageType, variant, isAmp }) => {
     describe('Audio Player', () => {
       it('should render an iframe with a valid URL', () => {
         cy.request(
-          `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
+          `${Cypress.env('currentPath')}.json${overrideRendererOnTest()}`,
         ).then(({ body: jsonData }) => {
           if (!isAvailable(jsonData)) {
             return cy.log(

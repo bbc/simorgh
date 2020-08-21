@@ -7,14 +7,14 @@ import {
 } from '../../../support/helpers/onDemandRadioTv';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 // eslint-disable-next-line import/no-named-as-default
-import dataEndpointOverride from '../../../support/helpers/visitPage';
+import overrideRendererOnTest from '../../../support/helpers/visitPage';
 
 export default ({ service, pageType, variant, isAmp }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
     describe('Video Player', () => {
       it('Brand page should not display a future episode', () => {
         cy.request(
-          `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
+          `${Cypress.env('currentPath')}.json${overrideRendererOnTest()}`,
         ).then(({ body: jsonData }) => {
           const episodeAvailability = getEpisodeAvailability(jsonData);
 
@@ -28,7 +28,7 @@ export default ({ service, pageType, variant, isAmp }) => {
       });
       it('should render an iframe with a valid URL', () => {
         cy.request(
-          `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
+          `${Cypress.env('currentPath')}.json${overrideRendererOnTest()}`,
         ).then(({ body: jsonData }) => {
           if (!isAvailable(jsonData)) {
             return cy.log(
