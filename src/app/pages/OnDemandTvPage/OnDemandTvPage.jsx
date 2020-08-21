@@ -87,7 +87,6 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
-  const darkMode = true;
 
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,
@@ -177,7 +176,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           <StyledTvHeadingContainer
             brandTitle={brandTitle}
             releaseDateTimeStamp={releaseDateTimeStamp}
-            darkMode={darkMode}
+            darkMode
             ariaHidden
           />
         </Grid>
@@ -188,10 +187,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           margins={getGroups(true, true, true, true, false, false)}
         >
-          <OnDemandParagraphContainer
-            text={shortSynopsis}
-            darkMode={darkMode}
-          />
+          <OnDemandParagraphContainer text={shortSynopsis} darkMode />
         </Grid>
       </StyledGelPageGrid>
     </>
