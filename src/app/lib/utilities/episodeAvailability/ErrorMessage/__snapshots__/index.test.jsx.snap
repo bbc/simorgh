@@ -31,6 +31,7 @@ exports[`episodeAvailability - Error Message should correctly render for expired
   bottom: 0;
   position: absolute;
   padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .c0 {
@@ -115,6 +116,7 @@ exports[`episodeAvailability - Error Message should correctly render for future 
   bottom: 0;
   position: absolute;
   padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .c0 {

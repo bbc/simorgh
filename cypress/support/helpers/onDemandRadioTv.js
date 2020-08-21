@@ -52,7 +52,7 @@ export const isBrand = jsonData => {
   return pageID.includes('programmes');
 };
 
-export const dataEndpointOverride = () => {
+export const overrideRendererOnTest = () => {
   if (Cypress.env('APP_ENV') === 'test') {
     return '?renderer_env=live';
   }

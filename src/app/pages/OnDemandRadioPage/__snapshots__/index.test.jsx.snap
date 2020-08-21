@@ -1594,6 +1594,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   bottom: 0;
   position: absolute;
   padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .c13 {
@@ -2130,6 +2131,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   bottom: 0;
   position: absolute;
   padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .c13 {
