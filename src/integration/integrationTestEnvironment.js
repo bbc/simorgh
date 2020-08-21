@@ -35,7 +35,7 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
         runScripts: this.runScripts,
         ...(this.displayAds && {
           headers: {
-            'BBC-Adverts': true,
+            'BBC-Adverts': 'true',
           },
         }),
       });
