@@ -201,7 +201,6 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onOnDemandRadioPage: true,
-      onLiveRadioPage: true,
       onFrontPage: false,
       header: 'पछिल्लो कार्यक्रम सुन्नुहोस्',
       durationLabel: 'अवधि %duration%',
