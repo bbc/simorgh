@@ -106,6 +106,9 @@ it('should route to and render live radio page', async () => {
   const { pageData } = await getInitialData({
     path: pathname,
     pageType,
+    toggles: {
+      liveRadioSchedule: { enabled: true },
+    },
   });
 
   const { getByText } = renderRouter({
