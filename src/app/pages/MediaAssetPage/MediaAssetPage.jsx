@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
@@ -145,6 +146,7 @@ const MediaAssetPage = ({ pageData }) => {
       <ATIAnalytics data={pageData} />
       <StyledGrid as="main" role="main">
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+        <Link to="/pashto/bbc_pashto_tv/tv_programmes/w13xttn4">About</Link>
       </StyledGrid>
       <CpsRelatedContent content={relatedContent} isMapContent />
     </>

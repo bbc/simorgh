@@ -1,987 +1,993 @@
 {
   "schedules": [
     {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570771570000,
-      "publishedTimeStart": 1571722230000,
-      "publishedTimeEnd": 1571722350000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1571722230000,
-      "transmissionTimeEnd": 1571722350000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqt1g2.imi:ws.bbc.co.uk/INDOA1571722230",
-        "pid": "p07qrk27"
-      },
       "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
         "pid": "p034vst8",
-        "title": "Global Newsbeat – Indonesia",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
         "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        },
+        "title": "Global Newsbeat – Indonesia"
+      },
+      "broadcast": {
+        "bid": "w4hqw2yy.imi:ws.bbc.co.uk/INDOA1597728630",
+        "pid": "p08mzg57"
       },
       "episode": {
-        "pid": "w3csykhd",
-        "presentationTitle": "22/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w3ct0j47",
+        "presentationTitle": "18/08/2020 GMT",
         "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
         }
       },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT2M",
+      "publishedTimeEnd": 1597728750000,
+      "publishedTimeStart": 1597728630000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597728750000,
+      "transmissionTimeStart": 1597728630000,
+      "updateTime": 1596757021000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
       "version": {
-        "pid": "w4hqt1g2"
+        "pid": "w4hqw2yy"
       }
     },
     {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570775182000,
-      "publishedTimeStart": 1571725830000,
-      "publishedTimeEnd": 1571725950000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1571725830000,
-      "transmissionTimeEnd": 1571725950000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqt1mq.imi:ws.bbc.co.uk/INDOA1571725830",
-        "pid": "p07qrntb"
-      },
       "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
         "pid": "p034vst8",
-        "title": "Global Newsbeat – Indonesia",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
         "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        },
+        "title": "Global Newsbeat – Indonesia"
+      },
+      "broadcast": {
+        "bid": "w4hqw34l.imi:ws.bbc.co.uk/INDOA1597732230",
+        "pid": "p08mzt4z"
       },
       "episode": {
-        "pid": "w3csykp1",
-        "presentationTitle": "22/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w3ct0j9w",
+        "presentationTitle": "18/08/2020 GMT",
         "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
         }
       },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT2M",
+      "publishedTimeEnd": 1597732350000,
+      "publishedTimeStart": 1597732230000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597732350000,
+      "transmissionTimeStart": 1597732230000,
+      "updateTime": 1596778660000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
       "version": {
-        "pid": "w4hqt1mq"
+        "pid": "w4hqw34l"
       }
     },
     {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570778781000,
-      "publishedTimeStart": 1571729430000,
-      "publishedTimeEnd": 1571729550000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1571729430000,
-      "transmissionTimeEnd": 1571729550000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqt1wm.imi:ws.bbc.co.uk/INDOA1571729430",
-        "pid": "p07qrtpd"
-      },
       "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
         "pid": "p034vst8",
-        "title": "Global Newsbeat – Indonesia",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
         "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        },
+        "title": "Global Newsbeat – Indonesia"
+      },
+      "broadcast": {
+        "bid": "w4hqw3b7.imi:ws.bbc.co.uk/INDOA1597735830",
+        "pid": "p08mzw8y"
       },
       "episode": {
-        "pid": "w3csykxy",
-        "presentationTitle": "22/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w3ct0jhj",
+        "presentationTitle": "18/08/2020 GMT",
         "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
         }
       },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT2M",
+      "publishedTimeEnd": 1597735950000,
+      "publishedTimeStart": 1597735830000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597735950000,
+      "transmissionTimeStart": 1597735830000,
+      "updateTime": 1596782270000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
       "version": {
-        "pid": "w4hqt1wm"
+        "pid": "w4hqw3b7"
       }
     },
     {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570782390000,
-      "publishedTimeStart": 1571733030000,
-      "publishedTimeEnd": 1571733150000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1571733030000,
-      "transmissionTimeEnd": 1571733150000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqt228.imi:ws.bbc.co.uk/INDOA1571733030",
-        "pid": "p07qs1gr"
-      },
       "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
         "pid": "p034vst8",
-        "title": "Global Newsbeat – Indonesia",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
         "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        },
+        "title": "Global Newsbeat – Indonesia"
+      },
+      "broadcast": {
+        "bid": "w4hqw3hw.imi:ws.bbc.co.uk/INDOA1597739430",
+        "pid": "p08n04b0"
       },
       "episode": {
-        "pid": "w3csyl3l",
-        "presentationTitle": "22/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w3ct0jp5",
+        "presentationTitle": "18/08/2020 GMT",
         "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
         }
       },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT2M",
+      "publishedTimeEnd": 1597739550000,
+      "publishedTimeStart": 1597739430000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597739550000,
+      "transmissionTimeStart": 1597739430000,
+      "updateTime": 1596789493000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
       "version": {
-        "pid": "w4hqt228"
+        "pid": "w4hqw3hw"
       }
     },
     {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570785972000,
-      "publishedTimeStart": 1571736630000,
-      "publishedTimeEnd": 1571736750000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1571736630000,
-      "transmissionTimeEnd": 1571736750000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqt27x.imi:ws.bbc.co.uk/INDOA1571736630",
-        "pid": "p07qs8kt"
-      },
       "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
         "pid": "p034vst8",
-        "title": "Global Newsbeat – Indonesia",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
         "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        },
+        "title": "Global Newsbeat – Indonesia"
+      },
+      "broadcast": {
+        "bid": "w4hqw3pj.imi:ws.bbc.co.uk/INDOA1597743030",
+        "pid": "p08n04b1"
       },
       "episode": {
-        "pid": "w3csyl97",
-        "presentationTitle": "22/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w3ct0jvt",
+        "presentationTitle": "18/08/2020 GMT",
         "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
         }
       },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT2M",
+      "publishedTimeEnd": 1597743150000,
+      "publishedTimeStart": 1597743030000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597743150000,
+      "transmissionTimeStart": 1597743030000,
+      "updateTime": 1596789494000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
       "version": {
-        "pid": "w4hqt27x"
+        "pid": "w4hqw3pj"
       }
     },
     {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570789590000,
-      "publishedTimeStart": 1571740230000,
-      "publishedTimeEnd": 1571740350000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1571740230000,
-      "transmissionTimeEnd": 1571740350000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqt2j9.imi:ws.bbc.co.uk/INDOA1571740230",
-        "pid": "p07qshzy"
-      },
       "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
         "pid": "p034vst8",
-        "title": "Global Newsbeat – Indonesia",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
         "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        },
+        "title": "Global Newsbeat – Indonesia"
+      },
+      "broadcast": {
+        "bid": "w4hqw3w5.imi:ws.bbc.co.uk/INDOA1597746630",
+        "pid": "p08n09w3"
       },
       "episode": {
-        "pid": "w3csylkm",
-        "presentationTitle": "22/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w3ct0k1g",
+        "presentationTitle": "18/08/2020 GMT",
         "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
         }
       },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT2M",
+      "publishedTimeEnd": 1597746750000,
+      "publishedTimeStart": 1597746630000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597746750000,
+      "transmissionTimeStart": 1597746630000,
+      "updateTime": 1596793083000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
       "version": {
-        "pid": "w4hqt2j9"
+        "pid": "w4hqw3w5"
       }
     },
     {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570829171000,
-      "publishedTimeStart": 1571781570000,
-      "publishedTimeEnd": 1571782500000,
-      "publishedTimeDuration": "PT15M30S",
-      "transmissionTimeStart": 1571781570000,
-      "transmissionTimeEnd": 1571782500000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msgwwl8gzz6p1.imi:ws.bbc.co.uk/INDOA1571781570",
-        "pid": "p07qvs0c"
-      },
       "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
         "pid": "w13xtt0s",
-        "title": "Dunia Pagi Ini",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpky.jpg",
         "synopses": {
-          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
-        }
+          "long": " ",
+          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+        },
+        "title": "Dunia Pagi Ini"
+      },
+      "broadcast": {
+        "bid": "w1mshmz6mz2s50j.imi:ws.bbc.co.uk/INDOA1597787970",
+        "pid": "p08n0hgb"
       },
       "episode": {
-        "pid": "w172ws13vpzxjgn",
-        "presentationTitle": "22/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpky.jpg",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w172xh2d1qr665z",
+        "presentationTitle": "18/08/2020 GMT",
         "synopses": {
-          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
         }
       },
-      "version": {
-        "pid": "w1msgwwl8gzz6p1"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
       "partnerId": "s0000001",
-      "updateTime": 1570832771000,
-      "publishedTimeStart": 1571785170000,
-      "publishedTimeEnd": 1571786100000,
       "publishedTimeDuration": "PT15M30S",
-      "transmissionTimeStart": 1571785170000,
-      "transmissionTimeEnd": 1571786100000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msgwwl8gzzbf5.imi:ws.bbc.co.uk/INDOA1571785170",
-        "pid": "p07qvwtq"
-      },
+      "publishedTimeEnd": 1597788900000,
+      "publishedTimeStart": 1597787970000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597788900000,
+      "transmissionTimeStart": 1597787970000,
+      "updateTime": 1596796783000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
+      "version": {
+        "pid": "w1mshmz6mz2s50j"
+      }
+    },
+    {
       "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
         "pid": "w13xtt0s",
-        "title": "Dunia Pagi Ini",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpky.jpg",
         "synopses": {
-          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
-        }
+          "long": " ",
+          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+        },
+        "title": "Dunia Pagi Ini"
       },
-      "episode": {
-        "pid": "w172ws13vpzxn6s",
-        "presentationTitle": "22/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpky.jpg",
-        "synopses": {
-          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
-        }
-      },
-      "version": {
-        "pid": "w1msgwwl8gzzbf5"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570857974000,
-      "publishedTimeStart": 1571808630000,
-      "publishedTimeEnd": 1571808750000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1571808630000,
-      "transmissionTimeEnd": 1571808750000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqt1h6.imi:ws.bbc.co.uk/INDOA1571808630",
-        "pid": "p07qwc8g"
-      },
-      "brand": {
-        "pid": "p034vst8",
-        "title": "Global Newsbeat – Indonesia",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
+        "bid": "w1mshmz6mz2s8rn.imi:ws.bbc.co.uk/INDOA1597791570",
+        "pid": "p08n2f44"
       },
       "episode": {
-        "pid": "w3csykjj",
-        "presentationTitle": "23/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w172xh2d1qr69y3",
+        "presentationTitle": "18/08/2020 GMT",
         "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
         }
       },
-      "version": {
-        "pid": "w4hqt1h6"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570861588000,
-      "publishedTimeStart": 1571812230000,
-      "publishedTimeEnd": 1571812350000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1571812230000,
-      "transmissionTimeEnd": 1571812350000,
-      "isBlanked": false,
-      "isRepeat": false,
       "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqt1nv.imi:ws.bbc.co.uk/INDOA1571812230",
-        "pid": "p07qwh0y"
-      },
-      "brand": {
-        "pid": "p034vst8",
-        "title": "Global Newsbeat – Indonesia",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "episode": {
-        "pid": "w3csykq5",
-        "presentationTitle": "23/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "version": {
-        "pid": "w4hqt1nv"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570865179000,
-      "publishedTimeStart": 1571815830000,
-      "publishedTimeEnd": 1571815950000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1571815830000,
-      "transmissionTimeEnd": 1571815950000,
       "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
       "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqt1xr.imi:ws.bbc.co.uk/INDOA1571815830",
-        "pid": "p07qwjlv"
-      },
-      "brand": {
-        "pid": "p034vst8",
-        "title": "Global Newsbeat – Indonesia",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "episode": {
-        "pid": "w3csykz2",
-        "presentationTitle": "23/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "version": {
-        "pid": "w4hqt1xr"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570868759000,
-      "publishedTimeStart": 1571819430000,
-      "publishedTimeEnd": 1571819550000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1571819430000,
-      "transmissionTimeEnd": 1571819550000,
-      "isBlanked": false,
       "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
       "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqt23d.imi:ws.bbc.co.uk/INDOA1571819430",
-        "pid": "p07qwn6l"
-      },
-      "brand": {
-        "pid": "p034vst8",
-        "title": "Global Newsbeat – Indonesia",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "episode": {
-        "pid": "w3csyl4q",
-        "presentationTitle": "23/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "version": {
-        "pid": "w4hqt23d"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570872351000,
-      "publishedTimeStart": 1571823030000,
-      "publishedTimeEnd": 1571823150000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1571823030000,
-      "transmissionTimeEnd": 1571823150000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqt291.imi:ws.bbc.co.uk/INDOA1571823030",
-        "pid": "p07qwr11"
-      },
-      "brand": {
-        "pid": "p034vst8",
-        "title": "Global Newsbeat – Indonesia",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "episode": {
-        "pid": "w3csylbc",
-        "presentationTitle": "23/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "version": {
-        "pid": "w4hqt291"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570875976000,
-      "publishedTimeStart": 1571826630000,
-      "publishedTimeEnd": 1571826750000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1571826630000,
-      "transmissionTimeEnd": 1571826750000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqt2kf.imi:ws.bbc.co.uk/INDOA1571826630",
-        "pid": "p07qwssf"
-      },
-      "brand": {
-        "pid": "p034vst8",
-        "title": "Global Newsbeat – Indonesia",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "episode": {
-        "pid": "w3csyllr",
-        "presentationTitle": "23/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "version": {
-        "pid": "w4hqt2kf"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570915565000,
-      "publishedTimeStart": 1571867970000,
-      "publishedTimeEnd": 1571868900000,
       "publishedTimeDuration": "PT15M30S",
-      "transmissionTimeStart": 1571867970000,
-      "transmissionTimeEnd": 1571868900000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msgwwl8h023l4.imi:ws.bbc.co.uk/INDOA1571867970",
-        "pid": "p07qxq8c"
-      },
-      "brand": {
-        "pid": "w13xtt0s",
-        "title": "Dunia Pagi Ini",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpky.jpg",
-        "synopses": {
-          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
-        }
-      },
-      "episode": {
-        "pid": "w172ws13vq00fcr",
-        "presentationTitle": "23/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpky.jpg",
-        "synopses": {
-          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
-        }
-      },
+      "publishedTimeEnd": 1597792500000,
+      "publishedTimeStart": 1597791570000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597792500000,
+      "transmissionTimeStart": 1597791570000,
+      "updateTime": 1596839834000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
       "version": {
-        "pid": "w1msgwwl8h023l4"
+        "pid": "w1mshmz6mz2s8rn"
       }
     },
     {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "p034vst8",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        },
+        "title": "Global Newsbeat – Indonesia"
+      },
+      "broadcast": {
+        "bid": "w4hqw302.imi:ws.bbc.co.uk/INDOA1597815030",
+        "pid": "p08n2hhw"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w3ct0j5c",
+        "presentationTitle": "19/08/2020 GMT",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
       "partnerId": "s0000001",
-      "updateTime": 1570919177000,
-      "publishedTimeStart": 1571871570000,
-      "publishedTimeEnd": 1571872500000,
+      "publishedTimeDuration": "PT2M",
+      "publishedTimeEnd": 1597815150000,
+      "publishedTimeStart": 1597815030000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597815150000,
+      "transmissionTimeStart": 1597815030000,
+      "updateTime": 1596843431000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
+      "version": {
+        "pid": "w4hqw302"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "p034vst8",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        },
+        "title": "Global Newsbeat – Indonesia"
+      },
+      "broadcast": {
+        "bid": "w4hqw35q.imi:ws.bbc.co.uk/INDOA1597818630",
+        "pid": "p08n2wrm"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w3ct0jc0",
+        "presentationTitle": "19/08/2020 GMT",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT2M",
+      "publishedTimeEnd": 1597818750000,
+      "publishedTimeStart": 1597818630000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597818750000,
+      "transmissionTimeStart": 1597818630000,
+      "updateTime": 1596865061000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
+      "version": {
+        "pid": "w4hqw35q"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "p034vst8",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        },
+        "title": "Global Newsbeat – Indonesia"
+      },
+      "broadcast": {
+        "bid": "w4hqw3cc.imi:ws.bbc.co.uk/INDOA1597822230",
+        "pid": "p08n2z7h"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w3ct0jjn",
+        "presentationTitle": "19/08/2020 GMT",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT2M",
+      "publishedTimeEnd": 1597822350000,
+      "publishedTimeStart": 1597822230000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597822350000,
+      "transmissionTimeStart": 1597822230000,
+      "updateTime": 1596868662000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
+      "version": {
+        "pid": "w4hqw3cc"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "p034vst8",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        },
+        "title": "Global Newsbeat – Indonesia"
+      },
+      "broadcast": {
+        "bid": "w4hqw3k0.imi:ws.bbc.co.uk/INDOA1597825830",
+        "pid": "p08n322t"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w3ct0jq9",
+        "presentationTitle": "19/08/2020 GMT",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT2M",
+      "publishedTimeEnd": 1597825950000,
+      "publishedTimeStart": 1597825830000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597825950000,
+      "transmissionTimeStart": 1597825830000,
+      "updateTime": 1596872282000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
+      "version": {
+        "pid": "w4hqw3k0"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "p034vst8",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        },
+        "title": "Global Newsbeat – Indonesia"
+      },
+      "broadcast": {
+        "bid": "w4hqw3qn.imi:ws.bbc.co.uk/INDOA1597829430",
+        "pid": "p08n34xc"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w3ct0jwy",
+        "presentationTitle": "19/08/2020 GMT",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT2M",
+      "publishedTimeEnd": 1597829550000,
+      "publishedTimeStart": 1597829430000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597829550000,
+      "transmissionTimeStart": 1597829430000,
+      "updateTime": 1596875909000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
+      "version": {
+        "pid": "w4hqw3qn"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "p034vst8",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        },
+        "title": "Global Newsbeat – Indonesia"
+      },
+      "broadcast": {
+        "bid": "w4hqw3x9.imi:ws.bbc.co.uk/INDOA1597833030",
+        "pid": "p08n38rt"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w3ct0k2l",
+        "presentationTitle": "19/08/2020 GMT",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT2M",
+      "publishedTimeEnd": 1597833150000,
+      "publishedTimeStart": 1597833030000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597833150000,
+      "transmissionTimeStart": 1597833030000,
+      "updateTime": 1596879476000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
+      "version": {
+        "pid": "w4hqw3x9"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w13xtt0s",
+        "synopses": {
+          "long": " ",
+          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+        },
+        "title": "Dunia Pagi Ini"
+      },
+      "broadcast": {
+        "bid": "w1mshmz6mz2w1xm.imi:ws.bbc.co.uk/INDOA1597874370",
+        "pid": "p08n3dhd"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w172xh2d1qr9332",
+        "presentationTitle": "19/08/2020 GMT",
+        "synopses": {
+          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
       "publishedTimeDuration": "PT15M30S",
-      "transmissionTimeStart": 1571871570000,
-      "transmissionTimeEnd": 1571872500000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msgwwl8h027b8.imi:ws.bbc.co.uk/INDOA1571871570",
-        "pid": "p07qxrb5"
-      },
+      "publishedTimeEnd": 1597875300000,
+      "publishedTimeStart": 1597874370000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597875300000,
+      "transmissionTimeStart": 1597874370000,
+      "updateTime": 1596883091000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
+      "version": {
+        "pid": "w1mshmz6mz2w1xm"
+      }
+    },
+    {
       "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
         "pid": "w13xtt0s",
-        "title": "Dunia Pagi Ini",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpky.jpg",
         "synopses": {
-          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
-        }
+          "long": " ",
+          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+        },
+        "title": "Dunia Pagi Ini"
       },
-      "episode": {
-        "pid": "w172ws13vq00k3w",
-        "presentationTitle": "23/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpky.jpg",
-        "synopses": {
-          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
-        }
-      },
-      "version": {
-        "pid": "w1msgwwl8h027b8"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570944363000,
-      "publishedTimeStart": 1571895030000,
-      "publishedTimeEnd": 1571895150000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1571895030000,
-      "transmissionTimeEnd": 1571895150000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqt1dy.imi:ws.bbc.co.uk/INDOA1571895030",
-        "pid": "p07qxzy2"
-      },
-      "brand": {
-        "pid": "p034vst8",
-        "title": "Global Newsbeat – Indonesia",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
+        "bid": "w1mshmz6mz2w5nr.imi:ws.bbc.co.uk/INDOA1597877970",
+        "pid": "p08n4wl7"
       },
       "episode": {
-        "pid": "w3csykg8",
-        "presentationTitle": "24/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w172xh2d1qr96v6",
+        "presentationTitle": "19/08/2020 GMT",
         "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
         }
       },
-      "version": {
-        "pid": "w4hqt1dy"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570948018000,
-      "publishedTimeStart": 1571898630000,
-      "publishedTimeEnd": 1571898750000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1571898630000,
-      "transmissionTimeEnd": 1571898750000,
-      "isBlanked": false,
-      "isRepeat": false,
       "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqt1ll.imi:ws.bbc.co.uk/INDOA1571898630",
-        "pid": "p07qy296"
-      },
-      "brand": {
-        "pid": "p034vst8",
-        "title": "Global Newsbeat – Indonesia",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "episode": {
-        "pid": "w3csykmx",
-        "presentationTitle": "24/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "version": {
-        "pid": "w4hqt1ll"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570951673000,
-      "publishedTimeStart": 1571902230000,
-      "publishedTimeEnd": 1571902350000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1571902230000,
-      "transmissionTimeEnd": 1571902350000,
       "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
       "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqt1vh.imi:ws.bbc.co.uk/INDOA1571902230",
-        "pid": "p07qy3qr"
-      },
-      "brand": {
-        "pid": "p034vst8",
-        "title": "Global Newsbeat – Indonesia",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "episode": {
-        "pid": "w3csykwt",
-        "presentationTitle": "24/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "version": {
-        "pid": "w4hqt1vh"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570955196000,
-      "publishedTimeStart": 1571905830000,
-      "publishedTimeEnd": 1571905950000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1571905830000,
-      "transmissionTimeEnd": 1571905950000,
-      "isBlanked": false,
       "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
       "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqt214.imi:ws.bbc.co.uk/INDOA1571905830",
-        "pid": "p07qy697"
-      },
-      "brand": {
-        "pid": "p034vst8",
-        "title": "Global Newsbeat – Indonesia",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "episode": {
-        "pid": "w3csyl2g",
-        "presentationTitle": "24/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "version": {
-        "pid": "w4hqt214"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570958754000,
-      "publishedTimeStart": 1571909430000,
-      "publishedTimeEnd": 1571909550000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1571909430000,
-      "transmissionTimeEnd": 1571909550000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqt26s.imi:ws.bbc.co.uk/INDOA1571909430",
-        "pid": "p07qy8kd"
-      },
-      "brand": {
-        "pid": "p034vst8",
-        "title": "Global Newsbeat – Indonesia",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "episode": {
-        "pid": "w3csyl83",
-        "presentationTitle": "24/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "version": {
-        "pid": "w4hqt26s"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570962378000,
-      "publishedTimeStart": 1571913030000,
-      "publishedTimeEnd": 1571913150000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1571913030000,
-      "transmissionTimeEnd": 1571913150000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqt2h5.imi:ws.bbc.co.uk/INDOA1571913030",
-        "pid": "p07qybsx"
-      },
-      "brand": {
-        "pid": "p034vst8",
-        "title": "Global Newsbeat – Indonesia",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "episode": {
-        "pid": "w3csyljh",
-        "presentationTitle": "24/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkw2.jpg",
-        "synopses": {
-          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
-          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
-        }
-      },
-      "version": {
-        "pid": "w4hqt2h5"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1571001973000,
-      "publishedTimeStart": 1571954370000,
-      "publishedTimeEnd": 1571955300000,
       "publishedTimeDuration": "PT15M30S",
-      "transmissionTimeStart": 1571954370000,
-      "transmissionTimeEnd": 1571955300000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msgwwl8h050h7.imi:ws.bbc.co.uk/INDOA1571954370",
-        "pid": "p07qz7rg"
-      },
-      "brand": {
-        "pid": "w13xtt0s",
-        "title": "Dunia Pagi Ini",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpky.jpg",
-        "synopses": {
-          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
-        }
-      },
-      "episode": {
-        "pid": "w172ws13vq03b8v",
-        "presentationTitle": "24/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpky.jpg",
-        "synopses": {
-          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
-        }
-      },
+      "publishedTimeEnd": 1597878900000,
+      "publishedTimeStart": 1597877970000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597878900000,
+      "transmissionTimeStart": 1597877970000,
+      "updateTime": 1596926239000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
       "version": {
-        "pid": "w1msgwwl8h050h7"
+        "pid": "w1mshmz6mz2w5nr"
       }
     },
     {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
-      "serviceId": "bbc_indonesian_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1893488400000,
-      "publishedTimeStart": 1893488400000,
-      "publishedTimeEnd": 1893489330000,
-      "publishedTimeDuration": "PT15M30S",
-      "transmissionTimeStart": 1893488400000,
-      "transmissionTimeEnd": 1893489330000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msgwwl8h0547c.imi:ws.bbc.co.uk/INDOA1571957970",
-        "pid": "p07qz9vd"
-      },
       "brand": {
-        "pid": "w13xtt0s",
-        "title": "Dunia Pagi Ini",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpky.jpg",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "p034vst8",
         "synopses": {
-          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
-        }
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        },
+        "title": "Global Newsbeat – Indonesia"
+      },
+      "broadcast": {
+        "bid": "w4hqw2xt.imi:ws.bbc.co.uk/INDOA1597901430",
+        "pid": "p08n4y3c"
       },
       "episode": {
-        "pid": "w172ws13vq03g0z",
-        "presentationTitle": "01/01/2030 09:00 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpky.jpg",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w3ct0j33",
+        "presentationTitle": "20/08/2020 GMT",
         "synopses": {
-          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
         }
       },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT2M",
+      "publishedTimeEnd": 1597901550000,
+      "publishedTimeStart": 1597901430000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597901550000,
+      "transmissionTimeStart": 1597901430000,
+      "updateTime": 1596929849000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
       "version": {
-        "pid": "w1msgwwl8h0547c"
+        "pid": "w4hqw2xt"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "p034vst8",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        },
+        "title": "Global Newsbeat – Indonesia"
+      },
+      "broadcast": {
+        "bid": "w4hqw33g.imi:ws.bbc.co.uk/INDOA1597905030",
+        "pid": "p08n56jb"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w3ct0j8r",
+        "presentationTitle": "20/08/2020 GMT",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT2M",
+      "publishedTimeEnd": 1597905150000,
+      "publishedTimeStart": 1597905030000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597905150000,
+      "transmissionTimeStart": 1597905030000,
+      "updateTime": 1596951470000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
+      "version": {
+        "pid": "w4hqw33g"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "p034vst8",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        },
+        "title": "Global Newsbeat – Indonesia"
+      },
+      "broadcast": {
+        "bid": "w4hqw393.imi:ws.bbc.co.uk/INDOA1597908630",
+        "pid": "p08n58d6"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w3ct0jgd",
+        "presentationTitle": "20/08/2020 GMT",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT2M",
+      "publishedTimeEnd": 1597908750000,
+      "publishedTimeStart": 1597908630000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597908750000,
+      "transmissionTimeStart": 1597908630000,
+      "updateTime": 1596955080000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
+      "version": {
+        "pid": "w4hqw393"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "p034vst8",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        },
+        "title": "Global Newsbeat – Indonesia"
+      },
+      "broadcast": {
+        "bid": "w4hqw3gr.imi:ws.bbc.co.uk/INDOA1597912230",
+        "pid": "p08n5b67"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w3ct0jn1",
+        "presentationTitle": "20/08/2020 GMT",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT2M",
+      "publishedTimeEnd": 1597912350000,
+      "publishedTimeStart": 1597912230000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597912350000,
+      "transmissionTimeStart": 1597912230000,
+      "updateTime": 1596958686000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
+      "version": {
+        "pid": "w4hqw3gr"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "p034vst8",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        },
+        "title": "Global Newsbeat – Indonesia"
+      },
+      "broadcast": {
+        "bid": "w4hqw3nd.imi:ws.bbc.co.uk/INDOA1597915830",
+        "pid": "p08n5d7g"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w3ct0jtp",
+        "presentationTitle": "20/08/2020 GMT",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT2M",
+      "publishedTimeEnd": 1597915950000,
+      "publishedTimeStart": 1597915830000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597915950000,
+      "transmissionTimeStart": 1597915830000,
+      "updateTime": 1596962334000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
+      "version": {
+        "pid": "w4hqw3nd"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "p034vst8",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        },
+        "title": "Global Newsbeat – Indonesia"
+      },
+      "broadcast": {
+        "bid": "w4hqw3v1.imi:ws.bbc.co.uk/INDOA1597919430",
+        "pid": "p08n5hdm"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w3ct0k0b",
+        "presentationTitle": "20/08/2020 GMT",
+        "synopses": {
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT2M",
+      "publishedTimeEnd": 1597919550000,
+      "publishedTimeStart": 1597919430000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597919550000,
+      "transmissionTimeStart": 1597919430000,
+      "updateTime": 1596965854000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
+      "version": {
+        "pid": "w4hqw3v1"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w13xtt0s",
+        "synopses": {
+          "long": " ",
+          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+        },
+        "title": "Dunia Pagi Ini"
+      },
+      "broadcast": {
+        "bid": "w1mshmz6mz2yytq.imi:ws.bbc.co.uk/INDOA1597960770",
+        "pid": "p08n5kkk"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w172xh2d1qrd005",
+        "presentationTitle": "20/08/2020 GMT",
+        "synopses": {
+          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT15M30S",
+      "publishedTimeEnd": 1597961700000,
+      "publishedTimeStart": 1597960770000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597961700000,
+      "transmissionTimeStart": 1597960770000,
+      "updateTime": 1596969486000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
+      "version": {
+        "pid": "w1mshmz6mz2yytq"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w13xtt0s",
+        "synopses": {
+          "long": " ",
+          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+        },
+        "title": "Dunia Pagi Ini"
+      },
+      "broadcast": {
+        "bid": "w1mshmz6mz2z2kv.imi:ws.bbc.co.uk/INDOA1597964370",
+        "pid": "p08n6jp4"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "pid": "w172xh2d1qrd3r9",
+        "presentationTitle": "20/08/2020 GMT",
+        "synopses": {
+          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT15M30S",
+      "publishedTimeEnd": 1597965300000,
+      "publishedTimeStart": 1597964370000,
+      "serviceId": "bbc_indonesian_radio",
+      "transmissionTimeEnd": 1597965300000,
+      "transmissionTimeStart": 1597964370000,
+      "updateTime": 1597012641000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_indonesian_radio",
+      "version": {
+        "pid": "w1mshmz6mz2z2kv"
       }
     }
   ]

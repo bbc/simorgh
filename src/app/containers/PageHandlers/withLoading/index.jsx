@@ -4,7 +4,11 @@ import { GridWrapper, GridItemConstrainedMedium } from '#lib/styledGrid';
 
 const WithLoading = Component => {
   const LoadingContainer = ({ loading, ...props }) => {
-    if (!loading) return <Component {...props} />;
+    if (!loading) {
+      debugger;
+      return <Component {...props} />;
+    }
+    debugger;
     return (
       <main role="main">
         <GridWrapper>

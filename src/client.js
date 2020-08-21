@@ -16,7 +16,9 @@ const root = document.getElementById('root');
 // When on an unknown route, the SSR would be discarded and the user would only
 // see a blank screen. Avoid this by only hydrating when the embedded page data
 // and window location agree what the path is. Otherwise, fallback to the SSR.
+debugger;
 if (window.SIMORGH_DATA.path === window.location.pathname) {
+  debugger;
   loadableReady(() => {
     hydrate(<ClientApp data={data} routes={routes} />, root);
   });

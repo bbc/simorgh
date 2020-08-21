@@ -7,6 +7,7 @@ import shouldRender from './shouldRender';
 
 const WithData = Component => {
   const DataContainer = ({ pageData, status, ...props }) => {
+    debugger;
     const { service } = props;
     const { passportHomes } = useContext(ServiceContext) || {};
     const {

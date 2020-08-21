@@ -6,30 +6,30 @@
         "availability": "available",
         "embedding": false,
         "format": "Audio",
-        "id": "w172xh2d1qr69y3",
+        "id": "w3ct0k2l",
         "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
         "smpKind": "radioProgramme",
         "subType": "episode",
         "synopses": {
-          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+          "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+          "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
         },
-        "title": "18/08/2020 GMT",
+        "title": "19/08/2020 GMT",
         "type": "media",
         "versions": [
           {
             "availabilityStatus": "available",
-            "availableFrom": 1597792500000,
+            "availableFrom": 1597833150000,
             "availableTerritories": {
               "nonUk": false,
               "uk": false,
               "world": true
             },
-            "availableUntil": 1600384500000,
-            "duration": 930,
-            "durationISO8601": "PT15M30S",
+            "availableUntil": 1598437950000,
+            "duration": 120,
+            "durationISO8601": "PT2M",
             "types": ["Original"],
-            "versionId": "w1mshmz6mz2s8rn",
+            "versionId": "w4hqw3x9",
             "warnings": {}
           }
         ]
@@ -39,40 +39,40 @@
   "metadata": {
     "analyticsLabels": {
       "contentType": "player-episode",
-      "pageIdentifier": "indonesia.bbc_indonesian_radio.programmes.w13xtt0s.page",
-      "pageTitle": "Dunia Pagi Ini - BBC News Indonesia",
+      "pageIdentifier": "indonesia.bbc_indonesian_radio.w3ct0k2l.page",
+      "pageTitle": "Global Newsbeat – Indonesia - BBC News Indonesia",
       "producer": "INDONESIAN",
       "producerId": "54"
     },
     "atiAnalytics": {},
     "blockTypes": ["media"],
     "createdBy": "bbc_indonesian_radio",
-    "firstPublished": 1596839746000,
-    "id": "urn:bbc:ares:ws_media:brand:bbc_indonesian_radio/w13xtt0s",
+    "firstPublished": 1596879369000,
+    "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w3ct0k2l",
     "language": "id",
-    "lastPublished": 1596839746000,
-    "lastUpdated": 1597665212139,
+    "lastPublished": 1596879369000,
+    "lastUpdated": 1597665333436,
     "locators": {
-      "brandPid": "w13xtt0s",
-      "pid": "w172xh2d1qr69y3"
+      "brandPid": "p034vst8",
+      "pid": "w3ct0k2l"
     },
     "options": {},
-    "releaseDateTimeStamp": 1597708800000,
+    "releaseDateTimeStamp": 1597795200000,
     "tags": {},
-    "timestamp": 1596839746000,
-    "title": "Dunia Pagi Ini",
+    "timestamp": 1596879369000,
+    "title": "Global Newsbeat – Indonesia",
     "type": "WSRADIO",
     "version": "v1.3.6"
   },
   "promo": {
     "brand": {
-      "pid": "w13xtt0s",
-      "title": "Dunia Pagi Ini"
+      "pid": "p034vst8",
+      "title": "Global Newsbeat – Indonesia"
     },
     "headlines": {
-      "headline": "Dunia Pagi Ini"
+      "headline": "Global Newsbeat – Indonesia"
     },
-    "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh2d1qr69y3",
+    "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w3ct0k2l",
     "indexImage": {
       "altText": null,
       "copyrightHolder": null,
@@ -85,43 +85,43 @@
       "width": 0
     },
     "locators": {
-      "brandPid": "w13xtt0s",
-      "pid": "w172xh2d1qr69y3"
+      "brandPid": "p034vst8",
+      "pid": "w3ct0k2l"
     },
     "media": {
       "advertising": false,
       "availability": "available",
       "embedding": false,
       "format": "Audio",
-      "id": "w172xh2d1qr69y3",
+      "id": "w3ct0k2l",
       "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
       "smpKind": "radioProgramme",
       "subType": "episode",
       "synopses": {
-        "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-        "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+        "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+        "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
       },
-      "title": "18/08/2020 GMT",
+      "title": "19/08/2020 GMT",
       "type": "media",
       "versions": [
         {
           "availabilityStatus": "available",
-          "availableFrom": 1597792500000,
+          "availableFrom": 1597833150000,
           "availableTerritories": {
             "nonUk": false,
             "uk": false,
             "world": true
           },
-          "availableUntil": 1600384500000,
-          "duration": 930,
-          "durationISO8601": "PT15M30S",
+          "availableUntil": 1598437950000,
+          "duration": 120,
+          "durationISO8601": "PT2M",
           "types": ["Original"],
-          "versionId": "w1mshmz6mz2s8rn",
+          "versionId": "w4hqw3x9",
           "warnings": {}
         }
       ]
     },
-    "releaseDateTimestamp": 1597708800000,
+    "releaseDateTimestamp": 1597795200000,
     "type": "ws_radio"
   },
   "relatedContent": {
@@ -130,13 +130,13 @@
         "promos": [
           {
             "brand": {
-              "pid": "w13xtt0s",
-              "title": "Dunia Pagi Ini"
+              "pid": "p034vst8",
+              "title": "Global Newsbeat – Indonesia"
             },
             "headlines": {
-              "headline": "Dunia Pagi Ini"
+              "headline": "Global Newsbeat – Indonesia"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh2d1qr665z",
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w3ct0jwy",
             "indexImage": {
               "altText": null,
               "copyrightHolder": null,
@@ -149,38 +149,338 @@
               "width": 0
             },
             "locators": {
-              "brandPid": "w13xtt0s",
-              "pid": "w172xh2d1qr665z"
+              "brandPid": "p034vst8",
+              "pid": "w3ct0jwy"
             },
             "media": {
               "advertising": false,
               "availability": "available",
               "embedding": false,
               "format": "Audio",
-              "id": "w172xh2d1qr665z",
+              "id": "w3ct0jwy",
               "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
               "smpKind": "radioProgramme",
               "subType": "episode",
               "synopses": {
-                "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-                "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+                "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+                "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+              },
+              "title": "19/08/2020 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1597829550000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1598434350000,
+                  "duration": 120,
+                  "durationISO8601": "PT2M",
+                  "types": ["Original"],
+                  "versionId": "w4hqw3qn",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1597795200000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "p034vst8",
+              "title": "Global Newsbeat – Indonesia"
+            },
+            "headlines": {
+              "headline": "Global Newsbeat – Indonesia"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w3ct0jq9",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "p034vst8",
+              "pid": "w3ct0jq9"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w3ct0jq9",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "smpKind": "radioProgramme",
+              "subType": "episode",
+              "synopses": {
+                "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+                "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+              },
+              "title": "19/08/2020 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1597825950000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1598430750000,
+                  "duration": 120,
+                  "durationISO8601": "PT2M",
+                  "types": ["Original"],
+                  "versionId": "w4hqw3k0",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1597795200000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "p034vst8",
+              "title": "Global Newsbeat – Indonesia"
+            },
+            "headlines": {
+              "headline": "Global Newsbeat – Indonesia"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w3ct0jjn",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "p034vst8",
+              "pid": "w3ct0jjn"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w3ct0jjn",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "smpKind": "radioProgramme",
+              "subType": "episode",
+              "synopses": {
+                "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+                "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+              },
+              "title": "19/08/2020 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1597822350000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1598427150000,
+                  "duration": 120,
+                  "durationISO8601": "PT2M",
+                  "types": ["Original"],
+                  "versionId": "w4hqw3cc",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1597795200000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "p034vst8",
+              "title": "Global Newsbeat – Indonesia"
+            },
+            "headlines": {
+              "headline": "Global Newsbeat – Indonesia"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w3ct0jc0",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "p034vst8",
+              "pid": "w3ct0jc0"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w3ct0jc0",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "smpKind": "radioProgramme",
+              "subType": "episode",
+              "synopses": {
+                "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+                "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+              },
+              "title": "19/08/2020 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1597818750000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1598423550000,
+                  "duration": 120,
+                  "durationISO8601": "PT2M",
+                  "types": ["Original"],
+                  "versionId": "w4hqw35q",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1597795200000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "p034vst8",
+              "title": "Global Newsbeat – Indonesia"
+            },
+            "headlines": {
+              "headline": "Global Newsbeat – Indonesia"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w3ct0j5c",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "p034vst8",
+              "pid": "w3ct0j5c"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w3ct0j5c",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "smpKind": "radioProgramme",
+              "subType": "episode",
+              "synopses": {
+                "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+                "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
+              },
+              "title": "19/08/2020 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1597815150000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1598419950000,
+                  "duration": 120,
+                  "durationISO8601": "PT2M",
+                  "types": ["Original"],
+                  "versionId": "w4hqw302",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1597795200000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "p034vst8",
+              "title": "Global Newsbeat – Indonesia"
+            },
+            "headlines": {
+              "headline": "Global Newsbeat – Indonesia"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w3ct0k1g",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "p034vst8",
+              "pid": "w3ct0k1g"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w3ct0k1g",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "smpKind": "radioProgramme",
+              "subType": "episode",
+              "synopses": {
+                "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+                "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
               },
               "title": "18/08/2020 GMT",
               "type": "media",
               "versions": [
                 {
                   "availabilityStatus": "available",
-                  "availableFrom": 1597788900000,
+                  "availableFrom": 1597746750000,
                   "availableTerritories": {
                     "nonUk": false,
                     "uk": false,
                     "world": true
                   },
-                  "availableUntil": 1600380900000,
-                  "duration": 930,
-                  "durationISO8601": "PT15M30S",
+                  "availableUntil": 1598351550000,
+                  "duration": 120,
+                  "durationISO8601": "PT2M",
                   "types": ["Original"],
-                  "versionId": "w1mshmz6mz2s50j",
+                  "versionId": "w4hqw3w5",
                   "warnings": {}
                 }
               ]
@@ -190,13 +490,13 @@
           },
           {
             "brand": {
-              "pid": "w13xtt0s",
-              "title": "Dunia Pagi Ini"
+              "pid": "p034vst8",
+              "title": "Global Newsbeat – Indonesia"
             },
             "headlines": {
-              "headline": "Dunia Pagi Ini"
+              "headline": "Global Newsbeat – Indonesia"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh2d1qr3f10",
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w3ct0jvt",
             "indexImage": {
               "altText": null,
               "copyrightHolder": null,
@@ -209,54 +509,54 @@
               "width": 0
             },
             "locators": {
-              "brandPid": "w13xtt0s",
-              "pid": "w172xh2d1qr3f10"
+              "brandPid": "p034vst8",
+              "pid": "w3ct0jvt"
             },
             "media": {
               "advertising": false,
               "availability": "available",
               "embedding": false,
               "format": "Audio",
-              "id": "w172xh2d1qr3f10",
+              "id": "w3ct0jvt",
               "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
               "smpKind": "radioProgramme",
               "subType": "episode",
               "synopses": {
-                "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-                "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+                "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+                "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
               },
-              "title": "17/08/2020 GMT",
+              "title": "18/08/2020 GMT",
               "type": "media",
               "versions": [
                 {
                   "availabilityStatus": "available",
-                  "availableFrom": 1597706100000,
+                  "availableFrom": 1597743150000,
                   "availableTerritories": {
                     "nonUk": false,
                     "uk": false,
                     "world": true
                   },
-                  "availableUntil": 1600298100000,
-                  "duration": 930,
-                  "durationISO8601": "PT15M30S",
+                  "availableUntil": 1598347950000,
+                  "duration": 120,
+                  "durationISO8601": "PT2M",
                   "types": ["Original"],
-                  "versionId": "w1mshmz6mz2pcvk",
+                  "versionId": "w4hqw3pj",
                   "warnings": {}
                 }
               ]
             },
-            "releaseDateTimestamp": 1597622400000,
+            "releaseDateTimestamp": 1597708800000,
             "type": "ws_radio"
           },
           {
             "brand": {
-              "pid": "w13xtt0s",
-              "title": "Dunia Pagi Ini"
+              "pid": "p034vst8",
+              "title": "Global Newsbeat – Indonesia"
             },
             "headlines": {
-              "headline": "Dunia Pagi Ini"
+              "headline": "Global Newsbeat – Indonesia"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh2d1qr398w",
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w3ct0jp5",
             "indexImage": {
               "altText": null,
               "copyrightHolder": null,
@@ -269,343 +569,43 @@
               "width": 0
             },
             "locators": {
-              "brandPid": "w13xtt0s",
-              "pid": "w172xh2d1qr398w"
+              "brandPid": "p034vst8",
+              "pid": "w3ct0jp5"
             },
             "media": {
               "advertising": false,
               "availability": "available",
               "embedding": false,
               "format": "Audio",
-              "id": "w172xh2d1qr398w",
+              "id": "w3ct0jp5",
               "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
               "smpKind": "radioProgramme",
               "subType": "episode",
               "synopses": {
-                "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-                "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+                "medium": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+                "short": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda."
               },
-              "title": "17/08/2020 GMT",
+              "title": "18/08/2020 GMT",
               "type": "media",
               "versions": [
                 {
                   "availabilityStatus": "available",
-                  "availableFrom": 1597702500000,
+                  "availableFrom": 1597739550000,
                   "availableTerritories": {
                     "nonUk": false,
                     "uk": false,
                     "world": true
                   },
-                  "availableUntil": 1600294500000,
-                  "duration": 930,
-                  "durationISO8601": "PT15M30S",
+                  "availableUntil": 1598344350000,
+                  "duration": 120,
+                  "durationISO8601": "PT2M",
                   "types": ["Original"],
-                  "versionId": "w1mshmz6mz2p83f",
+                  "versionId": "w4hqw3hw",
                   "warnings": {}
                 }
               ]
             },
-            "releaseDateTimestamp": 1597622400000,
-            "type": "ws_radio"
-          },
-          {
-            "brand": {
-              "pid": "w13xtt0s",
-              "title": "Dunia Pagi Ini"
-            },
-            "headlines": {
-              "headline": "Dunia Pagi Ini"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh2cpgfwnvr",
-            "indexImage": {
-              "altText": null,
-              "copyrightHolder": null,
-              "height": 0,
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
-              "id": "",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
-              "subType": "index",
-              "type": "image",
-              "width": 0
-            },
-            "locators": {
-              "brandPid": "w13xtt0s",
-              "pid": "w172xh2cpgfwnvr"
-            },
-            "media": {
-              "advertising": false,
-              "availability": "available",
-              "embedding": false,
-              "format": "Audio",
-              "id": "w172xh2cpgfwnvr",
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
-              "smpKind": "radioProgramme",
-              "subType": "episode",
-              "synopses": {
-                "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-                "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
-              },
-              "title": "16/08/2020 GMT",
-              "type": "media",
-              "versions": [
-                {
-                  "availabilityStatus": "available",
-                  "availableFrom": 1597619700000,
-                  "availableTerritories": {
-                    "nonUk": false,
-                    "uk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1600211700000,
-                  "duration": 930,
-                  "durationISO8601": "PT15M30S",
-                  "types": ["Original"],
-                  "versionId": "w1mshmz68psgmp9",
-                  "warnings": {}
-                }
-              ]
-            },
-            "releaseDateTimestamp": 1597536000000,
-            "type": "ws_radio"
-          },
-          {
-            "brand": {
-              "pid": "w13xtt0s",
-              "title": "Dunia Pagi Ini"
-            },
-            "headlines": {
-              "headline": "Dunia Pagi Ini"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh2cpgfwk3m",
-            "indexImage": {
-              "altText": null,
-              "copyrightHolder": null,
-              "height": 0,
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
-              "id": "",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
-              "subType": "index",
-              "type": "image",
-              "width": 0
-            },
-            "locators": {
-              "brandPid": "w13xtt0s",
-              "pid": "w172xh2cpgfwk3m"
-            },
-            "media": {
-              "advertising": false,
-              "availability": "available",
-              "embedding": false,
-              "format": "Audio",
-              "id": "w172xh2cpgfwk3m",
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
-              "smpKind": "radioProgramme",
-              "subType": "episode",
-              "synopses": {
-                "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-                "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
-              },
-              "title": "16/08/2020 GMT",
-              "type": "media",
-              "versions": [
-                {
-                  "availabilityStatus": "available",
-                  "availableFrom": 1597616100000,
-                  "availableTerritories": {
-                    "nonUk": false,
-                    "uk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1600208100000,
-                  "duration": 930,
-                  "durationISO8601": "PT15M30S",
-                  "types": ["Original"],
-                  "versionId": "w1mshmz68psghy5",
-                  "warnings": {}
-                }
-              ]
-            },
-            "releaseDateTimestamp": 1597536000000,
-            "type": "ws_radio"
-          },
-          {
-            "brand": {
-              "pid": "w13xtt0s",
-              "title": "Dunia Pagi Ini"
-            },
-            "headlines": {
-              "headline": "Dunia Pagi Ini"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh2cpgflz4g",
-            "indexImage": {
-              "altText": null,
-              "copyrightHolder": null,
-              "height": 0,
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
-              "id": "",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
-              "subType": "index",
-              "type": "image",
-              "width": 0
-            },
-            "locators": {
-              "brandPid": "w13xtt0s",
-              "pid": "w172xh2cpgflz4g"
-            },
-            "media": {
-              "advertising": false,
-              "availability": "available",
-              "embedding": false,
-              "format": "Audio",
-              "id": "w172xh2cpgflz4g",
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
-              "smpKind": "radioProgramme",
-              "subType": "episode",
-              "synopses": {
-                "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-                "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
-              },
-              "title": "13/08/2020 GMT",
-              "type": "media",
-              "versions": [
-                {
-                  "availabilityStatus": "available",
-                  "availableFrom": 1597360500000,
-                  "availableTerritories": {
-                    "nonUk": false,
-                    "uk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1599952500000,
-                  "duration": 930,
-                  "durationISO8601": "PT15M30S",
-                  "types": ["Original"],
-                  "versionId": "w1mshmz68ps5xz0",
-                  "warnings": {}
-                }
-              ]
-            },
-            "releaseDateTimestamp": 1597276800000,
-            "type": "ws_radio"
-          },
-          {
-            "brand": {
-              "pid": "w13xtt0s",
-              "title": "Dunia Pagi Ini"
-            },
-            "headlines": {
-              "headline": "Dunia Pagi Ini"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh2cpgflvdb",
-            "indexImage": {
-              "altText": null,
-              "copyrightHolder": null,
-              "height": 0,
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
-              "id": "",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
-              "subType": "index",
-              "type": "image",
-              "width": 0
-            },
-            "locators": {
-              "brandPid": "w13xtt0s",
-              "pid": "w172xh2cpgflvdb"
-            },
-            "media": {
-              "advertising": false,
-              "availability": "available",
-              "embedding": false,
-              "format": "Audio",
-              "id": "w172xh2cpgflvdb",
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
-              "smpKind": "radioProgramme",
-              "subType": "episode",
-              "synopses": {
-                "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-                "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
-              },
-              "title": "13/08/2020 GMT",
-              "type": "media",
-              "versions": [
-                {
-                  "availabilityStatus": "available",
-                  "availableFrom": 1597356900000,
-                  "availableTerritories": {
-                    "nonUk": false,
-                    "uk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1599948900000,
-                  "duration": 930,
-                  "durationISO8601": "PT15M30S",
-                  "types": ["Original"],
-                  "versionId": "w1mshmz68ps5t6w",
-                  "warnings": {}
-                }
-              ]
-            },
-            "releaseDateTimestamp": 1597276800000,
-            "type": "ws_radio"
-          },
-          {
-            "brand": {
-              "pid": "w13xtt0s",
-              "title": "Dunia Pagi Ini"
-            },
-            "headlines": {
-              "headline": "Dunia Pagi Ini"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh2cpgfj27c",
-            "indexImage": {
-              "altText": null,
-              "copyrightHolder": null,
-              "height": 0,
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
-              "id": "",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
-              "subType": "index",
-              "type": "image",
-              "width": 0
-            },
-            "locators": {
-              "brandPid": "w13xtt0s",
-              "pid": "w172xh2cpgfj27c"
-            },
-            "media": {
-              "advertising": false,
-              "availability": "available",
-              "embedding": false,
-              "format": "Audio",
-              "id": "w172xh2cpgfj27c",
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
-              "smpKind": "radioProgramme",
-              "subType": "episode",
-              "synopses": {
-                "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
-                "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
-              },
-              "title": "12/08/2020 GMT",
-              "type": "media",
-              "versions": [
-                {
-                  "availabilityStatus": "available",
-                  "availableFrom": 1597274100000,
-                  "availableTerritories": {
-                    "nonUk": false,
-                    "uk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1599866100000,
-                  "duration": 930,
-                  "durationISO8601": "PT15M30S",
-                  "types": ["Original"],
-                  "versionId": "w1mshmz68ps311x",
-                  "warnings": {}
-                }
-              ]
-            },
-            "releaseDateTimestamp": 1597190400000,
+            "releaseDateTimestamp": 1597708800000,
             "type": "ws_radio"
           }
         ],

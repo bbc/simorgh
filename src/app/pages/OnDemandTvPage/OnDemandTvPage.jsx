@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { shape, string, number, bool, func } from 'prop-types';
 import {
@@ -194,6 +194,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             darkMode={darkMode}
           />
         </Grid>
+        <Link to="/korean/bbc_korean_radio/liveradio">About</Link>
       </StyledGelPageGrid>
     </>
   );

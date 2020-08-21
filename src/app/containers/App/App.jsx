@@ -75,6 +75,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       });
 
       loaderPromise.then(() => {
+        debugger;
         setState({
           pageData: null,
           toggles,

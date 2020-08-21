@@ -11,7 +11,7 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import pathOr from 'ramda/src/pathOr';
 import MetadataContainer from '../../containers/Metadata';
 import ATIAnalytics from '../../containers/ATIAnalytics';
@@ -202,6 +202,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             }
           />
         </Grid>
+        <Link to="/korean/bbc_korean_radio/liveradio">{headline}</Link>
       </StyledGelPageGrid>
       {radioScheduleIsEnabled && hasRadioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />

@@ -29,6 +29,9 @@ export default {
   onDemandRadioSchedule: {
     enabled: true,
   },
+  liveRadioSchedule: {
+    enabled: true,
+  },
   logMediaPlayerStatus: {
     enabled: false,
   },
