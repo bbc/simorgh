@@ -6,26 +6,44 @@ import {
 } from '#lib/logger.const';
 import getMostWatchedEndpoint from '#lib/utilities/getMostWatchedUrl';
 import nodeLogger from '#lib/logger.node';
+import services from '#lib/config/services/loadableConfig';
 
 const logger = nodeLogger(__filename);
 
-export const processMostWatched = ({ data, isAmp, numberOfItems, service }) => {
-  if (!data) {
-    return null;
+const getServiceConfig = (service, variant) => {
+  if (variant) {
+    return services[service][variant];
   }
+  return services[service].default;
+};
+
+export const processMostWatched = ({ data, path, service, variant }) => {
+  const { mostWatched } = data;
+
+  if (!mostWatched) {
+    return data;
+  }
+
+  const { mostWatched: mostWatchedConfig } = getServiceConfig(service, variant);
+  const { numberOfItems } = mostWatchedConfig;
+
   const filteredData = filterPopularStaleData({
     data,
-    isAmp,
+    path,
     service,
     popularType: 'mostWatched',
   });
 
-  if (!filteredData) {
+  if (!filteredData || !filteredData.length) {
     return null;
   }
 
   const records = pathOr([], ['records'], filteredData);
-  return records.slice(0, numberOfItems).map(item => item.promo);
+  const processedRecords = records
+    .slice(0, numberOfItems)
+    .map(item => item.promo);
+
+  return { ...data, mostWatched: processedRecords };
 };
 
 export const getMostWatchedData = async ({ service, variant }) => {
