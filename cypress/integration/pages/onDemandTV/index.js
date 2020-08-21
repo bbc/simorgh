@@ -16,12 +16,7 @@ Object.keys(config)
       describe(`${pageType} - ${currentPath}`, () => {
         before(() => {
           Cypress.env('currentPath', currentPath);
-          let newPath;
-          if (Cypress.env('APP_ENV') === 'test') {
-            newPath = `${currentPath}?renderer_env=live`;
-          } else {
-            newPath = currentPath;
-          }
+          const newPath = dataEndpointOverride(path);
           visitPage(newPath, pageType);
         });
         crossPlatformTests({
