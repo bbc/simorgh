@@ -43,3 +43,11 @@ Cypress.Commands.add(
     );
   },
 );
+
+Cypress.Commands.add('mockGeolocation', (latitude = 48, longitude = 2) => {
+  cy.window().then($window => {
+    cy.stub($window.navigator.geolocation, 'getCurrentPosition', callback => {
+      return callback({ coords: { latitude, longitude } });
+    });
+  });
+});
