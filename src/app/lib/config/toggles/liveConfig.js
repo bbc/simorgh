@@ -12,9 +12,6 @@ export default {
   cinemaModeTV: {
     enabled: true,
   },
-  comscoreAnalytics: {
-    enabled: false,
-  },
   cpsRecommendations: {
     enabled: false,
   },
