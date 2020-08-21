@@ -140,6 +140,20 @@ Object {
 }
 `;
 
+exports[`Canonical Front Page Footer Link should match text and url 19`] = `
+Object {
+  "text": "AdChoices / Do Not Sell My Info",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+}
+`;
+
+exports[`Canonical Front Page Footer Link should match text and url 20`] = `
+Object {
+  "text": "Read about our approach to external linking.",
+  "url": "https://www.bbc.co.uk/help/web/links/",
+}
+`;
+
 exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
 exports[`Canonical Front Page Header I can see the branding 2`] = `"BBC News, عربي"`;
@@ -281,6 +295,34 @@ exports[`Canonical Front Page Header Navigation link should match text and url 2
 Object {
   "text": "برامجنا",
   "url": "/arabic/tv-and-radio-37728883",
+}
+`;
+
+exports[`Canonical Front Page Header Navigation link should match text and url 21`] = `
+Object {
+  "text": "Family & Education",
+  "url": "/news/education",
+}
+`;
+
+exports[`Canonical Front Page Header Navigation link should match text and url 22`] = `
+Object {
+  "text": "Entertainment & Arts",
+  "url": "/news/entertainment_and_arts",
+}
+`;
+
+exports[`Canonical Front Page Header Navigation link should match text and url 23`] = `
+Object {
+  "text": "Stories",
+  "url": "/news/stories",
+}
+`;
+
+exports[`Canonical Front Page Header Navigation link should match text and url 24`] = `
+Object {
+  "text": "Video & Audio",
+  "url": "/news/video_and_audio/headlines",
 }
 `;
 
