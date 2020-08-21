@@ -15,9 +15,6 @@ Object {
   "cinemaModeTV": Object {
     "enabled": true,
   },
-  "comscoreAnalytics": Object {
-    "enabled": true,
-  },
   "cpsRecommendations": Object {
     "enabled": false,
   },
@@ -149,9 +146,6 @@ Object {
     "enabled": true,
   },
   "cinemaModeTV": Object {
-    "enabled": true,
-  },
-  "comscoreAnalytics": Object {
     "enabled": true,
   },
   "cpsRecommendations": Object {
