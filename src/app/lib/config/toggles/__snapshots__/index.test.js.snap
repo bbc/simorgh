@@ -12,9 +12,6 @@ Object {
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
-  "cinemaModeTV": Object {
-    "enabled": true,
-  },
   "cpsRecommendations": Object {
     "enabled": false,
   },
@@ -71,9 +68,6 @@ Object {
     "enabled": true,
   },
   "chartbeatAnalytics": Object {
-    "enabled": true,
-  },
-  "cinemaModeTV": Object {
     "enabled": true,
   },
   "comscoreAnalytics": Object {
@@ -135,9 +129,6 @@ Object {
     "enabled": true,
   },
   "chartbeatAnalytics": Object {
-    "enabled": true,
-  },
-  "cinemaModeTV": Object {
     "enabled": true,
   },
   "cpsRecommendations": Object {
