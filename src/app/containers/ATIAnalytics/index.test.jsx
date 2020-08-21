@@ -1,7 +1,12 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 import { render } from '@testing-library/react';
-import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
+import {
+  isNull,
+  suppressPropWarnings,
+  setWindowValue,
+  resetWindowValue,
+} from '@bbc/psammead-test-helpers';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import mapAssetData from '#pages/MediaAssetPage/fixtureData.json';
 import pglAssetData from '#pages/PhotoGalleryPage/fixtureData.json';
@@ -128,6 +133,9 @@ describe('ATI Analytics Container', () => {
 
   describe('pageType=frontPage', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
+      setWindowValue('location', {
+        href: `https://localhost`,
+      });
       const pageviewParams = [
         's=598286',
         's2=64',
@@ -138,7 +146,7 @@ describe('ATI Analytics Container', () => {
         'lng=en-US',
         'x2=[responsive]',
         'x3=[news]',
-        'x5=[http%253A%252F%252Flocalhost%252F]',
+        'x5=[https%253A%252F%252Flocalhost]',
         'x7=[index-home]',
         'x8=[simorgh]',
         'x11=[1970-01-01T00:00:00.000Z]',
@@ -206,7 +214,7 @@ describe('ATI Analytics Container', () => {
         'x2=[responsive]',
         'x3=[news]',
         'x4=[pcm]',
-        'x5=[http%253A%252F%252Flocalhost%252F]',
+        'x5=[https%253A%252F%252Flocalhost]',
         'x7=[article-media-asset]',
         'x8=[simorgh]',
         'x9=[Simorgh:+Media+Pod+Build+First+CPS+Media+Asset+Page+in+Simorgh+',
@@ -284,7 +292,7 @@ describe('ATI Analytics Container', () => {
         'x2=[responsive]',
         'x3=[news]',
         'x4=[az]',
-        'x5=[http%253A%252F%252Flocalhost%252F]',
+        'x5=[https%253A%252F%252Flocalhost]',
         'x7=[article-photo-gallery]',
         'x8=[simorgh]',
         'x9=[Azərbaycan+Xalq+Cümhuriyyəti+-+Fotolarda+-+BBC+News]',
@@ -362,7 +370,7 @@ describe('ATI Analytics Container', () => {
         'x2=[responsive]',
         'x3=[news]',
         'x4=[es]',
-        'x5=[http%253A%252F%252Flocalhost%252F]',
+        'x5=[https%253A%252F%252Flocalhost]',
         'x7=[article]',
         'x8=[simorgh]',
         'x9=[WS+STY+TEST+-+Full+Headline+-+BBC+News]',
@@ -440,7 +448,7 @@ describe('ATI Analytics Container', () => {
         'x2=[responsive]',
         'x3=[news-ukrainian]',
         'x4=[uk]',
-        'x5=[http%253A%252F%252Flocalhost%252F]',
+        'x5=[https%253A%252F%252Flocalhost]',
         'x7=[article]',
         'x8=[simorgh]',
         'x9=[Виробництво+героїну+зросло+завдяки+сонячним+батареям.+Погляд+з+Британії+-+BBC+News+Україна]',
@@ -518,7 +526,7 @@ describe('ATI Analytics Container', () => {
         'x2=[responsive]',
         'x3=[news-ukrainian]',
         'x4=[ru]',
-        'x5=[http%253A%252F%252Flocalhost%252F]',
+        'x5=[https%253A%252F%252Flocalhost]',
         'x7=[article]',
         'x8=[simorgh]',
         'x9=[Карта+новых+районов+Украины:+кто+и+кого+поглотил+-+BBC+News+Україна]',
@@ -592,5 +600,96 @@ describe('ATI Analytics Container', () => {
         <ATIAnalytics data={articleDataNews} />
       </ContextWrap>,
     );
+  });
+
+  describe('XTO Marketing string', () => {
+    const windowLocation = window.location;
+    afterEach(() => {
+      resetWindowValue('location', windowLocation);
+    });
+
+    it('should include the xto marketing string for a valid campaign type', () => {
+      setWindowValue('location', {
+        href:
+          'https://localhost?at_medium=email&at_emailtype=acquisition&at_creation=my_creation',
+      });
+      const pageviewParams = [
+        's=598286',
+        's2=64',
+        'p=story::mundo.story.23263889.page',
+        'r=0x0x24x24',
+        're=1024x768',
+        'hl=00-00-00',
+        'lng=en-US',
+        'x1=[urn:bbc:cps:f776ad93-e486-b14a-b5ea-55955dd0644f]',
+        'x2=[responsive]',
+        'x3=[news]',
+        'x4=[es]',
+        'x5=[https%253A%252F%252Flocalhost%253Fat_medium%253Demail%2526at_emailtype%253Dacquisition%2526at_creation%253Dmy_creation]',
+        'x7=[article]',
+        'x8=[simorgh]',
+        'x9=[WS+STY+TEST+-+Full+Headline+-+BBC+News]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+        'x13=[Life~Fake+news]',
+        'x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]',
+        'x16=[Amuse%20me]',
+        'x17=[News]',
+        'xto=EREC--[my_creation]---@',
+      ].join('&');
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      canonical.default = mockCanonical;
+
+      render(
+        <ContextWrap platform="canonical" pageType="STY" service="news">
+          <ATIAnalytics data={styAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockCanonical.mock.calls[0][0]).toEqual({
+        pageviewParams,
+      });
+    });
+
+    it('should not include the xto marketing string when a campaign type is not specified', () => {
+      setWindowValue('location', {
+        href: 'http://localhost?foo=bar',
+      });
+      const pageviewParams = [
+        's=598286',
+        's2=64',
+        'p=story::mundo.story.23263889.page',
+        'r=0x0x24x24',
+        're=1024x768',
+        'hl=00-00-00',
+        'lng=en-US',
+        'x1=[urn:bbc:cps:f776ad93-e486-b14a-b5ea-55955dd0644f]',
+        'x2=[responsive]',
+        'x3=[news]',
+        'x4=[es]',
+        'x5=[http%253A%252F%252Flocalhost%253Ffoo%253Dbar]',
+        'x7=[article]',
+        'x8=[simorgh]',
+        'x9=[WS+STY+TEST+-+Full+Headline+-+BBC+News]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+        'x13=[Life~Fake+news]',
+        'x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]',
+        'x16=[Amuse%20me]',
+        'x17=[News]',
+      ].join('&');
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      canonical.default = mockCanonical;
+
+      render(
+        <ContextWrap platform="canonical" pageType="STY" service="news">
+          <ATIAnalytics data={styAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockCanonical.mock.calls[0][0]).toEqual({
+        pageviewParams,
+      });
+    });
   });
 });

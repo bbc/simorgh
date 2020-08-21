@@ -15,9 +15,6 @@ Object {
   "cinemaModeTV": Object {
     "enabled": true,
   },
-  "comscoreAnalytics": Object {
-    "enabled": false,
-  },
   "cpsRecommendations": Object {
     "enabled": false,
   },
@@ -27,10 +24,6 @@ Object {
   },
   "include": Object {
     "enabled": true,
-  },
-  "liveRadioSchedule": Object {
-    "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|bengali|burmese|hausa|indonesia|korean|nepali|pashto|persian|somali|swahili|tigrinya|urdu)",
   },
   "logMediaPlayerStatus": Object {
     "enabled": false,
@@ -96,10 +89,6 @@ Object {
   "include": Object {
     "enabled": true,
   },
-  "liveRadioSchedule": Object {
-    "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|bengali|burmese|hausa|indonesia|korean|nepali|pashto|persian|somali|swahili|tigrinya|urdu)",
-  },
   "logMediaPlayerStatus": Object {
     "enabled": false,
   },
@@ -151,9 +140,6 @@ Object {
   "cinemaModeTV": Object {
     "enabled": true,
   },
-  "comscoreAnalytics": Object {
-    "enabled": true,
-  },
   "cpsRecommendations": Object {
     "enabled": true,
   },
@@ -163,10 +149,6 @@ Object {
   },
   "include": Object {
     "enabled": true,
-  },
-  "liveRadioSchedule": Object {
-    "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|bengali|burmese|hausa|indonesia|korean|nepali|pashto|persian|somali|swahili|tigrinya|urdu)",
   },
   "logMediaPlayerStatus": Object {
     "enabled": false,

@@ -185,6 +185,11 @@ export const service = {
           endTextVisuallyHidden: 'نهاية %provider_name% مشاركة',
         },
       },
+      include: {
+        errorMessage:
+          'للأسف ليس بمقدورنا إظهار هذا الجزء من القصة على هذه الصفحة الخفيفة من الموبايل ',
+        linkText: 'انظر في السخة الكاملة لترى المحتوى بأكمله',
+      },
       topStoriesTitle: 'الخبر الرئيسي',
       featuresAnalysisTitle: 'اخترنا لكم',
     },
@@ -202,7 +207,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
       onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Features',

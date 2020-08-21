@@ -189,6 +189,12 @@ export const service = {
           endTextVisuallyHidden: 'Final de %provider_name% post',
         },
       },
+      include: {
+        errorMessage:
+          'Desculpe, mas não é possível exibir esta parte da história nesta página de acesso resumido de celular.',
+        linkText:
+          'Acesse a visão integral da página para visualizar todo o conteúdo.',
+      },
       topStoriesTitle: 'Principais notícias',
       featuresAnalysisTitle: 'Leia mais',
     },
