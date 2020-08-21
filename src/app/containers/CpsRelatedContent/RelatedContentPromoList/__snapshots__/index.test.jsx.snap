@@ -1,135 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CpsRelatedContent should render Story Feature components when given appropriate data 1`] = `
-<DocumentFragment>
-  .c10 {
+exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages 1`] = `
+.c2 {
   padding: 0.5rem 0 1rem;
 }
 
-.c10:last-child {
+.c2:last-child {
   border: none;
 }
 
-.c10:first-child {
+.c2:first-child {
   padding-top: 0;
 }
 
-.c10:last-child {
+.c2:last-child {
   padding-bottom: 0;
 }
 
-.c9 {
+.c0 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 .c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c8 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c4 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c2 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-}
-
-.c5 {
-  margin: 0;
-  padding: 0;
-}
-
-.c0 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
-.c1 {
-  margin-bottom: 1rem;
-}
-
-.c3 {
-  margin-top: 0;
-}
-
-.c12 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c16 {
+.c10 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c11 {
+.c4 {
   position: relative;
 }
 
-.c13 {
+.c7 {
   position: relative;
 }
 
-.c15 > * {
+.c9 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c19 {
+.c14 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -139,7 +60,19 @@ exports[`CpsRelatedContent should render Story Feature components when given app
   font-style: normal;
 }
 
-.c14 {
+.c13 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c8 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -152,7 +85,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c17 {
+.c11 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -163,7 +96,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
   line-height: 1.25rem;
 }
 
-.c18 {
+.c12 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -172,7 +105,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
   overflow-wrap: anywhere;
 }
 
-.c18:before {
+.c12:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -184,200 +117,129 @@ exports[`CpsRelatedContent should render Story Feature components when given app
   z-index: 1;
 }
 
-.c18:hover,
-.c18:focus {
+.c12:hover,
+.c12:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c18:visited {
+.c12:visited {
   color: #6E6E73;
 }
 
 @media (max-width:62.9375rem) {
-  .c10 {
+  .c2 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c2 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c10 {
+  .c2 {
     padding: 0 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c10:first-child {
+  .c2:first-child {
     padding-top: 1rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c7 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
+@supports (display:grid) {
+  .c1 {
+    display: grid;
+    position: initial;
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+@media (max-width:14.9375rem) {
+  .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c8 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c8 {
-    margin: 0;
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c8 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c4 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c2 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c3 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
+  .c3 {
+    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
+  .c3 {
+    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c1 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    margin-bottom: 1.5rem;
+  .c3 {
+    display: block;
   }
 }
 
 @media (min-width:63rem) {
-  .c12 {
+  .c6 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c12 {
+  .c6 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c10 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c16 {
+  .c10 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -385,7 +247,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c16 {
+  .c10 {
     display: block;
     width: initial;
     padding: initial;
@@ -394,7 +256,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c11 {
+  .c4 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -402,309 +264,273 @@ exports[`CpsRelatedContent should render Story Feature components when given app
 }
 
 @media (min-width:25rem) {
-  .c15 {
+  .c9 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c15 > * {
+  .c9 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c19 {
+  .c14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19 {
+  .c14 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
+@media (min-width:63rem) {
+  .c5 {
+    display: grid;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c17 {
+  .c11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-<section
-    aria-labelledby="features-analysis-heading"
-    class="c0"
-    data-e2e="related-content"
-    role="region"
+<ul
+  class="c0 c1"
+  dir="ltr"
+  role="list"
+>
+  <li
+    class="c2 c3"
+    dir="ltr"
+    role="listitem"
   >
     <div
-      class="c1"
+      class="c4 c5"
     >
       <div
-        class="c2 c3"
+        class="c6"
+        dir="ltr"
       >
         <div
-          class="c4"
-        />
-        <h2
-          class="c5"
+          class="c7"
         >
-          <span
-            class="c6"
+          <div
+            class="c8"
+          >
+            <div
+              class="lazyload-placeholder"
+            />
+          </div>
+          <div
+            class="c9"
+          />
+        </div>
+      </div>
+      <div
+        class="c10"
+        dir="ltr"
+      >
+        <h3
+          class="c11"
+        >
+          <a
+            class="c12"
+            href="/pidgin/44508901"
           >
             <span
-              class="c7"
+              role="text"
             >
               <span
-                class="c8"
-                dir="ltr"
-                id="features-analysis-heading"
+                class="c13"
               >
-                Informate me
+                , 
+              </span>
+              <span>
+                Meet boys who dey convert cassava to electricity
               </span>
             </span>
-          </span>
-        </h2>
+          </a>
+        </h3>
+        <time
+          class="c14"
+          datetime="1970-01-18"
+        >
+          18th January 1970
+        </time>
       </div>
-      <ul
-        class="c9"
-        role="list"
-      >
-        <li
-          class="c10"
-          role="listitem"
-        >
-          <div
-            class="c11"
-          >
-            <div
-              class="c12"
-              dir="ltr"
-            >
-              <div
-                class="c13"
-              >
-                <div
-                  class="c14"
-                >
-                  <div
-                    class="lazyload-placeholder"
-                  />
-                </div>
-                <div
-                  class="c15"
-                />
-              </div>
-            </div>
-            <div
-              class="c16"
-              dir="ltr"
-            >
-              <h3
-                class="c17"
-              >
-                <a
-                  class="c18"
-                  href="/igbo/afirika-23252735"
-                >
-                  STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
-                </a>
-              </h3>
-              <time
-                class="c19"
-                datetime="2020-02-03"
-              >
-                3rd February 2020
-              </time>
-            </div>
-          </div>
-        </li>
-        <li
-          class="c10"
-          role="listitem"
-        >
-          <div
-            class="c11"
-          >
-            <div
-              class="c12"
-              dir="ltr"
-            >
-              <div
-                class="c13"
-              >
-                <div
-                  class="c14"
-                >
-                  <div
-                    class="lazyload-placeholder"
-                  />
-                </div>
-                <div
-                  class="c15"
-                />
-              </div>
-            </div>
-            <div
-              class="c16"
-              dir="ltr"
-            >
-              <h3
-                class="c17"
-              >
-                <a
-                  class="c18"
-                  href="/igbo/afirika-49666505"
-                >
-                  Robert Mugabe: Zimbabwe eferela nwa amadi a aka
-                </a>
-              </h3>
-              <time
-                class="c19"
-                datetime="2020-02-03"
-              >
-                3rd February 2020
-              </time>
-            </div>
-          </div>
-        </li>
-      </ul>
     </div>
-  </section>
-</DocumentFragment>
+  </li>
+  <li
+    class="c2 c3"
+    dir="ltr"
+    role="listitem"
+  >
+    <div
+      class="c4 c5"
+    >
+      <div
+        class="c6"
+        dir="ltr"
+      >
+        <div
+          class="c7"
+        >
+          <div
+            class="c8"
+          >
+            <div
+              class="lazyload-placeholder"
+            />
+          </div>
+          <div
+            class="c9"
+          />
+        </div>
+      </div>
+      <div
+        class="c10"
+        dir="ltr"
+      >
+        <h3
+          class="c11"
+        >
+          <a
+            class="c12"
+            href="/pidgin/tori-46975713"
+          >
+            How light companies dey use estimated billing show Nigerians pepper
+          </a>
+        </h3>
+        <time
+          class="c14"
+          datetime="1970-01-18"
+        >
+          18th January 1970
+        </time>
+      </div>
+    </div>
+  </li>
+  <li
+    class="c2 c3"
+    dir="ltr"
+    role="listitem"
+  >
+    <div
+      class="c4 c5"
+    >
+      <div
+        class="c6"
+        dir="ltr"
+      >
+        <div
+          class="c7"
+        >
+          <div
+            class="c8"
+          >
+            <div
+              class="lazyload-placeholder"
+            />
+          </div>
+          <div
+            class="c9"
+          />
+        </div>
+      </div>
+      <div
+        class="c10"
+        dir="ltr"
+      >
+        <h3
+          class="c11"
+        >
+          <a
+            class="c12"
+            href="/pidgin/tori-42494678"
+          >
+            Nigeria: Wetin 5,222 megawatts electric fit do?
+          </a>
+        </h3>
+        <time
+          class="c14"
+          datetime="1970-01-18"
+        >
+          18th January 1970
+        </time>
+      </div>
+    </div>
+  </li>
+</ul>
 `;
 
-exports[`CpsRelatedContent should render Story Promo components without <ul> when given single item in collection 1`] = `
-<DocumentFragment>
-  .c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c8 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c4 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
+exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages 1`] = `
 .c2 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
+  padding: 0.5rem 0 1rem;
 }
 
-.c5 {
+.c2:last-child {
+  border: none;
+}
+
+.c2:first-child {
+  padding-top: 0;
+}
+
+.c2:last-child {
+  padding-bottom: 0;
+}
+
+.c0 {
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c0 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
-.c1 {
-  margin-bottom: 1rem;
-}
-
-.c3 {
-  margin-top: 0;
-}
-
-.c11 {
+.c5 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c15 {
+.c9 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c10 {
+.c4 {
   position: relative;
 }
 
-.c12 {
+.c6 {
   position: relative;
 }
 
-.c14 > * {
+.c8 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c18 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-.c19 {
+.c13 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -714,7 +540,19 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   font-style: normal;
 }
 
-.c13 {
+.c12 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c7 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -727,7 +565,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c16 {
+.c10 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -738,7 +576,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   line-height: 1.25rem;
 }
 
-.c17 {
+.c11 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -747,7 +585,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   overflow-wrap: anywhere;
 }
 
-.c17:before {
+.c11:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -759,188 +597,129 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   z-index: 1;
 }
 
-.c17:hover,
-.c17:focus {
+.c11:hover,
+.c11:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c17:visited {
+.c11:visited {
   color: #6E6E73;
 }
 
-@media (min-width:37.5rem) {
-  .c7 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c4 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
+@media (max-width:62.9375rem) {
+  .c2 {
+    border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
   .c2 {
-    margin-top: 1.5rem;
+    padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
   .c2 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c1 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    margin-bottom: 1.5rem;
+    padding: 0 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c9 {
+  .c2:first-child {
     padding-top: 1rem;
   }
 }
 
-@media (min-width:63rem) {
-  .c9 {
-    padding-bottom: 1.5rem;
+@supports (display:grid) {
+  .c1 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c3 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c3 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c3 {
+    display: block;
   }
 }
 
 @media (min-width:63rem) {
-  .c11 {
+  .c5 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c11 {
+  .c5 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c15 {
+  .c9 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c15 {
+  .c9 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -948,7 +727,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c15 {
+  .c9 {
     display: block;
     width: initial;
     padding: initial;
@@ -957,7 +736,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c10 {
+  .c4 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -965,164 +744,212 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 }
 
 @media (min-width:25rem) {
-  .c14 {
+  .c8 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c14 > * {
+  .c8 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c18 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c18 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c18 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:63rem) {
-  .c18 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c19 {
+  .c13 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19 {
+  .c13 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c16 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-<section
-    aria-labelledby="features-analysis-heading"
-    class="c0"
-    data-e2e="related-content"
-    role="region"
+<ul
+  class="c0 c1"
+  dir="ltr"
+  role="list"
+>
+  <li
+    class="c2 c3"
+    dir="ltr"
+    role="listitem"
   >
     <div
-      class="c1"
+      class="c4"
     >
       <div
-        class="c2 c3"
+        class="c5"
+        dir="ltr"
       >
         <div
-          class="c4"
-        />
-        <h2
-          class="c5"
+          class="c6"
         >
-          <span
-            class="c6"
+          <div
+            class="c7"
           >
-            <span
-              class="c7"
-            >
-              <span
-                class="c8"
-                dir="ltr"
-                id="features-analysis-heading"
-              >
-                Informate me
-              </span>
-            </span>
-          </span>
-        </h2>
+            <div
+              class="lazyload-placeholder"
+            />
+          </div>
+          <div
+            class="c8"
+          />
+        </div>
       </div>
       <div
         class="c9"
+        dir="ltr"
       >
-        <div
+        <h3
           class="c10"
         >
-          <div
+          <a
             class="c11"
-            dir="ltr"
+            href="/pidgin/44508901"
           >
-            <div
-              class="c12"
+            <span
+              role="text"
             >
-              <div
-                class="c13"
+              <span
+                class="c12"
               >
-                <div
-                  class="lazyload-placeholder"
-                />
-              </div>
-              <div
-                class="c14"
-              />
-            </div>
-          </div>
-          <div
-            class="c15"
-            dir="ltr"
-          >
-            <h3
-              class="c16"
-            >
-              <a
-                class="c17"
-                href="/igbo/afirika-23252735"
-              >
-                STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
-              </a>
-            </h3>
-            <p
-              class="c18"
-            >
-              This is a test asset used in Simorgh, please do not edit it without asking.
-            </p>
-            <time
-              class="c19"
-              datetime="2020-02-03"
-            >
-              3rd February 2020
-            </time>
-          </div>
-        </div>
+                , 
+              </span>
+              <span>
+                Meet boys who dey convert cassava to electricity
+              </span>
+            </span>
+          </a>
+        </h3>
+        <time
+          class="c13"
+          datetime="1970-01-18"
+        >
+          18th January 1970
+        </time>
       </div>
     </div>
-  </section>
-</DocumentFragment>
+  </li>
+  <li
+    class="c2 c3"
+    dir="ltr"
+    role="listitem"
+  >
+    <div
+      class="c4"
+    >
+      <div
+        class="c5"
+        dir="ltr"
+      >
+        <div
+          class="c6"
+        >
+          <div
+            class="c7"
+          >
+            <div
+              class="lazyload-placeholder"
+            />
+          </div>
+          <div
+            class="c8"
+          />
+        </div>
+      </div>
+      <div
+        class="c9"
+        dir="ltr"
+      >
+        <h3
+          class="c10"
+        >
+          <a
+            class="c11"
+            href="/pidgin/tori-46975713"
+          >
+            How light companies dey use estimated billing show Nigerians pepper
+          </a>
+        </h3>
+        <time
+          class="c13"
+          datetime="1970-01-18"
+        >
+          18th January 1970
+        </time>
+      </div>
+    </div>
+  </li>
+  <li
+    class="c2 c3"
+    dir="ltr"
+    role="listitem"
+  >
+    <div
+      class="c4"
+    >
+      <div
+        class="c5"
+        dir="ltr"
+      >
+        <div
+          class="c6"
+        >
+          <div
+            class="c7"
+          >
+            <div
+              class="lazyload-placeholder"
+            />
+          </div>
+          <div
+            class="c8"
+          />
+        </div>
+      </div>
+      <div
+        class="c9"
+        dir="ltr"
+      >
+        <h3
+          class="c10"
+        >
+          <a
+            class="c11"
+            href="/pidgin/tori-42494678"
+          >
+            Nigeria: Wetin 5,222 megawatts electric fit do?
+          </a>
+        </h3>
+        <time
+          class="c13"
+          datetime="1970-01-18"
+        >
+          18th January 1970
+        </time>
+      </div>
+    </div>
+  </li>
+</ul>
 `;
