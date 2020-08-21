@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { singleTextBlock } from '#models/blocks';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContext } from '#contexts/ToggleContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import MediaPlayerContainer from '.';
 
 const captionBlock = {
@@ -449,21 +449,8 @@ export const validLegacyAresMetadataBlock = {
   },
 };
 
-export const defaultToggles = {
-  mediaPlayer: {
-    enabled: true,
-  },
-};
-
-const toggleStateOff = {
-  mediaPlayer: {
-    enabled: false,
-  },
-};
-
 const GenerateFixtureData = ({
   platform,
-  toggleState,
   blocks,
   assetType,
   assetId,
@@ -481,9 +468,7 @@ const GenerateFixtureData = ({
     pathname="/pathname"
   >
     <ServiceContextProvider service="news">
-      <ToggleContext.Provider
-        value={{ toggleState, toggleDispatch: jest.fn() }}
-      >
+      <ToggleContextProvider>
         <BrowserRouter>
           <MediaPlayerContainer
             blocks={blocks}
@@ -494,14 +479,13 @@ const GenerateFixtureData = ({
             isLegacyMedia={isLegacyMedia}
           />
         </BrowserRouter>
-      </ToggleContext.Provider>
+      </ToggleContextProvider>
     </ServiceContextProvider>
   </RequestContextProvider>
 );
 
 GenerateFixtureData.propTypes = {
   platform: string.isRequired,
-  toggleState: shape({}),
   blocks: arrayOf(
     shape({
       type: string.isRequired,
@@ -518,7 +502,6 @@ GenerateFixtureData.propTypes = {
 };
 
 GenerateFixtureData.defaultProps = {
-  toggleState: defaultToggles,
   available: true,
   isLegacyMedia: false,
 };
@@ -568,17 +551,6 @@ export const VideoCanonicalNoVersionId = (
   <GenerateFixtureData
     platform="canonical"
     blocks={missingVpidBlocks}
-    assetType="articles"
-    assetId="c123456789o"
-    showPlaceholder
-  />
-);
-
-export const VideoCanonicalToggledOff = (
-  <GenerateFixtureData
-    platform="canonical"
-    blocks={[validAresMediaVideoBlock]}
-    toggleState={toggleStateOff}
     assetType="articles"
     assetId="c123456789o"
     showPlaceholder

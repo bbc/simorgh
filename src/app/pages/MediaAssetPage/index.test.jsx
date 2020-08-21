@@ -14,15 +14,19 @@ import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
-const toggleState = {
-  mediaPlayer: {
-    enabled: true,
-  },
-};
+jest.mock('#containers/ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  return ChartbeatAnalytics;
+});
+
+jest.mock('#containers/ComscoreAnalytics', () => {
+  const ComscoreAnalytics = () => <div>comscore</div>;
+  return ComscoreAnalytics;
+});
 
 const createAssetPage = ({ pageData }, service) => (
   <StaticRouter>
-    <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
+    <ToggleContext.Provider value={{ toggleDispatch: jest.fn() }}>
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"

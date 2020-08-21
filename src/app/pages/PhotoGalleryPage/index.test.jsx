@@ -14,20 +14,19 @@ import allCpsOnwardJourneys from '#data/pidgin/cpsAssets/tori-49221071.json';
 import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
-const toggleState = {
-  mediaPlayer: {
-    enabled: true,
-  },
-};
-
 jest.mock('#containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
 
+jest.mock('#containers/ComscoreAnalytics', () => {
+  const ComscoreAnalytics = () => <div>comscore</div>;
+  return ComscoreAnalytics;
+});
+
 const Page = ({ pageData, service }) => (
   <StaticRouter>
-    <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
+    <ToggleContext.Provider value={{ toggleDispatch: jest.fn() }}>
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
