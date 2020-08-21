@@ -8,13 +8,12 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
 export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
   pageType,
-}) => {
+}) =>
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
     it('should not have an AMP attribute', () => {
       cy.get('html').should('not.have.attr', 'amp');
     });
   });
-};
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = ({
