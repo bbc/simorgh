@@ -211,7 +211,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
       onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Features',
