@@ -189,6 +189,11 @@ export const service = {
           endTextVisuallyHidden: 'Dhammaadka %provider_name% boggan',
         },
       },
+      include: {
+        errorMessage:
+          'Waanu ka xunnahay, qeybta kuma soo bandhigi karno bogga mobile-kaan',
+        linkText: 'Eeg qeybta bogga oo dhan, si xogta oo dhan aad u aragto.',
+      },
       topStoriesTitle: 'Wararka ugu waaweyn',
       featuresAnalysisTitle: 'Xul',
     },
@@ -206,7 +211,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
       onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Features',

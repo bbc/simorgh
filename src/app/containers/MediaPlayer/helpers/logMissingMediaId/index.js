@@ -4,8 +4,8 @@ import { MEDIA_MISSING_FIELD } from '#lib/logger.const';
 const logger = nodeLogger(__filename);
 
 const logMissingMediaId = ({ url, assetType }) => {
-  const blockIdError = 'Missing Version or Block ID';
-  const message = { url, assetType, blockIdError };
+  const missingField = 'blockId';
+  const message = { url, assetType, missingField };
   logger.warn(MEDIA_MISSING_FIELD, message);
 };
 

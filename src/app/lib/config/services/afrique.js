@@ -190,6 +190,11 @@ export const service = {
           endTextVisuallyHidden: 'Fin de %provider_name% publication',
         },
       },
+      include: {
+        errorMessage: `Désolé, nous ne pouvons pas afficher cette partie de l'article sur cette page mobile légère.`,
+        linkText:
+          'Consultez la version complète de la page pour voir tout le contenu.',
+      },
       topStoriesTitle: 'À la une',
       featuresAnalysisTitle: 'Le choix de la rédaction',
     },
@@ -207,7 +212,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
       onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Features',

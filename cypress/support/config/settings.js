@@ -6938,15 +6938,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/turkce/haberler-turkiye-53818555'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/turkce/23059095'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/turkce/haberler-dunya-53818547'],
             enabled: false,
           },
         },
