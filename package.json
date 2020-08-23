@@ -235,7 +235,7 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2",
-    "webpack-node-externals": "^1.7.2",
+    "webpack-node-externals": "^2.5.1",
     "yaml-js": "^0.2.3"
   },
   "spec": {
