@@ -4,7 +4,6 @@
 | ----------------------- | ----------- | --------------------- |
 | `ads`                   | Display Advertisements on Front Pages and Story (STY) Pages |  | 
 | `chartbeatAnalytics`    | Capture Chartbeat Analytics | |
-| `cinemaModeTV`          | Display Cinema Mode on On Demand TV Pages | |
 | `comscoreAnalytics`     | Capture Comscore Analytics | |
 | `cpsRecommendations`    | Display Recommendations |  |
 | `enableFetchingToggles` | Enable fetching toggle values from remote Toggles Config API for specified services |
