@@ -143,6 +143,7 @@ server
           service,
           variant,
           pageType,
+          toggles,
         });
 
         data.toggles = toggles;
