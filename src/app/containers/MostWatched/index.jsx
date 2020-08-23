@@ -1,19 +1,18 @@
 import React, { useState, useEffect, useContext } from 'react';
 import 'isomorphic-fetch';
 import { arrayOf, shape, bool, string } from 'prop-types';
-import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
-import StoryPromo from '../StoryPromo';
-import Grid from '../../components/Grid';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import { getMostWatchedData, processMostWatched } from './utilities';
+import RelatedContentPromo from '../CpsRelatedContent/RelatedContentPromo';
+import RelatedContentPromoList from '../CpsRelatedContent/RelatedContentPromoList';
 
 const MostWatched = ({ initialData, hasHeader }) => {
-  const { dir, mostWatched, service } = useContext(ServiceContext);
+  const { mostWatched, service } = useContext(ServiceContext);
   const { variant, isAmp } = useContext(RequestContext);
 
   const defaultMostWatchedConfig = {
@@ -54,70 +53,14 @@ const MostWatched = ({ initialData, hasHeader }) => {
     return null;
   }
 
-  const singleTransform = promo => (
-    <Grid
-      columns={{
-        group0: 1,
-        group1: 1,
-        group2: 1,
-        group3: 1,
-        group4: 2,
-        group5: 2,
-      }}
-      enableGelGutters
-      dir={dir}
-    >
-      <StoryPromo item={promo} dir={dir} />
-    </Grid>
-  );
-
-  const listTransform = items => (
-    <Grid
-      columns={{
-        group0: 6,
-        group1: 6,
-        group2: 6,
-        group3: 6,
-        group4: 8,
-        group5: 8,
-      }}
-      as={StoryPromoUl}
-      enableGelGutters
-      dir={dir}
-    >
-      {items.map(item => (
-        <Grid
-          item
-          columns={{
-            group0: 6,
-            group1: 6,
-            group2: 6,
-            group3: 6,
-            group4: 8,
-            group5: 8,
-          }}
-          as={StoryPromoLi}
-          key={item.id || item.uri}
-          dir={dir}
-        >
-          <StoryPromo
-            item={item}
-            dir={dir}
-            displaySummary={false}
-            isSingleColumnLayout
-          />
-        </Grid>
-      ))}
-    </Grid>
-  );
-
   return (
     <CpsOnwardJourney
       labelId="most-watched-heading"
       title={hasHeader ? header : ''}
+      isMapContent
       content={mostWatchedItems}
-      singleTransform={singleTransform}
-      listTransform={listTransform}
+      promoComponent={RelatedContentPromo}
+      promoListComponent={RelatedContentPromoList}
       columnType="secondary"
     />
   );
