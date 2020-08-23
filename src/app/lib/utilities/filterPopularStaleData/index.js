@@ -7,7 +7,13 @@ import {
 
 const logger = nodeLogger(__filename);
 
-const filterPopularStaleData = ({ data, isAmp, service, popularType }) => {
+const filterPopularStaleData = ({
+  data,
+  isAmp,
+  path,
+  service,
+  popularType,
+}) => {
   if (!data) {
     return null;
   }
@@ -24,6 +30,7 @@ const filterPopularStaleData = ({ data, isAmp, service, popularType }) => {
       generated: data.generated,
       service,
       isAmp,
+      path,
     });
     return null;
   }
