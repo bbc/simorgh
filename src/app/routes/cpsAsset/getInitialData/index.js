@@ -16,7 +16,7 @@ import addBylineBlock from './addBylineBlock';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
-import { processMostWatched } from './processMostWatched';
+import processMostWatched from './processMostWatched';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
@@ -61,18 +61,25 @@ const transformJson = async (json, pathname) => {
   }
 };
 
-const processAdditionalData = ({ data, service, path: pathname, variant }) => {
-  const processedMostWatchedData = processMostWatched({
+// Moved to a different function to additional data processing other than most watched
+const processAdditionalData = ({ data, service, path: pathname, toggles }) => {
+  const processedData = processMostWatched({
     data,
     service,
     path: pathname,
-    variant,
+    toggles,
   });
 
-  return processedMostWatchedData;
+  return processedData;
 };
 
-export default async ({ path: pathname, service, variant, pageType }) => {
+export default async ({
+  path: pathname,
+  service,
+  variant,
+  pageType,
+  toggles,
+}) => {
   try {
     const { json, status } = await fetchPageData({ path: pathname, pageType });
 
@@ -90,7 +97,7 @@ export default async ({ path: pathname, service, variant, pageType }) => {
           data: additionalPageData,
           service,
           path: pathname,
-          variant,
+          toggles,
         }),
       },
     };

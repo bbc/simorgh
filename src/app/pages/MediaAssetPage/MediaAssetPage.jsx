@@ -61,7 +61,7 @@ const MediaAssetPage = ({ pageData }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
-  const mostWatchedInitialData = path(['mostWatched'], pageData);
+  const mostWatchedData = path(['mostWatched'], pageData);
 
   const componentsToRender = {
     fauxHeadline,
@@ -149,7 +149,7 @@ const MediaAssetPage = ({ pageData }) => {
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledGrid>
       <CpsRelatedContent content={relatedContent} isMapContent />
-      <MostWatchedContainer initialData={mostWatchedInitialData} />
+      <MostWatchedContainer data={mostWatchedData} />
     </>
   );
 };

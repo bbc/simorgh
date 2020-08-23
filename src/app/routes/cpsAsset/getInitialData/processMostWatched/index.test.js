@@ -1,19 +1,21 @@
-import fetchMock from 'fetch-mock';
-
 import nodeLogger from '#testHelpers/loggerMock';
-import { processMostWatched, getMostWatchedData } from '.';
+import processMostWatched from '.';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import {
-  MOST_WATCHED_CLIENT_REQUEST,
-  MOST_WATCHED_FETCH_ERROR,
+  MOST_WATCHED_PROCESS_ERROR,
+  MOST_WATCHED_STALE_DATA,
 } from '#lib/logger.const';
+
+const toggles = {
+  mostWatched: { enabled: true, value: `{"numberOfItems": 5}` },
+};
 
 describe('processMostWatched', () => {
   it('should return null if data is null', () => {
     const data = processMostWatched({
       data: null,
-      isAmp: true,
-      numberOfItems: 10,
+      path: 'some-path',
+      toggles,
       service: 'pidgin',
     });
     expect(data).toBe(null);
@@ -26,57 +28,67 @@ describe('processMostWatched', () => {
       records: ['some records'],
     };
     const processedData = processMostWatched({
-      data: staleData,
-      isAmp: true,
-      numberOfItems: 10,
+      data: { mostWatched: staleData },
+      path: 'some-path',
+      toggles,
       service: 'pidgin',
     });
     expect(processedData).toBe(null);
+    expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_WATCHED_STALE_DATA, {
+      message: 'lastRecordTimeStamp is greater than 60min',
+      service: 'pidgin',
+      path: 'some-path',
+      generated: '2019-11-06T17:05:17.981Z',
+      lastRecordTimeStamp: '2019-11-06T16:28:00Z',
+      isAmp: undefined,
+    });
   });
 
   it('should return the proper number of items in the right format', () => {
     const { records } = mostWatchedData;
-    const expectedData = records.slice(0, 5).map(item => item.promo);
+    const expectedData = {
+      mostWatched: records.slice(0, 5).map(item => item.promo),
+    };
 
     const data = processMostWatched({
-      data: mostWatchedData,
-      isAmp: false,
-      numberOfItems: 5,
+      data: { mostWatched: mostWatchedData },
+      path: 'some-path',
+      toggles,
       service: 'pidgin',
     });
-    expect(data.length).toBe(5);
+    expect(data.mostWatched.length).toBe(5);
     expect(data).toEqual(expectedData);
   });
-});
 
-describe('getMostWatchedData', () => {
-  it('should fetch mostWatched Data with the right url', async () => {
-    fetchMock.mock('/serbian/mostwatched/lat.json', mostWatchedData);
-    const data = await getMostWatchedData({
-      service: 'serbian',
-      variant: 'lat',
+  it('should log a message when the toggle is invalid', () => {
+    const data = processMostWatched({
+      data: { mostWatched: mostWatchedData },
+      path: 'some-path',
+      toggles: { invalidToggle: true },
+      service: 'pidgin',
     });
-
-    expect(data).toEqual(mostWatchedData);
-    expect(nodeLogger.info).toHaveBeenCalledWith(MOST_WATCHED_CLIENT_REQUEST, {
-      url: '/serbian/mostwatched/lat.json',
+    expect(data.mostWatched).toBe(null);
+    expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_WATCHED_PROCESS_ERROR, {
+      message: 'Invalid most watched toggle',
+      service: 'pidgin',
+      path: 'some-path',
     });
   });
 
-  it('should log errors in fetching most watched data', async () => {
-    fetchMock.mock(
-      '/pidgin/mostWatched.json',
-      Promise.reject(Error('an error')),
-    );
-    const data = await getMostWatchedData({
+  it('should log a message when the toggle value cannot be JSON parsed', () => {
+    const data = processMostWatched({
+      data: { mostWatched: mostWatchedData },
+      path: 'some-path',
+      toggles: {
+        mostWatched: { enabled: true, value: '{numberOfItems: 5}' },
+      },
       service: 'pidgin',
     });
-
-    expect(data).toBe(null);
-    expect(nodeLogger.error).toHaveBeenCalledWith(MOST_WATCHED_FETCH_ERROR, {
-      url: '/pidgin/mostwatched.json',
-      error:
-        'Error: fetch-mock: No fallback response defined for GET to /pidgin/mostwatched.json',
+    expect(data.mostWatched.length).toBe(10);
+    expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_WATCHED_PROCESS_ERROR, {
+      message: 'Unexpected token n in JSON at position 1',
+      service: 'pidgin',
+      path: 'some-path',
     });
   });
 });

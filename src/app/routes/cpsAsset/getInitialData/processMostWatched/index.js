@@ -1,69 +1,70 @@
 import pathOr from 'ramda/src/pathOr';
-import filterPopularStaleData from '#app/lib/utilities/filterPopularStaleData';
-import {
-  MOST_WATCHED_CLIENT_REQUEST,
-  MOST_WATCHED_FETCH_ERROR,
-} from '#lib/logger.const';
-import getMostWatchedEndpoint from '#lib/utilities/getMostWatchedUrl';
 import nodeLogger from '#lib/logger.node';
-import services from '#lib/config/services/loadableConfig';
+import { MOST_WATCHED_PROCESS_ERROR } from '#lib/logger.const';
+import filterPopularStaleData from '#app/lib/utilities/filterPopularStaleData';
 
 const logger = nodeLogger(__filename);
 
-const getServiceConfig = (service, variant) => {
-  if (variant) {
-    return services[service][variant];
+const processMostWatched = ({ data, path, service, toggles }) => {
+  if (!data) {
+    return data;
   }
-  return services[service].default;
-};
 
-export const processMostWatched = ({ data, path, service, variant }) => {
   const { mostWatched } = data;
 
   if (!mostWatched) {
     return data;
   }
 
-  const { mostWatched: mostWatchedConfig } = getServiceConfig(service, variant);
-  const { numberOfItems } = mostWatchedConfig;
+  const defaultToggle = {
+    enabled: false,
+    value: `{"numberOfItems": 10}`,
+  };
 
+  const { mostWatched: mostWatchedToggle } = toggles;
+  if (!mostWatchedToggle) {
+    logger.warn(MOST_WATCHED_PROCESS_ERROR, {
+      message: 'Invalid most watched toggle',
+      service,
+      path,
+    });
+  }
+
+  const { enabled, value } = mostWatchedToggle || defaultToggle;
+  let numberOfItems = 10;
+
+  try {
+    const parsedValue = JSON.parse(value);
+    numberOfItems = parsedValue.numberOfItems;
+  } catch (e) {
+    logger.warn(MOST_WATCHED_PROCESS_ERROR, {
+      message: e.message,
+      service,
+      path,
+    });
+  }
+
+  if (!enabled) {
+    return { ...data, mostWatched: null };
+  }
   const filteredData = filterPopularStaleData({
-    data,
+    data: mostWatched,
     path,
     service,
     popularType: 'mostWatched',
   });
 
-  if (!filteredData || !filteredData.length) {
+  if (!filteredData) {
     return null;
   }
 
   const records = pathOr([], ['records'], filteredData);
   const processedRecords = records
     .slice(0, numberOfItems)
+    .sort((a, b) => a.rank - b.rank)
     .map(item => item.promo);
 
   return { ...data, mostWatched: processedRecords };
 };
 
-export const getMostWatchedData = async ({ service, variant }) => {
-  const endpoint = getMostWatchedEndpoint({ service, variant });
-  logger.info(MOST_WATCHED_CLIENT_REQUEST, { url: endpoint });
-
-  try {
-    const response = await fetch(endpoint);
-    if (!response.ok) {
-      throw Error(
-        `Unexpected response (HTTP status code ${response.status}) when requesting ${endpoint}`,
-      );
-    }
-
-    return response.json();
-  } catch (error) {
-    logger.error(MOST_WATCHED_FETCH_ERROR, {
-      url: endpoint,
-      error: error.toString(),
-    });
-    return null;
-  }
-};
+export default processMostWatched;
