@@ -1642,7 +1642,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           allowfullscreen=""
                           class="c29"
                           scrolling="no"
-                          src="https://test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
+                          src="https://test.bbc.com/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
                           title="Media player"
                         />
                         <noscript />
@@ -2715,7 +2715,7 @@ exports[`Story Page should render correctly when the secondary column data is no
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"}
+      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"}
     </script>
   </head>
   <body>
@@ -4030,7 +4030,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                               allowfullscreen=""
                               class="c31"
                               scrolling="no"
-                              src="https://test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
+                              src="https://test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                               title="Media player"
                             />
                             <noscript />
@@ -5657,7 +5657,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"}
+      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"}
     </script>
   </head>
   <body>
@@ -6067,7 +6067,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               allowfullscreen=""
                               class="c31"
                               scrolling="no"
-                              src="https://test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
+                              src="https://test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                               title="Media player"
                             />
                             <noscript />

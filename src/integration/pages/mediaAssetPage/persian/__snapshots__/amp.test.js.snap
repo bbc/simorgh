@@ -310,7 +310,7 @@ exports[`AMP Media Asset Page I can see the timestamp 1`] = `"۲۶ بهمن ۱۳
 
 exports[`AMP Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"پخش صدا و تصویر"`;
 
-exports[`AMP Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa/amp"`;
+exports[`AMP Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.com/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa/amp"`;
 
 exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -449,7 +449,7 @@ Object {
   "@type": "AudioObject",
   "description": "Trump long headline",
   "duration": "PT26S",
-  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa/amp",
+  "embedURL": "https://polling.test.bbc.com/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa/amp",
   "name": "Trump short headline",
   "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01lmkk5.jpg",
   "uploadDate": "2019-02-15T12:37:28.000Z",

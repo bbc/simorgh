@@ -6,7 +6,7 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"VideoObject","name":"alt-text world service clip","description":"short","duration":"PT5S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","uploadDate":"2018-12-20T11:06:51.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/russian/multimedia/2016/05/160505_v_diving_record/p01kx42v/en-GB/amp"}
+      {"@context":"http://schema.org","@type":"VideoObject","name":"alt-text world service clip","description":"short","duration":"PT5S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","uploadDate":"2018-12-20T11:06:51.000Z","embedURL":"https://polling.test.bbc.com/ws/av-embeds/cps/russian/multimedia/2016/05/160505_v_diving_record/p01kx42v/en-GB/amp"}
     </script>
     <script
       async="true"
@@ -95,7 +95,7 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
               layout="fill"
               sandbox="allow-scripts allow-same-origin"
               scrolling="no"
-              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/russian/multimedia/2016/05/160505_v_diving_record/p01kx42v/en-GB/amp"
+              src="https://polling.test.bbc.com/ws/av-embeds/cps/russian/multimedia/2016/05/160505_v_diving_record/p01kx42v/en-GB/amp"
               title="Media player"
             >
               <amp-img
@@ -124,7 +124,7 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"VideoObject","name":"alt-text world service clip","description":"short","duration":"PT5S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","uploadDate":"2018-12-20T11:06:51.000Z","embedURL":"https://test.bbc.co.uk/ws/av-embeds/cps/russian/multimedia/2016/05/160505_v_diving_record/p01kx42v/en-GB"}
+      {"@context":"http://schema.org","@type":"VideoObject","name":"alt-text world service clip","description":"short","duration":"PT5S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","uploadDate":"2018-12-20T11:06:51.000Z","embedURL":"https://test.bbc.com/ws/av-embeds/cps/russian/multimedia/2016/05/160505_v_diving_record/p01kx42v/en-GB"}
     </script>
   </head>
   <body>
@@ -217,7 +217,7 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
               allowfullscreen=""
               class="c3"
               scrolling="no"
-              src="https://test.bbc.co.uk/ws/av-embeds/cps/russian/multimedia/2016/05/160505_v_diving_record/p01kx42v/en-GB"
+              src="https://test.bbc.com/ws/av-embeds/cps/russian/multimedia/2016/05/160505_v_diving_record/p01kx42v/en-GB"
               title="Media player"
             />
             <noscript />
@@ -235,7 +235,7 @@ exports[`MediaPlayer render the amp player 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"VideoObject","name":"alt-text world service clip","description":"short","duration":"PT5S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","uploadDate":"2018-12-20T11:06:51.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01kx42v/en-GB/amp"}
+      {"@context":"http://schema.org","@type":"VideoObject","name":"alt-text world service clip","description":"short","duration":"PT5S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","uploadDate":"2018-12-20T11:06:51.000Z","embedURL":"https://polling.test.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01kx42v/en-GB/amp"}
     </script>
     <script
       async="true"
@@ -324,7 +324,7 @@ exports[`MediaPlayer render the amp player 1`] = `
               layout="fill"
               sandbox="allow-scripts allow-same-origin"
               scrolling="no"
-              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01kx42v/en-GB/amp"
+              src="https://polling.test.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01kx42v/en-GB/amp"
               title="Media player"
             >
               <amp-img
@@ -427,7 +427,7 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"VideoObject","name":"alt-text world service clip","description":"short","duration":"PT5S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","uploadDate":"2018-12-20T11:06:51.000Z","embedURL":"https://test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01kx42v/en-GB"}
+      {"@context":"http://schema.org","@type":"VideoObject","name":"alt-text world service clip","description":"short","duration":"PT5S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","uploadDate":"2018-12-20T11:06:51.000Z","embedURL":"https://test.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01kx42v/en-GB"}
     </script>
   </head>
   <body>
@@ -446,7 +446,7 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
               allowfullscreen=""
               class="c3"
               scrolling="no"
-              src="https://test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01kx42v/en-GB"
+              src="https://test.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01kx42v/en-GB"
               title="Media player"
             />
             <noscript />

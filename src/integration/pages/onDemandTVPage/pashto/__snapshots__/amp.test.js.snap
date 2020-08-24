@@ -277,7 +277,7 @@ exports[`AMP On Demand T V Page I can see the episode title 1`] = `"۲۷ می ۲
 
 exports[`AMP On Demand T V Page Media Player a11y assistive technology can read the media player title 1`] = `"ویډیو پلیئر"`;
 
-exports[`AMP On Demand T V Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"`;
+exports[`AMP On Demand T V Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"`;
 
 exports[`AMP On Demand T V Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -396,7 +396,7 @@ Object {
       "@type": "VideoObject",
       "description": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
       "duration": "PT24M",
-      "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live",
+      "embedURL": "https://polling.test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live",
       "name": "نړۍ دا وخت",
       "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png",
       "uploadDate": "2020-05-27T00:00:00.000Z",
