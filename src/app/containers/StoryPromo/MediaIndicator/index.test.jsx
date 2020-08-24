@@ -1,4 +1,5 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import { latin, arabic } from '@bbc/gel-foundations/scripts';
 import MediaIndicator from '.';
@@ -159,15 +160,17 @@ describe('Story Promo Media Indicator', () => {
     />,
   );
 
-  shouldMatchSnapshot(
-    'should render correctly even without duration and cps type',
-    <MediaIndicator
-      dir="ltr"
-      item={externalVpidNoCpsTypeItem}
-      script={latin}
-      service="news"
-    />,
-  );
+  it('should render correctly even without duration and cps type', () => {
+    const { container } = render(
+      <MediaIndicator
+        dir="ltr"
+        item={externalVpidNoCpsTypeItem}
+        script={latin}
+        service="news"
+      />,
+    );
+    expect(container.querySelector('div')).toBeInTheDocument();
+  });
 
   isNull(
     'should not render if item media object has no format',

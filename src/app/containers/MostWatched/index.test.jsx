@@ -1,7 +1,6 @@
 import React from 'react';
 import { arrayOf, shape, bool } from 'prop-types';
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -31,10 +30,12 @@ MostWatchedComponent.propTypes = {
 };
 
 describe('MostWatched', () => {
-  shouldMatchSnapshot(
-    'should render the component on Canonical',
-    <MostWatchedComponent data={promos} isAmp={false} />,
-  );
+  it('should render the component on Canonical', async () => {
+    const { container } = await render(
+      <MostWatchedComponent data={promos} isAmp={false} />,
+    );
+    expect(container.querySelector('ul')).toBeInTheDocument();
+  });
 
   it('should not render the component on AMP', async () => {
     const { container } = await render(

@@ -61,17 +61,6 @@ const transformJson = async (json, pathname) => {
   }
 };
 
-// Moved to a different function to additional data processing other than most watched
-const processAdditionalData = ({ data, service, path: pathname, toggles }) => {
-  const processedData = processMostWatched({
-    data,
-    service,
-    path: pathname,
-    toggles,
-  });
-
-  return processedData;
-};
 export default async ({
   path: pathname,
   service,
@@ -87,7 +76,7 @@ export default async ({
       service,
       variant,
     );
-    const processedAdditionalData = processAdditionalData({
+    const processedAdditionalData = processMostWatched({
       data: additionalPageData,
       service,
       path: pathname,

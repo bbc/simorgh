@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import 'isomorphic-fetch';
 import { arrayOf, shape, bool } from 'prop-types';
 
 import { storyItem } from '#models/propTypes/storyItem';
