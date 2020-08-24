@@ -13,6 +13,7 @@ export default ({
   switch (pageType) {
     case 'frontpage':
     case 'mostRead':
+    case 'mostWatched':
     case 'secondaryColumn':
     case 'recommendations':
       dataPath = `${variant || 'index'}.json`;

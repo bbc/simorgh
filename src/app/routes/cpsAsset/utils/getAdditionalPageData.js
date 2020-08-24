@@ -1,10 +1,11 @@
 import isEmpty from 'ramda/src/isEmpty';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { STORY_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import getAssetType from './getAssetType';
 import getAssetUri from './getAssetUri';
 import hasRecommendations from './hasRecommendations';
 import fetchPageData from '../../utils/fetchPageData';
 import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
+import getMostWatchedEndpoint from '#lib/utilities/getMostWatchedUrl';
 import getSecondaryColumnUrl from '#lib/utilities/getSecondaryColumnUrl';
 import getRecommendationsUrl from '#lib/utilities/getRecommendationsUrl';
 
@@ -35,6 +36,16 @@ const pageTypeUrls = async (
             }
           : null,
       ].filter(i => i);
+    case MEDIA_ASSET_PAGE:
+      return [
+        {
+          name: 'mostWatched',
+          path: getMostWatchedEndpoint({ service, variant }).replace(
+            '.json',
+            '',
+          ),
+        },
+      ];
     default:
       return null;
   }
