@@ -2,10 +2,10 @@ import isLive from '../isLive';
 
 const AV_ROUTE = 'ws/av-embeds';
 
-const LIVE_CANONICAL_URL = 'https://bbc.co.uk';
-const LIVE_AMP_URL = 'https://polling.bbc.co.uk';
-const TEST_CANONICAL_URL = 'https://test.bbc.co.uk';
-const TEST_AMP_URL = 'https://polling.test.bbc.co.uk';
+const LIVE_CANONICAL_URL = 'https://bbc.com';
+const LIVE_AMP_URL = 'https://polling.bbc.com';
+const TEST_CANONICAL_URL = 'https://test.bbc.com';
+const TEST_AMP_URL = 'https://polling.test.bbc.com';
 
 const shouldOverrideMorphEnv = (queryString, type) => {
   if (isLive()) return false;
@@ -23,10 +23,10 @@ const shouldOverrideMorphEnv = (queryString, type) => {
 };
 
 const getBaseUrl = isAmp => {
-  if (isLive() && isAmp) return LIVE_AMP_URL;
-  if (isAmp) return TEST_AMP_URL;
-  if (isLive()) return LIVE_CANONICAL_URL;
-  return TEST_CANONICAL_URL;
+  if (isAmp) {
+    return isLive() ? LIVE_AMP_URL : TEST_AMP_URL;
+  }
+  return isLive() ? LIVE_CANONICAL_URL : TEST_CANONICAL_URL;
 };
 
 export default ({ type, mediaId, isAmp = false, queryString }) => {
