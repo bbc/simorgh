@@ -14,6 +14,7 @@ import {
   getLegacyAssetRegex,
   getMostReadPageRegex,
   getMostReadDataRegex,
+  getMostWatchedDataRegex,
   getIdxPageRegex,
   getSecondaryColumnDataRegex,
   getRecommendationsDataRegex,
@@ -52,6 +53,8 @@ export const legacyAssetPageDataPath = `${legacyAssetPagePath}.json`;
 
 export const mostReadPagePath = getMostReadPageRegex(allServices);
 export const mostReadDataRegexPath = getMostReadDataRegex(allServices);
+
+export const mostWatchedDataPath = getMostWatchedDataRegex(allServices);
 
 export const secondaryColumnDataRegexPath = getSecondaryColumnDataRegex(
   allServices,

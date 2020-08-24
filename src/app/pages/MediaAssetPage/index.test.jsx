@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import fetchMock from 'fetch-mock';
 import { render, waitFor } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';
 import path from 'ramda/src/path';
@@ -11,6 +12,7 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import MediaAssetPage from '.';
 import mapPageData from '#data/pidgin/cpsAssets/23248703';
 import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721';
+import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
@@ -111,16 +113,32 @@ const getBlockTextAtIndex = (index, originalPageData) => {
 
 const pageType = 'cpsAsset';
 
+fetchMock.config.overwriteRoutes = true;
+
+const mockInitialData = ({ service, assetId, pageData, mostWatched }) => {
+  fetchMock.mock(`http://localhost/${assetId}.json`, pageData);
+  fetchMock.mock(
+    `http://localhost/${service}/mostwatched.json`,
+    mostWatched || mostWatchedData,
+  );
+  return getInitialData({
+    path: assetId,
+    service,
+    pageType,
+  });
+};
+
 describe('Media Asset Page', () => {
   let pageData;
   let asFragment;
   let getByText;
   beforeEach(async () => {
-    fetch.mockResponse(JSON.stringify(mapPageData));
-    const response = await getInitialData({
-      path: 'some-map-path',
-      pageType,
+    const response = await mockInitialData({
+      assetId: 'pidgin/a-media-asset',
+      service: 'pidgin',
+      pageData: mapPageData,
     });
+
     pageData = response.pageData;
 
     ({ asFragment, getByText } = render(
@@ -213,10 +231,10 @@ describe('Media Asset Page', () => {
     };
 
     it('should render version (live audio stream)', async () => {
-      fetch.mockResponse(JSON.stringify(uzbekPageData));
-      const response = await getInitialData({
-        path: 'some-map-path',
-        pageType,
+      const response = await mockInitialData({
+        assetId: 'uzbek/a-media-asset',
+        service: 'uzbek',
+        pageData: uzbekPageData,
       });
       pageData = response.pageData;
       const liveStreamBlock = getLiveStreamBlock(pageData);
@@ -295,10 +313,10 @@ describe('Media Asset Page', () => {
 });
 
 it('should not show the timestamp when allowDateStamp is false', async () => {
-  fetch.mockResponse(JSON.stringify(mapPageData));
-  const { pageData } = await getInitialData({
-    path: 'some-map-path',
-    pageType,
+  const { pageData } = await mockInitialData({
+    assetId: 'pidgin/a-media-asset',
+    service: 'pidgin',
+    pageData: mapPageData,
   });
   const pageDataWithHiddenTimestamp = assocPath(
     ['metadata', 'options', 'allowDateStamp'],
@@ -312,10 +330,10 @@ it('should not show the timestamp when allowDateStamp is false', async () => {
 });
 
 it('should not show the iframe when available is false', async () => {
-  fetch.mockResponse(JSON.stringify(uzbekPageData));
-  const { pageData } = await getInitialData({
-    path: 'some-map-path',
-    pageType,
+  const { pageData } = await mockInitialData({
+    assetId: 'uzbek/a-media-asset',
+    service: 'uzbek',
+    pageData: uzbekPageData,
   });
   const uzbekDataExpiredLivestream = assocPath(
     ['content', 'blocks', 0, 'available'],
@@ -323,10 +341,10 @@ it('should not show the iframe when available is false', async () => {
     pageData,
   );
 
-  fetch.mockResponse(JSON.stringify(uzbekDataExpiredLivestream));
-  const { pageData: pageDataWithExpiredLiveStream } = await getInitialData({
-    path: 'some-map-path',
-    pageType,
+  const { pageData: pageDataWithExpiredLiveStream } = await mockInitialData({
+    assetId: 'uzbek/a-media-asset',
+    service: 'uzbek',
+    pageData: JSON.stringify(uzbekDataExpiredLivestream),
   });
 
   render(createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'));
@@ -341,10 +359,10 @@ it('should show the media message when available is false', async () => {
     uzbekPageData,
   );
 
-  fetch.mockResponse(JSON.stringify(uzbekDataExpiredLivestream));
-  const { pageData: pageDataWithExpiredLiveStream } = await getInitialData({
-    path: 'some-map-path',
-    pageType,
+  const { pageData: pageDataWithExpiredLiveStream } = await mockInitialData({
+    assetId: 'uzbek/a-media-asset',
+    service: 'uzbek',
+    pageData: JSON.stringify(uzbekDataExpiredLivestream),
   });
   const { getByText } = render(
     createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'),
@@ -369,10 +387,10 @@ it('should show the media message when there is no media block', async () => {
     uzbekDataWithNoMediaBlock,
   );
 
-  fetch.mockResponse(JSON.stringify(uzbekDataWithNoMediaType));
-  const { pageData: pageDataWithExpiredLiveStream } = await getInitialData({
-    path: 'some-map-path',
-    pageType,
+  const { pageData: pageDataWithExpiredLiveStream } = await mockInitialData({
+    assetId: 'uzbek/a-media-asset',
+    service: 'uzbek',
+    pageData: JSON.stringify(uzbekDataWithNoMediaType),
   });
   const { getByText } = render(
     createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'),
@@ -384,10 +402,10 @@ it('should show the media message when there is no media block', async () => {
 });
 
 it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
-  fetch.mockResponse(JSON.stringify(igboPageData));
-  const { pageData } = await getInitialData({
-    path: 'some-map-path',
-    pageType,
+  const { pageData } = await mockInitialData({
+    assetId: 'igbo/a-media-asset',
+    service: 'igbo',
+    pageData: igboPageData,
   });
 
   const { getByText } = render(createAssetPage({ pageData }, 'igbo'));
