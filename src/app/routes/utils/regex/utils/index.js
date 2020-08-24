@@ -97,3 +97,7 @@ export const getRecommendationsDataRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/:assetUri(${assetUriRegex})/recommendations:variant(${variantRegex})?.json`;
 };
+
+export const getAfricaEyeTVDataRegex = () => {
+  return `/worldservice/tv/africa_eye/:episodeId(${mediaIdRegex})?.json`;
+};
