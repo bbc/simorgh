@@ -126,7 +126,7 @@ describe('log MediaPlayer status', () => {
     logEmbedSourceStatus.mock.calls.forEach(call => {
       const { url, assetType, embedUrl } = call[0];
       expect(url).toBe('c123456789o');
-      expect(embedUrl.includes('test.bbc.co.uk')).toBe(true);
+      expect(embedUrl.includes('test.bbc.com')).toBe(true);
       expect(assetType).toBe('articles');
     });
   });
