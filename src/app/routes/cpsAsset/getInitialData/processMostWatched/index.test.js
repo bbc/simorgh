@@ -33,7 +33,7 @@ describe('processMostWatched', () => {
       toggles,
       service: 'pidgin',
     });
-    expect(processedData).toBe(null);
+    expect(processedData.mostWatched).toBe(null);
     expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_WATCHED_STALE_DATA, {
       message: 'lastRecordTimeStamp is greater than 60min',
       service: 'pidgin',
@@ -69,7 +69,7 @@ describe('processMostWatched', () => {
     });
     expect(data.mostWatched).toBe(null);
     expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_WATCHED_PROCESS_ERROR, {
-      message: 'Invalid most watched toggle',
+      message: "Cannot read property 'enabled' of undefined",
       service: 'pidgin',
       path: 'some-path',
     });
@@ -84,7 +84,7 @@ describe('processMostWatched', () => {
       },
       service: 'pidgin',
     });
-    expect(data.mostWatched.length).toBe(10);
+    expect(data.mostWatched).toBe(null);
     expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_WATCHED_PROCESS_ERROR, {
       message: 'Unexpected token n in JSON at position 1',
       service: 'pidgin',

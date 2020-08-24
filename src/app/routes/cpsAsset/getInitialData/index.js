@@ -72,7 +72,6 @@ const processAdditionalData = ({ data, service, path: pathname, toggles }) => {
 
   return processedData;
 };
-
 export default async ({
   path: pathname,
   service,
@@ -88,17 +87,18 @@ export default async ({
       service,
       variant,
     );
+    const processedAdditionalData = processAdditionalData({
+      data: additionalPageData,
+      service,
+      path: pathname,
+      toggles,
+    });
 
     return {
       status,
       pageData: {
         ...(await transformJson(json, pathname)),
-        ...processAdditionalData({
-          data: additionalPageData,
-          service,
-          path: pathname,
-          toggles,
-        }),
+        ...processedAdditionalData,
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {

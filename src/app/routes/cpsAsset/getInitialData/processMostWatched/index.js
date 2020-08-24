@@ -5,48 +5,30 @@ import filterPopularStaleData from '#app/lib/utilities/filterPopularStaleData';
 
 const logger = nodeLogger(__filename);
 
-const processMostWatched = ({ data, path, service, toggles }) => {
-  if (!data) {
-    return data;
-  }
-
-  const { mostWatched } = data;
-
-  if (!mostWatched) {
-    return data;
-  }
-
-  const defaultToggle = {
-    enabled: false,
-    value: `{"numberOfItems": 10}`,
-  };
-
-  const { mostWatched: mostWatchedToggle } = toggles;
-  if (!mostWatchedToggle) {
-    logger.warn(MOST_WATCHED_PROCESS_ERROR, {
-      message: 'Invalid most watched toggle',
-      service,
-      path,
-    });
-  }
-
-  const { enabled, value } = mostWatchedToggle || defaultToggle;
-  let numberOfItems = 10;
-
+const processToggles = ({ toggles, service, path }) => {
   try {
-    const parsedValue = JSON.parse(value);
-    numberOfItems = parsedValue.numberOfItems;
+    const { mostWatched: mostWatchedToggle } = toggles;
+    const { enabled, value } = mostWatchedToggle;
+
+    const { numberOfItems } = JSON.parse(value);
+    return { enabled, numberOfItems };
   } catch (e) {
     logger.warn(MOST_WATCHED_PROCESS_ERROR, {
       message: e.message,
       service,
       path,
     });
+    return { enabled: false, numberOfItems: 10 };
+  }
+};
+
+const processMostWatched = ({ data, path, service, toggles }) => {
+  if (!data || !data.mostWatched) {
+    return data;
   }
 
-  if (!enabled) {
-    return { ...data, mostWatched: null };
-  }
+  const { mostWatched } = data;
+  const { enabled, numberOfItems } = processToggles({ toggles, service, path });
   const filteredData = filterPopularStaleData({
     data: mostWatched,
     path,
@@ -54,8 +36,8 @@ const processMostWatched = ({ data, path, service, toggles }) => {
     popularType: 'mostWatched',
   });
 
-  if (!filteredData) {
-    return null;
+  if (!filteredData || !enabled) {
+    return { ...data, mostWatched: null };
   }
 
   const records = pathOr([], ['records'], filteredData);
