@@ -1,0 +1,612 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "advertising": false,
+        "availability": "available",
+        "embedding": false,
+        "format": "Audio",
+        "id": "w3ct0kfw",
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+        "smpKind": "radioProgramme",
+        "subType": "episode",
+        "synopses": {
+          "medium": "BBC와 함께하는 영어학습 코너입니다",
+          "short": "BBC와 함께하는 영어학습 코너입니다"
+        },
+        "title": "2020/08/21 GMT",
+        "type": "media",
+        "versions": [
+          {
+            "availabilityStatus": "available",
+            "availableFrom": 1598025600000,
+            "availableTerritories": {
+              "nonUk": false,
+              "uk": false,
+              "world": true
+            },
+            "duration": 600,
+            "durationISO8601": "PT10M",
+            "types": ["Original"],
+            "versionId": "w4hqw48l",
+            "warnings": {}
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "contentType": "player-episode",
+      "pageIdentifier": "korean.bbc_korean_radio.w3ct0kfw.page",
+      "pageTitle": "English Learning with BBC - BBC News 코리아",
+      "producer": "KOREAN",
+      "producerId": "57"
+    },
+    "atiAnalytics": {},
+    "blockTypes": ["media"],
+    "createdBy": "bbc_korean_radio",
+    "firstPublished": 1597127767000,
+    "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3ct0kfw",
+    "language": "ko",
+    "lastPublished": 1597127767000,
+    "lastUpdated": 1597665333436,
+    "locators": {
+      "brandPid": "w13xttlm",
+      "pid": "w3ct0kfw"
+    },
+    "options": {},
+    "releaseDateTimeStamp": 1597968000000,
+    "tags": {},
+    "timestamp": 1597127767000,
+    "title": "English Learning with BBC",
+    "type": "WSRADIO",
+    "version": "v1.3.6"
+  },
+  "promo": {
+    "brand": {
+      "pid": "w13xttlm",
+      "title": "English Learning with BBC"
+    },
+    "headlines": {
+      "headline": "English Learning with BBC"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3ct0kfw",
+    "indexImage": {
+      "altText": null,
+      "copyrightHolder": null,
+      "height": 0,
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+      "id": "",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+      "subType": "index",
+      "type": "image",
+      "width": 0
+    },
+    "locators": {
+      "brandPid": "w13xttlm",
+      "pid": "w3ct0kfw"
+    },
+    "media": {
+      "advertising": false,
+      "availability": "available",
+      "embedding": false,
+      "format": "Audio",
+      "id": "w3ct0kfw",
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+      "smpKind": "radioProgramme",
+      "subType": "episode",
+      "synopses": {
+        "medium": "BBC와 함께하는 영어학습 코너입니다",
+        "short": "BBC와 함께하는 영어학습 코너입니다"
+      },
+      "title": "2020/08/21 GMT",
+      "type": "media",
+      "versions": [
+        {
+          "availabilityStatus": "available",
+          "availableFrom": 1598025600000,
+          "availableTerritories": {
+            "nonUk": false,
+            "uk": false,
+            "world": true
+          },
+          "duration": 600,
+          "durationISO8601": "PT10M",
+          "types": ["Original"],
+          "versionId": "w4hqw48l",
+          "warnings": {}
+        }
+      ]
+    },
+    "releaseDateTimestamp": 1597968000000,
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "groups": [
+      {
+        "promos": [
+          {
+            "brand": {
+              "pid": "w13xttlm",
+              "title": "English Learning with BBC"
+            },
+            "headlines": {
+              "headline": "English Learning with BBC"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3ct0kj4",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xttlm",
+              "pid": "w3ct0kj4"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w3ct0kj4",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "smpKind": "radioProgramme",
+              "subType": "episode",
+              "synopses": {
+                "medium": "BBC와 함께하는 영어학습 코너입니다",
+                "short": "BBC와 함께하는 영어학습 코너입니다"
+              },
+              "title": "2020/08/20 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1597939200000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "types": ["Original"],
+                  "versionId": "w4hqw4bv",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1597881600000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "w13xttlm",
+              "title": "English Learning with BBC"
+            },
+            "headlines": {
+              "headline": "English Learning with BBC"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3ct0kld",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xttlm",
+              "pid": "w3ct0kld"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w3ct0kld",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "smpKind": "radioProgramme",
+              "subType": "episode",
+              "synopses": {
+                "medium": "BBC와 함께하는 영어학습 코너입니다",
+                "short": "BBC와 함께하는 영어학습 코너입니다"
+              },
+              "title": "2020/08/19 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1597852800000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "types": ["Original"],
+                  "versionId": "w4hqw4f3",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1597795200000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "w13xttlm",
+              "title": "English Learning with BBC"
+            },
+            "headlines": {
+              "headline": "English Learning with BBC"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3ct0kk8",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xttlm",
+              "pid": "w3ct0kk8"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w3ct0kk8",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "smpKind": "radioProgramme",
+              "subType": "episode",
+              "synopses": {
+                "medium": "BBC와 함께하는 영어학습 코너입니다",
+                "short": "BBC와 함께하는 영어학습 코너입니다"
+              },
+              "title": "2020/08/18 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1597766400000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "types": ["Original"],
+                  "versionId": "w4hqw4cz",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1597708800000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "w13xttlm",
+              "title": "English Learning with BBC"
+            },
+            "headlines": {
+              "headline": "English Learning with BBC"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3ct0kh0",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xttlm",
+              "pid": "w3ct0kh0"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w3ct0kh0",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "smpKind": "radioProgramme",
+              "subType": "episode",
+              "synopses": {
+                "medium": "BBC와 함께하는 영어학습 코너입니다",
+                "short": "BBC와 함께하는 영어학습 코너입니다"
+              },
+              "title": "2020/08/17 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1597680000000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "types": ["Original"],
+                  "versionId": "w4hqw49q",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1597622400000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "w13xttlm",
+              "title": "English Learning with BBC"
+            },
+            "headlines": {
+              "headline": "English Learning with BBC"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3ct0kfv",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xttlm",
+              "pid": "w3ct0kfv"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w3ct0kfv",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "smpKind": "radioProgramme",
+              "subType": "episode",
+              "synopses": {
+                "medium": "BBC와 함께하는 영어학습 코너입니다",
+                "short": "BBC와 함께하는 영어학습 코너입니다"
+              },
+              "title": "2020/08/14 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1597420800000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "types": ["Original"],
+                  "versionId": "w4hqw48k",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1597363200000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "w13xttlm",
+              "title": "English Learning with BBC"
+            },
+            "headlines": {
+              "headline": "English Learning with BBC"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3ct0kj3",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xttlm",
+              "pid": "w3ct0kj3"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w3ct0kj3",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "smpKind": "radioProgramme",
+              "subType": "episode",
+              "synopses": {
+                "medium": "BBC와 함께하는 영어학습 코너입니다",
+                "short": "BBC와 함께하는 영어학습 코너입니다"
+              },
+              "title": "2020/08/13 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1597334400000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "types": ["Original"],
+                  "versionId": "w4hqw4bt",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1597276800000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "w13xttlm",
+              "title": "English Learning with BBC"
+            },
+            "headlines": {
+              "headline": "English Learning with BBC"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3ct0klc",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xttlm",
+              "pid": "w3ct0klc"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w3ct0klc",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "smpKind": "radioProgramme",
+              "subType": "episode",
+              "synopses": {
+                "medium": "BBC와 함께하는 영어학습 코너입니다",
+                "short": "BBC와 함께하는 영어학습 코너입니다"
+              },
+              "title": "2020/08/12 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1597248000000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "types": ["Original"],
+                  "versionId": "w4hqw4f2",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1597190400000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "w13xttlm",
+              "title": "English Learning with BBC"
+            },
+            "headlines": {
+              "headline": "English Learning with BBC"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3ct0kk7",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xttlm",
+              "pid": "w3ct0kk7"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w3ct0kk7",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+              "smpKind": "radioProgramme",
+              "subType": "episode",
+              "synopses": {
+                "medium": "BBC와 함께하는 영어학습 코너입니다",
+                "short": "BBC와 함께하는 영어학습 코너입니다"
+              },
+              "title": "2020/08/11 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1597161600000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "types": ["Original"],
+                  "versionId": "w4hqw4cy",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1597104000000,
+            "type": "ws_radio"
+          }
+        ],
+        "type": "other-episode"
+      }
+    ],
+    "site": {
+      "name": "Korean",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/korean"
+    }
+  }
+}

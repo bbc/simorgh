@@ -81,14 +81,14 @@ export default server => {
       sendDataFile(res, dataFilePath, next);
     })
     .get(onDemandRadioDataPath, async ({ params }, res, next) => {
-      const { service, serviceId, mediaId } = params;
+      const { service, serviceId, id } = params;
 
       const dataFilePath = path.join(
         process.cwd(),
         'data',
         service,
         serviceId,
-        mediaId,
+        id,
       );
 
       sendDataFile(res, `${dataFilePath}.json`, next);

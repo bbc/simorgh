@@ -19,6 +19,7 @@ const getRouteProps = (routes, url) => {
   const errorCode = path(['errorCode'], params);
   const assetUri = path(['assetUri'], params);
   const variant = variantSanitiser(variantPath);
+  debugger;
 
   return {
     isAmp: 'amp' in params ? !!amp : isAmpPath(url),

@@ -7,6 +7,7 @@ import usePrevious from '#lib/utilities/usePrevious';
 import getToggles from '#app/lib/utilities/getToggles';
 
 export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
+  debugger;
   const {
     service,
     isAmp,
@@ -14,7 +15,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     id,
     assetUri,
     errorCode,
-    route: { pageType },
+    route: { getInitialData, pageType },
   } = getRouteProps(routes, location.pathname);
 
   const {
@@ -60,46 +61,25 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       isInitialMount.current = false;
     } else {
       // Only update on subsequent page renders
-      const {
-        service: nextService,
-        variant: nextVariant,
-        id: nextId,
-        assetUri: nextAssetUri,
-        isAmp: nextIsAmp,
-        route: { getInitialData, pageType: nextPageType },
-      } = getRouteProps(routes, location.pathname);
+      const nextService = service;
+      const nextVariant = variant;
+      const nextId = id;
+      const nextAssetUri = assetUri;
+      const nextIsAmp = isAmp;
+      const nextPageType = pageType;
 
       let loaderTimeout;
       const loaderPromise = new Promise(resolve => {
         loaderTimeout = setTimeout(resolve, 500);
       });
 
-      loaderPromise.then(() => {
-        debugger;
-        setState({
-          pageData: null,
-          toggles,
-          status: null,
-          service: nextService,
-          variant: nextVariant,
-          id: nextId,
-          assetUri: nextAssetUri,
-          isAmp: nextIsAmp,
-          pageType: nextPageType,
-          loading: true,
-          error: null,
-          errorCode: null,
-          timeOnServer: null,
-        });
-      });
-
       const updateAppState = async () => {
         const nextToggles = await getToggles(nextService);
         const data = await getInitialData({
           path: location.pathname,
-          service: nextService,
-          variant: nextVariant,
-          pageType: nextPageType,
+          nextService,
+          nextVariant,
+          nextPageType,
         });
 
         clearTimeout(loaderTimeout);

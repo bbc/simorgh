@@ -70,6 +70,7 @@ const LiveRadioPage = ({ pageData }) => {
     liveRadioOverrides,
     translations,
   } = useContext(ServiceContext);
+  debugger;
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
   const assetId = 'liveradio';
@@ -90,6 +91,7 @@ const LiveRadioPage = ({ pageData }) => {
     ['mediaAssetPage', 'audioPlayer'],
     translations,
   );
+  debugger;
   const hasRadioScheduleData = Boolean(radioScheduleData);
 
   return (
@@ -161,6 +163,7 @@ const LiveRadioPage = ({ pageData }) => {
             placeholderSrc={audioPlaceholderImageSrc}
           />
         </Grid>
+        <Link to="/indonesia/bbc_indonesian_radio/w172x6r5000f38s">Hello</Link>
       </StyledGelPageGrid>
       {hasRadioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />
