@@ -207,6 +207,9 @@ describe('App', () => {
             service: 'ukchina',
             variant: 'simp',
             pageType: 'article',
+            toggles: {
+              mockToggle: { enabled: false },
+            },
           });
 
           // start data fetch and set loading to true
