@@ -12,6 +12,7 @@ import {
   onDemandTvDataPath,
   recommendationsDataRegex,
   secondaryColumnDataRegexPath,
+  africaEyeTVDataRegex,
 } from '#app/routes/utils/regex';
 import { LOCAL_SENDFILE_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
@@ -153,6 +154,15 @@ export default server => {
     .get(IdxDataPath, async ({ params }, res, next) => {
       const { idx } = params;
       const dataFilePath = path.join(process.cwd(), 'data', idx, 'index.json');
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(africaEyeTVDataRegex, async ({ params }, res, next) => {
+      const { episodeId } = params;
+
+      const dataFilePath = constructDataFilePath({
+        pageType: 'africa_eye',
+        episodeId,
+      });
       sendDataFile(res, dataFilePath, next);
     })
     .get('/static/js/comscore/main-:version.js', ({ params }, res, next) => {

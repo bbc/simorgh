@@ -147,4 +147,16 @@ describe('constructDataFilePath', () => {
       ).toEqual(`${DATA_PATH}/data/ukchina/articles/12345678/simp.json`);
     });
   });
+
+  describe('Africa Eye TV', () => {
+    it('should construct correct data file path', () => {
+      expect(
+        constructDataFilePath({
+          pageType: 'africa_eye',
+          service: 'world_service',
+          id: '12345678',
+        }),
+      ).toEqual(`${DATA_PATH}/data/world_service/tv/africa_eye/12345678.json`);
+    });
+  });
 });
