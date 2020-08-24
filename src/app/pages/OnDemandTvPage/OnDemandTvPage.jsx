@@ -31,7 +31,6 @@ import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import DarkModeGlobalStyles from '#lib/utilities/darkMode';
 import AVPlayer from '#containers/AVPlayer';
-import useToggle from '#hooks/useToggle';
 
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
@@ -88,7 +87,6 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
-  const darkMode = useToggle('cinemaModeTV').enabled;
 
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,
@@ -115,7 +113,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
   return (
     <>
-      {darkMode && <DarkModeGlobalStyles />}
+      <DarkModeGlobalStyles />
       <ChartbeatAnalytics data={pageData} />
       <ATIAnalytics data={pageData} />
       <ComscoreAnalytics />
@@ -178,7 +176,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           <StyledTvHeadingContainer
             brandTitle={brandTitle}
             releaseDateTimeStamp={releaseDateTimeStamp}
-            darkMode={darkMode}
+            darkMode
             ariaHidden
           />
         </Grid>
@@ -189,10 +187,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           margins={getGroups(true, true, true, true, false, false)}
         >
-          <OnDemandParagraphContainer
-            text={shortSynopsis}
-            darkMode={darkMode}
-          />
+          <OnDemandParagraphContainer text={shortSynopsis} darkMode />
         </Grid>
         <Link to="/korean/bbc_korean_radio/liveradio">About</Link>
       </StyledGelPageGrid>
