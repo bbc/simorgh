@@ -8,6 +8,7 @@ import {
   IdxDataPath,
   legacyAssetPageDataPath,
   mostReadDataRegexPath,
+  mostWatchedDataPath,
   onDemandRadioDataPath,
   onDemandTvDataPath,
   recommendationsDataRegex,
@@ -74,6 +75,16 @@ export default server => {
       const { service, variant } = params;
       const dataFilePath = constructDataFilePath({
         pageType: 'mostRead',
+        service,
+        variant,
+      });
+
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(mostWatchedDataPath, async ({ params }, res, next) => {
+      const { service, variant } = params;
+      const dataFilePath = constructDataFilePath({
+        pageType: 'mostWatched',
         service,
         variant,
       });

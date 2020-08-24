@@ -10,7 +10,7 @@ import {
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
-import { shouldRenderLastUpdated } from '../utilities';
+import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/isDataStale';
 import LastUpdated from './LastUpdated';
 import processMostRead from '../utilities/processMostRead';
 import mostReadShape from '../utilities/mostReadShape';
