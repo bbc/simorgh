@@ -126,7 +126,7 @@ const OptionallyRenderedSkipWrapper = ({ skipLink, service, children }) =>
     children
   );
 
-const optionalSkipLinkProps = {
+const skipLinkProps = {
   terms: shape({
     '%title%': string,
   }),
@@ -136,13 +136,12 @@ const optionalSkipLinkProps = {
 };
 
 OptionallyRenderedSkipWrapper.propTypes = {
-  service: string,
+  service: string.isRequired,
   children: node.isRequired,
-  skipLink: shape(optionalSkipLinkProps),
+  skipLink: shape(skipLinkProps),
 };
 
 OptionallyRenderedSkipWrapper.defaultProps = {
-  service: '',
   skipLink: null,
 };
 
@@ -252,7 +251,7 @@ CpsOnwardJourney.propTypes = {
       usages.
   */
   columnType: oneOf(['main', 'secondary']).isRequired,
-  skipLink: shape(optionalSkipLinkProps),
+  skipLink: shape(skipLinkProps),
 };
 
 CpsOnwardJourney.defaultProps = {
