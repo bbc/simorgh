@@ -99,6 +99,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
           service: nextService,
           variant: nextVariant,
           pageType: nextPageType,
+          toggles: nextToggles,
         });
 
         clearTimeout(loaderTimeout);

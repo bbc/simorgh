@@ -120,9 +120,10 @@ const CpsOnwardJourney = ({
   labelId,
   title,
   content,
+  isMapContent,
   parentColumns,
-  listTransform,
-  singleTransform,
+  promoListComponent,
+  promoComponent,
   sectionLabelOverrideAs,
   sectionLabelBar,
   sectionLabelBackground,
@@ -172,24 +173,26 @@ const CpsOnwardJourney = ({
 
   return (
     <CpsOnwardJourneyWrapper>
-      <StyledSectionLabel
-        script={script}
-        service={service}
-        dir={dir}
-        labelId={labelId}
-        columnType={columnType}
-        overrideHeadingAs={sectionLabelOverrideAs}
-        bar={sectionLabelBar}
-        backgroundColor={sectionLabelBackground}
-      >
-        {title}
-      </StyledSectionLabel>
+      {title ? (
+        <StyledSectionLabel
+          script={script}
+          service={service}
+          dir={dir}
+          labelId={labelId}
+          columnType={columnType}
+          overrideHeadingAs={sectionLabelOverrideAs}
+          bar={sectionLabelBar}
+          backgroundColor={sectionLabelBackground}
+        >
+          {title}
+        </StyledSectionLabel>
+      ) : null}
       {hasSingleContent ? (
         <SingleContentWrapper columnType={columnType}>
-          {singleTransform(singleContent)}
+          {promoComponent({ promo: singleContent, dir })}
         </SingleContentWrapper>
       ) : (
-        listTransform(content)
+        promoListComponent({ promoItems: content, dir, isMapContent })
       )}
     </CpsOnwardJourneyWrapper>
   );
@@ -197,8 +200,9 @@ const CpsOnwardJourney = ({
 
 CpsOnwardJourney.propTypes = {
   labelId: string.isRequired,
-  title: string.isRequired,
+  title: string,
   content: arrayOf(shape(storyItem)),
+  isMapContent: bool,
   parentColumns: shape({
     group0: number,
     group1: number,
@@ -207,8 +211,8 @@ CpsOnwardJourney.propTypes = {
     group4: number,
     group5: number,
   }),
-  listTransform: func.isRequired,
-  singleTransform: func.isRequired,
+  promoListComponent: func.isRequired,
+  promoComponent: func.isRequired,
   sectionLabelOverrideAs: string,
   sectionLabelBar: bool,
   sectionLabelBackground: string,
@@ -221,6 +225,8 @@ CpsOnwardJourney.propTypes = {
 
 CpsOnwardJourney.defaultProps = {
   content: [],
+  title: '',
+  isMapContent: false,
   parentColumns: null,
   sectionLabelOverrideAs: null,
   sectionLabelBar: true,
