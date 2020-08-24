@@ -11,6 +11,7 @@
 | `liveRadioSchedule`     | Display Radio Schedule on Live Radio Pages | |
 | `logMediaPlayerStatus`  | Log the HTTP status code returned by the Media Player iFrame URL | |
 | `mostRead`              | Display Most Read | |
+| `mostWatched`           | Display Most Watched | |
 | `navOnArticles`         | Display Navigation on Article Pages | |
 | `prerollAds`            | Display Preroll Advertisements on Media Asset Pages (MAP) | ✅ |
 | `radioSchedule`         | Display Radio Schedule (if disabled, Radio Schedule will also not appear on Live Radio Pages (overrides the value of `liveRadioSchedule`) |  |
