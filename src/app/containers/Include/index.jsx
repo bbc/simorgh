@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import styled from 'styled-components';
+import { pathOr } from 'ramda';
 
 import EmbedError from '@bbc/psammead-embed-error';
 import nodeLogger from '#lib/logger.node';
 import { INCLUDE_RENDERED } from '#lib/logger.const';
 import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 
@@ -34,7 +36,20 @@ const FallbackGrid = styled(GridItemConstrainedMedium)`
 
 const IncludeContainer = props => {
   const { isAmp, canonicalLink } = useContext(RequestContext);
+  const { translations } = useContext(ServiceContext);
   const { enabled } = useToggle('include');
+
+  const errorMessage = pathOr(
+    'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+    ['include', 'errorMessage'],
+    translations,
+  );
+
+  const linkText = pathOr(
+    'View the full version of the page to see all the content.',
+    ['include', 'linkText'],
+    translations,
+  );
 
   if (!enabled) return null;
   const { isAmpSupported, href, type, index } = props;
@@ -43,9 +58,9 @@ const IncludeContainer = props => {
     return (
       <FallbackGrid>
         <EmbedError
-          message="Sorry, we can’t display this part of the story on this lightweight mobile page."
+          message={errorMessage}
           link={{
-            text: 'View the full version of the page to see all the content.',
+            text: linkText,
             href: `${canonicalLink}#include-${index + 1}`,
           }}
         />
