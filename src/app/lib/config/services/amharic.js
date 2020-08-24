@@ -171,6 +171,11 @@ export const service = {
           endTextVisuallyHidden: 'የ %provider_name% ይዘት መጨረሻ',
         },
       },
+      include: {
+        errorMessage:
+          'ይቅርታ፤ የዚህን ይዘት የተወሰነ ክፍል ለሞባይል አመቺ በሆነ መልክ ልናቀርብ አልቻልንም።',
+        linkText: 'በገጹ ላይ ያሉትን ሁሉንም ይዘቶች ለማየት ሙሉውን ይዘት ይመልከቱ  ',
+      },
       topStoriesTitle: 'እንዳያመልጥዎ',
       featuresAnalysisTitle: 'ከየፈርጁ',
     },
@@ -188,7 +193,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
       onOnDemandRadioPage: true,
       onFrontPage: false,
       header: 'ያድምጡ',

@@ -345,7 +345,7 @@ const launchDates = {
     frontPage: '3rd March 2020',
     mediaAssetPage: '5th March 2020',
     photoGalleryPage: '12th March 2020',
-    storyPage: '',
+    storyPage: '18th August 2020',
     mostReadPage: '28th May 2020',
   },
   ukchinaSimp: {

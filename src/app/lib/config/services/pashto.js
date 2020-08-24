@@ -187,6 +187,11 @@ export const service = {
           endTextVisuallyHidden: 'د ‍پوسټ %provider_name% پای',
         },
       },
+      include: {
+        errorMessage:
+          'وبښئ، په لایټ وېټ موبایل صفحې موږ د کیسې دا برخه نه شو ښودلی.',
+        linkText: 'د پاڼې بشپړه بڼه وښایاست چې ټوله منځپانګه یې ولیدله شي.',
+      },
       topStoriesTitle: 'مهم خبرونه',
       featuresAnalysisTitle: 'ځانګړي مطالب',
     },
@@ -204,7 +209,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
       onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Interactivity',
@@ -268,7 +272,7 @@ export const service = {
       },
       {
         title: 'پښتونخوا',
-        url: '/pashto/pakhtunkhwa',
+        url: '/pashto/topics/cz74k7wy49jt',
       },
       {
         title: 'نړۍ',
