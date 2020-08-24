@@ -1126,82 +1126,6 @@ exports[`Media Asset Page should render component 1`] = `
   padding-bottom: 0;
 }
 
-.c39 {
-  padding: 0.5rem 0 1rem;
-}
-
-.c39:last-child {
-  border: none;
-}
-
-.c39:first-child {
-  padding-top: 0;
-}
-
-.c39:last-child {
-  padding-bottom: 0;
-}
-
-.c37 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.c43 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 33.33%;
-}
-
-.c46 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-}
-
-.c41 {
-  position: relative;
-}
-
-.c44 {
-  position: relative;
-}
-
-.c45 > * {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
-}
-
-.c50 {
-  color: #222222;
-  background-color: #FFFFFF;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  display: block;
-}
-
-.c51 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.c54 {
-  padding: 0 0.25rem;
-}
-
 .c34 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1273,6 +1197,82 @@ exports[`Media Asset Page should render component 1`] = `
 
 .c31 {
   margin-top: 0;
+}
+
+.c43 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+.c46 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c41 {
+  position: relative;
+}
+
+.c44 {
+  position: relative;
+}
+
+.c45 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c50 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: block;
+}
+
+.c51 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.c54 {
+  padding: 0 0.25rem;
+}
+
+.c39 {
+  padding: 0.5rem 0 1rem;
+}
+
+.c39:last-child {
+  border: none;
+}
+
+.c39:first-child {
+  padding-top: 0;
+}
+
+.c39:last-child {
+  padding-bottom: 0;
+}
+
+.c37 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .c10 {
@@ -1703,27 +1703,168 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-@media (max-width:62.9375rem) {
-  .c39 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+@media (min-width:37.5rem) {
+  .c35 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c36 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c39 {
-    padding: 1rem 0 1rem;
+  .c36 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c36 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c36 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c32 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c32 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c30 {
+    margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c39 {
-    padding: 0 0 1.5rem;
+  .c30 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c38 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c40 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c40 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c40 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c39:first-child {
-    padding-top: 1rem;
+  .c40 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c40 {
+    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c40 {
+    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c40 {
+    display: block;
+  }
+}
+
+@media (max-width:63rem) {
+  .c29 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c29 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c29 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c29 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c29 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c29 {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -1806,168 +1947,27 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-@supports (display:grid) {
-  .c38 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c40 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c40 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c40 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c40 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c40 {
-    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c40 {
-    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c40 {
-    display: block;
+@media (max-width:62.9375rem) {
+  .c39 {
+    border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c35 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c36 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c36 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c36 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c36 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c32 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c32 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c30 {
-    margin-top: 1.5rem;
+  .c39 {
+    padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c30 {
-    margin-bottom: 1.5rem;
+  .c39 {
+    padding: 0 0 1.5rem;
   }
 }
 
-@media (max-width:63rem) {
-  .c29 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c29 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c29 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c29 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c29 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c29 {
-    margin-bottom: 1.5rem;
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c39:first-child {
+    padding-top: 1rem;
   }
 }
 

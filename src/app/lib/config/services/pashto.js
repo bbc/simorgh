@@ -209,7 +209,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
       onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Interactivity',
@@ -273,7 +272,7 @@ export const service = {
       },
       {
         title: 'پښتونخوا',
-        url: '/pashto/pakhtunkhwa',
+        url: '/pashto/topics/cz74k7wy49jt',
       },
       {
         title: 'نړۍ',
