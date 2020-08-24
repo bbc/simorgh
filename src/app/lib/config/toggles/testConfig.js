@@ -9,12 +9,6 @@ export default {
   chartbeatAnalytics: {
     enabled: true,
   },
-  cinemaModeTV: {
-    enabled: true,
-  },
-  comscoreAnalytics: {
-    enabled: true,
-  },
   cpsRecommendations: {
     enabled: true,
   },
