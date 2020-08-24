@@ -9,12 +9,6 @@ export default {
   chartbeatAnalytics: {
     enabled: true,
   },
-  cinemaModeTV: {
-    enabled: true,
-  },
-  comscoreAnalytics: {
-    enabled: true,
-  },
   cpsRecommendations: {
     enabled: true,
   },
@@ -25,11 +19,6 @@ export default {
   },
   include: {
     enabled: true,
-  },
-  liveRadioSchedule: {
-    enabled: true,
-    value:
-      '(afaanoromoo|afrique|amharic|arabic|bengali|burmese|hausa|indonesia|korean|nepali|pashto|persian|somali|swahili|tigrinya|urdu)',
   },
   onDemandRadioSchedule: {
     enabled: true,

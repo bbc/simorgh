@@ -6,6 +6,7 @@ export default ({ pageType, service, id, variant = '', assetUri }) => {
   switch (pageType) {
     case 'frontpage':
     case 'mostRead':
+    case 'mostWatched':
     case 'secondaryColumn':
     case 'recommendations':
       dataPath = `${variant || 'index'}.json`;
