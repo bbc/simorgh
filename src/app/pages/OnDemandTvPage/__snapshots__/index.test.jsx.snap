@@ -433,7 +433,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #F2F2F2;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -465,7 +465,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #F2F2F2;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -881,7 +881,7 @@ exports[`should show the future content message if episode is not yet available 
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #F2F2F2;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -913,7 +913,7 @@ exports[`should show the future content message if episode is not yet available 
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #F2F2F2;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -1329,7 +1329,7 @@ exports[`should show the future content message if episode is pending 1`] = `
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #F2F2F2;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -1361,7 +1361,7 @@ exports[`should show the future content message if episode is pending 1`] = `
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #F2F2F2;
   padding-bottom: 1.5rem;
   margin: 0;
 }

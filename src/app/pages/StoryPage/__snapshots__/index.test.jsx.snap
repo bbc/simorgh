@@ -269,26 +269,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding-bottom: 0;
 }
 
-.c45 {
-  padding: 0.5rem 0 1rem;
+.c31 {
+  margin-bottom: 1rem;
 }
 
-.c45:last-child {
-  border: none;
-}
-
-.c45:first-child {
-  padding-top: 0;
-}
-
-.c45:last-child {
-  padding-bottom: 0;
-}
-
-.c44 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.c33 {
+  margin-top: 0;
 }
 
 .c55 {
@@ -388,12 +374,26 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding: 0 0.25rem;
 }
 
-.c31 {
-  margin-bottom: 1rem;
+.c45 {
+  padding: 0.5rem 0 1rem;
 }
 
-.c33 {
-  margin-top: 0;
+.c45:last-child {
+  border: none;
+}
+
+.c45:first-child {
+  padding-top: 0;
+}
+
+.c45:last-child {
+  padding-bottom: 0;
+}
+
+.c44 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .c8 {
@@ -1018,27 +1018,33 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@media (max-width:62.9375rem) {
-  .c45 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+@media (max-width:25rem) {
+  .c31 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c31 {
+    padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c45 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c45 {
-    padding: 0 0 1.5rem;
+  .c31 {
+    margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c45:first-child {
+  .c39 {
     padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c39 {
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -1153,33 +1159,27 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@media (max-width:25rem) {
-  .c31 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c31 {
-    padding: 0 1rem;
+@media (max-width:62.9375rem) {
+  .c45 {
+    border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c39 {
-    padding-top: 1rem;
+  .c45 {
+    padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c39 {
-    padding-bottom: 1.5rem;
+  .c45 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c45:first-child {
+    padding-top: 1rem;
   }
 }
 
@@ -4464,26 +4464,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 0;
 }
 
-.c47 {
-  padding: 0.5rem 0 1rem;
+.c33 {
+  margin-bottom: 1rem;
 }
 
-.c47:last-child {
-  border: none;
-}
-
-.c47:first-child {
-  padding-top: 0;
-}
-
-.c47:last-child {
-  padding-bottom: 0;
-}
-
-.c46 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.c35 {
+  margin-top: 0;
 }
 
 .c53 {
@@ -4561,12 +4547,26 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding: 0 0.25rem;
 }
 
-.c33 {
-  margin-bottom: 1rem;
+.c47 {
+  padding: 0.5rem 0 1rem;
 }
 
-.c35 {
-  margin-top: 0;
+.c47:last-child {
+  border: none;
+}
+
+.c47:first-child {
+  padding-top: 0;
+}
+
+.c47:last-child {
+  padding-bottom: 0;
+}
+
+.c46 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .c8 {
@@ -5209,27 +5209,33 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (max-width:62.9375rem) {
-  .c47 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+@media (max-width:25rem) {
+  .c33 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c33 {
+    padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c47 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c47 {
-    padding: 0 0 1.5rem;
+  .c33 {
+    margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c47:first-child {
+  .c41 {
     padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c41 {
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -5330,33 +5336,27 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (max-width:25rem) {
-  .c33 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c33 {
-    padding: 0 1rem;
+@media (max-width:62.9375rem) {
+  .c47 {
+    border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c41 {
-    padding-top: 1rem;
+  .c47 {
+    padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c41 {
-    padding-bottom: 1.5rem;
+  .c47 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c47:first-child {
+    padding-top: 1rem;
   }
 }
 
