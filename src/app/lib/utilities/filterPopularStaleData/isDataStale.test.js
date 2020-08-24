@@ -1,4 +1,4 @@
-import { mostReadRecordIsFresh, shouldRenderLastUpdated } from '.';
+import { isDataStale, shouldRenderLastUpdated } from './isDataStale';
 
 const epochTimeNow = Date.now();
 const currentTime = new Date();
@@ -11,13 +11,13 @@ const calcTimestampDaysAgo = days =>
 
 describe('mostReadRecordIsFresh', () => {
   it('should return true if 60 minutes ago or less', () => {
-    expect(mostReadRecordIsFresh(currentTime.toUTCString())).toEqual(true);
-    expect(mostReadRecordIsFresh(calcTimestampMinutesAgo(59))).toEqual(true);
+    expect(isDataStale(currentTime.toUTCString())).toEqual(false);
+    expect(isDataStale(calcTimestampMinutesAgo(59))).toEqual(false);
   });
 
   it('should return false if more than 60 minutes ago', () => {
-    expect(mostReadRecordIsFresh(calcTimestampMinutesAgo(61))).toEqual(false);
-    expect(mostReadRecordIsFresh(calcTimestampDaysAgo(1))).toEqual(false);
+    expect(isDataStale(calcTimestampMinutesAgo(61))).toEqual(true);
+    expect(isDataStale(calcTimestampDaysAgo(1))).toEqual(true);
   });
 });
 

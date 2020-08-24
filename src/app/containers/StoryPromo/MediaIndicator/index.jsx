@@ -27,11 +27,10 @@ const getAssetContentTypes = item => {
 
 const getCpsMediaTypes = item => {
   const isPGL = path(['cpsType'], item) === 'PGL';
-  const isCpsMedia = path(['cpsType'], item) === 'MAP';
   const hasMediaInfo = path(['media'], item);
 
   // Only build a media indicator if this is a photo gallery or media item
-  if (!isPGL && (!isCpsMedia || !hasMediaInfo)) {
+  if (!isPGL && !hasMediaInfo) {
     return null;
   }
   const type = isPGL ? 'photogallery' : path(['media', 'format'], item);
