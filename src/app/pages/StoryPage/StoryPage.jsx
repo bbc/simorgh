@@ -45,6 +45,7 @@ import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
 import AdContainer from '#containers/Ad';
+import useToggle from '#hooks/useToggle';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -59,6 +60,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     serviceLang,
     lang,
   } = useContext(ServiceContext);
+  const { enabled: adsEnabled } = useToggle('ads');
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const category = path(
@@ -152,7 +154,8 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     byline: props => <StyledByline {...props} />,
     include: props => <Include {...props} />,
     social_embed: props => <SocialEmbed {...props} />,
-    mpu: props => <MpuContainer {...props} slotType="mpu" />,
+    mpu: props =>
+      adsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
       <CpsRecommendations
         {...props}
@@ -268,7 +271,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
-      <AdContainer slotType="leaderboard" />
+      {adsEnabled && <AdContainer slotType="leaderboard" />}
       <StoryPageGrid
         dir={dir}
         columns={gridColumns}
