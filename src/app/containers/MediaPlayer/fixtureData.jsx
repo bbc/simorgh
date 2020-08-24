@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { singleTextBlock } from '#models/blocks';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 import MediaPlayerContainer from '.';
 
 const captionBlock = {
@@ -468,18 +467,16 @@ const GenerateFixtureData = ({
     pathname="/pathname"
   >
     <ServiceContextProvider service="news">
-      <ToggleContextProvider>
-        <BrowserRouter>
-          <MediaPlayerContainer
-            blocks={blocks}
-            assetId={assetId}
-            assetType={assetType}
-            available={available}
-            showPlaceholder={showPlaceholder}
-            isLegacyMedia={isLegacyMedia}
-          />
-        </BrowserRouter>
-      </ToggleContextProvider>
+      <BrowserRouter>
+        <MediaPlayerContainer
+          blocks={blocks}
+          assetId={assetId}
+          assetType={assetType}
+          available={available}
+          showPlaceholder={showPlaceholder}
+          isLegacyMedia={isLegacyMedia}
+        />
+      </BrowserRouter>
     </ServiceContextProvider>
   </RequestContextProvider>
 );

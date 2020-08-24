@@ -20,7 +20,6 @@ export default {
   include: {
     enabled: true,
   },
-
   onDemandRadioSchedule: {
     enabled: true,
   },

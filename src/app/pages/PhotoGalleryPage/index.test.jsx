@@ -6,7 +6,8 @@ import { render } from '@testing-library/react';
 import assocPath from 'ramda/src/assocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContext } from '#contexts/ToggleContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+
 import PhotoGalleryPage from '.';
 import noOnwardJourneys from '#data/pidgin/cpsAssets/sport-23252855';
 import someCpsOnwardJourneys from '#data/azeri/cpsAssets/azerbaijan-44208474.json';
@@ -26,7 +27,7 @@ jest.mock('#containers/ComscoreAnalytics', () => {
 
 const Page = ({ pageData, service }) => (
   <StaticRouter>
-    <ToggleContext.Provider value={{ toggleDispatch: jest.fn() }}>
+    <ToggleContextProvider>
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
@@ -39,7 +40,7 @@ const Page = ({ pageData, service }) => (
           <PhotoGalleryPage service={service} pageData={pageData} />
         </RequestContextProvider>
       </ServiceContextProvider>
-    </ToggleContext.Provider>
+    </ToggleContextProvider>
   </StaticRouter>
 );
 
