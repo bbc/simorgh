@@ -153,10 +153,9 @@ describe('constructDataFilePath', () => {
       expect(
         constructDataFilePath({
           pageType: 'africa_eye',
-          service: 'world_service',
-          id: '12345678',
+          episodeId: '12345678',
         }),
-      ).toEqual(`${DATA_PATH}/data/world_service/tv/africa_eye/12345678.json`);
+      ).toEqual(`${DATA_PATH}/data/worldservice/tv/africa_eye/12345678.json`);
     });
   });
 });

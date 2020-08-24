@@ -98,6 +98,6 @@ export const getRecommendationsDataRegex = services => {
   return `/:service(${serviceRegex})/:assetUri(${assetUriRegex})/recommendations:variant(${variantRegex})?.json`;
 };
 
-export const getAfricaEyeTVDataRegex = () => {
-  return `/worldservice/tv/africa_eye/:episodeId(${mediaIdRegex})?.json`;
+export const getAfricaEyeTVPageRegex = () => {
+  return `/worldservice/tv/africa_eye/:episodeId(${mediaIdRegex})?`;
 };
