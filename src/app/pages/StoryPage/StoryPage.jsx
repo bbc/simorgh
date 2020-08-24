@@ -46,6 +46,10 @@ import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
 import AdContainer from '#containers/Ad';
 
+const MpuContainer = styled(AdContainer)`
+  margin-bottom: ${GEL_SPACING_TRPL};
+`;
+
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
     dir,
@@ -148,6 +152,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     byline: props => <StyledByline {...props} />,
     include: props => <Include {...props} />,
     social_embed: props => <SocialEmbed {...props} />,
+    mpu: props => <MpuContainer {...props} slotType="mpu" />,
     wsoj: props => (
       <CpsRecommendations
         {...props}

@@ -13,6 +13,7 @@ import addSummaryBlock from './addSummaryBlock';
 import cpsOnlyOnwardJourneys from './cpsOnlyOnwardJourneys';
 import addRecommendationsBlock from './addRecommendationsBlock';
 import addBylineBlock from './addBylineBlock';
+import addMpuBlock from './addMpuBlock';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
@@ -38,6 +39,7 @@ const processOptimoBlocks = pipe(
   augmentWithTimestamp,
   addBylineBlock,
   addRecommendationsBlock,
+  addMpuBlock,
   addIdsToBlocks,
   applyBlockPositioning,
   cpsOnlyOnwardJourneys,
