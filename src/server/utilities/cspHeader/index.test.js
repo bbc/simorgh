@@ -99,7 +99,7 @@ describe('cspHeader', () => {
         "'unsafe-inline'",
       ],
       styleSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
-      mediaSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
+      mediaSrcExpectation: ['https://news.files.bbci.co.uk'],
       workerSrcExpectation: ['blob:'],
     },
     {
@@ -227,7 +227,7 @@ describe('cspHeader', () => {
         'https://static.bbc.co.uk',
         "'unsafe-inline'",
       ],
-      mediaSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
+      mediaSrcExpectation: ['https://news.files.bbci.co.uk'],
       workerSrcExpectation: ["'self'"],
     },
     {
@@ -317,7 +317,7 @@ describe('cspHeader', () => {
         "'self'",
         "'unsafe-inline'",
       ],
-      mediaSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
+      mediaSrcExpectation: ['https://news.files.bbci.co.uk'],
       styleSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
       workerSrcExpectation: ['blob:'],
     },
@@ -465,7 +465,7 @@ describe('cspHeader', () => {
         'http://static.bbc.co.uk',
         "'unsafe-inline'",
       ],
-      mediaSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
+      mediaSrcExpectation: ['https://news.files.bbci.co.uk'],
       workerSrcExpectation: ["'self'"],
     },
   ].forEach(
