@@ -29,7 +29,7 @@ const WithContexts = Component => {
       pageData,
       showAdsBasedOnLocation,
     } = props;
-
+    debugger;
     return (
       <ToggleContextProvider toggles={toggles}>
         <ServiceContextProvider

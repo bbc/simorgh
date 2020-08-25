@@ -16,6 +16,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     errorCode,
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
+  debugger;
 
   const {
     pageData,

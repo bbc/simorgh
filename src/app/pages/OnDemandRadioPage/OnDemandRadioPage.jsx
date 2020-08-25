@@ -202,7 +202,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             }
           />
         </Grid>
-        <Link to="/korean/bbc_korean_radio/liveradio">{headline}</Link>
+        <Link to="/indonesia/media-23269037">{headline}</Link>
       </StyledGelPageGrid>
       {radioScheduleIsEnabled && hasRadioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />

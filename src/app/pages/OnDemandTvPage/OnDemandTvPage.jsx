@@ -189,7 +189,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         >
           <OnDemandParagraphContainer text={shortSynopsis} darkMode />
         </Grid>
-        <Link to="/korean/bbc_korean_radio/liveradio">About</Link>
+        <Link to="/indonesia/bbc_indonesian_radio/liveradio">About</Link>
       </StyledGelPageGrid>
     </>
   );

@@ -6,7 +6,6 @@ const WithError = Component => {
   debugger;
   const ErrorContainer = ({ error, status, ...props }) => {
     if (!error) return <Component {...props} status={status} />;
-    console.log('PEPPERMINT', error);
     return <ErrorPage errorCode={status || 500} />;
   };
 

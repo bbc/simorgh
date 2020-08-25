@@ -14,7 +14,7 @@ const WithData = Component => {
       hasData200StatusAndCorrectService,
       status: statusCode,
     } = shouldRender({ pageData, status }, service, passportHomes);
-
+    debugger;
     if (hasData200StatusAndCorrectService) {
       return <Component pageData={pageData} {...props} />;
     }

@@ -53,6 +53,7 @@ const StyledAudioPlayer = styled(AVPlayer)`
 `;
 
 const LiveRadioPage = ({ pageData }) => {
+  debugger;
   const {
     language,
     name,
@@ -163,7 +164,7 @@ const LiveRadioPage = ({ pageData }) => {
             placeholderSrc={audioPlaceholderImageSrc}
           />
         </Grid>
-        <Link to="/indonesia/bbc_indonesian_radio/w172x6r5000f38s">Hello</Link>
+        <Link to="/indonesia/media-23269037">Hello</Link>
       </StyledGelPageGrid>
       {hasRadioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />
