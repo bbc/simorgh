@@ -1,6 +1,11 @@
 import React from 'react';
 import { bool, element } from 'prop-types';
+import styled from 'styled-components';
 import { GridWrapper, GridItemConstrainedMedium } from '#lib/styledGrid';
+
+const StyledMain = styled.main`
+  min-height: 1000px;
+`;
 
 const WithLoading = Component => {
   const LoadingContainer = ({ loading, ...props }) => {
@@ -10,11 +15,11 @@ const WithLoading = Component => {
     }
     debugger;
     return (
-      <main role="main">
+      <StyledMain role="main">
         <GridWrapper>
           <GridItemConstrainedMedium />
         </GridWrapper>
-      </main>
+      </StyledMain>
     );
   };
 
