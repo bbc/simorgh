@@ -1,0 +1,53 @@
+# Instructions for use
+# Start simorgh dev server: `docker-compose build simorgh && docker-compose up simorgh`
+# Start simorgh prod server: `docker-compose build simorgh-prod && docker-compose up simorgh-prod`
+# Run cypress tests against local: docker-compose up cypress
+# Run cypress against test env: `docker-compose up cypress-test`
+# Run cypress against live env: `docker-compose up cypress-live`
+
+version: '3.3'
+services:
+  simorgh:
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    volumes:
+      - $PWD:/app
+    ports:
+      - '7080:7080'
+      - '1124:1124'
+    environment:
+      NODE_ENV: 'development'
+
+  simorgh-prod:
+    build:
+      context: ./
+      dockerfile: Dockerfile.prod
+    ports:
+      - '7080:7080'
+
+  cypress:
+    image: 'cypress/included:5.0.0'
+    working_dir: /e2e
+    volumes:
+      - $PWD:/e2e
+    depends_on:
+      - simorgh
+
+  cypress-test:
+    image: 'cypress/included:5.0.0'
+    working_dir: /e2e
+    volumes:
+      - $PWD:/e2e
+    environment:
+      CYPRESS_APP_ENV: test
+      CYPRESS_SMOKE: 'true'
+
+  cypress-live:
+    image: 'cypress/included:5.0.0'
+    working_dir: /e2e
+    volumes:
+      - $PWD:/e2e
+    environment:
+      CYPRESS_APP_ENV: live
+      CYPRESS_SMOKE: 'true'
