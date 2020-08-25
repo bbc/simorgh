@@ -7,6 +7,7 @@ import injectCspHeader, {
   generateImgSrc,
   generateScriptSrc,
   generateStyleSrc,
+  generateMediaSrc,
   generateWorkerSrc,
 } from '.';
 
@@ -98,6 +99,7 @@ describe('cspHeader', () => {
         "'unsafe-inline'",
       ],
       styleSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
+      mediaSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
       workerSrcExpectation: ['blob:'],
     },
     {
@@ -225,6 +227,7 @@ describe('cspHeader', () => {
         'https://static.bbc.co.uk',
         "'unsafe-inline'",
       ],
+      mediaSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
       workerSrcExpectation: ["'self'"],
     },
     {
@@ -314,6 +317,7 @@ describe('cspHeader', () => {
         "'self'",
         "'unsafe-inline'",
       ],
+      mediaSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
       styleSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
       workerSrcExpectation: ['blob:'],
     },
@@ -461,6 +465,7 @@ describe('cspHeader', () => {
         'http://static.bbc.co.uk',
         "'unsafe-inline'",
       ],
+      mediaSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
       workerSrcExpectation: ["'self'"],
     },
   ].forEach(
@@ -477,6 +482,7 @@ describe('cspHeader', () => {
       imgSrcExpectation,
       scriptSrcExpectation,
       styleSrcExpectation,
+      mediaSrcExpectation,
       workerSrcExpectation,
     }) => {
       describe(`Given isAmp ${isAmp} & isLive ${isLive}`, () => {
@@ -524,6 +530,12 @@ describe('cspHeader', () => {
           );
         });
 
+        it(`Then it has this mediaSrc`, () => {
+          expect(generateMediaSrc({ isAmp, isLive })).toEqual(
+            mediaSrcExpectation,
+          );
+        });
+
         it(`Then it has this workerSrc`, () => {
           expect(generateWorkerSrc({ isAmp })).toEqual(workerSrcExpectation);
         });
@@ -558,6 +570,7 @@ describe('cspHeader', () => {
             `img-src ${imgSrcExpectation.join(' ')}; ` +
             `script-src ${scriptSrcExpectation.join(' ')}; ` +
             `style-src ${styleSrcExpectation.join(' ')}; ` +
+            `media-src ${mediaSrcExpectation.join(' ')}; ` +
             `worker-src ${workerSrcExpectation.join(' ')}; ` +
             `report-to default; ` +
             `upgrade-insecure-requests`;
