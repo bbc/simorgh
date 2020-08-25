@@ -15,9 +15,9 @@ const mpuBlock = {
 };
 
 /**
- * Returns `pageData` with an MPU block inserted after the first
- * paragraph block. If `allowAdvertising` is `false` or there is no paragraph
- * block, `pageData` is returned unchanged.
+ * Returns `pageData` with an MPU block inserted after the fifth paragraph.
+ * If there aren't five paragraphs, the MPU is inserted at the end of the
+ * content. If `allowAdvertising` is `false`, `pageData` is returned unchanged.
  * @param {Object} pageData A page data object.
  */
 const addMpuBlock = pageData => {
