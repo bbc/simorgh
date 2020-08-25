@@ -16,7 +16,6 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     errorCode,
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
-  debugger;
 
   const {
     pageData,
@@ -41,6 +40,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     loading: false,
     errorCode: errorCode || initialData.errorCode,
     timeOnServer,
+    pathname: location.pathname,
   });
 
   const isInitialMount = useRef(true);
@@ -118,6 +118,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
           error: path(['error'], data),
           errorCode: null,
           timeOnServer: path(['timeOnServer'], data),
+          pathname: location.pathname,
         });
       };
 
@@ -135,6 +136,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     showAdsBasedOnLocation,
     pathname: location.pathname,
     previousPath,
+    loading: state.pathname !== location.pathname,
   });
 };
 
