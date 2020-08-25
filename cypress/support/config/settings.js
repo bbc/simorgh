@@ -3460,12 +3460,12 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/mundo/23263889'],
+            enabled: true,
           },
           local: {
             paths: ['/mundo/23263889'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
