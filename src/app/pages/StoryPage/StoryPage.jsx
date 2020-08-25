@@ -45,7 +45,6 @@ import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
 import AdContainer from '#containers/Ad';
-import useToggle from '#hooks/useToggle';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -60,7 +59,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     serviceLang,
     lang,
   } = useContext(ServiceContext);
-  const { enabled: adsEnabled } = useToggle('ads');
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const category = path(
@@ -138,6 +136,17 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     group5: 4,
   };
 
+  /**
+   * Should we display ads? We check:
+   * 1. The CPS `allowAdvertising` field value.
+   * 2. A value local to STYs.
+   * - iSite toggles are handled by the Ad container.
+   */
+  const isAdsEnabled = [
+    path(['metadata', 'options', 'allowAdvertising'], pageData),
+    process.env.NODE_ENV !== 'production',
+  ].every(Boolean);
+
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
@@ -155,7 +164,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     include: props => <Include {...props} />,
     social_embed: props => <SocialEmbed {...props} />,
     mpu: props =>
-      adsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
+      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
       <CpsRecommendations
         {...props}
@@ -271,7 +280,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
-      {adsEnabled && <AdContainer slotType="leaderboard" />}
+      {isAdsEnabled && <AdContainer slotType="leaderboard" />}
       <StoryPageGrid
         dir={dir}
         columns={gridColumns}
