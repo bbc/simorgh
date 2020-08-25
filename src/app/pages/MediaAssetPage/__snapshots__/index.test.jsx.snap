@@ -942,16 +942,16 @@ exports[`Media Asset Page should render component 1`] = `
   padding-bottom: 2rem;
 }
 
-.c11 {
+.c12 {
   grid-column: 1 / span 6;
 }
 
-.c22 {
+.c23 {
   display: grid;
   grid-column-gap: 1rem;
 }
 
-.c9 {
+.c10 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -963,7 +963,7 @@ exports[`Media Asset Page should render component 1`] = `
   padding: 2rem 0;
 }
 
-.c15 {
+.c16 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -974,7 +974,7 @@ exports[`Media Asset Page should render component 1`] = `
   padding: 1.5rem 0;
 }
 
-.c20 {
+.c21 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -982,7 +982,7 @@ exports[`Media Asset Page should render component 1`] = `
   font-weight: inherit;
 }
 
-.c13 {
+.c14 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -993,7 +993,7 @@ exports[`Media Asset Page should render component 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c13:last-child {
+.c14:last-child {
   padding-bottom: 1rem;
 }
 
@@ -1007,7 +1007,7 @@ exports[`Media Asset Page should render component 1`] = `
   font-style: normal;
 }
 
-.c14 {
+.c15 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1018,25 +1018,25 @@ exports[`Media Asset Page should render component 1`] = `
   margin: 0;
 }
 
-.c19 {
+.c20 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c19:visited {
+.c20:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c19:focus,
-.c19:hover {
+.c20:focus,
+.c20:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c17 {
+.c18 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1046,18 +1046,18 @@ exports[`Media Asset Page should render component 1`] = `
   list-style-type: none;
 }
 
-.c17 > li::before {
+.c18 > li::before {
   content: ' ';
   padding-left: 1.75rem;
   background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
   margin-left: -2rem;
 }
 
-.c18 {
+.c19 {
   margin-bottom: 1rem;
 }
 
-.c16 {
+.c17 {
   margin-bottom: 1.5rem;
 }
 
@@ -1067,7 +1067,7 @@ exports[`Media Asset Page should render component 1`] = `
   width: 100%;
 }
 
-.c25 {
+.c26 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -1081,7 +1081,7 @@ exports[`Media Asset Page should render component 1`] = `
   left: 0;
 }
 
-.c27 {
+.c8 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1092,20 +1092,20 @@ exports[`Media Asset Page should render component 1`] = `
   width: 100%;
 }
 
-.c27 > p {
+.c8 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c27 > p:last-child {
+.c8 > p:last-child {
   padding-bottom: 0;
 }
 
-.c27 i {
+.c8 i {
   font-style: normal;
 }
 
-.c24 {
+.c25 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1275,7 +1275,7 @@ exports[`Media Asset Page should render component 1`] = `
   padding: 0;
 }
 
-.c10 {
+.c11 {
   padding: 0.5rem 0 2rem;
 }
 
@@ -1286,7 +1286,7 @@ exports[`Media Asset Page should render component 1`] = `
   padding-bottom: 1.5rem;
 }
 
-.c12 {
+.c13 {
   padding-bottom: 1rem;
 }
 
@@ -1398,201 +1398,201 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (max-width:25rem) {
-  .c11 {
+  .c12 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c11 {
+  .c12 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c12 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c11 {
+  .c12 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c11 {
+  .c12 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c11 {
+  .c12 {
     max-width: initial;
   }
 }
 
 @media (max-width:63rem) {
-  .c8 {
+  .c9 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c8 {
+  .c9 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c8 {
+  .c9 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c8 {
+  .c9 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c8 {
+  .c9 {
     padding: 0 1rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c21 {
+  .c22 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c21 {
+  .c22 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c21 {
+  .c22 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c23 {
+  .c24 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c23 {
+  .c24 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c23 {
+  .c24 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c23 {
+  .c24 {
     grid-column: 1 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c26 {
+  .c27 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c26 {
+  .c27 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c26 {
+  .c27 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c26 {
+  .c27 {
     grid-column: 1 / span 10;
   }
 }
 
 @media (max-width:79.9375rem) {
-  .c22 {
+  .c23 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c22 {
+  .c23 {
     grid-template-columns: repeat(12,1fr);
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c10 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c10 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c10 {
     padding: 2.5rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
+  .c16 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c15 {
+  .c16 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c15 {
+  .c16 {
     padding-top: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c14 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -1613,55 +1613,55 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
+  .c15 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c14 {
+  .c15 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c17 {
+  .c18 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c18 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c27 {
+  .c8 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c8 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c27 {
+  .c8 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c27 {
+  .c8 {
     padding: 0.5rem 0 0;
   }
 }
@@ -1972,7 +1972,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:63rem) {
-  .c10 {
+  .c11 {
     padding: 1rem 0 2.5rem;
   }
 }
@@ -2024,7 +2024,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:63rem) {
-  .c12 {
+  .c13 {
     padding-bottom: 1.5rem;
   }
 }
@@ -2096,30 +2096,42 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                     <noscript />
                   </div>
+                  <figcaption
+                    class="c8"
+                  >
+                    <span
+                      class="c1"
+                    >
+                      Wetin we call dis Video, 
+                    </span>
+                    <p>
+                      short
+                    </p>
+                  </figcaption>
                 </figure>
               </div>
               <div
-                class="c8"
+                class="c9"
               >
                 <strong
                   aria-hidden="true"
-                  class="c9 c10"
+                  class="c10 c11"
                 >
                   Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & &lt; &gt;
                 </strong>
               </div>
               <div
-                class="c11 c12"
+                class="c12 c13"
               >
                 <time
-                  class="c13"
+                  class="c14"
                   datetime="2019-09-13"
                 >
                   13 September 2019
                 </time>
                 <div>
                   <time
-                    class="c13"
+                    class="c14"
                     datetime="2019-11-20"
                   >
                     New Informate 20 November 2019
@@ -2127,10 +2139,10 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <p
-                  class="c14"
+                  class="c15"
                 >
                   <b>
                     This is an introduction in bold. & &lt; &gt;
@@ -2138,10 +2150,10 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <h2
-                  class="c15"
+                  class="c16"
                   id="This-is-a-heading-<->"
                   tabindex="-1"
                 >
@@ -2149,10 +2161,10 @@ exports[`Media Asset Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <h2
-                  class="c15"
+                  class="c16"
                   id="This-is-a-subheading-<->"
                   tabindex="-1"
                 >
@@ -2160,10 +2172,10 @@ exports[`Media Asset Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <h2
-                  class="c15"
+                  class="c16"
                   id="This-is-a-crosshead-<->"
                   tabindex="-1"
                 >
@@ -2171,95 +2183,95 @@ exports[`Media Asset Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <p
-                  class="c14"
+                  class="c15"
                 >
                   This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <p
-                  class="c14"
+                  class="c15"
                 >
                   Bulleted list:
                 </p>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <div
-                  class="c16"
+                  class="c17"
                 >
                   <ul
-                    class="c17"
+                    class="c18"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="c18"
+                      class="c19"
                       role="listitem"
                     >
                       <a
-                        class="c19"
+                        class="c20"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="c18"
+                      class="c19"
                       role="listitem"
                     >
                       <a
-                        class="c19"
+                        class="c20"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="c18"
+                      class="c19"
                       role="listitem"
                     >
                       <a
-                        class="c19"
+                        class="c20"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="c18"
+                      class="c19"
                       role="listitem"
                     >
                       <a
-                        class="c19"
+                        class="c20"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
                       </a>
                     </li>
                     <li
-                      class="c18"
+                      class="c19"
                       role="listitem"
                     >
                       <a
-                        class="c19"
+                        class="c20"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
                       </a>
                     </li>
                     <li
-                      class="c18"
+                      class="c19"
                       role="listitem"
                     >
                       <a
-                        class="c19"
+                        class="c20"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
@@ -2269,86 +2281,86 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <p
-                  class="c14"
+                  class="c15"
                 >
                   Numbered list:
                 </p>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <div
-                  class="c16"
+                  class="c17"
                 >
                   <ul
-                    class="c17"
+                    class="c18"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="c18"
+                      class="c19"
                       role="listitem"
                     >
                       <a
-                        class="c19"
+                        class="c20"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="c18"
+                      class="c19"
                       role="listitem"
                     >
                       <a
-                        class="c19"
+                        class="c20"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="c18"
+                      class="c19"
                       role="listitem"
                     >
                       <a
-                        class="c19"
+                        class="c20"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="c18"
+                      class="c19"
                       role="listitem"
                     >
                       <a
-                        class="c19"
+                        class="c20"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
                       </a>
                     </li>
                     <li
-                      class="c18"
+                      class="c19"
                       role="listitem"
                     >
                       <a
-                        class="c19"
+                        class="c20"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
                       </a>
                     </li>
                     <li
-                      class="c18"
+                      class="c19"
                       role="listitem"
                     >
                       <a
-                        class="c19"
+                        class="c20"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
@@ -2358,10 +2370,10 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <p
-                  class="c14"
+                  class="c15"
                 >
                   Lorem ipsum dolor sit amet, 
                   <b>
@@ -2373,13 +2385,13 @@ exports[`Media Asset Page should render component 1`] = `
                   </b>
                   ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                   <i
-                    class="c20"
+                    class="c21"
                   >
                      in voluptate velit esse cillum 
                   </i>
                   dolore "eu fugiat nulla" pariatur. 
                   <a
-                    class="c19"
+                    class="c20"
                     href="https://bbc.com/pidgin"
                   >
                     Excepteur
@@ -2388,86 +2400,86 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <p
-                  class="c14"
+                  class="c15"
                 >
                   Testing special characters: !"£$%^&*()_+=-{}[]:@~;'#&lt;&gt;?,./\\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ
                 </p>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <p
-                  class="c14"
+                  class="c15"
                 >
                   ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#
                 </p>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <p
-                  class="c14"
+                  class="c15"
                 >
                   Table:
                 </p>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <p
-                  class="c14"
+                  class="c15"
                 >
                   Social media embed:
                 </p>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <p
-                  class="c14"
+                  class="c15"
                 >
                   Quote box:
                 </p>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <p
-                  class="c14"
+                  class="c15"
                 >
                   Correspondent quote box:
                 </p>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <p
-                  class="c14"
+                  class="c15"
                 >
                   Fact box:
                 </p>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <p
-                  class="c14"
+                  class="c15"
                 >
                   ­
                 </p>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <p
-                  class="c14"
+                  class="c15"
                 >
                   Lorem ipsum
                   <a
-                    class="c19"
+                    class="c20"
                     href="https://bbc.com/pidgin"
                   >
                      dolor sit amet
@@ -2476,26 +2488,26 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="c21"
+                class="c22"
               >
                 <figure
                   class="c3"
                 >
                   <div
-                    class="c22"
+                    class="c23"
                   >
                     <div
-                      class="c23"
+                      class="c24"
                     >
                       <div
-                        class="c24"
+                        class="c25"
                       >
                         <div
                           class="lazyload-placeholder"
                         />
                         <noscript />
                         <p
-                          class="c25"
+                          class="c26"
                           role="text"
                         >
                           <span
@@ -2512,10 +2524,10 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c26"
+                      class="c27"
                     >
                       <figcaption
-                        class="c27"
+                        class="c8"
                       >
                         <span
                           class="c1"
@@ -2531,26 +2543,26 @@ exports[`Media Asset Page should render component 1`] = `
                 </figure>
               </div>
               <div
-                class="c21"
+                class="c22"
               >
                 <figure
                   class="c3"
                 >
                   <div
-                    class="c22"
+                    class="c23"
                   >
                     <div
-                      class="c23"
+                      class="c24"
                     >
                       <div
-                        class="c24"
+                        class="c25"
                       >
                         <div
                           class="lazyload-placeholder"
                         />
                         <noscript />
                         <p
-                          class="c25"
+                          class="c26"
                           role="text"
                         >
                           <span
@@ -2567,10 +2579,10 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c26"
+                      class="c27"
                     >
                       <figcaption
-                        class="c27"
+                        class="c8"
                       >
                         <span
                           class="c1"
@@ -2586,36 +2598,36 @@ exports[`Media Asset Page should render component 1`] = `
                 </figure>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <div
-                  class="c16"
+                  class="c17"
                 >
                   <ul
-                    class="c17"
+                    class="c18"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="c18"
+                      class="c19"
                       role="listitem"
                     >
                       sunt in culpa qui officia deserunt mollit anim id est laborum
                     </li>
                     <li
-                      class="c18"
+                      class="c19"
                       role="listitem"
                     >
                       sunt in culpa qui officia deserunt mollit anim id est laborum
                     </li>
                     <li
-                      class="c18"
+                      class="c19"
                       role="listitem"
                     >
                       sunt in culpa qui officia deserunt mollit anim id est laborum
                     </li>
                     <li
-                      class="c18"
+                      class="c19"
                       role="listitem"
                     >
                       v3 draft
@@ -2624,19 +2636,19 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <p
-                  class="c14"
+                  class="c15"
                 >
                   This is transmission info 
                 </p>
               </div>
               <div
-                class="c11"
+                class="c12"
               >
                 <p
-                  class="c14"
+                  class="c15"
                 >
                   This is the footer 
                 </p>
@@ -2698,7 +2710,7 @@ exports[`Media Asset Page should render component 1`] = `
                           class="c44"
                         >
                           <div
-                            class="c24"
+                            class="c25"
                           >
                             <div
                               class="lazyload-placeholder"
@@ -2748,7 +2760,7 @@ exports[`Media Asset Page should render component 1`] = `
                           class="c44"
                         >
                           <div
-                            class="c24"
+                            class="c25"
                           >
                             <div
                               class="lazyload-placeholder"
@@ -2883,7 +2895,7 @@ exports[`Media Asset Page should render component 1`] = `
                           class="c44"
                         >
                           <div
-                            class="c24"
+                            class="c25"
                           >
                             <div
                               class="lazyload-placeholder"

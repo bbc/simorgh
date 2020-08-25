@@ -1647,6 +1647,18 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         />
                         <noscript />
                       </div>
+                      <figcaption
+                        class="c20"
+                      >
+                        <span
+                          class="c18"
+                        >
+                          Wetin we call dis Audio, 
+                        </span>
+                        <p>
+                          A caption for a test asset
+                        </p>
+                      </figcaption>
                     </figure>
                   </div>
                   <div
@@ -4035,6 +4047,18 @@ exports[`Story Page should render correctly when the secondary column data is no
                             />
                             <noscript />
                           </div>
+                          <figcaption
+                            class="c22"
+                          >
+                            <span
+                              class="c20"
+                            >
+                              Wetin we call dis Audio, 
+                            </span>
+                            <p>
+                              A caption for a test asset
+                            </p>
+                          </figcaption>
                         </figure>
                       </div>
                       <div
@@ -6072,6 +6096,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             />
                             <noscript />
                           </div>
+                          <figcaption
+                            class="c22"
+                          >
+                            <span
+                              class="c20"
+                            >
+                              Wetin we call dis Audio, 
+                            </span>
+                            <p>
+                              A caption for a test asset
+                            </p>
+                          </figcaption>
                         </figure>
                       </div>
                       <div
