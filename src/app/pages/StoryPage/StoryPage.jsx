@@ -139,7 +139,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   /**
    * Should we display ads? We check:
    * 1. The CPS `allowAdvertising` field value.
-   * 2. A value local to STYs.
+   * 2. A value local to the STY page type.
    * - iSite toggles are handled by the Ad container.
    */
   const isAdsEnabled = [

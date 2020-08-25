@@ -1,3 +1,4 @@
+/* eslint-disable prefer-destructuring */
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import assocPath from 'ramda/src/assocPath';
@@ -24,13 +25,18 @@ const addMpuBlock = pageData => {
     return pageData;
 
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
-  const firstParagraphIndex = blocks.findIndex(isParagraphBlock);
+  let mpuInsertionIndex = blocks.length;
 
-  if (firstParagraphIndex < 0) return pageData;
+  const paragraphBlockIndexes = blocks
+    .map((block, index) => isParagraphBlock(block) && index)
+    .filter(Boolean);
+
+  if (paragraphBlockIndexes.length >= 5)
+    mpuInsertionIndex = paragraphBlockIndexes[4];
 
   return assocPath(
     ['content', 'model', 'blocks'],
-    insert(firstParagraphIndex + 1, mpuBlock, blocks),
+    insert(mpuInsertionIndex, mpuBlock, blocks),
     pageData,
   );
 };
