@@ -466,7 +466,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
                 layout="fill"
                 sandbox="allow-scripts allow-same-origin"
                 scrolling="no"
-                src="https://polling.test.bbc.com/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr/amp?morph_env=live"
+                src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr/amp?morph_env=live"
                 title="Lecteur audio"
               >
                 <amp-img
