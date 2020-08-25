@@ -1,6 +1,7 @@
 /**
  * @service arabic
  * @pathname /arabic
+ * @displayAds true
  */
 
 import runCrossPlatformTests from '../crossPlatformTests';
