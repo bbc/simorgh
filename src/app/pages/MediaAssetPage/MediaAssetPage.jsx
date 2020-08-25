@@ -95,6 +95,8 @@ const MediaAssetPage = ({ pageData }) => {
             {...props}
             assetUri={assetUri}
             showLoadingImage
+            bottomPadding={false}
+            showCaption={false}
           />
         ),
 
@@ -104,12 +106,20 @@ const MediaAssetPage = ({ pageData }) => {
         assetUri={assetUri}
         isLegacyMedia
         showLoadingImage
+        bottomPadding={false}
+        showCaption={false}
       />
     ),
 
     // "Versions" are live streams
     version: props => (
-      <CpsAssetMediaPlayer {...props} assetUri={assetUri} showLoadingImage />
+      <CpsAssetMediaPlayer
+        {...props}
+        assetUri={assetUri}
+        showLoadingImage
+        bottomPadding={false}
+        showCaption={false}
+      />
     ),
     unavailableMedia: MediaMessage,
   };

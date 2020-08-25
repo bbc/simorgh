@@ -265,10 +265,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   margin-top: 0.5rem;
 }
 
-.c27 figure {
-  padding-bottom: 0;
-}
-
 .c31 {
   margin-bottom: 1rem;
 }
@@ -2990,10 +2986,6 @@ exports[`Story Page should render correctly when the secondary column data is no
   margin-top: 0.5rem;
 }
 
-.c29 figure {
-  padding-bottom: 0;
-}
-
 .c33 {
   margin-bottom: 1rem;
 }
@@ -4482,10 +4474,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 .c29 {
   margin-top: 0.5rem;
-}
-
-.c29 figure {
-  padding-bottom: 0;
 }
 
 .c33 {
