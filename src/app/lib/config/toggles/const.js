@@ -1,7 +1,6 @@
 export default {
   ADS: 'ads',
   CHARTBEAT_ANALYTICS: 'chartbeatAnalytics',
-  CINEMA_MODE_TV: 'cinemaModeTV',
   COMSCORE_ANALYTICS: 'comscoreAnalytics',
   CPS_RECOMMENDATIONS: 'cpsRecommendations',
   ENABLE_FETCHING_TOGGLES: 'enableFetchingToggles',
