@@ -24,7 +24,7 @@ const testCases = [
   },
   {
     description: `should build an AMP url for articles in test environment`,
-    expected: `https://polling.test.bbc.com/ws/av-embeds/articles/${mediaId}/amp`,
+    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
@@ -47,7 +47,7 @@ const testCases = [
   },
   {
     description: `should build an AMP url for articles in test environment with test override`,
-    expected: `https://polling.test.bbc.com/ws/av-embeds/articles/${mediaId}/amp`,
+    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
@@ -70,7 +70,7 @@ const testCases = [
   },
   {
     description: `should build an AMP url for articles in test environment with live override`,
-    expected: `https://polling.test.bbc.com/ws/av-embeds/articles/${mediaId}/amp${embedUrlLiveOverride}`,
+    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp${embedUrlLiveOverride}`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
@@ -93,7 +93,7 @@ const testCases = [
   },
   {
     description: `should build an AMP url for on-demand/live radio in test environment with live override`,
-    expected: `https://polling.test.bbc.com/ws/av-embeds/media/${mediaId}/amp${embedUrlLiveOverride}`,
+    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/media/${mediaId}/amp${embedUrlLiveOverride}`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
@@ -208,7 +208,7 @@ const testCases = [
   },
   {
     description: `should build an AMP url for legacy media in test environment with no override`,
-    expected: `https://polling.test.bbc.com/ws/av-embeds/legacy/${legacyId}/amp`,
+    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/legacy/${legacyId}/amp`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {

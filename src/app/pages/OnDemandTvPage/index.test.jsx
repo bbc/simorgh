@@ -255,7 +255,7 @@ it('should show the video player on amp with live override', async () => {
     .getAttribute('src');
 
   expect(videoPlayerIframeSrc).toEqual(
-    'https://polling.test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live',
+    'https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live',
   );
 });
 

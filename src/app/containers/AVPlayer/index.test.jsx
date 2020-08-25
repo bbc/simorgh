@@ -43,14 +43,14 @@ const GenerateFixtureData = ({
 const AVPlayerCanonicalODTV = (
   <GenerateFixtureData
     platform="canonical"
-    embedUrl="https://polling.test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"
+    embedUrl="https://test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"
   />
 );
 
 const AVPlayerAMPODRadio = (
   <GenerateFixtureData
     platform="amp"
-    embedUrl="https://polling.test.bbc.com/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om/amp"
+    embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om/amp"
     title="Audio Player"
     type="audio"
     iframeTitle="Audio player"
@@ -61,7 +61,7 @@ const AVPlayerAMPODRadio = (
 const AVPlayerLiveRadio = (
   <GenerateFixtureData
     platform="canonical"
-    embedUrl="https://polling.test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
+    embedUrl="https://test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
     title="Live radio"
     type="audio"
     iframeTitle="오디오 플레이어"
