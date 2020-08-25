@@ -140,7 +140,6 @@ describe('cspHeader', () => {
         'https://static.bbci.co.uk',
       ],
       frameSrcExpectation: [
-        'https://polling.bbc.co.uk',
         'https://emp.bbc.com',
         'https://emp.bbc.co.uk',
         'https://chartbeat.com',
@@ -361,8 +360,6 @@ describe('cspHeader', () => {
         'https://static.bbci.co.uk',
       ],
       frameSrcExpectation: [
-        'https://polling.bbc.co.uk',
-        'https://polling.test.bbc.co.uk',
         'https://emp.bbc.com',
         'https://emp.bbc.co.uk',
         'https://chartbeat.com',
