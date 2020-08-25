@@ -3,9 +3,9 @@ import isLive from '../isLive';
 const AV_ROUTE = 'ws/av-embeds';
 
 const LIVE_CANONICAL_URL = 'https://bbc.com';
-const LIVE_AMP_URL = 'https://polling.bbc.com';
+const LIVE_AMP_URL = 'https://polling.bbc.co.uk';
 const TEST_CANONICAL_URL = 'https://test.bbc.com';
-const TEST_AMP_URL = 'https://polling.test.bbc.com';
+const TEST_AMP_URL = 'https://polling.test.bbc.co.uk';
 
 const shouldOverrideMorphEnv = (queryString, type) => {
   if (isLive()) return false;

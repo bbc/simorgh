@@ -231,7 +231,7 @@ exports[`AMP Sinhala Live Radio Page Main heading should match text 1`] = `"බ�
 
 exports[`AMP Sinhala Live Radio Page Media Player a11y assistive technology can read the media player title 1`] = `"හඬ වාදකය"`;
 
-exports[`AMP Sinhala Live Radio Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.com/ws/av-embeds/media/bbc_sinhala_radio/liveradio/si/amp?morph_env=live"`;
+exports[`AMP Sinhala Live Radio Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_sinhala_radio/liveradio/si/amp?morph_env=live"`;
 
 exports[`AMP Sinhala Live Radio Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
