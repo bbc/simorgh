@@ -1,13 +1,9 @@
 /* eslint-disable prefer-destructuring */
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import assocPath from 'ramda/src/assocPath';
-import insert from 'ramda/src/insert';
-
-const isParagraphBlock = ({ type, model }) => {
-  if (type !== 'text') return false;
-  return path(['blocks', 0, 'type'], model) === 'paragraph';
-};
+import deepClone from 'ramda/src/clone';
+import splitAt from 'ramda/src/splitAt';
+import { getNthCpsParagraphIndex } from '../helpers';
 
 const mpuBlock = {
   type: 'mpu',
@@ -15,30 +11,36 @@ const mpuBlock = {
 };
 
 /**
- * Returns `pageData` with an MPU block inserted after the fifth paragraph.
- * If there aren't five paragraphs, the MPU is inserted at the end of the
- * content. If `allowAdvertising` is `false`, `pageData` is returned unchanged.
+ * Returns `pageData` with an MPU block inserted after the fourth paragraph.
+ * If there aren't four paragraphs, the MPU is inserted at the end of the
+ * content. If `allowAdvertising` is `false` or `pageType` is not a story page,
+ * `pageData` is returned unchanged.
  * @param {Object} pageData A page data object.
  */
-const addMpuBlock = pageData => {
-  if (!path(['metadata', 'options', 'allowAdvertising'], pageData))
-    return pageData;
-
+const addMpuBlock = json => {
+  const pageData = deepClone(json);
+  const pageType = path(['metadata', 'type'], pageData);
+  const { allowAdvertising } = path(['metadata', 'options'], pageData);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
-  let mpuInsertionIndex = blocks.length;
 
-  const paragraphBlockIndexes = blocks
-    .map((block, index) => isParagraphBlock(block) && index)
-    .filter(Boolean);
+  if (pageType !== 'STY' || !blocks || !allowAdvertising) {
+    return pageData;
+  }
 
-  if (paragraphBlockIndexes.length >= 5)
-    mpuInsertionIndex = paragraphBlockIndexes[4];
+  const mpuInsertionIndex = getNthCpsParagraphIndex(blocks, 4) || blocks.length;
 
-  return assocPath(
-    ['content', 'model', 'blocks'],
-    insert(mpuInsertionIndex, mpuBlock, blocks),
-    pageData,
+  const [blocksBeforeIndex, blocksAfterIndex] = splitAt(
+    mpuInsertionIndex + 1,
+    blocks,
   );
+
+  pageData.content.model.blocks = [
+    ...blocksBeforeIndex,
+    mpuBlock,
+    ...blocksAfterIndex,
+  ];
+
+  return pageData;
 };
 
 export default addMpuBlock;

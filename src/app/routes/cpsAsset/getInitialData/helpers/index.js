@@ -24,20 +24,19 @@ const isCpsParagraphBlock = cpsBlock => {
 };
 
 export const getNthCpsParagraphIndex = (blocks, count) => {
-  let indexCount = 0;
-  let paragraphCount = 0;
-  blocks.some((block, index) => {
-    if (isCpsParagraphBlock(block)) {
-      paragraphCount += 1;
-    }
-    if (paragraphCount === count || !count) {
-      indexCount = index;
-      return true;
-    }
-    return false;
-  });
-  if (paragraphCount < count || !count) {
+  if (!blocks || !count) {
     return null;
+  }
+  let indexCount = blocks.length;
+
+  const paragraphBlockIndexes = blocks
+    .map((block, index) => isCpsParagraphBlock(block) && index)
+    .filter(Boolean);
+
+  if (paragraphBlockIndexes.length >= count) {
+    indexCount = paragraphBlockIndexes[count - 1];
+  } else {
+    indexCount = null;
   }
   return indexCount;
 };
