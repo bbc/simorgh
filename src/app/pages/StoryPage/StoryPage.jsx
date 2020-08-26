@@ -44,6 +44,9 @@ import {
 import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
+import useToggle from '#hooks/useToggle';
+import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
+import { RequestContext } from '#contexts/RequestContext';
 
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
@@ -85,6 +88,11 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const recommendationsInitialData = path(['recommendations'], pageData);
+
+  // ads
+  const { enabled: adsEnabled } = useToggle('ads');
+  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
+  const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
   const gridColumns = {
     group0: 8,
@@ -238,6 +246,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
 
   return (
     <>
+      {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
+      {adsEnabled && showAdsBasedOnLocation && !isAmp && (
+        <CanonicalAdBootstrapJs adcampaign={adcampaign} />
+      )}
       <CpsMetadata
         title={title}
         shortHeadline={shortHeadline}
