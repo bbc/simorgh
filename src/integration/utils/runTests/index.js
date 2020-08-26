@@ -12,8 +12,7 @@ const getJestArgs = () =>
   process.argv
     .slice(2)
     .filter(flag => !flag.startsWith('--pageTypes='))
-    .filter(flag => !flag.startsWith('--dev'))
-    .filter(flag => !flag.startsWith('-u'));
+    .filter(flag => !flag.startsWith('--dev'));
 
 const getFilesToTest = pageTypes => {
   if (pageTypes) {
@@ -55,7 +54,7 @@ const runTests = () =>
   new Promise((resolve, reject) => {
     const child = spawn(
       'jest',
-      [filesToTest, '--runInBand', '--colors', '-u', ...getJestArgs()],
+      [filesToTest, '--runInBand', '--colors', ...getJestArgs()],
       { stdio: 'inherit' },
     );
     child.on('exit', code => {
