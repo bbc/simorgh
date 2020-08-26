@@ -17,6 +17,8 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
 
+  console.log('yyyyy', pageType);
+
   const {
     pageData,
     toggles,
@@ -69,6 +71,8 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         isAmp: nextIsAmp,
         route: { getInitialData, pageType: nextPageType },
       } = getRouteProps(routes, location.pathname);
+
+      console.log('nextPageType', nextPageType);
 
       let loaderTimeout;
       const loaderPromise = new Promise(resolve => {
@@ -125,6 +129,12 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       updateAppState();
     }
   }, [routes, location.pathname, toggles]);
+
+  useEffect(() => {
+    if (window) {
+      window.scrollTo(0, 0);
+    }
+  }, [location.pathname]);
 
   const previousLocationPath = usePrevious(location.pathname);
 
