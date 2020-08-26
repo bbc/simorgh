@@ -147,6 +147,7 @@ const directives = {
       'https://news.files.bbci.co.uk', // STY include
       'https://www.bbc.co.uk', // STY include
       'https://bbc-maps.carto.com', // STY include maps
+      'https://flo.uri.sh/', // STY includes
       ...advertisingDirectives.frameSrc,
       "'self'",
     ],
@@ -177,6 +178,7 @@ const directives = {
       'http://www.bbc.co.uk', // for localhost STY include
       'https://bbc-maps.carto.com', // STY include maps
       'https://news.test.files.bbci.co.uk',
+      'https://flo.uri.sh/', // STY includes
       ...advertisingDirectives.frameSrc,
       "'self'",
     ],
@@ -273,6 +275,7 @@ const directives = {
       'https://passport-control.int.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - int
       'https://passport-control.test.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - test
       'https://passport-control.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - live
+      'https://public.flourish.studio', // STY includes
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
@@ -304,6 +307,7 @@ const directives = {
       'https://passport-control.int.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - int
       'https://passport-control.test.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - test
       'https://passport-control.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - live
+      'https://public.flourish.studio', // STY includes
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
