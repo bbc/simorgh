@@ -40,6 +40,12 @@ To stop running tests immediately when there is a failure - NB this is useful wh
 npm run test:integration -- --bail
 ```
 
+To run tests updating existing snapshots
+
+```
+npm run test:integration -- -u
+```
+
 Any other Jest CLI args and flags can be passed along in the `test:integration` script.
 
 ## How to write tests
