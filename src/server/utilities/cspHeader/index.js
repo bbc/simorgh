@@ -349,10 +349,10 @@ const directives = {
     ],
   },
   mediaSrc: {
-    amp: [
+    ampLive: [
       'https://news.files.bbci.co.uk', // VJ includes may load .mp3 files
     ],
-    canonical: [
+    canonicalLive: [
       'https://news.files.bbci.co.uk', // VJ includes may load .mp3 files
     ],
     ampNonLive: [

@@ -317,8 +317,8 @@ describe('cspHeader', () => {
         "'self'",
         "'unsafe-inline'",
       ],
-      mediaSrcExpectation: ['https://news.files.bbci.co.uk'],
       styleSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
+      mediaSrcExpectation: ['https://news.files.bbci.co.uk'],
       workerSrcExpectation: ['blob:'],
     },
     {
@@ -570,7 +570,7 @@ describe('cspHeader', () => {
             `img-src ${imgSrcExpectation.join(' ')}; ` +
             `script-src ${scriptSrcExpectation.join(' ')}; ` +
             `style-src ${styleSrcExpectation.join(' ')}; ` +
-            `media-src ${mediaSrcExpectation.join(' ')}; ` +
+            `media-src ${mediaSrcExpectation}; ` +
             `worker-src ${workerSrcExpectation.join(' ')}; ` +
             `report-to default; ` +
             `upgrade-insecure-requests`;
