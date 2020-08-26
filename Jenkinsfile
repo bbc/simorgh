@@ -4,6 +4,7 @@ library 'Simorgh'
 def dockerRegistry = "329802642264.dkr.ecr.eu-west-1.amazonaws.com"
 def nodeImageVersion = "12.16.2"
 def nodeImage = "${dockerRegistry}/bbc-news/node-12-lts:${nodeImageVersion}"
+def cypressImage = "cypress/included:5.0.0"
 
 def appGitCommit = ""
 def appGitCommitAuthor = ""
@@ -128,7 +129,7 @@ pipeline {
     stage ('Install Dependencies') {
       agent {
         docker {
-          image "${nodeImage}"
+          image "${cypressImage}"
           reuseNode true
         }
       }
@@ -144,7 +145,7 @@ pipeline {
       }
       agent {
         docker {
-          image "${nodeImage}"
+          image "${cypressImage}"
           reuseNode true
         }
       }
@@ -164,7 +165,7 @@ pipeline {
           }
           agent {
             docker {
-              image "${nodeImage}"
+              image "${cypressImage}"
               reuseNode true
             }
           }
@@ -180,7 +181,7 @@ pipeline {
           }
           agent {
             docker {
-              image "${nodeImage}"
+              image "${cypressImage}"
               reuseNode true
             }
           }
@@ -197,6 +198,7 @@ pipeline {
         }
       }
     }
+    
     stage ('Build for Release') {
       when {
         expression { env.BRANCH_NAME == 'latest' }
