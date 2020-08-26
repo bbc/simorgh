@@ -372,7 +372,7 @@ const launchDates = {
     frontPage: '17th March 2020',
     mediaAssetPage: '26th March 2020',
     photoGalleryPage: '24th March 2020',
-    storyPage: '',
+    storyPage: '20th August 2020',
     mostReadPage: '28th May 2020',
     onDemandTV: '14th July 2020',
   },
