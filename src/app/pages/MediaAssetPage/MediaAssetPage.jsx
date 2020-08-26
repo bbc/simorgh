@@ -25,6 +25,7 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import CpsAssetMediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
+import MostWatchedContainer from '#containers/MostWatched';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
@@ -70,6 +71,7 @@ const MediaAssetPage = ({ pageData }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
+  const mostWatchedData = path(['mostWatched'], pageData);
 
   const componentsToRender = {
     fauxHeadline,
@@ -93,6 +95,8 @@ const MediaAssetPage = ({ pageData }) => {
             {...props}
             assetUri={assetUri}
             showLoadingImage
+            hasBottomPadding={false}
+            showCaption={false}
           />
         ),
 
@@ -102,12 +106,20 @@ const MediaAssetPage = ({ pageData }) => {
         assetUri={assetUri}
         isLegacyMedia
         showLoadingImage
+        hasBottomPadding={false}
+        showCaption={false}
       />
     ),
 
     // "Versions" are live streams
     version: props => (
-      <CpsAssetMediaPlayer {...props} assetUri={assetUri} showLoadingImage />
+      <CpsAssetMediaPlayer
+        {...props}
+        assetUri={assetUri}
+        showLoadingImage
+        hasBottomPadding={false}
+        showCaption={false}
+      />
     ),
     unavailableMedia: MediaMessage,
   };
@@ -157,6 +169,7 @@ const MediaAssetPage = ({ pageData }) => {
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledGrid>
       <CpsRelatedContent content={relatedContent} isMapContent />
+      <MostWatchedContainer data={mostWatchedData} />
     </>
   );
 };
