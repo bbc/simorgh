@@ -5,6 +5,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import getAboutTagsContent from './getAboutTagsContent';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
+import getBrandedImage from '../CpsMetadata/utils/getBrandedImage';
 
 const LinkedData = ({
   showAuthor,
@@ -16,6 +17,7 @@ const LinkedData = ({
   dateModified,
   aboutTags,
   entities,
+  imageLocator,
 }) => {
   const {
     brandName,
@@ -23,6 +25,7 @@ const LinkedData = ({
     defaultImage,
     noBylinesPolicy,
     isTrustProjectParticipant,
+    service,
   } = useContext(ServiceContext);
   const { canonicalNonUkLink } = useContext(RequestContext);
   const IMG_TYPE = 'ImageObject';
@@ -32,6 +35,10 @@ const LinkedData = ({
   const WEB_PAGE_TYPE = 'WebPage';
   const AUTHOR_PUBLISHER_NAME = isTrustProjectParticipant ? brandName : 'BBC';
   const isNotRadioChannel = type !== 'RadioChannel';
+
+  const brandedIndexImage = imageLocator
+    ? getBrandedImage(imageLocator, service)
+    : null;
 
   const logo = {
     '@type': IMG_TYPE,
@@ -44,7 +51,7 @@ const LinkedData = ({
     '@type': IMG_TYPE,
     width: 1024,
     height: 576,
-    url: defaultImage,
+    url: brandedIndexImage || defaultImage, // overwrite this value
   };
 
   const publisher = {
