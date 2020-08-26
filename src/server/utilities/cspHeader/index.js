@@ -147,7 +147,7 @@ const directives = {
       'https://news.files.bbci.co.uk', // STY include
       'https://www.bbc.co.uk', // STY include
       'https://bbc-maps.carto.com', // STY include maps
-      'https://flo.uri.sh/', // STY includes
+      'https://flo.uri.sh', // STY includes
       ...advertisingDirectives.frameSrc,
       "'self'",
     ],
@@ -178,7 +178,7 @@ const directives = {
       'http://www.bbc.co.uk', // for localhost STY include
       'https://bbc-maps.carto.com', // STY include maps
       'https://news.test.files.bbci.co.uk',
-      'https://flo.uri.sh/', // STY includes
+      'https://flo.uri.sh', // STY includes
       ...advertisingDirectives.frameSrc,
       "'self'",
     ],
