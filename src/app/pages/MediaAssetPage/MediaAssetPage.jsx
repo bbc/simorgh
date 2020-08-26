@@ -95,7 +95,7 @@ const MediaAssetPage = ({ pageData }) => {
             {...props}
             assetUri={assetUri}
             showLoadingImage
-            bottomPadding={false}
+            hasBottomPadding={false}
             showCaption={false}
           />
         ),
@@ -106,7 +106,7 @@ const MediaAssetPage = ({ pageData }) => {
         assetUri={assetUri}
         isLegacyMedia
         showLoadingImage
-        bottomPadding={false}
+        hasBottomPadding={false}
         showCaption={false}
       />
     ),
@@ -117,7 +117,7 @@ const MediaAssetPage = ({ pageData }) => {
         {...props}
         assetUri={assetUri}
         showLoadingImage
-        bottomPadding={false}
+        hasBottomPadding={false}
         showCaption={false}
       />
     ),

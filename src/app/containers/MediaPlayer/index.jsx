@@ -58,9 +58,12 @@ const MediaPlayerContainer = ({
   }
 
   const aresMediaBlock = filterForBlockType(blocks, 'aresMedia');
-  const captionBlock =
-    filterForBlockType(blocks, 'caption') ||
-    filterForBlockType(path(['model', 'blocks'], aresMediaBlock), 'caption');
+  const articleCaptionBlock = filterForBlockType(blocks, 'caption');
+  const cpsCaptionBlock = filterForBlockType(
+    path(['model', 'blocks'], aresMediaBlock),
+    'caption',
+  );
+  const captionBlock = articleCaptionBlock || cpsCaptionBlock;
 
   if (!aresMediaBlock) {
     return null;

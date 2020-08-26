@@ -38,7 +38,7 @@ const Wrapper = styled(GridItemConstrainedLargeNoMargin)`
   }
 
   ${props =>
-    !props.bottomPadding &&
+    !props.hasBottomPadding &&
     `figure {
     padding-bottom: 0;
   }`}
@@ -49,7 +49,7 @@ const CpsAssetMediaPlayer = ({
   assetUri,
   isLegacyMedia,
   showLoadingImage,
-  bottomPadding,
+  hasBottomPadding,
   showCaption,
 }) => {
   if (!assetUri) return null;
@@ -63,7 +63,7 @@ const CpsAssetMediaPlayer = ({
   const available = path(['model', 'available'], metadataBlock);
 
   return (
-    <Wrapper bottomPadding={bottomPadding}>
+    <Wrapper hasBottomPadding={hasBottomPadding}>
       <MediaPlayerContainer
         blocks={blocks}
         assetId={assetUri.substr(1)}
@@ -83,14 +83,14 @@ CpsAssetMediaPlayer.propTypes = {
   assetUri: string.isRequired,
   isLegacyMedia: bool,
   showLoadingImage: bool,
-  bottomPadding: bool,
+  hasBottomPadding: bool,
   showCaption: bool,
 };
 CpsAssetMediaPlayer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
   isLegacyMedia: false,
   showLoadingImage: false,
-  bottomPadding: true,
+  hasBottomPadding: true,
   showCaption: true,
 };
 
