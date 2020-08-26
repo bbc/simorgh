@@ -52,7 +52,7 @@ describe('Canonical Comscore Analytics ', () => {
       });
 
       expect(window._comscore).toEqual([
-        { c1: '2', c2: '17986528', cs_ucfr: '0' },
+        { c1: '2', c2: '17986528', cs_ucfr: '' },
       ]);
     });
 
