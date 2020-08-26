@@ -318,7 +318,10 @@ describe('cspHeader', () => {
         "'unsafe-inline'",
       ],
       styleSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
-      mediaSrcExpectation: ['https://news.files.bbci.co.uk'],
+      mediaSrcExpectation: [
+        'https://news.files.bbci.co.uk',
+        'https://news.test.files.bbci.co.uk',
+      ],
       workerSrcExpectation: ['blob:'],
     },
     {
@@ -465,7 +468,10 @@ describe('cspHeader', () => {
         'http://static.bbc.co.uk',
         "'unsafe-inline'",
       ],
-      mediaSrcExpectation: ['https://news.files.bbci.co.uk'],
+      mediaSrcExpectation: [
+        'https://news.files.bbci.co.uk',
+        'https://news.test.files.bbci.co.uk',
+      ],
       workerSrcExpectation: ["'self'"],
     },
   ].forEach(
@@ -570,7 +576,7 @@ describe('cspHeader', () => {
             `img-src ${imgSrcExpectation.join(' ')}; ` +
             `script-src ${scriptSrcExpectation.join(' ')}; ` +
             `style-src ${styleSrcExpectation.join(' ')}; ` +
-            `media-src ${mediaSrcExpectation}; ` +
+            `media-src ${mediaSrcExpectation.join(' ')}; ` +
             `worker-src ${workerSrcExpectation.join(' ')}; ` +
             `report-to default; ` +
             `upgrade-insecure-requests`;

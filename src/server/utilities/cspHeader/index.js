@@ -357,9 +357,11 @@ const directives = {
     ],
     ampNonLive: [
       'https://news.files.bbci.co.uk', // VJ includes may load .mp3 files
+      'https://news.test.files.bbci.co.uk', // Test
     ],
     canonicalNonLive: [
       'https://news.files.bbci.co.uk', // VJ includes may load .mp3 files
+      'https://news.test.files.bbci.co.uk', // Test
     ],
   },
 };
