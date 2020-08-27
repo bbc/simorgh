@@ -5,7 +5,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import getAboutTagsContent from './getAboutTagsContent';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
-import getBrandedImage from '../CpsMetadata/utils/getBrandedImage';
+import getBrandedImage from '#lib/utilities/getBrandedImage';
 
 const LinkedData = ({
   showAuthor,
