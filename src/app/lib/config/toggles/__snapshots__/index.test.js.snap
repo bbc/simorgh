@@ -22,9 +22,6 @@ Object {
   "include": Object {
     "enabled": true,
   },
-  "logMediaPlayerStatus": Object {
-    "enabled": false,
-  },
   "mostRead": Object {
     "enabled": true,
   },
@@ -80,9 +77,6 @@ Object {
   "include": Object {
     "enabled": true,
   },
-  "logMediaPlayerStatus": Object {
-    "enabled": false,
-  },
   "mostRead": Object {
     "enabled": true,
   },
@@ -134,9 +128,6 @@ Object {
   },
   "include": Object {
     "enabled": true,
-  },
-  "logMediaPlayerStatus": Object {
-    "enabled": false,
   },
   "mostRead": Object {
     "enabled": true,
