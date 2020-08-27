@@ -1,12 +1,11 @@
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import {
   VideoCanonicalWithPlaceholder,
   VideoCanonicalNoPlaceholder,
   VideoAmp,
   VideoCanonicalNoVersionId,
   VideoAmpNoBlockId,
-  VideoCanonicalToggledOff,
   VideoCanonicalWithCaption,
   VideoAmpWithCaption,
   UnavailableVideoCanonical,
@@ -29,10 +28,6 @@ describe('MediaPlayer', () => {
   );
 
   shouldMatchSnapshot('Renders the AMP player when platform is AMP', VideoAmp);
-
-  describe('Fails and returns early when', () => {
-    isNull('component is toggled off', VideoCanonicalToggledOff);
-  });
 });
 
 it('should display the AMP media caption', () => {
