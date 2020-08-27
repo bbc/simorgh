@@ -287,7 +287,7 @@ Object {
       "image": Object {
         "@type": "ImageObject",
         "height": 576,
-        "url": "http://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg",
+        "url": "https://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg",
         "width": 1024,
       },
       "mainEntityOfPage": Object {
@@ -315,7 +315,7 @@ Object {
 
 exports[`Canonical Photo Gallery Page SEO OG description 1`] = `"La estética de la ropa deportiva ha ido evolucionando en cada edición olímpica, pero no solo se trata de lucir bien, pues en varias competencias contar con un traje adecuado puede ser un factor que contribuya al triunfo."`;
 
-exports[`Canonical Photo Gallery Page SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg"`;
+exports[`Canonical Photo Gallery Page SEO OG image 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg"`;
 
 exports[`Canonical Photo Gallery Page SEO OG image alt 1`] = `"Gimnastas en los primeros juegos"`;
 
@@ -341,7 +341,7 @@ exports[`Canonical Photo Gallery Page SEO Twitter description 1`] = `"La estéti
 
 exports[`Canonical Photo Gallery Page SEO Twitter image alt 1`] = `"Gimnastas en los primeros juegos"`;
 
-exports[`Canonical Photo Gallery Page SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg"`;
+exports[`Canonical Photo Gallery Page SEO Twitter image src 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg"`;
 
 exports[`Canonical Photo Gallery Page SEO Twitter site 1`] = `"@bbcmundo"`;
 
