@@ -23,9 +23,6 @@ export default {
   include: {
     enabled: true,
   },
-  logMediaPlayerStatus: {
-    enabled: false,
-  },
   mostRead: {
     enabled: true,
   },
