@@ -51,7 +51,7 @@ const LinkedData = ({
     '@type': IMG_TYPE,
     width: 1024,
     height: 576,
-    url: brandedIndexImage || defaultImage, // overwrite this value
+    url: brandedIndexImage || defaultImage,
   };
 
   const publisher = {
