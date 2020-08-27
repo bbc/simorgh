@@ -69,4 +69,4 @@ services:
       CYPRESS_SMOKE: 'true'
 
 networks:
-  - simorgh
+  simorgh: {}
