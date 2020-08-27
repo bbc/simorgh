@@ -121,6 +121,7 @@ LinkedData.propTypes = {
   ),
   // eslint-disable-next-line react/forbid-prop-types
   entities: arrayOf(object),
+  imageLocator: string,
 };
 
 LinkedData.defaultProps = {
@@ -131,6 +132,7 @@ LinkedData.defaultProps = {
   dateModified: undefined,
   aboutTags: undefined,
   entities: [],
+  imageLocator: undefined,
 };
 
 export default LinkedData;
