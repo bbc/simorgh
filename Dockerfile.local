@@ -1,0 +1,25 @@
+FROM node:12.18
+
+# Set container working directory
+WORKDIR /app
+
+# Adds node_modules to the PATH
+ENV PATH /app/node_modules/.bin:$PATH
+
+# Copy files required to install dependencies
+COPY ["./package.json", "./package-lock.json", "/app/"]
+
+# Install application dependencies using package-lock
+RUN npm ci
+
+# copy source code to the app directory. This should be limited to production files only
+COPY . /app
+
+# Build the application
+RUN npm run build:local
+
+# Expose the express server port to the host
+EXPOSE 7080
+
+# Command to start the application when the container starts
+CMD ["npm", "start"] 

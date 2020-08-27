@@ -7,10 +7,22 @@
 
 version: '3.3'
 services:
-  simorgh:
+  simorgh-dev:
     build:
       context: ./
       dockerfile: Dockerfile.dev
+    volumes:
+      - $PWD:/app
+    ports:
+      - '7080:7080'
+      - '1124:1124'
+    environment:
+      NODE_ENV: 'development'
+
+  simorgh-local:
+    build:
+      context: ./
+      dockerfile: Dockerfile.local
     volumes:
       - $PWD:/app
     ports:
@@ -26,13 +38,13 @@ services:
     ports:
       - '7080:7080'
 
-  cypress:
+  cypress-local:
     image: 'cypress/included:5.0.0'
     working_dir: /e2e
     volumes:
       - $PWD:/e2e
     depends_on:
-      - simorgh
+      - simorgh-local
 
   cypress-test:
     image: 'cypress/included:5.0.0'
