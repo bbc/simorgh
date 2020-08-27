@@ -265,11 +265,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   margin-top: 0.5rem;
 }
 
-.c32 figure {
-  padding-bottom: 0;
-}
-
-.c36 {
+.c31 {
   margin-bottom: 1rem;
 }
 
@@ -1961,6 +1957,18 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         />
                         <noscript />
                       </div>
+                      <figcaption
+                        class="c20"
+                      >
+                        <span
+                          class="c18"
+                        >
+                          Wetin we call dis Audio, 
+                        </span>
+                        <p>
+                          A caption for a test asset
+                        </p>
+                      </figcaption>
                     </figure>
                   </div>
                   <div
@@ -3752,11 +3760,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   margin-top: 0.5rem;
 }
 
-.c34 figure {
-  padding-bottom: 0;
-}
-
-.c38 {
+.c33 {
   margin-bottom: 1rem;
 }
 
@@ -5558,29 +5562,104 @@ exports[`Story Page should render correctly when the secondary column data is no
                                 class="c58"
                                 dir="ltr"
                               >
-                                <a
-                                  class="c59"
-                                  href="/pidgin/tori-50187218"
-                                >
-                                  Naira Marley na 'Bad Influence'?
-                                </a>
-                                <div
-                                  class="c60"
-                                >
-                                  <time
-                                    class="c61"
-                                    datetime="2019-10-25"
-                                  >
-                                    De one we dem update for: 25th October 2019
-                                  </time>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li
-                            class="c53 c54"
-                            dir="ltr"
-                            role="listitem"
+                                It can even have italic text in it!
+                              </i>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div
+                        class="c6"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
+                        </p>
+                      </div>
+                      <div
+                        class="c29"
+                      >
+                        <figure
+                          class="c15"
+                        >
+                          <div
+                            class="c30"
+                          >
+                            <iframe
+                              allow="autoplay; fullscreen"
+                              allowfullscreen=""
+                              class="c31"
+                              scrolling="no"
+                              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
+                              title="Media player"
+                            />
+                            <noscript />
+                          </div>
+                          <figcaption
+                            class="c22"
+                          >
+                            <span
+                              class="c20"
+                            >
+                              Wetin we call dis Audio, 
+                            </span>
+                            <p>
+                              A caption for a test asset
+                            </p>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div
+                        class="c6"
+                      >
+                        <h2
+                          class="c32"
+                          id="This-is-a-heading"
+                          tabindex="-1"
+                        >
+                          This is a heading!
+                        </h2>
+                      </div>
+                      <div
+                        class="c6"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
+                        </p>
+                      </div>
+                      <div
+                        class="c6"
+                      >
+                        <h2
+                          class="c32"
+                          id="This-is-a-crosshead"
+                          tabindex="-1"
+                        >
+                          This is a crosshead!
+                        </h2>
+                      </div>
+                      <div
+                        class="c6"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
+                        </p>
+                      </div>
+                      <div
+                        class="c6"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          <a
+                            aria-label="This is an external link to google!, outside"
+                            class="c24"
+                            href="https://www.google.com/"
                           >
                             <div
                               class="c55"
@@ -6012,11 +6091,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   margin-top: 0.5rem;
 }
 
-.c34 figure {
-  padding-bottom: 0;
-}
-
-.c38 {
+.c33 {
   margin-bottom: 1rem;
 }
 
@@ -7938,6 +8013,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             />
                             <noscript />
                           </div>
+                          <figcaption
+                            class="c22"
+                          >
+                            <span
+                              class="c20"
+                            >
+                              Wetin we call dis Audio, 
+                            </span>
+                            <p>
+                              A caption for a test asset
+                            </p>
+                          </figcaption>
                         </figure>
                       </div>
                       <div
