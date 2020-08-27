@@ -558,6 +558,9 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
             <div>
               chartbeat
             </div>
+            <div>
+              comscore
+            </div>
             <main
               class="c0"
               role="main"
@@ -2026,6 +2029,9 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                 <noscript />
                 <div>
                   chartbeat
+                </div>
+                <div>
+                  comscore
                 </div>
                 <main
                   class="c0"
@@ -3879,6 +3885,9 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                 <div>
                   chartbeat
                 </div>
+                <div>
+                  comscore
+                </div>
                 <main
                   class="c0"
                   role="main"
@@ -5208,6 +5217,9 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                 <noscript />
                 <div>
                   chartbeat
+                </div>
+                <div>
+                  comscore
                 </div>
                 <main
                   class="c0"
@@ -7180,6 +7192,9 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                 <noscript />
                 <div>
                   chartbeat
+                </div>
+                <div>
+                  comscore
                 </div>
                 <main
                   class="c0"

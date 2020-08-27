@@ -29,9 +29,6 @@ export default {
   logMediaPlayerStatus: {
     enabled: false,
   },
-  mediaPlayer: {
-    enabled: true,
-  },
   mostRead: {
     enabled: true,
   },

@@ -8,7 +8,7 @@ import pathOr from 'ramda/src/pathOr';
 import assocPath from 'ramda/src/assocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContext } from '#contexts/ToggleContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import MediaAssetPage from '.';
 import mapPageData from '#data/pidgin/cpsAssets/23248703';
 import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721';
@@ -16,15 +16,19 @@ import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
-const toggleState = {
-  mediaPlayer: {
-    enabled: true,
-  },
-};
+jest.mock('#containers/ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  return ChartbeatAnalytics;
+});
+
+jest.mock('#containers/ComscoreAnalytics', () => {
+  const ComscoreAnalytics = () => <div>comscore</div>;
+  return ComscoreAnalytics;
+});
 
 const createAssetPage = ({ pageData }, service) => (
   <StaticRouter>
-    <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
+    <ToggleContextProvider>
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
@@ -37,7 +41,7 @@ const createAssetPage = ({ pageData }, service) => (
           <MediaAssetPage service={service} pageData={pageData} />
         </RequestContextProvider>
       </ServiceContextProvider>
-    </ToggleContext.Provider>
+    </ToggleContextProvider>
   </StaticRouter>
 );
 
