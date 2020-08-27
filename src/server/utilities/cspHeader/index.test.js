@@ -7,6 +7,7 @@ import injectCspHeader, {
   generateImgSrc,
   generateScriptSrc,
   generateStyleSrc,
+  generateMediaSrc,
   generateWorkerSrc,
 } from '.';
 
@@ -98,6 +99,7 @@ describe('cspHeader', () => {
         "'unsafe-inline'",
       ],
       styleSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
+      mediaSrcExpectation: ['https://news.files.bbci.co.uk'],
       workerSrcExpectation: ['blob:'],
     },
     {
@@ -151,6 +153,7 @@ describe('cspHeader', () => {
         'https://news.files.bbci.co.uk',
         'https://www.bbc.co.uk',
         'https://bbc-maps.carto.com',
+        'https://flo.uri.sh',
         'https://*.g.doubleclick.net',
         'https://tpc.googlesyndication.com',
         'https://bcp.crwdcntrl.net',
@@ -195,6 +198,7 @@ describe('cspHeader', () => {
         'https://passport-control.int.tools.bbc.co.uk/bookmarkletScript.js',
         'https://passport-control.test.tools.bbc.co.uk/bookmarkletScript.js',
         'https://passport-control.tools.bbc.co.uk/bookmarkletScript.js',
+        'https://public.flourish.studio',
         'https://ad.crwdcntrl.net',
         'https://adservice.google.co.uk',
         'https://adservice.google.com',
@@ -224,6 +228,7 @@ describe('cspHeader', () => {
         'https://static.bbc.co.uk',
         "'unsafe-inline'",
       ],
+      mediaSrcExpectation: ['https://news.files.bbci.co.uk'],
       workerSrcExpectation: ["'self'"],
     },
     {
@@ -314,6 +319,10 @@ describe('cspHeader', () => {
         "'unsafe-inline'",
       ],
       styleSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
+      mediaSrcExpectation: [
+        'https://news.files.bbci.co.uk',
+        'https://news.test.files.bbci.co.uk',
+      ],
       workerSrcExpectation: ['blob:'],
     },
     {
@@ -373,6 +382,7 @@ describe('cspHeader', () => {
         'http://www.bbc.co.uk',
         'https://bbc-maps.carto.com',
         'https://news.test.files.bbci.co.uk',
+        'https://flo.uri.sh',
         'https://*.g.doubleclick.net',
         'https://tpc.googlesyndication.com',
         'https://bcp.crwdcntrl.net',
@@ -427,6 +437,7 @@ describe('cspHeader', () => {
         'https://passport-control.int.tools.bbc.co.uk/bookmarkletScript.js',
         'https://passport-control.test.tools.bbc.co.uk/bookmarkletScript.js',
         'https://passport-control.tools.bbc.co.uk/bookmarkletScript.js',
+        'https://public.flourish.studio',
         'https://ad.crwdcntrl.net',
         'https://adservice.google.co.uk',
         'https://adservice.google.com',
@@ -458,6 +469,10 @@ describe('cspHeader', () => {
         'http://static.bbc.co.uk',
         "'unsafe-inline'",
       ],
+      mediaSrcExpectation: [
+        'https://news.files.bbci.co.uk',
+        'https://news.test.files.bbci.co.uk',
+      ],
       workerSrcExpectation: ["'self'"],
     },
   ].forEach(
@@ -474,6 +489,7 @@ describe('cspHeader', () => {
       imgSrcExpectation,
       scriptSrcExpectation,
       styleSrcExpectation,
+      mediaSrcExpectation,
       workerSrcExpectation,
     }) => {
       describe(`Given isAmp ${isAmp} & isLive ${isLive}`, () => {
@@ -521,6 +537,12 @@ describe('cspHeader', () => {
           );
         });
 
+        it(`Then it has this mediaSrc`, () => {
+          expect(generateMediaSrc({ isAmp, isLive })).toEqual(
+            mediaSrcExpectation,
+          );
+        });
+
         it(`Then it has this workerSrc`, () => {
           expect(generateWorkerSrc({ isAmp })).toEqual(workerSrcExpectation);
         });
@@ -555,6 +577,7 @@ describe('cspHeader', () => {
             `img-src ${imgSrcExpectation.join(' ')}; ` +
             `script-src ${scriptSrcExpectation.join(' ')}; ` +
             `style-src ${styleSrcExpectation.join(' ')}; ` +
+            `media-src ${mediaSrcExpectation.join(' ')}; ` +
             `worker-src ${workerSrcExpectation.join(' ')}; ` +
             `report-to default; ` +
             `upgrade-insecure-requests`;
