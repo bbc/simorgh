@@ -24,7 +24,7 @@ const CanonicalComscoreAnalytics = () => {
         src={`${staticAssetsPath}${comscoreScript}`}
       />
       <noscript>
-        {`<img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=0&cv=2.0&cj=1" />`}
+        {`<img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cv=2.0&cj=1" />`}
       </noscript>
     </Helmet>
   );
