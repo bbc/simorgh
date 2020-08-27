@@ -25,9 +25,6 @@ Object {
   "logMediaPlayerStatus": Object {
     "enabled": false,
   },
-  "mediaPlayer": Object {
-    "enabled": true,
-  },
   "mostRead": Object {
     "enabled": true,
   },
@@ -86,9 +83,6 @@ Object {
   "logMediaPlayerStatus": Object {
     "enabled": false,
   },
-  "mediaPlayer": Object {
-    "enabled": true,
-  },
   "mostRead": Object {
     "enabled": true,
   },
@@ -143,9 +137,6 @@ Object {
   },
   "logMediaPlayerStatus": Object {
     "enabled": false,
-  },
-  "mediaPlayer": Object {
-    "enabled": true,
   },
   "mostRead": Object {
     "enabled": true,
