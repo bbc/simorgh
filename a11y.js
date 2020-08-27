@@ -74,6 +74,7 @@ const pageTypes = {
   ],
   idxPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   onDemandTV: [],
+  mediaAssetPage: [...mediaEmbedErrorsToSuppress, '/iframe'],
 };
 
 Object.keys(pageTypes).forEach(pageType => {
