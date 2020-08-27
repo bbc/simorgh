@@ -60,15 +60,10 @@ const StyledGelWrapperGrid = styled(GelPageGrid)`
 // iframe padding set to keep scrub bar and duration in view
 const StyledAudioPlayer = styled(AVPlayer)`
   width: calc(100% + ${GEL_SPACING_DBL});
+  margin: 0 -${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     width: calc(100% + ${GEL_SPACING_QUAD});
-  }
-
-  iframe {
-    margin: 0 -${GEL_SPACING};
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-      margin: 0 -${GEL_SPACING_DBL};
-    }
+    margin: 0 -${GEL_SPACING_DBL};
   }
 `;
 
