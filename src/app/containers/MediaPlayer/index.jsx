@@ -23,7 +23,6 @@ import { getPlaceholderSrcSet } from '#lib/utilities/srcSet';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import formatDuration from '#lib/utilities/formatDuration';
 import buildIChefURL from '#lib/utilities/ichefURL';
-import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import toggles from '#lib/config/toggles';
@@ -51,9 +50,8 @@ const MediaPlayerContainer = ({
 }) => {
   const { isAmp } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
-  const { enabled } = useToggle('mediaPlayer');
   const location = useLocation();
-  if (!enabled || !blocks) {
+  if (!blocks) {
     return null;
   }
 

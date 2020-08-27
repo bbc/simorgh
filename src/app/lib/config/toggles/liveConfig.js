@@ -20,15 +20,11 @@ export default {
   include: {
     enabled: true,
   },
-
   onDemandRadioSchedule: {
     enabled: true,
   },
   logMediaPlayerStatus: {
     enabled: false,
-  },
-  mediaPlayer: {
-    enabled: true,
   },
   mostRead: {
     enabled: true,
