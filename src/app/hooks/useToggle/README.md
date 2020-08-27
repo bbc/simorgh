@@ -25,7 +25,7 @@ When writing unit tests for components that use the `useToggle` hook, you should
 
 ```
 const toggles = {
-  mediaPlayer: {
+  myFeature: {
     enabled: true,
   },
 };
