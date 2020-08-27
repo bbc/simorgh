@@ -439,7 +439,7 @@ Object {
       "image": Object {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+        "url": "http://ichef.test.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
         "width": 1024,
       },
       "mainEntityOfPage": Object {

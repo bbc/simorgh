@@ -237,7 +237,7 @@ Object {
       "image": Object {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+        "url": "http://ichef.test.bbci.co.uk/news/1024/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg",
         "width": 1024,
       },
       "mainEntityOfPage": Object {
