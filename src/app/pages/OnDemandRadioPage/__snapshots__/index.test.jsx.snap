@@ -298,9 +298,6 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 
 .c14 {
   width: calc(100% + 1rem);
-}
-
-.c14 iframe {
   margin: 0 -0.5rem;
 }
 
@@ -619,11 +616,6 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 @media (min-width:25rem) {
   .c14 {
     width: calc(100% + 2rem);
-  }
-}
-
-@media (min-width:25rem) {
-  .c14 iframe {
     margin: 0 -1rem;
   }
 }
@@ -834,9 +826,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 
 .c15 {
   width: calc(100% + 1rem);
-}
-
-.c15 iframe {
   margin: 0 -0.5rem;
 }
 
@@ -1165,11 +1154,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 @media (min-width:25rem) {
   .c15 {
     width: calc(100% + 2rem);
-  }
-}
-
-@media (min-width:25rem) {
-  .c15 iframe {
     margin: 0 -1rem;
   }
 }
