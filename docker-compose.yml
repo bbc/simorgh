@@ -33,6 +33,16 @@ services:
     networks:
       - simorgh
 
+  test-node:
+    image: node:latest
+    command: >-
+      curl
+      http://simorgh-local:7080/status
+    depends_on:
+      - simorgh-local
+    networks:
+      - simorgh
+
   simorgh-prod:
     build:
       context: ./
