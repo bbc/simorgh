@@ -41,6 +41,7 @@ const MediaPlayerContainer = ({
   available,
   isLegacyMedia,
   showLoadingImage,
+  showCaption,
 }) => {
   const { isAmp } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
@@ -51,7 +52,12 @@ const MediaPlayerContainer = ({
   }
 
   const aresMediaBlock = filterForBlockType(blocks, 'aresMedia');
-  const captionBlock = filterForBlockType(blocks, 'caption');
+  const articleCaptionBlock = filterForBlockType(blocks, 'caption');
+  const cpsCaptionBlock = filterForBlockType(
+    path(['model', 'blocks'], aresMediaBlock),
+    'caption',
+  );
+  const captionBlock = articleCaptionBlock || cpsCaptionBlock;
 
   if (!aresMediaBlock) {
     return null;
@@ -163,6 +169,11 @@ const MediaPlayerContainer = ({
     translations,
   );
 
+  const renderCaption = () =>
+    captionBlock ? (
+      <Caption block={captionBlock} type={mediaInfo.type} service={service} />
+    ) : null;
+
   return (
     <>
       <Metadata aresMediaBlock={aresMediaBlock} embedSource={embedSource} />
@@ -190,7 +201,7 @@ const MediaPlayerContainer = ({
             showLoadingImage={showLoadingImage}
           />
         )}
-        {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
+        {showCaption && renderCaption()}
       </Figure>
     </>
   );
@@ -204,12 +215,14 @@ MediaPlayerContainer.propTypes = {
   available: bool,
   isLegacyMedia: bool,
   showLoadingImage: bool,
+  showCaption: bool,
 };
 MediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
   available: true,
   isLegacyMedia: false,
   showLoadingImage: false,
+  showCaption: true,
 };
 
 export default MediaPlayerContainer;
