@@ -116,8 +116,13 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 const pageType = 'cpsAsset';
 
 describe('Story Page', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+  });
+
   afterEach(() => {
     fetchMock.restore();
+    delete process.env.SIMORGH_ICHEF_BASE_URL;
   });
 
   describe('snapshots', () => {
