@@ -5136,7 +5136,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                               allowfullscreen=""
                               class="c36"
                               scrolling="no"
-                              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
+                              src="https://test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                               title="Media player"
                             />
                             <noscript />
