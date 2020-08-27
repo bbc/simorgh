@@ -30,6 +30,8 @@ services:
       - '1124:1124'
     environment:
       NODE_ENV: 'development'
+    networks:
+      - simorgh
 
   simorgh-prod:
     build:
@@ -45,6 +47,8 @@ services:
       - $PWD:/e2e
     depends_on:
       - simorgh-local
+    networks:
+      - simorgh
 
   cypress-test:
     image: 'cypress/included:5.0.0'
@@ -63,3 +67,6 @@ services:
     environment:
       CYPRESS_APP_ENV: live
       CYPRESS_SMOKE: 'true'
+
+networks:
+  - simorgh
