@@ -728,6 +728,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
                     height="240"
                     layout="responsive"
                     src="https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png"
+                    srcset="https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png 128w,https://ichef.bbci.co.uk/images/ic/240x240/p08b23c8.png 240w,https://ichef.bbci.co.uk/images/ic/480x480/p08b23c8.png 480w"
                     width="240"
                   />
                 </div>
