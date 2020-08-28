@@ -163,6 +163,7 @@ const MediaAssetPage = ({ pageData }) => {
         datePublished={firstPublished}
         dateModified={lastPublished}
         aboutTags={aboutTags}
+        imageLocator={indexImageLocator}
       />
       <ATIAnalytics data={pageData} />
       <StyledGrid as="main" role="main">
