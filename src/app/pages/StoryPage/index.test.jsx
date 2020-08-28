@@ -35,7 +35,10 @@ const toggleState = {
     enabled: true,
   },
   ads: {
-    enabled: false,
+    enabled: true,
+  },
+  storyPageAds: {
+    enabled: true,
   },
   comscoreAnalytics: {
     enabled: true,

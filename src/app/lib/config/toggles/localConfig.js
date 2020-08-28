@@ -56,4 +56,7 @@ export default {
   variantCookie: {
     enabled: true,
   },
+  storyPageAds: {
+    enabled: true,
+  },
 };

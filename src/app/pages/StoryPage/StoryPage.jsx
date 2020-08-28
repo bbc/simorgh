@@ -45,6 +45,7 @@ import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
 import AdContainer from '#containers/Ad';
+import useToggle from '#hooks/useToggle';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -142,9 +143,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
    * 2. A value local to the STY page type.
    * - iSite toggles are handled by the Ad container.
    */
+  const { enabled: isStoryPageEnabled } = useToggle('storyPageAds');
   const isAdsEnabled = [
     path(['metadata', 'options', 'allowAdvertising'], pageData),
-    process.env.NODE_ENV !== 'production',
+    isStoryPageEnabled,
   ].every(Boolean);
 
   const componentsToRender = {
