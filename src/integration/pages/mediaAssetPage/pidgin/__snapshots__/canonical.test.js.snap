@@ -274,7 +274,7 @@ Object {
       "image": Object {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+        "url": "https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg",
         "width": 1024,
       },
       "mainEntityOfPage": Object {
@@ -315,7 +315,7 @@ Object {
 
 exports[`Canonical Media Asset Page SEO OG description 1`] = `"This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."`;
 
-exports[`Canonical Media Asset Page SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
+exports[`Canonical Media Asset Page SEO OG image 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
 
 exports[`Canonical Media Asset Page SEO OG image alt 1`] = `"connectionAltText"`;
 
@@ -341,7 +341,7 @@ exports[`Canonical Media Asset Page SEO Twitter description 1`] = `"This week, C
 
 exports[`Canonical Media Asset Page SEO Twitter image alt 1`] = `"connectionAltText"`;
 
-exports[`Canonical Media Asset Page SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
+exports[`Canonical Media Asset Page SEO Twitter image src 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
 
 exports[`Canonical Media Asset Page SEO Twitter site 1`] = `"@BBCNews"`;
 
