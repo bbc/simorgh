@@ -532,6 +532,12 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
           <div
             id="DataContainer"
           >
+            <div>
+              chartbeat
+            </div>
+            <div>
+              comscore
+            </div>
             <noscript />
             <main
               class="c0"
@@ -2058,6 +2064,12 @@ exports[`Media Asset Page should render component 1`] = `
           <div
             id="DataContainer"
           >
+            <div>
+              chartbeat
+            </div>
+            <div>
+              comscore
+            </div>
             <noscript />
             <main
               class="c0"

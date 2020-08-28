@@ -30,20 +30,19 @@ import ukrainianMostReadData from '#data/ukrainian/mostRead/index.json';
 
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
 
-const toggleState = {
-  mediaPlayer: {
-    enabled: true,
-  },
-};
-
 jest.mock('#containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
 
+jest.mock('#containers/ComscoreAnalytics', () => {
+  const ComscoreAnalytics = () => <div>comscore</div>;
+  return ComscoreAnalytics;
+});
+
 const Page = ({ pageData, service }) => (
   <StaticRouter>
-    <ToggleContextProvider toggles={toggleState}>
+    <ToggleContextProvider>
       <ServiceContextProvider
         pageLang={pageData.metadata.language}
         service={service}
@@ -116,8 +115,13 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 const pageType = 'cpsAsset';
 
 describe('Story Page', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+  });
+
   afterEach(() => {
     fetchMock.restore();
+    delete process.env.SIMORGH_ICHEF_BASE_URL;
   });
 
   describe('snapshots', () => {

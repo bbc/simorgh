@@ -258,6 +258,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         datePublished={firstPublished}
         dateModified={lastPublished}
         aboutTags={aboutTags}
+        imageLocator={indexImageLocator}
       />
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
