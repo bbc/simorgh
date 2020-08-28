@@ -37,7 +37,7 @@ services:
     image: node:latest
     command: >-
       curl
-      http://simorgh-local:7080/status
+      http://localhost:7080/status
     depends_on:
       - simorgh-local
     networks:
