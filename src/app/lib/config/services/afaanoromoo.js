@@ -199,7 +199,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onOnDemandRadioPage: true,
       onFrontPage: false,
       header: 'Dhaggeeffadhaa',
       durationLabel: 'Turtii %duration%',
