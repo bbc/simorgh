@@ -1,0 +1,916 @@
+{
+  "generated": "2020-08-13T09:22:21.241Z",
+  "lastRecordTimeStamp": "2030-01-01T17:00:00Z",
+  "firstRecordTimeStamp": "2020-08-13T07:17:00Z",
+  "totalRecords": 17,
+  "records": [
+    {
+      "id": "50491a6a-063d-42e3-9657-8146c1a029e6",
+      "rank": 1,
+      "count": 20,
+      "urn": "urn:bbc:curie:asset:50491a6a-063d-42e3-9657-8146c1a029e6",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Koronaavaayirasiin daldaluu",
+          "headline": "BBC Africa Eye: Hojjettoota hospitaala keessaa meeshaalee of eggannoo gurguran"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-53749594",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-53749594",
+          "curie": "http://www.bbc.co.uk/asset/50491a6a-063d-42e3-9657-8146c1a029e6",
+          "assetId": "53749594"
+        },
+        "summary": "Hojjettoota hospitaala keessaa meeshaalee of eggannoo gurguran",
+        "timestamp": 1597223188000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "media": {
+          "id": "53749595",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "p08ndj9v",
+          "entityType": "Clip",
+          "caption": "BBC Africa Eye: hojjettoota hospitaala keessaa meeshaalee ofeggannoo gurguran",
+          "type": "external_vpid"
+        },
+        "indexImage": {
+          "id": "113908559",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1755C/production/_113908559_p08ndjrj.jpg",
+          "path": "/cpsprodpb/1755C/production/_113908559_p08ndjrj.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Keyframe #2",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-53749594",
+        "type": "cps"
+      }
+    },
+    {
+      "id": "66381db4-0281-41a8-8c0f-1351bd110e68",
+      "rank": 2,
+      "count": 6,
+      "urn": "urn:bbc:curie:asset:66381db4-0281-41a8-8c0f-1351bd110e68",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Itoophiyaa fi Masriin hidhaa Laga Abbayyaarratti maaliif waliigaluu dadhaban?",
+          "headline": "Hidha Haaromsaa Guddicha Itoophiyaa: Itoophiyaa fi Masriin hidhaa Laga Abbayyaarratti maaliif waliigaluu dadhaban?"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-53441453",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-53441453",
+          "curie": "http://www.bbc.co.uk/asset/66381db4-0281-41a8-8c0f-1351bd110e68",
+          "assetId": "53441453"
+        },
+        "summary": "Suuraaleen saatalaayitarraa kaafaman akka agarsiisanitti Hidha Guddicha Itoophiyaan ijaartu duuba bishaan kuufamee mul'ata. Sudaan bishaan garashe dhufu akka hir'ate yogguu dubbattu, Masriinis gamasheen komii qabdu kaaftee jirti.",
+        "timestamp": 1595068750000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+            "categoryName": "Explainer"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "media": {
+          "id": "53441454",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "p08l5hll",
+          "entityType": "Clip",
+          "caption": "Hidha: Itoophiyaa fi Masriin hidhaa Laga Abbayyaarratti maaliif waliigaluu dadhaban?",
+          "type": "external_vpid"
+        },
+        "indexImage": {
+          "id": "113492934",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/AB99/production/_113492934_p08l5jbz.jpg",
+          "path": "/cpsprodpb/AB99/production/_113492934_p08l5jbz.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Ros Atkins",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-53441453",
+        "type": "cps"
+      }
+    },
+    {
+      "id": "072a9357-2885-434f-823d-d0e8e77746eb",
+      "rank": 3,
+      "count": 6,
+      "urn": "urn:bbc:curie:asset:072a9357-2885-434f-823d-d0e8e77746eb",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "\"Olompiikiin Baarseloonaa jireenya koo baay'ee jijjiire\"",
+          "headline": "''Olompiikiin Baarseloonaa jireenya koo baay'ee jijjiire''- Daraartuu Tulluu"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-41721926",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-41721926",
+          "curie": "http://www.bbc.co.uk/asset/072a9357-2885-434f-823d-d0e8e77746eb",
+          "assetId": "41721926"
+        },
+        "summary": "Adooleessi dabre waggaa 25ffaa atileet Daraartuu Tulluun haala hin eegamneen Olompikii Baarseloonaa irratti meedaliyaa warqii mo'attee ture. Imalli waggoota 25 daraartuu maal fakkaata?",
+        "timestamp": 1508761467000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "media": {
+          "id": "41721927",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "p05kqdhs",
+          "entityType": "Clip",
+          "caption": "''Olompiikiin Baarseloonaa jireenya koo baay'ee jijjiire''- Daraartuu Tulluu",
+          "type": "external_vpid"
+        },
+        "indexImage": {
+          "id": "98441465",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/DC5E/production/_98441465_p05kqfr8.png",
+          "path": "/cpsprodpb/DC5E/production/_98441465_p05kqfr8.png",
+          "height": 576,
+          "width": 1024,
+          "altText": "Atileet Daraartuu Tulluu",
+          "caption": "Atileet Daraartuu Tulluu",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-41721926",
+        "type": "cps"
+      }
+    },
+    {
+      "id": "e068a665-8176-4fcc-89bd-165e84df595d",
+      "rank": 4,
+      "count": 4,
+      "urn": "urn:bbc:curie:asset:e068a665-8176-4fcc-89bd-165e84df595d",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "\"Haacaaluun jagna, goota akka isaa miti kan ajjeese mucaakoo\"",
+          "headline": "Ajjeechaa Haacaaluu Hundeessaa: \"Haacaaluun jagna, goota akka isaa miti kan ajjeese mucaakoo\""
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-53577183",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-53577183",
+          "curie": "http://www.bbc.co.uk/asset/e068a665-8176-4fcc-89bd-165e84df595d",
+          "assetId": "53577183"
+        },
+        "summary": "Artiist Haacaaluu Hundeessaa ji'a har'aa ture kan ajjeefame. Magaalaa Amboo qe'ee maatii isaatti argamuun Abbaa isaa Obbo Hundeessaa Boonsaa waliin turtii gabaabaa gooneerra.",
+        "timestamp": 1596001176000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "media": {
+          "id": "53577185",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "p08m3xcx",
+          "entityType": "Clip",
+          "caption": "\"Haacaaluun jagna, goota akka isaa miti kan ajjeese mucaakoo\"",
+          "type": "external_vpid"
+        },
+        "indexImage": {
+          "id": "113693678",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/15657/production/_113693678_p08m3yh0.jpg",
+          "path": "/cpsprodpb/15657/production/_113693678_p08m3yh0.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Obbo Hundeessaa Boonsaa",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-53577183",
+        "type": "cps"
+      }
+    },
+    {
+      "id": "a15a639c-b3af-5447-b5bf-31855e5d6e9d",
+      "rank": 5,
+      "count": 4,
+      "urn": "urn:bbc:curie:asset:a15a639c-b3af-5447-b5bf-31855e5d6e9d",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Adaamaan jiddugala muuziqaa Oromoo ta’aa jirtii?",
+          "headline": "Aartii Oromoo: Adaamaan jiddugala muuziqaa Oromoo ta’aa jirtii?"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-47451795",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-47451795",
+          "curie": "http://www.bbc.co.uk/asset/a15a639c-b3af-5447-b5bf-31855e5d6e9d",
+          "assetId": "47451795"
+        },
+        "summary": "Artistiin magaalaa Adaamaa fayyadaa jiraatus bulchiinsi magaalaa deeggarsa gochu dhabuu ammoo artistootni komatu.",
+        "timestamp": 1551780252000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e1739461b000e9dabf6",
+              "campaignName": "WS - CS"
+            }
+          ],
+          "taggings": []
+        },
+        "media": {
+          "id": "47451796",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "p072mc4h",
+          "entityType": "Clip",
+          "caption": "Adaamaan jidduugala muuziqaa Oromoo ta’aa jirtii?",
+          "type": "external_vpid"
+        },
+        "indexImage": {
+          "id": "105896606",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/ECFD/production/_105896606_p072mck9.jpg",
+          "path": "/cpsprodpb/ECFD/production/_105896606_p072mck9.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Keyframe #1",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-47451795",
+        "type": "cps"
+      }
+    },
+    {
+      "id": "54e98493-7bab-4af5-bc7a-74d6bb20b683",
+      "rank": 6,
+      "count": 4,
+      "urn": "urn:bbc:curie:asset:54e98493-7bab-4af5-bc7a-74d6bb20b683",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Mormii hawaasa Oromoo lafoo haga qilleensarraan",
+          "headline": "Ajjeechaa Haacaaluu Hundeessaa: Mormii hawaasa Oromoo lafoo haga qilleensarraan"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-53346405",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-53346405",
+          "curie": "http://www.bbc.co.uk/asset/54e98493-7bab-4af5-bc7a-74d6bb20b683",
+          "assetId": "53346405"
+        },
+        "summary": "Hawaasni Oromoo Awustiraaliyaa magaalaa Melborn keessa jiran haala amma dura hin baramneen xiyyaaraan gargaaramuun ergaa dabarsaa mormiisaanii dhageessisan.",
+        "timestamp": 1594290027000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "media": {
+          "id": "53346406",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "p08k8jyh",
+          "entityType": "Clip",
+          "caption": "Ajjeechaa Haacaaluu: Mormii hawaasa Oromoo lafoo haga qilleensarraan",
+          "type": "external_vpid"
+        },
+        "indexImage": {
+          "id": "113303554",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/B1DA/production/_113303554_p08k8k96.jpg",
+          "path": "/cpsprodpb/B1DA/production/_113303554_p08k8k96.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Dargaggoota mormiitti jiran",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-53346405",
+        "type": "cps"
+      }
+    },
+    {
+      "id": "aee69b67-9190-425f-8b26-8b67d1da0713",
+      "rank": 7,
+      "count": 2,
+      "urn": "urn:bbc:curie:asset:aee69b67-9190-425f-8b26-8b67d1da0713",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Ajjeechaa Haacaaluu Hundeessaa hordofee wantota ta'an keessaa",
+          "headline": "Ajjeechaa Haacaaluu erga dhaga'amee booda godinaalee Oromiyaa garagaraatti maaltu ta'e?"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/53236840",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/53236840",
+          "curie": "http://www.bbc.co.uk/asset/aee69b67-9190-425f-8b26-8b67d1da0713",
+          "assetId": "53236840"
+        },
+        "summary": "Oduun du'aatii Haacaaluu erga dhaga'amee booda godinaalee Oromiyaa garagaraatti maaltu ta'e? Haalli amma irra jiruwoo maal fakkaata?",
+        "timestamp": 1593516272000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "media": {
+          "id": "53236841",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "p08jfwkn",
+          "entityType": "Clip",
+          "caption": "Ajjeechaa Haacaaluu erga dhaga'amee booda godinaalee Oromiyaa garagaraatti maaltu ta'e?",
+          "type": "external_vpid"
+        },
+        "indexImage": {
+          "id": "113166486",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/10B72/production/_113166486_p08jfy20.jpg",
+          "path": "/cpsprodpb/10B72/production/_113166486_p08jfy20.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Namoota walitti qabaman",
+          "copyrightHolder": "OMN",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/53236840",
+        "type": "cps"
+      }
+    },
+    {
+      "id": "71e01b66-9977-464e-b000-5e7ba439cf71",
+      "rank": 8,
+      "count": 2,
+      "urn": "urn:bbc:curie:asset:71e01b66-9977-464e-b000-5e7ba439cf71",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Loltuu ABO hanga barsiisaa amantii-Ustaaz Raayyaa Abbaa Maccaa",
+          "headline": "Ustaaz Raayyaa Abbaa Maccaa: Loltuu ABO hanga barsiisaa amantii-Ustaaz Raayyaa Abbaa Maccaa"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-48190048",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48190048",
+          "curie": "http://www.bbc.co.uk/asset/71e01b66-9977-464e-b000-5e7ba439cf71",
+          "assetId": "48190048"
+        },
+        "summary": "Manzuumaa ykn bifa faaruutiin Islaamummaa barsiisuudhaan kan beekaman Ustaaz Raayyaa Abbaa Maccaa loltuu ABO akka turan quba qabduu? Quuqama sabummaa fi amantii abbaa kiyyarraan dhaale jedhu.",
+        "timestamp": 1557235492000,
+        "language": "om",
+        "media": {
+          "id": "48190049",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "p078j1n5",
+          "entityType": "Clip",
+          "caption": "Loltuu ABO hanga barsiisaa amantii",
+          "type": "external_vpid"
+        },
+        "indexImage": {
+          "id": "106828086",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/109F2/production/_106828086_p078j2cd.jpg",
+          "path": "/cpsprodpb/109F2/production/_106828086_p078j2cd.jpg",
+          "height": 573,
+          "width": 1024,
+          "altText": "Ustaaz Raayyaa Abbaa Maccaa",
+          "copyrightHolder": "Miidiyaa Hawaasummaa",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48190048",
+        "type": "cps"
+      }
+    },
+    {
+      "id": "42cc4163-d60e-4a6b-87fa-4fb3d1d8b385",
+      "rank": 9,
+      "count": 2,
+      "urn": "urn:bbc:curie:asset:42cc4163-d60e-4a6b-87fa-4fb3d1d8b385",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "'Hamilee kootu na tuqame' - Hayilee G/Sillaasee",
+          "headline": "Ajjeechaa Haacaaluu Hundeessaa: 'Hamilee kootu na tuqame' - Hayilee G/Sillaasee"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-53596172",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-53596172",
+          "curie": "http://www.bbc.co.uk/asset/42cc4163-d60e-4a6b-87fa-4fb3d1d8b385",
+          "assetId": "53596172"
+        },
+        "summary": "Ajjeechaa Hacaaluu Hundeessaa hordofee hookkara magaalaa Finfinneefi Naannoo Oromiyaatti mudaten lubbuun namootaa 200 ol darbuun, qabeenyaan hedduus manca'eera.",
+        "timestamp": 1596111028000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "media": {
+          "id": "53596173",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "p08m7vfz",
+          "entityType": "Clip",
+          "caption": "Ajjeechaa Haacaaluu Hundeessaa: 'Hamilee kootu na tuqame' - Hayilee G/Sillaasee",
+          "type": "external_vpid"
+        },
+        "indexImage": {
+          "id": "113752421",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/3089/production/_113752421_p08m7vpp.jpg",
+          "path": "/cpsprodpb/3089/production/_113752421_p08m7vpp.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Hayilee Gabra Sillaasee",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-53596172",
+        "type": "cps"
+      }
+    },
+    {
+      "id": "ba7e97c0-5997-bf4a-a3b1-8e52a33fd7b9",
+      "rank": 10,
+      "count": 1,
+      "urn": "urn:bbc:curie:asset:ba7e97c0-5997-bf4a-a3b1-8e52a33fd7b9",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Qabadhu! Eebba Oromoo Karrayyuu",
+          "headline": "Aadaa Oromoo: Eebba Oromoo Karrayyuu"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/47071005",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/47071005",
+          "curie": "http://www.bbc.co.uk/asset/ba7e97c0-5997-bf4a-a3b1-8e52a33fd7b9",
+          "assetId": "47071005"
+        },
+        "summary": "Eebba Karrayyuu wanti adda taasisuu jiraa? Mee viidiyoo gabaabduu kanarraa hubadhaa",
+        "timestamp": 1548934044000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            }
+          ],
+          "taggings": []
+        },
+        "media": {
+          "id": "47071006",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "p06zkmyz",
+          "entityType": "Clip",
+          "caption": "Eebba Oromoo Karrayyuu",
+          "type": "external_vpid"
+        },
+        "indexImage": {
+          "id": "105413091",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/4A57/production/_105413091_p06zkn92.jpg",
+          "path": "/cpsprodpb/4A57/production/_105413091_p06zkn92.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Jaarsa eebbisan",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/47071005",
+        "type": "cps"
+      }
+    },
+    {
+      "id": "84f7a26b-404a-cd42-a4e0-9e6e39cea0e7",
+      "rank": 11,
+      "count": 1,
+      "urn": "urn:bbc:curie:asset:84f7a26b-404a-cd42-a4e0-9e6e39cea0e7",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Wallaansoo qotiyoo waliinii",
+          "headline": "Jaalallee argachuuf qotiyyoo waliin wallansoo ni qabattuu?"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-41484616",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-41484616",
+          "curie": "http://www.bbc.co.uk/asset/84f7a26b-404a-cd42-a4e0-9e6e39cea0e7",
+          "assetId": "41484616"
+        },
+        "summary": "Qeerroowwan Maadagaaskaar jaalallee argachuuf qotiyyoo waliin wallansoo yeroo dheeraa fudhatu taasisu.",
+        "timestamp": 1507176952000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "media": {
+          "id": "41484617",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "p05hybhj",
+          "entityType": "Clip",
+          "caption": "Jaalallee argachuuf qotiyyoo waliin wallansoo ni qabattuu?",
+          "type": "external_vpid"
+        },
+        "indexImage": {
+          "id": "98148160",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1828/production/_98148160_p05j2x25.jpg",
+          "path": "/cpsprodpb/1828/production/_98148160_p05j2x25.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Keyframe #1",
+          "caption": "Qeerroo qotiyyoon wallaansoo qabate",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-41484616",
+        "type": "cps"
+      }
+    },
+    {
+      "id": "77cb72b8-4c87-1a4d-9f06-c431b0885fc6",
+      "rank": 12,
+      "count": 1,
+      "urn": "urn:bbc:curie:asset:77cb72b8-4c87-1a4d-9f06-c431b0885fc6",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Maddoo, dhahannaa rifeensa intala dubraa Karrayyuu",
+          "headline": "Aadaa Karrayyuu: Maddoo, dhahannaa rifeensa intala dubraa"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-47513023",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-47513023",
+          "curie": "http://www.bbc.co.uk/asset/77cb72b8-4c87-1a4d-9f06-c431b0885fc6",
+          "assetId": "47513023"
+        },
+        "summary": "Dhahannaa rifeensa dubartoota Karrayyuu keessaa kam beektu?",
+        "timestamp": 1552199035000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+            "categoryName": "Interactive"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            }
+          ],
+          "taggings": []
+        },
+        "media": {
+          "id": "47513024",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "p0733c90",
+          "entityType": "Clip",
+          "caption": "Dhahannaa rifeensa dubartoota Karrayyuu keessaa kam beektu?",
+          "type": "external_vpid"
+        },
+        "indexImage": {
+          "id": "105963736",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/F8F8/production/_105963736_tolchi.jpg",
+          "path": "/cpsprodpb/F8F8/production/_105963736_tolchi.jpg",
+          "height": 608,
+          "width": 1080,
+          "altText": "Dubartoota Karrayyuu",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-47513023",
+        "type": "cps"
+      }
+    },
+    {
+      "id": "6c9a391a-c477-a243-a985-1dff0ca632f9",
+      "rank": 13,
+      "count": 1,
+      "urn": "urn:bbc:curie:asset:6c9a391a-c477-a243-a985-1dff0ca632f9",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Biyya malee dhalachuu",
+          "headline": "Biyya na jaalatu barbaadaan jira"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-41587308",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-41587308",
+          "curie": "http://www.bbc.co.uk/asset/6c9a391a-c477-a243-a985-1dff0ca632f9",
+          "assetId": "41587308"
+        },
+        "summary": "Sababa haadhaafi abbaan keessan amantaan gargar ta'aniif jecha lammummaa osoo dhabdanii maaltu isinitti dhaga'ama?",
+        "timestamp": 1507780722000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "media": {
+          "id": "41587309",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "p05jnm1f",
+          "entityType": "Clip",
+          "caption": "Biyya na jaalatu barbaadaa jira",
+          "type": "external_vpid"
+        },
+        "indexImage": {
+          "id": "98272237",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/11E0B/production/_98272237_p05jnnm8.jpg",
+          "path": "/cpsprodpb/11E0B/production/_98272237_p05jnnm8.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Mahaa Maamoo",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-41587308",
+        "type": "cps"
+      }
+    },
+    {
+      "id": "4d2e518f-1f65-8f48-9134-418d8f0bb996",
+      "rank": 14,
+      "count": 1,
+      "urn": "urn:bbc:curie:asset:4d2e518f-1f65-8f48-9134-418d8f0bb996",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Onkololeessa 26, 2017 haala Amboo keessa ture,",
+          "headline": "Humni waraanaa dhukaasa uummata irratti bane"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/41776970",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/41776970",
+          "curie": "http://www.bbc.co.uk/asset/4d2e518f-1f65-8f48-9134-418d8f0bb996",
+          "assetId": "41776970"
+        },
+        "summary": "Humni waraanaa idilee Itoophiyaa namoota hiriira ba'an irratti yoo dhukaasu jiraattonni naannichaa arganiiru",
+        "timestamp": 1509099561000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "media": {
+          "id": "41776971",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "p05l5hnp",
+          "entityType": "Clip",
+          "caption": "Humni waraanaa dhukaasa namoota hiriiraaf ba'an irratti banee ture",
+          "type": "external_vpid"
+        },
+        "indexImage": {
+          "id": "98503455",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/D886/production/_98503455_p05l5jrr.jpg",
+          "path": "/cpsprodpb/D886/production/_98503455_p05l5jrr.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Namoota Ambotti mormiif ba'an",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/41776970",
+        "type": "cps"
+      }
+    },
+    {
+      "id": "400cb159-ce04-4208-b00f-97a8317720d2",
+      "rank": 15,
+      "count": 1,
+      "urn": "urn:bbc:curie:asset:400cb159-ce04-4208-b00f-97a8317720d2",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "'Kiliippii muuziqaa Oromoo guddisuuf cimseen hojjedha' - Leencoo Fiqiruu",
+          "headline": "'Kiliippii muuziqaa Oromoo guddisuuf cimseen hojjedha'- Leencoo Fiqiruu"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-53147885",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-53147885",
+          "curie": "http://www.bbc.co.uk/asset/400cb159-ce04-4208-b00f-97a8317720d2",
+          "assetId": "53147885"
+        },
+        "summary": "Daayireektara ol adeemaa weelluwwan reefuu duuba jiru, Leencoo Fiqiruu, 'Kiliippii muuziqaa Oromoo guddisuuf cimseen hojjedha' jedha.",
+        "timestamp": 1592895608000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+            "categoryName": "Opinion"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            }
+          ],
+          "taggings": []
+        },
+        "media": {
+          "id": "53147886",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "p08hr73v",
+          "entityType": "Clip",
+          "caption": "BBC",
+          "type": "external_vpid"
+        },
+        "indexImage": {
+          "id": "113044222",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/56E4/production/_113044222_p08hr7f5.jpg",
+          "path": "/cpsprodpb/56E4/production/_113044222_p08hr7f5.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Daayireektara ol adeemaa weelluwwan reefuu duuba jiru -leencoo Fikruu",
+          "copyrightHolder": "Daayireektara ol adeemaa weelluwwan reefuu duuba j",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-53147885",
+        "type": "cps"
+      }
+    },
+    {
+      "id": "2577f169-059c-4ef6-85c0-8604cf84b2e1",
+      "rank": 16,
+      "count": 1,
+      "urn": "urn:bbc:curie:asset:2577f169-059c-4ef6-85c0-8604cf84b2e1",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "'Kaayyoon koo 'Beeta Israa'eelota' gara biyya isaaniitti deebisuudha'",
+          "headline": "''Kaayyoon koo Beeta Israa'eelota gara biyya isaaniitti deebisuudha''-Dhalattuu Itoophiyaa Israa'eelitti Ministira taate"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/53161894",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/53161894",
+          "curie": "http://www.bbc.co.uk/asset/2577f169-059c-4ef6-85c0-8604cf84b2e1",
+          "assetId": "53161894"
+        },
+        "summary": "''Kaayyoon koo Beeta Israa'eelota gara biyya isaaniitti deebisuudha'' jetti dhalattuun Itoophiyaa yeroo jalqabaaf Ministira Israa'eel taate.",
+        "timestamp": 1592992083000,
+        "language": "om",
+        "media": {
+          "id": "53161895",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "p08hvcy4",
+          "entityType": "Clip",
+          "caption": "''Jibbi sanyummaa kan biyyoota biroon walfakkaata''",
+          "type": "external_vpid"
+        },
+        "indexImage": {
+          "id": "113059220",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/08F7/production/_113059220_p08hvf7l.jpg",
+          "path": "/cpsprodpb/08F7/production/_113059220_p08hvf7l.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Jibba sanyummaa Israa'eel keessa jiru kan guutuu addnuyaatti gurraachotaarra gahuun wafakkaataa jetti dhalattuun Itoophiyaa yeroo jalqabaaf Ministira Israa'eel taate.",
+          "copyrightHolder": "Piniinaa Tamaanoo Shaataa",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/53161894",
+        "type": "cps"
+      }
+    },
+    {
+      "id": "0e2ae243-c10b-c545-9b62-72ee4751bdb8",
+      "rank": 17,
+      "count": 1,
+      "urn": "urn:bbc:curie:asset:0e2ae243-c10b-c545-9b62-72ee4751bdb8",
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Kalaqa mana rifeensaatti tamsa'ina Covid-19 hir'isuuf kaayyeffate",
+          "headline": "Koroonaavaayiras: Kalaqa mana rifeensaatti tamsa'ina Covid-19 hir'isuuf kaayyeffate"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-52613923",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-52613923",
+          "curie": "http://www.bbc.co.uk/asset/0e2ae243-c10b-c545-9b62-72ee4751bdb8",
+          "assetId": "52613923"
+        },
+        "summary": "''Mana rifeensaatti namni tokko Covid-19n qabamnaan, salphumatti iddoo raabsaa Koroonaavaayiras tahuu danda'a,'' jedha dargaggoo Mohaammad-Juhaar. Kana hir'isuuf waanin danda'uun kalaqa kanaan gumaacheera jedha.",
+        "timestamp": 1589266922000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            },
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "media": {
+          "id": "52613924",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "p08cxff0",
+          "entityType": "Clip",
+          "caption": "Koroonaavaayiras: Kalaqa mana rifeensaatti tamsa'ina Covid-19 hir'isuuf kaayyeffate",
+          "type": "external_vpid"
+        },
+        "indexImage": {
+          "id": "112237927",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/11D0D/production/_112237927_p08cxfjr.jpg",
+          "path": "/cpsprodpb/11D0D/production/_112237927_p08cxfjr.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Kalaqa mana rifeensaatti",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-52613923",
+        "type": "cps"
+      }
+    }
+  ]
+}
