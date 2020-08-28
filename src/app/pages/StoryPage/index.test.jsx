@@ -30,29 +30,24 @@ import ukrainianMostReadData from '#data/ukrainian/mostRead/index.json';
 
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
 
-const toggleState = {
-  mediaPlayer: {
-    enabled: true,
-  },
-  ads: {
-    enabled: true,
-  },
-  storyPageAds: {
-    enabled: true,
-  },
-  comscoreAnalytics: {
-    enabled: true,
-  },
-};
-
 jest.mock('#containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
 
+jest.mock('#containers/ComscoreAnalytics', () => {
+  const ComscoreAnalytics = () => <div>comscore</div>;
+  return ComscoreAnalytics;
+});
+
+jest.mock('#containers/Ad', () => {
+  const AdsContainer = () => <div>STY ADS</div>;
+  return AdsContainer;
+});
+
 const Page = ({ pageData, service }) => (
   <StaticRouter>
-    <ToggleContextProvider toggles={toggleState}>
+    <ToggleContextProvider>
       <ServiceContextProvider
         pageLang={pageData.metadata.language}
         service={service}

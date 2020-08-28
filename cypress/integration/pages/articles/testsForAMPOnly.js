@@ -41,36 +41,33 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
       }
     });
 
-    // `appToggles` tells us whether a feature is toggled on or off in the current environment.
-    if (appToggles.mediaPlayer.enabled) {
-      describe('Media Player: AMP', () => {
-        it('should render a placeholder image', () => {
-          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-            const media = getBlockData('video', body);
-            if (media && media.type === 'video') {
-              cy.get('div[class^="StyledVideoContainer"]').within(() => {
-                cy.get('amp-img')
-                  .should('have.attr', 'src')
-                  .should('not.be.empty');
-              });
-            }
-          });
-        });
-
-        it('should render an iframe with a valid URL', () => {
-          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-            const media = getBlockData('video', body);
-
-            if (media && media.type === 'video') {
-              const { lang } = appConfig[service][variant];
-              const embedUrl = `${getVideoEmbedUrl(body, lang)}/amp`;
-              cy.get(`amp-iframe[src="${embedUrl}"]`).should('be.visible');
-              cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
-            }
-          });
+    describe('Media Player: AMP', () => {
+      it('should render a placeholder image', () => {
+        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+          const media = getBlockData('video', body);
+          if (media && media.type === 'video') {
+            cy.get('div[class^="StyledVideoContainer"]').within(() => {
+              cy.get('amp-img')
+                .should('have.attr', 'src')
+                .should('not.be.empty');
+            });
+          }
         });
       });
-    }
+
+      it('should render an iframe with a valid URL', () => {
+        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+          const media = getBlockData('video', body);
+
+          if (media && media.type === 'video') {
+            const { lang } = appConfig[service][variant];
+            const embedUrl = `${getVideoEmbedUrl(body, lang)}/amp`;
+            cy.get(`amp-iframe[src="${embedUrl}"]`).should('be.visible');
+            cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
+          }
+        });
+      });
+    });
   });
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
