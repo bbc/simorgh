@@ -27,16 +27,14 @@ export const getNthCpsParagraphIndex = (blocks, count) => {
   if (!blocks || !count) {
     return null;
   }
-  let indexCount = blocks.length;
 
   const paragraphBlockIndexes = blocks
     .map((block, index) => isCpsParagraphBlock(block) && index)
     .filter(Boolean);
 
-  if (paragraphBlockIndexes.length >= count) {
-    indexCount = paragraphBlockIndexes[count - 1];
-  } else {
-    indexCount = null;
+  if (paragraphBlockIndexes.length < count) {
+    return null;
   }
-  return indexCount;
+
+  return paragraphBlockIndexes[count - 1];
 };
