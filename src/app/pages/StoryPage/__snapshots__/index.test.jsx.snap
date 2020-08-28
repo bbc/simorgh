@@ -1535,6 +1535,9 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
             <div>
               comscore
             </div>
+            <div>
+              STY ADS
+            </div>
             <div
               class="c0 c1"
               dir="ltr"
@@ -1801,6 +1804,9 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         Start of localised text
                       </b>
                     </p>
+                  </div>
+                  <div>
+                    STY ADS
                   </div>
                   <div
                     class="c6"
@@ -3479,19 +3485,11 @@ exports[`Story Page should render correctly when the secondary column data is no
       content="2019-10-23T12:39:32.000Z"
       name="article:modified_time"
     />
-    <noscript>
-      &lt;img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=0&cv=2.0&cj=1" /&gt;
-    </noscript>
     <script
       type="application/ld+json"
     >
       {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
     </script>
-    <script
-      async="true"
-      src="http://localhost:7080/static/js/comscore/main-1.0.js"
-      type="text/javascript"
-    />
     <script
       type="application/ld+json"
     >
@@ -4717,6 +4715,9 @@ exports[`Story Page should render correctly when the secondary column data is no
                 <div>
                   comscore
                 </div>
+                <div>
+                  STY ADS
+                </div>
                 <div
                   class="c0 c1"
                   dir="ltr"
@@ -4993,6 +4994,9 @@ exports[`Story Page should render correctly when the secondary column data is no
                             Start of localised text
                           </b>
                         </p>
+                      </div>
+                      <div>
+                        STY ADS
                       </div>
                       <div
                         class="c6"
@@ -7491,19 +7495,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
       content="2019-10-23T12:39:32.000Z"
       name="article:modified_time"
     />
-    <noscript>
-      &lt;img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=0&cv=2.0&cj=1" /&gt;
-    </noscript>
     <script
       type="application/ld+json"
     >
       {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
     </script>
-    <script
-      async="true"
-      src="http://localhost:7080/static/js/comscore/main-1.0.js"
-      type="text/javascript"
-    />
     <script
       type="application/ld+json"
     >
@@ -7533,6 +7529,9 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                 </div>
                 <div>
                   comscore
+                </div>
+                <div>
+                  STY ADS
                 </div>
                 <div
                   class="c0 c1"
@@ -7810,6 +7809,9 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             Start of localised text
                           </b>
                         </p>
+                      </div>
+                      <div>
+                        STY ADS
                       </div>
                       <div
                         class="c6"
