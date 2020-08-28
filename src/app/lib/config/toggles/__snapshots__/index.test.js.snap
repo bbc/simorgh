@@ -46,6 +46,9 @@ Object {
   "socialEmbed": Object {
     "enabled": true,
   },
+  "storyPageAds": Object {
+    "enabled": false,
+  },
   "variantCookie": Object {
     "enabled": true,
   },
@@ -101,6 +104,9 @@ Object {
   "socialEmbed": Object {
     "enabled": true,
   },
+  "storyPageAds": Object {
+    "enabled": true,
+  },
   "variantCookie": Object {
     "enabled": true,
   },
@@ -151,6 +157,9 @@ Object {
     "enabled": true,
   },
   "socialEmbed": Object {
+    "enabled": true,
+  },
+  "storyPageAds": Object {
     "enabled": true,
   },
   "variantCookie": Object {
