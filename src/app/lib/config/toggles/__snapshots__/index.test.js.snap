@@ -31,9 +31,6 @@ Object {
   "navOnArticles": Object {
     "enabled": true,
   },
-  "onDemandRadioSchedule": Object {
-    "enabled": true,
-  },
   "prerollAds": Object {
     "enabled": true,
   },
@@ -86,9 +83,6 @@ Object {
   "navOnArticles": Object {
     "enabled": true,
   },
-  "onDemandRadioSchedule": Object {
-    "enabled": true,
-  },
   "prerollAds": Object {
     "enabled": true,
   },
@@ -136,9 +130,6 @@ Object {
     "enabled": true,
   },
   "navOnArticles": Object {
-    "enabled": true,
-  },
-  "onDemandRadioSchedule": Object {
     "enabled": true,
   },
   "prerollAds": Object {
