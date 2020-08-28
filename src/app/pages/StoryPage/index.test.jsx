@@ -34,6 +34,12 @@ const toggleState = {
   mediaPlayer: {
     enabled: true,
   },
+  ads: {
+    enabled: false,
+  },
+  comscoreAnalytics: {
+    enabled: true,
+  },
 };
 
 jest.mock('#containers/ChartbeatAnalytics', () => {
