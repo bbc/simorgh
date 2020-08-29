@@ -58,10 +58,9 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
       it('should render an iframe with a valid URL', () => {
         cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
           const media = getBlockData('video', body);
-
           if (media && media.type === 'video') {
             const { lang } = appConfig[service][variant];
-            const embedUrl = `${getVideoEmbedUrl(body, lang)}/amp`;
+            const embedUrl = getVideoEmbedUrl(body, lang, true);
             cy.get(`amp-iframe[src="${embedUrl}"]`).should('be.visible');
             cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
           }
