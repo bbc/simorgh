@@ -17,6 +17,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
+import { ampLeaderboardStyles, ampMpuStyles } from '../utilities/adSlotStyles';
 
 // styled-components removes non-standard attributes (such as AMP attributes) on
 // server rendering. spreading props like this allows us to add AMP attributes
@@ -49,7 +50,8 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledAd = styled.div`
-  display: inline-block;
+  ${({ slotType }) =>
+    slotType === 'mpu' ? ampMpuStyles : ampLeaderboardStyles}
 `;
 
 const StyledLink = styled.a.attrs({ tabIndex: '-1' })`
@@ -123,7 +125,7 @@ const AmpAd = ({ slotType }) => {
           {AMP_ACCESS_FETCH(service)}
         </Helmet>
 
-        <StyledAd>
+        <StyledAd slotType={slotType}>
           <StyledLink
             href={LABEL_LINK}
             script={script}
