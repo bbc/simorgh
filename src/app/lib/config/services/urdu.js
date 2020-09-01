@@ -198,7 +198,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onOnDemandRadioPage: true,
       header: 'ایف ایم بلیٹن',
       durationLabel: '%duration% دورانیہ',
     },

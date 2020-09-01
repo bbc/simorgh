@@ -205,7 +205,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onOnDemandRadioPage: true,
       header: 'Vipindi vya Redio',
       durationLabel: 'Muda %duration%',
     },

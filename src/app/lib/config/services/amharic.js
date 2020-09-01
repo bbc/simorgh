@@ -193,7 +193,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onOnDemandRadioPage: true,
       header: 'ያድምጡ',
       durationLabel: 'ርዝመት %duration%',
     },

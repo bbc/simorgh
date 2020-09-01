@@ -211,7 +211,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onOnDemandRadioPage: true,
       header: 'Barnaamijyada Idaacadda',
       durationLabel: 'Muddada %duration%',
     },
