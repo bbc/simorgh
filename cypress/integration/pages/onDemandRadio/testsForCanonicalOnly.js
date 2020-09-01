@@ -19,7 +19,7 @@ export default ({ service, pageType, variant }) => {
       }
     });
     describe('Radio Schedule', () => {
-      it('should be displayed if there is enough schedule data', () => {
+      it('should be displayed if there is enough schedule data', function test() {
         const scheduleIsEnabled = path(
           ['onDemandRadioSchedule', 'enabled'],
           this.toggles,
