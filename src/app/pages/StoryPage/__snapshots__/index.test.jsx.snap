@@ -1535,7 +1535,9 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
             <div>
               comscore
             </div>
-            <div>
+            <div
+              id="sty-ads"
+            >
               STY ADS
             </div>
             <div
@@ -1805,7 +1807,9 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       </b>
                     </p>
                   </div>
-                  <div>
+                  <div
+                    id="sty-ads"
+                  >
                     STY ADS
                   </div>
                   <div
@@ -4715,7 +4719,9 @@ exports[`Story Page should render correctly when the secondary column data is no
                 <div>
                   comscore
                 </div>
-                <div>
+                <div
+                  id="sty-ads"
+                >
                   STY ADS
                 </div>
                 <div
@@ -4995,7 +5001,9 @@ exports[`Story Page should render correctly when the secondary column data is no
                           </b>
                         </p>
                       </div>
-                      <div>
+                      <div
+                        id="sty-ads"
+                      >
                         STY ADS
                       </div>
                       <div
@@ -7530,7 +7538,9 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                 <div>
                   comscore
                 </div>
-                <div>
+                <div
+                  id="sty-ads"
+                >
                   STY ADS
                 </div>
                 <div
@@ -7810,7 +7820,9 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           </b>
                         </p>
                       </div>
-                      <div>
+                      <div
+                        id="sty-ads"
+                      >
                         STY ADS
                       </div>
                       <div

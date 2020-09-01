@@ -41,7 +41,7 @@ jest.mock('#containers/ComscoreAnalytics', () => {
 });
 
 jest.mock('#containers/Ad', () => {
-  const AdsContainer = () => <div>STY ADS</div>;
+  const AdsContainer = () => <div id="sty-ads">STY ADS</div>;
   return AdsContainer;
 });
 const defaultToggleState = {
@@ -56,13 +56,11 @@ const defaultToggleState = {
   },
 };
 
-const toggleContextMock = {
-  toggleState: defaultToggleState,
-  toggleDispatch: jest.fn(),
-};
-const Page = ({ pageData, service }) => (
+const Page = ({ pageData, service, toggles = defaultToggleState }) => (
   <StaticRouter>
-    <ToggleContext.Provider value={toggleContextMock}>
+    <ToggleContext.Provider
+      value={{ toggleState: toggles, toggleDispatch: jest.fn() }}
+    >
       <ServiceContextProvider
         pageLang={pageData.metadata.language}
         service={service}
@@ -135,6 +133,7 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 const pageType = 'cpsAsset';
 
 describe('Story Page', () => {
+  const nodeEnv = process.env.NODE_ENV;
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
   });
@@ -142,6 +141,7 @@ describe('Story Page', () => {
   afterEach(() => {
     fetchMock.restore();
     delete process.env.SIMORGH_ICHEF_BASE_URL;
+    process.env.NODE_ENV = nodeEnv;
   });
 
   describe('snapshots', () => {
@@ -253,5 +253,60 @@ describe('Story Page', () => {
     );
 
     expect(secondaryColumn).toHaveAttribute('lang', 'uk');
+  });
+
+  it('should not render ads when the ads toggle is disabled and current environment is live', async () => {
+    process.env.NODE_ENV = 'live';
+    const toggles = {
+      ads: {
+        enabled: false,
+      },
+    };
+
+    fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
+    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
+    fetchMock.mock(
+      'http://localhost/pidgin/sty-secondary-column.json',
+      pidginSecondaryColumnData,
+    );
+
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'pidgin',
+      pageType,
+    });
+
+    render(<Page pageData={pageData} service="pidgin" toggles={toggles} />);
+
+    const storyPageAds = document.getElementById('sty-ads');
+
+    expect(storyPageAds).toBeNull();
+  });
+
+  it('should render ads when the ads toggle is enabled and current environment is not live', async () => {
+    process.env.NODE_ENV = 'test';
+    const toggles = {
+      ads: {
+        enabled: true,
+      },
+    };
+
+    fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
+    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
+    fetchMock.mock(
+      'http://localhost/pidgin/sty-secondary-column.json',
+      pidginSecondaryColumnData,
+    );
+
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'pidgin',
+      pageType,
+    });
+
+    render(<Page pageData={pageData} service="pidgin" toggles={toggles} />);
+
+    const storyPageAds = document.getElementById('sty-ads');
+    expect(storyPageAds).toBeInTheDocument();
   });
 });
