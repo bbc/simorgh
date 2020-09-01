@@ -11,7 +11,7 @@ import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 // contexts
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { ToggleContext } from '#contexts/ToggleContext';
 
 // components to test
 import StoryPage from '.';
@@ -44,10 +44,25 @@ jest.mock('#containers/Ad', () => {
   const AdsContainer = () => <div>STY ADS</div>;
   return AdsContainer;
 });
+const defaultToggleState = {
+  ads: {
+    enabled: true,
+  },
+  mostRead: {
+    enabled: true,
+  },
+  socialEmbed: {
+    enabled: true,
+  },
+};
 
+const toggleContextMock = {
+  toggleState: defaultToggleState,
+  toggleDispatch: jest.fn(),
+};
 const Page = ({ pageData, service }) => (
   <StaticRouter>
-    <ToggleContextProvider>
+    <ToggleContext.Provider value={toggleContextMock}>
       <ServiceContextProvider
         pageLang={pageData.metadata.language}
         service={service}
@@ -63,7 +78,7 @@ const Page = ({ pageData, service }) => (
           <StoryPage service={service} pageData={pageData} />
         </RequestContextProvider>
       </ServiceContextProvider>
-    </ToggleContextProvider>
+    </ToggleContext.Provider>
   </StaticRouter>
 );
 

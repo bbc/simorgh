@@ -94,9 +94,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const recommendationsInitialData = path(['recommendations'], pageData);
 
-  const { enabled: adsEnabled } = useToggle('ads');
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
-
   const gridColumns = {
     group0: 8,
     group1: 8,
@@ -142,14 +139,27 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     group5: 4,
   };
 
+  const { enabled: adsEnabled } = useToggle('ads');
+  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
+
   /**
    * Should we display ads? We check:
    * 1. The CPS `allowAdvertising` field value.
    * 2. A value local to the STY page type.
    * - iSite toggles are handled by the Ad container.
    */
+  console.log(
+    '1 -->',
+    path(['metadata', 'options', 'allowAdvertising'], pageData),
+  );
+
+  console.log('2 -->', adsEnabled);
+
+  console.log('3 -->', process.env.NODE_ENV !== 'production');
+
   const isAdsEnabled = [
     path(['metadata', 'options', 'allowAdvertising'], pageData),
+    adsEnabled,
     process.env.NODE_ENV !== 'production',
   ].every(Boolean);
 
@@ -262,10 +272,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
 
   return (
     <>
-      {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
-      {adsEnabled && showAdsBasedOnLocation && !isAmp && (
-        <CanonicalAdBootstrapJs />
-      )}
       <CpsMetadata
         title={title}
         shortHeadline={shortHeadline}
@@ -291,6 +297,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
+      {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
+      {isAdsEnabled && showAdsBasedOnLocation && !isAmp && (
+        <CanonicalAdBootstrapJs />
+      )}
       {isAdsEnabled && <AdContainer slotType="leaderboard" />}
       <StoryPageGrid
         dir={dir}
