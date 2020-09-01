@@ -89,6 +89,11 @@ export const getMostWatchedDataRegex = services => {
   return `/:service(${serviceRegex})/mostwatched:variant(${variantRegex})?.json`;
 };
 
+export const getMostWatchedPageRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/media/video:amp(${ampRegex})?`;
+};
+
 export const getSecondaryColumnDataRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/sty-secondary-column:variant(${variantRegex})?.json`;
