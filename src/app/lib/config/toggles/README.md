@@ -9,8 +9,6 @@
 | `enableFetchingToggles` | Enable fetching toggle values from remote Toggles Config API for specified services |
 | `include`               | Display Include on Story (STY) Pages |  |
 | `liveRadioSchedule`     | Display Radio Schedule on Live Radio Pages | |
-| `logMediaPlayerStatus`  | Log the HTTP status code returned by the Media Player iFrame URL | |
-| `mediaPlayer`           | Display Media Player on Media Asset Pages (MAP) and Article Pages | |
 | `mostRead`              | Display Most Read | |
 | `mostWatched`           | Display Most Watched | |
 | `navOnArticles`         | Display Navigation on Article Pages | |

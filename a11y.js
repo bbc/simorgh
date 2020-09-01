@@ -58,6 +58,7 @@ const pageTypes = {
   liveRadio: [
     ...mediaEmbedErrorsToSuppress,
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
+    '/iframe',
   ],
   photoGalleryPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   mostReadPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
@@ -71,9 +72,11 @@ const pageTypes = {
   onDemandRadio: [
     ...mediaEmbedErrorsToSuppress,
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
+    '/iframe',
   ],
   idxPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
-  onDemandTV: [],
+  onDemandTV: ['/iframe'],
+  mediaAssetPage: [...mediaEmbedErrorsToSuppress, '/iframe'],
 };
 
 Object.keys(pageTypes).forEach(pageType => {

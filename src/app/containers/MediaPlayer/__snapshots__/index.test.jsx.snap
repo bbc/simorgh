@@ -177,7 +177,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"}
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://test.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"}
     </script>
   </head>
   <body>
@@ -257,7 +257,7 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"}
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://test.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"}
     </script>
   </head>
   <body>
@@ -302,7 +302,7 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
             allowfullscreen=""
             class="c2"
             scrolling="no"
-            src="https://polling.test.bbc.co.uk/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"
+            src="https://test.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"
             title="Media player"
           />
           <noscript />
