@@ -1,7 +1,7 @@
 import path from 'ramda/src/path';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
-import { getEmbedUrl } from './helper';
+import getEmbedUrl from '../../../support/helpers/getEmbedUrl';
 import { isScheduleDataComplete } from '../../../../src/app/containers/RadioSchedule/utilities/evaluateScheduleData';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 

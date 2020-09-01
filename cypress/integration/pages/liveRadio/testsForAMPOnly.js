@@ -1,6 +1,6 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
-import { getEmbedUrl } from './helper';
+import getEmbedUrl from '../../../support/helpers/getEmbedUrl';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 
 // For testing important features that differ between services, e.g. Timestamps.
