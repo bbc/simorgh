@@ -3,6 +3,8 @@
 exports[`Amp AdSlot Snapshots should correctly render a leaderboard AdSlot 1`] = `
 <div>
   <amp-ad
+    amp-access="toggles.ads.enabled"
+    amp-access-hide="true"
     data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
     data-amp-slot-index="0"
     data-block-on-consent="default"
@@ -16,6 +18,8 @@ exports[`Amp AdSlot Snapshots should correctly render a leaderboard AdSlot 1`] =
     width="320"
   />
   <amp-ad
+    amp-access="toggles.ads.enabled"
+    amp-access-hide="true"
     data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
     data-amp-slot-index="0"
     data-block-on-consent="default"
@@ -33,6 +37,8 @@ exports[`Amp AdSlot Snapshots should correctly render a leaderboard AdSlot 1`] =
 
 exports[`Amp AdSlot Snapshots should correctly render a mpu AdSlot 1`] = `
 <amp-ad
+  amp-access="toggles.ads.enabled"
+  amp-access-hide="true"
   data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
   data-amp-slot-index="0"
   data-block-on-consent="default"
