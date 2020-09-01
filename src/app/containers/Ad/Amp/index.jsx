@@ -30,7 +30,9 @@ const Section = props => <section {...props} />;
 // setting display: none ensures ad requests within this component are not made.
 const AdSection = styled(Section)`
   background-color: ${C_LUNAR_LIGHT};
+`;
 
+const StyledAdSlot = styled(AdSlot)`
   .amp-geo-pending &,
   .amp-geo-group-gbOrUnknown & {
     display: none;
@@ -114,8 +116,6 @@ const AmpAd = ({ slotType }) => {
       aria-label={ariaLabel}
       role="region"
       data-e2e="advertisement"
-      amp-access="toggles.ads.enabled"
-      amp-access-hide="true"
       aria-hidden="true"
     >
       <StyledWrapper>
@@ -134,7 +134,7 @@ const AmpAd = ({ slotType }) => {
           >
             {label}
           </StyledLink>
-          <AdSlot service={service} slotType={slotType} />
+          <StyledAdSlot service={service} slotType={slotType} />
         </StyledAd>
       </StyledWrapper>
     </AdSection>

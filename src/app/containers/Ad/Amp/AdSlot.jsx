@@ -28,6 +28,8 @@ const defaultAmpAdProps = service => ({
   'data-slot': getDataSlot(service),
   'data-amp-slot-index': '0',
   'data-a4a-upgrade-type': 'amp-ad-network-doubleclick-impl',
+  'amp-access': 'toggles.ads.enabled',
+  'amp-access-hide': 'true',
 });
 
 const slotConfigurations = {
@@ -54,7 +56,7 @@ const slotConfigurations = {
   },
 };
 
-const AdSlot = ({ service, slotType }) => {
+const AdSlot = ({ service, slotType, className }) => {
   const { mobile, desktop } = slotConfigurations[slotType];
   const targetingJson = JSON.stringify(
     constructAdJsonData({ service, slotType }),
@@ -67,6 +69,7 @@ const AdSlot = ({ service, slotType }) => {
           {...defaultAmpAdProps(service)}
           {...mobile}
           json={targetingJson}
+          className={className}
         />
       )}
       {desktop && (
@@ -74,6 +77,7 @@ const AdSlot = ({ service, slotType }) => {
           {...defaultAmpAdProps(service)}
           {...desktop}
           json={targetingJson}
+          className={className}
         />
       )}
     </>
@@ -83,6 +87,11 @@ const AdSlot = ({ service, slotType }) => {
 AdSlot.propTypes = {
   service: string.isRequired,
   slotType: oneOf(['leaderboard', 'mpu']).isRequired,
+  className: string,
+};
+
+AdSlot.defaultProps = {
+  className: null,
 };
 
 export default AdSlot;
