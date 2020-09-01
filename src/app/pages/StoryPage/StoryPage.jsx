@@ -45,6 +45,8 @@ import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
 import AdContainer from '#containers/Ad';
+import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
+import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 
 const MpuContainer = styled(AdContainer)`
@@ -91,6 +93,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const recommendationsInitialData = path(['recommendations'], pageData);
+
+  const { enabled: adsEnabled } = useToggle('ads');
+  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
 
   const gridColumns = {
     group0: 8,
@@ -143,10 +148,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
    * 2. A value local to the STY page type.
    * - iSite toggles are handled by the Ad container.
    */
-  const { enabled: isStoryPageEnabled } = useToggle('storyPageAds');
   const isAdsEnabled = [
     path(['metadata', 'options', 'allowAdvertising'], pageData),
-    isStoryPageEnabled,
+    process.env.NODE_ENV !== 'production',
   ].every(Boolean);
 
   const componentsToRender = {
@@ -258,6 +262,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
 
   return (
     <>
+      {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
+      {adsEnabled && showAdsBasedOnLocation && !isAmp && (
+        <CanonicalAdBootstrapJs />
+      )}
       <CpsMetadata
         title={title}
         shortHeadline={shortHeadline}

@@ -38,4 +38,17 @@ export default () => {
       });
     }
   });
+
+  describe('Ads', () => {
+    const hasAds = service === 'mundo';
+    if (hasAds) {
+      const leaderboardEl = document.getElementById('dotcom-leaderboard');
+      const mpuEl = document.getElementById('dotcom-mpu');
+
+      it('should have ads in the document', () => {
+        expect(leaderboardEl).toBeInTheDocument();
+        expect(mpuEl).toBeInTheDocument();
+      });
+    }
+  });
 };
