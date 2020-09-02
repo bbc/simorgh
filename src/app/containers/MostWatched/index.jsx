@@ -20,7 +20,6 @@ const MostWatched = ({ data, hasHeader }) => {
   return (
     <CpsOnwardJourney
       labelId="most-watched-heading"
-      data-e2e="most-watched"
       title={hasHeader ? header : ''}
       isMapContent
       content={data}
