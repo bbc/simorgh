@@ -73,11 +73,18 @@ export default ({ service }) => {
     });
 
     it('should show/not show the super cool feature depending if the toggle is enabled for the service and the value is "some-cool-value"', function test() {
-      const superCoolFeatureToggle = path(['superCoolFeature'], this.toggles);
+      const superCoolFeatureIsEnabled = path(
+        ['superCoolFeature', 'enabled'],
+        this.toggles,
+      );
+      const superCoolFeatureValue = path(
+        ['superCoolFeature', 'value'],
+        this.toggles,
+      );
 
       if (
-        superCoolFeature.enabled &&
-        superCoolFeature.value === 'some-cool-value'
+        superCoolFeatureIsEnabled &&
+        superCoolFeatureValue === 'some-cool-value'
       ) {
         cy.get('[data-e2e=super-cool-feature]').should('exist');
       } else {
@@ -93,11 +100,18 @@ export default ({ service }) => {
 ```js
 it('should show/not show the super cool feature depending if the toggle is enabled for the service and the value is "some-cool-value"', () => {
   cy.get('@toggles').then(toggles => {
-    const superCoolFeatureToggle = path(['superCoolFeature'], this.toggles);
+    const superCoolFeatureIsEnabled = path(
+      ['superCoolFeature', 'enabled'],
+      this.toggles,
+    );
+    const superCoolFeatureValue = path(
+      ['superCoolFeature', 'value'],
+      this.toggles,
+    );
 
     if (
-      superCoolFeature.enabled &&
-      superCoolFeature.value === 'some-cool-value'
+      superCoolFeatureIsEnabled &&
+      superCoolFeatureValue === 'some-cool-value'
     ) {
       cy.get('[data-e2e=super-cool-feature]').should('exist');
     } else {
