@@ -126,7 +126,7 @@ const directives = {
   },
   frameSrc: {
     ampLive: [
-      'https://polling.bbc.co.uk', // Media Asset Page
+      'https://polling.bbc.co.uk', // Media Player
       'https://www.youtube.com', // Social Embeds, <amp-youtube />
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.ampproject.net', // Social Embeds
@@ -145,16 +145,16 @@ const directives = {
       'https://syndication.twitter.com', // Social Embeds
       'https://news.files.bbci.co.uk', // STY include
       'https://www.bbc.co.uk', // STY include
-      'https://bbc.com', // Media Asset Page
-      'https://www.bbc.com', // Media Asset Page
+      'https://bbc.com', // Media Player
+      'https://www.bbc.com', // Media Player
       'https://bbc-maps.carto.com', // STY include maps
       'https://flo.uri.sh', // STY includes
       ...advertisingDirectives.frameSrc,
       "'self'",
     ],
     ampNonLive: [
-      'https://polling.bbc.co.uk', // Media Asset Page
-      'https://polling.test.bbc.co.uk', // Media Asset Page
+      'https://polling.bbc.co.uk', // Media Player
+      'https://polling.test.bbc.co.uk', // Media Player
       'https://www.youtube.com', // Social Embeds, <amp-youtube />
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.ampproject.net', // Social Embeds
@@ -175,9 +175,9 @@ const directives = {
       'https://news.files.bbci.co.uk', // STY include
       'https://www.bbc.co.uk', // STY include
       'http://www.bbc.co.uk', // for localhost STY include
-      'https://test.bbc.com', // Media Asset Page iFrame
-      'https://www.bbc.com', // Media Asset Page iFrame
-      'https://bbc.com', // Media Asset Page iFrame
+      'https://test.bbc.com', // Media Player
+      'https://www.bbc.com', // Media Player
+      'https://bbc.com', // Media Player
       'https://bbc-maps.carto.com', // STY include maps
       'https://news.test.files.bbci.co.uk',
       'https://flo.uri.sh', // STY includes
