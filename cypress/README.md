@@ -72,13 +72,13 @@ export default ({ service }) => {
       cy.getToggles(service);
     });
 
-    it('should show/not show the super cool feature depending on the toggle value for the service', function test() {
-      const superCoolFeatureIsEnabled = path(
-        ['superCoolFeature', 'enabled'],
-        this.toggles,
-      );
+    it('should show/not show the super cool feature depending if the toggle is enabled for the service and the value is "some-cool-value"', function test() {
+      const superCoolFeatureToggle = path(['superCoolFeature'], this.toggles);
 
-      if (superCoolFeatureIsEnabled) {
+      if (
+        superCoolFeature.enabled &&
+        superCoolFeature.value === 'some-cool-value'
+      ) {
         cy.get('[data-e2e=super-cool-feature]').should('exist');
       } else {
         cy.get('[data-e2e=super-cool-feature]').should('not.exist');
@@ -91,14 +91,14 @@ export default ({ service }) => {
 **NB** In the example above, the `it` callback function is using the standard function syntax. Using arrow functions to access aliases via `this` won’t work because of the lexical binding of this - https://docs.cypress.io/api/commands/as.html#Fixture. If you'd rather have consistency and use an arrow function then you can still do so but you have to use `cy.get('@toggles')` and introduce async code handling with `.then` and with that comes more callback nesting. Here is the same test written with an arrow function.
 
 ```js
-it('should show/not show the super cool feature depending on the toggle value for the service', () => {
+it('should show/not show the super cool feature depending if the toggle is enabled for the service and the value is "some-cool-value"', () => {
   cy.get('@toggles').then(toggles => {
-    const superCoolFeatureIsEnabled = path(
-      ['superCoolFeature', 'enabled'],
-      toggles,
-    );
+    const superCoolFeatureToggle = path(['superCoolFeature'], this.toggles);
 
-    if (superCoolFeatureIsEnabled) {
+    if (
+      superCoolFeature.enabled &&
+      superCoolFeature.value === 'some-cool-value'
+    ) {
       cy.get('[data-e2e=super-cool-feature]').should('exist');
     } else {
       cy.get('[data-e2e=super-cool-feature]').should('not.exist');
