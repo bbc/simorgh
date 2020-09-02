@@ -148,15 +148,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
    * 2. A value local to the STY page type.
    * - iSite toggles are handled by the Ad container.
    */
-  console.log(
-    '1 -->',
-    path(['metadata', 'options', 'allowAdvertising'], pageData),
-  );
-
-  console.log('2 -->', adsEnabled);
-
-  console.log('3 -->', process.env.NODE_ENV !== 'production');
-
   const isAdsEnabled = [
     path(['metadata', 'options', 'allowAdvertising'], pageData),
     adsEnabled,
