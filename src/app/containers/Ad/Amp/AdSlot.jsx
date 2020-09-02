@@ -28,8 +28,6 @@ const defaultAmpAdProps = service => ({
   'data-slot': getDataSlot(service),
   'data-amp-slot-index': '0',
   'data-a4a-upgrade-type': 'amp-ad-network-doubleclick-impl',
-  'amp-access': 'toggles.ads.enabled',
-  'amp-access-hide': 'true',
 });
 
 const slotConfigurations = {

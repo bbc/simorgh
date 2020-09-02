@@ -31,7 +31,7 @@ const AdSection = styled(Section)`
   margin-top: ${GEL_SPACING};
 `;
 
-const StyledAdSlot = styled(AdSlot)`
+const DisplayWrapper = styled.div`
   .amp-geo-pending &,
   .amp-geo-group-gbOrUnknown & {
     display: none;
@@ -114,15 +114,20 @@ const AmpAd = ({ slotType }) => {
       </Helmet>
       <StyledWrapper>
         <AdContainer slotType={slotType}>
-          <StyledLink
-            href={LABEL_LINK}
-            script={script}
-            service={service}
-            dir={dir}
+          <DisplayWrapper
+            amp-access="toggles.ads.enabled"
+            amp-access-hide="true"
           >
-            {label}
-          </StyledLink>
-          <StyledAdSlot service={service} slotType={slotType} />
+            <StyledLink
+              href={LABEL_LINK}
+              script={script}
+              service={service}
+              dir={dir}
+            >
+              {label}
+            </StyledLink>
+            <AdSlot service={service} slotType={slotType} />
+          </DisplayWrapper>
         </AdContainer>
       </StyledWrapper>
     </AdSection>
