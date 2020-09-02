@@ -135,7 +135,6 @@ const directives = {
       "'self'",
     ],
     canonicalLive: [
-      'https://polling.bbc.co.uk', // Media page
       'https://emp.bbc.com',
       'https://emp.bbc.co.uk',
       'https://chartbeat.com',
@@ -163,8 +162,6 @@ const directives = {
       "'self'",
     ],
     canonicalNonLive: [
-      'https://polling.bbc.co.uk', // Media page
-      'https://polling.test.bbc.co.uk', // Media page
       'https://emp.bbc.com',
       'https://emp.bbc.co.uk',
       'https://chartbeat.com',
