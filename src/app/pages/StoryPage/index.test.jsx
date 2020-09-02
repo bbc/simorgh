@@ -133,7 +133,7 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 const pageType = 'cpsAsset';
 
 describe('Story Page', () => {
-  const nodeEnv = process.env.NODE_ENV;
+  const appEnv = process.env.SIMORGH_APP_ENV;
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
   });
@@ -141,7 +141,7 @@ describe('Story Page', () => {
   afterEach(() => {
     fetchMock.restore();
     delete process.env.SIMORGH_ICHEF_BASE_URL;
-    process.env.NODE_ENV = nodeEnv;
+    process.env.SIMORGH_APP_ENV = appEnv;
   });
 
   describe('snapshots', () => {
@@ -256,7 +256,7 @@ describe('Story Page', () => {
   });
 
   it('should not render ads when the ads toggle is disabled and current environment is live', async () => {
-    process.env.NODE_ENV = 'live';
+    process.env.SIMORGH_APP_ENV = 'live';
     const toggles = {
       ads: {
         enabled: false,
@@ -284,7 +284,7 @@ describe('Story Page', () => {
   });
 
   it('should render ads when the ads toggle is enabled and current environment is not live', async () => {
-    process.env.NODE_ENV = 'test';
+    process.env.SIMORGH_APP_ENV = 'test';
     const toggles = {
       ads: {
         enabled: true,
