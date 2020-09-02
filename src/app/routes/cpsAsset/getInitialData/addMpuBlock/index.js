@@ -1,6 +1,5 @@
 /* eslint-disable prefer-destructuring */
 import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
 import deepClone from 'ramda/src/clone';
 import splitAt from 'ramda/src/splitAt';
 import { getNthCpsParagraphIndex } from '../helpers';
@@ -14,11 +13,11 @@ const addMpuBlock = json => {
   const pageData = deepClone(json);
   const pageType = path(['metadata', 'type'], pageData);
   const { allowAdvertising } = path(['metadata', 'options'], pageData);
-  const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
 
-  if (pageType !== 'STY' || !blocks || !allowAdvertising) {
-    return pageData;
-  }
+  if (!allowAdvertising || pageType !== 'STY') return pageData;
+
+  const blocks = path(['content', 'model', 'blocks'], pageData);
+  if (!blocks) return pageData;
 
   const mpuInsertionIndex = getNthCpsParagraphIndex(blocks, 4) || blocks.length;
 
