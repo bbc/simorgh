@@ -436,6 +436,7 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Story Promo Image should matc
   height="549"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/DE34/production/_111648865_1stimage.png 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/DE34/production/_111648865_1stimage.png 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/DE34/production/_111648865_1stimage.png 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/DE34/production/_111648865_1stimage.png 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/DE34/production/_111648865_1stimage.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/DE34/production/_111648865_1stimage.png 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png 660w"
   width="976"
 />
 `;
