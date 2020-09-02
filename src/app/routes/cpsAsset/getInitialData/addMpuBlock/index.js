@@ -10,11 +10,12 @@ const mpuBlock = {
 };
 
 const addMpuBlock = json => {
-  const pageData = deepClone(json);
-  const pageType = path(['metadata', 'type'], pageData);
-  const { allowAdvertising } = path(['metadata', 'options'], pageData);
+  const { allowAdvertising } = path(['metadata', 'options'], json);
+  const pageType = path(['metadata', 'type'], json);
 
-  if (!allowAdvertising || pageType !== 'STY') return pageData;
+  if (!allowAdvertising || pageType !== 'STY') return json;
+
+  const pageData = deepClone(json);
 
   const blocks = path(['content', 'model', 'blocks'], pageData);
   if (!blocks) return pageData;
