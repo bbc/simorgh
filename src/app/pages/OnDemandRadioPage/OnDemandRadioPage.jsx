@@ -14,7 +14,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadioHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
-import StyledAudioPlayer from '#containers/AVPlayer/StyledAudioPlayer';
+import AVPlayer from '#containers/AVPlayer';
 import EpisodeImage from '#containers/OnDemandImage';
 import LinkedData from '#containers/LinkedData';
 import getMediaId from '#lib/utilities/getMediaId';
@@ -136,7 +136,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             </Grid>
           </StyledGelWrapperGrid>
           {mediaIsAvailable ? (
-            <StyledAudioPlayer
+            <AVPlayer
               assetId={episodeId}
               embedUrl={embedUrl}
               iframeTitle={iframeTitle}

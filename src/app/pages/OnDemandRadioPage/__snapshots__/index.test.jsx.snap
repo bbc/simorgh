@@ -283,11 +283,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   margin-bottom: 1rem;
 }
 
-.c15 amp-iframe {
-  width: calc(100% + 1rem);
-  margin: 0 -0.5rem;
-}
-
+.c15 amp-iframe,
 .c15 div > iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
@@ -592,13 +588,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c15 amp-iframe {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem;
-  }
-}
-
-@media (min-width:25rem) {
+  .c15 amp-iframe,
   .c15 div > iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
@@ -840,11 +830,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   margin-bottom: 1rem;
 }
 
-.c16 amp-iframe {
-  width: calc(100% + 1rem);
-  margin: 0 -0.5rem;
-}
-
+.c16 amp-iframe,
 .c16 div > iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
@@ -1159,13 +1145,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c16 amp-iframe {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem;
-  }
-}
-
-@media (min-width:25rem) {
+  .c16 amp-iframe,
   .c16 div > iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;

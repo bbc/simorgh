@@ -12,7 +12,7 @@ import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import LinkedData from '../../containers/LinkedData';
-import StyledAudioPlayer from '#containers/AVPlayer/StyledAudioPlayer';
+import AVPlayer from '#containers/AVPlayer';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import getMediaId from '#lib/utilities/getMediaId';
@@ -127,7 +127,7 @@ const LiveRadioPage = ({ pageData }) => {
           <Paragraph script={script} service={service}>
             {bodySummary}
           </Paragraph>
-          <StyledAudioPlayer
+          <AVPlayer
             assetId={assetId}
             embedUrl={embedUrl}
             iframeTitle={iframeTitle}
