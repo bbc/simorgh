@@ -13,7 +13,7 @@ const LinkContents = ({ item, isInline }) => {
     translations: { media: mediaTranslations },
   } = useContext(ServiceContext);
 
-  const isMedia = !!pathOr(null, ['media'], item);
+  const isMedia = pathOr(false, ['media'], item);
   const isPGL = pathOr(null, ['cpsType'], item) === 'PGL';
   const headlines = pathOr(null, ['headlines'], item);
 
