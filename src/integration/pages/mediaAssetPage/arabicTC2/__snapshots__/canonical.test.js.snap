@@ -161,6 +161,76 @@ exports[`Canonical Media Asset Page Media Player a11y assistive technology can r
 
 exports[`Canonical Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://test.bbc.com/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar"`;
 
+exports[`Canonical Media Asset Page Most Watched should match text and url 1`] = `
+Object {
+  "text": "كيف أصبح رئيس تركيا رجب طيب أردوغان أحد أبرز القادة؟",
+  "url": "/arabic/media-53529792",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 2`] = `
+Object {
+  "text": "قصة أخطر صورة سيلفي التقطت في متنزه بالمكسيك",
+  "url": "/arabic/media-53528843",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 3`] = `
+Object {
+  "text": "مباشر: تلفزيون بي بي سي عربي",
+  "url": "/arabic/media-49522519",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 4`] = `
+Object {
+  "text": "لحظة اعتراض طائرة حربية أمريكية لطائرة ركاب إيرانية متجهة إلى لبنان",
+  "url": "/arabic/media-53527555",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 5`] = `
+Object {
+  "text": "هل حذف غوغل فلسطين من خرائطه بالفعل؟",
+  "url": "/arabic/media-53532058",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 6`] = `
+Object {
+  "text": "عرض سعودي للفنان المصري عبد الرحمن ابو زهرة بعد شكواه من تجاهل المخرجين له",
+  "url": "/arabic/tv-and-radio-53519417",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 7`] = `
+Object {
+  "text": "أردوغان يرتل القرآن في أول صلاة جمعة في آيا صوفيا",
+  "url": "/arabic/tv-and-radio-53532358",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 8`] = `
+Object {
+  "text": "التحرش الإلكتروني شبح جديد يهدد نساء في مصر",
+  "url": "/arabic/media-53525480",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 9`] = `
+Object {
+  "text": "آيا صوفيا: كيف أصبح المبنى التاريخي في قلب هذه المعركة السياسية؟",
+  "url": "/arabic/media-53262408",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 10`] = `
+Object {
+  "text": "\\"المايوه الشرعي\\" يثير جدلا في الساحل الشمالي في مصر",
+  "url": "/arabic/tv-and-radio-53492142",
+}
+`;
+
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

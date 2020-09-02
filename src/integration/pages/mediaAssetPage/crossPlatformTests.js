@@ -72,4 +72,32 @@ export default () => {
       });
     }
   });
+
+  describe(`Most Watched`, () => {
+    const mostWatchedLinks = document.querySelectorAll(
+      '[data-e2e="most-watched-heading"] a',
+    );
+
+    if (mostWatchedLinks) {
+      mostWatchedLinks.forEach(mostWatchedLink => {
+        const mostWatchedText = mostWatchedLink.textContent;
+        const mostWatchedUrl = mostWatchedLink.getAttribute('href');
+
+        it('should be in the document', () => {
+          expect(mostWatchedLink).toBeInTheDocument();
+        });
+
+        it('should contain text', () => {
+          expect(mostWatchedText).toBeTruthy();
+        });
+
+        it('should match text and url', () => {
+          expect({
+            text: mostWatchedLink.textContent,
+            url: mostWatchedUrl,
+          }).toMatchSnapshot();
+        });
+      });
+    }
+  });
 };

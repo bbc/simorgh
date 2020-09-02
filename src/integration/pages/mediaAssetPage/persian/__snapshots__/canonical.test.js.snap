@@ -189,6 +189,76 @@ exports[`Canonical Media Asset Page Media Player a11y assistive technology can r
 
 exports[`Canonical Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://test.bbc.com/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa"`;
 
+exports[`Canonical Media Asset Page Most Watched should match text and url 1`] = `
+Object {
+  "text": "تلویزیون فارسی بی‌بی‌سی: پخش زنده اینترنتی",
+  "url": "/persian/media-49522521",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 2`] = `
+Object {
+  "text": "پرستاری که با نواختن ویولن به بیماران آرامش می‌دهد",
+  "url": "/persian/world-53324474",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 3`] = `
+Object {
+  "text": "جنجال بر سر واریز۲۳۱ میلیون تومانی به حساب نمایندگان مجلس ایران",
+  "url": "/persian/iran-53313696",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 4`] = `
+Object {
+  "text": "هشدار عباس عراقچی؛ 'خسارات راهبردی' ایران به چه معناست؟",
+  "url": "/persian/tv-and-radio-53317117",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 5`] = `
+Object {
+  "text": "تاثیر کرونا بر گاوبازی در اسپانیا",
+  "url": "/persian/world-53324472",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 6`] = `
+Object {
+  "text": "ابهام در مورد منشاء 'انفجار' در تاسیسات هسته‌ای نطنز",
+  "url": "/persian/iran-53313694",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 7`] = `
+Object {
+  "text": "اعتصاب غذای شماری از زندانیان ایرانی در ارمنستان",
+  "url": "/persian/iran-53315112",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 8`] = `
+Object {
+  "text": "رشد بورس تهران حبابی است؟",
+  "url": "/persian/business-53313698",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 9`] = `
+Object {
+  "text": "کشمکش بر سر ممنوعیت واردات موبایل‌های بالای ۳۰۰ یورو",
+  "url": "/persian/business-53315108",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 10`] = `
+Object {
+  "text": "کودتای ۲۸ مرداد به روایت اردشیر زاهدی",
+  "url": "/persian/iran/2013/08/130819_l42_vid_coup_eye3",
+}
+`;
+
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

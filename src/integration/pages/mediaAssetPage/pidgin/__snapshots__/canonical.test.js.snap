@@ -151,6 +151,76 @@ exports[`Canonical Media Asset Page Media Player a11y assistive technology can r
 
 exports[`Canonical Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://test.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"`;
 
+exports[`Canonical Media Asset Page Most Watched should match text and url 1`] = `
+Object {
+  "text": "'I no know say I different for society until pipo begin look me one kain'",
+  "url": "/pidgin/media-53580248",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 2`] = `
+Object {
+  "text": "Bundu Ama: Di community wey get only 'one' toilet",
+  "url": "/pidgin/media-53591139",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 3`] = `
+Object {
+  "text": "Naira Marley: Jude Chukwuka AKA Fada Maler say \\"I be Marlian for life\\"",
+  "url": "/pidgin/tori-53509788",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 4`] = `
+Object {
+  "text": "James Brown: Meet popular Nigeria cross dresser",
+  "url": "/pidgin/media-53468506",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 5`] = `
+Object {
+  "text": "Savage Trap Queen: I dey make 80k - 100k per blue film",
+  "url": "/pidgin/tori-45225863",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 6`] = `
+Object {
+  "text": "80-year-old man wey bin dey use sand to clean im teeth don get im own toothbrush",
+  "url": "/pidgin/tori-53359602",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 7`] = `
+Object {
+  "text": "Chichi Igbo: 'Di kain Internet bully I dey face daily, if my skin no tight I for don kpai'",
+  "url": "/pidgin/tori-53146818",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 8`] = `
+Object {
+  "text": "Regina Daniels share her thoughts on motherhood and her and Ned Nwoko baby",
+  "url": "/pidgin/tori-53377321",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 9`] = `
+Object {
+  "text": "Omohtee: 'Fat wey don turn to doti dey comot from my bumbum surgery wey I do' - Victim of 'failed bum surgery'",
+  "url": "/pidgin/tori-53331401",
+}
+`;
+
+exports[`Canonical Media Asset Page Most Watched should match text and url 10`] = `
+Object {
+  "text": "BBC Pidgin Minute",
+  "url": "/pidgin/media-53261804",
+}
+`;
+
 exports[`Canonical Media Asset Page Related Content should match text and url 1`] = `
 Object {
   "text": "Police Arrest 3 ontop Anambra Church Attack",
