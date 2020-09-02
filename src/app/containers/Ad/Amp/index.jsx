@@ -6,9 +6,7 @@ import {
   AMP_ACCESS_JS,
   AMP_ADS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-
-import { GEL_SPACING_DBL, GEL_SPACING } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import { C_LUNAR_LIGHT, C_RHINO } from '@bbc/psammead-styles/colours';
 import pathOr from 'ramda/src/pathOr';
 import { getMinion } from '@bbc/gel-foundations/typography';
@@ -30,6 +28,7 @@ const Section = props => <section {...props} />;
 // setting display: none ensures ad requests within this component are not made.
 const AdSection = styled(Section)`
   background-color: ${C_LUNAR_LIGHT};
+  margin-top: ${GEL_SPACING};
 `;
 
 const StyledAdSlot = styled(AdSlot)`
@@ -43,15 +42,9 @@ const StyledAdSlot = styled(AdSlot)`
 const StyledWrapper = styled.div`
   margin: 0 auto; /* To centre page layout for Group 4+ */
   text-align: center;
-  padding-bottom: ${GEL_SPACING};
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-bottom: ${GEL_SPACING_DBL};
-    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
-  }
 `;
 
-const StyledAd = styled.div`
+const AdContainer = styled.div`
   ${({ slotType }) =>
     slotType === 'mpu' ? ampMpuStyles : ampLeaderboardStyles}
 `;
@@ -66,10 +59,6 @@ const StyledLink = styled.a.attrs({ tabIndex: '-1' })`
   padding: ${GEL_SPACING} 0;
 
   text-align: ${({ dir }) => (dir === 'ltr' ? `right` : `left`)};
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-top: ${GEL_SPACING_DBL};
-  }
 
   &:hover {
     text-decoration: underline;
@@ -118,14 +107,13 @@ const AmpAd = ({ slotType }) => {
       data-e2e="advertisement"
       aria-hidden="true"
     >
+      <Helmet>
+        {AMP_ADS_JS}
+        {AMP_ACCESS_JS}
+        {AMP_ACCESS_FETCH(service)}
+      </Helmet>
       <StyledWrapper>
-        <Helmet>
-          {AMP_ADS_JS}
-          {AMP_ACCESS_JS}
-          {AMP_ACCESS_FETCH(service)}
-        </Helmet>
-
-        <StyledAd slotType={slotType}>
+        <AdContainer slotType={slotType}>
           <StyledLink
             href={LABEL_LINK}
             script={script}
@@ -135,7 +123,7 @@ const AmpAd = ({ slotType }) => {
             {label}
           </StyledLink>
           <StyledAdSlot service={service} slotType={slotType} />
-        </StyledAd>
+        </AdContainer>
       </StyledWrapper>
     </AdSection>
   );

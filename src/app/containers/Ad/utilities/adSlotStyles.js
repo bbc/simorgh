@@ -89,7 +89,6 @@ export const ampLeaderboardStyles = css`
   display: none;
   visibility: hidden;
   @media (min-width: ${LEADERBOARD_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING};
     min-height: ${LEADERBOARD_HEIGHTS.GROUP_1};
     display: inline-block;
     visibility: visible;
