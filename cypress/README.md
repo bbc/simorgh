@@ -93,7 +93,10 @@ export default ({ service }) => {
 ```js
 it('should show/not show the super cool feature depending on the toggle value for the service', () => {
   cy.get('@toggles').then(toggles => {
-    const superCoolFeatureIsEnabled = path(['superCoolFeature', 'enabled']);
+    const superCoolFeatureIsEnabled = path(
+      ['superCoolFeature', 'enabled'],
+      toggles,
+    );
 
     if (superCoolFeatureIsEnabled) {
       cy.get('[data-e2e=super-cool-feature]').should('exist');
