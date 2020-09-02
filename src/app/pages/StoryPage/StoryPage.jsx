@@ -44,9 +44,14 @@ import {
 import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
-import useToggle from '#hooks/useToggle';
+import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { RequestContext } from '#contexts/RequestContext';
+import useToggle from '#hooks/useToggle';
+
+const MpuContainer = styled(AdContainer)`
+  margin-bottom: ${GEL_SPACING_TRPL};
+`;
 
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
@@ -88,11 +93,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const recommendationsInitialData = path(['recommendations'], pageData);
-
-  // ads
-  const { enabled: adsEnabled } = useToggle('ads');
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
-  const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
   const gridColumns = {
     group0: 8,
@@ -139,6 +139,23 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     group5: 4,
   };
 
+  // ads
+  const { enabled: adsEnabled } = useToggle('ads');
+  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
+  const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
+
+  /**
+   * Should we display ads? We check:
+   * 1. The CPS `allowAdvertising` field value.
+   * 2. A value local to the STY page type.
+   * - iSite toggles are handled by the Ad container.
+   */
+  const isAdsEnabled = [
+    path(['metadata', 'options', 'allowAdvertising'], pageData),
+    adsEnabled,
+    process.env.NODE_ENV !== 'production',
+  ].every(Boolean);
+
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
@@ -155,6 +172,8 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     byline: props => <StyledByline {...props} />,
     include: props => <Include {...props} />,
     social_embed: props => <SocialEmbed {...props} />,
+    mpu: props =>
+      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
       <CpsRecommendations
         {...props}
@@ -270,10 +289,16 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         datePublished={firstPublished}
         dateModified={lastPublished}
         aboutTags={aboutTags}
+        imageLocator={indexImageLocator}
       />
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
+      {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
+      {isAdsEnabled && showAdsBasedOnLocation && !isAmp && (
+        <CanonicalAdBootstrapJs />
+      )}
+      {isAdsEnabled && <AdContainer slotType="leaderboard" />}
       <StoryPageGrid
         dir={dir}
         columns={gridColumns}

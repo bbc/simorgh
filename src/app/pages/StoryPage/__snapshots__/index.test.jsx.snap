@@ -1536,6 +1536,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
               comscore
             </div>
             <div
+              id="sty-ads"
+            >
+              STY ADS
+            </div>
+            <div
               class="c0 c1"
               dir="ltr"
             >
@@ -1803,6 +1808,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     </p>
                   </div>
                   <div
+                    id="sty-ads"
+                  >
+                    STY ADS
+                  </div>
+                  <div
                     class="c6"
                   >
                     <p
@@ -1952,7 +1962,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           allowfullscreen=""
                           class="c34"
                           scrolling="no"
-                          src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
+                          src="https://test.bbc.com/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
                           title="Media player"
                         />
                         <noscript />
@@ -3412,7 +3422,7 @@ exports[`Story Page should render correctly when the secondary column data is no
       property="og:description"
     />
     <meta
-      content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+      content="https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
       property="og:image"
     />
     <meta
@@ -3456,7 +3466,7 @@ exports[`Story Page should render correctly when the secondary column data is no
       name="twitter:image:alt"
     />
     <meta
-      content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+      content="https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
       name="twitter:image:src"
     />
     <meta
@@ -3482,12 +3492,12 @@ exports[`Story Page should render correctly when the secondary column data is no
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
+      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
     </script>
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"}
+      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"}
     </script>
   </head>
   <body>
@@ -4710,6 +4720,11 @@ exports[`Story Page should render correctly when the secondary column data is no
                   comscore
                 </div>
                 <div
+                  id="sty-ads"
+                >
+                  STY ADS
+                </div>
+                <div
                   class="c0 c1"
                   dir="ltr"
                 >
@@ -4987,6 +5002,11 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </p>
                       </div>
                       <div
+                        id="sty-ads"
+                      >
+                        STY ADS
+                      </div>
+                      <div
                         class="c6"
                       >
                         <p
@@ -5136,7 +5156,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                               allowfullscreen=""
                               class="c36"
                               scrolling="no"
-                              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
+                              src="https://test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                               title="Media player"
                             />
                             <noscript />
@@ -7416,7 +7436,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
       property="og:description"
     />
     <meta
-      content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+      content="https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
       property="og:image"
     />
     <meta
@@ -7460,7 +7480,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
       name="twitter:image:alt"
     />
     <meta
-      content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+      content="https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
       name="twitter:image:src"
     />
     <meta
@@ -7486,12 +7506,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
+      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
     </script>
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"}
+      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"}
     </script>
   </head>
   <body>
@@ -7517,6 +7537,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                 </div>
                 <div>
                   comscore
+                </div>
+                <div
+                  id="sty-ads"
+                >
+                  STY ADS
                 </div>
                 <div
                   class="c0 c1"
@@ -7796,6 +7821,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </p>
                       </div>
                       <div
+                        id="sty-ads"
+                      >
+                        STY ADS
+                      </div>
+                      <div
                         class="c6"
                       >
                         <p
@@ -7945,7 +7975,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               allowfullscreen=""
                               class="c36"
                               scrolling="no"
-                              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
+                              src="https://test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                               title="Media player"
                             />
                             <noscript />

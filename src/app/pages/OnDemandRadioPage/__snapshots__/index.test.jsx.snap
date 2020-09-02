@@ -15,7 +15,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
       rel="canonical"
     />
     <link
-      href="https://www.test.bbc.co.uk/pathname"
+      href="https://www.test.bbc.com/pathname"
       hreflang="ps"
       rel="alternate"
     />
@@ -297,7 +297,6 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 .c14 amp-iframe {
-  overflow: visible !important;
   width: calc(100% + 1rem);
 }
 
@@ -836,7 +835,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 .c15 amp-iframe {
-  overflow: visible !important;
   width: calc(100% + 1rem);
 }
 
@@ -1193,12 +1191,12 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       rel="canonical"
     />
     <link
-      href="https://www.test.bbc.co.uk/pathname"
+      href="https://www.test.bbc.com/pathname"
       hreflang="ps"
       rel="alternate"
     />
     <link
-      href="https://www.test.bbc.co.uk/pathname.amp"
+      href="https://www.test.bbc.com/pathname.amp"
       rel="amphtml"
     />
     <link
@@ -1393,7 +1391,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       name="twitter:title"
     />
     <noscript>
-      &lt;img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=0&cv=2.0&cj=1" /&gt;
+      &lt;img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cv=2.0&cj=1" /&gt;
     </noscript>
     <script
       async="true"
@@ -1403,7 +1401,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@graph":[{"@type":"WebPage","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News پښتو","publishingPrinciples":"https://www.bbc.com/pashto/institutional-49283007","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"ماښامنۍ خپرونه"}},{"@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png","duration":"PT29M30S","uploadDate":"2020-05-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"}]}
+      {"@context":"http://schema.org","@graph":[{"@type":"WebPage","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News پښتو","publishingPrinciples":"https://www.bbc.com/pashto/institutional-49283007","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"ماښامنۍ خپرونه"}},{"@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png","duration":"PT29M30S","uploadDate":"2020-05-01T00:00:00.000Z","embedURL":"https://test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"}]}
     </script>
   </head>
   <body>
@@ -1489,7 +1487,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
                 allowfullscreen=""
                 class="c17"
                 scrolling="no"
-                src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"
+                src="https://test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"
                 title="اډیو پلیئر"
               />
               <noscript />

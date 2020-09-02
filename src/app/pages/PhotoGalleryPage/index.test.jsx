@@ -97,6 +97,14 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 const pageType = 'cpsAsset';
 
 describe('Photo Gallery Page', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+  });
+
+  afterEach(() => {
+    delete process.env.SIMORGH_ICHEF_BASE_URL;
+  });
+
   describe('snapshots', () => {
     it('should match snapshot for PGL with no onward journeys', async () => {
       fetch.mockResponse(JSON.stringify(noOnwardJourneys));
