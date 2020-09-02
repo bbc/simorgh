@@ -10,13 +10,6 @@ const mpuBlock = {
   model: {},
 };
 
-/**
- * Returns `pageData` with an MPU block inserted after the fourth paragraph.
- * If there aren't four paragraphs, the MPU is inserted at the end of the
- * content. If `allowAdvertising` is `false` or `pageType` is not a story page,
- * `pageData` is returned unchanged.
- * @param {Object} pageData A page data object.
- */
 const addMpuBlock = json => {
   const pageData = deepClone(json);
   const pageType = path(['metadata', 'type'], pageData);
