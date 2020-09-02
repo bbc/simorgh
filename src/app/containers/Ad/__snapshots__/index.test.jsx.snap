@@ -6,18 +6,18 @@ exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`]
   margin-top: 0.5rem;
 }
 
-.amp-geo-pending .c3,
-.amp-geo-group-gbOrUnknown .c3 {
+.c1 {
   display: none;
   visibility: hidden;
 }
 
-.c1 {
+.c2 {
   margin: 0 auto;
   text-align: center;
 }
 
-.c2 {
+.amp-geo-pending .c3,
+.amp-geo-group-gbOrUnknown .c3 {
   display: none;
   visibility: hidden;
 }
@@ -43,17 +43,26 @@ exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`]
 }
 
 @media (min-width:20rem) {
-  .c2 {
-    min-height: 5.125rem;
-    display: inline-block;
+  .c1 {
+    min-height: 5.1875rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     visibility: visible;
   }
 }
 
 @media (min-width:63rem) {
-  .c2 {
-    min-height: 17.625rem;
-    padding: 0.5rem 1rem;
+  .c1 {
+    min-height: 17.6875rem;
   }
 }
 
@@ -179,21 +188,21 @@ exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
   margin-top: 0.5rem;
 }
 
-.amp-geo-pending .c3,
-.amp-geo-group-gbOrUnknown .c3 {
+.c1 {
   display: none;
   visibility: hidden;
+  padding: 0;
 }
 
-.c1 {
+.c2 {
   margin: 0 auto;
   text-align: center;
 }
 
-.c2 {
+.amp-geo-pending .c3,
+.amp-geo-group-gbOrUnknown .c3 {
   display: none;
   visibility: hidden;
-  padding: 0;
 }
 
 .c4 {
@@ -217,9 +226,19 @@ exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
 }
 
 @media (min-width:18.75rem) {
-  .c2 {
+  .c1 {
     min-height: 17.6875rem;
-    display: inline-block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     visibility: visible;
   }
 }

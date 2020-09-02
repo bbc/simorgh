@@ -31,12 +31,9 @@ const AdSection = styled(Section)`
   margin-top: ${GEL_SPACING};
 `;
 
-const DisplayWrapper = styled.div`
-  .amp-geo-pending &,
-  .amp-geo-group-gbOrUnknown & {
-    display: none;
-    visibility: hidden;
-  }
+const AdContainer = styled.div`
+  ${({ slotType }) =>
+    slotType === 'mpu' ? ampMpuStyles : ampLeaderboardStyles};
 `;
 
 const StyledWrapper = styled.div`
@@ -44,9 +41,12 @@ const StyledWrapper = styled.div`
   text-align: center;
 `;
 
-const AdContainer = styled.div`
-  ${({ slotType }) =>
-    slotType === 'mpu' ? ampMpuStyles : ampLeaderboardStyles};
+const DisplayWrapper = styled.div`
+  .amp-geo-pending &,
+  .amp-geo-group-gbOrUnknown & {
+    display: none;
+    visibility: hidden;
+  }
 `;
 
 const StyledLink = styled.a.attrs({ tabIndex: '-1' })`
@@ -112,8 +112,8 @@ const AmpAd = ({ slotType }) => {
         {AMP_ACCESS_JS}
         {AMP_ACCESS_FETCH(service)}
       </Helmet>
-      <StyledWrapper>
-        <AdContainer slotType={slotType}>
+      <AdContainer slotType={slotType}>
+        <StyledWrapper>
           <DisplayWrapper
             amp-access="toggles.ads.enabled"
             amp-access-hide="true"
@@ -128,8 +128,8 @@ const AmpAd = ({ slotType }) => {
             </StyledLink>
             <AdSlot service={service} slotType={slotType} />
           </DisplayWrapper>
-        </AdContainer>
-      </StyledWrapper>
+        </StyledWrapper>
+      </AdContainer>
     </AdSection>
   );
 };
