@@ -46,7 +46,7 @@ const StyledWrapper = styled.div`
 
 const AdContainer = styled.div`
   ${({ slotType }) =>
-    slotType === 'mpu' ? ampMpuStyles : ampLeaderboardStyles}
+    slotType === 'mpu' ? ampMpuStyles : ampLeaderboardStyles};
 `;
 
 const StyledLink = styled.a.attrs({ tabIndex: '-1' })`

@@ -34,6 +34,7 @@ const LARGE_LEADERBOARD_WIDTH_MIN = '58.75rem'; // 940px
 
 // This value is the total height of the Ad Label (25px) whilst accounting for the bottom margin (8px)
 const AD_UNIT_MARGIN = 2.0625; // 33px
+const AMP_AD_UNIT_MARGIN = 2; // 32px
 
 const MPU_HEIGHTS = {
   GROUP_1: `${3.125 + AD_UNIT_MARGIN}rem`,
@@ -44,12 +45,14 @@ const MPU_HEIGHTS = {
 
 const LEADERBOARD_HEIGHTS = {
   GROUP_1: `${3.125 + AD_UNIT_MARGIN}rem`,
+  GROUP_1_AMP: `${3.125 + AMP_AD_UNIT_MARGIN}rem`,
   // 50px + AD_UNIT_MARGIN = 75px
   GROUP_2: `${3.75 + AD_UNIT_MARGIN}rem`,
   // 60px + AD_UNIT_MARGIN = 85px
   GROUP_3: `${5.625 + AD_UNIT_MARGIN}rem`,
   // 90px + AD_UNIT_MARGIN = 115px
   LARGE: `${15.625 + AD_UNIT_MARGIN}rem`,
+  LARGE_AMP: `${15.625 + AMP_AD_UNIT_MARGIN}rem`,
   // 250px + AD_UNIT_MARGIN = 275px
 };
 
@@ -89,12 +92,12 @@ export const ampLeaderboardStyles = css`
   display: none;
   visibility: hidden;
   @media (min-width: ${LEADERBOARD_WIDTH_MIN}) {
-    min-height: ${LEADERBOARD_HEIGHTS.GROUP_1};
+    min-height: ${LEADERBOARD_HEIGHTS.GROUP_1_AMP};
     display: inline-block;
     visibility: visible;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    min-height: ${LEADERBOARD_HEIGHTS.LARGE};
+    min-height: ${LEADERBOARD_HEIGHTS.LARGE_AMP};
     padding: ${GEL_SPACING} ${GEL_SPACING_DBL};
   }
 `;

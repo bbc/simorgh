@@ -61,13 +61,12 @@ const AdSlot = ({ service, slotType, className }) => {
   );
 
   return (
-    <>
+    <div className={className}>
       {mobile && (
         <amp-ad
           {...defaultAmpAdProps(service)}
           {...mobile}
           json={targetingJson}
-          className={className}
         />
       )}
       {desktop && (
@@ -75,10 +74,9 @@ const AdSlot = ({ service, slotType, className }) => {
           {...defaultAmpAdProps(service)}
           {...desktop}
           json={targetingJson}
-          className={className}
         />
       )}
-    </>
+    </div>
   );
 };
 
