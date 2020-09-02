@@ -3,12 +3,18 @@
 exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`] = `
 .c0 {
   background-color: #F8F8F8;
+  margin-top: 0.5rem;
+}
+
+.amp-geo-pending .c3,
+.amp-geo-group-gbOrUnknown .c3 {
+  display: none;
+  visibility: hidden;
 }
 
 .c1 {
   margin: 0 auto;
   text-align: center;
-  padding-bottom: 0.5rem;
 }
 
 .c2 {
@@ -16,7 +22,7 @@ exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`]
   visibility: hidden;
 }
 
-.c3 {
+.c4 {
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -31,22 +37,14 @@ exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`]
   text-align: right;
 }
 
-.c3:hover {
+.c4:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-@media (min-width:63rem) {
-  .c1 {
-    padding-bottom: 1rem;
-    max-width: 63rem;
-  }
-}
-
 @media (min-width:20rem) {
   .c2 {
-    margin-top: 0.5rem;
-    min-height: 5.1875rem;
+    min-height: 5.125rem;
     display: inline-block;
     visibility: visible;
   }
@@ -54,28 +52,22 @@ exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`]
 
 @media (min-width:63rem) {
   .c2 {
-    min-height: 17.6875rem;
+    min-height: 17.625rem;
     padding: 0.5rem 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c4 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c4 {
     font-size: 0.75rem;
     line-height: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c3 {
-    padding-top: 1rem;
   }
 }
 
@@ -113,46 +105,46 @@ exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`]
           <div
             class="c2"
           >
-            <a
+            <div
               class="c3"
-              dir="ltr"
-              href="https://www.bbc.com/usingthebbc/cookies/"
-              tabindex="-1"
             >
-              Publicidad
-            </a>
-            <amp-ad
-              amp-access="toggles.ads.enabled"
-              amp-access-hide="true"
-              classname="StyledAdSlot-lj1cbr-1 WDnNr"
-              data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
-              data-amp-slot-index="0"
-              data-block-on-consent="default"
-              data-multi-size="320x50,300x50"
-              data-npa-on-unknown-consent="true"
-              data-slot="/4817/bbccom.test.site.amp.news"
-              height="50"
-              json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"mundo\\"}}"
-              media="(max-width: 62.9375rem)"
-              type="doubleclick"
-              width="320"
-            />
-            <amp-ad
-              amp-access="toggles.ads.enabled"
-              amp-access-hide="true"
-              classname="StyledAdSlot-lj1cbr-1 WDnNr"
-              data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
-              data-amp-slot-index="0"
-              data-block-on-consent="default"
-              data-multi-size="970x250,728x90"
-              data-npa-on-unknown-consent="true"
-              data-slot="/4817/bbccom.test.site.amp.news"
-              height="250"
-              json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"mundo\\"}}"
-              media="(min-width: 63rem)"
-              type="doubleclick"
-              width="970"
-            />
+              <a
+                class="c4"
+                dir="ltr"
+                href="https://www.bbc.com/usingthebbc/cookies/"
+                tabindex="-1"
+              >
+                Publicidad
+              </a>
+              <div>
+                <amp-ad
+                  data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
+                  data-amp-slot-index="0"
+                  data-block-on-consent="default"
+                  data-multi-size="320x50,300x50"
+                  data-npa-on-unknown-consent="true"
+                  data-slot="/4817/bbccom.test.site.amp.news"
+                  height="50"
+                  json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"mundo\\"}}"
+                  media="(max-width: 62.9375rem)"
+                  type="doubleclick"
+                  width="320"
+                />
+                <amp-ad
+                  data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
+                  data-amp-slot-index="0"
+                  data-block-on-consent="default"
+                  data-multi-size="970x250,728x90"
+                  data-npa-on-unknown-consent="true"
+                  data-slot="/4817/bbccom.test.site.amp.news"
+                  height="250"
+                  json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"mundo\\"}}"
+                  media="(min-width: 63rem)"
+                  type="doubleclick"
+                  width="970"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -184,12 +176,18 @@ exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
   <body>
     .c0 {
   background-color: #F8F8F8;
+  margin-top: 0.5rem;
+}
+
+.amp-geo-pending .c3,
+.amp-geo-group-gbOrUnknown .c3 {
+  display: none;
+  visibility: hidden;
 }
 
 .c1 {
   margin: 0 auto;
   text-align: center;
-  padding-bottom: 0.5rem;
 }
 
 .c2 {
@@ -198,7 +196,7 @@ exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
   padding: 0;
 }
 
-.c3 {
+.c4 {
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -213,16 +211,9 @@ exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
   text-align: right;
 }
 
-.c3:hover {
+.c4:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-}
-
-@media (min-width:63rem) {
-  .c1 {
-    padding-bottom: 1rem;
-    max-width: 63rem;
-  }
 }
 
 @media (min-width:18.75rem) {
@@ -234,22 +225,16 @@ exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c4 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c4 {
     font-size: 0.75rem;
     line-height: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c3 {
-    padding-top: 1rem;
   }
 }
 
@@ -267,29 +252,32 @@ exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
           <div
             class="c2"
           >
-            <a
+            <div
               class="c3"
-              dir="ltr"
-              href="https://www.bbc.com/usingthebbc/cookies/"
-              tabindex="-1"
             >
-              Publicidad
-            </a>
-            <amp-ad
-              amp-access="toggles.ads.enabled"
-              amp-access-hide="true"
-              classname="StyledAdSlot-lj1cbr-1 WDnNr"
-              data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
-              data-amp-slot-index="0"
-              data-block-on-consent="default"
-              data-multi-size="300x250"
-              data-npa-on-unknown-consent="true"
-              data-slot="/4817/bbccom.test.site.amp.news"
-              height="250"
-              json="{\\"targeting\\":{\\"slot\\":\\"mpu\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"mundo\\"}}"
-              type="doubleclick"
-              width="300"
-            />
+              <a
+                class="c4"
+                dir="ltr"
+                href="https://www.bbc.com/usingthebbc/cookies/"
+                tabindex="-1"
+              >
+                Publicidad
+              </a>
+              <div>
+                <amp-ad
+                  data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
+                  data-amp-slot-index="0"
+                  data-block-on-consent="default"
+                  data-multi-size="300x250"
+                  data-npa-on-unknown-consent="true"
+                  data-slot="/4817/bbccom.test.site.amp.news"
+                  height="250"
+                  json="{\\"targeting\\":{\\"slot\\":\\"mpu\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"mundo\\"}}"
+                  type="doubleclick"
+                  width="300"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
