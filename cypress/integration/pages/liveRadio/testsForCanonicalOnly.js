@@ -1,7 +1,6 @@
-import path from 'ramda/src/path';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
-import { getEmbedUrl } from './helper';
+import { getEmbedUrl, serviceHasRadioSchedule } from './helper';
 import { isScheduleDataComplete } from '../../../../src/app/containers/RadioSchedule/utilities/evaluateScheduleData';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 
@@ -18,10 +17,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   variant,
 }) =>
   describe(`testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {
-    beforeEach(() => {
-      cy.getToggles(service);
-    });
-
     describe('Audio Player', () => {
       const { lang } = appConfig[service][variant];
       let embedUrl;
@@ -52,16 +47,18 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       }
     });
     describe('Radio Schedule', () => {
-      it('should be displayed if there is enough schedule data', function test() {
-        const scheduleIsEnabled = path(
-          ['liveRadioSchedule', 'enabled'],
-          this.toggles,
-        );
+      it('should be displayed if there is enough schedule data', () => {
+        const toggleKey = 'onLiveRadioPage';
+        const isRadioScheduleOnPage = serviceHasRadioSchedule({
+          service,
+          variant,
+          toggleKey,
+        });
         cy.log(
-          `Live Radio Page configured for Radio Schedule? ${scheduleIsEnabled}`,
+          `Live Radio Page configured for Radio Schedule? ${isRadioScheduleOnPage}`,
         );
 
-        if (scheduleIsEnabled) {
+        if (isRadioScheduleOnPage) {
           const schedulePath = Cypress.env('currentPath')
             .replace('liveradio', 'schedule.json')
             // the schedule call for afaanoromoo is made to bbc_oromo_radio
@@ -77,7 +74,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             cy.log(
               `Radio Schedule is displayed? ${isRadioScheduleDataComplete}`,
             );
-            if (scheduleIsEnabled && isRadioScheduleDataComplete) {
+            if (isRadioScheduleOnPage && isRadioScheduleDataComplete) {
               cy.log('Schedule has enough data');
               cy.get('[data-e2e=radio-schedule]').should('exist');
             } else {
