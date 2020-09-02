@@ -54,14 +54,14 @@ const slotConfigurations = {
   },
 };
 
-const AdSlot = ({ service, slotType, className }) => {
+const AdSlot = ({ service, slotType }) => {
   const { mobile, desktop } = slotConfigurations[slotType];
   const targetingJson = JSON.stringify(
     constructAdJsonData({ service, slotType }),
   );
 
   return (
-    <div className={className}>
+    <>
       {mobile && (
         <amp-ad
           {...defaultAmpAdProps(service)}
@@ -76,18 +76,13 @@ const AdSlot = ({ service, slotType, className }) => {
           json={targetingJson}
         />
       )}
-    </div>
+    </>
   );
 };
 
 AdSlot.propTypes = {
   service: string.isRequired,
   slotType: oneOf(['leaderboard', 'mpu']).isRequired,
-  className: string,
-};
-
-AdSlot.defaultProps = {
-  className: null,
 };
 
 export default AdSlot;
