@@ -265,10 +265,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
 
   return (
     <>
-      {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
-      {adsEnabled && showAdsBasedOnLocation && !isAmp && (
-        <CanonicalAdBootstrapJs adcampaign={adcampaign} />
-      )}
       <CpsMetadata
         title={title}
         shortHeadline={shortHeadline}
@@ -296,7 +292,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <ComscoreAnalytics />
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
       {isAdsEnabled && showAdsBasedOnLocation && !isAmp && (
-        <CanonicalAdBootstrapJs />
+        <CanonicalAdBootstrapJs adcampaign={adcampaign} />
       )}
       {isAdsEnabled && <AdContainer slotType="leaderboard" />}
       <StoryPageGrid
