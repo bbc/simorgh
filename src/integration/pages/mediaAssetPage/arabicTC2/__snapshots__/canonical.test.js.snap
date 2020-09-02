@@ -143,6 +143,26 @@ Object {
 }
 `;
 
+exports[`Canonical Media Asset Page I can see related content: "المايوه الشرعي" يثير جدلا في الساحل الشمالي في مصر 1`] = `"/arabic/tv-and-radio-53492142"`;
+
+exports[`Canonical Media Asset Page I can see related content: آيا صوفيا: كيف أصبح المبنى التاريخي في قلب هذه المعركة السياسية؟ 1`] = `"/arabic/media-53262408"`;
+
+exports[`Canonical Media Asset Page I can see related content: أردوغان يرتل القرآن في أول صلاة جمعة في آيا صوفيا 1`] = `"/arabic/tv-and-radio-53532358"`;
+
+exports[`Canonical Media Asset Page I can see related content: التحرش الإلكتروني شبح جديد يهدد نساء في مصر 1`] = `"/arabic/media-53525480"`;
+
+exports[`Canonical Media Asset Page I can see related content: عرض سعودي للفنان المصري عبد الرحمن ابو زهرة بعد شكواه من تجاهل المخرجين له 1`] = `"/arabic/tv-and-radio-53519417"`;
+
+exports[`Canonical Media Asset Page I can see related content: قصة أخطر صورة سيلفي التقطت في متنزه بالمكسيك 1`] = `"/arabic/media-53528843"`;
+
+exports[`Canonical Media Asset Page I can see related content: كيف أصبح رئيس تركيا رجب طيب أردوغان أحد أبرز القادة؟ 1`] = `"/arabic/media-53529792"`;
+
+exports[`Canonical Media Asset Page I can see related content: لحظة اعتراض طائرة حربية أمريكية لطائرة ركاب إيرانية متجهة إلى لبنان 1`] = `"/arabic/media-53527555"`;
+
+exports[`Canonical Media Asset Page I can see related content: مباشر: تلفزيون بي بي سي عربي 1`] = `"/arabic/media-49522519"`;
+
+exports[`Canonical Media Asset Page I can see related content: هل حذف غوغل فلسطين من خرائطه بالفعل؟ 1`] = `"/arabic/media-53532058"`;
+
 exports[`Canonical Media Asset Page I can see the headline 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
 exports[`Canonical Media Asset Page I can see the placeholder loading image 1`] = `
