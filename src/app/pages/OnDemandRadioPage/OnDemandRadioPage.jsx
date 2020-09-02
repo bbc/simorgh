@@ -1,16 +1,8 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { shape, string, number, bool, func } from 'prop-types';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
-} from '@bbc/gel-foundations/spacings';
-import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { useLocation } from 'react-router-dom';
 import pathOr from 'ramda/src/pathOr';
 import MetadataContainer from '../../containers/Metadata';
@@ -22,7 +14,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadioHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
-import AVPlayer from '#containers/AVPlayer';
+import StyledAudioPlayer from '#containers/AVPlayer/StyledAudioPlayer';
 import EpisodeImage from '#containers/OnDemandImage';
 import LinkedData from '#containers/LinkedData';
 import getMediaId from '#lib/utilities/getMediaId';
@@ -53,24 +45,6 @@ const StyledGelPageGrid = styled(GelPageGrid)`
 const StyledGelWrapperGrid = styled(GelPageGrid)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     padding-top: ${GEL_SPACING_TRPL};
-  }
-`;
-
-// iframe padding set to keep scrub bar and duration in view
-const StyledAudioPlayer = styled(AVPlayer)`
-  amp-iframe {
-    width: calc(100% + ${GEL_SPACING_DBL});
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-      width: calc(100% + ${GEL_SPACING_QUAD});
-    }
-  }
-  iframe {
-    width: calc(100% + ${GEL_SPACING_DBL});
-    margin: 0 -${GEL_SPACING};
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-      width: calc(100% + ${GEL_SPACING_QUAD});
-      margin: 0 -${GEL_SPACING_DBL};
-    }
   }
 `;
 
