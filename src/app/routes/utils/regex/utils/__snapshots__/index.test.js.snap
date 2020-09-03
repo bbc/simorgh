@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`regex utils snapshots should create expected regex from getAfricaEyeTVPageRegex 1`] = `"/worldservice/tv/africa_eye/:episodeId([a-z0-9]+)?"`;
+
 exports[`regex utils snapshots should create expected regex from getArticleManifestRegex 1`] = `"/:service(news|persian|igbo)/:local(articles|erthyglau|sgeulachdan)/manifest.json"`;
 
 exports[`regex utils snapshots should create expected regex from getArticleRegex 1`] = `"/:service(news|persian|igbo)/:local(articles|erthyglau|sgeulachdan)/:id(c[a-zA-Z0-9]{10}o):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?"`;
