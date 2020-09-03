@@ -208,7 +208,7 @@
     "jest-silent-reporter": "^0.2.1",
     "jest-styled-components": "^6.3.4",
     "jsdom": "^16.4.0",
-    "lint-staged": "^10.2.11",
+    "lint-staged": "^10.2.13",
     "minimist": "^1.2.5",
     "mocha": "^8.1.1",
     "mocha-junit-reporter": "^2.0.0",
