@@ -1,6 +1,13 @@
 import path from 'path';
 
-export default ({ pageType, service, id, variant = '', assetUri }) => {
+export default ({
+  pageType,
+  service,
+  id,
+  variant = '',
+  assetUri,
+  episodeId,
+}) => {
   let dataPath;
 
   switch (pageType) {
@@ -15,6 +22,15 @@ export default ({ pageType, service, id, variant = '', assetUri }) => {
     case 'legacyAssets':
       dataPath = `${variant}/${assetUri}.json`;
       break;
+    case 'africa_eye':
+      return path.join(
+        process.cwd(),
+        'data',
+        'worldservice',
+        'tv',
+        pageType,
+        `${episodeId}.json`,
+      );
     default:
       dataPath = `${id}${variant}.json`;
   }
