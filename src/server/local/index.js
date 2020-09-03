@@ -13,7 +13,7 @@ import {
   onDemandTvDataPath,
   recommendationsDataRegex,
   secondaryColumnDataRegexPath,
-  africaEyeTVDataPath,
+  // africaEyeTVDataPath,
 } from '#app/routes/utils/regex';
 import { LOCAL_SENDFILE_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
