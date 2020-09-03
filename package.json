@@ -162,7 +162,7 @@
     "@storybook/addon-knobs": "^5.3.19",
     "@storybook/react": "^5.3.19",
     "@storybook/theming": "^5.3.19",
-    "@testing-library/dom": "^7.22.5",
+    "@testing-library/dom": "^7.23.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^10.4.9",
     "@testing-library/react-hooks": "^3.4.1",
