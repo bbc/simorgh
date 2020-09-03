@@ -167,15 +167,15 @@ export default server => {
       const dataFilePath = path.join(process.cwd(), 'data', idx, 'index.json');
       sendDataFile(res, dataFilePath, next);
     })
-    .get(africaEyeTVDataPath, async ({ params }, res, next) => {
-      const { episodeId } = params;
+    // .get(africaEyeTVDataPath, async ({ params }, res, next) => {
+    //   const { episodeId } = params;
 
-      const dataFilePath = constructDataFilePath({
-        pageType: 'africa_eye',
-        episodeId,
-      });
-      sendDataFile(res, dataFilePath, next);
-    })
+    //   const dataFilePath = constructDataFilePath({
+    //     pageType: 'africa_eye',
+    //     episodeId,
+    //   });
+    //   sendDataFile(res, dataFilePath, next);
+    // })
     .get('/static/js/comscore/main-:version.js', ({ params }, res, next) => {
       const { version } = params;
       const localComscorePath = path.join(
