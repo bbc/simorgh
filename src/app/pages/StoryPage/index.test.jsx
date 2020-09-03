@@ -42,7 +42,7 @@ jest.mock('#containers/ComscoreAnalytics', () => {
 });
 
 jest.mock('#containers/Ad', () => {
-  const AdsContainer = () => <div id="sty-ads">STY ADS</div>;
+  const AdsContainer = () => <div data-testid="sty-ads">STY ADS</div>;
   return AdsContainer;
 });
 
@@ -314,9 +314,9 @@ describe('Story Page', () => {
         />,
       );
 
-      const storyPageAds = document.getElementById('sty-ads');
+      const storyPageAds = queryByTestId('sty-ads');
+      expect(storyPageAds).not.toBeInTheDocument();
       const adBootstrap = queryByTestId('adBootstrap');
-      expect(storyPageAds).toBeNull();
       expect(adBootstrap).not.toBeInTheDocument();
     },
   );
@@ -365,9 +365,9 @@ describe('Story Page', () => {
         />,
       );
 
-      const storyPageAds = document.getElementById('sty-ads');
+      const storyPageAds = queryByTestId('sty-ads');
+      expect(storyPageAds).not.toBeInTheDocument();
       const adBootstrap = queryByTestId('adBootstrap');
-      expect(storyPageAds).toBeNull();
       expect(adBootstrap).not.toBeInTheDocument();
     },
   );
@@ -411,9 +411,9 @@ describe('Story Page', () => {
         />,
       );
 
-      const storyPageAds = document.getElementById('sty-ads');
+      const storyPageAds = queryByTestId('sty-ads');
+      expect(storyPageAds).not.toBeInTheDocument();
       const adBootstrap = queryByTestId('adBootstrap');
-      expect(storyPageAds).toBeNull();
       expect(adBootstrap).not.toBeInTheDocument();
     },
   );
@@ -439,7 +439,7 @@ describe('Story Page', () => {
       pageType,
     });
 
-    const { getByTestId } = render(
+    const { getByTestId, getAllByTestId } = render(
       <Page
         pageData={pageData}
         service="pidgin"
@@ -448,8 +448,9 @@ describe('Story Page', () => {
       />,
     );
 
-    const storyPageAds = document.getElementById('sty-ads');
-    expect(storyPageAds).toBeInTheDocument();
+    const storyPageAds = getAllByTestId('sty-ads');
+    // render ads container twice for leaderboard and mpu
+    expect(storyPageAds).toHaveLength(2);
     const adBootstrap = getByTestId('adBootstrap');
     expect(adBootstrap).toBeInTheDocument();
   });
@@ -491,10 +492,11 @@ describe('Story Page', () => {
     );
 
     const adBootstrap = getByTestId('adBootstrap');
+    expect(adBootstrap).toBeInTheDocument();
     expect(adBootstrap).toHaveAttribute('data-adcampaign', 'royalwedding');
   });
 
-  it('should configure canonical ad bootstrap with campaign where is not in metadata', async () => {
+  it('should configure canonical ad bootstrap where campaign is not in metadata', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
     const toggles = {
       ads: {
@@ -525,6 +527,7 @@ describe('Story Page', () => {
     );
 
     const adBootstrap = getByTestId('adBootstrap');
+    expect(adBootstrap).toBeInTheDocument();
     expect(adBootstrap).not.toHaveAttribute('data-adcampaign');
   });
 
