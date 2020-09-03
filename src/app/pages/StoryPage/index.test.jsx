@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
+import deepClone from 'ramda/src/clone';
 
 // test helpers
 import { render } from '@testing-library/react';
@@ -44,6 +45,16 @@ jest.mock('#containers/Ad', () => {
   const AdsContainer = () => <div id="sty-ads">STY ADS</div>;
   return AdsContainer;
 });
+
+jest.mock('#containers/Ad/Canonical/CanonicalAdBootstrapJs', () => {
+  const CanonicalAdBootstrapJs = ({ adcampaign }) => (
+    <div data-testid="adBootstrap" data-adcampaign={adcampaign}>
+      bootstrap
+    </div>
+  );
+  return CanonicalAdBootstrapJs;
+});
+
 const defaultToggleState = {
   ads: {
     enabled: true,
@@ -56,7 +67,13 @@ const defaultToggleState = {
   },
 };
 
-const Page = ({ pageData, service, toggles = defaultToggleState }) => (
+const Page = ({
+  pageData,
+  service,
+  showAdsBasedOnLocation = false,
+  isAmp = false,
+  toggles = defaultToggleState,
+}) => (
   <StaticRouter>
     <ToggleContext.Provider
       value={{ toggleState: toggles, toggleDispatch: jest.fn() }}
@@ -67,11 +84,12 @@ const Page = ({ pageData, service, toggles = defaultToggleState }) => (
       >
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
-          isAmp={false}
+          isAmp={isAmp}
           pageType={pageData.metadata.type}
           pathname={pageData.metadata.locators.assetUri}
           service={service}
           statusCode={200}
+          showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
           <StoryPage service={service} pageData={pageData} />
         </RequestContextProvider>
@@ -255,33 +273,150 @@ describe('Story Page', () => {
     expect(secondaryColumn).toHaveAttribute('lang', 'uk');
   });
 
-  it('should not render ads when the ads toggle is disabled and current environment is live', async () => {
-    process.env.SIMORGH_APP_ENV = 'live';
-    const toggles = {
-      ads: {
-        enabled: false,
-      },
-    };
+  it.each`
+    environment | showAdsBasedOnLocation | showAdsBasedOnLocationExpectation
+    ${'live'}   | ${true}                | ${'permitted to be shown'}
+    ${'test'}   | ${true}                | ${'permitted to be shown'}
+    ${'live'}   | ${false}               | ${'not permitted to be shown'}
+    ${'test'}   | ${false}               | ${'not permitted to be shown'}
+  `(
+    'should not render ads when the ads toggle is disabled, current environment is $environment and is in a location where ads are $showAdsBasedOnLocationExpectation',
+    async ({ environment, showAdsBasedOnLocation }) => {
+      process.env.SIMORGH_APP_ENV = environment;
+      const toggles = {
+        ads: {
+          enabled: false,
+        },
+      };
 
-    fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
-    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
-    fetchMock.mock(
-      'http://localhost/pidgin/sty-secondary-column.json',
-      pidginSecondaryColumnData,
-    );
+      fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
+      fetchMock.mock(
+        'http://localhost/pidgin/mostread.json',
+        pidginMostReadData,
+      );
+      fetchMock.mock(
+        'http://localhost/pidgin/sty-secondary-column.json',
+        pidginSecondaryColumnData,
+      );
 
-    const { pageData } = await getInitialData({
-      path: '/some-cps-sty-path',
-      service: 'pidgin',
-      pageType,
-    });
+      const { pageData } = await getInitialData({
+        path: '/some-cps-sty-path',
+        service: 'pidgin',
+        pageType,
+      });
 
-    render(<Page pageData={pageData} service="pidgin" toggles={toggles} />);
+      const { queryByTestId } = render(
+        <Page
+          pageData={pageData}
+          service="pidgin"
+          toggles={toggles}
+          showAdsBasedOnLocation={showAdsBasedOnLocation}
+        />,
+      );
 
-    const storyPageAds = document.getElementById('sty-ads');
+      const storyPageAds = document.getElementById('sty-ads');
+      const adBootstrap = queryByTestId('adBootstrap');
+      expect(storyPageAds).toBeNull();
+      expect(adBootstrap).not.toBeInTheDocument();
+    },
+  );
 
-    expect(storyPageAds).toBeNull();
-  });
+  it.each`
+    environment
+    ${'live'}
+    ${'test'}
+  `(
+    'should not render ads when the ads are not permitted for asset, current environment is $environment, ads are enabled and location permits ads',
+    async ({ environment }) => {
+      process.env.SIMORGH_APP_ENV = environment;
+      const toggles = {
+        ads: {
+          enabled: true,
+        },
+      };
+      const pidginPageDataDisallowAdvertising = deepClone(pidginPageData);
+      pidginPageDataDisallowAdvertising.metadata.options.allowAdvertising = false;
+
+      fetchMock.mock(
+        'http://localhost/some-cps-sty-path.json',
+        pidginPageDataDisallowAdvertising,
+      );
+      fetchMock.mock(
+        'http://localhost/pidgin/mostread.json',
+        pidginMostReadData,
+      );
+      fetchMock.mock(
+        'http://localhost/pidgin/sty-secondary-column.json',
+        pidginSecondaryColumnData,
+      );
+
+      const { pageData } = await getInitialData({
+        path: '/some-cps-sty-path',
+        service: 'pidgin',
+        pageType,
+      });
+
+      const { queryByTestId } = render(
+        <Page
+          pageData={pageData}
+          service="pidgin"
+          toggles={toggles}
+          showAdsBasedOnLocation
+        />,
+      );
+
+      const storyPageAds = document.getElementById('sty-ads');
+      const adBootstrap = queryByTestId('adBootstrap');
+      expect(storyPageAds).toBeNull();
+      expect(adBootstrap).not.toBeInTheDocument();
+    },
+  );
+
+  it.each`
+    environment
+    ${'live'}
+    ${'test'}
+  `(
+    'should not render ads when the ads toggle is enabled, current environment is $environment and is in a location where ads are not permitted to be shown',
+    async ({ environment }) => {
+      process.env.SIMORGH_APP_ENV = environment;
+      const toggles = {
+        ads: {
+          enabled: true,
+        },
+      };
+
+      fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
+      fetchMock.mock(
+        'http://localhost/pidgin/mostread.json',
+        pidginMostReadData,
+      );
+      fetchMock.mock(
+        'http://localhost/pidgin/sty-secondary-column.json',
+        pidginSecondaryColumnData,
+      );
+
+      const { pageData } = await getInitialData({
+        path: '/some-cps-sty-path',
+        service: 'pidgin',
+        pageType,
+      });
+
+      const { queryByTestId } = render(
+        <Page
+          pageData={pageData}
+          service="pidgin"
+          toggles={toggles}
+          showAdsBasedOnLocation={false}
+        />,
+      );
+
+      const storyPageAds = document.getElementById('sty-ads');
+      const adBootstrap = queryByTestId('adBootstrap');
+      expect(storyPageAds).toBeNull();
+      expect(adBootstrap).not.toBeInTheDocument();
+    },
+  );
 
   it('should render ads when the ads toggle is enabled and current environment is not live', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
@@ -304,9 +439,127 @@ describe('Story Page', () => {
       pageType,
     });
 
-    render(<Page pageData={pageData} service="pidgin" toggles={toggles} />);
+    const { getByTestId } = render(
+      <Page
+        pageData={pageData}
+        service="pidgin"
+        toggles={toggles}
+        showAdsBasedOnLocation
+      />,
+    );
 
     const storyPageAds = document.getElementById('sty-ads');
     expect(storyPageAds).toBeInTheDocument();
+    const adBootstrap = getByTestId('adBootstrap');
+    expect(adBootstrap).toBeInTheDocument();
+  });
+
+  it(`should configure canonical ad bootstrap with campaign where 'adCampaignKeyword' is in metadata`, async () => {
+    process.env.SIMORGH_APP_ENV = 'test';
+    const toggles = {
+      ads: {
+        enabled: true,
+      },
+    };
+
+    const pidginPageDataAdCampaign = deepClone(pidginPageData);
+    pidginPageDataAdCampaign.metadata.adCampaignKeyword = 'royalwedding';
+
+    fetchMock.mock(
+      'http://localhost/some-cps-sty-path.json',
+      pidginPageDataAdCampaign,
+    );
+    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
+    fetchMock.mock(
+      'http://localhost/pidgin/sty-secondary-column.json',
+      pidginSecondaryColumnData,
+    );
+
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'gahuza',
+      pageType,
+    });
+
+    const { getByTestId } = render(
+      <Page
+        pageData={pageData}
+        service="gahuza"
+        toggles={toggles}
+        showAdsBasedOnLocation
+      />,
+    );
+
+    const adBootstrap = getByTestId('adBootstrap');
+    expect(adBootstrap).toHaveAttribute('data-adcampaign', 'royalwedding');
+  });
+
+  it('should configure canonical ad bootstrap with campaign where is not in metadata', async () => {
+    process.env.SIMORGH_APP_ENV = 'test';
+    const toggles = {
+      ads: {
+        enabled: true,
+      },
+    };
+
+    fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
+    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
+    fetchMock.mock(
+      'http://localhost/pidgin/sty-secondary-column.json',
+      pidginSecondaryColumnData,
+    );
+
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'pidgin',
+      pageType,
+    });
+
+    const { getByTestId } = render(
+      <Page
+        pageData={pageData}
+        service="pidgin"
+        toggles={toggles}
+        showAdsBasedOnLocation
+      />,
+    );
+
+    const adBootstrap = getByTestId('adBootstrap');
+    expect(adBootstrap).not.toHaveAttribute('data-adcampaign');
+  });
+
+  it('should not render canonical ad bootstrap on amp', async () => {
+    process.env.SIMORGH_APP_ENV = 'test';
+    const toggles = {
+      ads: {
+        enabled: true,
+      },
+    };
+
+    fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
+    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
+    fetchMock.mock(
+      'http://localhost/pidgin/sty-secondary-column.json',
+      pidginSecondaryColumnData,
+    );
+
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'pidgin',
+      pageType,
+    });
+
+    const { queryByTestId } = render(
+      <Page
+        pageData={pageData}
+        service="pidgin"
+        toggles={toggles}
+        showAdsBasedOnLocation
+        isAmp
+      />,
+    );
+
+    const adBootstrap = queryByTestId('adBootstrap');
+    expect(adBootstrap).not.toBeInTheDocument();
   });
 });

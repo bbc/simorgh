@@ -153,6 +153,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const isAdsEnabled = [
     path(['metadata', 'options', 'allowAdvertising'], pageData),
     adsEnabled,
+    showAdsBasedOnLocation,
     process.env.SIMORGH_APP_ENV !== 'live',
   ].every(Boolean);
 
@@ -291,7 +292,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
-      {isAdsEnabled && showAdsBasedOnLocation && !isAmp && (
+      {isAdsEnabled && !isAmp && (
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />
       )}
       {isAdsEnabled && <AdContainer slotType="leaderboard" />}
