@@ -15,6 +15,7 @@ export default ({ isAmp }) => {
     if (isAmp || servicesWithoutRadioSchedule.includes(service)) {
       it('should not be in the document', () => {
         expect(scheduleWrapperEl).not.toBeInTheDocument();
+        expect(scheduleWrapperEl).toEqual('blah');
       });
     }
   });
