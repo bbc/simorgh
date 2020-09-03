@@ -1,0 +1,81 @@
+{
+  "programme": {
+    "type": "clip",
+    "pid": "p08h00x4",
+    "expected_child_count": null,
+    "position": null,
+    "image": {
+      "pid": "p08h0kqg"
+    },
+    "media_type": "audio_video",
+    "title": "The Bullet and the Virus",
+    "short_synopsis": "Africa Eye investigates the impact of the deadly coronavirus in Mathare.",
+    "medium_synopsis": null,
+    "long_synopsis": "Africa Eye investigates the impact of the deadly coronavirus in Mathare, one of Kenya's poorest slums.\r\n\r\nAs the pandemic looms, heavy-handed policing leads to violence and a series of tragic deaths.\r\n\r\nReporting from Mathare’s corona frontline, local journalist Elijah Kanyi asks: is the cure deadlier than the virus?\r\n\r\nSubscribe: http://bit.ly/subscribetoafrica\r\nWebsite: https://www.bbc.co.uk/africaeye\r\nFacebook: https://www.facebook.com/bbcnewsafrica/\r\nTwitter: https://www.twitter.com/bbcafrica/\r\nInstagram: https://www.instagram.com/bbcafrica/",
+    "first_broadcast_date": null,
+    "display_title": {
+      "title": "Africa Eye",
+      "subtitle": "The Bullet and the Virus"
+    },
+    "ownership": {
+      "service": {
+        "type": null,
+        "id": "bbc_world_service_tv",
+        "key": "worldservicetv",
+        "title": "BBC World Service TV"
+      }
+    },
+    "parent": {
+      "programme": {
+        "type": "brand",
+        "pid": "w13xttpn",
+        "title": "Africa Eye",
+        "short_synopsis": "Original and high-impact BBC investigations from across Africa",
+        "media_type": null,
+        "position": null,
+        "image": {
+          "pid": "p06pqg80"
+        },
+        "expected_child_count": null,
+        "first_broadcast_date": null,
+        "aggregated_episode_count": 25,
+        "ownership": {
+          "service": {
+            "type": null,
+            "id": "bbc_world_service_tv",
+            "key": "worldservicetv",
+            "title": "BBC World Service TV"
+          }
+        }
+      }
+    },
+    "peers": {
+      "previous": null,
+      "next": null
+    },
+    "versions": [
+      {
+        "canonical": 1,
+        "pid": "p08h00x7",
+        "duration": 1660,
+        "types": [
+          "Original version"
+        ]
+      }
+    ],
+    "links": [],
+    "supporting_content_items": [],
+    "categories": [
+      {
+        "type": "genre",
+        "id": "C00079",
+        "key": "news",
+        "title": "News",
+        "narrower": [],
+        "broader": {},
+        "has_topic_page": false,
+        "sameAs": null
+      }
+    ]
+  }
+}
