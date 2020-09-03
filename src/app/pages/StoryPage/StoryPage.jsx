@@ -153,7 +153,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const isAdsEnabled = [
     path(['metadata', 'options', 'allowAdvertising'], pageData),
     adsEnabled,
-    process.env.NODE_ENV !== 'production',
+    process.env.SIMORGH_APP_ENV !== 'live',
   ].every(Boolean);
 
   const componentsToRender = {
