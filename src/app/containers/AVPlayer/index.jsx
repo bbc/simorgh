@@ -94,7 +94,7 @@ AVPlayer.propTypes = {
   title: string,
   iframeTitle: string,
   className: string,
-  skin: string,
+  skin: string.isRequired,
 };
 
 AVPlayer.defaultProps = {
@@ -105,5 +105,4 @@ AVPlayer.defaultProps = {
   title: '',
   iframeTitle: '',
   className: '',
-  skin: 'classic',
 };
