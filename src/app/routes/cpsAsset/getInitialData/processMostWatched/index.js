@@ -7,10 +7,15 @@ const logger = nodeLogger(__filename);
 
 const processToggles = ({ toggles, service, path }) => {
   try {
-    const { mostWatched: mostWatchedToggle } = toggles;
-    const { enabled, value } = mostWatchedToggle;
+    const { mostPopularMedia } = toggles;
+    const { enabled, value } = mostPopularMedia;
 
-    const { numberOfItems } = JSON.parse(value);
+    const numberOfItems = parseInt(value, 10);
+
+    if (Number.isNaN(numberOfItems)) {
+      throw Error('Invalid number of items');
+    }
+
     return { enabled, numberOfItems };
   } catch (e) {
     logger.warn(MOST_WATCHED_PROCESS_ERROR, {
