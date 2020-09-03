@@ -93,7 +93,7 @@ export default () => {
 
         it('should match text and url', () => {
           expect({
-            text: mostWatchedLink.textContent,
+            text: mostWatchedText,
             url: mostWatchedUrl,
           }).toMatchSnapshot();
         });
