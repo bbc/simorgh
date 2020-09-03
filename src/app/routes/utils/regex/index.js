@@ -18,6 +18,7 @@ import {
   getIdxPageRegex,
   getSecondaryColumnDataRegex,
   getRecommendationsDataRegex,
+  getAfricaEyeTVPageRegex,
 } from './utils';
 
 const allServices = Object.keys(services);
@@ -66,3 +67,6 @@ export const recommendationsDataRegex = getRecommendationsDataRegex(
 
 export const IdxPagePath = getIdxPageRegex();
 export const IdxDataPath = `${IdxPagePath}.json`;
+
+export const africaEyeTVPagePath = getAfricaEyeTVPageRegex();
+export const africaEyeTVDataPath = `${africaEyeTVPagePath}.json`;
