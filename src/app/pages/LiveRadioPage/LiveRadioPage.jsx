@@ -53,7 +53,6 @@ const StyledAudioPlayer = styled(AVPlayer)`
 `;
 
 const LiveRadioPage = ({ pageData }) => {
-  debugger;
   const {
     language,
     name,
@@ -71,7 +70,7 @@ const LiveRadioPage = ({ pageData }) => {
     liveRadioOverrides,
     translations,
   } = useContext(ServiceContext);
-  debugger;
+
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
   const assetId = 'liveradio';
@@ -92,7 +91,7 @@ const LiveRadioPage = ({ pageData }) => {
     ['mediaAssetPage', 'audioPlayer'],
     translations,
   );
-  debugger;
+
   const hasRadioScheduleData = Boolean(radioScheduleData);
 
   return (

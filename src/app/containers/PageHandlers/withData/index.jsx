@@ -7,14 +7,13 @@ import shouldRender from './shouldRender';
 
 const WithData = Component => {
   const DataContainer = ({ pageData, status, ...props }) => {
-    debugger;
     const { service } = props;
     const { passportHomes } = useContext(ServiceContext) || {};
     const {
       hasData200StatusAndCorrectService,
       status: statusCode,
     } = shouldRender({ pageData, status }, service, passportHomes);
-    debugger;
+
     if (hasData200StatusAndCorrectService) {
       return <Component pageData={pageData} {...props} />;
     }

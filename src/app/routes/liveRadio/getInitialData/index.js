@@ -25,7 +25,6 @@ const getScheduleToggle = path(['liveRadioSchedule', 'enabled']);
 export default async ({ path: pathname, pageType, service, toggles }) => {
   try {
     const liveRadioDataPath = overrideRendererOnTest(pathname);
-    debugger;
     const pageDataPromise = await fetchPageData({
       path: liveRadioDataPath,
       pageType,

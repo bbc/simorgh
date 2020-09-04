@@ -26,11 +26,9 @@ const WithLoading = Component => {
     }, []);
 
     if (!loading) {
-      debugger;
       return <Component {...props} />;
     }
 
-    debugger;
     return (
       <StyledMain role="main">
         <GridWrapper>

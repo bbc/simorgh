@@ -46,7 +46,6 @@ const processOptimoBlocks = pipe(
 // Here pathname is passed as a prop specifically for CPS includes
 // This will most likely change in issue #6784 so it is temporary for now
 const transformJson = async (json, pathname) => {
-  debugger;
   try {
     const formattedPageData = formatPageData(json);
     const optimoBlocks = await convertToOptimoBlocks(
@@ -63,7 +62,6 @@ const transformJson = async (json, pathname) => {
 
 export default async ({ path: pathname, service, variant, pageType }) => {
   try {
-    debugger;
     const { json, status } = await fetchPageData({ path: pathname, pageType });
 
     const additionalPageData = await getAdditionalPageData(

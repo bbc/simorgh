@@ -27,7 +27,6 @@ export default async ({ path: pathname, pageType, service }) => {
       path: onDemandRadioDataPath,
       pageType,
     });
-    debugger;
 
     const { json, status } = hasRadioSchedule
       ? await withRadioSchedule({

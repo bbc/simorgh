@@ -33,7 +33,6 @@ export const getUrl = pathname => {
 };
 
 export default async ({ path, pageType }) => {
-  debugger;
   const url = getUrl(path);
 
   logger.info(DATA_REQUEST_RECEIVED, { data: url, pageType, path });
@@ -41,7 +40,6 @@ export default async ({ path, pageType }) => {
   try {
     const response = await fetch(url);
     const { status } = response;
-    debugger;
 
     if (status === OK) {
       const json = await response.json();
@@ -63,7 +61,6 @@ export default async ({ path, pageType }) => {
 
     throw error;
   } catch (aresError) {
-    debugger;
     const { message, status } = aresError;
     const simorghError = new Error(message);
 

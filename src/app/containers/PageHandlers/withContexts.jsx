@@ -12,7 +12,6 @@ import { UserContextProvider } from '#contexts/UserContext';
 import { EventContextProvider } from '#contexts/EventContext';
 
 const WithContexts = Component => {
-  debugger;
   const WithContextsContainer = props => {
     const {
       toggles,
@@ -29,7 +28,7 @@ const WithContexts = Component => {
       pageData,
       showAdsBasedOnLocation,
     } = props;
-    debugger;
+
     return (
       <ToggleContextProvider toggles={toggles}>
         <ServiceContextProvider

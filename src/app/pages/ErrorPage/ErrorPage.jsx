@@ -34,7 +34,6 @@ const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
 };
 
 const ErrorPage = ({ errorCode }) => {
-  debugger;
   const {
     brandName,
     dir,
