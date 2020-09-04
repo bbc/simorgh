@@ -27,7 +27,7 @@ const fileTransport = new (transports.File)({
   maxFiles: 5,
   maxsize: 104857600, // 100MB
   tailable: true
-});
+}).setMaxListeners(30);
 
 // prettier-ignore
 const consoleTransport = new (transports.Console)({
