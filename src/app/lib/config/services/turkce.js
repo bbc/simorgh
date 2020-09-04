@@ -16,10 +16,6 @@ import 'moment/locale/tr';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Reklam',
-    },
     lang: `tr`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Güncelleme',
@@ -61,6 +57,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Reklam',
+      },
       recommendationTitle: 'Bunlar da ilginizi çekebilir',
       seeAll: 'Hepsini görüntüle',
       home: 'Ana sayfa',
@@ -185,6 +184,11 @@ export const service = {
           text: '%provider_name% paylaşımını geçin',
           endTextVisuallyHidden: '%provider_name% paylaşımının sonu',
         },
+      },
+      include: {
+        errorMessage:
+          'Maalesef haberin bu bölümünü mobil sayfada görüntüleyemiyoruz',
+        linkText: 'Tüm içeriği görmek için sayfanın tüm sürümünü görüntüleyin ',
       },
       topStoriesTitle: 'Manşet haber',
       featuresAnalysisTitle: 'Aramızda Kalmasın',

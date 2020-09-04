@@ -1,79 +1,27 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number } from 'prop-types';
-import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import { arrayOf, shape, number, bool } from 'prop-types';
 import { pathOr } from 'ramda';
 
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
-import StoryPromo from '../StoryPromo';
-import Grid from '../../components/Grid';
 import CpsOnwardJourney from '../CpsOnwardJourney';
+import RelatedContentPromo from './RelatedContentPromo';
+import RelatedContentPromoList from './RelatedContentPromoList';
 
-const CpsRelatedContent = ({ content, parentColumns }) => {
-  const { dir, translations } = useContext(ServiceContext);
+const CpsRelatedContent = ({ content, parentColumns, isMapContent }) => {
+  const { translations } = useContext(ServiceContext);
 
   const title = pathOr('Related Content', ['relatedContent'], translations);
-
-  const singleTransform = promo => (
-    <Grid
-      columns={{
-        group0: 1,
-        group1: 1,
-        group2: 1,
-        group3: 1,
-        group4: 2,
-        group5: 2,
-      }}
-      enableGelGutters
-      dir={dir}
-    >
-      <StoryPromo item={promo} dir={dir} />
-    </Grid>
-  );
-
-  const listTransform = items => (
-    <Grid
-      columns={{
-        group0: 6,
-        group1: 6,
-        group2: 6,
-        group3: 6,
-        group4: 8,
-        group5: 8,
-      }}
-      as={StoryPromoUl}
-      enableGelGutters
-      dir={dir}
-    >
-      {items.map(item => (
-        <Grid
-          item
-          columns={{
-            group0: 6,
-            group1: 6,
-            group2: 6,
-            group3: 6,
-            group4: 4,
-            group5: 4,
-          }}
-          as={StoryPromoLi}
-          key={item.id || item.uri}
-          dir={dir}
-        >
-          <StoryPromo item={item} dir={dir} displaySummary={false} />
-        </Grid>
-      ))}
-    </Grid>
-  );
 
   return (
     <CpsOnwardJourney
       labelId="related-content-heading"
       title={title}
       content={content}
+      isMapContent={isMapContent}
       parentColumns={parentColumns}
-      singleTransform={singleTransform}
-      listTransform={listTransform}
+      promoComponent={RelatedContentPromo}
+      promoListComponent={RelatedContentPromoList}
       columnType="secondary"
     />
   );
@@ -92,11 +40,13 @@ CpsRelatedContent.propTypes = {
     group4: number,
     group5: number,
   }),
+  isMapContent: bool,
 };
 
 CpsRelatedContent.defaultProps = {
   content: [],
   parentColumns: null,
+  isMapContent: false,
 };
 
 export default CpsRelatedContent;

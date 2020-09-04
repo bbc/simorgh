@@ -97,7 +97,7 @@ exports[`AMP Media Asset Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=70&p=pidgin.media_asset.23248703.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-media-asset]&x8=[simorgh]&x9=[Simorgh:+Media+Pod+Build+First+CPS+Media+Asset+Page+in+Simorgh+with+the+Help+of+Drew+&+<+>+-+BBC+News+Pidgin]&x11=[2019-09-13T15:31:44.000Z]&x12=[2019-11-20T12:24:25.000Z]&x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]&x17=[Opinion]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=70&p=pidgin.media_asset.23248703.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-media-asset]&x8=[simorgh]&x9=[Simorgh:+Media+Pod+Build+First+CPS+Media+Asset+Page+in+Simorgh+&+<+>+-+BBC+News+Pidgin]&x11=[2019-09-13T15:31:44.000Z]&x12=[2019-11-20T12:24:25.000Z]&x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]&x17=[Opinion]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -119,7 +119,7 @@ Object {
     "contentType": "article-media-asset",
     "domain": "test.bbc.co.uk",
     "sections": "Pidgin, Pidgin - Domot, Pidgin - MAP, Pidgin - Domot - MAP, Pidgin - Opinion-category",
-    "title": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+    "title": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & < >",
     "uid": 50924,
     "virtualReferrer": "\${documentReferrer}",
   },
@@ -274,7 +274,7 @@ exports[`AMP Media Asset Page I can see related content: Lagos 'Gay' men Appear 
 
 exports[`AMP Media Asset Page I can see related content: Police Arrest 3 ontop Anambra Church Attack 1`] = `"/pidgin/tori-23145776"`;
 
-exports[`AMP Media Asset Page I can see the headline 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
+exports[`AMP Media Asset Page I can see the headline 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & < >"`;
 
 exports[`AMP Media Asset Page I can see the timestamp 1`] = `"13 September 2019"`;
 
@@ -360,7 +360,7 @@ exports[`AMP Media Asset Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`AMP Media Asset Page SEO Heading level 1 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
+exports[`AMP Media Asset Page SEO Heading level 1 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & < >"`;
 
 exports[`AMP Media Asset Page SEO Lang attribute 1`] = `"pcm"`;
 
@@ -383,17 +383,17 @@ Object {
       },
       "dateModified": "2019-11-20T12:24:25.000Z",
       "datePublished": "2019-09-13T15:31:44.000Z",
-      "headline": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+      "headline": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & < >",
       "image": Object {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+        "url": "https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg",
         "width": 1024,
       },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/pidgin/23248703",
         "@type": "WebPage",
-        "name": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+        "name": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & < >",
       },
       "publisher": Object {
         "@type": "NewsMediaOrganization",
@@ -428,7 +428,7 @@ Object {
 
 exports[`AMP Media Asset Page SEO OG description 1`] = `"This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."`;
 
-exports[`AMP Media Asset Page SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
+exports[`AMP Media Asset Page SEO OG image 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
 
 exports[`AMP Media Asset Page SEO OG image alt 1`] = `"connectionAltText"`;
 
@@ -442,7 +442,7 @@ exports[`AMP Media Asset Page SEO OG type 1`] = `"article"`;
 
 exports[`AMP Media Asset Page SEO OG url 1`] = `"http://localhost:7080/pidgin/23248703"`;
 
-exports[`AMP Media Asset Page SEO Page title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
+exports[`AMP Media Asset Page SEO Page title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & < > - BBC News Pidgin"`;
 
 exports[`AMP Media Asset Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
 
@@ -454,7 +454,7 @@ exports[`AMP Media Asset Page SEO Twitter description 1`] = `"This week, CPS med
 
 exports[`AMP Media Asset Page SEO Twitter image alt 1`] = `"connectionAltText"`;
 
-exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
+exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
 
 exports[`AMP Media Asset Page SEO Twitter site 1`] = `"@BBCNews"`;
 

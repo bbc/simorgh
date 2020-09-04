@@ -143,6 +143,26 @@ Object {
 }
 `;
 
+exports[`Canonical Media Asset Page I can see related content: "المايوه الشرعي" يثير جدلا في الساحل الشمالي في مصر 1`] = `"/arabic/tv-and-radio-53492142"`;
+
+exports[`Canonical Media Asset Page I can see related content: آيا صوفيا: كيف أصبح المبنى التاريخي في قلب هذه المعركة السياسية؟ 1`] = `"/arabic/media-53262408"`;
+
+exports[`Canonical Media Asset Page I can see related content: أردوغان يرتل القرآن في أول صلاة جمعة في آيا صوفيا 1`] = `"/arabic/tv-and-radio-53532358"`;
+
+exports[`Canonical Media Asset Page I can see related content: التحرش الإلكتروني شبح جديد يهدد نساء في مصر 1`] = `"/arabic/media-53525480"`;
+
+exports[`Canonical Media Asset Page I can see related content: عرض سعودي للفنان المصري عبد الرحمن ابو زهرة بعد شكواه من تجاهل المخرجين له 1`] = `"/arabic/tv-and-radio-53519417"`;
+
+exports[`Canonical Media Asset Page I can see related content: قصة أخطر صورة سيلفي التقطت في متنزه بالمكسيك 1`] = `"/arabic/media-53528843"`;
+
+exports[`Canonical Media Asset Page I can see related content: كيف أصبح رئيس تركيا رجب طيب أردوغان أحد أبرز القادة؟ 1`] = `"/arabic/media-53529792"`;
+
+exports[`Canonical Media Asset Page I can see related content: لحظة اعتراض طائرة حربية أمريكية لطائرة ركاب إيرانية متجهة إلى لبنان 1`] = `"/arabic/media-53527555"`;
+
+exports[`Canonical Media Asset Page I can see related content: مباشر: تلفزيون بي بي سي عربي 1`] = `"/arabic/media-49522519"`;
+
+exports[`Canonical Media Asset Page I can see related content: هل حذف غوغل فلسطين من خرائطه بالفعل؟ 1`] = `"/arabic/media-53532058"`;
+
 exports[`Canonical Media Asset Page I can see the headline 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
 exports[`Canonical Media Asset Page I can see the placeholder loading image 1`] = `
@@ -159,7 +179,7 @@ exports[`Canonical Media Asset Page I can see the timestamp 1`] = `"20 نوفم�
 
 exports[`Canonical Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"مشغل وسائط"`;
 
-exports[`Canonical Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar"`;
+exports[`Canonical Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://test.bbc.com/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar"`;
 
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -296,16 +316,18 @@ exports[`Canonical Media Asset Page SEO Linked data should match text 2`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "VideoObject",
+  "description": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
   "duration": null,
-  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar",
-  "thumbnailUrl": "https://",
-  "uploadDate": "1970-01-01T00:00:00.000Z",
+  "embedURL": "https://test.bbc.com/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar",
+  "name": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+  "thumbnailUrl": "https://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+  "uploadDate": "2015-11-20T10:09:33.000Z",
 }
 `;
 
 exports[`Canonical Media Asset Page SEO OG description 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
-exports[`Canonical Media Asset Page SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_arabic/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg"`;
+exports[`Canonical Media Asset Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
 
 exports[`Canonical Media Asset Page SEO OG image alt 1`] = `"BBC News عربي"`;
 
@@ -331,7 +353,7 @@ exports[`Canonical Media Asset Page SEO Twitter description 1`] = `"شركة ش�
 
 exports[`Canonical Media Asset Page SEO Twitter image alt 1`] = `"BBC News عربي"`;
 
-exports[`Canonical Media Asset Page SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_arabic/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg"`;
+exports[`Canonical Media Asset Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
 
 exports[`Canonical Media Asset Page SEO Twitter site 1`] = `"@BBCArabic"`;
 
@@ -343,7 +365,7 @@ exports[`Canonical Media Asset Page outer iframe has z-index of 1 1`] = `
   allowfullscreen=""
   class="StyledIframe-fuo2ed-1 lfcupi"
   scrolling="no"
-  src="https://polling.test.bbc.co.uk/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar"
+  src="https://test.bbc.com/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar"
   title="مشغل وسائط"
 />
 `;

@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Matangazo',
-    },
     lang: `sw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Imeboreshwa',
@@ -52,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Matangazo',
+      },
       seeAll: 'Tazama zote',
       home: 'Habari',
       currentPage: 'Ukurasa uliopo ',
@@ -184,6 +183,11 @@ export const service = {
           endTextVisuallyHidden: 'Mwisho wa %provider_name% ujumbe',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'Habari kuu',
       featuresAnalysisTitle: 'Gumzo mitandaoni',
     },
@@ -201,8 +205,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
-      onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Features',
       header: 'Vipindi vya Redio',
