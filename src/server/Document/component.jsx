@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
@@ -8,7 +7,6 @@ import {
   AMP_CONSENT_JS,
   AMP_ANALYTICS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import ResourceHints from '#app/components/ResourceHints';
 import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
@@ -30,12 +28,6 @@ const Document = ({
   const headScript = helmet.script.toComponent();
   const serialisedData = serialiseForScript(data);
   const scriptsAllowed = !isAmp;
-  const StyledDiv = styled.div`
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: ${C_GHOST};
-  `;
 
   // The JS to remove the no-js class will not run on AMP, therefore only add it to canonical
   const noJsHtmlAttrs = !isAmp && { className: 'no-js' };
@@ -80,7 +72,7 @@ const Document = ({
       <body {...ampGeoPendingAttrs}>
         {/* disabling the rule that bans the use of dangerouslySetInnerHTML until a more appropriate implementation can be implemented */}
         {/* eslint-disable-next-line react/no-danger */}
-        <StyledDiv id="root" dangerouslySetInnerHTML={{ __html: app }} />
+        <div id="root" dangerouslySetInnerHTML={{ __html: app }} />
         {scriptsAllowed && (
           <script
             /* eslint-disable-next-line react/no-danger */

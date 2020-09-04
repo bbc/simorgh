@@ -8,10 +8,6 @@ import Skeleton from 'react-loading-skeleton';
 import { GridWrapper, GridItemConstrainedMedium } from '#lib/styledGrid';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const StyledMain = styled.main`
-  min-height: 1000px;
-`;
-
 let timeout;
 
 const WithLoading = Component => {
@@ -28,16 +24,18 @@ const WithLoading = Component => {
     });
 
     useEffect(() => {
-      timeout = setTimeout(() => {
-        setShowSkeleton(true);
-      }, 500);
+      if (loading) {
+        timeout = setTimeout(() => {
+          setShowSkeleton(true);
+        }, 500);
+      }
       return () => clearTimeout(timeout);
-    }, []);
+    }, [loading]);
 
     return transitions.map(({ item, props: animProps }) =>
       item ? (
         <animated.div style={animProps}>
-          <StyledMain role="main">
+          <main role="main">
             <GridWrapper>
               <GridItemConstrainedMedium>
                 {showSkeleton && (
@@ -57,12 +55,10 @@ const WithLoading = Component => {
                 )}
               </GridItemConstrainedMedium>
             </GridWrapper>
-          </StyledMain>
+          </main>
         </animated.div>
       ) : (
-        <animated.div style={animProps}>
-          <Component {...props} />
-        </animated.div>
+        <Component {...props} />
       ),
     );
   };

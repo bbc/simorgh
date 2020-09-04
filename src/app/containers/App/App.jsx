@@ -8,6 +8,7 @@ import getToggles from '#app/lib/utilities/getToggles';
 import routes from '#app/routes';
 import withContexts from '#containers/PageHandlers/withContexts';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
+import withLoading from '#containers/PageHandlers/withLoading';
 
 const updatePageClientSide = async ({
   setState,
@@ -40,6 +41,7 @@ const setFocusOnMainHeading = () => {
 };
 
 const Routes = pipe(
+  withLoading,
   withPageWrapper,
   withContexts,
 )(props => renderRoutes(routes, props));
@@ -83,6 +85,8 @@ export const App = ({ location, initialData, bbcOrigin, history }) => {
       }
     }
   }, [isTransitioningRoutes]);
+
+  console.log('isTransitioningRoutes', isTransitioningRoutes);
 
   return (
     <Routes
