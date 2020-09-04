@@ -45,6 +45,10 @@ describe('Logger node - for the server', () => {
     });
 
     describe('Configuring Winston', () => {
+      const fileTransportMock = {
+        setMaxListeners: jest.fn(),
+      };
+
       beforeEach(() => {
         jest.mock('winston', () => jest.fn());
         winston = require('winston');
@@ -57,7 +61,10 @@ describe('Logger node - for the server', () => {
         winston.format.simple = jest.fn();
         winston.format.timestamp = jest.fn();
         winston.transports = jest.fn();
-        winston.transports.File = jest.fn();
+        winston.transports.File = jest
+          .fn()
+          .mockImplementation(() => fileTransportMock);
+
         winston.transports.Console = jest.fn();
         winston.format.label.mockImplementation(() => 'Label Mock');
         winston.format.simple.mockImplementation(() => 'Simple Mock');
@@ -75,8 +82,7 @@ describe('Logger node - for the server', () => {
 
         expect(winston.transports.File).toHaveBeenCalledWith({
           filename: 'foobarDir/app.log',
-          handleExceptions: true,
-          humanReadableUnhandledException: true,
+          handleExceptions: false,
           json: true,
           level: 'info',
           maxFiles: 5,
@@ -91,8 +97,7 @@ describe('Logger node - for the server', () => {
 
         expect(winston.transports.File).toHaveBeenCalledWith({
           filename: 'log/app.log',
-          handleExceptions: true,
-          humanReadableUnhandledException: true,
+          handleExceptions: false,
           json: true,
           level: 'info',
           maxFiles: 5,
@@ -106,8 +111,7 @@ describe('Logger node - for the server', () => {
         require('./logger.node');
 
         expect(winston.transports.Console).toHaveBeenCalledWith({
-          handleExceptions: true,
-          humanReadableUnhandledException: true,
+          handleExceptions: false,
           level: 'info',
           timestamp: true,
         });
@@ -142,7 +146,7 @@ describe('Logger node - for the server', () => {
           });
           expect(winston.createLogger).toHaveBeenCalledWith({
             format: 'Combine Mock',
-            transports: [{}, {}],
+            transports: [fileTransportMock, {}],
           });
         });
       });
