@@ -581,8 +581,12 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   class="c16"
                 >
                   <div
-                    class="lazyload-placeholder"
-                  />
+                    class="lazyload-wrapper"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
                 </div>
                 <div
                   class="c17"
@@ -642,8 +646,12 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   class="c16"
                 >
                   <div
-                    class="lazyload-placeholder"
-                  />
+                    class="lazyload-wrapper"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
                 </div>
                 <div
                   class="c17"
@@ -692,8 +700,12 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   class="c16"
                 >
                   <div
-                    class="lazyload-placeholder"
-                  />
+                    class="lazyload-wrapper"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
                 </div>
                 <div
                   class="c17"
@@ -1252,8 +1264,12 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                   class="c14"
                 >
                   <div
-                    class="lazyload-placeholder"
-                  />
+                    class="lazyload-wrapper"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
                 </div>
                 <div
                   class="c15"
