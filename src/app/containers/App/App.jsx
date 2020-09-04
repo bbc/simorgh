@@ -112,8 +112,6 @@ export const App = ({ location, initialData, bbcOrigin, history }) => {
     }
   }, [isTransitioningRoutes]);
 
-  console.log('isTransitioningRoutes', isTransitioningRoutes);
-
   return (
     <Routes
       {...state}
