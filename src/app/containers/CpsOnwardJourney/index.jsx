@@ -168,7 +168,7 @@ const CpsOnwardJourney = ({
   const CpsOnwardJourneyWrapper = ({ children }) =>
     parentColumns ? (
       <Wrapper
-        data-e2e="related-content"
+        data-e2e={labelId}
         parentColumns={parentColumns}
         columnType={columnType}
         {...a11yAttributes}
@@ -176,7 +176,7 @@ const CpsOnwardJourney = ({
         {children}
       </Wrapper>
     ) : (
-      <LegacyGridWrapper data-e2e="related-content" {...a11yAttributes}>
+      <LegacyGridWrapper data-e2e={labelId} {...a11yAttributes}>
         <LegacyGridItemConstrainedLarge>
           {children}
         </LegacyGridItemConstrainedLarge>

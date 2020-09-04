@@ -2657,7 +2657,7 @@ exports[`Media Asset Page should render component 1`] = `
             <section
               aria-labelledby="related-content-heading"
               class="c28"
-              data-e2e="related-content"
+              data-e2e="related-content-heading"
               role="region"
             >
               <div
