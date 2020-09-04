@@ -402,6 +402,8 @@ const validLegacyPageRoutes = [
 const invalidLegacyPageRoutes = [
   // Asset URI begin with a 6 digit date
   '/hausa/multimedia/2014/05/hip_hop_40years_gallery',
+  '/ukchina',
+  '/ukchina/simp',
 ];
 describe('legacyAssetPagePath', () => {
   shouldMatchValidRoutes(validLegacyPageRoutes, legacyAssetPagePath);
