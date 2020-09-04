@@ -1,10 +1,13 @@
-import { useEffect, useLayoutEffect, useState, useRef } from 'react';
+import React, { useEffect, useLayoutEffect, useState, useRef } from 'react';
+import pipe from 'ramda/src/pipe';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
 import getToggles from '#app/lib/utilities/getToggles';
 import routes from '#app/routes';
+import withContexts from '#containers/PageHandlers/withContexts';
+import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 
 const updatePageClientSide = async ({
   setState,
@@ -35,6 +38,11 @@ const setFocusOnMainHeading = () => {
     mainHeadingEl.focus();
   }
 };
+
+const Routes = pipe(
+  withPageWrapper,
+  withContexts,
+)(props => renderRoutes(routes, props));
 
 export const App = ({ location, initialData, bbcOrigin, history }) => {
   const { pathname } = location;
@@ -76,12 +84,14 @@ export const App = ({ location, initialData, bbcOrigin, history }) => {
     }
   }, [isTransitioningRoutes]);
 
-  return renderRoutes(routes, {
-    ...state,
-    bbcOrigin,
-    previousPath,
-    loading: isTransitioningRoutes,
-  });
+  return (
+    <Routes
+      {...state}
+      bbcOrigin={bbcOrigin}
+      previousPath={previousPath}
+      loading={isTransitioningRoutes}
+    />
+  );
 };
 
 export default withRouter(App);
