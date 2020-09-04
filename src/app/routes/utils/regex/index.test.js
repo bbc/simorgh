@@ -414,6 +414,8 @@ describe('legacyAssetPageDataPath', () => {
 
   shouldMatchValidRoutes(validDataRoutes, legacyAssetPageDataPath);
 
-  const invalidDataRoutes = invalidLegacyPageRoutes.map(route => `${route}.json`);
+  const invalidDataRoutes = invalidLegacyPageRoutes.map(
+    route => `${route}.json`,
+  );
   shouldNotMatchInvalidRoutes(invalidDataRoutes, legacyAssetPageDataPath);
 });
