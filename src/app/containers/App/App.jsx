@@ -1,152 +1,82 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useLayoutEffect, useState, useRef } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router';
-import path from 'ramda/src/path';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
 import getToggles from '#app/lib/utilities/getToggles';
+import routes from '#app/routes';
 
-export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
-  const {
-    service,
-    isAmp,
-    variant,
-    id,
-    assetUri,
-    errorCode,
-    route: { pageType },
-  } = getRouteProps(routes, location.pathname);
+const updatePageClientSide = async ({
+  setState,
+  service,
+  getInitialData,
+  variant,
+  pageType,
+  pathname,
+}) => {
+  const routeProps = getRouteProps(pathname);
+  const [toggles, initialData] = await Promise.all([
+    await getToggles(service),
+    await getInitialData({
+      path: pathname,
+      service,
+      variant,
+      pageType,
+    }),
+  ]);
 
-  console.log('yyyyy', pageType);
+  setState({ ...initialData, ...routeProps, pathname, toggles });
+};
 
-  const {
-    pageData,
-    toggles,
-    status,
-    error,
-    timeOnServer,
-    showAdsBasedOnLocation,
-  } = initialData;
+const setFocusOnMainHeading = () => {
+  const mainHeadingEl = document.querySelector('h1#content');
 
+  if (mainHeadingEl) {
+    mainHeadingEl.focus();
+  }
+};
+
+export const App = ({ location, initialData, bbcOrigin, history }) => {
+  const { pathname } = location;
+  const hasMounted = useRef(false);
+  const routeProps = getRouteProps(pathname);
+  const { service, variant, pageType, getInitialData } = routeProps;
+  const previousLocationPath = usePrevious(pathname);
+  const previousPath = history.action === 'POP' ? null : previousLocationPath; // clear the previous path on back clicks
   const [state, setState] = useState({
-    pageData,
-    toggles,
-    status,
-    service,
-    variant,
-    id,
-    assetUri,
-    isAmp,
-    pageType,
-    error,
-    loading: false,
-    errorCode: errorCode || initialData.errorCode,
-    timeOnServer,
-    pathname: location.pathname,
+    ...initialData,
+    ...routeProps,
+    pathname,
+    errorCode: routeProps.errorCode || initialData.errorCode, // wat
   });
-
-  const isInitialMount = useRef(true);
-  const shouldSetFocus = useRef(false);
+  const isTransitioningRoutes = state.pathname !== pathname;
 
   useEffect(() => {
-    if (shouldSetFocus.current) {
-      const contentEl = document.querySelector('h1#content');
-      if (contentEl) {
-        contentEl.focus();
-      }
-      shouldSetFocus.current = false;
-    }
-  }, [state.loading, state.pageData]);
-
-  useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
+    if (hasMounted.current) {
+      updatePageClientSide({
+        setState,
+        service,
+        getInitialData,
+        variant,
+        pageType,
+        pathname,
+      });
     } else {
-      // Only update on subsequent page renders
-      const {
-        service: nextService,
-        variant: nextVariant,
-        id: nextId,
-        assetUri: nextAssetUri,
-        isAmp: nextIsAmp,
-        route: { getInitialData, pageType: nextPageType },
-      } = getRouteProps(routes, location.pathname);
-
-      console.log('nextPageType', nextPageType);
-
-      let loaderTimeout;
-      const loaderPromise = new Promise(resolve => {
-        loaderTimeout = setTimeout(resolve, 500);
-      });
-
-      loaderPromise.then(() => {
-        setState({
-          pageData: null,
-          toggles,
-          status: null,
-          service: nextService,
-          variant: nextVariant,
-          id: nextId,
-          assetUri: nextAssetUri,
-          isAmp: nextIsAmp,
-          pageType: nextPageType,
-          loading: true,
-          error: null,
-          errorCode: null,
-          timeOnServer: null,
-        });
-      });
-
-      const updateAppState = async () => {
-        const nextToggles = await getToggles(nextService);
-        const data = await getInitialData({
-          path: location.pathname,
-          service: nextService,
-          variant: nextVariant,
-          pageType: nextPageType,
-        });
-
-        clearTimeout(loaderTimeout);
-        shouldSetFocus.current = true;
-        setState({
-          service: nextService,
-          variant: nextVariant,
-          id: nextId,
-          assetUri: nextAssetUri,
-          isAmp: nextIsAmp,
-          pageType: nextPageType,
-          loading: false,
-          pageData: path(['pageData'], data),
-          toggles: nextToggles,
-          status: path(['status'], data),
-          error: path(['error'], data),
-          errorCode: null,
-          timeOnServer: path(['timeOnServer'], data),
-          pathname: location.pathname,
-        });
-      };
-
-      updateAppState();
+      hasMounted.current = true;
     }
-  }, [routes, location.pathname, toggles]);
+  }, [service, getInitialData, variant, pageType, pathname]);
 
-  useEffect(() => {
-    if (window) {
-      window.scrollTo(0, 0);
+  useLayoutEffect(() => {
+    if (hasMounted.current && !isTransitioningRoutes) {
+      setFocusOnMainHeading();
     }
-  }, [location.pathname]);
+  }, [isTransitioningRoutes]);
 
-  const previousLocationPath = usePrevious(location.pathname);
-
-  // clear the previous path on back clicks
-  const previousPath = history.action === 'POP' ? null : previousLocationPath;
   return renderRoutes(routes, {
     ...state,
     bbcOrigin,
-    showAdsBasedOnLocation,
-    pathname: location.pathname,
     previousPath,
-    loading: state.pathname !== location.pathname,
+    loading: isTransitioningRoutes,
   });
 };
 
