@@ -4530,7 +4530,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                 <section
                   aria-labelledby="related-content-heading"
                   class="c15"
-                  data-e2e="related-content"
+                  data-e2e="related-content-heading"
                   role="region"
                 >
                   <div
@@ -8551,7 +8551,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                 <section
                   aria-labelledby="related-content-heading"
                   class="c34"
-                  data-e2e="related-content"
+                  data-e2e="related-content-heading"
                   role="region"
                 >
                   <div

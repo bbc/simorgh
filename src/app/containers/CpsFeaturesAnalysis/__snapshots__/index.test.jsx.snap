@@ -446,7 +446,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
 <section
     aria-labelledby="features-analysis-heading"
     class="c0"
-    data-e2e="related-content"
+    data-e2e="features-analysis-heading"
     role="region"
   >
     <div
@@ -1045,7 +1045,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 <section
     aria-labelledby="features-analysis-heading"
     class="c0"
-    data-e2e="related-content"
+    data-e2e="features-analysis-heading"
     role="region"
   >
     <div

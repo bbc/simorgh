@@ -2068,7 +2068,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                 <section
                   aria-labelledby="related-content-heading"
                   class="c36"
-                  data-e2e="related-content"
+                  data-e2e="related-content-heading"
                   role="region"
                 >
                   <div
@@ -2117,7 +2117,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   <section
                     aria-labelledby="top-stories-heading"
                     class="c36"
-                    data-e2e="related-content"
+                    data-e2e="top-stories-heading"
                     role="region"
                   >
                     <div
@@ -2289,7 +2289,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   <section
                     aria-labelledby="features-analysis-heading"
                     class="c36"
-                    data-e2e="related-content"
+                    data-e2e="features-analysis-heading"
                     role="region"
                   >
                     <div
@@ -5295,7 +5295,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                     <section
                       aria-labelledby="related-content-heading"
                       class="c38"
-                      data-e2e="related-content"
+                      data-e2e="related-content-heading"
                       role="region"
                     >
                       <div
@@ -8122,7 +8122,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     <section
                       aria-labelledby="related-content-heading"
                       class="c38"
-                      data-e2e="related-content"
+                      data-e2e="related-content-heading"
                       role="region"
                     >
                       <div
@@ -8171,7 +8171,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       <section
                         aria-labelledby="top-stories-heading"
                         class="c38"
-                        data-e2e="related-content"
+                        data-e2e="top-stories-heading"
                         role="region"
                       >
                         <div
@@ -8303,7 +8303,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       <section
                         aria-labelledby="features-analysis-heading"
                         class="c38"
-                        data-e2e="related-content"
+                        data-e2e="features-analysis-heading"
                         role="region"
                       >
                         <div
