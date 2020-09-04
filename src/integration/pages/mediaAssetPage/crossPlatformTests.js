@@ -65,7 +65,7 @@ export default () => {
 
         it('should match text and url', () => {
           expect({
-            text: relatedContentLink.textContent,
+            text: relatedContentText,
             url: relatedContentUrl,
           }).toMatchSnapshot();
         });
