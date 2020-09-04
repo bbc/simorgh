@@ -417,8 +417,6 @@ describe('legacyAssetPageDataPath', () => {
   shouldMatchValidRoutes(validRoutes, legacyAssetPageDataPath);
 
   const inValidRoutes = [
-    // Must be a 4 digit year after category
-    '/sinhala/category/15/02/150218_mahinda_rally_sl.json',
     // Asset URI begin with a 6 digit date
     '/hausa/multimedia/2014/05/hip_hop_40years_gallery.json',
   ];
