@@ -20,8 +20,7 @@ const logLocation = path.join(LOG_DIR, LOG_FILE);
 // prettier-ignore
 const fileTransport = new (transports.File)({
   filename: logLocation,
-  handleExceptions: true,
-  humanReadableUnhandledException: true,
+  handleExceptions: false,
   json: true,
   level: LOG_LEVEL,
   maxFiles: 5,
@@ -31,8 +30,7 @@ const fileTransport = new (transports.File)({
 
 // prettier-ignore
 const consoleTransport = new (transports.Console)({
-  handleExceptions: true,
-  humanReadableUnhandledException: true,
+  handleExceptions: false,
   level: LOG_LEVEL,
   timestamp: true,
 });
