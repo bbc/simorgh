@@ -525,7 +525,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 <section
     aria-labelledby="related-content-heading"
     class="c0"
-    data-e2e="related-content"
+    data-e2e="related-content-heading"
     role="region"
   >
     <div
@@ -1199,7 +1199,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 <section
     aria-labelledby="related-content-heading"
     class="c0"
-    data-e2e="related-content"
+    data-e2e="related-content-heading"
     role="region"
   >
     <div
