@@ -30,7 +30,7 @@ const WithLoading = Component => {
     useEffect(() => {
       timeout = setTimeout(() => {
         setShowSkeleton(true);
-      }, 1000);
+      }, 500);
       return () => clearTimeout(timeout);
     }, []);
 
