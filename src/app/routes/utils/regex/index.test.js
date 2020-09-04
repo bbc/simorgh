@@ -397,13 +397,12 @@ describe('legacyAssetPagePath', () => {
     '/zhongwen/simp/multimedia/2016/05/160511_vid_cultural_revolution_explainer',
     '/ukchina/simp/cool_britannia/people_in_uk/2016/09/160927_people_lord_mayor',
     '/ukchina/simp/elt/english_now/2014/12/141205_media_english_hiv',
+    '/ukchina/simp/uk_education/tianshu/091124_tianshu_iv_cityvc2',
   ];
 
   shouldMatchValidRoutes(validRoutes, legacyAssetPagePath);
 
   const inValidRoutes = [
-    // Must be a 4 digit year after category
-    '/sinhala/category/15/02/150218_mahinda_rally_sl',
     // Asset URI begin with a 6 digit date
     '/hausa/multimedia/2014/05/hip_hop_40years_gallery',
   ];
@@ -412,7 +411,6 @@ describe('legacyAssetPagePath', () => {
 
 describe('legacyAssetPageDataPath', () => {
   const validRoutes = [
-    '/sinhala/sri_lanka/2015/02/150218_mahinda_rally_sl.json',
     '/hausa/multimedia/2014/05/140528_hip_hop_40years_gallery.json',
   ];
 
