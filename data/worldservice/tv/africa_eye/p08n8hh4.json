@@ -1,0 +1,81 @@
+{
+  "programme": {
+    "type": "clip",
+    "pid": "p08n8hh4",
+    "expected_child_count": null,
+    "position": null,
+    "image": {
+      "pid": "p08n8hxq"
+    },
+    "media_type": "audio_video",
+    "title": "Cashing in on Covid",
+    "short_synopsis": "In Ghana hospital workers sell PPE for personal profit. Africa Eye goes undercover.",
+    "medium_synopsis": null,
+    "long_synopsis": "An Africa Eye undercover investigation reveals that some staff in Ghana's hospitals have been selling vital PPE for personal profit.\r\n \r\nMore than 2,000 medical workers in Ghana have been infected by coronavirus since the outbreak began. The country has faced a severe lack of essential protective equipment like face shields, masks and suits. \r\n \r\nOur investigation shows how some medical workers are profiteering at the expense of their colleagues.\r\n\r\nSubscribe: http://bit.ly/subscribetoafrica\r\nWebsite: https://www.bbc.co.uk/africaeye\r\nFacebook: https://www.facebook.com/bbcnewsafrica/\r\nTwitter: https://www.twitter.com/bbcafrica/\r\nInstagram: https://www.instagram.com/bbcafrica/",
+    "first_broadcast_date": null,
+    "display_title": {
+      "title": "Africa Eye",
+      "subtitle": "Cashing in on Covid"
+    },
+    "ownership": {
+      "service": {
+        "type": null,
+        "id": "bbc_world_service_tv",
+        "key": "worldservicetv",
+        "title": "BBC World Service TV"
+      }
+    },
+    "parent": {
+      "programme": {
+        "type": "brand",
+        "pid": "w13xttpn",
+        "title": "Africa Eye",
+        "short_synopsis": "Original and high-impact BBC investigations from across Africa",
+        "media_type": null,
+        "position": null,
+        "image": {
+          "pid": "p06pqg80"
+        },
+        "expected_child_count": null,
+        "first_broadcast_date": null,
+        "aggregated_episode_count": 25,
+        "ownership": {
+          "service": {
+            "type": null,
+            "id": "bbc_world_service_tv",
+            "key": "worldservicetv",
+            "title": "BBC World Service TV"
+          }
+        }
+      }
+    },
+    "peers": {
+      "previous": null,
+      "next": null
+    },
+    "versions": [
+      {
+        "canonical": 1,
+        "pid": "p08n8hh7",
+        "duration": 1472,
+        "types": [
+          "Original version"
+        ]
+      }
+    ],
+    "links": [],
+    "supporting_content_items": [],
+    "categories": [
+      {
+        "type": "genre",
+        "id": "C00079",
+        "key": "news",
+        "title": "News",
+        "narrower": [],
+        "broader": {},
+        "has_topic_page": false,
+        "sameAs": null
+      }
+    ]
+  }
+}
