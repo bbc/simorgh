@@ -67,8 +67,12 @@ export const App = ({ location, initialData, bbcOrigin, history }) => {
   }, [service, getInitialData, variant, pageType, pathname]);
 
   useLayoutEffect(() => {
-    if (hasMounted.current && !isTransitioningRoutes) {
-      setFocusOnMainHeading();
+    if (hasMounted.current) {
+      if (isTransitioningRoutes) {
+        window.scrollTo(0, 0);
+      } else {
+        setFocusOnMainHeading();
+      }
     }
   }, [isTransitioningRoutes]);
 
