@@ -17,7 +17,7 @@ COPY . /app
 
 # Build the application
 RUN npm run build:local
-RUN ls /app
+RUN ls /app/build
 
 # Expose the express server port to the host
 EXPOSE 7080
