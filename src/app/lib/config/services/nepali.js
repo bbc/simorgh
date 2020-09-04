@@ -10,7 +10,7 @@ export const service = {
     lang: `ne`,
     articleAuthor: `http://www.facebook.com/bbcnews`,
     articleTimestampPrefix: '',
-    articleTimestampSuffix: ' अद्यावधिक',
+    articleTimestampSuffix: 'अद्यावधिक',
     atiAnalyticsAppName: 'news-nepali',
     atiAnalyticsProducerId: '63',
     chartbeatDomain: 'nepali.bbc.co.uk',

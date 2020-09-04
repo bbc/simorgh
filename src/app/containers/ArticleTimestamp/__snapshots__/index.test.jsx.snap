@@ -358,7 +358,7 @@ exports[`ArticleTimestamp should render with a suffix 1`] = `
       class="c1"
       datetime="2019-03-15"
     >
-      १५ मार्च २०१९  अद्यावधिक
+      १५ मार्च २०१९ अद्यावधिक
     </time>
   </div>
 </div>
