@@ -118,7 +118,7 @@
     "core-js": "^3.6.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "express-static-gzip": "^2.0.7",
+    "express-static-gzip": "^2.0.8",
     "gnu-terry-pratchett": "0.0.2",
     "helmet": "^3.23.1",
     "helmet-csp": "^2.10.0",
