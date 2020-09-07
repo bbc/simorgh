@@ -709,3 +709,52 @@ shouldMatchSnapshot(
     title="BBC Ukrainian"
   />,
 );
+
+describe('apple-itunes-app meta tag', () => {
+  // eslint-disable-next-line react/prop-types
+  const CanonicalCPSAssetInternationalOrigin = ({ service }) => (
+    <MetadataWithContext
+      service={service}
+      bbcOrigin={dotComOrigin}
+      platform="canonical"
+      id="asset-12345678"
+      pageType="STY"
+      pathname={`/${service}/asset-12345678`}
+      {...newsArticleMetadataProps}
+    />
+  );
+
+  const itunesAppIds = [
+    {
+      service: 'arabic',
+      id: 558497376,
+    },
+    {
+      service: 'mundo',
+      id: 515255747,
+    },
+    {
+      service: 'russian',
+      id: 504278066,
+    },
+  ];
+
+  itunesAppIds.forEach(application => {
+    const { service, id } = application;
+    it(`should be rendered for ${service} because iTunesAppId is configured`, async () => {
+      render(<CanonicalCPSAssetInternationalOrigin service={service} />);
+
+      await waitFor(() => {
+        const appleItunesApp = document.querySelector(
+          'head > meta[name=apple-itunes-app]',
+        );
+        expect(appleItunesApp).toBeInTheDocument();
+
+        const content = appleItunesApp.getAttribute('content');
+        expect(content).toEqual(
+          `app-id=${id}, app-argument=https://www.bbc.com/test?utm_medium=banner&utm_content=apple-itunes-app`,
+        );
+      });
+    });
+  });
+});
