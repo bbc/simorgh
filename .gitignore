@@ -8,6 +8,7 @@ reports/*
 log
 cypress/screenshots
 cypress/results
+cypress/fixtures/toggles
 pack
 storybook_dist
 simorgh.report.html

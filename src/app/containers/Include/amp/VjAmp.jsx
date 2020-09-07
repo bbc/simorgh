@@ -75,7 +75,8 @@ const StyledAmpIframe = styled(AmpIframe)`
       cursor: pointer;
       display: block;
       padding: ${GEL_SPACING} ${GEL_SPACING_DBL};
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         text-decoration: underline;
       }
     }
