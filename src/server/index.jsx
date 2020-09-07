@@ -115,6 +115,12 @@ server
     },
   )
   .get(
+    '/persian/iran/2009/09/090920_bd_pp_ir88_timeline_election',
+    (req, res) => {
+      res.redirect('/persian', 302);
+    },
+  )
+  .get(
     '/*',
     injectCspHeaderProdBuild,
     async ({ url, headers, path: urlPath }, res) => {
