@@ -436,7 +436,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
       <section
         aria-labelledby="recommendations-heading"
         class="c2"
-        data-e2e="related-content"
+        data-e2e="recommendations-heading"
         role="region"
       >
         <div
@@ -1091,7 +1091,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
       <section
         aria-labelledby="recommendations-heading"
         class="c2"
-        data-e2e="related-content"
+        data-e2e="recommendations-heading"
         role="region"
       >
         <div
@@ -1926,7 +1926,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
       <section
         aria-labelledby="recommendations-heading"
         class="c2"
-        data-e2e="related-content"
+        data-e2e="recommendations-heading"
         role="region"
       >
         <div
