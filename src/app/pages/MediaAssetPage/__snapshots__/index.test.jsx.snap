@@ -838,8 +838,12 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                         class="c23"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                         <noscript />
                         <p
                           class="c24"
@@ -2503,8 +2507,12 @@ exports[`Media Asset Page should render component 1`] = `
                         class="c24"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                         <noscript />
                         <p
                           class="c25"
@@ -2558,8 +2566,12 @@ exports[`Media Asset Page should render component 1`] = `
                         class="c24"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                         <noscript />
                         <p
                           class="c25"
@@ -2713,8 +2725,12 @@ exports[`Media Asset Page should render component 1`] = `
                             class="c24"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                           </div>
                           <div
                             class="c45"
@@ -2763,8 +2779,12 @@ exports[`Media Asset Page should render component 1`] = `
                             class="c24"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                           </div>
                           <div
                             class="c45"
@@ -2898,8 +2918,12 @@ exports[`Media Asset Page should render component 1`] = `
                             class="c24"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                           </div>
                           <div
                             class="c45"

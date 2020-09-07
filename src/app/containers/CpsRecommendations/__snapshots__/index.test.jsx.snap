@@ -495,8 +495,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                         class="c16"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                       </div>
                       <div
                         class="c17"
@@ -1157,8 +1161,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           class="c20"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                         </div>
                         <div
                           class="c21"
@@ -1210,8 +1218,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           class="c20"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                         </div>
                         <div
                           class="c21"
@@ -1263,8 +1275,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           class="c20"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                         </div>
                         <div
                           class="c21"
@@ -1316,8 +1332,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           class="c20"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                         </div>
                         <div
                           class="c21"
@@ -1992,8 +2012,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           class="c20"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                         </div>
                         <div
                           class="c21"
@@ -2045,8 +2069,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           class="c25"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                         </div>
                         <div
                           class="c21"
@@ -2098,8 +2126,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           class="c25"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                         </div>
                         <div
                           class="c21"
@@ -2151,8 +2183,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           class="c25"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                         </div>
                         <div
                           class="c21"
