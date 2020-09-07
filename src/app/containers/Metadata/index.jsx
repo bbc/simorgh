@@ -9,6 +9,7 @@ import {
   renderAmpHtml,
   getAppleTouchUrl,
   renderAlternateLinks,
+  renderAppleItunesApp,
 } from './utils';
 
 const ENGLISH_SERVICES = ['news'];
@@ -69,6 +70,7 @@ const MetadataContainer = ({
     themeColor,
     twitterCreator,
     twitterSite,
+    iTunesAppId,
   } = useContext(ServiceContext);
   const appleTouchIcon = getAppleTouchUrl(service);
   const isEnglishService = ENGLISH_SERVICES.includes(service);
@@ -122,6 +124,7 @@ const MetadataContainer = ({
         !isEnglishService &&
         alternateLinksWsSites.map(renderAlternateLinks)}
       {renderAmpHtml(ampLink, isAmp)}
+      {renderAppleItunesApp(iTunesAppId, canonicalLink)}
       <meta name="apple-mobile-web-app-title" content={brandName} />
       <meta name="application-name" content={brandName} />
       <meta name="description" content={description} />

@@ -752,9 +752,21 @@ describe('apple-itunes-app meta tag', () => {
 
         const content = appleItunesApp.getAttribute('content');
         expect(content).toEqual(
-          `app-id=${id}, app-argument=https://www.bbc.com/test?utm_medium=banner&utm_content=apple-itunes-app`,
+          `app-id=${id}, app-argument=https://www.bbc.com/${service}/asset-12345678?utm_medium=banner&utm_content=apple-itunes-app`,
         );
       });
+    });
+  });
+
+  ['pidgin', 'persian', 'ukchina'].forEach(serviceWithoutItunes => {
+    it(`should not be rendered for ${serviceWithoutItunes} because iTunesAppId is not configured`, () => {
+      render(
+        <CanonicalCPSAssetInternationalOrigin service={serviceWithoutItunes} />,
+      );
+
+      expect(
+        document.querySelector('head > meta[name=apple-itunes-app]'),
+      ).not.toBeInTheDocument();
     });
   });
 });
