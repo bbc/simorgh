@@ -1,7 +1,7 @@
 const getMetaTagContent = selector =>
   document.querySelector(selector).getAttribute('content');
 
-export default () => {
+export default service => {
   describe('SEO', () => {
     it('Page title', () => {
       const pageTitleEl = document.querySelector('title');
@@ -213,6 +213,31 @@ export default () => {
           }).toMatchSnapshot();
         });
       });
+    });
+
+    describe('Apple iTunes App', () => {
+      const appleItunesApp = document.querySelector(
+        'meta[name="apple-itunes-app"]',
+      );
+      const content = appleItunesApp.getAttribute('content');
+
+      if (['arabic', 'mundo', 'russian'].includes(service)) {
+        it('should be in the document', () => {
+          expect(appleItunesApp).toBeInTheDocument();
+        });
+
+        it('should contain text', () => {
+          expect(content).toBeTruthy();
+        });
+
+        it('should match text', () => {
+          expect(content).toMatchSnapshot();
+        });
+      } else {
+        it('should not be in the document', () => {
+          expect(appleItunesApp).not.toBeInTheDocument();
+        });
+      }
     });
   });
 };
