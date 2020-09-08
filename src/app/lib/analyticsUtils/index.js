@@ -577,12 +577,12 @@ export const getATIMarketingString = (href, campaignType) => {
     XTOR: () => getXtorMarketingString(href),
   };
 
-  const isSupportedCampaign = () => campaignMapping =>
+  const isSupportedCampaign = campaignMapping =>
     campaignType.startsWith(campaignMapping);
 
-  const selectedCampaignType = Object.keys(supportedCampaignMappings).find(
-    isSupportedCampaign(campaignType),
-  );
+  const selectedCampaignType = Object.keys(
+    supportedCampaignMappings,
+  ).find(campaignMapping => isSupportedCampaign(campaignMapping));
 
   return supportedCampaignMappings[selectedCampaignType]
     ? supportedCampaignMappings[selectedCampaignType]()
