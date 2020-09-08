@@ -4,7 +4,16 @@ import React, {
   useState,
   useRef,
   useContext,
+  memo,
 } from 'react';
+import styled from 'styled-components';
+import { useSpring, animated } from 'react-spring';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_QUAD,
+} from '@bbc/gel-foundations/spacings';
+import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import pipe from 'ramda/src/pipe';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router';
@@ -16,6 +25,7 @@ import withContexts from '#containers/PageHandlers/withContexts';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withLoading from '#containers/PageHandlers/withLoading';
 import { MediaPlayerContext } from '../../contexts/MediaPlayerContext';
+import AVPlayer from '#containers/AVPlayer';
 
 const updatePageClientSide = async ({
   setState,
@@ -47,40 +57,64 @@ const setFocusOnMainHeading = () => {
   }
 };
 
+const ToastWrapper = styled.div`
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 24px 0px;
+`;
+
+const Toast = styled.div`
+  width: 755px;
+  max-width: 100%;
+  margin: 0 auto;
+`;
+
+const AnimatedToastWrapper = animated(ToastWrapper);
+
+const StyledAudioPlayer = memo(styled(AVPlayer)`
+  width: 100%;
+  amp-iframe {
+    overflow: visible !important;
+    width: calc(100% + ${GEL_SPACING_DBL});
+    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+      width: calc(100% + ${GEL_SPACING_QUAD});
+    }
+  }
+  iframe {
+    width: calc(100% + ${GEL_SPACING_DBL});
+    margin: 0 -${GEL_SPACING};
+    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+      width: calc(100% + ${GEL_SPACING_QUAD});
+      margin: 0 -${GEL_SPACING_DBL};
+    }
+  }
+`);
+
 const withStickyPlayer = Component => {
-  const Video = () => (
-    <div
-      dangerouslySetInnerHTML={{
-        __html: `
-          <iframe
-            id="ytplayer"
-            type="text/html"
-            width="640"
-            height="360"
-            src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
-            frameborder="0"
-          ></iframe>
-          `,
-      }}
-    />
-  );
   return props => {
-    const { showMediaPlayer } = useContext(MediaPlayerContext);
+    const { showMediaPlayer, mediaPlayerProps } = useContext(
+      MediaPlayerContext,
+    );
+
+    const animationStyles = useSpring({
+      transform: showMediaPlayer ? 'translateY(0%)' : 'translateY(100%)',
+    });
 
     return (
       <>
         <Component {...props} />
-        {showMediaPlayer && (
-          <div
-            style={{
-              position: 'fixed',
-              left: 0,
-              bottom: 0,
-            }}
-          >
-            <Video />
-          </div>
-        )}
+
+        <AnimatedToastWrapper
+          showMediaPlayer={showMediaPlayer}
+          style={animationStyles}
+        >
+          <Toast>
+            {mediaPlayerProps && <StyledAudioPlayer {...mediaPlayerProps} />}
+          </Toast>
+        </AnimatedToastWrapper>
       </>
     );
   };
