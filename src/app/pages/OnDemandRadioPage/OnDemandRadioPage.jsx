@@ -19,6 +19,7 @@ import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { MediaPlayerContext } from '../../contexts/MediaPlayerContext';
 import { RequestContext } from '#contexts/RequestContext';
 import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadioHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
@@ -94,6 +95,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   } = pageData;
 
   const { isAmp } = useContext(RequestContext);
+  const { toggleMediaPlayer } = useContext(MediaPlayerContext);
   const location = useLocation();
   const { dir, liveRadioOverrides, lang, service, translations } = useContext(
     ServiceContext,
@@ -203,6 +205,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           />
         </Grid>
         <Link to="/indonesia/media-23269037">{headline}</Link>
+        <button onClick={toggleMediaPlayer}>Toggle Player</button>
       </StyledGelPageGrid>
       {radioScheduleIsEnabled && hasRadioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />

@@ -1,4 +1,10 @@
-import React, { useEffect, useLayoutEffect, useState, useRef } from 'react';
+import React, {
+  useEffect,
+  useLayoutEffect,
+  useState,
+  useRef,
+  useContext,
+} from 'react';
 import pipe from 'ramda/src/pipe';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router';
@@ -9,6 +15,7 @@ import routes from '#app/routes';
 import withContexts from '#containers/PageHandlers/withContexts';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withLoading from '#containers/PageHandlers/withLoading';
+import { MediaPlayerContext } from '../../contexts/MediaPlayerContext';
 
 const updatePageClientSide = async ({
   setState,
@@ -57,12 +64,26 @@ const withStickyPlayer = Component => {
       }}
     />
   );
-  return props => (
-    <>
-      <Video />
-      <Component {...props} />
-    </>
-  );
+  return props => {
+    const { showMediaPlayer } = useContext(MediaPlayerContext);
+
+    return (
+      <>
+        <Component {...props} />
+        {showMediaPlayer && (
+          <div
+            style={{
+              position: 'fixed',
+              left: 0,
+              bottom: 0,
+            }}
+          >
+            <Video />
+          </div>
+        )}
+      </>
+    );
+  };
 };
 
 const Routes = pipe(

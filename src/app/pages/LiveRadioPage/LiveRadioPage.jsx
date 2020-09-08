@@ -20,6 +20,7 @@ import Grid, { GelPageGrid } from '#app/components/Grid';
 import LinkedData from '../../containers/LinkedData';
 import AVPlayer from '#containers/AVPlayer';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { MediaPlayerContext } from '../../contexts/MediaPlayerContext';
 import { RequestContext } from '#contexts/RequestContext';
 import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
@@ -72,6 +73,7 @@ const LiveRadioPage = ({ pageData }) => {
   } = useContext(ServiceContext);
 
   const { isAmp } = useContext(RequestContext);
+  const { toggleMediaPlayer } = useContext(MediaPlayerContext);
   const location = useLocation();
   const assetId = 'liveradio';
   const mediaId = getMediaId({
@@ -164,6 +166,7 @@ const LiveRadioPage = ({ pageData }) => {
           />
         </Grid>
         <Link to="/indonesia/media-23269037">Hello</Link>
+        <button onClick={toggleMediaPlayer}>Toggle Player</button>
       </StyledGelPageGrid>
       {hasRadioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />
