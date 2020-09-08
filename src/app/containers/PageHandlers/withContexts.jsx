@@ -10,6 +10,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import { EventContextProvider } from '#contexts/EventContext';
+import { MediaPlayerContextProvider } from '#contexts/MediaPlayerContext';
 
 const WithContexts = Component => {
   const WithContextsContainer = props => {
@@ -51,7 +52,9 @@ const WithContexts = Component => {
           >
             <EventContextProvider>
               <UserContextProvider>
-                <Component {...props} />
+                <MediaPlayerContextProvider>
+                  <Component {...props} />
+                </MediaPlayerContextProvider>
               </UserContextProvider>
             </EventContextProvider>
           </RequestContextProvider>
