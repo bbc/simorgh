@@ -171,26 +171,6 @@ Object {
 }
 `;
 
-exports[`Canonical Media Asset Page I can see related content: ابهام در مورد منشاء 'انفجار' در تاسیسات هسته‌ای نطنز 1`] = `"/persian/iran-53313694"`;
-
-exports[`Canonical Media Asset Page I can see related content: اعتصاب غذای شماری از زندانیان ایرانی در ارمنستان 1`] = `"/persian/iran-53315112"`;
-
-exports[`Canonical Media Asset Page I can see related content: تاثیر کرونا بر گاوبازی در اسپانیا 1`] = `"/persian/world-53324472"`;
-
-exports[`Canonical Media Asset Page I can see related content: تلویزیون فارسی بی‌بی‌سی: پخش زنده اینترنتی 1`] = `"/persian/media-49522521"`;
-
-exports[`Canonical Media Asset Page I can see related content: جنجال بر سر واریز۲۳۱ میلیون تومانی به حساب نمایندگان مجلس ایران 1`] = `"/persian/iran-53313696"`;
-
-exports[`Canonical Media Asset Page I can see related content: رشد بورس تهران حبابی است؟ 1`] = `"/persian/business-53313698"`;
-
-exports[`Canonical Media Asset Page I can see related content: هشدار عباس عراقچی؛ 'خسارات راهبردی' ایران به چه معناست؟ 1`] = `"/persian/tv-and-radio-53317117"`;
-
-exports[`Canonical Media Asset Page I can see related content: پرستاری که با نواختن ویولن به بیماران آرامش می‌دهد 1`] = `"/persian/world-53324474"`;
-
-exports[`Canonical Media Asset Page I can see related content: کشمکش بر سر ممنوعیت واردات موبایل‌های بالای ۳۰۰ یورو 1`] = `"/persian/business-53315108"`;
-
-exports[`Canonical Media Asset Page I can see related content: کودتای ۲۸ مرداد به روایت اردشیر زاهدی 1`] = `"/persian/iran/2013/08/130819_l42_vid_coup_eye3"`;
-
 exports[`Canonical Media Asset Page I can see the headline 1`] = `"Trump long headline"`;
 
 exports[`Canonical Media Asset Page I can see the placeholder loading image 1`] = `
