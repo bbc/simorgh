@@ -3,6 +3,7 @@ import { string, node, shape, arrayOf } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
+
 import {
   getIconAssetUrl,
   getIconLinks,
@@ -11,6 +12,7 @@ import {
   renderAlternateLinks,
   renderAppleItunesApp,
 } from './utils';
+import useToggle from '#hooks/useToggle';
 
 const ENGLISH_SERVICES = ['news'];
 const FACEBOOK_ADMIN_ID = 100004154058350;
@@ -107,6 +109,8 @@ const MetadataContainer = ({
   const metaImage = image || defaultImage;
   const metaImageAltText = imageAltText || defaultImageAltText;
 
+  const { enabled: iTunesAppEnabled } = useToggle('smart_app_banner');
+
   return (
     <Helmet htmlAttributes={htmlAttributes}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -124,7 +128,7 @@ const MetadataContainer = ({
         !isEnglishService &&
         alternateLinksWsSites.map(renderAlternateLinks)}
       {renderAmpHtml(ampLink, isAmp)}
-      {renderAppleItunesApp(iTunesAppId, canonicalLink)}
+      {iTunesAppEnabled && renderAppleItunesApp(iTunesAppId, canonicalLink)}
       <meta name="apple-mobile-web-app-title" content={brandName} />
       <meta name="application-name" content={brandName} />
       <meta name="description" content={description} />

@@ -4,6 +4,8 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MetadataContainer from './index';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+
 import {
   articleDataNews,
   articleDataPersian,
@@ -29,6 +31,12 @@ const getArticleMetadataProps = data => ({
 const newsArticleMetadataProps = getArticleMetadataProps(articleDataNews);
 const persianArticleMetadataProps = getArticleMetadataProps(articleDataPersian);
 
+const defaultToggles = {
+  smart_app_banner: {
+    enabled: true,
+  },
+};
+
 const MetadataWithContext = ({
   /* eslint-disable react/prop-types */
   service,
@@ -48,26 +56,28 @@ const MetadataWithContext = ({
   /* eslint-enable react/prop-types */
 }) => (
   <ServiceContextProvider service={service} pageLang={lang}>
-    <RequestContextProvider
-      bbcOrigin={bbcOrigin}
-      id={id}
-      isAmp={platform === 'amp'}
-      pageType={pageType}
-      pathname={pathname}
-      service={service}
-      statusCode={200}
-    >
-      <MetadataContainer
-        title={title}
-        lang={lang}
-        description={description}
-        openGraphType={openGraphType}
-        aboutTags={aboutTags}
-        mentionsTags={mentionsTags}
-        image={image}
-        imageAltText={imageAltText}
-      />
-    </RequestContextProvider>
+    <ToggleContextProvider toggles={defaultToggles}>
+      <RequestContextProvider
+        bbcOrigin={bbcOrigin}
+        id={id}
+        isAmp={platform === 'amp'}
+        pageType={pageType}
+        pathname={pathname}
+        service={service}
+        statusCode={200}
+      >
+        <MetadataContainer
+          title={title}
+          lang={lang}
+          description={description}
+          openGraphType={openGraphType}
+          aboutTags={aboutTags}
+          mentionsTags={mentionsTags}
+          image={image}
+          imageAltText={imageAltText}
+        />
+      </RequestContextProvider>
+    </ToggleContextProvider>
   </ServiceContextProvider>
 );
 
