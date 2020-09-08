@@ -6,9 +6,12 @@ const MediaPlayerContext = createContext({});
 const MediaPlayerContextProvider = ({ children }) => {
   const [mediaPlayerProps, setMediaPlayerProps] = useState(null);
   const [showMediaPlayer, setShowMediaPlayer] = useState(false);
+  const [playerIsInitialised, setPlayerIsInitialised] = useState(false);
   const toggleMediaPlayer = () => setShowMediaPlayer(!showMediaPlayer);
-  const initialiseMediaPlayer = _mediaPlayerProps =>
+  const initialiseMediaPlayer = _mediaPlayerProps => {
     setMediaPlayerProps(_mediaPlayerProps);
+    setPlayerIsInitialised(true);
+  };
 
   return (
     <MediaPlayerContext.Provider
@@ -18,6 +21,7 @@ const MediaPlayerContextProvider = ({ children }) => {
         toggleMediaPlayer,
         initialiseMediaPlayer,
         mediaPlayerProps,
+        playerIsInitialised,
       }}
     >
       {children}

@@ -53,9 +53,11 @@ const LiveRadioPage = ({ pageData }) => {
   } = useContext(ServiceContext);
 
   const { isAmp } = useContext(RequestContext);
-  const { toggleMediaPlayer, initialiseMediaPlayer } = useContext(
-    MediaPlayerContext,
-  );
+  const {
+    toggleMediaPlayer,
+    initialiseMediaPlayer,
+    playerIsInitialised,
+  } = useContext(MediaPlayerContext);
   const location = useLocation();
   const assetId = 'liveradio';
   const mediaId = getMediaId({
@@ -79,15 +81,17 @@ const LiveRadioPage = ({ pageData }) => {
   const hasRadioScheduleData = Boolean(radioScheduleData);
 
   useEffect(() => {
-    initialiseMediaPlayer({
-      assetId,
-      embedUrl,
-      iframeTitle,
-      title: 'Live radio',
-      type: 'audio',
-      skin: 'audio',
-      placeholderSrc: audioPlaceholderImageSrc,
-    });
+    if (!playerIsInitialised) {
+      initialiseMediaPlayer({
+        assetId,
+        embedUrl,
+        iframeTitle,
+        title: 'Live radio',
+        type: 'audio',
+        skin: 'audio',
+        placeholderSrc: audioPlaceholderImageSrc,
+      });
+    }
   }, []);
 
   return (
