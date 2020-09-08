@@ -5,11 +5,9 @@
  */
 
 import runAmpIncludeTests from '../ampIncludeTests';
-import runAmpTests from '../ampTests';
 
 describe('Amp', () => {
   describe(pageType, () => {
     runAmpIncludeTests();
-    runAmpTests(service);
   });
 });
