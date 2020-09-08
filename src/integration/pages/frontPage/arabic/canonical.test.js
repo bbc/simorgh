@@ -8,6 +8,6 @@ import runCanonicalTests from '../canonicalTests';
 
 describe('Canonical', () => {
   describe(pageType, () => {
-    runCanonicalTests('arabic');
+    runCanonicalTests(service);
   });
 });

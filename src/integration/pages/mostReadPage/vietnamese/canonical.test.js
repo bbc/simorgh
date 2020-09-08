@@ -7,6 +7,6 @@ import runCanonicalTests from '../canonicalTests';
 
 describe('Canonical', () => {
   describe(pageType, () => {
-    runCanonicalTests('vietnamese');
+    runCanonicalTests(service);
   });
 });

@@ -5,7 +5,4 @@
 
 import runCanonicalTests from '../canonicalTests';
 
-describe(
-  'Canonical persian/afghanistan IDX page',
-  runCanonicalTests('persian'),
-);
+describe('Canonical persian/afghanistan IDX page', runCanonicalTests(service));
