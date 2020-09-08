@@ -20,9 +20,9 @@ import { ampLeaderboardStyles, ampMpuStyles } from '../utilities/adSlotStyles';
 // styled-components removes non-standard attributes (such as AMP attributes) on
 // server rendering. spreading props like this allows us to add AMP attributes
 // to the element.
-const Section = props => <section {...props} />;
+const AccessDiv = props => <div {...props} />;
 
-const AdSection = styled(Section)`
+const AdSection = styled.section`
   background-color: ${C_LUNAR_LIGHT};
   margin-top: ${GEL_SPACING};
 `;
@@ -41,7 +41,7 @@ const StyledWrapper = styled.div`
 // the user's location. It removes the `amp-geo-pending` class when geolocation
 // data is available.
 // setting display: none ensures ad requests within this component are not made.
-const DisplayWrapper = styled.div`
+const DisplayWrapper = styled(AccessDiv)`
   .amp-geo-pending &,
   .amp-geo-group-gbOrUnknown & {
     display: none;
