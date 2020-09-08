@@ -402,7 +402,12 @@ const validLegacyPageRoutes = [
 const invalidLegacyPageRoutes = [
   // Asset URI begin with a 6 digit date
   '/hausa/multimedia/2014/05/hip_hop_40years_gallery',
+  '/ukchina',
+  '/ukchina/',
+  '/ukchina/simp',
+  '/ukchina/simp/',
 ];
+
 describe('legacyAssetPagePath', () => {
   shouldMatchValidRoutes(validLegacyPageRoutes, legacyAssetPagePath);
 
@@ -414,8 +419,13 @@ describe('legacyAssetPageDataPath', () => {
 
   shouldMatchValidRoutes(validDataRoutes, legacyAssetPageDataPath);
 
-  const invalidDataRoutes = invalidLegacyPageRoutes.map(
-    route => `${route}.json`,
-  );
+  const invalidDataRoutes = invalidLegacyPageRoutes.map(route => {
+    let path = route;
+    if (route.endsWith('/')) {
+      path = route.slice(0, -1);
+    }
+
+    return `${path}.json`;
+  });
   shouldNotMatchInvalidRoutes(invalidDataRoutes, legacyAssetPageDataPath);
 });
