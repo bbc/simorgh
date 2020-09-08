@@ -215,7 +215,7 @@ export default service => {
       });
     });
 
-    describe('Apple iTunes App', () => {
+    describe('apple-itunes-app meta tag', () => {
       const appleItunesApp = document.querySelector(
         'meta[name="apple-itunes-app"]',
       );
