@@ -7,6 +7,6 @@ import runAmpTests from '../ampTests';
 
 describe('AMP', () => {
   describe(pageType, () => {
-    runAmpTests('pashto');
+    runAmpTests(service);
   });
 });

@@ -5,4 +5,4 @@
 
 import runAmpTests from '../ampTests';
 
-describe('AMP Korean Live Radio Page', runAmpTests('korean'));
+describe('AMP Korean Live Radio Page', runAmpTests(service));

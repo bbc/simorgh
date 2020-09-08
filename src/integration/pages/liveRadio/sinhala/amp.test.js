@@ -5,4 +5,4 @@
 
 import runAmpTests from '../ampTests';
 
-describe('AMP Sinhala Live Radio Page', runAmpTests('sinhala'));
+describe('AMP Sinhala Live Radio Page', runAmpTests(service));
