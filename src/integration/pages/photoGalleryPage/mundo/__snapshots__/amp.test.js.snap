@@ -360,6 +360,8 @@ Object {
 }
 `;
 
+exports[`AMP Photo Gallery Page SEO Apple iTunes App should match text 1`] = `"app-id=515255747, app-argument=http://localhost:7080/mundo/deportes-36935058?utm_medium=banner&utm_content=apple-itunes-app"`;
+
 exports[`AMP Photo Gallery Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/deportes-36935058"`;
 
 exports[`AMP Photo Gallery Page SEO Dir attribute 1`] = `"ltr"`;

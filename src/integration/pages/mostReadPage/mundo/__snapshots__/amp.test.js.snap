@@ -382,6 +382,8 @@ Object {
 }
 `;
 
+exports[`AMP Most Read Page SEO Apple iTunes App should match text 1`] = `"app-id=515255747, app-argument=http://localhost:7080/mundo/popular/read?utm_medium=banner&utm_content=apple-itunes-app"`;
+
 exports[`AMP Most Read Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/popular/read"`;
 
 exports[`AMP Most Read Page SEO Dir attribute 1`] = `"ltr"`;

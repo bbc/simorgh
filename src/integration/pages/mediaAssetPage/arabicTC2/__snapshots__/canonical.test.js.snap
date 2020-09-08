@@ -231,6 +231,8 @@ Object {
 }
 `;
 
+exports[`Canonical Media Asset Page SEO Apple iTunes App should match text 1`] = `"app-id=558497376, app-argument=http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av?utm_medium=banner&utm_content=apple-itunes-app"`;
+
 exports[`Canonical Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av"`;
 
 exports[`Canonical Media Asset Page SEO Dir attribute 1`] = `"rtl"`;

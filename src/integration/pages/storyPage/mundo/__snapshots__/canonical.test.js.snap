@@ -229,6 +229,8 @@ Object {
 }
 `;
 
+exports[`Canonical Story Page SEO Apple iTunes App should match text 1`] = `"app-id=515255747, app-argument=http://localhost:7080/mundo/noticias-internacional-51266689?utm_medium=banner&utm_content=apple-itunes-app"`;
+
 exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
 
 exports[`Canonical Story Page SEO Dir attribute 1`] = `"ltr"`;
