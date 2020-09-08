@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { string, shape } from 'prop-types';
 import styled from 'styled-components';
 import { Headline } from '@bbc/psammead-headings';
+import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import pathOr from 'ramda/src/pathOr';
 import Paragraph from '@bbc/psammead-paragraph';
 import { useLocation, Link } from 'react-router-dom';
@@ -24,8 +25,11 @@ const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${pr
 const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
 const BigRedButton = styled.button`
-  background: red;
   color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  background-color: ${C_POSTBOX};
 `;
 
 const StyledGelPageGrid = styled(GelPageGrid)`
@@ -155,9 +159,9 @@ const LiveRadioPage = ({ pageData }) => {
           <Paragraph script={script} service={service}>
             {bodySummary}
           </Paragraph>
+          <BigRedButton onClick={toggleMediaPlayer}>Listen Live</BigRedButton>
         </Grid>
         <Link to="/indonesia/media-23269037">Hello</Link>
-        <BigRedButton onClick={toggleMediaPlayer}>Toggle Player</BigRedButton>
       </StyledGelPageGrid>
       {hasRadioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />

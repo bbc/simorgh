@@ -1,6 +1,7 @@
 import React, { useContext, memo } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
+import { C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -9,7 +10,6 @@ import {
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
 
 import { MediaPlayerContext } from '../../contexts/MediaPlayerContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -20,7 +20,8 @@ const ToastWrapper = styled.div`
   bottom: 0;
   width: 100%;
   position: fixed;
-  background: ${C_GHOST};
+  background: ${C_MIDNIGHT_BLACK};
+  z-index: 5;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 24px 0px;
 `;
 
@@ -77,10 +78,11 @@ export default Component => {
               service={service}
               id="content"
               tabIndex="-1"
+              darkMode
             >
               {heading}
             </Headline>
-            <Paragraph script={script} service={service}>
+            <Paragraph script={script} service={service} darkMode>
               {summary}
             </Paragraph>
             {mediaPlayerProps && <StyledAudioPlayer {...mediaPlayerProps} />}
