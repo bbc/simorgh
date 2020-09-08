@@ -16,6 +16,9 @@ import {
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import pipe from 'ramda/src/pipe';
 import { renderRoutes } from 'react-router-config';
+import { Headline } from '@bbc/psammead-headings';
+import Paragraph from '@bbc/psammead-paragraph';
+import { C_GHOST } from '@bbc/psammead-styles/colours';
 import { withRouter } from 'react-router';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
@@ -25,6 +28,7 @@ import withContexts from '#containers/PageHandlers/withContexts';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withLoading from '#containers/PageHandlers/withLoading';
 import { MediaPlayerContext } from '../../contexts/MediaPlayerContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import AVPlayer from '#containers/AVPlayer';
 
 const updatePageClientSide = async ({
@@ -62,7 +66,7 @@ const ToastWrapper = styled.div`
   bottom: 0;
   width: 100%;
   position: fixed;
-  background: #fff;
+  background: ${C_GHOST};
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 24px 0px;
 `;
 
@@ -99,9 +103,11 @@ const withStickyPlayer = Component => {
       MediaPlayerContext,
     );
 
+    const { script, service } = useContext(ServiceContext);
     const animationStyles = useSpring({
       transform: showMediaPlayer ? 'translateY(0%)' : 'translateY(100%)',
     });
+    const { heading, summary } = mediaPlayerProps || {};
 
     return (
       <>
@@ -112,6 +118,17 @@ const withStickyPlayer = Component => {
           style={animationStyles}
         >
           <Toast>
+            <Headline
+              script={script}
+              service={service}
+              id="content"
+              tabIndex="-1"
+            >
+              {heading}
+            </Headline>
+            <Paragraph script={script} service={service}>
+              {summary}
+            </Paragraph>
             {mediaPlayerProps && <StyledAudioPlayer {...mediaPlayerProps} />}
           </Toast>
         </AnimatedToastWrapper>

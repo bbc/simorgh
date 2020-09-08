@@ -90,6 +90,8 @@ const LiveRadioPage = ({ pageData }) => {
         type: 'audio',
         skin: 'audio',
         placeholderSrc: audioPlaceholderImageSrc,
+        heading,
+        summary: bodySummary,
       });
     }
   }, []);
