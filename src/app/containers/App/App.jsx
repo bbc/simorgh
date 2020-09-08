@@ -1,12 +1,7 @@
-import React, {
-  useEffect,
-  useLayoutEffect,
-  useState,
-  useRef,
-  useContext,
-} from 'react';
+import React, { useEffect, useLayoutEffect, useState, useRef } from 'react';
 import pipe from 'ramda/src/pipe';
 import { renderRoutes } from 'react-router-config';
+
 import { withRouter } from 'react-router';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
@@ -15,7 +10,7 @@ import routes from '#app/routes';
 import withContexts from '#containers/PageHandlers/withContexts';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withLoading from '#containers/PageHandlers/withLoading';
-import { MediaPlayerContext } from '../../contexts/MediaPlayerContext';
+import withStickyPlayer from '#containers/PageHandlers/withStickyPlayer';
 
 const updatePageClientSide = async ({
   setState,
@@ -45,45 +40,6 @@ const setFocusOnMainHeading = () => {
   if (mainHeadingEl) {
     mainHeadingEl.focus();
   }
-};
-
-const withStickyPlayer = Component => {
-  const Video = () => (
-    <div
-      dangerouslySetInnerHTML={{
-        __html: `
-          <iframe
-            id="ytplayer"
-            type="text/html"
-            width="640"
-            height="360"
-            src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
-            frameborder="0"
-          ></iframe>
-          `,
-      }}
-    />
-  );
-  return props => {
-    const { showMediaPlayer } = useContext(MediaPlayerContext);
-
-    return (
-      <>
-        <Component {...props} />
-        {showMediaPlayer && (
-          <div
-            style={{
-              position: 'fixed',
-              left: 0,
-              bottom: 0,
-            }}
-          >
-            <Video />
-          </div>
-        )}
-      </>
-    );
-  };
 };
 
 const Routes = pipe(

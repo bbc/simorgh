@@ -1,12 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { string, shape } from 'prop-types';
 import styled from 'styled-components';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_QUAD,
-} from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { Headline } from '@bbc/psammead-headings';
 import pathOr from 'ramda/src/pathOr';
 import Paragraph from '@bbc/psammead-paragraph';
@@ -18,7 +12,6 @@ import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import LinkedData from '../../containers/LinkedData';
-import AVPlayer from '#containers/AVPlayer';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { MediaPlayerContext } from '../../contexts/MediaPlayerContext';
 import { RequestContext } from '#contexts/RequestContext';
@@ -38,24 +31,6 @@ const BigRedButton = styled.button`
 const StyledGelPageGrid = styled(GelPageGrid)`
   width: 100%;
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
-`;
-
-const StyledAudioPlayer = styled(AVPlayer)`
-  amp-iframe {
-    overflow: visible !important;
-    width: calc(100% + ${GEL_SPACING_DBL});
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-      width: calc(100% + ${GEL_SPACING_QUAD});
-    }
-  }
-  iframe {
-    width: calc(100% + ${GEL_SPACING_DBL});
-    margin: 0 -${GEL_SPACING};
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-      width: calc(100% + ${GEL_SPACING_QUAD});
-      margin: 0 -${GEL_SPACING_DBL};
-    }
-  }
 `;
 
 const LiveRadioPage = ({ pageData }) => {
@@ -78,7 +53,11 @@ const LiveRadioPage = ({ pageData }) => {
   } = useContext(ServiceContext);
 
   const { isAmp } = useContext(RequestContext);
-  const { toggleMediaPlayer } = useContext(MediaPlayerContext);
+  const {
+    toggleMediaPlayer,
+    initialiseMediaPlayer,
+    playerIsInitialised,
+  } = useContext(MediaPlayerContext);
   const location = useLocation();
   const assetId = 'liveradio';
   const mediaId = getMediaId({
@@ -100,6 +79,22 @@ const LiveRadioPage = ({ pageData }) => {
   );
 
   const hasRadioScheduleData = Boolean(radioScheduleData);
+
+  useEffect(() => {
+    if (!playerIsInitialised) {
+      initialiseMediaPlayer({
+        assetId,
+        embedUrl,
+        iframeTitle,
+        title: 'Live radio',
+        type: 'audio',
+        skin: 'audio',
+        placeholderSrc: audioPlaceholderImageSrc,
+        heading,
+        summary: bodySummary,
+      });
+    }
+  }, []);
 
   return (
     <>
@@ -160,15 +155,6 @@ const LiveRadioPage = ({ pageData }) => {
           <Paragraph script={script} service={service}>
             {bodySummary}
           </Paragraph>
-          <StyledAudioPlayer
-            assetId={assetId}
-            embedUrl={embedUrl}
-            iframeTitle={iframeTitle}
-            title="Live radio"
-            type="audio"
-            skin="audio"
-            placeholderSrc={audioPlaceholderImageSrc}
-          />
         </Grid>
         <Link to="/indonesia/media-23269037">Hello</Link>
         <BigRedButton onClick={toggleMediaPlayer}>Toggle Player</BigRedButton>
