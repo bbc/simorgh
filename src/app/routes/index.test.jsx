@@ -4,7 +4,7 @@ import { renderRoutes } from 'react-router-config';
 import { matchPath } from 'react-router';
 
 // test helpers
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import fetchMock from 'fetch-mock';
 
 import defaultToggles from '#lib/config/toggles';
@@ -37,6 +37,7 @@ jest.mock('#pages/index.js', () => ({
   PhotoGalleryPage: jest.requireActual('#pages/PhotoGalleryPage').default,
   OnDemandRadioPage: jest.requireActual('#pages/OnDemandRadioPage').default,
   MostReadPage: jest.requireActual('#pages/MostReadPage').default,
+  MostWatchedPage: jest.requireActual('#pages/MostWatchedPage').default,
   MediaAssetPage: jest.requireActual('#pages/MediaAssetPage').default,
   LiveRadioPage: jest.requireActual('#pages/LiveRadioPage').default,
   IdxPage: jest.requireActual('#pages/IdxPage').default,
@@ -147,7 +148,7 @@ it('should route to and render the onDemand Radio page', async () => {
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
 
-it('should route to and render the skeleton onDemand TV Brand page', async () => {
+it('should route to and render the onDemand TV Brand page', async () => {
   const pathname = '/indonesia/bbc_indonesian_tv/tv_programmes/w13xttn4';
   fetchMock.mock(
     `http://localhost${pathname}.json?renderer_env=live`,
@@ -209,6 +210,27 @@ it('should route to and render a front page', async () => {
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Yarn Me Tori';
 
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+});
+
+it('should route to and render a skeleton most watched page', async () => {
+  const pathname = '/pidgin/media/video';
+
+  const { getInitialData, pageType } = getMatchingRoute(pathname);
+  const { pageData } = await getInitialData({
+    path: pathname,
+    service: 'pidgin',
+    pageType,
+  });
+  const { getByText } = renderRouter({
+    pathname,
+    pageData,
+    pageType,
+    service: 'pidgin',
+  });
+  screen.debug();
+  const EXPECTED_TITLE_RENDERED_IN_DOCUMENT = 'De one we dem don look';
+
+  expect(getByText(EXPECTED_TITLE_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
 
 it('should route to and render a media asset page', async () => {

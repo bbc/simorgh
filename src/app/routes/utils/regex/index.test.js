@@ -266,6 +266,23 @@ describe('mostWatchedDataPath', () => {
   shouldNotMatchInvalidRoutes(invalidRoutes, mostWatchedDataPath);
 });
 
+describe('mostWatchedPagePath', () => {
+  const validRoutes = [
+    '/pidgin/media/video',
+    '/pashto/media/video',
+    '/zhongwen/simp/media/video',
+  ];
+  shouldMatchValidRoutes(validRoutes, mostWatchedDataPath);
+
+  const invalidRoutes = [
+    '/foobar/media/video',
+    '/pidgin/video/media',
+    '/zhongwen/media/video/simp',
+    '/serbian/media/video',
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, mostWatchedDataPath);
+});
+
 describe('secondaryColumnDataRegexPath', () => {
   const validRoutes = [
     '/mundo/sty-secondary-column.json',
