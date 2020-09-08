@@ -5,4 +5,4 @@
 
 import runCanonicalTests from '../canonicalTests';
 
-describe('Canonical Sinhala Live Radio Page', runCanonicalTests);
+describe('Canonical Sinhala Live Radio Page', runCanonicalTests('sinhala'));
