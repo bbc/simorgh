@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { shape, bool, oneOf, oneOfType, string } from 'prop-types';
 import styled from 'styled-components';
-import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import Timestamp from '@bbc/psammead-timestamp-container';
@@ -24,6 +23,12 @@ import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import IndexAlsosContainer from './IndexAlsos';
 import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
+
+import StoryPromo, {
+  Headline,
+  Summary,
+  Link,
+} from '#psammead/psammead-story-promo/src';
 
 const logger = loggerNode(__filename);
 

@@ -17,6 +17,7 @@ module.exports = {
     '#testHelpers': resolvePath('src/testHelpers/'),
     '#server': resolvePath('src/server/'),
     '#utils': resolvePath('src/app/routes/utils/'),
+    '#psammead': resolvePath('src/app/psammead/'),
   },
   jestDirAlias: {
     '^#app(.*)$': '<rootDir>/src/app$1',
@@ -30,6 +31,7 @@ module.exports = {
     '^#testHelpers(.*)$': '<rootDir>/src/testHelpers$1',
     '^#server(.*)$': '<rootDir>/src/server$1',
     '^#utils(.*)$': '<rootDir>/src/app/routes/utils$1',
+    '^#psammead(.*)$': '<rootDir>/src/app/psammead$1',
   },
   eslintDirAlias: {
     map: [
@@ -44,6 +46,7 @@ module.exports = {
       ['#testHelpers', './src/testHelpers'],
       ['#server', './src/server'],
       ['#utils', './src/app/routes/utils'],
+      ['#psammead', './src/app/psammead'],
     ],
     extensions: ['.js', '.jsx', '.json'],
   },

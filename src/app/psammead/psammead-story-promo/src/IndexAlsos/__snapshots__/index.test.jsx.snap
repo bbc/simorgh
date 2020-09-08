@@ -1,0 +1,376 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index Alsos should render multiple correctly 1`] = `
+.c7 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.c5 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 0.5rem;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.c1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c0 {
+  position: relative;
+  z-index: 2;
+  padding: 1rem 0 0;
+}
+
+.c3 {
+  border-top: 1px solid #F2F2F2;
+  padding: 0.5rem 0;
+}
+
+.c2 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c8 {
+  display: inline;
+  vertical-align: middle;
+}
+
+.c4 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:hover,
+.c4:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4:visited {
+  color: #6E6E73;
+}
+
+.c4 svg {
+  margin: 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+<div
+  class="c0"
+  data-e2e="index-alsos"
+>
+  <h4
+    class="c1"
+  >
+    Related content
+  </h4>
+  <ul
+    class="c2"
+    role="list"
+  >
+    <li
+      class="c3"
+      role="listitem"
+    >
+      <a
+        class="c4"
+        href="/hausa/labarai-48916590"
+      >
+        <div
+          aria-hidden="true"
+          class="c5"
+          dir="ltr"
+        >
+          <div
+            class="c6"
+          >
+            <svg
+              aria-hidden="true"
+              class="c7"
+              focusable="false"
+              height="12px"
+              viewBox="0 0 32 32"
+              width="12px"
+            >
+              <polygon
+                points="3,32 29,16 3,0"
+              />
+            </svg>
+          </div>
+        </div>
+        <span
+          class=""
+          role="text"
+        >
+          <span
+            class="c1"
+          >
+            video, 
+          </span>
+          <span
+            class="c8"
+          >
+            APC ba ta isa ta kore ni ba – Buba Galadima
+          </span>
+        </span>
+      </a>
+    </li>
+    <li
+      class="c3"
+      role="listitem"
+    >
+      <a
+        class="c4"
+        href="/hausa/labarai-42837051"
+      >
+        <span
+          class="c8"
+        >
+          Yaushe Obasanjo ya fara yi wa shugabannin kasa baki?
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Index Alsos should render one correctly 1`] = `
+.c6 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.c4 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 0.5rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.c1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c0 {
+  position: relative;
+  z-index: 2;
+  padding: 1rem 0 0;
+}
+
+.c2 {
+  border-top: 1px solid #F2F2F2;
+  padding: 0.5rem 0;
+}
+
+.c7 {
+  display: inline;
+  vertical-align: middle;
+}
+
+.c3 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:hover,
+.c3:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c3:visited {
+  color: #6E6E73;
+}
+
+.c3 svg {
+  margin: 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+<div
+  class="c0"
+  data-e2e="index-alsos"
+>
+  <h4
+    class="c1"
+  >
+    Related content
+  </h4>
+  <div
+    class="c2"
+  >
+    <a
+      class="c3"
+      href="/hausa/labarai-48916590"
+    >
+      <div
+        aria-hidden="true"
+        class="c4"
+        dir="ltr"
+      >
+        <div
+          class="c5"
+        >
+          <svg
+            aria-hidden="true"
+            class="c6"
+            focusable="false"
+            height="12px"
+            viewBox="0 0 32 32"
+            width="12px"
+          >
+            <polygon
+              points="3,32 29,16 3,0"
+            />
+          </svg>
+        </div>
+      </div>
+      <span
+        class=""
+        role="text"
+      >
+        <span
+          class="c1"
+        >
+          video, 
+        </span>
+        <span
+          class="c7"
+        >
+          APC ba ta isa ta kore ni ba – Buba Galadima
+        </span>
+      </span>
+    </a>
+  </div>
+</div>
+`;
