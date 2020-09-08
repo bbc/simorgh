@@ -4,11 +4,9 @@
  */
 
 import runExpiredEpisodeTests from '../expiredEpisodeTests';
-import runCanonicalTests from '../canonicalTests';
 
 describe('Canonical', () => {
   describe(pageType, () => {
     runExpiredEpisodeTests();
-    runCanonicalTests(service);
   });
 });
