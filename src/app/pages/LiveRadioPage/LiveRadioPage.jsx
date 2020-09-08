@@ -30,6 +30,11 @@ const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${pr
 
 const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
+const BigRedButton = styled.button`
+  background: red;
+  color: #fff;
+`;
+
 const StyledGelPageGrid = styled(GelPageGrid)`
   width: 100%;
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
@@ -166,7 +171,7 @@ const LiveRadioPage = ({ pageData }) => {
           />
         </Grid>
         <Link to="/indonesia/media-23269037">Hello</Link>
-        <button onClick={toggleMediaPlayer}>Toggle Player</button>
+        <BigRedButton onClick={toggleMediaPlayer}>Toggle Player</BigRedButton>
       </StyledGelPageGrid>
       {hasRadioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />
