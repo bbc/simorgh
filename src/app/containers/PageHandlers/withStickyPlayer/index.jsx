@@ -7,17 +7,25 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
+import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import Paragraph from '@bbc/psammead-paragraph';
 import { MediaPlayerContext } from '../../../contexts/MediaPlayerContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import AVPlayer from '#containers/AVPlayer';
 import MiniController from './MiniController';
+import ChevronIcon from './ChevronIcon';
 
 export const Title = styled.h4`
   margin: 0; /* Reset */
   padding: ${GEL_SPACING};
-  font-family: ReithSerif, Helvetica, Arial, sans-serif;
+  padding: 4px 0 0;
+  ${({ service }) => service && getSansRegular(service)};
+`;
+
+const TitleWrapper = styled.div`
+  flex-grow: 1;
+  padding-left: 12px;
 `;
 
 const ToastWrapper = styled.div`
@@ -34,6 +42,7 @@ const Toast = styled.div`
   width: 755px;
   max-width: 100%;
   margin: 0 auto;
+  padding: 12px;
 `;
 
 const AnimatedToastWrapper = animated(ToastWrapper);
@@ -61,13 +70,30 @@ const ControlsWrapper = styled.div`
   display: flex;
   color: #fff;
   justify-content: space-between;
-  align-items: center;
 `;
 
 const AudioOuterWrapper = animated(styled.div`
   height: 0;
   overflow: hidden;
 `);
+
+const ShowMoreButton = styled.button`
+  border: 0;
+  background: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  outline: 0;
+  cursor: pointer;
+  font-size: 0.85rem;
+  ${({ service }) => service && getSansRegular(service)};
+  .icon {
+    transition: 0.2s ease-in-out all;
+  }
+  .icon.is-open {
+    transform: rotate(180deg);
+  }
+`;
 
 export default Component => {
   return props => {
@@ -97,10 +123,19 @@ export default Component => {
           <Toast>
             <ControlsWrapper>
               <MiniController />
-              <Title script={script} service={service} darkMode>
-                {heading}
-              </Title>
-              <span onClick={toggleMore}>{showMore ? 'Close' : 'Open'}</span>
+              <TitleWrapper>
+                <Title script={script} service={service} darkMode>
+                  {heading}
+                </Title>
+              </TitleWrapper>
+              <ShowMoreButton
+                script={script}
+                service={service}
+                onClick={toggleMore}
+              >
+                {showMore ? 'Hide' : 'Open'}
+                <ChevronIcon isOpen={showMore} />
+              </ShowMoreButton>
             </ControlsWrapper>
             <AudioOuterWrapper style={showMoreAnimStyle}>
               <div ref={showMoreRef}>
