@@ -601,8 +601,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                         class="c9"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                         <noscript />
                       </div>
                     </div>
@@ -641,8 +645,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                         class="c9"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                         <noscript />
                       </div>
                     </div>
@@ -681,8 +689,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                         class="c16"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                         <noscript />
                       </div>
                     </div>
@@ -721,8 +733,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                         class="c18"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                         <noscript />
                       </div>
                     </div>
@@ -761,8 +777,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                         class="c9"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                         <noscript />
                       </div>
                     </div>
@@ -801,8 +821,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                         class="c18"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                         <noscript />
                       </div>
                     </div>
@@ -841,8 +865,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                         class="c9"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                         <noscript />
                       </div>
                     </div>
@@ -881,8 +909,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                         class="c9"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                         <noscript />
                       </div>
                     </div>
@@ -921,8 +953,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                         class="c9"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                         <noscript />
                       </div>
                     </div>
@@ -961,8 +997,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                         class="c9"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                         <noscript />
                       </div>
                     </div>
@@ -1001,8 +1041,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                         class="c9"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                         <noscript />
                       </div>
                     </div>
@@ -1041,8 +1085,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                         class="c9"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                         <noscript />
                       </div>
                     </div>
@@ -1081,8 +1129,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                         class="c9"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                         <noscript />
                       </div>
                     </div>
@@ -1121,8 +1173,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                         class="c9"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                         <noscript />
                       </div>
                     </div>
@@ -1161,8 +1217,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                         class="c9"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                         <noscript />
                       </div>
                     </div>
@@ -2083,8 +2143,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -2123,8 +2187,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -2163,8 +2231,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                             class="c18"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -2203,8 +2275,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                             class="c20"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -2243,8 +2319,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -2283,8 +2363,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                             class="c20"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -2323,8 +2407,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -2363,8 +2451,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -2403,8 +2495,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -2443,8 +2539,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -2483,8 +2583,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -2523,8 +2627,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -2563,8 +2671,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -2603,8 +2715,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -2643,8 +2759,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -3938,8 +4058,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -3978,8 +4102,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -4018,8 +4146,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -4058,8 +4190,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -4098,8 +4234,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -4138,8 +4278,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -4178,8 +4322,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -4218,8 +4366,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -4258,8 +4410,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -4298,8 +4454,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -4338,8 +4498,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                           </div>
                         </div>
@@ -4422,8 +4586,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                                 class="c11"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c31"
@@ -5271,8 +5439,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -5326,8 +5498,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -5381,8 +5557,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -5436,8 +5616,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -5491,8 +5675,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -5546,8 +5734,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -5601,8 +5793,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -7246,8 +7442,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -7301,8 +7501,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c19"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -7356,8 +7560,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c21"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -7411,8 +7619,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c22"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -7466,8 +7678,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c23"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -7521,8 +7737,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c21"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -7576,8 +7796,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c24"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -7631,8 +7855,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c25"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -7686,8 +7914,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c26"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -7741,8 +7973,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c27"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -7796,8 +8032,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c28"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -7851,8 +8091,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c29"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -7906,8 +8150,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c30"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -7961,8 +8209,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c31"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -8016,8 +8268,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c32"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -8071,8 +8327,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c11"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -8126,8 +8386,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c33"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -8181,8 +8445,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c21"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -8236,8 +8504,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             class="c21"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c12"
@@ -8335,8 +8607,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 class="c50"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c51"
@@ -8385,8 +8661,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 class="c50"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c51"
@@ -8435,8 +8715,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 class="c50"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c51"
@@ -8485,8 +8769,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 class="c50"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c51"
@@ -8535,8 +8823,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 class="c50"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c51"
@@ -8585,8 +8877,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 class="c50"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c51"
@@ -8646,8 +8942,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 class="c50"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c51"
@@ -8696,8 +8996,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 class="c50"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c51"
@@ -8746,8 +9050,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 class="c50"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c51"

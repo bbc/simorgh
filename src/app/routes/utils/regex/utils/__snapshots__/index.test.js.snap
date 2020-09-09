@@ -16,7 +16,7 @@ exports[`regex utils snapshots should create expected regex from getFrontPageReg
 
 exports[`regex utils snapshots should create expected regex from getIdxPageRegex 1`] = `"/:idx(persian/afghanistan|ukrainian/ukraine_in_russian):amp(.amp)?"`;
 
-exports[`regex utils snapshots should create expected regex from getLegacyAssetRegex 1`] = `"/:service(news|persian|igbo):variant(/simp|/trad|/cyr|/lat)?/:assetUri([a-z-_/]{1,}/[a-z0-9-_]{1,}/[a-z0-9-_]{1,}/[0-9]{6}[a-z0-9-_]{0,})?:amp(.amp)?"`;
+exports[`regex utils snapshots should create expected regex from getLegacyAssetRegex 1`] = `"/:service(news|persian|igbo):variant(/simp|/trad|/cyr|/lat)?/:assetUri([a-z-_/]{1,}/[a-z0-9-_]{1,}/[a-z0-9-_]{1,}/[0-9]{6}[a-z0-9-_]{0,}):amp(.amp)?"`;
 
 exports[`regex utils snapshots should create expected regex from getLiveRadioRegex 1`] = `"/:service(news|persian|igbo)/:serviceId(bbc_[a-z]+_radio)/:mediaId(liveRadio):amp(.amp)?"`;
 
