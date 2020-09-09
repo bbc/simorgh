@@ -1,5 +1,10 @@
 import React from 'react';
+import PlayPauseButton from './PlayPauseButton';
 
 export default () => {
-  return <div>Player/Pause button here</div>;
+  return (
+    <div>
+      <PlayPauseButton />
+    </div>
+  );
 };
