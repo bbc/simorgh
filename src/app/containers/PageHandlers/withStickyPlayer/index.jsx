@@ -74,8 +74,9 @@ export default Component => {
     const [showMore, setShowMore] = useState(false);
     const toggleMore = () => setShowMore(!showMore);
     const showMoreRef = useRef();
-    const { mediaPlayerProps } = useContext(MediaPlayerContext);
-    const showMediaPlayer = true;
+    const { mediaPlayerProps, showMediaPlayer } = useContext(
+      MediaPlayerContext,
+    );
     const { script, service } = useContext(ServiceContext);
     const toastAnimStyled = useSpring({
       transform: showMediaPlayer ? 'translateY(0%)' : 'translateY(100%)',
