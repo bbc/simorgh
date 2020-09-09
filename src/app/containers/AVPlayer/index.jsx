@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, memo } from 'react';
 import { string } from 'prop-types';
 import {
   CanonicalMediaPlayer,
@@ -8,6 +8,9 @@ import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { MediaPlayerContext } from '#contexts/MediaPlayerContext';
+
+// CanonicalMediaPlayer is a thin wrapper for an iframe - it should never reload
+const MemoPlayer = memo(CanonicalMediaPlayer, () => true);
 
 const AVPlayer = ({
   assetId,
@@ -21,7 +24,7 @@ const AVPlayer = ({
 }) => {
   const { translations, service } = useContext(ServiceContext);
   const { isAmp, platform } = useContext(RequestContext);
-  const { setIsPlayerReady } = useContext(MediaPlayerContext);
+  const { setIsPlayerReady, setIsPlaying } = useContext(MediaPlayerContext);
 
   const isValidPlatform = ['amp', 'canonical'].includes(platform);
   const mediaInfo = {
@@ -48,7 +51,7 @@ const AVPlayer = ({
           service={service}
         />
       ) : (
-        <CanonicalMediaPlayer
+        <MemoPlayer
           showPlaceholder={false}
           src={embedUrl}
           title={iframeTitle}
@@ -58,7 +61,9 @@ const AVPlayer = ({
           noJsMessage={noJsMessage}
           noJsClassName="no-js"
           acceptableEventOrigins={['polling.test.bbc.co.uk', 'test.bbc.com']}
-          onMediaInitialised={setIsPlayerReady}
+          onMediaInitialised={() => setIsPlayerReady(true)}
+          onMediaPlaying={() => setIsPlaying(true)}
+          onMediaPause={() => setIsPlaying(false)}
         />
       )}
     </div>

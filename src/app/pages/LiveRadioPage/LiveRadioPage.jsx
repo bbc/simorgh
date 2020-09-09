@@ -6,7 +6,6 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import pathOr from 'ramda/src/pathOr';
 import Paragraph from '@bbc/psammead-paragraph';
 import { useLocation, Link } from 'react-router-dom';
-import { transduce } from 'ramda';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import MetadataContainer from '../../containers/Metadata';
 import RadioScheduleContainer from '#containers/RadioSchedule';
