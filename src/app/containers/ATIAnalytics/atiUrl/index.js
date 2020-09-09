@@ -210,7 +210,7 @@ export const buildATIPageTrackPath = ({
       description: 'marketing campaign',
       value: getATIMarketingString(href, campaignType),
       wrap: false,
-      escapeValue: true,
+      escapeValue: false,
     },
     {
       key: 'ref',
@@ -294,7 +294,7 @@ export const buildATIEventTrackUrl = ({
         type: type || '',
       }),
       wrap: false,
-      escapeValue: true,
+      escapeValue: false,
     },
   ];
 
