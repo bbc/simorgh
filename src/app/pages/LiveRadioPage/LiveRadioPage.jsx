@@ -161,7 +161,7 @@ const LiveRadioPage = ({ pageData }) => {
           </Paragraph>
           <BigRedButton onClick={toggleMediaPlayer}>Listen Live</BigRedButton>
         </Grid>
-        <Link to="/indonesia/media-23269037">Hello</Link>
+        <Link to="/afrique/region-23278969">Hello</Link>
       </StyledGelPageGrid>
       {hasRadioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />
