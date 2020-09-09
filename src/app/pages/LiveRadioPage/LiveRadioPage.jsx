@@ -66,6 +66,7 @@ const LiveRadioPage = ({ pageData }) => {
     initialiseMediaPlayer,
     playerIsInitialised,
     isPlayerReady,
+    isPlaying,
   } = useContext(MediaPlayerContext);
   const location = useLocation();
   const assetId = 'liveradio';
@@ -104,6 +105,13 @@ const LiveRadioPage = ({ pageData }) => {
       });
     }
   }, []);
+
+  // eslint-disable-next-line no-nested-ternary
+  const bigRedButtonState = isPlayerReady
+    ? isPlaying
+      ? 'playing'
+      : 'ready'
+    : 'loading';
 
   return (
     <>
@@ -164,14 +172,14 @@ const LiveRadioPage = ({ pageData }) => {
           <Paragraph script={script} service={service}>
             {bodySummary}
           </Paragraph>
-          {isPlayerReady ? (
-            <BigRedButton onClick={toggleMediaPlayer}>
-              Listen live
-            </BigRedButton>
-          ) : (
-            <BigRedButton disabled>
-              Loading
-            </BigRedButton>
+          {bigRedButtonState === 'loading' && (
+            <BigRedButton disabled>Loading</BigRedButton>
+          )}
+          {bigRedButtonState === 'playing' && (
+            <BigRedButton onClick={toggleMediaPlayer}>Now Playing</BigRedButton>
+          )}
+          {bigRedButtonState === 'ready' && (
+            <BigRedButton onClick={toggleMediaPlayer}>Listen Live</BigRedButton>
           )}
         </Grid>
         <Link to="/afrique/region-23278969">Hello</Link>
