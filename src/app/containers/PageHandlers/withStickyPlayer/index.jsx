@@ -8,12 +8,17 @@ import {
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
 import { MediaPlayerContext } from '../../../contexts/MediaPlayerContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import AVPlayer from '#containers/AVPlayer';
 import MiniController from './MiniController';
+
+export const Title = styled.h4`
+  margin: 0; /* Reset */
+  padding: ${GEL_SPACING};
+  font-family: ReithSerif, Helvetica, Arial, sans-serif;
+`;
 
 const ToastWrapper = styled.div`
   left: 0;
@@ -69,9 +74,8 @@ export default Component => {
     const [showMore, setShowMore] = useState(false);
     const toggleMore = () => setShowMore(!showMore);
     const showMoreRef = useRef();
-    const { showMediaPlayer, mediaPlayerProps } = useContext(
-      MediaPlayerContext,
-    );
+    const { mediaPlayerProps } = useContext(MediaPlayerContext);
+    const showMediaPlayer = true;
     const { script, service } = useContext(ServiceContext);
     const toastAnimStyled = useSpring({
       transform: showMediaPlayer ? 'translateY(0%)' : 'translateY(100%)',
@@ -85,7 +89,6 @@ export default Component => {
     return (
       <>
         <Component {...props} />
-
         <AnimatedToastWrapper
           showMediaPlayer={showMediaPlayer}
           style={toastAnimStyled}
@@ -93,15 +96,9 @@ export default Component => {
           <Toast>
             <ControlsWrapper>
               <MiniController />
-              <Headline
-                script={script}
-                service={service}
-                id="content"
-                tabIndex="-1"
-                darkMode
-              >
+              <Title script={script} service={service} darkMode>
                 {heading}
-              </Headline>
+              </Title>
               <span onClick={toggleMore}>{showMore ? 'Close' : 'Open'}</span>
             </ControlsWrapper>
             <AudioOuterWrapper style={showMoreAnimStyle}>

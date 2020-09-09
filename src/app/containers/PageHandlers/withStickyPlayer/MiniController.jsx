@@ -1,17 +1,10 @@
-import React, { useContext } from 'react';
-import { MediaPlayerContext } from '../../../contexts/MediaPlayerContext';
+import React from 'react';
+import PlayPauseButton from './PlayPauseButton';
 
 export default () => {
-  const { isPlaying, setIsPlaying } = useContext(MediaPlayerContext);
-
   return (
-    <button
-      onClick={() => {
-        setIsPlaying(!isPlaying);
-      }}
-      type="button"
-    >
-      Player/Pause button here
-    </button>
+    <div>
+      <PlayPauseButton />
+    </div>
   );
 };
