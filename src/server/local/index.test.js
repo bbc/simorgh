@@ -243,6 +243,27 @@ describe('Local Server', () => {
     });
   });
 
+  describe('Africa Eye TV data file', () => {
+    const africaEyeDataPaths = [
+      {
+        dataPath: '/worldservice/tv/africa_eye/w13xttpn.json',
+        expectedDataFile: '/worldservice/tv/africa_eye/w13xttpn.json',
+      },
+      {
+        dataPath: '/worldservice/tv/africa_eye/p08jbbg.json',
+        expectedDataFile: '/worldservice/tv/africa_eye/p08jbbg.json',
+      },
+    ];
+
+    africaEyeDataPaths.forEach(africaEyeDataPath => {
+      const { dataPath, expectedDataFile } = africaEyeDataPath;
+      assertDataFile({
+        dataPath,
+        expectedDataFile,
+      });
+    });
+  });
+
   it('comscore', async () => {
     const response = await makeRequest('/static/js/comscore/main-1.0.js');
     expect(response.status).toBe(200);
