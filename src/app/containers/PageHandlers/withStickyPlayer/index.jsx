@@ -1,4 +1,4 @@
-import React, { useContext, memo, useState, useRef } from 'react';
+import React, { useContext, memo, useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import { C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
@@ -72,6 +72,9 @@ export default Component => {
     const { showMediaPlayer, mediaPlayerProps } = useContext(
       MediaPlayerContext,
     );
+
+    useEffect(() => {}, [showMediaPlayer]);
+
     const { script, service } = useContext(ServiceContext);
     const toastAnimStyled = useSpring({
       transform: showMediaPlayer ? 'translateY(0%)' : 'translateY(100%)',
@@ -81,7 +84,6 @@ export default Component => {
       opacity: showMore ? 1 : 0,
     });
     const { heading, summary } = mediaPlayerProps || {};
-
     return (
       <>
         <Component {...props} />
