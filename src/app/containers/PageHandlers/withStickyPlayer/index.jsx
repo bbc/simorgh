@@ -47,7 +47,7 @@ const Toast = styled.div`
 
 const AnimatedToastWrapper = animated(ToastWrapper);
 
-const StyledAudioPlayer = memo(styled(AVPlayer)`
+const StyledAudioPlayer = styled(AVPlayer)`
   width: 100%;
   amp-iframe {
     overflow: visible !important;
@@ -64,7 +64,7 @@ const StyledAudioPlayer = memo(styled(AVPlayer)`
       margin: 0 -${GEL_SPACING_DBL};
     }
   }
-`);
+`;
 
 const ControlsWrapper = styled.div`
   display: flex;

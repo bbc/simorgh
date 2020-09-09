@@ -6,6 +6,7 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import pathOr from 'ramda/src/pathOr';
 import Paragraph from '@bbc/psammead-paragraph';
 import { useLocation, Link } from 'react-router-dom';
+import { transduce } from 'ramda';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import MetadataContainer from '../../containers/Metadata';
 import RadioScheduleContainer from '#containers/RadioSchedule';
@@ -29,7 +30,11 @@ const BigRedButton = styled.button`
   border: none;
   padding: 12px 28px;
   border-radius: 6px;
-  background-color: ${C_POSTBOX};
+  background-color: ${({ disabled }) => (disabled ? 'black' : C_POSTBOX)};
+  cursor: pointer;
+  &:disabled {
+    background-color: #999;
+  }
 `;
 
 const StyledGelPageGrid = styled(GelPageGrid)`
@@ -61,6 +66,7 @@ const LiveRadioPage = ({ pageData }) => {
     toggleMediaPlayer,
     initialiseMediaPlayer,
     playerIsInitialised,
+    isPlayerReady,
   } = useContext(MediaPlayerContext);
   const location = useLocation();
   const assetId = 'liveradio';
@@ -159,7 +165,15 @@ const LiveRadioPage = ({ pageData }) => {
           <Paragraph script={script} service={service}>
             {bodySummary}
           </Paragraph>
-          <BigRedButton onClick={toggleMediaPlayer}>Listen Live</BigRedButton>
+          {isPlayerReady ? (
+            <BigRedButton onClick={toggleMediaPlayer}>
+              Listen live
+            </BigRedButton>
+          ) : (
+            <BigRedButton disabled>
+              Loading
+            </BigRedButton>
+          )}
         </Grid>
         <Link to="/afrique/region-23278969">Hello</Link>
       </StyledGelPageGrid>

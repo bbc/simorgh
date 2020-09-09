@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { node } from 'prop-types';
+import pipe from 'ramda/src/pipe';
 
 const MediaPlayerContext = createContext({});
 
@@ -16,6 +17,7 @@ const MediaPlayerContextProvider = ({ children }) => {
     setMediaPlayerProps(_mediaPlayerProps);
     setPlayerIsInitialised(true);
   };
+  const [isPlayerReady, setIsPlayerReady] = useState(false);
 
   useEffect(() => {
     const mediaPlayerIframe = document.querySelector(
@@ -41,6 +43,8 @@ const MediaPlayerContextProvider = ({ children }) => {
         playerIsInitialised,
         setIsPlaying,
         isPlaying,
+        isPlayerReady,
+        setIsPlayerReady,
       }}
     >
       {children}
