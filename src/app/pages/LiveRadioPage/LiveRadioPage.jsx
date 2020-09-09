@@ -31,9 +31,6 @@ const BigRedButton = styled.button`
   border-radius: 6px;
   background-color: ${({ disabled }) => (disabled ? 'black' : C_POSTBOX)};
   cursor: pointer;
-  &:disabled {
-    background-color: #999;
-  }
 `;
 
 const StyledGelPageGrid = styled(GelPageGrid)`
