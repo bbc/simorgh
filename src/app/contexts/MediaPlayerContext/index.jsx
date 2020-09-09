@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import { node } from 'prop-types';
 
 const MediaPlayerContext = createContext({});
@@ -7,11 +7,28 @@ const MediaPlayerContextProvider = ({ children }) => {
   const [mediaPlayerProps, setMediaPlayerProps] = useState(null);
   const [showMediaPlayer, setShowMediaPlayer] = useState(false);
   const [playerIsInitialised, setPlayerIsInitialised] = useState(false);
-  const toggleMediaPlayer = () => setShowMediaPlayer(!showMediaPlayer);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const toggleMediaPlayer = () => {
+    setIsPlaying(!showMediaPlayer);
+    setShowMediaPlayer(!showMediaPlayer);
+  };
   const initialiseMediaPlayer = _mediaPlayerProps => {
     setMediaPlayerProps(_mediaPlayerProps);
     setPlayerIsInitialised(true);
   };
+
+  useEffect(() => {
+    const mediaPlayerIframe = document.querySelector(
+      'iframe[class^="StyledIframe"]',
+    );
+    if (mediaPlayerIframe) {
+      if (isPlaying) {
+        mediaPlayerIframe.contentWindow.postMessage('play', '*');
+      } else {
+        mediaPlayerIframe.contentWindow.postMessage('pause', '*');
+      }
+    }
+  }, [isPlaying]);
 
   return (
     <MediaPlayerContext.Provider
@@ -22,6 +39,8 @@ const MediaPlayerContextProvider = ({ children }) => {
         initialiseMediaPlayer,
         mediaPlayerProps,
         playerIsInitialised,
+        setIsPlaying,
+        isPlaying,
       }}
     >
       {children}

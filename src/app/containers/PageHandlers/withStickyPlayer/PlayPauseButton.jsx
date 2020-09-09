@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { MediaPlayerContext } from '../../../contexts/MediaPlayerContext';
 
 const PlayerButtonWrapper = styled.div`
   position: relative;
@@ -53,10 +54,16 @@ const PauseIcon = styled.div`
   border-bottom: 0px;
 `;
 
-export default ({ isPlaying }) => {
+export default () => {
+  const { isPlaying, setIsPlaying } = useContext(MediaPlayerContext);
+
   return (
     <div>
-      <PlayerButtonWrapper>
+      <PlayerButtonWrapper
+        onClick={() => {
+          setIsPlaying(!isPlaying);
+        }}
+      >
         <PlayerButton>
           {isPlaying ? <PauseIcon id="pause" /> : <PlayIcon id="play" />}
         </PlayerButton>
