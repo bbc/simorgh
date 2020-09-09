@@ -57,5 +57,27 @@ export default service => {
         expect(mpuEl).not.toBeInTheDocument();
       });
     }
+
+    it('should configure GNL dotcom library where service has ads and adCampaignKeyword is in metadata', () => {
+      const scripts = [...document.querySelectorAll('head script')].filter(
+        ({ textContent }) =>
+          hasAds &&
+          textContent.toString().includes('dotcomConfig') &&
+          textContent.toString().includes('adcampaign:'),
+      );
+
+      expect(scripts).toMatchSnapshot();
+    });
+
+    it('should configure GNL dotcom library where service has ads and adCampaignKeyword is not in metadata', () => {
+      const scripts = [...document.querySelectorAll('head script')].filter(
+        ({ textContent }) =>
+          hasAds &&
+          textContent.toString().includes('dotcomConfig') &&
+          !textContent.toString().includes('adcampaign:'),
+      );
+
+      expect(scripts).toMatchSnapshot();
+    });
   });
 };
