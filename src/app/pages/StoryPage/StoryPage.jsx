@@ -154,7 +154,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     path(['metadata', 'options', 'allowAdvertising'], pageData),
     adsEnabled,
     showAdsBasedOnLocation,
-    process.env.SIMORGH_APP_ENV !== 'live',
   ].every(Boolean);
 
   const componentsToRender = {
