@@ -1,4 +1,4 @@
-import React, { useContext, memo } from 'react';
+import React, { useContext, memo, useState, useRef } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import { C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
@@ -10,10 +10,10 @@ import {
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
-
-import { MediaPlayerContext } from '../../contexts/MediaPlayerContext';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { MediaPlayerContext } from '../../../contexts/MediaPlayerContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import AVPlayer from '#containers/AVPlayer';
+import MiniController from './MiniController';
 
 const ToastWrapper = styled.div`
   left: 0;
@@ -52,15 +52,33 @@ const StyledAudioPlayer = memo(styled(AVPlayer)`
   }
 `);
 
+const ControlsWrapper = styled.div`
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const AudioOuterWrapper = animated(styled.div`
+  height: 0;
+  overflow: hidden;
+`);
+
 export default Component => {
   return props => {
+    const [showMore, setShowMore] = useState(false);
+    const toggleMore = () => setShowMore(!showMore);
+    const showMoreRef = useRef();
     const { showMediaPlayer, mediaPlayerProps } = useContext(
       MediaPlayerContext,
     );
-
     const { script, service } = useContext(ServiceContext);
-    const animationStyles = useSpring({
+    const toastAnimStyled = useSpring({
       transform: showMediaPlayer ? 'translateY(0%)' : 'translateY(100%)',
+    });
+    const showMoreAnimStyle = useSpring({
+      height: showMore ? `${showMoreRef.current.offsetHeight}px` : '0px',
+      opacity: showMore ? 1 : 0,
     });
     const { heading, summary } = mediaPlayerProps || {};
 
@@ -70,22 +88,32 @@ export default Component => {
 
         <AnimatedToastWrapper
           showMediaPlayer={showMediaPlayer}
-          style={animationStyles}
+          style={toastAnimStyled}
         >
           <Toast>
-            <Headline
-              script={script}
-              service={service}
-              id="content"
-              tabIndex="-1"
-              darkMode
-            >
-              {heading}
-            </Headline>
-            <Paragraph script={script} service={service} darkMode>
-              {summary}
-            </Paragraph>
-            {mediaPlayerProps && <StyledAudioPlayer {...mediaPlayerProps} />}
+            <ControlsWrapper>
+              <MiniController />
+              <Headline
+                script={script}
+                service={service}
+                id="content"
+                tabIndex="-1"
+                darkMode
+              >
+                {heading}
+              </Headline>
+              <span onClick={toggleMore}>{showMore ? 'Close' : 'Open'}</span>
+            </ControlsWrapper>
+            <AudioOuterWrapper style={showMoreAnimStyle}>
+              <div ref={showMoreRef}>
+                <Paragraph script={script} service={service} darkMode>
+                  {summary}
+                </Paragraph>
+                {mediaPlayerProps && (
+                  <StyledAudioPlayer {...mediaPlayerProps} />
+                )}
+              </div>
+            </AudioOuterWrapper>
           </Toast>
         </AnimatedToastWrapper>
       </>
