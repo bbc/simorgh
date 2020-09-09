@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 const Icon = styled.span`
   display: block;
-  height: 17px;
-  width: 17px;
+  height: 20px;
+  width: 20px;
 `;
 
 export default ({ isOpen }) => (
@@ -17,8 +17,8 @@ export default ({ isOpen }) => (
           fill="none"
           stroke-width="0"
           viewBox="0 0 24 24"
-          height="1.25em"
-          width="1.25em"
+          height="20px"
+          width="20px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
