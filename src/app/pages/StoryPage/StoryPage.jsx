@@ -139,8 +139,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     group5: 4,
   };
 
+  // ads
   const { enabled: adsEnabled } = useToggle('ads');
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
+  const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
   /**
    * Should we display ads? We check:
@@ -151,6 +153,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const isAdsEnabled = [
     path(['metadata', 'options', 'allowAdvertising'], pageData),
     adsEnabled,
+    showAdsBasedOnLocation,
     process.env.SIMORGH_APP_ENV !== 'live',
   ].every(Boolean);
 
@@ -289,8 +292,8 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
-      {isAdsEnabled && showAdsBasedOnLocation && !isAmp && (
-        <CanonicalAdBootstrapJs />
+      {isAdsEnabled && !isAmp && (
+        <CanonicalAdBootstrapJs adcampaign={adcampaign} />
       )}
       {isAdsEnabled && <AdContainer slotType="leaderboard" />}
       <StoryPageGrid
