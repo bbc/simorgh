@@ -198,7 +198,13 @@ export const getProducer = service => {
 };
 
 export const getAtiUrl = (data = []) => {
-  const cleanedValues = data.filter(({ value }) => value);
+  const cleanedValues = data
+    .filter(({ value }) => value)
+    .map(item => {
+      const { value, escapeValue } = item;
+      const finalValue = escapeValue ? encodeURIComponent(value) : value;
+      return { ...item, value: finalValue };
+    });
 
   const parsedAtiValues = cleanedValues.map(({ key, value, wrap }) =>
     wrap ? `${key}=[${value}]` : `${key}=${value}`,
