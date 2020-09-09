@@ -7,12 +7,12 @@ exports[`CanonicalAds Ads Snapshots should push dotcom bootstrap and configurati
       type="text/javascript"
     >
       
-            window.dotcom = window.dotcom || { cmd: [] };
-            window.dotcomConfig = {
-              pageAds: true,
-              playerAds: false,
-            };
-          
+    window.dotcom = window.dotcom || { cmd: [] };
+    window.dotcomConfig = {
+      pageAds: true,
+      playerAds: false
+    };
+    
     </script>
   </head>
   <body>
