@@ -17,6 +17,7 @@ const assertDataFile = ({ dataPath, expectedDataFile }) => {
     expect(
       sendFileSpy.mock.calls[sendFileSpy.mock.calls.length - 1][0],
     ).toEqual(path.join(DATA_DIRECTORY, expectedDataFile));
+    sendFileSpy.mockClear();
   });
 };
 
@@ -223,5 +224,37 @@ describe('Local Server', () => {
         expectedDataFile,
       });
     });
+  });
+
+  describe('IDX data file', () => {
+    const idxDataPaths = [
+      {
+        dataPath: '/persian/afghanistan.json',
+        expectedDataFile: '/persian/afghanistan/index.json',
+      },
+    ];
+
+    idxDataPaths.forEach(idxDataPath => {
+      const { dataPath, expectedDataFile } = idxDataPath;
+      assertDataFile({
+        dataPath,
+        expectedDataFile,
+      });
+    });
+  });
+
+  it('comscore', async () => {
+    const response = await makeRequest('/static/js/comscore/main-1.0.js');
+    expect(response.status).toBe(200);
+    expect(
+      sendFileSpy.mock.calls[sendFileSpy.mock.calls.length - 1][0],
+    ).toEqual(
+      path.join(process.cwd(), '/public/static/js/comscore/main-1.0.js'),
+    );
+  });
+
+  it('ckns_policy', async () => {
+    const response = await makeRequest('/ckns_policy/test');
+    expect(response.status).toBe(200);
   });
 });
