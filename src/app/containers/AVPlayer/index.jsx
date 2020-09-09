@@ -17,8 +17,6 @@ const AVPlayer = ({
   type,
   skin,
   className,
-  // eslint-disable-next-line react/prop-types
-  refProp,
 }) => {
   const { translations, service } = useContext(ServiceContext);
   const { isAmp, platform } = useContext(RequestContext);

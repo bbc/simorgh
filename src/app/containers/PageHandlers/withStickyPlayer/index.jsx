@@ -72,9 +72,6 @@ export default Component => {
     const { showMediaPlayer, mediaPlayerProps } = useContext(
       MediaPlayerContext,
     );
-
-    useEffect(() => {}, [showMediaPlayer]);
-
     const { script, service } = useContext(ServiceContext);
     const toastAnimStyled = useSpring({
       transform: showMediaPlayer ? 'translateY(0%)' : 'translateY(100%)',
@@ -84,6 +81,7 @@ export default Component => {
       opacity: showMore ? 1 : 0,
     });
     const { heading, summary } = mediaPlayerProps || {};
+
     return (
       <>
         <Component {...props} />
