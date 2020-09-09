@@ -190,7 +190,7 @@ describe('Local Server', () => {
   describe('Secondary Column data file', () => {
     const secondaryColumnDataPaths = [
       {
-        dataPath: '/igbo/sty-secondary-column/index.json',
+        dataPath: '/igbo/sty-secondary-column.json',
         expectedDataFile: '/igbo/secondaryColumn/index.json',
       },
       {
@@ -201,6 +201,23 @@ describe('Local Server', () => {
 
     secondaryColumnDataPaths.forEach(secondaryColumnDataPath => {
       const { dataPath, expectedDataFile } = secondaryColumnDataPath;
+      assertDataFile({
+        dataPath,
+        expectedDataFile,
+      });
+    });
+  });
+
+  describe('Recommendations data file', () => {
+    const recommendationsDataPaths = [
+      {
+        dataPath: '/hindi/vert-fut-53035307/recommendations.json',
+        expectedDataFile: '/hindi/recommendations/index.json',
+      },
+    ];
+
+    recommendationsDataPaths.forEach(recommendationsDataPath => {
+      const { dataPath, expectedDataFile } = recommendationsDataPath;
       assertDataFile({
         dataPath,
         expectedDataFile,
