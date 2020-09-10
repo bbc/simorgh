@@ -43,7 +43,8 @@ const FlexWrapper = styled.div`
 `;
 
 const AnimatedWrapper = animated(styled.div`
-  position: 'relative';
+  overflow: hidden;
+  position: relative;
   width: 100%;
 `);
 
@@ -88,6 +89,11 @@ const LiveText = styled.span`
   ${({ service }) => service && getSansRegular(service)};
 `;
 
+const TransitionWrapper = animated(styled.div`
+  position: absolute;
+  width: 100%;
+`);
+
 export default ({ showMore, heading, summary, toggleMore }) => {
   const [height, setHeight] = useState('0px');
   const { script, service } = useContext(ServiceContext);
@@ -98,7 +104,7 @@ export default ({ showMore, heading, summary, toggleMore }) => {
   const transitonStyles = {
     from: { opacity: 0 },
     enter: { opacity: 1 },
-    leave: { opacity: 0, position: 'absolute', left: 0, top: 0, width: '100%' },
+    leave: { opacity: 0 },
   };
   const showMoreTransition = useTransition(showMore, null, {
     ...transitonStyles,
@@ -139,26 +145,11 @@ export default ({ showMore, heading, summary, toggleMore }) => {
   return (
     <FlexWrapper>
       <AnimatedWrapper style={springAnim}>
-        {showMoreTransition.map(
-          ({ item, key, props: animStyles }) =>
-            item && (
-              <animated.div ref={showMoreNodeRef} style={animStyles}>
-                <FlexWrapper>
-                  <EpisodeInfoWrapper>
-                    {renderTitle('large')}
-                    <Summary script={script} service={service}>
-                      {summary}
-                    </Summary>
-                  </EpisodeInfoWrapper>
-                </FlexWrapper>
-              </animated.div>
-            ),
-        )}
         {showLessTransition.map(
           ({ item, key, props: animStyles }) =>
             item && (
-              <animated.div ref={showLessNodeRef} style={animStyles}>
-                <FlexWrapper>
+              <TransitionWrapper style={animStyles}>
+                <FlexWrapper ref={showLessNodeRef}>
                   <PlayPauseButtonWrapper>
                     <PlayPauseButton />
                   </PlayPauseButtonWrapper>
@@ -172,7 +163,22 @@ export default ({ showMore, heading, summary, toggleMore }) => {
                     </LiveTextWrapper>
                   </EpisodeInfoWrapper>
                 </FlexWrapper>
-              </animated.div>
+              </TransitionWrapper>
+            ),
+        )}
+        {showMoreTransition.map(
+          ({ item, key, props: animStyles }) =>
+            item && (
+              <TransitionWrapper style={animStyles}>
+                <FlexWrapper ref={showMoreNodeRef}>
+                  <EpisodeInfoWrapper>
+                    {renderTitle('large')}
+                    <Summary script={script} service={service}>
+                      {summary}
+                    </Summary>
+                  </EpisodeInfoWrapper>
+                </FlexWrapper>
+              </TransitionWrapper>
             ),
         )}
       </AnimatedWrapper>
