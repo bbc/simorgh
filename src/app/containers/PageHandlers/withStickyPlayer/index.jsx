@@ -143,7 +143,13 @@ export default Component => {
                   {summary}
                 </Paragraph>
                 {mediaPlayerProps && (
-                  <StyledAudioPlayer {...mediaPlayerProps} />
+                  <StyledAudioPlayer
+                    {...mediaPlayerProps}
+                    /* Ensure we are using the test embed url, even if simorgh environment is live (eg on blue/green stack) */
+                    embedUrl={mediaPlayerProps.embedUrl
+                      .replace('www.bbc.com', 'www.test.bbc.com')
+                      .replace('//bbc.com', '//test.bbc.com')}
+                  />
                 )}
               </div>
             </AudioOuterWrapper>

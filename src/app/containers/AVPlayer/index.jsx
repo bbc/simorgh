@@ -63,6 +63,8 @@ const AVPlayer = ({
           acceptableEventOrigins={[
             'polling.test.bbc.co.uk',
             'www.test.bbc.com',
+            'bbc.com',
+            'www.bbc.com',
           ]}
           onMediaInitialised={() => setIsPlayerReady(true)}
           onMediaPlaying={() => setIsPlaying(true)}
