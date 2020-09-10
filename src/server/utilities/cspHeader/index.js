@@ -431,7 +431,7 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'child-src': generateChildSrc({ isAmp }),
     'connect-src': generateConnectSrc({ isAmp, isLive }),
     'font-src': generateFontSrc({ isAmp }),
-    'frame-src': generateFrameSrc({ isAmp, isLive }),
+    'frame-src': generateFrameSrc({ isAmp, isLive: false }),
     'img-src': generateImgSrc({ isAmp, isLive }),
     'script-src': generateScriptSrc({ isAmp, isLive }),
     'style-src': generateStyleSrc({ isAmp, isLive }),
