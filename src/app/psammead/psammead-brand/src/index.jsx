@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link as LINK } from 'react-router-dom';
 import { string, number, node, shape, bool } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import {
@@ -21,6 +22,8 @@ const SVG_BOTTOM_OFFSET_ABOVE_600PX = '1.25rem'; // 20px
 const SCRIPT_LINK_OFFSET_BELOW_240PX = 52;
 const PADDING_AROUND_SVG_BELOW_400PX = 16;
 const PADDING_AROUND_SVG_ABOVE_400PX = 28;
+
+const CSRLink = ({ href, ...props }) => <LINK to={href} {...props} />;
 
 const conditionallyRenderHeight = (svgHeight, padding) =>
   svgHeight ? `min-height: ${(svgHeight + padding) / 16}rem;` : '';
@@ -77,7 +80,7 @@ const brandWidth = (minWidth, maxWidth) => `
   -ms-flex-preferred-size: ${maxWidth / 16}rem;
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled(CSRLink)`
   display: inline-block;
   ${({ maxWidth, minWidth }) => brandWidth(minWidth, maxWidth)}
 
