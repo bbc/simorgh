@@ -4,7 +4,6 @@
   "description": "Simorgh",
   "main": "./src/client.js",
   "resolutions": {
-    "prismjs": "^1.21.0",
     "lodash": "^4.17.20"
   },
   "scripts": {
