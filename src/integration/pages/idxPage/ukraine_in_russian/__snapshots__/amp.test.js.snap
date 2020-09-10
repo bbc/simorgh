@@ -97,7 +97,7 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=94&p=ukrainian.ukraine_in_russian.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:40c7c53a-ba2e-8679-e050-380a4e807947]&x2=[amp]&x3=[news-ukrainian]&x4=[ru]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-section]&x8=[simorgh]&x9=[РУС+-+BBC+News+Україна]&x11=[2016-11-22T07:16:56.000Z]&x12=[2020-05-19T14:28:22.000Z]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=94&p=ukrainian.ukraine_in_russian.page&r=%24%7BscreenWidth%7Dx%24%7BscreenHeight%7Dx%24%7BscreenColorDepth%7D&re=%24%7BavailableScreenWidth%7Dx%24%7BavailableScreenHeight%7D&hl=%24%7Btimestamp%7D&lng=%24%7BbrowserLanguage%7D&x1=[urn%3Abbc%3Acps%3A40c7c53a-ba2e-8679-e050-380a4e807947]&x2=[amp]&x3=[news-ukrainian]&x4=[ru]&x5=[%24%7BsourceUrl%7D]&x6=[%24%7BdocumentReferrer%7D]&x7=[index-section]&x8=[simorgh]&x9=[%D0%A0%D0%A3%D0%A1%2B-%2BBBC%2BNews%2B%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0]&x11=[2016-11-22T07%3A16%3A56.000Z]&x12=[2020-05-19T14%3A28%3A22.000Z]&ref=%24%7BdocumentReferrer%7D",
   },
   "transport": Object {
     "beacon": false,
