@@ -1,7 +1,7 @@
 import React, { useContext, useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated, useTransition, useChain } from 'react-spring';
-import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING_HLF, GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import Paragraph from '@bbc/psammead-paragraph';
 import {
@@ -21,6 +21,7 @@ const Title = styled.h4`
   color: #f2f2f2;
   padding: 0;
   ${({ service }) => service && getSansRegular(service)};
+  padding-bottom: ${({ size }) => (size === 'large' ? GEL_SPACING : '0')};
 `;
 
 const EpisodeInfoWrapper = styled.div`
@@ -99,7 +100,7 @@ export default ({ showMore, heading, summary, toggleMore }) => {
     ...transitonStyles,
     ref: showLessTransitionRef,
   });
-  const renderTitle = ({ size } = {}) => (
+  const renderTitle = size => (
     <Title key="title" script={script} service={service} size={size} darkMode>
       {heading}
     </Title>
@@ -136,7 +137,7 @@ export default ({ showMore, heading, summary, toggleMore }) => {
               <animated.div ref={showMoreNodeRef} style={animStyles}>
                 <FlexWrapper>
                   <EpisodeInfoWrapper>
-                    {renderTitle({ size: 'large' })}
+                    {renderTitle('large')}
                     <Paragraph script={script} service={service} darkMode>
                       {summary}
                     </Paragraph>
