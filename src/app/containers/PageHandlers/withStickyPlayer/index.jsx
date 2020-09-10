@@ -1,7 +1,7 @@
 import React, { useContext, memo, useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
-import { C_EBON } from '@bbc/psammead-styles/colours';
+import { C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -33,7 +33,7 @@ const ToastWrapper = styled.div`
   bottom: 0;
   width: 100%;
   position: fixed;
-  background: ${C_EBON};
+  background: ${C_MIDNIGHT_BLACK};
   z-index: 5;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 24px 0px;
 `;
