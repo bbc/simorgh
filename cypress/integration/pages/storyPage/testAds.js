@@ -3,12 +3,14 @@ import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 
 export default service => {
-  describe.only('Ads', () => {
+  describe('Ads', () => {
     it('should be displayed based on whether ads toggle is enabled/disabled', () => {
       cy.getToggles(config[service].name).then(toggles => {
         const adsEnabled = path(['ads', 'enabled'], toggles);
 
         if (adsEnabled) {
+          cy.log('Ads should be displayed because toggle is enabled');
+
           cy.visit(Cypress.env('currentPath'), {
             headers: {
               'BBC-Adverts': 'true',
@@ -24,10 +26,8 @@ export default service => {
               ['metadata', 'adCampaignKeyword'],
               jsonData,
             );
-            console.log('adCampaignKeyword', adCampaignKeyword);
 
-            cy.log('Ads should be displayed because toggle is enabled');
-
+            // Leaderboard & MPU
             cy.get('[data-e2e="advertisement"]')
               .should('exist')
               .within(() => {
@@ -35,7 +35,7 @@ export default service => {
                 cy.get('[id="dotcom-mpu"]').should('exist');
               });
 
-            // Check scripts
+            // Ads scripts
             cy.get('head script[src*="dotcom-bootstrap.js"]').should('exist');
 
             cy.get('head script[type="text/javascript"]').should(scripts => {
