@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+import config from '../../../support/config/services';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -18,23 +19,29 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
     });
   });
 
-  describe('Ads', () => {
-    let adsEnabled = false;
+  if (Cypress.env('APP_ENV') === 'local') {
+    describe('Ads', () => {
+      it('should be displayed based on whether ads toggle is enabled/disabled', () => {
+        cy.getToggles(config[service].name).then(toggles => {
+          const adsEnabled = path(['ads', 'enabled'], toggles);
 
-    before(() => {
-      cy.getToggles(service).then(toggles => {
-        adsEnabled = path(['ads', 'enabled'], toggles);
+          if (adsEnabled) {
+            cy.visit(Cypress.env('currentPath'), {
+              headers: {
+                'BBC-Adverts': 'true',
+              },
+            });
+
+            cy.log('Ads should be displayed because toggle is enabled');
+            cy.get('[data-e2e="advertisement"]').should('exist');
+          } else {
+            cy.log('Ads should not be displayed because toggle is disabled');
+            cy.get('[data-e2e="advertisement"]').should('not.exist');
+          }
+        });
       });
     });
-
-    if (adsEnabled) {
-      cy.get('dotcom-leaderboard').should('exist');
-      cy.get('dotcom-mpu').should('exist');
-    } else {
-      cy.get('dotcom-leaderboard').should('not.exist');
-      cy.get('dotcom-mpu').should('not.exist');
-    }
-  });
+  }
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
