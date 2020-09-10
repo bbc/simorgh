@@ -20,7 +20,7 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
   });
 
   if (Cypress.env('APP_ENV') === 'local') {
-    describe('Ads', () => {
+    describe.only('Ads', () => {
       it('should be displayed based on whether ads toggle is enabled/disabled', () => {
         cy.getToggles(config[service].name).then(toggles => {
           const adsEnabled = path(['ads', 'enabled'], toggles);
@@ -33,7 +33,13 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
             });
 
             cy.log('Ads should be displayed because toggle is enabled');
-            cy.get('[data-e2e="advertisement"]').should('exist');
+
+            cy.get('[data-e2e="advertisement"]')
+              .should('exist')
+              .within(() => {
+                cy.get('[id="dotcom-leaderboard"]').should('exist');
+                cy.get('[id="dotcom-mpu"]').should('exist');
+              });
           } else {
             cy.log('Ads should not be displayed because toggle is disabled');
             cy.get('[data-e2e="advertisement"]').should('not.exist');
