@@ -2,12 +2,12 @@ import React, { useContext, useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated, useTransition, useChain } from 'react-spring';
 import { GEL_SPACING_HLF, GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import Paragraph from '@bbc/psammead-paragraph';
+import { getSansRegular, getSansBold } from '@bbc/psammead-styles/font-styles';
 import {
   getPica,
   getDoublePica,
   getBrevier,
+  getBodyCopy,
 } from '@bbc/gel-foundations/typography';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import PlayPauseButton from './PlayPauseButton';
@@ -20,8 +20,15 @@ const Title = styled.h4`
   margin: 0;
   color: #f2f2f2;
   padding: 0;
-  ${({ service }) => service && getSansRegular(service)};
+  ${({ service }) => service && getSansBold(service)};
   padding-bottom: ${({ size }) => (size === 'large' ? GEL_SPACING : '0')};
+`;
+
+const Summary = styled.p`
+  color: #f2f2f2;
+  margin: 0;
+  ${({ script }) => getBodyCopy(script)}
+  ${({ service }) => service && getSansRegular(service)};
 `;
 
 const EpisodeInfoWrapper = styled.div`
@@ -139,9 +146,9 @@ export default ({ showMore, heading, summary, toggleMore }) => {
                 <FlexWrapper>
                   <EpisodeInfoWrapper>
                     {renderTitle('large')}
-                    <Paragraph script={script} service={service} darkMode>
+                    <Summary script={script} service={service}>
                       {summary}
-                    </Paragraph>
+                    </Summary>
                   </EpisodeInfoWrapper>
                 </FlexWrapper>
               </animated.div>
