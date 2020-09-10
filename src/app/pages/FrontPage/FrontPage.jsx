@@ -99,8 +99,8 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
 
   const { enabled: adsEnabled } = useToggle('ads');
   const home = path(['home'], translations);
-  const lang = path(['metadata', 'language'], pageData);
   const groups = path(['content', 'groups'], pageData);
+  const lang = path(['metadata', 'language'], pageData);
   const description = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
   const radioScheduleData = path(['radioScheduleData'], pageData);
@@ -114,8 +114,6 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
       <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
     </span>
   );
-
-  // debugger;
 
   // Most Read is required to render above useful-links if it exists
   const hasUsefulLinks =

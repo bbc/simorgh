@@ -165,8 +165,8 @@ const StoryPromoContainer = ({
         type: 'audio',
         skin: 'audio',
         placeholderSrc,
-        heading: 'heading',
-        summary: 'summary',
+        heading: item.name,
+        summary: item.summary,
       });
     }
   }, [isLiveRadioPromo]);
