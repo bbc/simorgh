@@ -260,7 +260,6 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
 }
 
 .c5 amp-iframe {
-  overflow: visible !important;
   width: calc(100% + 1rem);
 }
 
@@ -913,7 +912,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 .c5 amp-iframe {
-  overflow: visible !important;
   width: calc(100% + 1rem);
 }
 
@@ -1627,7 +1625,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
       name="twitter:title"
     />
     <noscript>
-      &lt;img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=0&cv=2.0&cj=1" /&gt;
+      &lt;img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cv=2.0&cj=1" /&gt;
     </noscript>
     <script
       async="true"
@@ -1678,7 +1676,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 allowfullscreen=""
                 class="c7"
                 scrolling="no"
-                src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live"
+                src="https://test.bbc.com/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live"
                 title="Lecteur audio"
               />
               <noscript />

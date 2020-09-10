@@ -1806,8 +1806,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="c16"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c17"
@@ -1907,8 +1911,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="c16"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c31"
@@ -2008,8 +2016,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="c16"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c31"
@@ -2109,8 +2121,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="c16"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c31"
@@ -2210,8 +2226,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="c16"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c31"
@@ -2899,8 +2919,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="c16"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c17"
@@ -2954,8 +2978,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="c16"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c31"
@@ -3009,8 +3037,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="c16"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c31"
@@ -3064,8 +3096,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="c16"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c31"
@@ -3119,8 +3155,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="c16"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c31"
@@ -4727,8 +4767,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c24"
@@ -4756,8 +4800,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"
@@ -4875,8 +4923,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c24"
@@ -4904,8 +4956,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"
@@ -4959,8 +5015,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"
@@ -5014,8 +5074,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"
@@ -5069,8 +5133,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"
@@ -5124,8 +5192,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"
@@ -5179,8 +5251,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"
@@ -5234,8 +5310,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"
@@ -5289,8 +5369,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"
@@ -5344,8 +5428,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"
@@ -5451,8 +5539,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c24"
@@ -5506,8 +5598,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c38"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"
@@ -5561,8 +5657,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"
@@ -5616,8 +5716,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"
@@ -5671,8 +5775,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"
@@ -5790,8 +5898,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c24"
@@ -5819,8 +5931,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"
@@ -5874,8 +5990,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"
@@ -5929,8 +6049,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"
@@ -5984,8 +6108,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"
@@ -6039,8 +6167,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="c23"
                   >
                     <div
-                      class="lazyload-placeholder"
-                    />
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
                   </div>
                   <div
                     class="c28"

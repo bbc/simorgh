@@ -832,6 +832,7 @@ exports[`Story Promo Image should match image 1`] = `
   height="549"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 660w"
   width="976"
 />
 `;

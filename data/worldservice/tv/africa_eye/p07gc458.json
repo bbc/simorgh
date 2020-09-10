@@ -1,0 +1,81 @@
+{
+  "programme": {
+    "type": "clip",
+    "pid": "p07gc458",
+    "expected_child_count": null,
+    "position": null,
+    "image": {
+      "pid": "p07gm4q7"
+    },
+    "media_type": "audio_video",
+    "title": "Stealing from the Sick",
+    "short_synopsis": "BBC Africa Eye headed undercover to expose medicine theft by medical professionals.",
+    "medium_synopsis": "BBC Africa Eye headed undercover in Uganda to expose one of the reasons why there is shortage of life saving drugs – medicine theft by medical professionals.",
+    "long_synopsis": "Everyone in Uganda is entitled to free medicine to combat killer diseases like malaria. Despite Government efforts to improve access to essential medicines, a significant number of people have to use private facilities because of frequent stockouts.\r\n\r\nBBC Africa Eye headed undercover to expose one of the reasons why there is shortage of life saving drugs – medicine theft by medical professionals.\r\n\r\nAfrica Eye worked together with the Ugandan investigative journalist, Solomon Serwanjja.\r\n\r\nSubscribe: http://bit.ly/subscribetoafrica\r\nWebsite: https://www.bbc.com/africaeye\r\nFacebook: https://www.facebook.com/bbcnewsafrica/\r\nTwitter: https://www.twitter.com/bbcafrica/\r\nInstagram: https://www.instagram.com/bbcafrica/",
+    "first_broadcast_date": null,
+    "display_title": {
+      "title": "Africa Eye",
+      "subtitle": "Stealing from the Sick"
+    },
+    "ownership": {
+      "service": {
+        "type": null,
+        "id": "bbc_world_service_tv",
+        "key": "worldservicetv",
+        "title": "BBC World Service TV"
+      }
+    },
+    "parent": {
+      "programme": {
+        "type": "brand",
+        "pid": "w13xttpn",
+        "title": "Africa Eye",
+        "short_synopsis": "Original and high-impact BBC investigations from across Africa",
+        "media_type": null,
+        "position": null,
+        "image": {
+          "pid": "p06pqg80"
+        },
+        "expected_child_count": null,
+        "first_broadcast_date": null,
+        "aggregated_episode_count": 25,
+        "ownership": {
+          "service": {
+            "type": null,
+            "id": "bbc_world_service_tv",
+            "key": "worldservicetv",
+            "title": "BBC World Service TV"
+          }
+        }
+      }
+    },
+    "peers": {
+      "previous": null,
+      "next": null
+    },
+    "versions": [
+      {
+        "canonical": 1,
+        "pid": "p07gc45c",
+        "duration": 3154,
+        "types": [
+          "Original version"
+        ]
+      }
+    ],
+    "links": [],
+    "supporting_content_items": [],
+    "categories": [
+      {
+        "type": "genre",
+        "id": "C00079",
+        "key": "news",
+        "title": "News",
+        "narrower": [],
+        "broader": {},
+        "has_topic_page": false,
+        "sameAs": null
+      }
+    ]
+  }
+}
