@@ -148,6 +148,10 @@ const directives = {
       'https://www.bbc.com', // Media Player
       'https://bbc-maps.carto.com', // STY include maps
       'https://flo.uri.sh', // STY includes
+      'https://test.bbc.com', // Media Player
+      'https://www.test.bbc.com', // Media Player
+      'https://www.bbc.com', // Media Player
+      'https://bbc.com', // Media Player
       ...advertisingDirectives.frameSrc,
       "'self'",
     ],
@@ -431,7 +435,7 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'child-src': generateChildSrc({ isAmp }),
     'connect-src': generateConnectSrc({ isAmp, isLive }),
     'font-src': generateFontSrc({ isAmp }),
-    'frame-src': generateFrameSrc({ isAmp, isLive: false }),
+    'frame-src': generateFrameSrc({ isAmp, isLive }),
     'img-src': generateImgSrc({ isAmp, isLive }),
     'script-src': generateScriptSrc({ isAmp, isLive }),
     'style-src': generateStyleSrc({ isAmp, isLive }),
