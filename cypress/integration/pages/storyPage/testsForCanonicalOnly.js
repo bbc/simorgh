@@ -1,3 +1,5 @@
+import path from 'ramda/src/path';
+
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
@@ -14,6 +16,24 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
         ).should('not.exist');
       }
     });
+  });
+
+  describe('Ads', () => {
+    let adsEnabled = false;
+
+    before(() => {
+      cy.getToggles(service).then(toggles => {
+        adsEnabled = path(['ads', 'enabled'], toggles);
+      });
+    });
+
+    if (adsEnabled) {
+      cy.get('dotcom-leaderboard').should('exist');
+      cy.get('dotcom-mpu').should('exist');
+    } else {
+      cy.get('dotcom-leaderboard').should('not.exist');
+      cy.get('dotcom-mpu').should('not.exist');
+    }
   });
 };
 
