@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { GEL_FF_REITH_SANS } from '@bbc/gel-foundations/typography';
 
 const PlayerButtonWrapper = styled.div`
   position: relative;
@@ -92,6 +93,7 @@ const LongNowPlayingLine = styled.div`
 const PlayButtonTextWrapper = styled.div`
   line-height: 40px;
   float: right;
+  font-family: ${GEL_FF_REITH_SANS};
   #play-button-text {
     padding-left: 10px;
   }
