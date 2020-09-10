@@ -39,7 +39,7 @@ export default service => {
             cy.get('head script[src*="dotcom-bootstrap.js"]').should('exist');
 
             cy.get('head script[type="text/javascript"]').should(scripts => {
-              expect(scripts).to.contain('dotcomConfig');
+              expect(scripts).to.contain('pageAds: true');
 
               if (adCampaignKeyword) {
                 expect(scripts).to.contain(
