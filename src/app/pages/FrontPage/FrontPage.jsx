@@ -99,10 +99,14 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
 
   const { enabled: adsEnabled } = useToggle('ads');
   const home = path(['home'], translations);
-  const groups = path(['content', 'groups'], pageData);
   const lang = path(['metadata', 'language'], pageData);
+  // undefined v
+  const groups = path(['content', 'groups'], pageData);
+  // undefined v
   const description = path(['metadata', 'summary'], pageData);
+  // undefined v
   const seoTitle = path(['promo', 'name'], pageData);
+  // undefined v
   const radioScheduleData = path(['radioScheduleData'], pageData);
   const radioScheduleOnPage = path(['onFrontPage'], radioSchedule);
   const radioSchedulePosition = path(['frontPagePosition'], radioSchedule);
@@ -118,6 +122,8 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   // Most Read is required to render above useful-links if it exists
   const hasUsefulLinks =
     findIndex(group => group.type === 'useful-links')(groups) > -1;
+
+  // debugger;
 
   return (
     <>
