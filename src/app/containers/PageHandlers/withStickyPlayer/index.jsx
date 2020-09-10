@@ -12,6 +12,7 @@ import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { MediaPlayerContext } from '../../../contexts/MediaPlayerContext';
 import AVPlayer from '#containers/AVPlayer';
 import MiniControls from './MiniControls';
+import ExitPlayerButton from './ExitPlayerButton';
 
 export const Title = styled.h4`
   font-size: ${({ fontSize }) => fontSize || '1rem'};
@@ -36,7 +37,7 @@ const Toast = styled.div`
   width: 755px;
   max-width: 100%;
   margin: 0 auto;
-  padding: ${GEL_SPACING_DBL};
+  padding: ${GEL_SPACING_DBL} ${GEL_SPACING_DBL};
 `;
 
 const AnimatedToastWrapper = animated(ToastWrapper);
@@ -63,7 +64,7 @@ const StyledAudioPlayer = styled(AVPlayer)`
 const AudioOuterWrapper = animated(styled.div`
   height: 0;
   overflow: hidden;
-  width: calc(100% + 24px);
+  width: calc(100% + 2rem);
   margin-left: -${GEL_SPACING_DBL};
   padding: 0 ${GEL_SPACING_DBL};
 `);
@@ -110,6 +111,7 @@ export default Component => {
                       .replace('//bbc.com', '//test.bbc.com')}
                   />
                 )}
+                <ExitPlayerButton />
               </div>
             </AudioOuterWrapper>
           </Toast>
