@@ -10,8 +10,8 @@ const MediaPlayerContextProvider = ({ children }) => {
   const [playerIsInitialised, setPlayerIsInitialised] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const toggleMediaPlayer = () => {
-    setIsPlaying(!showMediaPlayer);
-    setShowMediaPlayer(!showMediaPlayer);
+    setIsPlaying(!isPlaying);
+    setShowMediaPlayer(true);
   };
   const initialiseMediaPlayer = _mediaPlayerProps => {
     setMediaPlayerProps(_mediaPlayerProps);
