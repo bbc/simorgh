@@ -1,0 +1,577 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "altText": "Le président congolais Denis Sassou Nguesso.",
+        "caption": "Le président congolais Denis Sassou Nguesso.",
+        "copyrightHolder": "Getty Images",
+        "height": 549,
+        "href": "http://c.files.bbci.co.uk/141C6/production/_107847328_gettyimages-465013648.jpg",
+        "id": "107847328",
+        "path": "/cpsprodpb/141C6/production/_107847328_gettyimages-465013648.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 976
+      },
+      {
+        "markupType": "plain_text",
+        "role": "introduction",
+        "text": "Le Fonds monétaire international (FMI) a annoncé jeudi qu'il allait accorder 448,6 millions de dollars sur trois ans au Congo-Brazzaville pour relancer l'économie de ce pays d'Afrique centrale plombée par la chute des prix du pétrole, en souhaitant une meilleure &quot;transparence&quot; de ses comptes publics.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "&quot;La décision du conseil d'administration autorise le déblocage immédiat de 44,9 millions de dollars au profit de la République du Congo&quot;, indique un communiqué du FMI publié .",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Les négociations avaient été ralenties par le fait que les autorités du Congo-Brazzaville avaient caché une partie de la dette publique du pays. ",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Autre difficulté et autre singularité: la Chine détient un tiers de la dette externe, selon des spécialistes, soit environ 2 milliards de dollars, selon certaines sources.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<bold>Lire aussi :</bold>",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "meta": [
+          {
+            "headlines": {
+              "headline": "La galère des étudiants boursiers congolais à l'étranger",
+              "overtyped": "La galère des étudiants boursiers congolais à l'étranger",
+              "shortHeadline": "La galère des étudiants boursiers congolais à l'étranger"
+            },
+            "id": "urn:bbc:ares::asset:afrique/region-48053218",
+            "language": "fr",
+            "locators": {
+              "href": "https://www.bbc.com/afrique/region-48053218"
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "taggings": []
+            },
+            "summary": "Ces étudiants disent ne pas avoir reçu leurs bourses depuis deux ans. Comment survivent-ils ? Nous leurs avons posé la question au Sénégal et en Russie.",
+            "timestamp": 1557234890000,
+            "type": "cps"
+          }
+        ],
+        "text": "<itemMeta>afrique/region-48053218</itemMeta>",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "meta": [
+          {
+            "headlines": {
+              "headline": "Le Congo veut mettre fin à l'absentéisme des fonctionnaires",
+              "overtyped": "Le Congo veut mettre fin à l'absentéisme des fonctionnaires",
+              "shortHeadline": "Le Congo veut mettre fin à l'absentéisme des fonctionnaires"
+            },
+            "id": "urn:bbc:ares::asset:afrique/region-45783728",
+            "language": "fr",
+            "locators": {
+              "href": "https://www.bbc.com/afrique/region-45783728"
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "taggings": []
+            },
+            "summary": "Les réactions se multiplient depuis que le gouvernement congolais a rendu public les noms de cinquante-six agents de l'Etat surpris dans différents restaurants et bars de la ville aux heures de travail.",
+            "timestamp": 1539004407000,
+            "type": "cps"
+          }
+        ],
+        "text": "<itemMeta>afrique/region-45783728</itemMeta>",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Le programme &quot;d'extension des facilités de crédit&quot; veut aider Brazzaville à &quot;restaurer sa stabilité macro-économique&quot;, en préservant &quot;le caractère soutenable de la dette&quot;, selon le communiqué du FMI.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": " Il s'agit également, selon l'institution financière de Washington, de &quot;jeter les fondations d'une croissance plus forte et plus inclusive&quot;.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Le programme &quot;cherche également à améliorer la gouvernance, pour parvenir à plus d'efficacité et de transparence dans la gestion des ressources publiques, spécialement dans le secteur pétrolier&quot;.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "En septembre 2017, une enquête d'une ONG, Public Eye, avait fait état de corruption et de détournement de fonds présumés dans la gestion des ressources pétrolières.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "L'enquête pointait la responsabilité présumée de proches du président Denis Sassou Nguesso, qui cumule 35 ans au pouvoir.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Le programme du FMI fera l'objet d'une évaluation tous les six mois, précise le FMI.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Le FMI avait passé dès 2017 un accord avec le Gabon voisin, frappé comme le Congo-Brazzaville par la chute des prix du pétrole à partir de 2014.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "En pleine négociation, il avait été révélé en juillet 2017 que le Congo-Brazzaville cachait une partie de sa dette.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Celle-ci s'établissait à près de 120% du PIB (8,7 milliards de dollars) et non 77%, selon des révélations à l'époque de Radio France Internationale (RFI). ",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<bold>Lire aussi :</bold>",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "meta": [
+          {
+            "headlines": {
+              "headline": "Près de 2000 armes de guerre saisies au Congo-Brazzaville",
+              "overtyped": "Près de 2000 armes de guerre saisies au Congo-Brazzaville",
+              "shortHeadline": "Près de 2000 armes de guerre saisies au Congo-Brazzaville"
+            },
+            "id": "urn:bbc:ares::asset:afrique/region-45443828",
+            "language": "fr",
+            "locators": {
+              "href": "https://www.bbc.com/afrique/region-45443828"
+            },
+            "passport": {
+              "category": {
+                "categoryId": "",
+                "categoryName": ""
+              },
+              "taggings": []
+            },
+            "summary": "Au Congo-Brazzaville, près de 2000 armes et munitions de guerre ont déjà été collectées, sur les trois mille attendues, auprès des miliciens Ninjas de l'ex chef rebelle, le pasteur Ntoumi.",
+            "timestamp": 1536295797000,
+            "type": "cps"
+          }
+        ],
+        "text": "<itemMeta>afrique/region-45443828</itemMeta>",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "meta": [
+          {
+            "headlines": {
+              "headline": "Les stations-service manquent de carburant à Brazzaville",
+              "overtyped": "Les stations-service manquent de carburant à Brazzaville ",
+              "shortHeadline": "Les stations-service manquent de carburant à Brazzaville"
+            },
+            "id": "urn:bbc:ares::asset:afrique/region-46133730",
+            "language": "fr",
+            "locators": {
+              "href": "https://www.bbc.com/afrique/region-46133730"
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "taggings": []
+            },
+            "summary": "La capitale congolaise, Brazzaville, connaît depuis deux semaines, une pénurie de carburant qui a paralysé une partie des transports urbains.",
+            "timestamp": 1541655788000,
+            "type": "cps"
+          }
+        ],
+        "text": "<itemMeta>afrique/region-46133730</itemMeta>",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "&quot;C'est un ouf de soulagement, mais ce n'est pas une victoire. Le FMI va devenir plus regardant&quot;, a réagi à Brazzaville Léon Mayeko, économiste à l'université Marien Ngouabi.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "&quot;Ce qu'il faut craindre, c'est peut-être la réduction des dépenses dans les secteurs comme la santé et l'éducation&quot;, a ajouté l'enseignant chercheur.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Les négociations du Congo pour un plan de sauvetage ont traîné pendant deux ans. ",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Le Fonds a exigé que le Congo assure la pérennité à long terme de la soutenabilité de sa dette comme condition préalable à l'octroi d'un prêt de trois ans.Le Congo est parvenu à un accord pour restructurer une partie de sa dette chinoise en avril. ",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Selon les termes de l'accord de restructuration, le remboursement de 944 milliards de francs CFA seront prolongés de 15 ans. ",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Le Congo doit cependant rembourser un tiers de ce montant d'ici la fin de l'année 2021 et la Chine ne réduira pas le montant dû à titre principal.             L'allongement de la maturité de la dette permettra également d'alléger le fardeau de la dette du Congo.",
+        "type": "paragraph"
+      },
+      {
+        "altText": "L'Etat congolais est fortement endetté envers la Chine.",
+        "caption": "L'Etat congolais est fortement endetté envers la Chine.",
+        "copyrightHolder": "Getty Images",
+        "height": 549,
+        "href": "http://c.files.bbci.co.uk/12B0/production/_107848740_gettyimages-1026873742.jpg",
+        "id": "107848740",
+        "path": "/cpsprodpb/12B0/production/_107848740_gettyimages-1026873742.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 976
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Cas d'école",
+        "type": "heading"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "De nombreux observateurs considèrent le Congo comme un test pour le FMI.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Un certain nombre de pays africains confrontés à un très fort endettement résultant des emprunts commerciaux, un boom des émissions d'euro-obligations et des années de prêts chinois sur le continent. ",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Ils pourraient à leur tour se tourner vers le FMI pour obtenir de l'aide dans les années à venir.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "&quot;Le FMI accepte tacitement que la Chine n'acceptera pas d'allègement de la dette envers les gouvernements africains&quot;, a déclaré un banquier, qui a suivi les négociations.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Le FMI conseille également au gouvernement congolais de se restructurer la dette à fort taux d'intérêt élevé qu'il a contracté auprès de négociants en pétrole, notamment Glencore et Trafigura.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<bold>Lire aussi :</bold>",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "meta": [
+          {
+            "headlines": {
+              "headline": "L’Angola sollicite l’aide du FMI",
+              "overtyped": "L’Angola sollicite l’aide du FMI",
+              "shortHeadline": "L’Angola sollicite l’aide du FMI"
+            },
+            "id": "urn:bbc:ares::asset:afrique/region-45346067",
+            "language": "fr",
+            "locators": {
+              "href": "https://www.bbc.com/afrique/region-45346067"
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "taggings": []
+            },
+            "summary": "Face à la crise économique qui persiste, Luanda appelle le FMI à la rescousse.",
+            "timestamp": 1535554493000,
+            "type": "cps"
+          }
+        ],
+        "text": "<itemMeta>afrique/region-45346067</itemMeta>",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "meta": [
+          {
+            "headlines": {
+              "headline": "FMI : un Ethiopien à la tête du bureau Afrique",
+              "overtyped": "FMI : un Ethiopien à la tête du bureau Afrique  ",
+              "shortHeadline": "FMI : un Ethiopien à la tête du bureau Afrique"
+            },
+            "id": "urn:bbc:ares::asset:afrique/region-37432116",
+            "language": "fr",
+            "locators": {
+              "href": "https://www.bbc.com/afrique/region-37432116"
+            },
+            "passport": {
+              "category": {
+                "categoryId": "",
+                "categoryName": ""
+              },
+              "taggings": []
+            },
+            "summary": "L'économiste éthiopien Abebe Aemro Selassie succède à la Libérienne Antoinette Sayeh, dont il était l'adjoint, jusqu'à cette récente nomination.",
+            "timestamp": 1474468755000,
+            "type": "cps"
+          }
+        ],
+        "text": "<itemMeta>afrique/region-37432116</itemMeta>",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Pour être éligible au programme du FMI, le gouvernement congolais a entrepris une série de réformes visant à améliorer la transparence du processus de gestion des ressources publiques, en particulier dans le secteur pétrolier traditionnellement opaque.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Mais le groupe de plaidoyer en faveur de la transparence dans la gestion des ressources naturelles Global Witness s'est plaint que les détails des accords de prêt garantis par le pétrole et les grands contrats d'infrastructure sont restés en grande partie cachés.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "&quot;La décision du FMI d'accorder un nouveau renflouement au Congo est une décision inquiétante relevant de l'amnésie institutionnelle et sape la nouvelle volonté affichée du FMI de lutter contre la corruption &quot;, a déclaré la chercheuse de Global Witness sur le pétrole Natasha White.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "afrique.africa.story.48961747.page",
+      "cps_asset_id": "48961747",
+      "cps_asset_type": "sty"
+    },
+    "atiAnalytics": {
+      "producerId": "3",
+      "producerName": "AFRIQUE"
+    },
+    "blockTypes": ["image", "paragraph", "heading"],
+    "createdBy": "afrique-v6",
+    "firstPublished": 1562926727000,
+    "id": "urn:bbc:ares::asset:afrique/region-48961747",
+    "includeComments": false,
+    "language": "fr",
+    "lastPublished": 1562926727000,
+    "lastUpdated": 1599736316589,
+    "locators": {
+      "assetId": "48961747",
+      "assetUri": "/afrique/region-48961747",
+      "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48961747",
+      "curie": "http://www.bbc.co.uk/asset/2f373f75-7b48-0740-95dc-89b83b9f976c"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasContentWarning": false,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false,
+      "suitableForSyndication": true
+    },
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "readTime": 3,
+    "tags": {
+      "about": [
+        {
+          "curationList": [
+            {
+              "curationId": "2b23bff2-00cd-4c8b-b34b-cc328fb9aee2",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "International aid",
+          "thingId": "2d8561aa-e070-4d10-b199-107b5919def6",
+          "thingLabel": "Aide internationale",
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Aid",
+            "http://www.wikidata.org/entity/Q2827815"
+          ],
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+          "thingUri": "http://www.bbc.co.uk/things/2d8561aa-e070-4d10-b199-107b5919def6#id",
+          "topicId": "cwr9j29d5zyt",
+          "topicName": "Aide internationale"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "6b4ba562-c286-4bcf-a9ac-8ebc9ec2ec14",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Congo-Brazzaville",
+          "thingId": "597ca0ed-007a-4ef1-b420-0ca7c9ea55d6",
+          "thingLabel": "République du Congo",
+          "thingSameAs": ["http://sws.geonames.org/2260494/"],
+          "thingType": ["core:Place", "core:Thing", "tagging:TagConcept"],
+          "thingUri": "http://www.bbc.co.uk/things/597ca0ed-007a-4ef1-b420-0ca7c9ea55d6#id",
+          "topicId": "cxnykjvyppyt",
+          "topicName": "République du Congo"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "5497a146-bc4b-4a06-ba77-53444ef2e0c7",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "China",
+          "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+          "thingLabel": "Chine",
+          "thingSameAs": [
+            "http://sws.geonames.org/1814991/",
+            "http://dbpedia.org/resource/China",
+            "http://www.wikidata.org/entity/Q148"
+          ],
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+          "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+          "topicId": "cg7261ykr8kt",
+          "topicName": "Chine"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "eca92160-9cf6-45ca-bc35-897b695425c1",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "International Monetary Fund (IMF)",
+          "thingId": "84bab5a3-426e-4051-86a3-00f0b085ef8e",
+          "thingLabel": "FMI",
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q7804",
+            "http://dbpedia.org/resource/International_Monetary_Fund"
+          ],
+          "thingType": [
+            "tagging:TagConcept",
+            "tagging:Agent",
+            "core:Organisation",
+            "core:Thing",
+            "tagging:AmbiguousTerm"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/84bab5a3-426e-4051-86a3-00f0b085ef8e#id",
+          "topicId": "cjgn7033v0jt",
+          "topicName": "FMI"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "ecc8594d-56ce-4e8f-ab87-8940664af321",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Economics",
+          "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
+          "thingLabel": "Economie",
+          "thingSameAs": ["http://dbpedia.org/resource/Economy"],
+          "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+          "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+          "topicId": "cnq687nr9v1t",
+          "topicName": "Economie"
+        }
+      ]
+    },
+    "timestamp": 1562926727000,
+    "type": "STY",
+    "version": "v1.3.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Le FMI accepte finalement d'aider le Congo-Brazzaville",
+      "shortHeadline": "Le FMI accepte finalement d'aider le Congo-Brazzaville"
+    },
+    "id": "urn:bbc:ares::asset:afrique/region-48961747",
+    "indexImage": {
+      "altText": "Le président congolais Denis Sassou Nguesso.",
+      "caption": "Le président congolais Denis Sassou Nguesso.",
+      "copyrightHolder": "Getty Images",
+      "height": 549,
+      "href": "http://c.files.bbci.co.uk/141C6/production/_107847328_gettyimages-465013648.jpg",
+      "id": "107847328",
+      "path": "/cpsprodpb/141C6/production/_107847328_gettyimages-465013648.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 976
+    },
+    "language": "fr",
+    "locators": {
+      "assetId": "48961747",
+      "assetUri": "/afrique/region-48961747",
+      "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48961747",
+      "curie": "http://www.bbc.co.uk/asset/2f373f75-7b48-0740-95dc-89b83b9f976c"
+    },
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "summary": "Au terme de plus de deux ans de discussions difficiles, le Fonds monétaire international a annoncé qu'il allait accorder 448,6 millions de dollars sur trois ans au pays d'Afrique centrale.",
+    "timestamp": 1562926727000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Afrique",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/afrique/region"
+    },
+    "site": {
+      "name": "Afrique",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/afrique"
+    }
+  }
+}

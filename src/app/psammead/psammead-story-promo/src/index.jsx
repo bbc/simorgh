@@ -198,7 +198,7 @@ Summary.defaultProps = {
 // eslint-disable-next-line react/prop-types
 const CSRLink = ({ href, ...props }) => <LINK to={href} {...props} />;
 
-export const Link = styled(LINK)`
+export const Link = styled(CSRLink)`
   position: static;
   color: ${C_EBON};
   text-decoration: none;
