@@ -43,7 +43,6 @@ const FlexWrapper = styled.div`
 `;
 
 const AnimatedWrapper = animated(styled.div`
-  overflow: hidden;
   position: relative;
   width: 100%;
 `);
