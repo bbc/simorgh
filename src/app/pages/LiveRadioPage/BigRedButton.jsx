@@ -49,8 +49,8 @@ const ShortNowPlayingLine = styled.div`
   display: inline-block;
   border: solid 1px #fdfdfd;
   border-radius: 2px;
-  animation: bouncy 0.7s linear infinite;
-  @keyframes bouncy {
+  animation: grow 0.7s linear infinite;
+  @keyframes grow {
     0% {
       height: 15px;
       transform: translateY(0px);
@@ -72,8 +72,8 @@ const LongNowPlayingLine = styled.div`
   border: solid 1px #fdfdfd;
   display: inline-block;
   border-radius: 2px;
-  animation: bounce 0.7s linear infinite;
-  @keyframes bounce {
+  animation: shrink 0.7s linear infinite;
+  @keyframes shrink {
     0% {
       height: 25px;
       transform: translateY(0px);
