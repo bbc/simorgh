@@ -1,0 +1,7 @@
+{
+  "name": "@bbc/psammead-brand/skip-link",
+  "private": true,
+  "main": "../dist/SkipLink",
+  "module": "../esm/SkipLink",
+  "sideEffects": false
+}

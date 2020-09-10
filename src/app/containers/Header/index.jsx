@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import SkipLink from '@bbc/psammead-brand/skip-link';
+import SkipLink from '#psammead/psammead-brand/src/SkipLink';
 import BrandContainer from '../Brand';
 import NavigationContainer from '../Navigation';
 import { ServiceContext } from '#contexts/ServiceContext';
