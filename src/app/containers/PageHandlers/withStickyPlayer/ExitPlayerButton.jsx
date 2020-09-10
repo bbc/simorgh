@@ -27,6 +27,7 @@ const IconWrapper = styled.span`
   position: relative;
   width: 13.2px;
   height: 13.2px;
+  cursor: pointer;
 `;
 const Icon = styled.span`
   position: absolute;
