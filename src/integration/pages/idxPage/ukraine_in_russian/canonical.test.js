@@ -8,7 +8,7 @@ import runHeaderTests from './header';
 import runFooterTests from './footer';
 
 describe('Canonical ukrainian/ukraine_in_russian IDX page', () => {
-  runCanonicalTests();
+  runCanonicalTests(service);
   runHeaderTests();
   runFooterTests();
 });
