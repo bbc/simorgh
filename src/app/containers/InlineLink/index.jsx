@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { pathToRegexp } from 'path-to-regexp';
-import InlineLink from '@bbc/psammead-inline-link';
 import pathOr from 'ramda/src/pathOr';
+import InlineLink from '#psammead/psammead-inline-link/src';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
