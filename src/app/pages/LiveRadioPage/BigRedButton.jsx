@@ -44,18 +44,49 @@ const NowPlayingIcon = styled.div`
 const ShortNowPlayingLine = styled.div`
   float: ${props => props.float};
   width: 2px;
-  height: 14px;
-  margin-top: 4px;
+  height: 15px;
+  margin: 5px 2px 0px;
+  display: inline-block;
   border: solid 1px #fdfdfd;
   border-radius: 2px;
+  animation: bouncy 0.7s linear infinite;
+  @keyframes bouncy {
+    0% {
+      height: 15px;
+      transform: translateY(0px);
+    }
+    50% {
+      height: 25px;
+      transform: translateY(-5px);
+    }
+    100% {
+      height: 15px;
+      transform: translateY(0px);
+    }
+  }
 `;
 
 const LongNowPlayingLine = styled.div`
   width: 2px;
   height: 25px;
-  display: inline-block;
   border: solid 1px #fdfdfd;
+  display: inline-block;
   border-radius: 2px;
+  animation: bounce 0.7s linear infinite;
+  @keyframes bounce {
+    0% {
+      height: 25px;
+      transform: translateY(0px);
+    }
+    50% {
+      height: 15px;
+      transform: translateY(5px);
+    }
+    100% {
+      height: 25px;
+      transform: translateY(0px);
+    }
+  }
 `;
 
 const PlayButtonTextWrapper = styled.div`
