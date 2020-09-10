@@ -43,6 +43,7 @@ const AnimatedWrapper = animated(styled.div`
 const ShowMoreButton = styled.button`
   border: 0;
   background: 0;
+  padding: 0;
   color: #fff;
   display: flex;
   align-items: center;
