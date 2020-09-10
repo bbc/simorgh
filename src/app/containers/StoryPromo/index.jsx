@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { shape, bool, oneOf, oneOfType, string } from 'prop-types';
 import styled from 'styled-components';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
@@ -10,6 +10,7 @@ import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { MediaPlayerContext } from '#contexts/MediaPlayerContext';
 import { createSrcset } from '#lib/utilities/srcSet';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
@@ -23,6 +24,7 @@ import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import IndexAlsosContainer from './IndexAlsos';
 import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
+import useLiveRadioSettings from '#app/pages/LiveRadioPage/useLiveRadioSettings';
 
 import StoryPromo, {
   Headline,
@@ -39,6 +41,14 @@ const SingleColumnStoryPromo = styled(StoryPromo)`
     display: grid;
   }
 `;
+
+const getMasterBrandFromUrl = url => {
+  if (!url || !url.includes('radio/liveradio')) {
+    return '';
+  }
+
+  return url.split('/').slice(-2, -1)[0];
+};
 
 const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
   if (!imageValues) {
@@ -109,6 +119,15 @@ const StoryPromoContainer = ({
     translations,
     timezone,
   } = useContext(ServiceContext);
+  const {
+    assetId,
+    embedUrl,
+    iframeTitle,
+    placeholderSrc,
+  } = useLiveRadioSettings(getMasterBrandFromUrl(item.uri));
+  const { toggleMediaPlayer, initialiseMediaPlayer } = useContext(
+    MediaPlayerContext,
+  );
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
@@ -129,6 +148,28 @@ const StoryPromoContainer = ({
     item,
     isAssetTypeCode,
   );
+
+  const isLiveRadioPromo = item.uri && item.uri.includes('radio/liveradio');
+  const handleLiveRadioLink = e => {
+    e.preventDefault();
+    toggleMediaPlayer();
+  };
+
+  useEffect(() => {
+    if (isLiveRadioPromo) {
+      initialiseMediaPlayer({
+        assetId,
+        embedUrl,
+        iframeTitle,
+        title: 'Live radio',
+        type: 'audio',
+        skin: 'audio',
+        placeholderSrc,
+        heading: 'heading',
+        summary: 'summary',
+      });
+    }
+  }, [isLiveRadioPromo]);
 
   const overtypedSummary = pathOr(null, ['overtypedSummary'], item);
   const hasWhiteSpaces = overtypedSummary && !overtypedSummary.trim().length;
@@ -205,7 +246,10 @@ const StoryPromoContainer = ({
           promoHasImage={displayImage}
           as={headingTagOverride}
         >
-          <StyledLink href={url}>
+          <StyledLink
+            href={url}
+            onClick={isLiveRadioPromo ? handleLiveRadioLink : undefined}
+          >
             {isLive ? (
               <LiveLabel
                 service={service}

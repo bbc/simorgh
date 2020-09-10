@@ -3,9 +3,8 @@ import { string, shape } from 'prop-types';
 import styled from 'styled-components';
 import { Headline } from '@bbc/psammead-headings';
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import pathOr from 'ramda/src/pathOr';
 import Paragraph from '@bbc/psammead-paragraph';
-import { useLocation, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import MetadataContainer from '../../containers/Metadata';
 import RadioScheduleContainer from '#containers/RadioSchedule';
@@ -15,14 +14,7 @@ import Grid, { GelPageGrid } from '#app/components/Grid';
 import LinkedData from '../../containers/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { MediaPlayerContext } from '../../contexts/MediaPlayerContext';
-import { RequestContext } from '#contexts/RequestContext';
-import getMediaId from '#lib/utilities/getMediaId';
-import getMasterbrand from '#lib/utilities/getMasterbrand';
-import getEmbedUrl from '#lib/utilities/getEmbedUrl';
-
-const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
-
-const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
+import useLiveRadioSettings from './useLiveRadioSettings';
 
 const BigRedButton = styled.button`
   color: #fff;
@@ -48,16 +40,8 @@ const LiveRadioPage = ({ pageData }) => {
     masterBrand,
     radioScheduleData,
   } = pageData;
-  const {
-    script,
-    service,
-    dir,
-    lang,
-    liveRadioOverrides,
-    translations,
-  } = useContext(ServiceContext);
+  const { script, service, dir } = useContext(ServiceContext);
 
-  const { isAmp } = useContext(RequestContext);
   const {
     toggleMediaPlayer,
     initialiseMediaPlayer,
@@ -65,25 +49,12 @@ const LiveRadioPage = ({ pageData }) => {
     isPlayerReady,
     isPlaying,
   } = useContext(MediaPlayerContext);
-  const location = useLocation();
-  const assetId = 'liveradio';
-  const mediaId = getMediaId({
+  const {
     assetId,
-    masterBrand: getMasterbrand(masterBrand, liveRadioOverrides),
-    lang,
-    service,
-  });
-  const embedUrl = getEmbedUrl({
-    mediaId,
-    type: 'media',
-    isAmp,
-    queryString: location.search,
-  });
-  const iframeTitle = pathOr(
-    'Audio player',
-    ['mediaAssetPage', 'audioPlayer'],
-    translations,
-  );
+    embedUrl,
+    iframeTitle,
+    placeholderSrc,
+  } = useLiveRadioSettings(masterBrand);
 
   const hasRadioScheduleData = Boolean(radioScheduleData);
 
@@ -96,7 +67,7 @@ const LiveRadioPage = ({ pageData }) => {
         title: 'Live radio',
         type: 'audio',
         skin: 'audio',
-        placeholderSrc: audioPlaceholderImageSrc,
+        placeholderSrc,
         heading,
         summary: bodySummary,
       });
