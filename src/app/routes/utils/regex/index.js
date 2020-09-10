@@ -14,9 +14,11 @@ import {
   getLegacyAssetRegex,
   getMostReadPageRegex,
   getMostReadDataRegex,
+  getMostWatchedDataRegex,
   getIdxPageRegex,
   getSecondaryColumnDataRegex,
   getRecommendationsDataRegex,
+  getAfricaEyeTVPageRegex,
 } from './utils';
 
 const allServices = Object.keys(services);
@@ -53,6 +55,8 @@ export const legacyAssetPageDataPath = `${legacyAssetPagePath}.json`;
 export const mostReadPagePath = getMostReadPageRegex(allServices);
 export const mostReadDataRegexPath = getMostReadDataRegex(allServices);
 
+export const mostWatchedDataPath = getMostWatchedDataRegex(allServices);
+
 export const secondaryColumnDataRegexPath = getSecondaryColumnDataRegex(
   allServices,
 );
@@ -63,3 +67,6 @@ export const recommendationsDataRegex = getRecommendationsDataRegex(
 
 export const IdxPagePath = getIdxPageRegex();
 export const IdxDataPath = `${IdxPagePath}.json`;
+
+export const africaEyeTVPagePath = getAfricaEyeTVPageRegex();
+export const africaEyeTVDataPath = `${africaEyeTVPagePath}.json`;
