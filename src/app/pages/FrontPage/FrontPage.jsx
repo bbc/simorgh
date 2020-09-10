@@ -119,7 +119,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
 
   // Most Read is required to render above useful-links if it exists
   const hasUsefulLinks =
-    groups && findIndex(group => group.type === 'useful-links')(groups) > -1;
+    findIndex(group => group.type === 'useful-links')(groups) > -1;
 
   return (
     <>
@@ -143,7 +143,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
           {offScreenText}
         </VisuallyHiddenText>
         <IndexPageContainer>
-          {groups && groups.map((group, index) => (
+          {groups.map((group, index) => (
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}
               {radioScheduleOnPage &&
