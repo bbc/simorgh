@@ -15,7 +15,6 @@
 | `preroll`               | Display Preroll Advertisements on Media Asset (MAP) Pages | | |
 | `scriptLink`            | Display Script Switching link for services with variants | | |
 | `socialEmbed`           | Display Social Embeds on Story (STY) Pages | | |
-| `storyPageAds`          | Display Advertisements on Story (STY) Pages | | |
 | `variantCookie`         | Set variant cookie for services with variants | | |
 
 ## Default (Fallback) Values

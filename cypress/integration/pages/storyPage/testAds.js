@@ -6,7 +6,7 @@ export default service => {
   describe.only('Ads', () => {
     it('should be displayed based on whether ads toggle is enabled/disabled', () => {
       cy.getToggles(config[service].name).then(toggles => {
-        const adsEnabled = path(['storyPageAds', 'enabled'], toggles);
+        const adsEnabled = path(['ads', 'enabled'], toggles);
 
         if (adsEnabled) {
           cy.visit(Cypress.env('currentPath'), {
