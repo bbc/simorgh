@@ -149,6 +149,7 @@ const directives = {
       'https://bbc-maps.carto.com', // STY include maps
       'https://flo.uri.sh', // STY includes
       'https://test.bbc.com', // Media Player
+      'https://www.test.bbc.com', // Media Player
       'https://www.bbc.com', // Media Player
       'https://bbc.com', // Media Player
       ...advertisingDirectives.frameSrc,
