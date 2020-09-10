@@ -170,11 +170,18 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   list-style-type: none;
 }
 
+.c25 > li {
+  position: relative;
+}
+
 .c25 > li::before {
-  content: ' ';
-  padding-left: 1.75rem;
-  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
-  margin-left: -2rem;
+  top: 0.5rem;
+  content: ' ';
+  position: absolute;
+  border-width: 1rem;
+  border: 0.1875rem solid #3F3F42;
+  border-radius: 50%;
+  left: -1rem;
 }
 
 .c26 {
@@ -1536,11 +1543,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
               comscore
             </div>
             <div
-              id="sty-ads"
-            >
-              STY ADS
-            </div>
-            <div
               class="c0 c1"
               dir="ltr"
             >
@@ -1814,11 +1816,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         Start of localised text
                       </b>
                     </p>
-                  </div>
-                  <div
-                    id="sty-ads"
-                  >
-                    STY ADS
                   </div>
                   <div
                     class="c6"
@@ -3719,11 +3716,18 @@ exports[`Story Page should render correctly when the secondary column data is no
   list-style-type: none;
 }
 
+.c27 > li {
+  position: relative;
+}
+
 .c27 > li::before {
-  content: ' ';
-  padding-left: 1.75rem;
-  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
-  margin-left: -2rem;
+  top: 0.5rem;
+  content: ' ';
+  position: absolute;
+  border-width: 1rem;
+  border: 0.1875rem solid #3F3F42;
+  border-radius: 50%;
+  left: -1rem;
 }
 
 .c28 {
@@ -4764,11 +4768,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                   comscore
                 </div>
                 <div
-                  id="sty-ads"
-                >
-                  STY ADS
-                </div>
-                <div
                   class="c0 c1"
                   dir="ltr"
                 >
@@ -5052,11 +5051,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                             Start of localised text
                           </b>
                         </p>
-                      </div>
-                      <div
-                        id="sty-ads"
-                      >
-                        STY ADS
                       </div>
                       <div
                         class="c6"
@@ -6005,11 +5999,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   list-style-type: none;
 }
 
+.c27 > li {
+  position: relative;
+}
+
 .c27 > li::before {
-  content: ' ';
-  padding-left: 1.75rem;
-  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
-  margin-left: -2rem;
+  top: 0.5rem;
+  content: ' ';
+  position: absolute;
+  border-width: 1rem;
+  border: 0.1875rem solid #3F3F42;
+  border-radius: 50%;
+  left: -1rem;
 }
 
 .c28 {
@@ -7591,11 +7592,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   comscore
                 </div>
                 <div
-                  id="sty-ads"
-                >
-                  STY ADS
-                </div>
-                <div
                   class="c0 c1"
                   dir="ltr"
                 >
@@ -7879,11 +7875,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             Start of localised text
                           </b>
                         </p>
-                      </div>
-                      <div
-                        id="sty-ads"
-                      >
-                        STY ADS
                       </div>
                       <div
                         class="c6"

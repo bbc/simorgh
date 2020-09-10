@@ -4,7 +4,9 @@
  */
 
 import runExpiredEpisodeTests from '../expiredEpisodeTests';
+import runAmpTests from '../ampTests';
 
 describe('AMP Pashto On Demand TV Page', () => {
   runExpiredEpisodeTests();
+  runAmpTests(service);
 });

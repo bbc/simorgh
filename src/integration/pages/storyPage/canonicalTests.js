@@ -40,22 +40,4 @@ export default service => {
       });
     }
   });
-
-  describe('Ads', () => {
-    const hasAds = service === 'mundo';
-    const leaderboardEl = document.getElementById('dotcom-leaderboard');
-    const mpuEl = document.getElementById('dotcom-mpu');
-
-    if (hasAds) {
-      it('should have ads in the document', () => {
-        expect(leaderboardEl).toBeInTheDocument();
-        expect(mpuEl).toBeInTheDocument();
-      });
-    } else {
-      it('should not have ads in the document', () => {
-        expect(leaderboardEl).not.toBeInTheDocument();
-        expect(mpuEl).not.toBeInTheDocument();
-      });
-    }
-  });
 };
