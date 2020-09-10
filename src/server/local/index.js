@@ -8,10 +8,12 @@ import {
   IdxDataPath,
   legacyAssetPageDataPath,
   mostReadDataRegexPath,
+  mostWatchedDataPath,
   onDemandRadioDataPath,
   onDemandTvDataPath,
   recommendationsDataRegex,
   secondaryColumnDataRegexPath,
+  // africaEyeTVDataPath,
 } from '#app/routes/utils/regex';
 import { LOCAL_SENDFILE_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
@@ -74,6 +76,16 @@ export default server => {
       const { service, variant } = params;
       const dataFilePath = constructDataFilePath({
         pageType: 'mostRead',
+        service,
+        variant,
+      });
+
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(mostWatchedDataPath, async ({ params }, res, next) => {
+      const { service, variant } = params;
+      const dataFilePath = constructDataFilePath({
+        pageType: 'mostWatched',
         service,
         variant,
       });
@@ -155,6 +167,15 @@ export default server => {
       const dataFilePath = path.join(process.cwd(), 'data', idx, 'index.json');
       sendDataFile(res, dataFilePath, next);
     })
+    // .get(africaEyeTVDataPath, async ({ params }, res, next) => {
+    //   const { episodeId } = params;
+
+    //   const dataFilePath = constructDataFilePath({
+    //     pageType: 'africa_eye',
+    //     episodeId,
+    //   });
+    //   sendDataFile(res, dataFilePath, next);
+    // })
     .get('/static/js/comscore/main-:version.js', ({ params }, res, next) => {
       const { version } = params;
       const localComscorePath = path.join(

@@ -67,7 +67,9 @@ const runTests = () =>
   });
 
 if (isCI) {
-  runTests();
+  runTests().catch(() => {
+    process.exit(1);
+  });
 } else {
   const spinner = ora().start();
 

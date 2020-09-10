@@ -13,9 +13,11 @@ import addSummaryBlock from './addSummaryBlock';
 import cpsOnlyOnwardJourneys from './cpsOnlyOnwardJourneys';
 import addRecommendationsBlock from './addRecommendationsBlock';
 import addBylineBlock from './addBylineBlock';
+import addMpuBlock from './addMpuBlock';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
+import processMostWatched from './processMostWatched';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
@@ -38,6 +40,7 @@ const processOptimoBlocks = pipe(
   augmentWithTimestamp,
   addBylineBlock,
   addRecommendationsBlock,
+  addMpuBlock,
   addIdsToBlocks,
   applyBlockPositioning,
   cpsOnlyOnwardJourneys,
@@ -60,7 +63,13 @@ const transformJson = async (json, pathname) => {
   }
 };
 
-export default async ({ path: pathname, service, variant, pageType }) => {
+export default async ({
+  path: pathname,
+  service,
+  variant,
+  pageType,
+  toggles,
+}) => {
   try {
     const { json, status } = await fetchPageData({ path: pathname, pageType });
 
@@ -69,12 +78,18 @@ export default async ({ path: pathname, service, variant, pageType }) => {
       service,
       variant,
     );
+    const processedAdditionalData = processMostWatched({
+      data: additionalPageData,
+      service,
+      path: pathname,
+      toggles,
+    });
 
     return {
       status,
       pageData: {
         ...(await transformJson(json, pathname)),
-        ...additionalPageData,
+        ...processedAdditionalData,
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {

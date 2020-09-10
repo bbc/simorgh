@@ -37,9 +37,11 @@ const Wrapper = styled(GridItemConstrainedLargeNoMargin)`
     margin-top: ${GEL_SPACING_QUAD};
   }
 
-  figure {
+  ${props =>
+    !props.hasBottomPadding &&
+    `figure {
     padding-bottom: 0;
-  }
+  }`}
 `;
 
 const CpsAssetMediaPlayer = ({
@@ -47,6 +49,8 @@ const CpsAssetMediaPlayer = ({
   assetUri,
   isLegacyMedia,
   showLoadingImage,
+  hasBottomPadding,
+  showCaption,
 }) => {
   if (!assetUri) return null;
 
@@ -59,7 +63,7 @@ const CpsAssetMediaPlayer = ({
   const available = path(['model', 'available'], metadataBlock);
 
   return (
-    <Wrapper>
+    <Wrapper hasBottomPadding={hasBottomPadding}>
       <MediaPlayerContainer
         blocks={blocks}
         assetId={assetUri.substr(1)}
@@ -68,6 +72,7 @@ const CpsAssetMediaPlayer = ({
         available={available}
         isLegacyMedia={isLegacyMedia}
         showLoadingImage={showLoadingImage}
+        showCaption={showCaption}
       />
     </Wrapper>
   );
@@ -78,11 +83,15 @@ CpsAssetMediaPlayer.propTypes = {
   assetUri: string.isRequired,
   isLegacyMedia: bool,
   showLoadingImage: bool,
+  hasBottomPadding: bool,
+  showCaption: bool,
 };
 CpsAssetMediaPlayer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
   isLegacyMedia: false,
   showLoadingImage: false,
+  hasBottomPadding: true,
+  showCaption: true,
 };
 
 export default CpsAssetMediaPlayer;
