@@ -14,20 +14,22 @@ import Grid, { GelPageGrid } from '#app/components/Grid';
 import LinkedData from '../../containers/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { MediaPlayerContext } from '../../contexts/MediaPlayerContext';
+import { BigRedPlayingButton, BigRedPauseButton } from './BigRedButton';
 import useLiveRadioSettings from './useLiveRadioSettings';
-
-const BigRedButton = styled.button`
-  color: #fff;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 6px;
-  background-color: ${({ disabled }) => (disabled ? 'black' : C_POSTBOX)};
-  cursor: pointer;
-`;
 
 const StyledGelPageGrid = styled(GelPageGrid)`
   width: 100%;
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
+`;
+
+const BigRedButton = styled.button`
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background-color: ${({ disabled }) => (disabled ? 'black' : C_POSTBOX)};
+  cursor: pointer;
+  margin-bottom: 36px;
 `;
 
 const LiveRadioPage = ({ pageData }) => {
@@ -144,10 +146,14 @@ const LiveRadioPage = ({ pageData }) => {
             <BigRedButton disabled>Loading</BigRedButton>
           )}
           {bigRedButtonState === 'playing' && (
-            <BigRedButton onClick={toggleMediaPlayer}>Now Playing</BigRedButton>
+            <BigRedButton onClick={toggleMediaPlayer}>
+              <BigRedPlayingButton />
+            </BigRedButton>
           )}
           {bigRedButtonState === 'ready' && (
-            <BigRedButton onClick={toggleMediaPlayer}>Listen Live</BigRedButton>
+            <BigRedButton onClick={toggleMediaPlayer}>
+              <BigRedPauseButton />
+            </BigRedButton>
           )}
         </Grid>
         <Link to="/afrique/region-23278969">Hello</Link>

@@ -55,8 +55,6 @@ export const buildATIPageTrackPath = ({
   const x6Value =
     platform === 'amp' ? referrer : referrer && encodeURIComponent(referrer);
 
-  const shouldIncludeMarketingString = process.env.SIMORGH_APP_ENV !== 'live';
-
   const pageViewBeaconValues = [
     {
       key: 's',
@@ -192,9 +190,7 @@ export const buildATIPageTrackPath = ({
     {
       key: 'xto',
       description: 'marketing campaign',
-      value: shouldIncludeMarketingString
-        ? getATIMarketingString(decodedHref, campaignType)
-        : null,
+      value: getATIMarketingString(decodedHref, campaignType),
       wrap: false,
     },
     {

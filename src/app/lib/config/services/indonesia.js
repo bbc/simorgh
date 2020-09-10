@@ -198,7 +198,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onOnDemandRadioPage: true,
       onFrontPage: false,
       header: 'Siaran radio',
       durationLabel: 'Durasi %duration%',

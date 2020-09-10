@@ -1,7 +1,7 @@
-import React, { useContext, memo, useState, useRef, useEffect } from 'react';
+import React, { useContext, useState, useRef } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
-import { C_EBON } from '@bbc/psammead-styles/colours';
+import { C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -9,23 +9,18 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import Paragraph from '@bbc/psammead-paragraph';
 import { MediaPlayerContext } from '../../../contexts/MediaPlayerContext';
-import { ServiceContext } from '../../../contexts/ServiceContext';
 import AVPlayer from '#containers/AVPlayer';
-import MiniController from './MiniController';
-import ChevronIcon from './ChevronIcon';
+import MiniControls from './MiniControls';
+import ExitPlayerButton from './ExitPlayerButton';
 
 export const Title = styled.h4`
-  margin: 0; /* Reset */
+  font-size: ${({ fontSize }) => fontSize || '1rem'};
+  margin: 0;
+  color: #f2f2f2;
   padding: ${GEL_SPACING};
   padding: 4px 0 0;
   ${({ service }) => service && getSansRegular(service)};
-`;
-
-const TitleWrapper = styled.div`
-  flex-grow: 1;
-  padding-left: 12px;
 `;
 
 const ToastWrapper = styled.div`
@@ -33,7 +28,7 @@ const ToastWrapper = styled.div`
   bottom: 0;
   width: 100%;
   position: fixed;
-  background: ${C_EBON};
+  background: ${C_MIDNIGHT_BLACK};
   z-index: 5;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 24px 0px;
 `;
@@ -42,7 +37,7 @@ const Toast = styled.div`
   width: 755px;
   max-width: 100%;
   margin: 0 auto;
-  padding: 12px;
+  padding: ${GEL_SPACING_DBL} ${GEL_SPACING_DBL};
 `;
 
 const AnimatedToastWrapper = animated(ToastWrapper);
@@ -66,34 +61,13 @@ const StyledAudioPlayer = styled(AVPlayer)`
   }
 `;
 
-const ControlsWrapper = styled.div`
-  display: flex;
-  color: #fff;
-  justify-content: space-between;
-`;
-
 const AudioOuterWrapper = animated(styled.div`
   height: 0;
   overflow: hidden;
+  width: calc(100% + 2rem);
+  margin-left: -${GEL_SPACING_DBL};
+  padding: 0 ${GEL_SPACING_DBL};
 `);
-
-const ShowMoreButton = styled.button`
-  border: 0;
-  background: 0;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  outline: 0;
-  cursor: pointer;
-  font-size: 0.85rem;
-  ${({ service }) => service && getSansRegular(service)};
-  .icon {
-    transition: 0.2s ease-in-out all;
-  }
-  .icon.is-open {
-    transform: rotate(180deg);
-  }
-`;
 
 export default Component => {
   return props => {
@@ -103,7 +77,6 @@ export default Component => {
     const { mediaPlayerProps, showMediaPlayer } = useContext(
       MediaPlayerContext,
     );
-    const { script, service } = useContext(ServiceContext);
     const toastAnimStyled = useSpring({
       transform: showMediaPlayer ? 'translateY(0%)' : 'translateY(100%)',
     });
@@ -121,30 +94,24 @@ export default Component => {
           style={toastAnimStyled}
         >
           <Toast>
-            <ControlsWrapper>
-              <MiniController />
-              <TitleWrapper>
-                <Title script={script} service={service} darkMode>
-                  {heading}
-                </Title>
-              </TitleWrapper>
-              <ShowMoreButton
-                script={script}
-                service={service}
-                onClick={toggleMore}
-              >
-                {showMore ? 'Hide' : 'Open'}
-                <ChevronIcon isOpen={showMore} />
-              </ShowMoreButton>
-            </ControlsWrapper>
+            <MiniControls
+              showMore={showMore}
+              heading={heading}
+              summary={summary}
+              toggleMore={toggleMore}
+            />
             <AudioOuterWrapper style={showMoreAnimStyle}>
               <div ref={showMoreRef}>
-                <Paragraph script={script} service={service} darkMode>
-                  {summary}
-                </Paragraph>
                 {mediaPlayerProps && (
-                  <StyledAudioPlayer {...mediaPlayerProps} />
+                  <StyledAudioPlayer
+                    {...mediaPlayerProps}
+                    /* Ensure we are using the test embed url, even if simorgh environment is live (eg on blue/green stack) */
+                    embedUrl={mediaPlayerProps.embedUrl
+                      .replace('www.bbc.com', 'www.test.bbc.com')
+                      .replace('//bbc.com', '//test.bbc.com')}
+                  />
                 )}
+                <ExitPlayerButton />
               </div>
             </AudioOuterWrapper>
           </Toast>

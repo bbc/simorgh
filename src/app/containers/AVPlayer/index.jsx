@@ -60,7 +60,12 @@ const AVPlayer = ({
           mediaInfo={mediaInfo}
           noJsMessage={noJsMessage}
           noJsClassName="no-js"
-          acceptableEventOrigins={['polling.test.bbc.co.uk', 'test.bbc.com']}
+          acceptableEventOrigins={[
+            'polling.test.bbc.co.uk',
+            'www.test.bbc.com',
+            'bbc.com',
+            'www.bbc.com',
+          ]}
           onMediaInitialised={() => setIsPlayerReady(true)}
           onMediaPlaying={() => setIsPlaying(true)}
           onMediaPause={() => setIsPlaying(false)}

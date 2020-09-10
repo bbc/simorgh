@@ -1,0 +1,81 @@
+{
+  "programme": {
+    "type": "clip",
+    "pid": "p08lzs95",
+    "expected_child_count": null,
+    "position": null,
+    "image": {
+      "pid": "p08lzst4"
+    },
+    "media_type": "audio_video",
+    "title": "The Gravedigger's Truth",
+    "short_synopsis": "Covid-19 hits Somalia.",
+    "medium_synopsis": null,
+    "long_synopsis": "In Somalia, two young doctors are in the fight of their lives. \r\nAs the coronavirus begins to claim its first victims, they volunteer in the capital’s only designated Covid-19 ward. Despite their bravery, people are dying because the hospital lacks vital medical equipment. \r\nOfficially, fewer than 100 Somalis have been killed by Covid-19. But BBC Africa Eye goes to one of the city’s main cemeteries, where the gravediggers tell a different story.\r\n\r\nSubscribe: http://bit.ly/subscribetoafrica\r\nWebsite: https://www.bbc.co.uk/africaeye\r\nFacebook: https://www.facebook.com/bbcnewsafrica/\r\nTwitter: https://www.twitter.com/bbcafrica/\r\nInstagram: https://www.instagram.com/bbcafrica/",
+    "first_broadcast_date": null,
+    "display_title": {
+      "title": "Africa Eye",
+      "subtitle": "The Gravedigger's Truth"
+    },
+    "ownership": {
+      "service": {
+        "type": null,
+        "id": "bbc_world_service_tv",
+        "key": "worldservicetv",
+        "title": "BBC World Service TV"
+      }
+    },
+    "parent": {
+      "programme": {
+        "type": "brand",
+        "pid": "w13xttpn",
+        "title": "Africa Eye",
+        "short_synopsis": "Original and high-impact BBC investigations from across Africa",
+        "media_type": null,
+        "position": null,
+        "image": {
+          "pid": "p06pqg80"
+        },
+        "expected_child_count": null,
+        "first_broadcast_date": null,
+        "aggregated_episode_count": 25,
+        "ownership": {
+          "service": {
+            "type": null,
+            "id": "bbc_world_service_tv",
+            "key": "worldservicetv",
+            "title": "BBC World Service TV"
+          }
+        }
+      }
+    },
+    "peers": {
+      "previous": null,
+      "next": null
+    },
+    "versions": [
+      {
+        "canonical": 1,
+        "pid": "p08lzs97",
+        "duration": 1789,
+        "types": [
+          "Original version"
+        ]
+      }
+    ],
+    "links": [],
+    "supporting_content_items": [],
+    "categories": [
+      {
+        "type": "genre",
+        "id": "C00079",
+        "key": "news",
+        "title": "News",
+        "narrower": [],
+        "broader": {},
+        "has_topic_page": false,
+        "sameAs": null
+      }
+    ]
+  }
+}

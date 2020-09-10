@@ -205,7 +205,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Verticals',
       frequenciesPageUrl: '/hausa/institutional/2011/11/000001_mitocinmu',

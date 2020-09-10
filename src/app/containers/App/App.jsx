@@ -21,16 +21,14 @@ const updatePageClientSide = async ({
   pathname,
 }) => {
   const routeProps = getRouteProps(pathname);
-  const [toggles, initialData] = await Promise.all([
-    await getToggles(service),
-    await getInitialData({
-      path: pathname,
-      service,
-      variant,
-      pageType,
-    }),
-  ]);
-
+  const toggles = await getToggles(service);
+  const initialData = await getInitialData({
+    path: pathname,
+    service,
+    variant,
+    pageType,
+    toggles,
+  });
   setState({ ...initialData, ...routeProps, pathname, toggles });
 };
 
