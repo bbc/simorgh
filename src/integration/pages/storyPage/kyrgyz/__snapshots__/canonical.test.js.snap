@@ -2,7 +2,7 @@
 
 exports[`Canonical Story Page A11y I can see the skip to content link 1`] = `"Сайтка өтүү"`;
 
-exports[`Canonical Story Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=58&amp;p=story::kyrgyz.story.23292889.page&amp;x1=[urn:bbc:cps:bb9390aa-4b35-e448-b295-cbd7369fe457]&amp;x2=[responsive]&amp;x3=[news-kyrgyz]&amp;x4=[ky]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[Test+STY+for+social+embeds+-+BBC+News+Кыргыз+Кызматы]&amp;x11=[2020-04-24T14:51:17.000Z]&amp;x12=[2020-04-24T14:51:17.000Z]\\"/>"`;
+exports[`Canonical Story Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=58&amp;p=story%3A%3Akyrgyz.story.23292889.page&amp;x1=[urn%3Abbc%3Acps%3Abb9390aa-4b35-e448-b295-cbd7369fe457]&amp;x2=[responsive]&amp;x3=[news-kyrgyz]&amp;x4=[ky]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[Test%2BSTY%2Bfor%2Bsocial%2Bembeds%2B-%2BBBC%2BNews%2B%D0%9A%D1%8B%D1%80%D0%B3%D1%8B%D0%B7%2B%D0%9A%D1%8B%D0%B7%D0%BC%D0%B0%D1%82%D1%8B]&amp;x11=[2020-04-24T14%3A51%3A17.000Z]&amp;x12=[2020-04-24T14%3A51%3A17.000Z]\\"/>"`;
 
 exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
 
