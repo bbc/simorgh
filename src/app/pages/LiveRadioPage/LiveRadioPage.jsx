@@ -14,7 +14,11 @@ import Grid, { GelPageGrid } from '#app/components/Grid';
 import LinkedData from '../../containers/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { MediaPlayerContext } from '../../contexts/MediaPlayerContext';
-import { BigRedPlayingButton, BigRedPauseButton } from './BigRedButton';
+import {
+  BigRedPlayingButton,
+  BigRedPauseButton,
+  BigLoadingButton,
+} from './BigRedButton';
 import useLiveRadioSettings from './useLiveRadioSettings';
 
 const StyledGelPageGrid = styled(GelPageGrid)`
@@ -143,7 +147,9 @@ const LiveRadioPage = ({ pageData }) => {
             {bodySummary}
           </Paragraph>
           {bigRedButtonState === 'loading' && (
-            <BigRedButton disabled>Loading</BigRedButton>
+            <BigRedButton disabled>
+              <BigLoadingButton />
+            </BigRedButton>
           )}
           {bigRedButtonState === 'playing' && (
             <BigRedButton onClick={toggleMediaPlayer}>

@@ -21,7 +21,6 @@ const PlayerButton = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,6 +96,10 @@ const PlayButtonTextWrapper = styled.div`
   #play-button-text {
     padding-left: 10px;
   }
+  #loading-button-text {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
 `;
 
 export const BigRedPlayingButton = () => {
@@ -126,6 +129,16 @@ export const BigRedPauseButton = () => {
       </PlayerButtonWrapper>
       <PlayButtonTextWrapper>
         <div id="play-button-text">Listen Live</div>
+      </PlayButtonTextWrapper>
+    </>
+  );
+};
+
+export const BigLoadingButton = () => {
+  return (
+    <>
+      <PlayButtonTextWrapper>
+        <div id="loading-button-text">Loading</div>
       </PlayButtonTextWrapper>
     </>
   );
