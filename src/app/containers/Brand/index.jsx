@@ -1,5 +1,5 @@
-import { bool, node } from 'prop-types';
 import React, { useContext } from 'react';
+import { bool, node } from 'prop-types';
 import Brand from '#psammead/psammead-brand/src';
 import { ServiceContext } from '#contexts/ServiceContext';
 
