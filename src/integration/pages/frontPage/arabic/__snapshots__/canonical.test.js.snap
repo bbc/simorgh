@@ -2,17 +2,11 @@
 
 exports[`Canonical Front Page A11y I can see the skip to content link 1`] = `"إذهب الى المحتوى"`;
 
-exports[`Canonical Front Page A11y I can see the skip to content link 2`] = `"إذهب الى المحتوى"`;
-
-exports[`Canonical Front Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=5&amp;p=arabic.page&amp;x1=[urn:bbc:cps:3f0c7dec-d826-8578-e050-380a4e807810]&amp;x2=[responsive]&amp;x3=[news-arabic]&amp;x4=[ar]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[الرئيسية+-+BBC+News+عربي]&amp;x11=[1970-01-18T02:13:01.429Z]&amp;x12=[1970-01-19T02:08:48.876Z]\\"/>"`;
+exports[`Canonical Front Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=5&amp;p=arabic.page&amp;x1=[urn%3Abbc%3Acps%3A3f0c7dec-d826-8578-e050-380a4e807810]&amp;x2=[responsive]&amp;x3=[news-arabic]&amp;x4=[ar]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9%2B-%2BBBC%2BNews%2B%D8%B9%D8%B1%D8%A8%D9%8A]&amp;x11=[1970-01-18T02%3A13%3A01.429Z]&amp;x12=[1970-01-19T02%3A08%3A48.876Z]\\"/>"`;
 
 exports[`Canonical Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
-exports[`Canonical Front Page Footer I can click on the BBC branding and it would take me to the homepage 2`] = `"/arabic"`;
-
 exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
-
-exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 2`] = `"© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
 exports[`Canonical Front Page Footer Link should match text and url 1`] = `
 Object {
@@ -77,72 +71,7 @@ Object {
 }
 `;
 
-exports[`Canonical Front Page Footer Link should match text and url 10`] = `
-Object {
-  "text": "BBC News, عربي",
-  "url": "/arabic",
-}
-`;
-
-exports[`Canonical Front Page Footer Link should match text and url 11`] = `
-Object {
-  "text": "لماذا يمكنك الاعتماد على أخبار بي بي سي",
-  "url": "https://www.bbc.com/arabic/institutional-49283069",
-}
-`;
-
-exports[`Canonical Front Page Footer Link should match text and url 12`] = `
-Object {
-  "text": "شروط الاستخدام",
-  "url": "https://www.bbc.com/arabic/institutional-37731351",
-}
-`;
-
-exports[`Canonical Front Page Footer Link should match text and url 13`] = `
-Object {
-  "text": "عن بي بي سي",
-  "url": "https://www.bbc.com/arabic/institutional-37731352",
-}
-`;
-
-exports[`Canonical Front Page Footer Link should match text and url 14`] = `
-Object {
-  "text": "سياسة الخصوصية",
-  "url": "https://www.bbc.com/arabic/institutional-37731353",
-}
-`;
-
-exports[`Canonical Front Page Footer Link should match text and url 15`] = `
-Object {
-  "text": "ملفات الارتباط Cookies",
-  "url": "https://www.bbc.com/usingthebbc/cookies/",
-}
-`;
-
-exports[`Canonical Front Page Footer Link should match text and url 16`] = `
-Object {
-  "text": "اتصل بـ بي بي سي",
-  "url": "https://www.bbc.com/arabic/institutional-37731355",
-}
-`;
-
-exports[`Canonical Front Page Footer Link should match text and url 17`] = `
-Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
-}
-`;
-
-exports[`Canonical Front Page Footer Link should match text and url 18`] = `
-Object {
-  "text": "سياستنا بخصوص الروابط الخارجية.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
-}
-`;
-
 exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, عربي"`;
-
-exports[`Canonical Front Page Header I can see the branding 2`] = `"BBC News, عربي"`;
 
 exports[`Canonical Front Page Header Navigation link should match text and url 1`] = `
 Object {
@@ -214,83 +143,9 @@ Object {
 }
 `;
 
-exports[`Canonical Front Page Header Navigation link should match text and url 11`] = `
-Object {
-  "text": "الصفحة الحالية, رئيسية",
-  "url": "/arabic",
-}
-`;
-
-exports[`Canonical Front Page Header Navigation link should match text and url 12`] = `
-Object {
-  "text": "شرق أوسط",
-  "url": "/arabic/middleeast",
-}
-`;
-
-exports[`Canonical Front Page Header Navigation link should match text and url 13`] = `
-Object {
-  "text": "عالم",
-  "url": "/arabic/world",
-}
-`;
-
-exports[`Canonical Front Page Header Navigation link should match text and url 14`] = `
-Object {
-  "text": "علوم وتكنولوجيا",
-  "url": "/arabic/scienceandtech",
-}
-`;
-
-exports[`Canonical Front Page Header Navigation link should match text and url 15`] = `
-Object {
-  "text": "صحة",
-  "url": "/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
-}
-`;
-
-exports[`Canonical Front Page Header Navigation link should match text and url 16`] = `
-Object {
-  "text": "فيديو",
-  "url": "/arabic/media",
-}
-`;
-
-exports[`Canonical Front Page Header Navigation link should match text and url 17`] = `
-Object {
-  "text": "صحافة",
-  "url": "/arabic/inthepress",
-}
-`;
-
-exports[`Canonical Front Page Header Navigation link should match text and url 18`] = `
-Object {
-  "text": "ترند",
-  "url": "/arabic/trending",
-}
-`;
-
-exports[`Canonical Front Page Header Navigation link should match text and url 19`] = `
-Object {
-  "text": "تحقيقات",
-  "url": "/arabic/tv-and-radio-42414864",
-}
-`;
-
-exports[`Canonical Front Page Header Navigation link should match text and url 20`] = `
-Object {
-  "text": "برامجنا",
-  "url": "/arabic/tv-and-radio-37728883",
-}
-`;
-
 exports[`Canonical Front Page Index Alsos should match visually hidden text 1`] = `"المزيد حول هذه القصة"`;
 
-exports[`Canonical Front Page Index Alsos should match visually hidden text 2`] = `"المزيد حول هذه القصة"`;
-
 exports[`Canonical Front Page Main heading should match text 1`] = `"BBC News, عربي - الرئيسية"`;
-
-exports[`Canonical Front Page Main heading should match text 2`] = `"BBC News, عربي - الرئيسية"`;
 
 exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -362,99 +217,17 @@ Object {
 }
 `;
 
-exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 11`] = `
-Object {
-  "sizes": null,
-  "url": "http://localhost:7080/arabic/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 12`] = `
-Object {
-  "sizes": "72x72",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-72x72.png",
-}
-`;
-
-exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 13`] = `
-Object {
-  "sizes": "96x96",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-96x96.png",
-}
-`;
-
-exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 14`] = `
-Object {
-  "sizes": "128x128",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-128x128.png",
-}
-`;
-
-exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 15`] = `
-Object {
-  "sizes": "144x144",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-144x144.png",
-}
-`;
-
-exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 16`] = `
-Object {
-  "sizes": "152x152",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-152x152.png",
-}
-`;
-
-exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 17`] = `
-Object {
-  "sizes": "180x180",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-180x180.png",
-}
-`;
-
-exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 18`] = `
-Object {
-  "sizes": "192x192",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 19`] = `
-Object {
-  "sizes": "384x384",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-384x384.png",
-}
-`;
-
-exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 20`] = `
-Object {
-  "sizes": "512x512",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-512x512.png",
-}
-`;
-
 exports[`Canonical Front Page SEO Canonical link 1`] = `"http://localhost:7080/arabic"`;
-
-exports[`Canonical Front Page SEO Canonical link 2`] = `"http://localhost:7080/arabic"`;
 
 exports[`Canonical Front Page SEO Dir attribute 1`] = `"rtl"`;
 
-exports[`Canonical Front Page SEO Dir attribute 2`] = `"rtl"`;
-
 exports[`Canonical Front Page SEO FB admins 1`] = `"100004154058350"`;
-
-exports[`Canonical Front Page SEO FB admins 2`] = `"100004154058350"`;
 
 exports[`Canonical Front Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Front Page SEO FB app ID 2`] = `"1609039196070050"`;
-
 exports[`Canonical Front Page SEO Heading level 1 1`] = `"BBC News, عربي - الرئيسية"`;
 
-exports[`Canonical Front Page SEO Heading level 1 2`] = `"BBC News, عربي - الرئيسية"`;
-
 exports[`Canonical Front Page SEO Lang attribute 1`] = `"ar"`;
-
-exports[`Canonical Front Page SEO Lang attribute 2`] = `"ar"`;
 
 exports[`Canonical Front Page SEO Linked data should match text 1`] = `
 Object {
@@ -491,108 +264,41 @@ Object {
 }
 `;
 
-exports[`Canonical Front Page SEO Linked data should match text 2`] = `
-Object {
-  "@context": "http://schema.org",
-  "@graph": Array [
-    Object {
-      "@type": "WebPage",
-      "image": Object {
-        "@type": "ImageObject",
-        "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
-        "width": 1024,
-      },
-      "mainEntityOfPage": Object {
-        "@id": "http://localhost:7080/arabic",
-        "@type": "WebPage",
-        "name": "الرئيسية",
-      },
-      "publisher": Object {
-        "@type": "NewsMediaOrganization",
-        "logo": Object {
-          "@type": "ImageObject",
-          "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
-          "width": 1024,
-        },
-        "name": "BBC News عربي",
-        "publishingPrinciples": "https://www.bbc.com/arabic/institutional-49283069",
-      },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
-      "url": "http://localhost:7080/arabic",
-    },
-  ],
-}
-`;
-
 exports[`Canonical Front Page SEO OG description 1`] = `"بي بي سي العربية هي شبكة لنقل الأخبار والمعلومات ومقاطع الفيديو إلى العالم عبر عدة وسائط، تشمل الإنترنت ومواقع التواصل الاجتماعي والراديو والتلفزيون والهواتف المحمولة."`;
-
-exports[`Canonical Front Page SEO OG description 2`] = `"بي بي سي العربية هي شبكة لنقل الأخبار والمعلومات ومقاطع الفيديو إلى العالم عبر عدة وسائط، تشمل الإنترنت ومواقع التواصل الاجتماعي والراديو والتلفزيون والهواتف المحمولة."`;
 
 exports[`Canonical Front Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
 
-exports[`Canonical Front Page SEO OG image 2`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
-
 exports[`Canonical Front Page SEO OG image alt 1`] = `"BBC News عربي"`;
-
-exports[`Canonical Front Page SEO OG image alt 2`] = `"BBC News عربي"`;
 
 exports[`Canonical Front Page SEO OG locale 1`] = `"ar"`;
 
-exports[`Canonical Front Page SEO OG locale 2`] = `"ar"`;
-
 exports[`Canonical Front Page SEO OG site name 1`] = `"BBC News عربي"`;
-
-exports[`Canonical Front Page SEO OG site name 2`] = `"BBC News عربي"`;
 
 exports[`Canonical Front Page SEO OG title 1`] = `"الرئيسية - BBC News عربي"`;
 
-exports[`Canonical Front Page SEO OG title 2`] = `"الرئيسية - BBC News عربي"`;
-
 exports[`Canonical Front Page SEO OG type 1`] = `"website"`;
-
-exports[`Canonical Front Page SEO OG type 2`] = `"website"`;
 
 exports[`Canonical Front Page SEO OG url 1`] = `"http://localhost:7080/arabic"`;
 
-exports[`Canonical Front Page SEO OG url 2`] = `"http://localhost:7080/arabic"`;
-
 exports[`Canonical Front Page SEO Page title 1`] = `"الرئيسية - BBC News عربي"`;
-
-exports[`Canonical Front Page SEO Page title 2`] = `"الرئيسية - BBC News عربي"`;
 
 exports[`Canonical Front Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
 
-exports[`Canonical Front Page SEO Robots meta tag 2`] = `"noodp,noydir"`;
-
 exports[`Canonical Front Page SEO Twitter card 1`] = `"summary_large_image"`;
-
-exports[`Canonical Front Page SEO Twitter card 2`] = `"summary_large_image"`;
 
 exports[`Canonical Front Page SEO Twitter creator 1`] = `"@BBCArabic"`;
 
-exports[`Canonical Front Page SEO Twitter creator 2`] = `"@BBCArabic"`;
-
 exports[`Canonical Front Page SEO Twitter description 1`] = `"بي بي سي العربية هي شبكة لنقل الأخبار والمعلومات ومقاطع الفيديو إلى العالم عبر عدة وسائط، تشمل الإنترنت ومواقع التواصل الاجتماعي والراديو والتلفزيون والهواتف المحمولة."`;
-
-exports[`Canonical Front Page SEO Twitter description 2`] = `"بي بي سي العربية هي شبكة لنقل الأخبار والمعلومات ومقاطع الفيديو إلى العالم عبر عدة وسائط، تشمل الإنترنت ومواقع التواصل الاجتماعي والراديو والتلفزيون والهواتف المحمولة."`;
 
 exports[`Canonical Front Page SEO Twitter image alt 1`] = `"BBC News عربي"`;
 
-exports[`Canonical Front Page SEO Twitter image alt 2`] = `"BBC News عربي"`;
-
 exports[`Canonical Front Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
-
-exports[`Canonical Front Page SEO Twitter image src 2`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
 
 exports[`Canonical Front Page SEO Twitter site 1`] = `"@BBCArabic"`;
 
-exports[`Canonical Front Page SEO Twitter site 2`] = `"@BBCArabic"`;
-
 exports[`Canonical Front Page SEO Twitter title 1`] = `"الرئيسية - BBC News عربي"`;
 
-exports[`Canonical Front Page SEO Twitter title 2`] = `"الرئيسية - BBC News عربي"`;
+exports[`Canonical Front Page SEO apple-itunes-app meta tag should match text 1`] = `"app-id=558497376, app-argument=http://localhost:7080/arabic?utm_medium=banner&utm_content=apple-itunes-app"`;
 
 exports[`Canonical Front Page Sections should match headline text 1`] = `"الخبر الرئيسي"`;
 
@@ -634,46 +340,6 @@ exports[`Canonical Front Page Sections should match headline text 19`] = `"بط�
 
 exports[`Canonical Front Page Sections should match headline text 20`] = `"روابط لبي بي سي"`;
 
-exports[`Canonical Front Page Sections should match headline text 21`] = `"الخبر الرئيسي"`;
-
-exports[`Canonical Front Page Sections should match headline text 22`] = `"فيديوالمزيد"`;
-
-exports[`Canonical Front Page Sections should match headline text 23`] = `"تقارير خاصةالمزيد"`;
-
-exports[`Canonical Front Page Sections should match headline text 24`] = `"مرأةالمزيد"`;
-
-exports[`Canonical Front Page Sections should match headline text 25`] = `"صحةالمزيد"`;
-
-exports[`Canonical Front Page Sections should match headline text 26`] = `"اقتصادالمزيد"`;
-
-exports[`Canonical Front Page Sections should match headline text 27`] = `"علوم وتكنولوجياالمزيد"`;
-
-exports[`Canonical Front Page Sections should match headline text 28`] = `"ثقافة وفنونالمزيد"`;
-
-exports[`Canonical Front Page Sections should match headline text 29`] = `"رياضةالمزيد"`;
-
-exports[`Canonical Front Page Sections should match headline text 30`] = `"برامجناالمزيد"`;
-
-exports[`Canonical Front Page Sections should match headline text 31`] = `"عرض الصحف"`;
-
-exports[`Canonical Front Page Sections should match headline text 32`] = `"مجلةالمزيد"`;
-
-exports[`Canonical Front Page Sections should match headline text 33`] = `"شارك برأيك:المزيد"`;
-
-exports[`Canonical Front Page Sections should match headline text 34`] = `"بي بي سي ترندالمزيد"`;
-
-exports[`Canonical Front Page Sections should match headline text 35`] = `"بالصورالمزيد"`;
-
-exports[`Canonical Front Page Sections should match headline text 36`] = `"مباشر"`;
-
-exports[`Canonical Front Page Sections should match headline text 37`] = `"أحدث نشرة أخبار"`;
-
-exports[`Canonical Front Page Sections should match headline text 38`] = `"اخترنا لكم"`;
-
-exports[`Canonical Front Page Sections should match headline text 39`] = `"بطولة كأس العالم 2018المزيد"`;
-
-exports[`Canonical Front Page Sections should match headline text 40`] = `"روابط لبي بي سي"`;
-
 exports[`Canonical Front Page Useful Links should match text and url 1`] = `"وظائف شاغرة في بي بي سي عربي - /arabic/front_page"`;
 
 exports[`Canonical Front Page Useful Links should match text and url 2`] = `"أكاديمية بي بي سي: اكتشف... تعلم.. .تطور - /arabic/front_page"`;
@@ -683,16 +349,6 @@ exports[`Canonical Front Page Useful Links should match text and url 3`] = `"ث�
 exports[`Canonical Front Page Useful Links should match text and url 4`] = `"مدونة المرأة: علامات - /arabic/front_page"`;
 
 exports[`Canonical Front Page Useful Links should match text and url 5`] = `"شركاؤنا - /arabic/front_page"`;
-
-exports[`Canonical Front Page Useful Links should match text and url 6`] = `"وظائف شاغرة في بي بي سي عربي - /arabic/front_page"`;
-
-exports[`Canonical Front Page Useful Links should match text and url 7`] = `"أكاديمية بي بي سي: اكتشف... تعلم.. .تطور - /arabic/front_page"`;
-
-exports[`Canonical Front Page Useful Links should match text and url 8`] = `"ثمانون عاما على بي بي سي عربي: من - /arabic/front_page"`;
-
-exports[`Canonical Front Page Useful Links should match text and url 9`] = `"مدونة المرأة: علامات - /arabic/front_page"`;
-
-exports[`Canonical Front Page Useful Links should match text and url 10`] = `"شركاؤنا - /arabic/front_page"`;
 
 exports[`Story Promo Headline should match text 1`] = `"المجلس العسكري في السودان يعلن إحباط \\"محاولة انقلابية\\""`;
 
