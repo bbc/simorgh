@@ -25,9 +25,11 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 const Wrapper = styled(GridItemConstrainedLargeNoMargin)`
   margin-top: ${GEL_SPACING};
 
-  figure {
-    padding-bottom: ${GEL_SPACING_DBL};
-  }
+  ${props =>
+    !props.hasBottomPadding &&
+    `figure {
+      padding-bottom: ${GEL_SPACING_DBL};
+    }`}
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_DBL};
@@ -40,9 +42,11 @@ const Wrapper = styled(GridItemConstrainedLargeNoMargin)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     padding: ${GEL_SPACING} 0 0;
     margin-top: ${GEL_SPACING_QUAD};
-    figure {
-      padding-bottom: ${GEL_SPACING_TRPL};
-    }
+    ${props =>
+      !props.hasBottomPadding &&
+      `figure {
+        padding-bottom: ${GEL_SPACING_TRPL};
+      }`}
   }
 `;
 
