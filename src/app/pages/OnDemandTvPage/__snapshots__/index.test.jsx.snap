@@ -60,7 +60,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
-  margin-bottom: 1rem;
 }
 
 .c1 {
@@ -294,12 +293,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 @media (max-width:62.9375rem) {
   .c12 {
     padding-bottom: 0.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c5 {
-    margin-bottom: 1.5rem;
   }
 }
 
