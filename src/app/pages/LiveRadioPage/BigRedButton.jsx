@@ -94,11 +94,11 @@ const PlayButtonTextWrapper = styled.div`
   float: right;
   font-family: ${GEL_FF_REITH_SANS};
   #play-button-text {
-    padding-left: 10px;
+    padding-left: 12.5px;
   }
   #loading-button-text {
-    padding-left: 34px;
-    padding-right: 34px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 `;
 
