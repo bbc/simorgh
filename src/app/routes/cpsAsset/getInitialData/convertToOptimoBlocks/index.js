@@ -1,6 +1,6 @@
-import clone from 'ramda/src/clone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
+import clone from '../../../utils/jsonClone';
 import paragraph from './blocks/paragraph';
 import media from './blocks/media';
 import legacyMedia from './blocks/legacyMedia';

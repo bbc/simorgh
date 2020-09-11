@@ -1,5 +1,5 @@
-import deepClone from 'ramda/src/clone';
 import pathOr from 'ramda/src/pathOr';
+import deepClone from '../../jsonClone';
 
 const insertBlockPositioning = ({ model }, positionArr = []) => {
   if (!pathOr(null, ['blocks'], model)) {

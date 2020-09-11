@@ -67,6 +67,18 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   padding: 0;
 }
 
+.c21 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 .c0 {
   margin: 0 auto;
   padding-bottom: 2rem;
@@ -115,18 +127,6 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-.c21 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
 }
 
 .c16 {
@@ -525,7 +525,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 <section
     aria-labelledby="related-content-heading"
     class="c0"
-    data-e2e="related-content"
+    data-e2e="related-content-heading"
     role="region"
   >
     <div
@@ -581,8 +581,12 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   class="c16"
                 >
                   <div
-                    class="lazyload-placeholder"
-                  />
+                    class="lazyload-wrapper"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
                 </div>
                 <div
                   class="c17"
@@ -642,8 +646,12 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   class="c16"
                 >
                   <div
-                    class="lazyload-placeholder"
-                  />
+                    class="lazyload-wrapper"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
                 </div>
                 <div
                   class="c17"
@@ -692,8 +700,12 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   class="c16"
                 >
                   <div
-                    class="lazyload-placeholder"
-                  />
+                    class="lazyload-wrapper"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
                 </div>
                 <div
                   class="c17"
@@ -796,6 +808,18 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   padding: 0;
 }
 
+.c19 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 .c0 {
   margin: 0 auto;
   padding-bottom: 2rem;
@@ -855,18 +879,6 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-.c19 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
 }
 
 .c14 {
@@ -1199,7 +1211,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 <section
     aria-labelledby="related-content-heading"
     class="c0"
-    data-e2e="related-content"
+    data-e2e="related-content-heading"
     role="region"
   >
     <div
@@ -1252,8 +1264,12 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                   class="c14"
                 >
                   <div
-                    class="lazyload-placeholder"
-                  />
+                    class="lazyload-wrapper"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
                 </div>
                 <div
                   class="c15"

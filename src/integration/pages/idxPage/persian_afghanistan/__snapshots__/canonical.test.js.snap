@@ -2,7 +2,7 @@
 
 exports[`Canonical persian/afghanistan IDX page A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
 
-exports[`Canonical persian/afghanistan IDX page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=69&amp;p=persian.afghanistan.page&amp;x1=[urn:bbc:cps:3cda1d8c-ffa2-03ae-e050-380a4e8056f3]&amp;x2=[responsive]&amp;x3=[news-persian]&amp;x4=[fa]&amp;x7=[index-section]&amp;x8=[simorgh-nojs]&amp;x9=[صفحه+افغانستان+-+BBC+News+فارسی]&amp;x11=[2016-09-20T16:06:44.000Z]&amp;x12=[2020-05-20T12:02:54.000Z]\\"/>"`;
+exports[`Canonical persian/afghanistan IDX page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=69&amp;p=persian.afghanistan.page&amp;x1=[urn%3Abbc%3Acps%3A3cda1d8c-ffa2-03ae-e050-380a4e8056f3]&amp;x2=[responsive]&amp;x3=[news-persian]&amp;x4=[fa]&amp;x7=[index-section]&amp;x8=[simorgh-nojs]&amp;x9=[%D8%B5%D9%81%D8%AD%D9%87%2B%D8%A7%D9%81%D8%BA%D8%A7%D9%86%D8%B3%D8%AA%D8%A7%D9%86%2B-%2BBBC%2BNews%2B%D9%81%D8%A7%D8%B1%D8%B3%DB%8C]&amp;x11=[2016-09-20T16%3A06%3A44.000Z]&amp;x12=[2020-05-20T12%3A02%3A54.000Z]\\"/>"`;
 
 exports[`Canonical persian/afghanistan IDX page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 

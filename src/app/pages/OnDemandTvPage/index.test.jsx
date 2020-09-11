@@ -19,7 +19,7 @@ const Page = ({ pageData, service, isAmp = false }) => (
     <ToggleContextProvider>
       <ServiceContextProvider service={service}>
         <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
+          bbcOrigin="https://www.test.bbc.com"
           isAmp={isAmp}
           pageType="media"
           pathname="/pathname"
@@ -194,7 +194,7 @@ it('should show the video player on canonical with no live override', async () =
     .getAttribute('src');
 
   expect(videoPlayerIframeSrc).toEqual(
-    'https://polling.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps',
+    'https://bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps',
   );
 });
 
@@ -235,7 +235,7 @@ it('should show the video player on canonical with live override', async () => {
     .getAttribute('src');
 
   expect(videoPlayerIframeSrc).toEqual(
-    'https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live',
+    'https://test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live',
   );
 });
 

@@ -18,8 +18,12 @@ exports[`ImageWithPlaceholder should not provide non-js fallback 1`] = `
   class="c0"
 >
   <div
-    class="lazyload-placeholder"
-  />
+    class="lazyload-wrapper"
+  >
+    <div
+      class="lazyload-placeholder"
+    />
+  </div>
 </div>
 `;
 
@@ -41,8 +45,12 @@ exports[`ImageWithPlaceholder should render a lazyloaded image when lazyLoad set
   class="c0"
 >
   <div
-    class="lazyload-placeholder"
-  />
+    class="lazyload-wrapper"
+  >
+    <div
+      class="lazyload-placeholder"
+    />
+  </div>
   <noscript>
     &lt;img srcSet="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w" alt="Pauline Clayton" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg" width="640" class=""/&gt;
   </noscript>
@@ -72,6 +80,7 @@ exports[`ImageWithPlaceholder should render an AMP image 1`] = `
     height="360"
     layout="responsive"
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+    srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w"
     width="640"
   />
 </div>

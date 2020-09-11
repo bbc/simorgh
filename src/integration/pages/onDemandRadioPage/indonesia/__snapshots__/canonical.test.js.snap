@@ -2,7 +2,7 @@
 
 exports[`Canonical On Demand Radio Page A11y I can see the skip to content link 1`] = `"Langsung ke konten"`;
 
-exports[`Canonical On Demand Radio Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=54&amp;p=indonesian.bbc_indonesian_radio.w172xh267fpn19l.page&amp;x1=[urn:bbc:pips:w172xh267fpn19l]&amp;x2=[responsive]&amp;x3=[news-indonesia]&amp;x4=[id]&amp;x7=[player-episode]&amp;x8=[simorgh-nojs]&amp;x9=[Dunia+Pagi+Ini+-+BBC+News+Indonesia]\\"/>"`;
+exports[`Canonical On Demand Radio Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=54&amp;p=indonesian.bbc_indonesian_radio.w172xh267fpn19l.page&amp;x1=[urn%3Abbc%3Apips%3Aw172xh267fpn19l]&amp;x2=[responsive]&amp;x3=[news-indonesia]&amp;x4=[id]&amp;x7=[player-episode]&amp;x8=[simorgh-nojs]&amp;x9=[Dunia%2BPagi%2BIni%2B-%2BBBC%2BNews%2BIndonesia]\\"/>"`;
 
 exports[`Canonical On Demand Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
 
@@ -125,7 +125,7 @@ exports[`Canonical On Demand Radio Page I can see the hero image 1`] = `"https:/
 
 exports[`Canonical On Demand Radio Page Media Player a11y assistive technology can read the media player title 1`] = `"Pemutar Audio"`;
 
-exports[`Canonical On Demand Radio Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/indonesia/bbc_indonesian_radio/w172xh267fpn19l/id?morph_env=live"`;
+exports[`Canonical On Demand Radio Page Media Player iframe with valid URL should be rendered 1`] = `"https://test.bbc.com/ws/av-embeds/media/indonesia/bbc_indonesian_radio/w172xh267fpn19l/id?morph_env=live"`;
 
 exports[`Canonical On Demand Radio Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -244,7 +244,7 @@ Object {
       "@type": "AudioObject",
       "description": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
       "duration": "PT15M30S",
-      "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/media/indonesia/bbc_indonesian_radio/w172xh267fpn19l/id?morph_env=live",
+      "embedURL": "https://test.bbc.com/ws/av-embeds/media/indonesia/bbc_indonesian_radio/w172xh267fpn19l/id?morph_env=live",
       "name": "Dunia Pagi Ini",
       "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b4828.png",
       "uploadDate": "2020-04-27T00:00:00.000Z",
