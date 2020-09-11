@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { Headline } from '@bbc/psammead-headings';
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import Paragraph from '@bbc/psammead-paragraph';
-import { Link } from 'react-router-dom';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import MetadataContainer from '../../containers/Metadata';
 import RadioScheduleContainer from '#containers/RadioSchedule';
@@ -162,7 +161,6 @@ const LiveRadioPage = ({ pageData }) => {
             </BigRedButton>
           )}
         </Grid>
-        <Link to="/afrique/region-23278969">Hello</Link>
       </StyledGelPageGrid>
       {hasRadioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />
