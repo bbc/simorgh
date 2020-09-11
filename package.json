@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Simorgh",
   "main": "./src/client.js",
-  "resolutions": {},
+  "resolutions": {
+    "lodash": "4.17.20"
+  },
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
