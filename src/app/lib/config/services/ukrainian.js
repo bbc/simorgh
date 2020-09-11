@@ -13,7 +13,7 @@ const secondaryColumnTranslations = {
 
 const baseServiceConfig = {
   articleAuthor: `http://www.facebook.com/bbcnews`,
-  articleTimestampPrefix: 'Оновлення даних: ',
+  articleTimestampPrefix: 'Оновлено: ',
   atiAnalyticsAppName: 'news-ukrainian',
   atiAnalyticsProducerId: '94',
   chartbeatDomain: 'ukrainian.bbc.co.uk',
