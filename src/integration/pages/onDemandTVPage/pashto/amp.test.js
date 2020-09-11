@@ -3,12 +3,12 @@
  * @pathname /pashto/bbc_pashto_tv/tv_programmes/w13xttn4
  */
 
-import runCrossPlatformTests from '../crossPlatformTests';
 import runAmpTests from '../ampTests';
+import runCrossPlatformTests from '../crossPlatformTests';
 
 describe('AMP', () => {
   describe(pageType, () => {
-    runCrossPlatformTests();
-    runAmpTests();
+    runAmpTests(service);
+    runCrossPlatformTests(service);
   });
 });

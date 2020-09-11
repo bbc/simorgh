@@ -1,7 +1,7 @@
 import { runCommonCrossPlatformTests, runMainHeadingTests } from '../../common';
 
-export default () => {
-  runCommonCrossPlatformTests();
+export default service => {
+  runCommonCrossPlatformTests(service);
   runMainHeadingTests();
 
   describe('Sections', () => {
