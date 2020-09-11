@@ -5,8 +5,8 @@ import {
   runRadioScheduleTests,
 } from '../../common';
 
-export default () => {
-  runCrossPlatformTests();
+export default service => {
+  runCrossPlatformTests(service);
   runCoreAmpTests();
   runAmpAnalyticsTests();
   runRadioScheduleTests({ isAmp: true });

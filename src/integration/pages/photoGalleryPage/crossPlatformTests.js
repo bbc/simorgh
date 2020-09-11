@@ -1,5 +1,5 @@
 import { runCommonCrossPlatformTests } from '../../common';
 
-export default () => {
-  runCommonCrossPlatformTests();
+export default service => {
+  runCommonCrossPlatformTests(service);
 };
