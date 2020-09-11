@@ -143,17 +143,3 @@ describe('Logger node - for the server', () => {
     });
   });
 });
-
-it('MaxListenersExceededWarning warning does not occur when more than 10 loggers are initialised', () => {
-  const loggerNode = require('./logger.node');
-
-  const logWarning = jest.spyOn(global.console, 'warn');
-
-  let i = 0;
-  // eslint-disable-next-line no-plusplus
-  for (; i < 11; i++) {
-    loggerNode(`path/file/foo_${i}.js`).info('information');
-  }
-
-  expect(logWarning).not.toHaveBeenCalledWith(`MaxListenersExceededWarning`);
-});
