@@ -7,7 +7,7 @@ import {
 } from '#lib/logger.const';
 
 const toggles = {
-  mostWatched: { enabled: true, value: `{"numberOfItems": 5}` },
+  mostPopularMedia: { enabled: true, value: '5' },
 };
 
 describe('processMostWatched', () => {
@@ -75,18 +75,18 @@ describe('processMostWatched', () => {
     });
   });
 
-  it('should log a message when the toggle value cannot be JSON parsed', () => {
+  it('should log a message when the toggle value is not a number', () => {
     const data = processMostWatched({
       data: { mostWatched: mostWatchedData },
       path: 'some-path',
       toggles: {
-        mostWatched: { enabled: true, value: '{numberOfItems: 5}' },
+        mostPopularMedia: { enabled: true, value: '{numberOfItems: 5}' },
       },
       service: 'pidgin',
     });
     expect(data.mostWatched).toBe(null);
     expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_WATCHED_PROCESS_ERROR, {
-      message: 'Unexpected token n in JSON at position 1',
+      message: 'Invalid number of items',
       service: 'pidgin',
       path: 'some-path',
     });

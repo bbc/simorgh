@@ -22,12 +22,6 @@ Object {
   "include": Object {
     "enabled": true,
   },
-  "logMediaPlayerStatus": Object {
-    "enabled": false,
-  },
-  "mediaPlayer": Object {
-    "enabled": true,
-  },
   "mostRead": Object {
     "enabled": true,
   },
@@ -35,9 +29,6 @@ Object {
     "enabled": false,
   },
   "navOnArticles": Object {
-    "enabled": true,
-  },
-  "onDemandRadioSchedule": Object {
     "enabled": true,
   },
   "prerollAds": Object {
@@ -83,12 +74,6 @@ Object {
   "include": Object {
     "enabled": true,
   },
-  "logMediaPlayerStatus": Object {
-    "enabled": false,
-  },
-  "mediaPlayer": Object {
-    "enabled": true,
-  },
   "mostRead": Object {
     "enabled": true,
   },
@@ -96,9 +81,6 @@ Object {
     "enabled": true,
   },
   "navOnArticles": Object {
-    "enabled": true,
-  },
-  "onDemandRadioSchedule": Object {
     "enabled": true,
   },
   "prerollAds": Object {
@@ -141,12 +123,6 @@ Object {
   "include": Object {
     "enabled": true,
   },
-  "logMediaPlayerStatus": Object {
-    "enabled": false,
-  },
-  "mediaPlayer": Object {
-    "enabled": true,
-  },
   "mostRead": Object {
     "enabled": true,
   },
@@ -154,9 +130,6 @@ Object {
     "enabled": true,
   },
   "navOnArticles": Object {
-    "enabled": true,
-  },
-  "onDemandRadioSchedule": Object {
     "enabled": true,
   },
   "prerollAds": Object {

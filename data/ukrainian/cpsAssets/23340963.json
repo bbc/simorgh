@@ -1,0 +1,244 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "altText": "Бег в упряжке - это прежде всего игра, ведь собака не получает немедленного вознаграждения",
+        "caption": "З лютого 2017 року Сергій Притула є постійним ведучим українського національного відбору на пісенний конкурс \"Євробачення\"",
+        "copyrightHolder": "Getty Images",
+        "height": 549,
+        "href": "http://b.files.bbci.co.uk/61FB/test/_63738052__111923538_gettyimages-645263470.jpg",
+        "id": "63738052",
+        "path": "/cpsdevpb/61FB/test/_63738052__111923538_gettyimages-645263470.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 976
+      },
+      {
+        "markupType": "plain_text",
+        "role": "introduction",
+        "text": "&quot;Мене звати Сергій Притула. Ви знаєте мене як успішного телеведучого... Сьогодні я так само хотів, щоб ви дізналися і пізнали мене з іншого боку.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Наразі найбільшу підтримку киян має чинний мер Віталій Кличко: за нього готові проголосувати 41,7% громадян, опитаних на початку серпня соціологічною групою &quot;Рейтинг&quot;.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Сергію Притулі ж соціологи віддають друге місце, його готові підтримати 11,6% виборців. А за кандидатку від &quot;Слуги народу&quot; Ірину Верещук готові віддати голос 9,4% виборців.",
+        "type": "paragraph"
+      },
+      {
+        "href": "https://twitter.com/bbcukrainian/status/1284454744178790400?s=20",
+        "id": "1284454744178790400",
+        "source": "twitter",
+        "type": "social_embed"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Сергію Притулі ж соціологи віддають друге місце, його готові підтримати 11,6% виборців. А за кандидатку від &quot;Слуги народу&quot; Ірину Верещук готові віддати голос 9,4% виборців.",
+        "type": "paragraph"
+      },
+      {
+        "altText": "З лютого 2017 року Сергій Притула є постійним ведучим українського національного відбору на пісенний конкурс \"Євробачення\"",
+        "caption": "З лютого 2017 року Сергій Притула є постійним ведучим українського національного відбору на пісенний конкурс \"Євробачення\"",
+        "copyrightHolder": "Getty Images",
+        "height": 549,
+        "href": "http://b.files.bbci.co.uk/1254B/test/_63738057__111923677_gettyimages-645262664.jpg",
+        "id": "63738057",
+        "path": "/cpsdevpb/1254B/test/_63738057__111923677_gettyimages-645262664.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 976
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Сергію Притулі ж соціологи віддають друге місце, його готові підтримати 11,6% виборців. А за кандидатку від &quot;Слуги народу&quot; Ірину Верещук готові віддати голос 9,4% виборців.",
+        "type": "paragraph"
+      },
+      {
+        "items": [
+          {
+            "markupType": "candy_xml",
+            "text": "<link><caption>Майже стільки ж - 9% підтримки - в Андрія Пальчевського.</caption><altText>Майже стільки ж - 9% підтримки - в Андрія Пальчевського.</altText><url href=\"https://www.bbc.com/ukrainian/features-russian-52171582\" platform=\"highweb\"/></link>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "text": "<link><caption>Майже стільки ж - 9% підтримки - в Андрія Пальчевського.</caption><altText>Майже стільки ж - 9% підтримки - в Андрія Пальчевського.</altText><url href=\"https://www.bbc.com/ukrainian/news-russian-47746156\" platform=\"highweb\"/></link>",
+            "type": "listItem"
+          }
+        ],
+        "numbered": false,
+        "type": "list"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Сергію Притулі ж соціологи віддають друге місце, його готові підтримати 11,6% виборців. А за кандидатку від &quot;Слуги народу&quot; Ірину Верещук готові віддати голос 9,4% виборців.",
+        "type": "paragraph"
+      },
+      {
+        "href": "/include/vjamericas/176-eclipse-lookup/mundo/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png",
+        "platform": "highweb",
+        "required": false,
+        "title": "Visual journalism include",
+        "type": "include"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Сергію Притулі ж соціологи віддають друге місце, його готові підтримати 11,6% виборців. А за кандидатку від &quot;Слуги народу&quot; Ірину Верещук готові віддати голос 9,4% виборців.",
+        "type": "paragraph"
+      },
+      {
+        "advertising": true,
+        "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+        "embedding": true,
+        "format": "video",
+        "id": "p01k6msm",
+        "imageCopyright": "BBC",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+        "subType": "clip",
+        "synopses": {
+          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+        },
+        "title": "Five things ants can teach us about management",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1540218932000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true
+            },
+            "duration": 191,
+            "durationISO8601": "PT3M11S",
+            "types": [
+              "Original"
+            ],
+            "versionId": "p01k6msp",
+            "warnings": {
+              "long": "Contains strong language and adult humour.",
+              "short": "Contains strong language and adult humour."
+            }
+          }
+        ]
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Сергію Притулі ж соціологи віддають друге місце, його готові підтримати 11,6% виборців. А за кандидатку від &quot;Слуги народу&quot; Ірину Верещук готові віддати голос 9,4% виборців.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "ukrainian.story.23340963.page",
+      "cps_asset_id": "23340963",
+      "cps_asset_type": "sty"
+    },
+    "atiAnalytics": {
+      "producerId": "94",
+      "producerName": "UKRAINIAN"
+    },
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "social_embed",
+      "list",
+      "include",
+      "media"
+    ],
+    "createdBy": "ukrainian-v6",
+    "firstPublished": 1597161449000,
+    "id": "urn:bbc:ares::asset:ukrainian/23340963",
+    "includeComments": false,
+    "language": "uk",
+    "lastPublished": 1597161449000,
+    "lastUpdated": 1597230920917,
+    "locators": {
+      "assetId": "23340963",
+      "assetUri": "/ukrainian/23340963",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/23340963",
+      "curie": "http://www.bbc.co.uk/asset/bc2e601c-5b7a-4b51-8576-49d810c389eb"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasContentWarning": false,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false,
+      "suitableForSyndication": true
+    },
+    "readTime": 1,
+    "tags": {},
+    "timestamp": 1597161449000,
+    "type": "STY",
+    "version": "v1.3.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Наразі найбільшу підтримку",
+      "shortHeadline": "Наразі найбільшу підтримку"
+    },
+    "id": "urn:bbc:ares::asset:ukrainian/23340963",
+    "indexImage": {
+      "altText": "З лютого 2017 року Сергій Притула є постійним ведучим українського національного відбору на пісенний конкурс \"Євробачення\"",
+      "caption": "З лютого 2017 року Сергій Притула є постійним ведучим українського національного відбору на пісенний конкурс \"Євробачення\"",
+      "copyrightHolder": "Getty Images",
+      "height": 549,
+      "href": "http://b.files.bbci.co.uk/FE3B/test/_63738056__111923538_gettyimages-645263470.jpg",
+      "id": "63738056",
+      "path": "/cpsdevpb/FE3B/test/_63738056__111923538_gettyimages-645263470.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 976
+    },
+    "language": "uk",
+    "locators": {
+      "assetId": "23340963",
+      "assetUri": "/ukrainian/23340963",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/23340963",
+      "curie": "http://www.bbc.co.uk/asset/bc2e601c-5b7a-4b51-8576-49d810c389eb"
+    },
+    "summary": "Наразі найбільшу підтримку Наразі найбільшу підтримку",
+    "timestamp": 1597161449000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [
+      {
+        "promos": [
+          {
+            "name": "Майже стільки ж - 9% підтримки - в Андрія Пальчевського.",
+            "type": "link",
+            "uri": "https://www.bbc.com/ukrainian/news-russian-47746156"
+          }
+        ],
+        "type": "related-urls"
+      }
+    ],
+    "section": {
+      "name": "Новини",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/ukrainian/front_page"
+    },
+    "site": {
+      "name": "BBC Україна",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/ukrainian"
+    }
+  }
+}
