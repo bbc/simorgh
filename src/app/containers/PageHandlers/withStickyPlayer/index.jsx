@@ -1,4 +1,4 @@
-import React, { useContext, useState, useRef } from 'react';
+import React, { useContext, useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import { C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
@@ -81,6 +81,12 @@ export default Component => {
       opacity: showMore ? 1 : 0,
     });
     const { heading, summary } = mediaPlayerProps || {};
+
+    useEffect(() => {
+      if (!showMediaPlayer) {
+        setShowMore(false);
+      }
+    }, [showMediaPlayer]);
 
     return (
       <>
