@@ -25,7 +25,7 @@ const StyledGelPageGrid = styled(GelPageGrid)`
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
 
-const BigRedButton = styled.button`
+export const BigRedButton = styled.button`
   color: #fff;
   border: none;
   padding: 8px 10px;

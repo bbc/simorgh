@@ -1,6 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { node } from 'prop-types';
-import pipe from 'ramda/src/pipe';
 
 const MediaPlayerContext = createContext({});
 

@@ -25,6 +25,12 @@ import IndexAlsosContainer from './IndexAlsos';
 import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import useLiveRadioSettings from '#app/pages/LiveRadioPage/useLiveRadioSettings';
+import {
+  BigRedPlayingButton,
+  BigRedPauseButton,
+  BigLoadingButton,
+} from '#app/pages/LiveRadioPage/BigRedButton';
+import { BigRedButton } from '#app/pages/LiveRadioPage/LiveRadioPage';
 
 import StoryPromo, {
   Headline,
@@ -125,9 +131,12 @@ const StoryPromoContainer = ({
     iframeTitle,
     placeholderSrc,
   } = useLiveRadioSettings(getMasterBrandFromUrl(item.uri));
-  const { toggleMediaPlayer, initialiseMediaPlayer } = useContext(
-    MediaPlayerContext,
-  );
+  const {
+    toggleMediaPlayer,
+    initialiseMediaPlayer,
+    isPlayerReady,
+    isPlaying,
+  } = useContext(MediaPlayerContext);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
@@ -150,6 +159,12 @@ const StoryPromoContainer = ({
   );
 
   const isLiveRadioPromo = item.uri && item.uri.includes('radio/liveradio');
+  // eslint-disable-next-line no-nested-ternary
+  const bigRedButtonState = isPlayerReady
+    ? isPlaying
+      ? 'playing'
+      : 'ready'
+    : 'loading';
   const handleLiveRadioLink = e => {
     e.preventDefault();
     toggleMediaPlayer();
@@ -289,6 +304,25 @@ const StoryPromoContainer = ({
           timezone={timezone}
           isRelative={isTenHoursAgo(timestamp)}
         />
+      )}
+      {isLiveRadioPromo && (
+        <div>
+          {bigRedButtonState === 'loading' && (
+            <BigRedButton disabled>
+              <BigLoadingButton />
+            </BigRedButton>
+          )}
+          {bigRedButtonState === 'playing' && (
+            <BigRedButton onClick={toggleMediaPlayer}>
+              <BigRedPlayingButton />
+            </BigRedButton>
+          )}
+          {bigRedButtonState === 'ready' && (
+            <BigRedButton onClick={toggleMediaPlayer}>
+              <BigRedPauseButton />
+            </BigRedButton>
+          )}
+        </div>
       )}
       {promoType === 'top' && relatedItems && (
         <IndexAlsosContainer
