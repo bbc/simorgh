@@ -306,7 +306,7 @@ const StoryPromoContainer = ({
         />
       )}
       {isLiveRadioPromo && (
-        <div>
+        <div style={{ paddingTop: 16 }}>
           {bigRedButtonState === 'loading' && (
             <BigRedButton disabled>
               <BigLoadingButton />
@@ -336,12 +336,25 @@ const StoryPromoContainer = ({
   );
 
   const imageValues = pathOr(null, ['indexImage'], item);
+  const liveRadioImageValues = {
+    altText: 'Default Image',
+    copyrightHolder: 'BBC',
+    height: 549,
+    href: 'https://animalgiftclub-static.myshopblocks.com/images/2019/03/contain/2048x2048/0ae185b149883eb0885e514932483274.jpg',
+    id: '107575400',
+    path: '/cpsprodpb/14914/production/_107844248_p02y5lv6.jpg',
+    subType: 'index',
+    width: 976,
+  };
   const Image = (
-    <StoryPromoImage
-      useLargeImages={useLargeImages}
-      lazyLoad={lazyLoadImage}
-      imageValues={imageValues}
-    />
+    <div>
+      <StoryPromoImage
+        useLargeImages={useLargeImages}
+        lazyLoad={lazyLoadImage}
+        imageValues={imageValues || liveRadioImageValues}
+      />
+      {(imageValues || '').toString()}
+    </div>
   );
 
   const MediaIndicator = (
