@@ -3,12 +3,12 @@
  * @pathname /somali/bbc_somali_tv/tv_programmes/w13xttqt
  */
 
-import runCrossPlatformTests from '../crossPlatformTests';
 import runAmpTests from '../ampTests';
+import runCrossPlatformTests from '../crossPlatformTests';
 
 describe('AMP', () => {
   describe(pageType, () => {
-    runCrossPlatformTests();
-    runAmpTests();
+    runAmpTests(service);
+    runCrossPlatformTests(service);
   });
 });
