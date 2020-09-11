@@ -1,6 +1,6 @@
 /* eslint-disable no-use-before-define */
-import deepClone from 'ramda/src/clone';
 import pathOr from 'ramda/src/pathOr';
+import deepClone from '../../jsonClone';
 
 const augmentWithTimestamp = jsonRaw => {
   // safely get deeply nested JSON values
