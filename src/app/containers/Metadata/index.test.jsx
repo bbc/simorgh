@@ -734,24 +734,14 @@ describe('apple-itunes-app meta tag', () => {
     />
   );
 
-  const itunesAppIds = [
-    {
-      service: 'arabic',
-      id: 558497376,
-    },
-    {
-      service: 'mundo',
-      id: 515255747,
-    },
-    {
-      service: 'russian',
-      id: 504278066,
-    },
-  ];
-
-  itunesAppIds.forEach(application => {
-    const { service, id } = application;
-    it(`should be rendered for ${service} because iTunesAppId is configured`, async () => {
+  it.each`
+    service      | iTunesAppId
+    ${'arabic'}  | ${558497376}
+    ${'mundo'}   | ${515255747}
+    ${'russian'} | ${504278066}
+  `(
+    'should be rendered for $service because iTunesAppId is configured ($iTunesAppId)',
+    async ({ service, iTunesAppId }) => {
       render(<CanonicalCPSAssetInternationalOrigin service={service} />);
 
       await waitFor(() => {
@@ -762,11 +752,11 @@ describe('apple-itunes-app meta tag', () => {
 
         const content = appleItunesApp.getAttribute('content');
         expect(content).toEqual(
-          `app-id=${id}, app-argument=https://www.bbc.com/${service}/asset-12345678?utm_medium=banner&utm_content=apple-itunes-app`,
+          `app-id=${iTunesAppId}, app-argument=https://www.bbc.com/${service}/asset-12345678?utm_medium=banner&utm_content=apple-itunes-app`,
         );
       });
-    });
-  });
+    },
+  );
 
   ['pidgin', 'persian', 'ukchina'].forEach(serviceWithoutItunes => {
     it(`should not be rendered for ${serviceWithoutItunes} because iTunesAppId is not configured`, () => {
