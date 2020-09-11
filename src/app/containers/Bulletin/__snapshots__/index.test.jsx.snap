@@ -271,8 +271,12 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
       class="c2"
     >
       <div
-        class="lazyload-placeholder"
-      />
+        class="lazyload-wrapper"
+      >
+        <div
+          class="lazyload-placeholder"
+        />
+      </div>
     </div>
   </div>
   <div
@@ -618,8 +622,12 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
       class="c2"
     >
       <div
-        class="lazyload-placeholder"
-      />
+        class="lazyload-wrapper"
+      >
+        <div
+          class="lazyload-placeholder"
+        />
+      </div>
     </div>
   </div>
   <div
@@ -950,8 +958,12 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
       class="c2"
     >
       <div
-        class="lazyload-placeholder"
-      />
+        class="lazyload-wrapper"
+      >
+        <div
+          class="lazyload-placeholder"
+        />
+      </div>
     </div>
   </div>
   <div
@@ -1282,8 +1294,12 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
       class="c2"
     >
       <div
-        class="lazyload-placeholder"
-      />
+        class="lazyload-wrapper"
+      >
+        <div
+          class="lazyload-placeholder"
+        />
+      </div>
     </div>
   </div>
   <div
@@ -1611,8 +1627,12 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
       class="c2"
     >
       <div
-        class="lazyload-placeholder"
-      />
+        class="lazyload-wrapper"
+      >
+        <div
+          class="lazyload-placeholder"
+        />
+      </div>
     </div>
   </div>
   <div
