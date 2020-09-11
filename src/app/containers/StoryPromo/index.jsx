@@ -27,7 +27,7 @@ import { MEDIA_MISSING } from '#lib/logger.const';
 import useLiveRadioSettings from '#app/pages/LiveRadioPage/useLiveRadioSettings';
 import {
   BigRedPlayingButton,
-  BigRedPauseButton,
+  BigRedPlayButton,
   BigLoadingButton,
 } from '#app/pages/LiveRadioPage/BigRedButton';
 import { BigRedButton } from '#app/pages/LiveRadioPage/LiveRadioPage';
@@ -319,7 +319,7 @@ const StoryPromoContainer = ({
           )}
           {bigRedButtonState === 'ready' && (
             <BigRedButton onClick={toggleMediaPlayer}>
-              <BigRedPauseButton />
+              <BigRedPlayButton />
             </BigRedButton>
           )}
         </div>

@@ -15,7 +15,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { MediaPlayerContext } from '../../contexts/MediaPlayerContext';
 import {
   BigRedPlayingButton,
-  BigRedPauseButton,
+  BigRedPlayButton,
   BigLoadingButton,
 } from './BigRedButton';
 import useLiveRadioSettings from './useLiveRadioSettings';
@@ -157,7 +157,7 @@ const LiveRadioPage = ({ pageData }) => {
           )}
           {bigRedButtonState === 'ready' && (
             <BigRedButton onClick={toggleMediaPlayer}>
-              <BigRedPauseButton />
+              <BigRedPlayButton />
             </BigRedButton>
           )}
         </Grid>

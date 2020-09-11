@@ -39,6 +39,7 @@ const PlayIcon = styled.div`
 const NowPlayingIcon = styled.div`
   width: 16px;
   height: 25px;
+  margin-left: -4px;
 `;
 
 const ShortNowPlayingLine = styled.div`
@@ -93,12 +94,17 @@ const PlayButtonTextWrapper = styled.div`
   line-height: 40px;
   float: right;
   font-family: ${GEL_FF_REITH_SANS};
-  #play-button-text {
-    padding-left: 12.5px;
+  #listen-button-text {
+    padding-left: 12px;
+    padding-right: 6px;
+  }
+  #playing-button-text {
+    padding-left: 0px;
+    padding-right: 6px;
   }
   #loading-button-text {
     padding-left: 35px;
-    padding-right: 35px;
+    padding-right: 41px;
   }
 `;
 
@@ -114,12 +120,14 @@ export const BigRedPlayingButton = () => {
           </NowPlayingIcon>
         </PlayerButton>
       </PlayerButtonWrapper>
-      <PlayButtonTextWrapper>Now Playing</PlayButtonTextWrapper>
+      <PlayButtonTextWrapper>
+        <div id="playing-button-text">Now Playing</div>
+      </PlayButtonTextWrapper>
     </>
   );
 };
 
-export const BigRedPauseButton = () => {
+export const BigRedPlayButton = () => {
   return (
     <>
       <PlayerButtonWrapper>
@@ -128,7 +136,7 @@ export const BigRedPauseButton = () => {
         </PlayerButton>
       </PlayerButtonWrapper>
       <PlayButtonTextWrapper>
-        <div id="play-button-text">Listen Live</div>
+        <div id="listen-button-text">Listen Live</div>
       </PlayButtonTextWrapper>
     </>
   );
