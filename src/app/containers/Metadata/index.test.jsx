@@ -4,6 +4,8 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MetadataContainer from './index';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+
 import {
   articleDataNews,
   articleDataPersian,
@@ -29,6 +31,12 @@ const getArticleMetadataProps = data => ({
 const newsArticleMetadataProps = getArticleMetadataProps(articleDataNews);
 const persianArticleMetadataProps = getArticleMetadataProps(articleDataPersian);
 
+const defaultToggles = {
+  apple_itunes_app: {
+    enabled: true,
+  },
+};
+
 const MetadataWithContext = ({
   /* eslint-disable react/prop-types */
   service,
@@ -48,26 +56,28 @@ const MetadataWithContext = ({
   /* eslint-enable react/prop-types */
 }) => (
   <ServiceContextProvider service={service} pageLang={lang}>
-    <RequestContextProvider
-      bbcOrigin={bbcOrigin}
-      id={id}
-      isAmp={platform === 'amp'}
-      pageType={pageType}
-      pathname={pathname}
-      service={service}
-      statusCode={200}
-    >
-      <MetadataContainer
-        title={title}
-        lang={lang}
-        description={description}
-        openGraphType={openGraphType}
-        aboutTags={aboutTags}
-        mentionsTags={mentionsTags}
-        image={image}
-        imageAltText={imageAltText}
-      />
-    </RequestContextProvider>
+    <ToggleContextProvider toggles={defaultToggles}>
+      <RequestContextProvider
+        bbcOrigin={bbcOrigin}
+        id={id}
+        isAmp={platform === 'amp'}
+        pageType={pageType}
+        pathname={pathname}
+        service={service}
+        statusCode={200}
+      >
+        <MetadataContainer
+          title={title}
+          lang={lang}
+          description={description}
+          openGraphType={openGraphType}
+          aboutTags={aboutTags}
+          mentionsTags={mentionsTags}
+          image={image}
+          imageAltText={imageAltText}
+        />
+      </RequestContextProvider>
+    </ToggleContextProvider>
   </ServiceContextProvider>
 );
 
@@ -709,3 +719,54 @@ shouldMatchSnapshot(
     title="BBC Ukrainian"
   />,
 );
+
+describe('apple-itunes-app meta tag', () => {
+  // eslint-disable-next-line react/prop-types
+  const CanonicalCPSAssetInternationalOrigin = ({ service }) => (
+    <MetadataWithContext
+      service={service}
+      bbcOrigin={dotComOrigin}
+      platform="canonical"
+      id="asset-12345678"
+      pageType="STY"
+      pathname={`/${service}/asset-12345678`}
+      {...newsArticleMetadataProps}
+    />
+  );
+
+  it.each`
+    service      | iTunesAppId
+    ${'arabic'}  | ${558497376}
+    ${'mundo'}   | ${515255747}
+    ${'russian'} | ${504278066}
+  `(
+    'should be rendered for $service because iTunesAppId is configured ($iTunesAppId)',
+    async ({ service, iTunesAppId }) => {
+      render(<CanonicalCPSAssetInternationalOrigin service={service} />);
+
+      await waitFor(() => {
+        const appleItunesApp = document.querySelector(
+          'head > meta[name=apple-itunes-app]',
+        );
+        expect(appleItunesApp).toBeInTheDocument();
+
+        const content = appleItunesApp.getAttribute('content');
+        expect(content).toEqual(
+          `app-id=${iTunesAppId}, app-argument=https://www.bbc.com/${service}/asset-12345678?utm_medium=banner&utm_content=apple-itunes-app`,
+        );
+      });
+    },
+  );
+
+  ['pidgin', 'persian', 'ukchina'].forEach(serviceWithoutItunes => {
+    it(`should not be rendered for ${serviceWithoutItunes} because iTunesAppId is not configured`, () => {
+      render(
+        <CanonicalCPSAssetInternationalOrigin service={serviceWithoutItunes} />,
+      );
+
+      expect(
+        document.querySelector('head > meta[name=apple-itunes-app]'),
+      ).not.toBeInTheDocument();
+    });
+  });
+});

@@ -60,3 +60,12 @@ export const renderAlternateLinks = link => (
     key={link.hrefLang}
   />
 );
+
+export const renderAppleItunesApp = (iTunesAppId, canonicalUrl) => {
+  if (iTunesAppId && canonicalUrl) {
+    const content = `app-id=${iTunesAppId}, app-argument=${canonicalUrl}?utm_medium=banner&utm_content=apple-itunes-app`;
+
+    return <meta name="apple-itunes-app" content={content} />;
+  }
+  return null;
+};
