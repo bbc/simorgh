@@ -117,7 +117,7 @@ export const getHref = platform => {
 
   if (onClient() && window.location.href) {
     const { href } = window.location;
-    return encodeURIComponent(href);
+    return href;
   }
 
   return null;
@@ -136,7 +136,7 @@ export const getReferrer = (platform, origin, previousPath) => {
     const referrer = previousPath
       ? `${origin}${previousPath}`
       : document.referrer;
-    return encodeURIComponent(referrer);
+    return referrer;
   }
 
   return null;
@@ -198,7 +198,13 @@ export const getProducer = service => {
 };
 
 export const getAtiUrl = (data = []) => {
-  const cleanedValues = data.filter(({ value }) => value);
+  const cleanedValues = data
+    .filter(({ value }) => value)
+    .map(item => {
+      const { value } = item;
+      const encodedValue = encodeURIComponent(value);
+      return { ...item, value: encodedValue };
+    });
 
   const parsedAtiValues = cleanedValues.map(({ key, value, wrap }) =>
     wrap ? `${key}=[${value}]` : `${key}=${value}`,

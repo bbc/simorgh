@@ -16,7 +16,7 @@ const runCommonCrossPlatformTests = service => {
   runHeaderTests(service);
   runFooterTests();
   runPerformanceTests();
-  runSEOTests();
+  runSEOTests(service);
 };
 
 export {
