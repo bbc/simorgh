@@ -462,3 +462,5 @@ exports[`AMP Most Read Page SEO Twitter image src 1`] = `"https://news.files.bbc
 exports[`AMP Most Read Page SEO Twitter site 1`] = `"@bbcmundo"`;
 
 exports[`AMP Most Read Page SEO Twitter title 1`] = `"Más leídas - BBC News Mundo"`;
+
+exports[`AMP Most Read Page SEO apple-itunes-app meta tag should match text 1`] = `"app-id=515255747, app-argument=http://localhost:7080/mundo/popular/read?utm_medium=banner&utm_content=apple-itunes-app"`;

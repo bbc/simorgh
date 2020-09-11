@@ -206,6 +206,7 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Главная',
+    iTunesAppId: 504278066,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
