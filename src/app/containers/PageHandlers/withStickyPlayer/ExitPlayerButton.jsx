@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   border-top: solid 1px #888;
-  padding: ${GEL_SPACING_DBL} ${GEL_SPACING} 0;
+  padding: 0.75rem ${GEL_SPACING};
 `;
 
 const ExitText = styled.span`
