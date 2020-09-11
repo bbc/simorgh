@@ -10,7 +10,6 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import CpsOnwardJourney from '../CpsOnwardJourney';
-import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 import { GridItemConstrainedMediumNoMargin } from '#lib/styledGrid';
 import RecommendationsPromo from './RecommendationsPromo';
 import RecommendationsPromoList from './RecommendationsPromoList';
@@ -22,7 +21,7 @@ const RecommendationsWrapper = styled.div`
 `;
 
 const CpsRecommendations = ({ items, parentColumns }) => {
-  const { recommendations, translations, service } = useContext(ServiceContext);
+  const { recommendations, translations } = useContext(ServiceContext);
   const { enabled } = useToggle('cpsRecommendations');
 
   const { hasStoryRecommendations } = recommendations;
@@ -37,36 +36,36 @@ const CpsRecommendations = ({ items, parentColumns }) => {
 
   const { text, endTextVisuallyHidden } = path(['skipLink'], recommendations);
 
-  const skipLinkTerms = {
+  const terms = {
     '%title%': title,
   };
 
   const endTextId = 'end-of-recommendations';
 
+  const skipLinkProps = {
+    endTextId,
+    terms,
+    text,
+    endTextVisuallyHidden,
+  };
+
   return (
     <GridItemConstrainedMediumNoMargin>
-      <SkipLinkWrapper
-        service={service}
-        endTextId={endTextId}
-        text={text}
-        endTextVisuallyHidden={endTextVisuallyHidden}
-        terms={skipLinkTerms}
-      >
-        <RecommendationsWrapper>
-          <CpsOnwardJourney
-            labelId="recommendations-heading"
-            title={title}
-            content={items}
-            parentColumns={parentColumns}
-            promoComponent={RecommendationsPromo}
-            promoListComponent={RecommendationsPromoList}
-            sectionLabelOverrideAs="strong"
-            sectionLabelBar={false}
-            sectionLabelBackground={C_LUNAR}
-            columnType="main"
-          />
-        </RecommendationsWrapper>
-      </SkipLinkWrapper>
+      <RecommendationsWrapper>
+        <CpsOnwardJourney
+          labelId="recommendations-heading"
+          title={title}
+          content={items}
+          parentColumns={parentColumns}
+          promoComponent={RecommendationsPromo}
+          promoListComponent={RecommendationsPromoList}
+          sectionLabelOverrideAs="strong"
+          sectionLabelBar={false}
+          sectionLabelBackground={C_LUNAR}
+          columnType="main"
+          skipLink={skipLinkProps}
+        />
+      </RecommendationsWrapper>
     </GridItemConstrainedMediumNoMargin>
   );
 };

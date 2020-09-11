@@ -5,4 +5,6 @@
 
 import runCanonicalTests from '../canonicalTests';
 
-describe('Canonical Korean Live Radio Page', runCanonicalTests);
+describe('Canonical Korean Live Radio Page', () => {
+  runCanonicalTests(service);
+});

@@ -35,7 +35,7 @@ exports[`AVPlayer for Live Radio should match snapshot for canonical AVPlayer 1`
       allowfullscreen=""
       class="c1"
       scrolling="no"
-      src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
+      src="https://test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
       title="오디오 플레이어"
     />
     <noscript />
@@ -135,7 +135,7 @@ exports[`AVPlayer for On Demand TV should match snapshot for canonical AVPlayer 
       allowfullscreen=""
       class="c1"
       scrolling="no"
-      src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"
+      src="https://test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"
       title="ویډیو پلیئر"
     />
     <noscript />

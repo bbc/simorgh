@@ -97,7 +97,7 @@ exports[`AMP Media Asset Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=5&p=worldnews::arabic.worldnews.2015.11.151120_t_arabic_av.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:topcat:22d6ef3c-8f6e-11e5-b707-b2517c19ac20]&x2=[amp]&x3=[news-arabic]&x4=[ar]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-media-asset]&x8=[simorgh]&x9=[شركة+شارب+للإلكترونيات+تحث+موظفيها+على+شراء+منتجاتها+-+BBC+News+عربي]&x11=[2015-11-20T10:09:33.000Z]&x12=[2015-11-20T10:09:33.000Z]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=5&p=worldnews%3A%3Aarabic.worldnews.2015.11.151120_t_arabic_av.page&r=%24%7BscreenWidth%7Dx%24%7BscreenHeight%7Dx%24%7BscreenColorDepth%7D&re=%24%7BavailableScreenWidth%7Dx%24%7BavailableScreenHeight%7D&hl=%24%7Btimestamp%7D&lng=%24%7BbrowserLanguage%7D&x1=[urn%3Abbc%3Atopcat%3A22d6ef3c-8f6e-11e5-b707-b2517c19ac20]&x2=[amp]&x3=[news-arabic]&x4=[ar]&x5=[%24%7BsourceUrl%7D]&x6=[%24%7BdocumentReferrer%7D]&x7=[article-media-asset]&x8=[simorgh]&x9=[%D8%B4%D8%B1%D9%83%D8%A9%2B%D8%B4%D8%A7%D8%B1%D8%A8%2B%D9%84%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7%D8%AA%2B%D8%AA%D8%AD%D8%AB%2B%D9%85%D9%88%D8%B8%D9%81%D9%8A%D9%87%D8%A7%2B%D8%B9%D9%84%D9%89%2B%D8%B4%D8%B1%D8%A7%D8%A1%2B%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%D9%87%D8%A7%2B-%2BBBC%2BNews%2B%D8%B9%D8%B1%D8%A8%D9%8A]&x11=[2015-11-20T10%3A09%3A33.000Z]&x12=[2015-11-20T10%3A09%3A33.000Z]&ref=%24%7BdocumentReferrer%7D",
   },
   "transport": Object {
     "beacon": false,
@@ -461,3 +461,5 @@ exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"https://news.files.b
 exports[`AMP Media Asset Page SEO Twitter site 1`] = `"@BBCArabic"`;
 
 exports[`AMP Media Asset Page SEO Twitter title 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها - BBC News عربي"`;
+
+exports[`AMP Media Asset Page SEO apple-itunes-app meta tag should match text 1`] = `"app-id=558497376, app-argument=http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av?utm_medium=banner&utm_content=apple-itunes-app"`;

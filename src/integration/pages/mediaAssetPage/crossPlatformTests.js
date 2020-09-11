@@ -3,8 +3,8 @@ import {
   runMediaPlayerEmbedTests,
 } from '../../common';
 
-export default () => {
-  runCommonCrossPlatformTests();
+export default service => {
+  runCommonCrossPlatformTests(service);
   runMediaPlayerEmbedTests();
 
   it('I can see the headline', () => {
@@ -45,17 +45,31 @@ export default () => {
     });
   }
 
-  const relatedContentLinks = document.querySelectorAll(
-    '[data-e2e="related-content"] a',
-  );
+  describe(`Related Content`, () => {
+    const relatedContentLinks = document.querySelectorAll(
+      '[data-e2e="related-content-heading"] a',
+    );
 
-  if (relatedContentLinks) {
-    relatedContentLinks.forEach(relatedContentLink => {
-      it(`I can see related content: ${relatedContentLink.textContent}`, () => {
-        expect(relatedContentLink).toBeInTheDocument();
-        expect(relatedContentLink.textContent).toBeTruthy();
-        expect(relatedContentLink.getAttribute('href')).toMatchSnapshot();
+    if (relatedContentLinks) {
+      relatedContentLinks.forEach(relatedContentLink => {
+        const relatedContentText = relatedContentLink.textContent;
+        const relatedContentUrl = relatedContentLink.getAttribute('href');
+
+        it('should be in the document', () => {
+          expect(relatedContentLink).toBeInTheDocument();
+        });
+
+        it('should contain text', () => {
+          expect(relatedContentText).toBeTruthy();
+        });
+
+        it('should match text and url', () => {
+          expect({
+            text: relatedContentText,
+            url: relatedContentUrl,
+          }).toMatchSnapshot();
+        });
       });
-    });
-  }
+    }
+  });
 };

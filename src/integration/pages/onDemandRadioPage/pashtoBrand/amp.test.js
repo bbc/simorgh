@@ -8,7 +8,7 @@ import runAmpTests from '../ampTests';
 
 describe('AMP', () => {
   describe(pageType, () => {
-    runCrossPlatformTests();
+    runCrossPlatformTests(service);
     runAmpTests();
   });
 });
