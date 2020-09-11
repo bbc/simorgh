@@ -1,12 +1,8 @@
-import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { C_POSTBOX, C_METAL, C_EBON } from '@bbc/psammead-styles/colours';
+import CSRLink from '#containers/CSRLink';
 
-// eslint-disable-next-line react/prop-types
-const CsrLink = ({ href, ...props }) => <Link to={href} {...props} />;
-
-const InlineLink = styled(CsrLink)`
+const InlineLink = styled(CSRLink)`
   color: ${C_EBON};
   border-bottom: 1px solid ${C_POSTBOX};
   text-decoration: none;
