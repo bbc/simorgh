@@ -2,7 +2,7 @@
 
 exports[`Canonical On Demand T V Page A11y I can see the skip to content link 1`] = `"مطلب ته ورشئ"`;
 
-exports[`Canonical On Demand T V Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=68&amp;p=pashto.bbc_pashto_tv.w172xcldhhrdqgb.page&amp;x1=[urn:bbc:pips:w13xttn4]&amp;x2=[responsive]&amp;x3=[news-pashto]&amp;x4=[ps]&amp;x7=[player-episode]&amp;x8=[simorgh-nojs]&amp;x9=[نړۍ+دا+وخت+-+BBC+News+پښتو]\\"/>"`;
+exports[`Canonical On Demand T V Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=68&amp;p=pashto.bbc_pashto_tv.w172xcldhhrdqgb.page&amp;x1=[urn%3Abbc%3Apips%3Aw13xttn4]&amp;x2=[responsive]&amp;x3=[news-pashto]&amp;x4=[ps]&amp;x7=[player-episode]&amp;x8=[simorgh-nojs]&amp;x9=[%D9%86%DA%93%DB%8D%2B%D8%AF%D8%A7%2B%D9%88%D8%AE%D8%AA%2B-%2BBBC%2BNews%2B%D9%BE%DA%9A%D8%AA%D9%88]\\"/>"`;
 
 exports[`Canonical On Demand T V Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
 

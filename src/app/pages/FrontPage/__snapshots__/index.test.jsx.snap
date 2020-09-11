@@ -2992,8 +2992,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 class="c13"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c33"
@@ -3042,8 +3046,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 class="c13"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c33"
@@ -3123,8 +3131,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 class="c13"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c33"
@@ -3173,8 +3185,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 class="c13"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c33"
@@ -3223,8 +3239,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 class="c13"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c33"
@@ -3273,8 +3293,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 class="c13"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c33"
@@ -3346,8 +3370,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 class="c13"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c33"
@@ -3396,8 +3424,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 class="c13"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c33"
