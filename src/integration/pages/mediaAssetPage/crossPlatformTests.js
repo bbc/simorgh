@@ -3,8 +3,8 @@ import {
   runMediaPlayerEmbedTests,
 } from '../../common';
 
-export default () => {
-  runCommonCrossPlatformTests();
+export default service => {
+  runCommonCrossPlatformTests(service);
   runMediaPlayerEmbedTests();
 
   it('I can see the headline', () => {
