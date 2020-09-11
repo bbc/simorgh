@@ -45,10 +45,6 @@ describe('Logger node - for the server', () => {
     });
 
     describe('Configuring Winston', () => {
-      const fileTransportMock = {
-        setMaxListeners: jest.fn(),
-      };
-
       beforeEach(() => {
         jest.mock('winston', () => jest.fn());
         winston = require('winston');
@@ -56,17 +52,12 @@ describe('Logger node - for the server', () => {
         winston.format = jest.fn();
         winston.createLogger = jest.fn();
         winston.format.combine = jest.fn();
-        winston.format.label = jest.fn();
         winston.format.printf = jest.fn();
         winston.format.simple = jest.fn();
         winston.format.timestamp = jest.fn();
         winston.transports = jest.fn();
-        winston.transports.File = jest
-          .fn()
-          .mockImplementation(() => fileTransportMock);
-
+        winston.transports.File = jest.fn();
         winston.transports.Console = jest.fn();
-        winston.format.label.mockImplementation(() => 'Label Mock');
         winston.format.simple.mockImplementation(() => 'Simple Mock');
         winston.format.timestamp.mockImplementation(() => 'Timestamp Mock');
         winston.format.printf.mockImplementation(() => 'Printf Mock');
@@ -82,7 +73,8 @@ describe('Logger node - for the server', () => {
 
         expect(winston.transports.File).toHaveBeenCalledWith({
           filename: 'foobarDir/app.log',
-          handleExceptions: false,
+          handleExceptions: true,
+          humanReadableUnhandledException: true,
           json: true,
           level: 'info',
           maxFiles: 5,
@@ -97,7 +89,8 @@ describe('Logger node - for the server', () => {
 
         expect(winston.transports.File).toHaveBeenCalledWith({
           filename: 'log/app.log',
-          handleExceptions: false,
+          handleExceptions: true,
+          humanReadableUnhandledException: true,
           json: true,
           level: 'info',
           maxFiles: 5,
@@ -111,7 +104,8 @@ describe('Logger node - for the server', () => {
         require('./logger.node');
 
         expect(winston.transports.Console).toHaveBeenCalledWith({
-          handleExceptions: false,
+          handleExceptions: true,
+          humanReadableUnhandledException: true,
           level: 'info',
           timestamp: true,
         });
@@ -132,21 +126,17 @@ describe('Logger node - for the server', () => {
           loggerNode('path/file/foo.js');
 
           expect(winston.format.combine).toHaveBeenCalledWith(
-            'Label Mock',
             'Simple Mock',
             'Timestamp Mock',
             'Printf Mock',
           );
-          expect(winston.format.label).toHaveBeenCalledWith({
-            label: 'file/foo.js',
-          });
           expect(winston.format.simple).toHaveBeenCalled();
           expect(winston.format.timestamp).toHaveBeenCalledWith({
             format: 'YYYY-MM-DD HH:mm:ss.SSS',
           });
           expect(winston.createLogger).toHaveBeenCalledWith({
             format: 'Combine Mock',
-            transports: [fileTransportMock, {}],
+            transports: [{}, {}],
           });
         });
       });
