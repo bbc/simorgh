@@ -2,8 +2,6 @@
 
 exports[`AMP Live Radio A11y I can see the skip to content link 1`] = `"Simbira ku birimwo"`;
 
-exports[`AMP Live Radio A11y I can see the skip to content link 2`] = `"Simbira ku birimwo"`;
-
 exports[`AMP Live Radio AMP Consent config 1`] = `
 Object {
   "consents": Object {
@@ -99,7 +97,7 @@ exports[`AMP Live Radio Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=40&p=gahuza.bbc_gahuza_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares:ws_media:live:bbc_gahuza_radio]&x2=[amp]&x3=[news-gahuza]&x4=[rw]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[Radio+BBC+Gahuza+-+BBC+News+Gahuza]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=40&p=gahuza.bbc_gahuza_radio.liveradio.page&r=%24%7BscreenWidth%7Dx%24%7BscreenHeight%7Dx%24%7BscreenColorDepth%7D&re=%24%7BavailableScreenWidth%7Dx%24%7BavailableScreenHeight%7D&hl=%24%7Btimestamp%7D&lng=%24%7BbrowserLanguage%7D&x1=[urn%3Abbc%3Aares%3Aws_media%3Alive%3Abbc_gahuza_radio]&x2=[amp]&x3=[news-gahuza]&x4=[rw]&x5=[%24%7BsourceUrl%7D]&x6=[%24%7BdocumentReferrer%7D]&x7=[player-live]&x8=[simorgh]&x9=[Radio%2BBBC%2BGahuza%2B-%2BBBC%2BNews%2BGahuza]&ref=%24%7BdocumentReferrer%7D",
   },
   "transport": Object {
     "beacon": false,
@@ -141,11 +139,7 @@ Object {
 
 exports[`AMP Live Radio Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
 
-exports[`AMP Live Radio Footer I can click on the BBC branding and it would take me to the homepage 2`] = `"/gahuza"`;
-
 exports[`AMP Live Radio Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
-
-exports[`AMP Live Radio Footer I can see the footer copyright and external linking text 2`] = `"© 2020 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
 
 exports[`AMP Live Radio Footer Link should match text and url 1`] = `
 Object {
@@ -210,72 +204,7 @@ Object {
 }
 `;
 
-exports[`AMP Live Radio Footer Link should match text and url 10`] = `
-Object {
-  "text": "BBC News, Gahuza",
-  "url": "/gahuza",
-}
-`;
-
-exports[`AMP Live Radio Footer Link should match text and url 11`] = `
-Object {
-  "text": "Igituma ushobora kwizera BBC News",
-  "url": "https://www.bbc.com/gahuza/institutional-49283343",
-}
-`;
-
-exports[`AMP Live Radio Footer Link should match text and url 12`] = `
-Object {
-  "text": "Ingingo zo gukoresha urubuga",
-  "url": "https://www.bbc.com/gahuza/institutional-35754053",
-}
-`;
-
-exports[`AMP Live Radio Footer Link should match text and url 13`] = `
-Object {
-  "text": "Ibijanye na BBC",
-  "url": "https://www.bbc.com/gahuza/institutional-35754055",
-}
-`;
-
-exports[`AMP Live Radio Footer Link should match text and url 14`] = `
-Object {
-  "text": "Ibigenga n'ubuzima bwite",
-  "url": "https://www.bbc.com/gahuza/institutional-35754059",
-}
-`;
-
-exports[`AMP Live Radio Footer Link should match text and url 15`] = `
-Object {
-  "text": "Cookies",
-  "url": "https://www.bbc.com/usingthebbc/cookies/",
-}
-`;
-
-exports[`AMP Live Radio Footer Link should match text and url 16`] = `
-Object {
-  "text": "Vugana na BBC",
-  "url": "https://www.bbc.com/gahuza/institutional-35754061",
-}
-`;
-
-exports[`AMP Live Radio Footer Link should match text and url 17`] = `
-Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
-}
-`;
-
-exports[`AMP Live Radio Footer Link should match text and url 18`] = `
-Object {
-  "text": "Soma ibijanye n'aho duhagaze ku mihora ijana ahandi",
-  "url": "https://www.bbc.co.uk/help/web/links/",
-}
-`;
-
 exports[`AMP Live Radio Header I can see the branding 1`] = `"BBC News, Gahuza"`;
-
-exports[`AMP Live Radio Header I can see the branding 2`] = `"BBC News, Gahuza"`;
 
 exports[`AMP Live Radio Header Navigation link should match text and url 1`] = `
 Object {
@@ -305,45 +234,11 @@ Object {
 }
 `;
 
-exports[`AMP Live Radio Header Navigation link should match text and url 5`] = `
-Object {
-  "text": "Urupapuro rw'itangiriro",
-  "url": "/gahuza",
-}
-`;
-
-exports[`AMP Live Radio Header Navigation link should match text and url 6`] = `
-Object {
-  "text": "Amakuru",
-  "url": "/gahuza/amakuru",
-}
-`;
-
-exports[`AMP Live Radio Header Navigation link should match text and url 7`] = `
-Object {
-  "text": "Imikino",
-  "url": "/gahuza/imikino",
-}
-`;
-
-exports[`AMP Live Radio Header Navigation link should match text and url 8`] = `
-Object {
-  "text": "Video",
-  "url": "/gahuza/media/video",
-}
-`;
-
 exports[`AMP Live Radio Main heading should match text 1`] = `"Radio BBC Gahuza"`;
-
-exports[`AMP Live Radio Main heading should match text 2`] = `"Radio BBC Gahuza"`;
 
 exports[`AMP Live Radio Media Player a11y assistive technology can read the media player title 1`] = `"Kina amajwi"`;
 
-exports[`AMP Live Radio Media Player a11y assistive technology can read the media player title 2`] = `"Kina amajwi"`;
-
 exports[`AMP Live Radio Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_gahuza_radio/liveradio/rw/amp?morph_env=live"`;
-
-exports[`AMP Live Radio Media Player iframe with valid URL should be rendered 2`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_gahuza_radio/liveradio/rw/amp?morph_env=live"`;
 
 exports[`AMP Live Radio SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -415,99 +310,17 @@ Object {
 }
 `;
 
-exports[`AMP Live Radio SEO Apple Touch Icon should match attributes 11`] = `
-Object {
-  "sizes": null,
-  "url": "http://localhost:7080/gahuza/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`AMP Live Radio SEO Apple Touch Icon should match attributes 12`] = `
-Object {
-  "sizes": "72x72",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/gahuza/images/icons/icon-72x72.png",
-}
-`;
-
-exports[`AMP Live Radio SEO Apple Touch Icon should match attributes 13`] = `
-Object {
-  "sizes": "96x96",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/gahuza/images/icons/icon-96x96.png",
-}
-`;
-
-exports[`AMP Live Radio SEO Apple Touch Icon should match attributes 14`] = `
-Object {
-  "sizes": "128x128",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/gahuza/images/icons/icon-128x128.png",
-}
-`;
-
-exports[`AMP Live Radio SEO Apple Touch Icon should match attributes 15`] = `
-Object {
-  "sizes": "144x144",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/gahuza/images/icons/icon-144x144.png",
-}
-`;
-
-exports[`AMP Live Radio SEO Apple Touch Icon should match attributes 16`] = `
-Object {
-  "sizes": "152x152",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/gahuza/images/icons/icon-152x152.png",
-}
-`;
-
-exports[`AMP Live Radio SEO Apple Touch Icon should match attributes 17`] = `
-Object {
-  "sizes": "180x180",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/gahuza/images/icons/icon-180x180.png",
-}
-`;
-
-exports[`AMP Live Radio SEO Apple Touch Icon should match attributes 18`] = `
-Object {
-  "sizes": "192x192",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/gahuza/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`AMP Live Radio SEO Apple Touch Icon should match attributes 19`] = `
-Object {
-  "sizes": "384x384",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/gahuza/images/icons/icon-384x384.png",
-}
-`;
-
-exports[`AMP Live Radio SEO Apple Touch Icon should match attributes 20`] = `
-Object {
-  "sizes": "512x512",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/gahuza/images/icons/icon-512x512.png",
-}
-`;
-
 exports[`AMP Live Radio SEO Canonical link 1`] = `"http://localhost:7080/gahuza/bbc_gahuza_radio/liveradio"`;
-
-exports[`AMP Live Radio SEO Canonical link 2`] = `"http://localhost:7080/gahuza/bbc_gahuza_radio/liveradio"`;
 
 exports[`AMP Live Radio SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`AMP Live Radio SEO Dir attribute 2`] = `"ltr"`;
-
 exports[`AMP Live Radio SEO FB admins 1`] = `"100004154058350"`;
-
-exports[`AMP Live Radio SEO FB admins 2`] = `"100004154058350"`;
 
 exports[`AMP Live Radio SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`AMP Live Radio SEO FB app ID 2`] = `"1609039196070050"`;
-
 exports[`AMP Live Radio SEO Heading level 1 1`] = `"Radio BBC Gahuza"`;
 
-exports[`AMP Live Radio SEO Heading level 1 2`] = `"Radio BBC Gahuza"`;
-
 exports[`AMP Live Radio SEO Lang attribute 1`] = `"rw"`;
-
-exports[`AMP Live Radio SEO Lang attribute 2`] = `"rw"`;
 
 exports[`AMP Live Radio SEO Linked data should match text 1`] = `
 Object {
@@ -532,97 +345,38 @@ Object {
 }
 `;
 
-exports[`AMP Live Radio SEO Linked data should match text 2`] = `
-Object {
-  "@context": "http://schema.org",
-  "@graph": Array [
-    Object {
-      "@type": "RadioChannel",
-      "image": Object {
-        "@type": "ImageObject",
-        "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
-        "width": 1024,
-      },
-      "mainEntityOfPage": Object {
-        "@id": "http://localhost:7080/gahuza/bbc_gahuza_radio/liveradio",
-        "@type": "WebPage",
-        "name": "Radio BBC Gahuza",
-      },
-      "url": "http://localhost:7080/gahuza/bbc_gahuza_radio/liveradio",
-    },
-  ],
-}
-`;
-
 exports[`AMP Live Radio SEO OG description 1`] = `"Amakuru y’amahanga, ubusesenguzi, amakuru y’akarere k’ibiyaga bigari, ikinamico, ubuzima, imibereho y’abagore. Kuri FM no kuri internet."`;
-
-exports[`AMP Live Radio SEO OG description 2`] = `"Amakuru y’amahanga, ubusesenguzi, amakuru y’akarere k’ibiyaga bigari, ikinamico, ubuzima, imibereho y’abagore. Kuri FM no kuri internet."`;
 
 exports[`AMP Live Radio SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png"`;
 
-exports[`AMP Live Radio SEO OG image 2`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png"`;
-
 exports[`AMP Live Radio SEO OG image alt 1`] = `"BBC News Gahuza"`;
-
-exports[`AMP Live Radio SEO OG image alt 2`] = `"BBC News Gahuza"`;
 
 exports[`AMP Live Radio SEO OG locale 1`] = `"rw-RW"`;
 
-exports[`AMP Live Radio SEO OG locale 2`] = `"rw-RW"`;
-
 exports[`AMP Live Radio SEO OG site name 1`] = `"BBC News Gahuza"`;
-
-exports[`AMP Live Radio SEO OG site name 2`] = `"BBC News Gahuza"`;
 
 exports[`AMP Live Radio SEO OG title 1`] = `"Radio BBC Gahuza - BBC News Gahuza"`;
 
-exports[`AMP Live Radio SEO OG title 2`] = `"Radio BBC Gahuza - BBC News Gahuza"`;
-
 exports[`AMP Live Radio SEO OG type 1`] = `"website"`;
-
-exports[`AMP Live Radio SEO OG type 2`] = `"website"`;
 
 exports[`AMP Live Radio SEO OG url 1`] = `"http://localhost:7080/gahuza/bbc_gahuza_radio/liveradio"`;
 
-exports[`AMP Live Radio SEO OG url 2`] = `"http://localhost:7080/gahuza/bbc_gahuza_radio/liveradio"`;
-
 exports[`AMP Live Radio SEO Page title 1`] = `"Radio BBC Gahuza - BBC News Gahuza"`;
-
-exports[`AMP Live Radio SEO Page title 2`] = `"Radio BBC Gahuza - BBC News Gahuza"`;
 
 exports[`AMP Live Radio SEO Robots meta tag 1`] = `"noodp,noydir"`;
 
-exports[`AMP Live Radio SEO Robots meta tag 2`] = `"noodp,noydir"`;
-
 exports[`AMP Live Radio SEO Twitter card 1`] = `"summary_large_image"`;
-
-exports[`AMP Live Radio SEO Twitter card 2`] = `"summary_large_image"`;
 
 exports[`AMP Live Radio SEO Twitter creator 1`] = `"@bbcgahuza"`;
 
-exports[`AMP Live Radio SEO Twitter creator 2`] = `"@bbcgahuza"`;
-
 exports[`AMP Live Radio SEO Twitter description 1`] = `"Amakuru y’amahanga, ubusesenguzi, amakuru y’akarere k’ibiyaga bigari, ikinamico, ubuzima, imibereho y’abagore. Kuri FM no kuri internet."`;
-
-exports[`AMP Live Radio SEO Twitter description 2`] = `"Amakuru y’amahanga, ubusesenguzi, amakuru y’akarere k’ibiyaga bigari, ikinamico, ubuzima, imibereho y’abagore. Kuri FM no kuri internet."`;
 
 exports[`AMP Live Radio SEO Twitter image alt 1`] = `"BBC News Gahuza"`;
 
-exports[`AMP Live Radio SEO Twitter image alt 2`] = `"BBC News Gahuza"`;
-
 exports[`AMP Live Radio SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png"`;
-
-exports[`AMP Live Radio SEO Twitter image src 2`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png"`;
 
 exports[`AMP Live Radio SEO Twitter site 1`] = `"@bbcgahuza"`;
 
-exports[`AMP Live Radio SEO Twitter site 2`] = `"@bbcgahuza"`;
-
 exports[`AMP Live Radio SEO Twitter title 1`] = `"Radio BBC Gahuza - BBC News Gahuza"`;
 
-exports[`AMP Live Radio SEO Twitter title 2`] = `"Radio BBC Gahuza - BBC News Gahuza"`;
-
 exports[`AMP Live Radio Summary should match text 1`] = `"Amakuru y’amahanga, ubusesenguzi, amakuru y’akarere k’ibiyaga bigari, ikinamico, ubuzima, imibereho y’abagore. Kuri FM no kuri internet."`;
-
-exports[`AMP Live Radio Summary should match text 2`] = `"Amakuru y’amahanga, ubusesenguzi, amakuru y’akarere k’ibiyaga bigari, ikinamico, ubuzima, imibereho y’abagore. Kuri FM no kuri internet."`;

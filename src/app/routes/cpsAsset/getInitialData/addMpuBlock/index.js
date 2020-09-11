@@ -1,7 +1,7 @@
 /* eslint-disable prefer-destructuring */
 import path from 'ramda/src/path';
-import deepClone from 'ramda/src/clone';
 import splitAt from 'ramda/src/splitAt';
+import deepClone from '../../../utils/jsonClone';
 import { getNthCpsParagraphIndex } from '../helpers';
 
 const mpuBlock = {
