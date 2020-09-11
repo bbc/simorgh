@@ -39,7 +39,7 @@ const Toast = styled.div`
 `;
 
 const MiniControlsWrapper = styled.div`
-  padding: ${GEL_SPACING_DBL} 0;
+  padding: 0.75rem 0;
 `;
 
 const AnimatedToastWrapper = animated(ToastWrapper);
