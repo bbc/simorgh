@@ -108,7 +108,7 @@ const MetadataContainer = ({
   const metaImage = image || defaultImage;
   const metaImageAltText = imageAltText || defaultImageAltText;
 
-  const { enabled: iTunesAppEnabled } = useToggle('smart_app_banner');
+  const { enabled: iTunesAppEnabled } = useToggle('apple_itunes_app');
 
   return (
     <Helmet htmlAttributes={htmlAttributes}>

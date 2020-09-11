@@ -32,7 +32,7 @@ const newsArticleMetadataProps = getArticleMetadataProps(articleDataNews);
 const persianArticleMetadataProps = getArticleMetadataProps(articleDataPersian);
 
 const defaultToggles = {
-  smart_app_banner: {
+  apple_itunes_app: {
     enabled: true,
   },
 };
