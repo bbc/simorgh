@@ -1,7 +1,11 @@
 import React, { useContext, useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated, useTransition, useChain } from 'react-spring';
-import { GEL_SPACING_HLF, GEL_SPACING } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING_HLF,
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+} from '@bbc/gel-foundations/spacings';
 import { getSansRegular, getSansBold } from '@bbc/psammead-styles/font-styles';
 import {
   getPica,
@@ -19,9 +23,9 @@ const Title = styled.h4`
     size === 'large' ? getDoublePica(script) : getPica(script)}
   margin: 0;
   color: #f2f2f2;
-  padding: 0;
   ${({ service }) => service && getSansBold(service)};
-  padding-bottom: ${({ size }) => (size === 'large' ? GEL_SPACING : '0')};
+  padding: ${({ size }) =>
+    size === 'large' ? `${GEL_SPACING_DBL} 0 ${GEL_SPACING}` : '0'};
 `;
 
 const Summary = styled.p`

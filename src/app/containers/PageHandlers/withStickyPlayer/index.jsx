@@ -2,7 +2,12 @@ import React, { useContext, useState, useRef } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import { C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_QUAD,
+} from '@bbc/gel-foundations/spacings';
+import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { MediaPlayerContext } from '../../../contexts/MediaPlayerContext';
 import AVPlayer from '#containers/AVPlayer';
@@ -46,6 +51,20 @@ const AudioOuterWrapper = animated(styled.div`
   padding: 0 ${GEL_SPACING_DBL};
 `);
 
+const StyledAudioPlayer = styled(AVPlayer)`
+  width: 100%;
+  amp-iframe,
+  iframe {
+    overflow: visible !important;
+    width: calc(100% + ${GEL_SPACING_DBL});
+    margin: 0 -${GEL_SPACING};
+    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+      width: calc(100% + ${GEL_SPACING_QUAD});
+      margin: 0 -${GEL_SPACING_DBL};
+    }
+  }
+`;
+
 export default Component => {
   return props => {
     const [showMore, setShowMore] = useState(false);
@@ -86,7 +105,7 @@ export default Component => {
               <div ref={showMoreRef}>
                 <Container>
                   {mediaPlayerProps && (
-                    <AVPlayer
+                    <StyledAudioPlayer
                       {...mediaPlayerProps}
                       /* Ensure we are using the test embed url, even if simorgh environment is live (eg on blue/green stack) */
                       embedUrl={mediaPlayerProps.embedUrl
