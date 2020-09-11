@@ -8,7 +8,7 @@ import pathOr from 'ramda/src/pathOr';
 import assocPath from 'ramda/src/assocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContext } from '#contexts/ToggleContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import MediaAssetPage from '.';
 import mapPageData from '#data/pidgin/cpsAssets/23248703';
 import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721';
@@ -16,15 +16,19 @@ import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
-const toggleState = {
-  mediaPlayer: {
-    enabled: true,
-  },
-};
+jest.mock('#containers/ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  return ChartbeatAnalytics;
+});
+
+jest.mock('#containers/ComscoreAnalytics', () => {
+  const ComscoreAnalytics = () => <div>comscore</div>;
+  return ComscoreAnalytics;
+});
 
 const createAssetPage = ({ pageData }, service) => (
   <StaticRouter>
-    <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
+    <ToggleContextProvider>
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
@@ -37,7 +41,7 @@ const createAssetPage = ({ pageData }, service) => (
           <MediaAssetPage service={service} pageData={pageData} />
         </RequestContextProvider>
       </ServiceContextProvider>
-    </ToggleContext.Provider>
+    </ToggleContextProvider>
   </StaticRouter>
 );
 
@@ -132,7 +136,10 @@ describe('Media Asset Page', () => {
   let pageData;
   let asFragment;
   let getByText;
+
   beforeEach(async () => {
+    process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+
     const response = await mockInitialData({
       assetId: 'pidgin/a-media-asset',
       service: 'pidgin',
@@ -148,6 +155,7 @@ describe('Media Asset Page', () => {
 
   afterEach(() => {
     delete process.env.SIMORGH_APP_ENV;
+    delete process.env.SIMORGH_ICHEF_BASE_URL;
   });
 
   it('should render the index image as metadata image', async () => {
@@ -155,14 +163,14 @@ describe('Media Asset Page', () => {
       {
         property: 'og:image',
         content:
-          'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
+          'https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
       },
       { property: 'og:image:alt', content: 'connectionAltText' },
       { name: 'twitter:image:alt', content: 'connectionAltText' },
       {
         name: 'twitter:image:src',
         content:
-          'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
+          'https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
       },
     ];
 

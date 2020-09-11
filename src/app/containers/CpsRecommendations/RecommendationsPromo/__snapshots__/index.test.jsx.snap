@@ -215,8 +215,12 @@ exports[`RecommendationsPromo it renders a Story Promo wrapped in a Grid compone
             class="c5"
           >
             <div
-              class="lazyload-placeholder"
-            />
+              class="lazyload-wrapper"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </div>
           </div>
           <div
             class="c6"

@@ -28,7 +28,6 @@ import LinkedData from '#containers/LinkedData';
 import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
-import useToggle from '#hooks/useToggle';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
@@ -60,7 +59,6 @@ const StyledGelWrapperGrid = styled(GelPageGrid)`
 // iframe padding set to keep scrub bar and duration in view
 const StyledAudioPlayer = styled(AVPlayer)`
   amp-iframe {
-    overflow: visible !important;
     width: calc(100% + ${GEL_SPACING_DBL});
     @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
       width: calc(100% + ${GEL_SPACING_QUAD});
@@ -91,6 +89,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     promoBrandTitle,
     durationISO8601,
     thumbnailImageUrl,
+    radioScheduleData,
   } = pageData;
 
   const { isAmp } = useContext(RequestContext);
@@ -118,12 +117,6 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     'Audio player',
     ['mediaAssetPage', 'audioPlayer'],
     translations,
-  );
-
-  const radioScheduleData = pathOr([], ['radioScheduleData'], pageData);
-  const hasRadioScheduleData = Boolean(radioScheduleData.length);
-  const { enabled: radioScheduleIsEnabled } = useToggle(
-    'onDemandRadioSchedule',
   );
 
   return (
@@ -203,7 +196,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           />
         </Grid>
       </StyledGelPageGrid>
-      {radioScheduleIsEnabled && hasRadioScheduleData && (
+      {radioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />
       )}
     </>

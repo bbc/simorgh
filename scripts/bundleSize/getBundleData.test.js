@@ -107,10 +107,10 @@ describe('getPageBundleData', () => {
 
   it('should output correctly for page type with one common bundles', () => {
     const data = getPageBundleData(jsFiles);
-    const photoGalleryPageData = data.filter(([pageName]) => {
+    const onDemandTvPageData = data.filter(([pageName]) => {
       return pageName === 'OnDemandTvPage';
     });
-    expect(photoGalleryPageData).toMatchInlineSnapshot(`
+    expect(onDemandTvPageData).toMatchInlineSnapshot(`
       Array [
         Array [
           "OnDemandTvPage",

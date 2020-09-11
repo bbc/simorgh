@@ -2,7 +2,7 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"Skip to content"`;
 
-exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598274&amp;s2=79&amp;p=scotland.articles.czwj5l0n210o.page&amp;x1=[urn:bbc:optimo:czwj5l0n210o]&amp;x2=[responsive]&amp;x3=[scotland]&amp;x4=[en-gb]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[This+is+the+SEO+headline+of+this+test+article]&amp;x11=[2019-09-13T12:36:29.124Z]&amp;x12=[2019-09-13T12:36:29.124Z]\\"/>"`;
+exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598274&amp;s2=79&amp;p=scotland.articles.czwj5l0n210o.page&amp;x1=[urn%3Abbc%3Aoptimo%3Aczwj5l0n210o]&amp;x2=[responsive]&amp;x3=[scotland]&amp;x4=[en-gb]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[This%2Bis%2Bthe%2BSEO%2Bheadline%2Bof%2Bthis%2Btest%2Barticle]&amp;x11=[2019-09-13T12%3A36%3A29.124Z]&amp;x12=[2019-09-13T12%3A36%3A29.124Z]\\"/>"`;
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/scotland"`;
 
@@ -212,7 +212,7 @@ Object {
   "@type": "VideoObject",
   "description": "They may be tiny, but us humans could learn a thing or two from ants.",
   "duration": "PT3M11S",
-  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/articles/czwj5l0n210o/p01k6msp/en-GB",
+  "embedURL": "https://test.bbc.com/ws/av-embeds/articles/czwj5l0n210o/p01k6msp/en-GB",
   "name": "Five things ants can teach us about management",
   "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg",
   "uploadDate": "2018-10-22T14:35:32.000Z",

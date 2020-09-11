@@ -1,0 +1,256 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "markupType": "plain_text",
+        "role": "introduction",
+        "text": "相对于研究生人数，本科生通常在英国的大学里占比重更大。不过随着海外留学生数量不断增加，这个比例的差距也在不断减小。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "英国高校的硕士研究生课程受欢迎的原因之一是课时短——只需一年就可以拿到硕士学位。虽然学费相对高昂，但在经过多方面的比较后，仍有不少中国学生选择到英国攻读硕士。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "目前 City University London伦敦城市大学的一万多名学生当中，本科生和研究生几乎各占一半。如此高的研究生比例在英国综合性大学中比较少见。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "在这些研究生中，有几乎百分之五十是外国留学生。海外学生几个较大的群体是来自中国、俄罗斯和希腊的学生，其中中国学生人数在六百到六百五十人之间。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "伦敦城市大学代理校长Julius Weinberg教授在接受我的采访时，特别强调外国学生不应该只和来自同一个国家地区的同学交往，因为出国留学的目的并不仅仅是交到本国的朋友，更重要的是经历一种国际体验。",
+        "type": "paragraph"
+      },
+      {
+        "altText": "Julius Weinberg教授",
+        "caption": "伦敦城市大学代理校长Julius Weinberg教授",
+        "copyrightHolder": "",
+        "height": 170,
+        "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2009/11/17/091117162023_pic3.jpg",
+        "id": "d7e381",
+        "path": "/amz/worldservice/live/assets/images/2009/11/17/091117162023_pic3.jpg",
+        "subType": "body",
+        "type": "image",
+        "width": 226
+      },
+      {
+        "markupType": "plain_text",
+        "text": "出门靠自己",
+        "type": "crosshead"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<bold>天舒</bold>：过去几年，很多中国学生离家来到英国读书，在家时他们受到父母的呵护和保护，来到国外后他们要自己面对各种困难和问题。我听到不少中国学生抱怨说，到英国来交了这么多钱，却没有在学校里受到很好的照顾，比如学习上、英语上、住房上遇到困难时，他们不知道找谁寻求帮助。您能给他们些建议吗？",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<bold>Weinberg教授：</bold>这个问题提的好。对大学来说，这是个难题。大学生是年轻的成年人，他们不再是孩子。我们不希望溺爱他们，更不想把他们裹在棉花套子里。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "出国留学，一是要旅行，并变得独立。这些年轻人都是独立的个体，他们总有一天会离开学校，走入社会，承担责任重大的工作，所以他们需要抛弃被父母老师照顾的想法，走向独立。而我们希望做到的是在这条路上扶持他们，让他们在离开学校时变成独立的成年人。我们不想限制他们思考、成长和冒险的能力，但你说的是对的，我们同时也需要给他们以支持。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "我想我们之所以能在吸引国际学生这方面取得成功，很大程度上是因为他们在城市大学有过愉快的经历，我们努力做到让每位学生都有自己的指导老师，我们为学生提供的心理辅导系统很完善，我们认真对待学生就业辅导工作。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "我不能说我们事事做的都很好，但我们的确是希望能把这个平衡掌握好，一方面不想束缚学生的自由，你知道年轻人都喜欢去酒吧喝几杯，也会喝醉，会做蠢事，但是我们都是从那个年龄过来的，都在错误中成长。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "另一方面我们也会给学生提供支持，给他们需要的建议。但同时也给他们成长中需要的自由，正是这样的自由空间才能使他们成为未来的精英和领袖。只有把这个平衡掌握好，我们的学生才能具备足够的自信和勇气面对未来。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "教育产业化",
+        "type": "crosshead"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<bold>天舒：</bold>有学生问，英国高等教育是否已经产业化，是否具有可持续性。您有什么看法？",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<bold>Weinberg教授：</bold>这要看你如何定义“产业化”了。英国的高等教育过去是精英教育，只有少数人能上大学，这些人背景相同，相互认识，也知道英国社会如何运转。最近一些年我们扩大了教育范围，不仅英国国内能上大学的人数增多，海外学生的数量也不断增长。这就要求我们更加职业化，并思考如何能更好的教学，帮助学生。如果这样的变化使教育变得产业化，而不是过去的那种“俱乐部”，我觉得这是件好事。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "英国教育特别注重独立思考，这是和很多国家不同之处。其它国家的高等教育或许更具有家长式的特点，有种像小学教育那种灌输的的感觉。这种方式有它的优点，对学生来说更加轻松，但同时它也有缺点，它不能为学生提供成为未来精英和领袖所需要具备的独立性和其它能力。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "所以可以说英国的高等教育在一定程度上是一种产业，它很庞大，雇员很多，注重卓越，并发展出更好的系统支持学生。但我更认为它是高质量的产业，帮助人们实现梦想，提高各种能力，在复杂的社会中逐渐步入领导层行列。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "我想我们能够做得更好，有某些方面可以更加职业化。好的产业非常重视顾客，好的产业明白这样的道理，如果想成功的话，一定要照顾好客户。我想如果说英国的高等教育产业化意味着我们的职业素养高，我们认真对待自己的工作，把客户放在首位，那么这是件好事。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<bold>未完待续</bold>",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "cps_asset_id": "2359159",
+      "cps_asset_type": "sty"
+    },
+    "atiAnalytics": {},
+    "blockTypes": [
+      "paragraph",
+      "image",
+      "crosshead"
+    ],
+    "createdBy": "ukchina_simplified",
+    "firstPublished": 1259065617000,
+    "id": "urn:bbc:ares::asset:ukchina/simp/uk_education/tianshu/091124_tianshu_iv_cityvc2",
+    "includeComments": false,
+    "language": "zh-Hans",
+    "lastPublished": 1259067776000,
+    "lastUpdated": 1590282501784,
+    "locators": {
+      "assetId": "2359159",
+      "assetUri": "/ukchina/simp/uk_education/tianshu/091124_tianshu_iv_cityvc2",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/uk_education/tianshu/091124_tianshu_iv_cityvc2",
+      "curie": "http://www.bbc.co.uk/asset/355940f2-7daf-11e7-b51c-cd9b3db9bd6e"
+    },
+    "options": {
+      "allowAdvertising": false,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "previouslyArchived": null,
+      "suitableForSyndication": false
+    },
+    "passport": {
+      "taggings": []
+    },
+    "tags": {},
+    "timestamp": 1259067776000,
+    "type": "STY",
+    "version": "v1.3.0"
+  },
+  "promo": {
+    "byline": {
+      "name": "BBC英伦网 天舒",
+      "persons": [
+        {
+          "function": "《天舒访谈》",
+          "name": "BBC英伦网 天舒"
+        }
+      ],
+      "title": "《天舒访谈》"
+    },
+    "headlines": {
+      "headline": "天舒访谈：英国教育的产业化"
+    },
+    "id": "urn:bbc:ares::asset:ukchina/simp/uk_education/tianshu/091124_tianshu_iv_cityvc2",
+    "indexImage": {
+      "altText": "毕业生",
+      "copyrightHolder": "",
+      "height": 60,
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2009/11/05/091105114940_graduation10660.jpg",
+      "id": "d7e247",
+      "path": "/amz/worldservice/live/assets/images/2009/11/05/091105114940_graduation10660.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 106
+    },
+    "language": "zh-Hans",
+    "locators": {
+      "assetId": "2359159",
+      "assetUri": "/ukchina/simp/uk_education/tianshu/091124_tianshu_iv_cityvc2",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/uk_education/tianshu/091124_tianshu_iv_cityvc2",
+      "curie": "http://www.bbc.co.uk/asset/355940f2-7daf-11e7-b51c-cd9b3db9bd6e"
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "伦敦城市大学校长回应英国教育产业化问题。",
+    "timestamp": 1259067776000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [
+      {
+        "promos": [
+          {
+            "name": "天舒访谈：为什么选择伦敦？",
+            "type": "link",
+            "uri": "http://www.bbc.co.uk//ukchina/simp/uk_education/tianshu/091117_tianshu_iv_cityvc"
+          },
+          {
+            "name": "视频：伦敦金融城新市长就职",
+            "type": "link",
+            "uri": "http://www.bbc.co.uk//ukchina/simp/uk_life/2009/11/091116_video_life_lordmayor"
+          },
+          {
+            "name": "天舒访谈：创业如入龙潭",
+            "type": "link",
+            "uri": "http://www.bbc.co.uk//ukchina/simp/uk_education/tianshu/091110_tianshu_iv_entrepreneur"
+          },
+          {
+            "name": "天舒访谈：爱丁堡公爵奖",
+            "type": "link",
+            "uri": "http://www.bbc.co.uk//ukchina/simp/uk_education/tianshu/091103_tianshu_iv_edinburgh"
+          },
+          {
+            "name": "天舒访谈:走上英国大学讲台",
+            "type": "link",
+            "uri": "http://www.bbc.co.uk//ukchina/simp/uk_education/tianshu/091027_tianshu_xiongyu_academic"
+          },
+          {
+            "name": "天舒访谈:想在英国学好英语",
+            "type": "link",
+            "uri": "http://www.bbc.co.uk//ukchina/simp/uk_education/tianshu/091020_tianshu_iv_english"
+          }
+        ],
+        "type": "see-alsos"
+      },
+      {
+        "promos": [
+          {
+            "name": "伦敦城市大学",
+            "type": "link",
+            "uri": "http://www.city.ac.uk/"
+          }
+        ],
+        "type": "related-urls"
+      }
+    ],
+    "section": {
+      "name": "",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/ukchina/simp"
+    },
+    "site": {
+      "name": "bbcukchina.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/ukchina/simp"
+    }
+  }
+}
