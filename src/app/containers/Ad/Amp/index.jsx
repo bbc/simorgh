@@ -6,9 +6,7 @@ import {
   AMP_ACCESS_JS,
   AMP_ADS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-
-import { GEL_SPACING_DBL, GEL_SPACING } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import { C_LUNAR_LIGHT, C_RHINO } from '@bbc/psammead-styles/colours';
 import pathOr from 'ramda/src/pathOr';
 import { getMinion } from '@bbc/gel-foundations/typography';
@@ -17,39 +15,38 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
+import { ampLeaderboardStyles, ampMpuStyles } from '../utilities/adSlotStyles';
 
 // styled-components removes non-standard attributes (such as AMP attributes) on
 // server rendering. spreading props like this allows us to add AMP attributes
 // to the element.
-const Section = props => <section {...props} />;
+const AccessDiv = props => <div {...props} />;
 
-// amp-geo adds geo group classes to the body of the document depending on
-// the user's location. It removes the `amp-geo-pending` class when geolocation
-// data is available.
-// setting display: none ensures ad requests within this component are not made.
-const AdSection = styled(Section)`
+const AdSection = styled.section`
   background-color: ${C_LUNAR_LIGHT};
+  margin-top: ${GEL_SPACING};
+`;
 
-  .amp-geo-pending &,
-  .amp-geo-group-gbOrUnknown & {
-    display: none;
-    visibility: hidden;
-  }
+const AdContainer = styled.div`
+  ${({ slotType }) =>
+    slotType === 'mpu' ? ampMpuStyles : ampLeaderboardStyles};
 `;
 
 const StyledWrapper = styled.div`
   margin: 0 auto; /* To centre page layout for Group 4+ */
   text-align: center;
-  padding-bottom: ${GEL_SPACING};
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-bottom: ${GEL_SPACING_DBL};
-    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
-  }
 `;
 
-const StyledAd = styled.div`
-  display: inline-block;
+// amp-geo adds geo group classes to the body of the document depending on
+// the user's location. It removes the `amp-geo-pending` class when geolocation
+// data is available.
+// setting display: none ensures ad requests within this component are not made.
+const DisplayWrapper = styled(AccessDiv)`
+  .amp-geo-pending &,
+  .amp-geo-group-gbOrUnknown & {
+    display: none;
+    visibility: hidden;
+  }
 `;
 
 const StyledLink = styled.a.attrs({ tabIndex: '-1' })`
@@ -62,10 +59,6 @@ const StyledLink = styled.a.attrs({ tabIndex: '-1' })`
   padding: ${GEL_SPACING} 0;
 
   text-align: ${({ dir }) => (dir === 'ltr' ? `right` : `left`)};
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-top: ${GEL_SPACING_DBL};
-  }
 
   &:hover {
     text-decoration: underline;
@@ -108,34 +101,38 @@ const AmpAd = ({ slotType }) => {
 
   return (
     // eslint-disable-next-line jsx-a11y/no-redundant-roles
-    <AdSection
-      aria-label={ariaLabel}
-      role="region"
-      data-e2e="advertisement"
-      amp-access="toggles.ads.enabled"
-      amp-access-hide="true"
-      aria-hidden="true"
-    >
-      <StyledWrapper>
-        <Helmet>
-          {AMP_ADS_JS}
-          {AMP_ACCESS_JS}
-          {AMP_ACCESS_FETCH(service)}
-        </Helmet>
-
-        <StyledAd>
-          <StyledLink
-            href={LABEL_LINK}
-            script={script}
-            service={service}
-            dir={dir}
-          >
-            {label}
-          </StyledLink>
-          <AdSlot service={service} slotType={slotType} />
-        </StyledAd>
-      </StyledWrapper>
-    </AdSection>
+    <>
+      <Helmet>
+        {AMP_ADS_JS}
+        {AMP_ACCESS_JS}
+        {AMP_ACCESS_FETCH(service)}
+      </Helmet>
+      <AdSection
+        aria-label={ariaLabel}
+        role="region"
+        data-e2e="advertisement"
+        aria-hidden="true"
+      >
+        <AdContainer slotType={slotType}>
+          <StyledWrapper>
+            <DisplayWrapper
+              amp-access="toggles.ads.enabled"
+              amp-access-hide="true"
+            >
+              <StyledLink
+                href={LABEL_LINK}
+                script={script}
+                service={service}
+                dir={dir}
+              >
+                {label}
+              </StyledLink>
+              <AdSlot service={service} slotType={slotType} />
+            </DisplayWrapper>
+          </StyledWrapper>
+        </AdContainer>
+      </AdSection>
+    </>
   );
 };
 
