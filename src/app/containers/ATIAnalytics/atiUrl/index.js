@@ -17,8 +17,6 @@ import {
   getATIMarketingString,
 } from '#lib/analyticsUtils';
 
-const spaceRegex = / /g;
-
 /*
  * For AMP pages, certain browser and device values are determined
  * https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md#device-and-browser
@@ -45,7 +43,6 @@ export const buildATIPageTrackPath = ({
   campaigns,
 }) => {
   const href = getHref(platform);
-  const decodedHref = decodeURIComponent(href);
   const referrer = getReferrer(platform, origin, previousPath);
   const campaignType = getCampaignType();
 
@@ -171,7 +168,7 @@ export const buildATIPageTrackPath = ({
       key: 'x16',
       description: 'campaigns',
       value: (Array.isArray(campaigns) ? campaigns : [])
-        .map(campaign => campaign.campaignName.replace(spaceRegex, '%20'))
+        .map(({ campaignName }) => campaignName)
         .join('~'),
       wrap: true,
     },
@@ -190,7 +187,7 @@ export const buildATIPageTrackPath = ({
     {
       key: 'xto',
       description: 'marketing campaign',
-      value: getATIMarketingString(decodedHref, campaignType),
+      value: getATIMarketingString(href, campaignType),
       wrap: false,
     },
     {
@@ -266,6 +263,7 @@ export const buildATIEventTrackUrl = ({
         componentInfo,
         type: type || '',
       }),
+      wrap: false,
     },
   ];
 

@@ -2,7 +2,7 @@
 
 exports[`Canonical Most Read Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
-exports[`Canonical Most Read Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=62&amp;p=mundo.popular.read.page&amp;x2=[responsive]&amp;x3=[news-mundo]&amp;x4=[es]&amp;x7=[list-datadriven]&amp;x8=[simorgh-nojs]&amp;x9=[Más+leídas+-+BBC+News+Mundo]&amp;x11=[2019-11-06T16:24:00Z]&amp;x12=[2100-11-06T16:39:00Z]\\"/>"`;
+exports[`Canonical Most Read Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=62&amp;p=mundo.popular.read.page&amp;x2=[responsive]&amp;x3=[news-mundo]&amp;x4=[es]&amp;x7=[list-datadriven]&amp;x8=[simorgh-nojs]&amp;x9=[M%C3%A1s%2Ble%C3%ADdas%2B-%2BBBC%2BNews%2BMundo]&amp;x11=[2019-11-06T16%3A24%3A00Z]&amp;x12=[2100-11-06T16%3A39%3A00Z]\\"/>"`;
 
 exports[`Canonical Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
@@ -329,3 +329,5 @@ exports[`Canonical Most Read Page SEO Twitter image src 1`] = `"https://news.fil
 exports[`Canonical Most Read Page SEO Twitter site 1`] = `"@bbcmundo"`;
 
 exports[`Canonical Most Read Page SEO Twitter title 1`] = `"Más leídas - BBC News Mundo"`;
+
+exports[`Canonical Most Read Page SEO apple-itunes-app meta tag should match text 1`] = `"app-id=515255747, app-argument=http://localhost:7080/mundo/popular/read?utm_medium=banner&utm_content=apple-itunes-app"`;

@@ -2,8 +2,10 @@ import {
   runCoreCanonicalTests,
   runCanonicalAnalyticsTests,
 } from '../../common';
+import runCrossPlatformTests from './crossPlatformTests';
 
-export default () => {
+export default service => {
+  runCrossPlatformTests(service);
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
 
@@ -37,45 +39,5 @@ export default () => {
         ).toBeInTheDocument();
       });
     }
-  });
-
-  describe('Ads', () => {
-    const hasAds = service === 'mundo';
-    const leaderboardEl = document.getElementById('dotcom-leaderboard');
-    const mpuEl = document.getElementById('dotcom-mpu');
-
-    if (hasAds) {
-      it('should have ads in the document', () => {
-        expect(leaderboardEl).toBeInTheDocument();
-        expect(mpuEl).toBeInTheDocument();
-      });
-    } else {
-      it('should not have ads in the document', () => {
-        expect(leaderboardEl).not.toBeInTheDocument();
-        expect(mpuEl).not.toBeInTheDocument();
-      });
-    }
-
-    it('should configure GNL dotcom library where service has ads and adCampaignKeyword is in metadata', () => {
-      const scripts = [...document.querySelectorAll('head script')].filter(
-        ({ textContent }) =>
-          hasAds &&
-          textContent.toString().includes('dotcomConfig') &&
-          textContent.toString().includes('adcampaign:'),
-      );
-
-      expect(scripts).toMatchSnapshot();
-    });
-
-    it('should configure GNL dotcom library where service has ads and adCampaignKeyword is not in metadata', () => {
-      const scripts = [...document.querySelectorAll('head script')].filter(
-        ({ textContent }) =>
-          hasAds &&
-          textContent.toString().includes('dotcomConfig') &&
-          !textContent.toString().includes('adcampaign:'),
-      );
-
-      expect(scripts).toMatchSnapshot();
-    });
   });
 };
