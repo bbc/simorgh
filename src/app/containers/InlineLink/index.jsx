@@ -35,7 +35,7 @@ const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
   const linkText = pathOr(null, [0, 'model', 'text'], blocks);
   return (
     <InlineLink
-      href={locator}
+      href={locator.replace('https://www.bbc.com', '')}
       aria-label={isExternal ? `${linkText}${externalLinkText}` : null}
     >
       <Blocks blocks={blocks} componentsToRender={componentsToRender} />

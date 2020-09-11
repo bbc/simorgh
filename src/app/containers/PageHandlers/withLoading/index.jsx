@@ -1,6 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { bool, element } from 'prop-types';
-import styled from 'styled-components';
 import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
 import { useSpring, useTransition, animated } from 'react-spring';
@@ -58,7 +57,7 @@ const WithLoading = Component => {
           </main>
         </animated.div>
       ) : (
-        <Component {...props} />
+        <>{loading ? null : <Component {...props} />}</>
       ),
     );
   };

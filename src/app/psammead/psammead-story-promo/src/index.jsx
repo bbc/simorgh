@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Link as LINK } from 'react-router-dom';
 import { node, bool, string, oneOf, shape } from 'prop-types';
 import {
   GEL_SPACING_HLF,
@@ -30,6 +29,7 @@ import {
 } from '@bbc/psammead-styles/font-styles';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { grid } from '@bbc/psammead-styles/detection';
+import CSRLink from '#containers/CSRLink';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
 
@@ -194,9 +194,6 @@ Summary.defaultProps = {
   promoHasImage: true,
   promoType: 'regular',
 };
-
-// eslint-disable-next-line react/prop-types
-const CSRLink = ({ href, ...props }) => <LINK to={href} {...props} />;
 
 export const Link = styled(CSRLink)`
   position: static;

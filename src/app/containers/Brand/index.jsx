@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import Brand from '@bbc/psammead-brand';
 import { bool, node } from 'prop-types';
+import Brand from '#psammead/psammead-brand/src';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const BrandContainer = ({ skipLink, scriptLink, ...props }) => {

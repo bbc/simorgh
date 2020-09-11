@@ -1,0 +1,555 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Brand should render correctly with link not provided 1`] = `
+.c3 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c0 {
+  background-color: #B80000;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+}
+
+.c2 {
+  box-sizing: content-box;
+  color: #FFFFFF;
+  fill: currentColor;
+  padding-top: 0.625rem;
+  padding-bottom: 0.375rem;
+  height: 1.5rem;
+  width: 100%;
+  max-width: 17.5rem;
+  min-width: 11.25rem;
+  -webkit-flex: 1 1 11.25rem;
+  -ms-flex: 1 1 11.25rem;
+  flex: 1 1 11.25rem;
+  -ms-flex-preferred-size: 17.5rem;
+}
+
+.c4:hover .c2,
+.c4:focus .c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+@media (max-width:14.9375rem) {
+  .c1 {
+    display: block;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c2 {
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),print {
+  .c2 {
+    fill: windowText;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <svg
+      aria-hidden="true"
+      class="c2"
+      focusable="false"
+      height="24"
+      viewBox="0 0 167.95 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill-rule="evenodd"
+      >
+        <path
+          d="M84.32"
+        />
+      </g>
+    </svg>
+    <span
+      class="c3"
+      role="text"
+    >
+      <span
+        lang="en-GB"
+      >
+        Default Brand Name
+      </span>
+      , 
+      Service
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Brand should render correctly with link provided 1`] = `
+.c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c0 {
+  background-color: #B80000;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+}
+
+.c3 {
+  display: inline-block;
+  width: 100%;
+  max-width: 17.5rem;
+  min-width: 11.25rem;
+  -webkit-flex: 1 1 11.25rem;
+  -ms-flex: 1 1 11.25rem;
+  flex: 1 1 11.25rem;
+  -ms-flex-preferred-size: 17.5rem;
+}
+
+.c4 {
+  box-sizing: content-box;
+  color: #FFFFFF;
+  fill: currentColor;
+  padding-top: 0.625rem;
+  padding-bottom: 0.375rem;
+  height: 1.5rem;
+  width: 100%;
+  max-width: 17.5rem;
+  min-width: 11.25rem;
+  -webkit-flex: 1 1 11.25rem;
+  -ms-flex: 1 1 11.25rem;
+  flex: 1 1 11.25rem;
+  -ms-flex-preferred-size: 17.5rem;
+}
+
+.c2:hover .c4,
+.c2:focus .c4 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+@media (max-width:14.9375rem) {
+  .c1 {
+    display: block;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c3 {
+    display: block;
+  }
+}
+
+@media (min-width:25rem) {
+  .c4 {
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),print {
+  .c4 {
+    fill: windowText;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <a
+      class="c2 c3"
+      href="https://www.bbc.co.uk/news"
+    >
+      <svg
+        aria-hidden="true"
+        class="c4"
+        focusable="false"
+        height="24"
+        viewBox="0 0 167.95 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill-rule="evenodd"
+        >
+          <path
+            d="M84.32"
+          />
+        </g>
+      </svg>
+      <span
+        class="c5"
+        role="text"
+      >
+        <span
+          lang="en-GB"
+        >
+          Default Brand Name
+        </span>
+        , 
+        Service
+      </span>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Brand should render correctly with no service Localised Name 1`] = `
+.c3 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c0 {
+  background-color: #B80000;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+}
+
+.c2 {
+  box-sizing: content-box;
+  color: #FFFFFF;
+  fill: currentColor;
+  padding-top: 0.625rem;
+  padding-bottom: 0.375rem;
+  height: 1.5rem;
+  width: 100%;
+  max-width: 17.5rem;
+  min-width: 11.25rem;
+  -webkit-flex: 1 1 11.25rem;
+  -ms-flex: 1 1 11.25rem;
+  flex: 1 1 11.25rem;
+  -ms-flex-preferred-size: 17.5rem;
+}
+
+.c4:hover .c2,
+.c4:focus .c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+@media (max-width:14.9375rem) {
+  .c1 {
+    display: block;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c2 {
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),print {
+  .c2 {
+    fill: windowText;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <svg
+      aria-hidden="true"
+      class="c2"
+      focusable="false"
+      height="24"
+      viewBox="0 0 167.95 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill-rule="evenodd"
+      >
+        <path
+          d="M84.32"
+        />
+      </g>
+    </svg>
+    <span
+      class="c3"
+    >
+      BBC News
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Brand should render correctly with transparent borders 1`] = `
+.c3 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c0 {
+  background-color: #B80000;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-top: 0.0625rem solid transparent;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+.c2 {
+  box-sizing: content-box;
+  color: #FFFFFF;
+  fill: currentColor;
+  padding-top: 0.625rem;
+  padding-bottom: 0.375rem;
+  height: 1.5rem;
+  width: 100%;
+  max-width: 17.5rem;
+  min-width: 11.25rem;
+  -webkit-flex: 1 1 11.25rem;
+  -ms-flex: 1 1 11.25rem;
+  flex: 1 1 11.25rem;
+  -ms-flex-preferred-size: 17.5rem;
+}
+
+.c4:hover .c2,
+.c4:focus .c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+@media (max-width:14.9375rem) {
+  .c1 {
+    display: block;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c2 {
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),print {
+  .c2 {
+    fill: windowText;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <svg
+      aria-hidden="true"
+      class="c2"
+      focusable="false"
+      height="24"
+      viewBox="0 0 167.95 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill-rule="evenodd"
+      >
+        <path
+          d="M84.32"
+        />
+      </g>
+    </svg>
+    <span
+      class="c3"
+    >
+      BBC News
+    </span>
+  </div>
+</div>
+`;

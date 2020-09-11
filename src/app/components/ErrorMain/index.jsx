@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, arrayOf, oneOf, shape } from 'prop-types';
 import styled from 'styled-components';
-import InlineLink from '@bbc/psammead-inline-link';
+import InlineLink from '#psammead/psammead-inline-link/src';
 import Paragraph from '@bbc/psammead-paragraph';
 import { C_POSTBOX, C_SHADOW } from '@bbc/psammead-styles/colours';
 import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
@@ -108,7 +108,9 @@ const ErrorMain = ({
       </ul>
       <CustomParagraph script={script} service={service}>
         {callToActionFirst}
-        <InlineLink href={callToActionLinkUrl}>
+        <InlineLink
+          href={callToActionLinkUrl.replace('https://www.bbc.com', '')}
+        >
           {callToActionLinkText}
         </InlineLink>
         {callToActionLast}
