@@ -350,8 +350,12 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
                 class="c9"
               >
                 <div
-                  class="lazyload-placeholder"
-                />
+                  class="lazyload-wrapper"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
               </div>
               <div
                 class="c10"
@@ -414,8 +418,12 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
                 class="c9"
               >
                 <div
-                  class="lazyload-placeholder"
-                />
+                  class="lazyload-wrapper"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
               </div>
               <div
                 class="c10"
@@ -467,8 +475,12 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
                 class="c9"
               >
                 <div
-                  class="lazyload-placeholder"
-                />
+                  class="lazyload-wrapper"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
               </div>
               <div
                 class="c10"

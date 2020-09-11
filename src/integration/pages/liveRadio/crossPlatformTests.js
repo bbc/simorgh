@@ -4,8 +4,8 @@ import {
   runMainHeadingTests,
 } from '../../common';
 
-export default () => {
-  runCommonCrossPlatformTests();
+export default service => {
+  runCommonCrossPlatformTests(service);
   runMediaPlayerEmbedTests();
   runMainHeadingTests();
 
