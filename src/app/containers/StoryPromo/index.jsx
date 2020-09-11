@@ -247,7 +247,7 @@ const StoryPromoContainer = ({
           as={headingTagOverride}
         >
           <StyledLink
-            href={url}
+            href={url.replace('http://www.bbc.com', '')}
             onClick={isLiveRadioPromo ? handleLiveRadioLink : undefined}
           >
             {isLive ? (
