@@ -574,18 +574,18 @@ describe('cspHeader', () => {
           expect(next).toHaveBeenCalled();
 
           const expectedCSPHeaderString =
-            `default-src ${defaultSrcExpectation.join(' ')}; ` +
-            `child-src ${childSrcExpectation.join(' ')}; ` +
-            `connect-src ${connectSrcExpectation.join(' ')}; ` +
-            `font-src ${fontSrcExpectation.join(' ')}; ` +
-            `frame-src ${frameSrcExpectation.join(' ')}; ` +
-            `img-src ${imgSrcExpectation.join(' ')}; ` +
-            `script-src ${scriptSrcExpectation.join(' ')}; ` +
-            `style-src ${styleSrcExpectation.join(' ')}; ` +
-            `media-src ${mediaSrcExpectation.join(' ')}; ` +
-            `worker-src ${workerSrcExpectation.join(' ')}; ` +
-            `report-to default; ` +
-            `upgrade-insecure-requests`;
+            `default-src ${defaultSrcExpectation.join(' ')};` +
+            `child-src ${childSrcExpectation.join(' ')};` +
+            `connect-src ${connectSrcExpectation.join(' ')};` +
+            `font-src ${fontSrcExpectation.join(' ')};` +
+            `frame-src ${frameSrcExpectation.join(' ')};` +
+            `img-src ${imgSrcExpectation.join(' ')};` +
+            `script-src ${scriptSrcExpectation.join(' ')};` +
+            `style-src ${styleSrcExpectation.join(' ')};` +
+            `media-src ${mediaSrcExpectation.join(' ')};` +
+            `worker-src ${workerSrcExpectation.join(' ')};` +
+            `report-to default;` +
+            `upgrade-insecure-requests true`;
 
           expect(headers['Content-Security-Policy']).toEqual(
             expectedCSPHeaderString,
