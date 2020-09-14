@@ -421,11 +421,11 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/afrique/fix'],
-            enabled: false,
+            paths: ['/afrique/48465371'],
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
     },
     specialFeatures: {
@@ -2422,8 +2422,8 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/hindi/fix'],
-            enabled: false,
+            paths: ['/hindi/39414759'],
+            enabled: true,
           },
         },
         smoke: false,
@@ -3616,8 +3616,8 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/marathi/fix'],
-            enabled: false,
+            paths: ['/marathi/43599597'],
+            enabled: true,
           },
         },
         smoke: false,
