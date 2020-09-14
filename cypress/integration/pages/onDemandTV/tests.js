@@ -2,12 +2,11 @@
 import {
   isAvailable,
   getEpisodeAvailability,
+  overrideRendererOnTest,
   getEmbedUrl,
   isBrand,
 } from '../../../support/helpers/onDemandRadioTv';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-// eslint-disable-next-line import/no-named-as-default
-import overrideRendererOnTest from '../../../support/helpers/visitPage';
 
 export default ({ service, pageType, variant, isAmp }) => {
   describe(`Tests for ${service} ${pageType}`, () => {

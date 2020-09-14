@@ -12,7 +12,6 @@ Object.keys(config)
   .forEach(serviceId => {
     const { variant, name: service } = config[serviceId];
     const paths = getPaths(serviceId, pageType);
-
     paths.forEach(currentPath => {
       describe(`${pageType} - ${currentPath}`, () => {
         before(() => {

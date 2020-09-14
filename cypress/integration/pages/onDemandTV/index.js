@@ -14,9 +14,14 @@ Object.keys(config)
     const paths = getPaths(serviceId, pageType);
     paths.forEach(currentPath => {
       describe(`${pageType} - ${currentPath}`, () => {
-        before(() => {
+        beforeEach(() => {
           Cypress.env('currentPath', currentPath);
-          const newPath = dataEndpointOverride(path);
+          let newPath;
+          if (Cypress.env('APP_ENV') === 'test') {
+            newPath = `${currentPath}?renderer_env=live`;
+          } else {
+            newPath = currentPath;
+          }
           visitPage(newPath, pageType);
         });
         crossPlatformTests({
@@ -35,7 +40,7 @@ Object.keys(config)
       .map(path => `${path}.amp`)
       .forEach(currentPath => {
         describe(`${pageType} - ${currentPath}`, () => {
-          before(() => {
+          beforeEach(() => {
             Cypress.env('currentPath', currentPath);
             visitPage(currentPath, pageType);
           });
