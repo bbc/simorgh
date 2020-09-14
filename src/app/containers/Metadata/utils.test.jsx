@@ -33,7 +33,7 @@ describe('Metadata utils', () => {
       ).toBeNull();
     });
 
-    it('should return the apple-itunes-app meta tag when iTunesAppId and canonicalLink provided', () => {
+    it('should return the apple-itunes-app meta tag when iTunesAppId and canonicalLink provided, is canonical page and apple_itunes_app is enabled ', () => {
       expect(
         renderAppleItunesApp({
           iTunesAppId: 12345678,
