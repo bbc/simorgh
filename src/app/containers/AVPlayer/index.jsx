@@ -80,11 +80,15 @@ const AudioPlayer = styled(AVPlayer)`
   }
 `;
 
-export default props =>
-  ({
-    audio: <AudioPlayer {...props} />,
-    classic: <AVPlayer {...props} />,
-  }[props.skin]);
+export default props => {
+  // eslint-disable-next-line react/prop-types
+  const { skin } = props;
+  return skin === 'audio' ? (
+    <AudioPlayer {...props} />
+  ) : (
+    <AVPlayer {...props} />
+  );
+};
 
 AVPlayer.propTypes = {
   embedUrl: string,
@@ -94,7 +98,7 @@ AVPlayer.propTypes = {
   title: string,
   iframeTitle: string,
   className: string,
-  skin: string.isRequired,
+  skin: string,
 };
 
 AVPlayer.defaultProps = {
@@ -105,4 +109,5 @@ AVPlayer.defaultProps = {
   title: '',
   iframeTitle: '',
   className: '',
+  skin: 'classic',
 };
