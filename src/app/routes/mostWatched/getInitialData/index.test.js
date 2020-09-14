@@ -1,22 +1,17 @@
 import getInitialData from '.';
-import mostReadJson from '#data/pidgin/mostRead';
 
-fetch.mockResponse(JSON.stringify(mostReadJson));
+describe('mostWatched - getInitialData', () => {
+  it('should return status and metadata', async () => {
+    const response = getInitialData({
+      path: 'mock-frontpage-path',
+      service: 'pidgin',
+      pageType: 'mostWatched',
+    });
+    const expected = {
+      status: 200,
+      pageData: { metadata: { type: 'mostWatched' } },
+    };
 
-it('should return essential data for a page to render', async () => {
-  const { pageData } = await getInitialData({
-    path: 'mock-frontpage-path',
-    service: 'pidgin',
-    pageType: 'mostWatched',
+    expect(response).toEqual(expected);
   });
-
-  expect(pageData.lastRecordTimeStamp).toEqual('2030-01-01T17:00:00Z');
-  expect(pageData.metadata.type).toEqual('mostWatched');
-  expect(pageData.records[0].promo.timestamp).toEqual(1558434642016);
-  expect(pageData.records[0].promo.headlines.shortHeadline).toEqual(
-    'Public Holidays wey go happun for 2019',
-  );
-  expect(pageData.records[0].promo.locators.assetUri).toEqual(
-    '/pidgin/tori-46729879',
-  );
 });

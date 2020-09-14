@@ -5,31 +5,22 @@ import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import MostWatchedPage from './MostWatchedPage';
-import pidginMostWatchedData from '#data/pidgin/mostWatched';
-import * as analyticsUtils from '#lib/analyticsUtils';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-
-fetch.mockResponse(JSON.stringify(pidginMostWatchedData));
-
-analyticsUtils.getAtUserId = jest.fn();
 
 const MostWatchedPageWithContext = () => (
-  <ToggleContextProvider>
-    <ServiceContextProvider service="pidgin">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.com"
-        isAmp={false}
-        pageType="mostWatched"
-        pathname="/pathname"
-        service="pidgin"
-        statusCode={200}
-      >
-        <BrowserRouter>
-          <MostWatchedPage />
-        </BrowserRouter>
-      </RequestContextProvider>
-    </ServiceContextProvider>
-  </ToggleContextProvider>
+  <ServiceContextProvider service="pidgin">
+    <RequestContextProvider
+      bbcOrigin="https://www.test.bbc.com"
+      isAmp={false}
+      pageType="mostWatched"
+      pathname="/pathname"
+      service="pidgin"
+      statusCode={200}
+    >
+      <BrowserRouter>
+        <MostWatchedPage />
+      </BrowserRouter>
+    </RequestContextProvider>
+  </ServiceContextProvider>
 );
 
 describe('Most Watched Page Main', () => {
@@ -44,7 +35,7 @@ describe('Most Watched Page Main', () => {
     });
 
     expect(container.querySelector('h1').textContent).toEqual(
-      'De one we dem de look well well',
+      'De one we dem don look',
     );
   });
 });

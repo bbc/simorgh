@@ -15,6 +15,7 @@ import {
   onDemandTvPath,
   mostReadDataRegexPath,
   mostWatchedDataPath,
+  mostWatchedPagePath,
   legacyAssetPagePath,
   legacyAssetPageDataPath,
   secondaryColumnDataRegexPath,
@@ -272,15 +273,14 @@ describe('mostWatchedPagePath', () => {
     '/pashto/media/video',
     '/zhongwen/simp/media/video',
   ];
-  shouldMatchValidRoutes(validRoutes, mostWatchedDataPath);
+  shouldMatchValidRoutes(validRoutes, mostWatchedPagePath);
 
   const invalidRoutes = [
     '/foobar/media/video',
     '/pidgin/video/media',
     '/zhongwen/media/video/simp',
-    '/serbian/media/video',
   ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, mostWatchedDataPath);
+  shouldNotMatchInvalidRoutes(invalidRoutes, mostWatchedPagePath);
 });
 
 describe('secondaryColumnDataRegexPath', () => {
