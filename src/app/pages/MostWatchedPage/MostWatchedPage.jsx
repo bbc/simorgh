@@ -13,9 +13,6 @@ import {
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
-import LinkedData from '#containers/LinkedData';
-import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import MetadataContainer from '#containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import IndexMain from '#app/components/PageLayout/IndexMain';
 import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
@@ -37,9 +34,7 @@ const MarginWrapper = styled.div`
 
 const MostWatchedPage = () => {
   const {
-    brandName,
     dir,
-    lang,
     mostWatched: { header },
   } = useContext(ServiceContext);
 
@@ -92,17 +87,13 @@ const MostWatchedPage = () => {
 
   return (
     <>
-      <ComscoreAnalytics />
-      <MetadataContainer
-        title={header}
-        lang={lang}
-        description={`${header} - ${brandName}`}
-        openGraphType="website"
-      />
-      <LinkedData type="WebPage" seoTitle={header} />
       <IndexMain data-e2e="most-watched">
         <IndexPageContainer>
-          <MostWatchedWrapper />
+          <MostWatchedWrapper>
+            <div style={{ display: 'none' }}>
+              To be replaced with most watched content
+            </div>
+          </MostWatchedWrapper>
         </IndexPageContainer>
       </IndexMain>
     </>
