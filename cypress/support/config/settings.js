@@ -172,6 +172,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -393,6 +410,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -585,6 +619,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -782,6 +833,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -941,6 +1009,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1138,6 +1223,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1357,6 +1459,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1427,6 +1546,23 @@ module.exports = () => ({
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1624,6 +1760,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1803,6 +1956,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2021,6 +2191,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2237,6 +2424,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2391,6 +2595,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2590,6 +2811,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2744,6 +2982,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2936,6 +3191,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -3155,6 +3427,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -3329,6 +3618,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -3488,6 +3794,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -3558,6 +3881,23 @@ module.exports = () => ({
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -3755,6 +4095,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -3825,6 +4182,23 @@ module.exports = () => ({
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -4053,6 +4427,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -4537,6 +4928,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -4696,6 +5104,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -4849,6 +5274,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -5005,6 +5447,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -5075,6 +5534,23 @@ module.exports = () => ({
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -5227,6 +5703,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -5379,6 +5872,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -5575,6 +6085,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -5795,6 +6322,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -5832,6 +6376,23 @@ module.exports = () => ({
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -6051,6 +6612,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -6270,6 +6848,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -6446,6 +7041,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -6600,6 +7212,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -6811,6 +7440,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -6970,6 +7616,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -7129,6 +7792,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -7288,6 +7968,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -7748,6 +8445,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -7971,6 +8685,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -8130,6 +8861,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -8284,6 +9032,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -8467,6 +9232,23 @@ module.exports = () => ({
         smoke: true,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -8650,6 +9432,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/$service/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
