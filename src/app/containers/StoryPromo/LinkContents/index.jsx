@@ -7,14 +7,15 @@ import pick from 'ramda/src/pick';
 import { ServiceContext } from '#contexts/ServiceContext';
 import formatDuration from '#lib/utilities/formatDuration';
 import { storyItem } from '#models/propTypes/storyItem';
+import { isPgl, isMap } from '../utilities';
 
 const LinkContents = ({ item, isInline }) => {
   const {
     translations: { media: mediaTranslations },
   } = useContext(ServiceContext);
 
-  const isMedia = pathOr(false, ['media'], item);
-  const isPGL = pathOr(null, ['cpsType'], item) === 'PGL';
+  const isMedia = isMap(item);
+  const isPhotoGallery = isPgl(item);
   const headlines = pathOr(null, ['headlines'], item);
 
   const getContent = () => {
@@ -27,11 +28,13 @@ const LinkContents = ({ item, isInline }) => {
 
   const content = getContent();
 
-  if (!isPGL && !isMedia) {
+  if (!isPhotoGallery && !isMedia) {
     return content;
   }
 
-  const type = isPGL ? 'photogallery' : pathOr(null, ['media', 'format'], item);
+  const type = isPhotoGallery
+    ? 'photogallery'
+    : pathOr(null, ['media', 'format'], item);
 
   // Always gets the first version. Smarter logic may be needed in the future.
   const rawDuration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
