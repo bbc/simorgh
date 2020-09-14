@@ -4696,6 +4696,23 @@ module.exports = () => ({
         },
         smoke: true,
       },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/persian/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/persian/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/persian/39120696'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
