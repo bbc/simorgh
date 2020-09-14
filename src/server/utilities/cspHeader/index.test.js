@@ -585,7 +585,7 @@ describe('cspHeader', () => {
             `media-src ${mediaSrcExpectation.join(' ')};` +
             `worker-src ${workerSrcExpectation.join(' ')};` +
             `report-to default;` +
-            `upgrade-insecure-requests true`;
+            `upgrade-insecure-requests`;
 
           expect(headers['Content-Security-Policy']).toEqual(
             expectedCSPHeaderString,
