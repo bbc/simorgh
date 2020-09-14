@@ -175,15 +175,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/afaanoromoo/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/afaanoromoo/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/afaanoromoo/fix'],
             enabled: false,
           },
         },
@@ -413,15 +413,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/afrique/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/afrique/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/afrique/fix'],
             enabled: false,
           },
         },
@@ -622,15 +622,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/amharic/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/amharic/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/amharic/fix'],
             enabled: false,
           },
         },
@@ -836,15 +836,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/arabic/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/arabic/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/arabic/fix'],
             enabled: false,
           },
         },
@@ -1012,15 +1012,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/azeri/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/azeri/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/azeri/fix'],
             enabled: false,
           },
         },
@@ -1226,15 +1226,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/bengali/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/bengali/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/bengali/fix'],
             enabled: false,
           },
         },
@@ -1462,15 +1462,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/burmese/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/burmese/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/burmese/fix'],
             enabled: false,
           },
         },
@@ -1547,20 +1547,7 @@ module.exports = () => ({
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
-        environments: {
-          live: {
-            paths: ['/$service/fix'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/$service/fix'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/$service/fix'],
-            enabled: false,
-          },
-        },
+        environments: undefined,
         smoke: false,
       },
     },
@@ -1763,15 +1750,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/gahuza/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/gahuza/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/gahuza/fix'],
             enabled: false,
           },
         },
@@ -1959,15 +1946,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/gujarati/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/gujarati/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/gujarati/fix'],
             enabled: false,
           },
         },
@@ -2194,15 +2181,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/hausa/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/hausa/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/hausa/fix'],
             enabled: false,
           },
         },
@@ -2427,15 +2414,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/hindi/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/hindi/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/hindi/fix'],
             enabled: false,
           },
         },
@@ -2598,15 +2585,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/igbo/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/igbo/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/igbo/fix'],
             enabled: false,
           },
         },
@@ -2814,15 +2801,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/indonesia/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/indonesia/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/indonesia/fix'],
             enabled: false,
           },
         },
@@ -2985,15 +2972,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/japanese/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/japanese/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/japanese/fix'],
             enabled: false,
           },
         },
@@ -3194,15 +3181,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/korean/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/korean/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/korean/fix'],
             enabled: false,
           },
         },
@@ -3430,15 +3417,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/kyrgyz/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/kyrgyz/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/kyrgyz/fix'],
             enabled: false,
           },
         },
@@ -3621,15 +3608,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/marathi/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/marathi/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/marathi/fix'],
             enabled: false,
           },
         },
@@ -3797,15 +3784,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/mundo/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/mundo/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/mundo/fix'],
             enabled: false,
           },
         },
@@ -3882,20 +3869,7 @@ module.exports = () => ({
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
-        environments: {
-          live: {
-            paths: ['/$service/fix'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/$service/fix'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/$service/fix'],
-            enabled: false,
-          },
-        },
+        environments: undefined,
         smoke: false,
       },
     },
@@ -4098,15 +4072,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/nepali/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/nepali/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/nepali/fix'],
             enabled: false,
           },
         },
@@ -4183,20 +4157,7 @@ module.exports = () => ({
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
-        environments: {
-          live: {
-            paths: ['/$service/fix'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/$service/fix'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/$service/fix'],
-            enabled: false,
-          },
-        },
+        environments: undefined,
         smoke: false,
       },
     },
@@ -4430,15 +4391,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/pashto/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/pashto/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/pashto/fix'],
             enabled: false,
           },
         },
@@ -4931,15 +4892,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/pidgin/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/pidgin/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/pidgin/fix'],
             enabled: false,
           },
         },
@@ -5107,15 +5068,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/portuguese/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/portuguese/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/portuguese/fix'],
             enabled: false,
           },
         },
@@ -5277,15 +5238,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/punjabi/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/punjabi/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/punjabi/fix'],
             enabled: false,
           },
         },
@@ -5450,15 +5411,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/russian/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/russian/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/russian/fix'],
             enabled: false,
           },
         },
@@ -5535,20 +5496,7 @@ module.exports = () => ({
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
-        environments: {
-          live: {
-            paths: ['/$service/fix'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/$service/fix'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/$service/fix'],
-            enabled: false,
-          },
-        },
+        environments: undefined,
         smoke: false,
       },
     },
@@ -5706,15 +5654,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/serbian/cyr/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/serbian/cyr/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/serbian/cyr/fix'],
             enabled: false,
           },
         },
@@ -5875,15 +5823,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/serbian/lat/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/serbian/lat/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/serbian/lat/fix'],
             enabled: false,
           },
         },
@@ -6088,15 +6036,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/sinhala/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/sinhala/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/sinhala/fix'],
             enabled: false,
           },
         },
@@ -6325,15 +6273,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/somali/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/somali/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/somali/fix'],
             enabled: false,
           },
         },
@@ -6377,20 +6325,7 @@ module.exports = () => ({
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
-        environments: {
-          live: {
-            paths: ['/$service/fix'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/$service/fix'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/$service/fix'],
-            enabled: false,
-          },
-        },
+        environments: undefined,
         smoke: false,
       },
     },
@@ -6615,15 +6550,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/swahili/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/swahili/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/swahili/fix'],
             enabled: false,
           },
         },
@@ -6851,15 +6786,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/tamil/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/tamil/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/tamil/fix'],
             enabled: false,
           },
         },
@@ -7044,15 +6979,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/telugu/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/telugu/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/telugu/fix'],
             enabled: false,
           },
         },
@@ -7215,15 +7150,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/thai/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/thai/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/thai/fix'],
             enabled: false,
           },
         },
@@ -7443,15 +7378,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/tigrinya/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/tigrinya/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/tigrinya/fix'],
             enabled: false,
           },
         },
@@ -7619,15 +7554,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/turkce/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/turkce/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/turkce/fix'],
             enabled: false,
           },
         },
@@ -7795,15 +7730,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/ukchina/simp/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/ukchina/simp/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/ukchina/simp/fix'],
             enabled: false,
           },
         },
@@ -7971,15 +7906,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/ukchina/trad/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/ukchina/trad/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/ukchina/trad/fix'],
             enabled: false,
           },
         },
@@ -8448,15 +8383,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/urdu/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/urdu/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/urdu/fix'],
             enabled: false,
           },
         },
@@ -8688,15 +8623,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/uzbek/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/uzbek/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/uzbek/fix'],
             enabled: false,
           },
         },
@@ -8864,15 +8799,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/vietnamese/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/vietnamese/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/vietnamese/fix'],
             enabled: false,
           },
         },
@@ -9035,15 +8970,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/yoruba/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/yoruba/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/yoruba/fix'],
             enabled: false,
           },
         },
@@ -9235,15 +9170,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/zhongwen/simp/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/zhongwen/simp/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/zhongwen/simp/fix'],
             enabled: false,
           },
         },
@@ -9435,15 +9370,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/$service/fix'],
+            paths: ['/zhongwen/trad/fix'],
             enabled: false,
           },
           test: {
-            paths: ['/$service/fix'],
+            paths: ['/zhongwen/trad/fix'],
             enabled: false,
           },
           local: {
-            paths: ['/$service/fix'],
+            paths: ['/zhongwen/trad/fix'],
             enabled: false,
           },
         },
