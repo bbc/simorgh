@@ -175,15 +175,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/afaanoromoo/fix'],
+            paths: ['/afaanoromoo'],
             enabled: false,
           },
           test: {
-            paths: ['/afaanoromoo/fix'],
+            paths: ['/afaanoromoo'],
             enabled: false,
           },
           local: {
-            paths: ['/afaanoromoo/fix'],
+            paths: ['/afaanoromoo'],
             enabled: false,
           },
         },
@@ -413,11 +413,11 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/afrique/fix'],
+            paths: ['/afrique'],
             enabled: false,
           },
           test: {
-            paths: ['/afrique/fix'],
+            paths: ['/afrique'],
             enabled: false,
           },
           local: {
@@ -622,15 +622,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/amharic/fix'],
+            paths: ['/amharic'],
             enabled: false,
           },
           test: {
-            paths: ['/amharic/fix'],
+            paths: ['/amharic'],
             enabled: false,
           },
           local: {
-            paths: ['/amharic/fix'],
+            paths: ['/amharic'],
             enabled: false,
           },
         },
@@ -836,15 +836,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/arabic/fix'],
+            paths: ['/arabic'],
             enabled: false,
           },
           test: {
-            paths: ['/arabic/fix'],
+            paths: ['/arabic'],
             enabled: false,
           },
           local: {
-            paths: ['/arabic/fix'],
+            paths: ['/arabic'],
             enabled: false,
           },
         },
@@ -1012,15 +1012,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/azeri/fix'],
+            paths: ['/azeri'],
             enabled: false,
           },
           test: {
-            paths: ['/azeri/fix'],
+            paths: ['/azeri'],
             enabled: false,
           },
           local: {
-            paths: ['/azeri/fix'],
+            paths: ['/azeri'],
             enabled: false,
           },
         },
@@ -1226,15 +1226,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/bengali/fix'],
+            paths: ['/bengali'],
             enabled: false,
           },
           test: {
-            paths: ['/bengali/fix'],
+            paths: ['/bengali'],
             enabled: false,
           },
           local: {
-            paths: ['/bengali/fix'],
+            paths: ['/bengali'],
             enabled: false,
           },
         },
@@ -1462,15 +1462,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/burmese/fix'],
+            paths: ['/burmese'],
             enabled: false,
           },
           test: {
-            paths: ['/burmese/fix'],
+            paths: ['/burmese'],
             enabled: false,
           },
           local: {
-            paths: ['/burmese/fix'],
+            paths: ['/burmese'],
             enabled: false,
           },
         },
@@ -1750,15 +1750,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/gahuza/fix'],
+            paths: ['/gahuza'],
             enabled: false,
           },
           test: {
-            paths: ['/gahuza/fix'],
+            paths: ['/gahuza'],
             enabled: false,
           },
           local: {
-            paths: ['/gahuza/fix'],
+            paths: ['/gahuza'],
             enabled: false,
           },
         },
@@ -1946,15 +1946,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/gujarati/fix'],
+            paths: ['/gujarati'],
             enabled: false,
           },
           test: {
-            paths: ['/gujarati/fix'],
+            paths: ['/gujarati'],
             enabled: false,
           },
           local: {
-            paths: ['/gujarati/fix'],
+            paths: ['/gujarati'],
             enabled: false,
           },
         },
@@ -2181,15 +2181,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/hausa/fix'],
+            paths: ['/hausa'],
             enabled: false,
           },
           test: {
-            paths: ['/hausa/fix'],
+            paths: ['/hausa'],
             enabled: false,
           },
           local: {
-            paths: ['/hausa/fix'],
+            paths: ['/hausa'],
             enabled: false,
           },
         },
@@ -2414,11 +2414,11 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/hindi/fix'],
+            paths: ['/hindi'],
             enabled: false,
           },
           test: {
-            paths: ['/hindi/fix'],
+            paths: ['/hindi'],
             enabled: false,
           },
           local: {
@@ -2585,15 +2585,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/igbo/fix'],
+            paths: ['/igbo'],
             enabled: false,
           },
           test: {
-            paths: ['/igbo/fix'],
+            paths: ['/igbo'],
             enabled: false,
           },
           local: {
-            paths: ['/igbo/fix'],
+            paths: ['/igbo'],
             enabled: false,
           },
         },
@@ -2801,15 +2801,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/indonesia/fix'],
+            paths: ['/indonesia'],
             enabled: false,
           },
           test: {
-            paths: ['/indonesia/fix'],
+            paths: ['/indonesia'],
             enabled: false,
           },
           local: {
-            paths: ['/indonesia/fix'],
+            paths: ['/indonesia'],
             enabled: false,
           },
         },
@@ -2972,15 +2972,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/japanese/fix'],
+            paths: ['/japanese'],
             enabled: false,
           },
           test: {
-            paths: ['/japanese/fix'],
+            paths: ['/japanese'],
             enabled: false,
           },
           local: {
-            paths: ['/japanese/fix'],
+            paths: ['/japanese'],
             enabled: false,
           },
         },
@@ -3181,15 +3181,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/korean/fix'],
+            paths: ['/korean'],
             enabled: false,
           },
           test: {
-            paths: ['/korean/fix'],
+            paths: ['/korean'],
             enabled: false,
           },
           local: {
-            paths: ['/korean/fix'],
+            paths: ['/korean'],
             enabled: false,
           },
         },
@@ -3417,15 +3417,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/kyrgyz/fix'],
+            paths: ['/kyrgyz'],
             enabled: false,
           },
           test: {
-            paths: ['/kyrgyz/fix'],
+            paths: ['/kyrgyz'],
             enabled: false,
           },
           local: {
-            paths: ['/kyrgyz/fix'],
+            paths: ['/kyrgyz'],
             enabled: false,
           },
         },
@@ -3608,11 +3608,11 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/marathi/fix'],
+            paths: ['/marathi'],
             enabled: false,
           },
           test: {
-            paths: ['/marathi/fix'],
+            paths: ['/marathi'],
             enabled: false,
           },
           local: {
@@ -3784,15 +3784,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/mundo/fix'],
+            paths: ['/mundo'],
             enabled: false,
           },
           test: {
-            paths: ['/mundo/fix'],
+            paths: ['/mundo'],
             enabled: false,
           },
           local: {
-            paths: ['/mundo/fix'],
+            paths: ['/mundo'],
             enabled: false,
           },
         },
@@ -4072,15 +4072,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/nepali/fix'],
+            paths: ['/nepali'],
             enabled: false,
           },
           test: {
-            paths: ['/nepali/fix'],
+            paths: ['/nepali'],
             enabled: false,
           },
           local: {
-            paths: ['/nepali/fix'],
+            paths: ['/nepali'],
             enabled: false,
           },
         },
@@ -4391,15 +4391,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/pashto/fix'],
+            paths: ['/pashto'],
             enabled: false,
           },
           test: {
-            paths: ['/pashto/fix'],
+            paths: ['/pashto'],
             enabled: false,
           },
           local: {
-            paths: ['/pashto/fix'],
+            paths: ['/pashto'],
             enabled: false,
           },
         },
@@ -4699,11 +4699,11 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/persian/fix'],
+            paths: ['/persian'],
             enabled: false,
           },
           test: {
-            paths: ['/persian/fix'],
+            paths: ['/persian'],
             enabled: false,
           },
           local: {
@@ -4909,15 +4909,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/pidgin/fix'],
+            paths: ['/pidgin'],
             enabled: false,
           },
           test: {
-            paths: ['/pidgin/fix'],
+            paths: ['/pidgin'],
             enabled: false,
           },
           local: {
-            paths: ['/pidgin/fix'],
+            paths: ['/pidgin'],
             enabled: false,
           },
         },
@@ -5085,15 +5085,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/portuguese/fix'],
+            paths: ['/portuguese'],
             enabled: false,
           },
           test: {
-            paths: ['/portuguese/fix'],
+            paths: ['/portuguese'],
             enabled: false,
           },
           local: {
-            paths: ['/portuguese/fix'],
+            paths: ['/portuguese'],
             enabled: false,
           },
         },
@@ -5255,15 +5255,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/punjabi/fix'],
+            paths: ['/punjabi'],
             enabled: false,
           },
           test: {
-            paths: ['/punjabi/fix'],
+            paths: ['/punjabi'],
             enabled: false,
           },
           local: {
-            paths: ['/punjabi/fix'],
+            paths: ['/punjabi'],
             enabled: false,
           },
         },
@@ -5428,15 +5428,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/russian/fix'],
+            paths: ['/russian'],
             enabled: false,
           },
           test: {
-            paths: ['/russian/fix'],
+            paths: ['/russian'],
             enabled: false,
           },
           local: {
-            paths: ['/russian/fix'],
+            paths: ['/russian'],
             enabled: false,
           },
         },
@@ -5671,15 +5671,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/serbian/cyr/fix'],
+            paths: ['/serbian/cyr'],
             enabled: false,
           },
           test: {
-            paths: ['/serbian/cyr/fix'],
+            paths: ['/serbian/cyr'],
             enabled: false,
           },
           local: {
-            paths: ['/serbian/cyr/fix'],
+            paths: ['/serbian/cyr'],
             enabled: false,
           },
         },
@@ -5840,15 +5840,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/serbian/lat/fix'],
+            paths: ['/serbian/lat'],
             enabled: false,
           },
           test: {
-            paths: ['/serbian/lat/fix'],
+            paths: ['/serbian/lat'],
             enabled: false,
           },
           local: {
-            paths: ['/serbian/lat/fix'],
+            paths: ['/serbian/lat'],
             enabled: false,
           },
         },
@@ -6053,15 +6053,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/sinhala/fix'],
+            paths: ['/sinhala'],
             enabled: false,
           },
           test: {
-            paths: ['/sinhala/fix'],
+            paths: ['/sinhala'],
             enabled: false,
           },
           local: {
-            paths: ['/sinhala/fix'],
+            paths: ['/sinhala'],
             enabled: false,
           },
         },
@@ -6290,15 +6290,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/somali/fix'],
+            paths: ['/somali'],
             enabled: false,
           },
           test: {
-            paths: ['/somali/fix'],
+            paths: ['/somali'],
             enabled: false,
           },
           local: {
-            paths: ['/somali/fix'],
+            paths: ['/somali'],
             enabled: false,
           },
         },
@@ -6567,15 +6567,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/swahili/fix'],
+            paths: ['/swahili'],
             enabled: false,
           },
           test: {
-            paths: ['/swahili/fix'],
+            paths: ['/swahili'],
             enabled: false,
           },
           local: {
-            paths: ['/swahili/fix'],
+            paths: ['/swahili'],
             enabled: false,
           },
         },
@@ -6803,15 +6803,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/tamil/fix'],
+            paths: ['/tamil'],
             enabled: false,
           },
           test: {
-            paths: ['/tamil/fix'],
+            paths: ['/tamil'],
             enabled: false,
           },
           local: {
-            paths: ['/tamil/fix'],
+            paths: ['/tamil'],
             enabled: false,
           },
         },
@@ -6996,15 +6996,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/telugu/fix'],
+            paths: ['/telugu'],
             enabled: false,
           },
           test: {
-            paths: ['/telugu/fix'],
+            paths: ['/telugu'],
             enabled: false,
           },
           local: {
-            paths: ['/telugu/fix'],
+            paths: ['/telugu'],
             enabled: false,
           },
         },
@@ -7167,15 +7167,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/thai/fix'],
+            paths: ['/thai'],
             enabled: false,
           },
           test: {
-            paths: ['/thai/fix'],
+            paths: ['/thai'],
             enabled: false,
           },
           local: {
-            paths: ['/thai/fix'],
+            paths: ['/thai'],
             enabled: false,
           },
         },
@@ -7395,15 +7395,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/tigrinya/fix'],
+            paths: ['/tigrinya'],
             enabled: false,
           },
           test: {
-            paths: ['/tigrinya/fix'],
+            paths: ['/tigrinya'],
             enabled: false,
           },
           local: {
-            paths: ['/tigrinya/fix'],
+            paths: ['/tigrinya'],
             enabled: false,
           },
         },
@@ -7571,15 +7571,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/turkce/fix'],
+            paths: ['/turkce'],
             enabled: false,
           },
           test: {
-            paths: ['/turkce/fix'],
+            paths: ['/turkce'],
             enabled: false,
           },
           local: {
-            paths: ['/turkce/fix'],
+            paths: ['/turkce'],
             enabled: false,
           },
         },
@@ -7747,15 +7747,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/ukchina/simp/fix'],
+            paths: ['/ukchina/simp'],
             enabled: false,
           },
           test: {
-            paths: ['/ukchina/simp/fix'],
+            paths: ['/ukchina/simp'],
             enabled: false,
           },
           local: {
-            paths: ['/ukchina/simp/fix'],
+            paths: ['/ukchina/simp'],
             enabled: false,
           },
         },
@@ -7923,15 +7923,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/ukchina/trad/fix'],
+            paths: ['/ukchina/trad'],
             enabled: false,
           },
           test: {
-            paths: ['/ukchina/trad/fix'],
+            paths: ['/ukchina/trad'],
             enabled: false,
           },
           local: {
-            paths: ['/ukchina/trad/fix'],
+            paths: ['/ukchina/trad'],
             enabled: false,
           },
         },
@@ -8181,15 +8181,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/ukrainian/fix'],
+            paths: ['/ukrainian'],
             enabled: false,
           },
           test: {
-            paths: ['/ukrainian/fix'],
+            paths: ['/ukrainian'],
             enabled: false,
           },
           local: {
-            paths: ['/ukrainian/fix'],
+            paths: ['/ukrainian'],
             enabled: false,
           },
         },
@@ -8417,15 +8417,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/urdu/fix'],
+            paths: ['/urdu'],
             enabled: false,
           },
           test: {
-            paths: ['/urdu/fix'],
+            paths: ['/urdu'],
             enabled: false,
           },
           local: {
-            paths: ['/urdu/fix'],
+            paths: ['/urdu'],
             enabled: false,
           },
         },
@@ -8657,15 +8657,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/uzbek/fix'],
+            paths: ['/uzbek'],
             enabled: false,
           },
           test: {
-            paths: ['/uzbek/fix'],
+            paths: ['/uzbek'],
             enabled: false,
           },
           local: {
-            paths: ['/uzbek/fix'],
+            paths: ['/uzbek'],
             enabled: false,
           },
         },
@@ -8833,15 +8833,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/vietnamese/fix'],
+            paths: ['/vietnamese'],
             enabled: false,
           },
           test: {
-            paths: ['/vietnamese/fix'],
+            paths: ['/vietnamese'],
             enabled: false,
           },
           local: {
-            paths: ['/vietnamese/fix'],
+            paths: ['/vietnamese'],
             enabled: false,
           },
         },
@@ -9004,15 +9004,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/yoruba/fix'],
+            paths: ['/yoruba'],
             enabled: false,
           },
           test: {
-            paths: ['/yoruba/fix'],
+            paths: ['/yoruba'],
             enabled: false,
           },
           local: {
-            paths: ['/yoruba/fix'],
+            paths: ['/yoruba'],
             enabled: false,
           },
         },
@@ -9204,15 +9204,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/zhongwen/simp/fix'],
+            paths: ['/zhongwen/simp'],
             enabled: false,
           },
           test: {
-            paths: ['/zhongwen/simp/fix'],
+            paths: ['/zhongwen/simp'],
             enabled: false,
           },
           local: {
-            paths: ['/zhongwen/simp/fix'],
+            paths: ['/zhongwen/simp'],
             enabled: false,
           },
         },
@@ -9404,15 +9404,15 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/zhongwen/trad/fix'],
+            paths: ['/zhongwen/trad'],
             enabled: false,
           },
           test: {
-            paths: ['/zhongwen/trad/fix'],
+            paths: ['/zhongwen/trad'],
             enabled: false,
           },
           local: {
-            paths: ['/zhongwen/trad/fix'],
+            paths: ['/zhongwen/trad'],
             enabled: false,
           },
         },
