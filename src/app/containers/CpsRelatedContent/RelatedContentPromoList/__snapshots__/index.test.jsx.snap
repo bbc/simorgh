@@ -335,8 +335,12 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
             class="c8"
           >
             <div
-              class="lazyload-placeholder"
-            />
+              class="lazyload-wrapper"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </div>
           </div>
           <div
             class="c9"
@@ -396,8 +400,12 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
             class="c8"
           >
             <div
-              class="lazyload-placeholder"
-            />
+              class="lazyload-wrapper"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </div>
           </div>
           <div
             class="c9"
@@ -446,8 +454,12 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
             class="c8"
           >
             <div
-              class="lazyload-placeholder"
-            />
+              class="lazyload-wrapper"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </div>
           </div>
           <div
             class="c9"
@@ -809,8 +821,12 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
             class="c7"
           >
             <div
-              class="lazyload-placeholder"
-            />
+              class="lazyload-wrapper"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </div>
           </div>
           <div
             class="c8"
@@ -870,8 +886,12 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
             class="c7"
           >
             <div
-              class="lazyload-placeholder"
-            />
+              class="lazyload-wrapper"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </div>
           </div>
           <div
             class="c8"
@@ -920,8 +940,12 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
             class="c7"
           >
             <div
-              class="lazyload-placeholder"
-            />
+              class="lazyload-wrapper"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </div>
           </div>
           <div
             class="c8"
