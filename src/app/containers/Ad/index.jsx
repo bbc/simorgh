@@ -8,13 +8,14 @@ import CanonicalAd from './Canonical';
 const AdContainer = ({ slotType, className }) => {
   const { isAmp } = useContext(RequestContext);
   const { enabled: adsEnabled } = useToggle('ads');
+  const { enabled: asyncAds } = useToggle('asyncAds'); // Temp toggle for testing async loading of the dotcom-bootstrap
 
   if (!adsEnabled) {
     return null;
   }
 
   const Ad = isAmp ? AmpAd : CanonicalAd;
-  return <Ad slotType={slotType} className={className} />;
+  return <Ad slotType={slotType} className={className} asyncAds={asyncAds} />;
 };
 
 AdContainer.propTypes = {
