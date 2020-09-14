@@ -30,6 +30,9 @@ describe('Ad Container', () => {
       ampAds: {
         enabled: true,
       },
+      asyncAds: {
+        enabled: true,
+      },
     };
 
     const mockToggleDispatch = jest.fn();
