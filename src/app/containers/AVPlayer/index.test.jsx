@@ -15,6 +15,7 @@ const GenerateFixtureData = ({
   type = 'video',
   embedUrl,
   iframeTitle = 'ویډیو پلیئر',
+  skin = 'classic',
 }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
@@ -34,6 +35,7 @@ const GenerateFixtureData = ({
           iframeTitle={iframeTitle}
           title={title}
           type={type}
+          skin={skin}
         />
       </BrowserRouter>
     </ServiceContextProvider>
