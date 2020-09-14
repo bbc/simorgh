@@ -8178,6 +8178,23 @@ module.exports = () => ({
         environments: undefined,
         smoke: false,
       },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/ukrainian/fix'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/ukrainian/fix'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/ukrainian/fix'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
