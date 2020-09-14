@@ -1,7 +1,6 @@
 /* eslint-disable consistent-return */
 import {
   isAvailable,
-  getEpisodeAvailability,
   overrideRendererOnTest,
   getEmbedUrl,
   isBrand,
@@ -21,21 +20,6 @@ export default ({ service, pageType, variant, isAmp }) => {
         cy.get('div[class^="ImageContainer"]')
           .find('img')
           .should('not.be.visible');
-      });
-    });
-
-    it('Brand page should not display a future episode', () => {
-      cy.request(
-        `${Cypress.env('currentPath')}.json${overrideRendererOnTest()}`,
-      ).then(({ body: jsonData }) => {
-        const episodeAvailability = getEpisodeAvailability(jsonData);
-
-        if (episodeAvailability === 'future') {
-          throw new Error('Episode is in the future');
-        }
-        return cy.log(
-          `Episode is ${episodeAvailability}: ${Cypress.env('currentPath')}`,
-        );
       });
     });
 

@@ -1,7 +1,6 @@
 /* eslint-disable consistent-return */
 import {
   isAvailable,
-  getEpisodeAvailability,
   overrideRendererOnTest,
   getEmbedUrl,
   isBrand,
@@ -11,20 +10,6 @@ import appConfig from '../../../../src/server/utilities/serviceConfigs';
 export default ({ service, pageType, variant, isAmp }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
     describe('Video Player', () => {
-      it('Brand page should not display a future episode', () => {
-        cy.request(
-          `${Cypress.env('currentPath')}.json${overrideRendererOnTest()}`,
-        ).then(({ body: jsonData }) => {
-          const episodeAvailability = getEpisodeAvailability(jsonData);
-
-          if (episodeAvailability === 'future') {
-            throw new Error('Episode is in the future');
-          }
-          return cy.log(
-            `Episode is ${episodeAvailability}: ${Cypress.env('currentPath')}`,
-          );
-        });
-      });
       it('should render an iframe with a valid URL', () => {
         cy.request(
           `${Cypress.env('currentPath')}.json${overrideRendererOnTest()}`,
