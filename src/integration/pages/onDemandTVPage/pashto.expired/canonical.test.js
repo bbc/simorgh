@@ -8,5 +8,5 @@ import runCanonicalTests from '../canonicalTests';
 
 describe('Canonical Pashto On Demand TV Page', () => {
   runExpiredEpisodeTests();
-  runCanonicalTests();
+  runCanonicalTests(service);
 });

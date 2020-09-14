@@ -2,7 +2,7 @@
 
 exports[`Canonical On Demand Radio Page A11y I can see the skip to content link 1`] = `"Langsung ke konten"`;
 
-exports[`Canonical On Demand Radio Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=54&amp;p=indonesian.bbc_indonesian_radio.w172xh267fpn19l.page&amp;x1=[urn:bbc:pips:w172xh267fpn19l]&amp;x2=[responsive]&amp;x3=[news-indonesia]&amp;x4=[id]&amp;x7=[player-episode]&amp;x8=[simorgh-nojs]&amp;x9=[Dunia+Pagi+Ini+-+BBC+News+Indonesia]\\"/>"`;
+exports[`Canonical On Demand Radio Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=54&amp;p=indonesian.bbc_indonesian_radio.w172xh267fpn19l.page&amp;x1=[urn%3Abbc%3Apips%3Aw172xh267fpn19l]&amp;x2=[responsive]&amp;x3=[news-indonesia]&amp;x4=[id]&amp;x7=[player-episode]&amp;x8=[simorgh-nojs]&amp;x9=[Dunia%2BPagi%2BIni%2B-%2BBBC%2BNews%2BIndonesia]\\"/>"`;
 
 exports[`Canonical On Demand Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
 

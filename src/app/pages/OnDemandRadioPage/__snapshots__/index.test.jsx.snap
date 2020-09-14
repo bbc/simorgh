@@ -283,6 +283,12 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   margin-bottom: 1rem;
 }
 
+.c15 amp-iframe,
+.c15 div > iframe {
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
+}
+
 .c14 {
   position: relative;
   height: 0;
@@ -307,15 +313,6 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-}
-
-.c15 amp-iframe {
-  width: calc(100% + 1rem);
-}
-
-.c15 iframe {
-  width: calc(100% + 1rem);
-  margin: 0 -0.5rem;
 }
 
 @supports (display:grid) {
@@ -590,6 +587,14 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   }
 }
 
+@media (min-width:25rem) {
+  .c15 amp-iframe,
+  .c15 div > iframe {
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
+  }
+}
+
 @media (max-width:24.9375rem) {
   .c13 {
     display: none;
@@ -630,25 +635,12 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   }
 }
 
-@media (min-width:25rem) {
-  .c15 amp-iframe {
-    width: calc(100% + 2rem);
-  }
-}
-
-@media (min-width:25rem) {
-  .c15 iframe {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem;
-  }
-}
-
 <div>
       <amp-analytics>
         <script
           type="application/json"
         >
-          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"pageview":"\${base}s=598343&s2=68&p=pashto.bbc_pashto_radio.w3ct0lz1.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:pips:w3ct0lz1]&x2=[amp]&x3=[news-pashto]&x4=[ps]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[ماښامنۍ+خپرونه+-+BBC+News+پښتو]&ref=\${documentReferrer}"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"pageview":"\${base}s=598343&s2=68&p=pashto.bbc_pashto_radio.w3ct0lz1.page&r=%24%7BscreenWidth%7Dx%24%7BscreenHeight%7Dx%24%7BscreenColorDepth%7D&re=%24%7BavailableScreenWidth%7Dx%24%7BavailableScreenHeight%7D&hl=%24%7Btimestamp%7D&lng=%24%7BbrowserLanguage%7D&x1=[urn%3Abbc%3Apips%3Aw3ct0lz1]&x2=[amp]&x3=[news-pashto]&x4=[ps]&x5=[%24%7BsourceUrl%7D]&x6=[%24%7BdocumentReferrer%7D]&x7=[player-episode]&x8=[simorgh]&x9=[%D9%85%D8%A7%DA%9A%D8%A7%D9%85%D9%86%DB%8D%2B%D8%AE%D9%BE%D8%B1%D9%88%D9%86%D9%87%2B-%2BBBC%2BNews%2B%D9%BE%DA%9A%D8%AA%D9%88]&ref=%24%7BdocumentReferrer%7D"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
         </script>
       </amp-analytics>
       <div>
@@ -838,6 +830,12 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   margin-bottom: 1rem;
 }
 
+.c16 amp-iframe,
+.c16 div > iframe {
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
+}
+
 .c14 {
   position: relative;
   height: 0;
@@ -862,15 +860,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-}
-
-.c16 amp-iframe {
-  width: calc(100% + 1rem);
-}
-
-.c16 iframe {
-  width: calc(100% + 1rem);
-  margin: 0 -0.5rem;
 }
 
 .c18 {
@@ -1155,6 +1144,14 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   }
 }
 
+@media (min-width:25rem) {
+  .c16 amp-iframe,
+  .c16 div > iframe {
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
+  }
+}
+
 @media (max-width:24.9375rem) {
   .c13 {
     display: none;
@@ -1192,19 +1189,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 @media (min-width:63rem) {
   .c4 {
     padding-top: 1.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c16 amp-iframe {
-    width: calc(100% + 2rem);
-  }
-}
-
-@media (min-width:25rem) {
-  .c16 iframe {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem;
   }
 }
 

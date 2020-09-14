@@ -9,6 +9,6 @@ import runCanonicalTests from '../canonicalTests';
 describe('Canonical', () => {
   describe(pageType, () => {
     runExpiredEpisodeTests();
-    runCanonicalTests();
+    runCanonicalTests(service);
   });
 });
