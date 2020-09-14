@@ -9,6 +9,6 @@ import runAmpTests from '../ampTests';
 describe('AMP', () => {
   describe(pageType, () => {
     runExpiredEpisodeTests();
-    runAmpTests();
+    runAmpTests(service);
   });
 });
