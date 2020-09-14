@@ -170,11 +170,18 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   list-style-type: none;
 }
 
+.c25 > li {
+  position: relative;
+}
+
 .c25 > li::before {
-  content: ' ';
-  padding-left: 1.75rem;
-  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
-  margin-left: -2rem;
+  top: 0.5rem;
+  content: ' ';
+  position: absolute;
+  border-width: 1rem;
+  border: 0.1875rem solid #3F3F42;
+  border-radius: 50%;
+  left: -1rem;
 }
 
 .c26 {
@@ -1598,8 +1605,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             class="c16"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c17"
@@ -1765,8 +1776,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             class="c16"
                           >
                             <div
-                              class="lazyload-placeholder"
-                            />
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
                             <noscript />
                             <p
                               class="c17"
@@ -1952,7 +1967,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           allowfullscreen=""
                           class="c34"
                           scrolling="no"
-                          src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
+                          src="https://test.bbc.com/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
                           title="Media player"
                         />
                         <noscript />
@@ -2050,7 +2065,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                 <section
                   aria-labelledby="related-content-heading"
                   class="c36"
-                  data-e2e="related-content"
+                  data-e2e="related-content-heading"
                   role="region"
                 >
                   <div
@@ -2099,7 +2114,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   <section
                     aria-labelledby="top-stories-heading"
                     class="c36"
-                    data-e2e="related-content"
+                    data-e2e="top-stories-heading"
                     role="region"
                   >
                     <div
@@ -2271,7 +2286,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   <section
                     aria-labelledby="features-analysis-heading"
                     class="c36"
-                    data-e2e="related-content"
+                    data-e2e="features-analysis-heading"
                     role="region"
                   >
                     <div
@@ -2322,8 +2337,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="c16"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c62"
@@ -2371,8 +2390,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="c16"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c62"
@@ -2420,8 +2443,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="c16"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c62"
@@ -2469,8 +2496,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="c16"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c62"
@@ -2518,8 +2549,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="c16"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c62"
@@ -2567,8 +2602,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="c16"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c62"
@@ -2616,8 +2655,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="c16"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c62"
@@ -2713,8 +2756,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="c16"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c62"
@@ -2762,8 +2809,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="c16"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c62"
@@ -3412,7 +3463,7 @@ exports[`Story Page should render correctly when the secondary column data is no
       property="og:description"
     />
     <meta
-      content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+      content="https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
       property="og:image"
     />
     <meta
@@ -3456,7 +3507,7 @@ exports[`Story Page should render correctly when the secondary column data is no
       name="twitter:image:alt"
     />
     <meta
-      content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+      content="https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
       name="twitter:image:src"
     />
     <meta
@@ -3482,12 +3533,12 @@ exports[`Story Page should render correctly when the secondary column data is no
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
+      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
     </script>
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"}
+      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"}
     </script>
   </head>
   <body>
@@ -3665,11 +3716,18 @@ exports[`Story Page should render correctly when the secondary column data is no
   list-style-type: none;
 }
 
+.c27 > li {
+  position: relative;
+}
+
 .c27 > li::before {
-  content: ' ';
-  padding-left: 1.75rem;
-  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
-  margin-left: -2rem;
+  top: 0.5rem;
+  content: ' ';
+  position: absolute;
+  border-width: 1rem;
+  border: 0.1875rem solid #3F3F42;
+  border-radius: 50%;
+  left: -1rem;
 }
 
 .c28 {
@@ -4782,8 +4840,12 @@ exports[`Story Page should render correctly when the secondary column data is no
                                 class="c18"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                                 <noscript />
                                 <p
                                   class="c19"
@@ -4949,8 +5011,12 @@ exports[`Story Page should render correctly when the secondary column data is no
                                 class="c18"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                                 <noscript />
                                 <p
                                   class="c19"
@@ -5136,7 +5202,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                               allowfullscreen=""
                               class="c36"
                               scrolling="no"
-                              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
+                              src="https://test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                               title="Media player"
                             />
                             <noscript />
@@ -5223,7 +5289,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                     <section
                       aria-labelledby="related-content-heading"
                       class="c38"
-                      data-e2e="related-content"
+                      data-e2e="related-content-heading"
                       role="region"
                     >
                       <div
@@ -5933,11 +5999,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   list-style-type: none;
 }
 
+.c27 > li {
+  position: relative;
+}
+
 .c27 > li::before {
-  content: ' ';
-  padding-left: 1.75rem;
-  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
-  margin-left: -2rem;
+  top: 0.5rem;
+  content: ' ';
+  position: absolute;
+  border-width: 1rem;
+  border: 0.1875rem solid #3F3F42;
+  border-radius: 50%;
+  left: -1rem;
 }
 
 .c28 {
@@ -7416,7 +7489,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
       property="og:description"
     />
     <meta
-      content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+      content="https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
       property="og:image"
     />
     <meta
@@ -7460,7 +7533,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
       name="twitter:image:alt"
     />
     <meta
-      content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+      content="https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
       name="twitter:image:src"
     />
     <meta
@@ -7486,12 +7559,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
+      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
     </script>
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"}
+      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"}
     </script>
   </head>
   <body>
@@ -7591,8 +7664,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="c18"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                                 <noscript />
                                 <p
                                   class="c19"
@@ -7758,8 +7835,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="c18"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                                 <noscript />
                                 <p
                                   class="c19"
@@ -7945,7 +8026,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               allowfullscreen=""
                               class="c36"
                               scrolling="no"
-                              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
+                              src="https://test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                               title="Media player"
                             />
                             <noscript />
@@ -8032,7 +8113,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     <section
                       aria-labelledby="related-content-heading"
                       class="c38"
-                      data-e2e="related-content"
+                      data-e2e="related-content-heading"
                       role="region"
                     >
                       <div
@@ -8081,7 +8162,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       <section
                         aria-labelledby="top-stories-heading"
                         class="c38"
-                        data-e2e="related-content"
+                        data-e2e="top-stories-heading"
                         role="region"
                       >
                         <div
@@ -8213,7 +8294,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       <section
                         aria-labelledby="features-analysis-heading"
                         class="c38"
-                        data-e2e="related-content"
+                        data-e2e="features-analysis-heading"
                         role="region"
                       >
                         <div
@@ -8264,8 +8345,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     class="c18"
                                   >
                                     <div
-                                      class="lazyload-placeholder"
-                                    />
+                                      class="lazyload-wrapper"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </div>
                                   </div>
                                   <div
                                     class="c60"
@@ -8313,8 +8398,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     class="c18"
                                   >
                                     <div
-                                      class="lazyload-placeholder"
-                                    />
+                                      class="lazyload-wrapper"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </div>
                                   </div>
                                   <div
                                     class="c60"
@@ -8408,8 +8497,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     class="c18"
                                   >
                                     <div
-                                      class="lazyload-placeholder"
-                                    />
+                                      class="lazyload-wrapper"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </div>
                                   </div>
                                   <div
                                     class="c60"
@@ -8495,8 +8588,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     class="c18"
                                   >
                                     <div
-                                      class="lazyload-placeholder"
-                                    />
+                                      class="lazyload-wrapper"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </div>
                                   </div>
                                   <div
                                     class="c60"
@@ -8544,8 +8641,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     class="c18"
                                   >
                                     <div
-                                      class="lazyload-placeholder"
-                                    />
+                                      class="lazyload-wrapper"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </div>
                                   </div>
                                   <div
                                     class="c60"
@@ -8593,8 +8694,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     class="c18"
                                   >
                                     <div
-                                      class="lazyload-placeholder"
-                                    />
+                                      class="lazyload-wrapper"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </div>
                                   </div>
                                   <div
                                     class="c60"
@@ -8642,8 +8747,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     class="c18"
                                   >
                                     <div
-                                      class="lazyload-placeholder"
-                                    />
+                                      class="lazyload-wrapper"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </div>
                                   </div>
                                   <div
                                     class="c60"
@@ -8691,8 +8800,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     class="c18"
                                   >
                                     <div
-                                      class="lazyload-placeholder"
-                                    />
+                                      class="lazyload-wrapper"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </div>
                                   </div>
                                   <div
                                     class="c60"
@@ -8740,8 +8853,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     class="c18"
                                   >
                                     <div
-                                      class="lazyload-placeholder"
-                                    />
+                                      class="lazyload-wrapper"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </div>
                                   </div>
                                   <div
                                     class="c60"

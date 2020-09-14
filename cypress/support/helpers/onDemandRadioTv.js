@@ -22,7 +22,7 @@ export const getEmbedUrl = ({ body, language, isAmp }) => {
   const { pid } = body.metadata.locators;
 
   const embedUrl = [
-    envConfig.avEmbedBaseUrl,
+    isAmp ? envConfig.avEmbedBaseUrlAmp : envConfig.avEmbedBaseUrlCanonical,
     'ws/av-embeds/media',
     serviceName,
     brandId,
