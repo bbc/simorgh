@@ -439,9 +439,8 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'media-src': generateMediaSrc({ isAmp, isLive }),
     'worker-src': generateWorkerSrc({ isAmp }),
     'report-to': 'default',
-    'upgrade-insecure-requests': true,
+    'upgrade-insecure-requests': [],
   },
-  browserSniff: false,
 });
 
 const injectCspHeader = (req, res, next) => {
