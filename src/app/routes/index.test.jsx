@@ -4,7 +4,7 @@ import { renderRoutes } from 'react-router-config';
 import { matchPath } from 'react-router';
 
 // test helpers
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import fetchMock from 'fetch-mock';
 
 import defaultToggles from '#lib/config/toggles';
@@ -214,6 +214,7 @@ it('should route to and render a front page', async () => {
 
 it('should route to and render a skeleton most watched page', async () => {
   const pathname = '/pidgin/media/video';
+  fetchMock.mock('http://localhost/pidgin/mostwatched.json', mostWatchedData);
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({
@@ -227,7 +228,6 @@ it('should route to and render a skeleton most watched page', async () => {
     pageType,
     service: 'pidgin',
   });
-  screen.debug();
   const EXPECTED_TITLE_RENDERED_IN_DOCUMENT = 'De one we dem don look';
 
   expect(getByText(EXPECTED_TITLE_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
