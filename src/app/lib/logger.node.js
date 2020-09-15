@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { createLogger, format, transports } = require('winston');
 
-const { combine, printf, simple, timestamp } = format;
+const { combine, printf, simple, label, timestamp } = format;
 
 const LOG_LEVEL = process.env.LOG_LEVEL || 'info';
 const LOG_FILE = 'app.log';
@@ -38,7 +38,7 @@ const consoleTransport = new (transports.Console)({
 });
 
 const customFormatting = printf(
-  data => `${data.timestamp} ${data.level} ${data.message}`,
+  data => `${data.timestamp} ${data.level} [${data.label}] ${data.message}`,
 );
 
 // e.g. outputs 'Article/index.jsx'
@@ -47,7 +47,19 @@ const folderAndFilename = name => {
   return fileparts.splice(-2).join(path.sep);
 };
 
-const fileLogger = createLogger({
+const logToFile = callingFile => {
+  return createLogger({
+    format: combine(
+      label({ label: folderAndFilename(callingFile) }),
+      simple(),
+      timestamp({ format: 'YYYY-MM-DD HH:mm:ss.SSS' }),
+      customFormatting,
+    ),
+    transports: [fileTransport, consoleTransport],
+  });
+};
+
+const debugLogger = createLogger({
   format: combine(
     simple(),
     timestamp({ format: 'YYYY-MM-DD HH:mm:ss.SSS' }),
@@ -62,33 +74,35 @@ const logEventMessage = ({ file, event, message }) => {
     message,
   };
 
-  return `[${file}] ${JSON.stringify(logObject, null, 2)}`;
+  const logFile = file ? `[${file}] ` : '';
+
+  return `${logFile}${JSON.stringify(logObject, null, 2)}`;
 };
 
 class Logger {
   constructor(callingFile) {
     createLogDirectory(LOG_DIR);
-
     const file = folderAndFilename(callingFile);
+    const fileLogger = logToFile(file);
 
     this.error = (event, message) => {
-      fileLogger.error(logEventMessage({ file, event, message }));
+      fileLogger.error(logEventMessage({ event, message }));
     };
 
     this.warn = (event, message) => {
-      fileLogger.warn(logEventMessage({ file, event, message }));
+      fileLogger.warn(logEventMessage({ event, message }));
     };
 
     this.info = (event, message) => {
-      fileLogger.info(logEventMessage({ file, event, message }));
+      fileLogger.info(logEventMessage({ event, message }));
     };
 
     this.debug = (event, message) => {
-      fileLogger.debug(logEventMessage({ file, event, message }));
+      debugLogger.debug(logEventMessage({ file, event, message }));
     };
 
     this.verbose = (event, message) => {
-      fileLogger.log(logEventMessage({ file, event, message }));
+      fileLogger.log(logEventMessage({ event, message }));
     };
   }
 }
