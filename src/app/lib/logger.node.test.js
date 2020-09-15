@@ -133,6 +133,9 @@ describe('Logger node - for the server', () => {
             'Timestamp Mock',
             'Printf Mock',
           );
+          expect(winston.format.label).toHaveBeenCalledWith({
+            label: 'file/foo.js',
+          });
           expect(winston.format.simple).toHaveBeenCalled();
           expect(winston.format.timestamp).toHaveBeenCalledWith({
             format: 'YYYY-MM-DD HH:mm:ss.SSS',
