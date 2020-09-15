@@ -48,8 +48,6 @@ const folderAndFilename = name => {
 };
 
 const logToFile = callingFile => {
-  createLogDirectory(LOG_DIR);
-
   return createLogger({
     format: combine(
       label({ label: folderAndFilename(callingFile) }),
@@ -61,37 +59,50 @@ const logToFile = callingFile => {
   });
 };
 
-const logEventMessage = (event, message) => {
+const debugLogger = createLogger({
+  format: combine(
+    simple(),
+    timestamp({ format: 'YYYY-MM-DD HH:mm:ss.SSS' }),
+    customFormatting,
+  ),
+  transports: [fileTransport, consoleTransport],
+});
+
+const logEventMessage = ({ file, event, message }) => {
   const logObject = {
     event,
     message,
   };
 
-  return JSON.stringify(logObject, null, 2);
+  const logFile = file ? `[${file}] ` : '';
+
+  return `${logFile}${JSON.stringify(logObject, null, 2)}`;
 };
 
 class Logger {
   constructor(callingFile) {
-    const fileLogger = logToFile(callingFile);
+    createLogDirectory(LOG_DIR);
+    const file = folderAndFilename(callingFile);
+    const fileLogger = logToFile(file);
 
     this.error = (event, message) => {
-      fileLogger.error(logEventMessage(event, message));
+      fileLogger.error(logEventMessage({ event, message }));
     };
 
     this.warn = (event, message) => {
-      fileLogger.warn(logEventMessage(event, message));
+      fileLogger.warn(logEventMessage({ event, message }));
     };
 
     this.info = (event, message) => {
-      fileLogger.info(logEventMessage(event, message));
+      fileLogger.info(logEventMessage({ event, message }));
     };
 
     this.debug = (event, message) => {
-      fileLogger.debug(logEventMessage(event, message));
+      debugLogger.debug(logEventMessage({ file, event, message }));
     };
 
     this.verbose = (event, message) => {
-      fileLogger.log(logEventMessage(event, message));
+      fileLogger.log(logEventMessage({ event, message }));
     };
   }
 }
