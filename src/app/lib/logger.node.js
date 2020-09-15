@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { createLogger, format, transports } = require('winston');
 
-const { combine, printf, simple, label, timestamp } = format;
+const { combine, label, printf, simple, timestamp } = format;
 
 const LOG_LEVEL = process.env.LOG_LEVEL || 'info';
 const LOG_FILE = 'app.log';

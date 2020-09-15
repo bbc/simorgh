@@ -128,6 +128,7 @@ describe('Logger node - for the server', () => {
           loggerNode('path/file/foo.js');
 
           expect(winston.format.combine).toHaveBeenCalledWith(
+            'Label Mock',
             'Simple Mock',
             'Timestamp Mock',
             'Printf Mock',
