@@ -85,7 +85,6 @@ export default (data, service, currentTime) => {
         currentTime,
         publishedTimeStart,
         publishedTimeEnd,
-        service,
       );
 
       return {
