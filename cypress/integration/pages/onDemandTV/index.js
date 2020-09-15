@@ -44,11 +44,7 @@ Object.keys(config)
             variant,
             isAmp: true,
           });
-          testsForAMPOnly({
-            service,
-            pageType,
-            variant,
-          });
+          testsForAMPOnly();
         });
       });
   });
