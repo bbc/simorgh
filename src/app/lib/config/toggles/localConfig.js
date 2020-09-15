@@ -47,7 +47,4 @@ export default {
   variantCookie: {
     enabled: true,
   },
-  asyncAds: {
-    enabled: true, // Temp toggle for testing async loading of the dotcom-bootstrap
-  },
 };

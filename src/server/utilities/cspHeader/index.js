@@ -428,7 +428,7 @@ export const generateWorkerSrc = ({ isAmp }) =>
 
 const helmetCsp = ({ isAmp, isLive }) => ({
   directives: {
-    'default-src': generateDefaultSrc({ isAmp, isLive }),
+    'default-src': generateDefaultSrc(),
     'child-src': generateChildSrc({ isAmp }),
     'connect-src': generateConnectSrc({ isAmp, isLive }),
     'font-src': generateFontSrc({ isAmp }),
