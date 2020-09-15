@@ -36,10 +36,11 @@ const setFocusOnMainHeading = () => {
 export const App = ({ location, initialData, bbcOrigin, history }) => {
   const { pathname } = location;
   const hasMounted = useRef(false);
+  const scrollYPositions = useRef([]);
+  const navigationIndex = useRef(0);
   const routeProps = getRouteProps(pathname);
   const previousLocationPath = usePrevious(pathname);
-  const isBackNavigation = history.action === 'POP';
-  const previousPath = isBackNavigation ? null : previousLocationPath; // clear the previous path on back clicks
+  const previousPath = history.action === 'POP' ? null : previousLocationPath; // clear the previous path on back clicks
   const [state, setState] = useState({
     ...initialData,
     ...routeProps,
@@ -47,6 +48,18 @@ export const App = ({ location, initialData, bbcOrigin, history }) => {
     errorCode: routeProps.errorCode || initialData.errorCode,
   });
   const routeHasChanged = state.currentPathname !== pathname;
+
+  console.log('xxxxxx', history);
+  console.log('xxxxxx', history.action);
+
+  if (routeHasChanged) {
+    if (history.action === 'PUSH') {
+      navigationIndex.current += 1;
+      scrollYPositions.current.push(window.scrollY);
+    } else if (navigationIndex.current) {
+      navigationIndex.current -= 1;
+    }
+  }
 
   useEffect(() => {
     if (hasMounted.current) {
@@ -57,11 +70,15 @@ export const App = ({ location, initialData, bbcOrigin, history }) => {
   }, [pathname]);
 
   useLayoutEffect(() => {
-    if (hasMounted.current && !isBackNavigation) {
+    if (hasMounted.current) {
       if (routeHasChanged) {
-        window.scrollTo(0, 0);
+        window.scroll(0, 0);
       } else {
         setFocusOnMainHeading();
+
+        if (navigationIndex.current !== scrollYPositions.current.length - 1) {
+          window.scroll(0, scrollYPositions.current[navigationIndex.current]);
+        }
       }
     }
   }, [routeHasChanged]);
