@@ -97,7 +97,7 @@ exports[`AMP Most Read Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=62&p=mundo.popular.read.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[list-datadriven]&x8=[simorgh]&x9=[Más+leídas+-+BBC+News+Mundo]&x11=[2019-11-06T16:24:00Z]&x12=[2100-11-06T16:39:00Z]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=62&p=mundo.popular.read.page&r=%24%7BscreenWidth%7Dx%24%7BscreenHeight%7Dx%24%7BscreenColorDepth%7D&re=%24%7BavailableScreenWidth%7Dx%24%7BavailableScreenHeight%7D&hl=%24%7Btimestamp%7D&lng=%24%7BbrowserLanguage%7D&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[%24%7BsourceUrl%7D]&x6=[%24%7BdocumentReferrer%7D]&x7=[list-datadriven]&x8=[simorgh]&x9=[M%C3%A1s%2Ble%C3%ADdas%2B-%2BBBC%2BNews%2BMundo]&x11=[2019-11-06T16%3A24%3A00Z]&x12=[2100-11-06T16%3A39%3A00Z]&ref=%24%7BdocumentReferrer%7D",
   },
   "transport": Object {
     "beacon": false,
@@ -462,3 +462,5 @@ exports[`AMP Most Read Page SEO Twitter image src 1`] = `"https://news.files.bbc
 exports[`AMP Most Read Page SEO Twitter site 1`] = `"@bbcmundo"`;
 
 exports[`AMP Most Read Page SEO Twitter title 1`] = `"Más leídas - BBC News Mundo"`;
+
+exports[`AMP Most Read Page SEO apple-itunes-app meta tag should match text 1`] = `"app-id=515255747, app-argument=http://localhost:7080/mundo/popular/read?utm_medium=banner&utm_content=apple-itunes-app"`;

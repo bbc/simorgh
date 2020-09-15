@@ -95,7 +95,7 @@ exports[`AMP On Demand Radio Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=40&p=gahuza.bbc_gahuza_radio.w172x7rkcj6v0vz.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:pips:w172x7rkcj6v0vz]&x2=[amp]&x3=[news-gahuza]&x4=[rw]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[Amakuru+ya+Gahuzamiryango+-+BBC+News+Gahuza]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=40&p=gahuza.bbc_gahuza_radio.w172x7rkcj6v0vz.page&r=%24%7BscreenWidth%7Dx%24%7BscreenHeight%7Dx%24%7BscreenColorDepth%7D&re=%24%7BavailableScreenWidth%7Dx%24%7BavailableScreenHeight%7D&hl=%24%7Btimestamp%7D&lng=%24%7BbrowserLanguage%7D&x1=[urn%3Abbc%3Apips%3Aw172x7rkcj6v0vz]&x2=[amp]&x3=[news-gahuza]&x4=[rw]&x5=[%24%7BsourceUrl%7D]&x6=[%24%7BdocumentReferrer%7D]&x7=[player-episode]&x8=[simorgh]&x9=[Amakuru%2Bya%2BGahuzamiryango%2B-%2BBBC%2BNews%2BGahuza]&ref=%24%7BdocumentReferrer%7D",
   },
   "transport": Object {
     "beacon": false,

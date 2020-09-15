@@ -69,11 +69,13 @@ const CanonicalAd = ({ slotType, className }) => {
 
   return (
     <>
-      {/* Loading dotcom-bootstrap.js here instead of CanonicalAdBootstrapJs to avoid it loading on live */}
-      {/* This can be moved once we allow the script to load on live */}
       <Helmet>
-        <script type="module" src={getBootstrapSrc(queryString)} />
-        <script nomodule="nomodule" src={getBootstrapSrc(queryString, true)} />
+        <script type="module" src={getBootstrapSrc(queryString)} async />
+        <script
+          nomodule="nomodule"
+          src={getBootstrapSrc(queryString, true)}
+          async
+        />
       </Helmet>
       <AdContainer
         slotType={slotType}
