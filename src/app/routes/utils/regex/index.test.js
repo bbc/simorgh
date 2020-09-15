@@ -15,6 +15,7 @@ import {
   onDemandTvPath,
   mostReadDataRegexPath,
   mostWatchedDataPath,
+  mostWatchedPagePath,
   legacyAssetPagePath,
   legacyAssetPageDataPath,
   secondaryColumnDataRegexPath,
@@ -264,6 +265,22 @@ describe('mostWatchedDataPath', () => {
     '/news/trad/mostwatched.json',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, mostWatchedDataPath);
+});
+
+describe('mostWatchedPagePath', () => {
+  const validRoutes = [
+    '/pidgin/media/video',
+    '/pashto/media/video',
+    '/zhongwen/simp/media/video',
+  ];
+  shouldMatchValidRoutes(validRoutes, mostWatchedPagePath);
+
+  const invalidRoutes = [
+    '/foobar/media/video',
+    '/pidgin/video/media',
+    '/zhongwen/media/video/simp',
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, mostWatchedPagePath);
 });
 
 describe('secondaryColumnDataRegexPath', () => {
