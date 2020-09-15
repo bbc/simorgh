@@ -11,6 +11,9 @@ const getNextPageState = async pathname => {
   const toggles = await getToggles(routeProps.service);
   const initialData = await routeProps.getInitialData({
     path: pathname,
+    service: routeProps.service,
+    variant: routeProps.variant,
+    pageType: routeProps.pageType,
     toggles,
   });
 
