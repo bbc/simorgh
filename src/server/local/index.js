@@ -13,7 +13,7 @@ import {
   onDemandTvDataPath,
   recommendationsDataRegex,
   secondaryColumnDataRegexPath,
-  // africaEyeTVDataPath,
+  africaEyeTVDataPath,
 } from '#app/routes/utils/regex';
 import { LOCAL_SENDFILE_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
@@ -36,7 +36,7 @@ const sendDataFile = (res, dataFilePath, next) => {
 const PUBLIC_DIRECTORY = 'build/public';
 
 export default server => {
-  server
+  return server
     .use((req, res, next) => {
       if (req.url.substr(-1) === '/' && req.url.length > 1)
         res.redirect(301, req.url.slice(0, -1));
@@ -167,15 +167,15 @@ export default server => {
       const dataFilePath = path.join(process.cwd(), 'data', idx, 'index.json');
       sendDataFile(res, dataFilePath, next);
     })
-    // .get(africaEyeTVDataPath, async ({ params }, res, next) => {
-    //   const { episodeId } = params;
+    .get(africaEyeTVDataPath, async ({ params }, res, next) => {
+      const { episodeId } = params;
 
-    //   const dataFilePath = constructDataFilePath({
-    //     pageType: 'africa_eye',
-    //     episodeId,
-    //   });
-    //   sendDataFile(res, dataFilePath, next);
-    // })
+      const dataFilePath = constructDataFilePath({
+        pageType: 'africa_eye',
+        episodeId,
+      });
+      sendDataFile(res, dataFilePath, next);
+    })
     .get('/static/js/comscore/main-:version.js', ({ params }, res, next) => {
       const { version } = params;
       const localComscorePath = path.join(

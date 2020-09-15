@@ -428,7 +428,7 @@ export const generateWorkerSrc = ({ isAmp }) =>
 
 const helmetCsp = ({ isAmp, isLive }) => ({
   directives: {
-    'default-src': generateDefaultSrc({ isAmp, isLive }),
+    'default-src': generateDefaultSrc(),
     'child-src': generateChildSrc({ isAmp }),
     'connect-src': generateConnectSrc({ isAmp, isLive }),
     'font-src': generateFontSrc({ isAmp }),
@@ -439,9 +439,8 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'media-src': generateMediaSrc({ isAmp, isLive }),
     'worker-src': generateWorkerSrc({ isAmp }),
     'report-to': 'default',
-    'upgrade-insecure-requests': true,
+    'upgrade-insecure-requests': [],
   },
-  browserSniff: false,
 });
 
 const injectCspHeader = (req, res, next) => {

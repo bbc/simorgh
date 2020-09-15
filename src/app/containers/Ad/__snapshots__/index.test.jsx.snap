@@ -309,10 +309,12 @@ exports[`Ad Container Snapshots Canonical should correctly render a leaderboard 
 <html>
   <head>
     <script
+      async="true"
       src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
       type="module"
     />
     <script
+      async="true"
       nomodule="nomodule"
       src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
     />
@@ -390,10 +392,12 @@ exports[`Ad Container Snapshots Canonical should correctly render an mpu ad 1`] 
 <html>
   <head>
     <script
+      async="true"
       src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
       type="module"
     />
     <script
+      async="true"
       nomodule="nomodule"
       src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
     />
