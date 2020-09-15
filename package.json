@@ -5,7 +5,7 @@
   "main": "./src/client.js",
   "resolutions": {
     "prismjs": "^1.21.0",
-    "node-forge": "^0.10.0"
+    "node-forge": "0.10.0"
   },
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
