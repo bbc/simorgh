@@ -38,7 +38,8 @@ export const App = ({ location, initialData, bbcOrigin, history }) => {
   const hasMounted = useRef(false);
   const routeProps = getRouteProps(pathname);
   const previousLocationPath = usePrevious(pathname);
-  const previousPath = history.action === 'POP' ? null : previousLocationPath; // clear the previous path on back clicks
+  const isBackNavigation = history.action === 'POP';
+  const previousPath = isBackNavigation ? null : previousLocationPath; // clear the previous path on back clicks
   const [state, setState] = useState({
     ...initialData,
     ...routeProps,
@@ -56,7 +57,7 @@ export const App = ({ location, initialData, bbcOrigin, history }) => {
   }, [pathname]);
 
   useLayoutEffect(() => {
-    if (hasMounted.current) {
+    if (hasMounted.current && !isBackNavigation) {
       if (routeHasChanged) {
         window.scrollTo(0, 0);
       } else {
