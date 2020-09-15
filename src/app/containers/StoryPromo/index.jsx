@@ -192,31 +192,29 @@ const StoryPromoContainer = ({
 
   const Info = (
     <>
-      {headline && (
-        <StyledHeadline
-          script={script}
-          service={service}
-          promoType={promoType}
-          promoHasImage={displayImage}
-          as={headingTagOverride}
-        >
-          <StyledLink href={url}>
-            {isLive ? (
-              <LiveLabel
-                service={service}
-                dir={dir}
-                liveText={liveLabel}
-                ariaHidden={liveLabelIsEnglish}
-                offScreenText={liveLabelIsEnglish ? 'Live' : null}
-              >
-                {linkcontents}
-              </LiveLabel>
-            ) : (
-              linkcontents
-            )}
-          </StyledLink>
-        </StyledHeadline>
-      )}
+      <StyledHeadline
+        script={script}
+        service={service}
+        promoType={promoType}
+        promoHasImage={displayImage}
+        as={headingTagOverride}
+      >
+        <StyledLink href={url}>
+          {isLive ? (
+            <LiveLabel
+              service={service}
+              dir={dir}
+              liveText={liveLabel}
+              ariaHidden={liveLabelIsEnglish}
+              offScreenText={liveLabelIsEnglish ? 'Live' : null}
+            >
+              {linkcontents}
+            </LiveLabel>
+          ) : (
+            linkcontents
+          )}
+        </StyledLink>
+      </StyledHeadline>
       {promoSummary && displaySummary && !isRecommendation && (
         <Summary
           script={script}
