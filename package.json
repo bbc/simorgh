@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Simorgh",
   "main": "./src/client.js",
-  "resolutions": {},
+  "resolutions": {
+    "prismjs": "^1.21.0"
+  },
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
@@ -118,7 +120,7 @@
     "express-static-gzip": "^2.0.8",
     "gnu-terry-pratchett": "0.0.2",
     "helmet": "^3.23.1",
-    "helmet-csp": "^2.10.0",
+    "helmet-csp": "^3.1.0",
     "isarray": "^2.0.5",
     "isomorphic-fetch": "^2.2.1",
     "js-cookie": "^2.2.1",
