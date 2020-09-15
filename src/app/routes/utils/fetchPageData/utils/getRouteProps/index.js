@@ -4,8 +4,9 @@ import pathOr from 'ramda/src/pathOr';
 import { variantSanitiser } from '#lib/utilities/variantHandler';
 import { fallbackServiceParam } from './routeFallbackParams';
 import isAmpPath from '#app/routes/utils/isAmpPath';
+import routes from '#app/routes';
 
-const getRouteProps = (routes, url) => {
+const getRouteProps = url => {
   const matchedRoutes = matchRoutes(routes, url);
 
   const route = path([0, 'route'], matchedRoutes);
@@ -27,6 +28,8 @@ const getRouteProps = (routes, url) => {
     id,
     assetUri,
     route,
+    pageType: route.pageType,
+    getInitialData: route.getInitialData,
     match,
     errorCode: errorCode ? Number(errorCode) : errorCode,
   };
