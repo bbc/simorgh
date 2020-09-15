@@ -38,12 +38,7 @@ export const isAvailable = pathEq(
   'available',
 );
 
-export const getEpisodeAvailability = jsonData => {
-  const availabilityStatus = jsonData.content.blocks[0].availability;
-
-  return availabilityStatus;
-};
-
+export const getEpisodeAvailability = path(['content', 'blocks', 0, 'availability']);
 export const isBrand = jsonData => {
   const pageID = path(
     ['metadata', 'analyticsLabels', 'pageIdentifier'],
