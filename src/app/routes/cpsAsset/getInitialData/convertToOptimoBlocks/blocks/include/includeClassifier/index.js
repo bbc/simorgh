@@ -20,12 +20,12 @@ const includeClassifier = ({ href, isAmpRequest }) => {
   const hrefTypePostion = () => (href.indexOf('/') === 0 ? 1 : 0);
 
   // This checks if the supportedType is in the correct position of the href
-  const hrefIsSupported = () => supportedType =>
+  const hrefIsSupported = supportedType =>
     href.startsWith(supportedType, hrefTypePostion());
 
   // This extracts the type from the href
-  const typeExtraction = Object.keys(supportedTypes).find(
-    hrefIsSupported(href),
+  const typeExtraction = Object.keys(supportedTypes).find(supportedType =>
+    hrefIsSupported(supportedType),
   );
 
   // This determines if the type is supported and returns the include type name
