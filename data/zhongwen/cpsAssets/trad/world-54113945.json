@@ -1,0 +1,740 @@
+{
+    "metadata": {
+      "id": "urn:bbc:ares::asset:zhongwen/trad/world-54113945",
+      "locators": {
+        "assetUri": "/zhongwen/trad/world-54113945",
+        "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-54113945",
+        "curie": "http://www.bbc.co.uk/asset/b008f7fc-a339-452b-9ded-814e175baf97",
+        "assetId": "54113945"
+      },
+      "type": "STY",
+      "createdBy": "zhongwen-traditional-v6",
+      "language": "zh-Hant",
+      "lastUpdated": 1599823998602,
+      "firstPublished": 1599823976000,
+      "lastPublished": 1599823976000,
+      "timestamp": 1599823976000,
+      "options": {
+        "isIgorSeoTagsEnabled": false,
+        "includeComments": false,
+        "allowRightHandSide": true,
+        "isFactCheck": false,
+        "allowDateStamp": true,
+        "suitableForSyndication": true,
+        "hasNewsTracker": false,
+        "allowRelatedStoriesBox": true,
+        "isKeyContent": false,
+        "allowHeadline": true,
+        "allowAdvertising": true,
+        "hasContentWarning": false,
+        "isBreakingNews": false,
+        "allowPrintingSharingLinks": true
+      },
+      "analyticsLabels": {
+        "cps_asset_type": "sty",
+        "counterName": "zhongwentrad.world.story.54113945.page",
+        "cps_asset_id": "54113945"
+      },
+      "tags": {},
+      "version": "v1.3.6",
+      "blockTypes": [
+        "image",
+        "paragraph",
+        "list",
+        "media",
+        "crosshead"
+      ],
+      "includeComments": false,
+      "atiAnalytics": {
+        "producerName": "CHINESE",
+        "producerId": "38"
+      },
+      "readTime": 1
+    },
+    "content": {
+      "blocks": [
+        {
+          "id": "114321087",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/130BC/production/_114321087_c466a021-195a-4755-b3de-6fdd34ca1e5f.jpg",
+          "path": "/cpsprodpb/130BC/production/_114321087_c466a021-195a-4755-b3de-6fdd34ca1e5f.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "印度旁遮普邦阿姆利則市一位移民工婦女抱著孩子參加抗議政府防疫措施集會（3/6/2020）",
+          "caption": "這次民調除了發現受疫情影響的地域差異，還有性別差異等。",
+          "copyrightHolder": "AFP",
+          "positionHint": "full-width",
+          "type": "image"
+        },
+        {
+          "text": "<bold>世界衛生組織（WHO）對</bold><bold>COVID-19新型冠狀病毒全球大流行定性六個月之際，BBC委托進行的一項全球民意調查指出，公眾認同疫情</bold><bold>加深</bold><bold>貧富差距，貧困國家所受衝擊尤為嚴重。</bold>",
+          "role": "introduction",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        {
+          "text": "新冠病毒疫情於2019年12月首先在中國武漢傳出，北京於2020年1月3日首次向世衛組織通報病例，<link><caption>世衛至3月11日將疫情定性為全球大流行</caption><url href=\"https://www.bbc.com/zhongwen/trad/chinese-news-51843068\" platform=\"highweb\"/></link>。此次BBC民調展示了全球多國過去半年所受之影響。",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        {
+          "text": "來自世界各地，包括中國大陸和香港在內近3萬名受訪者參加了這次民調。結果顯示，因抗疫而實行的封城禁足等措施引發的經濟破壞是最令人擔憂的議題。",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "其中，來自貧困國家，以及年輕受訪者，都認為自己受害最深。貧困國家當中69%受訪者聲稱收入下跌，富有國家的比率則是45%。",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "numbered": false,
+          "items": [
+            {
+              "text": "<itemMeta>zhongwen/trad/world-53887499</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "肺炎疫情：全球的10個國家零確診 他們贏了嗎？",
+                    "headline": "肺炎疫情：全球的10個國家零確診 他們贏了嗎？",
+                    "overtyped": "全球的10個國家零確診 他們贏了嗎？"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/zhongwen/trad/world-53887499"
+                  },
+                  "summary": "除了10個國家以外，新冠病毒已經散播到全世界。這些未被感染的國家，它們目前情況如何？",
+                  "timestamp": 1598259230000,
+                  "language": "zh-Hant",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                      "categoryName": "Analysis"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:zhongwen/trad/world-53887499",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>zhongwen/trad/business-53690325</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "「世界工廠」中國能否轉向「內循環」為主的經濟模式",
+                    "headline": "「世界工廠」中國能否轉向「內循環」為主的經濟模式",
+                    "overtyped": "「世界工廠」中國能否轉向「內循環」為主的經濟模式"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/zhongwen/trad/business-53690325"
+                  },
+                  "summary": "中國經濟的「內循環」突然成為一個熱詞，外界有聲音認為這是中國應對外部壓力「閉關鎖國」之舉。",
+                  "timestamp": 1597022150000,
+                  "language": "zh-Hant",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                      "categoryName": "Analysis"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:zhongwen/trad/business-53690325",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>zhongwen/trad/business-53249104</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "新冠疫情衝擊全球經濟的九個側面",
+                    "headline": "新冠疫情衝擊世界經濟 九張圖一目了然",
+                    "overtyped": "新冠疫情衝擊全球經濟的九個側面"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/zhongwen/trad/business-53249104"
+                  },
+                  "summary": "新型冠狀病毒COVID-19疫情全球蔓延半年後，世界經濟創傷顯露，而曙光也開始出現。九張圖一目了然。",
+                  "timestamp": 1593635414000,
+                  "language": "zh-Hant",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                      "categoryName": "Explainer"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:zhongwen/trad/business-53249104",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>zhongwen/trad/business-52619209</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "UVWL：世界經濟將如何走出新冠衰退",
+                    "headline": "肺炎疫情與經濟：世界走出衰退的四大模式",
+                    "overtyped": "UVWL：世界經濟將如何走出新冠衰退"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/zhongwen/trad/business-52619209"
+                  },
+                  "summary": "新冠病毒把全球經濟送入重症監護。病情持續多久？病人如何康復？歷史上的經濟危機和發展趨勢，或許可以給我們一些線索。",
+                  "timestamp": 1589317573000,
+                  "language": "zh-Hant",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                      "categoryName": "Analysis"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:zhongwen/trad/business-52619209",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>zhongwen/trad/world-52206418</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "後疫情世界：領跑經濟恢復的五個國家",
+                    "headline": "肺炎疫情：危機過後哪些國家經濟能恢復得最快最好",
+                    "overtyped": "後疫情世界：領跑經濟恢復的五個國家"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/zhongwen/trad/world-52206418"
+                  },
+                  "summary": "新型冠狀病毒疫情為全世界經濟帶來重大影響，一些專家已經開始評估，在疫情獲得控制之後，哪些國家的經濟能恢復的最快最好？",
+                  "timestamp": 1589034603000,
+                  "language": "zh-Hant",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                      "categoryName": "Feature"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:zhongwen/trad/world-52206418",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "text": "此外，差異也從種族與性別兩方面呈現。例如，女性受訪者認為其受害情況比男性嚴重；美國黑人新冠病毒感染率高於白人。",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "BBC國際台（BBC World Service）委托民調機構全球掃描（GlobeScan）於27個國家和地區進行這次民意調查，相關訪問於2020年6月進行，當時全球多個地區正處於疫情高峰。最終有2.7萬餘人受訪。",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "全球掃描總裁克里斯·庫爾特（Chris Coulter）對BBC指出：「這場大流行的一個中心論述是『我們榮辱與共』，我們的民意調查結論卻是相反的。在國與國之間，以至於在多數國家內部，那些弱勢群體所受打擊最重。」",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "id": "p08p49mt",
+          "subType": "clip",
+          "format": "video",
+          "title": "新冠肺炎疫情未止　经济衰退如何影响你？",
+          "synopses": {
+            "short": "肺炎疫情：卫生危机引发多国经济衰退　你会受影响吗？",
+            "long": "COVID-19新型冠状病毒疫情仍未止息，专家警告英、美等国家正面临非常恶劣的经济衰退。\n\n经济衰退的定义是什么？对你意味着什么？BBC事实核查团队（BBC Reality Check）给你解释。",
+            "medium": "COVID-19新型冠状病毒疫情使世界多国陷入衰退。经济衰退的定义是什么？对你意味着什么？"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08pbqf4.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "經濟衰退的定義是什麼？對你意味著什麼？",
+          "versions": [
+            {
+              "versionId": "p08p49mw",
+              "types": [
+                "Original"
+              ],
+              "duration": 151,
+              "durationISO8601": "PT2M31S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1597907893000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "smpKind": "programme",
+          "type": "media"
+        },
+        {
+          "text": "不平等的世界更不平等",
+          "markupType": "plain_text",
+          "type": "crosshead"
+        },
+        {
+          "text": "調查結果顯示，經濟合作與發展組織（OECD）成員國與非成員國之間出現顯著分化。69%非OECD國家或地區受訪者收入受疫情影響，OECD成員國受訪者的比率為45%。",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "OECD由37個發達經濟體所組成。民調結果意味著窮國人口受害程度更為嚴重；世界既有貧富不均因疫情而更加惡化。",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "id": "114324070",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/1B82/production/_114324070_optimised-covid_effect_chinese-trad-nc.png",
+          "path": "/cpsprodpb/1B82/production/_114324070_optimised-covid_effect_chinese-trad-nc.png",
+          "height": 1340,
+          "width": 990,
+          "altText": "圖表：新館病毒如何影響各國人民",
+          "copyrightHolder": "BBC",
+          "positionHint": "full-width",
+          "type": "image"
+        },
+        {
+          "id": "112953491",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/4BEB/production/_112953491__108802839_624_transparent-nc.png",
+          "path": "/cpsprodpb/4BEB/production/_112953491__108802839_624_transparent-nc.png",
+          "height": 1,
+          "width": 624,
+          "altText": "1px transparent line",
+          "copyrightHolder": "BBC",
+          "positionHint": "full-width",
+          "type": "image"
+        },
+        {
+          "text": "整體而言，相比於歐洲和北美洲，來自拉丁美洲、亞洲和非洲的受訪者更多認為自己在疫情中經濟受損，例如肯尼亞（91%）、泰國（81%）、尼日利亞（80%）、南非（77%）、印尼（76%）和越南（74%）。這些國家的低收入人口尤其覺得自己現在更沒錢。",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "中國大陸和香港作出同樣回答的受訪者比例均為55%。",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "澳大利亞、加拿大、日本、俄羅斯和英國的受訪者給出一個有悖常理的答案：收入越高的人越覺得自己的財務在疫情中受到衝擊。",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "id": "114321090",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/2334/production/_114321090_3590da07-0827-4cf8-a17c-fa1e3355524b.jpg",
+          "path": "/cpsprodpb/2334/production/_114321090_3590da07-0827-4cf8-a17c-fa1e3355524b.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "印尼雅加達某墓園內數名家屬為感染新冠病毒去世的親屬禱告（10/8/2020）",
+          "caption": "印尼是新冠病毒感染人數偏多國家之一。",
+          "copyrightHolder": "AFP",
+          "positionHint": "full-width",
+          "type": "image"
+        },
+        {
+          "text": "世代分野",
+          "markupType": "plain_text",
+          "type": "crosshead"
+        },
+        {
+          "text": "這次民調還發現，新冠疫情在年青人與年長者之間製造了一道鴻溝。",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "相比於年長者，年青一代認為疫情讓他們生活更艱難，而這可能與疫情導致就業、社交和受教育機會減少有關。",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "id": "114324071",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/4292/production/_114324071_optimised-covid_ages_chinese-trad-nc.png",
+          "path": "/cpsprodpb/4292/production/_114324071_optimised-covid_ages_chinese-trad-nc.png",
+          "height": 1000,
+          "width": 1050,
+          "altText": "圖表：不同世代受訪者如何評價自己受新冠疫情影響",
+          "copyrightHolder": "BBC",
+          "positionHint": "full-width",
+          "type": "image"
+        },
+        {
+          "text": "55%的Z世代（Gen Z；出生於1990年代中期至2010年代初期之間）受訪者與56%千禧世代（Millennials；出生於1980年代初期至1990年代中期之間）受訪者覺得，疫情讓他們的生活大受影響。",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "相比之下，只有49%的X世代（Gen X；出生於1965年至1980年間）受訪者與39%戰後嬰兒潮（ Baby Boomers；出生於1946年至1964年間）受訪者有同樣感受。",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Z世代受訪者在財政上受害最大，63%受訪者聲稱其收入受損；只有42%嬰兒潮受訪者聲稱其收入受損。",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "年長一代似乎更容易逃過一劫。56%嬰兒潮與更年長受訪者表示自己沒有在疫情中受到身體或財務傷害。聲稱自己既未受到身體傷害，也沒遭遇財政傷害的全球平均值為39%。",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "這次調查的其他重要發現：",
+          "markupType": "plain_text",
+          "type": "crosshead"
+        },
+        {
+          "numbered": false,
+          "items": [
+            {
+              "text": "全球將近57%——每十人中約有六人——認為自己在疫情中財政受損",
+              "markupType": "plain_text",
+              "type": "listItem"
+            },
+            {
+              "text": "女性認為自己在疫情中所遭遇的財政損害比男性嚴重，其中，差距最大前三名依次是德國（女性32%；男性24%）、意大利（女性50%；男性43%）和英國（45%女性；38%男性）",
+              "markupType": "plain_text",
+              "type": "listItem"
+            },
+            {
+              "text": "在美國，14%黑人表示其本人或家人受新冠疫情影響，白人則有7%",
+              "markupType": "plain_text",
+              "type": "listItem"
+            },
+            {
+              "text": "家長感覺自己受害更重，57%家長如此回應工作人員，沒有孩子而覺得自己受害更重的的受訪者則佔41%",
+              "markupType": "plain_text",
+              "type": "listItem"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "id": "112502995",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/EA10/production/_112502995_cps_web_banner_top_640x3-nc.png",
+          "path": "/cpsprodpb/EA10/production/_112502995_cps_web_banner_top_640x3-nc.png",
+          "height": 76,
+          "width": 640,
+          "altText": "新冠病毒更多報道",
+          "copyrightHolder": "BBC",
+          "positionHint": "full-width",
+          "type": "image"
+        },
+        {
+          "numbered": false,
+          "items": [
+            {
+              "text": "<link><caption>新型冠狀病毒專題報道</caption><url href=\"https://www.bbc.com/zhongwen/trad/51222586\" platform=\"highweb\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>zhongwen/trad/world-52932320</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "新冠疫情：全球最新情況數據一覽",
+                    "headline": "新冠疫情：全球最新情況數據一覽",
+                    "overtyped": "全球最新疫情數據一覽"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/zhongwen/trad/world-52932320"
+                  },
+                  "summary": "全球已有188個國家出現確診病例，確診總數已超過600萬例，近40萬人因此喪生。",
+                  "timestamp": 1592503365000,
+                  "language": "zh-Hant",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+                      "categoryName": "Interactive"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:zhongwen/trad/world-52932320",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>zhongwen/trad/science-53917575</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "新冠疫苗研發衝刺上市 你關心的幾個問題",
+                    "headline": "新冠疫苗研發衝刺上市 你關心的幾個問題",
+                    "overtyped": "新冠疫苗研發衝刺上市 你關心的幾個問題"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/zhongwen/trad/science-53917575"
+                  },
+                  "summary": "各國疫苗研究進展如何？疫苗的接種順序和訂購供應如何進行？在這場疫苗競賽背後又將帶來怎樣的外交影響？",
+                  "timestamp": 1598431620000,
+                  "language": "zh-Hant",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                      "categoryName": "Explainer"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:zhongwen/trad/science-53917575",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>zhongwen/trad/science-53887791</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "新冠疫苗研發競賽中的抄近路、耍陰招和民族主義",
+                    "headline": "新冠疫情：疫苗研發競賽中的抄近路、耍陰招和民族主義",
+                    "overtyped": "新冠疫苗研發競賽中的抄近路、耍陰招和民族主義"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/zhongwen/trad/science-53887791"
+                  },
+                  "summary": "在這場競賽中「疫苗民族主義」加劇，有的國家被指走捷徑、從事間諜活動、失去道德約束的冒險和嫉妒他國。",
+                  "timestamp": 1598314714000,
+                  "language": "zh-Hant",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                      "categoryName": "Feature"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:zhongwen/trad/science-53887791",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>zhongwen/trad/science-53590987</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "肺炎疫情：BBC盤點最新「解藥」及「療法」進度",
+                    "headline": "肺炎疫情：BBC盤點最新「解藥」及「療法」進度",
+                    "overtyped": "BBC盤點最新「解藥」及「療法」進度"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/zhongwen/trad/science-53590987"
+                  },
+                  "summary": "針對新冠肺炎重症患者，全球各地的實驗都在尋找最有效的治療方法。",
+                  "timestamp": 1596093630000,
+                  "language": "zh-Hant",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                      "categoryName": "Explainer"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:zhongwen/trad/science-53590987",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>zhongwen/trad/science-53832928</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "肺炎疫情：新冠病毒感染者的嗅覺喪失「與感冒有區別」",
+                    "headline": "肺炎疫情：新冠病毒感染者的嗅覺喪失「與感冒有區別」",
+                    "overtyped": "肺炎疫情：新冠病毒感染者的嗅覺喪失「與感冒有區別」"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/zhongwen/trad/science-53832928"
+                  },
+                  "summary": "專家懷疑，這是因為這種正在全球大流行當中的病毒會攻擊那些直接影響嗅覺和味覺的神經細胞。",
+                  "timestamp": 1597910429000,
+                  "language": "zh-Hant",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                      "categoryName": "News"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:zhongwen/trad/science-53832928",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "id": "112502996",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/11120/production/_112502996_cps_web_banner_bottom_640x3-nc.png",
+          "path": "/cpsprodpb/11120/production/_112502996_cps_web_banner_bottom_640x3-nc.png",
+          "height": 11,
+          "width": 640,
+          "altText": "分隔線",
+          "copyrightHolder": "BBC",
+          "positionHint": "full-width",
+          "type": "image"
+        }
+      ]
+    },
+    "promo": {
+      "headlines": {
+        "shortHeadline": "BBC全球調查：新冠疫情加深世界貧富差距",
+        "headline": "新冠疫情：BBC全球調查顯示世界貧富不均加深"
+      },
+      "locators": {
+        "assetUri": "/zhongwen/trad/world-54113945",
+        "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-54113945",
+        "curie": "http://www.bbc.co.uk/asset/b008f7fc-a339-452b-9ded-814e175baf97",
+        "assetId": "54113945"
+      },
+      "summary": "BBC委托進行的民意調查結果顯示，COVID-19新型冠狀病毒對世上貧困國家造成最大衝擊。",
+      "timestamp": 1599823976000,
+      "language": "zh-Hant",
+      "indexImage": {
+        "id": "114321087",
+        "subType": "index",
+        "href": "http://c.files.bbci.co.uk/130BC/production/_114321087_c466a021-195a-4755-b3de-6fdd34ca1e5f.jpg",
+        "path": "/cpsprodpb/130BC/production/_114321087_c466a021-195a-4755-b3de-6fdd34ca1e5f.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "印度旁遮普邦阿姆利則市一位移民工婦女抱著孩子參加抗議政府防疫措施集會（3/6/2020）",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:zhongwen/trad/world-54113945",
+      "type": "cps"
+    },
+    "relatedContent": {
+      "section": {
+        "subType": "index",
+        "name": "國際新聞",
+        "uri": "/zhongwen/trad/world",
+        "type": "simple"
+      },
+      "site": {
+        "subType": "site",
+        "name": "BBC 中文網",
+        "uri": "/zhongwen/trad",
+        "type": "simple"
+      },
+      "groups": [
+        {
+          "type": "see-alsos",
+          "promos": [
+            {
+              "headlines": {
+                "shortHeadline": "畢業即失業？疫情下中國大學畢業生面臨困境",
+                "headline": "畢業即失業？疫情下中國大學畢業生面臨困境"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/trad/chinese-news-53648522",
+                "cpsUrn": "urn:bbc:content:assetUri:/zhongwen/trad/chinese-news-53648522"
+              },
+              "summary": "新冠疫情讓中國本就放緩的經濟遭到衝擊。工作機會的大幅減少讓今年剛畢業的數百萬中國大學生面臨前所未有的就業困難。",
+              "timestamp": 1596544875000,
+              "language": "zh-Hant",
+              "cpsType": "MAP",
+              "media": {
+                "id": "53649725",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p08mptxp",
+                "entityType": "Clip",
+                "caption": "畢業即失業？疫情下中國大學畢業生面臨困境",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "113804925",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/CECC/production/_113804925_p08mpv88.jpg",
+                "path": "/cpsprodpb/CECC/production/_113804925_p08mpv88.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "新冠疫情讓中國本就放緩的經濟遭到衝擊。工作機會的大幅減少讓今年剛畢業的數百萬中國大學生面臨前所未有的就業困難。",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "mediaType": "Video",
+              "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-53648522",
+              "type": "cps"
+            },
+            {
+              "headlines": {
+                "shortHeadline": "肺炎疫情：武漢——沉默之城",
+                "headline": "肺炎疫情：武漢——沉默之城"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/trad/chinese-news-53134921",
+                "cpsUrn": "urn:bbc:content:assetUri:/zhongwen/trad/chinese-news-53134921"
+              },
+              "summary": "曾因新冠肺炎疫情被封鎖超過兩個月的武漢已恢復往日的生機。漫步在武漢街頭，和今年年初民眾們憤怒地批評試圖隱瞞疫情或瀆職的官員氣氛不同，這裏已被當局樹立成為一場偉大勝利的里程碑。",
+              "timestamp": 1592810955000,
+              "language": "zh-Hant",
+              "cpsType": "MAP",
+              "media": {
+                "id": "53134922",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p08hn8tg",
+                "entityType": "Clip",
+                "caption": "武漢：沉默之城",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "113017889",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/18237/production/_113017889_p08hn8x2.jpg",
+                "path": "/cpsprodpb/18237/production/_113017889_p08hn8x2.jpg",
+                "height": 575,
+                "width": 1024,
+                "altText": "曾因新冠肺炎疫情被封鎖超過兩個月的武漢已恢復往日的生機。漫步在武漢街頭，和今年年初民眾們憤怒地批評試圖隱瞞疫情或瀆職的官員氣氛不同，這裏已被當局樹立成為一場偉大勝利的里程碑。",
+                "copyrightHolder": "曾因新冠肺炎疫情被封鎖超過兩個月的武漢已恢復往日的生機。漫步在武漢街頭，和今年年初民眾們憤怒地批評試",
+                "type": "image"
+              },
+              "mediaType": "Video",
+              "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-53134921",
+              "type": "cps"
+            }
+          ]
+        }
+      ]
+    }
+  }
