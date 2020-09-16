@@ -1,13 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AVPlayer for Live Radio should match snapshot for canonical AVPlayer 1`] = `
-.c0 {
-  padding-top: 56.25%;
+.c1 {
+  height: 165px;
   position: relative;
-  overflow: hidden;
+  margin-bottom: 1rem;
 }
 
-.c1 {
+.c0 amp-iframe,
+.c0 div > iframe {
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
+}
+
+.c2 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -17,16 +23,30 @@ exports[`AVPlayer for Live Radio should match snapshot for canonical AVPlayer 1`
   height: 100%;
 }
 
+@media (min-width:63rem) {
+  .c1 {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 amp-iframe,
+  .c0 div > iframe {
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
+  }
+}
+
 <div
-  class=""
+  class="c0"
 >
   <div
-    class="c0"
+    class="c1"
   >
     <iframe
       allow="autoplay; fullscreen"
       allowfullscreen=""
-      class="c1"
+      class="c2"
       scrolling="no"
       src="https://test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
       title="오디오 플레이어"
@@ -37,10 +57,30 @@ exports[`AVPlayer for Live Radio should match snapshot for canonical AVPlayer 1`
 `;
 
 exports[`AVPlayer for On Demand Radio should match snapshot for AMP AVPlayer 1`] = `
-.c0 {
-  padding-top: 56.25%;
+.c1 {
+  height: 165px;
   position: relative;
-  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.c0 amp-iframe,
+.c0 div > iframe {
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
+}
+
+@media (min-width:63rem) {
+  .c1 {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 amp-iframe,
+  .c0 div > iframe {
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
+  }
 }
 
 <html>
@@ -54,10 +94,10 @@ exports[`AVPlayer for On Demand Radio should match snapshot for AMP AVPlayer 1`]
   <body>
     <div>
       <div
-        class=""
+        class="c0"
       >
         <div
-          class="c0"
+          class="c1"
         >
           <amp-iframe
             allowfullscreen="allowfullscreen"

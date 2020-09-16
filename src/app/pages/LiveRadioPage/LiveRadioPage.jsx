@@ -1,12 +1,6 @@
 import React, { useContext } from 'react';
 import { string, shape } from 'prop-types';
 import styled from 'styled-components';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_QUAD,
-} from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { Headline } from '@bbc/psammead-headings';
 import pathOr from 'ramda/src/pathOr';
 import Paragraph from '@bbc/psammead-paragraph';
@@ -32,23 +26,6 @@ const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholde
 const StyledGelPageGrid = styled(GelPageGrid)`
   width: 100%;
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
-`;
-
-const StyledAudioPlayer = styled(AVPlayer)`
-  amp-iframe {
-    width: calc(100% + ${GEL_SPACING_DBL});
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-      width: calc(100% + ${GEL_SPACING_QUAD});
-    }
-  }
-  iframe {
-    width: calc(100% + ${GEL_SPACING_DBL});
-    margin: 0 -${GEL_SPACING};
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-      width: calc(100% + ${GEL_SPACING_QUAD});
-      margin: 0 -${GEL_SPACING_DBL};
-    }
-  }
 `;
 
 const LiveRadioPage = ({ pageData }) => {
@@ -150,7 +127,7 @@ const LiveRadioPage = ({ pageData }) => {
           <Paragraph script={script} service={service}>
             {bodySummary}
           </Paragraph>
-          <StyledAudioPlayer
+          <AVPlayer
             assetId={assetId}
             embedUrl={embedUrl}
             iframeTitle={iframeTitle}

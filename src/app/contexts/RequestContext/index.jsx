@@ -70,6 +70,7 @@ RequestContextProvider.propTypes = {
     'frontPage',
     'media',
     'mostRead',
+    'mostWatched',
     'error',
     'MAP',
     'FIX',

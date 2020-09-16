@@ -70,8 +70,12 @@ const CanonicalAd = ({ slotType, className }) => {
   return (
     <>
       <Helmet>
-        <script type="module" src={getBootstrapSrc(queryString)} />
-        <script nomodule="nomodule" src={getBootstrapSrc(queryString, true)} />
+        <script type="module" src={getBootstrapSrc(queryString)} async />
+        <script
+          nomodule="nomodule"
+          src={getBootstrapSrc(queryString, true)}
+          async
+        />
       </Helmet>
       <AdContainer
         slotType={slotType}
