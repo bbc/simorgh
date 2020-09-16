@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
@@ -53,10 +54,11 @@ const MetadataWithContext = ({
   imageAltText,
   aboutTags,
   mentionsTags,
+  toggles = defaultToggles,
   /* eslint-enable react/prop-types */
 }) => (
   <ServiceContextProvider service={service} pageLang={lang}>
-    <ToggleContextProvider toggles={defaultToggles}>
+    <ToggleContextProvider toggles={toggles}>
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
         id={id}
@@ -721,16 +723,31 @@ shouldMatchSnapshot(
 );
 
 describe('apple-itunes-app meta tag', () => {
-  // eslint-disable-next-line react/prop-types
-  const CanonicalCPSAssetInternationalOrigin = ({ service }) => (
+  const getToggles = (enabled = true) => {
+    return {
+      apple_itunes_app: {
+        enabled,
+      },
+    };
+  };
+
+  const CanonicalCPSAssetInternationalOrigin = ({
+    // eslint-disable-next-line react/prop-types
+    service,
+    // eslint-disable-next-line react/prop-types
+    toggles,
+    // eslint-disable-next-line react/prop-types
+    platform,
+  }) => (
     <MetadataWithContext
       service={service}
       bbcOrigin={dotComOrigin}
-      platform="canonical"
+      platform={platform}
       id="asset-12345678"
       pageType="STY"
       pathname={`/${service}/asset-12345678`}
       {...newsArticleMetadataProps}
+      toggles={toggles}
     />
   );
 
@@ -742,7 +759,13 @@ describe('apple-itunes-app meta tag', () => {
   `(
     'should be rendered for $service because iTunesAppId is configured ($iTunesAppId)',
     async ({ service, iTunesAppId }) => {
-      render(<CanonicalCPSAssetInternationalOrigin service={service} />);
+      render(
+        <CanonicalCPSAssetInternationalOrigin
+          service={service}
+          toggles={getToggles(true)}
+          platform="canonical"
+        />,
+      );
 
       await waitFor(() => {
         const appleItunesApp = document.querySelector(
@@ -758,15 +781,27 @@ describe('apple-itunes-app meta tag', () => {
     },
   );
 
-  ['pidgin', 'persian', 'ukchina'].forEach(serviceWithoutItunes => {
-    it(`should not be rendered for ${serviceWithoutItunes} because iTunesAppId is not configured`, () => {
+  it.each`
+    service     | reason                                              | platform       | iTunesAppEnabled
+    ${'arabic'} | ${'it is not applicable for AMP pages'}             | ${'amp'}       | ${true}
+    ${'arabic'} | ${'apple_itunes_app feature toggle is not enabled'} | ${'canonical'} | ${false}
+    ${'pidgin'} | ${'service does not have iTunesAppId configured'}   | ${'canonical'} | ${true}
+  `(
+    `should not be rendered for $service because $reason`,
+    ({ service, platform, iTunesAppEnabled }) => {
+      const toggles = getToggles(iTunesAppEnabled);
+
       render(
-        <CanonicalCPSAssetInternationalOrigin service={serviceWithoutItunes} />,
+        <CanonicalCPSAssetInternationalOrigin
+          service={service}
+          toggles={toggles}
+          platform={platform}
+        />,
       );
 
       expect(
         document.querySelector('head > meta[name=apple-itunes-app]'),
       ).not.toBeInTheDocument();
-    });
-  });
+    },
+  );
 });

@@ -3,6 +3,7 @@ import {
   runCoreCanonicalTests,
   runCanonicalAnalyticsTests,
   runRadioScheduleTests,
+  runSeoCanonicalTests,
 } from '../../common';
 
 export default service => {
@@ -10,4 +11,5 @@ export default service => {
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
   runRadioScheduleTests({ isAmp: false });
+  runSeoCanonicalTests(service);
 };

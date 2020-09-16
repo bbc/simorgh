@@ -1,7 +1,7 @@
 const getMetaTagContent = selector =>
   document.querySelector(selector).getAttribute('content');
 
-export default service => {
+export default () => {
   describe('SEO', () => {
     it('Page title', () => {
       const pageTitleEl = document.querySelector('title');
@@ -213,32 +213,6 @@ export default service => {
           }).toMatchSnapshot();
         });
       });
-    });
-
-    describe('apple-itunes-app meta tag', () => {
-      const appleItunesApp = document.querySelector(
-        'meta[name="apple-itunes-app"]',
-      );
-
-      if (['arabic', 'mundo', 'russian'].includes(service)) {
-        const content = appleItunesApp.getAttribute('content');
-
-        it('should be in the document', () => {
-          expect(appleItunesApp).toBeInTheDocument();
-        });
-
-        it('should contain text', () => {
-          expect(content).toBeTruthy();
-        });
-
-        it('should match text', () => {
-          expect(content).toMatchSnapshot();
-        });
-      } else {
-        it('should not be in the document', () => {
-          expect(appleItunesApp).not.toBeInTheDocument();
-        });
-      }
     });
   });
 };
