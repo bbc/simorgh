@@ -31,7 +31,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
-  margin-bottom: 1rem;
 }
 
 .c11 {
@@ -177,7 +176,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 }
 
 .c2 figure {
-  padding-bottom: 0;
+  padding-bottom: 1rem;
 }
 
 .c10 {
@@ -212,12 +211,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-@media (min-width:63rem) {
-  .c4 {
-    margin-bottom: 1.5rem;
-  }
 }
 
 @media (max-width:25rem) {
@@ -463,6 +456,10 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   .c2 {
     padding: 0.5rem 0 0;
     margin-top: 2rem;
+  }
+
+  .c2 figure {
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -951,7 +948,6 @@ exports[`Media Asset Page should render component 1`] = `
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
-  margin-bottom: 1rem;
 }
 
 .c28 {
@@ -1147,7 +1143,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 .c2 figure {
-  padding-bottom: 0;
+  padding-bottom: 1rem;
 }
 
 .c34 {
@@ -1373,12 +1369,6 @@ exports[`Media Asset Page should render component 1`] = `
 
 .c48:visited {
   color: #6E6E73;
-}
-
-@media (min-width:63rem) {
-  .c4 {
-    margin-bottom: 1.5rem;
-  }
 }
 
 @media (max-width:37.4375rem) {
@@ -1724,6 +1714,10 @@ exports[`Media Asset Page should render component 1`] = `
   .c2 {
     padding: 0.5rem 0 0;
     margin-top: 2rem;
+  }
+
+  .c2 figure {
+    padding-bottom: 1.5rem;
   }
 }
 
