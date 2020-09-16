@@ -127,7 +127,12 @@ const MetadataContainer = ({
         !isEnglishService &&
         alternateLinksWsSites.map(renderAlternateLinks)}
       {renderAmpHtml(ampLink, isAmp)}
-      {iTunesAppEnabled && renderAppleItunesApp(iTunesAppId, canonicalLink)}
+      {renderAppleItunesApp({
+        iTunesAppId,
+        canonicalLink,
+        isAmp,
+        iTunesAppEnabled,
+      })}
       <meta name="apple-mobile-web-app-title" content={brandName} />
       <meta name="application-name" content={brandName} />
       <meta name="description" content={description} />
