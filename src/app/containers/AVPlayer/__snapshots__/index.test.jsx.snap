@@ -131,7 +131,6 @@ exports[`AVPlayer for On Demand TV should match snapshot for canonical AVPlayer 
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
-  margin-bottom: 1rem;
 }
 
 .c1 {
@@ -142,12 +141,6 @@ exports[`AVPlayer for On Demand TV should match snapshot for canonical AVPlayer 
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-@media (min-width:63rem) {
-  .c0 {
-    margin-bottom: 1.5rem;
-  }
 }
 
 <div
