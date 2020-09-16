@@ -25,17 +25,10 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
-  margin-bottom: 1rem;
 }
 
 .c0 {
   margin-top: 0.5rem;
-}
-
-@media (min-width:63rem) {
-  .c2 {
-    margin-bottom: 1.5rem;
-  }
 }
 
 @media (max-width:63rem) {
@@ -134,7 +127,6 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
-  margin-bottom: 1rem;
 }
 
 .c0 {
@@ -149,12 +141,6 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-@media (min-width:63rem) {
-  .c2 {
-    margin-bottom: 1.5rem;
-  }
 }
 
 @media (max-width:63rem) {
@@ -246,17 +232,10 @@ exports[`MediaPlayer render the amp player 1`] = `
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
-  margin-bottom: 1rem;
 }
 
 .c0 {
   margin-top: 0.5rem;
-}
-
-@media (min-width:63rem) {
-  .c2 {
-    margin-bottom: 1.5rem;
-  }
 }
 
 @media (max-width:63rem) {
@@ -346,7 +325,6 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
-  margin-bottom: 1rem;
 }
 
 .c0 {
@@ -361,12 +339,6 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-@media (min-width:63rem) {
-  .c2 {
-    margin-bottom: 1.5rem;
-  }
 }
 
 @media (max-width:63rem) {
