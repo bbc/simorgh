@@ -4,10 +4,11 @@
   "description": "Simorgh",
   "main": "./src/client.js",
   "resolutions": {
-    "prismjs": "^1.21.0"
+    "prismjs": "1.21.0",
+    "node-forge": "0.10.0"
   },
   "scripts": {
-    "preinstall": "npx npm-force-resolutions",
+    "preinstall": "[ \"$npm_config_refer\" != \"ci\" ] && npx npm-force-resolutions || exit 0",
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
     "bbcA11y": "wait-on -t 20000 http://localhost:7080/status && bbc-a11y",
     "bbcA11y:ci": "wait-on -t 20000 http://localhost:7080/status && xvfb-run -a bbc-a11y",
