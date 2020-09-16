@@ -58,9 +58,6 @@ Object {
   "ampAds": Object {
     "enabled": true,
   },
-  "asyncAds": Object {
-    "enabled": true,
-  },
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
@@ -111,9 +108,6 @@ Object {
     "enabled": false,
   },
   "ampAds": Object {
-    "enabled": true,
-  },
-  "asyncAds": Object {
     "enabled": true,
   },
   "chartbeatAnalytics": Object {
