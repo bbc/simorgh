@@ -20,7 +20,7 @@ const getNextPageState = async pathname => {
   return {
     ...initialData,
     ...routeProps,
-    currentPathname: pathname,
+    pathname,
     toggles,
   };
 };
@@ -42,10 +42,10 @@ export const App = ({ location, initialData, bbcOrigin, history }) => {
   const [state, setState] = useState({
     ...initialData,
     ...routeProps,
-    currentPathname: pathname,
+    pathname,
     errorCode: routeProps.errorCode || initialData.errorCode,
   });
-  const routeHasChanged = state.currentPathname !== pathname;
+  const routeHasChanged = state.pathname !== pathname;
 
   useEffect(() => {
     if (hasMounted.current) {
