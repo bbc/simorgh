@@ -43,14 +43,16 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       });
     });
     describe('Most Watched component', () => {
+      before(() => {
+        cy.getToggles(config[service].name);
+      });
+
       it('should show/not show the Most Watched component if the toggle is enabled for the service', function test() {
-        cy.log(config[service].name);
-        cy.getToggles(config[service].name).then(toggles => {
+        cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
           const mostWatchedIsEnabled = path(
             ['mostPopularMedia', 'enabled'],
             toggles,
           );
-          cy.log(mostWatchedIsEnabled);
           if (mostWatchedIsEnabled) {
             cy.get('[data-e2e=most-watched-heading]').should('exist');
           } else {
