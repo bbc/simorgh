@@ -1,5 +1,16 @@
 import React, { useContext } from 'react';
-import { string } from 'prop-types';
+import { string, bool } from 'prop-types';
+import styled from 'styled-components';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+} from '@bbc/gel-foundations/spacings';
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
@@ -7,6 +18,15 @@ import {
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+
+const Wrapper = styled.div`
+  ${props => !props.hasBottomPadding && `padding-bottom: ${GEL_SPACING_DBL};`}
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    ${props =>
+      !props.hasBottomPadding && `padding-bottom: ${GEL_SPACING_TRPL};`}
+  }
+`;
 
 const AVPlayer = ({
   assetId,
@@ -17,6 +37,7 @@ const AVPlayer = ({
   type,
   skin,
   className,
+  hasBottomPadding,
 }) => {
   const { translations, service } = useContext(ServiceContext);
   const { isAmp, platform } = useContext(RequestContext);
@@ -35,7 +56,7 @@ const AVPlayer = ({
   if (!isValidPlatform || !assetId) return null;
 
   return (
-    <div className={className}>
+    <Wrapper hasBottomPadding={hasBottomPadding} className={className}>
       {isAmp ? (
         <AmpMediaPlayer
           placeholderSrc={placeholderSrc}
@@ -57,7 +78,29 @@ const AVPlayer = ({
           noJsClassName="no-js"
         />
       )}
-    </div>
+    </Wrapper>
+  );
+};
+
+const AudioPlayer = styled(AVPlayer)`
+  amp-iframe,
+  div > iframe {
+    width: calc(100% + ${GEL_SPACING_DBL});
+    margin: 0 -${GEL_SPACING};
+    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+      width: calc(100% + ${GEL_SPACING_QUAD});
+      margin: 0 -${GEL_SPACING_DBL};
+    }
+  }
+`;
+
+export default props => {
+  // eslint-disable-next-line react/prop-types
+  const { skin } = props;
+  return skin === 'audio' ? (
+    <AudioPlayer {...props} />
+  ) : (
+    <AVPlayer {...props} />
   );
 };
 
@@ -70,6 +113,7 @@ AVPlayer.propTypes = {
   iframeTitle: string,
   className: string,
   skin: string,
+  hasBottomPadding: bool,
 };
 
 AVPlayer.defaultProps = {
@@ -81,6 +125,5 @@ AVPlayer.defaultProps = {
   iframeTitle: '',
   className: '',
   skin: 'classic',
+  hasBottomPadding: true,
 };
-
-export default AVPlayer;

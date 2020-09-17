@@ -64,6 +64,12 @@ const extractBundlesForPageType = pageType => {
       'common-MediaAssetPage-PhotoGalleryPage-StoryPage-31ecd969.3341ac12.js',
     ];
   }
+  if (pageType === 'MostWatchedPage') {
+    return [
+      'MostWatchedPage-e94df663.a733283a.js',
+      'common-ArticlePage-FrontPage-IdxPage-MediaAssetPage-MostReadPage-MostWatchedPage-OnDemandRadioPage-OnDemandTvPage-Ph-667a1289.f4b0fece.js',
+    ];
+  }
   throw Error('page type not mocked');
 };
 
