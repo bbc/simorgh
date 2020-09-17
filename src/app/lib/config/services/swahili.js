@@ -260,8 +260,12 @@ export const service = {
         url: '/swahili',
       },
       {
+        title: 'Uchaguzi Tanzania',
+        url: '/swahili/habari-53516858',
+      },
+      {
         title: 'Michezo',
-        url: '/swahili/michezo',
+        url: '/swahili/topics/ckdxndddjkxt',
       },
       {
         title: 'Video',
@@ -269,7 +273,7 @@ export const service = {
       },
       {
         title: 'Vipindi vya Redio',
-        url: '/swahili/kwa_kina/redio',
+        url: '/swahili/media-54071673',
       },
     ],
   },
