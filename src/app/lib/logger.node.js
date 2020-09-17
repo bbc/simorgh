@@ -39,6 +39,16 @@ const consoleTransport = new (transports.Console)({
 
 const customFormatting = printf(
   data => `${data.timestamp} ${data.level} [${data.label}] ${data.message}`,
+  // This sets the custom format for how logs are presented in the console
+);
+
+// eslint-disable-next-line no-unused-vars
+const logFormat = printf(
+  // eslint-disable-next-line no-shadow
+  ({ timestamp, level, label: filename, message: event, metadata }) =>
+    `${timestamp} ${level} [${filename}]: ${event}, metadata: ${JSON.stringify(
+      metadata,
+    )}`,
 );
 
 // e.g. outputs 'Article/index.jsx'
