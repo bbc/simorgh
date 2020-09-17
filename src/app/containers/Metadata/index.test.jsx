@@ -1,11 +1,9 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MetadataContainer from './index';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 import {
   articleDataNews,
@@ -32,12 +30,6 @@ const getArticleMetadataProps = data => ({
 const newsArticleMetadataProps = getArticleMetadataProps(articleDataNews);
 const persianArticleMetadataProps = getArticleMetadataProps(articleDataPersian);
 
-const defaultToggles = {
-  apple_itunes_app: {
-    enabled: true,
-  },
-};
-
 const MetadataWithContext = ({
   /* eslint-disable react/prop-types */
   service,
@@ -54,32 +46,29 @@ const MetadataWithContext = ({
   imageAltText,
   aboutTags,
   mentionsTags,
-  toggles = defaultToggles,
   /* eslint-enable react/prop-types */
 }) => (
   <ServiceContextProvider service={service} pageLang={lang}>
-    <ToggleContextProvider toggles={toggles}>
-      <RequestContextProvider
-        bbcOrigin={bbcOrigin}
-        id={id}
-        isAmp={platform === 'amp'}
-        pageType={pageType}
-        pathname={pathname}
-        service={service}
-        statusCode={200}
-      >
-        <MetadataContainer
-          title={title}
-          lang={lang}
-          description={description}
-          openGraphType={openGraphType}
-          aboutTags={aboutTags}
-          mentionsTags={mentionsTags}
-          image={image}
-          imageAltText={imageAltText}
-        />
-      </RequestContextProvider>
-    </ToggleContextProvider>
+    <RequestContextProvider
+      bbcOrigin={bbcOrigin}
+      id={id}
+      isAmp={platform === 'amp'}
+      pageType={pageType}
+      pathname={pathname}
+      service={service}
+      statusCode={200}
+    >
+      <MetadataContainer
+        title={title}
+        lang={lang}
+        description={description}
+        openGraphType={openGraphType}
+        aboutTags={aboutTags}
+        mentionsTags={mentionsTags}
+        image={image}
+        imageAltText={imageAltText}
+      />
+    </RequestContextProvider>
   </ServiceContextProvider>
 );
 
@@ -731,14 +720,8 @@ describe('apple-itunes-app meta tag', () => {
     };
   };
 
-  const CanonicalCPSAssetInternationalOrigin = ({
-    // eslint-disable-next-line react/prop-types
-    service,
-    // eslint-disable-next-line react/prop-types
-    toggles,
-    // eslint-disable-next-line react/prop-types
-    platform,
-  }) => (
+  // eslint-disable-next-line react/prop-types
+  const CanonicalCPSAssetInternationalOrigin = ({ service, platform }) => (
     <MetadataWithContext
       service={service}
       bbcOrigin={dotComOrigin}
@@ -747,7 +730,6 @@ describe('apple-itunes-app meta tag', () => {
       pageType="STY"
       pathname={`/${service}/asset-12345678`}
       {...newsArticleMetadataProps}
-      toggles={toggles}
     />
   );
 
@@ -782,19 +764,15 @@ describe('apple-itunes-app meta tag', () => {
   );
 
   it.each`
-    service     | reason                                              | platform       | iTunesAppEnabled
-    ${'arabic'} | ${'it is not applicable for AMP pages'}             | ${'amp'}       | ${true}
-    ${'arabic'} | ${'apple_itunes_app feature toggle is not enabled'} | ${'canonical'} | ${false}
-    ${'pidgin'} | ${'service does not have iTunesAppId configured'}   | ${'canonical'} | ${true}
+    service     | reason                                            | platform
+    ${'arabic'} | ${'it is not applicable for AMP pages'}           | ${'amp'}
+    ${'pidgin'} | ${'service does not have iTunesAppId configured'} | ${'canonical'}
   `(
     `should not be rendered for $service because $reason`,
-    ({ service, platform, iTunesAppEnabled }) => {
-      const toggles = getToggles(iTunesAppEnabled);
-
+    ({ service, platform }) => {
       render(
         <CanonicalCPSAssetInternationalOrigin
           service={service}
-          toggles={toggles}
           platform={platform}
         />,
       );
