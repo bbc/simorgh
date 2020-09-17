@@ -1,8 +1,9 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { C_GHOST, C_EBON } from '@bbc/psammead-styles/colours';
 import CpsOnwardJourney from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import '@testing-library/jest-dom';
 
 describe('CpsOnwardJourney', () => {
   const buildStoryItems = count => {
@@ -190,10 +191,8 @@ describe('CpsOnwardJourney', () => {
     expect(container).toMatchSnapshot();
 
     const skipLink = getByText('skip the foo section');
-    skipLink.click();
-
-    waitFor(() => {
-      getByText('end of the foo section').toHaveFocus();
-    });
+    expect(skipLink).toBeInTheDocument();
+    const endOfSection = getByText('end of the foo section');
+    expect(endOfSection).toBeInTheDocument();
   });
 });
