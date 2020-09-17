@@ -195,9 +195,6 @@ export const buildATIPageTrackPath = ({
       description: 'referrer url',
       value: getReferrer(platform, origin, previousPath),
       wrap: false,
-      // disable encoding for this parameter as ati does not appear to support
-      // decoding of the ref parameter
-      disableEncoding: true,
     },
   ];
 
