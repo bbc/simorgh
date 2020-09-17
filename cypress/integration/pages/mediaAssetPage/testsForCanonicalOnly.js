@@ -1,3 +1,4 @@
+import path from 'ramda/src/path';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getEmbedUrl, hasMedia } from './helpers';
@@ -41,7 +42,23 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         }
       });
     });
-
+    describe('Most Watched component', () => {
+      it('should show/not show the Most Watched component if the toggle is enabled for the service', function test() {
+        cy.log(config[service].name);
+        cy.getToggles(config[service].name).then(toggles => {
+          const mostWatchedIsEnabled = path(
+            ['mostPopularMedia', 'enabled'],
+            toggles,
+          );
+          cy.log(mostWatchedIsEnabled);
+          if (mostWatchedIsEnabled) {
+            cy.get('[data-e2e=most-watched-heading]').should('exist');
+          } else {
+            cy.get('[data-e2e=most-watched-heading]').should('not.exist');
+          }
+        });
+      });
+    });
     if (appToggles.chartbeatAnalytics.enabled && envConfig.chartbeatEnabled) {
       describe('Chartbeat', () => {
         it('should have a script with correct src', () => {
