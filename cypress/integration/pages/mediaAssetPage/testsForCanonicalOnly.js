@@ -53,8 +53,26 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             ['mostPopularMedia', 'enabled'],
             toggles,
           );
+          cy.log(`Service toggle enabled ${mostWatchedIsEnabled}`);
+          let serviceVariant = variant;
+          if (serviceVariant === 'default') {
+            serviceVariant = '';
+          } else {
+            serviceVariant = `/${variant}`;
+          }
           if (mostWatchedIsEnabled) {
-            cy.get('[data-e2e=most-watched-heading]').should('exist');
+            const mostWatchedPath = `/${config[service].name}/mostwatched${serviceVariant}.json`;
+            cy.log(mostWatchedPath);
+            cy.request(mostWatchedPath).then(({ body: mostWatchedJson }) => {
+              cy.log(
+                `Enough records to show component ${
+                  mostWatchedJson.totalRecords > 0
+                }`,
+              );
+              if (mostWatchedJson.totalRecords > 0) {
+                cy.get('[data-e2e=most-watched-heading]').should('exist');
+              }
+            });
           } else {
             cy.get('[data-e2e=most-watched-heading]').should('not.exist');
           }
