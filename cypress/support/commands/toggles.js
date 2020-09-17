@@ -14,9 +14,7 @@ Cypress.Commands.add(
       cy.writeFile(
         `cypress/fixtures/toggles/${service}.json`,
         response.body.toggles,
-      ).then(() => {
-        cy.fixture(`toggles/${service}.json`).as('toggles');
-      });
+      );
     });
   }),
 );
