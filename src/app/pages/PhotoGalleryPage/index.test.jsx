@@ -3,27 +3,31 @@ import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import assocPath from 'ramda/src/assocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContext } from '#contexts/ToggleContext';
-import { PhotoGalleryPage } from '..';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+
+import PhotoGalleryPage from '.';
 import noOnwardJourneys from '#data/pidgin/cpsAssets/sport-23252855';
 import someCpsOnwardJourneys from '#data/azeri/cpsAssets/azerbaijan-44208474.json';
 import allCpsOnwardJourneys from '#data/pidgin/cpsAssets/tori-49221071.json';
 import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
-const toggleState = {
-  mediaPlayer: {
-    enabled: true,
-  },
-};
+jest.mock('#containers/ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  return ChartbeatAnalytics;
+});
 
-const createAssetPage = ({ pageData }, service) => (
+jest.mock('#containers/ComscoreAnalytics', () => {
+  const ComscoreAnalytics = () => <div>comscore</div>;
+  return ComscoreAnalytics;
+});
+
+const Page = ({ pageData, service }) => (
   <StaticRouter>
-    <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
+    <ToggleContextProvider>
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
@@ -36,7 +40,7 @@ const createAssetPage = ({ pageData }, service) => (
           <PhotoGalleryPage service={service} pageData={pageData} />
         </RequestContextProvider>
       </ServiceContextProvider>
-    </ToggleContext.Provider>
+    </ToggleContextProvider>
   </StaticRouter>
 );
 
@@ -90,54 +94,82 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   return ContextsContainer;
 });
 
+const pageType = 'cpsAsset';
+
 describe('Photo Gallery Page', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+  });
+
+  afterEach(() => {
+    delete process.env.SIMORGH_ICHEF_BASE_URL;
+  });
+
   describe('snapshots', () => {
     it('should match snapshot for PGL with no onward journeys', async () => {
       fetch.mockResponse(JSON.stringify(noOnwardJourneys));
-      const { pageData } = await getInitialData('some-cps-pgl-path');
-      const page = createAssetPage({ pageData }, 'pidgin');
-      await matchSnapshotAsync(page);
+      const { pageData } = await getInitialData({
+        path: 'some-cps-pgl-path',
+        pageType,
+      });
+      await matchSnapshotAsync(<Page pageData={pageData} service="pidgin" />);
     });
 
     it('should match snapshot for PGL with about tags', async () => {
       fetch.mockResponse(JSON.stringify(pglAboutData));
-      const { pageData } = await getInitialData('some-cps-pgl-path');
-      const page = createAssetPage({ pageData }, 'afaanoromoo');
-      await matchSnapshotAsync(page);
+      const { pageData } = await getInitialData({
+        path: 'some-cps-pgl-path',
+        pageType,
+      });
+      await matchSnapshotAsync(
+        <Page pageData={pageData} service="afaanoromoo" />,
+      );
     });
 
     it('should match snapshot for PGL with non-CPS onward journeys filtered', async () => {
       fetch.mockResponse(JSON.stringify(someCpsOnwardJourneys));
-      const { pageData } = await getInitialData('some-cps-pgl-path');
-      const page = createAssetPage({ pageData }, 'azeri');
-      await matchSnapshotAsync(page);
+      const { pageData } = await getInitialData({
+        path: 'some-cps-pgl-path',
+        pageType,
+      });
+      await matchSnapshotAsync(<Page pageData={pageData} service="azeri" />);
     });
 
     it('should match snapshot for PGL with all CPS onward journeys', async () => {
       fetch.mockResponse(JSON.stringify(allCpsOnwardJourneys));
-      const { pageData } = await getInitialData('some-cps-pgl-path');
-      const page = createAssetPage({ pageData }, 'pidgin');
-      await matchSnapshotAsync(page);
+      const { pageData } = await getInitialData({
+        path: 'some-cps-pgl-path',
+        pageType,
+      });
+      await matchSnapshotAsync(<Page pageData={pageData} service="pidgin" />);
     });
   });
 
   it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
     fetch.mockResponse(JSON.stringify(pglAboutData));
-    const { pageData } = await getInitialData('some-cps-pgl-path');
-    const { getByText } = render(createAssetPage({ pageData }, 'afaanoromoo'));
+    const { pageData } = await getInitialData({
+      path: 'some-cps-pgl-path',
+      pageType,
+    });
+    const { getByText } = render(
+      <Page pageData={pageData} service="afaanoromoo" />,
+    );
     expect(getByText('21 Fuulbaana 2017')).toBeInTheDocument();
   });
 
   it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
     fetch.mockResponse(JSON.stringify(pglAboutData));
-    const { pageData } = await getInitialData('some-cps-pgl-path');
+    const { pageData } = await getInitialData({
+      path: 'some-cps-pgl-path',
+      pageType,
+    });
     const pageDataWithHiddenTimestamp = assocPath(
       ['metadata', 'options', 'allowDateStamp'],
       false,
       pageData,
     );
     const { asFragment } = render(
-      createAssetPage({ pageData: pageDataWithHiddenTimestamp }, 'afaanoromoo'),
+      <Page pageData={pageDataWithHiddenTimestamp} service="afaanoromoo" />,
     );
 
     expect(document.querySelector('main time')).toBeNull();

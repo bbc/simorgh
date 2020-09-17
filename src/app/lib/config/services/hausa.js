@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Talla',
-    },
     lang: `ha`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Wanda aka sabunta',
@@ -31,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Bayani, ',
     imageCopyrightOffscreenText: 'Asalin hoton, ',
     locale: `ha-GH`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ha',
     datetimeLocale: `ha`,
     service: 'hausa',
     serviceName: 'Hausa',
@@ -50,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Talla',
+      },
       seeAll: 'Duba su baki daya',
       home: 'Labaran Duniya',
       currentPage: 'Shafin da ake ciki',
@@ -177,9 +178,15 @@ export const service = {
             'BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: 'Kauce wa %provider_name%',
+          endTextVisuallyHidden: 'Karshen labarin da aka sa a %provider_name%',
         },
+      },
+      include: {
+        errorMessage:
+          'Yi hakuri, ba zamu iya nuna wannan bangaren na labarin a irin wannan karamar wayar',
+        linkText:
+          'Bude babban shafin domin kallon duka abubuwan da muka wallafa',
       },
       topStoriesTitle: 'Babban Labari',
       featuresAnalysisTitle: 'Minti Daya Da BBC',
@@ -190,6 +197,11 @@ export const service = {
       lastUpdated: 'Na baya-bayan nan:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Wadanda aka fi kallo',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

@@ -73,6 +73,9 @@ const headerFooterTranslations = {
 
 // Translations used in the main element of the page
 export const mainTranslations = {
+  ads: {
+    advertisementLabel: 'Реклама',
+  },
   seeAll: 'Посмотреть все',
   skipLinkText: 'Перейти к содержанию',
   relatedContent: 'Новости по теме',
@@ -155,6 +158,11 @@ export const mainTranslations = {
       endTextVisuallyHidden: 'Контент из %provider_name% окончен',
     },
   },
+  include: {
+    errorMessage:
+      'К сожалению, мы не можем показать вам эту часть истории из-за малого объема мобильной страницы.',
+    linkText: 'Откройте полную версию страницы, чтобы увидеть весь контент.',
+  },
   topStoriesTitle: 'Главное',
   featuresAnalysisTitle: 'Журнал',
 };
@@ -162,10 +170,6 @@ export const mainTranslations = {
 export const service = {
   default: {
     translations: { ...mainTranslations, ...headerFooterTranslations },
-    ads: {
-      hasAds: true,
-      advertisementLabel: 'Реклама',
-    },
     lang: `ru`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Обновлено',
@@ -186,6 +190,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Подпись, ',
     imageCopyrightOffscreenText: 'Автор фото, ',
     locale: `ru-RU`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ru',
     datetimeLocale: `ru`,
     service: 'russian',
     serviceName: 'Russian',
@@ -200,6 +206,7 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Главная',
+    iTunesAppId: 504278066,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -210,6 +217,11 @@ export const service = {
       lastUpdated: 'Последнее обновление:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Самое популярное видео',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

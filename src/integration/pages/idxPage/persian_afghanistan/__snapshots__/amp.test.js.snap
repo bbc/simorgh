@@ -81,6 +81,14 @@ Object {
       "wf",
       "yt",
     ],
+    "gbOrUnknown": Array [
+      "gb",
+      "gg",
+      "im",
+      "je",
+      "uk",
+      "unknown",
+    ],
   },
 }
 `;
@@ -89,7 +97,7 @@ exports[`AMP persian/afghanistan IDX page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=69&p=persian.afghanistan.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:3cda1d8c-ffa2-03ae-e050-380a4e8056f3]&x2=[amp]&x3=[news-persian]&x4=[fa]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-section]&x8=[simorgh]&x9=[صفحه+افغانستان+-+BBC+News+فارسی]&x11=[2016-09-20T16:06:44.000Z]&x12=[2020-05-20T12:02:54.000Z]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=69&p=persian.afghanistan.page&r=%24%7BscreenWidth%7Dx%24%7BscreenHeight%7Dx%24%7BscreenColorDepth%7D&re=%24%7BavailableScreenWidth%7Dx%24%7BavailableScreenHeight%7D&hl=%24%7Btimestamp%7D&lng=%24%7BbrowserLanguage%7D&x1=[urn%3Abbc%3Acps%3A3cda1d8c-ffa2-03ae-e050-380a4e8056f3]&x2=[amp]&x3=[news-persian]&x4=[fa]&x5=[%24%7BsourceUrl%7D]&x6=[%24%7BdocumentReferrer%7D]&x7=[index-section]&x8=[simorgh]&x9=[%D8%B5%D9%81%D8%AD%D9%87%2B%D8%A7%D9%81%D8%BA%D8%A7%D9%86%D8%B3%D8%AA%D8%A7%D9%86%2B-%2BBBC%2BNews%2B%D9%81%D8%A7%D8%B1%D8%B3%DB%8C]&x11=[2016-09-20T16%3A06%3A44.000Z]&x12=[2020-05-20T12%3A02%3A54.000Z]&ref=%24%7BdocumentReferrer%7D",
   },
   "transport": Object {
     "beacon": false,
@@ -342,19 +350,26 @@ Object {
 
 exports[`AMP persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 7`] = `
 Object {
+  "sizes": "180x180",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`AMP persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 8`] = `
+Object {
   "sizes": "192x192",
   "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-192x192.png",
 }
 `;
 
-exports[`AMP persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 8`] = `
+exports[`AMP persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 9`] = `
 Object {
   "sizes": "384x384",
   "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-384x384.png",
 }
 `;
 
-exports[`AMP persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 9`] = `
+exports[`AMP persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 10`] = `
 Object {
   "sizes": "512x512",
   "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png",
@@ -455,6 +470,7 @@ exports[`AMP persian/afghanistan IDX page Story Promo Image should match image 1
   height="549"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 660w"
   width="976"
 />
 `;

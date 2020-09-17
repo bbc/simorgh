@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Жарнама',
-    },
     lang: `ky`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Жаңылоо',
@@ -31,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Түшүндүрмө, ',
     imageCopyrightOffscreenText: 'Сүрөттүн булагы, ',
     locale: `ky-KG`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ky',
     datetimeLocale: `ky`,
     service: 'kyrgyz',
     serviceName: 'News Кыргыз КызMATы',
@@ -50,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Жарнама',
+      },
       seeAll: 'Баарын көрүү',
       home: 'Башталгыч бет',
       currentPage: 'Ачылып турган баракча',
@@ -183,6 +184,10 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% посттун аягы',
         },
       },
+      include: {
+        errorMessage: 'Кечиресиз, бул баракча мобилдик телефондо ачылбайт',
+        linkText: 'Башкы беттин толук версиясын ачыңыз',
+      },
       topStoriesTitle: 'Башкы кабарлар',
       featuresAnalysisTitle: 'Редактордун тандоосу',
     },
@@ -192,6 +197,11 @@ export const service = {
       lastUpdated: 'Акыркы жаңылоо:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Эң көп көрүлгөндөр',
+      numberOfItems: 5,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

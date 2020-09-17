@@ -1,5 +1,4 @@
 import envConfig from '../../support/config/envs';
-import config from '../../support/config/services';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -24,42 +23,6 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
           });
         });
       }
-      it('should only have expected bundle script tags', () => {
-        cy.get('script[src]').each($p => {
-          if ($p.attr('src').includes(envConfig.assetOrigin)) {
-            return expect($p.attr('src')).to.match(
-              new RegExp(
-                `(\\/static\\/js\\/(main|vendor|${config[service].name})-\\w+\\.\\w+\\.js)`,
-                'g',
-              ),
-            );
-          }
-          return null;
-        });
-      });
-
-      it('should have 1 bundle for its service', () => {
-        let matches = 0;
-
-        cy.get('script[src]')
-          .each($p => {
-            const match = $p
-              .attr('src')
-              .match(
-                new RegExp(
-                  `(\\/static\\/js\\/${config[service].name}-\\w+\\.\\w+\\.js)`,
-                  'g',
-                ),
-              );
-
-            if (match) {
-              matches += 1;
-            }
-          })
-          .then(() => {
-            expect(matches).to.equal(1);
-          });
-      });
       if (['photoGalleryPage', 'storyPage'].includes(pageType)) {
         describe('CPS PGL and STY Tests', () => {
           it('should render at least one image', () => {

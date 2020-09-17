@@ -51,18 +51,25 @@ const startApp = () => {
 };
 
 const runTests = () =>
-  new Promise(resolve => {
+  new Promise((resolve, reject) => {
     const child = spawn(
       'jest',
       [filesToTest, '--runInBand', '--colors', ...getJestArgs()],
       { stdio: 'inherit' },
     );
-
-    child.on('exit', resolve);
+    child.on('exit', code => {
+      if (code === 1) {
+        reject();
+      } else {
+        resolve();
+      }
+    });
   });
 
 if (isCI) {
-  runTests();
+  runTests().catch(() => {
+    process.exit(1);
+  });
 } else {
   const spinner = ora().start();
 
@@ -90,5 +97,9 @@ if (isCI) {
         }),
     )
     .then(runTests)
-    .then(stopApp);
+    .then(stopApp)
+    .catch(async () => {
+      await stopApp();
+      process.exit(1);
+    });
 }

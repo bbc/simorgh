@@ -15,10 +15,6 @@ import 'moment/locale/gd';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Advertisement',
-    },
     lang: `gd`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Ùraichte',
@@ -58,6 +54,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Advertisement',
+      },
       seeAll: 'Faic uile',
       home: 'Alba',
       currentPage: 'An duilleag seo',
@@ -174,6 +173,11 @@ export const service = {
       lastUpdated: 'Air ùrachadh mu dheireadh:',
       numberOfItems: 5,
       hasMostRead: false,
+    },
+    mostWatched: {
+      header: 'As motha leughte',
+      numberOfItems: 10,
+      hasMostWatched: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,

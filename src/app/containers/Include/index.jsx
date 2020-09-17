@@ -1,10 +1,15 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
+import styled from 'styled-components';
+import { pathOr } from 'ramda';
 
+import EmbedError from '@bbc/psammead-embed-error';
 import nodeLogger from '#lib/logger.node';
 import { INCLUDE_RENDERED } from '#lib/logger.const';
 import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
+import { GridItemConstrainedMedium } from '#lib/styledGrid';
 
 import Canonical from './canonical';
 import Idt2Canonical from './canonical/Idt2';
@@ -25,12 +30,43 @@ const componentsToRender = {
   },
 };
 
+const FallbackGrid = styled(GridItemConstrainedMedium)`
+  display: grid;
+`;
+
 const IncludeContainer = props => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, canonicalLink } = useContext(RequestContext);
+  const { translations } = useContext(ServiceContext);
   const { enabled } = useToggle('include');
 
+  const errorMessage = pathOr(
+    'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+    ['include', 'errorMessage'],
+    translations,
+  );
+
+  const linkText = pathOr(
+    'View the full version of the page to see all the content.',
+    ['include', 'linkText'],
+    translations,
+  );
+
   if (!enabled) return null;
-  const { href, type } = props;
+  const { isAmpSupported, href, type, index } = props;
+
+  if (!isAmpSupported && isAmp) {
+    return (
+      <FallbackGrid>
+        <EmbedError
+          message={errorMessage}
+          link={{
+            text: linkText,
+            href: `${canonicalLink}#include-${index + 1}`,
+          }}
+        />
+      </FallbackGrid>
+    );
+  }
 
   logger.info(INCLUDE_RENDERED, {
     includeUrl: href,

@@ -16,10 +16,6 @@ import 'moment/locale/tr';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Reklam',
-    },
     lang: `tr`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Güncelleme',
@@ -40,6 +36,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Altyazı, ',
     imageCopyrightOffscreenText: 'Kaynak, ',
     locale: `tr-TR`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'tr',
     datetimeLocale: `tr-tr`,
     service: 'turkce',
     serviceName: 'News Türkçe',
@@ -59,6 +57,10 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Reklam',
+      },
+      recommendationTitle: 'Bunlar da ilginizi çekebilir',
       seeAll: 'Hepsini görüntüle',
       home: 'Ana sayfa',
       currentPage: 'Bulunduğunuz sayfa',
@@ -183,6 +185,11 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% paylaşımının sonu',
         },
       },
+      include: {
+        errorMessage:
+          'Maalesef haberin bu bölümünü mobil sayfada görüntüleyemiyoruz',
+        linkText: 'Tüm içeriği görmek için sayfanın tüm sürümünü görüntüleyin ',
+      },
       topStoriesTitle: 'Manşet haber',
       featuresAnalysisTitle: 'Aramızda Kalmasın',
     },
@@ -193,11 +200,20 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'En fazla izlenilen içerek',
+      numberOfItems: 5,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
     recommendations: {
       hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Haberin başlığını atlayın ve okumaya devam edin',
+        endTextVisuallyHidden: 'Haberin sonu',
+      },
     },
     footer: {
       trustProjectLink: {

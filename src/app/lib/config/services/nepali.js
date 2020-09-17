@@ -7,14 +7,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'विज्ञापन',
-    },
     lang: `ne`,
     articleAuthor: `http://www.facebook.com/bbcnews`,
     articleTimestampPrefix: '',
-    articleTimestampSuffix: 'मा अद्यावधिक',
+    articleTimestampSuffix: 'अद्यावधिक',
     atiAnalyticsAppName: 'news-nepali',
     atiAnalyticsProducerId: '63',
     chartbeatDomain: 'nepali.bbc.co.uk',
@@ -31,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'क्याप्शन, ',
     imageCopyrightOffscreenText: 'तस्बिर स्रोत, ',
     locale: `ne-NP`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ne',
     datetimeLocale: `ne`,
     service: 'nepali',
     serviceName: 'Nepali',
@@ -50,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'विज्ञापन',
+      },
       seeAll: 'सबै हेर्नुहोस्',
       home: 'होमपेज',
       currentPage: 'अहिलेको पृष्ठ',
@@ -157,7 +158,7 @@ export const service = {
         listen: 'सुन्नुहोस्',
         watch: 'हेर्नुहोस्',
         liveLabel: 'प्रत्यक्ष प्रसारण',
-        nextLabel: 'NEXT',
+        nextLabel: 'अर्को',
         previousRadioShow: 'पछिल्लो रेडिओ कार्यक्रम',
         nextRadioShow: 'अघिल्लो रेडिओ कार्यक्रम',
         duration: 'समयावधि',
@@ -178,6 +179,10 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% पोस्ट समाप्त',
         },
       },
+      include: {
+        errorMessage: 'मोबाइलपेजमा सामग्रीको यो भाग देखाउन हामी असमर्थ छौँ।',
+        linkText: 'पूरा सामग्री हेर्न यो पेजको पूर्ण संस्करण हेर्नुहोस्।',
+      },
       topStoriesTitle: 'मुख्य समाचार',
       featuresAnalysisTitle: 'अन‌ि यो पनि',
     },
@@ -188,8 +193,16 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'धेरै हेरिएको',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
+      onFrontPage: false,
+      header: 'पछिल्लो कार्यक्रम सुन्नुहोस्',
+      durationLabel: 'अवधि %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

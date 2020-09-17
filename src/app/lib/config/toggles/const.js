@@ -1,0 +1,17 @@
+export default {
+  ADS: 'ads',
+  CHARTBEAT_ANALYTICS: 'chartbeatAnalytics',
+  COMSCORE_ANALYTICS: 'comscoreAnalytics',
+  CPS_RECOMMENDATIONS: 'cpsRecommendations',
+  ENABLE_FETCHING_TOGGLES: 'enableFetchingToggles',
+  INCLUDE: 'include',
+  LIVE_RADIO_SCHEDULE: 'liveRadioSchedule',
+  MEDIA_PLAYER: 'mediaPlayer',
+  MOST_READ: 'mostRead',
+  NAVIGATION_ON_ARTICLES: 'navOnArticles',
+  PREROLL_ADS: 'prerollAds',
+  RADIO_SCHEDULE: 'radioSchedule',
+  SCRIPT_SWITCH_LINK: 'scriptLink',
+  SOCIAL_EMBED: 'socialEmbed',
+  VARIANT_COOKIE: 'variantCookie',
+};

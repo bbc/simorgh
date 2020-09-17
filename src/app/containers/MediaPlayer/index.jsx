@@ -5,12 +5,17 @@ import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import Figure from '@bbc/psammead-figure';
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '@bbc/gel-foundations/spacings';
 import styled from 'styled-components';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
   MediaMessage,
 } from '@bbc/psammead-media-player';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import Caption from '../Caption';
 import Metadata from './Metadata';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
@@ -18,20 +23,14 @@ import { getPlaceholderSrcSet } from '#lib/utilities/srcSet';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import formatDuration from '#lib/utilities/formatDuration';
 import buildIChefURL from '#lib/utilities/ichefURL';
-import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import toggles from '#lib/config/toggles';
-import onClient from '#lib/utilities/onClient';
 import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
-import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
+import logMissingMediaId from './helpers/logMissingMediaId';
 
-const { logMediaPlayerStatus } = toggles[
-  process.env.SIMORGH_APP_ENV || 'local'
-];
 const DEFAULT_WIDTH = 512;
 const MediaPlayerContainer = ({
   blocks,
@@ -40,17 +39,23 @@ const MediaPlayerContainer = ({
   showPlaceholder,
   available,
   isLegacyMedia,
+  showLoadingImage,
+  showCaption,
 }) => {
   const { isAmp } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
-  const { enabled } = useToggle('mediaPlayer');
   const location = useLocation();
-  if (!enabled || !blocks) {
+  if (!blocks) {
     return null;
   }
 
   const aresMediaBlock = filterForBlockType(blocks, 'aresMedia');
-  const captionBlock = filterForBlockType(blocks, 'caption');
+  const articleCaptionBlock = filterForBlockType(blocks, 'caption');
+  const cpsCaptionBlock = filterForBlockType(
+    path(['model', 'blocks'], aresMediaBlock),
+    'caption',
+  );
+  const captionBlock = articleCaptionBlock || cpsCaptionBlock;
 
   if (!aresMediaBlock) {
     return null;
@@ -104,16 +109,50 @@ const MediaPlayerContainer = ({
     ),
   };
 
-  if (!(versionId || blockId)) {
-    return null; // this should be the holding image with an error overlay
-  }
-
   const placeholderSrcset = getPlaceholderSrcSet({ originCode, locator });
   const placeholderSrc = buildIChefURL({
     originCode,
     locator,
     resolution: DEFAULT_WIDTH,
   });
+
+  const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
+  const StyledMessageContainer = styled.div`
+    padding-top: ${landscapeRatio};
+    margin-bottom: ${GEL_SPACING_DBL};
+    position: relative;
+    overflow: hidden;
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      padding-bottom: ${GEL_SPACING_TRPL};
+    }
+  `;
+
+  const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
+  const contentNotAvailableMessage = `This content is no longer available`;
+
+  const translatedNoJSMessage =
+    path(['media', 'noJs'], translations) || noJsMessage;
+
+  const translatedExpiredContentMessage =
+    path(['media', 'contentExpired'], translations) ||
+    contentNotAvailableMessage;
+
+  const mediaIsValid = available && (versionId || blockId);
+  if (!mediaIsValid) {
+    if (isLegacyMedia && available) {
+      logMissingMediaId({ url: assetId, assetType });
+    }
+    return (
+      <StyledMessageContainer>
+        <MediaMessage
+          service={service}
+          message={translatedExpiredContentMessage}
+          placeholderSrc={placeholderSrc}
+          placeholderSrcset={placeholderSrcset}
+        />
+      </StyledMessageContainer>
+    );
+  }
 
   const embedSource = getEmbedUrl({
     mediaId: `${assetId}/${isLegacyMedia ? blockId : versionId}/${lang}`,
@@ -128,43 +167,10 @@ const MediaPlayerContainer = ({
     translations,
   );
 
-  const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
-  const StyledMessageContainer = styled.div`
-    padding-top: ${landscapeRatio};
-    position: relative;
-    overflow: hidden;
-  `;
-
-  const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
-  const contentNotAvailableMessage = `This content is no longer available`;
-
-  const translatedNoJSMessage =
-    path(['media', 'noJs'], translations) || noJsMessage;
-
-  const translatedExpiredContentMessage =
-    path(['media', 'contentExpired'], translations) ||
-    contentNotAvailableMessage;
-
-  if (!available) {
-    return (
-      <StyledMessageContainer>
-        <MediaMessage
-          service={service}
-          message={translatedExpiredContentMessage}
-          placeholderSrc={placeholderSrc}
-          placeholderSrcset={placeholderSrcset}
-        />
-      </StyledMessageContainer>
-    );
-  }
-
-  if (!onClient() && logMediaPlayerStatus.enabled) {
-    logEmbedSourceStatus({
-      url: assetId,
-      embedUrl: embedSource,
-      assetType,
-    });
-  }
+  const renderCaption = () =>
+    captionBlock ? (
+      <Caption block={captionBlock} type={mediaInfo.type} service={service} />
+    ) : null;
 
   return (
     <>
@@ -190,9 +196,10 @@ const MediaPlayerContainer = ({
             mediaInfo={mediaInfo}
             noJsMessage={translatedNoJSMessage}
             noJsClassName="no-js"
+            showLoadingImage={showLoadingImage}
           />
         )}
-        {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
+        {showCaption && renderCaption()}
       </Figure>
     </>
   );
@@ -205,11 +212,15 @@ MediaPlayerContainer.propTypes = {
   showPlaceholder: bool.isRequired,
   available: bool,
   isLegacyMedia: bool,
+  showLoadingImage: bool,
+  showCaption: bool,
 };
 MediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
   available: true,
   isLegacyMedia: false,
+  showLoadingImage: false,
+  showCaption: true,
 };
 
 export default MediaPlayerContainer;

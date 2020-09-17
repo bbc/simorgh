@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Reklam',
-    },
     lang: `az`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Yeniləndi',
@@ -31,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Altyazı, ',
     imageCopyrightOffscreenText: 'Şəklin mənbəyi, ',
     locale: `az-AZ`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'az',
     datetimeLocale: `az`,
     service: 'azeri',
     serviceName: 'Azərbaycanca',
@@ -50,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Reklam',
+      },
       seeAll: 'Hamısına baxın',
       home: 'Xəbərlər',
       currentPage: 'Hazırda olduğunuz səhifə',
@@ -173,6 +174,11 @@ export const service = {
           endTextVisuallyHidden: 'Paylaşımın sonu %provider_name%',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'Bu günün xəbərləri',
       featuresAnalysisTitle: 'Bunları da oxuyun',
     },
@@ -182,6 +188,11 @@ export const service = {
       lastUpdated: 'Ən son yeniləmə:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Ən çox baxılanlar',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

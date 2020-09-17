@@ -4,6 +4,7 @@ import { withRouter } from 'react-router';
 import path from 'ramda/src/path';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
+import getToggles from '#app/lib/utilities/getToggles';
 
 export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   const {
@@ -16,10 +17,18 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
 
-  const { pageData, status, error, timeOnServer } = initialData;
+  const {
+    pageData,
+    toggles,
+    status,
+    error,
+    timeOnServer,
+    showAdsBasedOnLocation,
+  } = initialData;
 
   const [state, setState] = useState({
     pageData,
+    toggles,
     status,
     service,
     variant,
@@ -57,7 +66,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         id: nextId,
         assetUri: nextAssetUri,
         isAmp: nextIsAmp,
-        route,
+        route: { getInitialData, pageType: nextPageType },
       } = getRouteProps(routes, location.pathname);
 
       let loaderTimeout;
@@ -68,13 +77,14 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       loaderPromise.then(() => {
         setState({
           pageData: null,
+          toggles,
           status: null,
           service: nextService,
           variant: nextVariant,
           id: nextId,
           assetUri: nextAssetUri,
           isAmp: nextIsAmp,
-          pageType: route.pageType,
+          pageType: nextPageType,
           loading: true,
           error: null,
           errorCode: null,
@@ -82,32 +92,38 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         });
       });
 
-      route
-        .getInitialData({
+      const updateAppState = async () => {
+        const nextToggles = await getToggles(nextService);
+        const data = await getInitialData({
           path: location.pathname,
           service: nextService,
           variant: nextVariant,
-        })
-        .then(data => {
-          clearTimeout(loaderTimeout);
-          shouldSetFocus.current = true;
-          setState({
-            service: nextService,
-            variant: nextVariant,
-            id: nextId,
-            assetUri: nextAssetUri,
-            isAmp: nextIsAmp,
-            pageType: route.pageType,
-            loading: false,
-            pageData: path(['pageData'], data),
-            status: path(['status'], data),
-            error: path(['error'], data),
-            errorCode: null,
-            timeOnServer: path(['timeOnServer'], data),
-          });
+          pageType: nextPageType,
+          toggles: nextToggles,
         });
+
+        clearTimeout(loaderTimeout);
+        shouldSetFocus.current = true;
+        setState({
+          service: nextService,
+          variant: nextVariant,
+          id: nextId,
+          assetUri: nextAssetUri,
+          isAmp: nextIsAmp,
+          pageType: nextPageType,
+          loading: false,
+          pageData: path(['pageData'], data),
+          toggles: nextToggles,
+          status: path(['status'], data),
+          error: path(['error'], data),
+          errorCode: null,
+          timeOnServer: path(['timeOnServer'], data),
+        });
+      };
+
+      updateAppState();
     }
-  }, [routes, location.pathname]);
+  }, [routes, location.pathname, toggles]);
 
   const previousLocationPath = usePrevious(location.pathname);
 
@@ -116,6 +132,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   return renderRoutes(routes, {
     ...state,
     bbcOrigin,
+    showAdsBasedOnLocation,
     pathname: location.pathname,
     previousPath,
   });

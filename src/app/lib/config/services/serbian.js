@@ -42,10 +42,7 @@ const baseServiceConfig = {
 export const service = {
   lat: {
     ...baseServiceConfig,
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Advertisement',
-    },
+
     articleTimestampPrefix: 'Ažurirano',
     articleTimestampSuffix: '',
     brandName: 'BBC News na srpskom',
@@ -54,6 +51,8 @@ export const service = {
     frontPageTitle: 'Glavna stranica',
     lang: `sr-latn`,
     locale: `sr-latn`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'sr-Latn',
     noBylinesPolicy:
       'https://www.bbc.com/serbian/lat/institutional-50173730#authorexpertise',
     publishingPrinciples:
@@ -112,6 +111,11 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Najgledanije',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     navigation: [
       {
         title: 'Početna strana',
@@ -147,6 +151,9 @@ export const service = {
       variant: 'cyr',
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Advertisement',
+      },
       seeAll: 'Pogledajte sve',
       home: 'Glavna stranica',
       currentPage: 'Otvorena stranica',
@@ -257,19 +264,25 @@ export const service = {
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
-          text: 'Warning: Third party content may contain adverts',
+          textPrefixVisuallyHidden: 'Potpis ispod videa, ',
+          text: 'Upozorenje: Sadržaj drugih sajtova može da sadrži i reklame',
         },
         fallback: {
-          text: 'Content is not available',
-          linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
+          text: 'Sadržaj nije dostupan',
+          linkText: 'Pogledajte više na %provider_name%',
+          linkTextSuffixVisuallyHidden: ', spoljna stranica',
           warningText: 'BBC nije odgovoran za sadržaj drugih sajtova.',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: 'Preskočite sadržaj sa %provider_name%',
+          endTextVisuallyHidden: 'Kraj sadržaja sa %provider_name%',
         },
+      },
+      include: {
+        errorMessage:
+          'Izvinite, ovaj deo teksta ne može da bude prikazan na mobilnom telefonu.',
+        linkText:
+          'Pogledajte punu verziju stranice da biste videli čitav sadržaj.',
       },
       topStoriesTitle: 'Najvažnije',
       featuresAnalysisTitle: 'Reportaže',
@@ -277,9 +290,6 @@ export const service = {
   },
   cyr: {
     ...baseServiceConfig,
-    ads: {
-      hasAds: false,
-    },
     articleTimestampPrefix: 'Ажурирано',
     articleTimestampSuffix: '',
     brandName: 'BBC News на српском',
@@ -288,6 +298,8 @@ export const service = {
     frontPageTitle: 'Главна страница',
     lang: `sr-cyrl`,
     locale: `sr-cyrl`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'sr-Cyrl',
     noBylinesPolicy:
       'https://www.bbc.com/serbian/cyr/institutional-50173730#authorexpertise',
     publishingPrinciples:
@@ -346,6 +358,11 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Најгледаније',
+      numberOfItems: 5,
+      hasMostWatched: true,
+    },
     navigation: [
       {
         title: 'Почетна страна',
@@ -381,6 +398,9 @@ export const service = {
       variant: 'lat',
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Advertisement',
+      },
       seeAll: 'Погледајте све',
       home: 'Главна страница',
       currentPage: 'Отворена страница',
@@ -504,6 +524,12 @@ export const service = {
           text: 'Skip %provider_name% post',
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
+      },
+      include: {
+        errorMessage:
+          'Извините, овај део текста не може да буде приказан на мобилном телефону.',
+        linkText:
+          'Погледајте пуну верзију странице да бисте видели читав садржај.',
       },
       topStoriesTitle: 'Најважније',
       featuresAnalysisTitle: 'Репортаже',

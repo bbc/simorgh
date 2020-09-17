@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+import pathEq from 'ramda/src/pathEq';
 import envConfig from '../config/envs';
 
 // the externalId `bbc_oromo_radio` is overriden to `bbc_afaanoromoo` in production code
@@ -12,28 +13,36 @@ const getServiceName = producerName =>
     .replace('chinese', 'zhongwen')
     .replace('afaan_oromoo', 'afaanoromoo');
 
-export const getEmbedUrl = (body, language) => {
+export const getEmbedUrl = ({ body, language, isAmp }) => {
   const externalId = body.metadata.createdBy;
   const brandId = getBrandId(externalId);
   const producerName = body.metadata.analyticsLabels.producer;
   const serviceName = getServiceName(producerName);
   const { pid } = body.metadata.locators;
 
-  return [
-    envConfig.avEmbedBaseUrl,
+  const embedUrl = [
+    isAmp ? envConfig.avEmbedBaseUrlAmp : envConfig.avEmbedBaseUrlCanonical,
     'ws/av-embeds/media',
     serviceName,
     brandId,
     pid,
     language,
   ].join('/');
+
+  return isAmp ? `${embedUrl}/amp` : embedUrl;
 };
 
-export const isExpired = jsonData => {
-  const versions = path(['content', 'blocks', '0', 'versions'], jsonData);
+export const isAvailable = pathEq(
+  ['content', 'blocks', '0', 'availability'],
+  'available',
+);
 
-  // Episode is expired if versions is empty
-  return versions.length === 0;
+export const isBrand = jsonData => {
+  const pageID = path(
+    ['metadata', 'analyticsLabels', 'pageIdentifier'],
+    jsonData,
+  );
+  return pageID.includes('programmes');
 };
 
 export const dataEndpointOverride = () => {

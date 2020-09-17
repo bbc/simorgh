@@ -2,7 +2,7 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"Skip to content"`;
 
-exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598286&amp;s2=64&amp;p=news.articles.c5jje4ejkqvo.page&amp;x1=[urn:bbc:optimo:c5jje4ejkqvo]&amp;x2=[responsive]&amp;x3=[news]&amp;x4=[en-gb]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[The+Germans+solving+rising+rents+with+people+power]&amp;x11=[2019-03-27T16:13:36.863Z]&amp;x12=[2019-03-27T16:20:33.751Z]\\"/>"`;
+exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598286&amp;s2=64&amp;p=news.articles.c5jje4ejkqvo.page&amp;x1=[urn%3Abbc%3Aoptimo%3Ac5jje4ejkqvo]&amp;x2=[responsive]&amp;x3=[news]&amp;x4=[en-gb]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[The%2BGermans%2Bsolving%2Brising%2Brents%2Bwith%2Bpeople%2Bpower]&amp;x11=[2019-03-27T16%3A13%3A36.863Z]&amp;x12=[2019-03-27T16%3A20%3A33.751Z]\\"/>"`;
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/news"`;
 
@@ -212,19 +212,26 @@ Object {
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 7`] = `
 Object {
+  "sizes": "180x180",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 8`] = `
+Object {
   "sizes": "192x192",
   "url": "https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png",
 }
 `;
 
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 8`] = `
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 9`] = `
 Object {
   "sizes": "384x384",
   "url": "https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png",
 }
 `;
 
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 9`] = `
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 10`] = `
 Object {
   "sizes": "512x512",
   "url": "https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png",

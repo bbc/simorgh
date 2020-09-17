@@ -2,7 +2,6 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import deepClone from 'ramda/src/clone';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import '@testing-library/jest-dom/extend-expect';
 import loggerMock from '#testHelpers/loggerMock';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -44,7 +43,7 @@ const fixtures = {
 };
 
 // eslint-disable-next-line react/prop-types
-const WrappedStoryPromo = ({ service = 'igbo', platform, ...props }) => (
+const WrappedStoryPromo = ({ service, platform, ...props }) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
@@ -92,6 +91,26 @@ describe('StoryPromo Container', () => {
       platform="canonical"
       item={indexAlsosItem}
       promoType="top"
+    />,
+  );
+
+  shouldMatchSnapshot(
+    `should render full width promos correctly for canonical`,
+    <WrappedStoryPromo
+      platform="canonical"
+      item={completeItem}
+      promoType="top"
+      isSingleColumnLayout
+    />,
+  );
+
+  shouldMatchSnapshot(
+    `should render full width promos correctly for amp`,
+    <WrappedStoryPromo
+      platform="amp"
+      item={completeItem}
+      promoType="top"
+      isSingleColumnLayout
     />,
   );
 
@@ -306,7 +325,7 @@ describe('StoryPromo Container', () => {
         cpsItem.timestamp = 1565035200000;
       });
 
-      it('should show the correct local date', () => {
+      it('should show the correct local date without an overriden datetime locale', () => {
         const { container: newsContainer } = render(
           <WrappedStoryPromo item={cpsItem} service="news" />,
         );
@@ -328,16 +347,46 @@ describe('StoryPromo Container', () => {
         expect(bengaliTime).toEqual('৬ অগাস্ট ২০১৯');
         expect(bengaliDate).toEqual('2019-08-06');
       });
+      it('should show the correct local date with an overidden datetime locale', () => {
+        const { container: newsContainer } = render(
+          <WrappedStoryPromo
+            item={cpsItem}
+            service="news"
+            serviceDatetimeLocale="fa"
+          />,
+        );
+        const {
+          textContent: newsTime,
+          dateTime: newsDate,
+        } = newsContainer.querySelector('time');
+
+        expect(newsTime).toEqual('۵ اوت ۲۰۱۹');
+        expect(newsDate).toEqual('2019-08-05');
+
+        const { container: bengaliContainer } = render(
+          <WrappedStoryPromo
+            item={cpsItem}
+            service="bengali"
+            serviceDatetimeLocale="uk"
+          />,
+        );
+        const {
+          textContent: bengaliTime,
+          dateTime: bengaliDate,
+        } = bengaliContainer.querySelector('time');
+        expect(bengaliTime).toEqual('6 серпня 2019');
+        expect(bengaliDate).toEqual('2019-08-06');
+      });
     });
 
     describe('With Index Alsos', () => {
-      it('should render a list with two related items', () => {
+      it('should render a list with three related items', () => {
         const { container } = render(
           <WrappedStoryPromo item={indexAlsosItem} promoType="top" />,
         );
 
         expect(container.getElementsByTagName('ul')).toHaveLength(1);
-        expect(container.getElementsByTagName('li')).toHaveLength(2);
+        expect(container.getElementsByTagName('li')).toHaveLength(3);
       });
 
       it('should render a related item not contained within a list', () => {

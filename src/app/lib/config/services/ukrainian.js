@@ -6,13 +6,14 @@ import '@bbc/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
 import { mainTranslations as russianMainTranslations } from './russian';
 
+const secondaryColumnTranslations = {
+  topStoriesTitle: 'Головне',
+  featuresAnalysisTitle: 'Докладно',
+};
+
 const baseServiceConfig = {
-  ads: {
-    hasAds: false,
-    advertisementLabel: 'Реклама',
-  },
   articleAuthor: `http://www.facebook.com/bbcnews`,
-  articleTimestampPrefix: 'Оновлення даних: ',
+  articleTimestampPrefix: 'Оновлено: ',
   atiAnalyticsAppName: 'news-ukrainian',
   atiAnalyticsProducerId: '94',
   chartbeatDomain: 'ukrainian.bbc.co.uk',
@@ -46,11 +47,13 @@ const baseServiceConfig = {
     brandLogoColour: `${C_WHITE}`,
   },
   translations: {
+    ads: {
+      advertisementLabel: 'Реклама',
+    },
     seeAll: 'Подивитись все',
     home: 'Головна',
     currentPage: 'Поточна сторінка',
     skipLinkText: 'Перейти до змісту',
-    relatedContent: 'Статті на цю ж тему',
     navMenuText: 'Розділи',
     mediaAssetPage: {
       mediaPlayer: 'Медіаплеєр',
@@ -175,8 +178,14 @@ const baseServiceConfig = {
         endTextVisuallyHidden: 'Кінець %provider_name% допису',
       },
     },
-    topStoriesTitle: 'Головне',
-    featuresAnalysisTitle: 'Докладно',
+    include: {
+      errorMessage:
+        'Вибачте, ми не можемо відобразити цю частину сторінки у мобільній версії.',
+      linkText:
+        'Перегляньте повну версію сторінки, щоб побачити увесь контент.',
+    },
+    relatedContent: 'Статті на цю ж тему',
+    ...secondaryColumnTranslations,
   },
   brandSVG,
   mostRead: {
@@ -185,6 +194,11 @@ const baseServiceConfig = {
     numberOfItems: 10,
     hasMostRead: true,
     onIdxPage: false,
+  },
+  mostWatched: {
+    header: 'Найпопулярніше',
+    numberOfItems: 5,
+    hasMostWatched: false,
   },
   radioSchedule: {
     hasRadioSchedule: false,
@@ -275,6 +289,8 @@ export const service = {
     ...baseServiceConfig,
     datetimeLocale: 'uk',
     locale: 'uk_UA',
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'uk',
     lang: 'uk',
   },
   'ru-UA': {
@@ -282,11 +298,15 @@ export const service = {
     translations: {
       ...baseServiceConfig.translations,
       ...russianMainTranslations,
+      ...secondaryColumnTranslations,
     },
     datetimeLocale: 'ru',
+    serviceDatetimeLocale: 'uk',
     locale: 'ru_UA',
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ru',
     lang: 'ru-UA',
-    headerFooterLang: 'uk',
+    serviceLang: 'uk',
   },
 };
 

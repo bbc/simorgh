@@ -2,20 +2,27 @@
 
 exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
 .c0 {
-  background-color: #F6F6F6;
+  background-color: #F8F8F8;
+  margin-top: 0.5rem;
 }
 
 .c1 {
-  margin: 0 auto;
-  text-align: center;
-  padding-bottom: 0.5rem;
+  display: none;
+  visibility: hidden;
 }
 
 .c2 {
-  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.c3 {
+.amp-geo-pending .c3,
+.amp-geo-group-gbOrUnknown .c3 {
+  display: none;
+  visibility: hidden;
+}
+
+.c4 {
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -30,35 +37,46 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
   text-align: right;
 }
 
-.c3:hover {
+.c4:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
+@media (min-width:20rem) {
+  .c1 {
+    min-height: 5.1875rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    visibility: visible;
+  }
+}
+
 @media (min-width:63rem) {
   .c1 {
-    padding-bottom: 1rem;
-    max-width: 63rem;
+    min-height: 17.6875rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c4 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c4 {
     font-size: 0.75rem;
     line-height: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c3 {
-    padding-top: 1rem;
   }
 }
 
@@ -83,21 +101,26 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
   </head>
   <body>
     <div>
-      <div
-        amp-access="toggles.ads.enabled"
-        amp-access-hide="true"
+      <section
+        aria-hidden="true"
+        aria-label="Publicités"
+        class="c0"
+        data-e2e="advertisement"
+        role="region"
       >
         <div
-          class="c0"
+          class="c1"
         >
           <div
-            class="c1"
+            class="c2"
           >
             <div
-              class="c2"
+              amp-access="toggles.ads.enabled"
+              amp-access-hide="true"
+              class="c3"
             >
               <a
-                class="c3"
+                class="c4"
                 dir="ltr"
                 href="https://www.bbc.com/usingthebbc/cookies/"
                 tabindex="-1"
@@ -133,7 +156,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </body>
 </html>
@@ -161,20 +184,28 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
   </head>
   <body>
     .c0 {
-  background-color: #F6F6F6;
+  background-color: #F8F8F8;
+  margin-top: 0.5rem;
 }
 
 .c1 {
-  margin: 0 auto;
-  text-align: center;
-  padding-bottom: 0.5rem;
+  display: none;
+  visibility: hidden;
+  padding: 0;
 }
 
 .c2 {
-  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.c3 {
+.amp-geo-pending .c3,
+.amp-geo-group-gbOrUnknown .c3 {
+  display: none;
+  visibility: hidden;
+}
+
+.c4 {
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -189,54 +220,64 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
   text-align: right;
 }
 
-.c3:hover {
+.c4:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-@media (min-width:63rem) {
+@media (min-width:18.75rem) {
   .c1 {
-    padding-bottom: 1rem;
-    max-width: 63rem;
+    min-height: 17.6875rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    visibility: visible;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c4 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c4 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-@media (min-width:63rem) {
-  .c3 {
-    padding-top: 1rem;
-  }
-}
-
 <div>
-      <div
-        amp-access="toggles.ads.enabled"
-        amp-access-hide="true"
+      <section
+        aria-hidden="true"
+        aria-label="Publicités 2"
+        class="c0"
+        data-e2e="advertisement"
+        role="region"
       >
         <div
-          class="c0"
+          class="c1"
         >
           <div
-            class="c1"
+            class="c2"
           >
             <div
-              class="c2"
+              amp-access="toggles.ads.enabled"
+              amp-access-hide="true"
+              class="c3"
             >
               <a
-                class="c3"
+                class="c4"
                 dir="ltr"
                 href="https://www.bbc.com/usingthebbc/cookies/"
                 tabindex="-1"
@@ -258,7 +299,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </body>
 </html>

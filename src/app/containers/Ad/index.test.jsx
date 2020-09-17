@@ -7,22 +7,10 @@ import { ToggleContext } from '#contexts/ToggleContext';
 
 import AdContainer from './index';
 
-const defaultToggleState = {
-  ads: {
-    enabled: true,
-  },
-};
-
-const mockToggleDispatch = jest.fn();
-
-const toggleContextMock = {
-  toggleState: defaultToggleState,
-  toggleDispatch: mockToggleDispatch,
-};
-
 describe('Ad Container', () => {
   beforeAll(() => {
     process.env.SIMORGH_CONFIG_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+
     window.dotcom = {
       bootstrap: jest.fn(),
       cmd: { push: jest.fn() },
@@ -35,84 +23,108 @@ describe('Ad Container', () => {
   });
 
   describe('Snapshots', () => {
-    shouldMatchSnapshot(
-      'should correctly render an AMP leaderboard ad',
-      <ServiceContextProvider service="mundo">
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          id="c0000000000o"
-          isAmp
-          pageType="frontPage"
-          service="mundo"
-          statusCode={200}
-          pathname="/mundo"
-        >
-          <ToggleContext.Provider value={toggleContextMock}>
-            <AdContainer slotType="leaderboard" />
-          </ToggleContext.Provider>
-        </RequestContextProvider>
-      </ServiceContextProvider>,
-    );
+    const defaultToggleState = {
+      ads: {
+        enabled: true,
+      },
+      ampAds: {
+        enabled: true,
+      },
+    };
 
-    shouldMatchSnapshot(
-      'should correctly render a Canonical leaderboard ad',
-      <ServiceContextProvider service="mundo">
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          id="c0000000000o"
-          isAmp={false}
-          pageType="frontPage"
-          service="mundo"
-          statusCode={200}
-          pathname="/mundo"
-        >
-          <ToggleContext.Provider value={toggleContextMock}>
-            <BrowserRouter>
+    const mockToggleDispatch = jest.fn();
+
+    const toggleContextMock = {
+      toggleState: defaultToggleState,
+      toggleDispatch: mockToggleDispatch,
+    };
+
+    describe('AMP', () => {
+      shouldMatchSnapshot(
+        'should correctly render a leaderboard ad',
+        <ServiceContextProvider service="mundo">
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            id="c0000000000o"
+            isAmp
+            pageType="frontPage"
+            service="mundo"
+            statusCode={200}
+            pathname="/mundo"
+            showAdsBasedOnLocation
+          >
+            <ToggleContext.Provider value={toggleContextMock}>
               <AdContainer slotType="leaderboard" />
-            </BrowserRouter>
-          </ToggleContext.Provider>
-        </RequestContextProvider>
-      </ServiceContextProvider>,
-    );
+            </ToggleContext.Provider>
+          </RequestContextProvider>
+        </ServiceContextProvider>,
+      );
 
-    shouldMatchSnapshot(
-      'should correctly render an AMP mpu ad',
-      <ServiceContextProvider service="mundo">
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          id="c0000000000o"
-          isAmp
-          pageType="frontPage"
-          service="mundo"
-          statusCode={200}
-          pathname="/mundo"
-        >
-          <ToggleContext.Provider value={toggleContextMock}>
-            <AdContainer slotType="mpu" />
-          </ToggleContext.Provider>
-        </RequestContextProvider>
-      </ServiceContextProvider>,
-    );
-
-    shouldMatchSnapshot(
-      'should correctly render a Canonical mpu ad',
-      <ServiceContextProvider service="mundo">
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          id="c0000000000o"
-          isAmp={false}
-          pageType="frontPage"
-          service="mundo"
-          statusCode={200}
-          pathname="/mundo"
-        >
-          <ToggleContext.Provider value={toggleContextMock}>
-            <BrowserRouter>
+      shouldMatchSnapshot(
+        'should correctly render an mpu ad',
+        <ServiceContextProvider service="mundo">
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            id="c0000000000o"
+            isAmp
+            pageType="frontPage"
+            service="mundo"
+            statusCode={200}
+            pathname="/mundo"
+            showAdsBasedOnLocation
+          >
+            <ToggleContext.Provider value={toggleContextMock}>
               <AdContainer slotType="mpu" />
-            </BrowserRouter>
-          </ToggleContext.Provider>
-        </RequestContextProvider>
-      </ServiceContextProvider>,
-    );
+            </ToggleContext.Provider>
+          </RequestContextProvider>
+        </ServiceContextProvider>,
+      );
+    });
+
+    describe('Canonical', () => {
+      shouldMatchSnapshot(
+        'should correctly render a leaderboard ad',
+        <ServiceContextProvider service="mundo">
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            id="c0000000000o"
+            isAmp={false}
+            pageType="frontPage"
+            service="mundo"
+            statusCode={200}
+            pathname="/mundo"
+            showAdsBasedOnLocation
+          >
+            <ToggleContext.Provider value={toggleContextMock}>
+              <BrowserRouter>
+                <AdContainer slotType="leaderboard" />
+              </BrowserRouter>
+            </ToggleContext.Provider>
+          </RequestContextProvider>
+        </ServiceContextProvider>,
+      );
+
+      shouldMatchSnapshot(
+        'should correctly render an mpu ad',
+        <ServiceContextProvider service="mundo">
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            id="c0000000000o"
+            isAmp={false}
+            pageType="frontPage"
+            service="mundo"
+            statusCode={200}
+            pathname="/mundo"
+            showAdsBasedOnLocation
+          >
+            <ToggleContext.Provider value={toggleContextMock}>
+              <BrowserRouter>
+                <AdContainer slotType="mpu" />
+              </BrowserRouter>
+            </ToggleContext.Provider>
+          </RequestContextProvider>
+        </ServiceContextProvider>,
+      );
+    });
   });
 });

@@ -9,9 +9,7 @@ describe('Logger folder creation', () => {
   it('creates folder log-temp', () => {
     fs.existsSync.mockReturnValue(false);
 
-    const loggerNode = require('./logger.node');
-
-    loggerNode('path/file/foo.js');
+    require('./logger.node');
 
     expect(fs.mkdirSync).toHaveBeenCalled();
   });
@@ -21,17 +19,24 @@ describe('Logger folder creation', () => {
     process.env.LOG_DIR = '';
     fs.existsSync.mockReturnValue(false);
 
-    const loggerNode = require('./logger.node');
-
-    loggerNode('path/file/foo.js');
+    require('./logger.node');
 
     expect(fs.existsSync).toHaveBeenCalledWith('log');
   });
 });
 
 describe('Logger node - for the server', () => {
+  beforeAll(() => {
+    process.env.LOG_LEVEL = 'info';
+  });
+
+  afterAll(() => {
+    delete process.env.LOG_LEVEL;
+  });
+
   afterEach(() => {
     jest.clearAllMocks();
+    delete process.env.LOG_LEVEL;
   });
 
   describe('Setting up logger', () => {
@@ -59,10 +64,6 @@ describe('Logger node - for the server', () => {
         winston.format.timestamp.mockImplementation(() => 'Timestamp Mock');
         winston.format.printf.mockImplementation(() => 'Printf Mock');
         winston.format.combine.mockImplementation(() => 'Combine Mock');
-        winston.format.json = jest.fn();
-        winston.format.prettyPrint = jest.fn();
-        winston.format.colorize = jest.fn();
-        winston.format.metadata = jest.fn();
 
         fs.existsSync = jest.fn();
         fs.mkdirSync = jest.fn();
@@ -70,15 +71,13 @@ describe('Logger node - for the server', () => {
 
       it('sets up file transport when LOG_DIR is set ', () => {
         process.env.LOG_DIR = 'foobarDir';
-        const loggerNode = require('./logger.node');
-
-        loggerNode('path/file/foo.js');
+        require('./logger.node');
 
         expect(winston.transports.File).toHaveBeenCalledWith({
           filename: 'foobarDir/app.log',
-          format: 'Combine Mock',
           handleExceptions: true,
           humanReadableUnhandledException: true,
+          json: true,
           level: 'info',
           maxFiles: 5,
           maxsize: 104857600,
@@ -88,16 +87,13 @@ describe('Logger node - for the server', () => {
 
       it('sets up file transport when LOG_DIR isnt set', () => {
         delete process.env.LOG_DIR;
-
-        const loggerNode = require('./logger.node');
-
-        loggerNode('path/file/foo.js');
+        require('./logger.node');
 
         expect(winston.transports.File).toHaveBeenCalledWith({
           filename: 'log/app.log',
-          format: 'Combine Mock',
           handleExceptions: true,
           humanReadableUnhandledException: true,
+          json: true,
           level: 'info',
           maxFiles: 5,
           maxsize: 104857600,
@@ -107,12 +103,9 @@ describe('Logger node - for the server', () => {
 
       it('sets up console transport', () => {
         process.env.LOG_DIR = 'foobarDir';
-        const loggerNode = require('./logger.node');
-
-        loggerNode('path/file/foo.js');
+        require('./logger.node');
 
         expect(winston.transports.Console).toHaveBeenCalledWith({
-          format: 'Combine Mock',
           handleExceptions: true,
           humanReadableUnhandledException: true,
           level: 'info',
@@ -132,14 +125,13 @@ describe('Logger node - for the server', () => {
       describe('createLogger', () => {
         it('is configured correctly', () => {
           const loggerNode = require('./logger.node');
-
           loggerNode('path/file/foo.js');
 
           expect(winston.format.combine).toHaveBeenCalledWith(
             'Label Mock',
             'Simple Mock',
             'Timestamp Mock',
-            'Metadata Mock',
+            'Printf Mock',
           );
           expect(winston.format.label).toHaveBeenCalledWith({
             label: 'file/foo.js',

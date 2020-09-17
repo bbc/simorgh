@@ -8,14 +8,16 @@ import runHeaderTests from './header';
 import runMainHeadingTests from './mainHeading';
 import runMediaPlayerEmbedTests from './mediaPlayerEmbed';
 import runPerformanceTests from './performance';
-import runSEOTests from './SEO';
+import runRadioScheduleTests from './radioSchedule';
+import runCrossPlatformSEOTests from './SEO';
+import runSeoCanonicalTests from './SEO.canonical';
 
 const runCommonCrossPlatformTests = service => {
   runA11yTests();
   runHeaderTests(service);
   runFooterTests();
   runPerformanceTests();
-  runSEOTests();
+  runCrossPlatformSEOTests();
 };
 
 export {
@@ -30,5 +32,7 @@ export {
   runMainHeadingTests,
   runMediaPlayerEmbedTests,
   runPerformanceTests,
-  runSEOTests,
+  runRadioScheduleTests,
+  runCrossPlatformSEOTests,
+  runSeoCanonicalTests,
 };

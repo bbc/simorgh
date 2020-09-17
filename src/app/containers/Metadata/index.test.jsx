@@ -1,9 +1,12 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MetadataContainer from './index';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+
 import {
   articleDataNews,
   articleDataPersian,
@@ -29,6 +32,12 @@ const getArticleMetadataProps = data => ({
 const newsArticleMetadataProps = getArticleMetadataProps(articleDataNews);
 const persianArticleMetadataProps = getArticleMetadataProps(articleDataPersian);
 
+const defaultToggles = {
+  apple_itunes_app: {
+    enabled: true,
+  },
+};
+
 const MetadataWithContext = ({
   /* eslint-disable react/prop-types */
   service,
@@ -45,12 +54,11 @@ const MetadataWithContext = ({
   imageAltText,
   aboutTags,
   mentionsTags,
+  toggles = defaultToggles,
   /* eslint-enable react/prop-types */
-}) => {
-  const serviceConfig = services[service].default;
-
-  return (
-    <ServiceContextProvider {...serviceConfig}>
+}) => (
+  <ServiceContextProvider service={service} pageLang={lang}>
+    <ToggleContextProvider toggles={toggles}>
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
         id={id}
@@ -71,9 +79,9 @@ const MetadataWithContext = ({
           imageAltText={imageAltText}
         />
       </RequestContextProvider>
-    </ServiceContextProvider>
-  );
-};
+    </ToggleContextProvider>
+  </ServiceContextProvider>
+);
 
 const CanonicalNewsInternationalOrigin = () => (
   <MetadataWithContext
@@ -196,6 +204,11 @@ it('should render the apple touch icons', async () => {
       href:
         'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png',
       sizes: '152x152',
+    },
+    {
+      href:
+        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-180x180.png',
+      sizes: '180x180',
     },
     {
       href:
@@ -644,3 +657,151 @@ shouldMatchSnapshot(
     openGraphType="website"
   />,
 );
+
+shouldMatchSnapshot(
+  'should match for Ukrainian STY with Ukrainian lang on canonical',
+  <MetadataWithContext
+    lang="uk"
+    service="ukrainian"
+    bbcOrigin={dotComOrigin}
+    platform="canonical"
+    id="news-53577781"
+    pageType="article"
+    pathname="/ukrainian/news-53577781"
+    description="BBC Ukrainian"
+    openGraphType="website"
+    title="BBC Ukrainian"
+  />,
+);
+
+shouldMatchSnapshot(
+  'should match for Ukrainian STY with Ukrainian lang on Amp',
+  <MetadataWithContext
+    lang="uk"
+    service="ukrainian"
+    bbcOrigin={dotComOrigin}
+    platform="amp"
+    id="news-53577781"
+    pageType="article"
+    pathname="/ukrainian/news-53577781.amp"
+    description="BBC Ukrainian"
+    openGraphType="website"
+    title="BBC Ukrainian"
+  />,
+);
+
+shouldMatchSnapshot(
+  'should match for Ukrainian STY with Russian lang on canonical',
+  <MetadataWithContext
+    lang="ru"
+    service="ukrainian"
+    bbcOrigin={dotComOrigin}
+    platform="canonical"
+    id="news-53577781"
+    pageType="article"
+    pathname="/ukrainian/news-53577781"
+    description="BBC Ukrainian"
+    openGraphType="website"
+    title="BBC Ukrainian"
+  />,
+);
+
+shouldMatchSnapshot(
+  'should match for Ukrainian STY with Russian lang on Amp',
+  <MetadataWithContext
+    lang="ru"
+    service="ukrainian"
+    bbcOrigin={dotComOrigin}
+    platform="amp"
+    id="news-53577781"
+    pageType="article"
+    pathname="/ukrainian/news-53577781.amp"
+    description="BBC Ukrainian"
+    openGraphType="website"
+    title="BBC Ukrainian"
+  />,
+);
+
+describe('apple-itunes-app meta tag', () => {
+  const getToggles = (enabled = true) => {
+    return {
+      apple_itunes_app: {
+        enabled,
+      },
+    };
+  };
+
+  const CanonicalCPSAssetInternationalOrigin = ({
+    // eslint-disable-next-line react/prop-types
+    service,
+    // eslint-disable-next-line react/prop-types
+    toggles,
+    // eslint-disable-next-line react/prop-types
+    platform,
+  }) => (
+    <MetadataWithContext
+      service={service}
+      bbcOrigin={dotComOrigin}
+      platform={platform}
+      id="asset-12345678"
+      pageType="STY"
+      pathname={`/${service}/asset-12345678`}
+      {...newsArticleMetadataProps}
+      toggles={toggles}
+    />
+  );
+
+  it.each`
+    service      | iTunesAppId
+    ${'arabic'}  | ${558497376}
+    ${'mundo'}   | ${515255747}
+    ${'russian'} | ${504278066}
+  `(
+    'should be rendered for $service because iTunesAppId is configured ($iTunesAppId)',
+    async ({ service, iTunesAppId }) => {
+      render(
+        <CanonicalCPSAssetInternationalOrigin
+          service={service}
+          toggles={getToggles(true)}
+          platform="canonical"
+        />,
+      );
+
+      await waitFor(() => {
+        const appleItunesApp = document.querySelector(
+          'head > meta[name=apple-itunes-app]',
+        );
+        expect(appleItunesApp).toBeInTheDocument();
+
+        const content = appleItunesApp.getAttribute('content');
+        expect(content).toEqual(
+          `app-id=${iTunesAppId}, app-argument=https://www.bbc.com/${service}/asset-12345678?utm_medium=banner&utm_content=apple-itunes-app`,
+        );
+      });
+    },
+  );
+
+  it.each`
+    service     | reason                                              | platform       | iTunesAppEnabled
+    ${'arabic'} | ${'it is not applicable for AMP pages'}             | ${'amp'}       | ${true}
+    ${'arabic'} | ${'apple_itunes_app feature toggle is not enabled'} | ${'canonical'} | ${false}
+    ${'pidgin'} | ${'service does not have iTunesAppId configured'}   | ${'canonical'} | ${true}
+  `(
+    `should not be rendered for $service because $reason`,
+    ({ service, platform, iTunesAppEnabled }) => {
+      const toggles = getToggles(iTunesAppEnabled);
+
+      render(
+        <CanonicalCPSAssetInternationalOrigin
+          service={service}
+          toggles={toggles}
+          platform={platform}
+        />,
+      );
+
+      expect(
+        document.querySelector('head > meta[name=apple-itunes-app]'),
+      ).not.toBeInTheDocument();
+    },
+  );
+});

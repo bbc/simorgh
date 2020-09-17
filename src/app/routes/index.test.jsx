@@ -5,8 +5,9 @@ import { matchPath } from 'react-router';
 
 // test helpers
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import fetchMock from 'fetch-mock';
+
+import defaultToggles from '#lib/config/toggles';
 
 // components being tested
 import routes from './index';
@@ -18,14 +19,32 @@ import onDemandTvPageJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn
 import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
 import frontPageJson from '#data/pidgin/frontpage/index.json';
 import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
+import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import legacyMediaAssetPage from '#data/azeri/legacyAssets/multimedia/2012/09/120919_georgia_prison_video.json';
 import photoGalleryPageJson from '#data/indonesia/cpsAssets/indonesia-41635759.json';
 import storyPageJson from '#data/mundo/cpsAssets/noticias-internacional-51266689.json';
 import featureIndexPageJson from '#data/afrique/cpsAssets/48465371.json';
 import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
 import indexPageJson from '#data/ukrainian/ukraine_in_russian';
+import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
+
+// mock pages/index.js to return a non async page component
+jest.mock('#pages/index.js', () => ({
+  StoryPage: jest.requireActual('#pages/StoryPage').default,
+  OnDemandTvPage: jest.requireActual('#pages/OnDemandTvPage').default,
+  PhotoGalleryPage: jest.requireActual('#pages/PhotoGalleryPage').default,
+  OnDemandRadioPage: jest.requireActual('#pages/OnDemandRadioPage').default,
+  MostReadPage: jest.requireActual('#pages/MostReadPage').default,
+  MostWatchedPage: jest.requireActual('#pages/MostWatchedPage').default,
+  MediaAssetPage: jest.requireActual('#pages/MediaAssetPage').default,
+  LiveRadioPage: jest.requireActual('#pages/LiveRadioPage').default,
+  IdxPage: jest.requireActual('#pages/IdxPage').default,
+  FrontPage: jest.requireActual('#pages/FrontPage').default,
+  ErrorPage: jest.requireActual('#pages/ErrorPage').default,
+  ArticlePage: jest.requireActual('#pages/ArticlePage').default,
+}));
 
 beforeEach(() => {
   // Mocks out CanonicalAdBootstrapJs script
@@ -49,25 +68,15 @@ const getMatchingRoute = pathname =>
     }),
   );
 
-const renderRouter = ({
-  pathname,
-  pageData,
-  pageType,
-  service,
-  status,
-  errorCode,
-}) =>
+const renderRouter = props =>
   render(
-    <MemoryRouter initialEntries={[pathname]}>
+    <MemoryRouter initialEntries={[props.pathname]}>
       {renderRoutes(routes, {
         bbcOrigin: 'https://www.bbc.com',
-        pathname,
-        pageData,
-        pageType,
-        service,
         isAmp: false,
-        status: status || 200,
-        ...(errorCode && { errorCode }),
+        status: props.status || 200,
+        toggles: defaultToggles.local,
+        ...props,
       })}
     </MemoryRouter>,
   );
@@ -96,7 +105,13 @@ it('should route to and render live radio page', async () => {
   );
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    pageType,
+    toggles: {
+      liveRadioSchedule: { enabled: true },
+    },
+  });
 
   const { getByText } = renderRouter({
     pathname,
@@ -117,7 +132,10 @@ it('should route to and render the onDemand Radio page', async () => {
   );
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageData,
@@ -130,7 +148,7 @@ it('should route to and render the onDemand Radio page', async () => {
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
 
-it('should route to and render the skeleton onDemand TV Brand page', async () => {
+it('should route to and render the onDemand TV Brand page', async () => {
   const pathname = '/indonesia/bbc_indonesian_tv/tv_programmes/w13xttn4';
   fetchMock.mock(
     `http://localhost${pathname}.json?renderer_env=live`,
@@ -138,7 +156,10 @@ it('should route to and render the skeleton onDemand TV Brand page', async () =>
   );
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageData,
@@ -156,7 +177,10 @@ it('should route to and render an article page', async () => {
   fetchMock.mock(`http://localhost${pathname}.json`, articlePageJson);
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageData,
@@ -188,12 +212,38 @@ it('should route to and render a front page', async () => {
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
 
+it('should route to and render a skeleton most watched page', async () => {
+  const pathname = '/pidgin/media/video';
+  fetchMock.mock('http://localhost/pidgin/mostwatched.json', mostWatchedData);
+
+  const { getInitialData, pageType } = getMatchingRoute(pathname);
+  const { pageData } = await getInitialData({
+    path: pathname,
+    service: 'pidgin',
+    pageType,
+  });
+  const { getByText } = renderRouter({
+    pathname,
+    pageData,
+    pageType,
+    service: 'pidgin',
+  });
+  const EXPECTED_TITLE_RENDERED_IN_DOCUMENT = 'De one we dem don look';
+
+  expect(getByText(EXPECTED_TITLE_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+});
+
 it('should route to and render a media asset page', async () => {
   const pathname = '/yoruba/media-23256797';
   fetchMock.mock(`http://localhost${pathname}.json`, mediaAssetPageJson);
+  fetchMock.mock('http://localhost/yoruba/mostwatched.json', mostWatchedData);
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    service: 'yoruba',
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageData,
@@ -209,9 +259,14 @@ it('should route to and render a media asset page', async () => {
 it('should route to and render a media asset page', async () => {
   const pathname = '/yoruba/media-23256797';
   fetchMock.mock(`http://localhost${pathname}.json`, mediaAssetPageJson);
+  fetchMock.mock('http://localhost/yoruba/mostwatched.json', mostWatchedData);
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    service: 'yoruba',
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageData,
@@ -229,9 +284,14 @@ it('should route to and render a media asset page', async () => {
 it('should route to and render a legacy media asset page', async () => {
   const pathname = '/azeri/multimedia/2012/09/120919_georgia_prison_video';
   fetchMock.mock(`http://localhost${pathname}.json`, legacyMediaAssetPage);
+  fetchMock.mock('http://localhost/azeri/mostwatched.json', mostWatchedData);
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    service: 'azeri',
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageData,
@@ -251,7 +311,10 @@ it('should route to and render a photo gallery page', async () => {
   fetchMock.mock(`http://localhost${pathname}.json`, photoGalleryPageJson);
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageData,
@@ -268,6 +331,10 @@ it('should route to and render a story page', async () => {
   const pathname = '/mundo/noticias-internacional-51266689';
   fetchMock.mock(`http://localhost${pathname}.json`, storyPageJson);
   fetchMock.mock(`http://localhost/mundo/mostread.json`, storyPageMostReadData);
+  fetchMock.mock(
+    `http://localhost${pathname}/recommendations.json`,
+    storyPageRecommendationsData,
+  );
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({
@@ -313,7 +380,10 @@ it.skip('should route to and render a feature index page', async () => {
   fetchMock.mock(`http://localhost${pathname}.json`, featureIndexPageJson);
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageData,
@@ -329,7 +399,10 @@ it.skip('should route to and render a feature index page', async () => {
 it('should route to and render a 500 error page', async () => {
   const pathname = '/igbo/500';
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { errorCode } = await getInitialData({ path: pathname });
+  const { errorCode } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageType,
@@ -342,13 +415,23 @@ it('should route to and render a 500 error page', async () => {
 });
 
 it('should fallback to and render a 500 error page if there is a problem with page data', async () => {
-  fetch.mockResponse(undefined);
   const pathname = '/afrique';
+  fetchMock.mock(`http://localhost${pathname}.json`, 500);
+
+  const { pageType, getInitialData } = getMatchingRoute(pathname);
+  const { status, error } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
-    pageData: undefined,
     pageType: 'frontPage',
     service: 'afrique',
+    error: {
+      message: error,
+    },
+    status,
+    errorCode: 500,
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '500';
 
@@ -358,7 +441,10 @@ it('should fallback to and render a 500 error page if there is a problem with pa
 it('should route to and render a 404 error page', async () => {
   const pathname = '/igbo/404';
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { errorCode } = await getInitialData({ path: pathname });
+  const { errorCode } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageType,
@@ -375,11 +461,18 @@ it('should render a 404 error page if a data fetch responds with a 404', async (
   fetchMock.mock(`http://localhost${pathname}.json`, 404);
 
   const { pageType, getInitialData } = getMatchingRoute(pathname);
-  const { status } = await getInitialData({ path: pathname });
+  const { status, error } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageType,
     status,
+    error: {
+      message: error,
+    },
+    errorCode: 404,
     service: 'pidgin',
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
@@ -391,7 +484,10 @@ it('should fallback to and render a 404 error page if no route match is found', 
   const pathname = '/a/path/that/does/not/exist';
   const { pageType, getInitialData } =
     getMatchingRoute(pathname) || routes[routes.length - 1];
-  const { errorCode } = await getInitialData({ path: pathname });
+  const { errorCode } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageType,

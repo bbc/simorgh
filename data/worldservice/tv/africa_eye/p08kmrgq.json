@@ -1,0 +1,81 @@
+{
+  "programme": {
+    "type": "clip",
+    "pid": "p08kmrgq",
+    "expected_child_count": null,
+    "position": null,
+    "image": {
+      "pid": "p08kmt6v"
+    },
+    "media_type": "audio_video",
+    "title": "THE LOCUST HUNTER",
+    "short_synopsis": "Swarms of locusts ravage East Africa destroying crops and threatening livelihoods.",
+    "medium_synopsis": null,
+    "long_synopsis": "There are increasing fears for food security in East Africa, with mounting evidence of a new wave of desert locusts.\r\nEarlier in the year, billions of the insects destroyed crops across the region, with the UN warning a second generation would be even more destructive.\r\nNow, despite international efforts, those fears appear to be coming to pass.\r\n\r\nWhen the first wave hit, Albert Lemasulani gave up his life to fight the swarms, leaving his family, his goats and his newborn son behind to try and prevent a plague.\r\n\r\nSubscribe: http://bit.ly/subscribetoafrica\r\nWebsite: https://www.bbc.co.uk/africaeye\r\nFacebook: https://www.facebook.com/bbcnewsafrica/\r\nTwitter: https://www.twitter.com/bbcafrica/\r\nInstagram: https://www.instagram.com/bbcafrica/",
+    "first_broadcast_date": null,
+    "display_title": {
+      "title": "Africa Eye",
+      "subtitle": "THE LOCUST HUNTER"
+    },
+    "ownership": {
+      "service": {
+        "type": null,
+        "id": "bbc_world_service_tv",
+        "key": "worldservicetv",
+        "title": "BBC World Service TV"
+      }
+    },
+    "parent": {
+      "programme": {
+        "type": "brand",
+        "pid": "w13xttpn",
+        "title": "Africa Eye",
+        "short_synopsis": "Original and high-impact BBC investigations from across Africa",
+        "media_type": null,
+        "position": null,
+        "image": {
+          "pid": "p06pqg80"
+        },
+        "expected_child_count": null,
+        "first_broadcast_date": null,
+        "aggregated_episode_count": 25,
+        "ownership": {
+          "service": {
+            "type": null,
+            "id": "bbc_world_service_tv",
+            "key": "worldservicetv",
+            "title": "BBC World Service TV"
+          }
+        }
+      }
+    },
+    "peers": {
+      "previous": null,
+      "next": null
+    },
+    "versions": [
+      {
+        "canonical": 1,
+        "pid": "p08kmrgt",
+        "duration": 1637,
+        "types": [
+          "Original version"
+        ]
+      }
+    ],
+    "links": [],
+    "supporting_content_items": [],
+    "categories": [
+      {
+        "type": "genre",
+        "id": "C00079",
+        "key": "news",
+        "title": "News",
+        "narrower": [],
+        "broader": {},
+        "has_topic_page": false,
+        "sameAs": null
+      }
+    ]
+  }
+}

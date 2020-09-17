@@ -1,8 +1,10 @@
-import findLastIndex from 'ramda/src/findLastIndex';
-import propSatisfies from 'ramda/src/propSatisfies';
 import path from 'ramda/src/path';
 import nodeLogger from '#lib/logger.node';
 import { RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR } from '#lib/logger.const';
+import {
+  getLastProgramIndex,
+  isScheduleDataComplete,
+} from './evaluateScheduleData';
 
 const logger = nodeLogger(__filename);
 
@@ -37,15 +39,12 @@ export default (data, service, currentTime) => {
   }
 
   const { schedules = [] } = data;
+  const latestProgramIndex = getLastProgramIndex({ schedules, currentTime });
 
-  // finding latest program, that may or may not still be live. this is because there isn't
-  // always a live program, in which case we show the most recently played program on demand.
-  const latestProgramIndex = findLastIndex(
-    propSatisfies(time => time < currentTime, 'publishedTimeStart'),
-  )(schedules);
-
-  const scheduleDataIsComplete =
-    schedules[latestProgramIndex - 2] && schedules[latestProgramIndex + 1];
+  const scheduleDataIsComplete = isScheduleDataComplete({
+    schedules,
+    currentTime,
+  });
 
   if (!scheduleDataIsComplete) {
     logProgramError({ error: 'Incomplete program schedule', service });
@@ -86,7 +85,6 @@ export default (data, service, currentTime) => {
         currentTime,
         publishedTimeStart,
         publishedTimeEnd,
-        service,
       );
 
       return {
