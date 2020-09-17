@@ -201,9 +201,9 @@ export const getAtiUrl = (data = []) => {
   const cleanedValues = data
     .filter(({ value }) => value)
     .map(item => {
-      const { value, disableEncoding } = item;
-      const finalValue = disableEncoding ? value : encodeURIComponent(value);
-      return { ...item, value: finalValue };
+      const { value } = item;
+      const encodedValue = encodeURIComponent(value);
+      return { ...item, value: encodedValue };
     });
 
   const parsedAtiValues = cleanedValues.map(({ key, value, wrap }) =>
