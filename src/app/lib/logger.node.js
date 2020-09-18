@@ -29,11 +29,7 @@ const logLocation = path.join(LOG_DIR, LOG_FILE);
 const consoleLogFormat = printf(data => {
   const logMessage = { ...data.metadata, ...data.message };
 
-  return `${data.timestamp} ${data.level} ${JSON.stringify(
-    logMessage,
-    null,
-    2,
-  )}`;
+  return `${data.timestamp} ${data.level} ${JSON.stringify(logMessage)}`;
 });
 
 const loggerOptions = {
