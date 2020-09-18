@@ -26,8 +26,17 @@ describe('Logger folder creation', () => {
 });
 
 describe('Logger node - for the server', () => {
+  beforeAll(() => {
+    process.env.LOG_LEVEL = 'info';
+  });
+
+  afterAll(() => {
+    delete process.env.LOG_LEVEL;
+  });
+
   afterEach(() => {
     jest.clearAllMocks();
+    delete process.env.LOG_LEVEL;
   });
 
   describe('Setting up logger', () => {
