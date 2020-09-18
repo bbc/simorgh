@@ -23,11 +23,11 @@ We pledge to act and interact in ways that contribute to an open, welcoming, div
 
 Examples of behaviour that contributes to a positive environment for our community include:
 
-- Demonstrating empathy and kindness toward other people
-- Being respectful of differing opinions, viewpoints, and experiences
-- Giving and gracefully accepting constructive feedback
-- Accepting responsibility and apologising to those affected by our mistakes, and learning from the experience
-- Focusing on what is best not just for us as individuals, but for the overall community
+- Respect different opinions, perspectives, and experiences
+- Giving and appreciating constructive feedback
+- Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience
+- Focusing on what is best for us as individuals and the overall community
+- Demonstrating kindness toward other people
 
 Examples of unacceptable behaviour include:
 
@@ -36,7 +36,6 @@ Examples of unacceptable behaviour include:
 - Public or private harassment
 - Publishing others’ private information, such as a physical or email address, without their explicit permission
 - Other conduct which could reasonably be considered inappropriate in a professional setting
-
 
 ## Enforcement Responsibilities
 
@@ -52,7 +51,7 @@ This Code of Conduct applies within all community spaces, and also applies when 
 
 Instances of abusive, harassing, or otherwise unacceptable behaviour may be reported to the community leaders responsible for enforcement at [Contact Email Address](https://www.bbc.co.uk/news/contact-us/product). All complaints will be reviewed and investigated promptly and fairly.
 
-Project maintainers are obligated to respect the privacy and security of the reporter of any incident.
+[Project maintainers](https://github.com/bbc/simorgh/blob/latest/MAINTAINERS.md) are obligated to respect the privacy and security of the reporter of any incident.
 
 ## Enforcement Guidelines
 
@@ -85,4 +84,4 @@ Consequence: A permanent ban from any sort of public interaction within the comm
 This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 2.0, available at [https://www.contributor-covenant.org/version/2/0/code_of_conduct.html][version]
 
 [homepage]: https://contributor-covenant.org
-[version]: https://contributor-covenant.org/version/1/4/
+[version]: https://www.contributor-covenant.org/version/2/0/code_of_conduct/
