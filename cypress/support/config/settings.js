@@ -1,5 +1,3 @@
-const { truncate } = require(`'cypress/types/lodash'`);
-
 module.exports = () => ({
   afaanoromoo: {
     name: 'afaanoromoo',
@@ -1019,7 +1017,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/azeri/azerbaijan-23066612'],
-            enabled: truncate,
+            enabled: true,
           },
           local: {
             paths: ['/azeri/azerbaijan-44208475'],
