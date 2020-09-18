@@ -97,21 +97,25 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               );
               // Compares number of items in json to number of items shown in the component
               // If the max number of items is 5 and the records are > 5, checks it shows 5
-
+              let expectedNumberOfItems;
               if (
                 maxNumberofItems === '5' &&
                 mostWatchedJson.totalRecords > 5
               ) {
-                cy.get('[class^="StoryPromoUl"]')
-                  .find('>li')
-                  .its('length')
-                  .should('eq', 5);
+                expectedNumberOfItems = 5;
+              } else if (
+                maxNumberofItems === '10' &&
+                mostWatchedJson.totalRecords > 10
+              ) {
+                expectedNumberOfItems = 10;
               } else {
-                cy.get('[class^="StoryPromoUl"]')
-                  .find('>li')
-                  .its('length')
-                  .should('eq', mostWatchedJson.totalRecords);
+                expectedNumberOfItems = mostWatchedJson.totalRecords;
               }
+
+              cy.get('[class^="StoryPromoUl"]')
+                .find('>li')
+                .its('length')
+                .should('eq', expectedNumberOfItems);
             }
           });
         });
