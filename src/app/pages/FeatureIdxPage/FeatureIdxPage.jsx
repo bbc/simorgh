@@ -68,12 +68,16 @@ const FeatureIdxPage = ({ pageData, mostReadEndpointOverride }) => {
       <LinkedData type="WebPage" seoTitle={seoTitle} />
       <main role="main">
         <IndexPageContainer>
-          <IndexHeading id="content" pageType="idx">
+          <IndexHeading id="content" pageType="fix">
             {title}
           </IndexHeading>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
-              <IndexPageSection group={group} sectionNumber={index} />
+              <IndexPageSection
+                group={group}
+                sectionNumber={index}
+                renderWithoutStrapline
+              />
             </Fragment>
           ))}
           {mostReadOnIdxPage && renderMostRead(mostReadEndpointOverride)}

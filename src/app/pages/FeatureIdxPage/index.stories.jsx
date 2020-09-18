@@ -6,9 +6,10 @@ import afriqueData from '#data/afrique/cpsAssets/48465371';
 import { getLocalMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 import FeatureIdxPage from '.';
 
-const stories = storiesOf('Pages|Front Page', module).addDecorator(story => (
-  <WithTimeMachine>{story()}</WithTimeMachine>
-));
+const stories = storiesOf(
+  'Pages|Feature Idx Page',
+  module,
+).addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
 
 const service = 'afrique';
 const variant = 'default';
