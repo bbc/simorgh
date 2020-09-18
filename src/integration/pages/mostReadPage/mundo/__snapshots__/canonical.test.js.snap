@@ -179,6 +179,8 @@ exports[`Canonical Most Read Page I can see the list items 9`] = `"9Apuñalan a 
 
 exports[`Canonical Most Read Page I can see the list items 10`] = `"10\\"Las iglesias evangélicas son un problema de seguridad nacional en América Latina\\"Última actualización: 6 noviembre 2019"`;
 
+exports[`Canonical Most Read Page Main heading should match text 1`] = `"Más leídas"`;
+
 exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

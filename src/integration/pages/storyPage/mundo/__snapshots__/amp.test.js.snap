@@ -292,6 +292,8 @@ Object {
 
 exports[`AMP Story Page Lead image I can see an image with a caption 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
 
+exports[`AMP Story Page Main heading should match text 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
+
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,
@@ -504,3 +506,5 @@ exports[`AMP Story Page Social Embeds I can see the caption accompanying a YouTu
 exports[`AMP Story Page Social Embeds I can see the skip link 1`] = `"Saltar contenido de YouTube, 1"`;
 
 exports[`AMP Story Page Social Embeds I can see the skip link destination 1`] = `"Fin del contenido de YouTube, 1"`;
+
+exports[`AMP Story Page Timestamp should match text 1`] = `"30 enero 2020"`;

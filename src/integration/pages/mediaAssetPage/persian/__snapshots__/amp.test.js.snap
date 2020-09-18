@@ -308,6 +308,8 @@ exports[`AMP Media Asset Page I can see the headline 1`] = `"Trump long headline
 
 exports[`AMP Media Asset Page I can see the timestamp 1`] = `"۲۶ بهمن ۱۳۹۷ - ۱۵ فوریه ۲۰۱۹"`;
 
+exports[`AMP Media Asset Page Main heading should match text 1`] = `"Trump long headline"`;
+
 exports[`AMP Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"پخش صدا و تصویر"`;
 
 exports[`AMP Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa/amp"`;
@@ -489,3 +491,5 @@ exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"https://ichef.test.b
 exports[`AMP Media Asset Page SEO Twitter site 1`] = `"@bbcpersian"`;
 
 exports[`AMP Media Asset Page SEO Twitter title 1`] = `"Trump short headline - BBC News فارسی"`;
+
+exports[`AMP Media Asset Page Timestamp should match text 1`] = `"۲۶ بهمن ۱۳۹۷ - ۱۵ فوریه ۲۰۱۹"`;

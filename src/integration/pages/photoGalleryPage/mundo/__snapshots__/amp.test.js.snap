@@ -290,6 +290,8 @@ Object {
 }
 `;
 
+exports[`AMP Photo Gallery Page Main heading should match text 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos"`;
+
 exports[`AMP Photo Gallery Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,
@@ -479,3 +481,5 @@ exports[`AMP Photo Gallery Page SEO Twitter image src 1`] = `"https://ichef.test
 exports[`AMP Photo Gallery Page SEO Twitter site 1`] = `"@bbcmundo"`;
 
 exports[`AMP Photo Gallery Page SEO Twitter title 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos - BBC News Mundo"`;
+
+exports[`AMP Photo Gallery Page Timestamp should match text 1`] = `"7 agosto 2016"`;

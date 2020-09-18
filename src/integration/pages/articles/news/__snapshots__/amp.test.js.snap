@@ -257,6 +257,8 @@ exports[`AMP Articles I can see an image with a caption 1`] = `"https://ichef.bb
 
 exports[`AMP Articles I can see an image with a caption 2`] = `"Image caption, The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich"`;
 
+exports[`AMP Articles Main heading should match text 1`] = `"The Germans solving rising rents with people power"`;
+
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

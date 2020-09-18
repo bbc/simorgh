@@ -270,6 +270,8 @@ exports[`AMP Media Asset Page I can see the headline 1`] = `"Simorgh: Media Pod 
 
 exports[`AMP Media Asset Page I can see the timestamp 1`] = `"13 September 2019"`;
 
+exports[`AMP Media Asset Page Main heading should match text 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & < >"`;
+
 exports[`AMP Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"Media player"`;
 
 exports[`AMP Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm/amp"`;
@@ -479,3 +481,5 @@ exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"https://ichef.test.b
 exports[`AMP Media Asset Page SEO Twitter site 1`] = `"@BBCNews"`;
 
 exports[`AMP Media Asset Page SEO Twitter title 1`] = `"First CPS Media Asset Pages Appear on Heloo - BBC News Pidgin"`;
+
+exports[`AMP Media Asset Page Timestamp should match text 1`] = `"13 September 2019"`;

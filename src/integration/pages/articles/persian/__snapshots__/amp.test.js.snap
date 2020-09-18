@@ -264,6 +264,8 @@ exports[`AMP Articles I can see an image with a caption 1`] = `"https://ichef.bb
 
 exports[`AMP Articles I can see an image with a caption 2`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند"`;
 
+exports[`AMP Articles Main heading should match text 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
+
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

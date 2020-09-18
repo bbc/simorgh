@@ -175,6 +175,8 @@ exports[`Canonical Articles I can see an image with a caption 1`] = `"https://ic
 
 exports[`Canonical Articles I can see an image with a caption 2`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند"`;
 
+exports[`Canonical Articles Main heading should match text 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
+
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

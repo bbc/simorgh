@@ -166,6 +166,8 @@ exports[`AMP Articles I can see an image with a caption 1`] = `"https://ichef.bb
 
 exports[`AMP Articles I can see an image with a caption 2`] = `"Image caption, This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption."`;
 
+exports[`AMP Articles Main heading should match text 1`] = `"This is the headline of this test article"`;
+
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

@@ -291,6 +291,8 @@ exports[`AMP Most Read Page I can see the list items 9`] = `"9HRW kêu gọi tr�
 
 exports[`AMP Most Read Page I can see the list items 10`] = `"10Lỗ hổng thiên đàng và một căn bệnh mãn tínhCập nhật gần nhất: 6 tháng 11 năm 2019"`;
 
+exports[`AMP Most Read Page Main heading should match text 1`] = `"Đọc nhiều nhất"`;
+
 exports[`AMP Most Read Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

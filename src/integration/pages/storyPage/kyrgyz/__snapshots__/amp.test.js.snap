@@ -264,6 +264,8 @@ Object {
 
 exports[`AMP Story Page Lead image I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
+exports[`AMP Story Page Main heading should match text 1`] = `"Test STY for social embeds"`;
+
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,
@@ -437,3 +439,5 @@ exports[`AMP Story Page Social Embeds I can see the caption accompanying a YouTu
 exports[`AMP Story Page Social Embeds I can see the skip link 1`] = `"YouTube баракчаны өткөрүп жиберүү, пост, 1"`;
 
 exports[`AMP Story Page Social Embeds I can see the skip link destination 1`] = `"YouTube посттун аягы, 1"`;
+
+exports[`AMP Story Page Timestamp should match text 1`] = `"24 апрель 2020"`;
