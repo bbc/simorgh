@@ -46,36 +46,74 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       before(() => {
         cy.getToggles(config[service].name);
       });
+      // Allows constructing most watched path with variant
+      let serviceVariant = variant;
+      serviceVariant =
+        serviceVariant === 'default'
+          ? (serviceVariant = '')
+          : (serviceVariant = `/${variant}`);
 
+      const mostWatchedPath = `/${config[service].name}/mostwatched${serviceVariant}.json`;
       it('should show/not show the Most Watched component if the toggle is enabled for the service', function test() {
+        // Find if that service has componant enabled in toggles
         cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
           const mostWatchedIsEnabled = path(
             ['mostPopularMedia', 'enabled'],
             toggles,
           );
           cy.log(`Service toggle enabled ${mostWatchedIsEnabled}`);
-          let serviceVariant = variant;
-          if (serviceVariant === 'default') {
-            serviceVariant = '';
-          } else {
-            serviceVariant = `/${variant}`;
-          }
+
           if (mostWatchedIsEnabled) {
-            const mostWatchedPath = `/${config[service].name}/mostwatched${serviceVariant}.json`;
-            cy.log(mostWatchedPath);
             cy.request(mostWatchedPath).then(({ body: mostWatchedJson }) => {
-              cy.log(
-                `Enough records to show component ${
-                  mostWatchedJson.totalRecords > 0
-                }`,
-              );
               if (mostWatchedJson.totalRecords > 0) {
+                cy.log('Enough records to show component');
                 cy.get('[data-e2e=most-watched-heading]').should('exist');
+              } else {
+                cy.log('Not enough records to show component');
+
+                cy.get('[data-e2e=most-watched-heading]').should('not.exist');
               }
             });
           } else {
             cy.get('[data-e2e=most-watched-heading]').should('not.exist');
           }
+        });
+      });
+      it('Most Watched component shows correct number of items', function test() {
+        cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
+          const mostWatchedIsEnabled = path(
+            ['mostPopularMedia', 'enabled'],
+            toggles,
+          );
+
+          cy.request(mostWatchedPath).then(({ body: mostWatchedJson }) => {
+            if (mostWatchedIsEnabled && mostWatchedJson.totalRecords > 0) {
+              const maxNumberofItems = path(
+                ['mostPopularMedia', 'value'],
+                toggles,
+              );
+              cy.log(
+                `Max number of items is ${maxNumberofItems}. Number of items is ${mostWatchedJson.totalRecords}`,
+              );
+              // Compares number of items in json to number of items shown in the component
+              // If the max number of items is 5 and the records are > 5, checks it shows 5
+
+              if (
+                maxNumberofItems === '5' &&
+                mostWatchedJson.totalRecords > 5
+              ) {
+                cy.get('[class^="StoryPromoUl"]')
+                  .find('>li')
+                  .its('length')
+                  .should('eq', 5);
+              } else {
+                cy.get('[class^="StoryPromoUl"]')
+                  .find('>li')
+                  .its('length')
+                  .should('eq', mostWatchedJson.totalRecords);
+              }
+            }
+          });
         });
       });
     });
