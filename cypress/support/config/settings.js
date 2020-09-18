@@ -1,3 +1,5 @@
+const { truncate } = require(`'cypress/types/lodash'`);
+
 module.exports = () => ({
   afaanoromoo: {
     name: 'afaanoromoo',
@@ -179,8 +181,8 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/afaanoromoo/sport-23125110'],
+            enabled: true,
           },
           local: {
             paths: ['/afaanoromoo/sport-23125110'],
@@ -413,12 +415,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/afrique/48465371'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/afrique/sports-23071094'],
+            enabled: true,
           },
           local: {
             paths: ['/afrique/48465371'],
@@ -626,8 +628,8 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/amharic/23119145'],
+            enabled: true,
           },
           local: {
             paths: ['/amharic/23119145'],
@@ -836,12 +838,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/arabic/magazine-54029177'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/arabic/23195478'],
+            enabled: true,
           },
           local: {
             paths: ['/arabic/magazine-54029177'],
@@ -1012,12 +1014,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/azeri/azerbaijan-44208475'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/azeri/azerbaijan-23066612'],
+            enabled: truncate,
           },
           local: {
             paths: ['/azeri/azerbaijan-44208475'],
@@ -1226,12 +1228,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/bengali/53988070'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/bengali/sport-2306692'],
+            enabled: true,
           },
           local: {
             paths: ['/bengali/53988070'],
@@ -1462,12 +1464,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/burmese/burma-50522534'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/burmese/sport-23068024'],
+            enabled: true,
           },
           local: {
             paths: ['/burmese/burma-50522534'],
@@ -1750,12 +1752,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/gahuza/52551839'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/gahuza/amakuru-23108776'],
+            enabled: true,
           },
           local: {
             paths: ['/gahuza/52551839'],
@@ -1946,12 +1948,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/gujarati/india-53920818'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/gujarati/india-23189893'],
+            enabled: true,
           },
           local: {
             paths: ['/gujarati/india-53920818'],
@@ -2181,12 +2183,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/hausa/labarai-52299135'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/hausa/wasanni-23061643'],
+            enabled: true,
           },
           local: {
             paths: ['/hausa/labarai-52299135'],
@@ -2414,12 +2416,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/hindi/india-53901953'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/hindi/india-23067562'],
+            enabled: true,
           },
           local: {
             paths: ['/hindi/india-53901953'],
@@ -2589,8 +2591,8 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/igbo/media-23160433'],
+            enabled: true,
           },
           local: {
             paths: ['/igbo/media-23160433'],
@@ -2801,12 +2803,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/indonesia/laporan-khusus-53760712'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/indonesia/olahraga-23080621'],
+            enabled: true,
           },
           local: {
             paths: ['/indonesia/laporan-khusus-53760712'],
@@ -2972,8 +2974,8 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/japanese/53969845'],
+            enabled: true,
           },
           test: {
             paths: [],
@@ -3181,12 +3183,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/korean/features-44652556'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/korean/features-23136351'],
+            enabled: true,
           },
           local: {
             paths: ['/korean/features-44652556'],
@@ -3417,12 +3419,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/kyrgyz/magazine-54071664'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/kyrgyz/world-23086329'],
+            enabled: true,
           },
           local: {
             paths: ['/kyrgyz/magazine-54071664'],
@@ -3608,12 +3610,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/marathi/india-53901688'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/marathi/23195696'],
+            enabled: true,
           },
           local: {
             paths: ['/marathi/india-53901688'],
@@ -3784,12 +3786,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/mundo/noticias-internacional-53826365'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/mundo/noticias-internacional-23055705'],
+            enabled: true,
           },
           local: {
             paths: ['/mundo/noticias-internacional-53826365'],
@@ -4072,12 +4074,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/nepali/media-54029171'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/nepali/news-23064489'],
+            enabled: true,
           },
           local: {
             paths: ['/nepali/media-54029171'],
@@ -4391,12 +4393,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/pashto/columns-54029178'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/pashto/sport-23079770'],
+            enabled: true,
           },
           local: {
             paths: ['/pashto/columns-54029178'],
@@ -4699,12 +4701,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/persian/science-52004647'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/persian/23278332'],
+            enabled: true,
           },
           local: {
             paths: ['/persian/science-52004647'],
@@ -4913,8 +4915,8 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/pidgin/tori-23133559'],
+            enabled: true,
           },
           local: {
             paths: ['/pidgin/tori-23133559'],
@@ -5085,12 +5087,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/portuguese/geral-51774675'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/portuguese/internacional-23049710'],
+            enabled: true,
           },
           local: {
             paths: ['/portuguese/geral-51774675'],
@@ -5255,12 +5257,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/punjabi/india-53963142'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/punjabi/india-23131884'],
+            enabled: true,
           },
           local: {
             paths: ['/punjabi/india-53963142'],
@@ -5428,12 +5430,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/russian/media-52418005'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/russian/sport-23045089'],
+            enabled: true,
           },
           local: {
             paths: ['/russian/media-52418005'],
@@ -5671,12 +5673,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/serbian/cyr/srbija-52197807'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/serbian/cyr/23163088'],
+            enabled: true,
           },
           local: {
             paths: ['/serbian/cyr/srbija-52197807'],
@@ -5840,12 +5842,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/serbian/lat/srbija-52197807'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/serbian/lat/23163088'],
+            enabled: true,
           },
           local: {
             paths: ['/serbian/lat/srbija-52197807'],
@@ -6053,12 +6055,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/sinhala/51727586'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/sinhala/world-23030633'],
+            enabled: true,
           },
           local: {
             paths: ['/sinhala/51727586'],
@@ -6290,12 +6292,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/somali/war-53203408'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/somali/cayaaraha-23058016'],
+            enabled: true,
           },
           local: {
             paths: ['/somali/war-53203408'],
@@ -6567,12 +6569,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/swahili/habari-53516858'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/swahili/michezo-23111684'],
+            enabled: true,
           },
           local: {
             paths: ['/swahili/habari-53516858'],
@@ -6803,12 +6805,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/tamil/india-53903714'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/tamil/global-23067400'],
+            enabled: true,
           },
           local: {
             paths: ['/tamil/india-53903714'],
@@ -6996,12 +6998,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/telugu/india-53944227'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/telugu/india-23128751'],
+            enabled: true,
           },
           local: {
             paths: ['/telugu/india-53944227'],
@@ -7167,8 +7169,8 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/thai/international-48101964'],
+            enabled: true,
           },
           test: {
             paths: [],
@@ -7399,8 +7401,8 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/tigrinya/23124146'],
+            enabled: true,
           },
           local: {
             paths: ['/tigrinya/23124146'],
@@ -7571,12 +7573,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/turkce/haberler-dunya-51801130'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/turkce/spor-23049925'],
+            enabled: true,
           },
           local: {
             paths: ['/turkce/haberler-dunya-51801130'],
@@ -7747,12 +7749,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/ukchina/simp/in_depth/cluster_uk_election_2105'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/ukchina/simp/sport-23094383'],
+            enabled: true,
           },
           local: {
             paths: ['/ukchina/simp/in_depth/cluster_uk_election_2105'],
@@ -7923,12 +7925,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/ukchina/simp/in_depth/cluster_uk_election_2105'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/ukchina/trad/sport-23094383'],
+            enabled: true,
           },
           local: {
             paths: ['/ukchina/trad/in_depth/cluster_uk_election_2105'],
@@ -8182,12 +8184,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/ukrainian/53725237'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/ukrainian/23086477'],
+            enabled: true,
           },
           local: {
             paths: ['/ukrainian/53725237'],
@@ -8418,12 +8420,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/urdu/world-53692225'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/urdu/world-23075586'],
+            enabled: true,
           },
           local: {
             paths: ['/urdu/world-53692225'],
@@ -8658,12 +8660,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/uzbek/52149619'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/uzbek/sport-23053653'],
+            enabled: true,
           },
           local: {
             paths: ['/uzbek/52149619'],
@@ -8834,12 +8836,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/vietnamese/magazine-54029179'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/vietnamese/sport-23079960'],
+            enabled: true,
           },
           local: {
             paths: ['/vietnamese/magazine-54029179'],
@@ -9009,8 +9011,8 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/yoruba/media-23159686'],
+            enabled: true,
           },
           local: {
             paths: ['/yoruba/media-23159686'],
@@ -9205,12 +9207,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/zhongwen/simp/world-54113945'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/zhongwen/simp/23161271'],
+            enabled: true,
           },
           local: {
             paths: ['/zhongwen/simp/world-54113945'],
@@ -9405,12 +9407,12 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/zhongwen/trad/world-54113945'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/zhongwen/trad/23161271'],
+            enabled: true,
           },
           local: {
             paths: ['/zhongwen/trad/world-54113945'],
