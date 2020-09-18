@@ -5,7 +5,7 @@ import { render, act } from '@testing-library/react';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import LiveRadioPage from '.';
+import LiveRadioPage from './LiveRadioPage';
 import afriquePageData from './fixtureData/afrique';
 import indonesianPageData from './fixtureData/indonesia';
 import gahuzaPageData from './fixtureData/gahuza';
@@ -87,7 +87,7 @@ describe('Radio Page Main', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live',
+      'https://test.bbc.com/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live',
     );
   });
 

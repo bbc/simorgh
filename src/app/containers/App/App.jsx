@@ -17,7 +17,14 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
 
-  const { pageData, toggles, status, error, timeOnServer } = initialData;
+  const {
+    pageData,
+    toggles,
+    status,
+    error,
+    timeOnServer,
+    showAdsBasedOnLocation,
+  } = initialData;
 
   const [state, setState] = useState({
     pageData,
@@ -92,6 +99,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
           service: nextService,
           variant: nextVariant,
           pageType: nextPageType,
+          toggles: nextToggles,
         });
 
         clearTimeout(loaderTimeout);
@@ -124,6 +132,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   return renderRoutes(routes, {
     ...state,
     bbcOrigin,
+    showAdsBasedOnLocation,
     pathname: location.pathname,
     previousPath,
   });

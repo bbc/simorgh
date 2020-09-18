@@ -39,6 +39,8 @@ export const getType = (pageType, shorthand = false) => {
       return 'Most Read';
     case 'STY':
       return 'STY';
+    case 'PGL':
+      return 'PGL';
     default:
       return null;
   }
@@ -113,6 +115,8 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
       return `${title} - ${brandName}`;
     case 'STY':
       return path(['promo', 'headlines', 'headline'], pageData);
+    case 'PGL':
+      return path(['promo', 'headlines', 'headline'], pageData);
     default:
       return null;
   }
@@ -167,7 +171,7 @@ export const getConfig = ({
     sections,
     uid: chartbeatUID,
     title,
-    virtualReferrer: referrer && decodeURIComponent(referrer),
+    virtualReferrer: referrer,
     ...(isAmp && { contentType }),
     ...(!isAmp && {
       type: contentType,

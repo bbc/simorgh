@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should match snapshot for News & International 1`] = `
+exports[`CPS metadata should match snapshot for News & International 1`] = `
 <html
   dir="ltr"
   lang="en-gb"
@@ -168,7 +168,7 @@ exports[`should match snapshot for News & International 1`] = `
       property="og:description"
     />
     <meta
-      content="http://ichef.test.bbci.co.uk/news/1024/branded_news/6FC4/test/_63721682_p01kx435.jpg"
+      content="https://ichef.test.bbci.co.uk/news/1024/branded_news/6FC4/test/_63721682_p01kx435.jpg"
       property="og:image"
     />
     <meta
@@ -212,7 +212,7 @@ exports[`should match snapshot for News & International 1`] = `
       name="twitter:image:alt"
     />
     <meta
-      content="http://ichef.test.bbci.co.uk/news/1024/branded_news/6FC4/test/_63721682_p01kx435.jpg"
+      content="https://ichef.test.bbci.co.uk/news/1024/branded_news/6FC4/test/_63721682_p01kx435.jpg"
       name="twitter:image:src"
     />
     <meta

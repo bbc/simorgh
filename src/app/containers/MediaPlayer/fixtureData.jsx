@@ -1,10 +1,9 @@
 import React from 'react';
-import { string, shape, arrayOf, object, bool } from 'prop-types';
+import { string, shape, arrayOf, object, bool, oneOfType } from 'prop-types';
 import { BrowserRouter } from 'react-router-dom';
 import { singleTextBlock } from '#models/blocks';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContext } from '#contexts/ToggleContext';
 import MediaPlayerContainer from '.';
 
 const captionBlock = {
@@ -284,6 +283,55 @@ const missingVpidBlocks = [
   },
 ];
 
+const missingBlockId = [
+  captionBlock,
+  {
+    model: {
+      blocks: [
+        {
+          blockId: 'urn:bbc:ares::clip:p01k6msm',
+          model: {
+            advertising: true,
+            embedding: true,
+            format: 'audio_video',
+            id: 'p01k6msm',
+            imageCopyright: 'BBC',
+            imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+            subType: 'clip',
+            syndication: { destinations: [] },
+            synopses: {
+              short:
+                'They may be tiny, but us humans could learn a thing or two from ants.',
+            },
+            title: 'Five things ants can teach us about management',
+            versions: [
+              {
+                availableFrom: 1540218932000,
+                availableTerritories: { nonUk: true, uk: true },
+                duration: 191,
+                durationISO8601: 'PT3M11S',
+                types: ['Original'],
+                blockId: '',
+                warnings: {
+                  long: 'Contains strong language and adult humour.',
+                  short: 'Contains strong language and adult humour.',
+                },
+              },
+            ],
+          },
+          type: 'aresMediaMetadata',
+          id: 'bede042c-ec9c-4462-8338-4b6fd9cde35d',
+          position: [4, 2, 1],
+        },
+        imageBlock,
+      ],
+    },
+    type: 'aresMedia',
+    id: 'e91c1a38-641d-4787-bec3-4f3783bb4b45',
+    position: [4, 2],
+  },
+];
+
 export const validAresMetadataBlock = {
   blockId: 'urn:bbc:ares::clip:p01k6msm',
   model: {
@@ -383,25 +431,31 @@ export const validAresMediaLiveAudioBlock = {
   position: [2, 1, 1],
 };
 
-export const defaultToggles = {
-  mediaPlayer: {
-    enabled: true,
-  },
-};
-
-const toggleStateOff = {
-  mediaPlayer: {
-    enabled: false,
+export const validLegacyAresMetadataBlock = {
+  type: 'aresMediaMetadata',
+  blockId: `urn:bbc:ares::primary:43703851`,
+  model: {
+    available: true,
+    blockId: '43703851',
+    format: 'audio_video',
+    imageUrl:
+      'https://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/05/160505093650_freediving_640x360_bbc_nocredit.jpg',
+    synopses: {
+      short: 'Новый рекорд во фридайвинге: 124 метра под водой без акваланга',
+    },
+    title: 'Новый рекорд фридайвинга: 124 метра под водой без акваланга',
+    firstPublished: 1462441945000,
   },
 };
 
 const GenerateFixtureData = ({
   platform,
-  toggleState,
   blocks,
   assetType,
   assetId,
+  available,
   showPlaceholder,
+  isLegacyMedia,
 }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
@@ -413,33 +467,40 @@ const GenerateFixtureData = ({
     pathname="/pathname"
   >
     <ServiceContextProvider service="news">
-      <ToggleContext.Provider
-        value={{ toggleState, toggleDispatch: jest.fn() }}
-      >
-        <BrowserRouter>
-          <MediaPlayerContainer
-            blocks={blocks}
-            assetId={assetId}
-            assetType={assetType}
-            showPlaceholder={showPlaceholder}
-          />
-        </BrowserRouter>
-      </ToggleContext.Provider>
+      <BrowserRouter>
+        <MediaPlayerContainer
+          blocks={blocks}
+          assetId={assetId}
+          assetType={assetType}
+          available={available}
+          showPlaceholder={showPlaceholder}
+          isLegacyMedia={isLegacyMedia}
+        />
+      </BrowserRouter>
     </ServiceContextProvider>
   </RequestContextProvider>
 );
 
 GenerateFixtureData.propTypes = {
   platform: string.isRequired,
-  toggleState: shape({}),
-  blocks: arrayOf(object).isRequired,
+  blocks: arrayOf(
+    shape({
+      type: string.isRequired,
+      model: shape({
+        blocks: arrayOf(oneOfType([string, object])),
+      }),
+    }),
+  ).isRequired,
   assetType: string.isRequired,
   assetId: string.isRequired,
+  available: bool,
+  isLegacyMedia: bool,
   showPlaceholder: bool.isRequired,
 };
 
 GenerateFixtureData.defaultProps = {
-  toggleState: defaultToggles,
+  available: true,
+  isLegacyMedia: false,
 };
 
 export const VideoCanonicalWithPlaceholder = (
@@ -472,21 +533,21 @@ export const VideoAmp = (
   />
 );
 
+export const VideoAmpNoBlockId = (
+  <GenerateFixtureData
+    platform="amp"
+    blocks={missingBlockId}
+    assetType="legacy"
+    assetId="persian/afghanistan/2013/04/130429_l42_vid_afgh_corruption"
+    showPlaceholder
+    isLegacyMedia
+  />
+);
+
 export const VideoCanonicalNoVersionId = (
   <GenerateFixtureData
     platform="canonical"
     blocks={missingVpidBlocks}
-    assetType="articles"
-    assetId="c123456789o"
-    showPlaceholder
-  />
-);
-
-export const VideoCanonicalToggledOff = (
-  <GenerateFixtureData
-    platform="canonical"
-    blocks={[validAresMediaVideoBlock]}
-    toggleState={toggleStateOff}
     assetType="articles"
     assetId="c123456789o"
     showPlaceholder
@@ -499,6 +560,28 @@ export const VideoCanonicalWithCaption = (
     blocks={validVideoWithCaptionBlock}
     assetType="articles"
     assetId="c123456789o"
+    showPlaceholder
+  />
+);
+
+export const UnavailableVideoCanonical = (
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={validVideoWithCaptionBlock}
+    assetType="articles"
+    assetId="c123456789o"
+    available={false}
+    showPlaceholder
+  />
+);
+
+export const UnavailableVideoAmp = (
+  <GenerateFixtureData
+    platform="amp"
+    blocks={validVideoWithCaptionBlock}
+    assetType="articles"
+    assetId="c123456789o"
+    available={false}
     showPlaceholder
   />
 );

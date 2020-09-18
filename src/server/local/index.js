@@ -8,10 +8,12 @@ import {
   IdxDataPath,
   legacyAssetPageDataPath,
   mostReadDataRegexPath,
+  mostWatchedDataPath,
   onDemandRadioDataPath,
   onDemandTvDataPath,
   recommendationsDataRegex,
   secondaryColumnDataRegexPath,
+  africaEyeTVDataPath,
 } from '#app/routes/utils/regex';
 import { LOCAL_SENDFILE_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
@@ -34,7 +36,7 @@ const sendDataFile = (res, dataFilePath, next) => {
 const PUBLIC_DIRECTORY = 'build/public';
 
 export default server => {
-  server
+  return server
     .use((req, res, next) => {
       if (req.url.substr(-1) === '/' && req.url.length > 1)
         res.redirect(301, req.url.slice(0, -1));
@@ -74,6 +76,16 @@ export default server => {
       const { service, variant } = params;
       const dataFilePath = constructDataFilePath({
         pageType: 'mostRead',
+        service,
+        variant,
+      });
+
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(mostWatchedDataPath, async ({ params }, res, next) => {
+      const { service, variant } = params;
+      const dataFilePath = constructDataFilePath({
+        pageType: 'mostWatched',
         service,
         variant,
       });
@@ -154,6 +166,23 @@ export default server => {
       const { idx } = params;
       const dataFilePath = path.join(process.cwd(), 'data', idx, 'index.json');
       sendDataFile(res, dataFilePath, next);
+    })
+    .get(africaEyeTVDataPath, async ({ params }, res, next) => {
+      const { episodeId } = params;
+
+      const dataFilePath = constructDataFilePath({
+        pageType: 'africa_eye',
+        episodeId,
+      });
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get('/static/js/comscore/main-:version.js', ({ params }, res, next) => {
+      const { version } = params;
+      const localComscorePath = path.join(
+        process.cwd(),
+        `/public/static/js/comscore/main-${version}.js`,
+      );
+      sendDataFile(res, localComscorePath, next);
     })
     .get('/ckns_policy/*', (req, res) => {
       // Route to allow the cookie banner to make the cookie oven request

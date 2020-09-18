@@ -1,11 +1,15 @@
 import {
   runCoreCanonicalTests,
   runCanonicalAnalyticsTests,
+  runSeoCanonicalTests,
 } from '../../common';
+import runCrossPlatformTests from './crossPlatformTests';
 
-export default () => {
+export default service => {
+  runCrossPlatformTests(service);
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
+  runSeoCanonicalTests(service);
 
   it('I can see the placeholder loading image', () => {
     const loadingImageWrapper = document.querySelector(

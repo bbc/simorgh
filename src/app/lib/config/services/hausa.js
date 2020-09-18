@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Talla',
-    },
     lang: `ha`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Wanda aka sabunta',
@@ -52,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Talla',
+      },
       seeAll: 'Duba su baki daya',
       home: 'Labaran Duniya',
       currentPage: 'Shafin da ake ciki',
@@ -183,6 +182,12 @@ export const service = {
           endTextVisuallyHidden: 'Karshen labarin da aka sa a %provider_name%',
         },
       },
+      include: {
+        errorMessage:
+          'Yi hakuri, ba zamu iya nuna wannan bangaren na labarin a irin wannan karamar wayar',
+        linkText:
+          'Bude babban shafin domin kallon duka abubuwan da muka wallafa',
+      },
       topStoriesTitle: 'Babban Labari',
       featuresAnalysisTitle: 'Minti Daya Da BBC',
     },
@@ -200,8 +205,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
-      onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Verticals',
       frequenciesPageUrl: '/hausa/institutional/2011/11/000001_mitocinmu',

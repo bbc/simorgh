@@ -3,11 +3,13 @@ import {
   runCoreCanonicalTests,
   runCanonicalAnalyticsTests,
   runRadioScheduleTests,
+  runSeoCanonicalTests,
 } from '../../common';
 
-export default () => {
-  runCrossPlatformTests();
+export default service => {
+  runCrossPlatformTests(service);
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
   runRadioScheduleTests({ isAmp: false });
+  runSeoCanonicalTests(service);
 };

@@ -5,19 +5,21 @@ import serviceConfig from '../../../../src/server/utilities/serviceConfigs';
 const getBrandId = externalId =>
   externalId === 'bbc_oromo_radio' ? 'bbc_afaanoromoo_radio' : externalId;
 
-export const getEmbedUrl = (body, language) => {
+export const getEmbedUrl = (body, language, isAmp = false) => {
   const { externalId } = body.content.blocks[2];
   const brandId = getBrandId(externalId);
 
-  return [
-    envConfig.avEmbedBaseUrl,
+  const embedUrl = [
+    isAmp ? envConfig.avEmbedBaseUrlAmp : envConfig.avEmbedBaseUrlCanonical,
     'ws/av-embeds/media',
     brandId,
     'liveradio',
     language,
   ].join('/');
+
+  return isAmp ? `${embedUrl}/amp` : embedUrl;
 };
 
-export const serviceHasRadioSchedule = ({ service, variant }) => {
-  return serviceConfig[service][variant].radioSchedule.onLiveRadioPage;
+export const serviceHasRadioSchedule = ({ service, variant, toggleKey }) => {
+  return serviceConfig[service][variant].radioSchedule[toggleKey];
 };

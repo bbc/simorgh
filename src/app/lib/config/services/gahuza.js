@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Kwamamaza',
-    },
     lang: `rw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Vyavuguruwe ',
@@ -52,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Kwamamaza',
+      },
       seeAll: 'Raba vyose',
       home: `Urupapuro rw'itangiriro`,
       currentPage: 'Uru rupapuro',
@@ -179,6 +178,11 @@ export const service = {
           endTextVisuallyHidden: 'Impera ya %provider_name% ubutumwa',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: "Inkuru iri kw'isonga",
       featuresAnalysisTitle: 'Ivyo BBC Gahuza ibahitiramwo',
     },
@@ -250,8 +254,8 @@ export const service = {
         url: '/gahuza',
       },
       {
-        title: 'Amakuru',
-        url: '/gahuza/amakuru',
+        title: 'Ibiyaga binini',
+        url: '/gahuza/topics/c06gq67y3w5t',
       },
       {
         title: 'Imikino',

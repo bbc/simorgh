@@ -16,10 +16,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: true,
-      advertisementLabel: 'Publicidade',
-    },
     lang: `pt-BR`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Atualizado',
@@ -64,6 +60,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Publicidade',
+      },
       recommendationTitle: 'Talvez também te interesse',
       seeAll: 'Ver todos',
       home: 'Início',
@@ -189,6 +188,12 @@ export const service = {
           text: 'Pule %provider_name% post',
           endTextVisuallyHidden: 'Final de %provider_name% post',
         },
+      },
+      include: {
+        errorMessage:
+          'Desculpe, mas não é possível exibir esta parte da história nesta página de acesso resumido de celular.',
+        linkText:
+          'Acesse a visão integral da página para visualizar todo o conteúdo.',
       },
       topStoriesTitle: 'Principais notícias',
       featuresAnalysisTitle: 'Leia mais',

@@ -24,71 +24,6 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   padding: 0;
 }
 
-.c12 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-  width: 100%;
-}
-
-.c12 >div {
-  vertical-align: middle;
-}
-
-.c12 >div {
-  display: inline-block;
-  vertical-align: initial;
-}
-
-.c12 svg {
-  margin: 0;
-}
-
-.c11 {
-  position: relative;
-}
-
-.c14 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c14:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c14:hover,
-.c14:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c14:visited {
-  color: #6E6E73;
-}
-
-.c15 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -167,6 +102,41 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   margin-top: 0;
 }
 
+.c12 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+.c12 >div {
+  vertical-align: middle;
+}
+
+.c12 >div {
+  display: inline-block;
+  vertical-align: initial;
+}
+
+.c12 svg {
+  margin: 0;
+}
+
+.c11 {
+  position: relative;
+}
+
+.c15 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .c13 {
   color: #222222;
   margin: 0;
@@ -177,6 +147,37 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   font-size: 0.9375rem;
   line-height: 1.25rem;
   display: inline;
+}
+
+.c14 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c14:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c14:hover,
+.c14:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c14:visited {
+  color: #6E6E73;
 }
 
 @media (max-width:62.9375rem) {
@@ -200,52 +201,6 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c10:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c12 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c12 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-    grid-column: 1 / span 6;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c11 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c15 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
   }
 }
 
@@ -387,6 +342,52 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   }
 }
 
+@media (min-width:37.5rem) {
+  .c12 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c12 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c12 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+    grid-column: 1 / span 6;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c11 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c15 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c13 {
     font-size: 1rem;
@@ -404,7 +405,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 <section
     aria-labelledby="top-stories-heading"
     class="c0"
-    data-e2e="related-content"
+    data-e2e="top-stories-heading"
     role="region"
   >
     <div
@@ -508,72 +509,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 exports[`CpsRelatedContent should render Top Stories components when without <ul> 1`] = `
 <DocumentFragment>
-  .c11 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-  width: 100%;
-}
-
-.c11 >div {
-  vertical-align: middle;
-}
-
-.c11 >div {
-  display: inline-block;
-  vertical-align: initial;
-}
-
-.c11 svg {
-  margin: 0;
-}
-
-.c10 {
-  position: relative;
-}
-
-.c13 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c13:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c13:hover,
-.c13:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c13:visited {
-  color: #6E6E73;
-}
-
-.c14 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c6 {
+  .c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -651,6 +587,41 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   margin-top: 0;
 }
 
+.c11 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+.c11 >div {
+  vertical-align: middle;
+}
+
+.c11 >div {
+  display: inline-block;
+  vertical-align: initial;
+}
+
+.c11 svg {
+  margin: 0;
+}
+
+.c10 {
+  position: relative;
+}
+
+.c14 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .c12 {
   color: #222222;
   margin: 0;
@@ -663,50 +634,35 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   display: inline;
 }
 
-@media (min-width:37.5rem) {
-  .c11 {
-    padding: 0 1rem;
-  }
+.c13 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
-@media (min-width:63rem) {
-  .c11 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
+.c13:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .c11 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-    grid-column: 1 / span 6;
-  }
+.c13:hover,
+.c13:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .c10 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
+.c13:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -859,6 +815,52 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   }
 }
 
+@media (min-width:37.5rem) {
+  .c11 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c11 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c11 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+    grid-column: 1 / span 6;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c10 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c14 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c12 {
     font-size: 1rem;
@@ -876,7 +878,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 <section
     aria-labelledby="top-stories-heading"
     class="c0"
-    data-e2e="related-content"
+    data-e2e="top-stories-heading"
     role="region"
   >
     <div

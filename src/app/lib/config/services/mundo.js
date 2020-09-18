@@ -16,10 +16,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: true,
-      advertisementLabel: 'Publicidad',
-    },
     lang: `es`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Actualizado',
@@ -56,11 +52,15 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Noticias',
+    iTunesAppId: 515255747,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Publicidad',
+      },
       recommendationTitle: 'Quizás también te interese',
       seeAll: 'Ver todo',
       home: 'Página de inicio',
@@ -186,6 +186,12 @@ export const service = {
           text: 'Saltar contenido de %provider_name%',
           endTextVisuallyHidden: 'Fin del contenido de %provider_name%',
         },
+      },
+      include: {
+        errorMessage:
+          'Lo sentimos, no podemos mostrar esta parte de la historia en esta página adaptada para los dispositivos móviles.',
+        linkText:
+          'Ver la versión completa de la página para visualizar todo el contenido.',
       },
       topStoriesTitle: 'Principales noticias',
       featuresAnalysisTitle: 'No te lo pierdas',

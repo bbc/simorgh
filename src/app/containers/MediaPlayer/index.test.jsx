@@ -1,19 +1,19 @@
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import {
   VideoCanonicalWithPlaceholder,
   VideoCanonicalNoPlaceholder,
   VideoAmp,
   VideoCanonicalNoVersionId,
-  VideoCanonicalToggledOff,
+  VideoAmpNoBlockId,
   VideoCanonicalWithCaption,
   VideoAmpWithCaption,
+  UnavailableVideoCanonical,
+  UnavailableVideoAmp,
 } from './fixtureData';
-import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
-import defaultToggles from '#lib/config/toggles';
-import onClient from '#lib/utilities/onClient';
+import logMissingMediaId from './helpers/logMissingMediaId';
 
-jest.mock('./helpers/logEmbedSourceStatus');
+jest.mock('./helpers/logMissingMediaId');
 jest.mock('#lib/utilities/onClient');
 
 describe('MediaPlayer', () => {
@@ -28,11 +28,6 @@ describe('MediaPlayer', () => {
   );
 
   shouldMatchSnapshot('Renders the AMP player when platform is AMP', VideoAmp);
-
-  describe('Fails and returns early when', () => {
-    isNull('there is no versionId', VideoCanonicalNoVersionId);
-    isNull('component is toggled off', VideoCanonicalToggledOff);
-  });
 });
 
 it('should display the AMP media caption', () => {
@@ -55,6 +50,40 @@ it('should render the iframe when showPlaceholder is set to false', () => {
   expect(document.querySelector('iframe')).toBeInTheDocument();
 });
 
+it('should render the Media Message when the video is not available Canonical', () => {
+  const { getByText } = render(UnavailableVideoCanonical);
+  const mediaMessage = `This content is no longer available`;
+  expect(logMissingMediaId).toHaveBeenCalledTimes(0);
+  expect(getByText(mediaMessage)).toBeInTheDocument();
+});
+
+it('should render the Media Message when the video is not available AMP', () => {
+  const { getByText } = render(UnavailableVideoAmp);
+  const mediaMessage = `This content is no longer available`;
+  expect(logMissingMediaId).toHaveBeenCalledTimes(0);
+  expect(getByText(mediaMessage)).toBeInTheDocument();
+});
+
+it('should render the Media Message when there is no versionId', () => {
+  jest.clearAllMocks();
+  const { getByText } = render(VideoCanonicalNoVersionId);
+  const mediaMessage = `This content is no longer available`;
+  expect(logMissingMediaId).toHaveBeenCalledTimes(0);
+  expect(getByText(mediaMessage)).toBeInTheDocument();
+});
+
+it('should render the Media Message when there is no blockId', () => {
+  jest.clearAllMocks();
+  const { getByText } = render(VideoAmpNoBlockId);
+  const mediaMessage = `This content is no longer available`;
+  expect(logMissingMediaId).toHaveBeenCalledTimes(1);
+  expect(logMissingMediaId).toHaveBeenCalledWith({
+    url: 'persian/afghanistan/2013/04/130429_l42_vid_afgh_corruption',
+    assetType: 'legacy',
+  });
+  expect(getByText(mediaMessage)).toBeInTheDocument();
+});
+
 it('should not render the iframe when showPlaceholder is set to true', () => {
   render(VideoCanonicalWithCaption);
 
@@ -65,45 +94,4 @@ it('should contain the noscript tag for no-JS scenarios ', () => {
   render(VideoCanonicalWithCaption);
 
   expect(document.querySelector('noscript')).toBeInTheDocument();
-});
-
-const enableLogMediaPlayerStatus = flag => {
-  defaultToggles[
-    process.env.SIMORGH_APP_ENV || 'local'
-  ].logMediaPlayerStatus.enabled = flag;
-};
-
-describe('log MediaPlayer status', () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-    logEmbedSourceStatus.mockImplementationOnce(() => jest.fn());
-    onClient.mockReturnValue(false);
-    enableLogMediaPlayerStatus(true);
-  });
-
-  it('should log embed source status code when player is loaded', () => {
-    render(VideoCanonicalWithCaption);
-
-    expect(logEmbedSourceStatus.mock.calls.length).toBeGreaterThan(0);
-    logEmbedSourceStatus.mock.calls.forEach(call => {
-      const { url, assetType, embedUrl } = call[0];
-      expect(url).toBe('c123456789o');
-      expect(embedUrl.includes('test.bbc.co.uk')).toBe(true);
-      expect(assetType).toBe('articles');
-    });
-  });
-
-  it('should not log when toggle is disabled', () => {
-    enableLogMediaPlayerStatus(false);
-    render(VideoCanonicalWithCaption);
-
-    expect(logEmbedSourceStatus).not.toHaveBeenCalled();
-  });
-
-  it('should only log on server', () => {
-    onClient.mockReturnValue(true);
-    render(VideoCanonicalWithCaption);
-
-    expect(logEmbedSourceStatus).not.toHaveBeenCalled();
-  });
 });

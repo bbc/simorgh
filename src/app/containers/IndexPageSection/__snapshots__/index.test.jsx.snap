@@ -172,36 +172,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   padding-bottom: 0.5rem;
 }
 
-.c20 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c20:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c20:hover,
-.c20:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c20:visited {
-  color: #6E6E73;
-}
-
 .c16 {
   display: block;
   width: 100%;
@@ -256,6 +226,37 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c20 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c20:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c20:hover,
+.c20:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c20:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -807,8 +808,12 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 class="c15"
               >
                 <div
-                  class="lazyload-placeholder"
-                />
+                  class="lazyload-wrapper"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
               </div>
               <div
                 class="c26"
@@ -862,8 +867,12 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 class="c15"
               >
                 <div
-                  class="lazyload-placeholder"
-                />
+                  class="lazyload-wrapper"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
               </div>
               <div
                 class="c26"
@@ -917,8 +926,12 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 class="c15"
               >
                 <div
-                  class="lazyload-placeholder"
-                />
+                  class="lazyload-wrapper"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
               </div>
               <div
                 class="c26"
@@ -972,8 +985,12 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 class="c15"
               >
                 <div
-                  class="lazyload-placeholder"
-                />
+                  class="lazyload-wrapper"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
               </div>
               <div
                 class="c26"
@@ -1166,36 +1183,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   padding-bottom: 0.5rem;
 }
 
-.c14 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c14:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c14:hover,
-.c14:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c14:visited {
-  color: #6E6E73;
-}
-
 .c19 {
   position: relative;
   height: 0;
@@ -1244,6 +1231,37 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
+}
+
+.c14 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c14:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c14:hover,
+.c14:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c14:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -1736,8 +1754,12 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
               class="c19"
             >
               <div
-                class="lazyload-placeholder"
-              />
+                class="lazyload-wrapper"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </div>
             </div>
             <div
               class="c20"
@@ -1765,8 +1787,12 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
               class="c19"
             >
               <div
-                class="lazyload-placeholder"
-              />
+                class="lazyload-wrapper"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </div>
             </div>
             <div
               class="c24"
@@ -1921,36 +1947,6 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
   padding-bottom: 0.5rem;
 }
 
-.c16 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c16:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c16:hover,
-.c16:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c16:visited {
-  color: #6E6E73;
-}
-
 .c12 {
   display: block;
   width: 100%;
@@ -1994,6 +1990,37 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+}
+
+.c16 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c16:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c16:hover,
+.c16:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c16:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -2426,36 +2453,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   padding-bottom: 0.5rem;
 }
 
-.c17 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c17:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c17:hover,
-.c17:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c17:visited {
-  color: #6E6E73;
-}
-
 .c13 {
   position: relative;
   height: 0;
@@ -2504,6 +2501,37 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c17 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c17:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c17:hover,
+.c17:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c17:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -2962,8 +2990,12 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="c13"
             >
               <div
-                class="lazyload-placeholder"
-              />
+                class="lazyload-wrapper"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </div>
             </div>
             <div
               class="c14"
@@ -3017,8 +3049,12 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="c13"
             >
               <div
-                class="lazyload-placeholder"
-              />
+                class="lazyload-wrapper"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </div>
             </div>
             <div
               class="c23"
@@ -3072,8 +3108,12 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="c13"
             >
               <div
-                class="lazyload-placeholder"
-              />
+                class="lazyload-wrapper"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </div>
             </div>
             <div
               class="c23"
@@ -3127,8 +3167,12 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="c13"
             >
               <div
-                class="lazyload-placeholder"
-              />
+                class="lazyload-wrapper"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </div>
             </div>
             <div
               class="c23"
@@ -3182,8 +3226,12 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="c13"
             >
               <div
-                class="lazyload-placeholder"
-              />
+                class="lazyload-wrapper"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </div>
             </div>
             <div
               class="c23"
