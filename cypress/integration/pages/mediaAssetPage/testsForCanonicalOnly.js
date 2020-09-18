@@ -55,14 +55,14 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
       const mostWatchedPath = `/${config[service].name}/mostwatched${serviceVariant}.json`;
       it('should show/not show the Most Watched component if the toggle is enabled for the service', function test() {
-        // Find if that service has componant enabled in toggles
+        // Find if the service has component enabled in toggles
         cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
           const mostWatchedIsEnabled = path(
             ['mostPopularMedia', 'enabled'],
             toggles,
           );
           cy.log(`Service toggle enabled ${mostWatchedIsEnabled}`);
-
+          // If toggle is enabled for that service, also check there are more than 0 records to show
           if (mostWatchedIsEnabled) {
             cy.request(mostWatchedPath).then(({ body: mostWatchedJson }) => {
               if (mostWatchedJson.totalRecords > 0) {
@@ -96,9 +96,17 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
                 `Max number of items is ${maxNumberofItems}. Number of items is ${mostWatchedJson.totalRecords}`,
               );
               // Compares number of items in json to number of items shown in the component
-              // If the max number of items is 5 and the records are > 5, checks it shows 5
+              // If there is only one record, the item is not in a list
+              // If the max number of items is 5 and the records are >= 5, checks it shows 5
+              // If the max number of items is 10 and the records are >= 10, checks it shows 10
               let expectedNumberOfItems;
-              if (
+              if (mostWatchedJson.totalRecords === 1) {
+                cy.get('[data-e2e=most-watched-heading]').within(() => {
+                  cy.get('[class^="StoryPromoWrapper"]')
+                    .its('length')
+                    .should('eq', 1);
+                });
+              } else if (
                 maxNumberofItems === '5' &&
                 mostWatchedJson.totalRecords > 5
               ) {
@@ -111,11 +119,12 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               } else {
                 expectedNumberOfItems = mostWatchedJson.totalRecords;
               }
-
-              cy.get('[class^="StoryPromoUl"]')
-                .find('>li')
-                .its('length')
-                .should('eq', expectedNumberOfItems);
+              cy.get('[data-e2e=most-watched-heading]').within(() => {
+                cy.get('[class^="StoryPromoUl"]')
+                  .find('>li')
+                  .its('length')
+                  .should('eq', expectedNumberOfItems);
+              });
             }
           });
         });
