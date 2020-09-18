@@ -1,7 +1,8 @@
-import { runCommonCrossPlatformTests } from '../../common';
+import { runCommonCrossPlatformTests, runTimestampTests } from '../../common';
 
 export default service => {
   runCommonCrossPlatformTests(service);
+  runTimestampTests();
 
   it('I can see an image with a caption', () => {
     const imageEl = document.querySelector(

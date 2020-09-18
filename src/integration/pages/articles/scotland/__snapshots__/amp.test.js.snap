@@ -343,3 +343,10 @@ exports[`AMP Articles SEO Twitter image src 1`] = `"https://news.files.bbci.co.u
 exports[`AMP Articles SEO Twitter site 1`] = `"@BBCScotland"`;
 
 exports[`AMP Articles SEO Twitter title 1`] = `"This is the SEO headline of this test article - BBC Scotland"`;
+
+exports[`AMP Articles Timestamp should match text 1`] = `
+Object {
+  "date": "2019-09-13",
+  "timestamp": "13 September 2019",
+}
+`;

@@ -334,3 +334,10 @@ exports[`Canonical Articles SEO Twitter image src 1`] = `"https://www.bbc.co.uk/
 exports[`Canonical Articles SEO Twitter site 1`] = `"@BBCNews"`;
 
 exports[`Canonical Articles SEO Twitter title 1`] = `"The Germans solving rising rents with people power - BBC News"`;
+
+exports[`Canonical Articles Timestamp should match text 1`] = `
+Object {
+  "date": "2019-03-27",
+  "timestamp": "27 March 2019",
+}
+`;

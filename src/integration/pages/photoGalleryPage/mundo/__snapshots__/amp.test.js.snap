@@ -482,4 +482,9 @@ exports[`AMP Photo Gallery Page SEO Twitter site 1`] = `"@bbcmundo"`;
 
 exports[`AMP Photo Gallery Page SEO Twitter title 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos - BBC News Mundo"`;
 
-exports[`AMP Photo Gallery Page Timestamp should match text 1`] = `"7 agosto 2016"`;
+exports[`AMP Photo Gallery Page Timestamp should match text 1`] = `
+Object {
+  "date": "2016-08-07",
+  "timestamp": "7 agosto 2016",
+}
+`;

@@ -440,4 +440,9 @@ exports[`AMP Story Page Social Embeds I can see the skip link 1`] = `"YouTube б
 
 exports[`AMP Story Page Social Embeds I can see the skip link destination 1`] = `"YouTube посттун аягы, 1"`;
 
-exports[`AMP Story Page Timestamp should match text 1`] = `"24 апрель 2020"`;
+exports[`AMP Story Page Timestamp should match text 1`] = `
+Object {
+  "date": "2020-04-24",
+  "timestamp": "24 апрель 2020",
+}
+`;

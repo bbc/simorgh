@@ -1,6 +1,7 @@
 export default () => {
   describe('Timestamp', () => {
     const timestampEl = document.querySelector('time');
+    const date = timestampEl.getAttribute('datetime');
     const timestamp = timestampEl.textContent;
 
     it('should be in the document', () => {
@@ -12,7 +13,7 @@ export default () => {
     });
 
     it('should match text', () => {
-      expect(timestamp).toMatchSnapshot();
+      expect({ date, timestamp }).toMatchSnapshot();
     });
   });
 };
