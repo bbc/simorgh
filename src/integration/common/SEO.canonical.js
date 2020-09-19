@@ -27,5 +27,12 @@ export default service => {
         });
       }
     });
+
+    it('AMP attribute should not be in the document', () => {
+      const htmlEl = document.querySelector('html');
+      const ampAttribute = htmlEl.getAttribute('amp');
+
+      expect(ampAttribute).not.toBeInTheDocument();
+    });
   });
 };
