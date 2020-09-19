@@ -12,6 +12,7 @@ import runRadioScheduleTests from './radioSchedule';
 import runCrossPlatformSEOTests from './SEO';
 import runSeoCanonicalTests from './SEO.canonical';
 import runTimestampTests from './timestamp';
+import runImageTests from './image';
 
 const runCommonCrossPlatformTests = service => {
   runA11yTests();
@@ -38,4 +39,5 @@ export {
   runCrossPlatformSEOTests,
   runSeoCanonicalTests,
   runTimestampTests,
+  runImageTests,
 };

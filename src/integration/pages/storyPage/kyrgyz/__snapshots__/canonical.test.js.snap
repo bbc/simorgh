@@ -129,7 +129,7 @@ Object {
 }
 `;
 
-exports[`Canonical Story Page Lead image I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
+exports[`Canonical Story Page Image Caption should match text 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
 exports[`Canonical Story Page Main heading should match text 1`] = `"Test STY for social embeds"`;
 

@@ -157,6 +157,8 @@ Object {
 }
 `;
 
+exports[`Canonical Photo Gallery Page Image Caption should match text 1`] = `"Pie de foto, En tenis, las competidoras en los juegos de principios del siglo XX utilizaban vestidos y medias largas, algo impensable para los estándares de la actualidad. Fue hasta 1920 en Amberes cuando las mujeres tuvieron participación reconocida oficialmente."`;
+
 exports[`Canonical Photo Gallery Page Main heading should match text 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos"`;
 
 exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 1`] = `
@@ -348,8 +350,6 @@ exports[`Canonical Photo Gallery Page SEO Twitter image src 1`] = `"https://iche
 exports[`Canonical Photo Gallery Page SEO Twitter site 1`] = `"@bbcmundo"`;
 
 exports[`Canonical Photo Gallery Page SEO Twitter title 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos - BBC News Mundo"`;
-
-exports[`Canonical Photo Gallery Page SEO apple-itunes-app meta tag should match text 1`] = `"app-id=515255747, app-argument=http://localhost:7080/mundo/deportes-36935058?utm_medium=banner&utm_content=apple-itunes-app"`;
 
 exports[`Canonical Photo Gallery Page Timestamp should match text 1`] = `
 Object {
