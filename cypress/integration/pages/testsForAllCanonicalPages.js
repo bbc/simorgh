@@ -23,13 +23,6 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
           });
         });
       }
-      if (['photoGalleryPage', 'storyPage'].includes(pageType)) {
-        describe('CPS PGL and STY Tests', () => {
-          it('should render at least one image', () => {
-            cy.get('figure').first().find('img').should('be.visible');
-          });
-        });
-      }
     });
   }
   describe(`Canonical Tests`, () => {
