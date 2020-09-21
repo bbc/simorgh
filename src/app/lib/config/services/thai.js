@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: 'th',
     service: 'thai',
     serviceName: 'Thai',
+    languageName: 'Thai',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbc_thailand',
     twitterSite: '@bbc_thailand',

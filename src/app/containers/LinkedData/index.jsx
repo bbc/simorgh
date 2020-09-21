@@ -26,6 +26,8 @@ const LinkedData = ({
     noBylinesPolicy,
     isTrustProjectParticipant,
     service,
+    languageName,
+    lang,
   } = useContext(ServiceContext);
   const { canonicalNonUkLink } = useContext(RequestContext);
   const IMG_TYPE = 'ImageObject';
@@ -34,6 +36,7 @@ const LinkedData = ({
     : 'Organization';
   const WEB_PAGE_TYPE = 'WebPage';
   const AUTHOR_PUBLISHER_NAME = isTrustProjectParticipant ? brandName : 'BBC';
+  const LANGUAGE_TYPE = 'Language';
   const isNotRadioChannel = type !== 'RadioChannel';
 
   const brandedIndexImage = imageLocator
@@ -66,6 +69,12 @@ const LinkedData = ({
     name: seoTitle,
   };
 
+  const inLangauge = {
+    '@type': LANGUAGE_TYPE,
+    name: languageName,
+    alternateName: lang,
+  };
+
   const linkedData = {
     '@type': type,
     url: canonicalNonUkLink,
@@ -76,6 +85,7 @@ const LinkedData = ({
     description,
     datePublished,
     dateModified,
+    inLangauge,
     ...(aboutTags && { about: getAboutTagsContent(aboutTags) }),
     ...(showAuthor && {
       author: {
