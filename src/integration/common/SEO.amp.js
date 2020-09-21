@@ -1,10 +1,10 @@
 export default () => {
   describe('SEO', () => {
-    it('AMP attribute should be in the document', () => {
+    it('AMP attribute should contain text', () => {
       const htmlEl = document.querySelector('html');
       const ampAttribute = htmlEl.getAttribute('amp');
 
-      expect(ampAttribute).toBeInTheDocument();
+      expect(ampAttribute).toBeTruthy();
     });
   });
 };
