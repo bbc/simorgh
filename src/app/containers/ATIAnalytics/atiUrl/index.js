@@ -48,14 +48,14 @@ export const buildATIPageTrackPath = ({
 
   // on AMP, variable substitutions are used in the value and they cannot be
   // encoded: https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md
-  const disableEncodingDueToSubstitution = platform === 'amp';
+  const disableEncodingDueToAmpSubstitution = platform === 'amp';
 
   // We use amp variable substitutes to get the href and referrer and these cannot be manipulated
   // For canonical, we have a requirement to encode the x5 and x6 value twice. Source issue: https://github.com/bbc/simorgh/pull/6593
-  const x5Value = disableEncodingDueToSubstitution
+  const x5Value = disableEncodingDueToAmpSubstitution
     ? href
     : href && encodeURIComponent(encodeURIComponent(href));
-  const x6Value = disableEncodingDueToSubstitution
+  const x6Value = disableEncodingDueToAmpSubstitution
     ? referrer
     : referrer && encodeURIComponent(encodeURIComponent(referrer));
 
@@ -89,28 +89,28 @@ export const buildATIPageTrackPath = ({
       description: 'screen resolution & colour depth',
       value: getScreenInfo(platform),
       wrap: false,
-      disableEncoding: disableEncodingDueToSubstitution,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     {
       key: 're',
       description: 'browser/viewport resolution',
       value: getBrowserViewPort(platform),
       wrap: false,
-      disableEncoding: disableEncodingDueToSubstitution,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     {
       key: 'hl',
       description: 'time',
       value: getCurrentTime(platform),
       wrap: false,
-      disableEncoding: disableEncodingDueToSubstitution,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     {
       key: 'lng',
       description: 'device language',
       value: getDeviceLanguage(platform),
       wrap: false,
-      disableEncoding: disableEncodingDueToSubstitution,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     { key: 'x1', description: 'content id', value: contentId, wrap: true },
     {
@@ -228,7 +228,7 @@ export const buildATIEventTrackUrl = ({
 }) => {
   // on AMP, variable substitutions are used in the value and they cannot be
   // encoded: https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md
-  const disableEncodingDueToSubstitution = platform === 'amp';
+  const disableEncodingDueToAmpSubstitution = platform === 'amp';
 
   const eventPublisher = type === 'view' ? 'ati' : 'atc';
   const eventTrackingBeaconValues = [
@@ -255,28 +255,28 @@ export const buildATIEventTrackUrl = ({
       description: 'screen resolution & colour depth',
       value: getScreenInfo(platform),
       wrap: false,
-      disableEncoding: disableEncodingDueToSubstitution,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     {
       key: 're',
       description: 'browser/viewport resolution',
       value: getBrowserViewPort(platform),
       wrap: false,
-      disableEncoding: disableEncodingDueToSubstitution,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     {
       key: 'hl',
       description: 'time',
       value: getCurrentTime(platform),
       wrap: false,
-      disableEncoding: disableEncodingDueToSubstitution,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     {
       key: 'lng',
       description: 'device language',
       value: getDeviceLanguage(platform),
       wrap: false,
-      disableEncoding: disableEncodingDueToSubstitution,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     {
       key: eventPublisher,
