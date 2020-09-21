@@ -168,7 +168,7 @@ const IndexPageSection = ({
   const { script, service, dir, translations } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
 
-  const strapline = pathOr(null, ['strapline', 'name'], group);
+  const strapline = pathOr('', ['strapline', 'name'], group);
   const isLink = pathOr(null, ['strapline', 'type'], group) === 'LINK';
   const href = pathOr(null, ['strapline', 'links', 'mobile'], group);
   const type = pathOr(null, ['type'], group);
