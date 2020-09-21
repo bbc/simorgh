@@ -215,8 +215,8 @@ Object {
 
 exports[`AMP Live Radio Header Navigation link should match text and url 2`] = `
 Object {
-  "text": "Amakuru",
-  "url": "/gahuza/amakuru",
+  "text": "Ibiyaga binini",
+  "url": "/gahuza/topics/c06gq67y3w5t",
 }
 `;
 

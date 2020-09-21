@@ -172,6 +172,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -393,6 +410,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: ['/afrique/48465371'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -585,6 +619,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -782,6 +833,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -941,6 +1009,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1138,6 +1223,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1357,6 +1459,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1427,6 +1546,10 @@ module.exports = () => ({
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: undefined,
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1624,6 +1747,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1803,6 +1943,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2021,6 +2178,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2237,6 +2411,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: ['/hindi/39414759'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2391,6 +2582,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2590,6 +2798,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2744,6 +2969,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2936,6 +3178,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -3155,6 +3414,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -3329,6 +3605,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -3488,6 +3781,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -3558,6 +3868,10 @@ module.exports = () => ({
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: undefined,
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -3755,6 +4069,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -3825,6 +4156,10 @@ module.exports = () => ({
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: undefined,
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -4053,6 +4388,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -4344,6 +4696,23 @@ module.exports = () => ({
         },
         smoke: true,
       },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: ['/persian/39120696'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -4537,6 +4906,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -4696,6 +5082,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -4849,6 +5252,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -5005,6 +5425,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -5075,6 +5512,10 @@ module.exports = () => ({
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: undefined,
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -5227,6 +5668,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -5379,6 +5837,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -5575,6 +6050,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -5795,6 +6287,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -5832,6 +6341,10 @@ module.exports = () => ({
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: undefined,
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -6051,6 +6564,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -6270,6 +6800,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -6446,6 +6993,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -6600,6 +7164,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -6811,6 +7392,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -6970,6 +7568,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -7129,6 +7744,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -7288,6 +7920,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -7342,6 +7991,7 @@ module.exports = () => ({
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
+      featureIndexPage: { environments: undefined, smoke: false },
     },
     specialFeatures: {
       cookieBanner: {
@@ -7527,6 +8177,23 @@ module.exports = () => ({
       },
       idxPage: {
         environments: undefined,
+        smoke: false,
+      },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
         smoke: false,
       },
     },
@@ -7748,6 +8415,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -7971,6 +8655,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -8130,6 +8831,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -8284,6 +9002,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -8467,6 +9202,23 @@ module.exports = () => ({
         smoke: true,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -8650,6 +9402,23 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
     specialFeatures: {
       cookieBanner: {
