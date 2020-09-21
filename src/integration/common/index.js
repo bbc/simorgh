@@ -11,6 +11,7 @@ import runPerformanceTests from './performance';
 import runRadioScheduleTests from './radioSchedule';
 import runCrossPlatformSEOTests from './SEO';
 import runSeoCanonicalTests from './SEO.canonical';
+import runSeoAmpTests from './SEO.amp';
 import runTimestampTests from './timestamp';
 import runImageTests from './image';
 
@@ -38,6 +39,7 @@ export {
   runRadioScheduleTests,
   runCrossPlatformSEOTests,
   runSeoCanonicalTests,
+  runSeoAmpTests,
   runTimestampTests,
   runImageTests,
 };

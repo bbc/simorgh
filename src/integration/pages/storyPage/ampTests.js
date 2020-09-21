@@ -1,10 +1,15 @@
-import { runCoreAmpTests, runAmpAnalyticsTests } from '../../common';
+import {
+  runCoreAmpTests,
+  runAmpAnalyticsTests,
+  runSeoAmpTests,
+} from '../../common';
 import runCrossPlatformTests from './crossPlatformTests';
 
 export default service => {
   runCoreAmpTests();
   runAmpAnalyticsTests();
   runCrossPlatformTests(service);
+  runSeoAmpTests();
 
   describe('Social Embeds', () => {
     const hasRichInstagramEmbed = !!document.querySelector(
