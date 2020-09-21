@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import styled from 'styled-components';
+import Lazyload from 'react-lazyload';
 import {
   AmpSocialEmbed,
   CanonicalSocialEmbed,
@@ -82,14 +83,16 @@ const SocialEmbedContainer = ({ blocks }) => {
             caption={caption}
           />
         ) : (
-          <CanonicalSocialEmbed
-            provider={provider}
-            service={service}
-            oEmbed={oEmbed}
-            fallback={fallback}
-            skipLink={skipLink}
-            caption={caption}
-          />
+          <Lazyload once>
+            <CanonicalSocialEmbed
+              provider={provider}
+              service={service}
+              oEmbed={oEmbed}
+              fallback={fallback}
+              skipLink={skipLink}
+              caption={caption}
+            />
+          </Lazyload>
         )}
       </Wrapper>
     </GridItemConstrainedMedium>
