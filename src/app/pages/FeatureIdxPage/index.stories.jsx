@@ -12,6 +12,7 @@ const stories = storiesOf(
 
 const service = 'afrique';
 const variant = 'default';
+
 stories.add(`${service}`, () => (
   <BrowserRouter>
     <FeatureIdxPage

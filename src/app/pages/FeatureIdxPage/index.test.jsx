@@ -15,12 +15,12 @@ const mockToggles = {
     enabled: true,
   },
 };
+
 const requestContextData = ({ service = 'afrique' }) => ({
   pageType: 'FIX',
   service,
   pathname: '/pathname',
   data: { status: 200 },
-  showAdsBasedOnLocation: true,
 });
 
 // eslint-disable-next-line react/prop-types
