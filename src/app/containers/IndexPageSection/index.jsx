@@ -196,9 +196,12 @@ const IndexPageSection = ({
   // If this group does not have a strapline; do not render!
   // This may change in the future, if a way to avoid breaking UX is found.
   // Also, don't render a section without any items.
+
+  // We are over-riding
   if (!strapline && !renderWithoutStrapline) {
     return null;
   }
+
   if (!items || items.length === 0) {
     return null;
   }
@@ -235,13 +238,14 @@ const IndexPageSection = ({
 
 IndexPageSection.defaultProps = {
   bar: true,
+  renderWithoutStrapline: false,
 };
 
 IndexPageSection.propTypes = {
   bar: bool,
   group: shape(groupShape).isRequired,
+  renderWithoutStrapline: bool,
   sectionNumber: number.isRequired,
-  renderWithoutStrapline: number.isRequired,
 };
 
 export default IndexPageSection;
