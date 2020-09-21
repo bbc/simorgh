@@ -4,10 +4,11 @@
   "description": "Simorgh",
   "main": "./src/client.js",
   "resolutions": {
-    "prismjs": "^1.21.0"
+    "prismjs": "1.21.0",
+    "node-forge": "0.10.0"
   },
   "scripts": {
-    "preinstall": "npx npm-force-resolutions",
+    "preinstall": "[ \"$npm_config_refer\" != \"ci\" ] && npx npm-force-resolutions || exit 0",
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
     "bbcA11y": "wait-on -t 20000 http://localhost:7080/status && bbc-a11y",
     "bbcA11y:ci": "wait-on -t 20000 http://localhost:7080/status && xvfb-run -a bbc-a11y",
@@ -93,7 +94,7 @@
     "@bbc/psammead-live-label": "^1.0.1",
     "@bbc/psammead-locales": "^4.1.11",
     "@bbc/psammead-media-indicator": "^4.0.12",
-    "@bbc/psammead-media-player": "^2.10.2",
+    "@bbc/psammead-media-player": "^3.0.0",
     "@bbc/psammead-most-read": "^4.1.11",
     "@bbc/psammead-navigation": "^6.0.17",
     "@bbc/psammead-paragraph": "^2.2.34",
@@ -119,7 +120,7 @@
     "express": "^4.17.1",
     "express-static-gzip": "^2.0.8",
     "gnu-terry-pratchett": "0.0.2",
-    "helmet": "^3.23.1",
+    "helmet": "^4.1.1",
     "helmet-csp": "^3.1.0",
     "isarray": "^2.0.5",
     "isomorphic-fetch": "^2.2.1",
