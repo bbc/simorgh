@@ -39,7 +39,7 @@ export const service = {
     datetimeLocale: `gd`,
     service: 'naidheachdan',
     serviceName: 'Naidheachdan',
-    languageName: '',
+    languageName: 'Scottish Gaelic',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnaidheachdan',
     twitterSite: '@bbcnaidheachdan',
