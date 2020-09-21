@@ -25,11 +25,6 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
       }
     });
   }
-  describe(`Canonical Tests`, () => {
-    it('should not have an AMP attribute on the page', () => {
-      cy.get('html').should('not.have.attr', 'amp');
-    });
-  });
 };
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.

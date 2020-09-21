@@ -19,10 +19,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   variant,
 }) =>
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
-    it('should not have an AMP attribute on the main article', () => {
-      cy.get('html').should('not.have.attr', 'amp');
-    });
-
     if (appToggles.chartbeatAnalytics.enabled) {
       describe('Chartbeat', () => {
         if (envConfig.chartbeatEnabled) {
