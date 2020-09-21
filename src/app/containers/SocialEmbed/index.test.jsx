@@ -7,9 +7,10 @@ import SocialEmbedContainer from '.';
 import withContexts from './testHelper';
 import { twitterBlock, twitterBlockNoEmbed } from './fixtures';
 
+/* eslint-disable react/prop-types */
 jest.mock('react-lazyload', () => {
-  return function MockedLazyload(props) {
-    return <>{props.children}</>;
+  return function MockedLazyload({ children }) {
+    return <>{children}</>;
   };
 });
 
