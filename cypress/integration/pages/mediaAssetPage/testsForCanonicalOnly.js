@@ -47,11 +47,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         cy.getToggles(config[service].name);
       });
       // Allows constructing most watched path with variant
-      let serviceVariant = variant;
-      serviceVariant =
-        serviceVariant === 'default'
-          ? (serviceVariant = '')
-          : (serviceVariant = `/${variant}`);
+      const serviceVariant = variant === 'default' ? '' : `/${variant}`;
 
       const mostWatchedPath = `/${config[service].name}/mostwatched${serviceVariant}.json`;
       it('should show/not show the Most Watched component if the toggle is enabled for the service', function test() {
