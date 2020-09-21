@@ -254,8 +254,8 @@ export const service = {
         url: '/gahuza',
       },
       {
-        title: 'Amakuru',
-        url: '/gahuza/amakuru',
+        title: 'Ibiyaga binini',
+        url: '/gahuza/topics/c06gq67y3w5t',
       },
       {
         title: 'Imikino',
