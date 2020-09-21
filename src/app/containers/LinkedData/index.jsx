@@ -69,7 +69,7 @@ const LinkedData = ({
     name: seoTitle,
   };
 
-  const inLangauge = {
+  const inLanguage = {
     '@type': LANGUAGE_TYPE,
     name: languageName,
     alternateName: lang,
@@ -85,7 +85,7 @@ const LinkedData = ({
     description,
     datePublished,
     dateModified,
-    inLangauge,
+    inLanguage,
     ...(aboutTags && { about: getAboutTagsContent(aboutTags) }),
     ...(showAuthor && {
       author: {
