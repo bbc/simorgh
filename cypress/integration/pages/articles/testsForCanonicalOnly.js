@@ -32,14 +32,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       });
     }
 
-    it('should include ampHTML tag', () => {
-      cy.get('head link[rel="amphtml"]').should(
-        'have.attr',
-        'href',
-        `${window.location.origin}${Cypress.env('currentPath')}.amp`,
-      );
-    });
-
     if (serviceHasCaption(service)) {
       describe('Image with placeholder', () => {
         it('should have a visible image that is not lazyloaded', () => {
