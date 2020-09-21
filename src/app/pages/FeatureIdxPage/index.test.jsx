@@ -15,6 +15,7 @@ const mockToggles = {
     enabled: true,
   },
 };
+
 const requestContextData = ({ service = 'afrique' }) => ({
   pageType: 'FIX',
   service,
