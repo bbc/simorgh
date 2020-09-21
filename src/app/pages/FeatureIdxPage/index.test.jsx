@@ -7,17 +7,10 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import afriqueFeatureIdxPageData from '#data/afrique/cpsAssets/48465371';
-import afriqueMostReadData from '#data/afrique/mostRead';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import FeatureIdxPage from '.';
 
 const mockToggles = {
-  ads: {
-    enabled: false,
-  },
-  mostRead: {
-    enabled: true,
-  },
   comscoreAnalytics: {
     enabled: true,
   },
@@ -129,14 +122,10 @@ describe('Feature Idx Page', () => {
   });
 
   describe('snapshots', () => {
-    it('should render a afrique feature idx page correctly', async () => {
+    it('should render an afrique feature idx page correctly', async () => {
       fetchMock.mock(
         'http://localhost/some-feature-idx-page-path.json',
         JSON.stringify(afriqueFeatureIdxPageData),
-      );
-      fetchMock.mock(
-        ' /afrique/mostread.json',
-        JSON.stringify(afriqueMostReadData),
       );
       const { pageData } = await getInitialData({
         path: 'some-feature-idx-page-path',
@@ -151,14 +140,10 @@ describe('Feature Idx Page', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should render a afrique amp feature idx page', async () => {
+    it('should render an afrique amp feature idx page', async () => {
       fetchMock.mock(
         'http://localhost/some-feature-idx-path.json',
         JSON.stringify(afriqueFeatureIdxPageData),
-      );
-      fetchMock.mock(
-        '/afrique/mostread.json',
-        JSON.stringify(afriqueMostReadData),
       );
       const { pageData } = await getInitialData({
         path: 'some-feature-idx-page-path',
@@ -185,10 +170,6 @@ describe('Feature Idx Page', () => {
         path: 'some-feature-idx-page-path',
         service: 'afrique',
       });
-      fetchMock.mock(
-        ' /afrique/mostread.json',
-        JSON.stringify(afriqueMostReadData),
-      );
 
       let container;
       await act(async () => {
@@ -212,14 +193,10 @@ describe('Feature Idx Page', () => {
       // expect(langSpan.textContent).toEqual('BBC News');
     });
 
-    it('should render front page sections', async () => {
+    it('should render feature index page sections', async () => {
       fetchMock.mock(
         'http://localhost/some-feature-idx-page-path.json',
         JSON.stringify(afriqueFeatureIdxPageData),
-      );
-      fetchMock.mock(
-        '/afrique/mostread.json',
-        JSON.stringify(afriqueMostReadData),
       );
       const { pageData } = await getInitialData({
         path: 'some-feature-idx-page-path',
