@@ -107,6 +107,8 @@ exports[`Canonical Korean Live Radio Page Media Player a11y assistive technology
 
 exports[`Canonical Korean Live Radio Page Media Player iframe with valid URL should be rendered 1`] = `"https://test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/ko?morph_env=live"`;
 
+exports[`Canonical Korean Live Radio Page SEO AMP HTML link should match text 1`] = `"http://localhost:7080/korean/bbc_korean_radio/liveradio.amp"`;
+
 exports[`Canonical Korean Live Radio Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

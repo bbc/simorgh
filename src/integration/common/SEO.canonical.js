@@ -33,5 +33,11 @@ export default service => {
 
       expect(htmlEl.hasAttribute('amp')).toBeFalsy();
     });
+
+    it('AMP HTML link should match text', () => {
+      const ampHtmlEl = document.querySelector('head link[rel="amphtml"]');
+
+      expect(ampHtmlEl.getAttribute('href')).toMatchSnapshot();
+    });
   });
 };

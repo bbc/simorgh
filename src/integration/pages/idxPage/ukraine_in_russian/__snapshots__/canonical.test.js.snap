@@ -135,6 +135,8 @@ exports[`Canonical ukrainian/ukraine_in_russian IDX page Header lang code should
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Main heading should match text 1`] = `"РУС"`;
 
+exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO AMP HTML link should match text 1`] = `"http://localhost:7080/ukrainian/ukraine_in_russian.amp"`;
+
 exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

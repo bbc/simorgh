@@ -187,6 +187,8 @@ exports[`Canonical Media Asset Page Media Player a11y assistive technology can r
 
 exports[`Canonical Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://test.bbc.com/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa"`;
 
+exports[`Canonical Media Asset Page SEO AMP HTML link should match text 1`] = `"http://localhost:7080/persian/iran-23231114.amp"`;
+
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

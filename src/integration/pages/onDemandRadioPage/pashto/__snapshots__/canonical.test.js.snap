@@ -150,6 +150,8 @@ exports[`Canonical On Demand Radio Page Media Player a11y assistive technology c
 
 exports[`Canonical On Demand Radio Page Media Player iframe with valid URL should be rendered 1`] = `"https://test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"`;
 
+exports[`Canonical On Demand Radio Page SEO AMP HTML link should match text 1`] = `"http://localhost:7080/pashto/bbc_pashto_radio/w3ct0lz1.amp"`;
+
 exports[`Canonical On Demand Radio Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

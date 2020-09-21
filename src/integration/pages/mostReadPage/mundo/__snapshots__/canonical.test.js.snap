@@ -181,6 +181,8 @@ exports[`Canonical Most Read Page I can see the list items 10`] = `"10\\"Las igl
 
 exports[`Canonical Most Read Page Main heading should match text 1`] = `"Más leídas"`;
 
+exports[`Canonical Most Read Page SEO AMP HTML link should match text 1`] = `"http://localhost:7080/mundo/popular/read.amp"`;
+
 exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

@@ -161,6 +161,8 @@ exports[`Canonical Photo Gallery Page Image Caption should match text 1`] = `"Pi
 
 exports[`Canonical Photo Gallery Page Main heading should match text 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos"`;
 
+exports[`Canonical Photo Gallery Page SEO AMP HTML link should match text 1`] = `"http://localhost:7080/mundo/deportes-36935058.amp"`;
+
 exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

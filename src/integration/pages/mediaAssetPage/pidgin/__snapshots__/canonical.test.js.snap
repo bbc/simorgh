@@ -177,6 +177,8 @@ Object {
 }
 `;
 
+exports[`Canonical Media Asset Page SEO AMP HTML link should match text 1`] = `"http://localhost:7080/pidgin/23248703.amp"`;
+
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

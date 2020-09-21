@@ -177,6 +177,8 @@ exports[`Canonical Articles I can see an image with a caption 2`] = `"توضیح
 
 exports[`Canonical Articles Main heading should match text 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
 
+exports[`Canonical Articles SEO AMP HTML link should match text 1`] = `"http://localhost:7080/persian/articles/c4vlle3q337o.amp"`;
+
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

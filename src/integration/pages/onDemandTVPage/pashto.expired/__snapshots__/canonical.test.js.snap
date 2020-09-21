@@ -11,3 +11,5 @@ exports[`Canonical Pashto On Demand TV Page Expired Episode I can see the episod
 exports[`Canonical Pashto On Demand TV Page Expired Episode I can see the episode title 1`] = `"۲۸ می ۲۰۲۰"`;
 
 exports[`Canonical Pashto On Demand TV Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"نړۍ دا وخت, ۲۸ می ۲۰۲۰"`;
+
+exports[`Canonical Pashto On Demand TV Page SEO AMP HTML link should match text 1`] = `"http://localhost:7080/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf.amp"`;

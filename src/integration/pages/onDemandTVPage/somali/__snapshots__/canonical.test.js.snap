@@ -134,6 +134,8 @@ exports[`Canonical On Demand T V Page Media Player a11y assistive technology can
 
 exports[`Canonical On Demand T V Page Media Player iframe with valid URL should be rendered 1`] = `"https://test.bbc.com/ws/av-embeds/media/somali/bbc_somali_tv/w172xcmnrdmbygt/so?morph_env=live"`;
 
+exports[`Canonical On Demand T V Page SEO AMP HTML link should match text 1`] = `"http://localhost:7080/somali/bbc_somali_tv/tv_programmes/w13xttqt.amp"`;
+
 exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

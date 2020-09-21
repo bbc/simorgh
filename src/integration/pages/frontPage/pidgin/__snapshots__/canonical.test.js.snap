@@ -133,6 +133,8 @@ exports[`Canonical Front Page Index Alsos should match visually hidden text 1`] 
 
 exports[`Canonical Front Page Main heading should match text 1`] = `"BBC News, Pidgin - Home"`;
 
+exports[`Canonical Front Page SEO AMP HTML link should match text 1`] = `"http://localhost:7080/pidgin.amp"`;
+
 exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,
