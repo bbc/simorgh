@@ -3,7 +3,6 @@ import { storiesOf } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import afriqueData from '#data/afrique/cpsAssets/48465371';
-import { getLocalMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 import FeatureIdxPage from '.';
 
 const stories = storiesOf(
@@ -23,10 +22,6 @@ stories.add(`${service}`, () => (
       service={service}
       variant={variant}
       pageData={afriqueData}
-      mostReadEndpointOverride={getLocalMostReadEndpoint({
-        service,
-        variant,
-      })}
     />
   </BrowserRouter>
 ));

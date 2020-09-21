@@ -197,7 +197,10 @@ const IndexPageSection = ({
   // This may change in the future, if a way to avoid breaking UX is found.
   // Also, don't render a section without any items.
 
-  // We are over-riding
+  // If renderWithoutStrapline is false (which it is by default),
+  // then the section will not render if there is no strapline.
+  // If renderWithoutStrapline is true, and there is no strapline present,
+  // the section will always render.
   if (!strapline && !renderWithoutStrapline) {
     return null;
   }
