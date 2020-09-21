@@ -97,7 +97,7 @@ exports[`AMP Front Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=70&p=pidgin.page&r=%24%7BscreenWidth%7Dx%24%7BscreenHeight%7Dx%24%7BscreenColorDepth%7D&re=%24%7BavailableScreenWidth%7Dx%24%7BavailableScreenHeight%7D&hl=%24%7Btimestamp%7D&lng=%24%7BbrowserLanguage%7D&x1=[urn%3Abbc%3Acps%3A52f3c7b1-83ed-2338-e050-17ac8045cd94]&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[%24%7BsourceUrl%7D]&x6=[%24%7BdocumentReferrer%7D]&x7=[index-home]&x8=[simorgh]&x9=[Domot%2B-%2BBBC%2BNews%2BPidgin]&x11=[1970-01-18T08%3A30%3A40.608Z]&x12=[1970-01-19T01%3A24%3A09.011Z]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=70&p=pidgin.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A52f3c7b1-83ed-2338-e050-17ac8045cd94]&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[Domot%2B-%2BBBC%2BNews%2BPidgin]&x11=[1970-01-18T08%3A30%3A40.608Z]&x12=[1970-01-19T01%3A24%3A09.011Z]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
