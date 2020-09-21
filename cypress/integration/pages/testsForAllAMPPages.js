@@ -9,13 +9,7 @@ export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
   service,
   pageType,
 }) => {
-  describe(`Running testsForAllAMPPages for ${service} ${pageType}`, () => {
-    if (['storyPage', 'photoGalleryPage'].includes(pageType)) {
-      it('should render at least one amp image', () => {
-        cy.get('figure').first().find('amp-img').should('be.visible');
-      });
-    }
-  });
+  describe(`No testsThatFollowSmokeTestConfigForAllAMPPages to run for ${service} ${pageType}`, () => {});
 };
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
