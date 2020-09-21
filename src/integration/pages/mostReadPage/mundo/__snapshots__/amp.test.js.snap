@@ -406,6 +406,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "es",
+        "name": "Spanish",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/mundo/popular/read",
         "@type": "WebPage",

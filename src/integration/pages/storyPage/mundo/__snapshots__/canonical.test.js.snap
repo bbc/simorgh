@@ -309,6 +309,11 @@ Object {
         "url": "https://ichef.test.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "es",
+        "name": "Spanish",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/mundo/noticias-internacional-51266689",
         "@type": "WebPage",

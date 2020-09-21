@@ -410,6 +410,11 @@ Object {
         "url": "https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "pcm",
+        "name": "Nigerian Pidgin",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/pidgin/23248703",
         "@type": "WebPage",
