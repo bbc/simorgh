@@ -298,6 +298,8 @@ exports[`Canonical Front Page SEO Twitter site 1`] = `"@BBCArabic"`;
 
 exports[`Canonical Front Page SEO Twitter title 1`] = `"الرئيسية - BBC News عربي"`;
 
+exports[`Canonical Front Page SEO apple-itunes-app meta tag should match text 1`] = `"app-id=558497376, app-argument=http://localhost:7080/arabic?utm_medium=banner&utm_content=apple-itunes-app"`;
+
 exports[`Canonical Front Page Sections should match headline text 1`] = `"الخبر الرئيسي"`;
 
 exports[`Canonical Front Page Sections should match headline text 2`] = `"فيديوالمزيد"`;
