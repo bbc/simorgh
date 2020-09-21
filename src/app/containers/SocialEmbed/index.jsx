@@ -24,6 +24,8 @@ const logger = nodeLogger(__filename);
  */
 const MAX_WIDTH = '31.25rem';
 
+const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
+
 const Wrapper = styled.div`
   margin-right: auto;
   margin-left: auto;
@@ -83,7 +85,7 @@ const SocialEmbedContainer = ({ blocks }) => {
             caption={caption}
           />
         ) : (
-          <Lazyload once>
+          <Lazyload offset={LAZYLOAD_OFFSET} once>
             <CanonicalSocialEmbed
               provider={provider}
               service={service}
