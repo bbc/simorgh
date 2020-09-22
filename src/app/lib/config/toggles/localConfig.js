@@ -47,4 +47,7 @@ export default {
   variantCookie: {
     enabled: true,
   },
+  webVitals: {
+    enabled: true,
+  },
 };
