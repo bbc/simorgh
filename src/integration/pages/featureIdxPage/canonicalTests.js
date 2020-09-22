@@ -1,7 +1,13 @@
-import { runCoreCanonicalTests } from '../../common';
+import runCrossPlatformTests from './crossPlatformTests';
+import {
+  runCoreCanonicalTests,
+  runCanonicalAnalyticsTests,
+  runSeoCanonicalTests,
+} from '../../common';
 
-describe('Canonical', () => {
-  describe(pageType, () => {
-    runCoreCanonicalTests(service);
-  });
-});
+export default service => {
+  runCrossPlatformTests(service);
+  runCoreCanonicalTests();
+  runCanonicalAnalyticsTests();
+  runSeoCanonicalTests(service);
+};
