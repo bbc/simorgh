@@ -16,6 +16,14 @@ const MediaStoryPromoLi = styled(StoryPromoLi)`
   }
 `;
 
+const MostWatchedOl = styled.ol.attrs({
+  role: 'list',
+})`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+`;
+
 const RelatedContentPromoList = ({ promoItems, dir, isMediaContent }) => {
   return (
     <Grid
@@ -27,7 +35,7 @@ const RelatedContentPromoList = ({ promoItems, dir, isMediaContent }) => {
         group4: 8,
         group5: 8,
       }}
-      as={StoryPromoUl}
+      as={isMediaContent ? MostWatchedOl : StoryPromoUl}
       enableGelGutters
       dir={dir}
     >
