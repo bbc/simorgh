@@ -155,7 +155,7 @@ describe('ATIAnalytics params', () => {
         serviceContext,
       );
       expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=service.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3A%2F%2Fwww.bbc.co.uk]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originhttp%253A%252F%252Fwww.example.com]&x7=[article]&x8=[simorgh]&x9=[pageTitle]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2Benglish%2Blabel%2B1~thing%2Benglish%2Blabel%2B2]&x14=[thing%2Bid%2B1~thing%2Bid%2B2]&ref=originhttp%3A%2F%2Fwww.example.com"`,
+        `"s=598285&s2=atiAnalyticsProducerId&p=service.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3A%2F%2Fwww.bbc.co.uk]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originhttp%253A%252F%252Fwww.example.com]&x7=[article]&x8=[simorgh]&x9=[pageTitle]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2Benglish%2Blabel%2B1~thing%2Benglish%2Blabel%2B2]&x14=[thing%2Bid%2B1~thing%2Bid%2B2]&ref=originhttp://www.example.com"`,
       );
     });
 
@@ -223,7 +223,7 @@ describe('ATIAnalytics params', () => {
       const params = atiUrl.split('&');
 
       expect(params).toContain('x6=[originhttp%253A%252F%252Fwww.example.com]');
-      expect(params).toContain('ref=originhttp%3A%2F%2Fwww.example.com');
+      expect(params).toContain('ref=originhttp://www.example.com');
     });
 
     it('should have ref parameter as the last parameter, if referrer url exists', () => {
@@ -234,7 +234,7 @@ describe('ATIAnalytics params', () => {
       );
       const params = atiUrl.split('&');
 
-      expect(params.pop()).toEqual('ref=originhttp%3A%2F%2Fwww.example.com');
+      expect(params.pop()).toEqual('ref=originhttp://www.example.com');
     });
 
     it('should not have ref and x6 parameters, if referrer url does not exist', () => {
