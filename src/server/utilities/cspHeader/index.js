@@ -67,6 +67,15 @@ const advertisingDirectives = {
   ],
 };
 
+const androidAppStoreDirectives = {
+  imgSrc: [
+    'https://lh3.googleusercontent.com/DMLOtArx9rm35YLzA0J9SWCJmTedWCezwTeZQK3_L0lxGWwdQovvX2bbjNWA_p09ZC4', // arabic
+    'https://lh3.googleusercontent.com/miz4L-OhDG1atvBOqxx83WxdNzdb2fWRz65rxST-enBzC52HJNTB3uzbTfwEZoO_UQ', // hindi
+    'https://lh3.googleusercontent.com/MaLsvtOl4Ao9o9TIUmblabzDOsVwBO90emKf0JTGR3hFgRcFh6npkDRC9bwxb15MVqc', // mundo
+    'https://lh3.googleusercontent.com/qWnPnHDJ4rt0jZf32B3C1_EhObyVKc8bMtk93grZiHXasaekVSPNMzp0mhlVGKyDRTo', // russian
+  ],
+};
+
 const directives = {
   connectSrc: {
     ampLive: [
@@ -200,6 +209,7 @@ const directives = {
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.cdninstagram.com', // Social Embeds, <amp-instagram />
       ...advertisingDirectives.imgSrc,
+      ...androidAppStoreDirectives.imgSrc,
       "data: 'self'",
     ],
     canonicalLive: [
@@ -216,6 +226,7 @@ const directives = {
       'https://news.bbcimg.co.uk', // STY include
       'https://static.bbc.co.uk', // STY include
       ...advertisingDirectives.imgSrc,
+      ...androidAppStoreDirectives.imgSrc,
       "data: 'self'", // needed at the end to maintain proper order
     ],
     ampNonLive: [
@@ -233,6 +244,7 @@ const directives = {
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.cdninstagram.com', // Social Embeds, <amp-instagram />
       ...advertisingDirectives.imgSrc,
+      ...androidAppStoreDirectives.imgSrc,
       "data: 'self'",
     ],
     canonicalNonLive: [
@@ -255,6 +267,7 @@ const directives = {
       'https://static.bbc.co.uk', // STY include
       'http://static.bbc.co.uk', // localhost STY include
       ...advertisingDirectives.imgSrc,
+      ...androidAppStoreDirectives.imgSrc,
       "data: 'self'", // needed at the end to maintain proper order
     ],
   },
