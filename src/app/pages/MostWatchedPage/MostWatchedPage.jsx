@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import styled from 'styled-components';
-import { node } from 'prop-types';
+import { arrayOf, shape, node } from 'prop-types';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
@@ -13,6 +13,7 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
+import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import IndexMain from '#app/components/PageLayout/IndexMain';
@@ -88,31 +89,26 @@ const MostWatchedPage = ({ pageData }) => {
     children: node.isRequired,
   };
 
-  const parentGridColumns = {
-    group0: 6,
-    group1: 6,
-    group2: 6,
-    group3: 6,
-    group4: 8,
-    group5: 8,
-  };
-
   return (
     <>
       <IndexMain data-e2e="most-watched">
         <IndexPageContainer>
           <MostWatchedWrapper>
             <IndexHeading id="content">{header}</IndexHeading>
-            <MostWatchedContainer
-              data={mostWatchedData}
-              hasHeader={false}
-              parentColumns={parentGridColumns}
-            />
+            <MostWatchedContainer data={mostWatchedData} isMostWatchedPage />
           </MostWatchedWrapper>
         </IndexPageContainer>
       </IndexMain>
     </>
   );
+};
+
+MostWatchedPage.propTypes = {
+  pageData: arrayOf(shape(storyItem)),
+};
+
+MostWatchedPage.defaultProps = {
+  pageData: null,
 };
 
 export default MostWatchedPage;

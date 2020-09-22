@@ -8,7 +8,7 @@ import CpsOnwardJourney from '../CpsOnwardJourney';
 import RelatedContentPromo from '../CpsRelatedContent/RelatedContentPromo';
 import RelatedContentPromoList from '../CpsRelatedContent/RelatedContentPromoList';
 
-const MostWatched = ({ data, hasHeader, parentColumns }) => {
+const MostWatched = ({ data, isMostWatchedPage }) => {
   const { mostWatched } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
   const { header } = mostWatched;
@@ -17,12 +17,21 @@ const MostWatched = ({ data, hasHeader, parentColumns }) => {
     return null;
   }
 
+  const parentColumns = {
+    group0: 6,
+    group1: 6,
+    group2: 6,
+    group3: 6,
+    group4: 8,
+    group5: 8,
+  };
+
   return (
     <CpsOnwardJourney
-      parentColumns={parentColumns}
+      parentColumns={isMostWatchedPage && parentColumns}
       labelId="most-watched-heading"
       data-e2e="most-watched"
-      title={hasHeader ? header : ''}
+      title={isMostWatchedPage ? '' : header}
       isMapContent
       content={data}
       promoComponent={RelatedContentPromo}
@@ -34,12 +43,12 @@ const MostWatched = ({ data, hasHeader, parentColumns }) => {
 
 MostWatched.propTypes = {
   data: arrayOf(shape(storyItem)),
-  hasHeader: bool,
+  isMostWatchedPage: bool,
 };
 
 MostWatched.defaultProps = {
   data: null,
-  hasHeader: true,
+  isMostWatchedPage: false,
 };
 
 export default MostWatched;
