@@ -20,14 +20,14 @@ export default async ({ service, variant, pageType, toggles }) => {
       service,
       path: mostWatchedUrl,
       toggles,
-      page: 'MostWatched',
+      page: pageType,
     });
 
     return {
       status,
       pageData: {
         ...mostWatchedData,
-        metadata: { type: 'mostWatched' },
+        metadata: { type: pageType },
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {

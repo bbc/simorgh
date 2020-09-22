@@ -9,7 +9,7 @@ const processToggles = ({ toggles, service, path, page }) => {
   try {
     const { mostPopularMedia, mostPopularMediaPage } = toggles;
     const { enabled, value } =
-      page === 'MAP' ? mostPopularMedia : mostPopularMediaPage;
+      page === 'mostWatched' ? mostPopularMediaPage : mostPopularMedia;
 
     const numberOfItems = parseInt(value, 10);
 
