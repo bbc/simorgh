@@ -425,7 +425,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
     },
     specialFeatures: {
