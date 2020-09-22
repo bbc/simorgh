@@ -48,6 +48,6 @@ describe('MostWatched', () => {
     const { container } = await render(
       <MostWatchedComponent data={[]} isAmp={false} />,
     );
-    expect(container.querySelector('ul')).not.toBeInTheDocument();
+    expect(container.querySelector('ol')).not.toBeInTheDocument();
   });
 });
