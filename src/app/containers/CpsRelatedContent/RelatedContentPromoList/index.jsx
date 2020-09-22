@@ -1,9 +1,24 @@
 import React from 'react';
-import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { arrayOf, bool, shape, string } from 'prop-types';
+import styled from 'styled-components';
+import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { C_LUNAR } from '@bbc/psammead-styles/colours';
 import Grid from '../../../components/Grid';
 import StoryPromo from '../../StoryPromo';
 import { storyItem } from '#models/propTypes/storyItem';
+
+const MediaStoryPromoLi = styled(StoryPromoLi)`
+  ${({ border }) =>
+    border &&
+    `
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      border-bottom: 0.0625rem solid ${C_LUNAR};
+      padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_DBL};
+    }
+  `}
+`;
 
 const RelatedContentPromoList = ({ promoItems, dir, isMapContent }) => {
   return (
@@ -31,7 +46,7 @@ const RelatedContentPromoList = ({ promoItems, dir, isMapContent }) => {
             group4: isMapContent ? 8 : 4,
             group5: isMapContent ? 8 : 4,
           }}
-          as={StoryPromoLi}
+          as={isMapContent ? MediaStoryPromoLi : StoryPromoLi}
           key={item.id || item.uri}
           dir={dir}
         >
