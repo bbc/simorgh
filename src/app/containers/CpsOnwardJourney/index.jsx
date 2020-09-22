@@ -78,12 +78,16 @@ const gridMarginSmall = css`
 `;
 
 const Wrapper = styled(ConstrainedLargeGrid)`
+  ${isMapContent =>
+    !isMapContent &&
+    `
   ${gelGridMargin}
   ${gridMarginSmall}
   ${({ columnType }) =>
     columnType === 'main' &&
     `
     padding: 0 ${GEL_SPACING_DBL};
+  `}
   `}
 `;
 
@@ -172,6 +176,7 @@ const CpsOnwardJourney = ({
         parentColumns={parentColumns}
         columnType={columnType}
         {...a11yAttributes}
+        isMapContent={isMapContent}
       >
         {children}
       </Wrapper>
