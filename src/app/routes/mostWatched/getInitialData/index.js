@@ -20,6 +20,7 @@ export default async ({ service, variant, pageType, toggles }) => {
       service,
       path: mostWatchedUrl,
       toggles,
+      page: 'MostWatched',
     });
 
     return {

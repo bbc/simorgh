@@ -83,6 +83,7 @@ export default async ({
       service,
       path: pathname,
       toggles,
+      page: 'MAP',
     });
 
     return {
