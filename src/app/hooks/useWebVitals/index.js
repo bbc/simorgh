@@ -1,19 +1,13 @@
 import 'isomorphic-fetch';
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
+import { getCLS, getFID, getLCP, getTTFB } from 'web-vitals';
 import nodeLogger from '#lib/logger.node';
 import { WEB_VITALS_SEND_ERROR } from '#lib/logger.const';
 
 // hooks
-import useToggle from '#hooks/useToggle';
 import useEvent from '#hooks/useEvent';
 
-// contexts
-import { UserContext } from '#contexts/UserContext';
-import { RequestContext } from '#contexts/RequestContext';
-
 // web-vitals
-import { getCLS, getFID, getLCP, getTTFB } from 'web-vitals';
-
 const logger = nodeLogger(__filename);
 
 const webVitalsBase = {
@@ -48,21 +42,15 @@ const sendBeacon = async event => {
 };
 
 const useWebVitals = () => {
-  const { enabled } = useToggle('webVitals');
-  const { personalisationEnabled } = useContext(UserContext);
-
   // Setup event listener for `beforeunload` event and call sendBeacon when this event fires.
   useEvent('beforeunload', sendBeacon);
 
-  if (enabled && personalisationEnabled) {
-    useEffect(() => {
-      getTTFB(updateWebVitals);
-      getCLS(updateWebVitals);
-      getFID(updateWebVitals);
-      getLCP(updateWebVitals);
-    }, []);
-  }
-
+  useEffect(() => {
+    getTTFB(updateWebVitals);
+    getCLS(updateWebVitals);
+    getFID(updateWebVitals);
+    getLCP(updateWebVitals);
+  }, []);
   return null;
 };
 
