@@ -2,7 +2,7 @@
 library 'Simorgh'
 
 def dockerRegistry = "329802642264.dkr.ecr.eu-west-1.amazonaws.com"
-def nodeImageVersion = "12.16.2"
+def nodeImageVersion = "12.18.5"
 def nodeImage = "${dockerRegistry}/bbc-news/node-12-lts:${nodeImageVersion}"
 
 def appGitCommit = ""
