@@ -11,6 +11,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_QUAD,
   GEL_SPACING_DBL,
+  GEL_SPACING_SEXT,
 } from '@bbc/gel-foundations/spacings';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -29,6 +30,10 @@ const StyledIndexHeading = styled(IndexHeading)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     padding-bottom: ${GEL_SPACING_QUAD};
   }
+`;
+
+const StyledIndexPageContainer = styled(IndexPageContainer)`
+  padding-bottom: ${GEL_SPACING_SEXT};
 `;
 
 const MostWatchedPage = ({ pageData }) => {
@@ -84,12 +89,12 @@ const MostWatchedPage = ({ pageData }) => {
   return (
     <>
       <IndexMain data-e2e="most-watched">
-        <IndexPageContainer>
+        <StyledIndexPageContainer>
           <MostWatchedWrapper>
             <StyledIndexHeading id="content">{header}</StyledIndexHeading>
             <MostWatchedContainer data={mostWatchedData} isMostWatchedPage />
           </MostWatchedWrapper>
-        </IndexPageContainer>
+        </StyledIndexPageContainer>
       </IndexMain>
     </>
   );
