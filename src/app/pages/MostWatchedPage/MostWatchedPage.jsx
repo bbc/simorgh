@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import path from 'ramda/src/path';
 import styled from 'styled-components';
 import { node } from 'prop-types';
 import {
@@ -17,6 +18,7 @@ import Grid, { GelPageGrid } from '#app/components/Grid';
 import IndexMain from '#app/components/PageLayout/IndexMain';
 import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
 import IndexHeading from '#containers/IndexHeading';
+import MostWatchedContainer from '#containers/MostWatched';
 
 const MarginWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
@@ -32,15 +34,16 @@ const MarginWrapper = styled.div`
   }
 `;
 
-const MostWatchedPage = () => {
+const MostWatchedPage = ({ pageData }) => {
   const {
     dir,
     mostWatched: { header },
   } = useContext(ServiceContext);
 
+  const mostWatchedData = path(['mostWatched'], pageData);
+
   const MostWatchedWrapper = ({ children }) => (
     <>
-      <IndexHeading id="content">{header}</IndexHeading>
       <MarginWrapper>
         <GelPageGrid
           dir={dir}
@@ -63,7 +66,7 @@ const MostWatchedPage = () => {
               group2: 1,
               group3: 1,
               group4: 1,
-              group5: 3,
+              group5: 1,
             }}
             columns={{
               group0: 6,
@@ -85,14 +88,26 @@ const MostWatchedPage = () => {
     children: node.isRequired,
   };
 
+  const parentGridColumns = {
+    group0: 6,
+    group1: 6,
+    group2: 6,
+    group3: 6,
+    group4: 8,
+    group5: 8,
+  };
+
   return (
     <>
       <IndexMain data-e2e="most-watched">
         <IndexPageContainer>
           <MostWatchedWrapper>
-            <div style={{ display: 'none' }}>
-              To be replaced with most watched content
-            </div>
+            <IndexHeading id="content">{header}</IndexHeading>
+            <MostWatchedContainer
+              data={mostWatchedData}
+              hasHeader={false}
+              parentColumns={parentGridColumns}
+            />
           </MostWatchedWrapper>
         </IndexPageContainer>
       </IndexMain>

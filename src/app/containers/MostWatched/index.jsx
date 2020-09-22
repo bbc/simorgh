@@ -8,7 +8,7 @@ import CpsOnwardJourney from '../CpsOnwardJourney';
 import RelatedContentPromo from '../CpsRelatedContent/RelatedContentPromo';
 import RelatedContentPromoList from '../CpsRelatedContent/RelatedContentPromoList';
 
-const MostWatched = ({ data, hasHeader }) => {
+const MostWatched = ({ data, hasHeader, parentColumns }) => {
   const { mostWatched } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
   const { header } = mostWatched;
@@ -19,6 +19,7 @@ const MostWatched = ({ data, hasHeader }) => {
 
   return (
     <CpsOnwardJourney
+      parentColumns={parentColumns}
       labelId="most-watched-heading"
       data-e2e="most-watched"
       title={hasHeader ? header : ''}
