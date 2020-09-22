@@ -8,11 +8,13 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability)
 [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://bbc.github.io/simorgh/)
 
-The BBC websites are being rebuilt from the bottom up as ReactJS based Single Page Applications, that will (eventually) also be fully fledged Progressive Web Apps. This application also builds Accelerated Mobile Pages for every regular HTML page that it renders.
+BBC World Service News websites are rendered using Simorgh, a ReactJS based Single Page Application which also builds Accelerated Mobile Pages for every regular HTML page that it renders.
 
-Simorgh will be used across the BBC World Service News websites ([some are already live](https://github.com/bbc/simorgh/wiki/Simorgh-Pages)), with tens of millions of users, and growing very fast.
+Simorgh provides a fast and accessible web experience used by over 500 million people around the world each month ([see list of websites using Simorgh](https://github.com/bbc/simorgh/blob/latest/docs/Simorgh-Release-Info.md)). It is regularly maintained and well documented, and we welcome open source contributors.
 
-We lean heavily on the component library called [Psammead](https://github.com/bbc/psammead/) that we also maintain. This library is also open source and used even more widely across the BBC.
+Simorgh is primarily maintained by BBC News Web Engineering teams delivers highly trusted news to readers all over the world, currently in 41 languages. We support a wide range of devices and care deeply about scale, performance, and accessibility. We work in agile, flexible teams, and have an exciting roadmap for future development.
+
+We heavily use a component library called [Psammead](https://github.com/bbc/psammead/) that we also maintain. This library is open source and used even more widely across the BBC.
 
 ## Documentation index
 
