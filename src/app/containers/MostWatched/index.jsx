@@ -28,7 +28,7 @@ const MostWatched = ({ data, isMostWatchedPage }) => {
 
   return (
     <CpsOnwardJourney
-      parentColumns={isMostWatchedPage && parentColumns}
+      parentColumns={isMostWatchedPage ? parentColumns : undefined}
       labelId="most-watched-heading"
       data-e2e="most-watched"
       title={isMostWatchedPage ? '' : header}
