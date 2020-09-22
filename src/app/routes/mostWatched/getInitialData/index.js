@@ -1,7 +1,7 @@
 import fetchPageData from '../../utils/fetchPageData';
 import getMostWatchedUrl from '#lib/utilities/getMostWatchedUrl';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
-import processMostWatched from '../../cpsAsset/getInitialData/processMostWatched';
+import processMostWatched from '../../utils/processMostWatched';
 
 export default async ({ service, variant, pageType, toggles }) => {
   try {
