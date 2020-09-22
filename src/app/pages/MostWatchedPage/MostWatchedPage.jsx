@@ -19,6 +19,8 @@ import IndexMain from '#app/components/PageLayout/IndexMain';
 import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
 import IndexHeading from '#containers/IndexHeading';
 import MostWatchedContainer from '#containers/MostWatched';
+import MetadataContainer from '#containers/Metadata';
+import LinkedData from '#containers/LinkedData';
 
 const StyledIndexHeading = styled(IndexHeading)`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
@@ -34,6 +36,8 @@ const StyledIndexHeading = styled(IndexHeading)`
 const MostWatchedPage = ({ pageData }) => {
   const {
     dir,
+    brandName,
+    lang,
     mostWatched: { header },
   } = useContext(ServiceContext);
 
@@ -83,6 +87,13 @@ const MostWatchedPage = ({ pageData }) => {
 
   return (
     <>
+      <MetadataContainer
+        title={header}
+        lang={lang}
+        description={`${header} - ${brandName}`}
+        openGraphType="website"
+      />
+      <LinkedData type="WebPage" seoTitle={header} />
       <IndexMain data-e2e="most-watched">
         <IndexPageContainer>
           <MostWatchedWrapper>
