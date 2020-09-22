@@ -1,6 +1,6 @@
 import 'isomorphic-fetch';
 import { useEffect } from 'react';
-import { getCLS, getFID, getLCP, getTTFB } from 'web-vitals';
+import { getCLS, getFID, getLCP, getTTFB, getFCP } from 'web-vitals';
 import nodeLogger from '#lib/logger.node';
 import { WEB_VITALS_SEND_ERROR } from '#lib/logger.const';
 
@@ -16,7 +16,7 @@ const webVitalsBase = {
   url: 'https://www.example.com/some/path', // TODO: Get the current page url
 };
 
-const vitals = { cls: null, fid: null, lcp: null, ttfb: null };
+const vitals = { cls: null, fid: null, lcp: null, ttfb: null, fcp: null };
 
 const updateWebVitals = ({ name, value }) => {
   const vitalName = name.toLowerCase();
@@ -50,6 +50,7 @@ const useWebVitals = () => {
     getCLS(updateWebVitals);
     getFID(updateWebVitals);
     getLCP(updateWebVitals);
+    getFCP(updateWebVitals);
   }, []);
   return null;
 };
