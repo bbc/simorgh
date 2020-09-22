@@ -117,21 +117,25 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 });
 
 describe('Feature Idx Page', () => {
+  let pageData;
+
+  beforeEach(async () => {
+    fetchMock.mock(
+      'http://localhost/some-feature-idx-page-path.json',
+      JSON.stringify(afriqueFeatureIdxPageData),
+    );
+    ({ pageData } = await getInitialData({
+      path: 'some-feature-idx-page-path',
+      service: 'afrique',
+    }));
+  });
+
   afterEach(() => {
     fetchMock.restore();
   });
 
   describe('snapshots', () => {
     it('should render an afrique feature idx page correctly', async () => {
-      fetchMock.mock(
-        'http://localhost/some-feature-idx-page-path.json',
-        JSON.stringify(afriqueFeatureIdxPageData),
-      );
-      const { pageData } = await getInitialData({
-        path: 'some-feature-idx-page-path',
-        service: 'afrique',
-      });
-
       let container;
       await act(async () => {
         container = render(<FeatureIdxPageWithContext pageData={pageData} />)
@@ -141,15 +145,6 @@ describe('Feature Idx Page', () => {
     });
 
     it('should render an afrique amp feature idx page', async () => {
-      fetchMock.mock(
-        'http://localhost/some-feature-idx-path.json',
-        JSON.stringify(afriqueFeatureIdxPageData),
-      );
-      const { pageData } = await getInitialData({
-        path: 'some-feature-idx-page-path',
-        service: 'afrique',
-      });
-
       let container;
       await act(async () => {
         container = render(
@@ -162,15 +157,6 @@ describe('Feature Idx Page', () => {
 
   describe('Assertions', () => {
     it('should render visually hidden text as h1', async () => {
-      fetchMock.mock(
-        'http://localhost/some-feature-idx-page-path.json',
-        JSON.stringify(afriqueFeatureIdxPageData),
-      );
-      const { pageData } = await getInitialData({
-        path: 'some-feature-idx-page-path',
-        service: 'afrique',
-      });
-
       let container;
       await act(async () => {
         container = render(<FeatureIdxPageWithContext pageData={pageData} />)
@@ -194,15 +180,6 @@ describe('Feature Idx Page', () => {
     });
 
     it('should render feature index page sections', async () => {
-      fetchMock.mock(
-        'http://localhost/some-feature-idx-page-path.json',
-        JSON.stringify(afriqueFeatureIdxPageData),
-      );
-      const { pageData } = await getInitialData({
-        path: 'some-feature-idx-page-path',
-        service: 'afrique',
-      });
-
       let container;
       await act(async () => {
         container = render(<FeatureIdxPageWithContext pageData={pageData} />)
