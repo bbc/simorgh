@@ -32,7 +32,7 @@ const MostWatched = ({ data, isMostWatchedPage }) => {
       labelId="most-watched-heading"
       data-e2e="most-watched"
       title={isMostWatchedPage ? '' : header}
-      isMapContent
+      isMediaContent
       content={data}
       promoComponent={RelatedContentPromo}
       promoListComponent={RelatedContentPromoList}

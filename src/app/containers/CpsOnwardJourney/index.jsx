@@ -78,8 +78,8 @@ const gridMarginSmall = css`
 `;
 
 const Wrapper = styled(ConstrainedLargeGrid)`
-  ${isMapContent =>
-    !isMapContent &&
+  ${isMediaContent =>
+    !isMediaContent &&
     `
   ${gelGridMargin}
   ${gridMarginSmall}
@@ -153,7 +153,7 @@ const CpsOnwardJourney = ({
   labelId,
   title,
   content,
-  isMapContent,
+  isMediaContent,
   parentColumns,
   promoListComponent,
   promoComponent,
@@ -176,7 +176,7 @@ const CpsOnwardJourney = ({
         parentColumns={parentColumns}
         columnType={columnType}
         {...a11yAttributes}
-        isMapContent={isMapContent}
+        isMediaContent={isMediaContent}
       >
         {children}
       </Wrapper>
@@ -228,7 +228,7 @@ const CpsOnwardJourney = ({
             {promoComponent({ promo: singleContent, dir })}
           </SingleContentWrapper>
         ) : (
-          promoListComponent({ promoItems: content, dir, isMapContent })
+          promoListComponent({ promoItems: content, dir, isMediaContent })
         )}
       </OptionallyRenderedSkipWrapper>
     </CpsOnwardJourneyWrapper>
@@ -239,7 +239,7 @@ CpsOnwardJourney.propTypes = {
   labelId: string.isRequired,
   title: string,
   content: arrayOf(shape(storyItem)),
-  isMapContent: bool,
+  isMediaContent: bool,
   parentColumns: shape({
     group0: number,
     group1: number,
@@ -264,7 +264,7 @@ CpsOnwardJourney.propTypes = {
 CpsOnwardJourney.defaultProps = {
   content: [],
   title: '',
-  isMapContent: false,
+  isMediaContent: false,
   parentColumns: null,
   sectionLabelOverrideAs: null,
   sectionLabelBar: true,

@@ -20,7 +20,7 @@ const MediaStoryPromoLi = styled(StoryPromoLi)`
   `}
 `;
 
-const RelatedContentPromoList = ({ promoItems, dir, isMapContent }) => {
+const RelatedContentPromoList = ({ promoItems, dir, isMediaContent }) => {
   return (
     <Grid
       columns={{
@@ -43,10 +43,10 @@ const RelatedContentPromoList = ({ promoItems, dir, isMapContent }) => {
             group1: 6,
             group2: 6,
             group3: 6,
-            group4: isMapContent ? 8 : 4,
-            group5: isMapContent ? 8 : 4,
+            group4: isMediaContent ? 8 : 4,
+            group5: isMediaContent ? 8 : 4,
           }}
-          as={isMapContent ? MediaStoryPromoLi : StoryPromoLi}
+          as={isMediaContent ? MediaStoryPromoLi : StoryPromoLi}
           key={item.id || item.uri}
           dir={dir}
         >
@@ -54,7 +54,7 @@ const RelatedContentPromoList = ({ promoItems, dir, isMapContent }) => {
             item={item}
             dir={dir}
             displaySummary={false}
-            isSingleColumnLayout={isMapContent}
+            isSingleColumnLayout={isMediaContent}
           />
         </Grid>
       ))}
@@ -64,12 +64,12 @@ const RelatedContentPromoList = ({ promoItems, dir, isMapContent }) => {
 
 RelatedContentPromoList.propTypes = {
   dir: string.isRequired,
-  isMapContent: bool,
+  isMediaContent: bool,
   promoItems: arrayOf(shape(storyItem)).isRequired,
 };
 
 RelatedContentPromoList.defaultProps = {
-  isMapContent: false,
+  isMediaContent: false,
 };
 
 export default RelatedContentPromoList;
