@@ -26,11 +26,11 @@ exports[`Byline should render correctly for STY pages with name and title 1`] = 
 }
 
 .c3 {
-  color: #404040;
+  color: #3F3F42;
 }
 
 .c4 {
-  color: #5A5A5A;
+  color: #6E6E73;
 }
 
 .c0 {

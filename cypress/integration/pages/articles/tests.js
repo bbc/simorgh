@@ -1,6 +1,5 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import appToggles from '../../../support/helpers/useAppToggles';
 import { getBlockByType, getBlockData } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
@@ -21,7 +20,7 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {});
 };
 
-// For testing feastures that may differ across services but share a common logic e.g. translated strings.
+// For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfig = ({
   service,
   pageType,
@@ -158,39 +157,34 @@ export const testsThatFollowSmokeTestConfig = ({
         });
       }
 
-      // `appToggles` tells us whether a feature is toggled on or off in the current environment.
-      if (appToggles.mediaPlayer.enabled) {
-        describe('Media Player', () => {
-          it('should have a visible caption beneath a mediaplayer', () => {
-            cy.request(`${Cypress.env('currentPath')}.json`).then(
-              ({ body }) => {
-                const media = getBlockData('video', body);
-                if (media) {
-                  const captionBlock = getBlockByType(
-                    media.model.blocks,
-                    'caption',
-                  );
+      describe('Media Player', () => {
+        it('should have a visible caption beneath a mediaplayer', () => {
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const media = getBlockData('video', body);
+            if (media) {
+              const captionBlock = getBlockByType(
+                media.model.blocks,
+                'caption',
+              );
 
-                  if (captionBlock) {
-                    const {
-                      text,
-                    } = captionBlock.model.blocks[0].model.blocks[0].model;
+              if (captionBlock) {
+                const {
+                  text,
+                } = captionBlock.model.blocks[0].model.blocks[0].model;
 
-                    cy.get('figcaption')
-                      .eq(1)
-                      .within(() => {
-                        cy.get('p')
-                          .eq(0)
-                          .should('be.visible')
-                          .should('contain', text);
-                      });
-                  }
-                }
-              },
-            );
+                cy.get('figcaption')
+                  .eq(1)
+                  .within(() => {
+                    cy.get('p')
+                      .eq(0)
+                      .should('be.visible')
+                      .should('contain', text);
+                  });
+              }
+            }
           });
         });
-      }
+      });
     });
   });
 };

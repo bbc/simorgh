@@ -7,13 +7,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Iklan',
-    },
     lang: `id`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Diperbarui',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-indonesia',
     atiAnalyticsProducerId: '54',
     chartbeatDomain: 'indonesian.bbc.co.uk', // this is meant to be different to the service name
@@ -30,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Keterangan, ',
     imageCopyrightOffscreenText: 'Sumber gambar, ',
     locale: `id-ID`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'id',
     datetimeLocale: `id`,
     service: 'indonesia',
     serviceName: 'Indonesia',
@@ -50,6 +49,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Iklan',
+      },
       seeAll: 'Lihat semua',
       home: 'Berita',
       currentPage: 'Halaman saat ini',
@@ -145,13 +147,14 @@ export const service = {
         noJs:
           'Untuk memutar video ini, aktifkan JavaScript atau coba di mesin pencari lain',
         contentExpired: 'Konten ini sudah tidak tersedia lagi.',
+        contentNotYetAvailable: 'Program ini belum tersedia.',
         audio: 'Audio',
         photogallery: 'Galeri Foto',
         video: 'Video',
         listen: 'Dengar',
         watch: 'Tonton',
         liveLabel: 'LANGSUNG',
-        nextLabel: 'NEXT',
+        nextLabel: 'BERIKUTNYA',
         previousRadioShow: 'Siaran radio sebelumnya',
         nextRadioShow: 'Siaran radio berikutnya',
         duration: 'Durasi',
@@ -173,6 +176,11 @@ export const service = {
           endTextVisuallyHidden: 'Lompati %provider_name% pesan',
         },
       },
+      include: {
+        errorMessage:
+          'Maaf, kami tidak dapat menampilkan bagian dari berita ini dalam versi ramah mobile',
+        linkText: 'Lihat versi lengkap di laman untuk melihat seluruh konten',
+      },
       topStoriesTitle: 'Berita Utama',
       featuresAnalysisTitle: 'Majalah',
     },
@@ -183,10 +191,16 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Terpopuler',
+      numberOfItems: 5,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
-      durationLabel: 'Duration %duration%',
+      header: 'Siaran radio',
+      durationLabel: 'Durasi %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

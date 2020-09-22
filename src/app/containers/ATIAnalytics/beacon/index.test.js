@@ -32,32 +32,16 @@ describe('beacon', () => {
         pageIdentifier: 'pageIdentifier',
       });
       expect(sendBeaconSpy).toHaveBeenCalledTimes(2);
-      expect(sendBeaconSpy.mock.calls).toEqual([
-        [
-          `https://foobar.com?${[
-            's=598285',
-            'p=pageIdentifier',
-            'r=0x0x24x24',
-            're=1024x768',
-            'hl=00-00-00',
-            'lng=en-US',
-            'atc=PUB-[service-component]-[creation-label~click]-[]-[PAR=container-component~CHD=child]-[pageIdentifier]-[]-[responsive_web~news-simorgh]-[https://bbc.com]',
-            'type=AT',
-          ].join('&')}`,
-        ],
-        [
-          `https://foobar.com?${[
-            's=598285',
-            'p=pageIdentifier',
-            'r=0x0x24x24',
-            're=1024x768',
-            'hl=00-00-00',
-            'lng=en-US',
-            'ati=PUB-[service-component]-[creation-label~view]-[]-[PAR=container-component~CHD=child]-[pageIdentifier]-[]-[responsive_web~news-simorgh]-[https://bbc.com]',
-            'type=AT',
-          ].join('&')}`,
-        ],
-      ]);
+      expect(sendBeaconSpy.mock.calls).toMatchInlineSnapshot(`
+        Array [
+          Array [
+            "https://foobar.com?s=598285&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-%5Bservice-component%5D-%5Bcreation-label~click%5D-%5B%5D-%5BPAR%3Dcontainer-component~CHD%3Dchild%5D-%5BpageIdentifier%5D-%5B%5D-%5Bresponsive_web~news-simorgh%5D-%5Bhttps%3A%2F%2Fbbc.com%5D&type=AT",
+          ],
+          Array [
+            "https://foobar.com?s=598285&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&ati=PUB-%5Bservice-component%5D-%5Bcreation-label~view%5D-%5B%5D-%5BPAR%3Dcontainer-component~CHD%3Dchild%5D-%5BpageIdentifier%5D-%5B%5D-%5Bresponsive_web~news-simorgh%5D-%5Bhttps%3A%2F%2Fbbc.com%5D&type=AT",
+          ],
+        ]
+      `);
     });
   });
 });

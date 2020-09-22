@@ -13,11 +13,14 @@ import addSummaryBlock from './addSummaryBlock';
 import cpsOnlyOnwardJourneys from './cpsOnlyOnwardJourneys';
 import addRecommendationsBlock from './addRecommendationsBlock';
 import addBylineBlock from './addBylineBlock';
+import addMpuBlock from './addMpuBlock';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
+import processMostWatched from './processMostWatched';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import getAdditionalPageData from '../utils/getAdditionalPageData';
+import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 const formatPageData = pipe(
   addAnalyticsCounterName,
@@ -36,16 +39,22 @@ const processOptimoBlocks = pipe(
   addSummaryBlock,
   augmentWithTimestamp,
   addBylineBlock,
+  addRecommendationsBlock,
+  addMpuBlock,
   addIdsToBlocks,
   applyBlockPositioning,
   cpsOnlyOnwardJourneys,
-  addRecommendationsBlock,
 );
 
-const transformJson = async json => {
+// Here pathname is passed as a prop specifically for CPS includes
+// This will most likely change in issue #6784 so it is temporary for now
+const transformJson = async (json, pathname) => {
   try {
     const formattedPageData = formatPageData(json);
-    const optimoBlocks = await convertToOptimoBlocks(formattedPageData);
+    const optimoBlocks = await convertToOptimoBlocks(
+      formattedPageData,
+      pathname,
+    );
     return processOptimoBlocks(optimoBlocks);
   } catch (e) {
     // We can arrive here if the CPS asset is a FIX page
@@ -54,19 +63,36 @@ const transformJson = async json => {
   }
 };
 
-export default async ({ path: pathname, service, variant }) => {
-  const { json, ...rest } = await fetchPageData(pathname);
+export default async ({
+  path: pathname,
+  service,
+  variant,
+  pageType,
+  toggles,
+}) => {
+  try {
+    const { json, status } = await fetchPageData({ path: pathname, pageType });
 
-  const additionalPageData = await getAdditionalPageData(
-    json,
-    service,
-    variant,
-  );
+    const additionalPageData = await getAdditionalPageData(
+      json,
+      service,
+      variant,
+    );
+    const processedAdditionalData = processMostWatched({
+      data: additionalPageData,
+      service,
+      path: pathname,
+      toggles,
+    });
 
-  return {
-    ...rest,
-    ...(json && {
-      pageData: { ...(await transformJson(json)), ...additionalPageData },
-    }),
-  };
+    return {
+      status,
+      pageData: {
+        ...(await transformJson(json, pathname)),
+        ...processedAdditionalData,
+      },
+    };
+  } catch ({ message, status = getErrorStatusCode() }) {
+    return { error: message, status };
+  }
 };

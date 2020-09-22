@@ -1,25 +1,28 @@
 import {
   runCommonCrossPlatformTests,
   runMediaPlayerEmbedTests,
+  runMainHeadingTests,
 } from '../../common';
 
-export default () => {
-  runCommonCrossPlatformTests();
+export default service => {
+  runCommonCrossPlatformTests(service);
   runMediaPlayerEmbedTests();
+  runMainHeadingTests();
 
-  it('I can see the headline', () => {
-    const h1El = document.querySelector('h1');
-
-    expect(h1El).toBeInTheDocument();
-    expect(h1El.textContent).toBeTruthy();
-    expect(h1El.textContent).toMatchSnapshot();
-  });
-
-  it('I can see the summary', () => {
+  describe('Summary', () => {
     const summaryEl = document.querySelector('main p');
+    const summaryText = summaryEl.textContent;
 
-    expect(summaryEl).toBeInTheDocument();
-    expect(summaryEl.textContent).toBeTruthy();
-    expect(summaryEl.textContent).toMatchSnapshot();
+    it('should be in the document', () => {
+      expect(summaryEl).toBeInTheDocument();
+    });
+
+    it('should contain text', () => {
+      expect(summaryText).toBeTruthy();
+    });
+
+    it('should match text', () => {
+      expect(summaryText).toMatchSnapshot();
+    });
   });
 };

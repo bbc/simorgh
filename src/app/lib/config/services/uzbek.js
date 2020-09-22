@@ -7,13 +7,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Реклама',
-    },
     lang: `uz-Cyrl`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Янгиланди',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-uzbek',
     atiAnalyticsProducerId: '96',
     chartbeatDomain: 'uzbek.bbc.co.uk',
@@ -30,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Тагсўз, ',
     imageCopyrightOffscreenText: 'Сурат манбаси, ',
     locale: `uz-UZ`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'uz',
     datetimeLocale: `uz`,
     service: 'uzbek',
     serviceName: 'Uzbek',
@@ -49,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Реклама',
+      },
       seeAll: 'Ҳаммасини кўринг',
       home: 'Бош саҳифа',
       currentPage: 'Жорий саҳифа',
@@ -144,6 +146,8 @@ export const service = {
       media: {
         noJs: 'Мултимедиа ўйнаш бу қурилмада дастакланмайди',
         contentExpired: 'Бу контентни ортиқ тинглаб/томоша қилиб бўлмайди.',
+        contentNotYetAvailable:
+          'Бу контент ҳали тинглаш/томоша қилишга тайёр эмас.',
         audio: 'Аудио',
         photogallery: 'Фото галерея',
         video: 'Видео',
@@ -180,6 +184,11 @@ export const service = {
           endTextVisuallyHidden: 'Охири %provider_name% пост',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'Бош мақола',
       featuresAnalysisTitle: 'Муҳаррир танлови',
     },
@@ -189,6 +198,11 @@ export const service = {
       lastUpdated: 'Сўнгги янгиланиш:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Энг кўп кўрилган',
+      numberOfItems: 5,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

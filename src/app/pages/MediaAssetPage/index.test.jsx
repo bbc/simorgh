@@ -1,29 +1,34 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import fetchMock from 'fetch-mock';
 import { render, waitFor } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import assocPath from 'ramda/src/assocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContext } from '#contexts/ToggleContext';
-import { MediaAssetPage } from '..';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import MediaAssetPage from '.';
 import mapPageData from '#data/pidgin/cpsAssets/23248703';
 import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721';
+import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
-const toggleState = {
-  mediaPlayer: {
-    enabled: true,
-  },
-};
+jest.mock('#containers/ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  return ChartbeatAnalytics;
+});
+
+jest.mock('#containers/ComscoreAnalytics', () => {
+  const ComscoreAnalytics = () => <div>comscore</div>;
+  return ComscoreAnalytics;
+});
 
 const createAssetPage = ({ pageData }, service) => (
   <StaticRouter>
-    <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
+    <ToggleContextProvider>
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
@@ -36,7 +41,7 @@ const createAssetPage = ({ pageData }, service) => (
           <MediaAssetPage service={service} pageData={pageData} />
         </RequestContextProvider>
       </ServiceContextProvider>
-    </ToggleContext.Provider>
+    </ToggleContextProvider>
   </StaticRouter>
 );
 
@@ -110,13 +115,37 @@ const getBlockTextAtIndex = (index, originalPageData) => {
   return path(['content', 'blocks', index, 'text'], originalPageData);
 };
 
+const pageType = 'cpsAsset';
+
+fetchMock.config.overwriteRoutes = true;
+
+const mockInitialData = ({ service, assetId, pageData, mostWatched }) => {
+  fetchMock.mock(`http://localhost/${assetId}.json`, pageData);
+  fetchMock.mock(
+    `http://localhost/${service}/mostwatched.json`,
+    mostWatched || mostWatchedData,
+  );
+  return getInitialData({
+    path: assetId,
+    service,
+    pageType,
+  });
+};
+
 describe('Media Asset Page', () => {
   let pageData;
   let asFragment;
   let getByText;
+
   beforeEach(async () => {
-    fetch.mockResponse(JSON.stringify(mapPageData));
-    const response = await getInitialData('some-map-path');
+    process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+
+    const response = await mockInitialData({
+      assetId: 'pidgin/a-media-asset',
+      service: 'pidgin',
+      pageData: mapPageData,
+    });
+
     pageData = response.pageData;
 
     ({ asFragment, getByText } = render(
@@ -126,6 +155,7 @@ describe('Media Asset Page', () => {
 
   afterEach(() => {
     delete process.env.SIMORGH_APP_ENV;
+    delete process.env.SIMORGH_ICHEF_BASE_URL;
   });
 
   it('should render the index image as metadata image', async () => {
@@ -133,14 +163,14 @@ describe('Media Asset Page', () => {
       {
         property: 'og:image',
         content:
-          'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
+          'https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
       },
       { property: 'og:image:alt', content: 'connectionAltText' },
       { name: 'twitter:image:alt', content: 'connectionAltText' },
       {
         name: 'twitter:image:src',
         content:
-          'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
+          'https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
       },
     ];
 
@@ -209,8 +239,11 @@ describe('Media Asset Page', () => {
     };
 
     it('should render version (live audio stream)', async () => {
-      fetch.mockResponse(JSON.stringify(uzbekPageData));
-      const response = await getInitialData('some-map-path');
+      const response = await mockInitialData({
+        assetId: 'uzbek/a-media-asset',
+        service: 'uzbek',
+        pageData: uzbekPageData,
+      });
       pageData = response.pageData;
       const liveStreamBlock = getLiveStreamBlock(pageData);
       liveStreamSource = getLiveStreamSource(liveStreamBlock);
@@ -288,8 +321,11 @@ describe('Media Asset Page', () => {
 });
 
 it('should not show the timestamp when allowDateStamp is false', async () => {
-  fetch.mockResponse(JSON.stringify(mapPageData));
-  const { pageData } = await getInitialData('some-map-path');
+  const { pageData } = await mockInitialData({
+    assetId: 'pidgin/a-media-asset',
+    service: 'pidgin',
+    pageData: mapPageData,
+  });
   const pageDataWithHiddenTimestamp = assocPath(
     ['metadata', 'options', 'allowDateStamp'],
     false,
@@ -302,18 +338,22 @@ it('should not show the timestamp when allowDateStamp is false', async () => {
 });
 
 it('should not show the iframe when available is false', async () => {
-  fetch.mockResponse(JSON.stringify(uzbekPageData));
-  const { pageData } = await getInitialData('some-map-path');
+  const { pageData } = await mockInitialData({
+    assetId: 'uzbek/a-media-asset',
+    service: 'uzbek',
+    pageData: uzbekPageData,
+  });
   const uzbekDataExpiredLivestream = assocPath(
     ['content', 'blocks', 0, 'available'],
     false,
     pageData,
   );
 
-  fetch.mockResponse(JSON.stringify(uzbekDataExpiredLivestream));
-  const { pageData: pageDataWithExpiredLiveStream } = await getInitialData(
-    'some-map-path',
-  );
+  const { pageData: pageDataWithExpiredLiveStream } = await mockInitialData({
+    assetId: 'uzbek/a-media-asset',
+    service: 'uzbek',
+    pageData: JSON.stringify(uzbekDataExpiredLivestream),
+  });
 
   render(createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'));
 
@@ -327,10 +367,11 @@ it('should show the media message when available is false', async () => {
     uzbekPageData,
   );
 
-  fetch.mockResponse(JSON.stringify(uzbekDataExpiredLivestream));
-  const { pageData: pageDataWithExpiredLiveStream } = await getInitialData(
-    'some-map-path',
-  );
+  const { pageData: pageDataWithExpiredLiveStream } = await mockInitialData({
+    assetId: 'uzbek/a-media-asset',
+    service: 'uzbek',
+    pageData: JSON.stringify(uzbekDataExpiredLivestream),
+  });
   const { getByText } = render(
     createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'),
   );
@@ -354,10 +395,11 @@ it('should show the media message when there is no media block', async () => {
     uzbekDataWithNoMediaBlock,
   );
 
-  fetch.mockResponse(JSON.stringify(uzbekDataWithNoMediaType));
-  const { pageData: pageDataWithExpiredLiveStream } = await getInitialData(
-    'some-map-path',
-  );
+  const { pageData: pageDataWithExpiredLiveStream } = await mockInitialData({
+    assetId: 'uzbek/a-media-asset',
+    service: 'uzbek',
+    pageData: JSON.stringify(uzbekDataWithNoMediaType),
+  });
   const { getByText } = render(
     createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'),
   );
@@ -368,8 +410,11 @@ it('should show the media message when there is no media block', async () => {
 });
 
 it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
-  fetch.mockResponse(JSON.stringify(igboPageData));
-  const { pageData } = await getInitialData('some-map-path');
+  const { pageData } = await mockInitialData({
+    assetId: 'igbo/a-media-asset',
+    service: 'igbo',
+    pageData: igboPageData,
+  });
 
   const { getByText } = render(createAssetPage({ pageData }, 'igbo'));
 

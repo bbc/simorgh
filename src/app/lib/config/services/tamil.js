@@ -8,13 +8,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'விளம்பரம்',
-    },
     lang: `ta`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'புதுப்பிக்கப்பட்டது',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-tamil',
     atiAnalyticsProducerId: '87',
     chartbeatDomain: 'tamil.bbc.co.uk',
@@ -31,6 +28,8 @@ export const service = {
     defaultCaptionOffscreenText: 'குறிப்பு, ',
     imageCopyrightOffscreenText: 'பட மூலாதாரம், ',
     locale: `ta-IN`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ta',
     datetimeLocale: `ta`,
     service: 'tamil',
     serviceName: 'Tamil',
@@ -50,6 +49,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'விளம்பரம்',
+      },
       seeAll: 'அனைத்தும் பார்க்க',
       home: 'முகப்பு',
       currentPage: 'தற்போதுள்ள பக்கம்',
@@ -146,6 +148,8 @@ export const service = {
       media: {
         noJs: 'ஒலிபரப்பு மென்பொருள் உங்கள் கணினியில் இல்லை',
         contentExpired: 'இந்த நிகழ்ச்சி இனி கிடைக்காது.',
+        contentNotYetAvailable:
+          'இந்த நிகழ்ச்சி இன்னும் கேட்க தயாராக்கப்படவில்லை.',
         audio: 'ஒலி',
         photogallery: 'படத் தொகுப்பு',
         video: 'காணொளி',
@@ -180,9 +184,15 @@ export const service = {
             'வெளியார் இணைய தளங்களின் உள்ளடக்கத்துக்கு பிபிசி பொறுப்பாகாது.',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: '%provider_name% பதிவை கடந்து செல்ல',
+          endTextVisuallyHidden: '%provider_name% பதிவின் முடிவு',
         },
+      },
+      include: {
+        errorMessage:
+          'மன்னிக்கவும், குறைந்த இணையத்தை பயன்படுத்தும் இந்த பக்கத்தில் கட்டுரையின் இந்த பகுதியை காணவியலாது. ',
+        linkText:
+          'முழு உள்ளடக்கத்தையும் காண இந்த பக்கத்தின் அசல் வடிவத்தை காணவும்.',
       },
       topStoriesTitle: 'முக்கிய செய்திகள்',
       featuresAnalysisTitle: 'சிறப்புச் செய்திகள்',
@@ -193,6 +203,11 @@ export const service = {
       lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'அதிகம் பார்க்கப்பட்டது',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

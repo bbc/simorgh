@@ -3,11 +3,12 @@ import cpsAsset from './cpsAsset';
 import home from './home';
 import liveRadio from './liveRadio';
 import mostRead from './mostRead';
+import mostWatched from './mostWatched';
 import onDemandRadio from './onDemandRadio';
 import onDemandTV from './onDemandTV';
+import idx from './idx';
 import error from './error';
 import errorNoRouteMatch from './errorNoRouteMatch';
-import idx from './idx';
 
 export default [
   article,
@@ -15,6 +16,7 @@ export default [
   home,
   liveRadio,
   mostRead,
+  mostWatched,
   onDemandRadio,
   onDemandTV,
   idx,

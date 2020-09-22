@@ -6,10 +6,10 @@ const getQueryString = query => {
   return params.join('&');
 };
 
-export const addOverrideQuery = path => {
+export const addOverrideQuery = (path, env = 'live') => {
   const url = new Url(path, true);
   const { query } = url;
-  const searchString = getQueryString({ ...query, renderer_env: 'live' });
+  const searchString = getQueryString({ ...query, renderer_env: `${env}` });
   const pathName = path ? path.split('?')[0] : path;
 
   return `${pathName}?${searchString}`;

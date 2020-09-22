@@ -8,10 +8,14 @@ import {
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+import nodeLogger from '#lib/logger.node';
+import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import useToggle from '#hooks/useToggle';
 import socialEmbedBlockPropTypes from '#models/propTypes/socialEmbed';
 import createTranslations from './translations';
+
+const logger = nodeLogger(__filename);
 
 /**
  * MAX_WIDTH ensures all provider embeds take up the same width.
@@ -59,6 +63,11 @@ const SocialEmbedContainer = ({ blocks }) => {
   };
 
   const caption = provider === 'youtube' ? captionTranslations : null;
+
+  logger.info(SOCIAL_EMBED_RENDERED, {
+    provider,
+    href,
+  });
 
   return (
     <GridItemConstrainedMedium>

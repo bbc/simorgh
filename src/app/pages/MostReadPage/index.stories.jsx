@@ -1,27 +1,42 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { UserContextProvider } from '#contexts/UserContext';
+import { getLocalMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 import MostReadPage from '.';
 import pidginMostReadData from '#data/pidgin/mostRead';
+import zhongwenSimpData from '#data/zhongwen/mostRead/simp.json';
 
-storiesOf('Pages|Most Read Page', module)
-  .addDecorator(withKnobs)
-  .add('Pidgin', () => (
-    <ToggleContextProvider service="pidgin" origin="https://www.test.bbc.com">
-      <ServiceContextProvider service="pidgin">
-        <RequestContextProvider
-          isAmp={false}
+const stories = storiesOf('Pages|Most Read Page', module);
+
+[
+  {
+    service: 'pidgin',
+    variant: 'default',
+    pageData: pidginMostReadData,
+  },
+  {
+    service: 'zhongwen',
+    variant: 'simp',
+    pageData: zhongwenSimpData,
+  },
+].forEach(({ service, pageData, variant }) => {
+  stories.add(`${service} ${variant === 'default' ? '' : variant}`, () => {
+    return (
+      <BrowserRouter>
+        <MostReadPage
           pageType="mostRead"
-          service="pidgin"
-        >
-          <UserContextProvider>
-            <MostReadPage pageData={pidginMostReadData} />
-          </UserContextProvider>
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
-  ));
+          isAmp={false}
+          pathname="/path"
+          status={200}
+          pageData={pageData}
+          service={service}
+          variant={variant}
+          mostReadEndpointOverride={getLocalMostReadEndpoint({
+            service,
+            variant,
+          })}
+        />
+      </BrowserRouter>
+    );
+  });
+});

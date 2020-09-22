@@ -12,14 +12,11 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'آگهی',
-    },
     lang: 'fa',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'به روز شده در',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-persian',
     atiAnalyticsProducerId: '69',
     chartbeatDomain: 'persian.bbc.co.uk',
@@ -35,6 +32,8 @@ export const service = {
     defaultCaptionOffscreenText: 'توضیح، ',
     imageCopyrightOffscreenText: 'منبع تصویر، ',
     locale: 'fa',
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'fa',
     datetimeLocale: 'fa',
     service: 'persian',
     serviceName: 'Persian',
@@ -55,6 +54,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'آگهی',
+      },
       seeAll: 'بیشتر',
       home: 'صفحه اول',
       currentPage: 'صفحه فعلی',
@@ -152,6 +154,7 @@ export const service = {
         noJs:
           'برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.',
         contentExpired: 'این محتوا دیگر قابل دسترس نیست.',
+        contentNotYetAvailable: 'این برنامه هم اکنون برای پخش آماده نیست.',
         audio: 'صدا',
         photogallery: 'عکس',
         video: 'ویدیو',
@@ -194,6 +197,11 @@ export const service = {
           endTextVisuallyHidden: 'پایان پست %provider_name%',
         },
       },
+      include: {
+        errorMessage:
+          'متأسفانه امکان نمایش این بخش از صفحه در موبایل وجود ندارد',
+        linkText: 'نسخه کامل و تمامی محتوا را ببینید',
+      },
       topStoriesTitle: 'مهمترین خبرها',
       featuresAnalysisTitle: 'گزارش و تحلیل',
     },
@@ -203,13 +211,21 @@ export const service = {
       lastUpdated: 'به روز شده در',
       numberOfItems: 10,
       hasMostRead: true,
+      onIdxPage: true,
+    },
+    mostWatched: {
+      header: 'پربیننده ترین',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
       frontPagePosition: '',
+      onIdxPage: true,
+      idxPagePosition: 'Features',
       header: 'برنامه‌های رادیو',
-      durationLabel: 'مدت %duration%',
+      durationLabel: '%duration% المدة الزمنية',
     },
     recommendations: {
       hasStoryRecommendations: false,
@@ -311,10 +327,6 @@ export const service = {
       {
         title: 'ناظران می‌گویند',
         url: '/persian/blogs/viewpoints',
-      },
-      {
-        title: 'وبلاگ‌ها',
-        url: '/persian/services/2012/01/000000_blogs_list',
       },
     ],
   },

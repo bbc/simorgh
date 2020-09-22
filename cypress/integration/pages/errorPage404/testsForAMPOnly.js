@@ -6,7 +6,7 @@ export const testsThatAlwaysRunForAMPOnly = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForAMPOnly to run for ${service} ${pageType}`, () => {});
 };
 
-// For testing feastures that may differ across services but share a common logic e.g. translated strings.
+// For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   service,
   pageType,

@@ -1,11 +1,6 @@
-import React from 'react';
+import IdxPage from './IdxPage';
+import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
-const IdxPage = () => {
-  return (
-    <main role="main">
-      <h1 id="content">IDX Page</h1>
-    </main>
-  );
-};
-
-export default IdxPage;
+export default applyBasicPageHandlers({
+  addVariantHandling: false,
+})(IdxPage);

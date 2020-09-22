@@ -3,6 +3,10 @@
  */
 
 const logCodes = {
+  // Application Start
+  CLUSTER_PROCESS_START: 'cluster_process_started',
+  CLUSTER_PROCESS_EXIT: 'cluster_process_exit',
+
   // Data fetch
   DATA_FETCH_ERROR: 'data_fetch_error',
   DATA_NOT_FOUND: 'data_response_404',
@@ -20,6 +24,10 @@ const logCodes = {
   MEDIA_MISSING: 'media_missing',
   MEDIA_MISSING_FIELD: 'media_missing_field',
   MEDIA_PLAYER_STATUS: 'media_player_status',
+  RADIO_MISSING_FIELD: 'radio_missing_field',
+  EPISODE_EXPIRED: 'episode_expired',
+  EPISODE_NOT_YET_AVAILABLE: 'episode_not_yet_available',
+  UNRECOGNISED_EPISODE_AVAILABILITY: 'unrecognised_episode_availability',
 
   // Translations
   NO_TRANSLATION_FOUND: 'no_translation_found',
@@ -39,6 +47,11 @@ const logCodes = {
   SERVER_SIDE_REQUEST_FAILED: 'ssr_request_failed',
   SERVICE_WORKER_SENDFILE_ERROR: 'server_sendfile_error_sw',
 
+  // Config
+  CONFIG_REQUEST_RECEIVED: 'config_request_received',
+  CONFIG_FETCH_ERROR: 'config_fetch_error',
+  CONFIG_ERROR: 'config_error',
+
   // Block Types
   UNSUPPORTED_BLOCK_TYPE: 'unsupported_block_type',
 
@@ -50,6 +63,22 @@ const logCodes = {
 
   // Analytics
   WEB_VITALS_SEND_ERROR: 'web_vitals_send_error',
+
+  // Most Watched
+  MOST_WATCHED_PROCESS_ERROR: 'most_watched_process_error',
+  MOST_WATCHED_STALE_DATA: 'most_watched_stale_data',
+
+  // Include
+  INCLUDE_ERROR: 'include_error',
+  INCLUDE_FETCH_ERROR: 'include_fetch_error',
+  INCLUDE_MISSING_URL: 'include_missing_url',
+  INCLUDE_RENDERED: 'include_rendered',
+  INCLUDE_REQUEST_RECEIVED: 'include_request_received',
+  INCLUDE_UNSUPPORTED: 'include_unsupported',
+  INCLUDE_IFRAME_REQUEST_RECEIVED: 'include_iframe_request_received',
+
+  // Social Embed
+  SOCIAL_EMBED_RENDERED: 'social_embed_rendered',
 };
 
 module.exports = logCodes;

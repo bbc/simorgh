@@ -6,11 +6,47 @@ These tests use the [Jest](#what-is-jest) test runner and operate in a [JSDOM](#
 
 To run the tests locally:
 
-```js
+```
 npm run test:integration
 ```
 
-This will build and run the application that the tests will run against.
+To run tests for a single page type with the watch task:
+
+```
+npm run test:integration -- --pageTypes=articles --watch
+```
+
+To run tests for multiple page types:
+
+```
+npm run test:integration -- --pageTypes=articles,frontPage
+```
+
+To run tests for a single page type with the watch task and webpack hot reloading of application code:
+
+```
+npm run test:integration -- --pageTypes=liveRadio --watch --dev
+```
+
+To run tests in CI so they fail if a snapshot was not captured:
+
+```
+npm run test:integration:ci
+```
+
+To stop running tests immediately when there is a failure - NB this is useful when you want to reduce noise if there are a lot of failing tests and you want to inspect one failing test at a time:
+
+```
+npm run test:integration -- --bail
+```
+
+To run tests updating existing snapshots
+
+```
+npm run test:integration -- -u
+```
+
+Any other Jest CLI args and flags can be passed along in the `test:integration` script.
 
 ## How to write tests
 
@@ -78,18 +114,29 @@ For Jest to run the tests in these files we need to create a `*(amp|canonical).t
  * @pathname /pidgin/23248703
  */
 
-import runCrossPlatformTests from '../crossPlatformTests';
 import runAmpTests from '../ampTests';
 
 describe('AMP', () => {
   describe(pageType, () => {
-    runCrossPlatformTests();
-    runAmpTests();
+    runAmpTests(service);
   });
 });
 ```
 
-In the above example we import the cross platform tests and the AMP tests. We have also specified a pathname using a [docblock pragma](#what-is-a-docblock-pragma). The pathname is the part of the url that is everything after `https://bbc.com` and in this example it is `/mundo/articles/ce42wzqr2mko`. If you visit `https://bbc.com/mundo/articles/ce42wzqr2mko` (**NB** this is the canonical url - for the AMP url just add `.amp` on the end) you will see this is a Mundo article page and it is what we are going to test.
+In the above example we import the AMP tests. We have also specified a pathname using a [docblock pragma](#what-is-a-docblock-pragma). The pathname is the part of the url that is everything after `https://bbc.com` and in this example it is `/mundo/articles/ce42wzqr2mko`. If you visit `https://bbc.com/mundo/articles/ce42wzqr2mko` (**NB** this is the canonical url - for the AMP url just add `.amp` on the end) you will see this is a Mundo article page and it is what we are going to test.
+
+```js
+import runCrossPlatformTests from './crossPlatformTests';
+import { runCoreAmpTests, runAmpAnalyticsTests } from '../../common';
+
+export default service => {
+  runCrossPlatformTests(service);
+  runCoreAmpTests();
+  runAmpAnalyticsTests();
+};
+```
+
+In this example, all tests which are applicable to AMP should be included, as well the cross platform tests (which run for both AMP and Canonical).
 
 Before our tests run, the test environment [setup file](https://github.com/bbc/simorgh/tree/latest/src/integration/integrationTestEnvironment.js) parses the `pathname` dockblock pragma and constructs the url. JSDOM then visits the url to get the DOM trees that we can use to run our tests against.
 

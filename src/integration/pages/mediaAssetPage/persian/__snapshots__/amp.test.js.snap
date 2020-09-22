@@ -1,0 +1,491 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP Media Asset Page A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
+
+exports[`AMP Media Asset Page AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+  "policy": Object {
+    "default": Object {
+      "timeout": Object {
+        "fallbackAction": "reject",
+        "seconds": 0,
+      },
+      "waitFor": Object {
+        "user-consent": Array [],
+      },
+    },
+  },
+}
+`;
+
+exports[`AMP Media Asset Page AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+    "gbOrUnknown": Array [
+      "gb",
+      "gg",
+      "im",
+      "je",
+      "uk",
+      "unknown",
+    ],
+  },
+}
+`;
+
+exports[`AMP Media Asset Page Analytics ATI 1`] = `
+Object {
+  "requests": Object {
+    "base": "https://logws1363.ati-host.net?",
+    "pageview": "\${base}s=598343&s2=69&p=iran%3A%3Apersian.iran.media_asset.23231114.page&r=%24%7BscreenWidth%7Dx%24%7BscreenHeight%7Dx%24%7BscreenColorDepth%7D&re=%24%7BavailableScreenWidth%7Dx%24%7BavailableScreenHeight%7D&hl=%24%7Btimestamp%7D&lng=%24%7BbrowserLanguage%7D&x1=[urn%3Abbc%3Acps%3A43667729-4c50-834f-a4b5-c0c95c3cafcf]&x2=[amp]&x3=[news-persian]&x4=[fa]&x5=[%24%7BsourceUrl%7D]&x6=[%24%7BdocumentReferrer%7D]&x7=[article-media-asset]&x8=[simorgh]&x9=[Trump%2Blong%2Bheadline%2B-%2BBBC%2BNews%2B%D9%81%D8%A7%D8%B1%D8%B3%DB%8C]&x11=[2019-02-15T12%3A47%3A51.000Z]&x12=[2019-02-15T12%3A47%3A51.000Z]&ref=%24%7BdocumentReferrer%7D",
+  },
+  "transport": Object {
+    "beacon": false,
+    "image": true,
+    "xhrpost": false,
+  },
+  "triggers": Object {
+    "trackPageview": Object {
+      "on": "visible",
+      "request": "pageview",
+    },
+  },
+}
+`;
+
+exports[`AMP Media Asset Page Analytics chartbeat 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "article-media-asset",
+    "domain": "test.bbc.co.uk",
+    "sections": "Persian, Persian - صفحه ایران, Persian - MAP, Persian - صفحه ایران - MAP, Persian - undefined-category",
+    "title": "Trump long headline",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
+exports[`AMP Media Asset Page Analytics comscore 1`] = `
+Object {
+  "extraUrlParams": Object {
+    "comscorekw": "amp",
+  },
+  "vars": Object {
+    "c2": "17986528",
+  },
+}
+`;
+
+exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
+
+exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 1`] = `
+Object {
+  "text": "BBC News, فارسی",
+  "url": "/persian",
+}
+`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 2`] = `
+Object {
+  "text": "چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟",
+  "url": "https://www.bbc.com/persian/institutional-49283091",
+}
+`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 3`] = `
+Object {
+  "text": "شرایط استفاده",
+  "url": "https://www.bbc.com/persian/institutional-37474133",
+}
+`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 4`] = `
+Object {
+  "text": "درباره بی بی سی",
+  "url": "https://www.bbc.com/persian/institutional-37474136",
+}
+`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 5`] = `
+Object {
+  "text": "سیاست حفظ حریم خصوصی",
+  "url": "https://www.bbc.com/persian/institutional-37540067",
+}
+`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 6`] = `
+Object {
+  "text": "کوکی ها",
+  "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
+}
+`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 7`] = `
+Object {
+  "text": "تماس با بی بی سی",
+  "url": "https://www.bbc.com/persian/institutional-37542244",
+}
+`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 8`] = `
+Object {
+  "text": "AdChoices / Do Not Sell My Info",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+}
+`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 9`] = `
+Object {
+  "text": "سیاست ما درباره لینک دادن به سایت های دیگر.",
+  "url": "https://www.bbc.com/persian/institutional/2011/04/000001_links",
+}
+`;
+
+exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, فارسی"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 1`] = `
+Object {
+  "text": "صفحه اول",
+  "url": "/persian",
+}
+`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 2`] = `
+Object {
+  "text": "کرونا",
+  "url": "/persian/science-52004647",
+}
+`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 3`] = `
+Object {
+  "text": "پخش زنده",
+  "url": "/persian/media-49522521",
+}
+`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 4`] = `
+Object {
+  "text": "ویدیو",
+  "url": "/persian/media/video",
+}
+`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 5`] = `
+Object {
+  "text": "تلویزیون",
+  "url": "/persian/tv-and-radio-37434377",
+}
+`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 6`] = `
+Object {
+  "text": "رادیو",
+  "url": "/persian/tv-and-radio-37434376",
+}
+`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 7`] = `
+Object {
+  "text": "ايران",
+  "url": "/persian/iran",
+}
+`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "افغانستان",
+  "url": "/persian/afghanistan",
+}
+`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 9`] = `
+Object {
+  "text": "جهان",
+  "url": "/persian/world",
+}
+`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 10`] = `
+Object {
+  "text": "هنر",
+  "url": "/persian/arts",
+}
+`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 11`] = `
+Object {
+  "text": "ورزش",
+  "url": "/persian/sport",
+}
+`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 12`] = `
+Object {
+  "text": "اقتصاد",
+  "url": "/persian/business",
+}
+`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 13`] = `
+Object {
+  "text": "دانش",
+  "url": "/persian/science",
+}
+`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 14`] = `
+Object {
+  "text": "ناظران می‌گویند",
+  "url": "/persian/blogs/viewpoints",
+}
+`;
+
+exports[`AMP Media Asset Page I can see the headline 1`] = `"Trump long headline"`;
+
+exports[`AMP Media Asset Page I can see the timestamp 1`] = `"۲۶ بهمن ۱۳۹۷ - ۱۵ فوریه ۲۰۱۹"`;
+
+exports[`AMP Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"پخش صدا و تصویر"`;
+
+exports[`AMP Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa/amp"`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
+Object {
+  "sizes": null,
+  "url": "http://localhost:7080/persian/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 2`] = `
+Object {
+  "sizes": "72x72",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 3`] = `
+Object {
+  "sizes": "96x96",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 4`] = `
+Object {
+  "sizes": "128x128",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 5`] = `
+Object {
+  "sizes": "144x144",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 6`] = `
+Object {
+  "sizes": "152x152",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 7`] = `
+Object {
+  "sizes": "180x180",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 8`] = `
+Object {
+  "sizes": "192x192",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 9`] = `
+Object {
+  "sizes": "384x384",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 10`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/persian/iran-23231114"`;
+
+exports[`AMP Media Asset Page SEO Dir attribute 1`] = `"rtl"`;
+
+exports[`AMP Media Asset Page SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP Media Asset Page SEO Heading level 1 1`] = `"Trump long headline"`;
+
+exports[`AMP Media Asset Page SEO Lang attribute 1`] = `"fa"`;
+
+exports[`AMP Media Asset Page SEO Linked data should match text 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@graph": Array [
+    Object {
+      "@type": "Article",
+      "author": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+          "width": 1024,
+        },
+        "name": "BBC News فارسی",
+        "noBylinesPolicy": "https://www.bbc.com/persian/institutional-49283091#authorexpertise",
+      },
+      "dateModified": "2019-02-15T12:47:51.000Z",
+      "datePublished": "2019-02-15T12:47:51.000Z",
+      "headline": "Trump long headline",
+      "image": Object {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg",
+        "width": 1024,
+      },
+      "mainEntityOfPage": Object {
+        "@id": "http://localhost:7080/persian/iran-23231114",
+        "@type": "WebPage",
+        "name": "Trump long headline",
+      },
+      "publisher": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+          "width": 1024,
+        },
+        "name": "BBC News فارسی",
+        "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "url": "http://localhost:7080/persian/iran-23231114",
+    },
+  ],
+}
+`;
+
+exports[`AMP Media Asset Page SEO Linked data should match text 2`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "AudioObject",
+  "description": "Trump long headline",
+  "duration": "PT26S",
+  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa/amp",
+  "name": "Trump short headline",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01lmkk5.jpg",
+  "uploadDate": "2019-02-15T12:37:28.000Z",
+}
+`;
+
+exports[`AMP Media Asset Page SEO OG description 1`] = `"Trump summary text"`;
+
+exports[`AMP Media Asset Page SEO OG image 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
+
+exports[`AMP Media Asset Page SEO OG image alt 1`] = `"Trump getting upset"`;
+
+exports[`AMP Media Asset Page SEO OG locale 1`] = `"fa"`;
+
+exports[`AMP Media Asset Page SEO OG site name 1`] = `"BBC News فارسی"`;
+
+exports[`AMP Media Asset Page SEO OG title 1`] = `"Trump short headline - BBC News فارسی"`;
+
+exports[`AMP Media Asset Page SEO OG type 1`] = `"article"`;
+
+exports[`AMP Media Asset Page SEO OG url 1`] = `"http://localhost:7080/persian/iran-23231114"`;
+
+exports[`AMP Media Asset Page SEO Page title 1`] = `"Trump long headline - BBC News فارسی"`;
+
+exports[`AMP Media Asset Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP Media Asset Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP Media Asset Page SEO Twitter creator 1`] = `"@bbcpersian"`;
+
+exports[`AMP Media Asset Page SEO Twitter description 1`] = `"Trump summary text"`;
+
+exports[`AMP Media Asset Page SEO Twitter image alt 1`] = `"Trump getting upset"`;
+
+exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
+
+exports[`AMP Media Asset Page SEO Twitter site 1`] = `"@bbcpersian"`;
+
+exports[`AMP Media Asset Page SEO Twitter title 1`] = `"Trump short headline - BBC News فارسی"`;

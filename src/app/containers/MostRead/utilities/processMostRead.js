@@ -1,10 +1,7 @@
 import pathOr from 'ramda/src/pathOr';
 import nodeLogger from '#lib/logger.node';
-import { mostReadRecordIsFresh } from '.';
-import {
-  MOST_READ_DATA_INCOMPLETE,
-  MOST_READ_STALE_DATA,
-} from '#lib/logger.const';
+import filterPopularStaleData from '#app/lib/utilities/filterPopularStaleData';
+import { MOST_READ_DATA_INCOMPLETE } from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
@@ -56,45 +53,48 @@ const getCpsItemData = record => {
   };
 };
 
-const mostReadItems = ({ data, numberOfItems }) => {
+const mostReadItems = ({ data, isAmp, numberOfItems, service }) => {
   if (!data) {
     return null;
   }
-  const records = pathOr([], ['records'], data);
 
-  // The ARES test endpoint for most read renders fixture data, so the data is stale
-  const isTest = process.env.SIMORGH_APP_ENV === 'test';
-
-  // Do not show most read if lastRecordUpdated is greater than 35min as this means PopAPI has failed twice
-  // in succession. This suggests ATI may be having issues, hence risk of stale data.
-  if (isTest || mostReadRecordIsFresh(data.lastRecordTimeStamp)) {
-    const items = [];
-    // eslint-disable-next-line no-restricted-syntax
-    for (const record of records) {
-      const mostReadItemData =
-        record.promo.type === 'optimo'
-          ? getOptimoItemData(record)
-          : getCpsItemData(record);
-      const { href, title } = mostReadItemData;
-
-      if (href && title) {
-        items.push(mostReadItemData);
-      } else {
-        logger.warn(MOST_READ_DATA_INCOMPLETE, {
-          message: `Most read data promo has href: ${href} and title: ${title}`,
-        });
-      }
-
-      if (items.length === numberOfItems) {
-        break;
-      }
-    }
-    return items;
-  }
-  logger.warn(MOST_READ_STALE_DATA, {
-    message: `Most read lastUpdatedTimestamp - ${data.lastRecordTimeStamp} value is greater than 35min`,
+  const filteredData = filterPopularStaleData({
+    data,
+    isAmp,
+    service,
+    popularType: 'mostRead',
   });
-  return null;
+
+  if (!filteredData) {
+    return null;
+  }
+
+  const records = pathOr([], ['records'], filteredData);
+
+  const items = [];
+  // eslint-disable-next-line no-restricted-syntax
+  for (const record of records) {
+    const mostReadItemData =
+      record.promo.type === 'optimo'
+        ? getOptimoItemData(record)
+        : getCpsItemData(record);
+    const { href, title } = mostReadItemData;
+
+    if (href && title) {
+      items.push(mostReadItemData);
+    } else {
+      logger.warn(MOST_READ_DATA_INCOMPLETE, {
+        service,
+        title,
+        url: href,
+      });
+    }
+
+    if (items.length === numberOfItems) {
+      break;
+    }
+  }
+  return items;
 };
 
 export default mostReadItems;

@@ -11,14 +11,11 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'اشتہار',
-    },
     lang: 'ur',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'اپ ڈیٹ کی گئی',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-urdu',
     atiAnalyticsProducerId: '95',
     chartbeatDomain: 'urdu.bbc.co.uk',
@@ -33,6 +30,8 @@ export const service = {
     defaultCaptionOffscreenText: '،کیپشن',
     imageCopyrightOffscreenText: '،تصویر کا ذریعہ',
     locale: 'ur',
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ur',
     datetimeLocale: 'ur',
     service: 'urdu',
     serviceName: 'Urdu',
@@ -54,6 +53,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'اشتہار',
+      },
       seeAll: 'سب دیکھیں',
       home: 'صفحۂ اول',
       currentPage: 'موجودہ صفحہ',
@@ -145,13 +147,14 @@ export const service = {
       media: {
         noJs: 'اپ کی ڈیوائس پر پلے بیک سپورٹ دستیاب نہیں',
         contentExpired: 'یہ مواد اب دستیاب نہیں',
+        contentNotYetAvailable: 'یہ پروگرام فی الحال دستیاب نہیں۔',
         audio: 'آڈیو',
         photogallery: 'تصاویر',
         video: 'ویڈیو',
         listen: 'سنیں',
         watch: 'دیکھیں',
         liveLabel: 'لائیو',
-        nextLabel: 'NEXT',
+        nextLabel: 'آگے جائیں',
         previousRadioShow: 'گذشتہ ریڈیو پروگرام',
         nextRadioShow: 'اگلا ریڈیو پروگرام',
         duration: 'دورانیہ',
@@ -166,12 +169,17 @@ export const service = {
           linkText: '%provider_name% مزید دیکھنے کے لیے',
           linkTextSuffixVisuallyHidden: ', بیرونی مواد',
           warningText:
-            ' بی بی سی. بی بی سی بیرونی سائٹس پر شائع شدہ مواد کی ذمہ دار نہیں ہے.',
+            'بی بی سی. بی بی سی بیرونی سائٹس پر شائع شدہ مواد کی ذمہ دار نہیں ہے.',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: '%provider_name% پوسٹ نظرانداز کریں',
+          endTextVisuallyHidden: '%provider_name% پوسٹ کا اختتام',
         },
+      },
+      include: {
+        errorMessage:
+          'ہم معذرت خواہ ہیں کہ ہم کہانی کے اس حصے کو اس لائٹ ویٹ موبائل صفحے پر نہیں دکھا سکتے',
+        linkText: 'تمام مواد دیکھنے کے لیے اس صفحے کا مکمل ورژن دیکھیں',
       },
       topStoriesTitle: 'اہم خبریں',
       featuresAnalysisTitle: 'فیچر اور تجزیے',
@@ -183,10 +191,16 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'سب سے زیادہ دیکھی گئی',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
-      durationLabel: 'دورانیہ %duration%',
+      header: 'ایف ایم بلیٹن',
+      durationLabel: '%duration% دورانیہ',
     },
     recommendations: {
       hasStoryRecommendations: false,

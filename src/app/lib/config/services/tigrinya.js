@@ -11,13 +11,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'መላለዪ',
-    },
     lang: `ti`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ዝተመሓየሸ',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-tigrinya',
     atiAnalyticsProducerId: '91',
     chartbeatDomain: 'tigrinya.bbc.co.uk',
@@ -34,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'መግለጺ, ',
     imageCopyrightOffscreenText: 'ምንጪ ስእሊ, ',
     locale: `ti-ET`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ti',
     datetimeLocale: `ti`,
     service: 'tigrinya',
     serviceName: 'Tigrinya',
@@ -53,6 +52,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'መላለዪ',
+      },
       seeAll: 'ንኹሉ ርኣዩ',
       home: 'መእተዊ ገጽ',
       currentPage: 'ዘለኹሞ ገጽ',
@@ -141,33 +143,37 @@ export const service = {
       media: {
         noJs: 'ትጥቀምሉ ዘለኹም መሳርሒ ኣይተቐበሎን።',
         contentExpired: 'እዚ እትደልይዎ ዘለኹም ትሕዝቶ የለን',
+        contentNotYetAvailable: 'እዚ ትሕዝቶ ንምጽዋት የለን፡፡',
         audio: 'ድምጺ',
         photogallery: 'ስእልታት',
         video: 'ቪድዮ',
         listen: 'ስምዑ',
         watch: 'ተዓዘቡ',
         liveLabel: 'ቀጥታ',
-        nextLabel: 'NEXT',
+        nextLabel: 'ዝቕጽል',
         previousRadioShow: 'ኣቐዲሙ ዝነበረ ፈነወ ራድዮ',
         nextRadioShow: 'ዝቕጽል ፈነወ ራድዮ',
         duration: 'ዕምሪ ፈነወ',
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
+          textPrefixVisuallyHidden: 'መግለጺ ቪድዮ፡, ',
           text: 'Warning: Third party content may contain adverts',
         },
         fallback: {
           text: 'Content is not available',
           linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
-          warningText:
-            'BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.',
+          linkTextSuffixVisuallyHidden: ', ደጋዊ',
+          warningText: 'ቢቢሲ፡ ንትሕዝቶ ካልኦት መርበባት ሓበሬታ ሓላፍነት ኣይወስድን።',
         },
         skipLink: {
           text: 'Skip %provider_name% post',
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
+      },
+      include: {
+        errorMessage: 'ይቕሬታ፡ ነዚ ክፋል ናይቲ ዛንታ ኣብዚ ፈኲስ ናይ ሞባይል ገጽ ከነቕርቦ ኣይከኣልናን',
+        linkText: 'ምሉእ ትሕዝቶ ንምርኣይ ንምሉእ መቓን ገጽ ተዓዘቡ',
       },
       topStoriesTitle: 'ዜናታት',
       featuresAnalysisTitle: 'ኣዘራረብቲ ዛዕባታት',
@@ -179,10 +185,16 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'ብብዝሒ ዝተራእየ',
+      numberOfItems: 2,
+      hasMostWatched: false,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
-      durationLabel: 'Duration %duration%',
+      header: 'ስምዑ',
+      durationLabel: 'ዕምሪ ፈነወ %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

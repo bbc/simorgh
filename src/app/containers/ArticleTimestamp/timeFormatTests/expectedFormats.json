@@ -101,10 +101,10 @@
   },
   "gujarati": {
     "default": {
-      "one minute ago": "એક મિનિટ પેહલા",
-      "five minutes ago": "5 મિનિટ પેહલા",
-      "one hour ago": "એક કલાક પેહલા",
-      "five hours ago": "5 કલાક પેહલા",
+      "one minute ago": "એક મિનિટ પહેલા",
+      "five minutes ago": "5 મિનિટ પહેલા",
+      "one hour ago": "એક કલાક પહેલા",
+      "five hours ago": "5 કલાક પહેલા",
       "exact date": "10 ઑક્ટોબર 2018",
       "exact date and time with timezone": "12 જુલાઈ 2019, 18:25 IST"
     }
@@ -236,7 +236,7 @@
       "one hour ago": "۱ ساعت وړاندې",
       "five hours ago": "۵ ساعتونه وړاندې",
       "exact date": "۱۰ اکتوبر ۲۰۱۸",
-      "exact date and time with timezone": "۱۲ جولاې ۲۰۱۹، ۱۲:۵۵ GMT"
+      "exact date and time with timezone": "۱۲ جولای ۲۰۱۹، ۱۲:۵۵ GMT"
     }
   },
   "persian": {
@@ -423,6 +423,14 @@
       "five hours ago": "5 годин(и) тому",
       "exact date": "10 жовтня 2018",
       "exact date and time with timezone": "12 липня 2019, 12:55 GMT"
+    },
+    "ru-UA": {
+      "one minute ago": "минуту назад",
+      "five minutes ago": "5 минут назад",
+      "one hour ago": "час назад",
+      "five hours ago": "5 часов назад",
+      "exact date": "10 октября 2018",
+      "exact date and time with timezone": "12 июля 2019, 12:55 GMT"
     }
   },
   "urdu": {

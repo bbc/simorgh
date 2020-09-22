@@ -16,13 +16,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: true,
-      advertisementLabel: 'Publicidad',
-    },
     lang: `es`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Actualizado',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-mundo',
     atiAnalyticsProducerId: '62',
     chartbeatDomain: 'mundo.bbc.co.uk',
@@ -39,6 +36,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Título, ',
     imageCopyrightOffscreenText: 'Fuente de la imagen, ',
     locale: `es-005`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'es',
     datetimeLocale: `es`,
     service: 'mundo',
     serviceName: 'News Mundo',
@@ -53,11 +52,16 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Noticias',
+    iTunesAppId: 515255747,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Publicidad',
+      },
+      recommendationTitle: 'Quizás también te interese',
       seeAll: 'Ver todo',
       home: 'Página de inicio',
       currentPage: 'Página actual',
@@ -153,6 +157,7 @@ export const service = {
         noJs:
           'Para ver este contenido, favor activar JavaScript, o intentar con otro navegador',
         contentExpired: 'Este contenido ya no está disponible.',
+        contentNotYetAvailable: 'Este programa todavía no está disponible.',
         audio: 'Audio',
         photogallery: 'Galería de fotos',
         video: 'Video',
@@ -166,7 +171,7 @@ export const service = {
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Título del video: ',
+          textPrefixVisuallyHidden: 'Título del video, ',
           text:
             'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
         },
@@ -182,6 +187,12 @@ export const service = {
           endTextVisuallyHidden: 'Fin del contenido de %provider_name%',
         },
       },
+      include: {
+        errorMessage:
+          'Lo sentimos, no podemos mostrar esta parte de la historia en esta página adaptada para los dispositivos móviles.',
+        linkText:
+          'Ver la versión completa de la página para visualizar todo el contenido.',
+      },
       topStoriesTitle: 'Principales noticias',
       featuresAnalysisTitle: 'No te lo pierdas',
     },
@@ -192,11 +203,20 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Más vistos',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
     recommendations: {
       hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Saltar %title% y continuar leyendo',
+        endTextVisuallyHidden: 'Final de %title%',
+      },
     },
     footer: {
       trustProjectLink: {

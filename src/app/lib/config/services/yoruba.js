@@ -7,13 +7,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Advertisement',
-    },
     lang: 'yo',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Ìgbà tí a ṣe àfíkun gbẹ̀yìn',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-yoruba',
     atiAnalyticsProducerId: '107',
     chartbeatDomain: 'yoruba.bbc.co.uk',
@@ -51,6 +48,9 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle: 'Àbáwọlé',
     translations: {
+      ads: {
+        advertisementLabel: 'Advertisement',
+      },
       seeAll: 'Wo gbogbo ẹ̀',
       home: 'Ìròyìn',
       currentPage: 'Ojú ewé to wà yìí',
@@ -146,6 +146,7 @@ export const service = {
       media: {
         noJs: 'Àwọn àmúyẹ fun gbígbọ́ orin ko le ṣiṣẹ lori ẹ̀rọ rẹ',
         contentExpired: 'Nnkan yìí kò sí mọ́.',
+        contentNotYetAvailable: 'Kò tíì sí nnkan náà nílẹ̀ láti gbọ́',
         audio: 'Orin',
         photogallery: 'Àtẹ Àwòrán',
         video: 'Fídíò',
@@ -163,13 +164,13 @@ export const service = {
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
+          textPrefixVisuallyHidden: 'Àkọlé fídíò, ',
           text: 'Warning: Third party content may contain adverts',
         },
         fallback: {
           text: 'Content is not available',
           linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
+          linkTextSuffixVisuallyHidden: ', Láti ìta',
           warningText:
             'BBC kò mọ̀ nípa àwọn ohun tí ó wà ní àwọn ojú òpó tí ó wà ní ìta.',
         },
@@ -177,6 +178,11 @@ export const service = {
           text: 'Skip %provider_name% post',
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: 'Ìròyìn tó ṣe kókó',
       featuresAnalysisTitle: 'Ìwádìí kíkún lóríi kókó ìròyìn ',
@@ -187,6 +193,11 @@ export const service = {
       lastUpdated: 'Tí a mú dójú ìwọ̀n gbẹ̀yìn ní:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Èyí tí a wò jùlọ',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

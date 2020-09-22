@@ -7,13 +7,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Xayeysiin',
-    },
     lang: `so`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Waa la cusbooneysiiyay',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-somali',
     atiAnalyticsProducerId: '83',
     chartbeatDomain: 'somali.bbc.co.uk',
@@ -30,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Qoraal, ',
     imageCopyrightOffscreenText: 'Xigashada Sawirka, ',
     locale: `so-SO`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'so',
     datetimeLocale: `so`,
     service: 'somali',
     serviceName: 'Somali',
@@ -49,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Xayeysiin',
+      },
       seeAll: 'Arag dhammaan',
       home: 'War',
       currentPage: 'Bogga hadda',
@@ -146,6 +148,8 @@ export const service = {
       media: {
         noJs: 'Qalabkan kuma ciyaari kartid maqalka iyo muuqaalka',
         contentExpired: 'Adeeggan hadda ma heli kartid',
+        contentNotYetAvailable:
+          'Adeeggani hadda diyaar ma aha oo ma ciyaari kartid',
         audio: 'Cod',
         photogallery: 'Albumka sawirrada',
         video: 'Muuqaal',
@@ -185,6 +189,11 @@ export const service = {
           endTextVisuallyHidden: 'Dhammaadka %provider_name% boggan',
         },
       },
+      include: {
+        errorMessage:
+          'Waanu ka xunnahay, qeybta kuma soo bandhigi karno bogga mobile-kaan',
+        linkText: 'Eeg qeybta bogga oo dhan, si xogta oo dhan aad u aragto.',
+      },
       topStoriesTitle: 'Wararka ugu waaweyn',
       featuresAnalysisTitle: 'Xul',
     },
@@ -194,6 +203,11 @@ export const service = {
       lastUpdated: 'Markii ugu dambeysay ee la cusbooneysiiyay:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Ugu daawasho badan',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

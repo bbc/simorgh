@@ -7,13 +7,10 @@ import 'moment/locale/fr';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: true,
-      advertisementLabel: 'Publicités',
-    },
     lang: `fr`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Mise à jour',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
     chartbeatDomain: 'afrique.bbc.co.uk',
@@ -30,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Légende, ',
     imageCopyrightOffscreenText: 'Crédit photo, ',
     locale: `fr`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'fr',
     datetimeLocale: `fr`,
     service: 'afrique',
     serviceName: 'Afrique',
@@ -50,6 +49,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Publicités',
+      },
       seeAll: 'Tout voir',
       home: 'Accueil',
       currentPage: 'Page en cours',
@@ -149,6 +151,7 @@ export const service = {
         noJs:
           'Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.',
         contentExpired: "Ce contenu n'est pas disponible",
+        contentNotYetAvailable: 'Ce programme ne peut être joué maintenant.',
         audio: 'Audio',
         photogallery: 'Galerie de photos',
         video: 'Vidéo',
@@ -187,6 +190,11 @@ export const service = {
           endTextVisuallyHidden: 'Fin de %provider_name% publication',
         },
       },
+      include: {
+        errorMessage: `Désolé, nous ne pouvons pas afficher cette partie de l'article sur cette page mobile légère.`,
+        linkText:
+          'Consultez la version complète de la page pour voir tout le contenu.',
+      },
       topStoriesTitle: 'À la une',
       featuresAnalysisTitle: 'Le choix de la rédaction',
     },
@@ -196,6 +204,11 @@ export const service = {
       lastUpdated: 'Dernière mise à jour:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Les plus vus',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

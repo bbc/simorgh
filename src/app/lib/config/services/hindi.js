@@ -7,13 +7,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: true,
-      advertisementLabel: 'विज्ञापन',
-    },
     lang: `hi`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'अपडेटेड',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-hindi',
     atiAnalyticsProducerId: '52',
     chartbeatDomain: 'hindi.bbc.co.uk',
@@ -30,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'कैप्शन, ',
     imageCopyrightOffscreenText: 'इमेज स्रोत, ',
     locale: `hi-IN`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'hi',
     datetimeLocale: `hi`,
     service: 'hindi',
     serviceName: 'Hindi',
@@ -50,6 +49,10 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'विज्ञापन',
+      },
+      recommendationTitle: 'और ये भी पढ़ें',
       seeAll: 'सब देखें',
       home: 'होम पेज',
       currentPage: 'मौजूदा पन्ना',
@@ -145,6 +148,7 @@ export const service = {
       media: {
         noJs: 'प्लेबैक आपके उपकरण पर नहीं हो पा रहा',
         contentExpired: 'यह सामग्री अब उपलब्ध नहीं है.',
+        contentNotYetAvailable: 'यह कार्यक्रम अभी चलने के लिए तैयार नहीं है.',
         audio: 'ऑडियो',
         photogallery: 'फ़ोटो गैलरी',
         video: 'वीडियो',
@@ -183,6 +187,12 @@ export const service = {
           endTextVisuallyHidden: 'पोस्ट %provider_name% समाप्त',
         },
       },
+      include: {
+        errorMessage:
+          'माफ़ी चाहते हैं, हम इस स्टोरी का कुछ हिस्सा लाइटवेट मोबाइल पेज पर नहीं दिखा सकते.',
+        linkText:
+          'आप अगर पूरी स्टोरी देखना चाहते हैं तो हमारे फुल वर्ज़न पर जाएं.',
+      },
       topStoriesTitle: 'टॉप स्टोरी',
       featuresAnalysisTitle: 'ज़रूर पढ़ें',
     },
@@ -193,11 +203,20 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'सबसे ज्यादा देखे गए',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
     recommendations: {
       hasStoryRecommendations: true,
+      skipLink: {
+        text: 'छोड़कर %title% आगे बढ़ें',
+        endTextVisuallyHidden: 'समाप्त',
+      },
     },
     footer: {
       trustProjectLink: {

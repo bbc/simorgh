@@ -7,13 +7,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'जाहिरात',
-    },
     lang: `mr`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'अपडेटेड',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-marathi',
     atiAnalyticsProducerId: '59',
     chartbeatDomain: 'marathi.bbc.co.uk',
@@ -30,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'कॅप्शन, ',
     imageCopyrightOffscreenText: 'फोटो स्रोत, ',
     locale: `mr-IN`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'mr',
     datetimeLocale: `mr`,
     service: 'marathi',
     serviceName: 'Marathi',
@@ -49,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'जाहिरात',
+      },
       seeAll: 'सर्व पाहा',
       home: 'बातम्या',
       currentPage: 'सध्याचे पान',
@@ -143,6 +145,7 @@ export const service = {
       media: {
         noJs: 'मीडिया प्लेबॅक आपल्या डिव्हाइसवर असमर्थित आहे',
         contentExpired: 'ही सामग्री यापुढे उपलब्ध नाही',
+        contentNotYetAvailable: 'ही सामग्री अद्याप प्ले करण्यासाठी उपलब्ध नाही',
         audio: 'ऑडिओ',
         photogallery: 'फोटो गॅलरी',
         video: 'व्हीडिओ',
@@ -176,6 +179,11 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% पोस्ट समाप्त',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'मोठ्या बातम्या',
       featuresAnalysisTitle: 'Features',
     },
@@ -185,6 +193,11 @@ export const service = {
       lastUpdated: 'शेवटचा अपडेट:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'सर्वाधिक पाहिलेले',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

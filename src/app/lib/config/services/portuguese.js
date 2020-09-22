@@ -16,13 +16,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: true,
-      advertisementLabel: 'Publicidade',
-    },
     lang: `pt-BR`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Atualizado',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-portuguese',
     atiAnalyticsProducerId: '33',
     chartbeatDomain: 'brasil.bbc.co.uk', // this is meant to be different to the service name
@@ -40,6 +37,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Legenda, ',
     imageCopyrightOffscreenText: 'Crédito, ',
     locale: `pt-BR`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'pt',
     datetimeLocale: `pt-br`,
     service: 'portuguese',
     serviceName: 'News Brasil',
@@ -61,6 +60,10 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Publicidade',
+      },
+      recommendationTitle: 'Talvez também te interesse',
       seeAll: 'Ver todos',
       home: 'Início',
       currentPage: 'Página atual',
@@ -156,6 +159,8 @@ export const service = {
         noJs:
           'A reprodução deste formato de vídeo não é compatível com seu dispositivo',
         contentExpired: 'Este conteúdo não está mais disponível.',
+        contentNotYetAvailable:
+          'Este conteúdo ainda não está disponível para ser tocado.',
         audio: 'Áudio',
         photogallery: 'Galeria de fotos',
         video: 'Vídeo',
@@ -184,6 +189,12 @@ export const service = {
           endTextVisuallyHidden: 'Final de %provider_name% post',
         },
       },
+      include: {
+        errorMessage:
+          'Desculpe, mas não é possível exibir esta parte da história nesta página de acesso resumido de celular.',
+        linkText:
+          'Acesse a visão integral da página para visualizar todo o conteúdo.',
+      },
       topStoriesTitle: 'Principais notícias',
       featuresAnalysisTitle: 'Leia mais',
     },
@@ -194,11 +205,20 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Mais assistido',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
     recommendations: {
       hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Pule %title% e continue lendo',
+        endTextVisuallyHidden: 'Fim do %title%',
+      },
     },
     footer: {
       trustProjectLink: {

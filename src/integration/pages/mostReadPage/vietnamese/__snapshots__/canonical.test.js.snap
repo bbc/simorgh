@@ -2,13 +2,139 @@
 
 exports[`Canonical Most Read Page A11y I can see the skip to content link 1`] = `"Bỏ qua để xem nội dung"`;
 
-exports[`Canonical Most Read Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=97&amp;p=vietnamese.popular.read.page&amp;x2=[responsive]&amp;x3=[news-vietnamese]&amp;x4=[vi]&amp;x7=[list-datadriven]&amp;x8=[simorgh-nojs]&amp;x9=[Đọc+nhiều+nhất+-+BBC+News+Tiếng+Việt]&amp;x11=[2019-11-06T16:54:00Z]&amp;x12=[2100-11-06T17:09:00Z]\\"/>"`;
+exports[`Canonical Most Read Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=97&amp;p=vietnamese.popular.read.page&amp;x2=[responsive]&amp;x3=[news-vietnamese]&amp;x4=[vi]&amp;x7=[list-datadriven]&amp;x8=[simorgh-nojs]&amp;x9=[%C4%90%E1%BB%8Dc%2Bnhi%E1%BB%81u%2Bnh%E1%BA%A5t%2B-%2BBBC%2BNews%2BTi%E1%BA%BFng%2BVi%E1%BB%87t]&amp;x11=[2019-11-06T16%3A54%3A00Z]&amp;x12=[2100-11-06T17%3A09%3A00Z]\\"/>"`;
 
 exports[`Canonical Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/vietnamese"`;
 
 exports[`Canonical Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài. Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài"`;
 
+exports[`Canonical Most Read Page Footer Link should match text and url 1`] = `
+Object {
+  "text": "BBC News, Tiếng Việt",
+  "url": "/vietnamese",
+}
+`;
+
+exports[`Canonical Most Read Page Footer Link should match text and url 2`] = `
+Object {
+  "text": "Tại sao bạn có thể tin tưởng BBC News",
+  "url": "https://www.bbc.com/vietnamese/institutional-49283563",
+}
+`;
+
+exports[`Canonical Most Read Page Footer Link should match text and url 3`] = `
+Object {
+  "text": "Điều khoản sử dụng",
+  "url": "https://www.bbc.com/vietnamese/institutional-37622991",
+}
+`;
+
+exports[`Canonical Most Read Page Footer Link should match text and url 4`] = `
+Object {
+  "text": "Về BBC",
+  "url": "https://www.bbc.com/vietnamese/institutional-37623840",
+}
+`;
+
+exports[`Canonical Most Read Page Footer Link should match text and url 5`] = `
+Object {
+  "text": "Chính sách riêng tư",
+  "url": "https://www.bbc.com/vietnamese/institutional-37623841",
+}
+`;
+
+exports[`Canonical Most Read Page Footer Link should match text and url 6`] = `
+Object {
+  "text": "Cookie",
+  "url": "https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html",
+}
+`;
+
+exports[`Canonical Most Read Page Footer Link should match text and url 7`] = `
+Object {
+  "text": "Liên hệ BBC",
+  "url": "https://www.bbc.com/vietnamese/institutional-37623842",
+}
+`;
+
+exports[`Canonical Most Read Page Footer Link should match text and url 8`] = `
+Object {
+  "text": "AdChoices / Do Not Sell My Info",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+}
+`;
+
+exports[`Canonical Most Read Page Footer Link should match text and url 9`] = `
+Object {
+  "text": "Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài",
+  "url": "https://www.bbc.co.uk/help/web/links/",
+}
+`;
+
 exports[`Canonical Most Read Page Header I can see the branding 1`] = `"BBC News, Tiếng Việt"`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 1`] = `
+Object {
+  "text": "Tin chính",
+  "url": "/vietnamese",
+}
+`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 2`] = `
+Object {
+  "text": "Việt Nam",
+  "url": "/vietnamese/vietnam",
+}
+`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 3`] = `
+Object {
+  "text": "Thế giới",
+  "url": "/vietnamese/world",
+}
+`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 4`] = `
+Object {
+  "text": "Diễn đàn",
+  "url": "/vietnamese/forum",
+}
+`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 5`] = `
+Object {
+  "text": "Kinh tế",
+  "url": "/vietnamese/business",
+}
+`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 6`] = `
+Object {
+  "text": "Nhịp sống mới",
+  "url": "/vietnamese/magazine",
+}
+`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 7`] = `
+Object {
+  "text": "Thể thao",
+  "url": "/vietnamese/sport",
+}
+`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "Học tiếng Anh",
+  "url": "/vietnamese/english",
+}
+`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 9`] = `
+Object {
+  "text": "Video",
+  "url": "/vietnamese/media/video",
+}
+`;
 
 exports[`Canonical Most Read Page I can see the headline 1`] = `"Đọc nhiều nhất"`;
 
@@ -32,6 +158,76 @@ exports[`Canonical Most Read Page I can see the list items 9`] = `"9HRW kêu g�
 
 exports[`Canonical Most Read Page I can see the list items 10`] = `"10Lỗ hổng thiên đàng và một căn bệnh mãn tínhCập nhật gần nhất: 6 tháng 11 năm 2019"`;
 
+exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 1`] = `
+Object {
+  "sizes": null,
+  "url": "http://localhost:7080/vietnamese/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 2`] = `
+Object {
+  "sizes": "72x72",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 3`] = `
+Object {
+  "sizes": "96x96",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 4`] = `
+Object {
+  "sizes": "128x128",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 5`] = `
+Object {
+  "sizes": "144x144",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 6`] = `
+Object {
+  "sizes": "152x152",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 7`] = `
+Object {
+  "sizes": "180x180",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 8`] = `
+Object {
+  "sizes": "192x192",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 9`] = `
+Object {
+  "sizes": "384x384",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 10`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-512x512.png",
+}
+`;
+
 exports[`Canonical Most Read Page SEO Canonical link 1`] = `"http://localhost:7080/vietnamese/popular/read"`;
 
 exports[`Canonical Most Read Page SEO Dir attribute 1`] = `"ltr"`;
@@ -44,34 +240,38 @@ exports[`Canonical Most Read Page SEO Heading level 1 1`] = `"Đọc nhiều nh�
 
 exports[`Canonical Most Read Page SEO Lang attribute 1`] = `"vi"`;
 
-exports[`Canonical Most Read Page SEO Linked data 1`] = `
+exports[`Canonical Most Read Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
-  "@type": "WebPage",
-  "image": Object {
-    "@type": "ImageObject",
-    "height": 576,
-    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
-    "width": 1024,
-  },
-  "mainEntityOfPage": Object {
-    "@id": "http://localhost:7080/vietnamese/popular/read",
-    "@type": "WebPage",
-    "name": "Đọc nhiều nhất",
-  },
-  "publisher": Object {
-    "@type": "NewsMediaOrganization",
-    "logo": Object {
-      "@type": "ImageObject",
-      "height": 576,
-      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
-      "width": 1024,
+  "@graph": Array [
+    Object {
+      "@type": "WebPage",
+      "image": Object {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
+        "width": 1024,
+      },
+      "mainEntityOfPage": Object {
+        "@id": "http://localhost:7080/vietnamese/popular/read",
+        "@type": "WebPage",
+        "name": "Đọc nhiều nhất",
+      },
+      "publisher": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
+          "width": 1024,
+        },
+        "name": "BBC News Tiếng Việt",
+        "publishingPrinciples": "https://www.bbc.com/vietnamese/institutional-49283563",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
+      "url": "http://localhost:7080/vietnamese/popular/read",
     },
-    "name": "BBC News Tiếng Việt",
-    "publishingPrinciples": "https://www.bbc.com/vietnamese/institutional-49283563",
-  },
-  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
-  "url": "http://localhost:7080/vietnamese/popular/read",
+  ],
 }
 `;
 

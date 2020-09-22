@@ -5,9 +5,8 @@ export const updateToggles = data => ({
   data,
 });
 
-const adsEnabled = data =>
-  pathOr(false, ['toggles', 'ads', 'enabled'], data) &&
-  pathOr(false, ['geoIp', 'advertiseCombined'], data);
+const adsEnabled = ({ data }) =>
+  pathOr(false, ['toggles', 'ads', 'enabled'], data);
 
 export const toggleReducer = (toggleState, action) => {
   const { type, data } = action;
@@ -17,7 +16,7 @@ export const toggleReducer = (toggleState, action) => {
         ...toggleState,
         ...data.toggles,
         ads: {
-          enabled: adsEnabled(data),
+          enabled: adsEnabled({ data }),
         },
       };
     default:

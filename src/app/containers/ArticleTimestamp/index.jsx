@@ -27,6 +27,7 @@ const ArticleTimestamp = ({
 }) => {
   const {
     articleTimestampPrefix,
+    articleTimestampSuffix,
     datetimeLocale,
     script,
     service,
@@ -61,6 +62,7 @@ const ArticleTimestamp = ({
     }),
     isRelative: isLastRelative(lastPublished),
     prefix: articleTimestampPrefix,
+    suffix: articleTimestampSuffix,
   };
 
   const Wrapper = popOut ? PopOutGridItemMedium : GridItemConstrainedMedium;

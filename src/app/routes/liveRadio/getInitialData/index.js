@@ -1,7 +1,9 @@
 import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
-import addIdsToBlocks from './addIdsToBlocks';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
+import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
+import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
+import getRadioService from '../../utils/getRadioService';
 
 const getLanguage = path(['metadata', 'language']);
 const getMetaDataId = path(['metadata', 'id']);
@@ -9,23 +11,45 @@ const getPromoName = path(['promo', 'name']);
 const getPromoSummary = path(['promo', 'summary']);
 const getPageTitle = path(['metadata', 'analyticsLabels', 'pageTitle']);
 const getContentType = path(['metadata', 'analyticsLabels', 'contentType']);
+const getMasterBrand = path(['content', 'blocks', 2, 'externalId']);
 const getPageIdentifier = path([
   'metadata',
   'analyticsLabels',
   'pageIdentifier',
 ]);
 
-export default async ({ path: pathname }) => {
-  const liveRadioDataPath = overrideRendererOnTest(pathname);
-  const { json, ...rest } = await fetchPageData(liveRadioDataPath);
-  const contentData = path(['content'], json);
-  const pageType = { metadata: { type: 'Live Radio' } };
+const getHeading = path(['content', 'blocks', 0, 'text']);
+const getBodySummary = path(['content', 'blocks', 1, 'text']);
+const getScheduleToggle = path(['liveRadioSchedule', 'enabled']);
 
-  return {
-    ...rest,
-    ...(json && {
+export default async ({ path: pathname, pageType, service, toggles }) => {
+  try {
+    const liveRadioDataPath = overrideRendererOnTest(pathname);
+
+    const pageDataPromise = fetchPageData({
+      path: liveRadioDataPath,
+      pageType,
+    });
+
+    const scheduleIsEnabled = getScheduleToggle(toggles);
+
+    const { json, status } = scheduleIsEnabled
+      ? await withRadioSchedule({
+          pageDataPromise,
+          service,
+          path: pathname,
+          radioService: getRadioService({ service, pathname }),
+          pageType: 'LiveRadio',
+        })
+      : await pageDataPromise;
+
+    const getRadioScheduleData = path(['radioScheduleData']);
+
+    return {
+      status,
       pageData: {
-        content: addIdsToBlocks(contentData),
+        heading: getHeading(json),
+        bodySummary: getBodySummary(json),
         language: getLanguage(json),
         id: getMetaDataId(json),
         name: getPromoName(json),
@@ -33,8 +57,12 @@ export default async ({ path: pathname }) => {
         pageTitle: getPageTitle(json),
         contentType: getContentType(json),
         pageIdentifier: getPageIdentifier(json),
-        ...pageType,
+        masterBrand: getMasterBrand(json),
+        radioScheduleData: getRadioScheduleData(json),
+        metadata: { type: 'Live Radio' },
       },
-    }),
-  };
+    };
+  } catch ({ message, status = getErrorStatusCode() }) {
+    return { error: message, status };
+  }
 };

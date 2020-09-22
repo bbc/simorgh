@@ -7,13 +7,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: '広告',
-    },
     lang: `ja`,
     articleAuthor: `https://www.facebook.com/bbcnews/`,
     articleTimestampPrefix: '更新',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-japanese',
     atiAnalyticsProducerId: '56',
     chartbeatDomain: 'japanese.bbc.co.uk',
@@ -31,6 +28,8 @@ export const service = {
     defaultCaptionOffscreenText: 'キャプション, ',
     imageCopyrightOffscreenText: '画像提供, ',
     locale: `ja-JP`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ja',
     datetimeLocale: `ja`,
     service: 'japanese',
     serviceName: 'Japan',
@@ -50,6 +49,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: '広告',
+      },
       seeAll: '全ての記事を見る',
       home: 'ホーム',
       currentPage: '現在のページ',
@@ -141,6 +143,7 @@ export const service = {
       media: {
         noJs: 'お使いの端末ではメディアプレイバックはご利用になれません',
         contentExpired: 'このコンテンツはもうご利用いただけません。',
+        contentNotYetAvailable: 'このコンテンツはまだ再生できません。',
         audio: '音声',
         photogallery: '写真ギャラリー',
         video: 'ビデオ',
@@ -168,6 +171,11 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% の投稿の終わり',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'トップ記事',
       featuresAnalysisTitle: '読み物・解説',
     },
@@ -177,6 +185,11 @@ export const service = {
       lastUpdated: '最終更新:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'よく見られています',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
@@ -190,12 +203,12 @@ export const service = {
         text: 'BBCニュースが信頼できる理由',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/japanese/help-33991539',
         text: '本サイトの外部リンク方針はこちら',
       },
       links: [
         {
-          href: 'https://www.bbc.com/japanese/help/terms',
+          href: 'https://www.bbc.com/japanese/help-33991540',
           text: '利用条件',
         },
         {
@@ -203,7 +216,7 @@ export const service = {
           text: 'BBCについて',
         },
         {
-          href: 'https://www.bbc.com/japanese/help/privacy',
+          href: 'https://www.bbc.com/japanese/help-33991542',
           text: '個人情報取り扱い方針',
         },
         {
@@ -233,6 +246,10 @@ export const service = {
       {
         title: 'コロナウイルス',
         url: '/japanese/52137815',
+      },
+      {
+        title: '米大統領選',
+        url: '/japanese/53969845',
       },
       {
         title: '日本',

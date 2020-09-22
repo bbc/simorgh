@@ -1,8 +1,7 @@
 import React from 'react';
 import fetchMock from 'fetch-mock';
-import { render, waitFor } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
-import '@testing-library/jest-dom/extend-expect';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 import CanonicalRadioSchedule from '.';
@@ -12,7 +11,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 const endpoint = 'https://localhost/arabic/bbc_arabic_radio/schedule.json';
 
 /* eslint-disable react/prop-types */
-const RadioScheduleWithContext = ({ initialData }) => (
+const RadioScheduleWithContext = ({ initialData, lang }) => (
   <RequestContextProvider
     isAmp={false}
     pageType="frontPage"
@@ -21,7 +20,11 @@ const RadioScheduleWithContext = ({ initialData }) => (
     timeOnServer={Date.now()}
   >
     <ServiceContextProvider service="arabic">
-      <CanonicalRadioSchedule initialData={initialData} endpoint={endpoint} />
+      <CanonicalRadioSchedule
+        initialData={initialData}
+        endpoint={endpoint}
+        lang={lang}
+      />
     </ServiceContextProvider>
   </RequestContextProvider>
 );
@@ -51,13 +54,14 @@ describe('Canonical RadioSchedule', () => {
         'arabic',
         Date.now(),
       );
-      const { container } = render(
-        <RadioScheduleWithContext initialData={initialData} />,
-      );
+      let container;
 
-      await waitFor(() => {
-        expect(container.querySelectorAll('li').length).toEqual(4);
+      await act(async () => {
+        container = await render(
+          <RadioScheduleWithContext initialData={initialData} />,
+        ).container;
       });
+      expect(container.querySelectorAll('li').length).toEqual(4);
     });
 
     it('does not render when data contains less than 4 programs', async () => {
@@ -66,13 +70,14 @@ describe('Canonical RadioSchedule', () => {
         'arabic',
         Date.now(),
       );
+      let container;
 
-      const { container } = render(
-        <RadioScheduleWithContext initialData={initialData} />,
-      );
-      await waitFor(() => {
-        expect(container).toBeEmpty();
+      await act(async () => {
+        container = await render(
+          <RadioScheduleWithContext initialData={initialData} />,
+        ).container;
       });
+      expect(container).toBeEmptyDOMElement();
     });
 
     it('does not render when data contains no programs', async () => {
@@ -81,13 +86,14 @@ describe('Canonical RadioSchedule', () => {
         'arabic',
         Date.now(),
       );
+      let container;
 
-      const { container } = render(
-        <RadioScheduleWithContext initialData={initialData} />,
-      );
-      await waitFor(() => {
-        expect(container).toBeEmpty();
+      await act(async () => {
+        container = await render(
+          <RadioScheduleWithContext initialData={initialData} />,
+        ).container;
       });
+      expect(container).toBeEmptyDOMElement();
     });
   });
 
@@ -101,53 +107,72 @@ describe('Canonical RadioSchedule', () => {
 
     it('contains four programs for a service with a radio schedule', async () => {
       fetchMock.mock(endpoint, arabicRadioScheduleData);
-      const { container } = render(<RadioScheduleWithContext />);
+      let container;
 
-      await waitFor(() => {
-        expect(container.querySelectorAll('li').length).toEqual(4);
+      await act(async () => {
+        container = await render(<RadioScheduleWithContext />).container;
       });
+      expect(container.querySelectorAll('li').length).toEqual(4);
+    });
+
+    it('render radio schedules container with lang code', async () => {
+      fetchMock.mock(endpoint, arabicRadioScheduleData);
+      let container;
+
+      await act(async () => {
+        container = await render(<RadioScheduleWithContext lang="fa-AF" />)
+          .container;
+      });
+      expect(container.querySelector('section')).toHaveAttribute(
+        'lang',
+        'fa-AF',
+      );
     });
 
     it('does not render when data contains less than 4 programs', async () => {
       fetchMock.mock(endpoint, {
         schedules: arabicRadioScheduleData.schedules.slice(0, 2),
       });
-      const { container } = render(<RadioScheduleWithContext />);
-      await waitFor(() => {
-        expect(container).toBeEmpty();
+      let container;
+
+      await act(async () => {
+        container = await render(<RadioScheduleWithContext />).container;
       });
+      expect(container).toBeEmptyDOMElement();
     });
 
     it('does not render when data contains no programs', async () => {
       fetchMock.mock(endpoint, {
         schedules: [],
       });
-      const { container } = render(<RadioScheduleWithContext />);
-      await waitFor(() => {
-        expect(container).toBeEmpty();
+      let container;
+
+      await act(async () => {
+        container = await render(<RadioScheduleWithContext />).container;
       });
+      expect(container).toBeEmptyDOMElement();
     });
 
     it('does not render when data fetched returns non-ok status code', async () => {
       fetchMock.mock(endpoint, 404);
+      let container;
 
-      const { container } = render(<RadioScheduleWithContext />);
-
-      await waitFor(() => {
-        expect(container).toBeEmpty();
+      await act(async () => {
+        container = await render(<RadioScheduleWithContext />).container;
       });
+      expect(container).toBeEmptyDOMElement();
     });
 
     it('does not render when data fetch is rejected', async () => {
       fetchMock.mock(endpoint, {
         throws: 'Server not found',
       });
+      let container;
 
-      const { container } = render(<RadioScheduleWithContext />);
-
-      await waitFor(() => {
-        expect(container).toBeEmpty();
+      await act(async () => {
+        container = await render(<RadioScheduleWithContext />).container;
       });
+      expect(container).toBeEmptyDOMElement();
     });
   });
 });

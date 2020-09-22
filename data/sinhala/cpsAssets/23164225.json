@@ -1,0 +1,224 @@
+{
+    "content": {
+      "blocks": [
+        {
+          "altText": "යාපනයේ ජල ගැලීම් ; 1700 ක් ආරක්‍ෂිත ස්ථාන කරා",
+          "copyrightHolder": "Ulf Larsen/Wikipedia Commons",
+          "height": 549,
+          "href": "http://b.files.bbci.co.uk/3E7F/test/_63599951_040454533-1.jpg",
+          "id": "63599951",
+          "path": "/cpsdevpb/3E7F/test/_63599951_040454533-1.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "role": "introduction",
+          "text": "පසුගිය දින කීපය ඇතුළත මිලිමීටර් පන්සීයකට අධික වර්ෂාවක් පතිත වූ උතුරු පළාතේ යාපනය දිස්ත්‍රික්කයේ ඇතැම් ස්ථානවල මහජනතාව දුෂ්කර තත්වයකට පත්ව සිටින බව දිස්ත්‍රික් කළමනාකරණ ඒකකය වාර්තා කරන බව ශ්‍රී ලංකා ආපදා කළමනාකරණ මධ්‍යස්ථානය පවසයි.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "'අරාලි' සහ වෙනත් කළපු ආශ්‍රිත ප්‍රදේශයන්හි බැමිවලට ඉහළින් ජල මට්ටම් පවතින අතර ඒ සමඟ පුද්ගලයන් 1700 කට අධික පිරිසක් ඔවුන් වාසය කළ ස්ථානවලින් තාවකාලිකව ඉවත් කරනු ලැබ ඇතැයි ශ්‍රී ලංකා ආපදා කළමනාකරණ මධ්‍යස්ථානයේ නියෝජ්‍ය අධ්‍යක්ෂ ප්‍රදීප් කොඩිප්පිලි බීබීසී සිංහල සේවය කළ විමසීමක දී සඳහන් කළේය.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;මේ තත්වය යටතේ ශ්‍රී ලංකා ආපදා කළමනාකරණ මධ්‍යස්ථානයේ යාපනය ඒකකය සහ ත්‍රිවිධ හමුදාව ඇතුළු සියලු කොටස් එකමුතු වෙමින් ඉදිරියේ ගත යුතු ක්‍රියාමාර්ග පිළිබඳව දැනටමත් අවශ්‍ය පියවර ගනිමින් සිටිනවා&quot; නියෝජ්‍ය අධ්‍යක්ෂ ප්‍රදීප් කොඩිප්පිලි පවතින තත්වය වැඩි දුරටත් විස්තර කළේය.",
+          "type": "paragraph"
+        },
+        {
+          "advertising": false,
+          "caption": "long headline",
+          "embedding": true,
+          "format": "audio",
+          "id": "p01ddy8t",
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01ddyc8.jpg",
+          "subType": "clip",
+          "synopses": {
+            "medium": "summary text",
+            "short": "long headline"
+          },
+          "title": "short headline",
+          "type": "media",
+          "versions": [
+            {
+              "availableFrom": 1505992570000,
+              "availableTerritories": {
+                "nonUk": true,
+                "uk": true,
+                "world": false
+              },
+              "duration": 32,
+              "durationISO8601": "PT32S",
+              "types": [
+                "Original"
+              ],
+              "versionId": "p01ddy8x",
+              "warnings": {}
+            }
+          ]
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;හදිසි මෙහෙයුම් මැදිරිය ආපදා කළමනාකරණ මධ්‍යස්ථානයේ සියලු ඒකක සූදානමින් තැබීමට පියවර ගෙන තිබෙනවා. ත්‍රිවිධ හමුදාව සහ පොලිසිය ස්ථාන ගත කරලා තියෙනවා. ඊට අමතරව 2014 ආරම්භ කළ වව්නියා දිස්ත්‍රික්කයේ විශේෂ බඩු භාණ්ඩ සහිත ආපදා කළමනාකරණ ඒකකයත් මේ මොහොතේ ක්‍රියාත්මක වෙමින් පවතිනවා&quot; ඔහු ඕනෑම හදිසි තත්වයක් සඳහා මුහුණ දීමට ඇති සූදානම පෙන්වා දෙයි.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;පූනෑව යුද හමුදා කඳවුරේ එම භාණ්ඩ සූදානමින් තියෙනවා. ඒ අනුව අපට හදිසි අවස්ථාවකට මුහුණ දෙන්න පුළුවන්&quot;",
+          "type": "paragraph"
+        }
+      ]
+    },
+    "metadata": {
+      "analyticsLabels": {
+        "counterName": "sinhala.story.23164225.page",
+        "cps_asset_id": "23164225",
+        "cps_asset_type": "sty"
+      },
+      "atiAnalytics": {
+        "producerId": "82",
+        "producerName": "SINHALA"
+      },
+      "blockTypes": [
+        "image",
+        "paragraph",
+        "media"
+      ],
+      "createdBy": "sinhala-v6",
+      "firstPublished": 1510572399000,
+      "id": "urn:bbc:ares::asset:sinhala/23164225",
+      "includeComments": false,
+      "language": "si",
+      "lastPublished": 1510572399000,
+      "lastUpdated": 1589552819177,
+      "locators": {
+        "assetId": "23164225",
+        "assetUri": "/sinhala/23164225",
+        "cpsUrn": "urn:bbc:content:assetUri:sinhala/23164225",
+        "curie": "http://www.bbc.co.uk/asset/9c7958f4-de89-4445-bb41-3d908abb7fd2"
+      },
+      "options": {
+        "allowAdvertising": true,
+        "allowDateStamp": true,
+        "allowHeadline": true,
+        "allowPrintingSharingLinks": true,
+        "allowRelatedStoriesBox": true,
+        "allowRightHandSide": true,
+        "hasContentWarning": false,
+        "hasNewsTracker": false,
+        "includeComments": false,
+        "isBreakingNews": false,
+        "isFactCheck": false,
+        "isIgorSeoTagsEnabled": false,
+        "isKeyContent": false,
+        "suitableForSyndication": true
+      },
+      "passport": {
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName": "News"
+        },
+        "taggings": []
+      },
+      "tags": {
+        "about": [
+          {
+            "thingId": "a7f44061-3bff-407f-ad71-84e7c2826cf4",
+            "thingLabel": "ශ්‍රී ලංකාව",
+            "thingSameAs": [
+              "http://sws.geonames.org/1227603/"
+            ],
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Thing",
+              "core:Place"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/a7f44061-3bff-407f-ad71-84e7c2826cf4#id"
+          }
+        ]
+      },
+      "timestamp": 1510572399000,
+      "type": "STY",
+      "version": "v1.3.0"
+    },
+    "promo": {
+      "headlines": {
+        "headline": "යාපනයේ ජල ගැලීම් 1700 ක් ආරක්‍ෂිත ස්ථාන කරා",
+        "shortHeadline": "යාපනයේ ජල ගැලීම් ; 1700 ක් ආරක්‍ෂිත ස්ථාන කරා"
+      },
+      "id": "urn:bbc:ares::asset:sinhala/23164225",
+      "indexImage": {
+        "altText": "යාපනයේ ජල ගැලීම් ; 1700 ක් ආරක්‍ෂිත ස්ථාන කරා",
+        "copyrightHolder": "Ulf Larsen/Wikipedia Commons",
+        "height": 549,
+        "href": "http://b.files.bbci.co.uk/3E7F/test/_63599951_040454533-1.jpg",
+        "id": "63599951",
+        "path": "/cpsdevpb/3E7F/test/_63599951_040454533-1.jpg",
+        "subType": "index",
+        "type": "image",
+        "width": 976
+      },
+      "language": "si",
+      "locators": {
+        "assetId": "23164225",
+        "assetUri": "/sinhala/23164225",
+        "cpsUrn": "urn:bbc:content:assetUri:sinhala/23164225",
+        "curie": "http://www.bbc.co.uk/asset/9c7958f4-de89-4445-bb41-3d908abb7fd2"
+      },
+      "passport": {
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName": "News"
+        },
+        "taggings": []
+      },
+      "summary": "පසුගිය දින කීපය ඇතුළත මිලිමීටර් පන්සීයකට අධික වර්ෂාවක් පතිත වූ උතුරු පළාතේ යාපනය දිස්ත්‍රික්කයේ ඇතැම් ස්ථානවල මහජනතාව දුෂ්කර තත්වයකට පත්ව සිටින බව දිස්ත්‍රික් කළමනාකරණ ඒකකය වාර්තා කරන බව ශ්‍රී ලංකා ආපදා කළමනාකරණ මධ්‍යස්ථානය පවසයි.",
+      "timestamp": 1510572399000,
+      "type": "cps"
+    },
+    "relatedContent": {
+      "groups": [
+        {
+          "promos": [
+            {
+              "name": "Appeal for more Jaffna doctors",
+              "type": "link",
+              "uri": "http://www.bbc.co.uk/news/world-south-asia-11736783"
+            },
+            {
+              "name": "Troops and rebels clash in Jaffna",
+              "type": "link",
+              "uri": "http://news.bbc.co.uk/1/hi/world/south_asia/4798129.stm"
+            },
+            {
+              "name": "Warning over Jaffna press freedom",
+              "type": "link",
+              "uri": "http://news.bbc.co.uk/1/hi/world/south_asia/4553636.stm"
+            },
+            {
+              "name": "President condemns Jaffna deaths",
+              "type": "link",
+              "uri": "http://news.bbc.co.uk/1/hi/world/south_asia/4747753.stm"
+            }
+          ],
+          "type": "see-alsos"
+        }
+      ],
+      "section": {
+        "name": "මුල් පිටුව",
+        "subType": "index",
+        "type": "simple",
+        "uri": "/sinhala/front_page"
+      },
+      "site": {
+        "name": "පුවත් - බීබීසී සිංහල",
+        "subType": "site",
+        "type": "simple",
+        "uri": "/sinhala"
+      }
+    }
+  }

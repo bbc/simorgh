@@ -323,7 +323,6 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #222222;
   background-color: #F2F2F2;
   margin: 1rem 0;
   padding-left: 0.5rem;
@@ -340,6 +339,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 .c1 {
   position: relative;
   z-index: 0;
+  color: #3F3F42;
   margin-top: 2rem;
 }
 
@@ -684,25 +684,6 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   }
 }
 
-@media (max-width:24.9375rem) {
-  .c0 {
-    margin: 2rem -0.5rem 0;
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c0 {
-    margin: 2rem -1rem 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    margin: 1.5rem -1rem 0;
-  }
-}
-
 @media (min-width:37.5rem) {
   .c7 {
     margin-top: 1.5rem;
@@ -773,6 +754,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   </div>
   <div
     class="c7"
+    data-e2e="radio-schedule"
   >
     <ul
       class="c8 c9"
@@ -1622,7 +1604,6 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #222222;
   background-color: #F2F2F2;
   margin: 1rem 0;
   padding-left: 0.5rem;
@@ -1639,6 +1620,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 .c1 {
   position: relative;
   z-index: 0;
+  color: #3F3F42;
   margin-top: 2rem;
 }
 
@@ -1983,25 +1965,6 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   }
 }
 
-@media (max-width:24.9375rem) {
-  .c0 {
-    margin: 2rem -0.5rem 0;
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c0 {
-    margin: 2rem -1rem 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    margin: 1.5rem -1rem 0;
-  }
-}
-
 @media (min-width:37.5rem) {
   .c7 {
     margin-top: 1.5rem;
@@ -2072,6 +2035,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   </div>
   <div
     class="c7"
+    data-e2e="radio-schedule"
   >
     <ul
       class="c8 c9"

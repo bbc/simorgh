@@ -7,13 +7,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Matangazo',
-    },
     lang: `sw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Imeboreshwa',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-swahili',
     atiAnalyticsProducerId: '86',
     chartbeatDomain: 'swahili.bbc.co.uk',
@@ -30,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Maelezo, ',
     imageCopyrightOffscreenText: 'Chanzo cha picha, ',
     locale: `sw-KE`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'sw',
     datetimeLocale: `sw`,
     service: 'swahili',
     serviceName: 'Swahili',
@@ -49,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Matangazo',
+      },
       seeAll: 'Tazama zote',
       home: 'Habari',
       currentPage: 'Ukurasa uliopo ',
@@ -143,6 +145,7 @@ export const service = {
       media: {
         noJs: 'Huwezi kusikiliza tena',
         contentExpired: 'Taarifa hii haipatikani tena.',
+        contentNotYetAvailable: 'Kipindi hiki hakipatikani kwa sasa.',
         audio: 'Sauti',
         photogallery: 'Mkusanyiko wa picha',
         video: 'Video',
@@ -180,6 +183,11 @@ export const service = {
           endTextVisuallyHidden: 'Mwisho wa %provider_name% ujumbe',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'Habari kuu',
       featuresAnalysisTitle: 'Gumzo mitandaoni',
     },
@@ -189,6 +197,11 @@ export const service = {
       lastUpdated: 'Imeboreshwa mwisho:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Iliyoangaliwa zaidi',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,
@@ -211,16 +224,15 @@ export const service = {
       },
       links: [
         {
-          href:
-            'https://www.bbc.com/swahili/taasisi/2011/10/000001_terms_of_use',
+          href: 'https://www.bbc.com/swahili/taasisi-37098622',
           text: 'Sheria ya matumizi',
         },
         {
-          href: 'https://www.bbc.com/swahili/taasisi/2011/10/000001_aboutus',
+          href: 'https://www.bbc.com/swahili/taasisi-37100009',
           text: 'Kuhusu BBC',
         },
         {
-          href: 'https://www.bbc.com/swahili/taasisi/2011/10/000001_privacy',
+          href: 'https://www.bbc.com/swahili/taasisi-37100010',
           text: 'Sera ya faragha',
         },
         {
@@ -228,7 +240,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/swahili/taasisi/2011/10/000001_contactus',
+          href: 'https://www.bbc.com/swahili/taasisi-37100011',
           text: 'Wasiliana na BBC',
         },
         {
@@ -248,8 +260,12 @@ export const service = {
         url: '/swahili',
       },
       {
+        title: 'Uchaguzi Tanzania',
+        url: '/swahili/habari-53516858',
+      },
+      {
         title: 'Michezo',
-        url: '/swahili/michezo',
+        url: '/swahili/topics/ckdxndddjkxt',
       },
       {
         title: 'Video',
@@ -257,7 +273,7 @@ export const service = {
       },
       {
         title: 'Vipindi vya Redio',
-        url: '/swahili/kwa_kina/redio',
+        url: '/swahili/media-54071673',
       },
     ],
   },

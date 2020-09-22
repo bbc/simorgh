@@ -7,13 +7,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'જાહેરાત',
-    },
     lang: `gu`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'અપડેટેડ',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-gujarati',
     atiAnalyticsProducerId: '50',
     chartbeatDomain: 'gujarati.bbc.co.uk',
@@ -30,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'કૅપ્શન, ',
     imageCopyrightOffscreenText: 'ઇમેજ સ્રોત, ',
     locale: `gu-IN`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'gu',
     datetimeLocale: `gu`,
     service: 'gujarati',
     serviceName: 'Gujarati',
@@ -49,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'જાહેરાત',
+      },
       seeAll: 'વધુ વાંચો',
       home: 'સમાચાર',
       currentPage: 'વર્તમાન પેજ',
@@ -144,6 +146,7 @@ export const service = {
       media: {
         noJs: 'તમારું ડિવાઇસ મીડિયા પ્લેબૅક સપોર્ટ નથી કરતું',
         contentExpired: 'આ સામગ્રી હવેથી ઉપલબ્ધ નથી.',
+        contentNotYetAvailable: 'આ સામગ્રી ચલાવવા માટે હજી ઉપલબ્ધ નથી.',
         audio: 'ઓડિયો',
         photogallery: 'ફોટો ગૅલરી',
         video: 'વીડિયો',
@@ -176,6 +179,11 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% કન્ટેન્ટ પૂર્ણ',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'નવાજૂની',
       featuresAnalysisTitle: 'બીબીસી વિશેષ',
     },
@@ -185,6 +193,11 @@ export const service = {
       lastUpdated: 'લાસ્ટ અપડેટ:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'સૌથી વધુ જોવાયેલ',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

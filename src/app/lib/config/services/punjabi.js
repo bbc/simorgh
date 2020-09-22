@@ -7,13 +7,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'ਇਸ਼ਤਿਹਾਰ',
-    },
     lang: `pa`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ਅਪਡੇਟ',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-punjabi',
     atiAnalyticsProducerId: '73',
     chartbeatDomain: 'punjabi.bbc.co.uk',
@@ -30,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'ਕੈਪਸ਼ਨ, ',
     imageCopyrightOffscreenText: 'ਤਸਵੀਰ ਸਰੋਤ, ',
     locale: `pa-IN`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'pa',
     datetimeLocale: `pa-in`,
     service: 'punjabi',
     serviceName: 'Punjabi',
@@ -49,6 +48,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'ਇਸ਼ਤਿਹਾਰ',
+      },
       seeAll: 'ਸਭ ਦੋਖੇ',
       home: 'ਹੋਮ ਪੇਜ',
       currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
@@ -140,6 +142,7 @@ export const service = {
       media: {
         noJs: "ਮੀਡੀਆ ਪਲੇਬੈਕ ਤੁਹਾਡੀ ਡਿਵਾਈਸ 'ਤੇ ਸਪੋਰਟ ਨਹੀਂ ਕਰਦਾ",
         contentExpired: 'ਇਹ ਸਮੱਗਰੀ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।',
+        contentNotYetAvailable: 'ਇਹ ਸਮੱਗਰੀ ਹਾਲੇ ਚਲਾਏ ਜਾਣ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।',
         audio: 'ਔਡੀਓ',
         photogallery: 'ਫੋਟੋ ਗੈਲਰੀ',
         video: 'ਵੀਡੀਓ',
@@ -153,19 +156,24 @@ export const service = {
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
-          text: 'Warning: Third party content may contain adverts',
+          textPrefixVisuallyHidden: 'ਵੀਡੀਓ ਕੈਪਸ਼ਨ, ',
+          text: "ਚਿਤਾਵਨੀ: ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ 'ਚ ਇਸ਼ਤਿਹਾਰ ਹੋ ਸਕਦੇ ਹਨ",
         },
         fallback: {
-          text: 'Content is not available',
-          linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
+          text: 'ਸਮੱਗਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ',
+          linkText: 'ਹੋਰ ਦੇਖਣ ਲਈ %provider_name%',
+          linkTextSuffixVisuallyHidden: ', ਬਾਹਰੀ',
           warningText: 'ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ ਲਈ ਬੀਬੀਸੀ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',
         },
         skipLink: {
           text: 'Skip %provider_name% post',
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: 'ਤਾਜ਼ਾ ਘਟਨਾਕ੍ਰਮ',
       featuresAnalysisTitle: 'ਦ੍ਰਿਸ਼ਟੀਕੋਣ',
@@ -176,6 +184,11 @@ export const service = {
       lastUpdated: 'ਆਖ਼ਰੀ ਅਪਡੇਟ:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'ਸਭ ਤੋਂ ਵੱਧ ਦੇਖਿਆ',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

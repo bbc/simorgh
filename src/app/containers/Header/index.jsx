@@ -7,13 +7,19 @@ import { RequestContext } from '#contexts/RequestContext';
 import ConsentBanner from '../ConsentBanner';
 import ScriptLink from './ScriptLink';
 import useToggle from '#hooks/useToggle';
-import onClient from '#lib/utilities/onClient';
+import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 
 const HeaderContainer = () => {
   const { pageType } = useContext(RequestContext);
-  const { service, script, translations, dir, scriptLink } = useContext(
-    ServiceContext,
-  );
+  const {
+    service,
+    script,
+    translations,
+    dir,
+    scriptLink,
+    lang,
+    serviceLang,
+  } = useContext(ServiceContext);
   const { skipLinkText } = translations;
   const borderBottom = pageType !== 'frontPage';
 
@@ -23,16 +29,25 @@ const HeaderContainer = () => {
   // All other page types show the nav bar at all times
   const showNav = showNavOnArticles || pageType !== 'article';
 
-  const isOperaMini = onClient() && window.operamini;
+  const isOperaMini = useOperaMiniDetection();
 
+  // `serviceLang` is defined when the language the page is written in is different to the
+  // language of the service. `serviceLang` is used to override the page language.
+  // However, the skip to content link remains set in the page language.
   const skipLink = !isOperaMini && (
-    <SkipLink service={service} script={script} dir={dir} href="#content">
+    <SkipLink
+      service={service}
+      script={script}
+      dir={dir}
+      href="#content"
+      lang={serviceLang && lang}
+    >
       {skipLinkText}
     </SkipLink>
   );
 
   return (
-    <header role="banner">
+    <header role="banner" lang={serviceLang}>
       <ConsentBanner />
       <BrandContainer
         borderBottom={borderBottom}

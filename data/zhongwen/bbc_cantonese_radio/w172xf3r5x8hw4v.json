@@ -1,0 +1,511 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xf3r5x8hw4v",
+    "locators": {
+      "pid": "w172xf3r5x8hw4v",
+      "brandPid": "p0340tsy"
+    },
+    "type": "WSRADIO",
+    "createdBy": "bbc_cantonese_radio",
+    "language": "zh",
+    "lastUpdated": 1591787694237,
+    "firstPublished": 1591488372000,
+    "lastPublished": 1591488372000,
+    "timestamp": 1591488372000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "时事一周 - BBC News 中文",
+      "pageIdentifier": "chinese.bbc_cantonese_radio.w172xf3r5x8hw4v.page",
+      "producerId": "38",
+      "contentType": "player-episode",
+      "producer": "CHINESE"
+    },
+    "tags": {},
+    "version": "v1.3.2",
+    "blockTypes": ["media"],
+    "title": "时事一周",
+    "releaseDateTimeStamp": 1591401600000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "availability": "available",
+        "id": "w172xf3r5x8hw4v",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "06/06/2020 GMT",
+        "synopses": {
+          "short": "美國非裔死亡案掀起示威浪潮；英國首相考慮延長BNO留英期限；香港首次不批准六四維園集會",
+          "medium": "本周節目內容：美國非裔死亡案掀起示威浪潮 | 英國首相考慮延長BNO留英期限 | 香港首次不批准六四維園集會 | 專題：用土耳其傳統香薰做洗手液 | 專題：西班牙人都住在住宅大廈 | 記者來鴻： 美國示威浪潮中非裔的處境 | 華人談天下：台灣誠品書店"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08g986p.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w1mshl08pg7zndc",
+            "types": ["Original"],
+            "duration": 3600,
+            "durationISO8601": "PT1H",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1594079970000,
+            "availableFrom": 1591487970000
+          }
+        ],
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "时事一周"
+    },
+    "locators": {
+      "pid": "w172xf3r5x8hw4v",
+      "brandPid": "p0340tsy"
+    },
+    "media": {
+      "id": "w172xf3r5x8hw4v",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "06/06/2020 GMT",
+      "synopses": {
+        "short": "美國非裔死亡案掀起示威浪潮；英國首相考慮延長BNO留英期限；香港首次不批准六四維園集會",
+        "medium": "本周節目內容：美國非裔死亡案掀起示威浪潮 | 英國首相考慮延長BNO留英期限 | 香港首次不批准六四維園集會 | 專題：用土耳其傳統香薰做洗手液 | 專題：西班牙人都住在住宅大廈 | 記者來鴻： 美國示威浪潮中非裔的處境 | 華人談天下：台灣誠品書店"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08g986p.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w1mshl08pg7zndc",
+          "types": ["Original"],
+          "duration": 3600,
+          "durationISO8601": "PT1H",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1594079970000,
+          "availableFrom": 1591487970000
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08g986p.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08g986p.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "brand": {
+      "pid": "p0340tsy",
+      "title": "时事一周"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xf3r5x8hw4v",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Chinese",
+      "uri": "/chinese",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "时事一周"
+            },
+            "locators": {
+              "pid": "p08fphh4",
+              "brandPid": "p0340tsy"
+            },
+            "media": {
+              "id": "p08fphh4",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "中國將在香港實施國家安全法，美國將取消香港特殊地位及制裁官員；美國白人警員殺黑人案觸發暴亂；澳門賭王何鴻燊去世......",
+                "medium": "本周節目內容：中國將在香港實施國家安全法，美國將取消香港特殊地位及制裁官員 | 美國白人警員殺黑人案觸發暴亂 | 澳門賭王何鴻燊去世 | 專題：數字0與印度宗教的關係 | 記者來鴻：從茶包看瘟疫大流行的威力 | 華人談天下：澳洲人如何度過禁足令"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08fnlfn.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p08fpj1x",
+                  "types": ["Podcast"],
+                  "duration": 3600,
+                  "durationISO8601": "PT1H",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1593388800000,
+                  "availableFrom": 1590796800000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08fnlfn.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08fnlfn.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "p0340tsy",
+              "title": "时事一周"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/p08fphh4",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "时事一周"
+            },
+            "locators": {
+              "pid": "w172xf3qgcmyky5",
+              "brandPid": "p0340tsy"
+            },
+            "media": {
+              "id": "w172xf3qgcmyky5",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "23/05/2020 GMT",
+              "synopses": {
+                "short": "世界衛生組織將調查應對措施；中國將在香港實施國安法；台灣總統蔡英文就任",
+                "medium": "本周節目內容：界衛生組織將調查應對措施 |中國將在香港實施國安法 |灣總統蔡英文就任 | 專題：令納粹聞風喪膽的女間諜 | 華人談天下：美國人重拾早年娛樂方式",
+                "long": "本周節目內容：界衛生組織將調查應對措施 |中國將在香港實施國安法 |灣總統蔡英文就任 | 專題：令納粹聞風喪膽的女間諜 | 華人談天下：美國人重拾早年娛樂方式"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08f1lf2.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshl07yxmfc5p",
+                  "types": ["Original"],
+                  "duration": 3600,
+                  "durationISO8601": "PT1H",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1592870370000,
+                  "availableFrom": 1590278370000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08f1lf2.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08f1lf2.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "p0340tsy",
+              "title": "时事一周"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xf3qgcmyky5",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "时事一周"
+            },
+            "locators": {
+              "pid": "w172xf3q33b5fbb",
+              "brandPid": "p0340tsy"
+            },
+            "media": {
+              "id": "w172xf3q33b5fbb",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "16/05/2020 GMT",
+              "synopses": {
+                "short": "新型冠狀病毒將成風土病；英國逐步解除封鎖安排；中國的戰狼外交",
+                "medium": "本周節目內容：新型冠狀病毒將成風土病 |英國逐步解除封鎖安排 |國的戰狼外交 | 專題：第一個看見冠狀病毒的人 | 專題：一個好老闆 |專題：大疫年日記 |華人談天下：法國小心翼翼的解封",
+                "long": "本周節目內容：新型冠狀病毒將成風土病 |英國逐步解除封鎖安排 |國的戰狼外交 | 專題：第一個看見冠狀病毒的人 | 專題：一個好老闆 |專題：大疫年日記 |華人談天下：法國小心翼翼的解封"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08ddpyd.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshl07ln9n6kv",
+                  "types": ["Original"],
+                  "duration": 3600,
+                  "durationISO8601": "PT1H",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1592265570000,
+                  "availableFrom": 1589673570000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08ddpyd.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08ddpyd.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "p0340tsy",
+              "title": "时事一周"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xf3q33b5fbb",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "时事一周"
+            },
+            "locators": {
+              "pid": "w172xf3nn121twz",
+              "brandPid": "p0340tsy"
+            },
+            "media": {
+              "id": "w172xf3nn121twz",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/04/2020 GMT",
+              "synopses": {
+                "short": "疫情衝擊顯現 中國經濟首現負增長；特朗普停世衛資助　多國譁然；西方質疑中國　解放軍台海「表不滿」……",
+                "medium": "本週節目內容：疫情衝擊顯現 中國經濟首現負增長 | 特朗普停世衛資助　多國譁然 | 西方質疑中國　解放軍台海「表不滿」 | 專題：抗疫醫護的精神創傷 | 記者來鴻：失去驅疫劇的德國古村如何自處？ | 華人談天下：台灣全民抗疫宣傳「戰」"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p089x3jt.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p089x3jt.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p089x3jt.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "p0340tsy",
+              "title": "时事一周"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xf3nn121twz",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "时事一周"
+            },
+            "locators": {
+              "pid": "w172xf3n8rr8p94",
+              "brandPid": "p0340tsy"
+            },
+            "media": {
+              "id": "w172xf3n8rr8p94",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "11/04/2020 GMT",
+              "synopses": {
+                "short": "《BBC時事一週》──BBC國際台粵語節目，重溫一週國際大事，兩岸四地消息，英國境況。並備有專題環節：〈記者來鴻〉和〈華人談天下〉。",
+                "medium": "本週節目內容：約翰遜染新冠病毒入院引發英國憲制危機 | 武漢解封 | 剛果香港醫生介紹非洲防疫形勢 | 專題：紫外線可對付新冠病毒？ | 記者來鴻：印尼年輕保守派重推「盲婚啞嫁」 | 華人談天下：新冠病毒肆虐紐約　華人的不解"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0899z7l.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0899z7l.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0899z7l.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "p0340tsy",
+              "title": "时事一周"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xf3n8rr8p94",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "时事一周"
+            },
+            "locators": {
+              "pid": "w172xf3mxhfhjp9",
+              "brandPid": "p0340tsy"
+            },
+            "media": {
+              "id": "w172xf3mxhfhjp9",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "04/04/2020 GMT",
+              "synopses": {
+                "short": "《BBC時事一週》──BBC國際台粵語節目，重溫一週國際大事，兩岸四地消息，英國境況。主要專題環節包括：〈記者來鴻〉、〈華人談天下〉、〈環宇風情〉、〈科技天地〉。",
+                "medium": "本週節目內容：美國特朗普政府改變防疫態度 | 抗疫救經濟　中美財政政策大不同 | 台灣前行政院長郝柏村逝世 | 專題：新冠病毒到底從哪裏來？ | 記者來鴻：走進愛沙尼亞最強「竊聽酒店」 | 華人談天下：法國人隔離生活的得與失"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p088q02p.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p088q02p.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p088q02p.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "p0340tsy",
+              "title": "时事一周"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xf3mxhfhjp9",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "时事一周"
+            },
+            "locators": {
+              "pid": "w172x0cpfrt6xd3",
+              "brandPid": "p0340tsy"
+            },
+            "media": {
+              "id": "w172x0cpfrt6xd3",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "11/01/2020 GMT",
+              "synopses": {
+                "short": "臺灣大選民進黨大勝；伊朗擊落民航機；哈里與梅根自我卸任",
+                "medium": "本周節目內容：臺灣大選民進黨大勝 | 伊朗擊落民航機 | 哈里與梅根自我卸任 |專題：地鐵污染 |專題：日本的潔淨 |專題：起死回生 |華人談天下：臺灣大選成敗得失"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08053vb.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08053vb.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08053vb.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "p0340tsy",
+              "title": "时事一周"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172x0cpfrt6xd3",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "时事一周"
+            },
+            "locators": {
+              "pid": "w172wp0x8m30pj7",
+              "brandPid": "p0340tsy"
+            },
+            "media": {
+              "id": "w172wp0x8m30pj7",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "19/10/2019 GMT",
+              "synopses": {
+                "short": "BBC國際台粵語節目，重溫一週國際大事，兩岸四地消息，英國境況。主要專題環節包括：〈記者來鴻〉、〈華人談天下〉、〈環宇風情〉、〈科技天地〉。",
+                "medium": "本週節目內容：約翰遜「脫歐」工作再嘗敗仗 | 特朗普信函給土耳其攻敘利亞問題添變數 | 趙紫陽百歲冥壽　靈灰終入土為安 | 專題：與Solomon Yue對話 | 專題：不願循規蹈矩的華沙人民 | 華人談天下：談禁煙　煙草處處的德國談何容易？"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07rjv4n.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p07rjv4n.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p07rjv4n.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "p0340tsy",
+              "title": "时事一周"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172wp0x8m30pj7",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}

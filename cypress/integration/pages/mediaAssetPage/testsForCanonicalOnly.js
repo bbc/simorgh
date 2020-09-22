@@ -10,7 +10,7 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForCanonicalOnly to run for ${service} ${pageType}`, () => {});
 };
 
-// For testing feastures that may differ across services but share a common logic e.g. translated strings.
+// For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
   pageType,
@@ -21,20 +21,24 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       const language = appConfig[config[service].name][variant].lang;
 
       it('should render an iframe with a valid URL', () => {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(
-          ({ body: jsonData }) => {
-            if (hasMedia(jsonData)) {
-              const embedUrl = getEmbedUrl(jsonData, language);
+        if (!`${Cypress.env('currentPath')}`.includes('/russian/av/')) {
+          cy.request(`${Cypress.env('currentPath')}.json`).then(
+            ({ body: jsonData }) => {
+              if (hasMedia(jsonData)) {
+                const embedUrl = getEmbedUrl(jsonData, language);
 
-              cy.get(`iframe[src="${embedUrl}"]`).should('be.visible');
-              cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
-            } else {
-              cy.log(
-                `No media on ${pageType} for ${Cypress.env('currentPath')}`,
-              );
-            }
-          },
-        );
+                cy.get(`iframe[src="${embedUrl}"]`).should('be.visible');
+                cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
+              } else {
+                cy.log(
+                  `No media on ${pageType} for ${Cypress.env('currentPath')}`,
+                );
+              }
+            },
+          );
+        } else {
+          cy.log('skipped test for cps russian map');
+        }
       });
     });
 

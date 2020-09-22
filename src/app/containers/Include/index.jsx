@@ -1,73 +1,88 @@
-/* eslint-disable react/no-danger */
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
-import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
-import { RequestContext } from '#contexts/RequestContext';
-import useToggle from '#hooks/useToggle';
+import { pathOr } from 'ramda';
 
-/**
- * Prevent Includes from being wider than their parent, whilst
- * allowing localised horizontal scrolling for content that is.
- */
-const Include = styled.div`
-  max-width: 100%;
-  overflow: scroll hidden;
+import EmbedError from '@bbc/psammead-embed-error';
+import nodeLogger from '#lib/logger.node';
+import { INCLUDE_RENDERED } from '#lib/logger.const';
+import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
+import useToggle from '#hooks/useToggle';
+import { GridItemConstrainedMedium } from '#lib/styledGrid';
+
+import Canonical from './canonical';
+import Idt2Canonical from './canonical/Idt2';
+import Idt2Amp from './amp/Idt2Amp';
+import VjAmp from './amp/VjAmp';
+
+const logger = nodeLogger(__filename);
+
+const componentsToRender = {
+  amp: {
+    idt2: props => <Idt2Amp {...props} />,
+    vj: props => <VjAmp {...props} />,
+  },
+  canonical: {
+    idt1: props => <Canonical {...props} />,
+    idt2: props => <Idt2Canonical {...props} />,
+    vj: props => <Canonical {...props} />,
+  },
+};
+
+const FallbackGrid = styled(GridItemConstrainedMedium)`
+  display: grid;
 `;
 
-const IncludeContainer = ({ html, type }) => {
-  const { isAmp } = useContext(RequestContext);
+const IncludeContainer = props => {
+  const { isAmp, canonicalLink } = useContext(RequestContext);
+  const { translations } = useContext(ServiceContext);
   const { enabled } = useToggle('include');
 
-  const supportedTypes = ['idt1', 'idt2', 'vj'];
-
-  if (isAmp || !enabled || !html || !supportedTypes.includes(type)) return null;
-
-  // This is a list of include types that depend on the javascript module loader requireJs.
-  // These includes were built to work within the BBC's legacy publishing platform (the PAL)
-  // that uses requireJS extensively. See https://github.com/bbc/simorgh/issues/5750
-  const requireIncludeTypes = ['vj', 'idt1'];
-
-  const paths = `{
-    'jquery-1':
-      'https://static.bbc.co.uk/frameworks/jquery/0.4.1/sharedmodules/jquery-1.7.2',
-    'istats-1':
-      'https://news.files.bbci.co.uk/include/vjassets/js/vendor/istats-1.0.0.min',
-  }`;
-
-  const configureAdditionalScripts = `require.config({ paths:${paths} });`;
-
-  const IncludeGrid = styled(GridItemConstrainedMedium)`
-    display: grid;
-  `;
-
-  return (
-    <IncludeGrid>
-      {requireIncludeTypes.includes(type) && (
-        <Helmet>
-          <script
-            type="text/javascript"
-            src="https://news.files.bbci.co.uk/include/vjassets/js/vendor/require-2.1.20b.min.js"
-          />
-          <script>{configureAdditionalScripts}</script>
-        </Helmet>
-      )}
-      <Include
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-    </IncludeGrid>
+  const errorMessage = pathOr(
+    'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+    ['include', 'errorMessage'],
+    translations,
   );
+
+  const linkText = pathOr(
+    'View the full version of the page to see all the content.',
+    ['include', 'linkText'],
+    translations,
+  );
+
+  if (!enabled) return null;
+  const { isAmpSupported, href, type, index } = props;
+
+  if (!isAmpSupported && isAmp) {
+    return (
+      <FallbackGrid>
+        <EmbedError
+          message={errorMessage}
+          link={{
+            text: linkText,
+            href: `${canonicalLink}#include-${index + 1}`,
+          }}
+        />
+      </FallbackGrid>
+    );
+  }
+
+  logger.info(INCLUDE_RENDERED, {
+    includeUrl: href,
+    type,
+  });
+
+  const platform = isAmp ? 'amp' : 'canonical';
+
+  return componentsToRender[platform][type]
+    ? componentsToRender[platform][type](props)
+    : null;
 };
 
 IncludeContainer.propTypes = {
-  html: string,
+  href: string.isRequired,
   type: string.isRequired,
-};
-
-IncludeContainer.defaultProps = {
-  html: null,
 };
 
 export default IncludeContainer;

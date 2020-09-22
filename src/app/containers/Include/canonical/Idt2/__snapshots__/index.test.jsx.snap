@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Include: IDT2 Canonical should render 1`] = `
+.c0 {
+  grid-column: 1 / span 6;
+  display: grid;
+}
+
+.c1 {
+  max-width: 100%;
+  overflow: scroll hidden;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    max-width: initial;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+      id="include-1"
+    >
+      <script
+        src="https://news.test.files.bbci.co.uk/include/idt2/static/js/dataPic.64a69df2.js"
+        type="text/javascript"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Include: IDT2 Canonical should render fallback when disallowed scripts are present 1`] = `
+.c1 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
+.c0 {
+  grid-column: 1 / span 6;
+  display: grid;
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    max-width: initial;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <img
+      alt="An image."
+      class="c1"
+      id="include-1"
+      src="https://www.bbc.com/ws/includes/idt2/image/816"
+      srcset="https://www.bbc.com/ws/includes/idt2/image/470 470w,https://www.bbc.com/ws/includes/idt2/image/816 816w"
+    />
+  </div>
+</div>
+`;

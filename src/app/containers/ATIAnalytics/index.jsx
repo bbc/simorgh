@@ -4,10 +4,10 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
 import { buildArticleATIUrl } from './params/article/buildParams';
-import { buildFrontPageATIUrl } from './params/frontpage/buildParams';
 import { buildTvRadioATIUrl } from './params/tvRadioPage/buildParams';
 import { buildCpsAssetPageATIUrl } from './params/cpsAssetPage/buildParams';
 import { buildMostReadATIUrl } from './params/mostReadPage/buildParams';
+import { buildIndexPageATIUrl } from './params/indexPage/buildParams';
 import { pageDataPropType } from '#models/propTypes/data';
 
 const ATIAnalytics = ({ data }) => {
@@ -17,9 +17,10 @@ const ATIAnalytics = ({ data }) => {
 
   const pageTypeHandlers = {
     article: buildArticleATIUrl,
-    frontPage: buildFrontPageATIUrl,
+    frontPage: buildIndexPageATIUrl,
     media: buildTvRadioATIUrl,
     mostRead: buildMostReadATIUrl,
+    IDX: buildIndexPageATIUrl,
     MAP: () =>
       buildCpsAssetPageATIUrl(
         data,

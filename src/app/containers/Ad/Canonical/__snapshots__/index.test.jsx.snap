@@ -1,18 +1,153 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderboard ad with dotcom-bootstrap script 1`] = `
+exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad with dotcom-bootstrap script 1`] = `
 <html>
   <head>
     <script
+      async="true"
       src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      type="module"
+    />
+    <script
+      async="true"
+      nomodule="nomodule"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
+    />
+  </head>
+  <body>
+    .c0 {
+  background-color: #F8F8F8;
+  display: none;
+  visibility: hidden;
+  padding: 0;
+}
+
+@media (min-width:18.75rem) {
+  .c0 {
+    min-height: 5.1875rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    visibility: visible;
+  }
+}
+
+@media (min-width:19.75rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    min-height: 17.6875rem;
+  }
+}
+
+<div>
+      <section
+        aria-hidden="true"
+        aria-label="Advertisement 2"
+        class="c0"
+        data-e2e="advertisement"
+        role="region"
+      >
+        <div
+          class="dotcom-ad"
+          id="dotcom-mpu"
+        />
+      </section>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderboard ad with dotcom-bootstrap script 1`] = `
+.c0 {
+  background-color: #F8F8F8;
+  display: none;
+  visibility: hidden;
+}
+
+@media (min-width:20rem) {
+  .c0 {
+    margin-top: 0.5rem;
+    min-height: 5.1875rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    visibility: visible;
+  }
+}
+
+@media (min-width:21rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    min-height: 5.8125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    min-height: 7.6875rem;
+  }
+}
+
+@media (min-width:58.75rem) {
+  .c0 {
+    min-height: 17.6875rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+<html>
+  <head>
+    <script
+      async="true"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      type="module"
+    />
+    <script
+      async="true"
+      nomodule="nomodule"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
     />
   </head>
   <body>
     <div>
-      <div
-        class="dotcom-ad"
-        id="dotcom-leaderboard"
-      />
+      <section
+        aria-hidden="true"
+        aria-label="Advertisement"
+        class="c0"
+        data-e2e="advertisement"
+        role="region"
+      >
+        <div
+          class="dotcom-ad"
+          id="dotcom-leaderboard"
+        />
+      </section>
     </div>
   </body>
 </html>

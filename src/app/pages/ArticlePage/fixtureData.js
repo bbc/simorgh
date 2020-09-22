@@ -67,6 +67,7 @@ const presetThings = {
       curationType: ['vivo-stream'],
       thingId: '2351f2b2-ce36-4f44-996d-c3c4f7f90eaa',
       thingLabel: 'Royal Wedding 2018',
+      thingEnglishLabel: 'Royal Wedding 2018',
       thingType: ['Thing', 'Event'],
       thingSameAs: [
         'http://dbpedia.org/resource/Queen_Victoria',
@@ -81,6 +82,7 @@ const presetThings = {
       curationType: ['vivo-stream'],
       thingId: '803eaeb9-c0c3-4f1b-9a66-90efac3df2dc',
       thingLabel: 'Duchess of Sussex',
+      thingEnglishLabel: 'Duchess of Sussex',
       thingType: ['Person'],
       thingSameAs: [],
     },
@@ -91,6 +93,7 @@ const presetThings = {
         'http://www.bbc.co.uk/things/1efbf3e5-b330-49a1-b531-b507ab027c96#id',
       thingId: '1efbf3e5-b330-49a1-b531-b507ab027c96',
       thingLabel: 'Queen Victoria',
+      thingEnglishLabel: 'Queen Victoria',
       thingType: ['Person', 'Thing'],
     },
   ],

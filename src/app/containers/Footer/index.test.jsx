@@ -44,6 +44,11 @@ const contextStub = {
   },
 };
 
+const contextStubWithFooterLang = {
+  ...contextStub,
+  serviceLang: 'uk',
+};
+
 const FooterWithContext = stub => (
   <ServiceContext.Provider value={stub}>
     <FooterContainer />
@@ -109,6 +114,14 @@ describe(`FooterContainer`, () => {
       expect(externalLink.textContent).toEqual(
         'Read about our approach to external linking.',
       );
+    });
+
+    it('should render footer with lang when serviceLang is defined', () => {
+      const { container } = render(
+        FooterWithContext(contextStubWithFooterLang),
+      );
+
+      expect(container.querySelector('footer')).toHaveAttribute('lang', 'uk');
     });
   });
 });

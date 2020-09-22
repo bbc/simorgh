@@ -1,0 +1,553 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcldhhrhmcf",
+    "locators": {
+      "pid": "w172xcldhhrhmcf",
+      "brandPid": "w13xttn4"
+    },
+    "type": "WSTV",
+    "createdBy": "bbc_pashto_tv",
+    "language": "ps",
+    "lastUpdated": 1591787694237,
+    "firstPublished": 1589725549000,
+    "lastPublished": 1589725549000,
+    "timestamp": 1589725549000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "نړۍ دا وخت - BBC News پښتو",
+      "pageIdentifier": "pashto.bbc_pashto_tv.tv.w172xcldhhrhmcf.page",
+      "producerId": "68",
+      "contentType": "player-episode",
+      "producer": "PASHTO"
+    },
+    "tags": {},
+    "version": "v1.3.2",
+    "blockTypes": ["media"],
+    "title": "نړۍ دا وخت",
+    "releaseDateTimeStamp": 1590624000000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "availability": "notAvailable",
+        "id": "w172xcldhhrhmcf",
+        "subType": "episode",
+        "format": "Video",
+        "title": "28/05/2020 GMT",
+        "synopses": {
+          "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
+          "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+        "embedding": false,
+        "advertising": false,
+        "versions": [],
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "نړۍ دا وخت"
+    },
+    "locators": {
+      "pid": "w172xcldhhrhmcf",
+      "brandPid": "w13xttn4"
+    },
+    "media": {
+      "id": "w172xcldhhrhmcf",
+      "subType": "episode",
+      "format": "Video",
+      "title": "28/05/2020 GMT",
+      "synopses": {
+        "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
+        "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+      "embedding": false,
+      "advertising": false,
+      "versions": [],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "brand": {
+      "pid": "w13xttn4",
+      "title": "نړۍ دا وخت"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcldhhrhmcf",
+    "type": "ws_tv"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Pashto",
+      "uri": "/pashto",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "نړۍ دا وخت"
+            },
+            "locators": {
+              "pid": "w172xclf71cw3rx",
+              "brandPid": "w13xttn4"
+            },
+            "media": {
+              "id": "w172xclf71cw3rx",
+              "subType": "episode",
+              "format": "Video",
+              "title": "09/06/2020 GMT",
+              "synopses": {
+                "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
+                "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjgp059ckpk",
+                  "types": ["Original"],
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1592315760000,
+                  "availableFrom": 1591710960000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "w13xttn4",
+              "title": "نړۍ دا وخت"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xclf71cw3rx",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "نړۍ دا وخت"
+            },
+            "locators": {
+              "pid": "w172xclf71cs6vt",
+              "brandPid": "w13xttn4"
+            },
+            "media": {
+              "id": "w172xclf71cs6vt",
+              "subType": "episode",
+              "format": "Video",
+              "title": "08/06/2020 GMT",
+              "synopses": {
+                "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
+                "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjgp0598nsg",
+                  "types": ["Original"],
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1592229360000,
+                  "availableFrom": 1591624560000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "w13xttn4",
+              "title": "نړۍ دا وخت"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xclf71cs6vt",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "نړۍ دا وخت"
+            },
+            "locators": {
+              "pid": "w172xcldvs2kgpk",
+              "brandPid": "w13xttn4"
+            },
+            "media": {
+              "id": "w172xcldvs2kgpk",
+              "subType": "episode",
+              "format": "Video",
+              "title": "07/06/2020 GMT",
+              "synopses": {
+                "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
+                "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjgnmx01xm6",
+                  "types": ["Original"],
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1592142960000,
+                  "availableFrom": 1591538160000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "w13xttn4",
+              "title": "نړۍ دا وخت"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcldvs2kgpk",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "نړۍ دا وخت"
+            },
+            "locators": {
+              "pid": "w172xcldvs2gksg",
+              "brandPid": "w13xttn4"
+            },
+            "media": {
+              "id": "w172xcldvs2gksg",
+              "subType": "episode",
+              "format": "Video",
+              "title": "06/06/2020 GMT",
+              "synopses": {
+                "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
+                "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjgnmwzz0q3",
+                  "types": ["Original"],
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1592056560000,
+                  "availableFrom": 1591451760000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "w13xttn4",
+              "title": "نړۍ دا وخت"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcldvs2gksg",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "نړۍ دا وخت"
+            },
+            "locators": {
+              "pid": "w172xcldvs2cnwc",
+              "brandPid": "w13xttn4"
+            },
+            "media": {
+              "id": "w172xcldvs2cnwc",
+              "subType": "episode",
+              "format": "Video",
+              "title": "05/06/2020 GMT",
+              "synopses": {
+                "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
+                "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjgnmwzw3t0",
+                  "types": ["Original"],
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1591970160000,
+                  "availableFrom": 1591365360000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "w13xttn4",
+              "title": "نړۍ دا وخت"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcldvs2cnwc",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "نړۍ دا وخت"
+            },
+            "locators": {
+              "pid": "w172xcldvs28rz8",
+              "brandPid": "w13xttn4"
+            },
+            "media": {
+              "id": "w172xcldvs28rz8",
+              "subType": "episode",
+              "format": "Video",
+              "title": "04/06/2020 GMT",
+              "synopses": {
+                "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
+                "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjgnmwzs6wx",
+                  "types": ["Original"],
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1591883760000,
+                  "availableFrom": 1591278960000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "w13xttn4",
+              "title": "نړۍ دا وخت"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcldvs28rz8",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "نړۍ دا وخت"
+            },
+            "locators": {
+              "pid": "w172xcldvs25w25",
+              "brandPid": "w13xttn4"
+            },
+            "media": {
+              "id": "w172xcldvs25w25",
+              "subType": "episode",
+              "format": "Video",
+              "title": "03/06/2020 GMT",
+              "synopses": {
+                "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
+                "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjgnmwzp9zt",
+                  "types": ["Original"],
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1591797360000,
+                  "availableFrom": 1591192560000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "w13xttn4",
+              "title": "نړۍ دا وخت"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcldvs25w25",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "نړۍ دا وخت"
+            },
+            "locators": {
+              "pid": "w172wc8vxz7xc13",
+              "brandPid": "w13xttn4"
+            },
+            "media": {
+              "id": "w172wc8vxz7xc13",
+              "subType": "episode",
+              "format": "Video",
+              "title": "31/03/2018 GMT",
+              "synopses": {
+                "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
+                "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1msggjvj2dcvb9",
+                  "types": ["Original"],
+                  "duration": 1620,
+                  "durationISO8601": "PT27M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableFrom": 1508976000000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "w13xttn4",
+              "title": "نړۍ دا وخت"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172wc8vxz7xc13",
+            "type": "ws_tv"
+          }
+        ]
+      }
+    ]
+  }
+}

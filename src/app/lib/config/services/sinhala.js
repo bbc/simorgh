@@ -11,13 +11,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'වෙළෙඳ දැන්වීමක් ',
-    },
     lang: `si`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'යාවත්කාලීනවී ඇත',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-sinhala',
     atiAnalyticsProducerId: '82',
     chartbeatDomain: 'sinhala.bbc.co.uk',
@@ -34,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'ශීර්ෂ වැකිය, ',
     imageCopyrightOffscreenText: 'ඡායාරූප මූලාශ්‍රය, ',
     locale: `si-LK`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'si',
     datetimeLocale: `si`,
     service: 'sinhala',
     serviceName: 'Sinhala',
@@ -53,6 +52,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'වෙළෙඳ දැන්වීමක් ',
+      },
       seeAll: 'සියල්ල දැකගන්න',
       home: 'මුල් පිටුව',
       currentPage: 'දැන් සිටින පිටුව',
@@ -149,6 +151,7 @@ export const service = {
         noJs: 'මෙහි කිසිවක් අඩංගු නැත.',
         contentExpired:
           'ඔබේ දුරකථනයේ හෝ පරිගණකයේ මෙය වාදනය කිරීමට අදාළ මෘදුකාංග නැත',
+        contentNotYetAvailable: 'මෙහි ඇති දෑ සවන්දීම සඳහා තවම සූදානම් නැත.',
         audio: 'හඬ',
         photogallery: 'ඡායාරූප ගැලරිය ',
         video: 'වීඩියෝ',
@@ -182,6 +185,11 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      include: {
+        errorMessage:
+          'කණගාටුයි, මෙම සැහැල්ලු ජංගම පිටුව තුළ අපට ලිපියේ මෙම කොටස පෙන්විය නොහැක.',
+        linkText: 'අන්තර්ගතයේ සියල්ල දැක ගැනීමට පිටුවේ සම්පූර්ණ අනුවාදය බලන්න',
+      },
       topStoriesTitle: 'ප්‍රධාන පුවත',
       featuresAnalysisTitle: 'දැක්ම',
     },
@@ -191,6 +199,11 @@ export const service = {
       lastUpdated: 'අවසන් යාවත්කාලීනවීම:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'වැඩියෙන්ම නැරඹූ',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

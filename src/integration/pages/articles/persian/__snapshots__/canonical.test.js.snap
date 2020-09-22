@@ -1,0 +1,347 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
+
+exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=69&amp;p=persian.articles.c4vlle3q337o.page&amp;x1=[urn%3Abbc%3Aoptimo%3Ac4vlle3q337o]&amp;x2=[responsive]&amp;x3=[news-persian]&amp;x4=[fa]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[%D9%BE%D9%87%D9%BE%D8%A7%D8%AF%DB%8C%2B%DA%A9%D9%87%2B%D8%A8%D8%B1%D8%A7%DB%8C%D8%AA%D8%A7%D9%86%2B%D9%82%D9%87%D9%88%D9%87%2B%D9%85%DB%8C%E2%80%8C%D8%A2%D9%88%D8%B1%D8%AF]&amp;x11=[2018-08-24T14%3A57%3A42.000Z]&amp;x12=[2018-08-24T14%3A57%3A42.000Z]&amp;x13=[Drones]&amp;x14=[c6176220-b6bb-4a1c-b3b4-3a6fcdc283b1]\\"/>"`;
+
+exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
+
+exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+
+exports[`Canonical Articles Footer Link should match text and url 1`] = `
+Object {
+  "text": "BBC News, فارسی",
+  "url": "/persian",
+}
+`;
+
+exports[`Canonical Articles Footer Link should match text and url 2`] = `
+Object {
+  "text": "چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟",
+  "url": "https://www.bbc.com/persian/institutional-49283091",
+}
+`;
+
+exports[`Canonical Articles Footer Link should match text and url 3`] = `
+Object {
+  "text": "شرایط استفاده",
+  "url": "https://www.bbc.com/persian/institutional-37474133",
+}
+`;
+
+exports[`Canonical Articles Footer Link should match text and url 4`] = `
+Object {
+  "text": "درباره بی بی سی",
+  "url": "https://www.bbc.com/persian/institutional-37474136",
+}
+`;
+
+exports[`Canonical Articles Footer Link should match text and url 5`] = `
+Object {
+  "text": "سیاست حفظ حریم خصوصی",
+  "url": "https://www.bbc.com/persian/institutional-37540067",
+}
+`;
+
+exports[`Canonical Articles Footer Link should match text and url 6`] = `
+Object {
+  "text": "کوکی ها",
+  "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Articles Footer Link should match text and url 7`] = `
+Object {
+  "text": "تماس با بی بی سی",
+  "url": "https://www.bbc.com/persian/institutional-37542244",
+}
+`;
+
+exports[`Canonical Articles Footer Link should match text and url 8`] = `
+Object {
+  "text": "AdChoices / Do Not Sell My Info",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+}
+`;
+
+exports[`Canonical Articles Footer Link should match text and url 9`] = `
+Object {
+  "text": "سیاست ما درباره لینک دادن به سایت های دیگر.",
+  "url": "https://www.bbc.com/persian/institutional/2011/04/000001_links",
+}
+`;
+
+exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, فارسی"`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 1`] = `
+Object {
+  "text": "صفحه اول",
+  "url": "/persian",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
+Object {
+  "text": "کرونا",
+  "url": "/persian/science-52004647",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
+Object {
+  "text": "پخش زنده",
+  "url": "/persian/media-49522521",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
+Object {
+  "text": "ویدیو",
+  "url": "/persian/media/video",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
+Object {
+  "text": "تلویزیون",
+  "url": "/persian/tv-and-radio-37434377",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
+Object {
+  "text": "رادیو",
+  "url": "/persian/tv-and-radio-37434376",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
+Object {
+  "text": "ايران",
+  "url": "/persian/iran",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "افغانستان",
+  "url": "/persian/afghanistan",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 9`] = `
+Object {
+  "text": "جهان",
+  "url": "/persian/world",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
+Object {
+  "text": "هنر",
+  "url": "/persian/arts",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
+Object {
+  "text": "ورزش",
+  "url": "/persian/sport",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 12`] = `
+Object {
+  "text": "اقتصاد",
+  "url": "/persian/business",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 13`] = `
+Object {
+  "text": "دانش",
+  "url": "/persian/science",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 14`] = `
+Object {
+  "text": "ناظران می‌گویند",
+  "url": "/persian/blogs/viewpoints",
+}
+`;
+
+exports[`Canonical Articles I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg"`;
+
+exports[`Canonical Articles I can see an image with a caption 2`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند"`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
+Object {
+  "sizes": null,
+  "url": "http://localhost:7080/persian/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 2`] = `
+Object {
+  "sizes": "72x72",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 3`] = `
+Object {
+  "sizes": "96x96",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 4`] = `
+Object {
+  "sizes": "128x128",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 5`] = `
+Object {
+  "sizes": "144x144",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 6`] = `
+Object {
+  "sizes": "152x152",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 7`] = `
+Object {
+  "sizes": "180x180",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 8`] = `
+Object {
+  "sizes": "192x192",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 9`] = `
+Object {
+  "sizes": "384x384",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 10`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7080/persian/articles/c4vlle3q337o"`;
+
+exports[`Canonical Articles SEO Dir attribute 1`] = `"rtl"`;
+
+exports[`Canonical Articles SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical Articles SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Articles SEO Heading level 1 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
+
+exports[`Canonical Articles SEO Lang attribute 1`] = `"fa"`;
+
+exports[`Canonical Articles SEO Linked data should match text 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@graph": Array [
+    Object {
+      "@type": "Article",
+      "about": Array [
+        Object {
+          "@type": "Thing",
+          "name": " پهپاد",
+        },
+      ],
+      "author": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+          "width": 1024,
+        },
+        "name": "BBC News فارسی",
+        "noBylinesPolicy": "https://www.bbc.com/persian/institutional-49283091#authorexpertise",
+      },
+      "dateModified": "2018-08-24T14:57:42.000Z",
+      "datePublished": "2018-08-24T14:57:42.000Z",
+      "headline": "پهپادی که برایتان قهوه می‌آورد",
+      "image": Object {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+        "width": 1024,
+      },
+      "mainEntityOfPage": Object {
+        "@id": "http://localhost:7080/persian/articles/c4vlle3q337o",
+        "@type": "WebPage",
+        "name": "پهپادی که برایتان قهوه می‌آورد",
+      },
+      "publisher": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+          "width": 1024,
+        },
+        "name": "BBC News فارسی",
+        "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "url": "http://localhost:7080/persian/articles/c4vlle3q337o",
+    },
+  ],
+}
+`;
+
+exports[`Canonical Articles SEO OG description 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
+
+exports[`Canonical Articles SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"`;
+
+exports[`Canonical Articles SEO OG image alt 1`] = `"BBC News فارسی"`;
+
+exports[`Canonical Articles SEO OG locale 1`] = `"fa"`;
+
+exports[`Canonical Articles SEO OG site name 1`] = `"BBC News فارسی"`;
+
+exports[`Canonical Articles SEO OG title 1`] = `"پهپادی که برایتان قهوه می‌آورد - BBC News فارسی"`;
+
+exports[`Canonical Articles SEO OG type 1`] = `"article"`;
+
+exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7080/persian/articles/c4vlle3q337o"`;
+
+exports[`Canonical Articles SEO Page title 1`] = `"پهپادی که برایتان قهوه می‌آورد - BBC News فارسی"`;
+
+exports[`Canonical Articles SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical Articles SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical Articles SEO Twitter creator 1`] = `"@bbcpersian"`;
+
+exports[`Canonical Articles SEO Twitter description 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
+
+exports[`Canonical Articles SEO Twitter image alt 1`] = `"BBC News فارسی"`;
+
+exports[`Canonical Articles SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"`;
+
+exports[`Canonical Articles SEO Twitter site 1`] = `"@bbcpersian"`;
+
+exports[`Canonical Articles SEO Twitter title 1`] = `"پهپادی که برایتان قهوه می‌آورد - BBC News فارسی"`;

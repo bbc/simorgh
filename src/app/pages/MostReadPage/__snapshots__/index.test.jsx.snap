@@ -54,7 +54,6 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 
 .c14 {
   padding-top: 0.375rem;
-  padding-bottom: 1.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -77,6 +76,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 
 .c10 {
   position: relative;
+  padding-bottom: 1.5rem;
 }
 
 .c17 {
@@ -94,29 +94,34 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c1 {
   margin: 0 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
 }
 
 .c2 {
-  color: #6E6E73;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #6E6E73;
   margin: 0;
-  padding: 1rem 0 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 @supports (display:grid) {
-  .c3 {
+  .c4 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c5 {
+  .c6 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
     margin-left: 0%;
@@ -126,7 +131,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c5 {
+  .c6 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
     margin-left: 0%;
@@ -136,7 +141,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c6 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
     margin-left: 0%;
@@ -146,7 +151,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
+  .c6 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
     margin-left: 0%;
@@ -156,7 +161,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c5 {
+  .c6 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     margin-left: 0%;
@@ -166,8 +171,8 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c5 {
-    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+  .c6 {
+    width: calc(11/20*(100% - 20 * 1rem) + 10 * 1rem );
     margin: 0 0.5rem;
     margin-left: 10%;
     display: inline-block;
@@ -176,7 +181,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @supports (display:grid) {
-  .c5 {
+  .c6 {
     display: block;
   }
 }
@@ -273,81 +278,99 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
-  .c6 {
-    margin-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c6 {
-    margin-top: 1.5rem;
-  }
-}
-
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c4 {
+  .c5 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c4 {
+  .c5 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c0 {
+  .c1 {
     margin: 0 1rem;
   }
 }
 
-@media (max-width:62.9375rem) {
+@media (min-width:25rem) {
   .c1 {
-    margin-bottom: 1.5rem;
+    padding-top: 1rem;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (max-width:37.4375rem) {
   .c1 {
-    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:37.5rem) {
   .c1 {
-    width: 100%;
-    margin: 0 auto 2.5rem;
-    max-width: 80rem;
+    padding-top: 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c1 {
+    padding-bottom: 2.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c2 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c2 {
-    font-size: 1.75rem;
-    line-height: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
-    padding: 1.5rem 0 1rem;
+    padding: 1.5rem 0 0.5rem;
   }
 }
 
 @media (min-width:63rem) {
   .c2 {
-    padding: 1.5rem 0 0.5rem;
+    padding: 1.5rem 0 0;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c3 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c3 {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    margin-top: 2rem;
   }
 }
 
@@ -395,6 +418,11 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
       href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png"
       rel="apple-touch-icon"
       sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
     />
     <link
       href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
@@ -553,10 +581,18 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
       content="De one we dem de read well well - BBC News Pidgin"
       name="twitter:title"
     />
+    <noscript>
+      &lt;img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cv=2.0&cj=1" /&gt;
+    </noscript>
+    <script
+      async="true"
+      src="http://localhost:7080/static/js/comscore/main-1.0.js"
+      type="text/javascript"
+    />
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"WebPage","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"De one we dem de read well well"}}
+      {"@context":"http://schema.org","@graph":[{"@type":"WebPage","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"De one we dem de read well well"}}]}
     </script>
   </head>
   <body>
@@ -575,21 +611,22 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
         >
           <h1
             class="c2"
+            dir="ltr"
             id="content"
             tabindex="-1"
           >
             De one we dem de read well well
           </h1>
           <div
-            class="c3 c4"
-            dir="ltr"
+            class="c3"
           >
             <div
-              class="c5"
+              class="c4 c5"
               dir="ltr"
             >
               <div
                 class="c6"
+                dir="ltr"
               >
                 <ol
                   class="c7 c8"

@@ -1,0 +1,449 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:gahuza/23313911",
+    "locators": {
+      "assetUri": "/gahuza/23313911",
+      "cpsUrn": "urn:bbc:content:assetUri:gahuza/23313911",
+      "curie": "http://www.bbc.co.uk/asset/48fe44a1-f432-4475-942d-ab017d13b4d0",
+      "assetId": "23313911"
+    },
+    "type": "STY",
+    "createdBy": "gahuza-v6",
+    "language": "rw",
+    "lastUpdated": 1592585242524,
+    "firstPublished": 1591720017000,
+    "lastPublished": 1591722582000,
+    "timestamp": 1591722582000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "gahuza.story.23313911.page",
+      "cps_asset_id": "23313911"
+    },
+    "tags": {},
+    "version": "v1.3.2",
+    "blockTypes": ["image", "paragraph", "include"],
+    "includeComments": false,
+    "atiAnalytics": { "producerName": "GAHUZA", "producerId": "40" }
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "63735666",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/1045D/test/_63735666_3.jpg",
+        "path": "/cpsdevpb/1045D/test/_63735666_3.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Test caption for first image",
+        "caption": "Test caption for image 1",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Introduction to this story. ",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      { "text": "IDT2 Map", "markupType": "plain_text", "type": "paragraph" },
+      {
+        "required": false,
+        "title": "IDT2 map",
+        "href": "/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7",
+        "platform": "highweb",
+        "idt2": {
+          "altText": "Map: St. Albans",
+          "dimensions": {
+            "small": {
+              "href": "/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7/image/350",
+              "width": 700,
+              "height": 700
+            },
+            "medium": {
+              "href": "/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7/image/470",
+              "width": 940,
+              "height": 940
+            },
+            "large": {
+              "href": "/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7/image/816",
+              "width": 1632,
+              "height": 918
+            }
+          },
+          "copyrightHolder": "",
+          "published": 1591722473752
+        },
+        "type": "include"
+      },
+      {
+        "text": "IDT2 Chart - Stacked column chart",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "required": false,
+        "title": "Stacked column chart",
+        "href": "/idt2/8f1e559c-c08e-4ef7-9afb-0318969410c4",
+        "platform": "highweb",
+        "idt2": {
+          "altText": "Data in a stacked column chart. .  .",
+          "dimensions": {
+            "small": {
+              "href": "/idt2/8f1e559c-c08e-4ef7-9afb-0318969410c4/image/350",
+              "width": 700,
+              "height": 820
+            },
+            "medium": {
+              "href": "/idt2/8f1e559c-c08e-4ef7-9afb-0318969410c4/image/470",
+              "width": 940,
+              "height": 896
+            },
+            "large": {
+              "href": "/idt2/8f1e559c-c08e-4ef7-9afb-0318969410c4/image/816",
+              "width": 1632,
+              "height": 1286
+            }
+          },
+          "copyrightHolder": "Source: BBC",
+          "published": 1592584702952
+        },
+        "type": "include"
+      },
+      {
+        "text": "IDT2 Chart - Stacked bar chart ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "required": false,
+        "title": "Stacked bar chart",
+        "href": "/idt2/b7a7dab7-8798-49db-824d-c871fa624031",
+        "platform": "highweb",
+        "type": "include"
+      },
+      {
+        "text": "IDT2 Chart - table",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "required": false,
+        "title": "Table chart",
+        "href": "/idt2/8f2c1d5e-74b2-4b95-9bf6-6c9f8e415208",
+        "platform": "highweb",
+        "idt2": {
+          "altText": "Data in a table. .  .",
+          "dimensions": {
+            "small": {
+              "href": "/idt2/8f2c1d5e-74b2-4b95-9bf6-6c9f8e415208/image/350",
+              "width": 700,
+              "height": 620
+            },
+            "medium": {
+              "href": "/idt2/8f2c1d5e-74b2-4b95-9bf6-6c9f8e415208/image/470",
+              "width": 940,
+              "height": 466
+            },
+            "large": {
+              "href": "/idt2/8f2c1d5e-74b2-4b95-9bf6-6c9f8e415208/image/816",
+              "width": 1632,
+              "height": 466
+            }
+          },
+          "copyrightHolder": "Source: BBC",
+          "published": 1592584646656
+        },
+        "type": "include"
+      },
+      {
+        "text": "IDT2 Chart - pie chart",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "required": false,
+        "title": "Pie chart",
+        "href": "/idt2/59993b50-74ac-4f6c-bd3f-fe0664156603",
+        "platform": "highweb",
+        "idt2": {
+          "altText": "Data in a pie chart. .  .",
+          "dimensions": {
+            "small": {
+              "href": "/idt2/59993b50-74ac-4f6c-bd3f-fe0664156603/image/350",
+              "width": 700,
+              "height": 862
+            },
+            "medium": {
+              "href": "/idt2/59993b50-74ac-4f6c-bd3f-fe0664156603/image/470",
+              "width": 940,
+              "height": 946
+            },
+            "large": {
+              "href": "/idt2/59993b50-74ac-4f6c-bd3f-fe0664156603/image/816",
+              "width": 1632,
+              "height": 964
+            }
+          },
+          "copyrightHolder": "Source: BBC",
+          "published": 1592584623524
+        },
+        "type": "include"
+      },
+      {
+        "text": "IDT2 Chart - grouped bar chart",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "required": false,
+        "title": "Grouped bar chart",
+        "href": "/idt2/85b68cc8-fd20-48a5-8049-2421bd354617",
+        "platform": "highweb",
+        "type": "include"
+      },
+      {
+        "text": "IDT2 Chart - grouped column chart",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "required": false,
+        "title": "Grouped column chart",
+        "href": "/idt2/3c9e4620-655a-4925-b3ae-ea3412cd301d",
+        "platform": "highweb",
+        "idt2": {
+          "altText": "Data in a grouped column chart. .  .",
+          "dimensions": {
+            "small": {
+              "href": "/idt2/3c9e4620-655a-4925-b3ae-ea3412cd301d/image/350",
+              "width": 700,
+              "height": 820
+            },
+            "medium": {
+              "href": "/idt2/3c9e4620-655a-4925-b3ae-ea3412cd301d/image/470",
+              "width": 940,
+              "height": 896
+            },
+            "large": {
+              "href": "/idt2/3c9e4620-655a-4925-b3ae-ea3412cd301d/image/816",
+              "width": 1632,
+              "height": 1286
+            }
+          },
+          "copyrightHolder": "Source: BBC",
+          "published": 1592584562637
+        },
+        "type": "include"
+      },
+      {
+        "text": "IDT2 Chart - line chart ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "required": false,
+        "title": "Line chart",
+        "href": "/idt2/831fc241-335a-4a54-a51e-08f08cee918c",
+        "platform": "highweb",
+        "idt2": {
+          "altText": "Data in a line chart. .  .",
+          "dimensions": {
+            "small": {
+              "href": "/idt2/831fc241-335a-4a54-a51e-08f08cee918c/image/350",
+              "width": 700,
+              "height": 808
+            },
+            "medium": {
+              "href": "/idt2/831fc241-335a-4a54-a51e-08f08cee918c/image/470",
+              "width": 940,
+              "height": 896
+            },
+            "large": {
+              "href": "/idt2/831fc241-335a-4a54-a51e-08f08cee918c/image/816",
+              "width": 1632,
+              "height": 1286
+            }
+          },
+          "copyrightHolder": "Source: BBC",
+          "published": 1592584485715
+        },
+        "type": "include"
+      },
+      {
+        "text": "IDT2 Chart - column chart",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "required": false,
+        "title": "Column chart",
+        "href": "/idt2/a34141d5-86ea-41a9-bc7f-6a0bba422857",
+        "platform": "highweb",
+        "type": "include"
+      },
+      {
+        "text": "IDT2 Chart - bar chart ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "required": false,
+        "title": "Bar chart",
+        "href": "/idt2/e4bb85f4-22fb-44c6-b055-9de0edcf0cee",
+        "platform": "highweb",
+        "idt2": {
+          "altText": "Data in a bar chart. .  .",
+          "dimensions": {
+            "small": {
+              "href": "/idt2/e4bb85f4-22fb-44c6-b055-9de0edcf0cee/image/350",
+              "width": 700,
+              "height": 714
+            },
+            "medium": {
+              "href": "/idt2/e4bb85f4-22fb-44c6-b055-9de0edcf0cee/image/470",
+              "width": 940,
+              "height": 714
+            },
+            "large": {
+              "href": "/idt2/e4bb85f4-22fb-44c6-b055-9de0edcf0cee/image/816",
+              "width": 1632,
+              "height": 714
+            }
+          },
+          "copyrightHolder": "Source: BBC",
+          "published": 1592585208974
+        },
+        "type": "include"
+      },
+      {
+        "text": "IDT2 Datapic ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "required": false,
+        "title": "Datapic",
+        "href": "/idt2/2a6c6ba1-8750-4b65-9c65-f08254b25485",
+        "platform": "highweb",
+        "idt2": {
+          "altText": "Data pic. Data pics work [ Yay data pic ] , Source: Source: Liz, Image: ",
+          "dimensions": {
+            "small": {
+              "href": "/idt2/2a6c6ba1-8750-4b65-9c65-f08254b25485/image/350",
+              "width": 700,
+              "height": 738
+            },
+            "medium": {
+              "href": "/idt2/2a6c6ba1-8750-4b65-9c65-f08254b25485/image/470",
+              "width": 940,
+              "height": 400
+            },
+            "large": {
+              "href": "/idt2/2a6c6ba1-8750-4b65-9c65-f08254b25485/image/816",
+              "width": 1632,
+              "height": 414
+            }
+          },
+          "copyrightHolder": "Getty Images",
+          "published": 1592585179585
+        },
+        "type": "include"
+      },
+      {
+        "text": "IDT2 Quotepic ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "required": false,
+        "title": "Quotepic",
+        "href": "/idt2/ea818144-9a83-47cd-a4d8-80b4c28f3f80",
+        "platform": "highweb",
+        "idt2": {
+          "altText": "&quot;Quotepics work&quot;, Source: Liz, Source description: , Image: ",
+          "dimensions": {
+            "small": {
+              "href": "/idt2/ea818144-9a83-47cd-a4d8-80b4c28f3f80/image/350",
+              "width": 700,
+              "height": 666
+            },
+            "medium": {
+              "href": "/idt2/ea818144-9a83-47cd-a4d8-80b4c28f3f80/image/470",
+              "width": 940,
+              "height": 400
+            },
+            "large": {
+              "href": "/idt2/ea818144-9a83-47cd-a4d8-80b4c28f3f80/image/816",
+              "width": 1632,
+              "height": 400
+            }
+          },
+          "copyrightHolder": "BBC",
+          "published": 1591722286464
+        },
+        "type": "include"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Test story with different IDT2 types",
+      "headline": "Test story with different IDT2 types"
+    },
+    "locators": {
+      "assetUri": "/gahuza/23313911",
+      "cpsUrn": "urn:bbc:content:assetUri:gahuza/23313911",
+      "curie": "http://www.bbc.co.uk/asset/48fe44a1-f432-4475-942d-ab017d13b4d0",
+      "assetId": "23313911"
+    },
+    "summary": "Testing types of IDT2",
+    "timestamp": 1591722582000,
+    "language": "rw",
+    "indexImage": {
+      "id": "63735666",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/1045D/test/_63735666_3.jpg",
+      "path": "/cpsdevpb/1045D/test/_63735666_3.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Test caption for first image",
+      "caption": "Test caption for image 1",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:gahuza/23313911",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Urupapuro rw'itangiriro",
+      "uri": "/gahuza/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Gahuza",
+      "uri": "/gahuza",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

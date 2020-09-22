@@ -13,9 +13,9 @@ import {
   getAtiUrl,
   getEventInfo,
   getProducer,
+  getCampaignType,
+  getATIMarketingString,
 } from '#lib/analyticsUtils';
-
-const spaceRegex = / /g;
 
 /*
  * For AMP pages, certain browser and device values are determined
@@ -42,6 +42,16 @@ export const buildATIPageTrackPath = ({
   categoryName,
   campaigns,
 }) => {
+  const href = getHref(platform);
+  const referrer = getReferrer(platform, origin, previousPath);
+  const campaignType = getCampaignType();
+
+  // We use amp variable substitutes to get the href and referrer and these cannot be manipulated
+  // For canonical, we have a requirement to encode the x5 and x6 value twice. Source issue: https://github.com/bbc/simorgh/pull/6593
+  const x5Value = platform === 'amp' ? href : href && encodeURIComponent(href);
+  const x6Value =
+    platform === 'amp' ? referrer : referrer && encodeURIComponent(referrer);
+
   const pageViewBeaconValues = [
     {
       key: 's',
@@ -108,13 +118,13 @@ export const buildATIPageTrackPath = ({
     {
       key: 'x5',
       description: 'url',
-      value: getHref(platform),
+      value: x5Value,
       wrap: true,
     },
     {
       key: 'x6',
       description: 'referrer url',
-      value: getReferrer(platform, origin, previousPath),
+      value: x6Value,
       wrap: true,
     },
     { key: 'x7', description: 'content type', value: contentType, wrap: true },
@@ -158,7 +168,7 @@ export const buildATIPageTrackPath = ({
       key: 'x16',
       description: 'campaigns',
       value: (Array.isArray(campaigns) ? campaigns : [])
-        .map(campaign => campaign.campaignName.replace(spaceRegex, '%20'))
+        .map(({ campaignName }) => campaignName)
         .join('~'),
       wrap: true,
     },
@@ -173,6 +183,12 @@ export const buildATIPageTrackPath = ({
       description: 'boolean - if locserve cookie value is defined',
       value: isLocServeCookieSet(),
       wrap: true,
+    },
+    {
+      key: 'xto',
+      description: 'marketing campaign',
+      value: getATIMarketingString(href, campaignType),
+      wrap: false,
     },
     {
       key: 'ref',
@@ -247,6 +263,7 @@ export const buildATIEventTrackUrl = ({
         componentInfo,
         type: type || '',
       }),
+      wrap: false,
     },
   ];
 

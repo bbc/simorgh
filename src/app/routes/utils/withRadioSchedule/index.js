@@ -31,17 +31,27 @@ const fetchData = url => {
   return fetch(url).then(handleResponse).catch(handleError);
 };
 
-const withRadioSchedule = async ({ pageDataPromise, service, path }) => {
+const withRadioSchedule = async ({
+  pageDataPromise,
+  service,
+  path,
+  radioService,
+  pageType,
+}) => {
   const { SIMORGH_APP_ENV, SIMORGH_BASE_URL } = process.env;
 
   const radioScheduleUrl = getRadioScheduleEndpoint({
     service,
+    radioService,
     env: SIMORGH_APP_ENV,
     queryString: getQueryString(path),
     baseUrl: SIMORGH_BASE_URL,
   });
 
-  logger.info(RADIO_SCHEDULE_REQUEST_RECEIVED, { url: radioScheduleUrl });
+  logger.info(RADIO_SCHEDULE_REQUEST_RECEIVED, {
+    url: radioScheduleUrl,
+    pageType,
+  });
   const radioSchedulePromise = fetchData(radioScheduleUrl);
 
   const [{ json: pageData, ...rest }, radioScheduleJson] = await Promise.all([

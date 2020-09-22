@@ -8,6 +8,7 @@ import withContext from '../../../contexts/utils/withContext';
 const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcworldservice/`,
   articleTimestampPrefix: '最近更新：',
+  articleTimestampSuffix: '',
   atiAnalyticsAppName: 'news-zhongwen',
   atiAnalyticsProducerId: '38',
   chartbeatDomain: 'zhongwen.bbc.co.uk',
@@ -45,14 +46,12 @@ const baseServiceConfig = {
 export const service = {
   simp: {
     ...baseServiceConfig,
-    ads: {
-      hasAds: true,
-      advertisementLabel: '广告',
-    },
     externalLinkText: ', 外部链接',
     frontPageTitle: '主页',
     lang: `zh-hans`,
     locale: `zh-hans`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'zh-Hans',
     defaultCaptionOffscreenText: '说明文字，',
     audioCaptionOffscreenText: '音频加注文字，',
     videoCaptionOffscreenText: '视频加注文字，',
@@ -103,6 +102,11 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: '热播',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     navigation: [
       {
         title: '主页',
@@ -146,6 +150,9 @@ export const service = {
       variant: 'trad',
     },
     translations: {
+      ads: {
+        advertisementLabel: '广告',
+      },
       seeAll: '浏览全部',
       home: '主页',
       currentPage: '目前页面',
@@ -234,6 +241,7 @@ export const service = {
       media: {
         noJs: '你的器材不支持播放多媒体材料',
         contentExpired: '有关内容已经不再向读者观众提供',
+        contentNotYetAvailable: '有关内容看来暂时不能显示。',
         audio: '音频',
         photogallery: '图辑专页',
         video: '视频',
@@ -261,18 +269,21 @@ export const service = {
           endTextVisuallyHidden: '结尾 %provider_name% 帖子',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: '头条新闻',
       featuresAnalysisTitle: '特别推荐',
     },
   },
   trad: {
     ...baseServiceConfig,
-    ads: {
-      hasAds: true,
-      advertisementLabel: '廣告',
-    },
     lang: `zh-hant`,
     locale: `zh-hant`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'zh-Hant',
     externalLinkText: ', 外部鏈接',
     frontPageTitle: '主頁',
     defaultCaptionOffscreenText: '說明文字，',
@@ -325,6 +336,11 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: '熱播',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     navigation: [
       {
         title: '主頁',
@@ -368,6 +384,9 @@ export const service = {
       variant: 'simp',
     },
     translations: {
+      ads: {
+        advertisementLabel: '廣告',
+      },
       seeAll: '瀏覽全部',
       home: '主頁',
       currentPage: '目前頁面',
@@ -456,6 +475,7 @@ export const service = {
       media: {
         noJs: '你的器材不支持播放多媒體材料',
         contentExpired: '有關內容已經不再向讀者觀眾提供。',
+        contentNotYetAvailable: '有關內容暫時尚未可以為你提供。',
         audio: '音頻',
         photogallery: '圖輯專頁',
         video: '視頻',
@@ -482,6 +502,11 @@ export const service = {
           text: '跳過 %provider_name% 帖子',
           endTextVisuallyHidden: '結尾 %provider_name% 帖子',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: '頭條新聞',
       featuresAnalysisTitle: '特別推薦',

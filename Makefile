@@ -8,11 +8,13 @@ install:
 
 developmentTests:
 	npx apache2-license-checker;
-	npm run test;
-	npx chromatic test run  --build-script-name build:storybook || true
+	npm run test:local;
 
 productionTests:
-	npm run build && npm run test:ci;
+	npm run test:ci;
+
+testChromatic:
+	npx chromatic test run  --build-script-name build:storybook --exit-once-uploaded --no-interactive || true
 
 testE2Es:
 	CYPRESS_SMOKE=false CYPRESS_APP_ENV=test npm run cypress

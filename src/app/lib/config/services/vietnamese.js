@@ -7,13 +7,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Quảng cáo',
-    },
     lang: `vi`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Cập nhật',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-vietnamese',
     atiAnalyticsProducerId: '97',
     chartbeatDomain: 'vietnamese.bbc.co.uk',
@@ -31,6 +28,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Chụp lại, ',
     imageCopyrightOffscreenText: 'Nguồn hình ảnh, ',
     locale: `vi-VN`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'vi',
     datetimeLocale: `vi`,
     service: 'vietnamese',
     serviceName: 'Tiếng Việt',
@@ -51,6 +50,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Quảng cáo',
+      },
       seeAll: 'Xem tất cả',
       home: 'Tin chính',
       currentPage: 'Trang hiện nay',
@@ -142,6 +144,7 @@ export const service = {
       media: {
         noJs: 'Máy của bạn không hỗ trợ nghe xem',
         contentExpired: 'Chương trình không còn nữa.',
+        contentNotYetAvailable: 'Chương trình này chưa sẵn sàng.',
         audio: 'Audio',
         photogallery: 'Gallery hình ảnh',
         video: 'Video',
@@ -169,6 +172,10 @@ export const service = {
           endTextVisuallyHidden: 'Cuối %provider_name% tin',
         },
       },
+      include: {
+        errorMessage: 'Xin lỗi, không thể hiện thị phần này ở trang mobile.',
+        linkText: 'Xin xem bản đầy đủ.',
+      },
       topStoriesTitle: 'Tin chính',
       featuresAnalysisTitle: 'Góc nhìn và chuyên mục',
     },
@@ -178,6 +185,11 @@ export const service = {
       lastUpdated: 'Cập nhật gần nhất:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Nghe nhiều nhất',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

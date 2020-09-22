@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Amp Story Page Includes IDT2 I can see a fallback image 1`] = `
+<amp-img
+  alt="Map: St. Albans"
+  attribution=""
+  height="940"
+  layout="responsive"
+  src="https://www.test.bbc.com/ws/includes/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7/image/470"
+  srcset="https://www.test.bbc.com/ws/includes/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7/image/350 350w,https://www.test.bbc.com/ws/includes/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7/image/470 470w"
+  width="940"
+/>
+`;

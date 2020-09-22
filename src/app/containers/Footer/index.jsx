@@ -12,7 +12,9 @@ const getCopyrightText = text => (
 );
 
 const FooterContainer = () => {
-  const { footer, service } = useContext(ServiceContext);
+  // `serviceLang` is defined when the language the page is written in is different to the
+  // language of the service. `serviceLang` is used to override the page language.
+  const { footer, service, serviceLang } = useContext(ServiceContext);
 
   if (!footer) {
     return null;
@@ -21,7 +23,7 @@ const FooterContainer = () => {
   const { externalLink, links, copyrightText, trustProjectLink } = footer;
 
   return (
-    <footer role="contentinfo">
+    <footer role="contentinfo" lang={serviceLang}>
       <BrandContainer borderTop />
       <SitewideLinks
         links={links}

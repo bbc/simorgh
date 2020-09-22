@@ -1,6 +1,8 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
-import getEmbedUrl from './helper';
+import { getEmbedUrl, serviceHasRadioSchedule } from './helper';
+import { isScheduleDataComplete } from '../../../../src/app/containers/RadioSchedule/utilities/evaluateScheduleData';
+import getDataUrl from '../../../support/helpers/getDataUrl';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -8,7 +10,7 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForCanonicalOnly to run for ${service} ${pageType}`, () => {});
 };
 
-// For testing feastures that may differ across services but share a common logic e.g. translated strings.
+// For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
   pageType,
@@ -20,7 +22,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       let embedUrl;
 
       beforeEach(() => {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+        cy.request(getDataUrl(Cypress.env('currentPath'))).then(({ body }) => {
           embedUrl = getEmbedUrl(body, lang);
         });
       });
@@ -43,6 +45,44 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           cy.hasGlobalChartbeatConfig();
         });
       }
+    });
+    describe('Radio Schedule', () => {
+      it('should be displayed if there is enough schedule data', () => {
+        const toggleKey = 'onLiveRadioPage';
+        const isRadioScheduleOnPage = serviceHasRadioSchedule({
+          service,
+          variant,
+          toggleKey,
+        });
+        cy.log(
+          `Live Radio Page configured for Radio Schedule? ${isRadioScheduleOnPage}`,
+        );
+
+        if (isRadioScheduleOnPage) {
+          const schedulePath = Cypress.env('currentPath')
+            .replace('liveradio', 'schedule.json')
+            // the schedule call for afaanoromoo is made to bbc_oromo_radio
+            .replace('bbc_afaanoromoo_radio', 'bbc_oromo_radio');
+
+          cy.request(schedulePath).then(({ body: scheduleJson }) => {
+            const { schedules } = scheduleJson;
+
+            const isRadioScheduleDataComplete = isScheduleDataComplete({
+              schedules,
+            });
+
+            cy.log(
+              `Radio Schedule is displayed? ${isRadioScheduleDataComplete}`,
+            );
+            if (isRadioScheduleOnPage && isRadioScheduleDataComplete) {
+              cy.log('Schedule has enough data');
+              cy.get('[data-e2e=radio-schedule]').should('exist');
+            } else {
+              cy.get('[data-e2e=radio-schedule]').should('not.exist');
+            }
+          });
+        }
+      });
     });
   });
 

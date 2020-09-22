@@ -5,16 +5,19 @@ import runCoreAmpTests from './core.amp';
 import runCoreCanonicalTests from './core.canonical';
 import runFooterTests from './footer';
 import runHeaderTests from './header';
+import runMainHeadingTests from './mainHeading';
 import runMediaPlayerEmbedTests from './mediaPlayerEmbed';
 import runPerformanceTests from './performance';
-import runSEOTests from './SEO';
+import runRadioScheduleTests from './radioSchedule';
+import runCrossPlatformSEOTests from './SEO';
+import runSeoCanonicalTests from './SEO.canonical';
 
-const runCommonCrossPlatformTests = () => {
+const runCommonCrossPlatformTests = service => {
   runA11yTests();
-  runHeaderTests();
+  runHeaderTests(service);
   runFooterTests();
   runPerformanceTests();
-  runSEOTests();
+  runCrossPlatformSEOTests();
 };
 
 export {
@@ -26,7 +29,10 @@ export {
   runCoreCanonicalTests,
   runFooterTests,
   runHeaderTests,
+  runMainHeadingTests,
   runMediaPlayerEmbedTests,
   runPerformanceTests,
-  runSEOTests,
+  runRadioScheduleTests,
+  runCrossPlatformSEOTests,
+  runSeoCanonicalTests,
 };

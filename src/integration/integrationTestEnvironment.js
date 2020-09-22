@@ -9,11 +9,18 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
   constructor(config, context) {
     super(config, context);
     const { platform } = config.testEnvironmentOptions;
-    const { pathname, service } = context.docblockPragmas;
+    const {
+      pathname,
+      service,
+      runScripts = 'true',
+      displayAds = 'false',
+    } = context.docblockPragmas;
     const pageType = getPageTypeFromTestPath(context.testPath);
 
     this.pageType = camelCaseToText(pageType);
     this.service = service;
+    this.runScripts = runScripts === 'true';
+    this.displayAds = displayAds === 'true';
     this.url = `http://localhost:7080${pathname}${
       platform === 'amp' ? '.amp' : ''
     }`;
@@ -23,7 +30,15 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
     await super.setup();
 
     try {
-      const dom = await fetchDom(this.url);
+      const dom = await fetchDom({
+        url: this.url,
+        runScripts: this.runScripts,
+        ...(this.displayAds && {
+          headers: {
+            'BBC-Adverts': 'true',
+          },
+        }),
+      });
 
       Object.defineProperties(this.global, {
         pageType: { value: this.pageType },

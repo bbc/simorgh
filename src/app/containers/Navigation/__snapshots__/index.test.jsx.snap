@@ -292,7 +292,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   .c14::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     width: 80rem;
     border-bottom: 0.0625rem solid #eab3b3;
     z-index: -1;
@@ -984,7 +984,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   .c13::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     width: 80rem;
     border-bottom: 0.0625rem solid #eab3b3;
     z-index: -1;
@@ -1644,7 +1644,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   .c13::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     width: 80rem;
     border-bottom: 0.0625rem solid #eab3b3;
     z-index: -1;
@@ -2382,7 +2382,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   .c9::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     width: 80rem;
     border-bottom: 0.0625rem solid #eab3b3;
     z-index: -1;
@@ -3027,7 +3027,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   .c9::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     width: 80rem;
     border-bottom: 0.0625rem solid #eab3b3;
     z-index: -1;
@@ -3649,7 +3649,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   .c9::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     width: 80rem;
     border-bottom: 0.0625rem solid #eab3b3;
     z-index: -1;

@@ -9,7 +9,9 @@ import {
   renderAmpHtml,
   getAppleTouchUrl,
   renderAlternateLinks,
+  renderAppleItunesApp,
 } from './utils';
+import useToggle from '#hooks/useToggle';
 
 const ENGLISH_SERVICES = ['news'];
 const FACEBOOK_ADMIN_ID = 100004154058350;
@@ -23,6 +25,7 @@ const iconSizes = {
     '128x128',
     '144x144',
     '152x152',
+    '180x180',
     '192x192',
     '384x384',
     '512x512',
@@ -37,6 +40,7 @@ const renderTags = tags =>
 
 const MetadataContainer = ({
   title,
+  socialHeadline,
   lang,
   description,
   openGraphType,
@@ -67,6 +71,7 @@ const MetadataContainer = ({
     themeColor,
     twitterCreator,
     twitterSite,
+    iTunesAppId,
   } = useContext(ServiceContext);
   const appleTouchIcon = getAppleTouchUrl(service);
   const isEnglishService = ENGLISH_SERVICES.includes(service);
@@ -98,9 +103,12 @@ const MetadataContainer = ({
   };
 
   const pageTitle = `${title} - ${brandName}`;
+  const socialTitle = `${socialHeadline || title} - ${brandName}`;
 
   const metaImage = image || defaultImage;
   const metaImageAltText = imageAltText || defaultImageAltText;
+
+  const { enabled: iTunesAppEnabled } = useToggle('apple_itunes_app');
 
   return (
     <Helmet htmlAttributes={htmlAttributes}>
@@ -119,6 +127,12 @@ const MetadataContainer = ({
         !isEnglishService &&
         alternateLinksWsSites.map(renderAlternateLinks)}
       {renderAmpHtml(ampLink, isAmp)}
+      {renderAppleItunesApp({
+        iTunesAppId,
+        canonicalLink,
+        isAmp,
+        iTunesAppEnabled,
+      })}
       <meta name="apple-mobile-web-app-title" content={brandName} />
       <meta name="application-name" content={brandName} />
       <meta name="description" content={description} />
@@ -136,7 +150,7 @@ const MetadataContainer = ({
       <meta property="og:image:alt" content={metaImageAltText} />
       <meta property="og:locale" content={locale} />
       <meta property="og:site_name" content={brandName} />
-      <meta property="og:title" content={pageTitle} />
+      <meta property="og:title" content={socialTitle} />
       <meta property="og:type" content={openGraphType} />
       <meta property="og:url" content={canonicalNonUkLink} />
       <meta name="twitter:card" content="summary_large_image" />
@@ -145,7 +159,7 @@ const MetadataContainer = ({
       <meta name="twitter:image:alt" content={metaImageAltText} />
       <meta name="twitter:image:src" content={metaImage} />
       <meta name="twitter:site" content={twitterSite} />
-      <meta name="twitter:title" content={pageTitle} />
+      <meta name="twitter:title" content={socialTitle} />
       {Boolean(aboutTags && aboutTags.length) && renderTags(aboutTags)}
       {Boolean(mentionsTags && mentionsTags.length) && renderTags(mentionsTags)}
       <link rel="apple-touch-icon" href={appleTouchIcon} />
@@ -173,6 +187,7 @@ const tagPropTypes = shape({
 
 MetadataContainer.propTypes = {
   title: string.isRequired,
+  socialHeadline: string,
   lang: string.isRequired,
   description: string.isRequired,
   openGraphType: string.isRequired,
@@ -184,6 +199,7 @@ MetadataContainer.propTypes = {
 };
 
 MetadataContainer.defaultProps = {
+  socialHeadline: null,
   aboutTags: [],
   mentionsTags: [],
   image: null,

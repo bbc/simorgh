@@ -1,5 +1,5 @@
 // Limiting to one service for now
-const serviceHasPublishedPromo = service => service === 'persian';
+const serviceHasPublishedPromo = service => service === 'arabic';
 
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
@@ -16,7 +16,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
       describe('Section', () => {
         if (
           serviceHasPublishedPromo(service) &&
-          Cypress.env('APP_ENV') !== 'local'
+          Cypress.env('APP_ENV') === 'live'
         ) {
           it('individual promo should link to corresponding article pages and back navigation should link to frontpage', () => {
             let currentURL = null;

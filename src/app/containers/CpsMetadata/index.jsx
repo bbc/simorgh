@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 import { string, arrayOf, shape } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Metadata from '../Metadata';
-import getBrandedImage from './utils/getBrandedImage';
+import getBrandedImage from '#lib/utilities/getBrandedImage';
 
 const CpsMetadata = ({
   title,
+  shortHeadline,
   language,
   description,
   firstPublished,
@@ -21,6 +22,7 @@ const CpsMetadata = ({
   return (
     <Metadata
       title={title}
+      socialHeadline={shortHeadline}
       lang={language}
       description={description}
       openGraphType="article"
@@ -47,6 +49,7 @@ const tagPropTypes = shape({
 
 CpsMetadata.propTypes = {
   title: string.isRequired,
+  shortHeadline: string.isRequired,
   language: string.isRequired,
   description: string.isRequired,
   firstPublished: string.isRequired,

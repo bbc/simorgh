@@ -1,0 +1,457 @@
+{
+    "content": {
+      "blocks": [
+        {
+          "altText": "ሃጫሉ",
+          "copyrightHolder": "Family",
+          "height": 549,
+          "href": "http://c.files.bbci.co.uk/5042/production/_113164502_mediaitem113164501.jpg",
+          "id": "113164502",
+          "path": "/cpsprodpb/5042/production/_113164502_mediaitem113164501.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "role": "introduction",
+          "text": "በድምጻዊ ሃጫሉ ሁንዴሳ ግድያ የተጠረጠሩ ሦስት ግለሰቦች እንዲሁም አቶ ጃዋር መሐመድና አቶ በቀለ ገርባ ፍርድ ቤት ቀረቡ።",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "በግድያው ተጠርጥረው ፍርድ ቤት የቀረቡት ሁለቱ ወንዶች አንዲት ሴት ሲሆኑ የ14 ቀናት የጊዜ ቀጠሮ እንደተጠየቀባቸው ተገልጿል።",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "በተያያዘ ዜናም የድምጻዊ ሃጫሉ ሁንዴሳን ግድያ ተከትሎ ባለፈው ማክሰኞ ከሰዓት በቁጥጥር ስር መዋላቸው የተገለጸው አቶ ጃዋር መሐመድና አቶ በቀለ ገርባ ዛሬ ጠዋት ፍርድ ቤት መቅረባቸው ተነግሯል።",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "ከድምጻዊው የቀብር ሁኔታ ጋር በተያያዘ የተፈጠረ ውዝግብን ተከትሎ በፖሊስ የተያዙት ሁለቱ ግለሰቦች ዛሬ አዲስ አበባ ውስጥ የፌደራል ከፍተኛው ፍርድ ቤት ቀርበው ተጨማሪ ቀጠሮ እንደተሰጠ የአገር ውስጥ መገናኛ ብዙኀን ዘግበዋል። ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "ሁለቱ ግለሰቦች ዛሬ ፍርድ ቤት የቀረቡት ለሰዎች ሞት ምክንያት የሆነን ሁከት በመቀስቀስና በሰው ሕይወት ማጥፋት ተጠርጥረው መሆኑ ተገልጿል።  ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "በዚህም መሰረት አቶ በቀለ ገርባ ለሐምሌ 6 ሲቀጠሩ አቶ ጃዋር መሐመድ ደግሞ ለሐምሌ 9 ፍርድ ቤት እንዲቀርቡ ቀጠሮ ተሰጥቷቸው ወደ ማረፊያ ቤት መመለሳቸው ተነግሯል። ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "candy_xml",
+          "meta": [
+            {
+              "headlines": {
+                "headline": "የድምጻዊ ሃጫሉ ሁንዴሳ የቀብር ሥነ ሥርዓት አምቦ ውስጥ ተፈጸመ",
+                "overtyped": "የድምጻዊ ሃጫሉ ሁንዴሳ የቀብር ሥነ ሥርዓት አምቦ ውስጥ ተፈጸመ ",
+                "shortHeadline": "የድምጻዊ ሃጫሉ ሁንዴሳ የቀብር ሥነ ሥርዓት አምቦ ውስጥ ተፈጸመ"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-53260523",
+              "language": "am",
+              "locators": {
+                "href": "http://www.bbc.com/amharic/news-53260523"
+              },
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "summary": "ባለፈው ሰኞ ምሽት ባልታወቁ ሰዎች በተተኮሰበት ጥይት የተገደለው የድምጻዊ ሃጫሉ ሁንዴሳ የቀብር ሥነ ሥርዓት በትውልድ ከተማው በአምቦ ተካሄደ። የታዋቂው ድምጻዊ የቀብር ቦታ ከፍተኛ ውዝግብ አስነስቶ የነበረ ሲሆን በቤተሰቦቹ ጥያቄ መሰረት በአምቦ ከተማ እንዲቀበር ተደርጓል።",
+              "timestamp": 1593681692000,
+              "type": "cps"
+            }
+          ],
+          "text": "• <itemMeta>amharic/news-53260523</itemMeta>",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "candy_xml",
+          "meta": [
+            {
+              "headlines": {
+                "headline": "የሃጫሉን ግድያ ተከትሎ በኦሮሚያ ክልል የ78 ሰዎች ህይወት መጥፋቱ ተገለጸ",
+                "overtyped": "ከሃጫሉ ግድያ በኋላ ቢያንስ የ67 ሰዎች ህይወት መጥፋቱ ተገለጸ ",
+                "shortHeadline": "የሃጫሉን ግድያ ተከትሎ በኦሮሚያ የ78 ሰዎች ህይወት መጥፋቱ ተገለጸ"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-53260522",
+              "language": "am",
+              "locators": {
+                "href": "http://www.bbc.com/amharic/news-53260522"
+              },
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "summary": "ማክሰኞ ዕለት የፌደራል ፖሊስ ፖለቲከኛውን ጃዋር መሐመድን ጨምሮ 35 ሰዎችን በቁጥጥር ስር ማዋሉን የገለጸ ሲሆን ትናንት ደግሞ የባልደራስ ፓርቲ ሊቀመንበር የሆነውን እስክንድር ነጋን ይዞ ማሰሩን አሳውቋል። በአጠቃላይ ከማክሰኞ ጀምሮ የ78 ሰዎች ህይወት መጥፋቱ ተገለጸ። በአዲስ አበባ ደግሞ ስምንት ሰዎች መሞታቸውን የከተማዋ ፖሊስ ኮሚሽን ገልጿል።",
+              "timestamp": 1593673406000,
+              "type": "cps"
+            }
+          ],
+          "text": "• <itemMeta>amharic/news-53260522</itemMeta>",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "candy_xml",
+          "meta": [
+            {
+              "headlines": {
+                "headline": "የድምጻዊ ሃጫሉ ሁንዴሳ የቀብር ሥነ ሥርዓት አምቦ ውስጥ ተፈጸመ",
+                "overtyped": "የ ",
+                "shortHeadline": "የድምጻዊ ሃጫሉ ሁንዴሳ የቀብር ሥነ ሥርዓት አምቦ ውስጥ ተፈጸመ"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-53260523",
+              "language": "am",
+              "locators": {
+                "href": "http://www.bbc.com/amharic/news-53260523"
+              },
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "summary": "ባለፈው ሰኞ ምሽት ባልታወቁ ሰዎች በተተኮሰበት ጥይት የተገደለው የድምጻዊ ሃጫሉ ሁንዴሳ የቀብር ሥነ ሥርዓት በትውልድ ከተማው በአምቦ ተካሄደ። የታዋቂው ድምጻዊ የቀብር ቦታ ከፍተኛ ውዝግብ አስነስቶ የነበረ ሲሆን በቤተሰቦቹ ጥያቄ መሰረት በአምቦ ከተማ እንዲቀበር ተደርጓል።",
+              "timestamp": 1593681692000,
+              "type": "cps"
+            },
+            {
+              "headlines": {
+                "headline": "የሰኔ 15ቱ አይነት ግድያን ለመድገም ታቅዶ እንደነበር የፌደራል ፖሊስ ገለፀ",
+                "overtyped": "የሰኔ 15ቱ አይነት ግድያን ለመድገም ታቅዶ እንደነበር የፌደራል ፖሊስ ገለፀ",
+                "shortHeadline": "የሰኔ 15ቱ አይነት ግድያን ለመድገም ታቅዶ እንደነበር የፌደራል ፖሊስ ገለፀ"
+              },
+              "id": "urn:bbc:ares::asset:amharic/53245478",
+              "language": "am",
+              "locators": {
+                "href": "http://www.bbc.com/amharic/53245478"
+              },
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "summary": "የፌደራል ፖሊስ ማምሻውን በሰጠው መግለጫ የድምጻዊ ሃጫሉ ሁንዴሳን መገደል ተከትሎ በትናንትናው እለት ጃዋር መሃመድ፣ በቀለ ገርባና ሌሎች የሰኔ 15 ዓይነት ግድያ ለመድገም እቅድ ነበራቸው ሲል መግለጫ ሰጥቷል። በሌላ በኩል የባልደራስ ሊቀመንበር የሆነው እስክንድር ነጋ በአዲስ አበባ ሁከትና ግጭት እንዲፈጠር በመቀስቀስ ተጠርጥሮ በቁጥጥር ስር መዋሉን ተናግሯል።",
+              "timestamp": 1593630161000,
+              "type": "cps"
+            }
+          ],
+          "text": "• <itemMeta>amharic/news-53260523</itemMeta><itemMeta>amharic/53245478</itemMeta>",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "ከድምጻዊ ሃጫሉ ሁንዴሳ የአስከሬን ሽኝት መስተጓጎልና ከአንድ የፖሊስ አባል ግድያ ጋር በተያያዘ አቶ ጃዋር መሐመድን ጨምሮ ሌሎች 35 ሰዎች በቁጥጥር መዋላቸውን የፌደራልና እና የኦሮሚያ ፖሊስ ኮሚሽኖች አስታወቀው ነበር።",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "ፖሊስ ጨምሮም ግለሰቦቹ በተያዙበት ጊዜ የጃዋር መሐመድ ጠባቂዎች ይዘውት የነበረው የጦር መሳሪያዎች እና መገናኛ ሬዲዮችንም መያዙንም ገልጿል። ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "አቶ ጃዋር መሐመድና አቶ በቀለ ገርባ የተቃዋሚው የኦሮሞ ፌደራሊስት ፓርቲ (ኦፌኮ) አባላት ሲሆኑ ፓርቲው የአባሎቹ መታሰር እንዳሳሰበው ትላንት ለቢቢሲ ገልጾ ነበር።",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "የሃጫሉ ሁንዴሳን ግድያ ተከትሎ በነበሩት ሁለት ቀናት በኦሮሚያ ክልል ውስጥ በተከሰተ ግጭት ቢያንስ ከ70 በላይ ሰዎች መሞታቸውን የክልሉ የኮምዩኒኬሽን ኃላፊ ለቢቢሲ ገልጸዋል።",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "በዋና ከተማዋ አዲስ አበባም ሁለት የጸጥታ ኃይል አባላትን ጨምሮ የ10 ሰዎች ህይወት ማለፉን የከተማዋ ፖሊስ ኮሚሽን አሳውቋል።    ",
+          "type": "paragraph"
+        }
+      ]
+    },
+    "metadata": {
+      "analyticsLabels": {
+        "counterName": "amharic.news.story.53260525.page",
+        "cps_asset_id": "53260525",
+        "cps_asset_type": "sty"
+      },
+      "atiAnalytics": {
+        "producerId": "4",
+        "producerName": "AMHARIC"
+      },
+      "blockTypes": [
+        "image",
+        "paragraph"
+      ],
+      "createdBy": "amharic-v6",
+      "firstPublished": 1593689245000,
+      "id": "urn:bbc:ares::asset:amharic/news-53260525",
+      "includeComments": false,
+      "language": "am",
+      "lastPublished": 1593689245000,
+      "lastUpdated": 1593692603379,
+      "locators": {
+        "assetId": "53260525",
+        "assetUri": "/amharic/news-53260525",
+        "cpsUrn": "urn:bbc:content:assetUri:amharic/news-53260525",
+        "curie": "http://www.bbc.co.uk/asset/3f25fa00-703e-434d-a45c-57b60614267f"
+      },
+      "options": {
+        "allowAdvertising": true,
+        "allowDateStamp": true,
+        "allowHeadline": true,
+        "allowPrintingSharingLinks": true,
+        "allowRelatedStoriesBox": true,
+        "allowRightHandSide": true,
+        "hasContentWarning": false,
+        "hasNewsTracker": false,
+        "includeComments": false,
+        "isBreakingNews": false,
+        "isFactCheck": false,
+        "isIgorSeoTagsEnabled": false,
+        "isKeyContent": false,
+        "suitableForSyndication": true
+      },
+      "passport": {
+        "campaigns": [
+          {
+            "campaignId": "5a988e4739461b000e9dabfc",
+            "campaignName": "WS - Update me"
+          }
+        ],
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName": "News"
+        },
+        "taggings": []
+      },
+      "tags": {
+        "about": [
+          {
+            "curationList": [
+              {
+                "curationId": "da6cac4d-3594-483e-ae86-6efb8b9d4791",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Law and order",
+            "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
+            "thingLabel": "ህግ",
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Law"
+            ],
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Theme",
+              "core:Thing"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+            "topicId": "c06gq8wdrjyt",
+            "topicName": "ህግ"
+          },
+          {
+            "curationList": [
+              {
+                "curationId": "ce663a76-0cb1-4068-96c1-591e3e02ccc5",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Ethiopia",
+            "thingId": "e986aff5-6b26-4638-b468-371d1d9617b4",
+            "thingLabel": "ኢትዮጵያ",
+            "thingSameAs": [
+              "http://sws.geonames.org/337996/"
+            ],
+            "thingType": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Place"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/e986aff5-6b26-4638-b468-371d1d9617b4#id",
+            "topicId": "c7zp57r92v5t",
+            "topicName": "ኢትዮጵያ"
+          },
+          {
+            "curationList": [
+              {
+                "curationId": "4d8376ea-4f49-46a7-8b8e-fd0b5f49db1e",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Oromo people",
+            "thingId": "01be9174-f16e-4076-99eb-2a2ea4ddf695",
+            "thingLabel": "የኦሮሞ ህዝብ",
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Oromo_people"
+            ],
+            "thingType": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Theme"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/01be9174-f16e-4076-99eb-2a2ea4ddf695#id",
+            "topicId": "cnq68150pjdt",
+            "topicName": "የኦሮሞ ህዝብ"
+          }
+        ]
+      },
+      "timestamp": 1593689245000,
+      "type": "STY",
+      "version": "v1.3.2"
+    },
+    "promo": {
+      "headlines": {
+        "headline": "አቶ ጃዋር መሐመድና አቶ በቀለ ገርባ እንዲሁም በሃጫሉ ግድያ የተጠረጠሩ ሦስት ሰዎች ፍርድ ቤት ቀረቡ",
+        "shortHeadline": "በድምጻዊ ሃጫሉ ሁንዴሳ ግድያ የተጠረጠሩ ሦስት ሰዎች ፍርድ ቤት ቀረቡ"
+      },
+      "id": "urn:bbc:ares::asset:amharic/news-53260525",
+      "indexImage": {
+        "altText": "ሃጫሉ",
+        "copyrightHolder": "Family",
+        "height": 549,
+        "href": "http://c.files.bbci.co.uk/5042/production/_113164502_mediaitem113164501.jpg",
+        "id": "113164502",
+        "path": "/cpsprodpb/5042/production/_113164502_mediaitem113164501.jpg",
+        "subType": "index",
+        "type": "image",
+        "width": 976
+      },
+      "language": "am",
+      "locators": {
+        "assetId": "53260525",
+        "assetUri": "/amharic/news-53260525",
+        "cpsUrn": "urn:bbc:content:assetUri:amharic/news-53260525",
+        "curie": "http://www.bbc.co.uk/asset/3f25fa00-703e-434d-a45c-57b60614267f"
+      },
+      "passport": {
+        "campaigns": [
+          {
+            "campaignId": "5a988e4739461b000e9dabfc",
+            "campaignName": "WS - Update me"
+          }
+        ],
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName": "News"
+        },
+        "taggings": []
+      },
+      "summary": "በድምጻዊ ሃጫሉ ሁንዴሳ ግድያ የተጠረጠሩ ሦስት ግለሰቦች እንዲሁም አቶ ጃዋር መሐመድና አቶ በቀለ ገርባ ፍርድ ቤት ቀረቡ። ከድምጻዊው የቀብር ሁኔታ ጋር በተያያዘ የተፈጠረ ውዝግብን ተከትሎ በፖሊስ የተያዙት አቶ ጀዋርና አቲ በቀለ ገርባ ዛሬ አዲስ አበባ ውስጥ የፌደራል ከፍተኛው ፍርድ ቤት ቀርበው ተጨማሪ ቀጠሮ እንደተሰጠ የአገር ውስጥ መገናኛ ብዙኀን ዘግበዋል።",
+      "timestamp": 1593689245000,
+      "type": "cps"
+    },
+    "relatedContent": {
+      "groups": [
+        {
+          "promos": [
+            {
+              "cpsType": "STY",
+              "headlines": {
+                "headline": "በአዲስ አበባ ባለፉት ሁለት ቀናት ሁለት ፖሊሶችን ጨምሮ የ10 ሰዎች ህይወት አለፈ",
+                "shortHeadline": "በአዲስ አበባ ባለፉት ሁለት ቀናት ሁለት ፖሊሶችን ጨምሮ የ10 ሰዎች ህይወት አለፈ"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-53260521",
+              "indexImage": {
+                "altText": "ኮሚሽነር ጌቱ አርጋው",
+                "copyrightHolder": "ETV",
+                "height": 549,
+                "href": "http://c.files.bbci.co.uk/13AD6/production/_113189508_whatsappimage2020-07-02at7.56.16am.jpg",
+                "id": "113189508",
+                "path": "/cpsprodpb/13AD6/production/_113189508_whatsappimage2020-07-02at7.56.16am.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 976
+              },
+              "language": "am",
+              "locators": {
+                "assetUri": "/amharic/news-53260521",
+                "cpsUrn": "urn:bbc:content:assetUri:/amharic/news-53260521"
+              },
+              "summary": "ባለፉት ሁለት ቀናት ሁለት ፖሊሶችን ጨምሮ የ10 ሰዎች ህይወት አለፈ",
+              "timestamp": 1593666633000,
+              "type": "cps"
+            },
+            {
+              "cpsType": "STY",
+              "headlines": {
+                "headline": "የለንደን ፖሊስ የአጼ ኃይለ ሥላሴ ሐውልትን ያፈረሱትን እየተከታተለ መሆኑን አስታወቀ",
+                "shortHeadline": "የለንደን ፖሊስ የአጼ ኃይለ ሥላሴ ሐውልትን ያፈረሱትን እየፈለገ ነው"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-53261077",
+              "indexImage": {
+                "altText": "አጼ ኃይለ ሥላሴ",
+                "copyrightHolder": "BBC",
+                "height": 549,
+                "href": "http://c.files.bbci.co.uk/2D4E/production/_113189511_672313bc-9cbe-4e77-bf87-9328a84b5a55.jpg",
+                "id": "113189511",
+                "path": "/cpsprodpb/2D4E/production/_113189511_672313bc-9cbe-4e77-bf87-9328a84b5a55.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 976
+              },
+              "language": "am",
+              "locators": {
+                "assetUri": "/amharic/news-53261077",
+                "cpsUrn": "urn:bbc:content:assetUri:/amharic/news-53261077"
+              },
+              "summary": "የለንደን ፖሊስ የአጼ ኃይለ ሥላሴ ሐውልትን ያፈረሱትን እየተከታተለ መሆኑን አስታወቀ",
+              "timestamp": 1593671493000,
+              "type": "cps"
+            },
+            {
+              "cpsType": "STY",
+              "headlines": {
+                "headline": "በአምቦ የሃጫሉ አጎትን ጨምሮ አምስት ሰዎች መሞታቸው ተነገረ",
+                "shortHeadline": "በአምቦ የሃጫሉ አጎትን ጨምሮ አምስት ሰዎች መሞታቸው ተነገረ"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-53258123",
+              "indexImage": {
+                "altText": "ሃጫሉ ሁንዴሳ",
+                "caption": "ሃጫሉ ሁንዴሳ",
+                "copyrightHolder": "Dagi Pictures",
+                "height": 680,
+                "href": "http://c.files.bbci.co.uk/8582/production/_113187143_53258123.jpg",
+                "id": "113187143",
+                "path": "/cpsprodpb/8582/production/_113187143_53258123.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 1209
+              },
+              "language": "am",
+              "locators": {
+                "assetUri": "/amharic/news-53258123",
+                "cpsUrn": "urn:bbc:content:assetUri:/amharic/news-53258123"
+              },
+              "summary": "በአምቦ የሃጫሉ አጎትን ጨምሮ አምስት ሰዎች መሞታቸው ተነገረ",
+              "timestamp": 1593629008000,
+              "type": "cps"
+            }
+          ],
+          "type": "see-alsos"
+        }
+      ],
+      "section": {
+        "name": "ዜና",
+        "subType": "index",
+        "type": "simple",
+        "uri": "/amharic/news"
+      },
+      "site": {
+        "name": "BBC አማርኛ",
+        "subType": "site",
+        "type": "simple",
+        "uri": "/amharic"
+      }
+    }
+  }

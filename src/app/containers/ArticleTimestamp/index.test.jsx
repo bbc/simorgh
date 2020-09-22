@@ -62,6 +62,33 @@ describe('ArticleTimestamp', () => {
     />,
   );
 
+  shouldMatchSnapshot(
+    'should render with a prefix',
+    <WrappedArticleTimestamp
+      firstPublished={1530947227000}
+      lastPublished={1552666749637}
+      service="mundo" // Prefix is Actualizado
+    />,
+  );
+
+  shouldMatchSnapshot(
+    'should render with a suffix',
+    <WrappedArticleTimestamp
+      firstPublished={1530947227000}
+      lastPublished={1552666749637}
+      service="nepali" // Suffix is मा अद्यावधिक
+    />,
+  );
+
+  shouldMatchSnapshot(
+    'should render with no suffix or prefix',
+    <WrappedArticleTimestamp
+      firstPublished={1530947227000}
+      lastPublished={1530947227000}
+      service="mundo"
+    />,
+  );
+
   describe('daylight savings time', () => {
     const daylightSavingsBehaviour = ({ descriptor, date, longName }) => {
       it(`should produce ${descriptor} as a descriptor when in ${longName}`, () => {

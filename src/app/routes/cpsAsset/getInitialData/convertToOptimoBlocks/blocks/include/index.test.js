@@ -1,252 +1,110 @@
+import loggerMock from '#testHelpers/loggerMock'; // Must be imported before convertInclude
+
 import convertInclude from '.';
+import pageData from './fixtures';
+import { INCLUDE_MISSING_URL, INCLUDE_UNSUPPORTED } from '#lib/logger.const';
 
-const vjMarkup = `<div>Visual Journalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`;
+import * as fetchMarkup from './fetchMarkup';
+import * as getImageBlock from './getImageBlock';
 
-const idt2Markup = `<div>IDT 2 Markup</div><script type="text/javascript" src="localhost/idt2.js"></script>`;
+const includeMarkup = `<div>INCLUDE Markup</div><script type="text/javascript" src="localhost/idt1.js"></script>`;
 
-const idt1Markup = `<div>IDT 1 Markup</div><script type="text/javascript" src="localhost/idt1.js"></script>`;
+const canonicalPathname = 'https://www.bbc.com/service/foo';
 
-describe('convertInclude', () => {
-  const includesBaseUrl = 'https://foobar.com/includes';
-  process.env.SIMORGH_INCLUDES_BASE_URL = includesBaseUrl;
+const ampPathname = 'https://www.bbc.com/service/foo.amp';
+
+const [
+  idt1Block,
+  idt2Block,
+  vjBlock,
+  unsupportedIncludeBlock,
+  noHrefIncludeBlock,
+  vjAmpSupportedBlock,
+  vjAmpNoSupportBlock,
+] = pageData.content.blocks;
+
+const runUnsupportedBlockAssertions = () => {
+  expect(loggerMock.error).not.toHaveBeenCalled();
+  expect(loggerMock.info).toHaveBeenCalledTimes(1);
+  expect(loggerMock.info).toBeCalledWith(INCLUDE_UNSUPPORTED, {
+    type: 'include',
+    classification: 'not-supported',
+    url: '/idt3/111-222-333-444-555',
+  });
+};
+
+const runNoHrefBlockAssertions = () => {
+  expect(loggerMock.info).not.toHaveBeenCalled();
+  expect(loggerMock.error).toHaveBeenCalledTimes(1);
+  expect(loggerMock.error).toHaveBeenCalledWith(INCLUDE_MISSING_URL, {
+    required: false,
+    tile: 'An include with no href',
+    href: null,
+    platform: 'highweb',
+    type: 'include',
+  });
+};
+
+describe('Convert Include block', () => {
+  const initialIncludesBaseUrl = process.env.SIMORGH_INCLUDES_BASE_URL;
+  const initialIncludesAmpBaseUrl = process.env.SIMORGH_INCLUDES_BASE_AMP_URL;
+
+  beforeEach(() => {
+    process.env.SIMORGH_INCLUDES_BASE_URL = 'https://foobar.com/includes';
+    process.env.SIMORGH_INCLUDES_BASE_AMP_URL = 'https://news.files.bbci.co.uk';
+  });
+
   afterEach(() => {
     fetch.resetMocks();
+    loggerMock.error.mockClear();
+    loggerMock.info.mockClear();
+    process.env.SIMORGH_INCLUDES_BASE_URL = initialIncludesBaseUrl;
+    process.env.SIMORGH_INCLUDES_BASE_AMP_URL = initialIncludesAmpBaseUrl;
   });
 
-  it('should fetch and convert an include block to an idt1 block', async () => {
-    fetch.mockResponse(() => Promise.resolve(idt1Markup));
-    const input = {
-      required: false,
-      tile: 'A quiz!',
-      href: '/indepthtoolkit/quizzes/123-456',
-      platform: 'highweb',
-      type: 'include',
-    };
-    const expected = {
-      type: 'include',
-      model: {
-        href: '/indepthtoolkit/quizzes/123-456',
-        required: false,
-        tile: 'A quiz!',
-        platform: 'highweb',
-        type: 'idt1',
-        html: idt1Markup,
-      },
-    };
-    expect(await convertInclude(input)).toEqual(expected);
-    expect(fetch).toHaveBeenCalled();
-  });
+  describe('Data dependent conditions', () => {
+    beforeEach(() => {
+      fetchMarkup.default = jest.fn().mockReturnValue(includeMarkup);
+    });
 
-  it('should fetch and convert an include block to an idt2 block', async () => {
-    fetch.mockResponse(() => Promise.resolve(idt2Markup));
-    const input = {
-      required: false,
-      tile: 'IDT2 Include',
-      href: '/idt2/111-222-333-444-555',
-      platform: 'highweb',
-      type: 'include',
-    };
-    const expected = {
-      type: 'include',
-      model: {
-        href: '/idt2/111-222-333-444-555',
-        required: false,
-        tile: 'IDT2 Include',
-        platform: 'highweb',
-        type: 'idt2',
-        html: idt2Markup,
-      },
-    };
-    expect(await convertInclude(input)).toEqual(expected);
-    expect(fetch).toHaveBeenCalled();
-  });
-
-  it('should fetch and convert an include block to a vj block', async () => {
-    fetch.mockResponse(() => Promise.resolve(vjMarkup));
-    const input = {
-      required: false,
-      tile: 'Include from VisJo',
-      href: '/include/111-222-333-444-555',
-      platform: 'highweb',
-      type: 'include',
-    };
-    const expected = {
-      type: 'include',
-      model: {
-        href: '/include/111-222-333-444-555',
-        required: false,
-        tile: 'Include from VisJo',
-        platform: 'highweb',
-        type: 'vj',
-        html: vjMarkup,
-      },
-    };
-    expect(await convertInclude(input)).toEqual(expected);
-    expect(fetch).toHaveBeenCalled();
-    expect(fetch).toHaveBeenCalledWith(
-      'https://foobar.com/includes/include/111-222-333-444-555',
-      {
-        timeout: 3000,
+    it.each`
+      expectation                                            | block                      | pathname             | runAdditionalExpectations
+      ${`'a valid IDT1 block on canonical`}                  | ${idt1Block}               | ${canonicalPathname} | ${() => {}}
+      ${`a valid IDT2 block on canonical`}                   | ${idt2Block}               | ${canonicalPathname} | ${() => {}}
+      ${`a valid VJ block on canonical`}                     | ${vjBlock}                 | ${canonicalPathname} | ${() => {}}
+      ${`null for non-supported include block on canonical`} | ${unsupportedIncludeBlock} | ${canonicalPathname} | ${runUnsupportedBlockAssertions}
+      ${`null include block without href on canonical`}      | ${noHrefIncludeBlock}      | ${canonicalPathname} | ${runNoHrefBlockAssertions}
+      ${`a valid VJ supported block on amp`}                 | ${vjAmpSupportedBlock}     | ${ampPathname}       | ${() => {}}
+      ${`null non-supported VJ block on amp`}                | ${vjAmpNoSupportBlock}     | ${ampPathname}       | ${() => {}}
+    `(
+      `should return $expectation`,
+      async ({ block, pathname, runAdditionalExpectations }) => {
+        fetch.mockResponse(() => Promise.resolve(includeMarkup));
+        expect(
+          await convertInclude(block, pageData, null, pathname),
+        ).toMatchSnapshot();
+        runAdditionalExpectations();
       },
     );
   });
 
-  it('should convert an include block to an idt1 block with no leading / in href', async () => {
-    fetch.mockResponse(() => Promise.resolve(idt1Markup));
-    const input = {
-      required: false,
-      tile: 'A quiz!',
-      href: 'indepthtoolkit',
-      platform: 'highweb',
-      type: 'include',
-    };
-    const expected = {
-      type: 'include',
-      model: {
-        href: 'indepthtoolkit',
-        required: false,
-        tile: 'A quiz!',
-        platform: 'highweb',
-        type: 'idt1',
-        html: idt1Markup,
-      },
-    };
-    expect(await convertInclude(input)).toEqual(expected);
-    expect(fetch).toHaveBeenCalledWith(
-      'https://foobar.com/includes/indepthtoolkit',
-      {
-        timeout: 3000,
-      },
-    );
-  });
+  describe('Error conditions', () => {
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+    it(`when fetchMarkup returns null`, async () => {
+      fetchMarkup.default = jest.fn().mockReturnValue(null);
+      expect(
+        await convertInclude(idt2Block, pageData, null, canonicalPathname),
+      ).toMatchSnapshot();
+    });
 
-  it('should convert an include block to an idt2 block with no / in href', async () => {
-    fetch.mockResponse(() => Promise.resolve(idt2Markup));
-    const input = {
-      required: false,
-      tile: 'IDT2 Include',
-      href: 'idt2',
-      platform: 'highweb',
-      type: 'include',
-    };
-    const expected = {
-      type: 'include',
-      model: {
-        href: 'idt2',
-        required: false,
-        tile: 'IDT2 Include',
-        platform: 'highweb',
-        type: 'idt2',
-        html: idt2Markup,
-      },
-    };
-    expect(await convertInclude(input)).toEqual(expected);
-    expect(fetch).toHaveBeenCalled();
-    expect(fetch).toHaveBeenCalledWith(
-      'https://foobar.com/includes/idt2/html',
-      {
-        timeout: 3000,
-      },
-    );
-  });
-
-  it('should fetch and convert an include block to a vj block with no / in href', async () => {
-    fetch.mockResponse(() => Promise.resolve(vjMarkup));
-    const input = {
-      required: false,
-      tile: 'Include from VisJo',
-      href: 'news/special/111-222-333-444-555',
-      platform: 'highweb',
-      type: 'include',
-    };
-    const expected = {
-      type: 'include',
-      model: {
-        href: 'news/special/111-222-333-444-555',
-        required: false,
-        tile: 'Include from VisJo',
-        platform: 'highweb',
-        type: 'vj',
-        html: vjMarkup,
-      },
-    };
-    expect(await convertInclude(input)).toEqual(expected);
-    expect(fetch).toHaveBeenCalled();
-    expect(fetch).toHaveBeenCalledWith(
-      'https://foobar.com/includes/news/special/111-222-333-444-555',
-      {
-        timeout: 3000,
-      },
-    );
-  });
-
-  it('should convert an include block to an idt2 block with html set to null when fetch returns with status other than 200', async () => {
-    jest.mock('#lib/logger.web', () => jest.fn());
-    fetch.mockResponse(() => Promise.resolve({ status: 304 }));
-    const input = {
-      required: false,
-      tile: 'IDT2 Include',
-      href: 'idt2',
-      platform: 'highweb',
-      type: 'include',
-    };
-    const expected = {
-      type: 'include',
-      model: {
-        href: 'idt2',
-        required: false,
-        tile: 'IDT2 Include',
-        platform: 'highweb',
-        type: 'idt2',
-        html: null,
-      },
-    };
-    expect(await convertInclude(input)).toEqual(expected);
-    expect(fetch).toHaveBeenCalled();
-    expect(fetch).toHaveBeenCalledWith(
-      'https://foobar.com/includes/idt2/html',
-      {
-        timeout: 3000,
-      },
-    );
-  });
-
-  it('should return null for an unsupported include type', async () => {
-    fetch.mockResponse(() => Promise.resolve('No fetch call'));
-    const input = {
-      required: false,
-      tile: 'A random include',
-      href: '/idt3/111-222-333-444-555',
-      platform: 'highweb',
-      type: 'include',
-    };
-    expect(await convertInclude(input)).toEqual(null);
-    expect(fetch).not.toHaveBeenCalled();
-  });
-
-  it('should return null for an unsupported include type with no leading / in href', async () => {
-    fetch.mockResponse(() => Promise.resolve('No fetch call'));
-    const input = {
-      required: false,
-      tile: 'A random include',
-      href: 'idt3/111-222-333-444-555',
-      platform: 'highweb',
-      type: 'include',
-    };
-    expect(await convertInclude(input)).toEqual(null);
-    expect(fetch).not.toHaveBeenCalled();
-  });
-
-  it('should return null for null/undefined href', async () => {
-    fetch.mockResponse(() => Promise.resolve('No fetch call'));
-    const input = {
-      required: false,
-      tile: 'A random include',
-      href: null,
-      platform: 'highweb',
-      type: 'include',
-    };
-    expect(await convertInclude(input)).toEqual(null);
-    expect(fetch).not.toHaveBeenCalled();
+    it(`when getImageBlock returns null`, async () => {
+      getImageBlock.default = jest.fn().mockReturnValue(null);
+      fetchMarkup.default = jest.fn().mockReturnValue(includeMarkup);
+      expect(
+        await convertInclude(idt2Block, pageData, null, canonicalPathname),
+      ).toMatchSnapshot();
+    });
   });
 });

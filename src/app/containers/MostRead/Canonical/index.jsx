@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useContext } from 'react';
-import styled from 'styled-components';
 import 'isomorphic-fetch';
 import { oneOf, string, elementType } from 'prop-types';
 import {
@@ -8,17 +7,10 @@ import {
   MostReadRank,
   MostReadLink,
 } from '@bbc/psammead-most-read';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
-import {
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
+import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
-import { shouldRenderLastUpdated } from '../utilities';
+import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/isDataStale';
 import LastUpdated from './LastUpdated';
 import processMostRead from '../utilities/processMostRead';
 import mostReadShape from '../utilities/mostReadShape';
@@ -29,15 +21,6 @@ import {
 
 const logger = nodeLogger(__filename);
 
-const MarginWrapper = styled.div`
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_DBL};
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_TRPL};
-  }
-`;
-
 const CanonicalMostRead = ({
   endpoint,
   columnLayout,
@@ -45,16 +28,23 @@ const CanonicalMostRead = ({
   initialData,
   wrapper: Wrapper,
 }) => {
+  const { isAmp } = useContext(RequestContext);
   const {
     service,
     script,
     dir,
     datetimeLocale,
+    serviceDatetimeLocale,
     timezone,
     mostRead: { lastUpdated, numberOfItems },
   } = useContext(ServiceContext);
 
-  const filteredData = processMostRead({ data: initialData, numberOfItems });
+  const filteredData = processMostRead({
+    data: initialData,
+    isAmp,
+    numberOfItems,
+    service,
+  });
 
   const [items, setItems] = useState(filteredData);
 
@@ -67,7 +57,14 @@ const CanonicalMostRead = ({
           );
         }
         const mostReadData = await response.json();
-        setItems(processMostRead({ data: mostReadData, numberOfItems }));
+        setItems(
+          processMostRead({
+            data: mostReadData,
+            isAmp,
+            numberOfItems,
+            service,
+          }),
+        );
       };
 
       const fetchMostReadData = pathname => {
@@ -94,58 +91,59 @@ const CanonicalMostRead = ({
     service,
     timezone,
     items,
+    isAmp,
   ]);
 
   if (!items) {
     return null;
   }
 
+  const locale = serviceDatetimeLocale || datetimeLocale;
+
   return (
     <Wrapper>
-      <MarginWrapper>
-        <MostReadList
-          numberOfItems={items.length}
-          dir={dir}
-          columnLayout={columnLayout}
-        >
-          {items.map((item, i) => (
-            <MostReadItemWrapper
+      <MostReadList
+        numberOfItems={items.length}
+        dir={dir}
+        columnLayout={columnLayout}
+      >
+        {items.map((item, i) => (
+          <MostReadItemWrapper
+            dir={dir}
+            key={item.id}
+            columnLayout={columnLayout}
+          >
+            <MostReadRank
+              service={service}
+              script={script}
+              listIndex={i + 1}
+              numberOfItems={items.length}
               dir={dir}
-              key={item.id}
               columnLayout={columnLayout}
+              size={size}
+            />
+            <MostReadLink
+              dir={dir}
+              service={service}
+              script={script}
+              title={item.title}
+              href={item.href}
+              size={size}
             >
-              <MostReadRank
-                service={service}
-                script={script}
-                listIndex={i + 1}
-                numberOfItems={items.length}
-                dir={dir}
-                columnLayout={columnLayout}
-                size={size}
-              />
-              <MostReadLink
-                dir={dir}
-                service={service}
-                script={script}
-                title={item.title}
-                href={item.href}
-                size={size}
-              >
-                {shouldRenderLastUpdated(item.timestamp) && (
-                  <LastUpdated
-                    prefix={lastUpdated}
-                    script={script}
-                    service={service}
-                    timestamp={item.timestamp}
-                    locale={datetimeLocale}
-                    timezone={timezone}
-                  />
-                )}
-              </MostReadLink>
-            </MostReadItemWrapper>
-          ))}
-        </MostReadList>
-      </MarginWrapper>
+              {shouldRenderLastUpdated(item.timestamp) && (
+                <LastUpdated
+                  prefix={lastUpdated}
+                  script={script}
+                  service={service}
+                  timestamp={item.timestamp}
+                  locale={locale}
+                  timezone={timezone}
+                />
+              )}
+            </MostReadLink>
+          </MostReadItemWrapper>
+        ))}
+      </MostReadList>
     </Wrapper>
   );
 };

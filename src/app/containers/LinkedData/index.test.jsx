@@ -9,7 +9,7 @@ import LinkedData from '.';
 const Context = ({ children, service }) => (
   <ServiceContextProvider service={service || 'news'}>
     <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.co.uk"
+      bbcOrigin="https://www.test.bbc.com"
       id="c0000000000o"
       isAmp={false}
       pageType="article"
@@ -67,6 +67,31 @@ describe('LinkedData', () => {
       { '@type': 'Person', name: 'A Person' },
     ],
   };
+
+  const propsForOndemandRadio = {
+    seoTitle: 'Ondemand Radio Headline',
+    type: 'WebPage',
+    entities: [
+      {
+        '@type': 'AudioObject',
+        name: 'ماښامنۍ خپرونه',
+        description: 'د بي بي سي ورلډ سروس څخه پروګرام کول',
+        duration: 'PT29M30S',
+        embedURL:
+          'https://test.bbc.com/ws/av-embeds/media/korean/externalId/id/ko?morph_env=live',
+        thumbnailUrl:
+          'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
+        uploadDate: '2020-04-23T15:30:00.000Z',
+      },
+    ],
+  };
+
+  shouldMatchSnapshot(
+    'should correctly render linked data for Ondemand Radio page',
+    <Context>
+      <LinkedData {...propsForOndemandRadio} />
+    </Context>,
+  );
 
   shouldMatchSnapshot(
     'should correctly render linked data for Photo Gallery page',

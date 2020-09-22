@@ -15,13 +15,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Advertisement',
-    },
     lang: 'en-GB',
     articleAuthor: `https://www.facebook.com/BBCArchive`,
     articleTimestampPrefix: 'Updated',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'archive',
     atiAnalyticsProducerId: '127',
     chartbeatDomain: 'bbc.co.uk',
@@ -56,6 +53,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Advertisement',
+      },
       home: 'Home',
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
@@ -164,6 +164,11 @@ export const service = {
       header: 'Most read',
       lastUpdated: 'Last updated:',
       hasMostRead: false,
+    },
+    mostWatched: {
+      header: 'Most watched',
+      numberOfItems: 10,
+      hasMostWatched: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,
