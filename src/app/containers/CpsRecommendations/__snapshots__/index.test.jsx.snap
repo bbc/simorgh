@@ -7,7 +7,7 @@ exports[`CpsRecommendations should not render when the service does not support 
 exports[`CpsRecommendations should not render when there is no recommendations data 1`] = `<div />`;
 
 exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and the service supports recommendations for a single item 1`] = `
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17,7 +17,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   flex-direction: column;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -36,7 +36,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   align-items: baseline;
 }
 
-.c10 {
+.c9 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -55,23 +55,23 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   align-items: center;
 }
 
-.c5 {
+.c4 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
   margin-top: 2rem;
 }
 
-.c7 {
+.c6 {
   margin: 0;
   padding: 0;
 }
 
-.c3 {
+.c2 {
   position: relative;
 }
 
-.c4 {
+.c3 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -91,7 +91,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 10;
 }
 
-.c4:not(:focus):not(:active) {
+.c3:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -103,7 +103,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   margin: 0;
 }
 
-.c21 {
+.c20 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -119,44 +119,39 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   grid-column: 1 / span 6;
 }
 
-.c2 {
-  margin-bottom: 1rem;
-  padding: 0 1rem;
-}
-
-.c6 {
+.c5 {
   margin-top: 0;
   margin: 0;
 }
 
-.c14 {
+.c13 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c18 {
+.c17 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c13 {
+.c12 {
   position: relative;
 }
 
-.c15 {
+.c14 {
   position: relative;
 }
 
-.c17 > * {
+.c16 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c16 {
+.c15 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -169,7 +164,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c12 > div {
+.c11 > div {
   display: grid;
   margin: 0.25rem 0;
   background-color: #FDFDFD;
@@ -181,7 +176,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   margin-bottom: 1.5rem;
 }
 
-.c19 {
+.c18 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -193,7 +188,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0.5rem 0.5rem 0.5rem 0;
 }
 
-.c20 {
+.c19 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -202,7 +197,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   overflow-wrap: anywhere;
 }
 
-.c20:before {
+.c19:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -214,18 +209,18 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 1;
 }
 
-.c20:hover,
-.c20:focus {
+.c19:hover,
+.c19:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c20:visited {
+.c19:visited {
   color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c8 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -234,58 +229,58 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c9 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c9 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c9 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c9 {
     padding-right: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c4 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c5 {
+  .c4 {
     margin-bottom: 1.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c11 {
+  .c10 {
     display: grid;
     position: initial;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c3 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     font-size: 0.8125rem;
   }
 }
@@ -317,52 +312,34 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
-@media (max-width:25rem) {
-  .c2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
 @media (min-width:37.5rem) {
-  .c2 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
+  .c5 {
     padding: 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c14 {
+  .c13 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c14 {
+  .c13 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c17 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c18 {
+  .c17 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -370,7 +347,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c18 {
+  .c17 {
     display: block;
     width: initial;
     padding: initial;
@@ -379,7 +356,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c13 {
+  .c12 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -387,41 +364,41 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:25rem) {
-  .c17 {
+  .c16 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c17 > * {
+  .c16 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c12 > div {
+  .c11 > div {
     margin: 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c19 {
+  .c18 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19 {
+  .c18 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c19 {
+  .c18 {
     padding: 0.5rem 1rem 1rem 0;
   }
 }
@@ -435,33 +412,33 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
     >
       <section
         aria-labelledby="recommendations-heading"
-        class="c2"
+        class=""
         data-e2e="recommendations-heading"
         role="region"
       >
         <div
-          class="c3"
+          class="c2"
         >
           <a
-            class="c4"
+            class="c3"
             href="#end-of-recommendations"
           >
             Saltar Quizás también te interese y continuar leyendo
           </a>
           <div
-            class="c5 c6"
+            class="c4 c5"
           >
             <strong
-              class="c7"
+              class="c6"
             >
               <span
-                class="c8"
+                class="c7"
               >
                 <span
-                  class="c9"
+                  class="c8"
                 >
                   <span
-                    class="c10"
+                    class="c9"
                     dir="ltr"
                     id="recommendations-heading"
                   >
@@ -475,24 +452,24 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             class=""
           >
             <div
-              class="c11"
+              class="c10"
               dir="ltr"
             >
               <div
-                class="c12"
+                class="c11"
               >
                 <div
-                  class="c13"
+                  class="c12"
                 >
                   <div
-                    class="c14"
+                    class="c13"
                     dir="ltr"
                   >
                     <div
-                      class="c15"
+                      class="c14"
                     >
                       <div
-                        class="c16"
+                        class="c15"
                       >
                         <div
                           class="lazyload-wrapper"
@@ -503,19 +480,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                         </div>
                       </div>
                       <div
-                        class="c17"
+                        class="c16"
                       />
                     </div>
                   </div>
                   <div
-                    class="c18"
+                    class="c17"
                     dir="ltr"
                   >
                     <div
-                      class="c19"
+                      class="c18"
                     >
                       <a
-                        class="c20"
+                        class="c19"
                         href="/mundo/noticias-53377054"
                       >
                         La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino
@@ -527,7 +504,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             </div>
           </div>
           <p
-            class="c21"
+            class="c20"
             id="end-of-recommendations"
             tabindex="-1"
           >
@@ -541,7 +518,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 `;
 
 exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and the service supports recommendations for multiple items 1`] = `
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -551,7 +528,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   flex-direction: column;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -570,7 +547,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   align-items: baseline;
 }
 
-.c10 {
+.c9 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -589,23 +566,23 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   align-items: center;
 }
 
-.c5 {
+.c4 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
   margin-top: 2rem;
 }
 
-.c7 {
+.c6 {
   margin: 0;
   padding: 0;
 }
 
-.c3 {
+.c2 {
   position: relative;
 }
 
-.c4 {
+.c3 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -625,7 +602,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 10;
 }
 
-.c4:not(:focus):not(:active) {
+.c3:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -637,7 +614,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   margin: 0;
 }
 
-.c25 {
+.c24 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -653,44 +630,39 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   grid-column: 1 / span 6;
 }
 
-.c2 {
-  margin-bottom: 1rem;
-  padding: 0 1rem;
-}
-
-.c6 {
+.c5 {
   margin-top: 0;
   margin: 0;
 }
 
-.c18 {
+.c17 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c22 {
+.c21 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c17 {
+.c16 {
   position: relative;
 }
 
-.c19 {
+.c18 {
   position: relative;
 }
 
-.c21 > * {
+.c20 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c20 {
+.c19 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -703,17 +675,17 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c16 > div {
+.c15 > div {
   display: grid;
   margin: 0.25rem 0;
   background-color: #FDFDFD;
 }
 
-.c13:last-child {
+.c12:last-child {
   border: none;
 }
 
-.c11 {
+.c10 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -725,7 +697,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   margin-bottom: 1.5rem;
 }
 
-.c23 {
+.c22 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -737,7 +709,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0.5rem 0.5rem 0.5rem 0;
 }
 
-.c24 {
+.c23 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -746,7 +718,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   overflow-wrap: anywhere;
 }
 
-.c24:before {
+.c23:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -758,18 +730,18 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 1;
 }
 
-.c24:hover,
-.c24:focus {
+.c23:hover,
+.c23:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c24:visited {
+.c23:visited {
   color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c8 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -778,52 +750,52 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c9 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c9 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c9 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c9 {
     padding-right: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c4 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c5 {
+  .c4 {
     margin-bottom: 1.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c12 {
+  .c11 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c14 {
+  .c13 {
     width: calc(1/1*(100% - 1 * 0.5rem) + 0 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -832,7 +804,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c14 {
+  .c13 {
     width: calc(1/1*(100% - 1 * 0.5rem) + 0 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -841,7 +813,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c14 {
+  .c13 {
     width: calc(1/1*(100% - 1 * 0.5rem) + 0 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -850,7 +822,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c14 {
+  .c13 {
     width: calc(1/1*(100% - 1 * 1rem) + 0 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -859,7 +831,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c14 {
+  .c13 {
     width: calc(1/1*(100% - 1 * 1rem) + 0 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -868,7 +840,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:80rem) {
-  .c14 {
+  .c13 {
     width: calc(1/1*(100% - 1 * 1rem) + 0 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -877,13 +849,13 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @supports (display:grid) {
-  .c14 {
+  .c13 {
     display: block;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c15 {
+  .c14 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -891,7 +863,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c15 {
+  .c14 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -899,7 +871,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c15 {
+  .c14 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -907,7 +879,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c15 {
+  .c14 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -915,7 +887,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c15 {
+  .c14 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -923,7 +895,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:80rem) {
-  .c15 {
+  .c14 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -931,20 +903,20 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @supports (display:grid) {
-  .c15 {
+  .c14 {
     display: grid;
     position: initial;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c3 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     font-size: 0.8125rem;
   }
 }
@@ -976,52 +948,34 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
-@media (max-width:25rem) {
-  .c2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
 @media (min-width:37.5rem) {
-  .c2 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
+  .c5 {
     padding: 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c18 {
+  .c17 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c18 {
+  .c17 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c21 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c22 {
+  .c21 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -1029,7 +983,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c22 {
+  .c21 {
     display: block;
     width: initial;
     padding: initial;
@@ -1038,7 +992,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c17 {
+  .c16 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -1046,41 +1000,41 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:25rem) {
-  .c21 {
+  .c20 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c21 > * {
+  .c20 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c16 > div {
+  .c15 > div {
     margin: 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c23 {
+  .c22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c23 {
+  .c22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c23 {
+  .c22 {
     padding: 0.5rem 1rem 1rem 0;
   }
 }
@@ -1094,33 +1048,33 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
     >
       <section
         aria-labelledby="recommendations-heading"
-        class="c2"
+        class=""
         data-e2e="recommendations-heading"
         role="region"
       >
         <div
-          class="c3"
+          class="c2"
         >
           <a
-            class="c4"
+            class="c3"
             href="#end-of-recommendations"
           >
             Saltar Quizás también te interese y continuar leyendo
           </a>
           <div
-            class="c5 c6"
+            class="c4 c5"
           >
             <strong
-              class="c7"
+              class="c6"
             >
               <span
-                class="c8"
+                class="c7"
               >
                 <span
-                  class="c9"
+                  class="c8"
                 >
                   <span
-                    class="c10"
+                    class="c9"
                     dir="ltr"
                     id="recommendations-heading"
                   >
@@ -1131,34 +1085,34 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             </strong>
           </div>
           <ul
-            class="c11 c12"
+            class="c10 c11"
             dir="ltr"
             role="list"
           >
             <li
-              class="c13 c14"
+              class="c12 c13"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="c15"
+                class="c14"
                 dir="ltr"
               >
                 <div
-                  class="c16"
+                  class="c15"
                 >
                   <div
-                    class="c17"
+                    class="c16"
                   >
                     <div
-                      class="c18"
+                      class="c17"
                       dir="ltr"
                     >
                       <div
-                        class="c19"
+                        class="c18"
                       >
                         <div
-                          class="c20"
+                          class="c19"
                         >
                           <div
                             class="lazyload-wrapper"
@@ -1169,19 +1123,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="c21"
+                          class="c20"
                         />
                       </div>
                     </div>
                     <div
-                      class="c22"
+                      class="c21"
                       dir="ltr"
                     >
                       <div
-                        class="c23"
+                        class="c22"
                       >
                         <a
-                          class="c24"
+                          class="c23"
                           href="/mundo/noticias-53377054"
                         >
                           La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino
@@ -1193,29 +1147,29 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
             <li
-              class="c13 c14"
+              class="c12 c13"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="c15"
+                class="c14"
                 dir="ltr"
               >
                 <div
-                  class="c16"
+                  class="c15"
                 >
                   <div
-                    class="c17"
+                    class="c16"
                   >
                     <div
-                      class="c18"
+                      class="c17"
                       dir="ltr"
                     >
                       <div
-                        class="c19"
+                        class="c18"
                       >
                         <div
-                          class="c20"
+                          class="c19"
                         >
                           <div
                             class="lazyload-wrapper"
@@ -1226,19 +1180,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="c21"
+                          class="c20"
                         />
                       </div>
                     </div>
                     <div
-                      class="c22"
+                      class="c21"
                       dir="ltr"
                     >
                       <div
-                        class="c23"
+                        class="c22"
                       >
                         <a
-                          class="c24"
+                          class="c23"
                           href="/mundo/noticias-america-latina-52884902"
                         >
                           Coronavirus en Colombia | El caso de la vigilante Edy Fonseca: "Me retuvieron en un edificio de clase alta durante la pandemia, lo acepté y me siento culpable"
@@ -1250,29 +1204,29 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
             <li
-              class="c13 c14"
+              class="c12 c13"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="c15"
+                class="c14"
                 dir="ltr"
               >
                 <div
-                  class="c16"
+                  class="c15"
                 >
                   <div
-                    class="c17"
+                    class="c16"
                   >
                     <div
-                      class="c18"
+                      class="c17"
                       dir="ltr"
                     >
                       <div
-                        class="c19"
+                        class="c18"
                       >
                         <div
-                          class="c20"
+                          class="c19"
                         >
                           <div
                             class="lazyload-wrapper"
@@ -1283,19 +1237,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="c21"
+                          class="c20"
                         />
                       </div>
                     </div>
                     <div
-                      class="c22"
+                      class="c21"
                       dir="ltr"
                     >
                       <div
-                        class="c23"
+                        class="c22"
                       >
                         <a
-                          class="c24"
+                          class="c23"
                           href="/mundo/noticias-internacional-53113381"
                         >
                           Soy una mujer genocida y aún me persiguen los recuerdos de lo que hice
@@ -1307,29 +1261,29 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
             <li
-              class="c13 c14"
+              class="c12 c13"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="c15"
+                class="c14"
                 dir="ltr"
               >
                 <div
-                  class="c16"
+                  class="c15"
                 >
                   <div
-                    class="c17"
+                    class="c16"
                   >
                     <div
-                      class="c18"
+                      class="c17"
                       dir="ltr"
                     >
                       <div
-                        class="c19"
+                        class="c18"
                       >
                         <div
-                          class="c20"
+                          class="c19"
                         >
                           <div
                             class="lazyload-wrapper"
@@ -1340,19 +1294,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="c21"
+                          class="c20"
                         />
                       </div>
                     </div>
                     <div
-                      class="c22"
+                      class="c21"
                       dir="ltr"
                     >
                       <div
-                        class="c23"
+                        class="c22"
                       >
                         <a
-                          class="c24"
+                          class="c23"
                           href="/mundo/vert-cul-53370542"
                         >
                           Estrenos 2020: las 10 mejores películas de lo que va del año según la BBC (y que seguramente no pudiste ver en el cine)
@@ -1365,7 +1319,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             </li>
           </ul>
           <p
-            class="c25"
+            class="c24"
             id="end-of-recommendations"
             tabindex="-1"
           >
@@ -1379,7 +1333,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 `;
 
 exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and the service supports recommendations for rtl service 1`] = `
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1389,7 +1343,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   flex-direction: column;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1408,7 +1362,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   align-items: baseline;
 }
 
-.c10 {
+.c9 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1427,23 +1381,23 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   align-items: center;
 }
 
-.c5 {
+.c4 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
   margin-top: 2rem;
 }
 
-.c7 {
+.c6 {
   margin: 0;
   padding: 0;
 }
 
-.c3 {
+.c2 {
   position: relative;
 }
 
-.c4 {
+.c3 {
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1463,7 +1417,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 10;
 }
 
-.c4:not(:focus):not(:active) {
+.c3:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -1475,7 +1429,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   margin: 0;
 }
 
-.c26 {
+.c25 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -1491,44 +1445,39 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   grid-column: 1 / span 6;
 }
 
-.c2 {
-  margin-bottom: 1rem;
-  padding: 0 1rem;
-}
-
-.c6 {
+.c5 {
   margin-top: 0;
   margin: 0;
 }
 
-.c18 {
+.c17 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c22 {
+.c21 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c17 {
+.c16 {
   position: relative;
 }
 
-.c19 {
+.c18 {
   position: relative;
 }
 
-.c21 > * {
+.c20 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c25 {
+.c24 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1541,7 +1490,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c20 {
+.c19 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1554,17 +1503,17 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c16 > div {
+.c15 > div {
   display: grid;
   margin: 0.25rem 0;
   background-color: #FDFDFD;
 }
 
-.c13:last-child {
+.c12:last-child {
   border: none;
 }
 
-.c11 {
+.c10 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -1576,7 +1525,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   margin-bottom: 1.5rem;
 }
 
-.c23 {
+.c22 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1588,7 +1537,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.c24 {
+.c23 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1597,7 +1546,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   overflow-wrap: anywhere;
 }
 
-.c24:before {
+.c23:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1609,18 +1558,18 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 1;
 }
 
-.c24:hover,
-.c24:focus {
+.c23:hover,
+.c23:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c24:visited {
+.c23:visited {
   color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c8 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1629,52 +1578,52 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c9 {
     font-size: 1.625rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c9 {
     font-size: 1.75rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c9 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c9 {
     padding-left: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c4 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c5 {
+  .c4 {
     margin-bottom: 1.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c12 {
+  .c11 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c14 {
+  .c13 {
     width: calc(1/1*(100% - 1 * 0.5rem) + 0 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1683,7 +1632,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c14 {
+  .c13 {
     width: calc(1/1*(100% - 1 * 0.5rem) + 0 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1692,7 +1641,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c14 {
+  .c13 {
     width: calc(1/1*(100% - 1 * 0.5rem) + 0 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1701,7 +1650,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c14 {
+  .c13 {
     width: calc(1/1*(100% - 1 * 1rem) + 0 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -1710,7 +1659,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c14 {
+  .c13 {
     width: calc(1/1*(100% - 1 * 1rem) + 0 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -1719,7 +1668,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:80rem) {
-  .c14 {
+  .c13 {
     width: calc(1/1*(100% - 1 * 1rem) + 0 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -1728,13 +1677,13 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @supports (display:grid) {
-  .c14 {
+  .c13 {
     display: block;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c15 {
+  .c14 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1742,7 +1691,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c15 {
+  .c14 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1750,7 +1699,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c15 {
+  .c14 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1758,7 +1707,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c15 {
+  .c14 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1766,7 +1715,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c15 {
+  .c14 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1774,7 +1723,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:80rem) {
-  .c15 {
+  .c14 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1782,20 +1731,20 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @supports (display:grid) {
-  .c15 {
+  .c14 {
     display: grid;
     position: initial;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c3 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     font-size: 0.8125rem;
   }
 }
@@ -1827,52 +1776,34 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
-@media (max-width:25rem) {
-  .c2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
 @media (min-width:37.5rem) {
-  .c2 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
+  .c5 {
     padding: 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c18 {
+  .c17 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c18 {
+  .c17 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c21 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c22 {
+  .c21 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -1880,7 +1811,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c22 {
+  .c21 {
     display: block;
     width: initial;
     padding: initial;
@@ -1889,7 +1820,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c17 {
+  .c16 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -1897,41 +1828,41 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width:25rem) {
-  .c21 {
+  .c20 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c21 > * {
+  .c20 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c16 > div {
+  .c15 > div {
     margin: 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c23 {
+  .c22 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c23 {
+  .c22 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c23 {
+  .c22 {
     padding: 0.5rem 0 1rem 1rem;
   }
 }
@@ -1945,33 +1876,33 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
     >
       <section
         aria-labelledby="recommendations-heading"
-        class="c2"
+        class=""
         data-e2e="recommendations-heading"
         role="region"
       >
         <div
-          class="c3"
+          class="c2"
         >
           <a
-            class="c4"
+            class="c3"
             href="#end-of-recommendations"
           >
             تخطى مواضيع قد تهمك وواصل القراءة
           </a>
           <div
-            class="c5 c6"
+            class="c4 c5"
           >
             <strong
-              class="c7"
+              class="c6"
             >
               <span
-                class="c8"
+                class="c7"
               >
                 <span
-                  class="c9"
+                  class="c8"
                 >
                   <span
-                    class="c10"
+                    class="c9"
                     dir="rtl"
                     id="recommendations-heading"
                   >
@@ -1982,34 +1913,34 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             </strong>
           </div>
           <ul
-            class="c11 c12"
+            class="c10 c11"
             dir="rtl"
             role="list"
           >
             <li
-              class="c13 c14"
+              class="c12 c13"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="c15"
+                class="c14"
                 dir="rtl"
               >
                 <div
-                  class="c16"
+                  class="c15"
                 >
                   <div
-                    class="c17"
+                    class="c16"
                   >
                     <div
-                      class="c18"
+                      class="c17"
                       dir="rtl"
                     >
                       <div
-                        class="c19"
+                        class="c18"
                       >
                         <div
-                          class="c20"
+                          class="c19"
                         >
                           <div
                             class="lazyload-wrapper"
@@ -2020,19 +1951,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="c21"
+                          class="c20"
                         />
                       </div>
                     </div>
                     <div
-                      class="c22"
+                      class="c21"
                       dir="rtl"
                     >
                       <div
-                        class="c23"
+                        class="c22"
                       >
                         <a
-                          class="c24"
+                          class="c23"
                           href="/arabic/middleeast-53329495"
                         >
                           الصراع في سوريا: الأمم المتحدة تقول إن جرائم حرب "فظيعة" ارتكبت في معركة ادلب
@@ -2044,29 +1975,29 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
             <li
-              class="c13 c14"
+              class="c12 c13"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="c15"
+                class="c14"
                 dir="rtl"
               >
                 <div
-                  class="c16"
+                  class="c15"
                 >
                   <div
-                    class="c17"
+                    class="c16"
                   >
                     <div
-                      class="c18"
+                      class="c17"
                       dir="rtl"
                     >
                       <div
-                        class="c19"
+                        class="c18"
                       >
                         <div
-                          class="c25"
+                          class="c24"
                         >
                           <div
                             class="lazyload-wrapper"
@@ -2077,19 +2008,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="c21"
+                          class="c20"
                         />
                       </div>
                     </div>
                     <div
-                      class="c22"
+                      class="c21"
                       dir="rtl"
                     >
                       <div
-                        class="c23"
+                        class="c22"
                       >
                         <a
-                          class="c24"
+                          class="c23"
                           href="/arabic/middleeast-53146050"
                         >
                           الحرب في ليبيا: الرئيس الفرنسي ماكرون يقول إن تركيا تمارس "لعبة خطرة" في ليبيا
@@ -2101,29 +2032,29 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
             <li
-              class="c13 c14"
+              class="c12 c13"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="c15"
+                class="c14"
                 dir="rtl"
               >
                 <div
-                  class="c16"
+                  class="c15"
                 >
                   <div
-                    class="c17"
+                    class="c16"
                   >
                     <div
-                      class="c18"
+                      class="c17"
                       dir="rtl"
                     >
                       <div
-                        class="c19"
+                        class="c18"
                       >
                         <div
-                          class="c25"
+                          class="c24"
                         >
                           <div
                             class="lazyload-wrapper"
@@ -2134,19 +2065,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="c21"
+                          class="c20"
                         />
                       </div>
                     </div>
                     <div
-                      class="c22"
+                      class="c21"
                       dir="rtl"
                     >
                       <div
-                        class="c23"
+                        class="c22"
                       >
                         <a
-                          class="c24"
+                          class="c23"
                           href="/arabic/middleeast-52959311"
                         >
                           ليبيا: هل يخوض أردوغان مغامرة وقودها السوريون؟
@@ -2158,29 +2089,29 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
             <li
-              class="c13 c14"
+              class="c12 c13"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="c15"
+                class="c14"
                 dir="rtl"
               >
                 <div
-                  class="c16"
+                  class="c15"
                 >
                   <div
-                    class="c17"
+                    class="c16"
                   >
                     <div
-                      class="c18"
+                      class="c17"
                       dir="rtl"
                     >
                       <div
-                        class="c19"
+                        class="c18"
                       >
                         <div
-                          class="c25"
+                          class="c24"
                         >
                           <div
                             class="lazyload-wrapper"
@@ -2191,19 +2122,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="c21"
+                          class="c20"
                         />
                       </div>
                     </div>
                     <div
-                      class="c22"
+                      class="c21"
                       dir="rtl"
                     >
                       <div
-                        class="c23"
+                        class="c22"
                       >
                         <a
-                          class="c24"
+                          class="c23"
                           href="/arabic/inthepress-52320329"
                         >
                           صحف بريطانية تناقش "الاختبار" الروسي في الشرق الأوسط و"العلاجات الدجلية" لفيروس كورونا
@@ -2216,7 +2147,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             </li>
           </ul>
           <p
-            class="c26"
+            class="c25"
             id="end-of-recommendations"
             tabindex="-1"
           >
