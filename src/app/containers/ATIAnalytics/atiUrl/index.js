@@ -50,7 +50,9 @@ export const buildATIPageTrackPath = ({
   // For canonical, we have a requirement to encode the x5 and x6 value twice. Source issue: https://github.com/bbc/simorgh/pull/6593
   const x5Value = platform === 'amp' ? href : href && encodeURIComponent(href);
   const x6Value =
-    platform === 'amp' ? referrer : referrer && encodeURIComponent(referrer);
+    platform === 'amp'
+      ? referrer
+      : referrer && encodeURIComponent(encodeURIComponent(referrer));
 
   const pageViewBeaconValues = [
     {
@@ -126,6 +128,7 @@ export const buildATIPageTrackPath = ({
       description: 'referrer url',
       value: x6Value,
       wrap: true,
+      disableEncoding: true,
     },
     { key: 'x7', description: 'content type', value: contentType, wrap: true },
     {
