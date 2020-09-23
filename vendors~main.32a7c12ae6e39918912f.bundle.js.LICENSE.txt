@@ -111,8 +111,6 @@ and limitations under the License.
 
 //! moment.js
 
-//! moment.js language configuration
-
 //! moment.js locale configuration
 
 //! stable.js 0.1.8, https://github.com/Two-Screen/stable
