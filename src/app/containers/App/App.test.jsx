@@ -58,6 +58,7 @@ describe('App', () => {
     expect.assertions(4);
     expect(route.getInitialData).not.toHaveBeenCalled();
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledTimes(1);
+    // commit note
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledWith([], {
       assetUri: undefined,
       bbcOrigin: 'https://www.bbc.co.uk',

@@ -49,6 +49,7 @@ export const App = ({ location, initialData, bbcOrigin, history }) => {
 
   useEffect(() => {
     if (hasMounted.current) {
+      console.log(state);
       getNextPageState(pathname).then(setState);
     } else {
       hasMounted.current = true;
