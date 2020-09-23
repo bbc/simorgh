@@ -241,9 +241,9 @@ describe('Chartbeat utilities', () => {
       const pageType = 'mostRead';
       const pageData = {};
       const brandName = 'BBC News 코리아';
-      const mostReadTitle = 'TOP 뉴스';
+      const title = 'TOP 뉴스';
 
-      expect(getTitle({ pageType, pageData, brandName, mostReadTitle })).toBe(
+      expect(getTitle({ pageType, pageData, brandName, title })).toBe(
         'TOP 뉴스 - BBC News 코리아',
       );
     });
@@ -252,11 +252,11 @@ describe('Chartbeat utilities', () => {
       const pageType = 'mostWatched';
       const pageData = {};
       const brandName = 'BBC News Afaan Oromoo';
-      const mostWatchedTitle = 'Hedduu kan ilaalaman';
+      const title = 'Hedduu kan ilaalaman';
 
-      expect(
-        getTitle({ pageType, pageData, brandName, mostWatchedTitle }),
-      ).toBe('Hedduu kan ilaalaman - BBC News Afaan Oromoo');
+      expect(getTitle({ pageType, pageData, brandName, title })).toBe(
+        'Hedduu kan ilaalaman - BBC News Afaan Oromoo',
+      );
     });
 
     test.each`
