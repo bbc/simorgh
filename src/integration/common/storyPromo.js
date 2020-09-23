@@ -1,6 +1,6 @@
 export default () => {
   describe('Story Promo', () => {
-    const section = document.querySelector('section');
+    const section = document.querySelector('div class[SectionLabelWrapper]');
 
     if (section) {
       it('should be in the document', () => {
