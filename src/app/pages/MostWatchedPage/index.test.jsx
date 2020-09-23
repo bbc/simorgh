@@ -5,6 +5,7 @@ import { bool } from 'prop-types';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import MostWatchedPage from './MostWatchedPage';
 
@@ -12,21 +13,28 @@ const pageData = {
   mostWatched: mostWatchedData.records.slice(0, 3).map(item => item.promo),
 };
 
+jest.mock('../../containers/ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  return ChartbeatAnalytics;
+});
+
 const MostWatchedPageWithContext = ({ isAmp }) => (
-  <ServiceContextProvider service="pidgin">
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.com"
-      isAmp={isAmp}
-      pageType="mostWatched"
-      pathname="/pathname"
-      service="pidgin"
-      statusCode={200}
-    >
-      <BrowserRouter>
-        <MostWatchedPage pageData={pageData} />
-      </BrowserRouter>
-    </RequestContextProvider>
-  </ServiceContextProvider>
+  <ToggleContextProvider>
+    <ServiceContextProvider service="pidgin">
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.com"
+        isAmp={isAmp}
+        pageType="mostWatched"
+        pathname="/pathname"
+        service="pidgin"
+        statusCode={200}
+      >
+        <BrowserRouter>
+          <MostWatchedPage pageData={pageData} />
+        </BrowserRouter>
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  </ToggleContextProvider>
 );
 
 MostWatchedPageWithContext.propTypes = {
