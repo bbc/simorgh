@@ -77,17 +77,13 @@ const gridMarginSmall = css`
   }
 `;
 
-const Wrapper = styled(ConstrainedLargeGrid)`
-  ${isMediaContent =>
-    !isMediaContent &&
-    `
+const StyledConstrainedLargeGrid = styled(ConstrainedLargeGrid)`
   ${gelGridMargin}
   ${gridMarginSmall}
   ${({ columnType }) =>
     columnType === 'main' &&
     `
     padding: 0 ${GEL_SPACING_DBL};
-  `}
   `}
 `;
 
@@ -169,6 +165,9 @@ const CpsOnwardJourney = ({
     'aria-labelledby': labelId,
   };
   const { script, service, dir } = useContext(ServiceContext);
+  const Wrapper = isMediaContent
+    ? styled(ConstrainedLargeGrid)`` // Necessary for styling
+    : StyledConstrainedLargeGrid;
   const CpsOnwardJourneyWrapper = ({ children }) =>
     parentColumns ? (
       <Wrapper

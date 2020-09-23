@@ -23,7 +23,7 @@ const MostWatched = ({ data, isMostWatchedPage }) => {
     group2: 6,
     group3: 6,
     group4: 8,
-    group5: 8,
+    group5: 20,
   };
 
   return (
