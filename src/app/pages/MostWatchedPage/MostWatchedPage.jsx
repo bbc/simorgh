@@ -65,8 +65,8 @@ const MostWatchedPage = ({ pageData }) => {
           group1: 1,
           group2: 1,
           group3: 1,
-          group4: 1,
-          group5: 1,
+          group4: 2,
+          group5: 2,
         }}
         columns={{
           group0: 6,
