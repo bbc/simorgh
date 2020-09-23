@@ -95,7 +95,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               // If there is only one record, the item is not in a list
               // If the max number of items is 5 and the records are >= 5, checks it shows 5
               // If the max number of items is 10 and the records are >= 10, checks it shows 10
-              let expectedNumberOfItems;
+              let expectedNumberOfItems = Math.min(mostWatchedJson.totalRecords, maxNumberofItems);
               if (mostWatchedJson.totalRecords === 1) {
                 cy.get('[data-e2e=most-watched-heading]').within(() => {
                   cy.get('[class^="StoryPromoWrapper"]')
