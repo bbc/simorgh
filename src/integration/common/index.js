@@ -19,7 +19,6 @@ const runCommonCrossPlatformTests = service => {
   runFooterTests();
   runPerformanceTests();
   runCrossPlatformSEOTests();
-  runStoryPromoTests();
 };
 
 export {

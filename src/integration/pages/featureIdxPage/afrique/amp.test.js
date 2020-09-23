@@ -5,6 +5,6 @@
 
 import runAmpTests from '../ampTests';
 
-describe('AMP afrique/48465371 Feature Index page', () => {
+describe('AMP Feature Index page', () => {
   runAmpTests(service);
 });
