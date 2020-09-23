@@ -21,6 +21,7 @@ const ATIAnalytics = ({ data }) => {
     media: buildTvRadioATIUrl,
     mostRead: buildMostReadATIUrl,
     IDX: buildIndexPageATIUrl,
+    FIX: buildIndexPageATIUrl,
     MAP: () =>
       buildCpsAssetPageATIUrl(
         data,

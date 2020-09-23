@@ -1038,6 +1038,9 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
               id="DataContainer"
             >
               <div>
+                Amp ATI analytics
+              </div>
+              <div>
                 chartbeat
               </div>
               <amp-analytics
@@ -5875,6 +5878,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
             <div
               id="DataContainer"
             >
+              <noscript />
               <div>
                 chartbeat
               </div>
