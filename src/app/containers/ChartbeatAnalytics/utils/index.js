@@ -37,6 +37,8 @@ export const getType = (pageType, shorthand = false) => {
       return 'Radio';
     case 'mostRead':
       return 'Most Read';
+    case 'mostWatched':
+      return 'Most Watched';
     case 'STY':
       return 'STY';
     case 'PGL':
@@ -99,7 +101,13 @@ export const buildSections = ({
   }
 };
 
-export const getTitle = ({ pageType, pageData, brandName, title }) => {
+export const getTitle = ({
+  pageType,
+  pageData,
+  brandName,
+  mostReadTitle,
+  mostWatchedTitle,
+}) => {
   switch (pageType) {
     case 'frontPage':
     case 'IDX':
@@ -112,7 +120,9 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
     case 'media':
       return path(['pageTitle'], pageData);
     case 'mostRead':
-      return `${title} - ${brandName}`;
+      return `${mostReadTitle} - ${brandName}`;
+    case 'mostWatched':
+      return `${mostWatchedTitle} - ${brandName}`;
     case 'STY':
       return path(['promo', 'headlines', 'headline'], pageData);
     case 'PGL':
@@ -136,6 +146,7 @@ export const getConfig = ({
   previousPath,
   chartbeatDomain,
   mostReadTitle,
+  mostWatchedTitle,
 }) => {
   const referrer =
     previousPath || isAmp ? getReferrer(platform, origin, previousPath) : null;
@@ -144,7 +155,8 @@ export const getConfig = ({
     pageType,
     pageData: data,
     brandName,
-    title: mostReadTitle,
+    mostReadTitle,
+    mostWatchedTitle,
   });
   const domain = env !== 'live' ? 'test.bbc.co.uk' : chartbeatDomain;
   const sectionName = path(['relatedContent', 'section', 'name'], data);
