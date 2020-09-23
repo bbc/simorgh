@@ -215,6 +215,10 @@ export const service = {
         url: '/thai/topics/c5v124k8lj7t',
       },
       {
+        title: 'ลือกตั้งสหรัฐฯ 2020',
+        url: '/thai/international-54245234',
+      },
+      {
         title: 'วิทยาศาสตร์',
         url: '/thai/topics/c5qvp1q33p0t',
       },
