@@ -323,6 +323,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
   >
     <div
       class="c4 c5"
+      data-e2e="story-promo"
     >
       <div
         class="c6"
@@ -388,6 +389,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
   >
     <div
       class="c4 c5"
+      data-e2e="story-promo"
     >
       <div
         class="c6"
@@ -442,6 +444,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
   >
     <div
       class="c4 c5"
+      data-e2e="story-promo"
     >
       <div
         class="c6"
@@ -809,6 +812,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
   >
     <div
       class="c4"
+      data-e2e="story-promo"
     >
       <div
         class="c5"
@@ -874,6 +878,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
   >
     <div
       class="c4"
+      data-e2e="story-promo"
     >
       <div
         class="c5"
@@ -928,6 +933,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
   >
     <div
       class="c4"
+      data-e2e="story-promo"
     >
       <div
         class="c5"

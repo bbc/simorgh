@@ -447,6 +447,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
         >
           <div
             class="c11"
+            data-e2e="story-promo"
           >
             <div
               class="c12"
@@ -477,6 +478,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
         >
           <div
             class="c11"
+            data-e2e="story-promo"
           >
             <div
               class="c12"
@@ -915,6 +917,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
       >
         <div
           class="c10"
+          data-e2e="story-promo"
         >
           <div
             class="c11"

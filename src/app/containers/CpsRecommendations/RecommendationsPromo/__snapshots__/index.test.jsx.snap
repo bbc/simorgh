@@ -203,6 +203,7 @@ exports[`RecommendationsPromo it renders a Story Promo wrapped in a Grid compone
   >
     <div
       class="c2"
+      data-e2e="story-promo"
     >
       <div
         class="c3"
