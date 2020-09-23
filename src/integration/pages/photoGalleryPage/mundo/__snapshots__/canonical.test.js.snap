@@ -96,64 +96,78 @@ Object {
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 4`] = `
 Object {
-  "text": "Economía",
-  "url": "/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342",
+  "text": "EE.UU. 2020",
+  "url": "/mundo/noticias-internacional-53826365",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 5`] = `
 Object {
-  "text": "Tecnología",
-  "url": "/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a",
+  "text": "¿Hablas español?",
+  "url": "/mundo/noticias-50160896",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 6`] = `
-Object {
-  "text": "Ciencia",
-  "url": "/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 7`] = `
-Object {
-  "text": "Salud",
-  "url": "/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 8`] = `
-Object {
-  "text": "Cultura",
-  "url": "/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 9`] = `
-Object {
-  "text": "Deportes",
-  "url": "/mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 10`] = `
-Object {
-  "text": "Video",
-  "url": "/mundo/media/video",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "Hay Festival",
   "url": "/mundo/noticias-36795069",
 }
 `;
 
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 7`] = `
+Object {
+  "text": "Economía",
+  "url": "/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "Ciencia",
+  "url": "/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 9`] = `
+Object {
+  "text": "Salud",
+  "url": "/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 10`] = `
+Object {
+  "text": "Cultura",
+  "url": "/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 11`] = `
+Object {
+  "text": "Tecnología",
+  "url": "/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a",
+}
+`;
+
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 12`] = `
+Object {
+  "text": "Video",
+  "url": "/mundo/media/video",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 13`] = `
 Object {
   "text": "Centroamérica Cuenta",
   "url": "/mundo/noticias-43826245",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 14`] = `
+Object {
+  "text": "BBC Extra",
+  "url": "/mundo/noticias-48908206",
 }
 `;
 
