@@ -22,6 +22,7 @@ import MostWatchedContainer from '#containers/MostWatched';
 import MetadataContainer from '#containers/Metadata';
 import LinkedData from '#containers/LinkedData';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import ATIAnalytics from '#containers/ATIAnalytics';
 
 const StyledIndexHeading = styled(IndexHeading)`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
@@ -94,6 +95,7 @@ const MostWatchedPage = ({ pageData }) => {
         description={`${header} - ${brandName}`}
         openGraphType="website"
       />
+      <ATIAnalytics data={pageData} />
       <LinkedData type="WebPage" seoTitle={header} />
       <ChartbeatAnalytics data={pageData} />
       <IndexMain data-e2e="most-watched">
