@@ -1,3 +1,5 @@
+import path from 'ramda/src/path';
+
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
@@ -25,9 +27,31 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   describe(`No testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {});
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
-export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = ({
-  service,
-  pageType,
-}) => {
-  describe(`No testsToNeverSmokeTestForCanonicalOnly to run for ${service} ${pageType}`, () => {});
+export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
+  describe('Social Embed', () => {
+    it('link should render if exists on page', () => {
+      cy.window().then(win => {
+        const jsonData = win.SIMORGH_DATA.pageData;
+
+        const hasSocialEmbed = path(
+          ['metadata', 'blockTypes'],
+          jsonData,
+        ).includes('social_embed');
+
+        if (hasSocialEmbed) {
+          const blocks = path(['content', 'model', 'blocks'], jsonData);
+          const socialEmbed = blocks.filter(
+            block => block.type === 'social_embed',
+          )[0];
+
+          const source = path(['model', 'blocks', 0, 'type'], socialEmbed);
+          cy.get(`[href="#skip-${source}-content-1"]`).should('not.exist');
+          cy.scrollTo(0, 900);
+          cy.get(`[href="#skip-${source}-content-1"]`).should('exist');
+        } else {
+          cy.log('No Social Embed exists');
+        }
+      });
+    });
+  });
 };
