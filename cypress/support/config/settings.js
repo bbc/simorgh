@@ -552,7 +552,7 @@ module.exports = () => ({
             paths: [
               '/amharic/news-51270657', // CPS MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [

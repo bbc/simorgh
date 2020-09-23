@@ -95,32 +95,24 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               // If there is only one record, the item is not in a list
               // If the max number of items is 5 and the records are >= 5, checks it shows 5
               // If the max number of items is 10 and the records are >= 10, checks it shows 10
-              let expectedNumberOfItems = Math.min(mostWatchedJson.totalRecords, maxNumberofItems);
+              const expectedNumberOfItems = Math.min(
+                mostWatchedJson.totalRecords,
+                maxNumberofItems,
+              );
               if (mostWatchedJson.totalRecords === 1) {
                 cy.get('[data-e2e=most-watched-heading]').within(() => {
                   cy.get('[class^="StoryPromoWrapper"]')
                     .its('length')
                     .should('eq', 1);
                 });
-              } else if (
-                maxNumberofItems === '5' &&
-                mostWatchedJson.totalRecords > 5
-              ) {
-                expectedNumberOfItems = 5;
-              } else if (
-                maxNumberofItems === '10' &&
-                mostWatchedJson.totalRecords > 10
-              ) {
-                expectedNumberOfItems = 10;
-              } else {
-                expectedNumberOfItems = mostWatchedJson.totalRecords;
+              } else if (mostWatchedJson.totalRecords !== 1) {
+                cy.get('[data-e2e=most-watched-heading]').within(() => {
+                  cy.get('[class^="StoryPromoUl"]')
+                    .find('>li')
+                    .its('length')
+                    .should('eq', expectedNumberOfItems);
+                });
               }
-              cy.get('[data-e2e=most-watched-heading]').within(() => {
-                cy.get('[class^="StoryPromoUl"]')
-                  .find('>li')
-                  .its('length')
-                  .should('eq', expectedNumberOfItems);
-              });
             }
           });
         });
