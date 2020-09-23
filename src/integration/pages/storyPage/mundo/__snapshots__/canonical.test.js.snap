@@ -367,7 +367,3 @@ exports[`Canonical Story Page SEO Twitter site 1`] = `"@bbcmundo"`;
 exports[`Canonical Story Page SEO Twitter title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
 
 exports[`Canonical Story Page SEO apple-itunes-app meta tag should match text 1`] = `"app-id=515255747, app-argument=http://localhost:7080/mundo/noticias-internacional-51266689?utm_medium=banner&utm_content=apple-itunes-app"`;
-
-exports[`Canonical Story Page Social Embeds I can see the skip link 1`] = `"Saltar contenido de YouTube, 1"`;
-
-exports[`Canonical Story Page Social Embeds I can see the skip link destination 1`] = `"Fin del contenido de YouTube, 1"`;

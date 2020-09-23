@@ -429,11 +429,3 @@ exports[`AMP Story Page SEO Twitter image src 1`] = `"https://ichef.test.bbci.co
 exports[`AMP Story Page SEO Twitter site 1`] = `"@bbckyrgyz"`;
 
 exports[`AMP Story Page SEO Twitter title 1`] = `"Test STY for social embeds - BBC News Кыргыз Кызматы"`;
-
-exports[`AMP Story Page Social Embeds I can see a link to the original content in a fallback 1`] = `"Facebook баракчадан көбүрөк пост окуу"`;
-
-exports[`AMP Story Page Social Embeds I can see the caption accompanying a YouTube embed 1`] = `"Видеонун түшүндүрмөсү, Эскертүү: Жарнамалар болушу ыктымал"`;
-
-exports[`AMP Story Page Social Embeds I can see the skip link 1`] = `"YouTube баракчаны өткөрүп жиберүү, пост, 1"`;
-
-exports[`AMP Story Page Social Embeds I can see the skip link destination 1`] = `"YouTube посттун аягы, 1"`;
