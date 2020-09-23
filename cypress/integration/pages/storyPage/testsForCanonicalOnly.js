@@ -29,7 +29,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
   describe('Social Embed', () => {
-    it('link should render if exists on page', () => {
+    it.only('link should render if exists on page', () => {
       cy.window().then(win => {
         const jsonData = win.SIMORGH_DATA.pageData;
 
@@ -45,9 +45,8 @@ export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
           )[0];
 
           const source = path(['model', 'blocks', 0, 'type'], socialEmbed);
-          cy.get(`[href="#skip-${source}-content-1"]`).should('not.exist');
           cy.scrollTo(0, 900);
-          cy.get(`[href="#skip-${source}-content-1"]`).should('exist');
+          cy.get(`[href^="#skip-${source}-content"]`).should('exist');
         } else {
           cy.log('No Social Embed exists');
         }
