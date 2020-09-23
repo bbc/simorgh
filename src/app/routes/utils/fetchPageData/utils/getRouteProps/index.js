@@ -17,9 +17,11 @@ const getRouteProps = url => {
   const service = path(['service'], params);
   const variantPath = path(['variant'], params);
   const id = path(['id'], params);
-  const errorCode = path(['errorCode'], params);
   const assetUri = path(['assetUri'], params);
   const variant = variantSanitiser(variantPath);
+  const pageType = path(['pageType'], route);
+  const getInitialData = path(['getInitialData'], route);
+  const errorCode = path(['errorCode'], params);
 
   return {
     isAmp: 'amp' in params ? !!amp : isAmpPath(url),
@@ -28,8 +30,8 @@ const getRouteProps = url => {
     id,
     assetUri,
     route,
-    pageType: route.pageType,
-    getInitialData: route.getInitialData,
+    pageType,
+    getInitialData,
     match,
     errorCode: errorCode ? Number(errorCode) : errorCode,
   };
