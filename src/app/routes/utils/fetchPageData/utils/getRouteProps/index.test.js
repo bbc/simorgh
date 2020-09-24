@@ -130,12 +130,7 @@ describe('getRouteProps', () => {
         match,
         route,
         service: 'fallbackService',
-        assetUri: undefined,
-        errorCode: undefined,
-        getInitialData: undefined,
-        id: undefined,
         pageType: 'error',
-        variant: undefined,
       });
     });
   });

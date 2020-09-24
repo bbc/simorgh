@@ -8,6 +8,8 @@ import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 import { App } from './App';
 import getToggles from '#app/lib/utilities/getToggles';
+import routes from '#app/routes';
+import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 
 jest.mock('react-router-config');
 jest.mock('#app/lib/utilities/getToggles');
@@ -55,26 +57,19 @@ describe('App', () => {
   });
 
   it('should return rendered routes', () => {
+    const pathname = 'pathnameOne';
+    const routeProps = getRouteProps(pathname);
     expect.assertions(4);
     expect(route.getInitialData).not.toHaveBeenCalled();
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledTimes(1);
-    // commit note
-    expect(reactRouterConfig.renderRoutes).toHaveBeenCalledWith([], {
-      assetUri: undefined,
+    expect(reactRouterConfig.renderRoutes).toHaveBeenCalledWith(routes, {
+      ...routeProps,
+      pathname,
       bbcOrigin: 'https://www.bbc.co.uk',
       pageData: initialData.pageData,
       toggles: initialData.toggles,
-      error: undefined,
-      errorCode: undefined,
-      id: undefined,
-      isAmp: false,
       loading: false,
-      pageType: 'article',
-      service: 'ukchina',
-      status: undefined,
-      pathname: 'pathnameOne',
       previousPath: null,
-      variant: 'simp',
       timeOnServer: initialData.timeOnServer,
     });
     expect(wrapper).toMatchSnapshot();
