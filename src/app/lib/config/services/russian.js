@@ -195,6 +195,7 @@ export const service = {
     datetimeLocale: `ru`,
     service: 'russian',
     serviceName: 'Russian',
+    languageName: 'Russian',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcrussian',
     twitterSite: '@bbcrussian',

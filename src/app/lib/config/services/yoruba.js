@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: 'yo',
     service: 'yoruba',
     serviceName: 'Yoruba',
+    languageName: 'Yoruba',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated
     twitterSite: '@BBCNews', // to be updated

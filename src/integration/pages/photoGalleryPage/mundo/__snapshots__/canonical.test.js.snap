@@ -304,6 +304,11 @@ Object {
         "url": "https://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "es",
+        "name": "Spanish",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/mundo/deportes-36935058",
         "@type": "WebPage",
