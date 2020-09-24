@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string, node, shape, arrayOf } from 'prop-types';
+import { string, node, shape, arrayOf, bool } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
@@ -49,7 +49,7 @@ const MetadataContainer = ({
   image,
   imageAltText,
   children,
-  pageType,
+  hasAppleItunesAppBanner,
 }) => {
   const {
     isAmp,
@@ -135,7 +135,7 @@ const MetadataContainer = ({
         canonicalLink,
         isAmp,
         appleItunesAppToggleEnabled,
-        pageType,
+        hasAppleItunesAppBanner,
       })}
       <meta name="apple-mobile-web-app-title" content={brandName} />
       <meta name="application-name" content={brandName} />
@@ -200,7 +200,7 @@ MetadataContainer.propTypes = {
   image: string,
   imageAltText: string,
   children: node,
-  pageType: string,
+  hasAppleItunesAppBanner: bool,
 };
 
 MetadataContainer.defaultProps = {
@@ -210,7 +210,7 @@ MetadataContainer.defaultProps = {
   image: null,
   imageAltText: null,
   children: null,
-  pageType: null,
+  hasAppleItunesAppBanner: false,
 };
 
 export default MetadataContainer;

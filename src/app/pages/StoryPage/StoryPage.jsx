@@ -141,9 +141,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
 
   // ads
   const { enabled: adsEnabled } = useToggle('ads');
-  const { isAmp, showAdsBasedOnLocation, pageType } = useContext(
-    RequestContext,
-  );
+  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
   /**
@@ -277,7 +275,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         imageLocator={indexImageLocator}
         imageAltText={indexImageAltText}
         aboutTags={aboutTags}
-        pageType={pageType}
+        hasAppleItunesAppBanner
       />
       <LinkedData
         type={categoryType(category)}

@@ -61,14 +61,12 @@ export const renderAlternateLinks = link => (
   />
 );
 
-const PAGE_TYPE_ALLOW_LIST = ['STY', 'MAP'];
-
 export const renderAppleItunesApp = ({
   iTunesAppId,
   canonicalLink,
   isAmp,
   appleItunesAppToggleEnabled,
-  pageType,
+  hasAppleItunesAppBanner,
 }) => {
   const isCanonical = !isAmp;
 
@@ -77,7 +75,7 @@ export const renderAppleItunesApp = ({
     canonicalLink,
     isCanonical,
     appleItunesAppToggleEnabled,
-    PAGE_TYPE_ALLOW_LIST.includes(pageType),
+    hasAppleItunesAppBanner,
   ].every(Boolean);
 
   if (shouldRender) {

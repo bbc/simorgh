@@ -14,10 +14,7 @@ describe('Metadata utils', () => {
     it('should return null on AMP', () => {
       expect(
         renderAppleItunesApp({
-          iTunesAppId: 12345678,
-          canonicalLink: 'https://www.bbc.com/test',
           isAmp: true,
-          appleItunesAppToggleEnabled: true,
         }),
       ).toBeNull();
     });
@@ -25,47 +22,34 @@ describe('Metadata utils', () => {
     it('should return null when apple_itunes_app feature toggle is disabled', () => {
       expect(
         renderAppleItunesApp({
-          iTunesAppId: 12345678,
-          canonicalLink: 'https://www.bbc.com/test',
-          isAmp: false,
           appleItunesAppToggleEnabled: false,
         }),
       ).toBeNull();
     });
 
-    it('should return null when hasAppBanner is false', () => {
+    it('should return null when hasAppleItunesAppBanner is false', () => {
       expect(
         renderAppleItunesApp({
-          iTunesAppId: 12345678,
-          canonicalLink: 'https://www.bbc.com/test',
-          isAmp: true,
-          appleItunesAppToggleEnabled: true,
+          hasAppleItunesAppBanner: false,
         }),
       ).toBeNull();
     });
 
-    it.each`
-      pageType
-      ${'STY'}
-      ${'MAP'}
-    `(
-      `should return the apple-itunes-app meta tag when iTunesAppId and canonicalLink exist, is canonical page, apple_itunes_app toggle is enabled and page type is $pageType`,
-      ({ pageType }) => {
-        expect(
-          renderAppleItunesApp({
-            iTunesAppId: 12345678,
-            canonicalLink: 'https://www.bbc.com/test',
-            isAmp: false,
-            appleItunesAppToggleEnabled: true,
-            pageType,
-          }),
-        ).toEqual(
-          <meta
-            name="apple-itunes-app"
-            content="app-id=12345678, app-argument=https://www.bbc.com/test?utm_medium=banner&utm_content=apple-itunes-app"
-          />,
-        );
-      },
-    );
+    it('should return the apple-itunes-app meta tag when iTunesAppId and canonicalLink exist, is canonical page, apple_itunes_app toggle is enabled and hasAppleItunesAppBanner is true', () => {
+      expect(
+        renderAppleItunesApp({
+          iTunesAppId: 12345678,
+          canonicalLink: 'https://www.bbc.com/test',
+          isAmp: false,
+          appleItunesAppToggleEnabled: true,
+          hasAppleItunesAppBanner: true,
+        }),
+      ).toEqual(
+        <meta
+          name="apple-itunes-app"
+          content="app-id=12345678, app-argument=https://www.bbc.com/test?utm_medium=banner&utm_content=apple-itunes-app"
+        />,
+      );
+    });
   });
 });

@@ -54,6 +54,7 @@ const MetadataWithContext = ({
   aboutTags,
   mentionsTags,
   toggles = defaultToggles,
+  hasAppleItunesAppBanner,
   /* eslint-enable react/prop-types */
 }) => (
   <ServiceContextProvider service={service} pageLang={lang}>
@@ -76,7 +77,7 @@ const MetadataWithContext = ({
           mentionsTags={mentionsTags}
           image={image}
           imageAltText={imageAltText}
-          pageType={pageType}
+          hasAppleItunesAppBanner={hasAppleItunesAppBanner}
         />
       </RequestContextProvider>
     </ToggleContextProvider>
@@ -736,7 +737,7 @@ describe('apple-itunes-app meta tag', () => {
     service,
     toggles,
     platform,
-    pageType = 'STY',
+    hasAppleItunesAppBanner,
     /* eslint-disable react/prop-types */
   }) => (
     <MetadataWithContext
@@ -744,30 +745,28 @@ describe('apple-itunes-app meta tag', () => {
       bbcOrigin={dotComOrigin}
       platform={platform}
       id="asset-12345678"
-      pageType={pageType}
+      pageType="STY"
       pathname={`/${service}/asset-12345678`}
       {...newsArticleMetadataProps}
       toggles={toggles}
+      hasAppleItunesAppBanner={hasAppleItunesAppBanner}
     />
   );
 
   it.each`
-    service      | iTunesAppId  | pageType
-    ${'arabic'}  | ${558497376} | ${'MAP'}
-    ${'arabic'}  | ${558497376} | ${'STY'}
-    ${'mundo'}   | ${515255747} | ${'MAP'}
-    ${'mundo'}   | ${515255747} | ${'STY'}
-    ${'russian'} | ${504278066} | ${'MAP'}
-    ${'russian'} | ${504278066} | ${'STY'}
+    service      | iTunesAppId
+    ${'arabic'}  | ${558497376}
+    ${'mundo'}   | ${515255747}
+    ${'russian'} | ${504278066}
   `(
-    'should be rendered for $service because iTunesAppId is configured ($iTunesAppId) and page type is $pageType',
-    async ({ service, iTunesAppId, pageType }) => {
+    'should be rendered for $service because iTunesAppId is configured ($iTunesAppId) and hasAppleItunesAppBanner is true',
+    async ({ service, iTunesAppId }) => {
       render(
         <CanonicalCPSAssetInternationalOrigin
           service={service}
           toggles={getToggles(true)}
           platform="canonical"
-          pageType={pageType}
+          hasAppleItunesAppBanner
         />,
       );
 
@@ -786,14 +785,19 @@ describe('apple-itunes-app meta tag', () => {
   );
 
   it.each`
-    service     | reason                                              | platform       | appleItunesAppToggleEnabled | pageType
-    ${'arabic'} | ${'platform is AMP'}                                | ${'amp'}       | ${true}                     | ${'MAP'}
-    ${'arabic'} | ${'apple_itunes_app feature toggle is not enabled'} | ${'canonical'} | ${false}                    | ${'MAP'}
-    ${'mundo'}  | ${'page type is not MAP or STY'}                    | ${'canonical'} | ${true}                     | ${'frontPage'}
-    ${'pidgin'} | ${'service does not have iTunesAppId configured'}   | ${'canonical'} | ${true}                     | ${'MAP'}
+    service     | reason                                              | platform       | appleItunesAppToggleEnabled | hasAppleItunesAppBanner
+    ${'arabic'} | ${'platform is AMP'}                                | ${'amp'}       | ${true}                     | ${true}
+    ${'arabic'} | ${'apple_itunes_app feature toggle is not enabled'} | ${'canonical'} | ${false}                    | ${true}
+    ${'mundo'}  | ${'hasAppleItunesAppBanner is false'}               | ${'canonical'} | ${true}                     | ${false}
+    ${'pidgin'} | ${'service does not have iTunesAppId configured'}   | ${'canonical'} | ${true}                     | ${true}
   `(
     `should not be rendered for $service because $reason`,
-    ({ service, platform, appleItunesAppToggleEnabled, pageType }) => {
+    ({
+      service,
+      platform,
+      appleItunesAppToggleEnabled,
+      hasAppleItunesAppBanner,
+    }) => {
       const toggles = getToggles(appleItunesAppToggleEnabled);
 
       render(
@@ -801,7 +805,7 @@ describe('apple-itunes-app meta tag', () => {
           service={service}
           toggles={toggles}
           platform={platform}
-          pageType={pageType}
+          hasAppleItunesAppBanner={hasAppleItunesAppBanner}
         />,
       );
 

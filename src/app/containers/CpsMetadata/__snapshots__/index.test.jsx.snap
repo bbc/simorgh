@@ -242,7 +242,7 @@ exports[`CPS metadata should match snapshot for News & International 1`] = `
 </html>
 `;
 
-exports[`CPS metadata with apple_itunes_app enabled for service with iTunesAppId should match snapshot 1`] = `
+exports[`CPS metadata with apple_itunes_app enabled for service with iTunesAppId (mundo) and hasAppleItunesAppBanner is true should match snapshot 1`] = `
 <html
   dir="ltr"
   lang="en-gb"

@@ -43,7 +43,6 @@ const mapProps = {
   lastPublished: getISOStringDate(articleDataNews.metadata.lastPublished),
   imageLocator: '6FC4/test/_63721682_p01kx435.jpg',
   imageAltText: 'connectionAltText',
-  pageType: 'STY',
 };
 
 describe('CpsMetadata get branded image', () => {
@@ -121,7 +120,7 @@ describe('CPS metadata', () => {
     </Context>,
   );
 
-  describe('with apple_itunes_app enabled for service with iTunesAppId', () => {
+  describe('with apple_itunes_app enabled for service with iTunesAppId (mundo) and hasAppleItunesAppBanner is true', () => {
     const toggles = {
       apple_itunes_app: {
         enabled: true,
@@ -131,7 +130,7 @@ describe('CPS metadata', () => {
     shouldMatchSnapshot(
       'should match snapshot',
       <Context service="mundo" toggles={toggles}>
-        <CpsMetadata {...mapProps} />
+        <CpsMetadata {...mapProps} hasAppleItunesAppBanner />
       </Context>,
     );
   });

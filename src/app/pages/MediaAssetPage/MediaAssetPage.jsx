@@ -38,7 +38,7 @@ import {
 import { RequestContext } from '#contexts/RequestContext';
 
 const MediaAssetPage = ({ pageData }) => {
-  const { canonicalLink, pageType } = useContext(RequestContext);
+  const { canonicalLink } = useContext(RequestContext);
   const isLegacyMediaAssetPage = () => canonicalLink.split('/').length > 7;
 
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -153,7 +153,7 @@ const MediaAssetPage = ({ pageData }) => {
         imageLocator={indexImageLocator}
         imageAltText={indexImageAltText}
         aboutTags={aboutTags}
-        pageType={pageType}
+        hasAppleItunesAppBanner
       />
       <LinkedData
         type="Article"
