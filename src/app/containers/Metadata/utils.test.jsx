@@ -31,6 +31,9 @@ describe('Metadata utils', () => {
       ${'mostRead'}
       ${'mostWatched'}
       ${'error'}
+      ${'PGL'}
+      ${'onDemandTV'}
+      ${'onDemandRadio'}
     `(`should return null when page type is $pageType`, ({ pageType }) => {
       expect(
         renderAppleItunesApp({
