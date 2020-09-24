@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `gu`,
     service: 'gujarati',
     serviceName: 'Gujarati',
+    languageName: 'Gujarati',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsgujarati',
     twitterSite: '@bbcnewsgujarati',
