@@ -5,10 +5,11 @@ import filterPopularStaleData from '#app/lib/utilities/filterPopularStaleData';
 
 const logger = nodeLogger(__filename);
 
-const processToggles = ({ toggles, service, path }) => {
+const processToggles = ({ toggles, service, path, page }) => {
   try {
-    const { mostPopularMedia } = toggles;
-    const { enabled, value } = mostPopularMedia;
+    const { mostPopularMedia, mostPopularMediaPage } = toggles;
+    const { enabled, value } =
+      page === 'mostWatched' ? mostPopularMediaPage : mostPopularMedia;
 
     const numberOfItems = parseInt(value, 10);
 
@@ -27,13 +28,18 @@ const processToggles = ({ toggles, service, path }) => {
   }
 };
 
-const processMostWatched = ({ data, path, service, toggles }) => {
+const processMostWatched = ({ data, path, service, toggles, page }) => {
   if (!data || !data.mostWatched) {
     return data;
   }
 
   const { mostWatched } = data;
-  const { enabled, numberOfItems } = processToggles({ toggles, service, path });
+  const { enabled, numberOfItems } = processToggles({
+    toggles,
+    service,
+    path,
+    page,
+  });
   const filteredData = filterPopularStaleData({
     data: mostWatched,
     path,

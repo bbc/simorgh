@@ -17,7 +17,7 @@ import addMpuBlock from './addMpuBlock';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
-import processMostWatched from './processMostWatched';
+import processMostWatched from '../../utils/processMostWatched';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
@@ -83,6 +83,7 @@ export default async ({
       service,
       path: pathname,
       toggles,
+      page: pageType,
     });
 
     return {

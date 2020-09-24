@@ -11,6 +11,7 @@ import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import { createSrcset } from '#lib/utilities/srcSet';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
@@ -24,6 +25,7 @@ import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import IndexAlsosContainer from './IndexAlsos';
 import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
+import { getHeadingTagOverride } from './utilities';
 
 const logger = loggerNode(__filename);
 
@@ -104,6 +106,7 @@ const StoryPromoContainer = ({
     translations,
     timezone,
   } = useContext(ServiceContext);
+  const { pageType } = useContext(RequestContext);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
@@ -165,8 +168,11 @@ const StoryPromoContainer = ({
 
   const useLargeImages = promoType === 'top' || promoType === 'leading';
 
-  const headingTagOverride =
-    isRecommendation || isContentTypeGuide ? 'div' : null;
+  const headingTagOverride = getHeadingTagOverride({
+    pageType,
+    isRecommendation,
+    isContentTypeGuide,
+  });
 
   const StyledHeadline = styled(Headline)`
     ${() =>

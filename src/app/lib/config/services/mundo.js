@@ -245,7 +245,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/mundo/institucional-36400011',
+          href: 'https://www.bbc.co.uk/send/u50853489',
           text: 'Contacta a la BBC',
         },
         {
