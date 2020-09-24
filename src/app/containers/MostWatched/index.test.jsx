@@ -42,16 +42,9 @@ describe('MostWatched', () => {
     expect(container.querySelector('ol')).toBeInTheDocument();
   });
 
-  it('should not render the component on AMP MAPs', async () => {
+  it('should render the component on AMP', async () => {
     const { container } = await render(
       <MostWatchedComponent data={promos} isAmp />,
-    );
-    expect(container.querySelector('ol')).not.toBeInTheDocument();
-  });
-
-  it('should render the component on AMP Most Watched pages', async () => {
-    const { container } = await render(
-      <MostWatchedComponent data={promos} isAmp isMostWatchedPage />,
     );
     expect(container.querySelector('ol')).toBeInTheDocument();
   });

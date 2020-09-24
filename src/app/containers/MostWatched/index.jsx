@@ -3,23 +3,15 @@ import { arrayOf, shape, bool } from 'prop-types';
 
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { RequestContext } from '#contexts/RequestContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import RelatedContentPromo from '../CpsRelatedContent/RelatedContentPromo';
 import RelatedContentPromoList from '../CpsRelatedContent/RelatedContentPromoList';
 
 const MostWatched = ({ data, isMostWatchedPage }) => {
   const { mostWatched } = useContext(ServiceContext);
-  const { isAmp } = useContext(RequestContext);
   const { header } = mostWatched;
 
   if (!data || !data.length) {
-    return null;
-  }
-
-  // Do not render Most Watched component on AMP MAPs
-  // Only render Most Watched component on AMP Most Watched pages
-  if (isAmp && !isMostWatchedPage) {
     return null;
   }
 
