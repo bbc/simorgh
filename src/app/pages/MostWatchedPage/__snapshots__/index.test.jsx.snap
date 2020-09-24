@@ -814,6 +814,7 @@ exports[`Most Watched Page Main should match snapshot for most watched page 1`] 
                   >
                     <div
                       class="c11 c12"
+                      data-e2e="story-promo"
                     >
                       <div
                         class="c13"
@@ -903,6 +904,7 @@ exports[`Most Watched Page Main should match snapshot for most watched page 1`] 
                   >
                     <div
                       class="c11 c12"
+                      data-e2e="story-promo"
                     >
                       <div
                         class="c13"
@@ -992,6 +994,7 @@ exports[`Most Watched Page Main should match snapshot for most watched page 1`] 
                   >
                     <div
                       class="c11 c12"
+                      data-e2e="story-promo"
                     >
                       <div
                         class="c13"
