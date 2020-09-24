@@ -33,6 +33,7 @@ export const service = {
     datetimeLocale: `ja`,
     service: 'japanese',
     serviceName: 'Japan',
+    languageName: 'Japanese',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsjapan',
     twitterSite: '@bbcnewsjapan',
