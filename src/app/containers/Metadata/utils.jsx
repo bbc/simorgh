@@ -70,12 +70,12 @@ export const renderAppleItunesApp = ({
   iTunesAppEnabled,
   pageType,
 }) => {
-  const isCanonicalPage = !isAmp;
+  const isCanonical = !isAmp;
 
   const shouldRender = [
     iTunesAppId,
     canonicalLink,
-    isCanonicalPage,
+    isCanonical,
     iTunesAppEnabled,
     PAGE_TYPE_ALLOW_LIST.includes(pageType),
   ].every(Boolean);
