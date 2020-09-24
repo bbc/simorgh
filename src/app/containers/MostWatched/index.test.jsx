@@ -34,20 +34,20 @@ describe('MostWatched', () => {
     const { container } = await render(
       <MostWatchedComponent data={promos} isAmp={false} />,
     );
-    expect(container.querySelector('ul')).toBeInTheDocument();
+    expect(container.querySelector('ol')).toBeInTheDocument();
   });
 
   it('should not render the component on AMP', async () => {
     const { container } = await render(
       <MostWatchedComponent data={promos} isAmp />,
     );
-    expect(container.querySelector('ul')).not.toBeInTheDocument();
+    expect(container.querySelector('ol')).not.toBeInTheDocument();
   });
 
   it('should not render the component when data is empty', async () => {
     const { container } = await render(
       <MostWatchedComponent data={[]} isAmp={false} />,
     );
-    expect(container.querySelector('ul')).not.toBeInTheDocument();
+    expect(container.querySelector('ol')).not.toBeInTheDocument();
   });
 });

@@ -297,6 +297,11 @@ Object {
         "url": "https://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "fa",
+        "name": "Persian",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/persian/iran-23231114",
         "@type": "WebPage",

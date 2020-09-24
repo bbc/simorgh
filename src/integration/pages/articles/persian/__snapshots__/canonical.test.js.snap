@@ -293,6 +293,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "fa",
+        "name": "Persian",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/persian/articles/c4vlle3q337o",
         "@type": "WebPage",

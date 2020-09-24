@@ -7,4 +7,20 @@ export const isMap = item => {
   return isCpsTypeMap || Boolean(hasMedia);
 };
 
+export const getHeadingTagOverride = ({
+  pageType,
+  isRecommendation,
+  isContentTypeGuide,
+}) => {
+  if (pageType === 'mostWatched') {
+    return 'h2';
+  }
+
+  if (isRecommendation || isContentTypeGuide) {
+    return 'div';
+  }
+
+  return null;
+};
+
 export const isPgl = item => pathOr(null, ['cpsType'], item) === 'PGL';

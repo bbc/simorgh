@@ -39,6 +39,7 @@ export const service = {
     datetimeLocale: 'en-gb',
     service: 'news',
     serviceName: 'News',
+    languageName: 'English',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews',
     twitterSite: '@BBCNews',

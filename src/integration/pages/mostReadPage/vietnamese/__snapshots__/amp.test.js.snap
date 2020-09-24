@@ -387,6 +387,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "vi",
+        "name": "Vietnamese",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/vietnamese/popular/read",
         "@type": "WebPage",

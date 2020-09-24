@@ -203,6 +203,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "rw",
+        "name": "Kinyarwanda",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/gahuza/bbc_gahuza_radio/liveradio",
         "@type": "WebPage",

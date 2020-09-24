@@ -231,6 +231,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "ru-UA",
+        "name": "Russian",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/ukrainian/ukraine_in_russian",
         "@type": "WebPage",
