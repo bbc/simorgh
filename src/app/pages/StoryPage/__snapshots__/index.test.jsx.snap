@@ -2146,6 +2146,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       >
                         <div
                           class="c51"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c52"
@@ -2176,6 +2177,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       >
                         <div
                           class="c51"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c52"
@@ -2210,6 +2212,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       >
                         <div
                           class="c51"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c52"
@@ -2318,6 +2321,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       >
                         <div
                           class="c51"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c60"
@@ -2371,6 +2375,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       >
                         <div
                           class="c51"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c60"
@@ -2424,6 +2429,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       >
                         <div
                           class="c51"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c60"
@@ -2477,6 +2483,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       >
                         <div
                           class="c51"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c60"
@@ -2530,6 +2537,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       >
                         <div
                           class="c51"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c60"
@@ -2583,6 +2591,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       >
                         <div
                           class="c51"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c60"
@@ -2636,6 +2645,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       >
                         <div
                           class="c51"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c60"
@@ -2737,6 +2747,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       >
                         <div
                           class="c51"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c60"
@@ -2790,6 +2801,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       >
                         <div
                           class="c51"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c60"
@@ -8180,6 +8192,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           >
                             <div
                               class="c53"
+                              data-e2e="story-promo"
                             >
                               <div
                                 class="c54"
@@ -8210,6 +8223,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           >
                             <div
                               class="c53"
+                              data-e2e="story-promo"
                             >
                               <div
                                 class="c54"
@@ -8240,6 +8254,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           >
                             <div
                               class="c53"
+                              data-e2e="story-promo"
                             >
                               <div
                                 class="c54"
@@ -8312,6 +8327,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           >
                             <div
                               class="c53"
+                              data-e2e="story-promo"
                             >
                               <div
                                 class="c58"
@@ -8365,6 +8381,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           >
                             <div
                               class="c53"
+                              data-e2e="story-promo"
                             >
                               <div
                                 class="c58"
@@ -8464,6 +8481,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           >
                             <div
                               class="c53"
+                              data-e2e="story-promo"
                             >
                               <div
                                 class="c58"
@@ -8555,6 +8573,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           >
                             <div
                               class="c53"
+                              data-e2e="story-promo"
                             >
                               <div
                                 class="c58"
@@ -8608,6 +8627,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           >
                             <div
                               class="c53"
+                              data-e2e="story-promo"
                             >
                               <div
                                 class="c58"
@@ -8661,6 +8681,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           >
                             <div
                               class="c53"
+                              data-e2e="story-promo"
                             >
                               <div
                                 class="c58"
@@ -8714,6 +8735,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           >
                             <div
                               class="c53"
+                              data-e2e="story-promo"
                             >
                               <div
                                 class="c58"
@@ -8767,6 +8789,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           >
                             <div
                               class="c53"
+                              data-e2e="story-promo"
                             >
                               <div
                                 class="c58"
@@ -8820,6 +8843,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           >
                             <div
                               class="c53"
+                              data-e2e="story-promo"
                             >
                               <div
                                 class="c58"

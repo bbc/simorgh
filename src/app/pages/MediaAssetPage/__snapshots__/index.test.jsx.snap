@@ -2728,6 +2728,7 @@ exports[`Media Asset Page should render component 1`] = `
                   >
                     <div
                       class="c41 c42"
+                      data-e2e="story-promo"
                     >
                       <div
                         class="c43"
@@ -2782,6 +2783,7 @@ exports[`Media Asset Page should render component 1`] = `
                   >
                     <div
                       class="c41 c42"
+                      data-e2e="story-promo"
                     >
                       <div
                         class="c43"
@@ -2836,6 +2838,7 @@ exports[`Media Asset Page should render component 1`] = `
                   >
                     <div
                       class="c41 c42"
+                      data-e2e="story-promo"
                     >
                       <div
                         class="c43"
@@ -2921,6 +2924,7 @@ exports[`Media Asset Page should render component 1`] = `
                   >
                     <div
                       class="c41 c42"
+                      data-e2e="story-promo"
                     >
                       <div
                         class="c43"

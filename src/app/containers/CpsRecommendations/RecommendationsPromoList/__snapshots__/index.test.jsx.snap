@@ -338,6 +338,7 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
       >
         <div
           class="c6"
+          data-e2e="story-promo"
         >
           <div
             class="c7"
@@ -406,6 +407,7 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
       >
         <div
           class="c6"
+          data-e2e="story-promo"
         >
           <div
             class="c7"
@@ -463,6 +465,7 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
       >
         <div
           class="c6"
+          data-e2e="story-promo"
         >
           <div
             class="c7"
