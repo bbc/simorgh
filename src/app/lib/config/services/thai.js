@@ -209,19 +209,23 @@ export const service = {
       },
       {
         title: 'ประเทศไทย',
-        url: '/thai/topics/1ed75fd4-f992-46db-9859-fb5a7c95da91',
+        url: '/thai/topics/cjgn73g98rqt',
       },
       {
         title: 'ต่างประเทศ',
-        url: '/thai/international',
+        url: '/thai/topics/c5v124k8lj7t',
+      },
+      {
+        title: 'ลือกตั้งสหรัฐฯ 2020',
+        url: '/thai/international-54245234',
       },
       {
         title: 'วิทยาศาสตร์',
-        url: '/thai/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
+        url: '/thai/topics/c5qvp1q33p0t',
       },
       {
         title: 'สุขภาพ',
-        url: '/thai/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
+        url: '/thai/topics/cyx5kz25zxdt',
       },
       {
         title: 'วิดีโอ',
