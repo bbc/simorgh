@@ -13,7 +13,13 @@ const MostWatched = ({ data, isMostWatchedPage }) => {
   const { isAmp } = useContext(RequestContext);
   const { header } = mostWatched;
 
-  if (isAmp || !data || !data.length) {
+  if (!data || !data.length) {
+    return null;
+  }
+
+  // Do not render Most Watched component on AMP MAPs
+  // Only render Most Watched component on AMP Most Watched pages
+  if (isAmp && !isMostWatchedPage) {
     return null;
   }
 
