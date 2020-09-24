@@ -59,7 +59,6 @@ describe('App', () => {
   it('should return rendered routes', () => {
     const pathname = 'pathnameOne';
     const routeProps = getRouteProps(pathname);
-    expect.assertions(4);
     expect(route.getInitialData).not.toHaveBeenCalled();
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledTimes(1);
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledWith(routes, {
@@ -86,7 +85,6 @@ describe('App', () => {
             history: { action: 'PUSH' },
           });
 
-          expect.assertions(3);
           expect(route.getInitialData).not.toHaveBeenCalled();
           expect(getToggles).not.toHaveBeenCalled();
           expect(reactRouterConfig.renderRoutes).not.toHaveBeenCalled();
