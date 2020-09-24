@@ -1,5 +1,5 @@
 export default () => {
-  describe('Apple iTunes App Banner meta tag', () => {
+  describe('Apple iTunes App meta tag', () => {
     const appleItunesApp = document.querySelector(
       'meta[name="apple-itunes-app"]',
     );
