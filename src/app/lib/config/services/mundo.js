@@ -245,7 +245,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/mundo/institucional-36400011',
+          href: 'https://www.bbc.co.uk/send/u50853489',
           text: 'Contacta a la BBC',
         },
         {
@@ -282,12 +282,20 @@ export const service = {
         url: '/mundo/internacional',
       },
       {
-        title: 'Economía',
-        url: '/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342',
+        title: 'EE.UU. 2020',
+        url: '/mundo/noticias-internacional-53826365',
       },
       {
-        title: 'Tecnología',
-        url: '/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a',
+        title: '¿Hablas español?',
+        url: '/mundo/noticias-50160896',
+      },
+      {
+        title: 'Hay Festival',
+        url: '/mundo/noticias-36795069',
+      },
+      {
+        title: 'Economía',
+        url: '/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342',
       },
       {
         title: 'Ciencia',
@@ -302,20 +310,20 @@ export const service = {
         url: '/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864',
       },
       {
-        title: 'Deportes',
-        url: '/mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592',
+        title: 'Tecnología',
+        url: '/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a',
       },
       {
         title: 'Video',
         url: '/mundo/media/video',
       },
       {
-        title: 'Hay Festival',
-        url: '/mundo/noticias-36795069',
-      },
-      {
         title: 'Centroamérica Cuenta',
         url: '/mundo/noticias-43826245',
+      },
+      {
+        title: 'BBC Extra',
+        url: '/mundo/noticias-48908206',
       },
     ],
   },
