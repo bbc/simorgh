@@ -7,6 +7,7 @@ import { buildArticleATIUrl } from './params/article/buildParams';
 import { buildTvRadioATIUrl } from './params/tvRadioPage/buildParams';
 import { buildCpsAssetPageATIUrl } from './params/cpsAssetPage/buildParams';
 import { buildMostReadATIUrl } from './params/mostReadPage/buildParams';
+import { buildMostWatchedATIUrl } from './params/mostWatchedPage/buildParams';
 import { buildIndexPageATIUrl } from './params/indexPage/buildParams';
 import { pageDataPropType } from '#models/propTypes/data';
 
@@ -20,6 +21,7 @@ const ATIAnalytics = ({ data }) => {
     frontPage: buildIndexPageATIUrl,
     media: buildTvRadioATIUrl,
     mostRead: buildMostReadATIUrl,
+    mostWatched: buildMostWatchedATIUrl,
     IDX: buildIndexPageATIUrl,
     MAP: () =>
       buildCpsAssetPageATIUrl(
