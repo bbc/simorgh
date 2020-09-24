@@ -304,7 +304,21 @@ Object {
 }
 `;
 
-exports[`AMP Story Page Lead image I can see an image with a caption 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
+exports[`AMP Story Page Image Caption should match text 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
+
+exports[`AMP Story Page Image should match snapshot 1`] = `
+<amp-img
+  alt="A person holding a union jack umbrella in front of Big Ben"
+  attribution="Getty Images"
+  height="549"
+  layout="responsive"
+  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 800w"
+  width="976"
+/>
+`;
+
+exports[`AMP Story Page Main heading should match text 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {

@@ -162,9 +162,19 @@ Object {
 
 exports[`AMP Articles Header I can see the branding 1`] = `"BBC Scotland"`;
 
-exports[`AMP Articles I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg"`;
+exports[`AMP Articles Image Caption should match text 1`] = `"Image caption, This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption."`;
 
-exports[`AMP Articles I can see an image with a caption 2`] = `"Image caption, This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption."`;
+exports[`AMP Articles Image should match snapshot 1`] = `
+<amp-img
+  alt="Map of France showing Paris and Cognac"
+  attribution=""
+  height="351"
+  layout="responsive"
+  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 624w"
+  width="624"
+/>
+`;
 
 exports[`AMP Articles Main heading should match text 1`] = `"This is the headline of this test article"`;
 

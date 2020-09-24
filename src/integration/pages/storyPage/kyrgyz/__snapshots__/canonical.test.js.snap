@@ -131,6 +131,16 @@ Object {
 
 exports[`Canonical Story Page Image Caption should match text 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
+exports[`Canonical Story Page Image should match snapshot 1`] = `
+<img
+  alt="social media"
+  class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/11D53/test/_63734037_socialmedia.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 624w"
+  width="624"
+/>
+`;
+
 exports[`Canonical Story Page Main heading should match text 1`] = `"Test STY for social embeds"`;
 
 exports[`Canonical Story Page SEO AMP HTML link should match text 1`] = `"http://localhost:7080/kyrgyz/23292889.amp"`;
