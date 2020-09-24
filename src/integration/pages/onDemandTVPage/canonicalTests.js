@@ -1,11 +1,9 @@
 import {
   runCoreCanonicalTests,
   runCanonicalAnalyticsTests,
-  runSeoCanonicalTests,
 } from '../../common';
 
-export default service => {
+export default () => {
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
-  runSeoCanonicalTests(service);
 };
