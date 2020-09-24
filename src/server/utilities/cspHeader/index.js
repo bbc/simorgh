@@ -131,6 +131,7 @@ const directives = {
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.ampproject.net', // Social Embeds
       'https://news.files.bbci.co.uk', // STY include
+      'https://www.riddle.com', // STY Includes
       ...advertisingDirectives.frameSrc,
       "'self'",
     ],
@@ -149,6 +150,7 @@ const directives = {
       'https://www.bbc.com', // Media Player
       'https://bbc-maps.carto.com', // STY include maps
       'https://flo.uri.sh', // STY includes
+      'https://www.riddle.com', // STY Includes
       ...advertisingDirectives.frameSrc,
       "'self'",
     ],
@@ -160,6 +162,7 @@ const directives = {
       'https://*.ampproject.net', // Social Embeds
       'https://news.files.bbci.co.uk', // STY include
       'https://news.test.files.bbci.co.uk', // STY include
+      'https://www.riddle.com', // STY Includes
       ...advertisingDirectives.frameSrc,
       "'self'",
     ],
@@ -181,6 +184,7 @@ const directives = {
       'https://bbc-maps.carto.com', // STY include maps
       'https://news.test.files.bbci.co.uk',
       'https://flo.uri.sh', // STY includes
+      'https://www.riddle.com', // STY Includes
       ...advertisingDirectives.frameSrc,
       "'self'",
     ],
