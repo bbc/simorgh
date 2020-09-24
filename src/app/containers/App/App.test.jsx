@@ -48,7 +48,6 @@ describe('App', () => {
     wrapper = mount(
       <App
         location={{ pathname: 'pathnameOne' }}
-        routes={[]}
         initialData={initialData}
         bbcOrigin="https://www.bbc.co.uk"
         history={history}
@@ -127,7 +126,7 @@ describe('App', () => {
 
           expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
             2,
-            [],
+            routes,
             {
               assetUri: undefined,
               bbcOrigin: 'https://www.bbc.co.uk',
@@ -151,7 +150,7 @@ describe('App', () => {
           // data fetch promise rejected, set data to null, loading to false and set error
           expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
             3,
-            [],
+            routes,
             {
               assetUri: undefined,
               bbcOrigin: 'https://www.bbc.co.uk',
@@ -209,7 +208,7 @@ describe('App', () => {
           // start data fetch and set loading to true
           expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
             2,
-            [],
+            routes,
             {
               assetUrl: undefined,
               bbcOrigin: 'https://www.bbc.co.uk',
@@ -233,7 +232,7 @@ describe('App', () => {
           // data fetch promise resolved, set data to fetched data and loading to false
           expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
             3,
-            [],
+            routes,
             {
               assetUri: undefined,
               bbcOrigin: 'https://www.bbc.co.uk',

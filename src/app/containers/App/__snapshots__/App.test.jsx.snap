@@ -24,7 +24,6 @@ exports[`App should return rendered routes 1`] = `
       "pathname": "pathnameOne",
     }
   }
-  routes={Array []}
 >
   <h1>
     Some initial data
