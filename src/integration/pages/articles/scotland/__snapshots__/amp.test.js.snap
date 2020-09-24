@@ -273,6 +273,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "en-GB",
+        "name": "English",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/scotland/articles/czwj5l0n210o",
         "@type": "WebPage",

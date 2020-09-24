@@ -41,6 +41,7 @@ export const service = {
     datetimeLocale: `es`,
     service: 'mundo',
     serviceName: 'News Mundo',
+    languageName: 'Spanish',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcmundo',
     twitterSite: '@bbcmundo',
