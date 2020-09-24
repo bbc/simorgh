@@ -289,6 +289,10 @@ export const service = {
         url: '/russian/in-depth-51962199',
       },
       {
+        title: 'Выборы в США',
+        url: '/russian/topics/c8jvq6n6kdxt',
+      },
+      {
         title: 'Истории',
         url: '/russian/features-50983593',
       },
