@@ -105,7 +105,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
                     .its('length')
                     .should('eq', 1);
                 });
-              } else if (mostWatchedJson.totalRecords !== 1) {
+              } else {
                 cy.get('[data-e2e=most-watched-heading]').within(() => {
                   cy.get('[class^="StoryPromoUl"]')
                     .find('>li')
