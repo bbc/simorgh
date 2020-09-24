@@ -194,6 +194,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "si",
+        "name": "Sinhala",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/sinhala/bbc_sinhala_radio/liveradio",
         "@type": "WebPage",
