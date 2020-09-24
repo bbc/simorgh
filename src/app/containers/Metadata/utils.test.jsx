@@ -17,31 +17,7 @@ describe('Metadata utils', () => {
           iTunesAppId: 12345678,
           canonicalLink: 'https://www.bbc.com/test',
           isAmp: true,
-          iTunesAppEnabled: true,
-        }),
-      ).toBeNull();
-    });
-
-    it.each`
-      pageType
-      ${'frontPage'}
-      ${'article'}
-      ${'FIX'}
-      ${'media'}
-      ${'mostRead'}
-      ${'mostWatched'}
-      ${'error'}
-      ${'PGL'}
-      ${'onDemandTV'}
-      ${'onDemandRadio'}
-    `(`should return null when page type is $pageType`, ({ pageType }) => {
-      expect(
-        renderAppleItunesApp({
-          iTunesAppId: 12345678,
-          canonicalLink: 'https://www.bbc.com/test',
-          isAmp: false,
-          iTunesAppEnabled: true,
-          pageType,
+          appleItunesAppToggleEnabled: true,
         }),
       ).toBeNull();
     });
@@ -52,7 +28,18 @@ describe('Metadata utils', () => {
           iTunesAppId: 12345678,
           canonicalLink: 'https://www.bbc.com/test',
           isAmp: false,
-          iTunesAppEnabled: false,
+          appleItunesAppToggleEnabled: false,
+        }),
+      ).toBeNull();
+    });
+
+    it('should return null when hasAppBanner is false', () => {
+      expect(
+        renderAppleItunesApp({
+          iTunesAppId: 12345678,
+          canonicalLink: 'https://www.bbc.com/test',
+          isAmp: true,
+          appleItunesAppToggleEnabled: true,
         }),
       ).toBeNull();
     });
@@ -69,7 +56,7 @@ describe('Metadata utils', () => {
             iTunesAppId: 12345678,
             canonicalLink: 'https://www.bbc.com/test',
             isAmp: false,
-            iTunesAppEnabled: true,
+            appleItunesAppToggleEnabled: true,
             pageType,
           }),
         ).toEqual(

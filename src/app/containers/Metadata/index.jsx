@@ -109,7 +109,9 @@ const MetadataContainer = ({
   const metaImage = image || defaultImage;
   const metaImageAltText = imageAltText || defaultImageAltText;
 
-  const { enabled: iTunesAppEnabled } = useToggle('apple_itunes_app');
+  const { enabled: appleItunesAppToggleEnabled } = useToggle(
+    'apple_itunes_app',
+  );
 
   return (
     <Helmet htmlAttributes={htmlAttributes}>
@@ -132,7 +134,7 @@ const MetadataContainer = ({
         iTunesAppId,
         canonicalLink,
         isAmp,
-        iTunesAppEnabled,
+        appleItunesAppToggleEnabled,
         pageType,
       })}
       <meta name="apple-mobile-web-app-title" content={brandName} />

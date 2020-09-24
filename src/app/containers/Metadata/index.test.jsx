@@ -786,15 +786,15 @@ describe('apple-itunes-app meta tag', () => {
   );
 
   it.each`
-    service     | reason                                              | platform       | iTunesAppEnabled | pageType
-    ${'arabic'} | ${'platform is AMP'}                                | ${'amp'}       | ${true}          | ${'MAP'}
-    ${'arabic'} | ${'apple_itunes_app feature toggle is not enabled'} | ${'canonical'} | ${false}         | ${'MAP'}
-    ${'mundo'}  | ${'page type is not MAP or STY'}                    | ${'canonical'} | ${true}          | ${'frontPage'}
-    ${'pidgin'} | ${'service does not have iTunesAppId configured'}   | ${'canonical'} | ${true}          | ${'MAP'}
+    service     | reason                                              | platform       | appleItunesAppToggleEnabled | pageType
+    ${'arabic'} | ${'platform is AMP'}                                | ${'amp'}       | ${true}                     | ${'MAP'}
+    ${'arabic'} | ${'apple_itunes_app feature toggle is not enabled'} | ${'canonical'} | ${false}                    | ${'MAP'}
+    ${'mundo'}  | ${'page type is not MAP or STY'}                    | ${'canonical'} | ${true}                     | ${'frontPage'}
+    ${'pidgin'} | ${'service does not have iTunesAppId configured'}   | ${'canonical'} | ${true}                     | ${'MAP'}
   `(
     `should not be rendered for $service because $reason`,
-    ({ service, platform, iTunesAppEnabled, pageType }) => {
-      const toggles = getToggles(iTunesAppEnabled);
+    ({ service, platform, appleItunesAppToggleEnabled, pageType }) => {
+      const toggles = getToggles(appleItunesAppToggleEnabled);
 
       render(
         <CanonicalCPSAssetInternationalOrigin
