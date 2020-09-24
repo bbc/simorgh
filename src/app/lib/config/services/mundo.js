@@ -41,6 +41,7 @@ export const service = {
     datetimeLocale: `es`,
     service: 'mundo',
     serviceName: 'News Mundo',
+    languageName: 'Spanish',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcmundo',
     twitterSite: '@bbcmundo',
@@ -245,7 +246,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/mundo/institucional-36400011',
+          href: 'https://www.bbc.co.uk/send/u50853489',
           text: 'Contacta a la BBC',
         },
         {

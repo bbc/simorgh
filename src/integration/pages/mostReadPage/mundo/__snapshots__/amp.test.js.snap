@@ -186,7 +186,7 @@ Object {
 exports[`AMP Most Read Page Footer Link should match text and url 7`] = `
 Object {
   "text": "Contacta a la BBC",
-  "url": "https://www.bbc.com/mundo/institucional-36400011",
+  "url": "https://www.bbc.co.uk/send/u50853489",
 }
 `;
 
@@ -419,6 +419,11 @@ Object {
         "height": 576,
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
         "width": 1024,
+      },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "es",
+        "name": "Spanish",
       },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/mundo/popular/read",

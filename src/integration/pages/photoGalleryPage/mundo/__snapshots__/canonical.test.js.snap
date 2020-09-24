@@ -53,7 +53,7 @@ Object {
 exports[`Canonical Photo Gallery Page Footer Link should match text and url 7`] = `
 Object {
   "text": "Contacta a la BBC",
-  "url": "https://www.bbc.com/mundo/institucional-36400011",
+  "url": "https://www.bbc.co.uk/send/u50853489",
 }
 `;
 
@@ -303,6 +303,11 @@ Object {
         "height": 576,
         "url": "https://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg",
         "width": 1024,
+      },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "es",
+        "name": "Spanish",
       },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/mundo/deportes-36935058",

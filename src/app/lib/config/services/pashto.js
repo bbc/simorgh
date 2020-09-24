@@ -37,6 +37,7 @@ export const service = {
     datetimeLocale: 'ps',
     service: 'pashto',
     serviceName: 'Pashto',
+    languageName: 'Pashto',
     altCalendar: jalaali,
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcpashto',

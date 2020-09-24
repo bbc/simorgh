@@ -23,6 +23,7 @@ export const service = {
     datetimeLocale: 'ig',
     service: 'igbo',
     serviceName: 'Igbo',
+    languageName: 'Igbo',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
     defaultImageAltText: 'BBC News Ìgbò',
     dir: 'ltr',
