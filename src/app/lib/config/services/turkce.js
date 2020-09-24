@@ -41,6 +41,7 @@ export const service = {
     datetimeLocale: `tr-tr`,
     service: 'turkce',
     serviceName: 'News Türkçe',
+    languageName: 'Turkish',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcturkce',
     twitterSite: '@bbcturkce',

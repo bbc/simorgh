@@ -201,6 +201,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/korean.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "ko",
+        "name": "Korean",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/korean/bbc_korean_radio/liveradio",
         "@type": "WebPage",

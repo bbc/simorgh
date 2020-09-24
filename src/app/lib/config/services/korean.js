@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `ko`,
     service: 'korean',
     serviceName: 'Korean',
+    languageName: 'Korean',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnews',
     twitterSite: '@bbcnews',
