@@ -61,13 +61,26 @@ export const renderAlternateLinks = link => (
   />
 );
 
+const PAGE_TYPE_ALLOW_LIST = ['STY', 'MAP'];
+
 export const renderAppleItunesApp = ({
   iTunesAppId,
   canonicalLink,
   isAmp,
   iTunesAppEnabled,
+  pageType,
 }) => {
-  if (iTunesAppId && canonicalLink && !isAmp && iTunesAppEnabled) {
+  const isCanonicalPage = !isAmp;
+
+  const shouldRender = [
+    iTunesAppId,
+    canonicalLink,
+    isCanonicalPage,
+    iTunesAppEnabled,
+    PAGE_TYPE_ALLOW_LIST.includes(pageType),
+  ].every(Boolean);
+
+  if (shouldRender) {
     const content = `app-id=${iTunesAppId}, app-argument=${canonicalLink}?utm_medium=banner&utm_content=apple-itunes-app`;
 
     return <meta name="apple-itunes-app" content={content} />;

@@ -14,6 +14,7 @@ const CpsMetadata = ({
   imageLocator,
   imageAltText,
   aboutTags,
+  pageType,
 }) => {
   const { service, articleAuthor } = useContext(ServiceContext);
   const brandedImage = imageLocator
@@ -29,6 +30,7 @@ const CpsMetadata = ({
       image={brandedImage}
       imageAltText={imageAltText}
       aboutTags={aboutTags}
+      pageType={pageType}
     >
       <meta name="article:author" content={articleAuthor} />
       <meta name="article:published_time" content={firstPublished} />
@@ -57,12 +59,14 @@ CpsMetadata.propTypes = {
   imageLocator: string,
   imageAltText: string,
   aboutTags: arrayOf(tagPropTypes),
+  pageType: string,
 };
 
 CpsMetadata.defaultProps = {
   imageLocator: null,
   imageAltText: null,
   aboutTags: [],
+  pageType: null,
 };
 
 export default CpsMetadata;

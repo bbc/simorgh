@@ -9,10 +9,16 @@ import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 
 const getISOStringDate = date => new Date(date).toISOString();
 
+const defaultToggles = {
+  apple_itunes_app: {
+    enabled: false,
+  },
+};
+
 // eslint-disable-next-line react/prop-types
-const Context = ({ service, children }) => (
+const Context = ({ service, children, toggles = defaultToggles }) => (
   <ServiceContextProvider service={service}>
-    <ToggleContextProvider>
+    <ToggleContextProvider toggles={toggles}>
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"
         id="c0000000000o"
@@ -37,6 +43,7 @@ const mapProps = {
   lastPublished: getISOStringDate(articleDataNews.metadata.lastPublished),
   imageLocator: '6FC4/test/_63721682_p01kx435.jpg',
   imageAltText: 'connectionAltText',
+  pageType: 'STY',
 };
 
 describe('CpsMetadata get branded image', () => {
@@ -113,4 +120,19 @@ describe('CPS metadata', () => {
       <CpsMetadata {...mapProps} />
     </Context>,
   );
+
+  describe('with apple_itunes_app enabled for service with iTunesAppId', () => {
+    const toggles = {
+      apple_itunes_app: {
+        enabled: true,
+      },
+    };
+
+    shouldMatchSnapshot(
+      'should match snapshot',
+      <Context service="mundo" toggles={toggles}>
+        <CpsMetadata {...mapProps} />
+      </Context>,
+    );
+  });
 });

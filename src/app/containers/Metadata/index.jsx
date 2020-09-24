@@ -49,6 +49,7 @@ const MetadataContainer = ({
   image,
   imageAltText,
   children,
+  pageType,
 }) => {
   const {
     isAmp,
@@ -132,6 +133,7 @@ const MetadataContainer = ({
         canonicalLink,
         isAmp,
         iTunesAppEnabled,
+        pageType,
       })}
       <meta name="apple-mobile-web-app-title" content={brandName} />
       <meta name="application-name" content={brandName} />
@@ -196,6 +198,7 @@ MetadataContainer.propTypes = {
   image: string,
   imageAltText: string,
   children: node,
+  pageType: string,
 };
 
 MetadataContainer.defaultProps = {
@@ -205,6 +208,7 @@ MetadataContainer.defaultProps = {
   image: null,
   imageAltText: null,
   children: null,
+  pageType: null,
 };
 
 export default MetadataContainer;

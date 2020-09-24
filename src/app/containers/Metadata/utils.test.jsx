@@ -11,7 +11,7 @@ describe('Metadata utils', () => {
       expect(renderAppleItunesApp({ canonicalLink: null })).toBeNull();
     });
 
-    it('should not render on AMP', () => {
+    it('should return null on AMP', () => {
       expect(
         renderAppleItunesApp({
           iTunesAppId: 12345678,
@@ -22,7 +22,28 @@ describe('Metadata utils', () => {
       ).toBeNull();
     });
 
-    it('should not render if apple_itunes_app feature toggle is disabled', () => {
+    it.each`
+      pageType
+      ${'frontPage'}
+      ${'article'}
+      ${'FIX'}
+      ${'media'}
+      ${'mostRead'}
+      ${'mostWatched'}
+      ${'error'}
+    `(`should return null when page type is $pageType`, ({ pageType }) => {
+      expect(
+        renderAppleItunesApp({
+          iTunesAppId: 12345678,
+          canonicalLink: 'https://www.bbc.com/test',
+          isAmp: false,
+          iTunesAppEnabled: true,
+          pageType,
+        }),
+      ).toBeNull();
+    });
+
+    it('should return null when apple_itunes_app feature toggle is disabled', () => {
       expect(
         renderAppleItunesApp({
           iTunesAppId: 12345678,
@@ -33,20 +54,28 @@ describe('Metadata utils', () => {
       ).toBeNull();
     });
 
-    it('should return the apple-itunes-app meta tag when iTunesAppId and canonicalLink provided, is canonical page and apple_itunes_app is enabled ', () => {
-      expect(
-        renderAppleItunesApp({
-          iTunesAppId: 12345678,
-          canonicalLink: 'https://www.bbc.com/test',
-          isAmp: false,
-          iTunesAppEnabled: true,
-        }),
-      ).toEqual(
-        <meta
-          name="apple-itunes-app"
-          content="app-id=12345678, app-argument=https://www.bbc.com/test?utm_medium=banner&utm_content=apple-itunes-app"
-        />,
-      );
-    });
+    it.each`
+      pageType
+      ${'STY'}
+      ${'MAP'}
+    `(
+      `should return the apple-itunes-app meta tag when iTunesAppId and canonicalLink exist, is canonical page, apple_itunes_app toggle is enabled and page type is $pageType`,
+      ({ pageType }) => {
+        expect(
+          renderAppleItunesApp({
+            iTunesAppId: 12345678,
+            canonicalLink: 'https://www.bbc.com/test',
+            isAmp: false,
+            iTunesAppEnabled: true,
+            pageType,
+          }),
+        ).toEqual(
+          <meta
+            name="apple-itunes-app"
+            content="app-id=12345678, app-argument=https://www.bbc.com/test?utm_medium=banner&utm_content=apple-itunes-app"
+          />,
+        );
+      },
+    );
   });
 });

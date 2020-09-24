@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
@@ -77,6 +76,7 @@ const MetadataWithContext = ({
           mentionsTags={mentionsTags}
           image={image}
           imageAltText={imageAltText}
+          pageType={pageType}
         />
       </RequestContextProvider>
     </ToggleContextProvider>
@@ -732,19 +732,19 @@ describe('apple-itunes-app meta tag', () => {
   };
 
   const CanonicalCPSAssetInternationalOrigin = ({
-    // eslint-disable-next-line react/prop-types
+    /* eslint-disable react/prop-types */
     service,
-    // eslint-disable-next-line react/prop-types
     toggles,
-    // eslint-disable-next-line react/prop-types
     platform,
+    pageType = 'STY',
+    /* eslint-disable react/prop-types */
   }) => (
     <MetadataWithContext
       service={service}
       bbcOrigin={dotComOrigin}
       platform={platform}
       id="asset-12345678"
-      pageType="STY"
+      pageType={pageType}
       pathname={`/${service}/asset-12345678`}
       {...newsArticleMetadataProps}
       toggles={toggles}
@@ -752,18 +752,22 @@ describe('apple-itunes-app meta tag', () => {
   );
 
   it.each`
-    service      | iTunesAppId
-    ${'arabic'}  | ${558497376}
-    ${'mundo'}   | ${515255747}
-    ${'russian'} | ${504278066}
+    service      | iTunesAppId  | pageType
+    ${'arabic'}  | ${558497376} | ${'MAP'}
+    ${'arabic'}  | ${558497376} | ${'STY'}
+    ${'mundo'}   | ${515255747} | ${'MAP'}
+    ${'mundo'}   | ${515255747} | ${'STY'}
+    ${'russian'} | ${504278066} | ${'MAP'}
+    ${'russian'} | ${504278066} | ${'STY'}
   `(
-    'should be rendered for $service because iTunesAppId is configured ($iTunesAppId)',
-    async ({ service, iTunesAppId }) => {
+    'should be rendered for $service because iTunesAppId is configured ($iTunesAppId) and page type is $pageType',
+    async ({ service, iTunesAppId, pageType }) => {
       render(
         <CanonicalCPSAssetInternationalOrigin
           service={service}
           toggles={getToggles(true)}
           platform="canonical"
+          pageType={pageType}
         />,
       );
 
@@ -782,13 +786,14 @@ describe('apple-itunes-app meta tag', () => {
   );
 
   it.each`
-    service     | reason                                              | platform       | iTunesAppEnabled
-    ${'arabic'} | ${'it is not applicable for AMP pages'}             | ${'amp'}       | ${true}
-    ${'arabic'} | ${'apple_itunes_app feature toggle is not enabled'} | ${'canonical'} | ${false}
-    ${'pidgin'} | ${'service does not have iTunesAppId configured'}   | ${'canonical'} | ${true}
+    service     | reason                                              | platform       | iTunesAppEnabled | pageType
+    ${'arabic'} | ${'platform is AMP'}                                | ${'amp'}       | ${true}          | ${'MAP'}
+    ${'arabic'} | ${'apple_itunes_app feature toggle is not enabled'} | ${'canonical'} | ${false}         | ${'MAP'}
+    ${'mundo'}  | ${'page type is not MAP or STY'}                    | ${'canonical'} | ${true}          | ${'frontPage'}
+    ${'pidgin'} | ${'service does not have iTunesAppId configured'}   | ${'canonical'} | ${true}          | ${'MAP'}
   `(
     `should not be rendered for $service because $reason`,
-    ({ service, platform, iTunesAppEnabled }) => {
+    ({ service, platform, iTunesAppEnabled, pageType }) => {
       const toggles = getToggles(iTunesAppEnabled);
 
       render(
@@ -796,6 +801,7 @@ describe('apple-itunes-app meta tag', () => {
           service={service}
           toggles={toggles}
           platform={platform}
+          pageType={pageType}
         />,
       );
 
