@@ -38,7 +38,7 @@ import {
 import { RequestContext } from '#contexts/RequestContext';
 
 const MediaAssetPage = ({ pageData }) => {
-  const { canonicalLink } = useContext(RequestContext);
+  const { canonicalLink, isAmp } = useContext(RequestContext);
   const isLegacyMediaAssetPage = () => canonicalLink.split('/').length > 7;
 
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -170,7 +170,7 @@ const MediaAssetPage = ({ pageData }) => {
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledGrid>
       <CpsRelatedContent content={relatedContent} isMediaContent />
-      <MostWatchedContainer data={mostWatchedData} />
+      {!isAmp && <MostWatchedContainer data={mostWatchedData} />}
     </>
   );
 };
