@@ -1990,6 +1990,13 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:63rem) {
+  .c39 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
   .c10 {
     padding: 1rem 0 2.5rem;
   }
@@ -2709,7 +2716,7 @@ exports[`Media Asset Page should render component 1`] = `
                     </span>
                   </h2>
                 </div>
-                <ul
+                <ol
                   class="c37 c38"
                   dir="ltr"
                   role="list"
@@ -3009,7 +3016,7 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                     </div>
                   </li>
-                </ul>
+                </ol>
               </div>
             </section>
           </div>
