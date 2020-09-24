@@ -281,6 +281,7 @@ const StoryPromoContainer = ({
 
   return (
     <StoryPromoComponent
+      data-e2e="story-promo"
       image={Image}
       info={Info}
       mediaIndicator={MediaIndicator}
