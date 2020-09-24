@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Most Watched Page Main should match snapshot for most watched page 1`] = `
+exports[`Most Watched Page Main should match snapshot for the Most Watched page 1`] = `
 .c19 {
   vertical-align: middle;
   margin: 0 0.25rem;
