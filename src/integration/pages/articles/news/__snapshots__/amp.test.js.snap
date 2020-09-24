@@ -439,9 +439,9 @@ exports[`AMP Articles SEO Twitter site 1`] = `"@BBCNews"`;
 
 exports[`AMP Articles SEO Twitter title 1`] = `"The Germans solving rising rents with people power - BBC News"`;
 
-exports[`AMP Articles Timestamp should match text 1`] = `
+exports[`AMP Articles Timestamp should match text and date 1`] = `
 Object {
   "date": "2019-03-27",
-  "timestamp": "27 March 2019",
+  "text": "27 March 2019",
 }
 `;

@@ -493,9 +493,9 @@ exports[`AMP Media Asset Page SEO Twitter site 1`] = `"@bbcpersian"`;
 
 exports[`AMP Media Asset Page SEO Twitter title 1`] = `"Trump short headline - BBC News فارسی"`;
 
-exports[`AMP Media Asset Page Timestamp should match text 1`] = `
+exports[`AMP Media Asset Page Timestamp should match text and date 1`] = `
 Object {
   "date": "2019-02-15",
-  "timestamp": "۲۶ بهمن ۱۳۹۷ - ۱۵ فوریه ۲۰۱۹",
+  "text": "۲۶ بهمن ۱۳۹۷ - ۱۵ فوریه ۲۰۱۹",
 }
 `;

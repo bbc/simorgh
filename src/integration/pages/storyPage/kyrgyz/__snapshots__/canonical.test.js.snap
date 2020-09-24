@@ -324,9 +324,9 @@ exports[`Canonical Story Page Social Embeds I can see the skip link 1`] = `"YouT
 
 exports[`Canonical Story Page Social Embeds I can see the skip link destination 1`] = `"YouTube посттун аягы, 1"`;
 
-exports[`Canonical Story Page Timestamp should match text 1`] = `
+exports[`Canonical Story Page Timestamp should match text and date 1`] = `
 Object {
   "date": "2020-04-24",
-  "timestamp": "24 апрель 2020",
+  "text": "24 апрель 2020",
 }
 `;

@@ -538,9 +538,9 @@ exports[`AMP Story Page Social Embeds I can see the skip link 1`] = `"Saltar con
 
 exports[`AMP Story Page Social Embeds I can see the skip link destination 1`] = `"Fin del contenido de YouTube, 1"`;
 
-exports[`AMP Story Page Timestamp should match text 1`] = `
+exports[`AMP Story Page Timestamp should match text and date 1`] = `
 Object {
   "date": "2020-01-30",
-  "timestamp": "30 enero 2020",
+  "text": "30 enero 2020",
 }
 `;

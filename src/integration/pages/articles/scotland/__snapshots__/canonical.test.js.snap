@@ -270,9 +270,9 @@ exports[`Canonical Articles SEO Twitter site 1`] = `"@BBCScotland"`;
 
 exports[`Canonical Articles SEO Twitter title 1`] = `"This is the SEO headline of this test article - BBC Scotland"`;
 
-exports[`Canonical Articles Timestamp should match text 1`] = `
+exports[`Canonical Articles Timestamp should match text and date 1`] = `
 Object {
   "date": "2019-09-13",
-  "timestamp": "13 September 2019",
+  "text": "13 September 2019",
 }
 `;

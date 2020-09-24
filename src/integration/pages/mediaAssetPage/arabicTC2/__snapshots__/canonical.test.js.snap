@@ -346,10 +346,10 @@ exports[`Canonical Media Asset Page SEO Twitter title 1`] = `"شركة شارب 
 
 exports[`Canonical Media Asset Page SEO apple-itunes-app meta tag should match text 1`] = `"app-id=558497376, app-argument=http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av?utm_medium=banner&utm_content=apple-itunes-app"`;
 
-exports[`Canonical Media Asset Page Timestamp should match text 1`] = `
+exports[`Canonical Media Asset Page Timestamp should match text and date 1`] = `
 Object {
   "date": "2015-11-20",
-  "timestamp": "20 نوفمبر/ تشرين الثاني 2015",
+  "text": "20 نوفمبر/ تشرين الثاني 2015",
 }
 `;
 
