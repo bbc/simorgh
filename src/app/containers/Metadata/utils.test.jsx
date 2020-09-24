@@ -11,7 +11,7 @@ describe('Metadata utils', () => {
       expect(renderAppleItunesApp({ canonicalLink: null })).toBeNull();
     });
 
-    it('should return null on AMP', () => {
+    it('should return null when platform is AMP', () => {
       expect(
         renderAppleItunesApp({
           isAmp: true,
