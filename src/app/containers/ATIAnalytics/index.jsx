@@ -23,6 +23,7 @@ const ATIAnalytics = ({ data }) => {
     mostRead: buildMostReadATIUrl,
     mostWatched: buildMostWatchedATIUrl,
     IDX: buildIndexPageATIUrl,
+    FIX: buildIndexPageATIUrl,
     MAP: () =>
       buildCpsAssetPageATIUrl(
         data,
