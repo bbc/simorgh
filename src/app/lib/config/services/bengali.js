@@ -36,6 +36,7 @@ export const service = {
     datetimeLocale: `bn`,
     service: 'bengali',
     serviceName: 'Bengali',
+    languageName: 'Bengali',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcbangla',
     twitterSite: '@bbcbangla',

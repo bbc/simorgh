@@ -38,6 +38,7 @@ export const service = {
     datetimeLocale: 'en-gb',
     service: 'archive',
     serviceName: 'Archive',
+    languageName: 'English',
     themeColor: `${C_ARCHIVE_BLUE}`,
     twitterCreator: '@BBCArchive',
     twitterSite: '@BBCArchive',

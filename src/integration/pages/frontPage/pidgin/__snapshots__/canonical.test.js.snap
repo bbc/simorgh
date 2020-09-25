@@ -227,6 +227,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "pcm",
+        "name": "Nigerian Pidgin",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/pidgin",
         "@type": "WebPage",

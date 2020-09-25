@@ -240,6 +240,11 @@ Object {
         "url": "https://ichef.test.bbci.co.uk/news/1024/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "ky",
+        "name": "Kyrgyz",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/kyrgyz/23292889",
         "@type": "WebPage",
