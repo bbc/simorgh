@@ -52,18 +52,24 @@ describe('Logger node - for the server', () => {
         winston.format = jest.fn();
         winston.createLogger = jest.fn();
         winston.format.combine = jest.fn();
-        winston.format.label = jest.fn();
         winston.format.printf = jest.fn();
         winston.format.simple = jest.fn();
+        winston.format.json = jest.fn();
+        winston.format.prettyPrint = jest.fn();
         winston.format.timestamp = jest.fn();
+        winston.format.colorize = jest.fn();
+        winston.format.metadata = jest.fn();
         winston.transports = jest.fn();
         winston.transports.File = jest.fn();
         winston.transports.Console = jest.fn();
-        winston.format.label.mockImplementation(() => 'Label Mock');
         winston.format.simple.mockImplementation(() => 'Simple Mock');
         winston.format.timestamp.mockImplementation(() => 'Timestamp Mock');
         winston.format.printf.mockImplementation(() => 'Printf Mock');
         winston.format.combine.mockImplementation(() => 'Combine Mock');
+        winston.format.json.mockImplementation(() => 'Json Mock');
+        winston.format.colorize.mockImplementation(() => 'Colorize Mock');
+        winston.format.metadata.mockImplementation(() => 'Metadata Mock');
+        winston.format.prettyPrint.mockImplementation(() => 'PrettyPrint Mock');
 
         fs.existsSync = jest.fn();
         fs.mkdirSync = jest.fn();
@@ -77,7 +83,7 @@ describe('Logger node - for the server', () => {
           filename: 'foobarDir/app.log',
           handleExceptions: true,
           humanReadableUnhandledException: true,
-          json: true,
+          format: 'Combine Mock',
           level: 'info',
           maxFiles: 5,
           maxsize: 104857600,
@@ -93,7 +99,7 @@ describe('Logger node - for the server', () => {
           filename: 'log/app.log',
           handleExceptions: true,
           humanReadableUnhandledException: true,
-          json: true,
+          format: 'Combine Mock',
           level: 'info',
           maxFiles: 5,
           maxsize: 104857600,
@@ -106,6 +112,7 @@ describe('Logger node - for the server', () => {
         require('./logger.node');
 
         expect(winston.transports.Console).toHaveBeenCalledWith({
+          format: 'Combine Mock',
           handleExceptions: true,
           humanReadableUnhandledException: true,
           level: 'info',
@@ -127,18 +134,31 @@ describe('Logger node - for the server', () => {
           const loggerNode = require('./logger.node');
           loggerNode('path/file/foo.js');
 
-          expect(winston.format.combine).toHaveBeenCalledWith(
-            'Label Mock',
-            'Simple Mock',
-            'Timestamp Mock',
+          expect(winston.format.combine).toHaveBeenNthCalledWith(
+            1,
+            'Json Mock',
+          );
+
+          expect(winston.format.combine).toHaveBeenNthCalledWith(
+            2,
+            'PrettyPrint Mock',
+            'Colorize Mock',
             'Printf Mock',
           );
-          expect(winston.format.label).toHaveBeenCalledWith({
-            label: 'file/foo.js',
-          });
+
+          expect(winston.format.combine).toHaveBeenNthCalledWith(
+            3,
+            'Simple Mock',
+            'Timestamp Mock',
+            'Metadata Mock',
+          );
+
           expect(winston.format.simple).toHaveBeenCalled();
           expect(winston.format.timestamp).toHaveBeenCalledWith({
             format: 'YYYY-MM-DD HH:mm:ss.SSS',
+          });
+          expect(winston.format.metadata).toHaveBeenCalledWith({
+            fillExcept: ['timestamp', 'level', 'message'],
           });
           expect(winston.createLogger).toHaveBeenCalledWith({
             format: 'Combine Mock',

@@ -38,9 +38,8 @@ import {
 import { RequestContext } from '#contexts/RequestContext';
 
 const MediaAssetPage = ({ pageData }) => {
-  const requestContext = useContext(RequestContext);
-  const isLegacyMediaAssetPage = () =>
-    requestContext.canonicalLink.split('/').length > 7;
+  const { canonicalLink, isAmp } = useContext(RequestContext);
+  const isLegacyMediaAssetPage = () => canonicalLink.split('/').length > 7;
 
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
@@ -154,6 +153,7 @@ const MediaAssetPage = ({ pageData }) => {
         imageLocator={indexImageLocator}
         imageAltText={indexImageAltText}
         aboutTags={aboutTags}
+        hasAppleItunesAppBanner
       />
       <LinkedData
         type="Article"
@@ -169,8 +169,8 @@ const MediaAssetPage = ({ pageData }) => {
       <StyledGrid as="main" role="main">
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledGrid>
-      <CpsRelatedContent content={relatedContent} isMapContent />
-      <MostWatchedContainer data={mostWatchedData} />
+      <CpsRelatedContent content={relatedContent} isMediaContent />
+      {!isAmp && <MostWatchedContainer data={mostWatchedData} />}
     </>
   );
 };

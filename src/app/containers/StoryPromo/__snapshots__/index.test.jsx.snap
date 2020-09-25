@@ -283,6 +283,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -670,6 +671,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -1061,6 +1063,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -1436,6 +1439,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -1819,6 +1823,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -2191,6 +2196,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -2567,6 +2573,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -2927,6 +2934,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -3241,6 +3249,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -3517,6 +3526,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -3797,6 +3807,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -4061,6 +4072,7 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -4331,6 +4343,7 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
 
 <div
   class="c0 c1"
+  data-e2e="story-promo"
 >
   <div
     class="c2"
@@ -4601,6 +4614,7 @@ exports[`StoryPromo Container should render full width promos correctly for cano
 
 <div
   class="c0 c1"
+  data-e2e="story-promo"
 >
   <div
     class="c2"
@@ -4875,6 +4889,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -5141,6 +5156,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -5413,6 +5429,7 @@ exports[`StoryPromo Container should render item without an image promoType lead
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -5667,6 +5684,7 @@ exports[`StoryPromo Container should render item without an image promoType top 
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -5918,6 +5936,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -6183,6 +6202,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -6452,6 +6472,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -6705,6 +6726,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -7094,6 +7116,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -7436,6 +7459,7 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -7672,6 +7696,7 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -7914,6 +7939,7 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -8138,6 +8164,7 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -8398,6 +8425,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -8674,6 +8702,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -8954,6 +8983,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -9218,6 +9248,7 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -9494,6 +9525,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -9770,6 +9802,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -10050,6 +10083,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -10314,6 +10348,7 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -10590,6 +10625,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -10866,6 +10902,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -11146,6 +11183,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -11410,6 +11448,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -11748,6 +11787,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -12132,6 +12172,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -12520,6 +12561,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"
@@ -12892,6 +12934,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
 
 <div
   class="c0"
+  data-e2e="story-promo"
 >
   <div
     class="c1"

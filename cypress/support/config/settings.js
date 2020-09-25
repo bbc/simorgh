@@ -1230,7 +1230,7 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/bengali/sport-2306692'],
+            paths: ['/bengali/sport-23066929'],
             enabled: false,
           },
           local: {
