@@ -226,6 +226,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/somali.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "so",
+        "name": "Somali",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/somali/bbc_somali_tv/tv_programmes/w13xttqt",
         "@type": "WebPage",

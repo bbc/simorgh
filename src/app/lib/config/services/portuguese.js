@@ -42,6 +42,7 @@ export const service = {
     datetimeLocale: `pt-br`,
     service: 'portuguese',
     serviceName: 'News Brasil',
+    languageName: 'Portuguese',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcbrasil',
     twitterSite: '@bbcbrasil',

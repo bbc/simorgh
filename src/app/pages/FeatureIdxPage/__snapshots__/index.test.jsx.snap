@@ -1100,6 +1100,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                     >
                       <div
                         class="c10"
+                        data-e2e="story-promo"
                       >
                         <div
                           class="c11"
@@ -1196,6 +1197,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -1257,6 +1259,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -1318,6 +1321,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -1379,6 +1383,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -1476,6 +1481,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -1583,6 +1589,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -1690,6 +1697,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -1797,6 +1805,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -1907,6 +1916,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -2014,6 +2024,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -2121,6 +2132,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -2228,6 +2240,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -2371,6 +2384,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c38"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c39"
@@ -2432,6 +2446,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -2529,6 +2544,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c10"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c11"
@@ -2590,6 +2606,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -2651,6 +2668,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -2712,6 +2730,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -2773,6 +2792,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -2870,6 +2890,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c10"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c11"
@@ -2931,6 +2952,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -2992,6 +3014,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -3053,6 +3076,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -3114,6 +3138,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -3211,6 +3236,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -3272,6 +3298,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -3333,6 +3360,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -3394,6 +3422,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -3491,6 +3520,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c38"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c39"
@@ -3552,6 +3582,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -3649,6 +3680,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -3710,6 +3742,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -3817,6 +3850,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -3878,6 +3912,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -3939,6 +3974,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -4000,6 +4036,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -4061,6 +4098,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -4122,6 +4160,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -4219,6 +4258,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c38"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c39"
@@ -4280,6 +4320,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -4341,6 +4382,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -4402,6 +4444,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -4463,6 +4506,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -4524,6 +4568,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -4585,6 +4630,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -4646,6 +4692,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -4707,6 +4754,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -4768,6 +4816,7 @@ exports[`Feature Idx Page snapshots should render an afrique amp feature idx pag
                       >
                         <div
                           class="c25"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c26"
@@ -5930,6 +5979,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                     >
                       <div
                         class="c10"
+                        data-e2e="story-promo"
                       >
                         <div
                           class="c11"
@@ -6025,6 +6075,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -6084,6 +6135,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -6143,6 +6195,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -6202,6 +6255,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -6297,6 +6351,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -6402,6 +6457,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -6507,6 +6563,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -6612,6 +6669,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -6720,6 +6778,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -6825,6 +6884,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -6930,6 +6990,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -7035,6 +7096,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -7176,6 +7238,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c39"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c40"
@@ -7235,6 +7298,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -7330,6 +7394,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c10"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c11"
@@ -7389,6 +7454,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -7448,6 +7514,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -7507,6 +7574,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -7566,6 +7634,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -7661,6 +7730,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c10"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c11"
@@ -7720,6 +7790,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -7779,6 +7850,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -7838,6 +7910,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -7897,6 +7970,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -7992,6 +8066,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -8051,6 +8126,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -8110,6 +8186,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -8169,6 +8246,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -8264,6 +8342,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c39"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c40"
@@ -8323,6 +8402,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -8418,6 +8498,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -8477,6 +8558,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -8582,6 +8664,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -8641,6 +8724,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -8700,6 +8784,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -8759,6 +8844,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -8818,6 +8904,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -8877,6 +8964,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -8972,6 +9060,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c39"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c40"
@@ -9031,6 +9120,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -9090,6 +9180,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -9149,6 +9240,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -9208,6 +9300,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -9267,6 +9360,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -9326,6 +9420,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -9385,6 +9480,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -9444,6 +9540,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"
@@ -9503,6 +9600,7 @@ exports[`Feature Idx Page snapshots should render an afrique feature idx page co
                       >
                         <div
                           class="c26"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c27"

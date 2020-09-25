@@ -483,6 +483,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               >
                 <div
                   class="c13"
+                  data-e2e="story-promo"
                 >
                   <div
                     class="c14"
@@ -1149,6 +1150,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 >
                   <div
                     class="c17"
+                    data-e2e="story-promo"
                   >
                     <div
                       class="c18"
@@ -1206,6 +1208,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 >
                   <div
                     class="c17"
+                    data-e2e="story-promo"
                   >
                     <div
                       class="c18"
@@ -1263,6 +1266,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 >
                   <div
                     class="c17"
+                    data-e2e="story-promo"
                   >
                     <div
                       class="c18"
@@ -1320,6 +1324,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 >
                   <div
                     class="c17"
+                    data-e2e="story-promo"
                   >
                     <div
                       class="c18"
@@ -2000,6 +2005,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 >
                   <div
                     class="c17"
+                    data-e2e="story-promo"
                   >
                     <div
                       class="c18"
@@ -2057,6 +2063,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 >
                   <div
                     class="c17"
+                    data-e2e="story-promo"
                   >
                     <div
                       class="c18"
@@ -2114,6 +2121,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 >
                   <div
                     class="c17"
+                    data-e2e="story-promo"
                   >
                     <div
                       class="c18"
@@ -2171,6 +2179,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 >
                   <div
                     class="c17"
+                    data-e2e="story-promo"
                   >
                     <div
                       class="c18"
