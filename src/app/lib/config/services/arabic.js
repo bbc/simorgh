@@ -192,7 +192,7 @@ export const service = {
           'للأسف ليس بمقدورنا إظهار هذا الجزء من القصة على هذه الصفحة الخفيفة من الموبايل ',
         linkText: 'انظر في السخة الكاملة لترى المحتوى بأكمله',
       },
-      topStoriesTitle: 'الخبر الرئيسي',
+      topStoriesTitle: 'الأخبار الرئيسية',
       featuresAnalysisTitle: 'اخترنا لكم',
     },
     brandSVG,
