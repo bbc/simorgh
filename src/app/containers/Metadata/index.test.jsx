@@ -50,27 +50,27 @@ const MetadataWithContext = ({
   /* eslint-enable react/prop-types */
 }) => (
   <ServiceContextProvider service={service} pageLang={lang}>
-      <RequestContextProvider
-        bbcOrigin={bbcOrigin}
-        id={id}
-        isAmp={platform === 'amp'}
-        pageType={pageType}
-        pathname={pathname}
-        service={service}
-        statusCode={200}
-      >
-        <MetadataContainer
-          title={title}
-          lang={lang}
-          description={description}
-          openGraphType={openGraphType}
-          aboutTags={aboutTags}
-          mentionsTags={mentionsTags}
-          image={image}
-          imageAltText={imageAltText}
-          hasAppleItunesAppBanner={hasAppleItunesAppBanner}
-        />
-      </RequestContextProvider>
+    <RequestContextProvider
+      bbcOrigin={bbcOrigin}
+      id={id}
+      isAmp={platform === 'amp'}
+      pageType={pageType}
+      pathname={pathname}
+      service={service}
+      statusCode={200}
+    >
+      <MetadataContainer
+        title={title}
+        lang={lang}
+        description={description}
+        openGraphType={openGraphType}
+        aboutTags={aboutTags}
+        mentionsTags={mentionsTags}
+        image={image}
+        imageAltText={imageAltText}
+        hasAppleItunesAppBanner={hasAppleItunesAppBanner}
+      />
+    </RequestContextProvider>
   </ServiceContextProvider>
 );
 
@@ -760,23 +760,17 @@ describe('apple-itunes-app meta tag', () => {
           `app-id=${iTunesAppId}, app-argument=https://www.bbc.com/${service}/asset-12345678?utm_medium=banner&utm_content=apple-itunes-app`,
         );
       });
-    });
-  });
+    },
+  );
 
   it.each`
-    service     | reason                                              | platform       | hasAppleItunesAppBanner
-    ${'arabic'} | ${'platform is AMP'}                                | ${'amp'}       | ${true}
-    ${'arabic'} | ${'apple_itunes_app feature toggle is not enabled'} | ${'canonical'} | ${true}
-    ${'mundo'}  | ${'hasAppleItunesAppBanner is false'}               | ${'canonical'} | ${false}
-    ${'pidgin'} | ${'service does not have iTunesAppId configured'}   | ${'canonical'} | ${true}
+    service     | reason                                            | platform       | hasAppleItunesAppBanner
+    ${'arabic'} | ${'platform is AMP'}                              | ${'amp'}       | ${true}
+    ${'mundo'}  | ${'hasAppleItunesAppBanner is false'}             | ${'canonical'} | ${false}
+    ${'pidgin'} | ${'service does not have iTunesAppId configured'} | ${'canonical'} | ${true}
   `(
     `should not be rendered for $service because $reason`,
-    ({
-      service,
-      platform,
-      appleItunesAppToggleEnabled,
-      hasAppleItunesAppBanner,
-    }) => {
+    ({ service, platform, hasAppleItunesAppBanner }) => {
       render(
         <CanonicalCPSAssetInternationalOrigin
           service={service}
