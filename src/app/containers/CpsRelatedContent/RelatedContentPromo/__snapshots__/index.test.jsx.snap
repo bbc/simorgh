@@ -244,6 +244,7 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
 >
   <div
     class="c1"
+    data-e2e="story-promo"
   >
     <div
       class="c2"

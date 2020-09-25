@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `ne`,
     service: 'nepali',
     serviceName: 'Nepali',
+    languageName: 'Nepali',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnepali',
     twitterSite: '@bbcnepali',

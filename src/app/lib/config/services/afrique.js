@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `fr`,
     service: 'afrique',
     serviceName: 'Afrique',
+    languageName: 'French',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcafrique',
     twitterSite: '@bbcafrique',

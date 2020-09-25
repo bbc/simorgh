@@ -53,10 +53,12 @@ const MetadataWithContext = ({
   imageAltText,
   aboutTags,
   mentionsTags,
+  toggles = defaultToggles,
+  hasAppleItunesAppBanner,
   /* eslint-enable react/prop-types */
 }) => (
   <ServiceContextProvider service={service} pageLang={lang}>
-    <ToggleContextProvider toggles={defaultToggles}>
+    <ToggleContextProvider toggles={toggles}>
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
         id={id}
@@ -75,6 +77,7 @@ const MetadataWithContext = ({
           mentionsTags={mentionsTags}
           image={image}
           imageAltText={imageAltText}
+          hasAppleItunesAppBanner={hasAppleItunesAppBanner}
         />
       </RequestContextProvider>
     </ToggleContextProvider>
@@ -721,16 +724,32 @@ shouldMatchSnapshot(
 );
 
 describe('apple-itunes-app meta tag', () => {
-  // eslint-disable-next-line react/prop-types
-  const CanonicalCPSAssetInternationalOrigin = ({ service }) => (
+  const getToggles = (enabled = true) => {
+    return {
+      apple_itunes_app: {
+        enabled,
+      },
+    };
+  };
+
+  const CanonicalCPSAssetInternationalOrigin = ({
+    /* eslint-disable react/prop-types */
+    service,
+    toggles,
+    platform,
+    hasAppleItunesAppBanner,
+    /* eslint-disable react/prop-types */
+  }) => (
     <MetadataWithContext
       service={service}
       bbcOrigin={dotComOrigin}
-      platform="canonical"
+      platform={platform}
       id="asset-12345678"
       pageType="STY"
       pathname={`/${service}/asset-12345678`}
       {...newsArticleMetadataProps}
+      toggles={toggles}
+      hasAppleItunesAppBanner={hasAppleItunesAppBanner}
     />
   );
 
@@ -740,9 +759,16 @@ describe('apple-itunes-app meta tag', () => {
     ${'mundo'}   | ${515255747}
     ${'russian'} | ${504278066}
   `(
-    'should be rendered for $service because iTunesAppId is configured ($iTunesAppId)',
+    'should be rendered for $service because iTunesAppId is configured ($iTunesAppId) and hasAppleItunesAppBanner is true',
     async ({ service, iTunesAppId }) => {
-      render(<CanonicalCPSAssetInternationalOrigin service={service} />);
+      render(
+        <CanonicalCPSAssetInternationalOrigin
+          service={service}
+          toggles={getToggles(true)}
+          platform="canonical"
+          hasAppleItunesAppBanner
+        />,
+      );
 
       await waitFor(() => {
         const appleItunesApp = document.querySelector(
@@ -758,15 +784,34 @@ describe('apple-itunes-app meta tag', () => {
     },
   );
 
-  ['pidgin', 'persian', 'ukchina'].forEach(serviceWithoutItunes => {
-    it(`should not be rendered for ${serviceWithoutItunes} because iTunesAppId is not configured`, () => {
+  it.each`
+    service     | reason                                              | platform       | appleItunesAppToggleEnabled | hasAppleItunesAppBanner
+    ${'arabic'} | ${'platform is AMP'}                                | ${'amp'}       | ${true}                     | ${true}
+    ${'arabic'} | ${'apple_itunes_app feature toggle is not enabled'} | ${'canonical'} | ${false}                    | ${true}
+    ${'mundo'}  | ${'hasAppleItunesAppBanner is false'}               | ${'canonical'} | ${true}                     | ${false}
+    ${'pidgin'} | ${'service does not have iTunesAppId configured'}   | ${'canonical'} | ${true}                     | ${true}
+  `(
+    `should not be rendered for $service because $reason`,
+    ({
+      service,
+      platform,
+      appleItunesAppToggleEnabled,
+      hasAppleItunesAppBanner,
+    }) => {
+      const toggles = getToggles(appleItunesAppToggleEnabled);
+
       render(
-        <CanonicalCPSAssetInternationalOrigin service={serviceWithoutItunes} />,
+        <CanonicalCPSAssetInternationalOrigin
+          service={service}
+          toggles={toggles}
+          platform={platform}
+          hasAppleItunesAppBanner={hasAppleItunesAppBanner}
+        />,
       );
 
       expect(
         document.querySelector('head > meta[name=apple-itunes-app]'),
       ).not.toBeInTheDocument();
-    });
-  });
+    },
+  );
 });

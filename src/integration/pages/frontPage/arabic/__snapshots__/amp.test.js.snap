@@ -97,7 +97,7 @@ exports[`AMP Front Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=5&p=arabic.page&r=%24%7BscreenWidth%7Dx%24%7BscreenHeight%7Dx%24%7BscreenColorDepth%7D&re=%24%7BavailableScreenWidth%7Dx%24%7BavailableScreenHeight%7D&hl=%24%7Btimestamp%7D&lng=%24%7BbrowserLanguage%7D&x1=[urn%3Abbc%3Acps%3A3f0c7dec-d826-8578-e050-380a4e807810]&x2=[amp]&x3=[news-arabic]&x4=[ar]&x5=[%24%7BsourceUrl%7D]&x6=[%24%7BdocumentReferrer%7D]&x7=[index-home]&x8=[simorgh]&x9=[%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9%2B-%2BBBC%2BNews%2B%D8%B9%D8%B1%D8%A8%D9%8A]&x11=[1970-01-18T02%3A13%3A01.429Z]&x12=[1970-01-19T02%3A08%3A48.876Z]&ref=%24%7BdocumentReferrer%7D",
+    "pageview": "\${base}s=598343&s2=5&p=arabic.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A3f0c7dec-d826-8578-e050-380a4e807810]&x2=[amp]&x3=[news-arabic]&x4=[ar]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9%2B-%2BBBC%2BNews%2B%D8%B9%D8%B1%D8%A8%D9%8A]&x11=[1970-01-18T02%3A13%3A01.429Z]&x12=[1970-01-19T02%3A08%3A48.876Z]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -374,6 +374,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "ar",
+        "name": "Arabic",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/arabic",
         "@type": "WebPage",
@@ -430,8 +435,6 @@ exports[`AMP Front Page SEO Twitter image src 1`] = `"https://news.files.bbci.co
 exports[`AMP Front Page SEO Twitter site 1`] = `"@BBCArabic"`;
 
 exports[`AMP Front Page SEO Twitter title 1`] = `"الرئيسية - BBC News عربي"`;
-
-exports[`AMP Front Page SEO apple-itunes-app meta tag should match text 1`] = `"app-id=558497376, app-argument=http://localhost:7080/arabic?utm_medium=banner&utm_content=apple-itunes-app"`;
 
 exports[`AMP Front Page Sections should match headline text 1`] = `"الخبر الرئيسي"`;
 

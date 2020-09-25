@@ -35,6 +35,7 @@ export const service = {
     datetimeLocale: 'ur',
     service: 'urdu',
     serviceName: 'Urdu',
+    languageName: 'Urdu',
     serviceLocalizedName: 'اردو',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcurdu',

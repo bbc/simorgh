@@ -37,6 +37,7 @@ export const service = {
     datetimeLocale: 'fa',
     service: 'persian',
     serviceName: 'Persian',
+    languageName: 'Persian',
     altCalendar: jalaali,
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcpersian',

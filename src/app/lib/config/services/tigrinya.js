@@ -36,6 +36,7 @@ export const service = {
     datetimeLocale: `ti`,
     service: 'tigrinya',
     serviceName: 'Tigrinya',
+    languageName: 'Tigrinya',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnews',
     twitterSite: '@bbcnews',

@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `ha`,
     service: 'hausa',
     serviceName: 'Hausa',
+    languageName: 'Hausa',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbchausa',
     twitterSite: '@bbchausa',

@@ -73,7 +73,12 @@ server
     }),
   )
   .use(compression())
-  .use(helmet({ frameguard: { action: 'deny' } }))
+  .use(
+    helmet({
+      frameguard: { action: 'deny' },
+      contentSecurityPolicy: false,
+    }),
+  )
   .use(gnuTP())
   .get('/status', (req, res) => {
     res.status(200).send(getBuildMetadata());
@@ -176,6 +181,12 @@ server
         });
 
         logger.info(ROUTING_INFORMATION, {
+          url,
+          status,
+          pageType: derivedPageType,
+        });
+
+        logger.debug(ROUTING_INFORMATION, {
           url,
           status,
           pageType: derivedPageType,

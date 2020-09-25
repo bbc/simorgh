@@ -195,6 +195,7 @@ export const service = {
     datetimeLocale: `ru`,
     service: 'russian',
     serviceName: 'Russian',
+    languageName: 'Russian',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcrussian',
     twitterSite: '@bbcrussian',
@@ -287,6 +288,10 @@ export const service = {
       {
         title: 'Коронавирус',
         url: '/russian/in-depth-51962199',
+      },
+      {
+        title: 'Выборы в США',
+        url: '/russian/topics/c8jvq6n6kdxt',
       },
       {
         title: 'Истории',

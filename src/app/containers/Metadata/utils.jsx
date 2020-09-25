@@ -61,9 +61,25 @@ export const renderAlternateLinks = link => (
   />
 );
 
-export const renderAppleItunesApp = (iTunesAppId, canonicalUrl) => {
-  if (iTunesAppId && canonicalUrl) {
-    const content = `app-id=${iTunesAppId}, app-argument=${canonicalUrl}?utm_medium=banner&utm_content=apple-itunes-app`;
+export const renderAppleItunesApp = ({
+  iTunesAppId,
+  canonicalLink,
+  isAmp,
+  appleItunesAppToggleEnabled,
+  hasAppleItunesAppBanner,
+}) => {
+  const isCanonical = !isAmp;
+
+  const shouldRender = [
+    iTunesAppId,
+    canonicalLink,
+    isCanonical,
+    appleItunesAppToggleEnabled,
+    hasAppleItunesAppBanner,
+  ].every(Boolean);
+
+  if (shouldRender) {
+    const content = `app-id=${iTunesAppId}, app-argument=${canonicalLink}?utm_medium=banner&utm_content=apple-itunes-app`;
 
     return <meta name="apple-itunes-app" content={content} />;
   }
