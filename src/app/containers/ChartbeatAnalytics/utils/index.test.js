@@ -72,6 +72,11 @@ describe('Chartbeat utilities', () => {
         expectedShortType: 'Most Read',
       },
       {
+        type: 'mostWatched',
+        expectedDefaultType: 'Most Watched',
+        expectedShortType: 'Most Watched',
+      },
+      {
         type: 'STY',
         expectedDefaultType: 'STY',
         expectedShortType: 'STY',
@@ -240,6 +245,17 @@ describe('Chartbeat utilities', () => {
 
       expect(getTitle({ pageType, pageData, brandName, title })).toBe(
         'TOP 뉴스 - BBC News 코리아',
+      );
+    });
+
+    it('should return correct title when pageType is mostWatched', () => {
+      const pageType = 'mostWatched';
+      const pageData = {};
+      const brandName = 'BBC News Afaan Oromoo';
+      const title = 'Hedduu kan ilaalaman';
+
+      expect(getTitle({ pageType, pageData, brandName, title })).toBe(
+        'Hedduu kan ilaalaman - BBC News Afaan Oromoo',
       );
     });
 
@@ -686,6 +702,40 @@ describe('Chartbeat utilities', () => {
       sections: 'Korean, Korean - Most Read',
       type: 'Most Read',
       title: 'TOP 뉴스 - BBC News 코리아',
+      uid: 50924,
+      useCanonical: true,
+      virtualReferrer: 'test.bbc.com/previous-path',
+    };
+
+    expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+  });
+
+  it('should return config for canonical pages when page type is mostWatched and env is not live', () => {
+    const fixtureData = {
+      isAmp: false,
+      platform: 'canonical',
+      pageType: 'mostWatched',
+      data: {
+        name: 'Most Watched Page Title',
+      },
+      brandName: 'BBC News Afaan Oromoo',
+      mostWatchedTitle: 'Hedduu kan ilaalaman',
+      chartbeatDomain: 'afaanoromoo.bbc.co.uk',
+      env: 'test',
+      service: 'afaanoromoo',
+      origin: 'test.bbc.com',
+      previousPath: '/previous-path',
+    };
+
+    const expectedConfig = {
+      domain: 'test.bbc.co.uk',
+      idSync: {
+        bbc_hid: 'foobar',
+      },
+      path: '/',
+      sections: 'Afaanoromoo, Afaanoromoo - Most Watched',
+      type: 'Most Watched',
+      title: 'Hedduu kan ilaalaman - BBC News Afaan Oromoo',
       uid: 50924,
       useCanonical: true,
       virtualReferrer: 'test.bbc.com/previous-path',

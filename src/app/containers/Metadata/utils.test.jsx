@@ -11,22 +11,29 @@ describe('Metadata utils', () => {
       expect(renderAppleItunesApp({ canonicalLink: null })).toBeNull();
     });
 
-    it('should not render on AMP', () => {
+    it('should return null when platform is AMP', () => {
       expect(
         renderAppleItunesApp({
-          iTunesAppId: 12345678,
-          canonicalLink: 'https://www.bbc.com/test',
           isAmp: true,
         }),
       ).toBeNull();
     });
 
-    it('should return the apple-itunes-app meta tag when iTunesAppId and canonicalLink are provided, and is a canonical page', () => {
+    it('should return null when hasAppleItunesAppBanner is false', () => {
+      expect(
+        renderAppleItunesApp({
+          hasAppleItunesAppBanner: false,
+        }),
+      ).toBeNull();
+    });
+
+    it('should return the apple-itunes-app meta tag when iTunesAppId and canonicalLink exist, is canonical page and hasAppleItunesAppBanner is true', () => {
       expect(
         renderAppleItunesApp({
           iTunesAppId: 12345678,
           canonicalLink: 'https://www.bbc.com/test',
           isAmp: false,
+          hasAppleItunesAppBanner: true,
         }),
       ).toEqual(
         <meta

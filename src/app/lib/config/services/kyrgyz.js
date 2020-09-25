@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `ky`,
     service: 'kyrgyz',
     serviceName: 'News Кыргыз КызMATы',
+    languageName: 'Kyrgyz',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbckyrgyz',
     twitterSite: '@bbckyrgyz',

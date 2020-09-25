@@ -38,6 +38,7 @@ export const service = {
     datetimeLocale: 'en-gb',
     service: 'scotland',
     serviceName: 'Scotland',
+    languageName: 'English',
     themeColor: `${C_DARK_SALTIRE}`,
     twitterCreator: '@BBCScotland',
     twitterSite: '@BBCScotland',
