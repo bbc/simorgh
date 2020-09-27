@@ -225,7 +225,7 @@
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0",
-    "supertest": "^4.0.2",
+    "supertest": "^5.0.0",
     "swagger-cli": "^4.0.4",
     "terser-webpack-plugin": "^4.2.2",
     "timemachine": "^0.3.1",
