@@ -126,7 +126,7 @@
     "isomorphic-fetch": "^2.2.1",
     "js-cookie": "^2.2.1",
     "lru-cache": "^6.0.0",
-    "moment": "^2.28.0",
+    "moment": "^2.29.0",
     "moment-timezone": "^0.5.31",
     "morgan": "^1.10.0",
     "path-to-regexp": "^6.1.0",
