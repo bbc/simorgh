@@ -13,5 +13,3 @@ exports[`Canonical On Demand Radio Page Expired Episode I can see the episode ti
 exports[`Canonical On Demand Radio Page Expired Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b4828.png"`;
 
 exports[`Canonical On Demand Radio Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Dunia Pagi Ini, 5 Maret 2020"`;
-
-exports[`Canonical On Demand Radio Page SEO AMP HTML link should match text 1`] = `"http://localhost:7080/indonesia/bbc_indonesian_radio/w172x6r5000f38s.amp"`;

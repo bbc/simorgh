@@ -173,8 +173,6 @@ Object {
 
 exports[`Canonical persian/afghanistan IDX page Main heading should match text 1`] = `"صفحه افغانستان"`;
 
-exports[`Canonical persian/afghanistan IDX page SEO AMP HTML link should match text 1`] = `"http://localhost:7080/persian/afghanistan.amp"`;
-
 exports[`Canonical persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

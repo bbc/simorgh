@@ -100,8 +100,6 @@ exports[`Canonical Sinhala Live Radio Page Media Player a11y assistive technolog
 
 exports[`Canonical Sinhala Live Radio Page Media Player iframe with valid URL should be rendered 1`] = `"https://test.bbc.com/ws/av-embeds/media/bbc_sinhala_radio/liveradio/si?morph_env=live"`;
 
-exports[`Canonical Sinhala Live Radio Page SEO AMP HTML link should match text 1`] = `"http://localhost:7080/sinhala/bbc_sinhala_radio/liveradio.amp"`;
-
 exports[`Canonical Sinhala Live Radio Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

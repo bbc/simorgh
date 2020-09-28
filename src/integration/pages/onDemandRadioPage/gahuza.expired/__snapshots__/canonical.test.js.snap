@@ -13,5 +13,3 @@ exports[`Canonical On Demand Radio Page Expired Episode I can see the episode ti
 exports[`Canonical On Demand Radio Page Expired Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b8lg4.png"`;
 
 exports[`Canonical On Demand Radio Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Amakuru ya Gahuzamiryango, 6 Ukwa gatatu 2020"`;
-
-exports[`Canonical On Demand Radio Page SEO AMP HTML link should match text 1`] = `"http://localhost:7080/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz.amp"`;

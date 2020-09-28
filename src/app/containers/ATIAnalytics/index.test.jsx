@@ -11,6 +11,7 @@ import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import mapAssetData from '#pages/MediaAssetPage/fixtureData.json';
 import pglAssetData from '#pages/PhotoGalleryPage/fixtureData.json';
 import styAssetData from '#pages/StoryPage/fixtureData/mundo.json';
+import fixAssetData from '#data/afrique/cpsAssets/48465371.json';
 import styUkrainianAssetData from '#data/ukrainian/cpsAssets/news-53561143.json';
 import styUkrainianInRussianAssetData from '#data/ukrainian/cpsAssets/features-russian-53477115.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -324,7 +325,6 @@ describe('ATI Analytics Container', () => {
         }
       `);
     });
-
     it('should not include the xto marketing string when a campaign type is not specified', () => {
       setWindowValue('location', {
         href: 'http://localhost?foo=bar',
@@ -341,6 +341,41 @@ describe('ATI Analytics Container', () => {
       expect(mockCanonical.mock.calls[0][0]).toMatchInlineSnapshot(`
         Object {
           "pageviewParams": "s=598286&s2=64&p=story%3A%3Amundo.story.23263889.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3Af776ad93-e486-b14a-b5ea-55955dd0644f]&x2=[responsive]&x3=[news]&x4=[es]&x5=[http%253A%252F%252Flocalhost%253Ffoo%253Dbar]&x7=[article]&x8=[simorgh]&x9=[WS%2BSTY%2BTEST%2B-%2BFull%2BHeadline%2B-%2BBBC%2BNews]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Life~Fake%2Bnews]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]",
+        }
+      `);
+    });
+  });
+  describe('pageType=FIX', () => {
+    it('should call CanonicalATIAnalytics when platform is canonical', () => {
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      canonical.default = mockCanonical;
+
+      render(
+        <ContextWrap platform="canonical" pageType="FIX" service="afrique">
+          <ATIAnalytics data={fixAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockCanonical.mock.calls[0][0]).toMatchInlineSnapshot(`
+        Object {
+          "pageviewParams": "s=598343&s2=3&p=afrique.feature_index.48465371.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A447a95b6-1c9f-e544-bf60-e23452e7fa71]&x2=[responsive]&x3=[news-afrique]&x4=[fr]&x5=[http%253A%252F%252Flocalhost%252F]&x8=[simorgh]&x9=[Tout%2Bsavoir%2Bsur%2Bla%2BCAN%2B2019%2B-%2BBBC%2BNews%2BAfrique]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]",
+        }
+      `);
+    });
+
+    it('should call AmpATIAnalytics when platform is Amp', () => {
+      const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+      amp.default = mockAmp;
+
+      render(
+        <ContextWrap platform="amp" pageType="FIX" service="afrique">
+          <ATIAnalytics data={fixAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockAmp.mock.calls[0][0]).toMatchInlineSnapshot(`
+        Object {
+          "pageviewParams": "s=598343&s2=3&p=afrique.feature_index.48465371.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A447a95b6-1c9f-e544-bf60-e23452e7fa71]&x2=[amp]&x3=[news-afrique]&x4=[fr]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x8=[simorgh]&x9=[Tout%2Bsavoir%2Bsur%2Bla%2BCAN%2B2019%2B-%2BBBC%2BNews%2BAfrique]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&ref=\${documentReferrer}",
         }
       `);
     });

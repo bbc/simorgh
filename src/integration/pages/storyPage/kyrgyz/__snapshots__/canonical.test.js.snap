@@ -143,8 +143,6 @@ exports[`Canonical Story Page Image should match snapshot 1`] = `
 
 exports[`Canonical Story Page Main heading should match text 1`] = `"Test STY for social embeds"`;
 
-exports[`Canonical Story Page SEO AMP HTML link should match text 1`] = `"http://localhost:7080/kyrgyz/23292889.amp"`;
-
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

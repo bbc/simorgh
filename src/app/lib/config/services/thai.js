@@ -216,7 +216,7 @@ export const service = {
         url: '/thai/topics/c5v124k8lj7t',
       },
       {
-        title: 'ลือกตั้งสหรัฐฯ 2020',
+        title: 'เลือกตั้งสหรัฐฯ 2020',
         url: '/thai/international-54245234',
       },
       {

@@ -107,8 +107,6 @@ exports[`Canonical Live Radio Media Player a11y assistive technology can read th
 
 exports[`Canonical Live Radio Media Player iframe with valid URL should be rendered 1`] = `"https://test.bbc.com/ws/av-embeds/media/bbc_gahuza_radio/liveradio/rw?morph_env=live"`;
 
-exports[`Canonical Live Radio SEO AMP HTML link should match text 1`] = `"http://localhost:7080/gahuza/bbc_gahuza_radio/liveradio.amp"`;
-
 exports[`Canonical Live Radio SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

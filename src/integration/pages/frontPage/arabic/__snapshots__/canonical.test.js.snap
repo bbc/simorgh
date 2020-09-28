@@ -147,8 +147,6 @@ exports[`Canonical Front Page Index Alsos should match visually hidden text 1`] 
 
 exports[`Canonical Front Page Main heading should match text 1`] = `"BBC News, عربي - الرئيسية"`;
 
-exports[`Canonical Front Page SEO AMP HTML link should match text 1`] = `"http://localhost:7080/arabic.amp"`;
-
 exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,
@@ -304,8 +302,6 @@ exports[`Canonical Front Page SEO Twitter image src 1`] = `"https://news.files.b
 exports[`Canonical Front Page SEO Twitter site 1`] = `"@BBCArabic"`;
 
 exports[`Canonical Front Page SEO Twitter title 1`] = `"الرئيسية - BBC News عربي"`;
-
-exports[`Canonical Front Page SEO apple-itunes-app meta tag should match text 1`] = `"app-id=558497376, app-argument=http://localhost:7080/arabic?utm_medium=banner&utm_content=apple-itunes-app"`;
 
 exports[`Canonical Front Page Sections should match headline text 1`] = `"الخبر الرئيسي"`;
 

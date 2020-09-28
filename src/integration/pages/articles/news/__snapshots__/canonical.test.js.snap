@@ -178,8 +178,6 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
 
 exports[`Canonical Articles Main heading should match text 1`] = `"The Germans solving rising rents with people power"`;
 
-exports[`Canonical Articles SEO AMP HTML link should match text 1`] = `"http://localhost:7080/news/articles/c5jje4ejkqvo.amp"`;
-
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,
