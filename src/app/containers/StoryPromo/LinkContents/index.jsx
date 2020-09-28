@@ -51,10 +51,12 @@ const LinkContents = ({ item, isInline }) => {
     const separator = ',';
     const duration = moment.duration(rawDuration, 'seconds');
     const durationString = formatDuration({ duration, separator });
+    const durationTranslation = mediaTranslations.duration || '';
 
     offScreenDuration = (
-      // once we have 'duration' translations, we could place those here
-      <VisuallyHiddenText>{`, ${durationString}`}</VisuallyHiddenText>
+      <VisuallyHiddenText>
+        {`, ${durationTranslation} ${durationString}`}
+      </VisuallyHiddenText>
     );
   }
 
