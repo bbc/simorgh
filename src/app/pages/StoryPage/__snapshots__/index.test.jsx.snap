@@ -2256,7 +2256,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                   <span
                                     class="c18"
                                   >
-                                    Audio, 
+                                    Make you listen, 
                                   </span>
                                   <span>
                                     Akụkọ BBC Igbo na Nkeji
@@ -2719,7 +2719,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                   <span
                                     class="c18"
                                   >
-                                    Audio, 
+                                    Make you listen, 
                                   </span>
                                   <span>
                                     A gbabguola Don Wani
@@ -8549,7 +8549,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                       <span
                                         class="c20"
                                       >
-                                        Audio
+                                        Make you listen
                                         , 
                                       </span>
                                       <span>

@@ -32,9 +32,16 @@ const LinkContents = ({ item, isInline }) => {
     return content;
   }
 
-  const type = isPhotoGallery
-    ? 'photogallery'
-    : pathOr(null, ['media', 'format'], item);
+  const getAnnouncedType = () => {
+    if (isPhotoGallery) {
+      return 'photogallery';
+    }
+
+    const mediaType = pathOr(null, ['media', 'format'], item);
+    return mediaType === 'audio' ? 'listen' : mediaType;
+  };
+
+  const type = getAnnouncedType();
 
   // Always gets the first version. Smarter logic may be needed in the future.
   const rawDuration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
