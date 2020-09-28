@@ -3006,7 +3006,7 @@ exports[`Media Asset Page should render component 1`] = `
                               <span
                                 class="c1"
                               >
-                                , 0,15
+                                , Duration 0,15
                               </span>
                             </span>
                           </a>

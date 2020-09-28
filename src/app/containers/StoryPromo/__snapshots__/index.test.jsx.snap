@@ -368,7 +368,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
           <span
             class="c12"
           >
-            , 3,12
+            , Duration 3,12
           </span>
         </span>
       </a>
@@ -754,7 +754,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
           <span
             class="c12"
           >
-            , 3,12
+            , Duration 3,12
           </span>
         </span>
       </a>
@@ -1091,7 +1091,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
           <span
             class="c4"
           >
-            , 3,12
+            , Duration 3,12
           </span>
         </span>
       </a>
@@ -1524,7 +1524,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
           <span
             class="c12"
           >
-            , 3,12
+            , Duration 3,12
           </span>
         </span>
       </a>
@@ -11869,7 +11869,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
           <span
             class="c12"
           >
-            , 1,33,20
+            , Duration 1,33,20
           </span>
         </span>
       </a>
@@ -12252,7 +12252,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
           <span
             class="c12"
           >
-            , 1,33,20
+            , Duration 1,33,20
           </span>
         </span>
       </a>
@@ -12589,7 +12589,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
           <span
             class="c4"
           >
-            , 1,33,20
+            , Duration 1,33,20
           </span>
         </span>
       </a>
@@ -13016,7 +13016,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
           <span
             class="c12"
           >
-            , 1,33,20
+            , Duration 1,33,20
           </span>
         </span>
       </a>

@@ -2727,7 +2727,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                   <span
                                     class="c18"
                                   >
-                                    , 0,49
+                                    , Duration 0,49
                                   </span>
                                 </span>
                               </a>
@@ -8461,7 +8461,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                       <span
                                         class="c20"
                                       >
-                                        , 1,07
+                                        , Duration 1,07
                                       </span>
                                     </span>
                                   </a>

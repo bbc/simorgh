@@ -72,6 +72,7 @@ const mockServiceConfig = {
       listen: 'LISTEN',
       video: 'VIDEO',
       photogallery: 'PHOTOGALLERY',
+      duration: 'DURATION',
     },
   },
 };
