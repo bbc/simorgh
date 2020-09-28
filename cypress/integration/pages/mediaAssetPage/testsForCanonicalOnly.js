@@ -75,7 +75,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           }
         });
       });
-      it('Most Watched component shows correct number of items', function test() {
+      it('should show correct number of items', function test() {
         cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
           const mostWatchedIsEnabled = path(
             ['mostPopularMedia', 'enabled'],
