@@ -23,3 +23,5 @@ export const OnDemandTvPage = loadable(() => import('./OnDemandTvPage'));
 export const StoryPage = loadable(() => import('./StoryPage'));
 
 export const IdxPage = loadable(() => import('./IdxPage'));
+
+export const FeatureIdxPage = loadable(() => import('./FeatureIdxPage'));

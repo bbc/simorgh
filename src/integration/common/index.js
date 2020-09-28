@@ -10,7 +10,7 @@ import runMediaPlayerEmbedTests from './mediaPlayerEmbed';
 import runPerformanceTests from './performance';
 import runRadioScheduleTests from './radioSchedule';
 import runCrossPlatformSEOTests from './SEO';
-import runSeoCanonicalTests from './SEO.canonical';
+import runAppleItunesAppBannerTests from './appleItunesAppBanner';
 
 const runCommonCrossPlatformTests = service => {
   runA11yTests();
@@ -34,5 +34,5 @@ export {
   runPerformanceTests,
   runRadioScheduleTests,
   runCrossPlatformSEOTests,
-  runSeoCanonicalTests,
+  runAppleItunesAppBannerTests,
 };
