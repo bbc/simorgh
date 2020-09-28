@@ -19,8 +19,6 @@ const getRouteProps = url => {
   const id = path(['id'], params);
   const assetUri = path(['assetUri'], params);
   const variant = variantSanitiser(variantPath);
-  const pageType = path(['pageType'], route);
-  const getInitialData = path(['getInitialData'], route);
   const errorCode = path(['errorCode'], params);
 
   return {
@@ -30,8 +28,6 @@ const getRouteProps = url => {
     id,
     assetUri,
     route,
-    pageType,
-    getInitialData,
     match,
     errorCode: errorCode ? Number(errorCode) : errorCode,
   };

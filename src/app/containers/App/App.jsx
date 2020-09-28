@@ -6,23 +6,43 @@ import usePrevious from '#lib/utilities/usePrevious';
 import getToggles from '#app/lib/utilities/getToggles';
 import routes from '#app/routes';
 
+const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
+  const { pageData, status, error, timeOnServer } = initialData;
+  const { service, isAmp, variant, id, assetUri, route } = routeProps;
+  const { pageType } = route;
+
+  return {
+    pathname,
+    pageData,
+    toggles,
+    status,
+    service,
+    variant,
+    id,
+    assetUri,
+    isAmp,
+    pageType,
+    error,
+    loading: false,
+    errorCode: routeProps.errorCode || initialData.errorCode,
+    timeOnServer,
+  };
+};
+
 const getNextPageState = async pathname => {
   const routeProps = getRouteProps(pathname);
-  const toggles = await getToggles(routeProps.service);
-  const initialData = await routeProps.getInitialData({
+  const { service, variant, route } = routeProps;
+  const { pageType, getInitialData } = route;
+  const toggles = await getToggles(service);
+  const initialData = await getInitialData({
     path: pathname,
-    service: routeProps.service,
-    variant: routeProps.variant,
-    pageType: routeProps.pageType,
+    service,
+    variant,
+    pageType,
     toggles,
   });
 
-  return {
-    ...initialData,
-    ...routeProps,
-    pathname,
-    toggles,
-  };
+  return mapToState({ pathname, initialData, routeProps, toggles });
 };
 
 const setFocusOnMainHeading = () => {
@@ -39,17 +59,19 @@ export const App = ({ location, initialData, bbcOrigin, history }) => {
   const routeProps = getRouteProps(pathname);
   const previousLocationPath = usePrevious(pathname);
   const previousPath = history.action === 'POP' ? null : previousLocationPath; // clear the previous path on back clicks
-  const [state, setState] = useState({
-    ...initialData,
-    ...routeProps,
-    pathname,
-    errorCode: routeProps.errorCode || initialData.errorCode,
-  });
+  const { showAdsBasedOnLocation, toggles } = initialData;
+  const [state, setState] = useState(
+    mapToState({
+      pathname,
+      initialData,
+      routeProps,
+      toggles,
+    }),
+  );
   const routeHasChanged = state.pathname !== pathname;
 
   useEffect(() => {
     if (hasMounted.current) {
-      console.log(state);
       getNextPageState(pathname).then(setState);
     } else {
       hasMounted.current = true;
@@ -71,6 +93,7 @@ export const App = ({ location, initialData, bbcOrigin, history }) => {
     bbcOrigin,
     previousPath,
     loading: routeHasChanged,
+    showAdsBasedOnLocation,
   });
 };
 
