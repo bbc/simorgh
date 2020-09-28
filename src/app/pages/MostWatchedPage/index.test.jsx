@@ -46,11 +46,11 @@ MostWatchedPageWithContext.defaultProps = {
 };
 
 describe('Most Watched Page Main', () => {
-  it('should match snapshot for most watched page', async () => {
+  it('should match snapshot for the Most Watched page', async () => {
     await matchSnapshotAsync(<MostWatchedPageWithContext />);
   });
 
-  it('shoulder render most watched component on canonical', async () => {
+  it('shoulder render the Most Watched component on Canonical', async () => {
     let container;
     let getByText;
     await act(async () => {
@@ -63,21 +63,24 @@ describe('Most Watched Page Main', () => {
     const expectedContent = `'I no know say I different for society until pipo begin look me one kain'`;
 
     expect(container.querySelector('h1').textContent).toEqual(expectedHeader);
+    expect(container.querySelector('h2')).toBeInTheDocument();
     expect(getByText(expectedContent)).toBeInTheDocument();
   });
 
-  it('shoulder not render most watched component on amp', async () => {
+  it('shoulder render the Most Watched component on AMP', async () => {
+    let getByText;
     let container;
     await act(async () => {
-      const response = await render(
-        <MostWatchedPageWithContext isAmp={false} />,
-      );
+      const response = await render(<MostWatchedPageWithContext isAmp />);
+      getByText = response.getByText;
       container = response.container;
     });
 
     const expectedHeader = 'De one we dem don look';
+    const expectedContent = `'I no know say I different for society until pipo begin look me one kain'`;
 
     expect(container.querySelector('h1').textContent).toEqual(expectedHeader);
-    expect(container.querySelector('h3')).not.toBeInTheDocument();
+    expect(container.querySelector('h2')).toBeInTheDocument();
+    expect(getByText(expectedContent)).toBeInTheDocument();
   });
 });
