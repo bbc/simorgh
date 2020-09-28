@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `rw`,
     service: 'gahuza',
     serviceName: 'Gahuza',
+    languageName: 'Kinyarwanda',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcgahuza',
     twitterSite: '@bbcgahuza',

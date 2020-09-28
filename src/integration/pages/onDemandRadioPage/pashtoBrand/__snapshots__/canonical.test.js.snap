@@ -242,6 +242,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "ps",
+        "name": "Pashto",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/pashto/bbc_pashto_radio/p0340yr4",
         "@type": "WebPage",
