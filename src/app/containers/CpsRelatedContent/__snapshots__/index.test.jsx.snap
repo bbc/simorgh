@@ -569,6 +569,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
         >
           <div
             class="c13"
+            data-e2e="story-promo"
           >
             <div
               class="c14"
@@ -634,6 +635,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
         >
           <div
             class="c13"
+            data-e2e="story-promo"
           >
             <div
               class="c14"
@@ -688,6 +690,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
         >
           <div
             class="c13"
+            data-e2e="story-promo"
           >
             <div
               class="c14"
@@ -1252,6 +1255,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
         >
           <div
             class="c11"
+            data-e2e="story-promo"
           >
             <div
               class="c12"

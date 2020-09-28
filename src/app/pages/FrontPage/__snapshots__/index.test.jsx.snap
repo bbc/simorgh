@@ -920,6 +920,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                     >
                       <div
                         class="c10"
+                        data-e2e="story-promo"
                       >
                         <div
                           class="c11"
@@ -1067,6 +1068,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       >
                         <div
                           class="c30"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c31"
@@ -1123,6 +1125,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       >
                         <div
                           class="c30"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c31"
@@ -1210,6 +1213,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       >
                         <div
                           class="c30"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c31"
@@ -1266,6 +1270,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       >
                         <div
                           class="c30"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c31"
@@ -1322,6 +1327,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       >
                         <div
                           class="c30"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c31"
@@ -1378,6 +1384,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       >
                         <div
                           class="c30"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c31"
@@ -1457,6 +1464,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       >
                         <div
                           class="c30"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c31"
@@ -1513,6 +1521,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       >
                         <div
                           class="c30"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c31"
@@ -2834,6 +2843,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                     >
                       <div
                         class="c10"
+                        data-e2e="story-promo"
                       >
                         <div
                           class="c11"
@@ -2980,6 +2990,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       >
                         <div
                           class="c31"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c32"
@@ -3034,6 +3045,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       >
                         <div
                           class="c31"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c32"
@@ -3119,6 +3131,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       >
                         <div
                           class="c31"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c32"
@@ -3173,6 +3186,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       >
                         <div
                           class="c31"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c32"
@@ -3227,6 +3241,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       >
                         <div
                           class="c31"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c32"
@@ -3281,6 +3296,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       >
                         <div
                           class="c31"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c32"
@@ -3358,6 +3374,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       >
                         <div
                           class="c31"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c32"
@@ -3412,6 +3429,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       >
                         <div
                           class="c31"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c32"

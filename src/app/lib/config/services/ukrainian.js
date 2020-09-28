@@ -289,12 +289,14 @@ export const service = {
     ...baseServiceConfig,
     datetimeLocale: 'uk',
     locale: 'uk_UA',
+    languageName: 'Ukrainian',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'uk',
     lang: 'uk',
   },
   'ru-UA': {
     ...baseServiceConfig,
+    languageName: 'Russian',
     translations: {
       ...baseServiceConfig.translations,
       ...russianMainTranslations,

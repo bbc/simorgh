@@ -33,6 +33,7 @@ export const service = {
     datetimeLocale: `ta`,
     service: 'tamil',
     serviceName: 'Tamil',
+    languageName: 'Tamil',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbctamil',
     twitterSite: '@bbctamil',
