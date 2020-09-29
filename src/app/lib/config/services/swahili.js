@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `sw`,
     service: 'swahili',
     serviceName: 'Swahili',
+    languageName: 'Swahili',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcswahili',
     twitterSite: '@bbcswahili',

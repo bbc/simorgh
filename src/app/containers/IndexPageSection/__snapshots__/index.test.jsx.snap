@@ -736,6 +736,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
       >
         <div
           class="c12"
+          data-e2e="story-promo"
         >
           <div
             class="c13"
@@ -796,6 +797,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
       >
         <div
           class="c24"
+          data-e2e="story-promo"
         >
           <div
             class="c25"
@@ -855,6 +857,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
       >
         <div
           class="c24"
+          data-e2e="story-promo"
         >
           <div
             class="c25"
@@ -914,6 +917,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
       >
         <div
           class="c24"
+          data-e2e="story-promo"
         >
           <div
             class="c25"
@@ -973,6 +977,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
       >
         <div
           class="c24"
+          data-e2e="story-promo"
         >
           <div
             class="c25"
@@ -1716,6 +1721,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
     >
       <div
         class="c11"
+        data-e2e="story-promo"
       >
         <div
           class="c12"
@@ -1775,6 +1781,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
     >
       <div
         class="c22"
+        data-e2e="story-promo"
       >
         <div
           class="c23"
@@ -2238,6 +2245,7 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
   >
     <div
       class="c8"
+      data-e2e="story-promo"
     >
       <div
         class="c9"
@@ -2978,6 +2986,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
     >
       <div
         class="c10"
+        data-e2e="story-promo"
       >
         <div
           class="c11"
@@ -3037,6 +3046,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
     >
       <div
         class="c21"
+        data-e2e="story-promo"
       >
         <div
           class="c22"
@@ -3096,6 +3106,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
     >
       <div
         class="c21"
+        data-e2e="story-promo"
       >
         <div
           class="c22"
@@ -3155,6 +3166,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
     >
       <div
         class="c21"
+        data-e2e="story-promo"
       >
         <div
           class="c22"
@@ -3214,6 +3226,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
     >
       <div
         class="c21"
+        data-e2e="story-promo"
       >
         <div
           class="c22"

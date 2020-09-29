@@ -36,6 +36,7 @@ export const service = {
     datetimeLocale: `si`,
     service: 'sinhala',
     serviceName: 'Sinhala',
+    languageName: 'Sinhala',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcsinhala',
     twitterSite: '@bbcsinhala',

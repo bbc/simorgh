@@ -18,6 +18,7 @@ const baseServiceConfig = {
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png',
   dir: `ltr`,
   service: 'serbian',
+  languageName: 'Serbian',
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcnasrpskom',
   twitterSite: '@bbcnasrpskom',

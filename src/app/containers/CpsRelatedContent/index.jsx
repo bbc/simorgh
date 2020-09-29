@@ -8,7 +8,7 @@ import CpsOnwardJourney from '../CpsOnwardJourney';
 import RelatedContentPromo from './RelatedContentPromo';
 import RelatedContentPromoList from './RelatedContentPromoList';
 
-const CpsRelatedContent = ({ content, parentColumns, isMapContent }) => {
+const CpsRelatedContent = ({ content, parentColumns, isMediaContent }) => {
   const { translations } = useContext(ServiceContext);
 
   const title = pathOr('Related Content', ['relatedContent'], translations);
@@ -18,7 +18,7 @@ const CpsRelatedContent = ({ content, parentColumns, isMapContent }) => {
       labelId="related-content-heading"
       title={title}
       content={content}
-      isMapContent={isMapContent}
+      isMediaContent={isMediaContent}
       parentColumns={parentColumns}
       promoComponent={RelatedContentPromo}
       promoListComponent={RelatedContentPromoList}
@@ -40,13 +40,13 @@ CpsRelatedContent.propTypes = {
     group4: number,
     group5: number,
   }),
-  isMapContent: bool,
+  isMediaContent: bool,
 };
 
 CpsRelatedContent.defaultProps = {
   content: [],
   parentColumns: null,
-  isMapContent: false,
+  isMediaContent: false,
 };
 
 export default CpsRelatedContent;

@@ -23,7 +23,11 @@ describe('RelatedContentPromoList', () => {
   shouldMatchSnapshot(
     'it renders a list of Story Promos for MAP pages',
     <ServiceContextProvider service="pidgin">
-      <RelatedContentPromoList promoItems={promoItems} dir="ltr" isMapContent />
+      <RelatedContentPromoList
+        promoItems={promoItems}
+        dir="ltr"
+        isMediaContent
+      />
       ,
     </ServiceContextProvider>,
   );

@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `so`,
     service: 'somali',
     serviceName: 'Somali',
+    languageName: 'Somali',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcsomali',
     twitterSite: '@bbcsomali',

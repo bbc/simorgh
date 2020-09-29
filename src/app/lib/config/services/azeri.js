@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `az`,
     service: 'azeri',
     serviceName: 'Azərbaycanca',
+    languageName: 'Azerbaijani',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcazeri',
     twitterSite: '@bbcazeri',

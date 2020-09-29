@@ -275,6 +275,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         imageLocator={indexImageLocator}
         imageAltText={indexImageAltText}
         aboutTags={aboutTags}
+        hasAppleItunesAppBanner
       />
       <LinkedData
         type={categoryType(category)}

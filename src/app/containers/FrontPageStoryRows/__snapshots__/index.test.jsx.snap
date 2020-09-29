@@ -661,6 +661,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   >
     <div
       class="c14"
+      data-e2e="story-promo"
     >
       <div
         class="c15"
@@ -1177,6 +1178,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   >
     <div
       class="c2"
+      data-e2e="story-promo"
     >
       <div
         class="c3"
@@ -1231,6 +1233,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   >
     <div
       class="c12"
+      data-e2e="story-promo"
     >
       <div
         class="c13"
@@ -1967,6 +1970,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   >
     <div
       class="c13"
+      data-e2e="story-promo"
     >
       <div
         class="c14"
@@ -2049,6 +2053,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   >
     <div
       class="c13"
+      data-e2e="story-promo"
     >
       <div
         class="c14"
@@ -2108,6 +2113,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   >
     <div
       class="c13"
+      data-e2e="story-promo"
     >
       <div
         class="c14"
@@ -2482,6 +2488,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   >
     <div
       class="c2"
+      data-e2e="story-promo"
     >
       <div
         class="c3"
@@ -2536,6 +2543,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   >
     <div
       class="c2"
+      data-e2e="story-promo"
     >
       <div
         class="c3"
@@ -2621,6 +2629,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   >
     <div
       class="c2"
+      data-e2e="story-promo"
     >
       <div
         class="c3"
@@ -2675,6 +2684,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   >
     <div
       class="c2"
+      data-e2e="story-promo"
     >
       <div
         class="c3"
@@ -3336,6 +3346,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   >
     <div
       class="c13"
+      data-e2e="story-promo"
     >
       <div
         class="c14"
@@ -3389,6 +3400,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   >
     <div
       class="c13"
+      data-e2e="story-promo"
     >
       <div
         class="c14"
@@ -3420,6 +3432,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   >
     <div
       class="c13"
+      data-e2e="story-promo"
     >
       <div
         class="c14"
@@ -3722,6 +3735,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   >
     <div
       class="c2"
+      data-e2e="story-promo"
     >
       <div
         class="c3"
@@ -3753,6 +3767,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   >
     <div
       class="c2"
+      data-e2e="story-promo"
     >
       <div
         class="c3"
@@ -3809,6 +3824,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   >
     <div
       class="c2"
+      data-e2e="story-promo"
     >
       <div
         class="c3"
@@ -3840,6 +3856,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   >
     <div
       class="c2"
+      data-e2e="story-promo"
     >
       <div
         class="c3"
@@ -4480,6 +4497,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 >
   <div
     class="c2"
+    data-e2e="story-promo"
   >
     <div
       class="c3"
