@@ -488,6 +488,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
         >
           <div
             class="c11"
+            data-e2e="story-promo"
           >
             <div
               class="c12"
@@ -541,6 +542,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
         >
           <div
             class="c11"
+            data-e2e="story-promo"
           >
             <div
               class="c12"
@@ -1082,6 +1084,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
       >
         <div
           class="c10"
+          data-e2e="story-promo"
         >
           <div
             class="c11"

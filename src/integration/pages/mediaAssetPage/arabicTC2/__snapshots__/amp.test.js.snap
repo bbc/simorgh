@@ -392,6 +392,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "ar",
+        "name": "Arabic",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av",
         "@type": "WebPage",

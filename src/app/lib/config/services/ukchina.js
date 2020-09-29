@@ -21,6 +21,7 @@ const baseServiceConfig = {
   datetimeLocale: `zh-cn`,
   service: 'ukchina',
   serviceName: 'UK China',
+  languageName: 'Chinese',
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@BBCChina',
   twitterSite: '@BBCChina',

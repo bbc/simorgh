@@ -9,7 +9,7 @@ import MostWatched from '.';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 
 const promos = mostWatchedData.records.slice(0, 5).map(item => item.promo);
-const MostWatchedComponent = ({ data, isAmp }) => (
+const MostWatchedComponent = ({ data, isAmp, isMostWatchedPage }) => (
   <ServiceContextProvider service="pidgin">
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
@@ -19,7 +19,7 @@ const MostWatchedComponent = ({ data, isAmp }) => (
       service="pidgin"
       statusCode={200}
     >
-      <MostWatched data={data} />
+      <MostWatched data={data} isMostWatchedPage={isMostWatchedPage} />
     </RequestContextProvider>
   </ServiceContextProvider>
 );
@@ -27,6 +27,11 @@ const MostWatchedComponent = ({ data, isAmp }) => (
 MostWatchedComponent.propTypes = {
   data: arrayOf(shape(storyItem)).isRequired,
   isAmp: bool.isRequired,
+  isMostWatchedPage: bool,
+};
+
+MostWatchedComponent.defaultProps = {
+  isMostWatchedPage: false,
 };
 
 describe('MostWatched', () => {
@@ -34,20 +39,20 @@ describe('MostWatched', () => {
     const { container } = await render(
       <MostWatchedComponent data={promos} isAmp={false} />,
     );
-    expect(container.querySelector('ul')).toBeInTheDocument();
+    expect(container.querySelector('ol')).toBeInTheDocument();
   });
 
-  it('should not render the component on AMP', async () => {
+  it('should render the component on AMP', async () => {
     const { container } = await render(
       <MostWatchedComponent data={promos} isAmp />,
     );
-    expect(container.querySelector('ul')).not.toBeInTheDocument();
+    expect(container.querySelector('ol')).toBeInTheDocument();
   });
 
   it('should not render the component when data is empty', async () => {
     const { container } = await render(
       <MostWatchedComponent data={[]} isAmp={false} />,
     );
-    expect(container.querySelector('ul')).not.toBeInTheDocument();
+    expect(container.querySelector('ol')).not.toBeInTheDocument();
   });
 });

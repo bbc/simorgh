@@ -6,7 +6,7 @@ Cypress.Commands.add(
   'getToggles',
   memoizeWith(identity, service => {
     cy.request({
-      url: `${envConfig.togglesUrl}toggles?application=simorgh&service=${service}&__amp_source_origin=${envConfig.baseUrl}`,
+      url: `${envConfig.togglesUrl}?application=simorgh&service=${service}&__amp_source_origin=${envConfig.baseUrl}`,
       headers: {
         Origin: 'https://www.bbc.co.uk',
       },
@@ -14,9 +14,7 @@ Cypress.Commands.add(
       cy.writeFile(
         `cypress/fixtures/toggles/${service}.json`,
         response.body.toggles,
-      ).then(() => {
-        cy.fixture(`toggles/${service}.json`).as('toggles');
-      });
+      );
     });
   }),
 );
