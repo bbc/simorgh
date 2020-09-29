@@ -1,7 +1,6 @@
 import React from 'react';
 import reactRouterConfig from 'react-router-config';
-import { render } from '@testing-library/react';
-import { act } from 'react-dom/test-utils';
+import { render, act } from '@testing-library/react';
 import { App } from './App';
 import getToggles from '#app/lib/utilities/getToggles';
 import routes from '#app/routes';
