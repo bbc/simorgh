@@ -40,14 +40,6 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
         cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
       });
     });
-
-    describe('Chartbeat', () => {
-      if (envConfig.chartbeatEnabled) {
-        it('should have chartbeat config UID', () => {
-          cy.hasAmpChartbeatConfigUid();
-        });
-      }
-    });
   });
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
