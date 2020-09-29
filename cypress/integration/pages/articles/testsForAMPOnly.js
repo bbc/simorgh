@@ -1,6 +1,4 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import envConfig from '../../../support/config/envs';
-import appToggles from '../../../support/helpers/useAppToggles';
 import { getBlockData, getVideoEmbedUrl } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
@@ -20,16 +18,6 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   variant,
 }) =>
   describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
-    if (appToggles.chartbeatAnalytics.enabled) {
-      describe('Chartbeat', () => {
-        if (envConfig.chartbeatEnabled) {
-          it('should have chartbeat config UID', () => {
-            cy.hasAmpChartbeatConfigUid();
-          });
-        }
-      });
-    }
-
     it('should contain an amp-img', () => {
       if (serviceHasFigure(service)) {
         cy.get('figure')
