@@ -1269,10 +1269,10 @@ module.exports = () => ({
           },
           local: {
             paths: ['/bengali/media/video'],
-            enabled: false,
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       photoGalleryPage: {
         environments: {
