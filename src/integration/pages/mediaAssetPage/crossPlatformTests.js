@@ -1,27 +1,13 @@
 import {
   runCommonCrossPlatformTests,
   runMediaPlayerEmbedTests,
+  runTimestampTests,
 } from '../../common';
 
 export default service => {
   runCommonCrossPlatformTests(service);
   runMediaPlayerEmbedTests();
-
-  it('I can see the headline', () => {
-    const headlineEl = document.querySelector('h1[id="content"]');
-
-    expect(headlineEl).toBeInTheDocument();
-    expect(headlineEl.textContent).toBeTruthy();
-    expect(headlineEl.textContent).toMatchSnapshot();
-  });
-
-  it('I can see the timestamp', () => {
-    const timestampEl = document.querySelector('time');
-
-    expect(timestampEl).toBeInTheDocument();
-    expect(timestampEl.textContent).toBeTruthy();
-    expect(timestampEl.textContent).toMatchSnapshot();
-  });
+  runTimestampTests();
 
   const bulletedListItem = document.querySelector('main ul[role="list"] > li');
 
