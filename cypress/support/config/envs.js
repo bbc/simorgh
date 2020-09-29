@@ -10,7 +10,7 @@ const config = {
     avEmbedBaseUrlAmp: 'https://polling.bbc.co.uk',
     standaloneErrorPages: false,
     alwaysCheckForFallback: true,
-    togglesUrl: 'https://toggles.api.bbci.co.uk/',
+    togglesUrl: 'https://config.api.bbci.co.uk/',
   },
   test: {
     baseUrl: 'https://www.test.bbc.com',
@@ -23,7 +23,7 @@ const config = {
     avEmbedBaseUrlAmp: 'https://polling.test.bbc.co.uk',
     standaloneErrorPages: false,
     alwaysCheckForFallback: true,
-    togglesUrl: 'https://toggles.test.api.bbci.co.uk/',
+    togglesUrl: 'https://config.test.api.bbci.co.uk/',
   },
   local: {
     baseUrl: 'http://localhost:7080',
@@ -36,7 +36,7 @@ const config = {
     avEmbedBaseUrlAmp: 'https://polling.test.bbc.co.uk',
     standaloneErrorPages: true,
     alwaysCheckForFallback: false,
-    togglesUrl: 'https://toggles.test.api.bbci.co.uk/',
+    togglesUrl: 'https://config.test.api.bbci.co.uk/',
   },
 };
 
