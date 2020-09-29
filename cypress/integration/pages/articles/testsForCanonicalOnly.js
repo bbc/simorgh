@@ -19,10 +19,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   variant,
 }) =>
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
-    it('should not have an AMP attribute on the main article', () => {
-      cy.get('html').should('not.have.attr', 'amp');
-    });
-
     if (appToggles.chartbeatAnalytics.enabled) {
       describe('Chartbeat', () => {
         if (envConfig.chartbeatEnabled) {
@@ -35,14 +31,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         }
       });
     }
-
-    it('should include ampHTML tag', () => {
-      cy.get('head link[rel="amphtml"]').should(
-        'have.attr',
-        'href',
-        `${window.location.origin}${Cypress.env('currentPath')}.amp`,
-      );
-    });
 
     if (serviceHasCaption(service)) {
       describe('Image with placeholder', () => {
