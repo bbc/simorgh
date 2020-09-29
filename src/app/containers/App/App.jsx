@@ -6,7 +6,7 @@ import mergeAll from 'ramda/src/mergeAll';
 import path from 'ramda/src/path';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
-import getToggles from '#app/lib/utilities/getToggles';
+import getToggles from '#lib/utilities/getToggles';
 import routes from '#app/routes';
 
 const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
