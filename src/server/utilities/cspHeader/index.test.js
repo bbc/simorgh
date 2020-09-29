@@ -89,6 +89,7 @@ describe('cspHeader', () => {
         'https://*.g.doubleclick.net',
         'https://tpc.googlesyndication.com',
         'https://*.google.com',
+        'https://*.googleusercontent.com',
         "data: 'self'",
       ],
       scriptSrcExpectation: [
@@ -186,6 +187,7 @@ describe('cspHeader', () => {
         'https://*.g.doubleclick.net',
         'https://tpc.googlesyndication.com',
         'https://*.google.com',
+        'https://*.googleusercontent.com',
         "data: 'self'",
       ],
       scriptSrcExpectation: [
@@ -312,6 +314,7 @@ describe('cspHeader', () => {
         'https://*.g.doubleclick.net',
         'https://tpc.googlesyndication.com',
         'https://*.google.com',
+        'https://*.googleusercontent.com',
         "data: 'self'",
       ],
       scriptSrcExpectation: [
@@ -426,6 +429,7 @@ describe('cspHeader', () => {
         'https://*.g.doubleclick.net',
         'https://tpc.googlesyndication.com',
         'https://*.google.com',
+        'https://*.googleusercontent.com',
         "data: 'self'",
       ],
       scriptSrcExpectation: [
