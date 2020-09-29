@@ -25,7 +25,6 @@ const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
       pathname,
       pageType,
       toggles,
-      loading: false,
     },
   ]);
 };
