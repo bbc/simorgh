@@ -1261,7 +1261,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/bengali/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/bengali/media/video'],
@@ -2033,7 +2033,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/gujarati/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/gujarati/media/video'],
@@ -2285,7 +2285,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/hausa/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/hausa/media/video'],
@@ -2535,7 +2535,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/hindi/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/hindi/media/video'],
@@ -9020,7 +9020,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/urdu/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/urdu/media/video'],
