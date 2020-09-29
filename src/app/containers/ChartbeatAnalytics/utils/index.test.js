@@ -820,7 +820,7 @@ describe('Chartbeat utilities', () => {
 
     const mockTitle = jest
       .fn()
-      .mockImplementation(() => 'This is a Feautre Index page title');
+      .mockImplementation(() => 'This is a Feature Index page title');
 
     frontPageUtils.getPageTitle = mockTitle;
 
