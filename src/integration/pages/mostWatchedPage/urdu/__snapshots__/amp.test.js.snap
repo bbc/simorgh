@@ -280,6 +280,8 @@ exports[`AMP Most Watched Page I can see the list items 10`] = `"ویڈیو, ج�
 
 exports[`AMP Most Watched Page Main heading should match text 1`] = `"سب سے زیادہ دیکھی گئی"`;
 
+exports[`AMP Most Watched Page Main heading should match text 2`] = `"سب سے زیادہ دیکھی گئی"`;
+
 exports[`AMP Most Watched Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

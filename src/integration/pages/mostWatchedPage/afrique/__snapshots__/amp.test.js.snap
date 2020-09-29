@@ -286,6 +286,8 @@ exports[`AMP Most Watched Page I can see the list items 6`] = `"Audio, L’invit
 
 exports[`AMP Most Watched Page Main heading should match text 1`] = `"Les plus vus"`;
 
+exports[`AMP Most Watched Page Main heading should match text 2`] = `"Les plus vus"`;
+
 exports[`AMP Most Watched Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,

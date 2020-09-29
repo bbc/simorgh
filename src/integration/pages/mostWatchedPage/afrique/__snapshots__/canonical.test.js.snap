@@ -164,6 +164,8 @@ exports[`Canonical Most Watched Page I can see the list items 6`] = `"Audio, Lâ€
 
 exports[`Canonical Most Watched Page Main heading should match text 1`] = `"Les plus vus"`;
 
+exports[`Canonical Most Watched Page Main heading should match text 2`] = `"Les plus vus"`;
+
 exports[`Canonical Most Watched Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,
