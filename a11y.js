@@ -1,3 +1,10 @@
+/** This is an extension of the bbc-a11y tool, which verifies whether this application meets
+ * BBC accessibility guidelines - http://www.bbc.co.uk/guidelines/futuremedia/accessibility/
+ *
+ * See https://github.com/bbc/bbc-a11y/blob/master/guides/using/using-bbc-a11y-in-your-project.md
+ * for further information
+ */
+
 const { getPageUrls } = require('./cypress/support/helpers/getPageUrls');
 
 // allPageWidths = [240, 360, 600, 1008, 1280];
