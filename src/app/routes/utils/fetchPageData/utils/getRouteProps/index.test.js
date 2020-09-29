@@ -130,7 +130,6 @@ describe('getRouteProps', () => {
         match,
         route,
         service: 'fallbackService',
-        pageType: 'error',
       });
     });
   });
@@ -151,8 +150,6 @@ describe('getRouteProps', () => {
         isAmp: true,
         match: undefined,
         route: undefined,
-        pageType: undefined,
-        getInitialData: undefined,
         service: 'fallbackService',
       });
 
