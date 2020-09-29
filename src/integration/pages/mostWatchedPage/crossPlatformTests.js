@@ -1,15 +1,8 @@
-import { runCommonCrossPlatformTests } from '../../common';
+import { runCommonCrossPlatformTests, runMainHeadingTests } from '../../common';
 
 export default service => {
   runCommonCrossPlatformTests(service);
-
-  it('I can see the headline', () => {
-    const h1El = document.querySelector('h1');
-
-    expect(h1El).toBeInTheDocument();
-    expect(h1El.textContent).toBeTruthy();
-    expect(h1El.textContent).toMatchSnapshot();
-  });
+  runMainHeadingTests();
 
   it('I can see the list items', () => {
     const listItemElements = document.querySelectorAll('main ol li');
