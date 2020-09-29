@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { bool, element } from 'prop-types';
 import styled from 'styled-components';
 import { GridWrapper, GridItemConstrainedMedium } from '#lib/styledGrid';
@@ -10,10 +10,11 @@ const LoadingMain = styled.main`
 
 const WithLoading = Component => {
   const LoadingContainer = ({ loading, ...props }) => {
+    const [showLoading, setShowLoading] = useState(false);
     useEffect(() => {
       if (loading) {
         timeout = setTimeout(() => {
-          // TODO show loading animation
+          setShowLoading(true);
         }, 500);
       }
       return () => clearTimeout(timeout);
@@ -24,7 +25,9 @@ const WithLoading = Component => {
     return (
       <LoadingMain role="main">
         <GridWrapper>
-          <GridItemConstrainedMedium />
+          <GridItemConstrainedMedium>
+            {showLoading && <div data-testid="loading" />}
+          </GridItemConstrainedMedium>
         </GridWrapper>
       </LoadingMain>
     );
