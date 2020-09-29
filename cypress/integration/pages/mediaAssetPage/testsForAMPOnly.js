@@ -1,8 +1,6 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getEmbedUrl, hasMedia } from './helpers';
-import appToggles from '../../../support/helpers/useAppToggles';
-import envConfig from '../../../support/config/envs';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -41,14 +39,6 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
         }
       });
     });
-
-    if (appToggles.chartbeatAnalytics.enabled && envConfig.chartbeatEnabled) {
-      describe('Chartbeat', () => {
-        it('should have the correct config UID', () => {
-          cy.hasAmpChartbeatConfigUid();
-        });
-      });
-    }
   });
 };
 
