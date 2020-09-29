@@ -9,7 +9,7 @@ export default ({ service, pageType, variant }) => {
       });
       // Allows constructing most watched path with variant
       const serviceVariant = variant === 'default' ? '' : `/${variant}`;
-      console.log(config[service]);
+
       const mostWatchedPath = `/${config[service].name}/mostwatched${serviceVariant}.json`;
       it('should show/not show the Most Watched component if the toggle is enabled for the service', function test() {
         // Find if the service has component enabled in toggles
