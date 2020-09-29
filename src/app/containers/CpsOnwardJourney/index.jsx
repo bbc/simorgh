@@ -25,6 +25,7 @@ import { C_GHOST } from '@bbc/psammead-styles/colours';
 
 import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 import { storyItem } from '#models/propTypes/storyItem';
+import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import {
   GridWrapper as LegacyGridWrapper,
@@ -159,12 +160,16 @@ const CpsOnwardJourney = ({
   columnType,
   skipLink,
 }) => {
-  const a11yAttributes = {
-    as: 'section',
-    role: 'region',
-    'aria-labelledby': labelId,
-  };
   const { script, service, dir } = useContext(ServiceContext);
+  const { pageType } = useContext(RequestContext);
+
+  const isMostWatched = pageType === 'mostWatched';
+  const a11yAttributes = isMostWatched
+    ? {
+        as: 'div',
+      }
+    : { as: 'section', role: 'region', 'aria-labelledby': labelId };
+
   const Wrapper = isMediaContent
     ? styled(ConstrainedLargeGrid)`` // Necessary for styling
     : StyledConstrainedLargeGrid;
