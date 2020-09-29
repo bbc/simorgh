@@ -136,8 +136,6 @@ Object {
 }
 `;
 
-exports[`Canonical Most Watched Page I can see the headline 1`] = `"سب سے زیادہ دیکھی گئی"`;
-
 exports[`Canonical Most Watched Page I can see the list items 1`] = `"ویڈیو, ایرانی خواتین کو گیمر بننے کے لیے ملک کیوں چھوڑنا پڑتا ہے؟7 جولائی 2020"`;
 
 exports[`Canonical Most Watched Page I can see the list items 2`] = `"آڈیو, سیربین ریڈیو پروگرام رات 8 بجے لائیو15 اکتوبر 2015"`;
@@ -157,6 +155,8 @@ exports[`Canonical Most Watched Page I can see the list items 8`] = `"ویڈیو
 exports[`Canonical Most Watched Page I can see the list items 9`] = `"ویڈیو, 100 خواتین: آن لائن گیمر خاتون29 نومبر 2016"`;
 
 exports[`Canonical Most Watched Page I can see the list items 10`] = `"ویڈیو, جان نکسن کی سی آئی اے میں شمولیت کے دن سے صدام حسین کے بارے میں تحقیق ان کی زندگی کا محور۔5 جنوری 2017"`;
+
+exports[`Canonical Most Watched Page Main heading should match text 1`] = `"سب سے زیادہ دیکھی گئی"`;
 
 exports[`Canonical Most Watched Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
