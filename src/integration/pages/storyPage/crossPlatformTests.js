@@ -1,7 +1,13 @@
-import { runCommonCrossPlatformTests } from '../../common';
+import {
+  runCommonCrossPlatformTests,
+  runTimestampTests,
+  runImageTests,
+} from '../../common';
 
 export default service => {
   runCommonCrossPlatformTests(service);
+  runTimestampTests();
+  runImageTests();
 
   describe('Social Embeds', () => {
     it('I can see the skip link', () => {
