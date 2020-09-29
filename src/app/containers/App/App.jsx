@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useState, useRef } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router';
 import pick from 'ramda/src/pick';
-import merge from 'ramda/src/merge';
+import mergeAll from 'ramda/src/mergeAll';
 import path from 'ramda/src/path';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
@@ -11,29 +11,23 @@ import routes from '#app/routes';
 
 const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
   const pageType = path(['route', 'pageType'], routeProps);
-  const state = pick(
-    [
-      'service',
-      'isAmp',
-      'variant',
-      'id',
-      'assetUri',
-      'errorCode',
-      'pageData',
-      'status',
-      'error',
-      'timeOnServer',
-      'errorCode',
-    ],
-    merge(routeProps, initialData),
-  );
 
-  return merge(state, {
-    pathname,
-    pageType,
-    toggles,
-    loading: false,
-  });
+  return mergeAll([
+    pick(
+      ['service', 'isAmp', 'variant', 'id', 'assetUri', 'errorCode'],
+      routeProps,
+    ),
+    pick(
+      ['pageData', 'status', 'error', 'timeOnServer', 'errorCode'],
+      initialData,
+    ),
+    {
+      pathname,
+      pageType,
+      toggles,
+      loading: false,
+    },
+  ]);
 };
 
 const getNextPageState = async pathname => {
