@@ -63,13 +63,13 @@ describe('fetchPageData', () => {
       expect(fetch).toHaveBeenCalledWith(expectedUrl);
     });
 
-    it('should call fetch with correct url when passed the full test path', async () => {
+    it('should call fetch with the correct url when passed the full test path', async () => {
       await fetchPageData({ path: fullTestPath, pageType });
 
       expect(fetch).toHaveBeenCalledWith(fullTestPath);
     });
 
-    it('should call fetch with correct url when passed the full live path', async () => {
+    it('should call fetch with the correct url when passed the full live path', async () => {
       await fetchPageData({ path: fullLivePath, pageType });
 
       expect(fetch).toHaveBeenCalledWith(fullLivePath);
