@@ -171,9 +171,19 @@ Object {
 }
 `;
 
-exports[`Canonical Articles I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg"`;
+exports[`Canonical Articles Image Caption should match text 1`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند"`;
 
-exports[`Canonical Articles I can see an image with a caption 2`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند"`;
+exports[`Canonical Articles Image should match snapshot 1`] = `
+<img
+  alt="قهوه"
+  class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 800w"
+  width="1024"
+/>
+`;
+
+exports[`Canonical Articles Main heading should match text 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -350,3 +360,10 @@ exports[`Canonical Articles SEO Twitter image src 1`] = `"https://news.files.bbc
 exports[`Canonical Articles SEO Twitter site 1`] = `"@bbcpersian"`;
 
 exports[`Canonical Articles SEO Twitter title 1`] = `"پهپادی که برایتان قهوه می‌آورد - BBC News فارسی"`;
+
+exports[`Canonical Articles Timestamp should match text and date 1`] = `
+Object {
+  "date": "2018-08-24",
+  "text": "۲ شهریور ۱۳۹۷ - ۲۴ اوت ۲۰۱۸",
+}
+`;
