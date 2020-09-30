@@ -238,7 +238,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/kyrgyz/institutional-38157284',
+          href: 'https://www.bbc.co.uk/send/u50853445',
           text: 'Би-Би-Си менен байланышыңыз',
         },
         {
