@@ -21,7 +21,7 @@
     "build:test": "cp envConfig/test.env .env && NODE_ENV=production webpack",
     "build:test:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/test.env > .env && NODE_ENV=production webpack",
     "cypress": "cypress run",
-    "cypress:ci": "rm -rf cypress/results; xvfb-run -a cypress run --browser chrome --reporter cypress-multi-reporters --reporter-options configFile=cypress/reporter-config.json && npm run cypress:3rdParty",
+    "cypress:ci": "rm -rf cypress/results; xvfb-run -a cypress run --browser chromium --reporter cypress-multi-reporters --reporter-options configFile=cypress/reporter-config.json && npm run cypress:3rdParty",
     "cypress:interactive": "cypress open",
     "cypress:3rdParty": "npm run cypress -- --project ./3rdPartyCypress/.",
     "cypress:adhoc": "npm run cypress:interactive -- --project ./AdHocCypress/.",
