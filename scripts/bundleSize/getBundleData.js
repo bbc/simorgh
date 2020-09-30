@@ -10,71 +10,85 @@ const services = Object.keys(cypressServiceConfigs);
 
 const getFileSize = filePath => fs.statSync(filePath).size;
 
-const getBundleData = ({ regex, jsFiles }) => {
-  const filenames = jsFiles.filter(fileName => fileName.match(regex));
+const jsFiles = fs
+  .readdirSync('build/public/static/js')
+  .filter(fileName => fileName.endsWith('.js'));
 
-  const bundleSizes = filenames
-    .map(fileName => getFileSize(`build/public/static/js/${fileName}`))
-    .map(sizeInBytes => Math.round(sizeInBytes / 1024));
+const getBundlesData = bundles => {
+  return bundles.map(name => {
+    const sizeInBytes = getFileSize(`build/public/static/js/${name}`);
+    const size = Math.round(sizeInBytes / 1024);
 
-  return bundleSizes;
-};
-
-const getTotalBundleSizes = sizes =>
-  sizes.reduce((totalKB, fileSizeInKB) => totalKB + fileSizeInKB, 0);
-
-const getPageBundleData = jsFiles => {
-  return pages.map(pageName => {
-    const pageBundleRegex = extractBundlesForPageType(pageName).reduce(
-      (acc, file) => {
-        return acc ? `${file}|${acc}` : file;
-      },
-    );
-    const mainBundleData = getBundleData({
-      regex: `(^main|^framework|^moment)`,
-      jsFiles,
-    });
-    const vendorBundleData = getBundleData({
-      regex: `^vendor`,
-      jsFiles,
-    });
-    const pageBundleData = getBundleData({
-      regex: pageBundleRegex,
-      jsFiles,
-    });
-
-    const totalBundleSizes = getTotalBundleSizes([
-      ...mainBundleData,
-      ...vendorBundleData,
-      ...pageBundleData,
-    ]);
-
-    return [
-      pageName,
-      mainBundleData.join(', '),
-      vendorBundleData.join(', '),
-      pageBundleData.join(', '),
-      totalBundleSizes,
-    ];
+    return {
+      name,
+      size,
+    };
   });
 };
 
-const getServiceBundleData = jsFiles =>
+const getPageBundleData = () => {
+  const main = getBundlesData(
+    jsFiles.filter(fileName => fileName.startsWith('main-')),
+  );
+  const framework = getBundlesData(
+    jsFiles.filter(fileName => fileName.startsWith('framework-')),
+  );
+  const mainTotalSize = main.reduce((acc, { size }) => acc + size, 0);
+  const frameworkTotalSize = framework.reduce((acc, { size }) => acc + size, 0);
+
+  return pages.map(pageName => {
+    const bundles = extractBundlesForPageType(pageName);
+    const bundlesData = getBundlesData(bundles);
+
+    return bundlesData.reduce(
+      ({ lib, shared, page, totalSize, ...rest }, { name, size }) => {
+        const bundleData = { name, size };
+        const isShared = name.startsWith('shared-');
+        const isLib = name.includes('-lib-');
+
+        if (isLib) {
+          lib.push(bundleData);
+        } else if (isShared) {
+          shared.push(bundleData);
+        } else {
+          page.push(bundleData);
+        }
+        return {
+          ...rest,
+          lib,
+          shared,
+          page,
+          totalSize: totalSize + size,
+        };
+      },
+      {
+        pageName,
+        main,
+        framework,
+        lib: [],
+        shared: [],
+        page: [],
+        totalSize: mainTotalSize + frameworkTotalSize,
+      },
+    );
+  });
+};
+
+const getServiceBundleData = () =>
   services
     .map(service => {
-      const serviceBundleData = getBundleData({
-        jsFiles,
-        regex: new RegExp(`^${service}`),
-      });
+      const bundlesData = getBundlesData(
+        jsFiles.filter(file => file.startsWith(service)),
+      );
 
-      return { service, serviceBundleData };
+      return { serviceName: service, bundles: bundlesData };
     })
-    .filter(({ serviceBundleData }) => serviceBundleData.length)
-    .map(({ service, serviceBundleData }) => {
-      const totalBundleSizes = getTotalBundleSizes(serviceBundleData);
-
-      return [service, serviceBundleData.join(', '), totalBundleSizes];
-    });
+    .filter(({ bundles }) => bundles.length)
+    .map(({ serviceName, bundles }) => ({
+      serviceName,
+      bundles,
+      totalSize: bundles.reduce((acc, { size }) => acc + size, 0),
+    }));
 
 exports.getPageBundleData = getPageBundleData;
 exports.getServiceBundleData = getServiceBundleData;

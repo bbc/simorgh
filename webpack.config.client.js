@@ -97,7 +97,7 @@ module.exports = ({
               const rawRequest =
                 module.rawRequest &&
                 module.rawRequest.replace(/^@(\w+)[/\\]/, '$1-');
-              if (rawRequest) return rawRequest;
+              if (rawRequest) return `${rawRequest}-lib`;
 
               const identifier = module.identifier();
               const trimmedIdentifier = /(?:^|[/\\])node_modules[/\\](.*)/.exec(
@@ -107,7 +107,7 @@ module.exports = ({
                 trimmedIdentifier &&
                 trimmedIdentifier[1].replace(/^@(\w+)[/\\]/, '$1-');
 
-              return processedIdentifier || identifier;
+              return `${processedIdentifier || identifier}-lib`;
             },
             priority: 30,
             minChunks: 1,
@@ -115,7 +115,7 @@ module.exports = ({
           },
           shared: {
             name(module, chunks) {
-              return crypto
+              const cryptoName = crypto
                 .createHash('sha1')
                 .update(
                   chunks.reduce((acc, chunk) => {
@@ -124,6 +124,8 @@ module.exports = ({
                 )
                 .digest('base64')
                 .replace(/\//g, '');
+
+              return `shared-${cryptoName}`;
             },
             priority: 10,
             minChunks: 2,

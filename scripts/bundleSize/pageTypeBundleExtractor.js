@@ -1,7 +1,6 @@
 const bundleReport = require('../../reports/webpackBundleReport.json');
 
 const extractBundlesForPageType = pageComponent => {
-  console.log(bundleReport.namedChunkGroups);
   const chunkGroup = bundleReport.namedChunkGroups[pageComponent];
   if (chunkGroup) {
     return chunkGroup.assets
