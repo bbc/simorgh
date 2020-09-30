@@ -241,7 +241,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/swahili/taasisi-37100011',
+          href: 'https://www.bbc.co.uk/send/u50853731',
           text: 'Wasiliana na BBC',
         },
         {
