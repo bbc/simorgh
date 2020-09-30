@@ -226,7 +226,7 @@ export const service = {
           text: 'Cookie',
         },
         {
-          href: '/institutional-37623842 	https://www.bbc.co.uk/send/u50853951',
+          href: 'https://www.bbc.co.uk/send/u50853951',
           text: 'Liên hệ BBC',
         },
         {
