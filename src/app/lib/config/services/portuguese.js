@@ -248,7 +248,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/portuguese/institutional-36202456',
+          href: 'https://www.bbc.co.uk/send/u50853599',
           text: 'Fale com a BBC',
         },
         {
