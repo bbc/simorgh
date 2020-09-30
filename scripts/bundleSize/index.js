@@ -41,13 +41,14 @@ const pageBundlesTable = new Table({
     'framework',
     'lib',
     'shared',
+    'commons',
     'page',
     'Total size (kB)',
   ],
 });
 
 sortByBundlesTotalAscending(pageBundleData).forEach(
-  ({ pageName, main, framework, lib, shared, page, totalSize }) => {
+  ({ pageName, main, framework, lib, shared, commons, page, totalSize }) => {
     const getFileInfo = ({ name, size }) =>
       `${name.slice(0, 10)}…${name.slice(-6)} (${size}kB)`;
 
@@ -57,6 +58,7 @@ sortByBundlesTotalAscending(pageBundleData).forEach(
       framework.map(getFileInfo).join('\n'),
       lib.map(getFileInfo).join('\n'),
       shared.map(getFileInfo).join('\n'),
+      commons.map(getFileInfo).join('\n'),
       page.map(getFileInfo).join('\n'),
       totalSize,
     ]);

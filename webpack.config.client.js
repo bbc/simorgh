@@ -85,6 +85,13 @@ module.exports = ({
             chunks: 'all',
             test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
             priority: 40,
+            enforce: true,
+          },
+          commons: {
+            name: `commons`,
+            // if a chunk is used on all components we put it in commons
+            minChunks: 11,
+            priority: 20,
           },
           lib: {
             test(module) {

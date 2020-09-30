@@ -41,15 +41,18 @@ const getPageBundleData = () => {
     const bundlesData = getBundlesData(bundles);
 
     return bundlesData.reduce(
-      ({ lib, shared, page, totalSize, ...rest }, { name, size }) => {
+      ({ lib, shared, page, commons, totalSize, ...rest }, { name, size }) => {
         const bundleData = { name, size };
         const isShared = name.startsWith('shared-');
         const isLib = name.includes('-lib-');
+        const isCommons = name.includes('commons-');
 
         if (isLib) {
           lib.push(bundleData);
         } else if (isShared) {
           shared.push(bundleData);
+        } else if (isCommons) {
+          commons.push(bundleData);
         } else {
           page.push(bundleData);
         }
@@ -57,6 +60,7 @@ const getPageBundleData = () => {
           ...rest,
           lib,
           shared,
+          commons,
           page,
           totalSize: totalSize + size,
         };
@@ -67,6 +71,7 @@ const getPageBundleData = () => {
         framework,
         lib: [],
         shared: [],
+        commons: [],
         page: [],
         totalSize: mainTotalSize + frameworkTotalSize,
       },
