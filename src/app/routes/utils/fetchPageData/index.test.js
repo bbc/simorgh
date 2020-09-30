@@ -93,13 +93,14 @@ describe('fetchPageData', () => {
     it('should handle a rejected Ares fetch and return an error the Simorgh app can handle', () => {
       fetch.mockRejectedValue(new Error('Failed to fetch'), { status: 500 });
 
-      return fetchPageData.default({ path: requestedPathname, pageType }).catch(
-        ({ message, status }) =>
+      return fetchPageData
+        .default({ path: requestedPathname, pageType })
+        .catch(({ message, status }) =>
           expect({ message, status }).toEqual({
             message: 'Failed to fetch',
             status: 502,
           }),
-      );
+        );
     });
   });
 
@@ -113,8 +114,9 @@ describe('fetchPageData', () => {
       it('should return a 500 error code', () => {
         setWindowValue('location', false);
 
-        return fetchPageData.default({ path: requestedPathname, pageType }).catch(
-          ({ message, status }) => {
+        return fetchPageData
+          .default({ path: requestedPathname, pageType })
+          .catch(({ message, status }) => {
             expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
               error:
                 'invalid json response body at  reason: Unexpected end of JSON input',
@@ -129,8 +131,7 @@ describe('fetchPageData', () => {
                 'invalid json response body at  reason: Unexpected end of JSON input',
               status: 500,
             });
-          },
-        );
+          });
       });
     });
 
@@ -138,8 +139,9 @@ describe('fetchPageData', () => {
       it('should return a 502 error code', () => {
         setWindowValue('location', true);
 
-        return fetchPageData.default({ path: requestedPathname, pageType }).catch(
-          ({ message, status }) => {
+        return fetchPageData
+          .default({ path: requestedPathname, pageType })
+          .catch(({ message, status }) => {
             expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
               error:
                 'invalid json response body at  reason: Unexpected end of JSON input',
@@ -153,8 +155,7 @@ describe('fetchPageData', () => {
                 'invalid json response body at  reason: Unexpected end of JSON input',
               status: 502,
             });
-          },
-        );
+          });
       });
     });
   });
@@ -163,14 +164,14 @@ describe('fetchPageData', () => {
     it('should return the status code as 404', async () => {
       fetch.mockResponse('Not found', { status: 404 });
 
-      return fetchPageData.default({ path: requestedPathname, pageType }).catch(
-        ({ message, status }) => {
+      return fetchPageData
+        .default({ path: requestedPathname, pageType })
+        .catch(({ message, status }) => {
           expect({ message, status }).toEqual({
             message: 'data_response_404',
             status: 404,
           });
-        },
-      );
+        });
     });
   });
 
@@ -187,8 +188,9 @@ describe('fetchPageData', () => {
       it('should log, and return the status code as 500', async () => {
         fetch.mockResponse("I'm a teapot", { status: 418 });
 
-        return fetchPageData.default({ path: requestedPathname, pageType }).catch(
-          ({ message, status }) => {
+        return fetchPageData
+          .default({ path: requestedPathname, pageType })
+          .catch(({ message, status }) => {
             expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
               error:
                 'Unexpected upstream response (HTTP status code 418) when requesting http://localhost/path/to/asset.json',
@@ -202,15 +204,15 @@ describe('fetchPageData', () => {
               status: 500,
               message: `Unexpected upstream response (HTTP status code 418) when requesting ${expectedUrl}`,
             });
-          },
-        );
+          });
       });
 
       it('should log, and propogate the status code as 500', async () => {
         fetch.mockResponse('Error', { status: 500 });
 
-        return fetchPageData.default({ path: requestedPathname, pageType }).catch(
-          ({ message, status }) => {
+        return fetchPageData
+          .default({ path: requestedPathname, pageType })
+          .catch(({ message, status }) => {
             expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
               error: `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
               status: 500,
@@ -223,8 +225,7 @@ describe('fetchPageData', () => {
               status: 500,
               message: `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
             });
-          },
-        );
+          });
       });
     });
   });
@@ -237,8 +238,9 @@ describe('fetchPageData', () => {
     it('should log, and return the status code as 502', async () => {
       fetch.mockResponse("I'm a teapot", { status: 418 });
 
-      return fetchPageData.default({ path: requestedPathname, pageType }).catch(
-        ({ message, status }) => {
+      return fetchPageData
+        .default({ path: requestedPathname, pageType })
+        .catch(({ message, status }) => {
           expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
             error: `Unexpected upstream response (HTTP status code 418) when requesting ${expectedUrl}`,
             status: 502,
@@ -251,15 +253,15 @@ describe('fetchPageData', () => {
             status: 502,
             message: `Unexpected upstream response (HTTP status code 418) when requesting ${expectedUrl}`,
           });
-        },
-      );
+        });
     });
 
     it('should log, and propogate the status code as 502', async () => {
       fetch.mockResponse('Internal server error', { status: 500 });
 
-      return fetchPageData.default({ path: requestedPathname, pageType }).catch(
-        ({ message, status }) => {
+      return fetchPageData
+        .default({ path: requestedPathname, pageType })
+        .catch(({ message, status }) => {
           expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
             error: `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
             status: 502,
@@ -272,8 +274,7 @@ describe('fetchPageData', () => {
             status: 502,
             message: `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
           });
-        },
-      );
+        });
     });
   });
 });
@@ -321,10 +322,11 @@ describe('getUrl', () => {
         );
       });
 
-      it('should remove .amp from url with params', () => {});
-      expect(fetchPageData.getUrl('/test/article.amp?param=test')).toEqual(
-        'http://localhost/test/article.json?param=test',
-      );
+      it('should remove .amp from url with params', () => {
+        expect(fetchPageData.getUrl('/test/article.amp?param=test')).toEqual(
+          'http://localhost/test/article.json?param=test',
+        );
+      });
     });
 
     describe('is live', () => {
@@ -351,9 +353,9 @@ describe('getUrl', () => {
       });
 
       it('should remove .amp and multiple query string parameters from url', () => {
-        expect(fetchPageData.getUrl('/test/article.amp?first=1&second=2')).toEqual(
-          'http://localhost/test/article.json',
-        );
+        expect(
+          fetchPageData.getUrl('/test/article.amp?first=1&second=2'),
+        ).toEqual('http://localhost/test/article.json');
       });
     });
 
