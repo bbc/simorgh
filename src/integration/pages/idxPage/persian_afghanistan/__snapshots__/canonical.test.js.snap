@@ -335,7 +335,7 @@ exports[`Canonical persian/afghanistan IDX page Sections should match headline t
 
 exports[`Canonical persian/afghanistan IDX page Sections should match headline text 3`] = `"تحلیل و گزارش"`;
 
-exports[`Canonical persian/afghanistan IDX page Story Promo Headline should match text 1`] = `"ویدیو, ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان, 2,32"`;
+exports[`Canonical persian/afghanistan IDX page Story Promo Headline should match text 1`] = `"ویدیو, ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان, مدت 2,32"`;
 
 exports[`Canonical persian/afghanistan IDX page Story Promo Image should match image 1`] = `
 <img
