@@ -7,6 +7,7 @@ const expectedBaseUrl = 'http://localhost';
 const requestedPathname = '/path/to/asset';
 const expectedUrl = `${expectedBaseUrl}${requestedPathname}.json`;
 const pageType = 'Fetch Page Data';
+const requestOrigin = 'Jest Test';
 
 afterEach(() => {
   jest.clearAllMocks();
@@ -33,13 +34,14 @@ describe('fetchPageData', () => {
       });
     });
 
-    it('should log pageType if passed in as a parameter', async () => {
-      await fetchPageData({ path: requestedPathname, pageType });
+    it('should log additional arguments if passed', async () => {
+      await fetchPageData({ path: requestedPathname, pageType, requestOrigin });
 
       expect(loggerMock.info).toBeCalledWith(DATA_REQUEST_RECEIVED, {
         data: expectedUrl,
         path: requestedPathname,
         pageType,
+        requestOrigin,
       });
     });
   });
