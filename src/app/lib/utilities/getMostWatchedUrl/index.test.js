@@ -1,6 +1,6 @@
 import getMostWatchedEndpoint from '.';
 
-describe('getMostReadEndpoint', () => {
+describe('getMostWatchEndpoint', () => {
   it('should not return base path nor append .json when env is local', () => {
     expect(getMostWatchedEndpoint({ service: 'hausa', env: 'local' })).toBe(
       '/hausa/mostwatched',
