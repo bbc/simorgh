@@ -172,7 +172,7 @@ Object {
 
 exports[`Canonical Media Asset Page Related Content should match text and url 4`] = `
 Object {
-  "text": "Audio, BBC News Pidgin One Minute News, 0,15",
+  "text": "Make you listen, BBC News Pidgin One Minute News, Duration 0,15",
   "url": "/pidgin/media-23147054",
 }
 `;
