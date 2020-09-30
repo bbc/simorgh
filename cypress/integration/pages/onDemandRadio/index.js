@@ -16,12 +16,11 @@ Object.keys(config)
       describe(`${pageType} - ${currentPath}`, () => {
         before(() => {
           Cypress.env('currentPath', currentPath);
-          let newPath;
-          if (Cypress.env('APP_ENV') === 'test') {
-            newPath = `${currentPath}?renderer_env=live`;
-          } else {
-            newPath = currentPath;
-          }
+
+          const newPath =
+            Cypress.env('APP_ENV') === 'test'
+              ? `${currentPath}?renderer_env=live`
+              : currentPath;
 
           visitPage(newPath, pageType);
         });
