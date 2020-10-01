@@ -796,11 +796,9 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
               >
                 De one we dem don look
               </h1>
-              <section
-                aria-labelledby="most-watched-heading"
+              <div
                 class=""
                 data-e2e="most-watched-heading"
-                role="region"
               >
                 <ol
                   class="c7 c8"
@@ -1078,7 +1076,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                     </div>
                   </li>
                 </ol>
-              </section>
+              </div>
             </div>
           </div>
         </div>

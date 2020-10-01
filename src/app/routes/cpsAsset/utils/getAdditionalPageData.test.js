@@ -25,7 +25,11 @@ describe('getAdditionalPageData', () => {
 
   it('should return additional data with most watched for a MAP asset', async () => {
     fetchMock.mock('http://localhost/pidgin/mostwatched.json', mostWatchedJson);
-    const additionalPageData = await getAdditionalPageData(mapJson, 'pidgin');
+    const additionalPageData = await getAdditionalPageData({
+      pageData: mapJson,
+      service: 'pidgin',
+      env: 'local',
+    });
 
     const expectedOutput = {
       mostWatched: mostWatchedJson,
@@ -44,7 +48,10 @@ describe('getAdditionalPageData', () => {
       recommendationsJson,
     );
     hasRecommendations.mockImplementationOnce(() => true);
-    const additionalPageData = await getAdditionalPageData(styJson, 'mundo');
+    const additionalPageData = await getAdditionalPageData({
+      pageData: styJson,
+      service: 'mundo',
+    });
 
     const expectedOutput = {
       mostRead: mostReadJson,
@@ -61,10 +68,10 @@ describe('getAdditionalPageData', () => {
       foo: 'bar',
     });
     hasRecommendations.mockImplementationOnce(() => false);
-    const additionalPageData = await getAdditionalPageData(
-      noRecommendationsStyJson,
-      'pidgin',
-    );
+    const additionalPageData = await getAdditionalPageData({
+      pageData: noRecommendationsStyJson,
+      service: 'pidgin',
+    });
 
     const expectedOutput = {
       mostRead: { foo: 'bar' },
@@ -78,7 +85,10 @@ describe('getAdditionalPageData', () => {
     fetchMock.mock('http://localhost/mundo/mostread.json', 404);
     fetchMock.mock('http://localhost/mundo/sty-secondary-column.json', 404);
     fetchMock.mock('http://localhost/mundo/23263889/recommendations.json', 404);
-    const additionalPageData = await getAdditionalPageData(styJson, 'mundo');
+    const additionalPageData = await getAdditionalPageData({
+      pageData: styJson,
+      service: 'mundo',
+    });
 
     expect(additionalPageData).toEqual({});
   });
