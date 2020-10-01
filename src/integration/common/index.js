@@ -12,6 +12,7 @@ import runRadioScheduleTests from './radioSchedule';
 import runCrossPlatformSEOTests from './SEO';
 import runAppleItunesAppBannerTests from './appleItunesAppBanner';
 import runStoryPromoTests from './storyPromo';
+import runSectionTests from './sections';
 
 const runCommonCrossPlatformTests = service => {
   runA11yTests();
@@ -37,4 +38,5 @@ export {
   runCrossPlatformSEOTests,
   runAppleItunesAppBannerTests,
   runStoryPromoTests,
+  runSectionTests,
 };
