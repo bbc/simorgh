@@ -1,6 +1,8 @@
 export default () => {
   describe('Sections', () => {
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll(
+      'section:not([data-e2e="advertisement"])',
+    );
 
     if (sections) {
       sections.forEach(section => {
@@ -8,18 +10,14 @@ export default () => {
           expect(section).toBeInTheDocument();
         });
 
-        const h2El = section.querySelector('h2');
+        const headlineEl = section.querySelector('h2');
 
         it('should have a headline', () => {
-          expect(h2El).toBeInTheDocument();
-        });
-
-        it('should have a headline with text', () => {
-          expect(h2El.textContent).toBeTruthy();
+          expect(headlineEl).toBeInTheDocument();
         });
 
         it('should match headline text', () => {
-          expect(h2El.textContent).toMatchSnapshot();
+          expect(headlineEl.textContent).toMatchSnapshot();
         });
       });
     }

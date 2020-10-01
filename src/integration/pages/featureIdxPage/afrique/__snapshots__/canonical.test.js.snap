@@ -246,6 +246,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "fr",
+        "name": "French",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/afrique/48465371",
         "@type": "WebPage",
@@ -302,3 +307,50 @@ exports[`Canonical Feature Index page SEO Twitter image src 1`] = `"https://news
 exports[`Canonical Feature Index page SEO Twitter site 1`] = `"@bbcafrique"`;
 
 exports[`Canonical Feature Index page SEO Twitter title 1`] = `"Tout savoir sur la CAN 2019 - BBC News Afrique"`;
+
+exports[`Canonical Feature Index page Sections should match headline text 1`] = `""`;
+
+exports[`Canonical Feature Index page Sections should match headline text 2`] = `""`;
+
+exports[`Canonical Feature Index page Sections should match headline text 3`] = `""`;
+
+exports[`Canonical Feature Index page Sections should match headline text 4`] = `""`;
+
+exports[`Canonical Feature Index page Sections should match headline text 5`] = `""`;
+
+exports[`Canonical Feature Index page Sections should match headline text 6`] = `""`;
+
+exports[`Canonical Feature Index page Sections should match headline text 7`] = `""`;
+
+exports[`Canonical Feature Index page Sections should match headline text 8`] = `""`;
+
+exports[`Canonical Feature Index page Sections should match headline text 9`] = `""`;
+
+exports[`Canonical Feature Index page Sections should match headline text 10`] = `""`;
+
+exports[`Canonical Feature Index page Story Promo Headline should match text 1`] = `"CAN 2019 : le Sénégal qualifié pour les huitièmes de finale"`;
+
+exports[`Canonical Feature Index page Story Promo Image should match image 1`] = `
+<img
+  alt="CAN 2019 : le Sénégal en huitième de finale"
+  class="StyledImg-sc-7vx2mr-0 hIxkbt"
+  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 660w"
+  width="976"
+/>
+`;
+
+exports[`Canonical Feature Index page Story Promo Link should match text and url 1`] = `
+Object {
+  "text": "CAN 2019 : le Sénégal qualifié pour les huitièmes de finale",
+  "url": "/afrique/sports-48835428",
+}
+`;
+
+exports[`Canonical Feature Index page Story Promo Timestamp should match text and date 1`] = `
+Object {
+  "date": "2019-07-02",
+  "text": "2 juillet 2019",
+}
+`;

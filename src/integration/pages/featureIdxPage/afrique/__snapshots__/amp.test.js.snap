@@ -97,7 +97,7 @@ exports[`AMP Feature Index page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=3&p=afrique.feature_index.48465371.page&r=%24%7BscreenWidth%7Dx%24%7BscreenHeight%7Dx%24%7BscreenColorDepth%7D&re=%24%7BavailableScreenWidth%7Dx%24%7BavailableScreenHeight%7D&hl=%24%7Btimestamp%7D&lng=%24%7BbrowserLanguage%7D&x1=[urn%3Abbc%3Acps%3A447a95b6-1c9f-e544-bf60-e23452e7fa71]&x2=[amp]&x3=[news-afrique]&x4=[fr]&x5=[%24%7BsourceUrl%7D]&x6=[\${documentReferrer}]&x8=[simorgh]&x9=[Tout%2Bsavoir%2Bsur%2Bla%2BCAN%2B2019%2B-%2BBBC%2BNews%2BAfrique]&x11=[2019-05-30T14%3A23%3A38.000Z]&x12=[2019-07-19T12%3A46%3A18.000Z]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=3&p=afrique.feature_index.48465371.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A447a95b6-1c9f-e544-bf60-e23452e7fa71]&x2=[amp]&x3=[news-afrique]&x4=[fr]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x8=[simorgh]&x9=[Tout%2Bsavoir%2Bsur%2Bla%2BCAN%2B2019%2B-%2BBBC%2BNews%2BAfrique]&x11=[2019-05-30T14%3A23%3A38.000Z]&x12=[2019-07-19T12%3A46%3A18.000Z]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -379,6 +379,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "fr",
+        "name": "French",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/afrique/48465371",
         "@type": "WebPage",
@@ -435,3 +440,51 @@ exports[`AMP Feature Index page SEO Twitter image src 1`] = `"https://news.files
 exports[`AMP Feature Index page SEO Twitter site 1`] = `"@bbcafrique"`;
 
 exports[`AMP Feature Index page SEO Twitter title 1`] = `"Tout savoir sur la CAN 2019 - BBC News Afrique"`;
+
+exports[`AMP Feature Index page Sections should match headline text 1`] = `""`;
+
+exports[`AMP Feature Index page Sections should match headline text 2`] = `""`;
+
+exports[`AMP Feature Index page Sections should match headline text 3`] = `""`;
+
+exports[`AMP Feature Index page Sections should match headline text 4`] = `""`;
+
+exports[`AMP Feature Index page Sections should match headline text 5`] = `""`;
+
+exports[`AMP Feature Index page Sections should match headline text 6`] = `""`;
+
+exports[`AMP Feature Index page Sections should match headline text 7`] = `""`;
+
+exports[`AMP Feature Index page Sections should match headline text 8`] = `""`;
+
+exports[`AMP Feature Index page Sections should match headline text 9`] = `""`;
+
+exports[`AMP Feature Index page Sections should match headline text 10`] = `""`;
+
+exports[`AMP Feature Index page Story Promo Headline should match text 1`] = `"CAN 2019 : le Sénégal qualifié pour les huitièmes de finale"`;
+
+exports[`AMP Feature Index page Story Promo Image should match image 1`] = `
+<amp-img
+  alt="CAN 2019 : le Sénégal en huitième de finale"
+  attribution="Getty Images"
+  height="549"
+  layout="responsive"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 660w"
+  width="976"
+/>
+`;
+
+exports[`AMP Feature Index page Story Promo Link should match text and url 1`] = `
+Object {
+  "text": "CAN 2019 : le Sénégal qualifié pour les huitièmes de finale",
+  "url": "/afrique/sports-48835428",
+}
+`;
+
+exports[`AMP Feature Index page Story Promo Timestamp should match text and date 1`] = `
+Object {
+  "date": "2019-07-02",
+  "text": "2 juillet 2019",
+}
+`;

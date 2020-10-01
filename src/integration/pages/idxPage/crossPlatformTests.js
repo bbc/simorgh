@@ -1,12 +1,7 @@
-import {
-  runCommonCrossPlatformTests,
-  runMainHeadingTests,
-  runSectionTests,
-} from '../../common';
+import { runCommonCrossPlatformTests, runSectionTests } from '../../common';
 
 export default service => {
   runCommonCrossPlatformTests(service);
-  runMainHeadingTests();
   runSectionTests();
 
   describe('Index Alsos', () => {
