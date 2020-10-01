@@ -4,6 +4,7 @@ import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
 import testsForCanonicalOnly from './testsForCanonicalOnly';
 import crossPlatformTests from './tests';
 import visitPage from '../../../support/helpers/visitPage';
+import { overrideRendererOnTest } from '../../../support/helpers/onDemandRadioTv';
 
 const pageType = 'onDemandTV';
 Object.keys(config)
@@ -13,9 +14,12 @@ Object.keys(config)
     const paths = getPaths(serviceId, pageType);
     paths.forEach(currentPath => {
       describe(`${pageType} - ${currentPath}`, () => {
-        before(() => {
+        beforeEach(() => {
           Cypress.env('currentPath', currentPath);
-          visitPage(currentPath, pageType);
+          const newPath = `${Cypress.env(
+            'currentPath',
+          )}${overrideRendererOnTest()}`;
+          visitPage(newPath, pageType);
         });
         crossPlatformTests({
           service,
@@ -33,7 +37,7 @@ Object.keys(config)
       .map(path => `${path}.amp`)
       .forEach(currentPath => {
         describe(`${pageType} - ${currentPath}`, () => {
-          before(() => {
+          beforeEach(() => {
             Cypress.env('currentPath', currentPath);
             visitPage(currentPath, pageType);
           });

@@ -17,6 +17,7 @@ const pageTypeUrls = async (
   variant,
   assetUri,
   pageData,
+  env,
 ) => {
   switch (assetType) {
     case STORY_PAGE:
@@ -40,10 +41,7 @@ const pageTypeUrls = async (
       return [
         {
           name: 'mostWatched',
-          path: getMostWatchedEndpoint({ service, variant }).replace(
-            '.json',
-            '',
-          ),
+          path: getMostWatchedEndpoint({ service, variant, env }),
         },
       ];
     default:
@@ -64,7 +62,7 @@ const fetchUrl = ({ name, path }) =>
     .then(response => validateResponse(response, name))
     .catch(noop);
 
-const getAdditionalPageData = async (pageData, service, variant) => {
+const getAdditionalPageData = async ({ pageData, service, variant, env }) => {
   const assetType = getAssetType(pageData);
   const assetUri = getAssetUri(pageData);
 
@@ -74,6 +72,7 @@ const getAdditionalPageData = async (pageData, service, variant) => {
     variant,
     assetUri,
     pageData,
+    env,
   );
 
   if (urlsToFetch) {
