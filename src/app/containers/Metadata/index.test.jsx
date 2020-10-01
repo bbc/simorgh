@@ -4,7 +4,6 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MetadataContainer from './index';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 import {
   articleDataNews,
@@ -31,12 +30,6 @@ const getArticleMetadataProps = data => ({
 const newsArticleMetadataProps = getArticleMetadataProps(articleDataNews);
 const persianArticleMetadataProps = getArticleMetadataProps(articleDataPersian);
 
-const defaultToggles = {
-  apple_itunes_app: {
-    enabled: true,
-  },
-};
-
 const MetadataWithContext = ({
   /* eslint-disable react/prop-types */
   service,
@@ -53,34 +46,31 @@ const MetadataWithContext = ({
   imageAltText,
   aboutTags,
   mentionsTags,
-  toggles = defaultToggles,
   hasAppleItunesAppBanner,
   /* eslint-enable react/prop-types */
 }) => (
   <ServiceContextProvider service={service} pageLang={lang}>
-    <ToggleContextProvider toggles={toggles}>
-      <RequestContextProvider
-        bbcOrigin={bbcOrigin}
-        id={id}
-        isAmp={platform === 'amp'}
-        pageType={pageType}
-        pathname={pathname}
-        service={service}
-        statusCode={200}
-      >
-        <MetadataContainer
-          title={title}
-          lang={lang}
-          description={description}
-          openGraphType={openGraphType}
-          aboutTags={aboutTags}
-          mentionsTags={mentionsTags}
-          image={image}
-          imageAltText={imageAltText}
-          hasAppleItunesAppBanner={hasAppleItunesAppBanner}
-        />
-      </RequestContextProvider>
-    </ToggleContextProvider>
+    <RequestContextProvider
+      bbcOrigin={bbcOrigin}
+      id={id}
+      isAmp={platform === 'amp'}
+      pageType={pageType}
+      pathname={pathname}
+      service={service}
+      statusCode={200}
+    >
+      <MetadataContainer
+        title={title}
+        lang={lang}
+        description={description}
+        openGraphType={openGraphType}
+        aboutTags={aboutTags}
+        mentionsTags={mentionsTags}
+        image={image}
+        imageAltText={imageAltText}
+        hasAppleItunesAppBanner={hasAppleItunesAppBanner}
+      />
+    </RequestContextProvider>
   </ServiceContextProvider>
 );
 
@@ -724,18 +714,9 @@ shouldMatchSnapshot(
 );
 
 describe('apple-itunes-app meta tag', () => {
-  const getToggles = (enabled = true) => {
-    return {
-      apple_itunes_app: {
-        enabled,
-      },
-    };
-  };
-
   const CanonicalCPSAssetInternationalOrigin = ({
     /* eslint-disable react/prop-types */
     service,
-    toggles,
     platform,
     hasAppleItunesAppBanner,
     /* eslint-disable react/prop-types */
@@ -748,7 +729,6 @@ describe('apple-itunes-app meta tag', () => {
       pageType="STY"
       pathname={`/${service}/asset-12345678`}
       {...newsArticleMetadataProps}
-      toggles={toggles}
       hasAppleItunesAppBanner={hasAppleItunesAppBanner}
     />
   );
@@ -764,7 +744,6 @@ describe('apple-itunes-app meta tag', () => {
       render(
         <CanonicalCPSAssetInternationalOrigin
           service={service}
-          toggles={getToggles(true)}
           platform="canonical"
           hasAppleItunesAppBanner
         />,
@@ -785,25 +764,16 @@ describe('apple-itunes-app meta tag', () => {
   );
 
   it.each`
-    service     | reason                                              | platform       | appleItunesAppToggleEnabled | hasAppleItunesAppBanner
-    ${'arabic'} | ${'platform is AMP'}                                | ${'amp'}       | ${true}                     | ${true}
-    ${'arabic'} | ${'apple_itunes_app feature toggle is not enabled'} | ${'canonical'} | ${false}                    | ${true}
-    ${'mundo'}  | ${'hasAppleItunesAppBanner is false'}               | ${'canonical'} | ${true}                     | ${false}
-    ${'pidgin'} | ${'service does not have iTunesAppId configured'}   | ${'canonical'} | ${true}                     | ${true}
+    service     | reason                                            | platform       | hasAppleItunesAppBanner
+    ${'arabic'} | ${'platform is AMP'}                              | ${'amp'}       | ${true}
+    ${'mundo'}  | ${'hasAppleItunesAppBanner is false'}             | ${'canonical'} | ${false}
+    ${'pidgin'} | ${'service does not have iTunesAppId configured'} | ${'canonical'} | ${true}
   `(
     `should not be rendered for $service because $reason`,
-    ({
-      service,
-      platform,
-      appleItunesAppToggleEnabled,
-      hasAppleItunesAppBanner,
-    }) => {
-      const toggles = getToggles(appleItunesAppToggleEnabled);
-
+    ({ service, platform, hasAppleItunesAppBanner }) => {
       render(
         <CanonicalCPSAssetInternationalOrigin
           service={service}
-          toggles={toggles}
           platform={platform}
           hasAppleItunesAppBanner={hasAppleItunesAppBanner}
         />,
