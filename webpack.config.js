@@ -37,6 +37,8 @@ module.exports = (shell = {}) => {
     resolve: {
       extensions: ['.js', '.jsx'], // resolves `import '../Foo'` to `../Foo/index.jsx`
       alias: {
+        react: 'preact-compat',
+        'react-dom': 'preact-compat',
         ...webpackDirAlias,
         /*
            This is needed to avoid multiple versions of isarray in multiple chunks.

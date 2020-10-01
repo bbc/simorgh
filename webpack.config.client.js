@@ -83,7 +83,7 @@ module.exports = ({
           framework: {
             name: 'framework',
             chunks: 'all',
-            test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+            test: /[\\/]node_modules[\\/](preact|preact-compat)[\\/]/,
             priority: 40,
             enforce: true,
           },
