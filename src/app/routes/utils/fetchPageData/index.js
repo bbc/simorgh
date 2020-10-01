@@ -38,7 +38,7 @@ export const getUrl = pathname => {
  * @param {...string} loggerArgs Additional arguments for richer logging.
  */
 const fetchPageData = async ({ path, ...loggerArgs }) => {
-  const url = getUrl(path);
+  const url = path.startsWith('http') ? path : getUrl(path);
 
   logger.info(DATA_REQUEST_RECEIVED, {
     data: url,

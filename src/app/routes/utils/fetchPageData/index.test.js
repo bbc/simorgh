@@ -5,6 +5,8 @@ import { DATA_FETCH_ERROR, DATA_REQUEST_RECEIVED } from '#lib/logger.const';
 
 const expectedBaseUrl = 'http://localhost';
 const requestedPathname = '/path/to/asset';
+const fullTestPath = 'https://test.bbc.com/hausa/mostwatched.json';
+const fullLivePath = 'https://www.bbc.com/hausa/mostwatched.json';
 const expectedUrl = `${expectedBaseUrl}${requestedPathname}.json`;
 const pageType = 'Fetch Page Data';
 const requestOrigin = 'Jest Test';
@@ -57,10 +59,22 @@ describe('fetchPageData', () => {
       );
     });
 
-    it('should call fetch with correct url', async () => {
+    it('should call fetch with the correct url when passed the pathname', async () => {
       await fetchPageData({ path: requestedPathname, pageType });
 
       expect(fetch).toHaveBeenCalledWith(expectedUrl);
+    });
+
+    it('should call fetch with the correct url when passed the full test path', async () => {
+      await fetchPageData({ path: fullTestPath, pageType });
+
+      expect(fetch).toHaveBeenCalledWith(fullTestPath);
+    });
+
+    it('should call fetch with the correct url when passed the full live path', async () => {
+      await fetchPageData({ path: fullLivePath, pageType });
+
+      expect(fetch).toHaveBeenCalledWith(fullLivePath);
     });
 
     it('should call fetch on amp pages without .amp in pathname', async () => {
