@@ -35,7 +35,7 @@ module.exports = ({
           './src/poly',
           './src/client',
         ]
-      : ['./src/client'],
+      : ['./src/poly', './src/client'],
     devServer: {
       host: 'localhost',
       port: webpackDevServerPort,
