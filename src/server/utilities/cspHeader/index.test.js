@@ -6,7 +6,6 @@ import injectCspHeader, {
   generateFrameSrc,
   generateImgSrc,
   generateScriptSrc,
-  generateScriptSrcElem,
   generateStyleSrc,
   generateMediaSrc,
   generateWorkerSrc,
@@ -105,7 +104,6 @@ describe('cspHeader', () => {
         "'self'",
         "'unsafe-inline'",
       ],
-      scriptSrcElemExpectation: [''],
       styleSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
       mediaSrcExpectation: ['https://news.files.bbci.co.uk'],
       workerSrcExpectation: ['blob:'],
@@ -236,10 +234,6 @@ describe('cspHeader', () => {
         "'self'",
         "'unsafe-inline'",
       ],
-      scriptSrcElemExpectation: [
-        'https://pixel.adsafeprotected.com',
-        'https://static.adsafeprotected.com',
-      ],
       styleSrcExpectation: [
         'https://news.files.bbci.co.uk',
         'https://platform.twitter.com',
@@ -344,7 +338,6 @@ describe('cspHeader', () => {
         "'self'",
         "'unsafe-inline'",
       ],
-      scriptSrcElemExpectation: [''],
       styleSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
       mediaSrcExpectation: [
         'https://news.files.bbci.co.uk',
@@ -495,10 +488,6 @@ describe('cspHeader', () => {
         "'self'",
         "'unsafe-inline'",
       ],
-      scriptSrcElemExpectation: [
-        'https://pixel.adsafeprotected.com',
-        'https://static.adsafeprotected.com',
-      ],
       styleSrcExpectation: [
         'https://news.files.bbci.co.uk',
         'https://platform.twitter.com',
@@ -528,7 +517,6 @@ describe('cspHeader', () => {
       frameSrcExpectation,
       imgSrcExpectation,
       scriptSrcExpectation,
-      scriptSrcElemExpectation,
       styleSrcExpectation,
       mediaSrcExpectation,
       workerSrcExpectation,
@@ -569,12 +557,6 @@ describe('cspHeader', () => {
         it(`Then it has this scriptSrc`, () => {
           expect(generateScriptSrc({ isAmp, isLive })).toEqual(
             scriptSrcExpectation,
-          );
-        });
-
-        it(`Then it has this scriptSrcElem`, () => {
-          expect(generateScriptSrcElem({ isAmp, isLive })).toEqual(
-            scriptSrcElemExpectation,
           );
         });
 
@@ -623,7 +605,6 @@ describe('cspHeader', () => {
             `frame-src ${frameSrcExpectation.join(' ')};` +
             `img-src ${imgSrcExpectation.join(' ')};` +
             `script-src ${scriptSrcExpectation.join(' ')};` +
-            `script-src-elem ${scriptSrcElemExpectation.join(' ')};` +
             `style-src ${styleSrcExpectation.join(' ')};` +
             `media-src ${mediaSrcExpectation.join(' ')};` +
             `worker-src ${workerSrcExpectation.join(' ')};` +
