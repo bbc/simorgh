@@ -2,12 +2,10 @@ import config from '../../../support/config/services';
 import getPaths from '../../../support/helpers/getPaths';
 import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
 import testsForCanonicalOnly from './testsForCanonicalOnly';
-import testsForAMPOnly from './testsForAMPOnly';
 import crossPlatformTests from './tests';
 import visitPage from '../../../support/helpers/visitPage';
-import { overrideRendererOnTest } from '../../../support/helpers/onDemandRadioTv';
 
-const pageType = 'onDemandRadio';
+const pageType = 'mostWatchedPage';
 Object.keys(config)
   .filter(service => serviceHasPageType(service, pageType))
   .forEach(serviceId => {
@@ -17,10 +15,7 @@ Object.keys(config)
       describe(`${pageType} - ${currentPath}`, () => {
         before(() => {
           Cypress.env('currentPath', currentPath);
-
-          const newPath = `${currentPath}${overrideRendererOnTest()}`;
-
-          visitPage(newPath, pageType);
+          visitPage(currentPath, pageType);
         });
         crossPlatformTests({
           service,
@@ -47,11 +42,6 @@ Object.keys(config)
             pageType,
             variant,
             isAmp: true,
-          });
-          testsForAMPOnly({
-            service,
-            pageType,
-            variant,
           });
         });
       });
