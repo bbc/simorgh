@@ -33,7 +33,7 @@ export const getUrl = pathname => {
 };
 
 export default async ({ path, pageType }) => {
-  const url = getUrl(path);
+  const url = path.startsWith('http') ? path : getUrl(path);
 
   logger.info(DATA_REQUEST_RECEIVED, { data: url, pageType, path });
 
