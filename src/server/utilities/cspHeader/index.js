@@ -40,6 +40,10 @@ const advertisingDirectives = {
     'https://*.g.doubleclick.net',
     'https://tpc.googlesyndication.com',
     'https://*.google.com',
+    'https://dt.adsafeprotected.com',
+    'https://dtvc.adsafeprotected.com',
+    'https://fwvc.adsafeprotected.com',
+    'https://pixel.adsafeprotected.com',
   ],
   scriptSrc: [
     'https://ad.crwdcntrl.net',
@@ -60,6 +64,10 @@ const advertisingDirectives = {
     'https://tpc.googlesyndication.com',
     'https://gn-web-assets.api.bbc.com',
     'https://www.googletagservices.com',
+  ],
+  scriptSrcElem: [
+    'https://pixel.adsafeprotected.com',
+    'https://static.adsafeprotected.com',
   ],
   defaultSrc: [
     'https://tpc.googlesyndication.com',
@@ -323,6 +331,10 @@ const directives = {
       "'unsafe-inline'",
     ],
   },
+  scriptSrcElem: {
+    canonicalLive: [...advertisingDirectives.scriptSrcElem],
+    canonicalNonLive: [...advertisingDirectives.scriptSrcElem],
+  },
   styleSrc: {
     ampLive: [
       'https://news.files.bbci.co.uk', // STY include styles
@@ -417,6 +429,11 @@ export const generateScriptSrc = ({ isAmp, isLive }) => {
   return directives.scriptSrc.canonicalLive;
 };
 
+export const generateScriptSrcElem = ({ isAmp, isLive }) => {
+  if (!isLive && !isAmp) return directives.scriptSrcElem.canonicalNonLive;
+  return directives.scriptSrcElem.canonicalLive;
+};
+
 export const generateStyleSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.styleSrc.ampNonLive;
   if (!isLive && !isAmp) return directives.styleSrc.canonicalNonLive;
@@ -443,6 +460,7 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'frame-src': generateFrameSrc({ isAmp, isLive }),
     'img-src': generateImgSrc({ isAmp, isLive }),
     'script-src': generateScriptSrc({ isAmp, isLive }),
+    'script-src-elem': generateScriptSrcElem({ isAmp, isLive }),
     'style-src': generateStyleSrc({ isAmp, isLive }),
     'media-src': generateMediaSrc({ isAmp, isLive }),
     'worker-src': generateWorkerSrc({ isAmp }),
