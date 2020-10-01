@@ -10,6 +10,9 @@ import runMediaPlayerEmbedTests from './mediaPlayerEmbed';
 import runPerformanceTests from './performance';
 import runRadioScheduleTests from './radioSchedule';
 import runCrossPlatformSEOTests from './SEO';
+import runSeoAmpTests from './SEO.amp';
+import runTimestampTests from './timestamp';
+import runImageTests from './image';
 import runAppleItunesAppBannerTests from './appleItunesAppBanner';
 import runStoryPromoTests from './storyPromo';
 import runSectionTests from './sections';
@@ -20,6 +23,7 @@ const runCommonCrossPlatformTests = service => {
   runFooterTests();
   runPerformanceTests();
   runCrossPlatformSEOTests();
+  runMainHeadingTests();
 };
 
 export {
@@ -36,6 +40,9 @@ export {
   runPerformanceTests,
   runRadioScheduleTests,
   runCrossPlatformSEOTests,
+  runSeoAmpTests,
+  runTimestampTests,
+  runImageTests,
   runAppleItunesAppBannerTests,
   runStoryPromoTests,
   runSectionTests,
