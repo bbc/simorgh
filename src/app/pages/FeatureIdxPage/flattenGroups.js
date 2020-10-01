@@ -1,25 +1,26 @@
 export default groups => {
   const numberOfGroups = groups.length;
-
   if (numberOfGroups < 2) {
     return groups;
   }
-
   const flattenedGroups = [];
-
   // eslint-disable-next-line no-plusplus
-  for (let i = numberOfGroups - 1; i > 0; i--) {
+  for (let i = numberOfGroups - 1; i >= 0; i--) {
     const group = groups[i];
-
-    if (group.strapline) {
+    if (group.strapline || i === 0) {
       flattenedGroups.push(group);
     } else {
       const previousGroup = groups[i - 1];
-      previousGroup.items = [...previousGroup.items, ...group.items];
+      const flattenItems = [...previousGroup.items, ...group.items];
+      const dedupedArray = flattenItems.reduce((itemArray, currentItem) => {
+        const itemFound = itemArray.find(item => item.id === currentItem.id);
+        if (!itemFound) {
+          return itemArray.concat([currentItem]);
+        }
+        return itemArray;
+      }, []);
+      previousGroup.items = dedupedArray;
     }
   }
-
-  flattenedGroups.push(groups[0]);
-
   return flattenedGroups.reverse();
 };

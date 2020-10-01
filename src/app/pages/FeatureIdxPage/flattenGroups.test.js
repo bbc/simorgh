@@ -32,12 +32,15 @@ describe('flattenGroups', () => {
 
   it('should move items from multiple groups without a strapline into groups with a strapline', () => {
     const groups = [
+      { items: [232123, 211262, 1, 2, 3] },
+      { items: [239123, 210062, 1, 2, 3, 4] },
       { strapline: { name: 'blah' }, items: [123, 122] },
       { items: [2323, 212] },
       { strapline: { name: 'blahasasa' }, items: [1723, 1228] },
       { items: [23223, 2121] },
     ];
     expect(flattenGroups(groups)).toStrictEqual([
+      { items: [232123, 211262, 239123, 210062, 1, 2, 3, 4] },
       { strapline: { name: 'blah' }, items: [123, 122, 2323, 212] },
       { strapline: { name: 'blahasasa' }, items: [1723, 1228, 23223, 2121] },
     ]);
