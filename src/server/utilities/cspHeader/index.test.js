@@ -6,6 +6,7 @@ import injectCspHeader, {
   generateFrameSrc,
   generateImgSrc,
   generateScriptSrc,
+  generateScriptSrcElem,
   generateStyleSrc,
   generateMediaSrc,
   generateWorkerSrc,
@@ -89,6 +90,10 @@ describe('cspHeader', () => {
         'https://*.g.doubleclick.net',
         'https://tpc.googlesyndication.com',
         'https://*.google.com',
+        'https://dt.adsafeprotected.com',
+        'https://dtvc.adsafeprotected.com',
+        'https://fwvc.adsafeprotected.com',
+        'https://pixel.adsafeprotected.com',
         'https://*.googleusercontent.com',
         "data: 'self'",
       ],
@@ -100,6 +105,7 @@ describe('cspHeader', () => {
         "'self'",
         "'unsafe-inline'",
       ],
+      scriptSrcElemExpectation: [''],
       styleSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
       mediaSrcExpectation: ['https://news.files.bbci.co.uk'],
       workerSrcExpectation: ['blob:'],
@@ -187,6 +193,10 @@ describe('cspHeader', () => {
         'https://*.g.doubleclick.net',
         'https://tpc.googlesyndication.com',
         'https://*.google.com',
+        'https://dt.adsafeprotected.com',
+        'https://dtvc.adsafeprotected.com',
+        'https://fwvc.adsafeprotected.com',
+        'https://pixel.adsafeprotected.com',
         'https://*.googleusercontent.com',
         "data: 'self'",
       ],
@@ -225,6 +235,10 @@ describe('cspHeader', () => {
         'https://www.googletagservices.com',
         "'self'",
         "'unsafe-inline'",
+      ],
+      scriptSrcElemExpectation: [
+        'https://pixel.adsafeprotected.com',
+        'https://static.adsafeprotected.com',
       ],
       styleSrcExpectation: [
         'https://news.files.bbci.co.uk',
@@ -314,6 +328,10 @@ describe('cspHeader', () => {
         'https://*.g.doubleclick.net',
         'https://tpc.googlesyndication.com',
         'https://*.google.com',
+        'https://dt.adsafeprotected.com',
+        'https://dtvc.adsafeprotected.com',
+        'https://fwvc.adsafeprotected.com',
+        'https://pixel.adsafeprotected.com',
         'https://*.googleusercontent.com',
         "data: 'self'",
       ],
@@ -326,6 +344,7 @@ describe('cspHeader', () => {
         "'self'",
         "'unsafe-inline'",
       ],
+      scriptSrcElemExpectation: [''],
       styleSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
       mediaSrcExpectation: [
         'https://news.files.bbci.co.uk',
@@ -429,6 +448,10 @@ describe('cspHeader', () => {
         'https://*.g.doubleclick.net',
         'https://tpc.googlesyndication.com',
         'https://*.google.com',
+        'https://dt.adsafeprotected.com',
+        'https://dtvc.adsafeprotected.com',
+        'https://fwvc.adsafeprotected.com',
+        'https://pixel.adsafeprotected.com',
         'https://*.googleusercontent.com',
         "data: 'self'",
       ],
@@ -472,6 +495,10 @@ describe('cspHeader', () => {
         "'self'",
         "'unsafe-inline'",
       ],
+      scriptSrcElemExpectation: [
+        'https://pixel.adsafeprotected.com',
+        'https://static.adsafeprotected.com',
+      ],
       styleSrcExpectation: [
         'https://news.files.bbci.co.uk',
         'https://platform.twitter.com',
@@ -501,6 +528,7 @@ describe('cspHeader', () => {
       frameSrcExpectation,
       imgSrcExpectation,
       scriptSrcExpectation,
+      scriptSrcElemExpectation,
       styleSrcExpectation,
       mediaSrcExpectation,
       workerSrcExpectation,
@@ -541,6 +569,12 @@ describe('cspHeader', () => {
         it(`Then it has this scriptSrc`, () => {
           expect(generateScriptSrc({ isAmp, isLive })).toEqual(
             scriptSrcExpectation,
+          );
+        });
+
+        it(`Then it has this scriptSrcElem`, () => {
+          expect(generateScriptSrcElem({ isAmp, isLive })).toEqual(
+            scriptSrcElemExpectation,
           );
         });
 
@@ -589,6 +623,7 @@ describe('cspHeader', () => {
             `frame-src ${frameSrcExpectation.join(' ')};` +
             `img-src ${imgSrcExpectation.join(' ')};` +
             `script-src ${scriptSrcExpectation.join(' ')};` +
+            `script-src-elem ${scriptSrcElemExpectation.join(' ')};` +
             `style-src ${styleSrcExpectation.join(' ')};` +
             `media-src ${mediaSrcExpectation.join(' ')};` +
             `worker-src ${workerSrcExpectation.join(' ')};` +
