@@ -4,6 +4,7 @@ import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
 import testsForCanonicalOnly from './testsForCanonicalOnly';
 import crossPlatformTests from './tests';
 import visitPage from '../../../support/helpers/visitPage';
+import { overrideRendererOnTest } from '../../../support/helpers/onDemandRadioTv';
 
 const pageType = 'onDemandTV';
 Object.keys(config)
@@ -15,10 +16,9 @@ Object.keys(config)
       describe(`${pageType} - ${currentPath}`, () => {
         beforeEach(() => {
           Cypress.env('currentPath', currentPath);
-          const newPath =
-            Cypress.env('APP_ENV') === 'test'
-              ? `${currentPath}?renderer_env=live`
-              : currentPath;
+          const newPath = `${Cypress.env(
+            'currentPath',
+          )}${overrideRendererOnTest()}`;
           visitPage(newPath, pageType);
         });
         crossPlatformTests({

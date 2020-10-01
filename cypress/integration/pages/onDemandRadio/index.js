@@ -5,6 +5,7 @@ import testsForCanonicalOnly from './testsForCanonicalOnly';
 import testsForAMPOnly from './testsForAMPOnly';
 import crossPlatformTests from './tests';
 import visitPage from '../../../support/helpers/visitPage';
+import { overrideRendererOnTest } from '../../../support/helpers/onDemandRadioTv';
 
 const pageType = 'onDemandRadio';
 Object.keys(config)
@@ -17,10 +18,7 @@ Object.keys(config)
         before(() => {
           Cypress.env('currentPath', currentPath);
 
-          const newPath =
-            Cypress.env('APP_ENV') === 'test'
-              ? `${currentPath}?renderer_env=live`
-              : currentPath;
+          const newPath = `${currentPath}${overrideRendererOnTest()}`;
 
           visitPage(newPath, pageType);
         });
