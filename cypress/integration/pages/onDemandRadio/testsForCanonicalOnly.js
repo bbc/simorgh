@@ -52,6 +52,7 @@ export default ({ service, pageType, variant }) => {
             if (isRadioScheduleOnPage && isRadioScheduleDataComplete) {
               cy.log('Schedule has enough data');
               cy.get('[data-e2e=radio-schedule]').should('exist');
+              // cy.get('[data-e2e=live]').should('exist');
             } else {
               cy.get('[data-e2e=radio-schedule]').should('not.exist');
             }
