@@ -12,14 +12,13 @@ export default groups => {
     } else {
       const previousGroup = groups[i - 1];
       const flattenItems = [...previousGroup.items, ...group.items];
-      const dedupedArray = flattenItems.reduce((itemArray, currentItem) => {
+      previousGroup.items = flattenItems.reduce((itemArray, currentItem) => {
         const itemFound = itemArray.find(item => item.id === currentItem.id);
         if (!itemFound) {
           return itemArray.concat([currentItem]);
         }
         return itemArray;
       }, []);
-      previousGroup.items = dedupedArray;
     }
   }
   return flattenedGroups.reverse();
