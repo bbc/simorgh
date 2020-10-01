@@ -86,8 +86,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/afaanoromoo/bbc_afaanoromoo_radio/programmes/w13xttnw?renderer_env=live', // Brand
-              '/afaanoromoo/bbc_afaanoromoo_radio/w3ct0lb4?renderer_env=live', // Episode
+              '/afaanoromoo/bbc_afaanoromoo_radio/programmes/w13xttnw', // Brand
+              '/afaanoromoo/bbc_afaanoromoo_radio/w3ct0lb4', // Episode
             ],
             enabled: true,
           },
@@ -312,8 +312,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/afrique/bbc_afrique_radio/programmes/p030s6g6?renderer_env=live', // Brand
-              '/afrique/bbc_afrique_radio/w172xlmx3r0xtz8?renderer_env=live', // Episode
+              '/afrique/bbc_afrique_radio/programmes/p030s6g6', // Brand
+              '/afrique/bbc_afrique_radio/w172xlmx3r0xtz8', // Episode
             ],
             enabled: true,
           },
@@ -567,8 +567,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/amharic/bbc_amharic_radio/programmes/w13xttnt?renderer_env=live', // Brand
-              '/amharic/bbc_amharic_radio/w3ct07cs?renderer_env=live', // Episode
+              '/amharic/bbc_amharic_radio/programmes/w13xttnt', // Brand
+              '/amharic/bbc_amharic_radio/w3ct07cs', // Episode
             ],
             enabled: true,
           },
@@ -794,8 +794,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/arabic/bbc_arabic_radio/programmes/p030vh25?renderer_env=live', // Brand
-              '/arabic/bbc_arabic_radio/w172xdgdkpsv2hy?renderer_env=live', // Episode
+              '/arabic/bbc_arabic_radio/programmes/p030vh25', // Brand
+              '/arabic/bbc_arabic_radio/w172xdgdkpsv2hy', // Episode
             ],
             enabled: true,
           },
@@ -1218,8 +1218,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/bengali/bbc_bangla_radio/programmes/p030vjwm?renderer_env=live', // Brand
-              '/bengali/bbc_bangla_radio/w172xdw7kp2rsmn?renderer_env=live', // Episode
+              '/bengali/bbc_bangla_radio/programmes/p030vjwm', // Brand
+              '/bengali/bbc_bangla_radio/w172xdw7kp2rsmn', // Episode
             ],
             enabled: true,
           },
@@ -1449,8 +1449,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/burmese/bbc_burmese_radio/programmes/p0340rnm?renderer_env=live', // Brand
-              '/burmese/bbc_burmese_radio/w3ct0b50?renderer_env=live', // Episode
+              '/burmese/bbc_burmese_radio/programmes/p0340rnm', // Brand
+              '/burmese/bbc_burmese_radio/w3ct0b50', // Episode
             ],
             enabled: true,
           },
@@ -2221,8 +2221,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/hausa/bbc_hausa_radio/programmes/p030s4mx?renderer_env=live', // Brand
-              '/hausa/bbc_hausa_radio/w3ct0hw3?renderer_env=live', // Episode
+              '/hausa/bbc_hausa_radio/programmes/p030s4mx', // Brand
+              '/hausa/bbc_hausa_radio/w3ct0hw3', // Episode
             ],
             enabled: true,
           },
@@ -2913,8 +2913,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/indonesia/bbc_indonesian_radio/programmes/w13xtt0s?renderer_env=live', // Brand
-              '/indonesia/bbc_indonesian_radio/w172xh2cb63qxmj?renderer_env=live', // Episode
+              '/indonesia/bbc_indonesian_radio/programmes/w13xtt0s', // Brand
+              '/indonesia/bbc_indonesian_radio/w172xh2cb63qxmj', // Episode
             ],
             enabled: true,
           },
@@ -3332,8 +3332,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/korean/bbc_korean_radio/programmes/w13xttlm?renderer_env=live', // Brand
-              '/korean/bbc_korean_radio/w3ct0kj2?renderer_env=live', // Episode
+              '/korean/bbc_korean_radio/programmes/w13xttlm', // Brand
+              '/korean/bbc_korean_radio/w3ct0kj2', // Episode
             ],
             enabled: true,
           },
@@ -4287,8 +4287,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/nepali/bbc_nepali_radio/programmes/p0340xzt?renderer_env=live', // Brand
-              '/nepali/bbc_nepali_radio/w172xhtrt7ltv35?renderer_env=live', // Episode
+              '/nepali/bbc_nepali_radio/programmes/p0340xzt', // Brand
+              '/nepali/bbc_nepali_radio/w172xhtrt7ltv35', // Episode
             ],
             enabled: true,
           },
@@ -4599,8 +4599,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/pashto/bbc_pashto_radio/programmes/p0340ysc?renderer_env=live', // Brand
-              '/pashto/bbc_pashto_radio/w3ct0mg5?renderer_env=live', // Episode
+              '/pashto/bbc_pashto_radio/programmes/p0340ysc', // Brand
+              '/pashto/bbc_pashto_radio/w3ct0mg5', // Episode
             ],
             enabled: true,
           },
@@ -4904,10 +4904,10 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/persian/bbc_dari_radio/programmes/p0364sj5?renderer_env=live', // Brand Dari
-              '/persian/bbc_persian_radio/programmes/p0340vyw?renderer_env=live', // Brand Persian
-              '/persian/bbc_dari_radio/w3ct0cmz?renderer_env=live', // Episode Dari
-              '/persian/bbc_persian_radio/w172xft8wf4db2l?renderer_env=live', // Episode Persian
+              '/persian/bbc_dari_radio/programmes/p0364sj5', // Brand Dari
+              '/persian/bbc_persian_radio/programmes/p0340vyw', // Brand Persian
+              '/persian/bbc_dari_radio/w3ct0cmz', // Episode Dari
+              '/persian/bbc_persian_radio/w172xft8wf4db2l', // Episode Persian
             ],
             enabled: true,
           },
@@ -6653,8 +6653,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/somali/bbc_somali_radio/programmes/p034117j?renderer_env=live', // Brand
-              '/somali/bbc_somali_radio/w172xjs23w3wdhf?renderer_env=live', // Episode
+              '/somali/bbc_somali_radio/programmes/p034117j', // Brand
+              '/somali/bbc_somali_radio/w172xjs23w3wdhf', // Episode
             ],
             enabled: true,
           },
@@ -6950,8 +6950,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/swahili/bbc_swahili_radio/programmes/p030s7gh?renderer_env=live', // Brand
-              '/swahili/bbc_swahili_radio/w3ct0nxk?renderer_env=live', // Episode
+              '/swahili/bbc_swahili_radio/programmes/p030s7gh', // Brand
+              '/swahili/bbc_swahili_radio/w3ct0nxk', // Episode
             ],
             enabled: true,
           },
@@ -7873,8 +7873,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/tigrinya/bbc_tigrinya_radio/programmes/w13xttny?renderer_env=live', // Brand
-              '/tigrinya/bbc_tigrinya_radio/w3ct0p36?renderer_env=live', // Episode
+              '/tigrinya/bbc_tigrinya_radio/programmes/w13xttny', // Brand
+              '/tigrinya/bbc_tigrinya_radio/w3ct0p36', // Episode
             ],
             enabled: true,
           },
@@ -8955,8 +8955,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/urdu/bbc_urdu_radio/programmes/p03413l5?renderer_env=live', // Brand
-              '/urdu/bbc_urdu_radio/w172xk01rbjw9cl?renderer_env=live', // Episode
+              '/urdu/bbc_urdu_radio/programmes/p03413l5', // Brand
+              '/urdu/bbc_urdu_radio/w172xk01rbjw9cl', // Episode
             ],
             enabled: true,
           },
