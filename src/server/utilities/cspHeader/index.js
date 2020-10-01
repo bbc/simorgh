@@ -431,7 +431,8 @@ export const generateScriptSrc = ({ isAmp, isLive }) => {
 
 export const generateScriptSrcElem = ({ isAmp, isLive }) => {
   if (!isLive && !isAmp) return directives.scriptSrcElem.canonicalNonLive;
-  return directives.scriptSrcElem.canonicalLive;
+  if (isLive && !isAmp) return directives.scriptSrcElem.canonicalLive;
+  return [''];
 };
 
 export const generateStyleSrc = ({ isAmp, isLive }) => {
