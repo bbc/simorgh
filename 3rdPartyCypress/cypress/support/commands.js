@@ -20,7 +20,7 @@ Cypress.Commands.add(
   (path, responseCode, type) => {
     cy.request({
       url: path,
-      failOnStatusCode: true,
+      retryOnStatusCodeFailure: true,
     }).then(({ status, headers }) => {
       expect(status).to.eq(responseCode);
       expect(headers['content-type']).to.include(type);

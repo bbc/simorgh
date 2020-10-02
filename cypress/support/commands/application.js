@@ -46,7 +46,7 @@ Cypress.Commands.add(
 Cypress.Commands.add(
   'testResponseCodeAndTypeRetry',
   (path, responseCode, type, retriesLeft = 2) => {
-    cy.request({ url: path, failOnStatusCode: true }).then(
+    cy.request({ url: path, retryOnStatusCodeFailure: true }).then(
       ({ status, headers }) => {
         expect(status, `Unexpected status code for ${path}`).to.equal(
           responseCode,
