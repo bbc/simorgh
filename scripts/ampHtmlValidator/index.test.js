@@ -115,6 +115,6 @@ describe('amp validator tests', () => {
     </html>`,
     }));
     await runValidator(true);
-    expect(log).toBeCalledTimes(35);
+    expect(log).toBeCalledTimes(41);
   });
 });
