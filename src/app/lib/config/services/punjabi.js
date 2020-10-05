@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `pa-in`,
     service: 'punjabi',
     serviceName: 'Punjabi',
+    languageName: 'Punjabi',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewspunjabi',
     twitterSite: '@bbcnewspunjabi',

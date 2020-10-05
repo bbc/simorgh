@@ -39,36 +39,6 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         });
       }
     });
-
-    if (
-      ['mediaAssetPage', 'photoGalleryPage', 'storyPage'].includes(pageType)
-    ) {
-      describe('Photo Gallery, Story Page and MAP Tests', () => {
-        it('should render a timestamp', () => {
-          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-            if (body.metadata.options.allowDateStamp) {
-              cy.get('time')
-                .eq(0)
-                .should('be.visible')
-                .should('have.attr', 'datetime')
-                .should('not.be.empty');
-            } else {
-              cy.log('Test skipped - allowDateStamp false within metadata');
-            }
-          });
-        });
-        if (['photoGalleryPage', 'storyPage'].includes(pageType)) {
-          it('should render a H1, which displays the headline', () => {
-            cy.request(`${Cypress.env('currentPath')}.json`).then(
-              ({ body }) => {
-                cy.get('h1').should('contain', body.promo.headlines.headline);
-              },
-            );
-          });
-        }
-      });
-    }
-    // End of block (['mediaAssetPage', 'photoGalleryPage', 'storyPage'].includes(pageType))
   });
 };
 

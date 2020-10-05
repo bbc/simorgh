@@ -10,16 +10,6 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   pageType,
 }) =>
   describe(`Amp Tests for ${service} ${pageType}`, () => {
-    describe('AMP Status', () => {
-      it('should return a 200 response', () => {
-        cy.testResponseCodeAndType(
-          `${Cypress.env('currentPath')}.amp`,
-          200,
-          'text/html',
-        );
-      });
-    });
-
     it('should contain an amp-img', () => {
       cy.get('li')
         .should('be.visible')

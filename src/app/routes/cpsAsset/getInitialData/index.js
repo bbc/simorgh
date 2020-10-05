@@ -17,7 +17,7 @@ import addMpuBlock from './addMpuBlock';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
-import processMostWatched from './processMostWatched';
+import processMostWatched from '../../utils/processMostWatched';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
@@ -71,18 +71,23 @@ export default async ({
   toggles,
 }) => {
   try {
+    const env = pathname.includes('renderer_env=live')
+      ? 'live'
+      : process.env.SIMORGH_APP_ENV;
     const { json, status } = await fetchPageData({ path: pathname, pageType });
 
-    const additionalPageData = await getAdditionalPageData(
-      json,
+    const additionalPageData = await getAdditionalPageData({
+      pageData: json,
       service,
       variant,
-    );
+      env,
+    });
     const processedAdditionalData = processMostWatched({
       data: additionalPageData,
       service,
       path: pathname,
       toggles,
+      page: pageType,
     });
 
     return {

@@ -1,8 +1,7 @@
-import { runCommonCrossPlatformTests, runMainHeadingTests } from '../../common';
+import { runCommonCrossPlatformTests } from '../../common';
 
 export default service => {
   runCommonCrossPlatformTests(service);
-  runMainHeadingTests();
 
   describe('Sections', () => {
     const sections = document.querySelectorAll(

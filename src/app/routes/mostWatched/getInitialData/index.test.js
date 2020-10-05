@@ -8,15 +8,17 @@ it('should return essential data for a page to render', async () => {
     path: '/pidgin/media/video',
     service: 'pidgin',
     pageType: 'mostWatched',
+    toggles: {
+      mostPopularMediaPage: { enabled: true, value: '5' },
+    },
   });
 
-  expect(pageData.lastRecordTimeStamp).toEqual('2030-01-01T17:00:00Z');
   expect(pageData.metadata.type).toEqual('mostWatched');
-  expect(pageData.records[0].promo.timestamp).toEqual(1596019170000);
-  expect(pageData.records[0].promo.headlines.shortHeadline).toEqual(
+  expect(pageData.mostWatched[0].timestamp).toEqual(1596019170000);
+  expect(pageData.mostWatched[0].headlines.shortHeadline).toEqual(
     "'I no know say I different for society until pipo begin look me one kain'",
   );
-  expect(pageData.records[0].promo.locators.assetUri).toEqual(
+  expect(pageData.mostWatched[0].locators.assetUri).toEqual(
     '/pidgin/media-53580248',
   );
 });

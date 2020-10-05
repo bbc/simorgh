@@ -2005,7 +2005,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
+<<<<<<< HEAD
                           class="c47"
+=======
+                          class="c51"
+                          data-e2e="story-promo"
+>>>>>>> origin/latest
                         >
                           <div
                             class="c48"
@@ -2035,7 +2040,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
+<<<<<<< HEAD
                           class="c47"
+=======
+                          class="c51"
+                          data-e2e="story-promo"
+>>>>>>> origin/latest
                         >
                           <div
                             class="c48"
@@ -2069,7 +2079,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
+<<<<<<< HEAD
                           class="c47"
+=======
+                          class="c51"
+                          data-e2e="story-promo"
+>>>>>>> origin/latest
                         >
                           <div
                             class="c48"
@@ -2113,7 +2128,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                   <span
                                     class="c18"
                                   >
-                                    Audio, 
+                                    Make you listen, 
                                   </span>
                                   <span>
                                     Akụkọ BBC Igbo na Nkeji
@@ -2177,7 +2192,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
+<<<<<<< HEAD
                           class="c47"
+=======
+                          class="c51"
+                          data-e2e="story-promo"
+>>>>>>> origin/latest
                         >
                           <div
                             class="c56"
@@ -2230,7 +2250,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
+<<<<<<< HEAD
                           class="c47"
+=======
+                          class="c51"
+                          data-e2e="story-promo"
+>>>>>>> origin/latest
                         >
                           <div
                             class="c56"
@@ -2283,7 +2308,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
+<<<<<<< HEAD
                           class="c47"
+=======
+                          class="c51"
+                          data-e2e="story-promo"
+>>>>>>> origin/latest
                         >
                           <div
                             class="c56"
@@ -2336,7 +2366,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
+<<<<<<< HEAD
                           class="c47"
+=======
+                          class="c51"
+                          data-e2e="story-promo"
+>>>>>>> origin/latest
                         >
                           <div
                             class="c56"
@@ -2389,7 +2424,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
+<<<<<<< HEAD
                           class="c47"
+=======
+                          class="c51"
+                          data-e2e="story-promo"
+>>>>>>> origin/latest
                         >
                           <div
                             class="c56"
@@ -2442,7 +2482,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
+<<<<<<< HEAD
                           class="c47"
+=======
+                          class="c51"
+                          data-e2e="story-promo"
+>>>>>>> origin/latest
                         >
                           <div
                             class="c56"
@@ -2495,7 +2540,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
+<<<<<<< HEAD
                           class="c47"
+=======
+                          class="c51"
+                          data-e2e="story-promo"
+>>>>>>> origin/latest
                         >
                           <div
                             class="c56"
@@ -2569,7 +2619,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                   <span
                                     class="c18"
                                   >
-                                    Audio, 
+                                    Make you listen, 
                                   </span>
                                   <span>
                                     A gbabguola Don Wani
@@ -2577,7 +2627,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                   <span
                                     class="c18"
                                   >
-                                    , 0,49
+                                    , Duration 0,49
                                   </span>
                                 </span>
                               </a>
@@ -2596,7 +2646,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
+<<<<<<< HEAD
                           class="c47"
+=======
+                          class="c51"
+                          data-e2e="story-promo"
+>>>>>>> origin/latest
                         >
                           <div
                             class="c56"
@@ -2649,7 +2704,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
+<<<<<<< HEAD
                           class="c47"
+=======
+                          class="c51"
+                          data-e2e="story-promo"
+>>>>>>> origin/latest
                         >
                           <div
                             class="c56"
@@ -3386,7 +3446,7 @@ exports[`Story Page should render correctly when the secondary column data is no
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
+      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","inLanguage":{"@type":"Language","name":"Nigerian Pidgin","alternateName":"pcm"},"author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
     </script>
     <script
       type="application/ld+json"
@@ -7144,7 +7204,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
+      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","inLanguage":{"@type":"Language","name":"Nigerian Pidgin","alternateName":"pcm"},"author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
     </script>
     <script
       type="application/ld+json"
@@ -7759,7 +7819,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
+<<<<<<< HEAD
                               class="c49"
+=======
+                              class="c53"
+                              data-e2e="story-promo"
+>>>>>>> origin/latest
                             >
                               <div
                                 class="c50"
@@ -7789,7 +7854,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
+<<<<<<< HEAD
                               class="c49"
+=======
+                              class="c53"
+                              data-e2e="story-promo"
+>>>>>>> origin/latest
                             >
                               <div
                                 class="c50"
@@ -7819,7 +7889,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
+<<<<<<< HEAD
                               class="c49"
+=======
+                              class="c53"
+                              data-e2e="story-promo"
+>>>>>>> origin/latest
                             >
                               <div
                                 class="c50"
@@ -7891,7 +7966,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
+<<<<<<< HEAD
                               class="c49"
+=======
+                              class="c53"
+                              data-e2e="story-promo"
+>>>>>>> origin/latest
                             >
                               <div
                                 class="c54"
@@ -7944,7 +8024,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
+<<<<<<< HEAD
                               class="c49"
+=======
+                              class="c53"
+                              data-e2e="story-promo"
+>>>>>>> origin/latest
                             >
                               <div
                                 class="c54"
@@ -8024,7 +8109,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                       <span
                                         class="c20"
                                       >
-                                        , 1,07
+                                        , Duration 1,07
                                       </span>
                                     </span>
                                   </a>
@@ -8043,7 +8128,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
+<<<<<<< HEAD
                               class="c49"
+=======
+                              class="c53"
+                              data-e2e="story-promo"
+>>>>>>> origin/latest
                             >
                               <div
                                 class="c54"
@@ -8111,7 +8201,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                       <span
                                         class="c20"
                                       >
-                                        Audio
+                                        Make you listen
                                         , 
                                       </span>
                                       <span>
@@ -8134,7 +8224,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
+<<<<<<< HEAD
                               class="c49"
+=======
+                              class="c53"
+                              data-e2e="story-promo"
+>>>>>>> origin/latest
                             >
                               <div
                                 class="c54"
@@ -8187,7 +8282,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
+<<<<<<< HEAD
                               class="c49"
+=======
+                              class="c53"
+                              data-e2e="story-promo"
+>>>>>>> origin/latest
                             >
                               <div
                                 class="c54"
@@ -8240,7 +8340,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
+<<<<<<< HEAD
                               class="c49"
+=======
+                              class="c53"
+                              data-e2e="story-promo"
+>>>>>>> origin/latest
                             >
                               <div
                                 class="c54"
@@ -8293,7 +8398,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
+<<<<<<< HEAD
                               class="c49"
+=======
+                              class="c53"
+                              data-e2e="story-promo"
+>>>>>>> origin/latest
                             >
                               <div
                                 class="c54"
@@ -8346,7 +8456,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
+<<<<<<< HEAD
                               class="c49"
+=======
+                              class="c53"
+                              data-e2e="story-promo"
+>>>>>>> origin/latest
                             >
                               <div
                                 class="c54"
@@ -8399,7 +8514,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
+<<<<<<< HEAD
                               class="c49"
+=======
+                              class="c53"
+                              data-e2e="story-promo"
+>>>>>>> origin/latest
                             >
                               <div
                                 class="c54"

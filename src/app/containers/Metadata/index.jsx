@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string, node, shape, arrayOf } from 'prop-types';
+import { string, node, shape, arrayOf, bool } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
@@ -11,7 +11,6 @@ import {
   renderAlternateLinks,
   renderAppleItunesApp,
 } from './utils';
-import useToggle from '#hooks/useToggle';
 
 const ENGLISH_SERVICES = ['news'];
 const FACEBOOK_ADMIN_ID = 100004154058350;
@@ -49,6 +48,7 @@ const MetadataContainer = ({
   image,
   imageAltText,
   children,
+  hasAppleItunesAppBanner,
 }) => {
   const {
     isAmp,
@@ -108,8 +108,6 @@ const MetadataContainer = ({
   const metaImage = image || defaultImage;
   const metaImageAltText = imageAltText || defaultImageAltText;
 
-  const { enabled: iTunesAppEnabled } = useToggle('apple_itunes_app');
-
   return (
     <Helmet htmlAttributes={htmlAttributes}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -131,7 +129,7 @@ const MetadataContainer = ({
         iTunesAppId,
         canonicalLink,
         isAmp,
-        iTunesAppEnabled,
+        hasAppleItunesAppBanner,
       })}
       <meta name="apple-mobile-web-app-title" content={brandName} />
       <meta name="application-name" content={brandName} />
@@ -196,6 +194,7 @@ MetadataContainer.propTypes = {
   image: string,
   imageAltText: string,
   children: node,
+  hasAppleItunesAppBanner: bool,
 };
 
 MetadataContainer.defaultProps = {
@@ -205,6 +204,7 @@ MetadataContainer.defaultProps = {
   image: null,
   imageAltText: null,
   children: null,
+  hasAppleItunesAppBanner: false,
 };
 
 export default MetadataContainer;

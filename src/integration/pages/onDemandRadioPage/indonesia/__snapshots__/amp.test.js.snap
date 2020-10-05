@@ -256,6 +256,8 @@ exports[`AMP On Demand Radio Page I can see the episode title 1`] = `"27 April 2
 
 exports[`AMP On Demand Radio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b4828.png"`;
 
+exports[`AMP On Demand Radio Page Main heading should match text 1`] = `"Dunia Pagi Ini, 27 April 2020"`;
+
 exports[`AMP On Demand Radio Page Media Player a11y assistive technology can read the media player title 1`] = `"Pemutar Audio"`;
 
 exports[`AMP On Demand Radio Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/indonesia/bbc_indonesian_radio/w172xh267fpn19l/id/amp?morph_env=live"`;
@@ -353,6 +355,11 @@ Object {
         "height": 576,
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png",
         "width": 1024,
+      },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "id",
+        "name": "Indonesian",
       },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/indonesia/bbc_indonesian_radio/w172xh267fpn19l",

@@ -73,9 +73,19 @@ Object {
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC Scotland"`;
 
-exports[`Canonical Articles I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg"`;
+exports[`Canonical Articles Image Caption should match text 1`] = `"Image caption, This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption."`;
 
-exports[`Canonical Articles I can see an image with a caption 2`] = `"Image caption, This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption."`;
+exports[`Canonical Articles Image should match snapshot 1`] = `
+<img
+  alt="Map of France showing Paris and Cognac"
+  class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 624w"
+  width="624"
+/>
+`;
+
+exports[`Canonical Articles Main heading should match text 1`] = `"This is the headline of this test article"`;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -184,6 +194,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "en-GB",
+        "name": "English",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/scotland/articles/czwj5l0n210o",
         "@type": "WebPage",
@@ -252,3 +267,10 @@ exports[`Canonical Articles SEO Twitter image src 1`] = `"https://news.files.bbc
 exports[`Canonical Articles SEO Twitter site 1`] = `"@BBCScotland"`;
 
 exports[`Canonical Articles SEO Twitter title 1`] = `"This is the SEO headline of this test article - BBC Scotland"`;
+
+exports[`Canonical Articles Timestamp should match text and date 1`] = `
+Object {
+  "date": "2019-09-13",
+  "text": "13 September 2019",
+}
+`;

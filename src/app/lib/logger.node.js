@@ -3,7 +3,16 @@ const fs = require('fs');
 const path = require('path');
 const { createLogger, format, transports } = require('winston');
 
-const { combine, label, printf, simple, timestamp } = format;
+const {
+  combine,
+  printf,
+  simple,
+  timestamp,
+  metadata,
+  json,
+  colorize,
+  prettyPrint,
+} = format;
 
 const LOG_LEVEL = process.env.LOG_LEVEL || 'info';
 const LOG_FILE = 'app.log';
@@ -17,29 +26,31 @@ const createLogDirectory = (dirName = 'log') => {
 
 const logLocation = path.join(LOG_DIR, LOG_FILE);
 
-// prettier-ignore
-const fileTransport = new (transports.File)({
-  filename: logLocation,
-  handleExceptions: true,
-  humanReadableUnhandledException: true,
-  json: true,
-  level: LOG_LEVEL,
-  maxFiles: 5,
-  maxsize: 104857600, // 100MB
-  tailable: true
+const consoleLogFormat = printf(data => {
+  const logMessage = { ...data.metadata, ...data.message };
+
+  return `${data.timestamp} ${data.level} ${JSON.stringify(logMessage)}`;
 });
 
-// prettier-ignore
-const consoleTransport = new (transports.Console)({
-  handleExceptions: true,
-  humanReadableUnhandledException: true,
-  level: LOG_LEVEL,
-  timestamp: true,
-});
-
-const customFormatting = printf(
-  data => `${data.timestamp} ${data.level} [${data.label}] ${data.message}`,
-);
+const loggerOptions = {
+  file: {
+    filename: logLocation,
+    handleExceptions: true,
+    humanReadableUnhandledException: true,
+    level: LOG_LEVEL,
+    maxFiles: 5,
+    maxsize: 104857600, // 100MB
+    tailable: true,
+    format: combine(json()),
+  },
+  console: {
+    handleExceptions: true,
+    humanReadableUnhandledException: true,
+    level: LOG_LEVEL,
+    timestamp: true,
+    format: combine(prettyPrint(), colorize(), consoleLogFormat),
+  },
+};
 
 // e.g. outputs 'Article/index.jsx'
 const folderAndFilename = name => {
@@ -47,62 +58,50 @@ const folderAndFilename = name => {
   return fileparts.splice(-2).join(path.sep);
 };
 
-const logToFile = callingFile => {
-  return createLogger({
-    format: combine(
-      label({ label: folderAndFilename(callingFile) }),
-      simple(),
-      timestamp({ format: 'YYYY-MM-DD HH:mm:ss.SSS' }),
-      customFormatting,
-    ),
-    transports: [fileTransport, consoleTransport],
-  });
-};
-
-const debugLogger = createLogger({
-  format: combine(
+const fileLogger = createLogger({
+  format: format.combine(
     simple(),
     timestamp({ format: 'YYYY-MM-DD HH:mm:ss.SSS' }),
-    customFormatting,
+
+    // creates a metadata object, that uses our custom formatting
+    metadata({
+      fillExcept: ['timestamp', 'level', 'message'],
+    }),
   ),
-  transports: [fileTransport, consoleTransport],
+  transports: [
+    new transports.File(loggerOptions.file),
+
+    // console output is sent to syslog - this can consume a lot of disk space in instances that
+    // handle a lot of traffic, so we only enable console output in some environments
+    ...(process.env.LOG_TO_CONSOLE === 'true'
+      ? [new transports.Console(loggerOptions.console)]
+      : []),
+  ],
 });
-
-const logEventMessage = ({ file, event, message }) => {
-  const logObject = {
-    event,
-    message,
-  };
-
-  const logFile = file ? `[${file}] ` : '';
-
-  return `${logFile}${JSON.stringify(logObject, null, 2)}`;
-};
 
 class Logger {
   constructor(callingFile) {
     createLogDirectory(LOG_DIR);
     const file = folderAndFilename(callingFile);
-    const fileLogger = logToFile(file);
 
     this.error = (event, message) => {
-      fileLogger.error(logEventMessage({ event, message }));
+      fileLogger.error({ file, event, message });
     };
 
     this.warn = (event, message) => {
-      fileLogger.warn(logEventMessage({ event, message }));
+      fileLogger.warn({ file, event, message });
     };
 
     this.info = (event, message) => {
-      fileLogger.info(logEventMessage({ event, message }));
+      fileLogger.info({ file, event, message });
     };
 
     this.debug = (event, message) => {
-      debugLogger.debug(logEventMessage({ file, event, message }));
+      fileLogger.debug({ file, event, message });
     };
 
     this.verbose = (event, message) => {
-      fileLogger.log(logEventMessage({ event, message }));
+      fileLogger.log({ file, event, message });
     };
   }
 }

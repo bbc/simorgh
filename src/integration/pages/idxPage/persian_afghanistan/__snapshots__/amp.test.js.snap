@@ -400,6 +400,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "fa",
+        "name": "Persian",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/persian/afghanistan",
         "@type": "WebPage",
@@ -461,7 +466,7 @@ exports[`AMP persian/afghanistan IDX page Sections should match headline text 1`
 
 exports[`AMP persian/afghanistan IDX page Sections should match headline text 2`] = `"تحلیل و گزارش"`;
 
-exports[`AMP persian/afghanistan IDX page Story Promo Headline should match text 1`] = `"ویدیو, ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان, 2,32"`;
+exports[`AMP persian/afghanistan IDX page Story Promo Headline should match text 1`] = `"ویدیو, ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان, مدت 2,32"`;
 
 exports[`AMP persian/afghanistan IDX page Story Promo Image should match image 1`] = `
 <amp-img

@@ -1,6 +1,5 @@
 import csp from 'helmet-csp';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
-import routes from '#app/routes';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 
 /*
@@ -40,6 +39,10 @@ const advertisingDirectives = {
     'https://*.g.doubleclick.net',
     'https://tpc.googlesyndication.com',
     'https://*.google.com',
+    'https://dt.adsafeprotected.com',
+    'https://dtvc.adsafeprotected.com',
+    'https://fwvc.adsafeprotected.com',
+    'https://pixel.adsafeprotected.com',
   ],
   scriptSrc: [
     'https://ad.crwdcntrl.net',
@@ -131,6 +134,7 @@ const directives = {
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.ampproject.net', // Social Embeds
       'https://news.files.bbci.co.uk', // STY include
+      'https://www.riddle.com', // STY Includes
       ...advertisingDirectives.frameSrc,
       "'self'",
     ],
@@ -149,6 +153,7 @@ const directives = {
       'https://www.bbc.com', // Media Player
       'https://bbc-maps.carto.com', // STY include maps
       'https://flo.uri.sh', // STY includes
+      'https://www.riddle.com', // STY Includes
       ...advertisingDirectives.frameSrc,
       "'self'",
     ],
@@ -160,6 +165,7 @@ const directives = {
       'https://*.ampproject.net', // Social Embeds
       'https://news.files.bbci.co.uk', // STY include
       'https://news.test.files.bbci.co.uk', // STY include
+      'https://www.riddle.com', // STY Includes
       ...advertisingDirectives.frameSrc,
       "'self'",
     ],
@@ -181,6 +187,7 @@ const directives = {
       'https://bbc-maps.carto.com', // STY include maps
       'https://news.test.files.bbci.co.uk',
       'https://flo.uri.sh', // STY includes
+      'https://www.riddle.com', // STY Includes
       ...advertisingDirectives.frameSrc,
       "'self'",
     ],
@@ -196,6 +203,7 @@ const directives = {
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.cdninstagram.com', // Social Embeds, <amp-instagram />
       ...advertisingDirectives.imgSrc,
+      'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
       "data: 'self'",
     ],
     canonicalLive: [
@@ -212,6 +220,7 @@ const directives = {
       'https://news.bbcimg.co.uk', // STY include
       'https://static.bbc.co.uk', // STY include
       ...advertisingDirectives.imgSrc,
+      'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
       "data: 'self'", // needed at the end to maintain proper order
     ],
     ampNonLive: [
@@ -229,6 +238,7 @@ const directives = {
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.cdninstagram.com', // Social Embeds, <amp-instagram />
       ...advertisingDirectives.imgSrc,
+      'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
       "data: 'self'",
     ],
     canonicalNonLive: [
@@ -251,6 +261,7 @@ const directives = {
       'https://static.bbc.co.uk', // STY include
       'http://static.bbc.co.uk', // localhost STY include
       ...advertisingDirectives.imgSrc,
+      'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
       "data: 'self'", // needed at the end to maintain proper order
     ],
   },
@@ -444,7 +455,7 @@ const helmetCsp = ({ isAmp, isLive }) => ({
 });
 
 const injectCspHeader = (req, res, next) => {
-  const { isAmp } = getRouteProps(routes, req.url);
+  const { isAmp } = getRouteProps(req.url);
   const originHeader = req.headers['bbc-origin'];
   const { origin } = getOriginContext(originHeader);
 
