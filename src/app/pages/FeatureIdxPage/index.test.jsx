@@ -3,6 +3,7 @@ import React from 'react';
 import fetchMock from 'fetch-mock';
 import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
+import assocPath from 'ramda/src/assocPath';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -14,13 +15,20 @@ const mockToggles = {
   comscoreAnalytics: {
     enabled: true,
   },
+  ads: {
+    enabled: false,
+  },
 };
 
-const requestContextData = ({ service = 'afrique' }) => ({
+const requestContextData = ({
+  service = 'afrique',
+  showAdsBasedOnLocation,
+}) => ({
   pageType: 'FIX',
   service,
   pathname: '/pathname',
   data: { status: 200 },
+  showAdsBasedOnLocation,
 });
 
 // eslint-disable-next-line react/prop-types
@@ -28,13 +36,14 @@ const FeatureIdxPageWithContext = ({
   isAmp = false,
   service = 'afrique',
   toggles = mockToggles,
+  showAdsBasedOnLocation,
   ...props
 }) => (
   <BrowserRouter>
     <ToggleContextProvider toggles={toggles}>
       <RequestContextProvider
         isAmp={isAmp}
-        {...requestContextData({ service })}
+        {...requestContextData({ service, showAdsBasedOnLocation })}
       >
         <ServiceContextProvider service={service}>
           <FeatureIdxPage {...props} />
@@ -116,6 +125,20 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   );
 });
 
+jest.mock('#containers/Ad/MPU', () => {
+  const MPUContainer = () => (
+    <div data-testid="fix-ads">Feature Index Page Ad - MPU</div>
+  );
+  return MPUContainer;
+});
+
+jest.mock('#containers/Ad/Canonical/CanonicalAdBootstrapJs', () => {
+  const CanonicalAdBootstrapJs = () => (
+    <div data-testid="adBootstrap">bootstrap</div>
+  );
+  return CanonicalAdBootstrapJs;
+});
+
 describe('Feature Idx Page', () => {
   let pageData;
 
@@ -124,6 +147,7 @@ describe('Feature Idx Page', () => {
       'http://localhost/some-feature-idx-page-path.json',
       JSON.stringify(afriqueFeatureIdxPageData),
     );
+
     ({ pageData } = await getInitialData({
       path: 'some-feature-idx-page-path',
       service: 'afrique',
@@ -132,6 +156,7 @@ describe('Feature Idx Page', () => {
 
   afterEach(() => {
     fetchMock.restore();
+    jest.clearAllMocks();
   });
 
   describe('snapshots', () => {
@@ -190,6 +215,98 @@ describe('Feature Idx Page', () => {
       expect(sections).toHaveLength(10);
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
+      });
+    });
+
+    describe('Ads', () => {
+      it.each`
+        adsEnabled | showAdsBasedOnLocation | scenario
+        ${false}   | ${true}                | ${'ads feature toggle is not enabled'}
+        ${true}    | ${false}               | ${'ads not permitted to be shown in location'}
+      `(
+        'should not render because $scenario',
+        async ({ showAdsBasedOnLocation, adsEnabled }) => {
+          const toggles = {
+            ads: {
+              enabled: adsEnabled,
+            },
+          };
+
+          let queryByTestId;
+          await act(async () => {
+            ({ queryByTestId } = render(
+              <FeatureIdxPageWithContext
+                pageData={pageData}
+                showAdsBasedOnLocation={showAdsBasedOnLocation}
+                toggles={toggles}
+              />,
+            ));
+          });
+
+          const fixPageAds = queryByTestId('fix-ads');
+          expect(fixPageAds).not.toBeInTheDocument();
+          const adBootstrap = queryByTestId('adBootstrap');
+          expect(adBootstrap).not.toBeInTheDocument();
+        },
+      );
+
+      it('should render leaderboard and MPU ads when the ads toggle is enabled and page has top-stories', async () => {
+        const toggles = {
+          ads: {
+            enabled: true,
+          },
+        };
+
+        const pageDataWithTopStories = assocPath(
+          ['content', 'groups', 0, 'type'],
+          'top-stories',
+          pageData,
+        );
+
+        let getByTestId;
+        await act(async () => {
+          ({ getByTestId } = render(
+            <FeatureIdxPageWithContext
+              pageData={pageDataWithTopStories}
+              showAdsBasedOnLocation
+              toggles={toggles}
+            />,
+          ));
+        });
+
+        const leaderboardAd = document.querySelector(
+          '[data-e2e="advertisement"]',
+        );
+        expect(leaderboardAd).toBeInTheDocument();
+
+        const mpuAd = getByTestId('fix-ads');
+        expect(mpuAd).toBeInTheDocument();
+
+        const adBootstrap = getByTestId('adBootstrap');
+        expect(adBootstrap).toBeInTheDocument();
+      });
+
+      it('should not render canonical ad bootstrap on amp', async () => {
+        process.env.SIMORGH_APP_ENV = 'test';
+        const toggles = {
+          ads: {
+            enabled: true,
+          },
+        };
+
+        let queryByTestId;
+        await act(async () => {
+          ({ queryByTestId } = render(
+            <FeatureIdxPageWithContext
+              pageData={pageData}
+              toggles={toggles}
+              showAdsBasedOnLocation={false}
+            />,
+          ));
+        });
+
+        const adBootstrap = queryByTestId('adBootstrap');
+        expect(adBootstrap).not.toBeInTheDocument();
       });
     });
   });
