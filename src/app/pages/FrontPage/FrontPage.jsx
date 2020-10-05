@@ -25,6 +25,7 @@ import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import AdContainer from '#containers/Ad';
+import MPUContainer from '#containers/Ad/MPU';
 import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
 import RadioScheduleContainer from '#containers/RadioSchedule';
@@ -59,14 +60,6 @@ const negativeMargin = `
 
 const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
   ${negativeMargin}
-`;
-
-const MPUContainer = styled(AdContainer)`
-  ${negativeMargin}
-  /* MPU gets misaligned with the original padding at smaller breakpoints */
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    padding: 0;
-  }
 `;
 
 const MostReadWrapper = ({ children }) => (
@@ -151,7 +144,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
                   />
                 )}
               <IndexPageSection group={group} sectionNumber={index} />
-              {group.type === 'top-stories' && <MPUContainer slotType="mpu" />}
+              {group.type === 'top-stories' && <MPUContainer />}
             </Fragment>
           ))}
           {!hasUsefulLinks && renderMostRead(mostReadEndpointOverride)}
