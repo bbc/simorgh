@@ -811,7 +811,7 @@ describe('Chartbeat utilities', () => {
       },
       path: '/',
       sections: 'Afrique, Afrique - FIX',
-      title: 'This is a Feautre Index page title',
+      title: 'This is a Feature Index page title',
       type: 'FIX',
       uid: 50924,
       useCanonical: true,
