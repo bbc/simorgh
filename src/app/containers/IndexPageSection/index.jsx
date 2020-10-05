@@ -95,8 +95,8 @@ const parentGridColumns = {
   group5: 8,
 };
 
-const renderPromos = (items, isFirstSection, dir) => {
-  const rows = getRows(items, isFirstSection);
+const renderPromos = ({ items, isFirstSection, dir, showAllRows }) => {
+  const rows = getRows({ items, isFirstSection, showAllRows });
   const rowsDetails = getRowDetails(rows);
 
   // Don't use StoryPromoUl and Li if there is only one story in one row
@@ -149,6 +149,7 @@ const sectionBody = ({
   service,
   isFirstSection,
   dir,
+  showAllRows,
 }) => {
   if (group.semanticGroupName === 'Useful links') {
     return (
@@ -156,7 +157,7 @@ const sectionBody = ({
     );
   }
 
-  return renderPromos(items, isFirstSection, dir);
+  return renderPromos({ items, isFirstSection, dir, showAllRows });
 };
 
 const IndexPageSection = ({

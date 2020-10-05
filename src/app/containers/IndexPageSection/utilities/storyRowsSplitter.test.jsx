@@ -259,13 +259,17 @@ const numberOfStories = {
 
 const rowsTest = value => {
   it(`should return right splitting for ${value} stories for first section`, () => {
-    expect(getRows(numberOfStories[value].input, true)).toStrictEqual(
+    const items = numberOfStories[value].input;
+    const isFirstSection = true;
+    expect(getRows({ items, isFirstSection })).toStrictEqual(
       numberOfStories[value].expectedFirstSection,
     );
   });
 
   it(`should return right splitting for ${value} stories for non-first section`, () => {
-    expect(getRows(numberOfStories[value].input, false)).toStrictEqual(
+    const items = numberOfStories[value].input;
+    const isFirstSection = false;
+    expect(getRows({ items, isFirstSection })).toStrictEqual(
       numberOfStories[value].expectedNotFirstSection,
     );
   });
