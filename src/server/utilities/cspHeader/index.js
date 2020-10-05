@@ -39,6 +39,10 @@ const advertisingDirectives = {
     'https://*.g.doubleclick.net',
     'https://tpc.googlesyndication.com',
     'https://*.google.com',
+    'https://dt.adsafeprotected.com',
+    'https://dtvc.adsafeprotected.com',
+    'https://fwvc.adsafeprotected.com',
+    'https://pixel.adsafeprotected.com',
   ],
   scriptSrc: [
     'https://ad.crwdcntrl.net',
