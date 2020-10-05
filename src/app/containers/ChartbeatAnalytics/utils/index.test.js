@@ -57,6 +57,11 @@ describe('Chartbeat utilities', () => {
         expectedShortType: 'IDX',
       },
       {
+        type: 'FIX',
+        expectedDefaultType: 'FIX',
+        expectedShortType: 'FIX',
+      },
+      {
         type: 'MAP',
         expectedDefaultType: 'article-media-asset',
         expectedShortType: 'article-media-asset',
@@ -263,6 +268,7 @@ describe('Chartbeat utilities', () => {
       pageType       | brandName        | pageTitle                        | expectedNumberOfCalls
       ${'index'}     | ${'BBC News'}    | ${'This is an index page title'} | ${1}
       ${'IDX'}       | ${'BBC Persian'} | ${'This is an IDX page title'}   | ${1}
+      ${'FIX'}       | ${'BBC Afrique'} | ${'This is an FIX page title'}   | ${1}
       ${'frontPage'} | ${'BBC News'}    | ${'This is a frontpage title'}   | ${1}
       ${'article'}   | ${null}          | ${'This is an article title'}    | ${1}
       ${'foo'}       | ${'BBC News'}    | ${null}                          | ${0}
@@ -740,6 +746,86 @@ describe('Chartbeat utilities', () => {
       useCanonical: true,
       virtualReferrer: 'test.bbc.com/previous-path',
     };
+
+    expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+  });
+
+  it('should return config for canonical pages when page type is IDX and env is not live', () => {
+    const fixtureData = {
+      isAmp: false,
+      platform: 'canonical',
+      pageType: 'IDX',
+      data: {},
+      brandName: 'BBC-Persian',
+      chartbeatDomain: 'bbc.co.uk',
+      env: 'test',
+      service: 'persian',
+      origin: 'test.bbc.com',
+      previousPath: '/previous-path',
+    };
+
+    const expectedConfig = {
+      domain: 'test.bbc.co.uk',
+      idSync: {
+        bbc_hid: 'foobar',
+      },
+      path: '/',
+      sections: 'Persian, Persian - IDX',
+      title: 'This is an index page title',
+      type: 'Index',
+      uid: 50924,
+      useCanonical: true,
+      virtualReferrer: 'test.bbc.com/previous-path',
+    };
+
+    const mockTitle = jest
+      .fn()
+      .mockImplementation(() => 'This is an index page title');
+
+    frontPageUtils.getPageTitle = mockTitle;
+
+    const expectedCookieValue = 'foobar';
+    jest.spyOn(Cookie, 'get').mockImplementation(() => expectedCookieValue);
+
+    expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+  });
+
+  it('should return config for canonical pages when page type is FIX and env is not live', () => {
+    const fixtureData = {
+      isAmp: false,
+      platform: 'canonical',
+      pageType: 'FIX',
+      data: {},
+      brandName: 'BBC-Afique',
+      chartbeatDomain: 'bbc.co.uk',
+      env: 'test',
+      service: 'afrique',
+      origin: 'test.bbc.com',
+      previousPath: '/previous-path',
+    };
+
+    const expectedConfig = {
+      domain: 'test.bbc.co.uk',
+      idSync: {
+        bbc_hid: 'foobar',
+      },
+      path: '/',
+      sections: 'Afrique, Afrique - FIX',
+      title: 'This is a Feature Index page title',
+      type: 'FIX',
+      uid: 50924,
+      useCanonical: true,
+      virtualReferrer: 'test.bbc.com/previous-path',
+    };
+
+    const mockTitle = jest
+      .fn()
+      .mockImplementation(() => 'This is a Feature Index page title');
+
+    frontPageUtils.getPageTitle = mockTitle;
+
+    const expectedCookieValue = 'foobar';
+    jest.spyOn(Cookie, 'get').mockImplementation(() => expectedCookieValue);
 
     expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
   });
