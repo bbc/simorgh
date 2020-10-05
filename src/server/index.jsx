@@ -136,7 +136,7 @@ server
           isAmp,
           route: { getInitialData, pageType },
           variant,
-        } = getRouteProps(routes, urlPath);
+        } = getRouteProps(urlPath);
 
         // Set derivedPageType based on matched route
         derivedPageType = pageType || derivedPageType;
