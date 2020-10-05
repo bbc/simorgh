@@ -32,10 +32,19 @@ export const getUrl = pathname => {
   return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
 };
 
-export default async ({ path, pageType }) => {
-  const url = getUrl(path);
+/**
+ * An isomorphic fetch wrapper for pages, with error and log handling.
+ * @param {string} path The URL of a resource to fetch.
+ * @param {...string} loggerArgs Additional arguments for richer logging.
+ */
+const fetchPageData = async ({ path, ...loggerArgs }) => {
+  const url = path.startsWith('http') ? path : getUrl(path);
 
-  logger.info(DATA_REQUEST_RECEIVED, { data: url, pageType, path });
+  logger.info(DATA_REQUEST_RECEIVED, {
+    data: url,
+    path,
+    ...loggerArgs,
+  });
 
   try {
     const response = await fetch(url);
@@ -74,10 +83,12 @@ export default async ({ path, pageType }) => {
       data: url,
       status: simorghError.status,
       error: message,
-      pageType,
       path,
+      ...loggerArgs,
     });
 
     throw simorghError;
   }
 };
+
+export default fetchPageData;
