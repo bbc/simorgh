@@ -186,12 +186,6 @@ server
           pageType: derivedPageType,
         });
 
-        logger.debug(ROUTING_INFORMATION, {
-          url,
-          status,
-          pageType: derivedPageType,
-        });
-
         if (result.redirectUrl) {
           res.redirect(301, result.redirectUrl);
         } else if (result.html) {
