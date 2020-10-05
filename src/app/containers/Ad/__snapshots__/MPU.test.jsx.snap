@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MPU should render correctly 1`] = `
+exports[`MPU should render without gel margins at all breakpoints and gel padding at smaller breakpoints 1`] = `
 .c0 {
   background-color: #F8F8F8;
   display: none;

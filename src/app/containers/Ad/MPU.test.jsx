@@ -12,7 +12,7 @@ const toggles = {
 };
 
 describe('MPU', () => {
-  it('should render correctly', async () => {
+  it('should render without gel margins at all breakpoints and gel padding at smaller breakpoints', async () => {
     const service = 'pidgin';
 
     let container;
