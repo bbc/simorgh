@@ -1,3 +1,10 @@
+/** This is an extension of the bbc-a11y tool, which verifies whether this application meets
+ * BBC accessibility guidelines - http://www.bbc.co.uk/guidelines/futuremedia/accessibility/
+ *
+ * See https://github.com/bbc/bbc-a11y/blob/master/guides/using/using-bbc-a11y-in-your-project.md
+ * for further information
+ */
+
 const { getPageUrls } = require('./cypress/support/helpers/getPageUrls');
 
 // allPageWidths = [240, 360, 600, 1008, 1280];
@@ -67,6 +74,7 @@ const pageTypes = {
     '/iframe', // same issues as in mediaEmbedErrorsToSuppress but the DOM path is different
     "//div[@id='root']/div/div[1]/main/div[37]/div/div/div", // issue with IDT2 includes
     "//div[@id='ns_datapic_royal-engagements']",
+    "//div[@id='ns_datapic_env-test-2']",
     "//div[@id='responsive-embed-newsspec-21841-green-diet-app-core-content']",
   ],
   onDemandRadio: [
@@ -77,13 +85,19 @@ const pageTypes = {
   idxPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   onDemandTV: ['/iframe'],
   mediaAssetPage: [...mediaEmbedErrorsToSuppress, '/iframe'],
+  featureIndexPage: [],
 };
 
-Object.keys(pageTypes).forEach(pageType => {
-  getPageUrls({ pageType, environment, isSmoke }).forEach(url =>
-    pageWidths.forEach(width =>
-      // eslint-disable-next-line no-undef
-      page(`${baseUrl}${url}`, { width, hide: pageTypes[pageType] }),
-    ),
-  );
+// eslint-disable-next-line array-callback-return
+Object.keys(pageTypes).map(pageType => {
+  getPageUrls({ pageType, environment, isSmoke })
+    .toString()
+    .split(',')
+    .map(pageUrl => `${baseUrl}${pageUrl}`)
+    .forEach(url =>
+      pageWidths.forEach(width =>
+        // eslint-disable-next-line no-undef
+        page(url, { width, hide: pageTypes[pageType] }),
+      ),
+    );
 });
