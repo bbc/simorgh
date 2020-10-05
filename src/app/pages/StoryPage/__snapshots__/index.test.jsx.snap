@@ -2005,12 +2005,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
-<<<<<<< HEAD
                           class="c47"
-=======
-                          class="c51"
                           data-e2e="story-promo"
->>>>>>> origin/latest
                         >
                           <div
                             class="c48"
@@ -2040,12 +2036,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
-<<<<<<< HEAD
                           class="c47"
-=======
-                          class="c51"
                           data-e2e="story-promo"
->>>>>>> origin/latest
                         >
                           <div
                             class="c48"
@@ -2079,12 +2071,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
-<<<<<<< HEAD
                           class="c47"
-=======
-                          class="c51"
                           data-e2e="story-promo"
->>>>>>> origin/latest
                         >
                           <div
                             class="c48"
@@ -2192,12 +2180,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
-<<<<<<< HEAD
                           class="c47"
-=======
-                          class="c51"
                           data-e2e="story-promo"
->>>>>>> origin/latest
                         >
                           <div
                             class="c56"
@@ -2250,12 +2234,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
-<<<<<<< HEAD
                           class="c47"
-=======
-                          class="c51"
                           data-e2e="story-promo"
->>>>>>> origin/latest
                         >
                           <div
                             class="c56"
@@ -2308,12 +2288,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
-<<<<<<< HEAD
                           class="c47"
-=======
-                          class="c51"
                           data-e2e="story-promo"
->>>>>>> origin/latest
                         >
                           <div
                             class="c56"
@@ -2366,12 +2342,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
-<<<<<<< HEAD
                           class="c47"
-=======
-                          class="c51"
                           data-e2e="story-promo"
->>>>>>> origin/latest
                         >
                           <div
                             class="c56"
@@ -2424,12 +2396,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
-<<<<<<< HEAD
                           class="c47"
-=======
-                          class="c51"
                           data-e2e="story-promo"
->>>>>>> origin/latest
                         >
                           <div
                             class="c56"
@@ -2482,12 +2450,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
-<<<<<<< HEAD
                           class="c47"
-=======
-                          class="c51"
                           data-e2e="story-promo"
->>>>>>> origin/latest
                         >
                           <div
                             class="c56"
@@ -2540,12 +2504,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
-<<<<<<< HEAD
                           class="c47"
-=======
-                          class="c51"
                           data-e2e="story-promo"
->>>>>>> origin/latest
                         >
                           <div
                             class="c56"
@@ -2646,12 +2606,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
-<<<<<<< HEAD
                           class="c47"
-=======
-                          class="c51"
                           data-e2e="story-promo"
->>>>>>> origin/latest
                         >
                           <div
                             class="c56"
@@ -2704,12 +2660,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <div
-<<<<<<< HEAD
                           class="c47"
-=======
-                          class="c51"
                           data-e2e="story-promo"
->>>>>>> origin/latest
                         >
                           <div
                             class="c56"
@@ -7819,12 +7771,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
-<<<<<<< HEAD
                               class="c49"
-=======
-                              class="c53"
                               data-e2e="story-promo"
->>>>>>> origin/latest
                             >
                               <div
                                 class="c50"
@@ -7854,12 +7802,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
-<<<<<<< HEAD
                               class="c49"
-=======
-                              class="c53"
                               data-e2e="story-promo"
->>>>>>> origin/latest
                             >
                               <div
                                 class="c50"
@@ -7889,12 +7833,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
-<<<<<<< HEAD
                               class="c49"
-=======
-                              class="c53"
                               data-e2e="story-promo"
->>>>>>> origin/latest
                             >
                               <div
                                 class="c50"
@@ -7966,12 +7906,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
-<<<<<<< HEAD
                               class="c49"
-=======
-                              class="c53"
                               data-e2e="story-promo"
->>>>>>> origin/latest
                             >
                               <div
                                 class="c54"
@@ -8024,12 +7960,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
-<<<<<<< HEAD
                               class="c49"
-=======
-                              class="c53"
                               data-e2e="story-promo"
->>>>>>> origin/latest
                             >
                               <div
                                 class="c54"
@@ -8128,12 +8060,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
-<<<<<<< HEAD
                               class="c49"
-=======
-                              class="c53"
                               data-e2e="story-promo"
->>>>>>> origin/latest
                             >
                               <div
                                 class="c54"
@@ -8224,12 +8152,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
-<<<<<<< HEAD
                               class="c49"
-=======
-                              class="c53"
                               data-e2e="story-promo"
->>>>>>> origin/latest
                             >
                               <div
                                 class="c54"
@@ -8282,12 +8206,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
-<<<<<<< HEAD
                               class="c49"
-=======
-                              class="c53"
                               data-e2e="story-promo"
->>>>>>> origin/latest
                             >
                               <div
                                 class="c54"
@@ -8340,12 +8260,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
-<<<<<<< HEAD
                               class="c49"
-=======
-                              class="c53"
                               data-e2e="story-promo"
->>>>>>> origin/latest
                             >
                               <div
                                 class="c54"
@@ -8398,12 +8314,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
-<<<<<<< HEAD
                               class="c49"
-=======
-                              class="c53"
                               data-e2e="story-promo"
->>>>>>> origin/latest
                             >
                               <div
                                 class="c54"
@@ -8456,12 +8368,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
-<<<<<<< HEAD
                               class="c49"
-=======
-                              class="c53"
                               data-e2e="story-promo"
->>>>>>> origin/latest
                             >
                               <div
                                 class="c54"
@@ -8514,12 +8422,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             role="listitem"
                           >
                             <div
-<<<<<<< HEAD
                               class="c49"
-=======
-                              class="c53"
                               data-e2e="story-promo"
->>>>>>> origin/latest
                             >
                               <div
                                 class="c54"
