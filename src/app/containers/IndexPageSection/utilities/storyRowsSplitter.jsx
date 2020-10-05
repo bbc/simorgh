@@ -23,11 +23,11 @@ const splitNoImageRow = standardSlices => [
   standardSlices.slice(2),
 ];
 
-const getRows = ({ items, isFirstSection, showAllRows }) => {
+const getRows = ({ items, isFirstSection, showAllPromos }) => {
   const [firstRow, unsplitregularItems] = splitFirstRow(items, isFirstSection);
   let regularRows = [];
   let noImageRow = [];
-  if (showAllRows) {
+  if (showAllPromos) {
     regularRows = splitStandardRows(unsplitregularItems);
   } else {
     [regularRows, [noImageRow]] = splitNoImageRow(
