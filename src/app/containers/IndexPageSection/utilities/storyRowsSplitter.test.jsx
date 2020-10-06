@@ -258,20 +258,42 @@ const numberOfStories = {
 };
 
 const rowsTest = value => {
-  it(`should return right splitting for ${value} stories for first section`, () => {
-    const items = numberOfStories[value].input;
-    const isFirstSection = true;
-    expect(getRows({ items, isFirstSection })).toStrictEqual(
-      numberOfStories[value].expectedFirstSection,
-    );
+  describe('first section', () => {
+    it(`should correctly split ${value} stories`, () => {
+      const items = numberOfStories[value].input;
+      const isFirstSection = true;
+      expect(getRows({ items, isFirstSection })).toStrictEqual(
+        numberOfStories[value].expectedFirstSection,
+      );
+    });
+
+    it(`should correctly split ${value} stories when showAllPromos is true`, () => {
+      const items = numberOfStories[value].input;
+      const isFirstSection = true;
+      const showAllPromos = true;
+      expect(getRows({ items, isFirstSection, showAllPromos })).toStrictEqual(
+        numberOfStories[value].expectedFirstSection,
+      );
+    });
   });
 
-  it(`should return right splitting for ${value} stories for non-first section`, () => {
-    const items = numberOfStories[value].input;
-    const isFirstSection = false;
-    expect(getRows({ items, isFirstSection })).toStrictEqual(
-      numberOfStories[value].expectedNotFirstSection,
-    );
+  describe('non-first section', () => {
+    it(`should correctly split ${value} stories`, () => {
+      const items = numberOfStories[value].input;
+      const isFirstSection = false;
+      expect(getRows({ items, isFirstSection })).toStrictEqual(
+        numberOfStories[value].expectedNotFirstSection,
+      );
+    });
+
+    it(`should correctly split ${value} stories when showAllPromos is true`, () => {
+      const items = numberOfStories[value].input;
+      const isFirstSection = true;
+      const showAllPromos = true;
+      expect(getRows({ items, isFirstSection, showAllPromos })).toStrictEqual(
+        numberOfStories[value].expectedNotFirstSection,
+      );
+    });
   });
 };
 
