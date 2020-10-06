@@ -10,5 +10,23 @@ jobs:
         with:
           node-version: '12'
           check-latest: true
+
       - name: Running npm update
         run: npm update
+
+      # Raise pull request
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: Dependency Updates
+          branch: test-auto-dep-updates
+          title: Auto bump dependencies
+          assignees: chris-hinds
+          draft: true
+
+      - name: Check outputs
+        run: |
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
