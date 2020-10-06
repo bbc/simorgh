@@ -1,5 +1,8 @@
+import path from 'ramda/src/path';
 import runCanonicalAdsTests from '../../../support/helpers/adsTests/testsForCanonicalOnly';
 
+// For testing important features that differ between services, e.g. Timestamps.
+// We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
   describe(`Include initialisation only on Mundo on specific page`, () => {
     // This test ensures that inline scripts used in includes execute successfully and
@@ -28,9 +31,30 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 };
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
-export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = ({
-  service,
-  pageType,
-}) => {
-  describe(`No testsToNeverSmokeTestForCanonicalOnly to run for ${service} ${pageType}`, () => {});
+export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
+  describe('Social Embed', () => {
+    it.only('link should render if exists on page', () => {
+      cy.window().then(win => {
+        const jsonData = win.SIMORGH_DATA.pageData;
+
+        const hasSocialEmbed = path(
+          ['metadata', 'blockTypes'],
+          jsonData,
+        ).includes('social_embed');
+
+        if (hasSocialEmbed) {
+          const blocks = path(['content', 'model', 'blocks'], jsonData);
+          const socialEmbed = blocks.filter(
+            block => block.type === 'social_embed',
+          )[0];
+
+          const source = path(['model', 'blocks', 0, 'type'], socialEmbed);
+          cy.scrollTo(0, 900);
+          cy.get(`[href^="#skip-${source}-content"]`).should('exist');
+        } else {
+          cy.log('No Social Embed exists');
+        }
+      });
+    });
+  });
 };
