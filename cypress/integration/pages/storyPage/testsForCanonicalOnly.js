@@ -29,7 +29,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
   describe('Social Embed', () => {
-    it.only('link should render if exists on page', () => {
+    it('link should render if exists on page', () => {
       cy.window().then(win => {
         const jsonData = win.SIMORGH_DATA.pageData;
 
