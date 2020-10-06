@@ -164,9 +164,19 @@ Object {
 }
 `;
 
-exports[`Canonical Articles I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg"`;
+exports[`Canonical Articles Image Caption should match text 1`] = `"Image caption, The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich"`;
 
-exports[`Canonical Articles I can see an image with a caption 2`] = `"Image caption, The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich"`;
+exports[`Canonical Articles Image should match snapshot 1`] = `
+<img
+  alt="group of residents"
+  class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 800w"
+  width="976"
+/>
+`;
+
+exports[`Canonical Articles Main heading should match text 1`] = `"The Germans solving rising rents with people power"`;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -337,3 +347,10 @@ exports[`Canonical Articles SEO Twitter image src 1`] = `"https://www.bbc.co.uk/
 exports[`Canonical Articles SEO Twitter site 1`] = `"@BBCNews"`;
 
 exports[`Canonical Articles SEO Twitter title 1`] = `"The Germans solving rising rents with people power - BBC News"`;
+
+exports[`Canonical Articles Timestamp should match text and date 1`] = `
+Object {
+  "date": "2019-03-27",
+  "text": "27 March 2019",
+}
+`;

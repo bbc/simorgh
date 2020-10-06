@@ -216,28 +216,28 @@ Object {
 exports[`AMP Media Asset Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "شرق أوسط",
-  "url": "/arabic/middleeast",
+  "url": "/arabic/topics/ckdxnj6g4znt",
 }
 `;
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "عالم",
-  "url": "/arabic/world",
+  "url": "/arabic/topics/c719d2el19nt",
 }
 `;
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "علوم وتكنولوجيا",
-  "url": "/arabic/scienceandtech",
+  "url": "/arabic/topics/c719d2ely7xt",
 }
 `;
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "صحة",
-  "url": "/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+  "url": "/arabic/topics/c95y3q70znjt",
 }
 `;
 
@@ -251,14 +251,14 @@ Object {
 exports[`AMP Media Asset Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "صحافة",
-  "url": "/arabic/inthepress",
+  "url": "/arabic/topics/c08gmd9rp97t",
 }
 `;
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "ترند",
-  "url": "/arabic/trending",
+  "url": "/arabic/topics/c404vr23x4dt",
 }
 `;
 
@@ -276,9 +276,7 @@ Object {
 }
 `;
 
-exports[`AMP Media Asset Page I can see the headline 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
-
-exports[`AMP Media Asset Page I can see the timestamp 1`] = `"20 نوفمبر/ تشرين الثاني 2015"`;
+exports[`AMP Media Asset Page Main heading should match text 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
 exports[`AMP Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"مشغل وسائط"`;
 
@@ -466,3 +464,10 @@ exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"https://news.files.b
 exports[`AMP Media Asset Page SEO Twitter site 1`] = `"@BBCArabic"`;
 
 exports[`AMP Media Asset Page SEO Twitter title 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها - BBC News عربي"`;
+
+exports[`AMP Media Asset Page Timestamp should match text and date 1`] = `
+Object {
+  "date": "2015-11-20",
+  "text": "20 نوفمبر/ تشرين الثاني 2015",
+}
+`;
