@@ -124,7 +124,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afaanoromoo/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/afaanoromoo/media/video'],
@@ -379,7 +379,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afrique/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/afrique/media/video'],
@@ -605,7 +605,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/amharic/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/amharic/media/video'],
@@ -837,7 +837,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/arabic/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/arabic/media/video'],
@@ -1820,7 +1820,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/gahuza/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/gahuza/media/video'],
@@ -2723,7 +2723,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/igbo/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/igbo/media/video'],
@@ -3144,7 +3144,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/japanese/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/japanese/media/video'],
@@ -3370,7 +3370,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/korean/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/korean/media/video'],
@@ -3831,7 +3831,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/marathi/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/marathi/media/video'],
@@ -4330,7 +4330,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/nepali/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/nepali/media/video'],
@@ -4667,7 +4667,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/pashto/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/pashto/media/video'],
@@ -4976,7 +4976,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/persian/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/persian/media/video'],
@@ -5219,7 +5219,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/pidgin/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/pidgin/media/video'],
@@ -5412,7 +5412,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/portuguese/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/portuguese/media/video'],
@@ -5599,7 +5599,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/punjabi/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/punjabi/media/video'],
@@ -5789,7 +5789,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/russian/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/russian/media/video'],
@@ -6720,7 +6720,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/somali/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/somali/media/video'],
@@ -7015,7 +7015,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/swahili/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/swahili/media/video'],
@@ -7268,7 +7268,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/tamil/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/tamil/media/video'],
@@ -9470,7 +9470,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/vietnamese/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/vietnamese/media/video'],
@@ -9658,7 +9658,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/yoruba/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/yoruba/media/video'],
