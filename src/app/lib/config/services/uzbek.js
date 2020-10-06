@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `uz`,
     service: 'uzbek',
     serviceName: 'Uzbek',
+    languageName: 'Uzbek',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcuzbek',
     twitterSite: '@bbcuzbek',

@@ -33,6 +33,7 @@ export const service = {
     datetimeLocale: `ja`,
     service: 'japanese',
     serviceName: 'Japan',
+    languageName: 'Japanese',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsjapan',
     twitterSite: '@bbcnewsjapan',
@@ -246,6 +247,10 @@ export const service = {
       {
         title: 'コロナウイルス',
         url: '/japanese/52137815',
+      },
+      {
+        title: '米大統領選',
+        url: '/japanese/53969845',
       },
       {
         title: '日本',

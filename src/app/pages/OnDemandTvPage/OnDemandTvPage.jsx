@@ -168,6 +168,8 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
               type="video"
               title="On-demand TV"
               iframeTitle={iframeTitle}
+              hasBottomPadding={false}
+              skin="classic"
             />
           ) : (
             <MediaError skin="video" />

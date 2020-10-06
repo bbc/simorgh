@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `id`,
     service: 'indonesia',
     serviceName: 'Indonesia',
+    languageName: 'Indonesian',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcindonesia',
     twitterSite: '@bbcindonesia',

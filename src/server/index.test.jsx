@@ -161,7 +161,7 @@ const testRenderedData = ({
 
   expect(renderDocumentSpy).toHaveBeenCalledWith(expectedProps);
 
-  expect(getRouteProps).toHaveBeenCalledWith(routes, url.split('?')[0]);
+  expect(getRouteProps).toHaveBeenCalledWith(url.split('?')[0]);
 
   expect(text).toEqual(
     '<!doctype html><html><body><h1>Mock app</h1></body></html>',
@@ -1394,11 +1394,7 @@ describe('Server HTTP Headers', () => {
   });
 
   it(`should have X-XSS-Protection set to '1; mode=block' `, () => {
-    validateHttpHeader(
-      statusRequest.headers,
-      'x-xss-protection',
-      '1; mode=block',
-    );
+    validateHttpHeader(statusRequest.headers, 'x-xss-protection', '0');
   });
 
   describe("should set 'x-clacks-overhead' header", () => {

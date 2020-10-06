@@ -2,7 +2,7 @@
 
 exports[`Canonical Photo Gallery Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
-exports[`Canonical Photo Gallery Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=62&amp;p=sport::mundo.sport.photo_gallery.36935058.page&amp;x1=[urn:bbc:cps:08e22e90-7361-cd47-b586-7cb53fc5a012]&amp;x2=[responsive]&amp;x3=[news-mundo]&amp;x4=[es]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[Río+2016,+el+antes+y+el+ahora:+cómo+ha+cambiado+la+ropa+deportiva+en+más+de+un+siglo+de+juegos+olímpicos+-+BBC+News+Mundo]&amp;x11=[2016-08-07T09:21:02.000Z]&amp;x12=[2016-08-07T09:21:14.000Z]&amp;x14=[0d205538-c52e-41c7-a4a1-50efd6c1da59~15f1bcf6-b6ab-48e8-b708-efed41e43d31~1d2e1514-faa8-425d-8481-a1cc4da6cc24~4063f80f-cccc-44c8-9449-5ca44e4c8592]\\"/>"`;
+exports[`Canonical Photo Gallery Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=62&amp;p=sport%3A%3Amundo.sport.photo_gallery.36935058.page&amp;x1=[urn%3Abbc%3Acps%3A08e22e90-7361-cd47-b586-7cb53fc5a012]&amp;x2=[responsive]&amp;x3=[news-mundo]&amp;x4=[es]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[R%C3%ADo%2B2016%2C%2Bel%2Bantes%2By%2Bel%2Bahora%3A%2Bc%C3%B3mo%2Bha%2Bcambiado%2Bla%2Bropa%2Bdeportiva%2Ben%2Bm%C3%A1s%2Bde%2Bun%2Bsiglo%2Bde%2Bjuegos%2Bol%C3%ADmpicos%2B-%2BBBC%2BNews%2BMundo]&amp;x11=[2016-08-07T09%3A21%3A02.000Z]&amp;x12=[2016-08-07T09%3A21%3A14.000Z]&amp;x14=[0d205538-c52e-41c7-a4a1-50efd6c1da59~15f1bcf6-b6ab-48e8-b708-efed41e43d31~1d2e1514-faa8-425d-8481-a1cc4da6cc24~4063f80f-cccc-44c8-9449-5ca44e4c8592]\\"/>"`;
 
 exports[`Canonical Photo Gallery Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
@@ -53,7 +53,7 @@ Object {
 exports[`Canonical Photo Gallery Page Footer Link should match text and url 7`] = `
 Object {
   "text": "Contacta a la BBC",
-  "url": "https://www.bbc.com/mundo/institucional-36400011",
+  "url": "https://www.bbc.co.uk/send/u50853489",
 }
 `;
 
@@ -96,66 +96,90 @@ Object {
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 4`] = `
 Object {
-  "text": "Economía",
-  "url": "/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342",
+  "text": "EE.UU. 2020",
+  "url": "/mundo/noticias-internacional-53826365",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 5`] = `
 Object {
-  "text": "Tecnología",
-  "url": "/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a",
+  "text": "¿Hablas español?",
+  "url": "/mundo/noticias-50160896",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 6`] = `
-Object {
-  "text": "Ciencia",
-  "url": "/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 7`] = `
-Object {
-  "text": "Salud",
-  "url": "/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 8`] = `
-Object {
-  "text": "Cultura",
-  "url": "/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 9`] = `
-Object {
-  "text": "Deportes",
-  "url": "/mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 10`] = `
-Object {
-  "text": "Video",
-  "url": "/mundo/media/video",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "Hay Festival",
   "url": "/mundo/noticias-36795069",
 }
 `;
 
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 7`] = `
+Object {
+  "text": "Economía",
+  "url": "/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "Ciencia",
+  "url": "/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 9`] = `
+Object {
+  "text": "Salud",
+  "url": "/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 10`] = `
+Object {
+  "text": "Cultura",
+  "url": "/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 11`] = `
+Object {
+  "text": "Tecnología",
+  "url": "/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a",
+}
+`;
+
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 12`] = `
+Object {
+  "text": "Video",
+  "url": "/mundo/media/video",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 13`] = `
 Object {
   "text": "Centroamérica Cuenta",
   "url": "/mundo/noticias-43826245",
 }
 `;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 14`] = `
+Object {
+  "text": "BBC Extra",
+  "url": "/mundo/noticias-48908206",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Image Caption should match text 1`] = `"Pie de foto, En tenis, las competidoras en los juegos de principios del siglo XX utilizaban vestidos y medias largas, algo impensable para los estándares de la actualidad. Fue hasta 1920 en Amberes cuando las mujeres tuvieron participación reconocida oficialmente."`;
+
+exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
+<noscript>
+  &lt;img srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 480w, https://ichef.bbci.co.uk/news/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 549w" alt="Tenista de 1904" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg" width="549" class="StyledImg-sc-7vx2mr-0 dQLeqZ"/&gt;
+</noscript>
+`;
+
+exports[`Canonical Photo Gallery Page Main heading should match text 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos"`;
 
 exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -290,6 +314,11 @@ Object {
         "url": "https://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "es",
+        "name": "Spanish",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/mundo/deportes-36935058",
         "@type": "WebPage",
@@ -346,3 +375,10 @@ exports[`Canonical Photo Gallery Page SEO Twitter image src 1`] = `"https://iche
 exports[`Canonical Photo Gallery Page SEO Twitter site 1`] = `"@bbcmundo"`;
 
 exports[`Canonical Photo Gallery Page SEO Twitter title 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos - BBC News Mundo"`;
+
+exports[`Canonical Photo Gallery Page Timestamp should match text and date 1`] = `
+Object {
+  "date": "2016-08-07",
+  "text": "7 agosto 2016",
+}
+`;

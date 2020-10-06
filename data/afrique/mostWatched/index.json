@@ -1,979 +1,374 @@
 {
-  "generated": "2020-07-21T09:48:22.43Z",
+  "generated": "2020-09-22T12:03:00.378Z",
   "lastRecordTimeStamp": "2030-01-01T17:00:00Z",
-  "firstRecordTimeStamp": "2020-07-21T08:42:00Z",
-  "totalRecords": 20,
+  "firstRecordTimeStamp": "2019-06-13T10:32:00Z",
+  "totalRecords": 7,
   "records": [
     {
-      "id": "9f532145-30b3-47c8-be29-2a4259f73eb9",
+      "id": "bd849ac2-1084-eb47-8d77-e5e2f8855451",
       "rank": 1,
-      "count": 35,
-      "urn": "urn:bbc:curie:asset:9f532145-30b3-47c8-be29-2a4259f73eb9",
+      "count": 9193,
+      "urn": "urn:bbc:curie:asset:bd849ac2-1084-eb47-8d77-e5e2f8855451",
       "promo": {
         "headlines": {
-          "shortHeadline": "Une patiente atteinte d'un cancer en phase terminale se marie à l'hôpital",
-          "headline": "Une patiente atteinte d'un cancer en phase terminale se marie à l'hôpital"
+          "shortHeadline": "Test clip to verify the vertical clip functionality in Vivo",
+          "headline": "Test asset"
         },
         "locators": {
-          "assetUri": "/afrique/media-53477494",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/media-53477494",
-          "curie": "http://www.bbc.co.uk/asset/9f532145-30b3-47c8-be29-2a4259f73eb9",
-          "assetId": "53477494"
+          "assetUri": "/news/education-23119419",
+          "cpsUrn": "urn:bbc:content:assetUri:news/education-23119419",
+          "curie": "http://www.bbc.co.uk/asset/bd849ac2-1084-eb47-8d77-e5e2f8855451",
+          "assetId": "23119419"
         },
-        "summary": "Après six mois de lutte contre le cancer, le petit ami de Tash Longhurst attendait le moment idéal pour lui faire sa demande, avant de décider qu'ils ne pouvaient plus attendre.",
-        "timestamp": 1595255514000,
-        "language": "fr",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-            "categoryName": "Feature"
+        "summary": "test asset",
+        "timestamp": 1493222071000,
+        "language": "en-gb",
+        "media": {
+          "id": "p019bw91",
+          "subType": "clip",
+          "format": "video",
+          "title": "Test clip to verify the vertical clip functionality in Vivo",
+          "synopses": {
+            "short": "Test asset"
           },
-          "campaigns": [
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019bw9d.jpg",
+          "embedding": false,
+          "advertising": true,
+          "caption": "Test asset",
+          "versions": [
             {
-              "campaignId": "5a988e2139461b000e9dabf7",
-              "campaignName": "WS - Inspire me"
+              "versionId": "p019bw93",
+              "types": ["Portrait"],
+              "duration": 16,
+              "durationISO8601": "PT16S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1491493332000
             }
           ],
-          "taggings": []
-        },
-        "media": {
-          "id": "53477495",
-          "subType": "primary",
-          "format": "video",
-          "externalId": "p08lbl8b",
-          "entityType": "Clip",
-          "caption": "Hospital wedding for terminally ill cancer patient",
-          "type": "external_vpid"
+          "type": "media"
         },
         "indexImage": {
-          "id": "113543393",
+          "id": "63533037",
           "subType": "index",
-          "href": "http://c.files.bbci.co.uk/99A6/production/_113543393_p08lbm14.jpg",
-          "path": "/cpsprodpb/99A6/production/_113543393_p08lbm14.jpg",
-          "height": 1152,
-          "width": 2048,
-          "altText": "Patiente atteinte d'un cancer et son epoux",
-          "copyrightHolder": "BBC",
+          "href": "http://b.files.bbci.co.uk/11D49/test/_63533037_p019bw9d.jpg",
+          "path": "/cpsdevpb/11D49/test/_63533037_p019bw9d.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Keyframe",
+          "caption": "1",
+          "copyrightHolder": "1",
           "type": "image"
         },
-        "id": "urn:bbc:ares::asset:afrique/media-53477494",
+        "id": "urn:bbc:ares::asset:news/education-23119419",
         "type": "cps"
       }
     },
     {
-      "id": "ccce7d84-99b4-4def-8a75-0e7e707b8821",
+      "id": "c7c30040-1c8e-8844-8c50-9b5f3823e7b4",
       "rank": 2,
-      "count": 32,
-      "urn": "urn:bbc:curie:asset:ccce7d84-99b4-4def-8a75-0e7e707b8821",
+      "count": 9135,
+      "urn": "urn:bbc:curie:asset:c7c30040-1c8e-8844-8c50-9b5f3823e7b4",
       "promo": {
         "headlines": {
-          "shortHeadline": "\"Les proposition de la CEDEAO peuvent permettre au Mali de sortir de la crise\"",
-          "headline": "Etienne Fakaba Sissoko: Avec les propositions de la CEDEAO le Mali peut sortir de la crise"
+          "shortHeadline": "Gelila, miraculée des eaux 2",
+          "headline": "Gelila, miraculée des eaux 2"
         },
         "locators": {
-          "assetUri": "/afrique/media-53481318",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/media-53481318",
-          "curie": "http://www.bbc.co.uk/asset/ccce7d84-99b4-4def-8a75-0e7e707b8821",
-          "assetId": "53481318"
+          "assetUri": "/afrique/23053607",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/23053607",
+          "curie": "http://www.bbc.co.uk/asset/c7c30040-1c8e-8844-8c50-9b5f3823e7b4",
+          "assetId": "23053607"
         },
-        "summary": "L'analyste politique malien Etienne Fakaba Sissoko se prononce sur l'apport de la CEDEAO dans la recherche de la sérénité au Mali",
-        "timestamp": 1595299529000,
+        "summary": "Gelila, miraculée des eaux",
+        "timestamp": 1466173996000,
         "language": "fr",
         "media": {
-          "id": "53481319",
+          "id": "63485393",
           "subType": "primary",
           "format": "audio",
-          "externalId": "p08ldc3c",
-          "entityType": "Clip",
-          "caption": "Etienne Fakaba Sissoko: Avec les proposition de la CEDEAO le Mali peut sortir de la crise",
-          "type": "external_vpid"
+          "externalId": "bbc_world_service_west_africa",
+          "duration": "PT0S",
+          "caption": "Gelila, miraculée des eaux",
+          "image": {
+            "id": "63485393",
+            "subType": "thumbnail",
+            "href": "http://b.files.bbci.co.uk/E1D1/test/_63490875_160617112451_boat_512x288__nocredit.jpg",
+            "path": "/cpsdevpb/E1D1/test/_63490875_160617112451_boat_512x288__nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "Gelila, miraculée des eaux",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "embedding": false,
+          "available": true,
+          "live": true,
+          "type": "version"
         },
         "indexImage": {
-          "id": "113556842",
+          "id": "63490877",
           "subType": "index",
-          "href": "http://c.files.bbci.co.uk/6121/production/_113556842_p08ldchp.jpg",
-          "path": "/cpsprodpb/6121/production/_113556842_p08ldchp.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "L'analyste politique malien Etienne Fakaba Sissoko se prononce sur l'apport de la CEDEAO dans la recherche de la sérénité au Mali.",
-          "copyrightHolder": "Le mouvement M5 qui appelle à manifester depuis qu",
+          "href": "http://b.files.bbci.co.uk/12FF1/test/_63490877_160617112451_boat_512x288__nocredit.jpg",
+          "path": "/cpsdevpb/12FF1/test/_63490877_160617112451_boat_512x288__nocredit.jpg",
+          "height": 351,
+          "width": 624,
+          "altText": "Gelila, miraculée des eaux",
+          "caption": "Gelila, miraculée des eaux",
+          "copyrightHolder": "BBC",
           "type": "image"
         },
-        "id": "urn:bbc:ares::asset:afrique/media-53481318",
+        "id": "urn:bbc:ares::asset:afrique/23053607",
         "type": "cps"
       }
     },
     {
-      "id": "bc7ea9ba-d90e-46a7-935f-2960c3c06b0d",
+      "id": "00ae411f-2d39-0441-9ed8-8954477bfc95",
       "rank": 3,
-      "count": 25,
-      "urn": "urn:bbc:curie:asset:bc7ea9ba-d90e-46a7-935f-2960c3c06b0d",
+      "count": 8784,
+      "urn": "urn:bbc:curie:asset:00ae411f-2d39-0441-9ed8-8954477bfc95",
       "promo": {
         "headlines": {
-          "shortHeadline": "La coalition FCC-CACH émane de la volonté des congolais",
-          "headline": "La coalition FCC-CACH émane de la volonté des congolais"
+          "shortHeadline": "Gelila, miraculée des eaux",
+          "headline": "Gelila, miraculée des eaux"
         },
         "locators": {
-          "assetUri": "/afrique/monde-53459944",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-53459944",
-          "curie": "http://www.bbc.co.uk/asset/bc7ea9ba-d90e-46a7-935f-2960c3c06b0d",
-          "assetId": "53459944"
+          "assetUri": "/afrique/23053606",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/23053606",
+          "curie": "http://www.bbc.co.uk/asset/00ae411f-2d39-0441-9ed8-8954477bfc95",
+          "assetId": "23053606"
         },
-        "summary": "La coalition FCC-CACH émane de la volonté des congolais",
-        "timestamp": 1595098795000,
+        "summary": "Gelila, miraculée des eaux",
+        "timestamp": 1466173587000,
         "language": "fr",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-            "categoryName": "Feature"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e3e39461b000e9dabfb",
-              "campaignName": "WS - Keep me on trend"
-            },
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ],
-          "taggings": []
-        },
         "media": {
-          "id": "53459945",
+          "id": "63485393",
           "subType": "primary",
           "format": "audio",
-          "externalId": "p08l65nl",
-          "entityType": "Clip",
-          "caption": "La coalition FCC-CACH émane de la volonté des congolais",
-          "type": "external_vpid"
+          "externalId": "bbc_world_service_west_africa",
+          "duration": "PT0S",
+          "caption": "Gelila, miraculée des eaux",
+          "image": {
+            "id": "63485393",
+            "subType": "thumbnail",
+            "href": "http://b.files.bbci.co.uk/E1D1/test/_63490875_160617112451_boat_512x288__nocredit.jpg",
+            "path": "/cpsdevpb/E1D1/test/_63490875_160617112451_boat_512x288__nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "Gelila, miraculée des eaux",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "embedding": false,
+          "available": true,
+          "live": true,
+          "type": "version"
         },
         "indexImage": {
-          "id": "113515769",
+          "id": "63490877",
           "subType": "index",
-          "href": "http://c.files.bbci.co.uk/179EF/production/_113515769_p08l669g.jpg",
-          "path": "/cpsprodpb/179EF/production/_113515769_p08l669g.jpg",
-          "height": 576,
-          "width": 1024,
-          "altText": "La coalition FCC-CACH émane de la volonté des congolais",
-          "copyrightHolder": "Le Débat BBC Afrique-Africa Radio, 52 minutes pour",
+          "href": "http://b.files.bbci.co.uk/12FF1/test/_63490877_160617112451_boat_512x288__nocredit.jpg",
+          "path": "/cpsdevpb/12FF1/test/_63490877_160617112451_boat_512x288__nocredit.jpg",
+          "height": 351,
+          "width": 624,
+          "altText": "Gelila, miraculée des eaux",
+          "caption": "Gelila, miraculée des eaux",
+          "copyrightHolder": "BBC",
           "type": "image"
         },
-        "id": "urn:bbc:ares::asset:afrique/monde-53459944",
+        "id": "urn:bbc:ares::asset:afrique/23053606",
         "type": "cps"
       }
     },
     {
-      "id": "8428ae68-5610-424b-9e53-1035ff33c68b",
+      "id": "45baf56a-c9f3-f444-b263-e2e1a1ca5a6c",
       "rank": 4,
-      "count": 15,
-      "urn": "urn:bbc:curie:asset:8428ae68-5610-424b-9e53-1035ff33c68b",
+      "count": 5135,
+      "urn": "urn:bbc:curie:asset:45baf56a-c9f3-f444-b263-e2e1a1ca5a6c",
       "promo": {
         "headlines": {
-          "shortHeadline": "Le mouvement body positive a-t-il été détourné ?",
-          "headline": "Le mouvement body positive a-t-il été détourné ?"
+          "shortHeadline": "Test clip to verify the vertical clip functionality in Vivo- clone",
+          "headline": "Test asset"
         },
         "locators": {
-          "assetUri": "/afrique/region-53478093",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/region-53478093",
-          "curie": "http://www.bbc.co.uk/asset/8428ae68-5610-424b-9e53-1035ff33c68b",
-          "assetId": "53478093"
+          "assetUri": "/news/health-23118996",
+          "cpsUrn": "urn:bbc:content:assetUri:news/health-23118996",
+          "curie": "http://www.bbc.co.uk/asset/45baf56a-c9f3-f444-b263-e2e1a1ca5a6c",
+          "assetId": "23118996"
         },
-        "summary": "Des modèles noirs s'expriment sur le mouvement body positive, ses racines et ce qui ne va pas",
-        "timestamp": 1595274682000,
-        "language": "fr",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
+        "summary": "test asset",
+        "timestamp": 1493220094000,
+        "language": "en-gb",
+        "media": {
+          "id": "p019bw91",
+          "subType": "clip",
+          "format": "video",
+          "title": "Test clip to verify the vertical clip functionality in Vivo",
+          "synopses": {
+            "short": "Test asset"
           },
-          "campaigns": [
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019bw9d.jpg",
+          "embedding": false,
+          "advertising": true,
+          "caption": "Test asset",
+          "versions": [
             {
-              "campaignId": "5a988e3739461b000e9dabfa",
-              "campaignName": "WS - Give me perspective"
+              "versionId": "p019bw93",
+              "types": ["Portrait"],
+              "duration": 16,
+              "durationISO8601": "PT16S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1491493332000
             }
           ],
-          "taggings": []
-        },
-        "media": {
-          "id": "53478094",
-          "subType": "primary",
-          "format": "video",
-          "externalId": "p08lc8p7",
-          "entityType": "Clip",
-          "caption": "Le mouvement body positive a-t-il été détourné ?",
-          "type": "external_vpid"
+          "type": "media"
         },
         "indexImage": {
-          "id": "113545540",
+          "id": "63533037",
           "subType": "index",
-          "href": "http://c.files.bbci.co.uk/11CA/production/_113545540_p08lcdsg.jpg",
-          "path": "/cpsprodpb/11CA/production/_113545540_p08lcdsg.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Modèles noirs grande taille",
-          "copyrightHolder": "BBC",
+          "href": "http://b.files.bbci.co.uk/11D49/test/_63533037_p019bw9d.jpg",
+          "path": "/cpsdevpb/11D49/test/_63533037_p019bw9d.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Keyframe",
+          "caption": "1",
+          "copyrightHolder": "1",
           "type": "image"
         },
-        "id": "urn:bbc:ares::asset:afrique/region-53478093",
+        "id": "urn:bbc:ares::asset:news/health-23118996",
         "type": "cps"
       }
     },
     {
-      "id": "fa90462b-0eba-4410-acdd-92e001a2d370",
+      "id": "9e176c72-d83a-9344-9bd5-e0d4fee04e73",
       "rank": 5,
-      "count": 11,
-      "urn": "urn:bbc:curie:asset:fa90462b-0eba-4410-acdd-92e001a2d370",
+      "count": 2929,
+      "urn": "urn:bbc:curie:asset:9e176c72-d83a-9344-9bd5-e0d4fee04e73",
       "promo": {
         "headlines": {
-          "shortHeadline": "LE DEBAT BBC AFRIQUE - AFRICA RADIO DU 04/07/2020",
-          "headline": "LE DEBAT BBC AFRIQUE - AFRICA RADIO DU 04/07/2020"
+          "shortHeadline": "Test 1 - Magari yasiyotumia mafuta yaanza kazi Kenya",
+          "headline": "Test 2 - Magari yasiyotumia mafuta yaanza kazi Kenya"
         },
         "locators": {
-          "assetUri": "/afrique/53328553",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/53328553",
-          "curie": "http://www.bbc.co.uk/asset/fa90462b-0eba-4410-acdd-92e001a2d370",
-          "assetId": "53328553"
+          "assetUri": "/somali/cayaaraha-23066582",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/cayaaraha-23066582",
+          "curie": "http://www.bbc.co.uk/asset/9e176c72-d83a-9344-9bd5-e0d4fee04e73",
+          "assetId": "23066582"
         },
-        "summary": "LE DEBAT BBC AFRIQUE - AFRICA RADIO DU 04/07/2020",
-        "timestamp": 1594144040000,
-        "language": "fr",
+        "summary": "Test 3 - Magari yasiyotumia mafuta yaanza kazi Kenya",
+        "timestamp": 1470741174000,
+        "language": "so",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "taggings": []
+        },
         "media": {
-          "id": "53328554",
+          "id": "23062547",
           "subType": "primary",
-          "format": "audio",
-          "externalId": "p08k3s41",
+          "format": "video",
+          "externalId": "p014t04t",
           "entityType": "Clip",
-          "caption": "LE DEBAT BBC AFRIQUE - AFRICA RADIO DU 04/07/2020",
+          "caption": "Test 2 - Magari yasiyotumia mafuta yaanza kazi Kenya",
+          "statusCode": 404,
+          "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
           "type": "external_vpid"
         },
         "indexImage": {
-          "id": "113278812",
+          "id": "63502568",
           "subType": "index",
-          "href": "http://c.files.bbci.co.uk/557F/production/_113278812_p08k3spt.jpg",
-          "path": "/cpsprodpb/557F/production/_113278812_p08k3spt.jpg",
-          "height": 1152,
-          "width": 2048,
-          "altText": "LE DEBAT BBC AFRIQUE - AFRICA RADIO DU 04/07/2020",
-          "copyrightHolder": "Le Débat BBC Afrique-Africa Radio, 52 minutes pour",
+          "href": "http://b.files.bbci.co.uk/151F8/test/_63502568_p012zl0f.jpg",
+          "path": "/cpsdevpb/151F8/test/_63502568_p012zl0f.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "BBC",
+          "copyrightHolder": "BBC",
           "type": "image"
         },
-        "id": "urn:bbc:ares::asset:afrique/53328553",
+        "id": "urn:bbc:ares::asset:somali/cayaaraha-23066582",
         "type": "cps"
       }
     },
     {
-      "id": "d362b40f-39d3-1742-9d30-14ee201a2c6c",
+      "id": "76619b13-28fa-a449-8f79-f0d33f792b14",
       "rank": 6,
-      "count": 6,
-      "urn": "urn:bbc:curie:asset:d362b40f-39d3-1742-9d30-14ee201a2c6c",
+      "count": 2483,
+      "urn": "urn:bbc:curie:asset:76619b13-28fa-a449-8f79-f0d33f792b14",
       "promo": {
         "headlines": {
-          "shortHeadline": "La reprise des cours vue par deux enseignants au Sénégal",
-          "headline": "Coronavirus au Sénégal: la reprise des cours vue par deux enseignants"
+          "shortHeadline": "L’invité BBC Afrique 21/06/2016 : Ibrahim Maïga audio",
+          "headline": "L’invité BBC Afrique 21/06/2016 : Ibrahim Maïga short"
         },
         "locators": {
-          "assetUri": "/afrique/media-51130455",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/media-51130455",
-          "curie": "http://www.bbc.co.uk/asset/d362b40f-39d3-1742-9d30-14ee201a2c6c",
-          "assetId": "51130455"
+          "assetUri": "/afrique/sports-23055672",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/sports-23055672",
+          "curie": "http://www.bbc.co.uk/asset/76619b13-28fa-a449-8f79-f0d33f792b14",
+          "assetId": "23055672"
         },
-        "summary": "Deux enseignants sénégalais partagent leur expérience de reprise des cours malgré la propagation de la pandémie de Covid-19 au Sénégal.",
-        "timestamp": 1594535611000,
+        "summary": "Au Mali, cela fait un an jour pour jour que les accords de paix d'Alger ont été signes. Mais où en est le pays dans la mise en œuvre de ces accords?",
+        "timestamp": 1466767754000,
         "language": "fr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
         "media": {
-          "id": "53379492",
+          "id": "23055673",
           "subType": "primary",
-          "format": "video",
-          "externalId": "p08kjqw6",
+          "format": "audio",
+          "externalId": "p01458cf",
           "entityType": "Clip",
-          "caption": "Reprendre les cours malgrè la pandémie: deux enseignants se confient",
+          "caption": "L’invité BBC Afrique 21/06/2016 : Ibrahim Maïga short",
+          "statusCode": 404,
+          "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
           "type": "external_vpid"
         },
         "indexImage": {
-          "id": "113343439",
+          "id": "63492699",
           "subType": "index",
-          "href": "http://c.files.bbci.co.uk/16CFA/production/_113343439_p08kjslj.jpg",
-          "path": "/cpsprodpb/16CFA/production/_113343439_p08kjslj.jpg",
+          "href": "http://b.files.bbci.co.uk/1852D/test/_63492699_p01458jl.jpg",
+          "path": "/cpsdevpb/1852D/test/_63492699_p01458jl.jpg",
           "height": 576,
           "width": 1024,
-          "altText": "Keyframe #6",
-          "caption": "Senegal",
-          "copyrightHolder": "BBC",
+          "altText": "L’invité BBC Afrique 21/06/2016 : Ibrahim Maïga",
+          "caption": "audío",
+          "copyrightHolder": "Alamy",
           "type": "image"
         },
-        "id": "urn:bbc:ares::asset:afrique/media-51130455",
+        "id": "urn:bbc:ares::asset:afrique/sports-23055672",
         "type": "cps"
       }
     },
     {
-      "id": "bc6c3ff5-cd33-43d0-a72b-5c573701a8bf",
+      "id": "602b87eb-2b23-6948-b5c3-c0e9cc5aa513",
       "rank": 7,
-      "count": 5,
-      "urn": "urn:bbc:curie:asset:bc6c3ff5-cd33-43d0-a72b-5c573701a8bf",
+      "count": 174,
+      "urn": "urn:bbc:curie:asset:602b87eb-2b23-6948-b5c3-c0e9cc5aa513",
       "promo": {
         "headlines": {
-          "shortHeadline": "A 11 ans, ce jeune danseur de ballet casse les codes",
-          "headline": "Un danseur de ballet de 11 ans casse les codes"
+          "shortHeadline": "Brexit : les immigrés face au référendum minora change",
+          "headline": "Brexit : les immigrés face au référendum short minora change"
         },
         "locators": {
-          "assetUri": "/afrique/media-53419193",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/media-53419193",
-          "curie": "http://www.bbc.co.uk/asset/bc6c3ff5-cd33-43d0-a72b-5c573701a8bf",
-          "assetId": "53419193"
+          "assetUri": "/afrique/monde-23055670",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-23055670",
+          "curie": "http://www.bbc.co.uk/asset/602b87eb-2b23-6948-b5c3-c0e9cc5aa513",
+          "assetId": "23055670"
         },
-        "summary": "Fondée en 2015, la Leap of Dance Academy de Lagos, au Nigeria est une idée originale de Daniel Ajala Owoseni, qui sans espace de danse, enseigne le ballet gratuitement.",
-        "timestamp": 1594816638000,
-        "language": "fr",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-            "categoryName": "Feature"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e2139461b000e9dabf7",
-              "campaignName": "WS - Inspire me"
-            }
-          ],
-          "taggings": []
-        },
-        "media": {
-          "id": "53419194",
-          "subType": "primary",
-          "format": "video",
-          "externalId": "p08ktmqn",
-          "entityType": "Clip",
-          "caption": "Un danseur de ballet 11 ans casse les codes",
-          "type": "external_vpid"
-        },
-        "indexImage": {
-          "id": "113402136",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/F690/production/_113402136_dc35a580-ed96-4642-a144-678e2af7e647.jpg",
-          "path": "/cpsprodpb/F690/production/_113402136_dc35a580-ed96-4642-a144-678e2af7e647.jpg",
-          "height": 1152,
-          "width": 2048,
-          "altText": "Ballet dancer",
-          "copyrightHolder": "BBC/Grace Ekpu",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:afrique/media-53419193",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "5bc41a5c-d694-674e-abe3-7d6a81bafa99",
-      "rank": 8,
-      "count": 5,
-      "urn": "urn:bbc:curie:asset:5bc41a5c-d694-674e-abe3-7d6a81bafa99",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Coronavirus: qu'est ce que la résilience?",
-          "headline": "Coronavirus: qu'est ce que la résilience?"
-        },
-        "locators": {
-          "assetUri": "/afrique/media-51116085",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/media-51116085",
-          "curie": "http://www.bbc.co.uk/asset/5bc41a5c-d694-674e-abe3-7d6a81bafa99",
-          "assetId": "51116085"
-        },
-        "summary": "Dans ce contexte du Covid-19, la résilience est essentielle pour chacun de nous. Mais que signifie ce terme?,",
-        "timestamp": 1594581223000,
-        "language": "fr",
-        "media": {
-          "id": "53379497",
-          "subType": "primary",
-          "format": "video",
-          "externalId": "p08kl1x3",
-          "entityType": "Clip",
-          "caption": "Coronavirus: qu'est ce que la résilience?.",
-          "type": "external_vpid"
-        },
-        "indexImage": {
-          "id": "113347613",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/7BBA/production/_113347613_p08kl221.jpg",
-          "path": "/cpsprodpb/7BBA/production/_113347613_p08kl221.jpg",
-          "height": 576,
-          "width": 1024,
-          "altText": "Keyframe #4",
-          "copyrightHolder": "BBC",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:afrique/media-51116085",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "4571e078-20f6-4bff-9c0e-70e34619f8b6",
-      "rank": 9,
-      "count": 5,
-      "urn": "urn:bbc:curie:asset:4571e078-20f6-4bff-9c0e-70e34619f8b6",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Coronavirus en Afrique: le défi de prouver que le Covid-19 existe",
-          "headline": "Coronavirus en Afrique : lutter contre une pandémie de ‘fausse information’"
-        },
-        "locators": {
-          "assetUri": "/afrique/region-53338800",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/region-53338800",
-          "curie": "http://www.bbc.co.uk/asset/4571e078-20f6-4bff-9c0e-70e34619f8b6",
-          "assetId": "53338800"
-        },
-        "summary": "Avec un grand nombre de fausses informations et une méfiance accrue à l'égard du gouvernement, une grande partie de la population nigériane pense que la pandémie est un canular.",
-        "timestamp": 1594226543000,
-        "language": "fr",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-            "categoryName": "Feature"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e3739461b000e9dabfa",
-              "campaignName": "WS - Give me perspective"
-            }
-          ],
-          "taggings": []
-        },
-        "media": {
-          "id": "53338801",
-          "subType": "primary",
-          "format": "video",
-          "externalId": "p08k5p08",
-          "entityType": "Clip",
-          "caption": "Coronavirus en Afrique: prouver que COVID-19 existe",
-          "type": "external_vpid"
-        },
-        "indexImage": {
-          "id": "113294696",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/11011/production/_113294696_p08k5p6n.jpg",
-          "path": "/cpsprodpb/11011/production/_113294696_p08k5p6n.jpg",
-          "height": 576,
-          "width": 1024,
-          "altText": "Lagos",
-          "copyrightHolder": "BBC",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:afrique/region-53338800",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "02ff8e31-8b27-4520-a36c-88afe70480d8",
-      "rank": 10,
-      "count": 5,
-      "urn": "urn:bbc:curie:asset:02ff8e31-8b27-4520-a36c-88afe70480d8",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "L'artiste qui transforme des esquisses en chef d'oeuvre",
-          "headline": "L'artiste qui transforme des esquisses en chef d'oeuvre"
-        },
-        "locators": {
-          "assetUri": "/afrique/53456862",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/53456862",
-          "curie": "http://www.bbc.co.uk/asset/02ff8e31-8b27-4520-a36c-88afe70480d8",
-          "assetId": "53456862"
-        },
-        "summary": "Ayanfe Olarinde est une artiste spécialiste de l'esquisse à Lagos dont l'art s'inspire de la vie et des bouleversements auxquels les jeunes sont confrontés.",
-        "timestamp": 1595068676000,
-        "language": "fr",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-            "categoryName": "Feature"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e2139461b000e9dabf7",
-              "campaignName": "WS - Inspire me"
-            },
-            {
-              "campaignId": "5a988e2939461b000e9dabf8",
-              "campaignName": "WS - Educate me"
-            },
-            {
-              "campaignId": "5a988e3e39461b000e9dabfb",
-              "campaignName": "WS - Keep me on trend"
-            }
-          ],
-          "taggings": []
-        },
-        "media": {
-          "id": "53456863",
-          "subType": "primary",
-          "format": "video",
-          "externalId": "p08l3r5x",
-          "entityType": "Clip",
-          "caption": "Ayanfe Olarinde est une artiste spécialiste de l'esquisse à Lagos",
-          "type": "external_vpid"
-        },
-        "indexImage": {
-          "id": "113493671",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/44E7/production/_113493671_p08l44wl.jpg",
-          "path": "/cpsprodpb/44E7/production/_113493671_p08l44wl.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Ayanfe Olarinde",
-          "caption": "Ayanfe Olarinde est une artiste spécialiste de l'esquisse à Lagos",
-          "copyrightHolder": "BBC",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:afrique/53456862",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "b534585d-8993-4d04-8e4a-a4590d5b09d9",
-      "rank": 11,
-      "count": 4,
-      "urn": "urn:bbc:curie:asset:b534585d-8993-4d04-8e4a-a4590d5b09d9",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Rencontre avec l'enfant boxeur le plus rapide du monde",
-          "headline": "Ghana : rencontre Prince Larbie 'The Buzz' avec l'enfant boxeur le plus rapide du monde"
-        },
-        "locators": {
-          "assetUri": "/afrique/media-53279666",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/media-53279666",
-          "curie": "http://www.bbc.co.uk/asset/b534585d-8993-4d04-8e4a-a4590d5b09d9",
-          "assetId": "53279666"
-        },
-        "summary": "Prince Larbie surnommé 'The Buzz' est un petit boxeur ghanéen, capable de donner 150 coups de poing par minute.",
-        "timestamp": 1593802745000,
-        "language": "fr",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e2139461b000e9dabf7",
-              "campaignName": "WS - Inspire me"
-            }
-          ],
-          "taggings": []
-        },
-        "media": {
-          "id": "53279667",
-          "subType": "primary",
-          "format": "video",
-          "externalId": "p08jsrj0",
-          "entityType": "Clip",
-          "caption": "Ghana : rencontre Prince Larbie 'The Buzz' avec l'enfant boxeur le plus rapide du monde",
-          "type": "external_vpid"
-        },
-        "indexImage": {
-          "id": "113229940",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/1380/production/_113229940_p08jssj5.jpg",
-          "path": "/cpsprodpb/1380/production/_113229940_p08jssj5.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Rencontre Prince Larbie 'The Buzz' avec l'enfant boxeur le plus rapide du monde",
-          "copyrightHolder": "BBC",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:afrique/media-53279666",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "a2447ce1-266a-462e-9a8c-d279dd82231b",
-      "rank": 12,
-      "count": 4,
-      "urn": "urn:bbc:curie:asset:a2447ce1-266a-462e-9a8c-d279dd82231b",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "LE DEBAT BBC AFRIQUE -AFRICA RADIO DU 27 06 2020",
-          "headline": "LE DEBAT BBC AFRIQUE -AFRICA RADIO DU 27 06 2020"
-        },
-        "locators": {
-          "assetUri": "/afrique/53204848",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/53204848",
-          "curie": "http://www.bbc.co.uk/asset/a2447ce1-266a-462e-9a8c-d279dd82231b",
-          "assetId": "53204848"
-        },
-        "summary": "LE DEBAT BBC AFRIQUE -AFRICA RADIO DU 27 06 2020",
-        "timestamp": 1593258349000,
-        "language": "fr",
-        "media": {
-          "id": "53204849",
-          "subType": "primary",
-          "format": "audio",
-          "externalId": "p08j45tz",
-          "entityType": "Clip",
-          "caption": "LE DEBAT BBC AFRIQUE -AFRICA RADIO DU 27 06 2020",
-          "type": "external_vpid"
-        },
-        "indexImage": {
-          "id": "113122744",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/AEB2/production/_113122744_p08j468s.jpg",
-          "path": "/cpsprodpb/AEB2/production/_113122744_p08j468s.jpg",
-          "height": 573,
-          "width": 1024,
-          "altText": "LE DEBAT BBC AFRIQUE -AFRICA RADIO DU 27 06 2020",
-          "copyrightHolder": "Le Débat BBC Afrique-Africa Radio, 52 minutes pour",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:afrique/53204848",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "a221533a-4cfd-3748-aa2f-bf16f5eab48c",
-      "rank": 13,
-      "count": 3,
-      "urn": "urn:bbc:curie:asset:a221533a-4cfd-3748-aa2f-bf16f5eab48c",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "LE DEBAT BBC AFRICA RADIO 15/05/2020",
-          "headline": "LE DEBAT BBC AFRICA RADIO 15/05/2020"
-        },
-        "locators": {
-          "assetUri": "/afrique/region-52684920",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/region-52684920",
-          "curie": "http://www.bbc.co.uk/asset/a221533a-4cfd-3748-aa2f-bf16f5eab48c",
-          "assetId": "52684920"
-        },
-        "summary": "LE DEBAT BBC AFRICA RADIO 15/05/2020",
-        "timestamp": 1589559812000,
-        "language": "fr",
-        "passport": {
-          "taggings": []
-        },
-        "media": {
-          "id": "52684560",
-          "subType": "primary",
-          "format": "audio",
-          "externalId": "p08d9k7m",
-          "entityType": "Clip",
-          "caption": "LE DEBAT BBC AFRICA RADIO 15/05/2020",
-          "type": "external_vpid"
-        },
-        "indexImage": {
-          "id": "112293902",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/51CB/production/_112293902_p08d9ltl.jpg",
-          "path": "/cpsprodpb/51CB/production/_112293902_p08d9ltl.jpg",
-          "height": 1152,
-          "width": 2048,
-          "altText": "LE DEBAT BBC AFRICA RADIO 15/05/2020",
-          "copyrightHolder": "Le Débat BBC Afrique-Africa Radio, 52 minutes pour",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:afrique/region-52684920",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "552543f8-0dcd-044b-9215-b61b33fbdea1",
-      "rank": 14,
-      "count": 3,
-      "urn": "urn:bbc:curie:asset:552543f8-0dcd-044b-9215-b61b33fbdea1",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "#ZeeliciousFood: quand un passe-temps devient un emploi",
-          "headline": "#ZeeliciousFood: quand un passe-temps devient un emploi"
-        },
-        "locators": {
-          "assetUri": "/afrique/45608588",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/45608588",
-          "curie": "http://www.bbc.co.uk/asset/552543f8-0dcd-044b-9215-b61b33fbdea1",
-          "assetId": "45608588"
-        },
-        "summary": "Malgré des études d'économie à l'université et un emploi de rêve dans une compagnie pétrolière, Winifred Nwanya décide de se consacrer au passe-temps de son enfance: cuisiner.",
-        "timestamp": 1594137402000,
-        "language": "fr",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-            "categoryName": "Feature"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e2139461b000e9dabf7",
-              "campaignName": "WS - Inspire me"
-            }
-          ],
-          "taggings": []
-        },
-        "media": {
-          "id": "53327142",
-          "subType": "primary",
-          "format": "video",
-          "externalId": "p08k383g",
-          "entityType": "Clip",
-          "caption": "Quand un passe temps devient un emploi à plein temp",
-          "type": "external_vpid"
-        },
-        "indexImage": {
-          "id": "113277485",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/E46D/production/_113277485_p08k3b1b.jpg",
-          "path": "/cpsprodpb/E46D/production/_113277485_p08k3b1b.jpg",
-          "height": 576,
-          "width": 1024,
-          "altText": "Youtube",
-          "copyrightHolder": " BBC",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:afrique/45608588",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "f07a9e75-0535-c946-bf84-d1837b62691b",
-      "rank": 15,
-      "count": 2,
-      "urn": "urn:bbc:curie:asset:f07a9e75-0535-c946-bf84-d1837b62691b",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Comment concilier maquillage et masque facial",
-          "headline": "Comment concilier maquillage et masque facial"
-        },
-        "locators": {
-          "assetUri": "/afrique/media-51115925",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/media-51115925",
-          "curie": "http://www.bbc.co.uk/asset/f07a9e75-0535-c946-bf84-d1837b62691b",
-          "assetId": "51115925"
-        },
-        "summary": "Basée à Dakar, la maquilleuse professionnelle Khady Niang Diakhate partage des astuces pour rester coquette sous le masque.",
-        "timestamp": 1594289837000,
-        "language": "fr",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-            "categoryName": "Feature"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e2139461b000e9dabf7",
-              "campaignName": "WS - Inspire me"
-            }
-          ],
-          "taggings": []
-        },
-        "media": {
-          "id": "53348981",
-          "subType": "primary",
-          "format": "video",
-          "externalId": "p08k8kcq",
-          "entityType": "Clip",
-          "caption": "Comment concilier maquillage et masque facial",
-          "type": "external_vpid"
-        },
-        "indexImage": {
-          "id": "113304803",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/7878/production/_113304803_p08k8lv7.jpg",
-          "path": "/cpsprodpb/7878/production/_113304803_p08k8lv7.jpg",
-          "height": 576,
-          "width": 1024,
-          "altText": "Basée à Dakar, la maquilleuse professionnelle Khady Niang Diakhate partage des astuces pour rester coquette sous le masque.",
-          "copyrightHolder": "BBC",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:afrique/media-51115925",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "c9edf9cf-cdcc-4704-ba6b-8320bee2c640",
-      "rank": 16,
-      "count": 2,
-      "urn": "urn:bbc:curie:asset:c9edf9cf-cdcc-4704-ba6b-8320bee2c640",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Patrice Lumumba, un héros raconté par ses enfants",
-          "headline": "Patrice Lumumba, un héros raconté par ses enfants"
-        },
-        "locators": {
-          "assetUri": "/afrique/media-53243501",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/media-53243501",
-          "curie": "http://www.bbc.co.uk/asset/c9edf9cf-cdcc-4704-ba6b-8320bee2c640",
-          "assetId": "53243501"
-        },
-        "summary": "Le tout premier Premier ministre de l'actuelle RDC est connu en Afrique et dans le monde entier; ici, ses enfants racontent la manière dont ils ont vécu son combat et les avantages dont chaque Congolais a bénéficié de celui-ci.",
-        "timestamp": 1593543641000,
-        "language": "fr",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e2939461b000e9dabf8",
-              "campaignName": "WS - Educate me"
-            },
-            {
-              "campaignId": "5a988e3739461b000e9dabfa",
-              "campaignName": "WS - Give me perspective"
-            }
-          ],
-          "taggings": []
-        },
-        "media": {
-          "id": "53243502",
-          "subType": "primary",
-          "format": "video",
-          "externalId": "p08jh5d7",
-          "entityType": "Clip",
-          "caption": "Il y a 60 ans jour pour jour,",
-          "type": "external_vpid"
-        },
-        "indexImage": {
-          "id": "113173039",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/16B6D/production/_113173039_p08jh7nk.jpg",
-          "path": "/cpsprodpb/16B6D/production/_113173039_p08jh7nk.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Keyframe #1",
-          "copyrightHolder": "AFP",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:afrique/media-53243501",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "a25db412-ab01-554d-9406-45c665e9cb6c",
-      "rank": 17,
-      "count": 2,
-      "urn": "urn:bbc:curie:asset:a25db412-ab01-554d-9406-45c665e9cb6c",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "La lutteuse africaine Cindi Gold, future championne ?",
-          "headline": "Cindi Gold, l’une des rares femmes noires sur les rings africains de lutte professionnelle"
-        },
-        "locators": {
-          "assetUri": "/afrique/sports-46609905",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/sports-46609905",
-          "curie": "http://www.bbc.co.uk/asset/a25db412-ab01-554d-9406-45c665e9cb6c",
-          "assetId": "46609905"
-        },
-        "summary": "Cindi Gold, l’une des rares femmes noires sur les rings africains de lutte professionnelle \"ouvre la voie\" pour les autres.",
-        "timestamp": 1545145163000,
-        "language": "fr",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-            "categoryName": "Feature"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e2139461b000e9dabf7",
-              "campaignName": "Inspire me"
-            }
-          ],
-          "taggings": []
-        },
-        "media": {
-          "id": "46609906",
-          "subType": "primary",
-          "format": "video",
-          "externalId": "p06vyxnk",
-          "entityType": "Clip",
-          "caption": "La lutteuse africaine Cindi Gold, future championne ?",
-          "type": "external_vpid"
-        },
-        "indexImage": {
-          "id": "104863632",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/5C54/production/_104863632_p06vyz9h.jpg",
-          "path": "/cpsprodpb/5C54/production/_104863632_p06vyz9h.jpg",
-          "height": 1152,
-          "width": 2048,
-          "altText": "Wrestler",
-          "copyrightHolder": "BBC",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:afrique/sports-46609905",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "901bc7c5-111c-483c-9fd3-c453674a16b2",
-      "rank": 18,
-      "count": 2,
-      "urn": "urn:bbc:curie:asset:901bc7c5-111c-483c-9fd3-c453674a16b2",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "\"Il n'y a pas d'artifice juridique qui empêche Alassane Ouattara de se représenter\"",
-          "headline": "Alassane Ouattara pourrait briguer un 3ème mandat pour le constitutionaliste Dola Traore"
-        },
-        "locators": {
-          "assetUri": "/afrique/monde-53408522",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-53408522",
-          "curie": "http://www.bbc.co.uk/asset/901bc7c5-111c-483c-9fd3-c453674a16b2",
-          "assetId": "53408522"
-        },
-        "summary": "Un constitutionaliste ivoirien parle de la légitimité ou non d’une éventuelle candidature d’Alassane Ouattara à la prochaine présidentielle.",
-        "timestamp": 1594756057000,
-        "language": "fr",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e3e39461b000e9dabfb",
-              "campaignName": "WS - Keep me on trend"
-            }
-          ],
-          "taggings": []
-        },
-        "media": {
-          "id": "53408523",
-          "subType": "primary",
-          "format": "audio",
-          "externalId": "p08ks528",
-          "entityType": "Clip",
-          "caption": "Alassane Ouattara pourrait briguer un 3ème mandat pour le constitutionaliste Dola Traore",
-          "type": "external_vpid"
-        },
-        "indexImage": {
-          "id": "113394090",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/2359/production/_113394090_p08ks5p2.jpg",
-          "path": "/cpsprodpb/2359/production/_113394090_p08ks5p2.jpg",
-          "height": 576,
-          "width": 1024,
-          "altText": "Un constitutionaliste ivoirien parle de la légitimité ou non d’une éventuelle candidature d’Alassane Ouattara à la prochaine présidentielle.",
-          "caption": "Dola Zie Djack Traore enseignant à l'UFR de droit, sciences politiques et administratives",
-          "copyrightHolder": "Dola Zie Djack Traore ",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:afrique/monde-53408522",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "794b1ea0-9eda-5d4d-abf5-823e4470b697",
-      "rank": 19,
-      "count": 2,
-      "urn": "urn:bbc:curie:asset:794b1ea0-9eda-5d4d-abf5-823e4470b697",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Grands-mères boxeuses",
-          "headline": "Grands-mères boxeuses"
-        },
-        "locators": {
-          "assetUri": "/afrique/region-41086111",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/region-41086111",
-          "curie": "http://www.bbc.co.uk/asset/794b1ea0-9eda-5d4d-abf5-823e4470b697",
-          "assetId": "41086111"
-        },
-        "summary": "La boxe est un sport difficile mais pour ces retraitées de plus de 60 ans, c’est une activité qui leur permet de se garder en former, de se défendre et de se sentir plus jeune.",
-        "timestamp": 1504012829000,
+        "summary": "Brexit : les immigrés face au référendum medium",
+        "timestamp": 1466767510000,
         "language": "fr",
         "passport": {
           "category": {
@@ -983,83 +378,29 @@
           "taggings": []
         },
         "media": {
-          "id": "41086112",
+          "id": "23055671",
           "subType": "primary",
           "format": "video",
-          "externalId": "p05dlv7y",
+          "externalId": "p0145893",
           "entityType": "Clip",
-          "caption": "\"J'ai 75 ans et la boxe, j'adore ça\"",
+          "caption": "Brexit : les immigrés face au référendum short",
+          "statusCode": 404,
+          "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
           "type": "external_vpid"
         },
         "indexImage": {
-          "id": "97588001",
+          "id": "63493119",
           "subType": "index",
-          "href": "http://c.files.bbci.co.uk/2768/production/_97588001_1.jpg",
-          "path": "/cpsprodpb/2768/production/_97588001_1.jpg",
-          "height": 261,
-          "width": 464,
-          "altText": "\"J'ai 75 ans et la boxe, j'adore ça\", Zodwa Twala",
-          "caption": "\"J'ai 75 ans et la boxe, j'adore ça\", Zodwa Twala",
-          "copyrightHolder": "BBC",
+          "href": "http://b.files.bbci.co.uk/16403/test/_63493119_89aa6162-e8af-4aa8-ba99-93359b855bf5.jpg",
+          "path": "/cpsdevpb/16403/test/_63493119_89aa6162-e8af-4aa8-ba99-93359b855bf5.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Brexit : les immigrés face au référendum minora change",
+          "caption": "brexit au référendum minora change",
+          "copyrightHolder": "BBC Sport",
           "type": "image"
         },
-        "id": "urn:bbc:ares::asset:afrique/region-41086111",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "556a64a1-9b70-7a48-af75-d4b46d962125",
-      "rank": 20,
-      "count": 2,
-      "urn": "urn:bbc:curie:asset:556a64a1-9b70-7a48-af75-d4b46d962125",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Empreintes, les grandes voix de la musique congolaise",
-          "headline": "C’est le moment : empreintes, les grandes voix de la musique congolaise"
-        },
-        "locators": {
-          "assetUri": "/afrique/media-52922409",
-          "cpsUrn": "urn:bbc:content:assetUri:afrique/media-52922409",
-          "curie": "http://www.bbc.co.uk/asset/556a64a1-9b70-7a48-af75-d4b46d962125",
-          "assetId": "52922409"
-        },
-        "summary": "Ata Ahli Ahebla reçoit l’artiste Oxygène et le promoteur Sauve-Gérard Ngoma Malanda pour parler de cet album.",
-        "timestamp": 1591366101000,
-        "language": "fr",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e3139461b000e9dabf9",
-              "campaignName": "WS - Divert me"
-            }
-          ],
-          "taggings": []
-        },
-        "media": {
-          "id": "52922412",
-          "subType": "primary",
-          "format": "audio",
-          "externalId": "p08fww8p",
-          "entityType": "Clip",
-          "caption": "C’est le moment : empreintes, les grandes voix de la musique congolaise",
-          "type": "external_vpid"
-        },
-        "indexImage": {
-          "id": "112718906",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/EE35/production/_112718906_p08fwx0p.jpg",
-          "path": "/cpsprodpb/EE35/production/_112718906_p08fwx0p.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Empreintes : les grandes voix de la musique congolaise",
-          "copyrightHolder": "BBC",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:afrique/media-52922409",
+        "id": "urn:bbc:ares::asset:afrique/monde-23055670",
         "type": "cps"
       }
     }

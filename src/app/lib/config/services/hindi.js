@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `hi`,
     service: 'hindi',
     serviceName: 'Hindi',
+    languageName: 'Hindi',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbchindi',
     twitterSite: '@bbchindi',

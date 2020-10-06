@@ -195,6 +195,7 @@ export const service = {
     datetimeLocale: `ru`,
     service: 'russian',
     serviceName: 'Russian',
+    languageName: 'Russian',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcrussian',
     twitterSite: '@bbcrussian',
@@ -206,6 +207,7 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Главная',
+    iTunesAppId: 504278066,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -286,6 +288,10 @@ export const service = {
       {
         title: 'Коронавирус',
         url: '/russian/in-depth-51962199',
+      },
+      {
+        title: 'Выборы в США',
+        url: '/russian/topics/c8jvq6n6kdxt',
       },
       {
         title: 'Истории',

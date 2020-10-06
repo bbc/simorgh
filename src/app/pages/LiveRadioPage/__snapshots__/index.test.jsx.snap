@@ -213,7 +213,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@graph":[{"@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"BBC Afrique Radio"}}]}
+      {"@context":"http://schema.org","@graph":[{"@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"BBC Afrique Radio"},"inLanguage":{"@type":"Language","name":"French","alternateName":"fr"}}]}
     </script>
     <script
       async="true"
@@ -251,21 +251,18 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   margin-bottom: 1rem;
 }
 
+.c5 amp-iframe,
+.c5 div > iframe {
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
+}
+
 .c1 {
   width: 100%;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-}
-
-.c5 amp-iframe {
-  width: calc(100% + 1rem);
-}
-
-.c5 iframe {
-  width: calc(100% + 1rem);
-  margin: 0 -0.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -385,6 +382,14 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   }
 }
 
+@media (min-width:25rem) {
+  .c5 amp-iframe,
+  .c5 div > iframe {
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
+  }
+}
+
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     margin: 0 auto;
@@ -399,25 +404,12 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   }
 }
 
-@media (min-width:25rem) {
-  .c5 amp-iframe {
-    width: calc(100% + 2rem);
-  }
-}
-
-@media (min-width:25rem) {
-  .c5 iframe {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem;
-  }
-}
-
 <div>
       <amp-analytics>
         <script
           type="application/json"
         >
-          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"pageview":"\${base}s=598343&s2=3&p=afrique.bbc_afrique_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares:ws_media:live:bbc_afrique_radio]&x2=[amp]&x3=[news-afrique]&x4=[fr]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[BBC+Afrique+Radio+-+BBC+News+Afrique]&ref=\${documentReferrer}"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"pageview":"\${base}s=598343&s2=3&p=afrique.bbc_afrique_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Aares%3Aws_media%3Alive%3Abbc_afrique_radio]&x2=[amp]&x3=[news-afrique]&x4=[fr]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[BBC%2BAfrique%2BRadio%2B-%2BBBC%2BNews%2BAfrique]&ref=\${documentReferrer}"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
         </script>
       </amp-analytics>
       <div>
@@ -903,21 +895,18 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   margin-bottom: 1rem;
 }
 
+.c5 amp-iframe,
+.c5 div > iframe {
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
+}
+
 .c1 {
   width: 100%;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-}
-
-.c5 amp-iframe {
-  width: calc(100% + 1rem);
-}
-
-.c5 iframe {
-  width: calc(100% + 1rem);
-  margin: 0 -0.5rem;
 }
 
 .c7 {
@@ -1385,6 +1374,14 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   }
 }
 
+@media (min-width:25rem) {
+  .c5 amp-iframe,
+  .c5 div > iframe {
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
+  }
+}
+
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     margin: 0 auto;
@@ -1396,19 +1393,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   .c1 {
     margin: 0 auto;
     max-width: 80rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c5 amp-iframe {
-    width: calc(100% + 2rem);
-  }
-}
-
-@media (min-width:25rem) {
-  .c5 iframe {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem;
   }
 }
 
@@ -1635,7 +1619,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@graph":[{"@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"BBC Afrique Radio"}}]}
+      {"@context":"http://schema.org","@graph":[{"@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"BBC Afrique Radio"},"inLanguage":{"@type":"Language","name":"French","alternateName":"fr"}}]}
     </script>
   </head>
   <body>

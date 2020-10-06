@@ -1,8 +1,7 @@
 const getMetaTagContent = selector =>
   document.querySelector(selector).getAttribute('content');
 
-// eslint-disable-next-line no-unused-vars
-export default service => {
+export default () => {
   describe('SEO', () => {
     it('Page title', () => {
       const pageTitleEl = document.querySelector('title');

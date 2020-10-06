@@ -2,7 +2,7 @@
 
 exports[`Canonical Most Read Page A11y I can see the skip to content link 1`] = `"Bỏ qua để xem nội dung"`;
 
-exports[`Canonical Most Read Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=97&amp;p=vietnamese.popular.read.page&amp;x2=[responsive]&amp;x3=[news-vietnamese]&amp;x4=[vi]&amp;x7=[list-datadriven]&amp;x8=[simorgh-nojs]&amp;x9=[Đọc+nhiều+nhất+-+BBC+News+Tiếng+Việt]&amp;x11=[2019-11-06T16:54:00Z]&amp;x12=[2100-11-06T17:09:00Z]\\"/>"`;
+exports[`Canonical Most Read Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=97&amp;p=vietnamese.popular.read.page&amp;x2=[responsive]&amp;x3=[news-vietnamese]&amp;x4=[vi]&amp;x7=[list-datadriven]&amp;x8=[simorgh-nojs]&amp;x9=[%C4%90%E1%BB%8Dc%2Bnhi%E1%BB%81u%2Bnh%E1%BA%A5t%2B-%2BBBC%2BNews%2BTi%E1%BA%BFng%2BVi%E1%BB%87t]&amp;x11=[2019-11-06T16%3A54%3A00Z]&amp;x12=[2100-11-06T17%3A09%3A00Z]\\"/>"`;
 
 exports[`Canonical Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/vietnamese"`;
 
@@ -158,6 +158,8 @@ exports[`Canonical Most Read Page I can see the list items 9`] = `"9HRW kêu g�
 
 exports[`Canonical Most Read Page I can see the list items 10`] = `"10Lỗ hổng thiên đàng và một căn bệnh mãn tínhCập nhật gần nhất: 6 tháng 11 năm 2019"`;
 
+exports[`Canonical Most Read Page Main heading should match text 1`] = `"Đọc nhiều nhất"`;
+
 exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,
@@ -251,6 +253,11 @@ Object {
         "height": 576,
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
         "width": 1024,
+      },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "vi",
+        "name": "Vietnamese",
       },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/vietnamese/popular/read",

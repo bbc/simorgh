@@ -3,25 +3,34 @@ import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import CpsMetadata from './index';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 
 const getISOStringDate = date => new Date(date).toISOString();
 
+const defaultToggles = {
+  apple_itunes_app: {
+    enabled: false,
+  },
+};
+
 // eslint-disable-next-line react/prop-types
-const Context = ({ service, children }) => (
+const Context = ({ service, children, toggles = defaultToggles }) => (
   <ServiceContextProvider service={service}>
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.co.uk"
-      id="c0000000000o"
-      isAmp={false}
-      pageType="article"
-      pathname="/pathname"
-      service={service}
-      statusCode={200}
-    >
-      {children}
-    </RequestContextProvider>
+    <ToggleContextProvider toggles={toggles}>
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp={false}
+        pageType="article"
+        pathname="/pathname"
+        service={service}
+        statusCode={200}
+      >
+        {children}
+      </RequestContextProvider>
+    </ToggleContextProvider>
   </ServiceContextProvider>
 );
 
@@ -110,4 +119,19 @@ describe('CPS metadata', () => {
       <CpsMetadata {...mapProps} />
     </Context>,
   );
+
+  describe('with apple_itunes_app enabled for service with iTunesAppId (mundo) and hasAppleItunesAppBanner is true', () => {
+    const toggles = {
+      apple_itunes_app: {
+        enabled: true,
+      },
+    };
+
+    shouldMatchSnapshot(
+      'should match snapshot',
+      <Context service="mundo" toggles={toggles}>
+        <CpsMetadata {...mapProps} hasAppleItunesAppBanner />
+      </Context>,
+    );
+  });
 });

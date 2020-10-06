@@ -13,6 +13,7 @@ const ChartbeatAnalytics = ({ data }) => {
     brandName,
     chartbeatDomain,
     mostRead: { header: mostReadTitle },
+    mostWatched: { header: mostWatchedTitle },
   } = useContext(ServiceContext);
   const { sendCanonicalChartbeatBeacon } = useContext(UserContext);
   const { enabled } = useToggle('chartbeatAnalytics');
@@ -34,6 +35,7 @@ const ChartbeatAnalytics = ({ data }) => {
     origin,
     previousPath,
     mostReadTitle,
+    mostWatchedTitle,
   };
 
   const chartbeatConfig = getConfig(configDependencies);

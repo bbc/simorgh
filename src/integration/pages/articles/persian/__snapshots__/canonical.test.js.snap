@@ -2,7 +2,7 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
 
-exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=69&amp;p=persian.articles.c4vlle3q337o.page&amp;x1=[urn:bbc:optimo:c4vlle3q337o]&amp;x2=[responsive]&amp;x3=[news-persian]&amp;x4=[fa]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[پهپادی+که+برایتان+قهوه+می‌آورد]&amp;x11=[2018-08-24T14:57:42.000Z]&amp;x12=[2018-08-24T14:57:42.000Z]&amp;x13=[Drones]&amp;x14=[c6176220-b6bb-4a1c-b3b4-3a6fcdc283b1]\\"/>"`;
+exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=69&amp;p=persian.articles.c4vlle3q337o.page&amp;x1=[urn%3Abbc%3Aoptimo%3Ac4vlle3q337o]&amp;x2=[responsive]&amp;x3=[news-persian]&amp;x4=[fa]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[%D9%BE%D9%87%D9%BE%D8%A7%D8%AF%DB%8C%2B%DA%A9%D9%87%2B%D8%A8%D8%B1%D8%A7%DB%8C%D8%AA%D8%A7%D9%86%2B%D9%82%D9%87%D9%88%D9%87%2B%D9%85%DB%8C%E2%80%8C%D8%A2%D9%88%D8%B1%D8%AF]&amp;x11=[2018-08-24T14%3A57%3A42.000Z]&amp;x12=[2018-08-24T14%3A57%3A42.000Z]&amp;x13=[Drones]&amp;x14=[c6176220-b6bb-4a1c-b3b4-3a6fcdc283b1]\\"/>"`;
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
@@ -171,9 +171,19 @@ Object {
 }
 `;
 
-exports[`Canonical Articles I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg"`;
+exports[`Canonical Articles Image Caption should match text 1`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند"`;
 
-exports[`Canonical Articles I can see an image with a caption 2`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند"`;
+exports[`Canonical Articles Image should match snapshot 1`] = `
+<img
+  alt="قهوه"
+  class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 800w"
+  width="1024"
+/>
+`;
+
+exports[`Canonical Articles Main heading should match text 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -289,6 +299,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "fa",
+        "name": "Persian",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/persian/articles/c4vlle3q337o",
         "@type": "WebPage",
@@ -345,3 +360,10 @@ exports[`Canonical Articles SEO Twitter image src 1`] = `"https://news.files.bbc
 exports[`Canonical Articles SEO Twitter site 1`] = `"@bbcpersian"`;
 
 exports[`Canonical Articles SEO Twitter title 1`] = `"پهپادی که برایتان قهوه می‌آورد - BBC News فارسی"`;
+
+exports[`Canonical Articles Timestamp should match text and date 1`] = `
+Object {
+  "date": "2018-08-24",
+  "text": "۲ شهریور ۱۳۹۷ - ۲۴ اوت ۲۰۱۸",
+}
+`;

@@ -2,7 +2,7 @@
 
 exports[`Canonical Front Page A11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
 
-exports[`Canonical Front Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=70&amp;p=pidgin.page&amp;x1=[urn:bbc:cps:52f3c7b1-83ed-2338-e050-17ac8045cd94]&amp;x2=[responsive]&amp;x3=[news-pidgin]&amp;x4=[pcm]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[Domot+-+BBC+News+Pidgin]&amp;x11=[1970-01-18T08:30:40.608Z]&amp;x12=[1970-01-19T01:24:09.011Z]\\"/>"`;
+exports[`Canonical Front Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=70&amp;p=pidgin.page&amp;x1=[urn%3Abbc%3Acps%3A52f3c7b1-83ed-2338-e050-17ac8045cd94]&amp;x2=[responsive]&amp;x3=[news-pidgin]&amp;x4=[pcm]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[Domot%2B-%2BBBC%2BNews%2BPidgin]&amp;x11=[1970-01-18T08%3A30%3A40.608Z]&amp;x12=[1970-01-19T01%3A24%3A09.011Z]\\"/>"`;
 
 exports[`Canonical Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
@@ -226,6 +226,11 @@ Object {
         "height": 576,
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
         "width": 1024,
+      },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "pcm",
+        "name": "Nigerian Pidgin",
       },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/pidgin",
