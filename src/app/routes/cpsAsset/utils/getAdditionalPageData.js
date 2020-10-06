@@ -25,15 +25,18 @@ const pageTypeUrls = async (
         {
           name: 'mostRead',
           path: getMostReadEndpoint({ service, variant }).replace('.json', ''),
+          assetUri,
         },
         {
           name: 'secondaryColumn',
           path: getSecondaryColumnUrl({ service, variant }),
+          assetUri,
         },
         (await hasRecommendations(service, variant, pageData))
           ? {
               name: 'recommendations',
               path: getRecommendationsUrl({ assetUri, variant }),
+              assetUri,
             }
           : null,
       ].filter(i => i);
@@ -42,6 +45,7 @@ const pageTypeUrls = async (
         {
           name: 'mostWatched',
           path: getMostWatchedEndpoint({ service, variant, env }),
+          assetUri,
         },
       ];
     default:
@@ -57,8 +61,8 @@ const validateResponse = ({ status, json }, name) => {
   return null;
 };
 
-const fetchUrl = ({ name, path }) =>
-  fetchPageData({ path })
+const fetchUrl = ({ name, path, ...loggerArgs }) =>
+  fetchPageData({ path, ...loggerArgs })
     .then(response => validateResponse(response, name))
     .catch(noop);
 

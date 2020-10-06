@@ -271,23 +271,23 @@ export const service = {
       },
       {
         title: 'Afrique',
-        url: '/afrique/region',
+        url: '/afrique/topics/cvqxn2k7kv7t',
       },
       {
         title: 'Monde',
-        url: '/afrique/monde',
+        url: '/afrique/topics/cvqxn21vx11t',
       },
       {
         title: 'Sports',
-        url: '/afrique/sports',
+        url: '/afrique/topics/c404v54yrqyt',
       },
       {
         title: 'Economie',
-        url: '/afrique/topics/ca170ae3-99c1-48db-9b67-2866f85e7342',
+        url: '/afrique/topics/cnq687nr9v1t',
       },
       {
         title: 'Culture',
-        url: '/afrique/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864',
+        url: '/afrique/topics/cnq687nrrw8t',
       },
       {
         title: 'Au féminin',
@@ -295,11 +295,11 @@ export const service = {
       },
       {
         title: 'Technologie',
-        url: '/afrique/topics/31684f19-84d6-41f6-b033-7ae08098572a',
+        url: '/afrique/topics/cnq687nn703t',
       },
       {
         title: 'Santé',
-        url: '/afrique/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
+        url: '/afrique/topics/c06gq9jxz3rt',
       },
       {
         title: 'Vidéos',
@@ -307,7 +307,7 @@ export const service = {
       },
       {
         title: 'Nos émissions',
-        url: '/afrique/nos_emissions/radio',
+        url: '/afrique/media-54074891',
       },
     ],
   },

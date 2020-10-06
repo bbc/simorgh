@@ -271,19 +271,19 @@ export const service = {
       },
       {
         title: 'شرق أوسط',
-        url: '/arabic/middleeast',
+        url: '/arabic/topics/ckdxnj6g4znt',
       },
       {
         title: 'عالم',
-        url: '/arabic/world',
+        url: '/arabic/topics/c719d2el19nt',
       },
       {
         title: 'علوم وتكنولوجيا',
-        url: '/arabic/scienceandtech',
+        url: '/arabic/topics/c719d2ely7xt',
       },
       {
         title: 'صحة',
-        url: '/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
+        url: '/arabic/topics/c95y3q70znjt',
       },
       {
         title: 'فيديو',
@@ -291,11 +291,11 @@ export const service = {
       },
       {
         title: 'صحافة',
-        url: '/arabic/inthepress',
+        url: '/arabic/topics/c08gmd9rp97t',
       },
       {
         title: 'ترند',
-        url: '/arabic/trending',
+        url: '/arabic/topics/c404vr23x4dt',
       },
       {
         title: 'تحقيقات',
