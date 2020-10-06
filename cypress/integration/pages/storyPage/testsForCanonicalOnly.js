@@ -21,10 +21,7 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
-  service,
-  pageType,
-}) => {
+export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({ service }) => {
   if (Cypress.env('APP_ENV') === 'local') {
     runCanonicalAdsTests({ service });
   }
