@@ -132,24 +132,16 @@ const noHeadlineNoAssetTypeItem = {
 };
 
 const allowedItemsTest = value => {
-  it(`should return right allowed items for ${value} stories for first section`, () => {
-    const items = numberOfStories[value].input;
-    const isFirstSection = true;
-    expect(getAllowedItems({ items, isFirstSection })).toStrictEqual(
-      numberOfStories[value].expectedFrontSectionAllowedItems,
-    );
-  });
+  describe('first section', () => {
+    it(`should return correct allowed items for ${value} stories`, () => {
+      const items = numberOfStories[value].input;
+      const isFirstSection = true;
+      expect(getAllowedItems({ items, isFirstSection })).toStrictEqual(
+        numberOfStories[value].expectedFrontSectionAllowedItems,
+      );
+    });
 
-  it(`should return right allowed items for ${value} stories for non-first section`, () => {
-    const items = numberOfStories[value].input;
-    const isFirstSection = false;
-    expect(getAllowedItems({ items, isFirstSection })).toStrictEqual(
-      numberOfStories[value].expectedNotFrontSectionAllowedItems,
-    );
-  });
-
-  describe('Show all promos', () => {
-    it(`should return right allowed items for ${value} stories for first section when showAllPromos is true`, () => {
+    it(`should return correct allowed items for ${value} stories when showAllPromos is true`, () => {
       const items = numberOfStories[value].input;
       const showAllPromos = true;
       const isFirstSection = true;
@@ -157,34 +149,24 @@ const allowedItemsTest = value => {
         getAllowedItems({ items, isFirstSection, showAllPromos }),
       ).toStrictEqual(numberOfStories[value].expectedFrontSectionAllowedItems);
     });
+  });
 
-    it(`should return right allowed items for ${value} stories for first section when showAllPromos is false`, () => {
+  describe('non-first section', () => {
+    it(`should return correct allowed items for ${value} stories`, () => {
       const items = numberOfStories[value].input;
-      const showAllPromos = false;
-      const isFirstSection = true;
-      expect(
-        getAllowedItems({ items, isFirstSection, showAllPromos }),
-      ).toStrictEqual(numberOfStories[value].expectedFrontSectionAllowedItems);
+      const isFirstSection = false;
+      expect(getAllowedItems({ items, isFirstSection })).toStrictEqual(
+        numberOfStories[value].expectedNotFrontSectionAllowedItems,
+      );
     });
 
-    it(`should return right allowed items for ${value} stories for non first section when showAllPromos is true`, () => {
+    it(`should return correct allowed items for ${value} stories when showAllPromos is true`, () => {
       const items = numberOfStories[value].input;
       const showAllPromos = true;
       const isFirstSection = false;
       expect(
         getAllowedItems({ items, isFirstSection, showAllPromos }),
       ).toStrictEqual(numberOfStories[value].expectedShowAllPromosAllowedItems);
-    });
-
-    it(`should return right allowed items for ${value} stories for non first section when showAllPromos is false`, () => {
-      const items = numberOfStories[value].input;
-      const showAllPromos = false;
-      const isFirstSection = false;
-      expect(
-        getAllowedItems({ items, isFirstSection, showAllPromos }),
-      ).toStrictEqual(
-        numberOfStories[value].expectedNotFrontSectionAllowedItems,
-      );
     });
   });
 };
