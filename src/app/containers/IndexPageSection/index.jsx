@@ -165,6 +165,7 @@ const IndexPageSection = ({
   group,
   sectionNumber,
   renderWithoutStrapline,
+  showAllPromos,
 }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
@@ -188,7 +189,11 @@ const IndexPageSection = ({
   const items = removeItemsWithoutUrlOrHeadline(bulletinFilteredItems);
 
   // We have a cap on the number of allowed items per section
-  const allowedItems = getAllowedItems(items, isFirstSection);
+  const allowedItems = getAllowedItems({
+    items,
+    isFirstSection,
+    showAllPromos,
+  });
 
   // The current implementation of SectionLabel *requires* a strapline to be
   // present in order to render. It is currently *not possible* to render a
@@ -235,6 +240,7 @@ const IndexPageSection = ({
         service,
         isFirstSection,
         dir,
+        showAllPromos,
       })}
     </StyledSection>
   );
@@ -243,6 +249,7 @@ const IndexPageSection = ({
 IndexPageSection.defaultProps = {
   bar: true,
   renderWithoutStrapline: false,
+  showAllPromos: false,
 };
 
 IndexPageSection.propTypes = {
@@ -250,6 +257,7 @@ IndexPageSection.propTypes = {
   group: shape(groupShape).isRequired,
   renderWithoutStrapline: bool,
   sectionNumber: number.isRequired,
+  showAllPromos: bool,
 };
 
 export default IndexPageSection;
