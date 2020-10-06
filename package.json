@@ -85,7 +85,7 @@
     "@bbc/psammead-detokeniser": "^1.0.0",
     "@bbc/psammead-embed-error": "^1.1.2",
     "@bbc/psammead-figure": "^1.2.14",
-    "@bbc/psammead-grid": "^1.1.19",
+    "@bbc/psammead-grid": "^1.1.23",
     "@bbc/psammead-heading-index": "^1.0.4",
     "@bbc/psammead-headings": "^3.1.35",
     "@bbc/psammead-image": "^1.2.4",
