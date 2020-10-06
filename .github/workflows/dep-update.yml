@@ -1,0 +1,13 @@
+name: 'Simorgh Dependency Updates'
+description: 'Uses npm update to regularly update the Simorgh dependencies in occurrence with our semver versioning scheme'
+author: 'GitHub'
+steps:
+  - uses: actions/checkout@v2
+  - uses: actions/setup-node@v2
+    with:
+      node-version: '12'
+      check-latest: true
+  - name: Running npm outdated
+    run: npm outdated
+  - name: Running npm update
+    run: npm update
