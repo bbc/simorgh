@@ -288,7 +288,7 @@ const rowsTest = value => {
 
     it(`should correctly split ${value} stories when showAllPromos is true`, () => {
       const items = numberOfStories[value].input;
-      const isFirstSection = true;
+      const isFirstSection = false;
       const showAllPromos = true;
       expect(getRows({ items, isFirstSection, showAllPromos })).toStrictEqual(
         numberOfStories[value].expectedNotFirstSection,
