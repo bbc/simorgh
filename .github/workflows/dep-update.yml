@@ -1,7 +1,3 @@
-name: 'Simorgh Dependency Updates'
-description: 'Uses npm update to regularly update the Simorgh dependencies in occurrence with our semver versioning scheme'
-author: 'GitHub'
-
 on: [push]
 
 jobs:
