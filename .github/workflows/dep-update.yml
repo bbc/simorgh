@@ -2,6 +2,7 @@ on: [push]
 
 jobs:
   npm_dep_update:
+    runs-on: ubuntu-latest
     name: Simorgh Dependency Updates'
     steps:
       - uses: actions/checkout@v2
