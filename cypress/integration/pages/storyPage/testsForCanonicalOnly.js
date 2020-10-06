@@ -1,4 +1,4 @@
-import testAds from './testAds';
+import runCanonicalAdsTests from '../../../support/helpers/adsTests/testsForCanonicalOnly';
 
 export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
   describe(`Include initialisation only on Mundo on specific page`, () => {
@@ -15,18 +15,17 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
       }
     });
   });
-
-  if (Cypress.env('APP_ENV') === 'local') {
-    testAds(service);
-  }
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
   pageType,
-}) =>
-  describe(`No testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {});
+}) => {
+  if (Cypress.env('APP_ENV') === 'local') {
+    runCanonicalAdsTests({ service });
+  }
+};
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = ({
