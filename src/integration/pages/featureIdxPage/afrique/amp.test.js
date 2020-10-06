@@ -6,5 +6,6 @@
 import runAmpTests from '../ampTests';
 
 describe('AMP Feature Index page', () => {
-  runAmpTests(service);
+  const additionalParam = 'bob';
+  runAmpTests(service, additionalParam);
 });
