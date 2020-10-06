@@ -1,11 +1,11 @@
 import {
   runCommonCrossPlatformTests,
-  runTimestampTests,
-  runImageTests,
+  runStoryPromoTests,
+  runSectionTests,
 } from '../../common';
 
 export default service => {
   runCommonCrossPlatformTests(service);
-  runTimestampTests();
-  runImageTests();
+  runStoryPromoTests();
+  runSectionTests();
 };
