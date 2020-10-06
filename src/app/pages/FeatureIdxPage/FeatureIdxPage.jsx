@@ -44,6 +44,7 @@ const FeatureIdxPage = ({ pageData }) => {
                 group={group}
                 sectionNumber={index}
                 renderWithoutStrapline
+                showAllPromos
               />
             </Fragment>
           ))}

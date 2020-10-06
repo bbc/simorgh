@@ -27,12 +27,12 @@ const getRows = ({ items, isFirstSection, showAllPromos }) => {
   const [firstRow, unsplitregularItems] = splitFirstRow(items, isFirstSection);
   let regularRows = [];
   let noImageRow = [];
+  const standardRows = splitStandardRows(unsplitregularItems);
+
   if (showAllPromos) {
-    regularRows = splitStandardRows(unsplitregularItems);
+    regularRows = standardRows;
   } else {
-    [regularRows, [noImageRow]] = splitNoImageRow(
-      splitStandardRows(unsplitregularItems),
-    );
+    [regularRows, [noImageRow]] = splitNoImageRow(standardRows);
   }
 
   return {
