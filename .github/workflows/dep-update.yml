@@ -10,7 +10,5 @@ jobs:
         with:
           node-version: '12'
           check-latest: true
-      - name: Running npm outdated
-        run: npm outdated
       - name: Running npm update
         run: npm update
