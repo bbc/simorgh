@@ -429,21 +429,11 @@ exports[`AMP Feature Index page SEO Twitter title 1`] = `"کورونا وائر�
 
 exports[`AMP Feature Index page Sections should match headline text 1`] = `""`;
 
-exports[`AMP Feature Index page Sections should match headline text 2`] = `""`;
+exports[`AMP Feature Index page Sections should match headline text 2`] = `"ملٹی میڈیاسب دیکھیں"`;
 
-exports[`AMP Feature Index page Sections should match headline text 3`] = `"ملٹی میڈیاسب دیکھیں"`;
+exports[`AMP Feature Index page Sections should match headline text 3`] = `"فیچر اور تجزیے"`;
 
-exports[`AMP Feature Index page Sections should match headline text 4`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 5`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 6`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 7`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 8`] = `"فیچر اور تجزیے"`;
-
-exports[`AMP Feature Index page Sections should match headline text 9`] = `"وائرس کی تاریخ"`;
+exports[`AMP Feature Index page Sections should match headline text 4`] = `"وائرس کی تاریخ"`;
 
 exports[`AMP Feature Index page Story Promo Headline should match text 1`] = `"بل گیٹس کورونا وائرس سے متعلق سازشی نظریات کا مرکز کیسے بنے"`;
 
