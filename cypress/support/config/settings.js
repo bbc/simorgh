@@ -6057,7 +6057,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/serbian/cyr/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/serbian/cyr/media/video'],
@@ -6243,7 +6243,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/serbian/lat/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/serbian/lat/media/video'],
@@ -9882,7 +9882,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/zhongwen/simp/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/zhongwen/simp/media/video'],
