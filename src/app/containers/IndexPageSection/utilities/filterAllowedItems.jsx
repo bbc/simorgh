@@ -7,10 +7,18 @@ import {
 const MAX_ALLOWED_ITEMS_FIRST_SECTION = 13;
 const MAX_ALLOWED_ITEMS = 10;
 
-export const getAllowedItems = (items, isFirstSection) =>
-  isFirstSection
-    ? items.slice(0, MAX_ALLOWED_ITEMS_FIRST_SECTION)
-    : items.slice(0, MAX_ALLOWED_ITEMS);
+export const getAllowedItems = ({ items, isFirstSection, showAllPromos }) => {
+  let allowedItems = [];
+
+  if (isFirstSection) {
+    allowedItems = items.slice(0, MAX_ALLOWED_ITEMS_FIRST_SECTION);
+  } else if (showAllPromos) {
+    allowedItems = items;
+  } else {
+    allowedItems = items.slice(0, MAX_ALLOWED_ITEMS);
+  }
+  return allowedItems;
+};
 
 export const removeFirstSlotRadioBulletin = dropWhile(
   item => item.contentType === 'RadioBulletin',
