@@ -95,25 +95,28 @@ const parentGridColumns = {
   group5: 8,
 };
 
-const renderPromos = (items, isFirstSection, dir) => {
-  const rows = getRows(items, isFirstSection);
+const renderPromos = ({ items, isFirstSection, dir, showAllPromos }) => {
+  const rows = getRows({ items, isFirstSection, showAllPromos });
   const rowsDetails = getRowDetails(rows);
 
   // Don't use StoryPromoUl and Li if there is only one story in one row
   const sectionHasSingleStory =
     rowsDetails.length === 1 && rowsDetails[0].stories.length === 1;
 
-  const renderedRows = rowsDetails.map(row => (
-    <row.RowComponent
-      key={row.stories[0].id}
-      stories={row.stories}
-      isFirstSection={isFirstSection}
-      displayImages={row.displayImages}
-      dir={dir}
-      parentColumns={parentGridColumns}
-      parentEnableGelGutters // value is set to true here and passed to each Row component's Grid item
-    />
-  ));
+  const renderedRows = rowsDetails.map(row => {
+    const key = row.stories[0].id || row.stories[0].uri;
+    return (
+      <row.RowComponent
+        key={key}
+        stories={row.stories}
+        isFirstSection={isFirstSection}
+        displayImages={row.displayImages}
+        dir={dir}
+        parentColumns={parentGridColumns}
+        parentEnableGelGutters // value is set to true here and passed to each Row component's Grid item
+      />
+    );
+  });
 
   return (
     <MarginWrapper
@@ -149,6 +152,7 @@ const sectionBody = ({
   service,
   isFirstSection,
   dir,
+  showAllPromos,
 }) => {
   if (group.semanticGroupName === 'Useful links') {
     return (
@@ -156,15 +160,10 @@ const sectionBody = ({
     );
   }
 
-  return renderPromos(items, isFirstSection, dir);
+  return renderPromos({ items, isFirstSection, dir, showAllPromos });
 };
 
-const IndexPageSection = ({
-  bar,
-  group,
-  sectionNumber,
-  renderWithoutStrapline,
-}) => {
+const IndexPageSection = ({ bar, group, sectionNumber, showAllPromos }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
 
@@ -187,7 +186,11 @@ const IndexPageSection = ({
   const items = removeItemsWithoutUrlOrHeadline(bulletinFilteredItems);
 
   // We have a cap on the number of allowed items per section
-  const allowedItems = getAllowedItems(items, isFirstSection);
+  const allowedItems = getAllowedItems({
+    items,
+    isFirstSection,
+    showAllPromos,
+  });
 
   // The current implementation of SectionLabel *requires* a strapline to be
   // present in order to render. It is currently *not possible* to render a
@@ -196,16 +199,11 @@ const IndexPageSection = ({
   // If this group does not have a strapline; do not render!
   // This may change in the future, if a way to avoid breaking UX is found.
   // Also, don't render a section without any items.
-
-  // If renderWithoutStrapline is false (which it is by default),
-  // then the section will not render if there is no strapline.
-  // If renderWithoutStrapline is true, and there is no strapline present,
-  // the section will always render.
-  if (!strapline && !renderWithoutStrapline) {
+  if (!isFirstSection && !strapline) {
     return null;
   }
 
-  if (!items || items.length === 0) {
+  if (!allowedItems || allowedItems.length === 0) {
     return null;
   }
 
@@ -234,6 +232,7 @@ const IndexPageSection = ({
         service,
         isFirstSection,
         dir,
+        showAllPromos,
       })}
     </StyledSection>
   );
@@ -241,14 +240,14 @@ const IndexPageSection = ({
 
 IndexPageSection.defaultProps = {
   bar: true,
-  renderWithoutStrapline: false,
+  showAllPromos: false,
 };
 
 IndexPageSection.propTypes = {
   bar: bool,
   group: shape(groupShape).isRequired,
-  renderWithoutStrapline: bool,
   sectionNumber: number.isRequired,
+  showAllPromos: bool,
 };
 
 export default IndexPageSection;
