@@ -44,9 +44,17 @@ export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
             block => block.type === 'social_embed',
           )[0];
 
-          const source = path(['model', 'blocks', 0, 'type'], socialEmbed);
-          cy.scrollTo(0, 900);
-          cy.get(`[href^="#skip-${source}-content"]`).should('exist');
+          const socialEmbedData = path(['model', 'blocks', 0], socialEmbed);
+
+          const socialEmbedSource = socialEmbedData.type;
+          const socialEmbedUrl = path(['model', 'href'], socialEmbedData);
+
+          cy.get(
+            `[data-e2e="${socialEmbedSource}-embed-${socialEmbedUrl}"]`,
+          ).scrollIntoView();
+          cy.get(`[href^="#skip-${socialEmbedSource}-content"]`).should(
+            'exist',
+          );
         } else {
           cy.log('No Social Embed exists');
         }
