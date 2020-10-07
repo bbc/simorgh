@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'જાહેરાત',
-    },
     lang: `gu`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'અપડેટેડ',
@@ -36,6 +32,7 @@ export const service = {
     datetimeLocale: `gu`,
     service: 'gujarati',
     serviceName: 'Gujarati',
+    languageName: 'Gujarati',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsgujarati',
     twitterSite: '@bbcnewsgujarati',
@@ -52,6 +49,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'જાહેરાત',
+      },
       seeAll: 'વધુ વાંચો',
       home: 'સમાચાર',
       currentPage: 'વર્તમાન પેજ',
@@ -179,6 +179,11 @@ export const service = {
           text: 'બદલો %provider_name% કન્ટેન્ટ',
           endTextVisuallyHidden: '%provider_name% કન્ટેન્ટ પૂર્ણ',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: 'નવાજૂની',
       featuresAnalysisTitle: 'બીબીસી વિશેષ',

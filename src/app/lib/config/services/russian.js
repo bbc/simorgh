@@ -73,6 +73,9 @@ const headerFooterTranslations = {
 
 // Translations used in the main element of the page
 export const mainTranslations = {
+  ads: {
+    advertisementLabel: 'Реклама',
+  },
   seeAll: 'Посмотреть все',
   skipLinkText: 'Перейти к содержанию',
   relatedContent: 'Новости по теме',
@@ -155,6 +158,11 @@ export const mainTranslations = {
       endTextVisuallyHidden: 'Контент из %provider_name% окончен',
     },
   },
+  include: {
+    errorMessage:
+      'К сожалению, мы не можем показать вам эту часть истории из-за малого объема мобильной страницы.',
+    linkText: 'Откройте полную версию страницы, чтобы увидеть весь контент.',
+  },
   topStoriesTitle: 'Главное',
   featuresAnalysisTitle: 'Журнал',
 };
@@ -162,10 +170,6 @@ export const mainTranslations = {
 export const service = {
   default: {
     translations: { ...mainTranslations, ...headerFooterTranslations },
-    ads: {
-      hasAds: true,
-      advertisementLabel: 'Реклама',
-    },
     lang: `ru`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Обновлено',
@@ -191,6 +195,7 @@ export const service = {
     datetimeLocale: `ru`,
     service: 'russian',
     serviceName: 'Russian',
+    languageName: 'Russian',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcrussian',
     twitterSite: '@bbcrussian',
@@ -202,6 +207,7 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Главная',
+    iTunesAppId: 504278066,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -282,6 +288,10 @@ export const service = {
       {
         title: 'Коронавирус',
         url: '/russian/in-depth-51962199',
+      },
+      {
+        title: 'Выборы в США',
+        url: '/russian/topics/c8jvq6n6kdxt',
       },
       {
         title: 'Истории',

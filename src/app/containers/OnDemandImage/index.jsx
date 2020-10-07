@@ -1,15 +1,14 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import styled from 'styled-components';
-import Image, { AmpImg } from '@bbc/psammead-image';
 import {
   GEL_SPACING_QUAD,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_1_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
-import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
 const paddingDir = ({ dir }) => `padding-${dir === 'rtl' ? 'left' : 'right'}`;
 
@@ -32,7 +31,6 @@ const mediumImageSize = 240;
 const largeImageSize = 480;
 
 const OnDemandImage = ({ imageUrl, dir }) => {
-  const { isAmp } = useContext(RequestContext);
   const { defaultImageAltText: alt } = useContext(ServiceContext);
 
   const src = getSrc({ imageUrl, size: smallImageSize });
@@ -41,20 +39,18 @@ const OnDemandImage = ({ imageUrl, dir }) => {
     sizes: [smallImageSize, mediumImageSize, largeImageSize],
   });
   const sizes = '(min-width: 1008px) 228px, 30vw';
-  const imageProps = { src, alt, srcset };
 
   return (
     <ImageContainer dir={dir}>
-      {isAmp ? (
-        <AmpImg
-          {...imageProps}
-          layout="responsive"
-          height={mediumImageSize}
-          width={mediumImageSize}
-        />
-      ) : (
-        <Image {...imageProps} sizes={sizes} />
-      )}
+      <ImageWithPlaceholder
+        src={src}
+        alt={alt}
+        srcset={srcset}
+        sizes={sizes}
+        ratio={100}
+        width={mediumImageSize}
+        height={mediumImageSize}
+      />
     </ImageContainer>
   );
 };

@@ -233,36 +233,6 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c17 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c17:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c17:hover,
-.c17:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c17:visited {
-  color: #6E6E73;
-}
-
 .c13 {
   position: relative;
   height: 0;
@@ -381,6 +351,37 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c17 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c17:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c17:hover,
+.c17:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c17:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:25rem) {
@@ -919,6 +920,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                     >
                       <div
                         class="c10"
+                        data-e2e="story-promo"
                       >
                         <div
                           class="c11"
@@ -936,6 +938,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 height="549"
                                 layout="responsive"
                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
+                                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 660w"
                                 width="976"
                               />
                             </div>
@@ -1065,6 +1068,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       >
                         <div
                           class="c30"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c31"
@@ -1082,6 +1086,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                   height="549"
                                   layout="responsive"
                                   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg"
+                                  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 660w"
                                   width="976"
                                 />
                               </div>
@@ -1120,6 +1125,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       >
                         <div
                           class="c30"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c31"
@@ -1137,6 +1143,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                   height="549"
                                   layout="responsive"
                                   src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
+                                  srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 660w"
                                   width="976"
                                 />
                               </div>
@@ -1206,6 +1213,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       >
                         <div
                           class="c30"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c31"
@@ -1223,6 +1231,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                   height="549"
                                   layout="responsive"
                                   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg"
+                                  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 660w"
                                   width="976"
                                 />
                               </div>
@@ -1261,6 +1270,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       >
                         <div
                           class="c30"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c31"
@@ -1278,6 +1288,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                   height="549"
                                   layout="responsive"
                                   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png"
+                                  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 660w"
                                   width="976"
                                 />
                               </div>
@@ -1316,6 +1327,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       >
                         <div
                           class="c30"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c31"
@@ -1333,6 +1345,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                   height="549"
                                   layout="responsive"
                                   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png"
+                                  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 660w"
                                   width="976"
                                 />
                               </div>
@@ -1371,6 +1384,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       >
                         <div
                           class="c30"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c31"
@@ -1388,6 +1402,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                   height="549"
                                   layout="responsive"
                                   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png"
+                                  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 660w"
                                   width="976"
                                 />
                               </div>
@@ -1449,6 +1464,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       >
                         <div
                           class="c30"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c31"
@@ -1466,6 +1482,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                   height="549"
                                   layout="responsive"
                                   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0775/production/_101890910_gettyimages-964924372.jpg"
+                                  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0775/production/_101890910_gettyimages-964924372.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0775/production/_101890910_gettyimages-964924372.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0775/production/_101890910_gettyimages-964924372.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0775/production/_101890910_gettyimages-964924372.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0775/production/_101890910_gettyimages-964924372.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0775/production/_101890910_gettyimages-964924372.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0775/production/_101890910_gettyimages-964924372.jpg 660w"
                                   width="976"
                                 />
                               </div>
@@ -1504,6 +1521,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       >
                         <div
                           class="c30"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c31"
@@ -1521,6 +1539,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                   height="549"
                                   layout="responsive"
                                   src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
+                                  srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 660w"
                                   width="976"
                                 />
                               </div>
@@ -1826,36 +1845,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c18 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c18:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c18:hover,
-.c18:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c18:visited {
-  color: #6E6E73;
-}
-
 .c14 {
   display: block;
   width: 100%;
@@ -2063,6 +2052,37 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+}
+
+.c18 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c18:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c18:hover,
+.c18:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c18:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:25rem) {
@@ -2823,6 +2843,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                     >
                       <div
                         class="c10"
+                        data-e2e="story-promo"
                       >
                         <div
                           class="c11"
@@ -2969,6 +2990,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       >
                         <div
                           class="c31"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c32"
@@ -2981,8 +3003,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 class="c13"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c33"
@@ -3019,6 +3045,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       >
                         <div
                           class="c31"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c32"
@@ -3031,8 +3058,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 class="c13"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c33"
@@ -3100,6 +3131,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       >
                         <div
                           class="c31"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c32"
@@ -3112,8 +3144,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 class="c13"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c33"
@@ -3150,6 +3186,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       >
                         <div
                           class="c31"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c32"
@@ -3162,8 +3199,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 class="c13"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c33"
@@ -3200,6 +3241,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       >
                         <div
                           class="c31"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c32"
@@ -3212,8 +3254,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 class="c13"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c33"
@@ -3250,6 +3296,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       >
                         <div
                           class="c31"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c32"
@@ -3262,8 +3309,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 class="c13"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c33"
@@ -3323,6 +3374,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       >
                         <div
                           class="c31"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c32"
@@ -3335,8 +3387,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 class="c13"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c33"
@@ -3373,6 +3429,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       >
                         <div
                           class="c31"
+                          data-e2e="story-promo"
                         >
                           <div
                             class="c32"
@@ -3385,8 +3442,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 class="c13"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="c33"

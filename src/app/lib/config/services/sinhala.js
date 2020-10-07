@@ -11,10 +11,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'වෙළෙඳ දැන්වීමක් ',
-    },
     lang: `si`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'යාවත්කාලීනවී ඇත',
@@ -40,6 +36,7 @@ export const service = {
     datetimeLocale: `si`,
     service: 'sinhala',
     serviceName: 'Sinhala',
+    languageName: 'Sinhala',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcsinhala',
     twitterSite: '@bbcsinhala',
@@ -56,6 +53,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'වෙළෙඳ දැන්වීමක් ',
+      },
       seeAll: 'සියල්ල දැකගන්න',
       home: 'මුල් පිටුව',
       currentPage: 'දැන් සිටින පිටුව',
@@ -185,6 +185,11 @@ export const service = {
           text: 'Skip %provider_name% post',
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
+      },
+      include: {
+        errorMessage:
+          'කණගාටුයි, මෙම සැහැල්ලු ජංගම පිටුව තුළ අපට ලිපියේ මෙම කොටස පෙන්විය නොහැක.',
+        linkText: 'අන්තර්ගතයේ සියල්ල දැක ගැනීමට පිටුවේ සම්පූර්ණ අනුවාදය බලන්න',
       },
       topStoriesTitle: 'ප්‍රධාන පුවත',
       featuresAnalysisTitle: 'දැක්ම',

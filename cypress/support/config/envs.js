@@ -6,9 +6,11 @@ const config = {
     assetOrigin: 'https://news.files.bbci.co.uk',
     atiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?',
     chartbeatEnabled: false,
-    avEmbedBaseUrl: 'https://polling.bbc.co.uk',
+    avEmbedBaseUrlCanonical: 'https://bbc.com',
+    avEmbedBaseUrlAmp: 'https://polling.bbc.co.uk',
     standaloneErrorPages: false,
     alwaysCheckForFallback: true,
+    togglesUrl: 'https://config.api.bbci.co.uk/',
   },
   test: {
     baseUrl: 'https://www.test.bbc.com',
@@ -17,9 +19,11 @@ const config = {
     assetOrigin: 'https://news.test.files.bbci.co.uk',
     atiUrl: 'https://logws1363.ati-host.net?',
     chartbeatEnabled: true,
-    avEmbedBaseUrl: 'https://polling.test.bbc.co.uk',
+    avEmbedBaseUrlCanonical: 'https://test.bbc.com',
+    avEmbedBaseUrlAmp: 'https://polling.test.bbc.co.uk',
     standaloneErrorPages: false,
     alwaysCheckForFallback: true,
+    togglesUrl: 'https://config.test.api.bbci.co.uk/',
   },
   local: {
     baseUrl: 'http://localhost:7080',
@@ -28,9 +32,11 @@ const config = {
     assetOrigin: 'http://localhost:7080',
     atiUrl: 'https://logws1363.ati-host.net?',
     chartbeatEnabled: true,
-    avEmbedBaseUrl: 'https://polling.test.bbc.co.uk',
+    avEmbedBaseUrlCanonical: 'https://test.bbc.com',
+    avEmbedBaseUrlAmp: 'https://polling.test.bbc.co.uk',
     standaloneErrorPages: true,
     alwaysCheckForFallback: false,
+    togglesUrl: 'https://config.test.api.bbci.co.uk/',
   },
 };
 

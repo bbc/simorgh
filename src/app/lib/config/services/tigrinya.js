@@ -11,10 +11,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'መላለዪ',
-    },
     lang: `ti`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ዝተመሓየሸ',
@@ -40,6 +36,7 @@ export const service = {
     datetimeLocale: `ti`,
     service: 'tigrinya',
     serviceName: 'Tigrinya',
+    languageName: 'Tigrinya',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnews',
     twitterSite: '@bbcnews',
@@ -56,6 +53,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'መላለዪ',
+      },
       seeAll: 'ንኹሉ ርኣዩ',
       home: 'መእተዊ ገጽ',
       currentPage: 'ዘለኹሞ ገጽ',
@@ -172,6 +172,10 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      include: {
+        errorMessage: 'ይቕሬታ፡ ነዚ ክፋል ናይቲ ዛንታ ኣብዚ ፈኲስ ናይ ሞባይል ገጽ ከነቕርቦ ኣይከኣልናን',
+        linkText: 'ምሉእ ትሕዝቶ ንምርኣይ ንምሉእ መቓን ገጽ ተዓዘቡ',
+      },
       topStoriesTitle: 'ዜናታት',
       featuresAnalysisTitle: 'ኣዘራረብቲ ዛዕባታት',
     },
@@ -189,8 +193,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
-      onOnDemandRadioPage: false,
       onFrontPage: false,
       header: 'ስምዑ',
       durationLabel: 'ዕምሪ ፈነወ %duration%',

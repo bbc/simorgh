@@ -3,6 +3,7 @@ import chalk from 'chalk';
 import { readdirSync, statSync } from 'fs';
 import stripAnsi from 'strip-ansi';
 
+jest.mock('./pageTypeBundleExtractor');
 jest.mock('ora');
 jest.mock('chalk', () => ({
   red: a => a,
@@ -18,18 +19,14 @@ jest.mock('../../cypress/support/config/services', () => ({
 }));
 jest.mock('fs');
 jest.mock('./bundleSizeConfig', () => ({
-  MIN_SIZE: 373,
-  MAX_SIZE: 563,
+  MIN_SIZE: 490,
+  MAX_SIZE: 583,
 }));
 
 const setUpFSMocks = (service1FileSize, service2FileSize) => {
   beforeEach(() => {
     const bundles = [
       'main-12345.js',
-      'vendor-11111.js',
-      'vendor-22222.js',
-      'vendor-33333.js',
-      'vendor-44444.js',
       'service1-12345.12345.js',
       'service2-12345.12345.js',
       '1111-lib-1111.js',
@@ -38,6 +35,7 @@ const setUpFSMocks = (service1FileSize, service2FileSize) => {
       'commons-3333.js',
       'shared-1111.js',
       'shared-2222.js',
+      'framework-1111.js',
     ];
     readdirSync.mockReturnValue(bundles);
 
@@ -45,10 +43,10 @@ const setUpFSMocks = (service1FileSize, service2FileSize) => {
       service1: service1FileSize,
       service2: service2FileSize,
       main: 20000,
-      vendor: 100000,
       lib: 80000,
       shared: 40000,
       commons: 50000,
+      framework: 100000,
       Page: 20000,
     };
     statSync.mockImplementation(filePath => {
@@ -161,79 +159,69 @@ describe('bundleSize', () => {
         └─────────────────────────────────┴─────┘
 
         Page type bundles
-        ┌───────────────────┬──────────────────────────┬───────────┬──────────────────────────┬──────────────────────────┬──────────────────────────┬──────────────────────────┬─────────────────┐
-        │ Page type         │ main                     │ framework │ lib                      │ shared                   │ commons                  │ page                     │ Total size (kB) │
-        ├───────────────────┼──────────────────────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
-        │ ErrorPage         │ main-12345…345.js (20kB) │           │                          │                          │ commons-0f…458.js (49kB) │ ErrorPage-…931.js (20kB) │ 236             │
-        │                   │                          │           │                          │                          │ commons-7d…5c9.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-84…fc0.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-92…2d7.js (49kB) │                          │                 │
-        ├───────────────────┼──────────────────────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
-        │ MostReadPage      │ main-12345…345.js (20kB) │           │ ../moment-…c50.js (78kB) │ shared-Udd…3aa.js (39kB) │ commons-0f…458.js (49kB) │ MostReadPa…378.js (20kB) │ 353             │
-        │                   │                          │           │                          │                          │ commons-7d…5c9.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-84…fc0.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-92…2d7.js (49kB) │                          │                 │
-        ├───────────────────┼──────────────────────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
-        │ OnDemandTvPage    │ main-12345…345.js (20kB) │           │ ../moment-…c50.js (78kB) │ shared-Udd…3aa.js (39kB) │ commons-0f…458.js (49kB) │ OnDemandTv…c9e.js (20kB) │ 353             │
-        │                   │                          │           │                          │                          │ commons-7d…5c9.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-84…fc0.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-92…2d7.js (49kB) │                          │                 │
-        ├───────────────────┼──────────────────────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
-        │ ArticlePage       │ main-12345…345.js (20kB) │           │ ../moment-…c50.js (78kB) │ shared-Udd…3aa.js (39kB) │ commons-0f…458.js (49kB) │ ArticlePag…b86.js (20kB) │ 392             │
-        │                   │                          │           │                          │ shared-nj6…c3a.js (39kB) │ commons-7d…5c9.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-84…fc0.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-92…2d7.js (49kB) │                          │                 │
-        ├───────────────────┼──────────────────────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
-        │ FrontPage         │ main-12345…345.js (20kB) │           │ ../moment-…c50.js (78kB) │ shared-Udd…3aa.js (39kB) │ commons-0f…458.js (49kB) │ FrontPage-…043.js (20kB) │ 392             │
-        │                   │                          │           │                          │ shared-nj6…c3a.js (39kB) │ commons-7d…5c9.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-84…fc0.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-92…2d7.js (49kB) │                          │                 │
-        ├───────────────────┼──────────────────────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
-        │ IdxPage           │ main-12345…345.js (20kB) │           │ ../moment-…c50.js (78kB) │ shared-Udd…3aa.js (39kB) │ commons-0f…458.js (49kB) │ IdxPage-31…7b8.js (20kB) │ 392             │
-        │                   │                          │           │                          │ shared-nj6…c3a.js (39kB) │ commons-7d…5c9.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-84…fc0.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-92…2d7.js (49kB) │                          │                 │
-        ├───────────────────┼──────────────────────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
-        │ LiveRadioPage     │ main-12345…345.js (20kB) │           │ ../moment-…c50.js (78kB) │ shared-Udd…3aa.js (39kB) │ commons-0f…458.js (49kB) │ LiveRadioP…8bd.js (20kB) │ 392             │
-        │                   │                          │           │                          │ shared-nj6…c3a.js (39kB) │ commons-7d…5c9.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-84…fc0.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-92…2d7.js (49kB) │                          │                 │
-        ├───────────────────┼──────────────────────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
-        │ MediaAssetPage    │ main-12345…345.js (20kB) │           │ ../moment-…c50.js (78kB) │ shared-Udd…3aa.js (39kB) │ commons-0f…458.js (49kB) │ MediaAsset…eea.js (20kB) │ 392             │
-        │                   │                          │           │                          │ shared-nj6…c3a.js (39kB) │ commons-7d…5c9.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-84…fc0.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-92…2d7.js (49kB) │                          │                 │
-        ├───────────────────┼──────────────────────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
-        │ OnDemandRadioPage │ main-12345…345.js (20kB) │           │ ../moment-…c50.js (78kB) │ shared-Udd…3aa.js (39kB) │ commons-0f…458.js (49kB) │ OnDemandRa…6ac.js (20kB) │ 392             │
-        │                   │                          │           │                          │ shared-nj6…c3a.js (39kB) │ commons-7d…5c9.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-84…fc0.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-92…2d7.js (49kB) │                          │                 │
-        ├───────────────────┼──────────────────────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
-        │ PhotoGalleryPage  │ main-12345…345.js (20kB) │           │ ../moment-…c50.js (78kB) │ shared-Udd…3aa.js (39kB) │ commons-0f…458.js (49kB) │ PhotoGalle…839.js (20kB) │ 392             │
-        │                   │                          │           │                          │ shared-nj6…c3a.js (39kB) │ commons-7d…5c9.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-84…fc0.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-92…2d7.js (49kB) │                          │                 │
-        ├───────────────────┼──────────────────────────┼───────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
-        │ StoryPage         │ main-12345…345.js (20kB) │           │ ../moment-…c50.js (78kB) │ shared-Udd…3aa.js (39kB) │ commons-0f…458.js (49kB) │ StoryPage-…414.js (20kB) │ 412             │
-        │                   │                          │           │                          │ shared-nj6…c3a.js (39kB) │ commons-7d…5c9.js (49kB) │ StoryPage-…d12.js (20kB) │                 │
-        │                   │                          │           │                          │                          │ commons-84…fc0.js (49kB) │                          │                 │
-        │                   │                          │           │                          │                          │ commons-92…2d7.js (49kB) │                          │                 │
-        └───────────────────┴──────────────────────────┴───────────┴──────────────────────────┴──────────────────────────┴──────────────────────────┴──────────────────────────┴─────────────────┘
+        ┌───────────────────┬──────────────────────────┬──────────────────────────┬──────────────────────────┬──────────────────────────┬──────────────────────────┬──────────────────────────┬─────────────────┐
+        │ Page type         │ main                     │ framework                │ lib                      │ shared                   │ commons                  │ page                     │ Total size (kB) │
+        ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
+        │ FrontPage         │ main-12345…345.js (20kB) │ framework-…111.js (98kB) │ 1111-lib-1…111.js (78kB) │ shared-111…111.js (39kB) │ commons-11…111.js (49kB) │ FrontPage-…07e.js (20kB) │ 353             │
+        │                   │                          │                          │                          │                          │ commons-22…222.js (49kB) │                          │                 │
+        ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
+        │ OnDemandTvPage    │ main-12345…345.js (20kB) │ framework-…111.js (98kB) │ 1111-lib-1…111.js (78kB) │ shared-111…111.js (39kB) │ commons-11…111.js (49kB) │ OnDemandTv…b7f.js (20kB) │ 382             │
+        │                   │                          │                          │ 3333-lib-2…222.js (78kB) │                          │                          │                          │                 │
+        ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
+        │ ArticlePage       │ main-12345…345.js (20kB) │ framework-…111.js (98kB) │ 1111-lib-1…111.js (78kB) │ shared-111…111.js (39kB) │ commons-11…111.js (49kB) │ ArticlePag…c35.js (20kB) │ 392             │
+        │                   │                          │                          │                          │ shared-333…333.js (39kB) │ commons-22…222.js (49kB) │                          │                 │
+        ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
+        │ OnDemandRadioPage │ main-12345…345.js (20kB) │ framework-…111.js (98kB) │ 1111-lib-1…111.js (78kB) │ shared-222…222.js (39kB) │ commons-11…111.js (49kB) │ OnDemandRa…2d0.js (20kB) │ 392             │
+        │                   │                          │                          │                          │ shared-333…333.js (39kB) │ commons-22…222.js (49kB) │                          │                 │
+        ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
+        │ PhotoGalleryPage  │ main-12345…345.js (20kB) │ framework-…111.js (98kB) │ 1111-lib-1…111.js (78kB) │ shared-111…111.js (39kB) │ commons-11…111.js (49kB) │ PhotoGalle…83a.js (20kB) │ 392             │
+        │                   │                          │                          │                          │ shared-333…333.js (39kB) │ commons-22…222.js (49kB) │                          │                 │
+        ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
+        │ StoryPage         │ main-12345…345.js (20kB) │ framework-…111.js (98kB) │ 1111-lib-1…111.js (78kB) │ shared-111…111.js (39kB) │ commons-11…111.js (49kB) │ StoryPage-…76d.js (20kB) │ 392             │
+        │                   │                          │                          │                          │ shared-222…222.js (39kB) │ commons-22…222.js (49kB) │                          │                 │
+        ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
+        │ ErrorPage         │ main-12345…345.js (20kB) │ framework-…111.js (98kB) │ 1111-lib-1…111.js (78kB) │ shared-111…111.js (39kB) │ commons-11…111.js (49kB) │ ErrorPage-…c35.js (20kB) │ 431             │
+        │                   │                          │                          │                          │ shared-222…222.js (39kB) │ commons-22…222.js (49kB) │                          │                 │
+        │                   │                          │                          │                          │ shared-333…333.js (39kB) │                          │                          │                 │
+        ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
+        │ IdxPage           │ main-12345…345.js (20kB) │ framework-…111.js (98kB) │ 1111-lib-1…111.js (78kB) │ shared-111…111.js (39kB) │ commons-11…111.js (49kB) │ IdxPage-31…555.js (20kB) │ 431             │
+        │                   │                          │                          │                          │ shared-222…222.js (39kB) │ commons-22…222.js (49kB) │                          │                 │
+        │                   │                          │                          │                          │ shared-333…333.js (39kB) │                          │                          │                 │
+        ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
+        │ MostReadPage      │ main-12345…345.js (20kB) │ framework-…111.js (98kB) │ 1111-lib-1…111.js (78kB) │ shared-111…111.js (39kB) │ commons-11…111.js (49kB) │ MostReadPa…f05.js (20kB) │ 431             │
+        │                   │                          │                          │                          │ shared-222…222.js (39kB) │ commons-22…222.js (49kB) │                          │                 │
+        │                   │                          │                          │                          │ shared-333…333.js (39kB) │                          │                          │                 │
+        ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
+        │ LiveRadioPage     │ main-12345…345.js (20kB) │ framework-…111.js (98kB) │ 1111-lib-1…111.js (78kB) │ shared-111…111.js (39kB) │ commons-11…111.js (49kB) │ LiveRadioP…a90.js (20kB) │ 431             │
+        │                   │                          │                          │                          │ shared-222…222.js (39kB) │ commons-22…222.js (49kB) │                          │                 │
+        │                   │                          │                          │                          │ shared-333…333.js (39kB) │                          │                          │                 │
+        ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
+        │ MediaAssetPage    │ main-12345…345.js (20kB) │ framework-…111.js (98kB) │ 1111-lib-1…111.js (78kB) │ shared-111…111.js (39kB) │ commons-11…111.js (49kB) │ MediaAsset…c9c.js (20kB) │ 431             │
+        │                   │                          │                          │ 3333-lib-2…222.js (78kB) │                          │ commons-22…222.js (49kB) │                          │                 │
+        ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
+        │ MostReadPage      │ main-12345…345.js (20kB) │ framework-…111.js (98kB) │ 1111-lib-1…111.js (78kB) │ shared-111…111.js (39kB) │ commons-11…111.js (49kB) │ MostReadPa…f05.js (20kB) │ 431             │
+        │                   │                          │                          │                          │ shared-222…222.js (39kB) │ commons-22…222.js (49kB) │                          │                 │
+        │                   │                          │                          │                          │ shared-333…333.js (39kB) │                          │                          │                 │
+        ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
+        │ MostWatchedPage   │ main-12345…345.js (20kB) │ framework-…111.js (98kB) │ 1111-lib-1…111.js (78kB) │ shared-111…111.js (39kB) │ commons-11…111.js (49kB) │ MostWatche…f05.js (20kB) │ 431             │
+        │                   │                          │                          │                          │ shared-222…222.js (39kB) │ commons-22…222.js (49kB) │                          │                 │
+        │                   │                          │                          │                          │ shared-333…333.js (39kB) │                          │                          │                 │
+        └───────────────────┴──────────────────────────┴──────────────────────────┴──────────────────────────┴──────────────────────────┴──────────────────────────┴──────────────────────────┴─────────────────┘
 
         Page bundles summary (excludes service bundle)
         ┌─────────────────────────────────┬─────┐
-        │ Smallest total bundle size (kB) │ 236 │
+        │ Smallest total bundle size (kB) │ 353 │
         ├─────────────────────────────────┼─────┤
-        │ Largest total bundle size (kB)  │ 412 │
+        │ Largest total bundle size (kB)  │ 431 │
         ├─────────────────────────────────┼─────┤
-        │ Average total bundle size (kB)  │ 373 │
+        │ Average total bundle size (kB)  │ 409 │
         └─────────────────────────────────┴─────┘
 
         Service + Page bundles summary
         ┌────────────────────────────────────────────────────────────────────┬─────┐
-        │ Smallest total bundle size (kB) (smallest service + smallest page) │ 378 │
+        │ Smallest total bundle size (kB) (smallest service + smallest page) │ 495 │
         ├────────────────────────────────────────────────────────────────────┼─────┤
-        │ Largest total bundle size (kB) (largest service + largest page)    │ 558 │
+        │ Largest total bundle size (kB) (largest service + largest page)    │ 577 │
         └────────────────────────────────────────────────────────────────────┴─────┘"
       `);
     });
@@ -280,7 +268,7 @@ describe('bundleSize', () => {
       });
 
       expect(global.console.error).toHaveBeenCalledWith(
-        "Bundle size for service1 ErrorPage is too small at 238 kB. Please update thresholds in './scripts/bundleSize/bundleSizeConfig.js'",
+        "Bundle size for service1 FrontPage is too small at 355 kB. Please update thresholds in './scripts/bundleSize/bundleSizeConfig.js'",
       );
     });
   });
@@ -326,7 +314,7 @@ describe('bundleSize', () => {
       });
 
       expect(global.console.error).toHaveBeenCalledWith(
-        "Bundle size for service2 StoryPage is too large at 573 kB. Please update thresholds in './scripts/bundleSize/bundleSizeConfig.js'",
+        "Bundle size for service2 MostWatchedPage is too large at 592 kB. Please update thresholds in './scripts/bundleSize/bundleSizeConfig.js'",
       );
     });
   });

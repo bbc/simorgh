@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Matangazo',
-    },
     lang: `sw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Imeboreshwa',
@@ -36,6 +32,7 @@ export const service = {
     datetimeLocale: `sw`,
     service: 'swahili',
     serviceName: 'Swahili',
+    languageName: 'Swahili',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcswahili',
     twitterSite: '@bbcswahili',
@@ -52,6 +49,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Matangazo',
+      },
       seeAll: 'Tazama zote',
       home: 'Habari',
       currentPage: 'Ukurasa uliopo ',
@@ -184,6 +184,11 @@ export const service = {
           endTextVisuallyHidden: 'Mwisho wa %provider_name% ujumbe',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'Habari kuu',
       featuresAnalysisTitle: 'Gumzo mitandaoni',
     },
@@ -201,8 +206,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
-      onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Features',
       header: 'Vipindi vya Redio',
@@ -258,8 +261,12 @@ export const service = {
         url: '/swahili',
       },
       {
+        title: 'Uchaguzi Tanzania',
+        url: '/swahili/habari-53516858',
+      },
+      {
         title: 'Michezo',
-        url: '/swahili/michezo',
+        url: '/swahili/topics/ckdxndddjkxt',
       },
       {
         title: 'Video',
@@ -267,7 +274,7 @@ export const service = {
       },
       {
         title: 'Vipindi vya Redio',
-        url: '/swahili/kwa_kina/redio',
+        url: '/swahili/media-54071673',
       },
     ],
   },

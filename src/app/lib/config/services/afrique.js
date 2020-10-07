@@ -7,10 +7,6 @@ import 'moment/locale/fr';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: true,
-      advertisementLabel: 'Publicités',
-    },
     lang: `fr`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Mise à jour',
@@ -36,6 +32,7 @@ export const service = {
     datetimeLocale: `fr`,
     service: 'afrique',
     serviceName: 'Afrique',
+    languageName: 'French',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcafrique',
     twitterSite: '@bbcafrique',
@@ -53,6 +50,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Publicités',
+      },
       seeAll: 'Tout voir',
       home: 'Accueil',
       currentPage: 'Page en cours',
@@ -191,6 +191,11 @@ export const service = {
           endTextVisuallyHidden: 'Fin de %provider_name% publication',
         },
       },
+      include: {
+        errorMessage: `Désolé, nous ne pouvons pas afficher cette partie de l'article sur cette page mobile légère.`,
+        linkText:
+          'Consultez la version complète de la page pour voir tout le contenu.',
+      },
       topStoriesTitle: 'À la une',
       featuresAnalysisTitle: 'Le choix de la rédaction',
     },
@@ -208,8 +213,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
-      onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Features',
       frequenciesPageUrl:
@@ -270,23 +273,23 @@ export const service = {
       },
       {
         title: 'Afrique',
-        url: '/afrique/region',
+        url: '/afrique/topics/cvqxn2k7kv7t',
       },
       {
         title: 'Monde',
-        url: '/afrique/monde',
+        url: '/afrique/topics/cvqxn21vx11t',
       },
       {
         title: 'Sports',
-        url: '/afrique/sports',
+        url: '/afrique/topics/c404v54yrqyt',
       },
       {
         title: 'Economie',
-        url: '/afrique/topics/ca170ae3-99c1-48db-9b67-2866f85e7342',
+        url: '/afrique/topics/cnq687nr9v1t',
       },
       {
         title: 'Culture',
-        url: '/afrique/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864',
+        url: '/afrique/topics/cnq687nrrw8t',
       },
       {
         title: 'Au féminin',
@@ -294,11 +297,11 @@ export const service = {
       },
       {
         title: 'Technologie',
-        url: '/afrique/topics/31684f19-84d6-41f6-b033-7ae08098572a',
+        url: '/afrique/topics/cnq687nn703t',
       },
       {
         title: 'Santé',
-        url: '/afrique/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
+        url: '/afrique/topics/c06gq9jxz3rt',
       },
       {
         title: 'Vidéos',
@@ -306,7 +309,7 @@ export const service = {
       },
       {
         title: 'Nos émissions',
-        url: '/afrique/nos_emissions/radio',
+        url: '/afrique/media-54074891',
       },
     ],
   },

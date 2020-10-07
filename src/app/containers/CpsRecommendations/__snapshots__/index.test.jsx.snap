@@ -7,76 +7,6 @@ exports[`CpsRecommendations should not render when the service does not support 
 exports[`CpsRecommendations should not render when there is no recommendations data 1`] = `<div />`;
 
 exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and the service supports recommendations for a single item 1`] = `
-.c14 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 33.33%;
-}
-
-.c18 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-}
-
-.c13 {
-  position: relative;
-}
-
-.c15 {
-  position: relative;
-}
-
-.c17 > * {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
-}
-
-.c20 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c20:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c20:hover,
-.c20:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c20:visited {
-  color: #6E6E73;
-}
-
-.c16 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #ECEAE7;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 30%;
-  padding-bottom: 56.25%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -137,25 +67,11 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0;
 }
 
-.c0 {
-  grid-column: 1 / span 6;
-}
-
-.c4 {
-  margin-bottom: 1rem;
-  padding: 0 1rem;
-}
-
-.c6 {
-  margin-top: 0;
-  margin: 0;
-}
-
-.c1 {
+.c3 {
   position: relative;
 }
 
-.c2 {
+.c4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -175,7 +91,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 10;
 }
 
-.c2:not(:focus):not(:active) {
+.c4:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -199,13 +115,67 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   margin: 0;
 }
 
+.c0 {
+  grid-column: 1 / span 6;
+}
+
+.c2 {
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.c6 {
+  margin-top: 0;
+  margin: 0;
+}
+
+.c14 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+.c18 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c13 {
+  position: relative;
+}
+
+.c15 {
+  position: relative;
+}
+
+.c17 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c16 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
 .c12 > div {
   display: grid;
   margin: 0.25rem 0;
   background-color: #FDFDFD;
 }
 
-.c3 {
+.c1 {
   background-color: #F2F2F2;
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
@@ -221,6 +191,154 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   font-size: 0.9375rem;
   line-height: 1.25rem;
   padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.c20 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.c20:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c20:hover,
+.c20:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c20:visited {
+  color: #6E6E73;
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c10 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c5 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c11 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    max-width: initial;
+  }
+}
+
+@media (max-width:25rem) {
+  .c2 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    padding: 1rem 0;
+  }
 }
 
 @media (min-width:63rem) {
@@ -282,123 +400,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
-@media (min-width:37.5rem) {
-  .c9 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    padding-right: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c5 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c11 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    max-width: initial;
-  }
-}
-
-@media (max-width:25rem) {
-  .c4 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    padding: 1rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 0.8125rem;
-  }
-}
-
 @media (max-width:62.9375rem) {
   .c12 > div {
     margin: 0.25rem 0;
@@ -432,21 +433,21 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
     <div
       class="c1"
     >
-      <a
+      <section
+        aria-labelledby="recommendations-heading"
         class="c2"
-        href="#end-of-recommendations"
+        data-e2e="recommendations-heading"
+        role="region"
       >
-        Saltar Quizás también te interese y continuar leyendo
-      </a>
-      <div
-        class="c3"
-      >
-        <section
-          aria-labelledby="recommendations-heading"
-          class="c4"
-          data-e2e="related-content"
-          role="region"
+        <div
+          class="c3"
         >
+          <a
+            class="c4"
+            href="#end-of-recommendations"
+          >
+            Saltar Quizás también te interese y continuar leyendo
+          </a>
           <div
             class="c5 c6"
           >
@@ -482,6 +483,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               >
                 <div
                   class="c13"
+                  data-e2e="story-promo"
                 >
                   <div
                     class="c14"
@@ -494,8 +496,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                         class="c16"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                       </div>
                       <div
                         class="c17"
@@ -521,101 +527,21 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </div>
           </div>
-        </section>
-      </div>
-      <p
-        class="c21"
-        id="end-of-recommendations"
-        tabindex="-1"
-      >
-        Final de Quizás también te interese
-      </p>
+          <p
+            class="c21"
+            id="end-of-recommendations"
+            tabindex="-1"
+          >
+            Final de Quizás también te interese
+          </p>
+        </div>
+      </section>
     </div>
   </div>
 </div>
 `;
 
 exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and the service supports recommendations for multiple items 1`] = `
-.c13:last-child {
-  border: none;
-}
-
-.c11 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.c18 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 33.33%;
-}
-
-.c22 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-}
-
-.c17 {
-  position: relative;
-}
-
-.c19 {
-  position: relative;
-}
-
-.c21 > * {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
-}
-
-.c24 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c24:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c24:hover,
-.c24:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c24:visited {
-  color: #6E6E73;
-}
-
-.c20 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #ECEAE7;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 30%;
-  padding-bottom: 56.25%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -676,25 +602,11 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0;
 }
 
-.c0 {
-  grid-column: 1 / span 6;
-}
-
-.c4 {
-  margin-bottom: 1rem;
-  padding: 0 1rem;
-}
-
-.c6 {
-  margin-top: 0;
-  margin: 0;
-}
-
-.c1 {
+.c3 {
   position: relative;
 }
 
-.c2 {
+.c4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -714,7 +626,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 10;
 }
 
-.c2:not(:focus):not(:active) {
+.c4:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -738,13 +650,77 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   margin: 0;
 }
 
+.c0 {
+  grid-column: 1 / span 6;
+}
+
+.c2 {
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.c6 {
+  margin-top: 0;
+  margin: 0;
+}
+
+.c18 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+.c22 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c17 {
+  position: relative;
+}
+
+.c19 {
+  position: relative;
+}
+
+.c21 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c20 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
 .c16 > div {
   display: grid;
   margin: 0.25rem 0;
   background-color: #FDFDFD;
 }
 
-.c3 {
+.c13:last-child {
+  border: none;
+}
+
+.c11 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c1 {
   background-color: #F2F2F2;
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
@@ -762,63 +738,35 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0.5rem 0.5rem 0.5rem 0;
 }
 
-@media (min-width:63rem) {
-  .c18 {
-    display: block;
-    width: 100%;
-  }
+.c24 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .c18 {
-    width: initial;
-    grid-column: 1 / span 2;
-  }
+.c24:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
 }
 
-@media (min-width:37.5rem) {
-  .c22 {
-    padding: 0 1rem;
-  }
+.c24:hover,
+.c24:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
-@media (min-width:63rem) {
-  .c22 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c22 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c17 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c21 {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-@media (max-width:24.9375rem) {
-  .c21 > * {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
-  }
+.c24:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -990,6 +938,18 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.8125rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c0 {
     grid-column: 1 / span 5;
@@ -1018,19 +978,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (max-width:25rem) {
-  .c4 {
+  .c2 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
+  .c2 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c2 {
     margin-bottom: 1.5rem;
   }
 }
@@ -1041,15 +1001,62 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    line-height: 1.125rem;
+@media (min-width:63rem) {
+  .c18 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c18 {
+    width: initial;
+    grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
-    font-size: 0.8125rem;
+  .c22 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c22 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c22 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c17 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c21 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c21 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
   }
 }
 
@@ -1086,21 +1093,21 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
     <div
       class="c1"
     >
-      <a
+      <section
+        aria-labelledby="recommendations-heading"
         class="c2"
-        href="#end-of-recommendations"
+        data-e2e="recommendations-heading"
+        role="region"
       >
-        Saltar Quizás también te interese y continuar leyendo
-      </a>
-      <div
-        class="c3"
-      >
-        <section
-          aria-labelledby="recommendations-heading"
-          class="c4"
-          data-e2e="related-content"
-          role="region"
+        <div
+          class="c3"
         >
+          <a
+            class="c4"
+            href="#end-of-recommendations"
+          >
+            Saltar Quizás también te interese y continuar leyendo
+          </a>
           <div
             class="c5 c6"
           >
@@ -1143,6 +1150,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 >
                   <div
                     class="c17"
+                    data-e2e="story-promo"
                   >
                     <div
                       class="c18"
@@ -1155,8 +1163,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           class="c20"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                         </div>
                         <div
                           class="c21"
@@ -1196,6 +1208,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 >
                   <div
                     class="c17"
+                    data-e2e="story-promo"
                   >
                     <div
                       class="c18"
@@ -1208,8 +1221,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           class="c20"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                         </div>
                         <div
                           class="c21"
@@ -1249,6 +1266,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 >
                   <div
                     class="c17"
+                    data-e2e="story-promo"
                   >
                     <div
                       class="c18"
@@ -1261,8 +1279,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           class="c20"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                         </div>
                         <div
                           class="c21"
@@ -1302,6 +1324,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 >
                   <div
                     class="c17"
+                    data-e2e="story-promo"
                   >
                     <div
                       class="c18"
@@ -1314,8 +1337,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           class="c20"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                         </div>
                         <div
                           class="c21"
@@ -1342,114 +1369,21 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
           </ul>
-        </section>
-      </div>
-      <p
-        class="c25"
-        id="end-of-recommendations"
-        tabindex="-1"
-      >
-        Final de Quizás también te interese
-      </p>
+          <p
+            class="c25"
+            id="end-of-recommendations"
+            tabindex="-1"
+          >
+            Final de Quizás también te interese
+          </p>
+        </div>
+      </section>
     </div>
   </div>
 </div>
 `;
 
 exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and the service supports recommendations for rtl service 1`] = `
-.c13:last-child {
-  border: none;
-}
-
-.c11 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.c18 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 33.33%;
-}
-
-.c22 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-}
-
-.c17 {
-  position: relative;
-}
-
-.c19 {
-  position: relative;
-}
-
-.c21 > * {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
-}
-
-.c24 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c24:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c24:hover,
-.c24:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c24:visited {
-  color: #6E6E73;
-}
-
-.c25 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #ECEAE7;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 30%;
-  padding-bottom: 56.25%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-.c20 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #ECEAE7;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 30%;
-  padding-bottom: 56.21212121212121%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1510,25 +1444,11 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0;
 }
 
-.c0 {
-  grid-column: 1 / span 6;
-}
-
-.c4 {
-  margin-bottom: 1rem;
-  padding: 0 1rem;
-}
-
-.c6 {
-  margin-top: 0;
-  margin: 0;
-}
-
-.c1 {
+.c3 {
   position: relative;
 }
 
-.c2 {
+.c4 {
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1548,7 +1468,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 10;
 }
 
-.c2:not(:focus):not(:active) {
+.c4:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -1572,13 +1492,90 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   margin: 0;
 }
 
+.c0 {
+  grid-column: 1 / span 6;
+}
+
+.c2 {
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.c6 {
+  margin-top: 0;
+  margin: 0;
+}
+
+.c18 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+.c22 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c17 {
+  position: relative;
+}
+
+.c19 {
+  position: relative;
+}
+
+.c21 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c25 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c20 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.21212121212121%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
 .c16 > div {
   display: grid;
   margin: 0.25rem 0;
   background-color: #FDFDFD;
 }
 
-.c3 {
+.c13:last-child {
+  border: none;
+}
+
+.c11 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c1 {
   background-color: #F2F2F2;
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
@@ -1596,63 +1593,35 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-@media (min-width:63rem) {
-  .c18 {
-    display: block;
-    width: 100%;
-  }
+.c24 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .c18 {
-    width: initial;
-    grid-column: 1 / span 2;
-  }
+.c24:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
 }
 
-@media (min-width:37.5rem) {
-  .c22 {
-    padding: 0 1rem;
-  }
+.c24:hover,
+.c24:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
-@media (min-width:63rem) {
-  .c22 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c22 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c17 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c21 {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-@media (max-width:24.9375rem) {
-  .c21 > * {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
-  }
+.c24:visited {
+  color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
@@ -1824,6 +1793,18 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.8125rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c0 {
     grid-column: 1 / span 5;
@@ -1852,19 +1833,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (max-width:25rem) {
-  .c4 {
+  .c2 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
+  .c2 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c2 {
     margin-bottom: 1.5rem;
   }
 }
@@ -1875,15 +1856,62 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    line-height: 1.125rem;
+@media (min-width:63rem) {
+  .c18 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c18 {
+    width: initial;
+    grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
-    font-size: 0.8125rem;
+  .c22 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c22 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c22 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c17 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c21 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c21 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
   }
 }
 
@@ -1920,21 +1948,21 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
     <div
       class="c1"
     >
-      <a
+      <section
+        aria-labelledby="recommendations-heading"
         class="c2"
-        href="#end-of-recommendations"
+        data-e2e="recommendations-heading"
+        role="region"
       >
-        تخطى مواضيع قد تهمك وواصل القراءة
-      </a>
-      <div
-        class="c3"
-      >
-        <section
-          aria-labelledby="recommendations-heading"
-          class="c4"
-          data-e2e="related-content"
-          role="region"
+        <div
+          class="c3"
         >
+          <a
+            class="c4"
+            href="#end-of-recommendations"
+          >
+            تخطى مواضيع قد تهمك وواصل القراءة
+          </a>
           <div
             class="c5 c6"
           >
@@ -1977,6 +2005,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 >
                   <div
                     class="c17"
+                    data-e2e="story-promo"
                   >
                     <div
                       class="c18"
@@ -1989,8 +2018,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           class="c20"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                         </div>
                         <div
                           class="c21"
@@ -2030,6 +2063,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 >
                   <div
                     class="c17"
+                    data-e2e="story-promo"
                   >
                     <div
                       class="c18"
@@ -2042,8 +2076,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           class="c25"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                         </div>
                         <div
                           class="c21"
@@ -2083,6 +2121,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 >
                   <div
                     class="c17"
+                    data-e2e="story-promo"
                   >
                     <div
                       class="c18"
@@ -2095,8 +2134,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           class="c25"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                         </div>
                         <div
                           class="c21"
@@ -2136,6 +2179,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 >
                   <div
                     class="c17"
+                    data-e2e="story-promo"
                   >
                     <div
                       class="c18"
@@ -2148,8 +2192,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           class="c25"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                         </div>
                         <div
                           class="c21"
@@ -2176,15 +2224,15 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
           </ul>
-        </section>
-      </div>
-      <p
-        class="c26"
-        id="end-of-recommendations"
-        tabindex="-1"
-      >
-        مواضيع قد تهمك نهاية
-      </p>
+          <p
+            class="c26"
+            id="end-of-recommendations"
+            tabindex="-1"
+          >
+            مواضيع قد تهمك نهاية
+          </p>
+        </div>
+      </section>
     </div>
   </div>
 </div>

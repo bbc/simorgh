@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Reklam',
-    },
     lang: `az`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Yeniləndi',
@@ -36,6 +32,7 @@ export const service = {
     datetimeLocale: `az`,
     service: 'azeri',
     serviceName: 'Azərbaycanca',
+    languageName: 'Azerbaijani',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcazeri',
     twitterSite: '@bbcazeri',
@@ -52,6 +49,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Reklam',
+      },
       seeAll: 'Hamısına baxın',
       home: 'Xəbərlər',
       currentPage: 'Hazırda olduğunuz səhifə',
@@ -175,6 +175,11 @@ export const service = {
           endTextVisuallyHidden: 'Paylaşımın sonu %provider_name%',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'Bu günün xəbərləri',
       featuresAnalysisTitle: 'Bunları da oxuyun',
     },
@@ -245,15 +250,15 @@ export const service = {
       },
       {
         title: 'Azərbaycan',
-        url: '/azeri/azerbaijan',
+        url: '/azeri/topics/c7zp571g7y7t',
       },
       {
         title: 'Region',
-        url: '/azeri/region',
+        url: '/azeri/topics/czpveq9ll8pt',
       },
       {
         title: 'Beynəlxalq',
-        url: '/azeri/international',
+        url: '/azeri/topics/cde15l4vn02t',
       },
       {
         title: 'Dərgi',

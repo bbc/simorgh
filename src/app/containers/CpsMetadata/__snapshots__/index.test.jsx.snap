@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should match snapshot for News & International 1`] = `
+exports[`CPS metadata should match snapshot for News & International 1`] = `
 <html
   dir="ltr"
   lang="en-gb"
@@ -168,7 +168,7 @@ exports[`should match snapshot for News & International 1`] = `
       property="og:description"
     />
     <meta
-      content="http://ichef.test.bbci.co.uk/news/1024/branded_news/6FC4/test/_63721682_p01kx435.jpg"
+      content="https://ichef.test.bbci.co.uk/news/1024/branded_news/6FC4/test/_63721682_p01kx435.jpg"
       property="og:image"
     />
     <meta
@@ -212,7 +212,7 @@ exports[`should match snapshot for News & International 1`] = `
       name="twitter:image:alt"
     />
     <meta
-      content="http://ichef.test.bbci.co.uk/news/1024/branded_news/6FC4/test/_63721682_p01kx435.jpg"
+      content="https://ichef.test.bbci.co.uk/news/1024/branded_news/6FC4/test/_63721682_p01kx435.jpg"
       name="twitter:image:src"
     />
     <meta
@@ -221,6 +221,242 @@ exports[`should match snapshot for News & International 1`] = `
     />
     <meta
       content="Article Headline for SEO - BBC News"
+      name="twitter:title"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
+      content="2018-01-01T12:01:00.000Z"
+      name="article:published_time"
+    />
+    <meta
+      content="2018-01-01T13:00:00.000Z"
+      name="article:modified_time"
+    />
+  </head>
+  <body>
+    <div />
+  </body>
+</html>
+`;
+
+exports[`CPS metadata with apple_itunes_app enabled for service with iTunesAppId (mundo) and hasAppleItunesAppBanner is true should match snapshot 1`] = `
+<html
+  dir="ltr"
+  lang="en-gb"
+>
+  <head>
+    <title>
+      Article Headline for SEO - BBC News Mundo
+    </title>
+    <link
+      href="https://www.test.bbc.com/pathname"
+      rel="canonical"
+    />
+    <link
+      href="https://www.test.bbc.co.uk/pathname"
+      hreflang="es"
+      rel="alternate"
+    />
+    <link
+      href="https://www.test.bbc.co.uk/pathname.amp"
+      rel="amphtml"
+    />
+    <link
+      href="http://localhost:7080/mundo/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/mundo/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/mundo/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/mundo/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/mundo/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/mundo/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/mundo/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/mundo/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/mundo/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/mundo/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/mundo/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/mundo/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/mundo/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/mundo/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noodp,noydir"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="app-id=515255747, app-argument=https://www.test.bbc.co.uk/pathname?utm_medium=banner&utm_content=apple-itunes-app"
+      name="apple-itunes-app"
+    />
+    <meta
+      content="BBC News Mundo"
+      name="apple-mobile-web-app-title"
+    />
+    <meta
+      content="BBC News Mundo"
+      name="application-name"
+    />
+    <meta
+      content="Article Headline for SEO"
+      name="description"
+    />
+    <meta
+      content="100004154058350"
+      property="fb:admins"
+    />
+    <meta
+      content="1609039196070050"
+      property="fb:app_id"
+    />
+    <meta
+      content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
+      property="fb:pages"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <meta
+      content="#B80000"
+      name="msapplication-TileColor"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/include/articles/public/mundo/images/icons/icon-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta
+      content="Article Headline for SEO"
+      property="og:description"
+    />
+    <meta
+      content="https://ichef.test.bbci.co.uk/news/1024/branded_mundo/6FC4/test/_63721682_p01kx435.jpg"
+      property="og:image"
+    />
+    <meta
+      content="connectionAltText"
+      property="og:image:alt"
+    />
+    <meta
+      content="es-005"
+      property="og:locale"
+    />
+    <meta
+      content="BBC News Mundo"
+      property="og:site_name"
+    />
+    <meta
+      content="Article Headline for SEO - BBC News Mundo"
+      property="og:title"
+    />
+    <meta
+      content="article"
+      property="og:type"
+    />
+    <meta
+      content="https://www.test.bbc.com/pathname"
+      property="og:url"
+    />
+    <meta
+      content="summary_large_image"
+      name="twitter:card"
+    />
+    <meta
+      content="@bbcmundo"
+      name="twitter:creator"
+    />
+    <meta
+      content="Article Headline for SEO"
+      name="twitter:description"
+    />
+    <meta
+      content="connectionAltText"
+      name="twitter:image:alt"
+    />
+    <meta
+      content="https://ichef.test.bbci.co.uk/news/1024/branded_mundo/6FC4/test/_63721682_p01kx435.jpg"
+      name="twitter:image:src"
+    />
+    <meta
+      content="@bbcmundo"
+      name="twitter:site"
+    />
+    <meta
+      content="Article Headline for SEO - BBC News Mundo"
       name="twitter:title"
     />
     <meta

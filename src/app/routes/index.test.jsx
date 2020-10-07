@@ -19,6 +19,7 @@ import onDemandTvPageJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn
 import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
 import frontPageJson from '#data/pidgin/frontpage/index.json';
 import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
+import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import legacyMediaAssetPage from '#data/azeri/legacyAssets/multimedia/2012/09/120919_georgia_prison_video.json';
 import photoGalleryPageJson from '#data/indonesia/cpsAssets/indonesia-41635759.json';
 import storyPageJson from '#data/mundo/cpsAssets/noticias-internacional-51266689.json';
@@ -36,6 +37,7 @@ jest.mock('#pages/index.js', () => ({
   PhotoGalleryPage: jest.requireActual('#pages/PhotoGalleryPage').default,
   OnDemandRadioPage: jest.requireActual('#pages/OnDemandRadioPage').default,
   MostReadPage: jest.requireActual('#pages/MostReadPage').default,
+  MostWatchedPage: jest.requireActual('#pages/MostWatchedPage').default,
   MediaAssetPage: jest.requireActual('#pages/MediaAssetPage').default,
   LiveRadioPage: jest.requireActual('#pages/LiveRadioPage').default,
   IdxPage: jest.requireActual('#pages/IdxPage').default,
@@ -106,6 +108,9 @@ it('should route to and render live radio page', async () => {
   const { pageData } = await getInitialData({
     path: pathname,
     pageType,
+    toggles: {
+      liveRadioSchedule: { enabled: true },
+    },
   });
 
   const { getByText } = renderRouter({
@@ -143,7 +148,7 @@ it('should route to and render the onDemand Radio page', async () => {
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
 
-it('should route to and render the skeleton onDemand TV Brand page', async () => {
+it('should route to and render the onDemand TV Brand page', async () => {
   const pathname = '/indonesia/bbc_indonesian_tv/tv_programmes/w13xttn4';
   fetchMock.mock(
     `http://localhost${pathname}.json?renderer_env=live`,
@@ -207,13 +212,36 @@ it('should route to and render a front page', async () => {
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
 
-it('should route to and render a media asset page', async () => {
-  const pathname = '/yoruba/media-23256797';
-  fetchMock.mock(`http://localhost${pathname}.json`, mediaAssetPageJson);
+it('should route to and render a skeleton most watched page', async () => {
+  const pathname = '/pidgin/media/video';
+  fetchMock.mock('http://localhost/pidgin/mostwatched.json', mostWatchedData);
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({
     path: pathname,
+    service: 'pidgin',
+    pageType,
+  });
+  const { getByText } = renderRouter({
+    pathname,
+    pageData,
+    pageType,
+    service: 'pidgin',
+  });
+  const EXPECTED_TITLE_RENDERED_IN_DOCUMENT = 'De one we dem don look';
+
+  expect(getByText(EXPECTED_TITLE_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+});
+
+it('should route to and render a media asset page', async () => {
+  const pathname = '/yoruba/media-23256797';
+  fetchMock.mock(`http://localhost${pathname}.json`, mediaAssetPageJson);
+  fetchMock.mock('http://localhost/yoruba/mostwatched.json', mostWatchedData);
+
+  const { getInitialData, pageType } = getMatchingRoute(pathname);
+  const { pageData } = await getInitialData({
+    path: pathname,
+    service: 'yoruba',
     pageType,
   });
   const { getByText } = renderRouter({
@@ -231,10 +259,12 @@ it('should route to and render a media asset page', async () => {
 it('should route to and render a media asset page', async () => {
   const pathname = '/yoruba/media-23256797';
   fetchMock.mock(`http://localhost${pathname}.json`, mediaAssetPageJson);
+  fetchMock.mock('http://localhost/yoruba/mostwatched.json', mostWatchedData);
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({
     path: pathname,
+    service: 'yoruba',
     pageType,
   });
   const { getByText } = renderRouter({
@@ -254,10 +284,12 @@ it('should route to and render a media asset page', async () => {
 it('should route to and render a legacy media asset page', async () => {
   const pathname = '/azeri/multimedia/2012/09/120919_georgia_prison_video';
   fetchMock.mock(`http://localhost${pathname}.json`, legacyMediaAssetPage);
+  fetchMock.mock('http://localhost/azeri/mostwatched.json', mostWatchedData);
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({
     path: pathname,
+    service: 'azeri',
     pageType,
   });
   const { getByText } = renderRouter({

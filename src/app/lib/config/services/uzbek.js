@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Реклама',
-    },
     lang: `uz-Cyrl`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Янгиланди',
@@ -36,6 +32,7 @@ export const service = {
     datetimeLocale: `uz`,
     service: 'uzbek',
     serviceName: 'Uzbek',
+    languageName: 'Uzbek',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcuzbek',
     twitterSite: '@bbcuzbek',
@@ -52,6 +49,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Реклама',
+      },
       seeAll: 'Ҳаммасини кўринг',
       home: 'Бош саҳифа',
       currentPage: 'Жорий саҳифа',
@@ -184,6 +184,11 @@ export const service = {
           text: 'Ўтказиб юборинг %provider_name% пост ',
           endTextVisuallyHidden: 'Охири %provider_name% пост',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: 'Бош мақола',
       featuresAnalysisTitle: 'Муҳаррир танлови',

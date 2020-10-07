@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Quảng cáo',
-    },
     lang: `vi`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Cập nhật',
@@ -37,6 +33,7 @@ export const service = {
     datetimeLocale: `vi`,
     service: 'vietnamese',
     serviceName: 'Tiếng Việt',
+    languageName: 'Vietnamese',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcvietnamese',
     twitterSite: '@bbcvietnamese',
@@ -54,6 +51,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Quảng cáo',
+      },
       seeAll: 'Xem tất cả',
       home: 'Tin chính',
       currentPage: 'Trang hiện nay',
@@ -172,6 +172,10 @@ export const service = {
           text: 'Bỏ qua %provider_name% tin',
           endTextVisuallyHidden: 'Cuối %provider_name% tin',
         },
+      },
+      include: {
+        errorMessage: 'Xin lỗi, không thể hiện thị phần này ở trang mobile.',
+        linkText: 'Xin xem bản đầy đủ.',
       },
       topStoriesTitle: 'Tin chính',
       featuresAnalysisTitle: 'Góc nhìn và chuyên mục',

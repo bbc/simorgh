@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Mgbasa ozi',
-    },
     lang: 'ig',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Mgbe ikpeazụ e tinyere ya ozi ọhụrụ',
@@ -27,6 +23,7 @@ export const service = {
     datetimeLocale: 'ig',
     service: 'igbo',
     serviceName: 'Igbo',
+    languageName: 'Igbo',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
     defaultImageAltText: 'BBC News Ìgbò',
     dir: 'ltr',
@@ -54,6 +51,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Mgbasa ozi',
+      },
       seeAll: 'Lee ha niile',
       home: 'Akụkọ',
       currentPage: 'Peegi ị nọ ugbua',
@@ -183,6 +183,11 @@ export const service = {
           text: 'Skip %provider_name% post',
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: 'Isi akụkọ',
       featuresAnalysisTitle: 'Kọwaara m isi akụkọ',

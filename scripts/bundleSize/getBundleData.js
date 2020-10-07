@@ -39,7 +39,7 @@ const getPageBundleData = () => {
     const bundles = extractBundlesForPageType(pageName);
     const bundlesData = getBundlesData(bundles);
 
-    return bundlesData.reduce(
+    const a = bundlesData.reduce(
       ({ lib, shared, page, commons, totalSize, ...rest }, { name, size }) => {
         const bundleData = { name, size };
         const isShared = name.startsWith('shared-');
@@ -75,6 +75,10 @@ const getPageBundleData = () => {
         totalSize: mainTotalSize + frameworkTotalSize,
       },
     );
+
+    // console.warn(a);
+
+    return a;
   });
 };
 

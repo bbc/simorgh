@@ -4,10 +4,10 @@ import pageIsSame from '../utils/pageIsSame';
 import getInitialData from './getInitialData';
 import {
   ErrorPage,
-  FrontPage,
   MediaAssetPage,
   PhotoGalleryPage,
   StoryPage,
+  FeatureIdxPage,
 } from '#pages';
 import { cpsAssetPagePath, legacyAssetPagePath } from '../utils/regex';
 import {
@@ -25,7 +25,7 @@ const CpsAsset = props => {
     [STORY_PAGE]: StoryPage,
     [PHOTO_GALLERY_PAGE]: PhotoGalleryPage,
     [MEDIA_ASSET_PAGE]: MediaAssetPage,
-    [FEATURE_INDEX_PAGE]: FrontPage,
+    [FEATURE_INDEX_PAGE]: FeatureIdxPage,
   }[type];
 
   return PageType ? (

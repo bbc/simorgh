@@ -18,6 +18,7 @@ const baseServiceConfig = {
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png',
   dir: `ltr`,
   service: 'serbian',
+  languageName: 'Serbian',
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcnasrpskom',
   twitterSite: '@bbcnasrpskom',
@@ -42,10 +43,7 @@ const baseServiceConfig = {
 export const service = {
   lat: {
     ...baseServiceConfig,
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Advertisement',
-    },
+
     articleTimestampPrefix: 'Ažurirano',
     articleTimestampSuffix: '',
     brandName: 'BBC News na srpskom',
@@ -129,16 +127,20 @@ export const service = {
         url: '/serbian/lat/srbija-52197807',
       },
       {
+        title: 'Izbori u SAD',
+        url: '/serbian/lat/topics/cq04kq3z44pt',
+      },
+      {
         title: 'Srbija',
-        url: '/serbian/lat/topics/1791445f-977a-4e6d-b490-51f84bb4fc52',
+        url: '/serbian/lat/topics/cr50vdy9q6wt',
       },
       {
         title: 'Balkan',
-        url: '/serbian/lat/balkan',
+        url: '/serbian/lat/topics/c06g87137jgt',
       },
       {
         title: 'Svet',
-        url: '/serbian/lat/svet',
+        url: '/serbian/lat/topics/c2lej05e1eqt',
       },
       {
         title: 'Video',
@@ -154,6 +156,9 @@ export const service = {
       variant: 'cyr',
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Advertisement',
+      },
       seeAll: 'Pogledajte sve',
       home: 'Glavna stranica',
       currentPage: 'Otvorena stranica',
@@ -278,15 +283,18 @@ export const service = {
           endTextVisuallyHidden: 'Kraj sadržaja sa %provider_name%',
         },
       },
+      include: {
+        errorMessage:
+          'Izvinite, ovaj deo teksta ne može da bude prikazan na mobilnom telefonu.',
+        linkText:
+          'Pogledajte punu verziju stranice da biste videli čitav sadržaj.',
+      },
       topStoriesTitle: 'Najvažnije',
       featuresAnalysisTitle: 'Reportaže',
     },
   },
   cyr: {
     ...baseServiceConfig,
-    ads: {
-      hasAds: false,
-    },
     articleTimestampPrefix: 'Ажурирано',
     articleTimestampSuffix: '',
     brandName: 'BBC News на српском',
@@ -370,16 +378,20 @@ export const service = {
         url: '/serbian/cyr/srbija-52197807',
       },
       {
+        title: 'Избори у САД',
+        url: '/serbian/cyr/topics/c9mj2rzvl9xt',
+      },
+      {
         title: 'Србија',
-        url: '/serbian/cyr/topics/1791445f-977a-4e6d-b490-51f84bb4fc52',
+        url: '/serbian/cyr/topics/cvjp1d3k9dvt',
       },
       {
         title: 'Балкан',
-        url: '/serbian/cyr/balkan',
+        url: '/serbian/cyr/topics/c8y9k0k2pvvt',
       },
       {
         title: 'Свет',
-        url: '/serbian/cyr/svet',
+        url: '/serbian/cyr/topics/c3m1x951mljt',
       },
       {
         title: 'Видео',
@@ -395,6 +407,9 @@ export const service = {
       variant: 'lat',
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Advertisement',
+      },
       seeAll: 'Погледајте све',
       home: 'Главна страница',
       currentPage: 'Отворена страница',
@@ -518,6 +533,12 @@ export const service = {
           text: 'Skip %provider_name% post',
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
+      },
+      include: {
+        errorMessage:
+          'Извините, овај део текста не може да буде приказан на мобилном телефону.',
+        linkText:
+          'Погледајте пуну верзију странице да бисте видели читав садржај.',
       },
       topStoriesTitle: 'Најважније',
       featuresAnalysisTitle: 'Репортаже',

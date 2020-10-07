@@ -8,10 +8,6 @@ import 'moment/locale/te';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'వ్యాపార ప్రకటన',
-    },
     lang: `te`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'అప్‌డేట్ అయ్యింది',
@@ -37,6 +33,7 @@ export const service = {
     datetimeLocale: `te-in`,
     service: 'telugu',
     serviceName: 'Telugu',
+    languageName: 'Telugu',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewstelugu',
     twitterSite: '@bbcnewstelugu',
@@ -53,6 +50,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'వ్యాపార ప్రకటన',
+      },
       seeAll: 'అన్నీ చూడండి',
       home: 'హోమ్',
       currentPage: 'ప్రస్తుత పేజీ',
@@ -181,6 +181,11 @@ export const service = {
           text: 'పోస్ట్‌ %provider_name% స్కిప్ చేయండి',
           endTextVisuallyHidden: 'పోస్ట్ of %provider_name% ముగిసింది',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: 'ముఖ్యమైన కథనాలు',
       featuresAnalysisTitle: 'ఫీచర్లు',

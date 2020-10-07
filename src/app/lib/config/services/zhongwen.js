@@ -21,6 +21,7 @@ const baseServiceConfig = {
   datetimeLocale: `zh-cn`,
   service: 'zhongwen',
   serviceName: 'News 中文',
+  languageName: 'Chinese',
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcchinese',
   twitterSite: '@bbcchinese',
@@ -46,10 +47,6 @@ const baseServiceConfig = {
 export const service = {
   simp: {
     ...baseServiceConfig,
-    ads: {
-      hasAds: true,
-      advertisementLabel: '广告',
-    },
     externalLinkText: ', 外部链接',
     frontPageTitle: '主页',
     lang: `zh-hans`,
@@ -154,6 +151,9 @@ export const service = {
       variant: 'trad',
     },
     translations: {
+      ads: {
+        advertisementLabel: '广告',
+      },
       seeAll: '浏览全部',
       home: '主页',
       currentPage: '目前页面',
@@ -270,16 +270,17 @@ export const service = {
           endTextVisuallyHidden: '结尾 %provider_name% 帖子',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: '头条新闻',
       featuresAnalysisTitle: '特别推荐',
     },
   },
   trad: {
     ...baseServiceConfig,
-    ads: {
-      hasAds: true,
-      advertisementLabel: '廣告',
-    },
     lang: `zh-hant`,
     locale: `zh-hant`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
@@ -384,6 +385,9 @@ export const service = {
       variant: 'simp',
     },
     translations: {
+      ads: {
+        advertisementLabel: '廣告',
+      },
       seeAll: '瀏覽全部',
       home: '主頁',
       currentPage: '目前頁面',
@@ -499,6 +503,11 @@ export const service = {
           text: '跳過 %provider_name% 帖子',
           endTextVisuallyHidden: '結尾 %provider_name% 帖子',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: '頭條新聞',
       featuresAnalysisTitle: '特別推薦',

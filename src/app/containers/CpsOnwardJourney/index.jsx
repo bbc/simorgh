@@ -23,7 +23,9 @@ import {
 import Grid from '@bbc/psammead-grid';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 
+import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 import { storyItem } from '#models/propTypes/storyItem';
+import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import {
   GridWrapper as LegacyGridWrapper,
@@ -76,7 +78,7 @@ const gridMarginSmall = css`
   }
 `;
 
-const Wrapper = styled(ConstrainedLargeGrid)`
+const StyledConstrainedLargeGrid = styled(ConstrainedLargeGrid)`
   ${gelGridMargin}
   ${gridMarginSmall}
   ${({ columnType }) =>
@@ -116,36 +118,74 @@ const SingleContentWrapper = styled.div`
   `}
 `;
 
+const OptionallyRenderedSkipWrapper = ({ skipLink, service, children }) =>
+  skipLink ? (
+    <SkipLinkWrapper service={service} {...skipLink}>
+      {children}
+    </SkipLinkWrapper>
+  ) : (
+    children
+  );
+
+const skipLinkProps = {
+  terms: shape({
+    '%title%': string,
+  }),
+  endTextVisuallyHidden: string,
+  endTextId: string,
+  text: string,
+};
+
+OptionallyRenderedSkipWrapper.propTypes = {
+  service: string.isRequired,
+  children: node.isRequired,
+  skipLink: shape(skipLinkProps),
+};
+
+OptionallyRenderedSkipWrapper.defaultProps = {
+  skipLink: null,
+};
+
 const CpsOnwardJourney = ({
   labelId,
   title,
   content,
+  isMediaContent,
   parentColumns,
-  listTransform,
-  singleTransform,
+  promoListComponent,
+  promoComponent,
   sectionLabelOverrideAs,
   sectionLabelBar,
   sectionLabelBackground,
   columnType,
+  skipLink,
 }) => {
-  const a11yAttributes = {
-    as: 'section',
-    role: 'region',
-    'aria-labelledby': labelId,
-  };
   const { script, service, dir } = useContext(ServiceContext);
+  const { pageType } = useContext(RequestContext);
+
+  const isMostWatched = pageType === 'mostWatched';
+  const a11yAttributes = isMostWatched
+    ? {
+        as: 'div',
+      }
+    : { as: 'section', role: 'region', 'aria-labelledby': labelId };
+
+  const Wrapper = isMediaContent
+    ? styled(ConstrainedLargeGrid)`` // Necessary for styling
+    : StyledConstrainedLargeGrid;
   const CpsOnwardJourneyWrapper = ({ children }) =>
     parentColumns ? (
       <Wrapper
-        data-e2e="related-content"
+        data-e2e={labelId}
         parentColumns={parentColumns}
         columnType={columnType}
         {...a11yAttributes}
+        isMediaContent={isMediaContent}
       >
         {children}
       </Wrapper>
     ) : (
-      <LegacyGridWrapper data-e2e="related-content" {...a11yAttributes}>
+      <LegacyGridWrapper data-e2e={labelId} {...a11yAttributes}>
         <LegacyGridItemConstrainedLarge>
           {children}
         </LegacyGridItemConstrainedLarge>
@@ -172,33 +212,38 @@ const CpsOnwardJourney = ({
 
   return (
     <CpsOnwardJourneyWrapper>
-      <StyledSectionLabel
-        script={script}
-        service={service}
-        dir={dir}
-        labelId={labelId}
-        columnType={columnType}
-        overrideHeadingAs={sectionLabelOverrideAs}
-        bar={sectionLabelBar}
-        backgroundColor={sectionLabelBackground}
-      >
-        {title}
-      </StyledSectionLabel>
-      {hasSingleContent ? (
-        <SingleContentWrapper columnType={columnType}>
-          {singleTransform(singleContent)}
-        </SingleContentWrapper>
-      ) : (
-        listTransform(content)
-      )}
+      <OptionallyRenderedSkipWrapper skipLink={skipLink} service={service}>
+        {title ? (
+          <StyledSectionLabel
+            script={script}
+            service={service}
+            dir={dir}
+            labelId={labelId}
+            columnType={columnType}
+            overrideHeadingAs={sectionLabelOverrideAs}
+            bar={sectionLabelBar}
+            backgroundColor={sectionLabelBackground}
+          >
+            {title}
+          </StyledSectionLabel>
+        ) : null}
+        {hasSingleContent ? (
+          <SingleContentWrapper columnType={columnType}>
+            {promoComponent({ promo: singleContent, dir })}
+          </SingleContentWrapper>
+        ) : (
+          promoListComponent({ promoItems: content, dir, isMediaContent })
+        )}
+      </OptionallyRenderedSkipWrapper>
     </CpsOnwardJourneyWrapper>
   );
 };
 
 CpsOnwardJourney.propTypes = {
   labelId: string.isRequired,
-  title: string.isRequired,
+  title: string,
   content: arrayOf(shape(storyItem)),
+  isMediaContent: bool,
   parentColumns: shape({
     group0: number,
     group1: number,
@@ -207,8 +252,8 @@ CpsOnwardJourney.propTypes = {
     group4: number,
     group5: number,
   }),
-  listTransform: func.isRequired,
-  singleTransform: func.isRequired,
+  promoListComponent: func.isRequired,
+  promoComponent: func.isRequired,
   sectionLabelOverrideAs: string,
   sectionLabelBar: bool,
   sectionLabelBackground: string,
@@ -217,14 +262,18 @@ CpsOnwardJourney.propTypes = {
       usages.
   */
   columnType: oneOf(['main', 'secondary']).isRequired,
+  skipLink: shape(skipLinkProps),
 };
 
 CpsOnwardJourney.defaultProps = {
   content: [],
+  title: '',
+  isMediaContent: false,
   parentColumns: null,
   sectionLabelOverrideAs: null,
   sectionLabelBar: true,
   sectionLabelBackground: C_GHOST,
+  skipLink: null,
 };
 
 export default CpsOnwardJourney;

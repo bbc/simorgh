@@ -1,91 +1,7 @@
 import { getPageBundleData } from './getBundleData';
 import { pages } from './pages';
 
-jest.mock('./pageTypeBundleExtractor', () => {
-  return {
-    extractBundlesForPageType: pageType => {
-      if (pageType === 'ArticlePage') {
-        return [
-          'ArticlePage-31ecd969.31473c35.js',
-          'common-ArticlePage-FrontPage-IdxPage-MediaAssetPage-MostReadPage-OnDemandRadioPage-OnDemandTvPage-Ph-667a1289.f4b0fece.js',
-        ];
-      }
-      if (pageType === 'StoryPage') {
-        return [
-          'StoryPage-31ecd969.ca0d676d.js',
-          'common-ArticlePage-FrontPage-IdxPage-MediaAssetPage-MostReadPage-OnDemandRadioPage-OnDemandTvPage-Ph-667a1289.f4b0fece.js',
-          'common-MediaAssetPage-PhotoGalleryPage-StoryPage-31ecd969.3341ac12.js',
-        ];
-      }
-      if (pageType === 'FrontPage') {
-        return [
-          'FrontPage-31ecd969.bbf7a07e.js',
-          'common-ArticlePage-FrontPage-IdxPage-MediaAssetPage-MostReadPage-OnDemandRadioPage-OnDemandTvPage-Ph-667a1289.f4b0fece.js',
-          'common-FrontPage-IdxPage-31ecd969.39680be8.js',
-        ];
-      }
-      if (pageType === 'IdxPage') {
-        return [
-          'IdxPage-31ecd969.68b77555.js',
-          'common-ArticlePage-FrontPage-IdxPage-MediaAssetPage-MostReadPage-OnDemandRadioPage-OnDemandTvPage-Ph-667a1289.f4b0fece.js',
-          'common-FrontPage-IdxPage-31ecd969.39680be8.js',
-        ];
-      }
-      if (pageType === 'LiveRadioPage') {
-        return [
-          'LiveRadioPage-31ecd969.64772a90.js',
-          'common-ArticlePage-FrontPage-IdxPage-MediaAssetPage-MostReadPage-OnDemandRadioPage-OnDemandTvPage-Ph-667a1289.f4b0fece.js',
-        ];
-      }
-      if (pageType === 'MediaAssetPage') {
-        return [
-          'MediaAssetPage-88a3c260.b7ec8c9c.js',
-          'common-ArticlePage-FrontPage-IdxPage-MediaAssetPage-MostReadPage-OnDemandRadioPage-OnDemandTvPage-Ph-667a1289.f4b0fece.js',
-          'common-MediaAssetPage-PhotoGalleryPage-StoryPage-31ecd969.3341ac12.js',
-        ];
-      }
-      if (pageType === 'MostReadPage') {
-        return [
-          'MostReadPage-31ecd969.7484ff05.js',
-          'common-ArticlePage-FrontPage-IdxPage-MediaAssetPage-MostReadPage-OnDemandRadioPage-OnDemandTvPage-Ph-667a1289.f4b0fece.js',
-        ];
-      }
-      if (pageType === 'OnDemandRadioPage') {
-        return [
-          'OnDemandRadioPage-31ecd969.ec6af2d0.js',
-          'common-ArticlePage-FrontPage-IdxPage-MediaAssetPage-MostReadPage-OnDemandRadioPage-OnDemandTvPage-Ph-667a1289.f4b0fece.js',
-        ];
-      }
-      if (pageType === 'OnDemandTvPage') {
-        return [
-          'OnDemandTvPage-31ecd969.de41ab7f.js',
-          'common-ArticlePage-FrontPage-IdxPage-MediaAssetPage-MostReadPage-OnDemandRadioPage-OnDemandTvPage-Ph-667a1289.f4b0fece.js',
-        ];
-      }
-      if (pageType === 'PhotoGalleryPage') {
-        return [
-          'PhotoGalleryPage-e94df663.a733283a.js',
-          'common-ArticlePage-FrontPage-IdxPage-MediaAssetPage-MostReadPage-OnDemandRadioPage-OnDemandTvPage-Ph-667a1289.f4b0fece.js',
-          'common-MediaAssetPage-PhotoGalleryPage-StoryPage-31ecd969.3341ac12.js',
-        ];
-      }
-      if (pageType === 'ErrorPage') {
-        return [
-          'ArticlePage-31ecd969.31473c35.js',
-          'common-ArticlePage-FrontPage-IdxPage-MediaAssetPage-MostReadPage-OnDemandRadioPage-OnDemandTvPage-Ph-667a1289.f4b0fece.js',
-        ];
-      }
-      if (pageType === 'IdxPage') {
-        return [
-          'ArticlePage-31ecd969.31473c35.js',
-          'common-ArticlePage-FrontPage-IdxPage-MediaAssetPage-MostReadPage-OnDemandRadioPage-OnDemandTvPage-Ph-667a1289.f4b0fece.js',
-        ];
-      }
-      throw Error('page type not mocked');
-    },
-  };
-});
-
+jest.mock('./pageTypeBundleExtractor');
 jest.mock('fs', () => ({
   readdirSync: () => [
     'ArticlePage-31ecd969.31473c35.js',
@@ -94,6 +10,7 @@ jest.mock('fs', () => ({
     'LiveRadioPage-31ecd969.64772a90.js',
     'MediaAssetPage-88a3c260.b7ec8c9c.js',
     'MostReadPage-31ecd969.7484ff05.js',
+    'MostWatchedPage-31ecd969.7484rr05.js',
     'OnDemandRadioPage-31ecd969.ec6af2d0.js',
     'OnDemandTvPage-31ecd969.de41ab7f.js',
     'PhotoGalleryPage-e94df663.a733283a.js',
@@ -106,9 +23,14 @@ jest.mock('fs', () => ({
     'azeri-31ecd969.ee2579a9.js',
     'bengali-31ecd969.7f2e9af6.js',
     'burmese-31ecd969.6dba80fc.js',
-    'common-ArticlePage-FrontPage-IdxPage-MediaAssetPage-MostReadPage-OnDemandRadioPage-OnDemandTvPage-Ph-667a1289.f4b0fece.js',
-    'common-FrontPage-IdxPage-31ecd969.39680be8.js',
-    'common-MediaAssetPage-PhotoGalleryPage-StoryPage-31ecd969.3341ac12.js',
+    'commons-1111.js',
+    'commons-2222.js',
+    'commons-3333.js',
+    '1111-lib-1111.js',
+    'framework-1111.js',
+    'shared-1111.js',
+    'shared-2222.js',
+    'shared-3333.js',
     'cymrufyw-31ecd969.f1e65089.js',
     'gahuza-31ecd969.ba8347e8.js',
     'gujarati-31ecd969.f3443ddd.js',
@@ -147,9 +69,6 @@ jest.mock('fs', () => ({
     'ukrainian-31ecd969.0b427c1a.js',
     'urdu-31ecd969.cc15ea70.js',
     'uzbek-31ecd969.4dae23cc.js',
-    'vendor-253ae210.ffbaa173.js',
-    'vendor-678f84af.32480a24.js',
-    'vendor-7d359b94.0a179d9a.js',
     'vietnamese-31ecd969.96b409d0.js',
     'yoruba-31ecd969.2072cb94.js',
     'zhongwen-31ecd969.40328f02.js',
@@ -175,9 +94,28 @@ describe('getPageBundleData', () => {
     expect(photoGalleryPageData).toMatchInlineSnapshot(`
       Array [
         Object {
-          "commons": Array [],
-          "framework": Array [],
-          "lib": Array [],
+          "commons": Array [
+            Object {
+              "name": "commons-1111.js",
+              "size": 10,
+            },
+            Object {
+              "name": "commons-2222.js",
+              "size": 10,
+            },
+          ],
+          "framework": Array [
+            Object {
+              "name": "framework-1111.js",
+              "size": 10,
+            },
+          ],
+          "lib": Array [
+            Object {
+              "name": "1111-lib-1111.js",
+              "size": 10,
+            },
+          ],
           "main": Array [
             Object {
               "name": "main-d0ae3f07.8d44cc89.js",
@@ -193,18 +131,19 @@ describe('getPageBundleData', () => {
               "name": "PhotoGalleryPage-e94df663.a733283a.js",
               "size": 10,
             },
+          ],
+          "pageName": "PhotoGalleryPage",
+          "shared": Array [
             Object {
-              "name": "common-ArticlePage-FrontPage-IdxPage-MediaAssetPage-MostReadPage-OnDemandRadioPage-OnDemandTvPage-Ph-667a1289.f4b0fece.js",
+              "name": "shared-1111.js",
               "size": 10,
             },
             Object {
-              "name": "common-MediaAssetPage-PhotoGalleryPage-StoryPage-31ecd969.3341ac12.js",
+              "name": "shared-3333.js",
               "size": 10,
             },
           ],
-          "pageName": "PhotoGalleryPage",
-          "shared": Array [],
-          "totalSize": 50,
+          "totalSize": 90,
         },
       ]
     `);
@@ -212,15 +151,34 @@ describe('getPageBundleData', () => {
 
   it('should output correctly for page type with one common bundles', () => {
     const data = getPageBundleData();
-    const photoGalleryPageData = data.filter(({ pageName }) => {
+    const onDemandTvPageData = data.filter(({ pageName }) => {
       return pageName === 'OnDemandTvPage';
     });
-    expect(photoGalleryPageData).toMatchInlineSnapshot(`
+    expect(onDemandTvPageData).toMatchInlineSnapshot(`
       Array [
         Object {
-          "commons": Array [],
-          "framework": Array [],
-          "lib": Array [],
+          "commons": Array [
+            Object {
+              "name": "commons-1111.js",
+              "size": 10,
+            },
+          ],
+          "framework": Array [
+            Object {
+              "name": "framework-1111.js",
+              "size": 10,
+            },
+          ],
+          "lib": Array [
+            Object {
+              "name": "1111-lib-1111.js",
+              "size": 10,
+            },
+            Object {
+              "name": "3333-lib-2222.js",
+              "size": 10,
+            },
+          ],
           "main": Array [
             Object {
               "name": "main-d0ae3f07.8d44cc89.js",
@@ -236,14 +194,15 @@ describe('getPageBundleData', () => {
               "name": "OnDemandTvPage-31ecd969.de41ab7f.js",
               "size": 10,
             },
+          ],
+          "pageName": "OnDemandTvPage",
+          "shared": Array [
             Object {
-              "name": "common-ArticlePage-FrontPage-IdxPage-MediaAssetPage-MostReadPage-OnDemandRadioPage-OnDemandTvPage-Ph-667a1289.f4b0fece.js",
+              "name": "shared-1111.js",
               "size": 10,
             },
           ],
-          "pageName": "OnDemandTvPage",
-          "shared": Array [],
-          "totalSize": 40,
+          "totalSize": 80,
         },
       ]
     `);

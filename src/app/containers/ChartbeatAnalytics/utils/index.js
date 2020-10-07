@@ -37,8 +37,14 @@ export const getType = (pageType, shorthand = false) => {
       return 'Radio';
     case 'mostRead':
       return 'Most Read';
+    case 'mostWatched':
+      return 'Most Watched';
     case 'STY':
       return 'STY';
+    case 'PGL':
+      return 'PGL';
+    case 'FIX':
+      return 'FIX';
     default:
       return null;
   }
@@ -111,8 +117,14 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
       return path(['pageTitle'], pageData);
     case 'mostRead':
       return `${title} - ${brandName}`;
+    case 'mostWatched':
+      return `${title} - ${brandName}`;
     case 'STY':
       return path(['promo', 'headlines', 'headline'], pageData);
+    case 'PGL':
+      return path(['promo', 'headlines', 'headline'], pageData);
+    case 'FIX':
+      return getPageTitle(pageData, brandName);
     default:
       return null;
   }
@@ -132,6 +144,7 @@ export const getConfig = ({
   previousPath,
   chartbeatDomain,
   mostReadTitle,
+  mostWatchedTitle,
 }) => {
   const referrer =
     previousPath || isAmp ? getReferrer(platform, origin, previousPath) : null;
@@ -140,7 +153,7 @@ export const getConfig = ({
     pageType,
     pageData: data,
     brandName,
-    title: mostReadTitle,
+    title: pageType === 'mostWatched' ? mostWatchedTitle : mostReadTitle,
   });
   const domain = env !== 'live' ? 'test.bbc.co.uk' : chartbeatDomain;
   const sectionName = path(['relatedContent', 'section', 'name'], data);
@@ -167,7 +180,7 @@ export const getConfig = ({
     sections,
     uid: chartbeatUID,
     title,
-    virtualReferrer: referrer && decodeURIComponent(referrer),
+    virtualReferrer: referrer,
     ...(isAmp && { contentType }),
     ...(!isAmp && {
       type: contentType,

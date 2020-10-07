@@ -2,7 +2,7 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"Skip to content"`;
 
-exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598286&amp;s2=64&amp;p=news.articles.c5jje4ejkqvo.page&amp;x1=[urn:bbc:optimo:c5jje4ejkqvo]&amp;x2=[responsive]&amp;x3=[news]&amp;x4=[en-gb]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[The+Germans+solving+rising+rents+with+people+power]&amp;x11=[2019-03-27T16:13:36.863Z]&amp;x12=[2019-03-27T16:20:33.751Z]\\"/>"`;
+exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598286&amp;s2=64&amp;p=news.articles.c5jje4ejkqvo.page&amp;x1=[urn%3Abbc%3Aoptimo%3Ac5jje4ejkqvo]&amp;x2=[responsive]&amp;x3=[news]&amp;x4=[en-gb]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[The%2BGermans%2Bsolving%2Brising%2Brents%2Bwith%2Bpeople%2Bpower]&amp;x11=[2019-03-27T16%3A13%3A36.863Z]&amp;x12=[2019-03-27T16%3A20%3A33.751Z]\\"/>"`;
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/news"`;
 
@@ -164,9 +164,19 @@ Object {
 }
 `;
 
-exports[`Canonical Articles I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg"`;
+exports[`Canonical Articles Image Caption should match text 1`] = `"Image caption, The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich"`;
 
-exports[`Canonical Articles I can see an image with a caption 2`] = `"Image caption, The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich"`;
+exports[`Canonical Articles Image should match snapshot 1`] = `
+<img
+  alt="group of residents"
+  class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 800w"
+  width="976"
+/>
+`;
+
+exports[`Canonical Articles Main heading should match text 1`] = `"The Germans solving rising rents with people power"`;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -276,6 +286,11 @@ Object {
         "url": "https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "en-GB",
+        "name": "English",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/news/articles/c5jje4ejkqvo",
         "@type": "WebPage",
@@ -332,3 +347,10 @@ exports[`Canonical Articles SEO Twitter image src 1`] = `"https://www.bbc.co.uk/
 exports[`Canonical Articles SEO Twitter site 1`] = `"@BBCNews"`;
 
 exports[`Canonical Articles SEO Twitter title 1`] = `"The Germans solving rising rents with people power - BBC News"`;
+
+exports[`Canonical Articles Timestamp should match text and date 1`] = `
+Object {
+  "date": "2019-03-27",
+  "text": "27 March 2019",
+}
+`;

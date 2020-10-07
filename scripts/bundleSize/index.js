@@ -14,11 +14,13 @@ const serviceBundleData = sortByBundlesTotalAscending(getServiceBundleData());
 const serviceBundlesTotals = serviceBundleData.map(
   ({ totalSize }) => totalSize,
 );
+
 const smallestServiceBundleSize = Math.min(...serviceBundlesTotals);
 const largestServiceBundleSize = Math.max(...serviceBundlesTotals);
 const averageServiceBundleSize = getAverageBundleSize(serviceBundlesTotals);
 
 const pageBundleData = sortByBundlesTotalAscending(getPageBundleData());
+
 const pageBundlesTotals = pageBundleData.map(({ totalSize }) => totalSize);
 const smallestPageBundleSize = Math.min(...pageBundlesTotals);
 const largestPageBundleSize = Math.max(...pageBundlesTotals);

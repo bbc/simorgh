@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Жарнама',
-    },
     lang: `ky`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Жаңылоо',
@@ -36,6 +32,7 @@ export const service = {
     datetimeLocale: `ky`,
     service: 'kyrgyz',
     serviceName: 'News Кыргыз КызMATы',
+    languageName: 'Kyrgyz',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbckyrgyz',
     twitterSite: '@bbckyrgyz',
@@ -52,6 +49,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Жарнама',
+      },
       seeAll: 'Баарын көрүү',
       home: 'Башталгыч бет',
       currentPage: 'Ачылып турган баракча',
@@ -184,6 +184,10 @@ export const service = {
           text: '%provider_name% баракчаны өткөрүп жиберүү, пост',
           endTextVisuallyHidden: '%provider_name% посттун аягы',
         },
+      },
+      include: {
+        errorMessage: 'Кечиресиз, бул баракча мобилдик телефондо ачылбайт',
+        linkText: 'Башкы беттин толук версиясын ачыңыз',
       },
       topStoriesTitle: 'Башкы кабарлар',
       featuresAnalysisTitle: 'Редактордун тандоосу',

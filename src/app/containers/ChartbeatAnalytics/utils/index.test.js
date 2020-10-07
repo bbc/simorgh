@@ -57,6 +57,11 @@ describe('Chartbeat utilities', () => {
         expectedShortType: 'IDX',
       },
       {
+        type: 'FIX',
+        expectedDefaultType: 'FIX',
+        expectedShortType: 'FIX',
+      },
+      {
         type: 'MAP',
         expectedDefaultType: 'article-media-asset',
         expectedShortType: 'article-media-asset',
@@ -72,9 +77,19 @@ describe('Chartbeat utilities', () => {
         expectedShortType: 'Most Read',
       },
       {
+        type: 'mostWatched',
+        expectedDefaultType: 'Most Watched',
+        expectedShortType: 'Most Watched',
+      },
+      {
         type: 'STY',
         expectedDefaultType: 'STY',
         expectedShortType: 'STY',
+      },
+      {
+        type: 'PGL',
+        expectedDefaultType: 'PGL',
+        expectedShortType: 'PGL',
       },
       {
         type: null,
@@ -227,113 +242,6 @@ describe('Chartbeat utilities', () => {
   });
 
   describe('Chartbeat Title', () => {
-    it('should call getPromoHeadline when pageType is article', () => {
-      const pageType = 'article';
-      const pageData = {};
-
-      const mockGetPromoHeadline = jest
-        .fn()
-        .mockImplementation(() => 'This is an article title');
-      articleUtils.getPromoHeadline = mockGetPromoHeadline;
-      expect(getTitle({ pageType, pageData })).toBe('This is an article title');
-      expect(mockGetPromoHeadline).toHaveBeenCalledTimes(1);
-    });
-
-    it('should call getPageTitle when pageType is frontPage', () => {
-      const pageType = 'frontPage';
-      const pageData = {};
-      const brandName = 'BBC News';
-
-      const mockGetPageTitle = jest
-        .fn()
-        .mockImplementation(() => 'This is a frontpage title');
-      frontPageUtils.getPageTitle = mockGetPageTitle;
-      expect(getTitle({ pageType, pageData, brandName })).toBe(
-        'This is a frontpage title',
-      );
-      expect(mockGetPageTitle).toHaveBeenCalledTimes(1);
-    });
-
-    it('should call getPageTitle when pageType is IDX', () => {
-      const pageType = 'IDX';
-      const pageData = {};
-      const brandName = 'BBC Persian';
-
-      const mockGetPageTitle = jest
-        .fn()
-        .mockImplementation(() => 'This is an IDX page title');
-      frontPageUtils.getPageTitle = mockGetPageTitle;
-      expect(getTitle({ pageType, pageData, brandName })).toBe(
-        'This is an IDX page title',
-      );
-      expect(mockGetPageTitle).toHaveBeenCalledTimes(1);
-    });
-
-    it('should call getPageTitle when pageType is index', () => {
-      const pageType = 'index';
-      const pageData = {};
-      const brandName = 'BBC News';
-
-      const mockGetPageTitle = jest
-        .fn()
-        .mockImplementation(() => 'This is an index page title');
-      frontPageUtils.getPageTitle = mockGetPageTitle;
-      expect(getTitle({ pageType, pageData, brandName })).toBe(
-        'This is an index page title',
-      );
-      expect(mockGetPageTitle).toHaveBeenCalledTimes(1);
-    });
-
-    it('should default to null when no matching pageType', () => {
-      const pageType = 'some page type';
-      const pageData = {};
-      const brandName = 'BBC News';
-
-      expect(getTitle({ pageType, pageData, brandName })).toBe(null);
-    });
-
-    it('should return correct title when pageType is MAP', () => {
-      const pageType = 'MAP';
-      const pageData = {
-        promo: {
-          headlines: {
-            headline: 'MAP Page Title',
-          },
-        },
-      };
-
-      expect(getTitle({ pageType, pageData })).toBe('MAP Page Title');
-    });
-
-    it('should return correct title when pageType is media (Live radio)', () => {
-      const pageType = 'media';
-      const pageData = {
-        pageTitle: 'Live Radio Page Title',
-      };
-
-      expect(getTitle({ pageType, pageData })).toBe('Live Radio Page Title');
-    });
-
-    it('should return correct title when pageType is media (onDemand radio)', () => {
-      const pageType = 'media';
-      const pageData = {
-        pageTitle: 'OnDemand Radio Page Title',
-      };
-
-      expect(getTitle({ pageType, pageData })).toBe(
-        'OnDemand Radio Page Title',
-      );
-    });
-
-    it('should return correct title when pageType is media (onDemand TV)', () => {
-      const pageType = 'media';
-      const pageData = {
-        pageTitle: 'OnDemand TV Page Title',
-      };
-
-      expect(getTitle({ pageType, pageData })).toBe('OnDemand TV Page Title');
-    });
-
     it('should return correct title when pageType is mostRead', () => {
       const pageType = 'mostRead';
       const pageData = {};
@@ -345,18 +253,79 @@ describe('Chartbeat utilities', () => {
       );
     });
 
-    it('should return correct title when pageType is STY', () => {
-      const pageType = 'STY';
-      const pageData = {
-        promo: {
-          headlines: {
-            headline: 'STY Page Title',
-          },
-        },
-      };
+    it('should return correct title when pageType is mostWatched', () => {
+      const pageType = 'mostWatched';
+      const pageData = {};
+      const brandName = 'BBC News Afaan Oromoo';
+      const title = 'Hedduu kan ilaalaman';
 
-      expect(getTitle({ pageType, pageData })).toBe('STY Page Title');
+      expect(getTitle({ pageType, pageData, brandName, title })).toBe(
+        'Hedduu kan ilaalaman - BBC News Afaan Oromoo',
+      );
     });
+
+    test.each`
+      pageType       | brandName        | pageTitle                        | expectedNumberOfCalls
+      ${'index'}     | ${'BBC News'}    | ${'This is an index page title'} | ${1}
+      ${'IDX'}       | ${'BBC Persian'} | ${'This is an IDX page title'}   | ${1}
+      ${'FIX'}       | ${'BBC Afrique'} | ${'This is an FIX page title'}   | ${1}
+      ${'frontPage'} | ${'BBC News'}    | ${'This is a frontpage title'}   | ${1}
+      ${'article'}   | ${null}          | ${'This is an article title'}    | ${1}
+      ${'foo'}       | ${'BBC News'}    | ${null}                          | ${0}
+    `(
+      'should call getPageTitle when pageType is $pageType',
+      ({ brandName, pageType, pageTitle, expectedNumberOfCalls }) => {
+        const pageData = {};
+
+        const mockTitle = jest.fn().mockImplementation(() => pageTitle);
+
+        if (pageType === 'article') {
+          articleUtils.getPromoHeadline = mockTitle;
+        } else {
+          frontPageUtils.getPageTitle = mockTitle;
+        }
+
+        expect(getTitle({ pageType, pageData, brandName })).toBe(pageTitle);
+
+        expect(mockTitle).toHaveBeenCalledTimes(expectedNumberOfCalls);
+      },
+    );
+
+    test.each`
+      pageType   | context               | pageTitle
+      ${'media'} | ${'(onDemand TV)'}    | ${'OnDemand TV Page Title'}
+      ${'media'} | ${'(onDemand Radio)'} | ${'OnDemand TV Radio Title'}
+      ${'media'} | ${'(Live Radio)'}     | ${'Live Radio Title'}
+    `(
+      'should return correct title when pageType is $pageType $context',
+      ({ pageType, pageTitle }) => {
+        const pageData = {
+          pageTitle,
+        };
+
+        expect(getTitle({ pageType, pageData })).toBe(pageTitle);
+      },
+    );
+
+    test.each`
+      pageType | pageTitle
+      ${'PGL'} | ${'PGL Page Title'}
+      ${'STY'} | ${'STY Page Title'}
+      ${'MAP'} | ${'MAP Page Title'}
+    `(
+      'should return correct title when pageType is $pageType',
+      ({ pageType, pageTitle }) => {
+        const pageData = {
+          promo: {
+            headlines: {
+              headline: pageTitle,
+            },
+          },
+        };
+
+        expect(getTitle({ pageType, pageData })).toBe(pageTitle);
+      },
+    );
   });
 
   describe('Chartbeat Config', () => {
@@ -417,6 +386,15 @@ describe('Chartbeat utilities', () => {
         useCanonical: true,
         virtualReferrer: 'test.bbc.com/previous-path',
       };
+
+      const mockTitle = jest
+        .fn()
+        .mockImplementation(() => 'This is an index page title');
+
+      frontPageUtils.getPageTitle = mockTitle;
+
+      const expectedCookieValue = 'foobar';
+      jest.spyOn(Cookie, 'get').mockImplementation(() => expectedCookieValue);
 
       expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
     });
@@ -738,6 +716,40 @@ describe('Chartbeat utilities', () => {
     expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
   });
 
+  it('should return config for canonical pages when page type is mostWatched and env is not live', () => {
+    const fixtureData = {
+      isAmp: false,
+      platform: 'canonical',
+      pageType: 'mostWatched',
+      data: {
+        name: 'Most Watched Page Title',
+      },
+      brandName: 'BBC News Afaan Oromoo',
+      mostWatchedTitle: 'Hedduu kan ilaalaman',
+      chartbeatDomain: 'afaanoromoo.bbc.co.uk',
+      env: 'test',
+      service: 'afaanoromoo',
+      origin: 'test.bbc.com',
+      previousPath: '/previous-path',
+    };
+
+    const expectedConfig = {
+      domain: 'test.bbc.co.uk',
+      idSync: {
+        bbc_hid: 'foobar',
+      },
+      path: '/',
+      sections: 'Afaanoromoo, Afaanoromoo - Most Watched',
+      type: 'Most Watched',
+      title: 'Hedduu kan ilaalaman - BBC News Afaan Oromoo',
+      uid: 50924,
+      useCanonical: true,
+      virtualReferrer: 'test.bbc.com/previous-path',
+    };
+
+    expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+  });
+
   it('should return config for canonical pages when page type is IDX and env is not live', () => {
     const fixtureData = {
       isAmp: false,
@@ -765,6 +777,95 @@ describe('Chartbeat utilities', () => {
       useCanonical: true,
       virtualReferrer: 'test.bbc.com/previous-path',
     };
+
+    const mockTitle = jest
+      .fn()
+      .mockImplementation(() => 'This is an index page title');
+
+    frontPageUtils.getPageTitle = mockTitle;
+
+    const expectedCookieValue = 'foobar';
+    jest.spyOn(Cookie, 'get').mockImplementation(() => expectedCookieValue);
+
+    expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+  });
+
+  it('should return config for canonical pages when page type is FIX and env is not live', () => {
+    const fixtureData = {
+      isAmp: false,
+      platform: 'canonical',
+      pageType: 'FIX',
+      data: {},
+      brandName: 'BBC-Afique',
+      chartbeatDomain: 'bbc.co.uk',
+      env: 'test',
+      service: 'afrique',
+      origin: 'test.bbc.com',
+      previousPath: '/previous-path',
+    };
+
+    const expectedConfig = {
+      domain: 'test.bbc.co.uk',
+      idSync: {
+        bbc_hid: 'foobar',
+      },
+      path: '/',
+      sections: 'Afrique, Afrique - FIX',
+      title: 'This is a Feature Index page title',
+      type: 'FIX',
+      uid: 50924,
+      useCanonical: true,
+      virtualReferrer: 'test.bbc.com/previous-path',
+    };
+
+    const mockTitle = jest
+      .fn()
+      .mockImplementation(() => 'This is a Feature Index page title');
+
+    frontPageUtils.getPageTitle = mockTitle;
+
+    const expectedCookieValue = 'foobar';
+    jest.spyOn(Cookie, 'get').mockImplementation(() => expectedCookieValue);
+
+    expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+  });
+
+  it('should return config for canonical pages when page type is IDX and env is not live', () => {
+    const fixtureData = {
+      isAmp: false,
+      platform: 'canonical',
+      pageType: 'IDX',
+      data: {},
+      brandName: 'BBC-Persian',
+      chartbeatDomain: 'bbc.co.uk',
+      env: 'test',
+      service: 'persian',
+      origin: 'test.bbc.com',
+      previousPath: '/previous-path',
+    };
+
+    const expectedConfig = {
+      domain: 'test.bbc.co.uk',
+      idSync: {
+        bbc_hid: 'foobar',
+      },
+      path: '/',
+      sections: 'Persian, Persian - IDX',
+      title: 'This is an index page title',
+      type: 'Index',
+      uid: 50924,
+      useCanonical: true,
+      virtualReferrer: 'test.bbc.com/previous-path',
+    };
+
+    const mockTitle = jest
+      .fn()
+      .mockImplementation(() => 'This is an index page title');
+
+    frontPageUtils.getPageTitle = mockTitle;
+
+    const expectedCookieValue = 'foobar';
+    jest.spyOn(Cookie, 'get').mockImplementation(() => expectedCookieValue);
 
     expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
   });

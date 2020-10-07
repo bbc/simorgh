@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { shape, bool, oneOf, oneOfType } from 'prop-types';
+import { shape, bool, oneOf, oneOfType, string } from 'prop-types';
 import styled from 'styled-components';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
@@ -11,6 +11,7 @@ import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import { createSrcset } from '#lib/utilities/srcSet';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
@@ -24,10 +25,17 @@ import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import IndexAlsosContainer from './IndexAlsos';
 import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
+import { getHeadingTagOverride } from './utilities';
 
 const logger = loggerNode(__filename);
 
 const PROMO_TYPES = ['top', 'regular', 'leading'];
+
+const SingleColumnStoryPromo = styled(StoryPromo)`
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    display: grid;
+  }
+`;
 
 const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
   if (!imageValues) {
@@ -87,6 +95,8 @@ const StoryPromoContainer = ({
   displayImage,
   displaySummary,
   isRecommendation,
+  isSingleColumnLayout,
+  serviceDatetimeLocale,
 }) => {
   const {
     altCalendar,
@@ -96,6 +106,7 @@ const StoryPromoContainer = ({
     translations,
     timezone,
   } = useContext(ServiceContext);
+  const { pageType } = useContext(RequestContext);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
@@ -157,8 +168,11 @@ const StoryPromoContainer = ({
 
   const useLargeImages = promoType === 'top' || promoType === 'leading';
 
-  const headingTagOverride =
-    isRecommendation || isContentTypeGuide ? 'div' : null;
+  const headingTagOverride = getHeadingTagOverride({
+    pageType,
+    isRecommendation,
+    isContentTypeGuide,
+  });
 
   const StyledHeadline = styled(Headline)`
     ${() =>
@@ -176,33 +190,37 @@ const StoryPromoContainer = ({
     `}
   `;
 
+  const locale = serviceDatetimeLocale || datetimeLocale;
+
+  const StyledLink = styled(Link)`
+    overflow-wrap: anywhere;
+  `;
+
   const Info = (
     <>
-      {headline && (
-        <StyledHeadline
-          script={script}
-          service={service}
-          promoType={promoType}
-          promoHasImage={displayImage}
-          as={headingTagOverride}
-        >
-          <Link href={url}>
-            {isLive ? (
-              <LiveLabel
-                service={service}
-                dir={dir}
-                liveText={liveLabel}
-                ariaHidden={liveLabelIsEnglish}
-                offScreenText={liveLabelIsEnglish ? 'Live' : null}
-              >
-                {linkcontents}
-              </LiveLabel>
-            ) : (
-              linkcontents
-            )}
-          </Link>
-        </StyledHeadline>
-      )}
+      <StyledHeadline
+        script={script}
+        service={service}
+        promoType={promoType}
+        promoHasImage={displayImage}
+        as={headingTagOverride}
+      >
+        <StyledLink href={url}>
+          {isLive ? (
+            <LiveLabel
+              service={service}
+              dir={dir}
+              liveText={liveLabel}
+              ariaHidden={liveLabelIsEnglish}
+              offScreenText={liveLabelIsEnglish ? 'Live' : null}
+            >
+              {linkcontents}
+            </LiveLabel>
+          ) : (
+            linkcontents
+          )}
+        </StyledLink>
+      </StyledHeadline>
       {promoSummary && displaySummary && !isRecommendation && (
         <Summary
           script={script}
@@ -216,7 +234,7 @@ const StoryPromoContainer = ({
       {displayTimestamp && (
         <Timestamp
           altCalendar={altCalendar}
-          locale={datetimeLocale}
+          locale={locale}
           timestamp={timestamp}
           dateTimeFormat="YYYY-MM-DD"
           format="LL"
@@ -257,8 +275,13 @@ const StoryPromoContainer = ({
     />
   );
 
+  const StoryPromoComponent = isSingleColumnLayout
+    ? SingleColumnStoryPromo
+    : StoryPromo;
+
   return (
-    <StoryPromo
+    <StoryPromoComponent
+      data-e2e="story-promo"
       image={Image}
       info={Info}
       mediaIndicator={MediaIndicator}
@@ -277,6 +300,8 @@ StoryPromoContainer.propTypes = {
   displayImage: bool,
   displaySummary: bool,
   isRecommendation: bool,
+  isSingleColumnLayout: bool,
+  serviceDatetimeLocale: string,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -286,6 +311,8 @@ StoryPromoContainer.defaultProps = {
   displayImage: true,
   displaySummary: true,
   isRecommendation: false,
+  isSingleColumnLayout: false,
+  serviceDatetimeLocale: null,
 };
 
 export default StoryPromoContainer;

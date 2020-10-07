@@ -11,10 +11,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'اشتہار',
-    },
     lang: 'ur',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -39,6 +35,7 @@ export const service = {
     datetimeLocale: 'ur',
     service: 'urdu',
     serviceName: 'Urdu',
+    languageName: 'Urdu',
     serviceLocalizedName: 'اردو',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcurdu',
@@ -57,6 +54,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'اشتہار',
+      },
       seeAll: 'سب دیکھیں',
       home: 'صفحۂ اول',
       currentPage: 'موجودہ صفحہ',
@@ -177,6 +177,11 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% پوسٹ کا اختتام',
         },
       },
+      include: {
+        errorMessage:
+          'ہم معذرت خواہ ہیں کہ ہم کہانی کے اس حصے کو اس لائٹ ویٹ موبائل صفحے پر نہیں دکھا سکتے',
+        linkText: 'تمام مواد دیکھنے کے لیے اس صفحے کا مکمل ورژن دیکھیں',
+      },
       topStoriesTitle: 'اہم خبریں',
       featuresAnalysisTitle: 'فیچر اور تجزیے',
     },
@@ -194,8 +199,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
-      onOnDemandRadioPage: true,
       onFrontPage: false,
       header: 'ایف ایم بلیٹن',
       durationLabel: '%duration% دورانیہ',

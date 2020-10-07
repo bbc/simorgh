@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Advertisement',
-    },
     lang: 'yo',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Ìgbà tí a ṣe àfíkun gbẹ̀yìn',
@@ -36,6 +32,7 @@ export const service = {
     datetimeLocale: 'yo',
     service: 'yoruba',
     serviceName: 'Yoruba',
+    languageName: 'Yoruba',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated
     twitterSite: '@BBCNews', // to be updated
@@ -52,6 +49,9 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle: 'Àbáwọlé',
     translations: {
+      ads: {
+        advertisementLabel: 'Advertisement',
+      },
       seeAll: 'Wo gbogbo ẹ̀',
       home: 'Ìròyìn',
       currentPage: 'Ojú ewé to wà yìí',
@@ -179,6 +179,11 @@ export const service = {
           text: 'Skip %provider_name% post',
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: 'Ìròyìn tó ṣe kókó',
       featuresAnalysisTitle: 'Ìwádìí kíkún lóríi kókó ìròyìn ',

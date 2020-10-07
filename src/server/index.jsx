@@ -73,7 +73,12 @@ server
     }),
   )
   .use(compression())
-  .use(helmet({ frameguard: { action: 'deny' } }))
+  .use(
+    helmet({
+      frameguard: { action: 'deny' },
+      contentSecurityPolicy: false,
+    }),
+  )
   .use(gnuTP())
   .get('/status', (req, res) => {
     res.status(200).send(getBuildMetadata());
@@ -131,7 +136,7 @@ server
           isAmp,
           route: { getInitialData, pageType },
           variant,
-        } = getRouteProps(routes, urlPath);
+        } = getRouteProps(urlPath);
 
         // Set derivedPageType based on matched route
         derivedPageType = pageType || derivedPageType;
@@ -143,11 +148,13 @@ server
           service,
           variant,
           pageType,
+          toggles,
         });
 
         data.toggles = toggles;
         data.path = urlPath;
         data.timeOnServer = Date.now();
+        data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
 
         const { status } = data;
         // Set derivedPageType based on returned page data

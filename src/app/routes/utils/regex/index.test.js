@@ -14,6 +14,8 @@ import {
   onDemandRadioPath,
   onDemandTvPath,
   mostReadDataRegexPath,
+  mostWatchedDataPath,
+  mostWatchedPagePath,
   legacyAssetPagePath,
   legacyAssetPageDataPath,
   secondaryColumnDataRegexPath,
@@ -249,6 +251,38 @@ describe('mostReadDataRegexPath', () => {
   shouldNotMatchInvalidRoutes(invalidRoutes, mostReadDataRegexPath);
 });
 
+describe('mostWatchedDataPath', () => {
+  const validRoutes = [
+    '/news/mostwatched.json',
+    '/zhongwen/mostwatched/simp.json',
+  ];
+  shouldMatchValidRoutes(validRoutes, mostWatchedDataPath);
+
+  const invalidRoutes = [
+    '/foobar/mostwatched.json',
+    '/foobar/mostwatched',
+    '/foobar/mostwatched.js',
+    '/news/trad/mostwatched.json',
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, mostWatchedDataPath);
+});
+
+describe('mostWatchedPagePath', () => {
+  const validRoutes = [
+    '/pidgin/media/video',
+    '/pashto/media/video',
+    '/zhongwen/simp/media/video',
+  ];
+  shouldMatchValidRoutes(validRoutes, mostWatchedPagePath);
+
+  const invalidRoutes = [
+    '/foobar/media/video',
+    '/pidgin/video/media',
+    '/zhongwen/media/video/simp',
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, mostWatchedPagePath);
+});
+
 describe('secondaryColumnDataRegexPath', () => {
   const validRoutes = [
     '/mundo/sty-secondary-column.json',
@@ -373,39 +407,42 @@ describe('cpsAssetPageDataPath', () => {
   shouldNotMatchInvalidRoutes(inValidRoutes, cpsAssetPageDataPath);
 });
 
+const validLegacyPageRoutes = [
+  '/sinhala/sri_lanka/2015/02/150218_mahinda_rally_sl',
+  '/hausa/multimedia/2014/05/140528_hip_hop_40years_gallery',
+  '/zhongwen/simp/multimedia/2016/05/160511_vid_cultural_revolution_explainer',
+  '/ukchina/simp/cool_britannia/people_in_uk/2016/09/160927_people_lord_mayor',
+  '/ukchina/simp/elt/english_now/2014/12/141205_media_english_hiv',
+  '/ukchina/simp/uk_education/tianshu/091124_tianshu_iv_cityvc2',
+];
+
+const invalidLegacyPageRoutes = [
+  // Asset URI begin with a 6 digit date
+  '/hausa/multimedia/2014/05/hip_hop_40years_gallery',
+  '/ukchina',
+  '/ukchina/',
+  '/ukchina/simp',
+  '/ukchina/simp/',
+];
+
 describe('legacyAssetPagePath', () => {
-  const validRoutes = [
-    '/sinhala/sri_lanka/2015/02/150218_mahinda_rally_sl',
-    '/hausa/multimedia/2014/05/140528_hip_hop_40years_gallery',
-    '/zhongwen/simp/multimedia/2016/05/160511_vid_cultural_revolution_explainer',
-    '/ukchina/simp/cool_britannia/people_in_uk/2016/09/160927_people_lord_mayor',
-    '/ukchina/simp/elt/english_now/2014/12/141205_media_english_hiv',
-  ];
+  shouldMatchValidRoutes(validLegacyPageRoutes, legacyAssetPagePath);
 
-  shouldMatchValidRoutes(validRoutes, legacyAssetPagePath);
-
-  const inValidRoutes = [
-    // Must be a 4 digit year after category
-    '/sinhala/category/15/02/150218_mahinda_rally_sl',
-    // Asset URI begin with a 6 digit date
-    '/hausa/multimedia/2014/05/hip_hop_40years_gallery',
-  ];
-  shouldNotMatchInvalidRoutes(inValidRoutes, legacyAssetPagePath);
+  shouldNotMatchInvalidRoutes(invalidLegacyPageRoutes, legacyAssetPagePath);
 });
 
 describe('legacyAssetPageDataPath', () => {
-  const validRoutes = [
-    '/sinhala/sri_lanka/2015/02/150218_mahinda_rally_sl.json',
-    '/hausa/multimedia/2014/05/140528_hip_hop_40years_gallery.json',
-  ];
+  const validDataRoutes = validLegacyPageRoutes.map(route => `${route}.json`);
 
-  shouldMatchValidRoutes(validRoutes, legacyAssetPageDataPath);
+  shouldMatchValidRoutes(validDataRoutes, legacyAssetPageDataPath);
 
-  const inValidRoutes = [
-    // Must be a 4 digit year after category
-    '/sinhala/category/15/02/150218_mahinda_rally_sl.json',
-    // Asset URI begin with a 6 digit date
-    '/hausa/multimedia/2014/05/hip_hop_40years_gallery.json',
-  ];
-  shouldNotMatchInvalidRoutes(inValidRoutes, legacyAssetPageDataPath);
+  const invalidDataRoutes = invalidLegacyPageRoutes.map(route => {
+    let path = route;
+    if (route.endsWith('/')) {
+      path = route.slice(0, -1);
+    }
+
+    return `${path}.json`;
+  });
+  shouldNotMatchInvalidRoutes(invalidDataRoutes, legacyAssetPageDataPath);
 });

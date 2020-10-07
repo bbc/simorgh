@@ -12,10 +12,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'اعلان',
-    },
     lang: 'ps',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -41,6 +37,7 @@ export const service = {
     datetimeLocale: 'ps',
     service: 'pashto',
     serviceName: 'Pashto',
+    languageName: 'Pashto',
     altCalendar: jalaali,
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcpashto',
@@ -58,6 +55,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'اعلان',
+      },
       seeAll: 'ټول وګورئ',
       home: 'کور پاڼه',
       currentPage: 'اوسنۍ پاڼه',
@@ -188,6 +188,11 @@ export const service = {
           endTextVisuallyHidden: 'د ‍پوسټ %provider_name% پای',
         },
       },
+      include: {
+        errorMessage:
+          'وبښئ، په لایټ وېټ موبایل صفحې موږ د کیسې دا برخه نه شو ښودلی.',
+        linkText: 'د پاڼې بشپړه بڼه وښایاست چې ټوله منځپانګه یې ولیدله شي.',
+      },
       topStoriesTitle: 'مهم خبرونه',
       featuresAnalysisTitle: 'ځانګړي مطالب',
     },
@@ -205,8 +210,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
-      onOnDemandRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Interactivity',
       frequenciesPageUrl: '/pashto/institutional/2012/03/000001_frequencies',
@@ -269,7 +272,7 @@ export const service = {
       },
       {
         title: 'پښتونخوا',
-        url: '/pashto/pakhtunkhwa',
+        url: '/pashto/topics/cz74k7wy49jt',
       },
       {
         title: 'نړۍ',

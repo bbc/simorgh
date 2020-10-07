@@ -97,7 +97,7 @@ exports[`AMP On Demand Radio Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=68&p=pashto.bbc_pashto_radio.w172xjcjkv7gw1w.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:pips:p0340yr4]&x2=[amp]&x3=[news-pashto]&x4=[ps]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[وروستي+خبرونه+-+BBC+News+پښتو]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=68&p=pashto.bbc_pashto_radio.w172xjcjkv7gw1w.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Apips%3Ap0340yr4]&x2=[amp]&x3=[news-pashto]&x4=[ps]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[%D9%88%D8%B1%D9%88%D8%B3%D8%AA%D9%8A%2B%D8%AE%D8%A8%D8%B1%D9%88%D9%86%D9%87%2B-%2BBBC%2BNews%2B%D9%BE%DA%9A%D8%AA%D9%88]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -223,7 +223,7 @@ Object {
 exports[`AMP On Demand Radio Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "پښتونخوا",
-  "url": "/pashto/pakhtunkhwa",
+  "url": "/pashto/topics/cz74k7wy49jt",
 }
 `;
 
@@ -276,6 +276,8 @@ exports[`AMP On Demand Radio Page I can see the episode summary 1`] = `"د نړ�
 exports[`AMP On Demand Radio Page I can see the episode title 1`] = `"۱۸ می ۲۰۲۰"`;
 
 exports[`AMP On Demand Radio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png"`;
+
+exports[`AMP On Demand Radio Page Main heading should match text 1`] = `"وروستي خبرونه, ۱۸ می ۲۰۲۰"`;
 
 exports[`AMP On Demand Radio Page Media Player a11y assistive technology can read the media player title 1`] = `"اډیو پلیئر"`;
 
@@ -374,6 +376,11 @@ Object {
         "height": 576,
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
         "width": 1024,
+      },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "ps",
+        "name": "Pashto",
       },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/pashto/bbc_pashto_radio/p0340yr4",
