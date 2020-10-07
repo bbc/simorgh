@@ -160,13 +160,7 @@ const sectionBody = ({
   return renderPromos({ items, isFirstSection, dir, showAllPromos });
 };
 
-const IndexPageSection = ({
-  bar,
-  group,
-  sectionNumber,
-  renderWithoutStrapline,
-  showAllPromos,
-}) => {
+const IndexPageSection = ({ bar, group, sectionNumber, showAllPromos }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
 
@@ -202,14 +196,6 @@ const IndexPageSection = ({
   // If this group does not have a strapline; do not render!
   // This may change in the future, if a way to avoid breaking UX is found.
   // Also, don't render a section without any items.
-
-  // If renderWithoutStrapline is false (which it is by default),
-  // then the section will not render if there is no strapline.
-  // If renderWithoutStrapline is true, and there is no strapline present,
-  // the section will always render.
-  if (!strapline && !renderWithoutStrapline) {
-    return null;
-  }
 
   if (!items || items.length === 0) {
     return null;
@@ -248,14 +234,12 @@ const IndexPageSection = ({
 
 IndexPageSection.defaultProps = {
   bar: true,
-  renderWithoutStrapline: false,
   showAllPromos: false,
 };
 
 IndexPageSection.propTypes = {
   bar: bool,
   group: shape(groupShape).isRequired,
-  renderWithoutStrapline: bool,
   sectionNumber: number.isRequired,
   showAllPromos: bool,
 };
