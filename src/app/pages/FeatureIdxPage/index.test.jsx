@@ -170,15 +170,9 @@ describe('Feature Idx Page', () => {
       expect(content).toEqual('content');
       expect(tabIndex).toBe('-1');
 
-      // const span = h1.querySelector('span');
-      // expect(span.getAttribute('role')).toEqual('text');
       expect(h1.textContent).toMatchInlineSnapshot(
         `"کورونا وائرس: تحقیق، تشخیص اور احتیاط"`,
       );
-
-      // const langSpan = span.querySelector('span');
-      // expect(langSpan.getAttribute('lang')).toEqual('en-GB');
-      // expect(langSpan.textContent).toEqual('BBC News');
     });
 
     it('should render flattened sections', async () => {
