@@ -1,5 +1,6 @@
 import React, { useContext, Fragment } from 'react';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import MetadataContainer from '#containers/Metadata';
@@ -15,13 +16,14 @@ import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstra
 import useToggle from '#hooks/useToggle';
 import AdContainer from '#containers/Ad';
 import MPUContainer from '#containers/Ad/MPU';
+import flattenGroups from './flattenGroups';
 
 const FeatureIdxPage = ({ pageData }) => {
   const { lang } = useContext(ServiceContext);
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
-  const groups = path(['content', 'groups'], pageData);
+  const groups = flattenGroups(pathOr([], ['content', 'groups'], pageData));
   const title = path(['metadata', 'title'], pageData);
   const summary = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
@@ -59,7 +61,7 @@ const FeatureIdxPage = ({ pageData }) => {
               <IndexPageSection
                 group={group}
                 sectionNumber={index}
-                renderWithoutStrapline
+                showAllPromos
               />
               {group.type === 'top-stories' && <MPUContainer />}
             </Fragment>

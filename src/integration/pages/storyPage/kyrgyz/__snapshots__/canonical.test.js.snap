@@ -83,14 +83,14 @@ Object {
 exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "Кыргызстан",
-  "url": "/kyrgyz/kyrgyzstan",
+  "url": "/kyrgyz/topics/cz74kjpyk07t",
 }
 `;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "Дүйнө",
-  "url": "/kyrgyz/world",
+  "url": "/kyrgyz/topics/ck2l9z012nkt",
 }
 `;
 
@@ -118,7 +118,7 @@ Object {
 exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "Журнал",
-  "url": "/kyrgyz/magazine",
+  "url": "/kyrgyz/magazine-54071664",
 }
 `;
 
@@ -140,6 +140,8 @@ exports[`Canonical Story Page Image should match snapshot 1`] = `
   width="624"
 />
 `;
+
+exports[`Canonical Story Page Lead image I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
 exports[`Canonical Story Page Main heading should match text 1`] = `"Test STY for social embeds"`;
 
@@ -313,14 +315,6 @@ exports[`Canonical Story Page SEO Twitter image src 1`] = `"https://ichef.test.b
 exports[`Canonical Story Page SEO Twitter site 1`] = `"@bbckyrgyz"`;
 
 exports[`Canonical Story Page SEO Twitter title 1`] = `"Test STY for social embeds - BBC News Кыргыз Кызматы"`;
-
-exports[`Canonical Story Page Social Embeds I can see a link to the original content in a fallback 1`] = `"Facebook баракчадан көбүрөк пост окуу"`;
-
-exports[`Canonical Story Page Social Embeds I can see the caption accompanying a YouTube embed 1`] = `"Видеонун түшүндүрмөсү, Эскертүү: Жарнамалар болушу ыктымал"`;
-
-exports[`Canonical Story Page Social Embeds I can see the skip link 1`] = `"YouTube баракчаны өткөрүп жиберүү, пост, 1"`;
-
-exports[`Canonical Story Page Social Embeds I can see the skip link destination 1`] = `"YouTube посттун аягы, 1"`;
 
 exports[`Canonical Story Page Timestamp should match text and date 1`] = `
 Object {

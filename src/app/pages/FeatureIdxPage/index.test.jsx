@@ -7,7 +7,7 @@ import assocPath from 'ramda/src/assocPath';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import afriqueFeatureIdxPageData from '#data/afrique/cpsAssets/48465371';
+import urduPageData from '#data/urdu/cpsAssets/science-51314202';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import FeatureIdxPage from '.';
 
@@ -20,10 +20,7 @@ const mockToggles = {
   },
 };
 
-const requestContextData = ({
-  service = 'afrique',
-  showAdsBasedOnLocation,
-}) => ({
+const requestContextData = ({ service = 'urdu', showAdsBasedOnLocation }) => ({
   pageType: 'FIX',
   service,
   pathname: '/pathname',
@@ -34,7 +31,7 @@ const requestContextData = ({
 // eslint-disable-next-line react/prop-types
 const FeatureIdxPageWithContext = ({
   isAmp = false,
-  service = 'afrique',
+  service = 'urdu',
   toggles = mockToggles,
   showAdsBasedOnLocation,
   ...props
@@ -145,12 +142,12 @@ describe('Feature Idx Page', () => {
   beforeEach(async () => {
     fetchMock.mock(
       'http://localhost/some-feature-idx-page-path.json',
-      JSON.stringify(afriqueFeatureIdxPageData),
+      JSON.stringify(urduPageData),
     );
 
     ({ pageData } = await getInitialData({
       path: 'some-feature-idx-page-path',
-      service: 'afrique',
+      service: 'urdu',
     }));
   });
 
@@ -160,7 +157,7 @@ describe('Feature Idx Page', () => {
   });
 
   describe('snapshots', () => {
-    it('should render an afrique feature idx page correctly', async () => {
+    it('should render an urdu feature idx page correctly', async () => {
       let container;
       await act(async () => {
         container = render(<FeatureIdxPageWithContext pageData={pageData} />)
@@ -169,7 +166,7 @@ describe('Feature Idx Page', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should render an afrique amp feature idx page', async () => {
+    it('should render an urdu amp feature idx page', async () => {
       let container;
       await act(async () => {
         container = render(
@@ -195,16 +192,12 @@ describe('Feature Idx Page', () => {
       expect(content).toEqual('content');
       expect(tabIndex).toBe('-1');
 
-      // const span = h1.querySelector('span');
-      // expect(span.getAttribute('role')).toEqual('text');
-      expect(h1.textContent).toEqual('Tout savoir sur la CAN 2019');
-
-      // const langSpan = span.querySelector('span');
-      // expect(langSpan.getAttribute('lang')).toEqual('en-GB');
-      // expect(langSpan.textContent).toEqual('BBC News');
+      expect(h1.textContent).toMatchInlineSnapshot(
+        `"کورونا وائرس: تحقیق، تشخیص اور احتیاط"`,
+      );
     });
 
-    it('should render feature index page sections', async () => {
+    it('should render flattened sections', async () => {
       let container;
       await act(async () => {
         container = render(<FeatureIdxPageWithContext pageData={pageData} />)
@@ -212,9 +205,12 @@ describe('Feature Idx Page', () => {
       });
 
       const sections = container.querySelectorAll('section');
-      expect(sections).toHaveLength(10);
+      expect(sections).toHaveLength(4);
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
+
+        const strapline = section.querySelector('h2');
+        expect(strapline.textContent).toMatchSnapshot();
       });
     });
 
