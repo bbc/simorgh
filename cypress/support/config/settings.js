@@ -6473,7 +6473,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/sinhala/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/sinhala/media/video'],
