@@ -216,28 +216,28 @@ Object {
 exports[`AMP Front Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "شرق أوسط",
-  "url": "/arabic/middleeast",
+  "url": "/arabic/topics/ckdxnj6g4znt",
 }
 `;
 
 exports[`AMP Front Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "عالم",
-  "url": "/arabic/world",
+  "url": "/arabic/topics/c719d2el19nt",
 }
 `;
 
 exports[`AMP Front Page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "علوم وتكنولوجيا",
-  "url": "/arabic/scienceandtech",
+  "url": "/arabic/topics/c719d2ely7xt",
 }
 `;
 
 exports[`AMP Front Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "صحة",
-  "url": "/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+  "url": "/arabic/topics/c95y3q70znjt",
 }
 `;
 
@@ -251,14 +251,14 @@ Object {
 exports[`AMP Front Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "صحافة",
-  "url": "/arabic/inthepress",
+  "url": "/arabic/topics/c08gmd9rp97t",
 }
 `;
 
 exports[`AMP Front Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "ترند",
-  "url": "/arabic/trending",
+  "url": "/arabic/topics/c404vr23x4dt",
 }
 `;
 
