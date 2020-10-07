@@ -9,7 +9,13 @@ const pageType = 'mostWatchedPage';
 Object.keys(config)
   .filter(service => serviceHasPageType(service, pageType))
   .forEach(serviceId => {
-    const { variant, name: service } = config[serviceId];
+    // eslint-disable-next-line prefer-const
+    let { variant, name: service } = config[serviceId];
+    if (variant !== 'default') {
+      const capitaliseVariant =
+        variant.charAt(0).toUpperCase() + variant.slice(1);
+      service += capitaliseVariant;
+    }
     const paths = getPaths(serviceId, pageType);
     paths.forEach(currentPath => {
       describe(`${pageType} - ${currentPath}`, () => {
