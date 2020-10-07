@@ -1930,66 +1930,6 @@
               "type": "cps"
             },
             {
-              "assetTypeCode": "PRO",
-              "contentType": "Video",
-              "indexImage": {
-                "altText": "کورونا",
-                "copyrightHolder": "BBC",
-                "height": 576,
-                "href": "http://c.files.bbci.co.uk/150FF/production/_111217268_whatsappimage2020-03-11at10.24.03am.jpg",
-                "id": "111217268",
-                "path": "/cpsprodpb/150FF/production/_111217268_whatsappimage2020-03-11at10.24.03am.jpg",
-                "subType": "index",
-                "type": "image",
-                "width": 1024
-              },
-              "name": "کورونا وائرس سے بچاؤ کے کونسے ٹوٹکے چلتے ہیں اور کونسے نہیں؟",
-              "summary": "کسی نے کہا پیاز فائدہ مند ہے تو کسی نے کہا لہسن، کسی نےتو ادرک اور نیم کے پتوں کے استعمال کا مشورہ دے ڈالا۔",
-              "timestamp": 1583906658000,
-              "type": "link",
-              "uri": "https://www.youtube.com/watch?v=zSg1Pner4NI&feature=youtu.be"
-            },
-            {
-              "assetTypeCode": "PRO",
-              "contentType": "Video",
-              "indexImage": {
-                "altText": "کورونا سے بچاؤ",
-                "copyrightHolder": "BBC",
-                "height": 576,
-                "href": "http://c.files.bbci.co.uk/679E/production/_111162562_p084vy1f.jpg",
-                "id": "111162562",
-                "path": "/cpsprodpb/679E/production/_111162562_p084vy1f.jpg",
-                "subType": "index",
-                "type": "image",
-                "width": 1024
-              },
-              "name": "خود ساختہ تنہائی کا مطلب کیا ہے؟",
-              "summary": "کورونا وائرس: خود ساختہ تنہائی کے بارے میں یاد رکھنے والی پانچ اہم باتیں کون سی ہیں؟ جانے ہماری ساتھی ثمرہ فاطمہ کی اس ڈیجیٹل ویڈیو میں۔",
-              "timestamp": 1583491891000,
-              "type": "link",
-              "uri": "https://youtu.be/hXE8Xy0NIR0"
-            },
-            {
-              "assetTypeCode": "PRO",
-              "contentType": "Video",
-              "indexImage": {
-                "altText": "کورونا",
-                "copyrightHolder": "BBC",
-                "height": 576,
-                "href": "http://c.files.bbci.co.uk/C80F/production/_111151215_coronashake.jpg",
-                "id": "111151215",
-                "path": "/cpsprodpb/C80F/production/_111151215_coronashake.jpg",
-                "subType": "index",
-                "type": "image",
-                "width": 1024
-              },
-              "name": "ہاتھ ملانے کے متبادل طریقے",
-              "summary": "دنیا بھر میں لوگ ہاتھ ملانے سے گریز کر رہے ہیں تاکہ کورونا وائرس کا پھیلاؤ روکا جا سکے۔ چین کے شہر ووہان میں ہیلو کہنے کا ایک نیا طریقہ انٹرنیٹ پر مقبول ہو رہا ہے۔ ہیبڈ شیک کی جگہ اسے ’ووہان شیک‘ کا نام دیا گیا ہے۔",
-              "timestamp": 1583419663000,
-              "type": "link",
-              "uri": "https://www.youtube.com/watch?v=vZgx5XqiNP0"
-            },
-            {
               "cpsType": "MAP",
               "headlines": {
                 "headline": "عالمی وبا کیا ہوتی ہے؟"
@@ -2071,26 +2011,6 @@
               "summary": "کووِڈ 19 چین کے شہر ووہان سے شروع ہوا۔ یہ مہلک وائرس اب دنیا کے مختلف ممالک تک پھیل چکا ہے اور اسے عالمی وبا قرار دے دیا گیا ہے۔ جانیے کہ عالمی وبا کیا ہوتی ہے۔",
               "timestamp": 1583948890000,
               "type": "cps"
-            },
-            {
-              "assetTypeCode": "PRO",
-              "contentType": "Video",
-              "indexImage": {
-                "altText": "کورونا",
-                "copyrightHolder": "BBC",
-                "height": 360,
-                "href": "http://c.files.bbci.co.uk/119FF/production/_110719127_whatsappimage2020-01-31at2.07.08pm.jpg",
-                "id": "110719127",
-                "path": "/cpsprodpb/119FF/production/_110719127_whatsappimage2020-01-31at2.07.08pm.jpg",
-                "subType": "index",
-                "type": "image",
-                "width": 640
-              },
-              "name": "کورونا وائرس کیا ہے، کیسے پھیلتا ہے؟",
-              "summary": "کورونا وائرس کیا ہے اور چین میں وبا کی طرح پھیلنے والی اس بیماری سے لوگ کیسے متاثر ہو رہے ہیں؟ ہماری اس ویڈیو میں جانیے کہ یہ وائرس کیسے پھیلتا ہے اور ماہرین اس کے لیے کیا احتیاطی تدابیر تجویز کر رہے ہیں۔",
-              "timestamp": 1580462241000,
-              "type": "link",
-              "uri": "https://www.youtube.com/watch?v=FxGkftz-MAA&"
             }
           ],
           "semanticGroupName": "Watch/Listen",
@@ -6825,66 +6745,6 @@
         },
         {
           "items": [
-            {
-              "assetTypeCode": "PRO",
-              "contentType": "Video",
-              "indexImage": {
-                "altText": "کورونا کے بارے میں غلط فہمیاں",
-                "copyrightHolder": "BBC",
-                "height": 576,
-                "href": "http://c.files.bbci.co.uk/51D4/production/_111784902_mediaitem111772729.jpg",
-                "id": "111784902",
-                "path": "/cpsprodpb/51D4/production/_111784902_mediaitem111772729.jpg",
-                "subType": "index",
-                "type": "image",
-                "width": 1024
-              },
-              "name": "کورونا سے بچاؤ: لہسن کھائیں یا پانی پیتے رہیں کوئی فائدہ نہیں",
-              "summary": "کیا سانس روکنے سے کورونا وائرس کا علاج ہو سکتا ہے؟ ایسے سوال اور ان سے جڑی کئی افواہیں انٹرنیٹ پر گردش کر رہی ہیں۔ انٹرنیٹ پر پھیلنے والی افواہوں میں کتنی حقیقت ہے، جاننے کے لیے دیکھیے ہماری ڈیجیٹل ویڈیو۔",
-              "timestamp": 1586882495000,
-              "type": "link",
-              "uri": "https://youtu.be/MHbkJjGP-40"
-            },
-            {
-              "assetTypeCode": "PRO",
-              "contentType": "Video",
-              "indexImage": {
-                "altText": "بی بی سی",
-                "copyrightHolder": "BBC",
-                "height": 576,
-                "href": "http://c.files.bbci.co.uk/10AAF/production/_111717286_3e3e8c34-0714-47ae-8c4f-7de9e0b53b50.jpg",
-                "id": "111717286",
-                "path": "/cpsprodpb/10AAF/production/_111717286_3e3e8c34-0714-47ae-8c4f-7de9e0b53b50.jpg",
-                "subType": "index",
-                "type": "image",
-                "width": 1024
-              },
-              "name": "کورونا کے علاج سے متعلق افواہوں کی حقیقت",
-              "summary": "کورونا کے علاج سے متعلق چند غلط فہمیوں اور افواہوں کی حقیقت کیا ہے",
-              "timestamp": 1586416057000,
-              "type": "link",
-              "uri": "https://www.youtube.com/watch?v=VoA6lxVh3rA&feature=youtu.be"
-            },
-            {
-              "assetTypeCode": "PRO",
-              "contentType": "Video",
-              "indexImage": {
-                "altText": "پاکستان",
-                "copyrightHolder": "BBC",
-                "height": 576,
-                "href": "http://c.files.bbci.co.uk/7BE4/production/_111761713_coronaimageforwebsite.jpg",
-                "id": "111761713",
-                "path": "/cpsprodpb/7BE4/production/_111761713_coronaimageforwebsite.jpg",
-                "subType": "index",
-                "type": "image",
-                "width": 1024
-              },
-              "name": "کورونا وائرس کا علاج اور اس سے جڑی افواہوں کی حقیقت کیا؟",
-              "summary": "کیا سانس روکنے سے کورونا وائرس کا علاج ہو سکتا ہے؟ ایسے سوال اور ان سے جڑی کئی افواہیں انٹرنیٹ پر گردش کر رہی ہیں۔ انٹرنیٹ پر پھیلنے والی افواہوں میں کتنی حقیقت ہے، جاننے کی لیے دیکھیے ہماری ڈیجیٹل ویڈیو میں۔",
-              "timestamp": 1586681895000,
-              "type": "link",
-              "uri": "https://www.youtube.com/watch?v=VygClAVqlfE"
-            }
           ],
           "semanticGroupName": "Guides 3",
           "title": "Guides 3",

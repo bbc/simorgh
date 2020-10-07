@@ -13,9 +13,11 @@ export default groups => {
       const previousGroup = groups[i - 1];
       const flattenItems = [...previousGroup.items, ...group.items];
       previousGroup.items = flattenItems.reduce((itemArray, currentItem) => {
-        const itemFound = itemArray.find(item => item.id === currentItem.id);
+        const itemFound = itemArray.find(
+          item => JSON.stringify(item) === JSON.stringify(currentItem),
+        );
         if (!itemFound) {
-          return itemArray.concat([currentItem]);
+          return itemArray.concat(currentItem);
         }
         return itemArray;
       }, []);

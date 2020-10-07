@@ -103,17 +103,20 @@ const renderPromos = ({ items, isFirstSection, dir, showAllPromos }) => {
   const sectionHasSingleStory =
     rowsDetails.length === 1 && rowsDetails[0].stories.length === 1;
 
-  const renderedRows = rowsDetails.map(row => (
-    <row.RowComponent
-      key={row.stories[0].id}
-      stories={row.stories}
-      isFirstSection={isFirstSection}
-      displayImages={row.displayImages}
-      dir={dir}
-      parentColumns={parentGridColumns}
-      parentEnableGelGutters // value is set to true here and passed to each Row component's Grid item
-    />
-  ));
+  const renderedRows = rowsDetails.map(row => {
+    const key = row.stories[0].id || row.stories[0].uri;
+    return (
+      <row.RowComponent
+        key={key}
+        stories={row.stories}
+        isFirstSection={isFirstSection}
+        displayImages={row.displayImages}
+        dir={dir}
+        parentColumns={parentGridColumns}
+        parentEnableGelGutters // value is set to true here and passed to each Row component's Grid item
+      />
+    );
+  });
 
   return (
     <MarginWrapper
