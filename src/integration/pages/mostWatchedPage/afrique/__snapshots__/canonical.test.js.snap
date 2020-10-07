@@ -83,35 +83,35 @@ Object {
 exports[`Canonical Most Watched Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "Afrique",
-  "url": "/afrique/region",
+  "url": "/afrique/topics/cvqxn2k7kv7t",
 }
 `;
 
 exports[`Canonical Most Watched Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "Monde",
-  "url": "/afrique/monde",
+  "url": "/afrique/topics/cvqxn21vx11t",
 }
 `;
 
 exports[`Canonical Most Watched Page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "Sports",
-  "url": "/afrique/sports",
+  "url": "/afrique/topics/c404v54yrqyt",
 }
 `;
 
 exports[`Canonical Most Watched Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Economie",
-  "url": "/afrique/topics/ca170ae3-99c1-48db-9b67-2866f85e7342",
+  "url": "/afrique/topics/cnq687nr9v1t",
 }
 `;
 
 exports[`Canonical Most Watched Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Culture",
-  "url": "/afrique/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864",
+  "url": "/afrique/topics/cnq687nrrw8t",
 }
 `;
 
@@ -125,14 +125,14 @@ Object {
 exports[`Canonical Most Watched Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "Technologie",
-  "url": "/afrique/topics/31684f19-84d6-41f6-b033-7ae08098572a",
+  "url": "/afrique/topics/cnq687nn703t",
 }
 `;
 
 exports[`Canonical Most Watched Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "Santé",
-  "url": "/afrique/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+  "url": "/afrique/topics/c06gq9jxz3rt",
 }
 `;
 
@@ -146,7 +146,7 @@ Object {
 exports[`Canonical Most Watched Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "Nos émissions",
-  "url": "/afrique/nos_emissions/radio",
+  "url": "/afrique/media-54074891",
 }
 `;
 
