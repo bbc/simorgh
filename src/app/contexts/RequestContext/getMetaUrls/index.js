@@ -7,20 +7,20 @@ const getCanonicalUrl = (origin, pathname) => {
   return canonicalUrl.replace(ampRegex, '');
 };
 
-const getUkCanonicalUrl = (origin, pathname) => {
-  const tldRegex = /(.com|.co.uk)/g;
-  return `${origin.replace(tldRegex, '.co.uk')}${pathname}`;
+const getUkCanonicalUrl = url => {
+  const tldRegex = /(\.com|\.co\.uk)/g;
+  return url.replace(tldRegex, '.co.uk');
 };
 
-const getNonUkCanonicalUrl = (origin, pathname) => {
-  const tldRegex = /(.com|.co.uk)/g;
-  return `${origin.replace(tldRegex, '.com')}${pathname}`;
+const getNonUkCanonicalUrl = url => {
+  const tldRegex = /(\.com|\.co\.uk)/g;
+  return url.replace(tldRegex, '.com');
 };
 
 const getMetaUrls = (origin, pathname) => {
   const canonicalLink = getCanonicalUrl(origin, pathname);
-  const canonicalUkLink = getUkCanonicalUrl(origin, pathname);
-  const canonicalNonUkLink = getNonUkCanonicalUrl(origin, pathname);
+  const canonicalUkLink = getUkCanonicalUrl(canonicalLink);
+  const canonicalNonUkLink = getNonUkCanonicalUrl(canonicalLink);
 
   return {
     canonicalLink,
