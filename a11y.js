@@ -69,6 +69,7 @@ const pageTypes = {
   ],
   photoGalleryPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   mostReadPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
+  mostWatchedPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   storyPage: [
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
     '/iframe', // same issues as in mediaEmbedErrorsToSuppress but the DOM path is different

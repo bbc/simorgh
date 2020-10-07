@@ -43,6 +43,8 @@ export const getType = (pageType, shorthand = false) => {
       return 'STY';
     case 'PGL':
       return 'PGL';
+    case 'FIX':
+      return 'FIX';
     default:
       return null;
   }
@@ -121,6 +123,8 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
       return path(['promo', 'headlines', 'headline'], pageData);
     case 'PGL':
       return path(['promo', 'headlines', 'headline'], pageData);
+    case 'FIX':
+      return getPageTitle(pageData, brandName);
     default:
       return null;
   }
