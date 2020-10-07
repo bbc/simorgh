@@ -196,8 +196,11 @@ const IndexPageSection = ({ bar, group, sectionNumber, showAllPromos }) => {
   // If this group does not have a strapline; do not render!
   // This may change in the future, if a way to avoid breaking UX is found.
   // Also, don't render a section without any items.
+  if (!isFirstSection && !strapline) {
+    return null;
+  }
 
-  if (!items || items.length === 0) {
+  if (!allowedItems || allowedItems.length === 0) {
     return null;
   }
 
