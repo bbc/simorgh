@@ -74,7 +74,7 @@ const SocialEmbedContainer = ({ blocks }) => {
 
   return (
     <GridItemConstrainedMedium>
-      <Wrapper provider={provider}>
+      <Wrapper provider={provider} data-e2e={`${provider}-embed-${href}`}>
         {isAmp ? (
           <AmpSocialEmbed
             provider={provider}
