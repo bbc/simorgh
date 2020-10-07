@@ -260,11 +260,11 @@ export const service = {
       },
       {
         title: 'Кыргызстан',
-        url: '/kyrgyz/kyrgyzstan',
+        url: '/kyrgyz/topics/cz74kjpyk07t',
       },
       {
         title: 'Дүйнө',
-        url: '/kyrgyz/world',
+        url: '/kyrgyz/topics/ck2l9z012nkt',
       },
       {
         title: 'Сапар TV',
@@ -280,7 +280,7 @@ export const service = {
       },
       {
         title: 'Журнал',
-        url: '/kyrgyz/magazine',
+        url: '/kyrgyz/magazine-54071664',
       },
       {
         title: 'Блог',
