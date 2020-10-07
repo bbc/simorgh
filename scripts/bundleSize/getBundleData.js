@@ -14,8 +14,8 @@ const jsFiles = fs
   .readdirSync('build/public/static/js')
   .filter(fileName => fileName.endsWith('.js'));
 
-const getBundlesData = bundles => {
-  return bundles.map(name => {
+const getBundlesData = bundles =>
+  bundles.map(name => {
     const sizeInBytes = getFileSize(`build/public/static/js/${name}`);
     const size = Math.round(sizeInBytes / 1024);
 
@@ -24,7 +24,6 @@ const getBundlesData = bundles => {
       size,
     };
   });
-};
 
 const getPageBundleData = () => {
   const main = getBundlesData(
