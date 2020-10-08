@@ -165,7 +165,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               .then(() => {
                 cy.get(`iframe[src="${embedUrl}"]`).should('be.visible');
               });
-            cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
+            cy.testResponseCodeAndTypeRetry(embedUrl, 200, 'text/html');
           }
         });
       });

@@ -26,7 +26,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
                 const embedUrl = getEmbedUrl(jsonData, language, true);
 
                 cy.get(`amp-iframe[src="${embedUrl}"]`).should('be.visible');
-                cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
+                cy.testResponseCodeAndTypeRetry(embedUrl, 200, 'text/html');
               } else {
                 cy.log(
                   `No media on ${pageType} for ${Cypress.env('currentPath')}`,
