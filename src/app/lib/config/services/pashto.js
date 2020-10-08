@@ -247,7 +247,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/pashto/institutional-37622768',
+          href: 'https://www.bbc.co.uk/send/u50853533',
           text: 'زموږ سره اړیکي',
         },
         {
