@@ -2,8 +2,8 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import {
-  F_NASSIM_PERSIAN_REGULAR,
-  F_NASSIM_PERSIAN_BOLD,
+  F_REITH_QALAM_REGULAR,
+  F_REITH_QALAM_BOLD,
 } from '@bbc/psammead-styles/fonts';
 import 'moment/locale/fa';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -271,7 +271,7 @@ export const service = {
       copyrightText: 'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
     },
     timezone: 'GMT',
-    fonts: [F_NASSIM_PERSIAN_REGULAR, F_NASSIM_PERSIAN_BOLD],
+    fonts: [F_REITH_QALAM_REGULAR, F_REITH_QALAM_BOLD],
     navigation: [
       {
         title: 'صفحه اول',

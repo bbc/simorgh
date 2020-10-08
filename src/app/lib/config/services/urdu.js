@@ -2,8 +2,8 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import { urdu as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
-  F_NASSIM_URDU_REGULAR,
-  F_NASSIM_URDU_BOLD,
+  F_REITH_QALAM_REGULAR,
+  F_REITH_QALAM_BOLD,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Karachi';
 import '@bbc/psammead-locales/moment/ur';
@@ -247,7 +247,7 @@ export const service = {
       copyrightText:
         'بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں',
     },
-    fonts: [F_NASSIM_URDU_REGULAR, F_NASSIM_URDU_BOLD],
+    fonts: [F_REITH_QALAM_REGULAR, F_REITH_QALAM_BOLD],
     timezone: 'Asia/Karachi',
     navigation: [
       {

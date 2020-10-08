@@ -2,8 +2,8 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import { pashto as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
-  F_NASSIM_PASHTO_REGULAR,
-  F_NASSIM_PASHTO_BOLD,
+  F_REITH_QALAM_REGULAR,
+  F_REITH_QALAM_BOLD,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/psammead-locales/moment/ps';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -259,7 +259,7 @@ export const service = {
       ],
       copyrightText: 'بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
     },
-    fonts: [F_NASSIM_PASHTO_REGULAR, F_NASSIM_PASHTO_BOLD],
+    fonts: [F_REITH_QALAM_REGULAR, F_REITH_QALAM_BOLD],
     timezone: 'GMT',
     navigation: [
       {
