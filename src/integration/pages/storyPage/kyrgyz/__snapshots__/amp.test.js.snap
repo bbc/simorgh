@@ -186,7 +186,7 @@ Object {
 exports[`AMP Story Page Footer Link should match text and url 7`] = `
 Object {
   "text": "Би-Би-Си менен байланышыңыз",
-  "url": "https://www.bbc.com/kyrgyz/institutional-38157284",
+  "url": "https://www.bbc.co.uk/send/u50853445",
 }
 `;
 

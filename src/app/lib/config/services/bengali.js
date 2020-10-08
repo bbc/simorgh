@@ -241,7 +241,7 @@ export const service = {
           text: 'কুকিজ',
         },
         {
-          href: 'https://www.bbc.com//bengali/institutional-37289967',
+          href: 'https://www.bbc.co.uk/send/u50853247',
           text: 'বিবিসির সঙ্গে যোগাযোগ করুন',
         },
         {

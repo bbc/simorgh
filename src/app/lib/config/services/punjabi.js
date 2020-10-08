@@ -250,7 +250,7 @@ export const service = {
           text: 'ਕੁਕੀਜ਼',
         },
         {
-          href: 'https://www.bbc.com/punjabi/institutional-42227903',
+          href: 'https://www.bbc.co.uk/send/u50853621',
           text: 'ਬੀਬੀਸੀ ਨਾਲ ਸੰਪਰਕ ਕਰੋ',
         },
         {
