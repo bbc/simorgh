@@ -242,7 +242,7 @@ export const service = {
           text: 'ကွတ်ကီး',
         },
         {
-          href: 'https://www.bbc.com/burmese/institutional-37577525',
+          href: 'https://www.bbc.co.uk/send/u50853269',
           text: 'ဘီဘီစီကို ဆက်သွယ်ရန်',
         },
         {
