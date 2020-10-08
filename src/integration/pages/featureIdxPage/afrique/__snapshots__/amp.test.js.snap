@@ -443,24 +443,6 @@ exports[`AMP Feature Index page SEO Twitter title 1`] = `"Tout savoir sur la CAN
 
 exports[`AMP Feature Index page Sections should match headline text 1`] = `""`;
 
-exports[`AMP Feature Index page Sections should match headline text 2`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 3`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 4`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 5`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 6`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 7`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 8`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 9`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 10`] = `""`;
-
 exports[`AMP Feature Index page Story Promo Headline should match text 1`] = `"CAN 2019 : le Sénégal qualifié pour les huitièmes de finale"`;
 
 exports[`AMP Feature Index page Story Promo Image should match image 1`] = `
