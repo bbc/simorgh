@@ -233,7 +233,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/yoruba/institutional-43091540',
+          href: 'https://www.bbc.co.uk/send/u50853973',
           text: 'Kàn sí BBC',
         },
         {
