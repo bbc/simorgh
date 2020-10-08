@@ -264,7 +264,19 @@ Object {
 
 exports[`AMP Story Page Image Caption should match text 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
-exports[`AMP Story Page Image should match snapshot 1`] = `null`;
+exports[`AMP Story Page Image should match snapshot 1`] = `
+<amp-img
+  alt="social media"
+  attribution=""
+  height="351"
+  layout="responsive"
+  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/11D53/test/_63734037_socialmedia.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 624w"
+  width="624"
+/>
+`;
+
+exports[`AMP Story Page Main heading should match text 1`] = `"Test STY for social embeds"`;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -439,7 +451,7 @@ exports[`AMP Story Page SEO Twitter title 1`] = `"Test STY for social embeds - B
 
 exports[`AMP Story Page Timestamp should match text and date 1`] = `
 Object {
-  "date": "2019-09-25",
-  "text": "25 сентябрь 2019",
+  "date": "2020-04-24",
+  "text": "24 апрель 2020",
 }
 `;
