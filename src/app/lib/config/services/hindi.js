@@ -272,27 +272,27 @@ export const service = {
       },
       {
         title: 'भारत',
-        url: '/hindi/india',
+        url: '/topics/ckdxnkz7607t',
       },
       {
         title: 'विदेश',
-        url: '/hindi/international',
+        url: '/hindi/topics/c9wpm0en87xt',
       },
       {
         title: 'मनोरंजन',
-        url: '/hindi/entertainment',
+        url: '/hindi/topics/c06gq3n0pp7t',
       },
       {
         title: 'खेल',
-        url: '/hindi/sport',
+        url: '/hindi/topics/cwr9j8g1kj9t',
       },
       {
         title: 'विज्ञान-टेक्नॉलॉजी',
-        url: '/hindi/science',
+        url: '/hindi/topics/c2lej0594knt',
       },
       {
         title: 'सोशल',
-        url: '/hindi/social',
+        url: '/hindi/topics/c2e4q0z9qznt',
       },
       {
         title: 'वीडियो',

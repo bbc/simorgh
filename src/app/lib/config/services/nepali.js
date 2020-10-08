@@ -261,7 +261,7 @@ export const service = {
       },
       {
         title: 'पछिल्लो कार्यक्रम',
-        url: '/nepali/multimedia/radio_programmes',
+        url: '/nepali/media-54029171',
       },
       {
         title: 'भिडियो',
