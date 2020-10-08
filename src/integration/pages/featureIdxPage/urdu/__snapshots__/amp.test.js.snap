@@ -97,7 +97,7 @@ exports[`AMP Feature Index page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=95&p=urdu.science.feature_index.51314202.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A8c1f4760-de67-744b-bfd2-16eb1e9fd644]&x2=[amp]&x3=[news-urdu]&x4=[ur]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x8=[simorgh]&x9=[%DA%A9%D9%88%D8%B1%D9%88%D9%86%D8%A7%2B%D9%88%D8%A7%D8%A6%D8%B1%D8%B3%3A%2B%D8%AA%D8%AD%D9%82%DB%8C%D9%82%D8%8C%2B%D8%AA%D8%B4%D8%AE%DB%8C%D8%B5%2B%D8%A7%D9%88%D8%B1%2B%D8%A7%D8%AD%D8%AA%DB%8C%D8%A7%D8%B7%2B-%2BBBC%2BNews%2B%D8%A7%D8%B1%D8%AF%D9%88]&x11=[2020-01-31T08%3A48%3A32.000Z]&x12=[2020-09-29T10%3A13%3A59.000Z]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=95&p=urdu.science.feature_index.51314202.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A8c1f4760-de67-744b-bfd2-16eb1e9fd644]&x2=[amp]&x3=[news-urdu]&x4=[ur]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-section]&x8=[simorgh]&x9=[%DA%A9%D9%88%D8%B1%D9%88%D9%86%D8%A7%2B%D9%88%D8%A7%D8%A6%D8%B1%D8%B3%3A%2B%D8%AA%D8%AD%D9%82%DB%8C%D9%82%D8%8C%2B%D8%AA%D8%B4%D8%AE%DB%8C%D8%B5%2B%D8%A7%D9%88%D8%B1%2B%D8%A7%D8%AD%D8%AA%DB%8C%D8%A7%D8%B7%2B-%2BBBC%2BNews%2B%D8%A7%D8%B1%D8%AF%D9%88]&x11=[2020-01-31T08%3A48%3A32.000Z]&x12=[2020-09-29T10%3A13%3A59.000Z]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
