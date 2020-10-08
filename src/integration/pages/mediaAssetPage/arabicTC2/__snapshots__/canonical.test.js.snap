@@ -2,7 +2,7 @@
 
 exports[`Canonical Media Asset Page A11y I can see the skip to content link 1`] = `"إذهب الى المحتوى"`;
 
-exports[`Canonical Media Asset Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=5&amp;p=worldnews%3A%3Aarabic.worldnews.2015.11.151120_t_arabic_av.page&amp;x1=[urn%3Abbc%3Atopcat%3A22d6ef3c-8f6e-11e5-b707-b2517c19ac20]&amp;x2=[responsive]&amp;x3=[news-arabic]&amp;x4=[ar]&amp;x7=[article-media-asset]&amp;x8=[simorgh-nojs]&amp;x9=[%D8%B4%D8%B1%D9%83%D8%A9%2B%D8%B4%D8%A7%D8%B1%D8%A8%2B%D9%84%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7%D8%AA%2B%D8%AA%D8%AD%D8%AB%2B%D9%85%D9%88%D8%B8%D9%81%D9%8A%D9%87%D8%A7%2B%D8%B9%D9%84%D9%89%2B%D8%B4%D8%B1%D8%A7%D8%A1%2B%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%D9%87%D8%A7%2B-%2BBBC%2BNews%2B%D8%B9%D8%B1%D8%A8%D9%8A]&amp;x11=[2015-11-20T10%3A09%3A33.000Z]&amp;x12=[2015-11-20T10%3A09%3A33.000Z]\\"/>"`;
+exports[`Canonical Media Asset Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=5&amp;x1=[urn%3Abbc%3Atopcat%3A22d6ef3c-8f6e-11e5-b707-b2517c19ac20]&amp;x2=[responsive]&amp;x3=[news-arabic]&amp;x4=[ar]&amp;x7=[article-media-asset]&amp;x8=[simorgh-nojs]&amp;x9=[%D8%B4%D8%B1%D9%83%D8%A9%2B%D8%B4%D8%A7%D8%B1%D8%A8%2B%D9%84%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7%D8%AA%2B%D8%AA%D8%AD%D8%AB%2B%D9%85%D9%88%D8%B8%D9%81%D9%8A%D9%87%D8%A7%2B%D8%B9%D9%84%D9%89%2B%D8%B4%D8%B1%D8%A7%D8%A1%2B%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%D9%87%D8%A7%2B-%2BBBC%2BNews%2B%D8%B9%D8%B1%D8%A8%D9%8A]&amp;x11=[2015-11-20T10%3A09%3A33.000Z]&amp;x12=[2015-11-20T10%3A09%3A33.000Z]\\"/>"`;
 
 exports[`Canonical Media Asset Page Apple iTunes App meta tag should match name and content 1`] = `
 Object {
@@ -160,8 +160,6 @@ exports[`Canonical Media Asset Page I can see the placeholder loading image 1`] 
 </div>
 `;
 
-exports[`Canonical Media Asset Page Main heading should match text 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
-
 exports[`Canonical Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"مشغل وسائط"`;
 
 exports[`Canonical Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://test.bbc.com/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar"`;
@@ -302,19 +300,6 @@ Object {
 }
 `;
 
-exports[`Canonical Media Asset Page SEO Linked data should match text 2`] = `
-Object {
-  "@context": "http://schema.org",
-  "@type": "VideoObject",
-  "description": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
-  "duration": null,
-  "embedURL": "https://test.bbc.com/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar",
-  "name": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
-  "thumbnailUrl": "https://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
-  "uploadDate": "2015-11-20T10:09:33.000Z",
-}
-`;
-
 exports[`Canonical Media Asset Page SEO OG description 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
 exports[`Canonical Media Asset Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
@@ -351,8 +336,8 @@ exports[`Canonical Media Asset Page SEO Twitter title 1`] = `"شركة شارب 
 
 exports[`Canonical Media Asset Page Timestamp should match text and date 1`] = `
 Object {
-  "date": "2015-11-20",
-  "text": "20 نوفمبر/ تشرين الثاني 2015",
+  "date": "2020-07-27",
+  "text": "27 يوليو/ تموز 2020",
 }
 `;
 
