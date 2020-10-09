@@ -234,7 +234,7 @@ export const service = {
           text: 'کوکیز',
         },
         {
-          href: 'https://www.bbc.com/urdu/institutional-37588285',
+          href: 'https://www.bbc.co.uk/send/u50853907',
           text: 'بی بی سی سے رابطہ کریں',
         },
         {

@@ -257,7 +257,7 @@ export const service = {
           text: 'Куки',
         },
         {
-          href: 'https://www.bbc.com/russian/institutional-36517237',
+          href: 'https://www.bbc.co.uk/send/u50853643',
           text: 'Связаться с Би-би-си',
         },
         {

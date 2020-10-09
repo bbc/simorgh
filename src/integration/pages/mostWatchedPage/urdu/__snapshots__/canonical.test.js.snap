@@ -53,7 +53,7 @@ Object {
 exports[`Canonical Most Watched Page Footer Link should match text and url 7`] = `
 Object {
   "text": "بی بی سی سے رابطہ کریں",
-  "url": "https://www.bbc.com/urdu/institutional-37588285",
+  "url": "https://www.bbc.co.uk/send/u50853907",
 }
 `;
 

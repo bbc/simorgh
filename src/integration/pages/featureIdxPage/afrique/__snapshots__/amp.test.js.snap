@@ -186,7 +186,7 @@ Object {
 exports[`AMP Feature Index page Footer Link should match text and url 7`] = `
 Object {
   "text": "Contactez la BBC",
-  "url": "https://www.bbc.com/afrique/institutionelles-36826644",
+  "url": "https://www.bbc.co.uk/send/u50853159",
 }
 `;
 
@@ -442,24 +442,6 @@ exports[`AMP Feature Index page SEO Twitter site 1`] = `"@bbcafrique"`;
 exports[`AMP Feature Index page SEO Twitter title 1`] = `"Tout savoir sur la CAN 2019 - BBC News Afrique"`;
 
 exports[`AMP Feature Index page Sections should match headline text 1`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 2`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 3`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 4`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 5`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 6`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 7`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 8`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 9`] = `""`;
-
-exports[`AMP Feature Index page Sections should match headline text 10`] = `""`;
 
 exports[`AMP Feature Index page Story Promo Headline should match text 1`] = `"CAN 2019 : le Sénégal qualifié pour les huitièmes de finale"`;
 

@@ -263,7 +263,7 @@ export const service = {
           text: 'คุกกีส์',
         },
         {
-          href: 'https://www.bbc.com/thai/institutional-37981748',
+          href: 'https://www.bbc.co.uk/send/u50853797',
           text: 'ติดต่อบีบีซี',
         },
         {
