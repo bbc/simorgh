@@ -85,7 +85,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/zhongwen/simp/institutional-38664417',
+          href: 'https://www.bbc.co.uk/send/u50778626',
           text: '联络BBC',
         },
         {

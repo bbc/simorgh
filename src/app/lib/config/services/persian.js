@@ -258,7 +258,7 @@ export const service = {
           text: 'کوکی ها',
         },
         {
-          href: 'https://www.bbc.com/persian/institutional-37542244',
+          href: 'https://www.bbc.co.uk/send/u50853555',
           text: 'تماس با بی بی سی',
         },
         {
