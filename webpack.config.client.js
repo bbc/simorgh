@@ -8,6 +8,8 @@ const dotenv = require('dotenv');
 const { DuplicatesPlugin } = require('inspectpack/plugin');
 const { getClientEnvVars } = require('./src/clientEnvVars');
 
+const FRAMEWORK_BUNDLES = ['react', 'react-dom'];
+const TOTAL_PAGES = 13;
 const DOT_ENV_CONFIG = dotenv.config();
 
 if (DOT_ENV_CONFIG.error) {
@@ -32,7 +34,6 @@ module.exports = ({
       ? [
           `webpack-dev-server/client?http://localhost:${webpackDevServerPort}`,
           'webpack/hot/only-dev-server',
-          './src/poly',
           './src/client',
         ]
       : ['./src/poly', './src/client'],
@@ -83,17 +84,24 @@ module.exports = ({
           framework: {
             name: 'framework',
             chunks: 'all',
-            test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+            // This regex ignores nested copies of framework libraries so they're bundled with their issuer.
+            test: new RegExp(
+              `(?<!node_modules.*)[\\\\/]node_modules[\\\\/](${FRAMEWORK_BUNDLES.join(
+                `|`,
+              )})[\\\\/]`,
+            ),
             priority: 40,
+            // Don't let webpack eliminate this chunk (prevents this chunk from becoming a part of the commons chunk)
             enforce: true,
           },
           commons: {
-            name: `commons`,
-            // if a chunk is used on all components we put it in commons
-            minChunks: 11,
+            name: 'commons',
+            // if a chunk is used on all pages we put it in commons
+            minChunks: TOTAL_PAGES,
             priority: 20,
           },
           lib: {
+            // if a module is bigger than 160kb from node_modules we make a separate chunk for it
             test(module) {
               return (
                 module.size() > 160000 &&

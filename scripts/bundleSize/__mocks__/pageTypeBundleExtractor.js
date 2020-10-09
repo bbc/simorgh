@@ -132,8 +132,18 @@ const extractBundlesForPageType = pageType => {
       'shared-1111.js',
     ];
   }
+  if (pageType === 'FeatureIdxPage') {
+    return [
+      'FeatureIdxPage-31ecd969.31473c35.js',
+      'commons-1111.js',
+      'commons-2222.js',
+      '1111-lib-1111.js',
+      '3333-lib-2222.js',
+      'shared-1111.js',
+    ];
+  }
 
-  throw Error('page type not mocked');
+  throw Error(`page type ${pageType} not mocked`);
 };
 
 exports.extractBundlesForPageType = extractBundlesForPageType;
