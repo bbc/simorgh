@@ -180,7 +180,7 @@
     "chrome-launcher": "^0.13.4",
     "cli-table": "^0.3.1",
     "compression-webpack-plugin": "^6.0.2",
-    "copy-webpack-plugin": "^6.2.0",
+    "copy-webpack-plugin": "^6.2.1",
     "cypress": "^5.3.0",
     "cypress-multi-reporters": "^1.4.0",
     "depcheck": "^1.2.0",
