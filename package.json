@@ -84,7 +84,7 @@
     "@bbc/psammead-consent-banner": "^2.3.39",
     "@bbc/psammead-copyright": "^1.2.34",
     "@bbc/psammead-detokeniser": "^1.0.0",
-    "@bbc/psammead-embed-error": "^1.1.6",
+    "@bbc/psammead-embed-error": "^1.1.7",
     "@bbc/psammead-figure": "^1.2.16",
     "@bbc/psammead-grid": "^1.1.23",
     "@bbc/psammead-heading-index": "^1.0.8",
