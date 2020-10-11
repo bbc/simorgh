@@ -228,7 +228,7 @@
     "stylelint-processor-styled-components": "^1.10.0",
     "supertest": "^4.0.2",
     "swagger-cli": "^4.0.4",
-    "terser-webpack-plugin": "^4.2.2",
+    "terser-webpack-plugin": "^4.2.3",
     "timemachine": "^0.3.1",
     "wait-on": "^5.2.0",
     "webpack": "^4.44.2",
