@@ -75,7 +75,7 @@
     "@bbc/moment-timezone-include": "^1.1.4",
     "@bbc/psammead-amp-geo": "^1.2.0",
     "@bbc/psammead-assets": "^2.14.2",
-    "@bbc/psammead-brand": "^5.1.34",
+    "@bbc/psammead-brand": "^5.1.35",
     "@bbc/psammead-bulleted-list": "1.0.15",
     "@bbc/psammead-bulletin": "^3.2.20",
     "@bbc/psammead-byline": "1.0.9",
