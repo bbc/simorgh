@@ -92,16 +92,16 @@ const numberOfStories = {
     expectedShowAllPromosAllowedItems: range(0, 13),
   },
   14: {
-    input: range(0, 13),
+    input: range(0, 14),
     expectedFrontSectionAllowedItems: range(0, 13),
     expectedNotFrontSectionAllowedItems: range(0, 10),
-    expectedShowAllPromosAllowedItems: range(0, 13),
+    expectedShowAllPromosAllowedItems: range(0, 14),
   },
   20: {
-    input: range(0, 13),
+    input: range(0, 20),
     expectedFrontSectionAllowedItems: range(0, 13),
     expectedNotFrontSectionAllowedItems: range(0, 10),
-    expectedShowAllPromosAllowedItems: range(0, 13),
+    expectedShowAllPromosAllowedItems: range(0, 20),
   },
 };
 
@@ -147,7 +147,7 @@ const allowedItemsTest = value => {
       const isFirstSection = true;
       expect(
         getAllowedItems({ items, isFirstSection, showAllPromos }),
-      ).toStrictEqual(numberOfStories[value].expectedFrontSectionAllowedItems);
+      ).toStrictEqual(numberOfStories[value].expectedShowAllPromosAllowedItems);
     });
   });
 
