@@ -92,16 +92,16 @@ const numberOfStories = {
     expectedShowAllPromosAllowedItems: range(0, 13),
   },
   14: {
-    input: range(0, 14),
+    input: range(0, 13),
     expectedFrontSectionAllowedItems: range(0, 13),
     expectedNotFrontSectionAllowedItems: range(0, 10),
-    expectedShowAllPromosAllowedItems: range(0, 14),
+    expectedShowAllPromosAllowedItems: range(0, 13),
   },
   20: {
-    input: range(0, 20),
+    input: range(0, 13),
     expectedFrontSectionAllowedItems: range(0, 13),
     expectedNotFrontSectionAllowedItems: range(0, 10),
-    expectedShowAllPromosAllowedItems: range(0, 20),
+    expectedShowAllPromosAllowedItems: range(0, 13),
   },
 };
 
