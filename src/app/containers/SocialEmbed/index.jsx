@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import styled from 'styled-components';
 import Lazyload from 'react-lazyload';
@@ -15,6 +15,7 @@ import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import useToggle from '#hooks/useToggle';
 import socialEmbedBlockPropTypes from '#models/propTypes/socialEmbed';
 import createTranslations from './translations';
+import EnrichTweet from './enrichTweet';
 
 const logger = nodeLogger(__filename);
 
@@ -32,33 +33,6 @@ const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING_TRPL};
   max-width: ${MAX_WIDTH};
 `;
-
-// AddSocialEmbed renders a lazyloaded social embed and instructs twitter JS to scan the dom again to enrich new tweets
-const AddSocialEmbed = ({
-  provider,
-  service,
-  oEmbed,
-  fallback,
-  skipLink,
-  caption,
-}) => {
-  useEffect(() => {
-    if (window.twttr) {
-      twttr.widgets.load();
-    }
-  }, []);
-
-  return (
-    <CanonicalSocialEmbed
-      provider={provider}
-      service={service}
-      oEmbed={oEmbed}
-      fallback={fallback}
-      skipLink={skipLink}
-      caption={caption}
-    />
-  );
-};
 
 const SocialEmbedContainer = ({ blocks }) => {
   const { isAmp } = useContext(RequestContext);
@@ -99,6 +73,24 @@ const SocialEmbedContainer = ({ blocks }) => {
     href,
   });
 
+  const socialEmbed = (
+    <CanonicalSocialEmbed
+      provider={provider}
+      service={service}
+      oEmbed={oEmbed}
+      fallback={fallback}
+      skipLink={skipLink}
+      caption={caption}
+    />
+  );
+
+  const enrichedSocialEmbed =
+    provider === 'twitter' ? (
+      <EnrichTweet>{socialEmbed}</EnrichTweet>
+    ) : (
+      socialEmbed
+    );
+
   return (
     <GridItemConstrainedMedium>
       <Wrapper provider={provider} data-e2e={`${provider}-embed-${href}`}>
@@ -113,14 +105,7 @@ const SocialEmbedContainer = ({ blocks }) => {
           />
         ) : (
           <Lazyload offset={LAZYLOAD_OFFSET} once>
-            <AddSocialEmbed
-              provider={provider}
-              service={service}
-              oEmbed={oEmbed}
-              fallback={fallback}
-              skipLink={skipLink}
-              caption={caption}
-            />
+            {enrichedSocialEmbed}
           </Lazyload>
         )}
       </Wrapper>

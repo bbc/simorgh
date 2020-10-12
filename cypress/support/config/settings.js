@@ -5826,14 +5826,14 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/russian/news-53473369'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/russian/23219699'],
             enabled: true,
           },
+          test: {
+            paths: ['/russian/features-54391793'],
+            enabled: false,
+          },
           local: {
-            paths: ['/russian/23219699'],
+            paths: ['/russian/features-54391793'],
             enabled: true,
           },
         },
