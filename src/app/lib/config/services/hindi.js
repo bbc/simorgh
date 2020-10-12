@@ -272,7 +272,7 @@ export const service = {
       },
       {
         title: 'भारत',
-        url: '/topics/ckdxnkz7607t',
+        url: '/hindi/topics/ckdxnkz7607t',
       },
       {
         title: 'विदेश',
