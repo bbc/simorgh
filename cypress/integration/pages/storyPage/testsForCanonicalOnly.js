@@ -17,18 +17,50 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
       }
     });
   });
-};
 
-// For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
-  service,
-  pageType,
-}) =>
-  describe(`No testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {});
-
-// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
-export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
   describe('Social Embed', () => {
+    // This test specifically covers an edge case where more than one tweet is
+    // included in a Story and twitter needs to be prompted to render the tweet
+    // rather than leaving it as core content
+    //
+    // Specifically it runs against this asset http://localhost:7080/russian/features-54391793
+    // but should pass against any page Story page with 2 or more tweets
+    it('Lazy loaded tweets enrich', () => {
+      cy.window().then(win => {
+        const jsonData = win.SIMORGH_DATA.pageData;
+
+        const blocks = path(['content', 'model', 'blocks'], jsonData);
+        const twitterEmbedBlocks = blocks.filter(block => {
+          return (
+            block.type === 'social_embed' &&
+            path(['model', 'blocks', 0, 'type'], block) === 'twitter'
+          );
+        });
+
+        if (twitterEmbedBlocks.length > 1) {
+          const firstTwitterEmbedUrl = path(
+            [0, 'model', 'blocks', 0, 'model', 'href'],
+            twitterEmbedBlocks,
+          );
+          const secondTwitterEmbedUrl = path(
+            [1, 'model', 'blocks', 0, 'model', 'href'],
+            twitterEmbedBlocks,
+          );
+
+          cy.get(
+            `[data-e2e="twitter-embed-${firstTwitterEmbedUrl}"]`,
+          ).scrollIntoView();
+          cy.get('.twitter-tweet-rendered').should('have.length', 1);
+          cy.get(
+            `[data-e2e="twitter-embed-${secondTwitterEmbedUrl}"]`,
+          ).scrollIntoView();
+          cy.get('.twitter-tweet-rendered').should('have.length', 2);
+        } else {
+          cy.log('No Social Embed exists');
+        }
+      });
+    });
+
     it('link should render if exists on page', () => {
       cy.window().then(win => {
         const jsonData = win.SIMORGH_DATA.pageData;
@@ -61,4 +93,19 @@ export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
       });
     });
   });
+};
+
+// For testing features that may differ across services but share a common logic e.g. translated strings.
+export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
+  service,
+  pageType,
+}) =>
+  describe(`No testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {});
+
+// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
+export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = ({
+  service,
+  pageType,
+}) => {
+  describe(`No testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {});
 };
