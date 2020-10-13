@@ -24,20 +24,20 @@ const getOutdatedPackages = () =>
     });
   });
 
-const updatePackages = ({ outdatedPackages, version }) =>
+const updatePackages = ({ outdatedPackages, versionToBump }) =>
   new Promise(resolve => {
     const commands = outdatedPackages
       .map(([packageName, wanted, latest]) => {
         const [latestMajor] = latest.split('.').map(Number);
         const [wantedMajor, wantedMinor] = wanted.split('.').map(Number);
 
-        if (version === 'patch') {
+        if (versionToBump === 'patch') {
           return `${packageName}@"<${wantedMajor}.${wantedMinor + 1}"`;
         }
-        if (version === 'minor') {
+        if (versionToBump === 'minor') {
           return `${packageName}@"<${wantedMajor + 1}.0.0"`;
         }
-        if (version === 'major') {
+        if (versionToBump === 'major') {
           if (wantedMajor !== latestMajor) {
             return `${packageName}@${latestMajor}`;
           }
@@ -54,11 +54,11 @@ const updatePackages = ({ outdatedPackages, version }) =>
   });
 
 return getOutdatedPackages().then(outdatedPackages => {
-  const version = process.argv
+  const versionToBump = process.argv
     .slice(2)
     .filter(arg => allowedArgs.includes(arg))
     .map(arg => arg.substring(2))
     .pop();
 
-  return updatePackages({ outdatedPackages, version });
+  return updatePackages({ outdatedPackages, versionToBump });
 });
