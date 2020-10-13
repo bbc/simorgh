@@ -1,6 +1,18 @@
 const { spawn } = require('child_process');
 
 const allowedArgs = ['--major', '--minor', '--patch'];
+const versionToBump = process.argv
+  .slice(2)
+  .filter(arg => allowedArgs.includes(arg))
+  .map(arg => arg.substring(2))
+  .pop();
+
+if (!versionToBump) {
+  console.log(
+    'You must specify the version to bump e.g. --major, --minor, --patch',
+  );
+  process.exit(1);
+}
 
 const getOutdatedPackages = () =>
   new Promise(resolve => {
@@ -24,7 +36,7 @@ const getOutdatedPackages = () =>
     });
   });
 
-const updatePackages = ({ outdatedPackages, versionToBump }) =>
+const updatePackages = ({ outdatedPackages }) =>
   new Promise(resolve => {
     const commands = outdatedPackages
       .map(([packageName, wanted, latest]) => {
@@ -50,15 +62,15 @@ const updatePackages = ({ outdatedPackages, versionToBump }) =>
       shell: true,
       stdio: 'inherit',
     });
+
     child.on('exit', resolve);
   });
 
-return getOutdatedPackages().then(outdatedPackages => {
-  const versionToBump = process.argv
-    .slice(2)
-    .filter(arg => allowedArgs.includes(arg))
-    .map(arg => arg.substring(2))
-    .pop();
+console.log(`Checking for ${versionToBump} version updates...`);
 
-  return updatePackages({ outdatedPackages, versionToBump });
-});
+return getOutdatedPackages()
+  .then(outdatedPackages => updatePackages({ outdatedPackages, versionToBump }))
+  .catch(error => {
+    console.log(error);
+    process.exit(1);
+  });
