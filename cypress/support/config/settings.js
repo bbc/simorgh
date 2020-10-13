@@ -5825,15 +5825,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/russian/news-53473369'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/russian/23219699'],
+            paths: ['/russian/features-54391793'],
             enabled: true,
           },
+          test: {
+            paths: ['/russian/features-54391793'],
+            enabled: false,
+          },
           local: {
-            paths: ['/russian/23219699'],
+            paths: ['/russian/features-54391793'],
             enabled: true,
           },
         },
@@ -7918,7 +7918,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/tigrinya/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/tigrinya/media/video'],
@@ -8304,7 +8304,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/ukchina/simp/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/ukchina/simp/media/video'],
@@ -8497,7 +8497,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/ukchina/trad/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/ukchina/trad/media/video'],
@@ -8771,7 +8771,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/ukrainian/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/ukrainian/media/video'],
