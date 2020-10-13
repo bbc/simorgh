@@ -245,7 +245,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/somali/hayadeed-37098613',
+          href: 'https://www.bbc.co.uk/send/u50853709',
           text: 'La xiriir BBC',
         },
         {

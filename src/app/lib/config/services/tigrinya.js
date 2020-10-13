@@ -226,7 +226,7 @@ export const service = {
           text: 'ኩኪስ',
         },
         {
-          href: 'https://www.bbc.com/tigrinya/institutional-42228875',
+          href: 'https://www.bbc.co.uk/send/u50853819',
           text: 'ንቢቢሲ ንምርካብ',
         },
         {

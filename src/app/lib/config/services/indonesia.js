@@ -233,7 +233,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/indonesia/institutional-37818427',
+          href: 'https://www.bbc.co.uk/send/u50853401',
           text: 'Hubungi BBC',
         },
         {

@@ -1030,11 +1030,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/azeri/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/azeri/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/azeri/media/video'],
@@ -1514,11 +1514,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/burmese/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/burmese/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/burmese/media/video'],
@@ -2956,11 +2956,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/indonesia/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/indonesia/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/indonesia/media/video'],
@@ -3623,11 +3623,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/kyrgyz/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/kyrgyz/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/kyrgyz/media/video'],
@@ -4024,11 +4024,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/mundo/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/mundo/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/mundo/media/video'],
@@ -6053,11 +6053,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/serbian/cyr/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/serbian/cyr/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/serbian/cyr/media/video'],
@@ -6239,11 +6239,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/serbian/lat/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/serbian/lat/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/serbian/lat/media/video'],
@@ -6469,7 +6469,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/sinhala/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/sinhala/media/video'],
@@ -7481,11 +7481,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/telugu/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/telugu/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/telugu/media/video'],
@@ -7669,11 +7669,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/thai/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/thai/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/thai/media/video'],
@@ -7918,7 +7918,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/tigrinya/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/tigrinya/media/video'],
@@ -8304,7 +8304,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/ukchina/simp/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/ukchina/simp/media/video'],
@@ -8497,7 +8497,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/ukchina/trad/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/ukchina/trad/media/video'],
@@ -8771,7 +8771,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/ukrainian/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/ukrainian/media/video'],
@@ -9280,11 +9280,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/uzbek/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/uzbek/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/uzbek/media/video'],
@@ -9878,11 +9878,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/zhongwen/simp/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/zhongwen/simp/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/zhongwen/simp/media/video'],
@@ -10095,11 +10095,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/zhongwen/trad/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/zhongwen/trad/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/zhongwen/trad/media/video'],

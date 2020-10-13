@@ -186,7 +186,7 @@ Object {
 exports[`AMP Media Asset Page Footer Link should match text and url 7`] = `
 Object {
   "text": "تماس با بی بی سی",
-  "url": "https://www.bbc.com/persian/institutional-37542244",
+  "url": "https://www.bbc.co.uk/send/u50853555",
 }
 `;
 

@@ -53,7 +53,7 @@ Object {
 exports[`Canonical persian/afghanistan IDX page Footer Link should match text and url 7`] = `
 Object {
   "text": "تماس با بی بی سی",
-  "url": "https://www.bbc.com/persian/institutional-37542244",
+  "url": "https://www.bbc.co.uk/send/u50853555",
 }
 `;
 
@@ -329,21 +329,23 @@ exports[`Canonical persian/afghanistan IDX page SEO Twitter site 1`] = `"@bbcper
 
 exports[`Canonical persian/afghanistan IDX page SEO Twitter title 1`] = `"صفحه افغانستان - BBC News فارسی"`;
 
-exports[`Canonical persian/afghanistan IDX page Sections should match headline text 1`] = `"ویدیو و صدا"`;
+exports[`Canonical persian/afghanistan IDX page Sections should match headline text 1`] = `"Top story - Afghanistan"`;
 
-exports[`Canonical persian/afghanistan IDX page Sections should match headline text 2`] = `"برنامه‌های رادیو"`;
+exports[`Canonical persian/afghanistan IDX page Sections should match headline text 2`] = `"ویدیو و صدا"`;
 
-exports[`Canonical persian/afghanistan IDX page Sections should match headline text 3`] = `"تحلیل و گزارش"`;
+exports[`Canonical persian/afghanistan IDX page Sections should match headline text 3`] = `"برنامه‌های رادیو"`;
 
-exports[`Canonical persian/afghanistan IDX page Story Promo Headline should match text 1`] = `"ویدیو, ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان, مدت 2,32"`;
+exports[`Canonical persian/afghanistan IDX page Sections should match headline text 4`] = `"تحلیل و گزارش"`;
+
+exports[`Canonical persian/afghanistan IDX page Story Promo Headline should match text 1`] = `"رهبر طالبان به آمریکا: اجازه ندهید موافقتنامه‌مان با ناکامی رو به رو شود؛ ارگ: پیام رهبر طالبان ارزش ندارد"`;
 
 exports[`Canonical persian/afghanistan IDX page Story Promo Image should match image 1`] = `
 <img
-  alt="ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان"
+  alt="هبت الله آخوندزاده"
   class="StyledImg-sc-7vx2mr-0 hIxkbt"
   sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
-  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg"
-  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 660w"
-  width="976"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 320w, https://ichef.bbci.co.uk/news/624/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 624w"
+  width="624"
 />
 `;

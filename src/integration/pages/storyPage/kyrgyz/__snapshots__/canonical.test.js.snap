@@ -53,7 +53,7 @@ Object {
 exports[`Canonical Story Page Footer Link should match text and url 7`] = `
 Object {
   "text": "Би-Би-Си менен байланышыңыз",
-  "url": "https://www.bbc.com/kyrgyz/institutional-38157284",
+  "url": "https://www.bbc.co.uk/send/u50853445",
 }
 `;
 
@@ -83,14 +83,14 @@ Object {
 exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "Кыргызстан",
-  "url": "/kyrgyz/kyrgyzstan",
+  "url": "/kyrgyz/topics/cz74kjpyk07t",
 }
 `;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "Дүйнө",
-  "url": "/kyrgyz/world",
+  "url": "/kyrgyz/topics/ck2l9z012nkt",
 }
 `;
 
@@ -118,7 +118,7 @@ Object {
 exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "Журнал",
-  "url": "/kyrgyz/magazine",
+  "url": "/kyrgyz/magazine-54071664",
 }
 `;
 

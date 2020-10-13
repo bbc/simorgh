@@ -249,7 +249,7 @@ export const service = {
           text: 'ملفات الارتباط Cookies',
         },
         {
-          href: 'https://www.bbc.com/arabic/institutional-37731355',
+          href: 'https://www.bbc.co.uk/send/u50853203',
           text: 'اتصل بـ بي بي سي',
         },
         {

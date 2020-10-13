@@ -241,7 +241,7 @@ export const service = {
           text: "Ka'idoji",
         },
         {
-          href: 'https://www.bbc.com/hausa/game-da-mu-37377092',
+          href: 'https://www.bbc.co.uk/send/u50853335',
           text: 'Tuntubi BBC',
         },
         {
