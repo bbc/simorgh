@@ -7914,7 +7914,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/tigrinya/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/tigrinya/media/video'],
@@ -8300,7 +8300,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/ukchina/simp/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/ukchina/simp/media/video'],
@@ -8493,7 +8493,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/ukchina/trad/media/video'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/ukchina/trad/media/video'],
@@ -8766,8 +8766,8 @@ module.exports = () => ({
       mostWatchedPage: {
         environments: {
           live: {
-            paths: ['/ukrainianmedia/video'],
-            enabled: false,
+            paths: ['/ukrainian/media/video'],
+            enabled: true,
           },
           test: {
             paths: ['/ukrainian/media/video'],
