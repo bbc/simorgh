@@ -20,7 +20,7 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
 
   describe('Social Embed', () => {
     // This test specifically covers an edge case where more than one tweet is
-    // included in a Story and twitter need to prompted to render the tweet
+    // included in a Story and twitter needs to be prompted to render the tweet
     // rather than leaving it as core content
     //
     // Specifically it runs against this asset http://localhost:7080/russian/features-54391793
