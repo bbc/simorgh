@@ -152,7 +152,10 @@ module.exports = ({
             reuseExistingChunk: true,
           },
         },
-        maxInitialRequests: 20,
+        // Keep maximum initial requests to 25
+        maxInitialRequests: 25,
+        // A chunk should be at least 20kb before using splitChunks
+        minSize: 20000,
       },
     },
     node: {
