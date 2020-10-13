@@ -56,16 +56,20 @@ const FeatureIdxPage = ({ pageData }) => {
           <IndexHeading id="content" pageType="fix">
             {title}
           </IndexHeading>
-          {groups.map((group, index) => (
-            <Fragment key={group.title}>
-              <IndexPageSection
-                group={group}
-                sectionNumber={index}
-                showAllPromos
-              />
-              {group.type === 'top-stories' && <MPUContainer />}
-            </Fragment>
-          ))}
+          {groups.map((group, index) => {
+            const isFirstSection = index === 0;
+
+            return (
+              <Fragment key={group.title}>
+                <IndexPageSection
+                  group={group}
+                  sectionNumber={index}
+                  showAllPromos
+                />
+                {isFirstSection && <MPUContainer />}
+              </Fragment>
+            );
+          })}
         </IndexPageContainer>
       </main>
     </>
