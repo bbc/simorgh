@@ -1,6 +1,6 @@
 const { spawn } = require('child_process');
 
-const semver = ['major', 'minor', 'patch'];
+const allowedArgs = ['--major', '--minor', '--patch'];
 
 const getOutdatedPackages = () =>
   new Promise(resolve => {
@@ -54,11 +54,10 @@ const updatePackages = ({ outdatedPackages, version }) =>
   });
 
 return getOutdatedPackages().then(outdatedPackages => {
-  const removeArgDashes = arg => arg.substring(2);
   const version = process.argv
     .slice(2)
-    .filter(arg => semver.includes(removeArgDashes(arg)))
-    .map(removeArgDashes)
+    .filter(arg => allowedArgs.includes(arg))
+    .map(arg => arg.substring(2))
     .pop();
 
   return updatePackages({ outdatedPackages, version });
