@@ -1,4 +1,9 @@
 /* eslint-disable global-require */
+/*
+  A high level overview of our client-side JavaScript bundling strategy can be dound here:
+  https://github.com/bbc/simorgh/blob/latest/docs/JavaScript-Bundling-Strategy.md
+ */
+
 const crypto = require('crypto');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
