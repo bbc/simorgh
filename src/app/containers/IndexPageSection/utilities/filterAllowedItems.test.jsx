@@ -147,7 +147,7 @@ const allowedItemsTest = value => {
       const isFirstSection = true;
       expect(
         getAllowedItems({ items, isFirstSection, showAllPromos }),
-      ).toStrictEqual(numberOfStories[value].expectedFrontSectionAllowedItems);
+      ).toStrictEqual(numberOfStories[value].expectedShowAllPromosAllowedItems);
     });
   });
 
