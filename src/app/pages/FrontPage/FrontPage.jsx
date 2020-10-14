@@ -24,6 +24,7 @@ import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { NEGATIVE_MARGIN } from '#lib/styles.const';
+import USElectionBanner from '#containers/USElectionBanner';
 
 const FrontPageMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
@@ -109,6 +110,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
         </VisuallyHiddenText>
+        <USElectionBanner />
         <IndexPageContainer>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
