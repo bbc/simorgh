@@ -49,6 +49,8 @@ export const getContentType = pageType => {
       return 'index-home';
     case 'IDX':
       return 'index-section';
+    case 'FIX':
+      return 'index-section';
     default:
       return null;
   }
