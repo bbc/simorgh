@@ -54,7 +54,13 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
           cy.get(
             `[data-e2e="twitter-embed-${secondTwitterEmbedUrl}"]`,
           ).scrollIntoView();
-          cy.get('.twitter-tweet-rendered').should('have.length', 2);
+          // of.at.least is used here instead of having length of exactly 2
+          // so the test does not fail if more than one twitter embed scrolls
+          // into view
+          cy.get('.twitter-tweet-rendered').should(
+            'have.length.of.at.least',
+            2,
+          );
         } else {
           cy.log('No Social Embed exists');
         }
