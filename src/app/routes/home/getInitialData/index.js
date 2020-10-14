@@ -36,10 +36,31 @@ export const hasRadioSchedule = async (service, variant) => {
   return serviceHasRadioSchedule && radioScheduleOnFrontPage;
 };
 
-export default async ({ path, service, variant, pageType }) => {
+const fetchElectionsOembed = async service => {
+  const usElectionOembedPath = `/${service}/election/us2020/results/oembed`;
+
+  try {
+    const { json, status } = await fetchPageData({
+      path: usElectionOembedPath,
+    });
+
+    if (json) {
+      return { usElectionOembed: json };
+    }
+  } catch (error) {
+    return {};
+  }
+};
+
+export default async ({ path, service, variant, pageType, toggles }) => {
   try {
     const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
     const pageDataPromise = fetchPageData({ path, pageType });
+    const pageHasUsElectionsBanner = pathOr(
+      false,
+      ['us2020ElectionBanner'],
+      toggles,
+    );
 
     const { json, status } = pageHasRadioSchedule
       ? await withRadioSchedule({
@@ -52,9 +73,15 @@ export default async ({ path, service, variant, pageType }) => {
 
     return {
       status,
-      pageData: transformJson(json),
+      pageData: {
+        ...transformJson(json),
+        ...(pageHasUsElectionsBanner
+          ? await fetchElectionsOembed(service)
+          : null),
+      },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
+    console.log(message);
     return { error: message, status };
   }
 };

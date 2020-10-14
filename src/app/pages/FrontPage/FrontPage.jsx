@@ -76,6 +76,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const radioScheduleData = path(['radioScheduleData'], pageData);
   const radioScheduleOnPage = path(['onFrontPage'], radioSchedule);
   const radioSchedulePosition = path(['frontPagePosition'], radioSchedule);
+  const usElectionResultsOembed = path(['usElectionOembed'], pageData);
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
 
   const offScreenText = (
@@ -110,7 +111,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
         </VisuallyHiddenText>
-        <USElectionBanner />
+        <USElectionBanner oembed={usElectionResultsOembed} />
         <IndexPageContainer>
           {groups.map((group, index) => (
             <Fragment key={group.title}>

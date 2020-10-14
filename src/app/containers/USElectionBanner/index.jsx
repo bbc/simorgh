@@ -3,21 +3,18 @@ import React from 'react';
 // Utilities
 import useToggle from '#hooks/useToggle';
 
-// Fixture Data
-import Fixture from './fixture.json';
-
-const getMarkup = () => {
-  return { __html: Fixture.html };
+const getMarkup = oembed => {
+  return { __html: oembed.html };
 };
 
-const USElectionBanner = () => {
+const USElectionBanner = ({ oembed }) => {
   const { enabled } = useToggle('us2020ElectionBanner');
 
-  if (!enabled) return null;
+  if (!enabled || !oembed) return null;
 
   return (
     <>
-      <div dangerouslySetInnerHTML={getMarkup()} />
+      <div dangerouslySetInnerHTML={getMarkup(oembed)} />
     </>
   );
 };
