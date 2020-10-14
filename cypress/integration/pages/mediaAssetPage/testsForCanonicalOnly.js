@@ -75,7 +75,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               cy.get('[data-e2e=most-watched-heading]').should('not.exist');
             }
           });
-        } else if (service !== 'persian' || service !== 'amharic') {
+        } else {
           cy.log(
             'Skipping this test on services that are not Persian or Amharic',
           );
@@ -123,7 +123,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               }
             });
           });
-        } else if (service !== 'persian' || service !== 'amharic') {
+        } else {
           cy.log(
             'Skipping this test on services that are not Persian or Amharic',
           );
