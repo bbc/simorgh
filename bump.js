@@ -36,7 +36,7 @@ const getOutdatedPackages = () =>
     });
   });
 
-const updatePackages = ({ outdatedPackages }) =>
+const updatePackages = outdatedPackages =>
   new Promise(resolve => {
     const commands = outdatedPackages
       .map(([packageName, wanted, latest]) => {
@@ -49,10 +49,8 @@ const updatePackages = ({ outdatedPackages }) =>
         if (versionToBump === 'minor') {
           return `${packageName}@"<${wantedMajor + 1}.0.0"`;
         }
-        if (versionToBump === 'major') {
-          if (wantedMajor !== latestMajor) {
-            return `${packageName}@${latestMajor}`;
-          }
+        if (versionToBump === 'major' && wantedMajor !== latestMajor) {
+          return `${packageName}@${latestMajor}`;
         }
         return null;
       })
@@ -69,7 +67,7 @@ const updatePackages = ({ outdatedPackages }) =>
 console.log(`Checking for ${versionToBump} version updates...`);
 
 return getOutdatedPackages()
-  .then(outdatedPackages => updatePackages({ outdatedPackages, versionToBump }))
+  .then(updatePackages)
   .catch(error => {
     console.log(error);
     process.exit(1);
