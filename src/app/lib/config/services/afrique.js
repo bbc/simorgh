@@ -213,8 +213,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: true,
-      frontPagePosition: 'Features',
       frequenciesPageUrl:
         '/afrique/institutionelles/2010/12/000000_schedules_frequencies_afrique',
       frequenciesPageLabel: 'Nos fréquences',
@@ -251,7 +249,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/afrique/institutionelles-36826644',
+          href: 'https://www.bbc.co.uk/send/u50853159',
           text: 'Contactez la BBC',
         },
         {

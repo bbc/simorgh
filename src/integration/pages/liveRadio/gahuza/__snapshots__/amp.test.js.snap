@@ -186,7 +186,7 @@ Object {
 exports[`AMP Live Radio Footer Link should match text and url 7`] = `
 Object {
   "text": "Vugana na BBC",
-  "url": "https://www.bbc.com/gahuza/institutional-35754061",
+  "url": "https://www.bbc.co.uk/send/u50853291",
 }
 `;
 

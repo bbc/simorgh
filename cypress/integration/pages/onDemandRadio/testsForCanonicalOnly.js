@@ -1,9 +1,13 @@
+import path from 'ramda/src/path';
 import envConfig from '../../../support/config/envs';
-import { serviceHasRadioSchedule } from '../liveRadio/helper';
 import { isScheduleDataComplete } from '../../../../src/app/containers/RadioSchedule/utilities/evaluateScheduleData';
 
 export default ({ service, pageType, variant }) => {
   describe(`testsForCanonicalOnly for ${service} ${pageType} ${variant}`, () => {
+    beforeEach(() => {
+      cy.getToggles(service);
+    });
+
     describe('Chartbeat', () => {
       if (envConfig.chartbeatEnabled) {
         it('should have a script with src value set to chartbeat source', () => {
@@ -15,18 +19,16 @@ export default ({ service, pageType, variant }) => {
       }
     });
     describe('Radio Schedule', () => {
-      it('should be displayed if there is enough schedule data', () => {
-        const toggleKey = 'onOnDemandRadioPage';
-        const isRadioScheduleOnPage = serviceHasRadioSchedule({
-          service,
-          variant,
-          toggleKey,
-        });
+      it('should be displayed if there is enough schedule data', function test() {
+        const scheduleIsEnabled = path(
+          ['onDemandRadioSchedule', 'enabled'],
+          this.toggles,
+        );
         cy.log(
-          `On Demand Radio Page configured for Radio Schedule? ${isRadioScheduleOnPage}`,
+          `On Demand Radio Page configured for Radio Schedule? ${scheduleIsEnabled}`,
         );
 
-        if (isRadioScheduleOnPage) {
+        if (scheduleIsEnabled) {
           const currentPath = Cypress.env('currentPath');
 
           const masterBrand = currentPath.split('/')[2];
@@ -49,7 +51,7 @@ export default ({ service, pageType, variant }) => {
             cy.log(
               `Radio Schedule is displayed? ${isRadioScheduleDataComplete}`,
             );
-            if (isRadioScheduleOnPage && isRadioScheduleDataComplete) {
+            if (scheduleIsEnabled && isRadioScheduleDataComplete) {
               cy.log('Schedule has enough data');
               cy.get('[data-e2e=radio-schedule]').should('exist');
               // cy.get('[data-e2e=live]').should('exist');

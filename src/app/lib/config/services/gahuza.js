@@ -201,7 +201,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: false,
       header: 'Ibiganiro bishya',
       durationLabel: 'Umwanya bimara %duration%',
     },
@@ -235,7 +234,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/gahuza/institutional-35754061',
+          href: 'https://www.bbc.co.uk/send/u50853291',
           text: 'Vugana na BBC',
         },
         {
