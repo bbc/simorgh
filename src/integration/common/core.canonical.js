@@ -3,7 +3,7 @@ export default () => {
 
   it('Bundle scripts', () => {
     const bundleScriptMatcher = new RegExp(
-      `(\\/static\\/js\\/(main|vendor|framework|-lib-|commons|${global.service})-\\w+\\.\\w+\\.js)`,
+      `(\\/static\\/js\\/(main|vendor|framework|.+?-lib|commons|${global.service})-\\w+\\.\\w+\\.js)`,
       'g',
     );
     const bbcOriginScripts = Array.from(
