@@ -11,6 +11,9 @@ jobs:
           node-version: '12'
           check-latest: true
 
+      - name: Install node modules
+        run: npm ci
+
       - name: Running Patch Update
         run: node bump --patch
 
