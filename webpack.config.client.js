@@ -1,6 +1,6 @@
 /* eslint-disable global-require */
 /*
-  A high level overview of our client-side JavaScript bundling strategy can be dound here:
+  A high level overview of our client-side JavaScript bundling strategy can be found here:
   https://github.com/bbc/simorgh/blob/latest/docs/JavaScript-Bundling-Strategy.md
  */
 
