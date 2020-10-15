@@ -82,89 +82,96 @@ Object {
 
 exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 2`] = `
 Object {
+  "text": "انتخابات آمریکا",
+  "url": "/persian/world-54468359",
+}
+`;
+
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 3`] = `
+Object {
   "text": "کرونا",
   "url": "/persian/science-52004647",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 3`] = `
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "پخش زنده",
   "url": "/persian/media-49522521",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 4`] = `
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "ویدیو",
   "url": "/persian/media/video",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 5`] = `
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "تلویزیون",
   "url": "/persian/tv-and-radio-37434377",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 6`] = `
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "رادیو",
   "url": "/persian/tv-and-radio-37434376",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 7`] = `
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "ايران",
   "url": "/persian/iran",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 8`] = `
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "صفحه فعلی, افغانستان",
   "url": "/persian/afghanistan",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 9`] = `
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 10`] = `
 Object {
   "text": "جهان",
   "url": "/persian/world",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 10`] = `
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "هنر",
   "url": "/persian/arts",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 11`] = `
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 12`] = `
 Object {
   "text": "ورزش",
   "url": "/persian/sport",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 12`] = `
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 13`] = `
 Object {
   "text": "اقتصاد",
   "url": "/persian/business",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 13`] = `
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 14`] = `
 Object {
   "text": "دانش",
   "url": "/persian/science",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 14`] = `
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 15`] = `
 Object {
   "text": "ناظران می‌گویند",
   "url": "/persian/blogs/viewpoints",

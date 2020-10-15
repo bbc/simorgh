@@ -278,6 +278,10 @@ export const service = {
         url: '/persian',
       },
       {
+        title: 'انتخابات آمریکا',
+        url: '/persian/world-54468359',
+      },
+      {
         title: 'کرونا',
         url: '/persian/science-52004647',
       },
