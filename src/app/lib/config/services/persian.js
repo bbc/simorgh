@@ -221,8 +221,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: false,
-      frontPagePosition: '',
       onIdxPage: true,
       idxPagePosition: 'Features',
       header: 'برنامه‌های رادیو',
@@ -276,6 +274,10 @@ export const service = {
       {
         title: 'صفحه اول',
         url: '/persian',
+      },
+      {
+        title: 'انتخابات آمریکا',
+        url: '/persian/world-54468359',
       },
       {
         title: 'کرونا',
