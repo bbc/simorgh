@@ -61,8 +61,11 @@ const validateResponse = ({ status, json }, name) => {
   return null;
 };
 
+// Timeout set to 2000ms, it is lower than the 3000ms default reflecting
+// the less essential nature of additional data giving Simorgh a greater chance
+// of still serving a page even without additional data dependent content.
 const fetchUrl = ({ name, path, ...loggerArgs }) =>
-  fetchPageData({ path, ...loggerArgs })
+  fetchPageData({ path, timeout: 2000, ...loggerArgs })
     .then(response => validateResponse(response, name))
     .catch(noop);
 

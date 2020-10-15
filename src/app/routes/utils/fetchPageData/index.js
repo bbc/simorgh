@@ -37,8 +37,15 @@ export const getUrl = pathname => {
  * @param {string} path The URL of a resource to fetch.
  * @param {...string} loggerArgs Additional arguments for richer logging.
  */
-const fetchPageData = async ({ path, ...loggerArgs }) => {
+const fetchPageData = async ({ path, timeout, ...loggerArgs }) => {
   const url = path.startsWith('http') ? path : getUrl(path);
+  // Defaults to 3000ms, matching the mozart timeout for a
+  // response from Simorgh via the Simorgh payload. This is
+  // suitable for 'pageData' requests but should probably be
+  // lower for 'additional data' that is not essential to
+  // the user experience. This ensures Simorgh is free to handle
+  // another request once the mozart timeout expires
+  const effectiveTimeout = timeout || 3000;
 
   logger.info(DATA_REQUEST_RECEIVED, {
     data: url,
@@ -47,7 +54,7 @@ const fetchPageData = async ({ path, ...loggerArgs }) => {
   });
 
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, { timeout: effectiveTimeout });
     const { status } = response;
 
     if (status === OK) {
