@@ -1,9 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
 
 // Utilities
 import useToggle from '#hooks/useToggle';
 
-const getMarkup = oembed => {
+// Components
+import FrontPageSection from '../../components/FrontPageSection';
+
+const createMarkup = oembed => {
   return { __html: oembed.html };
 };
 
@@ -13,9 +17,9 @@ const USElectionBanner = ({ oembed }) => {
   if (!enabled || !oembed) return null;
 
   return (
-    <>
-      <div dangerouslySetInnerHTML={getMarkup(oembed)} />
-    </>
+    <FrontPageSection>
+      <div dangerouslySetInnerHTML={createMarkup(oembed)} />
+    </FrontPageSection>
   );
 };
 
