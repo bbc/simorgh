@@ -2,7 +2,7 @@
 
 exports[`Canonical Feature Index page A11y I can see the skip to content link 1`] = `"Aller au contenu"`;
 
-exports[`Canonical Feature Index page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=3&amp;p=afrique.feature_index.48465371.page&amp;x1=[urn%3Abbc%3Acps%3A447a95b6-1c9f-e544-bf60-e23452e7fa71]&amp;x2=[responsive]&amp;x3=[news-afrique]&amp;x4=[fr]&amp;x8=[simorgh-nojs]&amp;x9=[Tout%2Bsavoir%2Bsur%2Bla%2BCAN%2B2019%2B-%2BBBC%2BNews%2BAfrique]&amp;x11=[2019-05-30T14%3A23%3A38.000Z]&amp;x12=[2019-07-19T12%3A46%3A18.000Z]\\"/>"`;
+exports[`Canonical Feature Index page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=3&amp;p=afrique.feature_index.48465371.page&amp;x1=[urn%3Abbc%3Acps%3A447a95b6-1c9f-e544-bf60-e23452e7fa71]&amp;x2=[responsive]&amp;x3=[news-afrique]&amp;x4=[fr]&amp;x7=[index-section]&amp;x8=[simorgh-nojs]&amp;x9=[Tout%2Bsavoir%2Bsur%2Bla%2BCAN%2B2019%2B-%2BBBC%2BNews%2BAfrique]&amp;x11=[2019-05-30T14%3A23%3A38.000Z]&amp;x12=[2019-07-19T12%3A46%3A18.000Z]\\"/>"`;
 
 exports[`Canonical Feature Index page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/afrique"`;
 
@@ -53,7 +53,7 @@ Object {
 exports[`Canonical Feature Index page Footer Link should match text and url 7`] = `
 Object {
   "text": "Contactez la BBC",
-  "url": "https://www.bbc.com/afrique/institutionelles-36826644",
+  "url": "https://www.bbc.co.uk/send/u50853159",
 }
 `;
 
@@ -309,24 +309,6 @@ exports[`Canonical Feature Index page SEO Twitter site 1`] = `"@bbcafrique"`;
 exports[`Canonical Feature Index page SEO Twitter title 1`] = `"Tout savoir sur la CAN 2019 - BBC News Afrique"`;
 
 exports[`Canonical Feature Index page Sections should match headline text 1`] = `""`;
-
-exports[`Canonical Feature Index page Sections should match headline text 2`] = `""`;
-
-exports[`Canonical Feature Index page Sections should match headline text 3`] = `""`;
-
-exports[`Canonical Feature Index page Sections should match headline text 4`] = `""`;
-
-exports[`Canonical Feature Index page Sections should match headline text 5`] = `""`;
-
-exports[`Canonical Feature Index page Sections should match headline text 6`] = `""`;
-
-exports[`Canonical Feature Index page Sections should match headline text 7`] = `""`;
-
-exports[`Canonical Feature Index page Sections should match headline text 8`] = `""`;
-
-exports[`Canonical Feature Index page Sections should match headline text 9`] = `""`;
-
-exports[`Canonical Feature Index page Sections should match headline text 10`] = `""`;
 
 exports[`Canonical Feature Index page Story Promo Headline should match text 1`] = `"CAN 2019 : le Sénégal qualifié pour les huitièmes de finale"`;
 

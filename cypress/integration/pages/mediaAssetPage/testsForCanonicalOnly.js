@@ -29,7 +29,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
                 const embedUrl = getEmbedUrl(jsonData, language);
 
                 cy.get(`iframe[src="${embedUrl}"]`).should('be.visible');
-                cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
+                cy.testResponseCodeAndTypeRetry(embedUrl, 200, 'text/html');
               } else {
                 cy.log(
                   `No media on ${pageType} for ${Cypress.env('currentPath')}`,
