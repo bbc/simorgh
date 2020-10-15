@@ -11,8 +11,8 @@ jobs:
           node-version: '12'
           check-latest: true
 
-      - name: Running npm update
-        run: npm update
+      - name: Running Patch Update
+        run: node bump --patch
 
       # Raise pull request
 
