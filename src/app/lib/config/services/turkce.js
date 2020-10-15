@@ -239,7 +239,7 @@ export const service = {
           text: 'Çerezler',
         },
         {
-          href: 'https://www.bbc.com/turkce/kurumsal-36767474',
+          href: 'https://www.bbc.co.uk/send/u50853841',
           text: "BBC'yle temas kurun",
         },
         {

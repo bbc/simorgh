@@ -126,6 +126,7 @@ exports[`SocialEmbedContainer AMP should render correctly 1`] = `
       >
         <div
           class="c1"
+          data-e2e="twitter-embed-https://twitter.com/MileyCyrus/status/1237210910835392512"
         >
           <div
             class="c2"
@@ -289,6 +290,7 @@ exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] 
 >
   <div
     class="c1"
+    data-e2e="twitter-embed-https://twitter.com/MileyCyrus/status/1237210910835392512"
   >
     <div
       class="c2"
@@ -503,6 +505,7 @@ exports[`SocialEmbedContainer Canonical should render correctly without an embed
 >
   <div
     class="c1"
+    data-e2e="twitter-embed-https://twitter.com/MileyCyrus/status/1237210910835392512"
   >
     <div
       class="c2"
