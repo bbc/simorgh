@@ -212,8 +212,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: true,
-      frontPagePosition: 'Features',
       header: 'Barnaamijyada Idaacadda',
       durationLabel: 'Muddada %duration%',
     },
