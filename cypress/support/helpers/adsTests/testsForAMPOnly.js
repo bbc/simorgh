@@ -27,6 +27,8 @@ export default ({ service }) => {
             // AMP Ads should exist
             cy.get('[data-e2e="advertisement"]').should('exist');
             cy.get('amp-ad').should('exist');
+          } else {
+            cy.log(`Ads not enabled for ${service}`);
           }
         });
       });
