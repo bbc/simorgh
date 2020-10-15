@@ -7,6 +7,7 @@
 | `comscoreAnalytics`     | Capture Comscore Analytics | | |
 | `cpsRecommendations`    | Display Recommendations | | |
 | `enableFetchingToggles` | Enable fetching toggle values from remote Toggles Config API for specified services | | |
+| `frontPageRadioSchedule` | Display Radio Schedule on Front Pages | The section of the front page to display the schedule component | `Features`, `Verticals`, `Section 1`, `Interactivity` |
 | `include`               | Display Include on Story (STY) Pages | | |
 | `liveRadioSchedule`     | Display Radio Schedule on Live Radio Pages | | |
 | `mostRead`              | Display Most Read | | |

@@ -221,8 +221,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: false,
-      frontPagePosition: '',
       onIdxPage: true,
       idxPagePosition: 'Features',
       header: 'برنامه‌های رادیو',
