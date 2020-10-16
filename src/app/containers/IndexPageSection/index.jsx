@@ -173,9 +173,11 @@ const IndexPageSection = ({ bar, group, sectionNumber, showAllPromos }) => {
   const type = pathOr(null, ['type'], group);
   const seeAll = pathOr(null, ['seeAll'], translations);
   const isFirstSection = sectionNumber === 0;
+  // If this is the 1st section and the strapline has a name field then it should render a visually hidden text
+  // , otherwise render the strapline as it is
   const strapline = isFirstSection
     ? pathOr(topStoriesTitle, ['strapline', 'name'], group)
-    : pathOr('', ['strapline', 'name'], group); // We are not supposed to default this value if the group is not the 1st section
+    : pathOr('', ['strapline', 'name'], group);
 
   const radioFilteredItems = removeFirstSlotRadioBulletin(
     pathOr(null, ['items'], group),
