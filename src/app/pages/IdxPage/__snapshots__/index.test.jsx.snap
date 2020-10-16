@@ -4954,7 +4954,9 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="c8"
                   dir="ltr"
                   id="Top-story"
-                />
+                >
+                  Головне
+                </span>
               </span>
             </span>
           </h2>
