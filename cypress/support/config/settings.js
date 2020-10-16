@@ -124,11 +124,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afaanoromoo/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/afaanoromoo/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/afaanoromoo/media/video'],
@@ -356,7 +356,7 @@ module.exports = () => ({
               '/afrique/media-52121324', // CPS MAP
               '/afrique/institutionelles/2015/07/150714_hissene_habre_explainer', // TC2 MAP
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -379,11 +379,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afrique/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/afrique/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/afrique/media/video'],
@@ -592,7 +592,7 @@ module.exports = () => ({
             paths: [
               '/amharic/news-23263266', // CPS MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/amharic/news-23263266'], // CPS MAP with video clip
@@ -837,11 +837,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/arabic/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/arabic/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/arabic/media/video'],
@@ -1030,11 +1030,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/azeri/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/azeri/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/azeri/media/video'],
@@ -1261,11 +1261,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/bengali/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/bengali/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/bengali/media/video'],
@@ -1514,11 +1514,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/burmese/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/burmese/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/burmese/media/video'],
@@ -1820,7 +1820,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/gahuza/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/gahuza/media/video'],
@@ -2033,11 +2033,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/gujarati/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/gujarati/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/gujarati/media/video'],
@@ -2285,11 +2285,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/hausa/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/hausa/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['hausa/media/video'],
@@ -2535,11 +2535,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/hindi/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/hindi/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/hindi/media/video'],
@@ -2723,11 +2723,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/igbo/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/igbo/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/igbo/media/video'],
@@ -2956,11 +2956,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/indonesia/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/indonesia/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/indonesia/media/video'],
@@ -3144,7 +3144,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/japanese/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/japanese/media/video'],
@@ -3370,11 +3370,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/korean/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/korean/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/korean/media/video'],
@@ -3623,11 +3623,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/kyrgyz/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/kyrgyz/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/kyrgyz/media/video'],
@@ -3831,11 +3831,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/marathi/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/marathi/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/marathi/media/video'],
@@ -4024,11 +4024,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/mundo/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/mundo/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/mundo/media/video'],
@@ -4333,11 +4333,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/nepali/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/nepali/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/nepali/media/video'],
@@ -4670,11 +4670,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/pashto/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/pashto/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/pashto/media/video'],
@@ -5222,11 +5222,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/pidgin/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/pidgin/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/pidgin/media/video'],
@@ -5415,11 +5415,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/portuguese/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/portuguese/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/portuguese/media/video'],
@@ -5602,11 +5602,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/punjabi/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/punjabi/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/punjabi/media/video'],
@@ -5792,11 +5792,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/russian/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/russian/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/russian/media/video'],
@@ -6053,11 +6053,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/serbian/cyr/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/serbian/cyr/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/serbian/cyr/media/video'],
@@ -6239,11 +6239,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/serbian/lat/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/serbian/lat/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/serbian/lat/media/video'],
@@ -6469,7 +6469,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/sinhala/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/sinhala/media/video'],
@@ -6723,11 +6723,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/somali/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/somali/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/somali/media/video'],
@@ -7018,11 +7018,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/swahili/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/swahili/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/swahili/media/video'],
@@ -7271,11 +7271,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/tamil/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/tamil/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/tamil/media/video'],
@@ -7481,11 +7481,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/telugu/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/telugu/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/telugu/media/video'],
@@ -7669,11 +7669,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/thai/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/thai/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/thai/media/video'],
@@ -7914,11 +7914,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/tigrinya/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/tigrinya/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/tigrinya/media/video'],
@@ -8111,7 +8111,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/turkce/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/turkce/media/video'],
@@ -8300,11 +8300,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/ukchina/simp/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/ukchina/simp/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/ukchina/simp/media/video'],
@@ -8493,11 +8493,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/ukchina/trad/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/ukchina/trad/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/ukchina/trad/media/video'],
@@ -8767,11 +8767,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/ukrainian/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/ukrainian/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/ukrainian/media/video'],
@@ -9023,11 +9023,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/urdu/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/urdu/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/urdu/media/video'],
@@ -9280,11 +9280,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/uzbek/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/uzbek/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/uzbek/media/video'],
@@ -9473,11 +9473,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/vietnamese/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/vietnamese/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/vietnamese/media/video'],
@@ -9661,11 +9661,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/yoruba/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/yoruba/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/yoruba/media/video'],
@@ -9878,11 +9878,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/zhongwen/simp/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/zhongwen/simp/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/zhongwen/simp/media/video'],
@@ -10095,11 +10095,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/zhongwen/trad/media/video'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/zhongwen/trad/media/video'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/zhongwen/trad/media/video'],
