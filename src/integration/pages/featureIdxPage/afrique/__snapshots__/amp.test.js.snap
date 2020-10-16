@@ -97,7 +97,7 @@ exports[`AMP Feature Index page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=3&p=afrique.feature_index.48465371.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A447a95b6-1c9f-e544-bf60-e23452e7fa71]&x2=[amp]&x3=[news-afrique]&x4=[fr]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x8=[simorgh]&x9=[Tout%2Bsavoir%2Bsur%2Bla%2BCAN%2B2019%2B-%2BBBC%2BNews%2BAfrique]&x11=[2019-05-30T14%3A23%3A38.000Z]&x12=[2019-07-19T12%3A46%3A18.000Z]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=3&p=afrique.feature_index.48465371.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A447a95b6-1c9f-e544-bf60-e23452e7fa71]&x2=[amp]&x3=[news-afrique]&x4=[fr]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-section]&x8=[simorgh]&x9=[Tout%2Bsavoir%2Bsur%2Bla%2BCAN%2B2019%2B-%2BBBC%2BNews%2BAfrique]&x11=[2019-05-30T14%3A23%3A38.000Z]&x12=[2019-07-19T12%3A46%3A18.000Z]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -186,7 +186,7 @@ Object {
 exports[`AMP Feature Index page Footer Link should match text and url 7`] = `
 Object {
   "text": "Contactez la BBC",
-  "url": "https://www.bbc.com/afrique/institutionelles-36826644",
+  "url": "https://www.bbc.co.uk/send/u50853159",
 }
 `;
 
@@ -441,7 +441,7 @@ exports[`AMP Feature Index page SEO Twitter site 1`] = `"@bbcafrique"`;
 
 exports[`AMP Feature Index page SEO Twitter title 1`] = `"Tout savoir sur la CAN 2019 - BBC News Afrique"`;
 
-exports[`AMP Feature Index page Sections should match headline text 1`] = `""`;
+exports[`AMP Feature Index page Sections should match headline text 1`] = `"À la une"`;
 
 exports[`AMP Feature Index page Story Promo Headline should match text 1`] = `"CAN 2019 : le Sénégal qualifié pour les huitièmes de finale"`;
 

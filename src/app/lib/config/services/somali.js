@@ -212,8 +212,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: true,
-      frontPagePosition: 'Features',
       header: 'Barnaamijyada Idaacadda',
       durationLabel: 'Muddada %duration%',
     },
@@ -247,7 +245,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/somali/hayadeed-37098613',
+          href: 'https://www.bbc.co.uk/send/u50853709',
           text: 'La xiriir BBC',
         },
         {

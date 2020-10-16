@@ -229,7 +229,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/azeri/institutional-37131054',
+          href: 'https://www.bbc.co.uk/send/u50853225',
           text: 'BBC ilə Əlaqə',
         },
         {

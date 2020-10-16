@@ -166,13 +166,18 @@ const sectionBody = ({
 const IndexPageSection = ({ bar, group, sectionNumber, showAllPromos }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
+  const { topStoriesTitle } = translations;
 
-  const strapline = pathOr('', ['strapline', 'name'], group);
   const isLink = pathOr(null, ['strapline', 'type'], group) === 'LINK';
   const href = pathOr(null, ['strapline', 'links', 'mobile'], group);
   const type = pathOr(null, ['type'], group);
   const seeAll = pathOr(null, ['seeAll'], translations);
   const isFirstSection = sectionNumber === 0;
+  // If this is the 1st section and the strapline has a name field then it should render a visually hidden text
+  // , otherwise render the strapline as it is
+  const strapline = isFirstSection
+    ? pathOr(topStoriesTitle, ['strapline', 'name'], group)
+    : pathOr('', ['strapline', 'name'], group);
 
   const radioFilteredItems = removeFirstSlotRadioBulletin(
     pathOr(null, ['items'], group),

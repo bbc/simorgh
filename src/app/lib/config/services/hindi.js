@@ -246,7 +246,7 @@ export const service = {
           text: 'कुकीज़',
         },
         {
-          href: 'https://www.bbc.com/hindi/institutional-37342616',
+          href: 'https://www.bbc.co.uk/send/u50853379',
           text: 'बीबीसी से संपर्क करें',
         },
         {
@@ -272,7 +272,7 @@ export const service = {
       },
       {
         title: 'भारत',
-        url: '/topics/ckdxnkz7607t',
+        url: '/hindi/topics/ckdxnkz7607t',
       },
       {
         title: 'विदेश',
