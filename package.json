@@ -165,7 +165,7 @@
     "@storybook/theming": "^5.3.21",
     "@testing-library/dom": "^7.24.5",
     "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.0.4",
+    "@testing-library/react": "^11.1.0",
     "@testing-library/react-hooks": "^3.4.2",
     "amphtml-validator": "^1.0.33",
     "babel-eslint": "^10.1.0",
