@@ -104,7 +104,7 @@
     "@bbc/psammead-script-link": "^1.0.24",
     "@bbc/psammead-section-label": "^5.0.16",
     "@bbc/psammead-sitewide-links": "^4.0.20",
-    "@bbc/psammead-social-embed": "^1.1.11",
+    "@bbc/psammead-social-embed": "^3.0.0",
     "@bbc/psammead-story-promo": "^6.0.14",
     "@bbc/psammead-story-promo-list": "^4.1.8",
     "@bbc/psammead-styles": "^4.5.1",
