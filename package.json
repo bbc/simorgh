@@ -98,7 +98,7 @@
     "@bbc/psammead-media-player": "^3.0.3",
     "@bbc/psammead-most-read": "^4.1.17",
     "@bbc/psammead-navigation": "^6.0.22",
-    "@bbc/psammead-paragraph": "^2.2.38",
+    "@bbc/psammead-paragraph": "^4.0.0",
     "@bbc/psammead-radio-schedule": "^3.0.25",
     "@bbc/psammead-rich-text-transforms": "^2.0.2",
     "@bbc/psammead-script-link": "^1.0.24",
