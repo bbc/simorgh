@@ -155,7 +155,7 @@
     "@babel/polyfill": "^7.11.5",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
-    "@babel/runtime": "^7.11.1",
+    "@babel/runtime": "^7.12.1",
     "@bbc/apache2-license-checker": "^1.1.4",
     "@bbc/psammead-storybook-helpers": "^8.4.1",
     "@bbc/psammead-test-helpers": "^4.0.0",
