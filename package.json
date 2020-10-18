@@ -80,7 +80,7 @@
     "@bbc/psammead-bulletin": "^3.2.20",
     "@bbc/psammead-byline": "1.0.9",
     "@bbc/psammead-calendars": "^2.0.18",
-    "@bbc/psammead-caption": "^2.2.36",
+    "@bbc/psammead-caption": "^3.0.3",
     "@bbc/psammead-consent-banner": "^2.3.39",
     "@bbc/psammead-copyright": "^1.2.34",
     "@bbc/psammead-detokeniser": "^1.0.0",
