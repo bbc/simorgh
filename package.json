@@ -87,7 +87,7 @@
     "@bbc/psammead-embed-error": "^1.1.6",
     "@bbc/psammead-figure": "^1.2.16",
     "@bbc/psammead-grid": "^1.1.23",
-    "@bbc/psammead-heading-index": "^1.0.8",
+    "@bbc/psammead-heading-index": "^3.0.0",
     "@bbc/psammead-headings": "^3.1.39",
     "@bbc/psammead-image": "^1.2.5",
     "@bbc/psammead-image-placeholder": "^1.2.46",
