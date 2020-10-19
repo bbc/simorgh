@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Feature Idx Page Assertions should render flattened sections 1`] = `""`;
+exports[`Feature Idx Page Assertions should render flattened sections 1`] = `"اہم خبریں"`;
 
 exports[`Feature Idx Page Assertions should render flattened sections 2`] = `"ملٹی میڈیاسب دیکھیں"`;
 
@@ -1174,7 +1174,9 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
                               class="c8"
                               dir="rtl"
                               id="Lead-Feature"
-                            />
+                            >
+                              اہم خبریں
+                            </span>
                           </span>
                         </span>
                       </h2>
@@ -11973,7 +11975,9 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
                               class="c8"
                               dir="rtl"
                               id="Lead-Feature"
-                            />
+                            >
+                              اہم خبریں
+                            </span>
                           </span>
                         </span>
                       </h2>
@@ -22776,7 +22780,9 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
                               class="c8"
                               dir="rtl"
                               id="Lead-Feature"
-                            />
+                            >
+                              اہم خبریں
+                            </span>
                           </span>
                         </span>
                       </h2>
@@ -33437,7 +33443,9 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
                               class="c9"
                               dir="rtl"
                               id="Lead-Feature"
-                            />
+                            >
+                              اہم خبریں
+                            </span>
                           </span>
                         </span>
                       </h2>
