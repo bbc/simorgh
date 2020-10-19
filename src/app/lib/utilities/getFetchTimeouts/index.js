@@ -1,4 +1,4 @@
-//Timeouts for Simorgh making fetches to upstreams
+// Timeouts for Simorgh making fetches to upstreams
 
 /**
  * This timeout is for fetching 'page critical data` where
