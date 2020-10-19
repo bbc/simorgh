@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+import runCanonicalAdsTests from '../../../support/helpers/adsTests/testsForCanonicalOnly';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -17,7 +18,17 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
       }
     });
   });
+};
 
+// For testing features that may differ across services but share a common logic e.g. translated strings.
+export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({ service }) => {
+  if (Cypress.env('APP_ENV') === 'local') {
+    runCanonicalAdsTests({ service });
+  }
+};
+
+// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
+export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
   describe('Social Embed', () => {
     // This test specifically covers an edge case where more than one tweet is
     // included in a Story and twitter needs to be prompted to render the tweet
@@ -54,7 +65,13 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
           cy.get(
             `[data-e2e="twitter-embed-${secondTwitterEmbedUrl}"]`,
           ).scrollIntoView();
-          cy.get('.twitter-tweet-rendered').should('have.length', 2);
+          // of.at.least is used here instead of having length of exactly 2
+          // so the test does not fail if more than one twitter embed scrolls
+          // into view
+          cy.get('.twitter-tweet-rendered').should(
+            'have.length.of.at.least',
+            2,
+          );
         } else {
           cy.log('No Social Embed exists');
         }
@@ -93,19 +110,4 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
       });
     });
   });
-};
-
-// For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
-  service,
-  pageType,
-}) =>
-  describe(`No testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {});
-
-// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
-export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = ({
-  service,
-  pageType,
-}) => {
-  describe(`No testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {});
 };

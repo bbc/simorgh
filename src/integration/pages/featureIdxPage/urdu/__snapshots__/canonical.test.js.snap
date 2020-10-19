@@ -2,7 +2,7 @@
 
 exports[`Canonical Feature Index page A11y I can see the skip to content link 1`] = `"مواد پر جائیں"`;
 
-exports[`Canonical Feature Index page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=95&amp;p=urdu.science.feature_index.51314202.page&amp;x1=[urn%3Abbc%3Acps%3A8c1f4760-de67-744b-bfd2-16eb1e9fd644]&amp;x2=[responsive]&amp;x3=[news-urdu]&amp;x4=[ur]&amp;x8=[simorgh-nojs]&amp;x9=[%DA%A9%D9%88%D8%B1%D9%88%D9%86%D8%A7%2B%D9%88%D8%A7%D8%A6%D8%B1%D8%B3%3A%2B%D8%AA%D8%AD%D9%82%DB%8C%D9%82%D8%8C%2B%D8%AA%D8%B4%D8%AE%DB%8C%D8%B5%2B%D8%A7%D9%88%D8%B1%2B%D8%A7%D8%AD%D8%AA%DB%8C%D8%A7%D8%B7%2B-%2BBBC%2BNews%2B%D8%A7%D8%B1%D8%AF%D9%88]&amp;x11=[2020-01-31T08%3A48%3A32.000Z]&amp;x12=[2020-09-29T10%3A13%3A59.000Z]\\"/>"`;
+exports[`Canonical Feature Index page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=95&amp;p=urdu.science.feature_index.51314202.page&amp;x1=[urn%3Abbc%3Acps%3A8c1f4760-de67-744b-bfd2-16eb1e9fd644]&amp;x2=[responsive]&amp;x3=[news-urdu]&amp;x4=[ur]&amp;x7=[index-section]&amp;x8=[simorgh-nojs]&amp;x9=[%DA%A9%D9%88%D8%B1%D9%88%D9%86%D8%A7%2B%D9%88%D8%A7%D8%A6%D8%B1%D8%B3%3A%2B%D8%AA%D8%AD%D9%82%DB%8C%D9%82%D8%8C%2B%D8%AA%D8%B4%D8%AE%DB%8C%D8%B5%2B%D8%A7%D9%88%D8%B1%2B%D8%A7%D8%AD%D8%AA%DB%8C%D8%A7%D8%B7%2B-%2BBBC%2BNews%2B%D8%A7%D8%B1%D8%AF%D9%88]&amp;x11=[2020-01-31T08%3A48%3A32.000Z]&amp;x12=[2020-09-29T10%3A13%3A59.000Z]\\"/>"`;
 
 exports[`Canonical Feature Index page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/urdu"`;
 
@@ -294,7 +294,7 @@ exports[`Canonical Feature Index page SEO Twitter site 1`] = `"@bbcurdu"`;
 
 exports[`Canonical Feature Index page SEO Twitter title 1`] = `"کورونا وائرس: تحقیق، تشخیص اور احتیاط - BBC News اردو"`;
 
-exports[`Canonical Feature Index page Sections should match headline text 1`] = `""`;
+exports[`Canonical Feature Index page Sections should match headline text 1`] = `"اہم خبریں"`;
 
 exports[`Canonical Feature Index page Sections should match headline text 2`] = `"ملٹی میڈیاسب دیکھیں"`;
 

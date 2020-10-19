@@ -196,8 +196,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: true,
-      frontPagePosition: 'Section 1',
       header: 'BBC 코리아 라디오',
       durationLabel: '방송 길이 %duration%',
     },
