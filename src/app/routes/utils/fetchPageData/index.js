@@ -15,6 +15,7 @@ import {
   UPSTREAM_CODES_TO_PROPAGATE_IN_SIMORGH,
 } from '#lib/statusCodes.const';
 import getErrorStatusCode from './utils/getErrorStatusCode';
+import { PRIMARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 
 const logger = nodeLogger(__filename);
 
@@ -35,17 +36,14 @@ export const getUrl = pathname => {
 /**
  * An isomorphic fetch wrapper for pages, with error and log handling.
  * @param {string} path The URL of a resource to fetch.
+ * @param {number} timeout Optional parameter to provide a custom timeout
+ * for request for 'secondary data'. The fetch timeout defaults to the 'primary
+ * data' timeout if this is not provided.
  * @param {...string} loggerArgs Additional arguments for richer logging.
  */
 const fetchPageData = async ({ path, timeout, ...loggerArgs }) => {
   const url = path.startsWith('http') ? path : getUrl(path);
-  // Defaults to 3000ms, matching the mozart timeout for a
-  // response from Simorgh via the Simorgh payload. This is
-  // suitable for 'pageData' requests but should probably be
-  // lower for 'additional data' that is not essential to
-  // the user experience. This ensures Simorgh is free to handle
-  // another request once the mozart timeout expires
-  const effectiveTimeout = timeout || 3000;
+  const effectiveTimeout = timeout || PRIMARY_DATA_TIMEOUT;
 
   logger.info(DATA_REQUEST_RECEIVED, {
     data: url,

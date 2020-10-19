@@ -8,6 +8,7 @@ import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 import getMostWatchedEndpoint from '#lib/utilities/getMostWatchedUrl';
 import getSecondaryColumnUrl from '#lib/utilities/getSecondaryColumnUrl';
 import getRecommendationsUrl from '#lib/utilities/getRecommendationsUrl';
+import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 
 const noop = () => {};
 
@@ -61,11 +62,10 @@ const validateResponse = ({ status, json }, name) => {
   return null;
 };
 
-// Timeout set to 2000ms, it is lower than the 3000ms default reflecting
-// the less essential nature of additional data giving Simorgh a greater chance
-// of still serving a page even without additional data dependent content.
+const timeout = SECONDARY_DATA_TIMEOUT;
+
 const fetchUrl = ({ name, path, ...loggerArgs }) =>
-  fetchPageData({ path, timeout: 2000, ...loggerArgs })
+  fetchPageData({ path, timeout, ...loggerArgs })
     .then(response => validateResponse(response, name))
     .catch(noop);
 
