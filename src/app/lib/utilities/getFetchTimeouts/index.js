@@ -10,7 +10,7 @@
  * is free'ed up to handle subsequent requests when mozart itself will
  * be no longer waiting for Simorgh to respond.
  */
-export const PRIMARY_DATA_TIMEOUT = 3000;
+export const PRIMARY_DATA_TIMEOUT = 4500;
 
 /**
  * This timeout is for fetching 'secondary' data that is not

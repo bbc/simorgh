@@ -62,10 +62,8 @@ const validateResponse = ({ status, json }, name) => {
   return null;
 };
 
-const timeout = SECONDARY_DATA_TIMEOUT;
-
 const fetchUrl = ({ name, path, ...loggerArgs }) =>
-  fetchPageData({ path, timeout, ...loggerArgs })
+  fetchPageData({ path, timeout: SECONDARY_DATA_TIMEOUT, ...loggerArgs })
     .then(response => validateResponse(response, name))
     .catch(noop);
 
