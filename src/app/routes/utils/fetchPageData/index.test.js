@@ -62,25 +62,25 @@ describe('fetchPageData', () => {
     it('should call fetch with the correct url when passed the pathname', async () => {
       await fetchPageData({ path: requestedPathname, pageType });
 
-      expect(fetch).toHaveBeenCalledWith(expectedUrl, { timeout: 3000 });
+      expect(fetch).toHaveBeenCalledWith(expectedUrl, { timeout: 4500 });
     });
 
     it('should call fetch with the correct url when passed the full test path', async () => {
       await fetchPageData({ path: fullTestPath, pageType });
 
-      expect(fetch).toHaveBeenCalledWith(fullTestPath, { timeout: 3000 });
+      expect(fetch).toHaveBeenCalledWith(fullTestPath, { timeout: 4500 });
     });
 
     it('should call fetch with the correct url when passed the full live path', async () => {
       await fetchPageData({ path: fullLivePath, pageType });
 
-      expect(fetch).toHaveBeenCalledWith(fullLivePath, { timeout: 3000 });
+      expect(fetch).toHaveBeenCalledWith(fullLivePath, { timeout: 4500 });
     });
 
     it('should call fetch on amp pages without .amp in pathname', async () => {
       await fetchPageData({ path: requestedPathname, pageType });
 
-      expect(fetch).toHaveBeenCalledWith(expectedUrl, { timeout: 3000 });
+      expect(fetch).toHaveBeenCalledWith(expectedUrl, { timeout: 4500 });
     });
 
     it('should return expected response', async () => {
