@@ -1,4 +1,5 @@
 import React from 'react';
+import { number, string, shape } from 'prop-types';
 import styled from 'styled-components';
 
 // Utilities
@@ -38,6 +39,20 @@ const USElectionBanner = ({ oembed }) => {
       <StyledWrapper dangerouslySetInnerHTML={createMarkup(oembed)} />
     </FrontPageSection>
   );
+};
+
+USElectionBanner.propTypes = {
+  oembed: shape({
+    version: string,
+    type: string,
+    width: number,
+    height: number,
+    html: string,
+  }),
+};
+
+USElectionBanner.defaultProps = {
+  oembed: null,
 };
 
 export default USElectionBanner;
