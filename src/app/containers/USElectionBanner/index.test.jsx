@@ -11,6 +11,7 @@ const MockOembedData = {
   html: '<div>Hello</div>',
 };
 
+// eslint-disable-next-line react/prop-types
 const ElectionsBannerWithContext = ({ oembed }) => (
   <ToggleContext.Provider
     value={{

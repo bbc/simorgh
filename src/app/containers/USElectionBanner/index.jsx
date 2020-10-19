@@ -2,12 +2,6 @@ import React from 'react';
 import { number, string, shape } from 'prop-types';
 import styled from 'styled-components';
 
-// Utilities
-import useToggle from '#hooks/useToggle';
-
-// Components
-import FrontPageSection from '../../components/FrontPageSection';
-
 // Styling
 import {
   GEL_SPACING,
@@ -15,6 +9,12 @@ import {
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+
+// Utilities
+import useToggle from '#hooks/useToggle';
+
+// Components
+import FrontPageSection from '../../components/FrontPageSection';
 
 const createMarkup = oembed => {
   return { __html: oembed.html };

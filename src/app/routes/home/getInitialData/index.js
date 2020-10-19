@@ -44,12 +44,14 @@ const fetchElectionsOembed = async service => {
       path: usElectionOembedPath,
     });
 
-    if (json) {
+    if (json && status === 200) {
       return { usElectionOembed: json };
     }
   } catch (error) {
     return {};
   }
+
+  return null;
 };
 
 export default async ({ path, service, variant, pageType, toggles }) => {
@@ -81,7 +83,6 @@ export default async ({ path, service, variant, pageType, toggles }) => {
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
-    console.log(message);
     return { error: message, status };
   }
 };
