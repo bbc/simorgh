@@ -28,7 +28,7 @@ describe('fetchMarkup', () => {
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
       {
-        timeout: 3000,
+        timeout: 2000,
       },
     );
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
@@ -48,7 +48,7 @@ describe('fetchMarkup', () => {
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
       {
-        timeout: 3000,
+        timeout: 2000,
       },
     );
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
@@ -74,7 +74,7 @@ describe('fetchMarkup', () => {
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
       {
-        timeout: 3000,
+        timeout: 2000,
       },
     );
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
