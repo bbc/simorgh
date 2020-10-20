@@ -176,6 +176,21 @@ export default server => {
       });
       sendDataFile(res, dataFilePath, next);
     })
+    .get(
+      '/:service/election/us2020/results/oembed.json',
+      ({ params }, res, next) => {
+        const dataFilePath = path.join(
+          process.cwd(),
+          'data',
+          params.service,
+          'election',
+          'us2020',
+          'results',
+          'oembed.json',
+        );
+        sendDataFile(res, dataFilePath, next);
+      },
+    )
     .get('/static/js/comscore/main-:version.js', ({ params }, res, next) => {
       const { version } = params;
       const localComscorePath = path.join(
