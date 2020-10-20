@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { string, shape } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { Headline } from '@bbc/psammead-headings';
 import pathOr from 'ramda/src/pathOr';
 import Paragraph from '@bbc/psammead-paragraph';
