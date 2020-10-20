@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { bool, element } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { GridWrapper, GridItemConstrainedMedium } from '#lib/styledGrid';
 
 let timeout;

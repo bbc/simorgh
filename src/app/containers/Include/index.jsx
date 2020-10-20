@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { pathOr } from 'ramda';
 
 import EmbedError from '@bbc/psammead-embed-error';
