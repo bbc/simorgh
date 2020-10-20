@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { node } from 'prop-types';
 import Grid from '@bbc/psammead-grid';
 import {

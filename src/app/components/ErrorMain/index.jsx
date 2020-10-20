@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, arrayOf, oneOf, shape } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import InlineLink from '@bbc/psammead-inline-link';
 import Paragraph from '@bbc/psammead-paragraph';
 import { C_POSTBOX, C_SHADOW } from '@bbc/psammead-styles/colours';
