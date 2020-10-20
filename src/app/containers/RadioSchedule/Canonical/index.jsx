@@ -61,8 +61,8 @@ const RadioScheduleSectionLabel = styled(SectionLabel)`
 `;
 
 const RadioFrequencyLink = styled.a`
-  ${({ script }) => script && getLongPrimer(script)};
-  ${({ service }) => service && getSansRegular(service)};
+  ${({ script }) => script && getLongPrimer(script)}
+  ${({ service }) => service && getSansRegular(service)}
   color: ${C_EBON};
   text-decoration: none;
 
