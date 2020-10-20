@@ -1,7 +1,6 @@
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 
-// confirm css removal is OK in snapshots
 const IndexMarginStyles = `
   margin: 0 ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
