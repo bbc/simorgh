@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment-timezone';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { shape, string, oneOf, oneOfType, bool } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import MediaIndicator from '@bbc/psammead-media-indicator';

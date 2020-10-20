@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
 import { string } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import moment from 'moment';
 import {
@@ -29,10 +29,7 @@ import { RADIO_SCHEDULE_FETCH_ERROR } from '#lib/logger.const';
 
 const logger = webLogger();
 
-const RadioScheduleSection = styled.section.attrs(() => ({
-  role: 'region',
-  'aria-labelledby': 'Radio-Schedule',
-}))`
+const RadioScheduleSection = styled.section`
   background-color: ${C_LUNAR};
   padding: 0 ${GEL_MARGIN_ABOVE_400PX};
 `;
@@ -148,7 +145,12 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
   }
 
   return (
-    <RadioScheduleSection className={className} {...(lang && { lang })}>
+    <RadioScheduleSection
+      className={className}
+      role="region"
+      aria-labelledby="Radio-Schedule"
+      {...(lang && { lang })}
+    >
       <RadioScheduleSectionLabel
         script={script}
         labelId="Radio-Schedule"

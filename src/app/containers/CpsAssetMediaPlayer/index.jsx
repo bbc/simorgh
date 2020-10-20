@@ -1,7 +1,7 @@
 import React from 'react';
 import path from 'ramda/src/path';
 import { string, bool } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,

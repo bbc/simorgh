@@ -10,7 +10,7 @@ import {
   oneOf,
 } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
@@ -71,7 +71,7 @@ ConstrainedLargeGrid.propTypes = {
   children: node.isRequired,
 };
 
-const gridMarginSmall = css`
+const gridMarginSmall = `
   margin-bottom: ${GEL_SPACING_DBL};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-bottom: ${GEL_SPACING_TRPL};
@@ -171,7 +171,7 @@ const CpsOnwardJourney = ({
     : { as: 'section', role: 'region', 'aria-labelledby': labelId };
 
   const Wrapper = isMediaContent
-    ? styled(ConstrainedLargeGrid)`` // Necessary for styling
+    ? ConstrainedLargeGrid
     : StyledConstrainedLargeGrid;
   const CpsOnwardJourneyWrapper = ({ children }) =>
     parentColumns ? (
