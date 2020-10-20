@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
@@ -14,15 +14,7 @@ import ResourceHints from '#app/components/ResourceHints';
 import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
 
 /* eslint-disable react/prop-types */
-const Document = ({
-  assetOrigins,
-  app,
-  data,
-  styleTags,
-  helmet,
-  isAmp,
-  scripts,
-}) => {
+const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
@@ -30,12 +22,15 @@ const Document = ({
   const headScript = helmet.script.toComponent();
   const serialisedData = serialiseForScript(data);
   const scriptsAllowed = !isAmp;
+
   const StyledDiv = styled.div`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: ${C_GHOST};
   `;
+
+  const { html, css, ids } = app;
 
   // The JS to remove the no-js class will not run on AMP, therefore only add it to canonical
   const noJsHtmlAttrs = !isAmp && { className: 'no-js' };
@@ -57,8 +52,14 @@ const Document = ({
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <ResourceHints assetOrigins={assetOrigins} />
         {title}
+        {isAmp ? (
+          <style amp-custom="" data-emotion-css={ids.join(' ')}>
+            {css}
+          </style>
+        ) : (
+          <style data-emotion-css={ids.join(' ')}>{css}</style>
+        )}
         {helmetLinkTags}
-        {styleTags}
         {headScript}
         {isAmp && (
           <>
