@@ -4743,14 +4743,14 @@ module.exports = () => ({
           },
           test: {
             paths: ['/pashto/sport-23079770'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/pashto/columns-54029178'],
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
     },
     specialFeatures: {
@@ -5295,7 +5295,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/pidgin/tori-23133559'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/pidgin/tori-23133559'],
@@ -9946,16 +9946,16 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/zhongwen/simp/world-54113945'],
+            paths: [],
             enabled: false,
           },
           test: {
             paths: ['/zhongwen/simp/23161271'],
-            enabled: false,
+            enabled: true,
           },
           local: {
-            paths: ['/zhongwen/simp/world-54113945'],
-            enabled: true,
+            paths: [],
+            enabled: false,
           },
         },
         smoke: false,
@@ -10163,16 +10163,16 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/zhongwen/trad/world-54113945'],
+            paths: [],
             enabled: false,
           },
           test: {
             paths: ['/zhongwen/trad/23161271'],
-            enabled: false,
+            enabled: true,
           },
           local: {
-            paths: ['/zhongwen/trad/world-54113945'],
-            enabled: true,
+            paths: [],
+            enabled: false,
           },
         },
         smoke: false,
