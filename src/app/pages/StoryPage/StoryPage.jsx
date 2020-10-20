@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { node } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -239,14 +239,14 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     }
   `;
 
-  const MostReadSection = styled.section.attrs(() => ({
-    role: 'region',
-    'aria-labelledby': 'Most-Read',
-    'data-e2e': 'most-read',
-  }))``;
+  const MostReadSection = styled.section``;
 
   const MostReadWrapper = ({ children }) => (
-    <MostReadSection>
+    <MostReadSection
+      role="region"
+      aria-labelledby="Most-Read"
+      data-e2e="most-read"
+    >
       <SectionLabel
         script={script}
         labelId="Most-Read"
