@@ -23,6 +23,13 @@ exports[`ElectionBanner with oEmbed data should render correctly 1`] = `
   }
 }
 
+@media (max-width:62.9375rem) {
+  .c1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 <div
   class="c0"
 >

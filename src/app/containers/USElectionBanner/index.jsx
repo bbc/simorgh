@@ -5,10 +5,14 @@ import styled from 'styled-components';
 // Styling
 import {
   GEL_SPACING,
+  GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+} from '@bbc/gel-foundations/breakpoints';
 
 // Utilities
 import useToggle from '#hooks/useToggle';
@@ -26,6 +30,11 @@ const StyledWrapper = styled.div`
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_QUAD};
+  }
+
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    padding-left: ${GEL_SPACING_DBL};
+    padding-right: ${GEL_SPACING_DBL};
   }
 `;
 
