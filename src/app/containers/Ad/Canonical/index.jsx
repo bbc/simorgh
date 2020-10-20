@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { oneOf, string } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { C_LUNAR_LIGHT } from '@bbc/psammead-styles/colours';
 import pathOr from 'ramda/src/pathOr';
 import { leaderboardStyles, mpuStyles } from '../utilities/adSlotStyles';

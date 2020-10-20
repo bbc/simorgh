@@ -1,4 +1,3 @@
-import { css } from 'styled-components';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -59,7 +58,7 @@ const LEADERBOARD_HEIGHTS = {
   hence the padding is set such that this is accounted for.
 */
 
-export const leaderboardStyles = css`
+export const leaderboardStyles = `
   display: none;
   visibility: hidden;
   @media (min-width: ${LEADERBOARD_WIDTH_MIN}) {
@@ -85,7 +84,7 @@ export const leaderboardStyles = css`
   }
 `;
 
-export const ampLeaderboardStyles = css`
+export const ampLeaderboardStyles = `
   display: none;
   visibility: hidden;
   @media (min-width: ${LEADERBOARD_WIDTH_MIN}) {
@@ -100,7 +99,7 @@ export const ampLeaderboardStyles = css`
   }
 `;
 
-export const mpuStyles = css`
+export const mpuStyles = `
   display: none;
   visibility: hidden;
   padding: 0;
@@ -119,7 +118,7 @@ export const mpuStyles = css`
   }
 `;
 
-export const ampMpuStyles = css`
+export const ampMpuStyles = `
   display: none;
   visibility: hidden;
   padding: 0;

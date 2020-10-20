@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, shape, number } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { AmpImg } from '@bbc/psammead-image';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 

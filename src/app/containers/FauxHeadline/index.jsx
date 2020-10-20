@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 import {
   GEL_SPACING,

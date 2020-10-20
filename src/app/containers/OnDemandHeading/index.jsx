@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { string, number, bool } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { Headline } from '@bbc/psammead-headings';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { GEL_SPACING, GEL_SPACING_SEPT } from '@bbc/gel-foundations/spacings';

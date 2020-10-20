@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { Headline, SubHeading } from '@bbc/psammead-headings';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { ServiceContext } from '#contexts/ServiceContext';

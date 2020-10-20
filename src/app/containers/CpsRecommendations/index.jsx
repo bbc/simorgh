@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, number } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import { C_LUNAR } from '@bbc/psammead-styles/colours';
