@@ -1,6 +1,6 @@
 import React from 'react';
 import { arrayOf, bool, shape, string } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
@@ -16,9 +16,7 @@ const MediaStoryPromoLi = styled(StoryPromoLi)`
   }
 `;
 
-const MostWatchedOl = styled.ol.attrs({
-  role: 'list',
-})`
+const MostWatchedOl = styled.ol`
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -35,7 +33,7 @@ const RelatedContentPromoList = ({ promoItems, dir, isMediaContent }) => {
         group4: 8,
         group5: 8,
       }}
-      as={isMediaContent ? MostWatchedOl : StoryPromoUl}
+      as={isMediaContent ? <MostWatchedOl role="list" /> : StoryPromoUl}
       enableGelGutters
       dir={dir}
     >

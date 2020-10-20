@@ -1,6 +1,6 @@
 import React from 'react';
 import { number, string, shape } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 // Styling
 import {
