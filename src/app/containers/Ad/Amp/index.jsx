@@ -29,7 +29,7 @@ const AdSection = styled.section`
 
 const AdContainer = styled.div`
   ${({ slotType }) =>
-    slotType === 'mpu' ? ampMpuStyles : ampLeaderboardStyles};
+    slotType === 'mpu' ? ampMpuStyles : ampLeaderboardStyles}
 `;
 
 const StyledWrapper = styled.div`
@@ -50,7 +50,7 @@ const DisplayWrapper = styled(AccessDiv)`
 `;
 
 const StyledLink = styled.a`
-  ${({ script }) => script && getMinion(script)};
+  ${({ script }) => script && getMinion(script)}
   ${({ service }) => getSansRegular(service)}
   color: ${C_RHINO};
   text-decoration: none;
