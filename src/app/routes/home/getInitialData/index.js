@@ -9,6 +9,7 @@ import squashTopStories from '#app/routes/utils/sharedDataTransformers/squashTop
 import addIdsToItems from '#app/routes/utils/sharedDataTransformers/addIdsToItems';
 import filterGroupsWithoutStraplines from '#app/routes/utils/sharedDataTransformers/filterGroupsWithoutStraplines';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
+import { OK } from '#lib/statusCodes.const';
 
 const transformJson = pipe(
   filterUnknownContentTypes,
@@ -29,7 +30,7 @@ const fetchElectionsOembed = async service => {
       path: usElectionOembedPath,
     });
 
-    if (json && status === 200) {
+    if (json && status === OK) {
       return { usElectionOembed: json };
     }
   } catch (error) {
@@ -70,7 +71,6 @@ export default async ({ path: pathname, service, pageType, toggles }) => {
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
-    console.log(message);
     return { error: message, status };
   }
 };

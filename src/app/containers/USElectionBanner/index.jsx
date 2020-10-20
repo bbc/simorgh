@@ -56,7 +56,7 @@ USElectionBanner.propTypes = {
     type: string,
     width: number,
     height: number,
-    html: string,
+    html: string.isRequired,
   }),
 };
 
