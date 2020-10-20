@@ -4,14 +4,14 @@ import { ChunkExtractor } from '@loadable/server';
 import renderDocument from '.';
 import { ServerApp } from '../../app/containers/App';
 import DocumentComponent from './component';
-import * as styles from '../styles';
+// import * as styles from '../styles';
 
-const { ServerStyleSheet } = jest.requireActual('styled-components');
-const mockSheet = new ServerStyleSheet();
+// const { ServerStyleSheet } = jest.requireActual('styled-components');
+// const mockSheet = new ServerStyleSheet();
 
-jest.mock('../styles', () => ({
-  getStyleTag: jest.fn().mockImplementation(() => '__mock_style_tags__'),
-}));
+// jest.mock('../styles', () => ({
+//   getStyleTag: jest.fn().mockImplementation(() => '__mock_style_tags__'),
+// }));
 
 jest.mock('../utilities/getAssetOrigins', () => () => '__mock_asset_origins__');
 
@@ -22,12 +22,12 @@ jest.mock('@loadable/server', () => ({
   })),
 }));
 
-jest.mock('styled-components', () => {
-  return {
-    ServerStyleSheet: () => mockSheet,
-    StyleSheetManager: jest.fn(),
-  };
-});
+// jest.mock('styled-components', () => {
+//   return {
+//     ServerStyleSheet: () => mockSheet,
+//     StyleSheetManager: jest.fn(),
+//   };
+// });
 
 jest.mock('./component', () => jest.fn());
 
@@ -48,7 +48,7 @@ jest.mock('react-dom/server', () => ({
     .mockImplementation(() => '<html lang="en-GB"></html>'),
 }));
 
-jest.spyOn(mockSheet, 'collectStyles');
+// jest.spyOn(mockSheet, 'collectStyles');
 jest.spyOn(server, 'renderToString');
 jest.spyOn(server, 'renderToStaticMarkup');
 
@@ -78,17 +78,17 @@ describe('Render Document', () => {
       );
       expect(document.redirectUrl).toBe(null);
 
-      expect(mockSheet.collectStyles).toHaveBeenCalledWith(
-        <ServerApp
-          bbcOrigin="https://www.test.bbc.co.uk"
-          context={{}}
-          data={{ test: 'data' }}
-          isAmp={false}
-          location="/"
-          routes={['someRoute']}
-          service="news"
-        />,
-      );
+      // expect(mockSheet.collectStyles).toHaveBeenCalledWith(
+      //   <ServerApp
+      //     bbcOrigin="https://www.test.bbc.co.uk"
+      //     context={{}}
+      //     data={{ test: 'data' }}
+      //     isAmp={false}
+      //     location="/"
+      //     routes={['someRoute']}
+      //     service="news"
+      //   />,
+      // );
 
       expect(server.renderToStaticMarkup.mock.calls[0][0].props).toStrictEqual({
         app: 'no',
@@ -98,7 +98,7 @@ describe('Render Document', () => {
         isAmp: false,
         scripts: '__mock_script_elements__',
         service: 'news',
-        styleTags: '__mock_style_tags__',
+        // styleTags: '__mock_style_tags__',
       });
 
       expect(
@@ -117,11 +117,11 @@ describe('Render Document', () => {
         statsFile: `${__dirname}/public/loadable-stats-foobar.json`,
       });
 
-      expect(
-        server.renderToString.mock.calls[0][0].props.sheet.constructor.name,
-      ).toBe('StyleSheet');
+      // expect(
+      //   server.renderToString.mock.calls[0][0].props.sheet.constructor.name,
+      // ).toBe('StyleSheet');
 
-      expect(styles.getStyleTag).toHaveBeenCalledWith(mockSheet, false);
+      // expect(styles.getStyleTag).toHaveBeenCalledWith(mockSheet, false);
 
       done();
     });

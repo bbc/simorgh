@@ -1,7 +1,7 @@
 import React from 'react';
 import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
-import * as styledComponents from 'styled-components';
+// import * as styledComponents from 'styled-components';
 import dotenv from 'dotenv';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
@@ -87,14 +87,14 @@ const mockRouteProps = ({
   });
 };
 
-styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
-  collectStyles: jest.fn().mockReturnValue(<h1>Mock app</h1>),
-  getStyleElement: jest.fn().mockReturnValue(<style />),
-}));
+// styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
+//   collectStyles: jest.fn().mockReturnValue(<h1>Mock app</h1>),
+//   getStyleElement: jest.fn().mockReturnValue(<style />),
+// }));
 
-jest.mock('./styles', () => ({
-  getStyleTag: jest.fn().mockImplementation(() => <style />),
-}));
+// jest.mock('./styles', () => ({
+//   getStyleTag: jest.fn().mockImplementation(() => <style />),
+// }));
 
 jest.mock('./utilities/customMetrics');
 
@@ -142,7 +142,6 @@ const testRenderedData = ({
       isAmp={isAmp}
       service={service}
       scripts="__mock_script_elements__"
-      styleTags={<style />}
     />,
   );
 
@@ -1341,7 +1340,6 @@ describe('Server', () => {
             isAmp={isAmp}
             service={service}
             scripts="__mock_script_elements__"
-            styleTags={<style />}
           />,
         );
 
