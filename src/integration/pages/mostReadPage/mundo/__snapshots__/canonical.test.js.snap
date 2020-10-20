@@ -53,7 +53,7 @@ Object {
 exports[`Canonical Most Read Page Footer Link should match text and url 7`] = `
 Object {
   "text": "Contacta a la BBC",
-  "url": "https://www.bbc.com/mundo/institucional-36400011",
+  "url": "https://www.bbc.co.uk/send/u50853489",
 }
 `;
 
@@ -96,64 +96,78 @@ Object {
 
 exports[`Canonical Most Read Page Header Navigation link should match text and url 4`] = `
 Object {
-  "text": "Economía",
-  "url": "/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342",
+  "text": "EE.UU. 2020",
+  "url": "/mundo/noticias-internacional-53826365",
 }
 `;
 
 exports[`Canonical Most Read Page Header Navigation link should match text and url 5`] = `
 Object {
-  "text": "Tecnología",
-  "url": "/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a",
+  "text": "¿Hablas español?",
+  "url": "/mundo/noticias-50160896",
 }
 `;
 
 exports[`Canonical Most Read Page Header Navigation link should match text and url 6`] = `
-Object {
-  "text": "Ciencia",
-  "url": "/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
-}
-`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text and url 7`] = `
-Object {
-  "text": "Salud",
-  "url": "/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
-}
-`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text and url 8`] = `
-Object {
-  "text": "Cultura",
-  "url": "/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864",
-}
-`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text and url 9`] = `
-Object {
-  "text": "Deportes",
-  "url": "/mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592",
-}
-`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text and url 10`] = `
-Object {
-  "text": "Video",
-  "url": "/mundo/media/video",
-}
-`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "Hay Festival",
   "url": "/mundo/noticias-36795069",
 }
 `;
 
+exports[`Canonical Most Read Page Header Navigation link should match text and url 7`] = `
+Object {
+  "text": "Economía",
+  "url": "/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342",
+}
+`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "Ciencia",
+  "url": "/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+}
+`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 9`] = `
+Object {
+  "text": "Salud",
+  "url": "/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+}
+`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 10`] = `
+Object {
+  "text": "Cultura",
+  "url": "/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864",
+}
+`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 11`] = `
+Object {
+  "text": "Tecnología",
+  "url": "/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a",
+}
+`;
+
 exports[`Canonical Most Read Page Header Navigation link should match text and url 12`] = `
+Object {
+  "text": "Video",
+  "url": "/mundo/media/video",
+}
+`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 13`] = `
 Object {
   "text": "Centroamérica Cuenta",
   "url": "/mundo/noticias-43826245",
+}
+`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 14`] = `
+Object {
+  "text": "BBC Extra",
+  "url": "/mundo/noticias-48908206",
 }
 `;
 
@@ -178,6 +192,8 @@ exports[`Canonical Most Read Page I can see the list items 8`] = `"8\\"Asu mare\
 exports[`Canonical Most Read Page I can see the list items 9`] = `"9Apuñalan a tres turistas mexicanos en JordaniaÚltima actualización: 6 noviembre 2019"`;
 
 exports[`Canonical Most Read Page I can see the list items 10`] = `"10\\"Las iglesias evangélicas son un problema de seguridad nacional en América Latina\\"Última actualización: 6 noviembre 2019"`;
+
+exports[`Canonical Most Read Page Main heading should match text 1`] = `"Más leídas"`;
 
 exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -273,6 +289,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "es",
+        "name": "Spanish",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/mundo/popular/read",
         "@type": "WebPage",
@@ -329,5 +350,3 @@ exports[`Canonical Most Read Page SEO Twitter image src 1`] = `"https://news.fil
 exports[`Canonical Most Read Page SEO Twitter site 1`] = `"@bbcmundo"`;
 
 exports[`Canonical Most Read Page SEO Twitter title 1`] = `"Más leídas - BBC News Mundo"`;
-
-exports[`Canonical Most Read Page SEO apple-itunes-app meta tag should match text 1`] = `"app-id=515255747, app-argument=http://localhost:7080/mundo/popular/read?utm_medium=banner&utm_content=apple-itunes-app"`;

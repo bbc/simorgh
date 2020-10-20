@@ -53,7 +53,7 @@ Object {
 exports[`Canonical Front Page Footer Link should match text and url 7`] = `
 Object {
   "text": "اتصل بـ بي بي سي",
-  "url": "https://www.bbc.com/arabic/institutional-37731355",
+  "url": "https://www.bbc.co.uk/send/u50853203",
 }
 `;
 
@@ -83,28 +83,28 @@ Object {
 exports[`Canonical Front Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "شرق أوسط",
-  "url": "/arabic/middleeast",
+  "url": "/arabic/topics/ckdxnj6g4znt",
 }
 `;
 
 exports[`Canonical Front Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "عالم",
-  "url": "/arabic/world",
+  "url": "/arabic/topics/c719d2el19nt",
 }
 `;
 
 exports[`Canonical Front Page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "علوم وتكنولوجيا",
-  "url": "/arabic/scienceandtech",
+  "url": "/arabic/topics/c719d2ely7xt",
 }
 `;
 
 exports[`Canonical Front Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "صحة",
-  "url": "/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+  "url": "/arabic/topics/c95y3q70znjt",
 }
 `;
 
@@ -118,14 +118,14 @@ Object {
 exports[`Canonical Front Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "صحافة",
-  "url": "/arabic/inthepress",
+  "url": "/arabic/topics/c08gmd9rp97t",
 }
 `;
 
 exports[`Canonical Front Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "ترند",
-  "url": "/arabic/trending",
+  "url": "/arabic/topics/c404vr23x4dt",
 }
 `;
 
@@ -241,6 +241,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "ar",
+        "name": "Arabic",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/arabic",
         "@type": "WebPage",
@@ -297,8 +302,6 @@ exports[`Canonical Front Page SEO Twitter image src 1`] = `"https://news.files.b
 exports[`Canonical Front Page SEO Twitter site 1`] = `"@BBCArabic"`;
 
 exports[`Canonical Front Page SEO Twitter title 1`] = `"الرئيسية - BBC News عربي"`;
-
-exports[`Canonical Front Page SEO apple-itunes-app meta tag should match text 1`] = `"app-id=558497376, app-argument=http://localhost:7080/arabic?utm_medium=banner&utm_content=apple-itunes-app"`;
 
 exports[`Canonical Front Page Sections should match headline text 1`] = `"الخبر الرئيسي"`;
 

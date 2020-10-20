@@ -73,7 +73,12 @@ server
     }),
   )
   .use(compression())
-  .use(helmet({ frameguard: { action: 'deny' } }))
+  .use(
+    helmet({
+      frameguard: { action: 'deny' },
+      contentSecurityPolicy: false,
+    }),
+  )
   .use(gnuTP())
   .get('/status', (req, res) => {
     res.status(200).send(getBuildMetadata());
@@ -131,7 +136,7 @@ server
           isAmp,
           route: { getInitialData, pageType },
           variant,
-        } = getRouteProps(routes, urlPath);
+        } = getRouteProps(urlPath);
 
         // Set derivedPageType based on matched route
         derivedPageType = pageType || derivedPageType;
@@ -176,12 +181,6 @@ server
         });
 
         logger.info(ROUTING_INFORMATION, {
-          url,
-          status,
-          pageType: derivedPageType,
-        });
-
-        logger.debug(ROUTING_INFORMATION, {
           url,
           status,
           pageType: derivedPageType,

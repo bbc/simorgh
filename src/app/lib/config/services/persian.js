@@ -37,6 +37,7 @@ export const service = {
     datetimeLocale: 'fa',
     service: 'persian',
     serviceName: 'Persian',
+    languageName: 'Persian',
     altCalendar: jalaali,
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcpersian',
@@ -220,8 +221,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: false,
-      frontPagePosition: '',
       onIdxPage: true,
       idxPagePosition: 'Features',
       header: 'برنامه‌های رادیو',
@@ -257,7 +256,7 @@ export const service = {
           text: 'کوکی ها',
         },
         {
-          href: 'https://www.bbc.com/persian/institutional-37542244',
+          href: 'https://www.bbc.co.uk/send/u50853555',
           text: 'تماس با بی بی سی',
         },
         {
@@ -275,6 +274,10 @@ export const service = {
       {
         title: 'صفحه اول',
         url: '/persian',
+      },
+      {
+        title: 'انتخابات آمریکا',
+        url: '/persian/world-54468359',
       },
       {
         title: 'کرونا',

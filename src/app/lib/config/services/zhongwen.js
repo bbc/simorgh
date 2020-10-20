@@ -21,6 +21,7 @@ const baseServiceConfig = {
   datetimeLocale: `zh-cn`,
   service: 'zhongwen',
   serviceName: 'News 中文',
+  languageName: 'Chinese',
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcchinese',
   twitterSite: '@bbcchinese',
@@ -84,7 +85,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/zhongwen/simp/institutional-38664417',
+          href: 'https://www.bbc.co.uk/send/u50778626',
           text: '联络BBC',
         },
         {

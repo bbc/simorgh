@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`IdxPage - Persian Snapshots should render a persian idx page correctly with most read and radio schedule 1`] = `
-.c47 {
+.c50 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -10,7 +10,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   height: 0.725rem;
 }
 
-.c20 {
+.c28 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -19,7 +19,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   height: 0.75rem;
 }
 
-.c58 {
+.c61 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -45,7 +45,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   padding-bottom: 2rem;
 }
 
-.c67 {
+.c70 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -53,7 +53,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   grid-template-rows: repeat(10,auto);
 }
 
-.c72 {
+.c75 {
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -65,7 +65,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   padding: 0;
 }
 
-.c74 {
+.c77 {
   font-size: 1rem;
   line-height: 1.625rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -78,13 +78,13 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   margin-bottom: 0.5rem;
 }
 
-.c74:hover,
-.c74:focus {
+.c77:hover,
+.c77:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c74:before {
+.c77:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -96,17 +96,17 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   z-index: 1;
 }
 
-.c73 {
+.c76 {
   padding-top: 0.375rem;
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-.c75 {
+.c78 {
   padding-top: 0.5rem;
 }
 
-.c70 {
+.c73 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -118,12 +118,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   padding: 0;
 }
 
-.c69 {
+.c72 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
-.c27 {
+.c20 {
   font-size: 1rem;
   line-height: 1.25rem;
   color: #6E6E73;
@@ -181,7 +181,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   align-items: center;
 }
 
-.c38 {
+.c41 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -210,6 +210,21 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   z-index: 0;
   color: #3F3F42;
   margin-top: 2rem;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.c21 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
 }
 
 .c5 {
@@ -217,7 +232,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   padding: 0;
 }
 
-.c14 {
+.c11 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -225,53 +240,53 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   width: 100%;
 }
 
-.c30 {
+.c33 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c22 {
+.c16 {
   display: inline-block;
   vertical-align: top;
 }
 
-.c32 {
+.c35 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c13 {
+.c10 {
   position: relative;
 }
 
-.c29 {
+.c32 {
+  position: relative;
+}
+
+.c12 {
   position: relative;
 }
 
 .c15 {
-  position: relative;
-}
-
-.c17 {
   position: absolute;
   bottom: 0;
 }
 
-.c17 > * {
+.c15 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c31 > * {
+.c34 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c26 {
+.c19 {
   font-size: 1.0625rem;
   line-height: 1.5rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -282,7 +297,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   padding-bottom: 0.5rem;
 }
 
-.c34 {
+.c37 {
   font-size: 1.0625rem;
   line-height: 1.5rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -293,7 +308,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   padding-bottom: 0.5rem;
 }
 
-.c25 {
+.c30 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -305,7 +320,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   margin: 0;
 }
 
-.c54 {
+.c57 {
   color: #3F3F42;
   padding: 0.5rem 0;
   display: inline-block;
@@ -317,7 +332,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   line-height: 1.625rem;
 }
 
-.c62 {
+.c65 {
   color: #6E6E73;
   padding: 0.5rem 0;
   display: inline-block;
@@ -329,7 +344,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   line-height: 1.625rem;
 }
 
-.c52 {
+.c55 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -337,7 +352,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   overflow-wrap: break-word;
 }
 
-.c52:before {
+.c55:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -349,27 +364,27 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   z-index: 1;
 }
 
-.c52:hover,
-.c52:focus {
+.c55:hover,
+.c55:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c52:visited {
+.c55:visited {
   color: #6E6E73;
 }
 
-.c52:hover .c53 {
+.c55:hover .c56 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c52:focus .c53 {
+.c55:focus .c56 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c49 {
+.c52 {
   padding-top: 0.5rem;
   background-color: #FFFFFF;
   display: -webkit-box;
@@ -383,7 +398,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   height: 100%;
 }
 
-.c50 {
+.c53 {
   padding: 0 0.5rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -391,7 +406,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   flex-grow: 1;
 }
 
-.c51 {
+.c54 {
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -401,7 +416,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   margin: 0;
 }
 
-.c60 {
+.c63 {
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -411,7 +426,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   margin: 0;
 }
 
-.c61 {
+.c64 {
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -422,7 +437,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   margin-left: 0.5rem;
 }
 
-.c55 {
+.c58 {
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -433,7 +448,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   margin: 0;
 }
 
-.c56 {
+.c59 {
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -445,7 +460,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   color: #FFFFFF;
 }
 
-.c63 {
+.c66 {
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -457,7 +472,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   color: #11708C;
 }
 
-.c57 > svg {
+.c60 > svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -465,7 +480,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   margin: 0;
 }
 
-.c64 > svg {
+.c67 > svg {
   color: #11708C;
   fill: currentColor;
   width: 1.0625rem;
@@ -473,11 +488,11 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   margin: 0;
 }
 
-.c59 {
+.c62 {
   padding-right: 0.5rem;
 }
 
-.c45 {
+.c48 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -488,7 +503,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   align-items: center;
 }
 
-.c46 {
+.c49 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -500,13 +515,13 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   padding-left: 0.25rem;
 }
 
-.c46 > svg {
+.c49 > svg {
   color: #5A5A5A;
   margin: 0;
   overflow: visible;
 }
 
-.c48 {
+.c51 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -521,7 +536,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   width: 100%;
 }
 
-.c48 > time {
+.c51 > time {
   color: #5A5A5A;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -530,7 +545,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-style: normal;
 }
 
-.c48::after {
+.c51::after {
   content: '';
   border-top: 0.0625rem solid #AEAEB5;
   top: 1rem;
@@ -538,60 +553,66 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   width: 100%;
 }
 
-.c44 {
+.c47 {
   padding-bottom: 0.5rem;
 }
 
-.c41 {
+.c44 {
   padding: 0;
   margin: 0;
 }
 
-.c43 {
+.c46 {
   position: relative;
   padding-bottom: 1rem;
 }
 
-.c35 {
+.c38 {
   background-color: #F2F2F2;
   padding: 0 1rem;
 }
 
-.c39 {
+.c42 {
   margin: 0 auto;
   width: 100%;
   padding-bottom: 1rem;
 }
 
-.c37 {
+.c40 {
   margin: 0 auto;
   width: 100%;
   padding-top: 0.5rem;
 }
 
-.c11 {
+.c24 {
   padding: 0.5rem 0 1rem;
 }
 
-.c11:last-child {
+.c24:last-child {
   border: none;
 }
 
-.c11:first-child {
+.c24:first-child {
   padding-top: 0;
 }
 
-.c11:last-child {
+.c24:last-child {
   padding-bottom: 0;
 }
 
-.c9 {
+.c22 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c16 {
+.c14 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
+.c13 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -604,7 +625,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c18 {
+.c26 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -615,7 +636,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   display: block;
 }
 
-.c19 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -627,7 +648,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   height: 100%;
 }
 
-.c21 {
+.c29 {
   padding: 0 0.25rem;
 }
 
@@ -636,12 +657,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   width: 100%;
 }
 
-.c65 {
+.c68 {
   margin: 0 auto;
   width: 100%;
 }
 
-.c23 {
+.c17 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -652,7 +673,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   line-height: 1.875rem;
 }
 
-.c33 {
+.c36 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -663,7 +684,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   line-height: 1.625rem;
 }
 
-.c24 {
+.c18 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -672,7 +693,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   overflow-wrap: anywhere;
 }
 
-.c24:before {
+.c18:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -684,13 +705,13 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   z-index: 1;
 }
 
-.c24:hover,
-.c24:focus {
+.c18:hover,
+.c18:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c24:visited {
+.c18:visited {
   color: #6E6E73;
 }
 
@@ -759,14 +780,14 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @supports (display:grid) {
-  .c10 {
+  .c23 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c12 {
+  .c25 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -775,7 +796,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c12 {
+  .c25 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -784,7 +805,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c12 {
+  .c25 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -793,7 +814,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c12 {
+  .c25 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -802,7 +823,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c12 {
+  .c25 {
     width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -811,7 +832,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:80rem) {
-  .c12 {
+  .c25 {
     width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -820,13 +841,13 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @supports (display:grid) {
-  .c12 {
+  .c25 {
     display: block;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c28 {
+  .c31 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -835,7 +856,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c28 {
+  .c31 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -844,7 +865,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c28 {
+  .c31 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -853,7 +874,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c28 {
+  .c31 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -862,7 +883,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c28 {
+  .c31 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -871,7 +892,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:80rem) {
-  .c28 {
+  .c31 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -880,38 +901,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @supports (display:grid) {
-  .c28 {
+  .c31 {
     display: block;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c40 {
+  .c43 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c40 {
+  .c43 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c40 {
+  .c43 {
     padding: 0 1rem;
   }
 }
 
 @supports (display:grid) {
-  .c40 {
+  .c43 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c42 {
+  .c45 {
     width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -920,7 +941,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c42 {
+  .c45 {
     width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -929,7 +950,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c42 {
+  .c45 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -938,7 +959,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c42 {
+  .c45 {
     width: calc(3/6*(100% - 6 * 1rem) + 2 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -947,7 +968,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c42 {
+  .c45 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -956,7 +977,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:80rem) {
-  .c42 {
+  .c45 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -965,13 +986,13 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @supports (display:grid) {
-  .c42 {
+  .c45 {
     display: block;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c68 {
+  .c71 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -979,7 +1000,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c68 {
+  .c71 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -987,7 +1008,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c68 {
+  .c71 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -995,7 +1016,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c68 {
+  .c71 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -1003,7 +1024,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c68 {
+  .c71 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -1011,7 +1032,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:80rem) {
-  .c68 {
+  .c71 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -1019,187 +1040,187 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @supports (display:grid) {
-  .c68 {
+  .c71 {
     display: block;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c67 {
+  .c70 {
     grid-template-rows: repeat( 5,auto );
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c71 {
+  .c74 {
     min-width: 1rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c71 {
+  .c74 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c71 {
+  .c74 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c71 {
+  .c74 {
     min-width: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c71 {
+  .c74 {
     min-width: 1.5rem;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c76 {
+  .c79 {
     min-width: 1rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c76 {
+  .c79 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c76 {
+  .c79 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c76 {
+  .c79 {
     min-width: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c76 {
+  .c79 {
     min-width: 2rem;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c77 {
+  .c80 {
     min-width: 1rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c77 {
+  .c80 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c77 {
+  .c80 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c77 {
+  .c80 {
     min-width: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c77 {
+  .c80 {
     min-width: 2rem;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c78 {
+  .c81 {
     min-width: 1rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c78 {
+  .c81 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c78 {
+  .c81 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c78 {
+  .c81 {
     min-width: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c78 {
+  .c81 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c72 {
+  .c75 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c72 {
+  .c75 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c74 {
+  .c77 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c74 {
+  .c77 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c74 {
+  .c77 {
     font-size: 1.375rem;
     line-height: 1.75rem;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c73 {
+  .c76 {
     padding-left: 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c27 {
+  .c20 {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c20 {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
@@ -1241,27 +1262,27 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c38 {
+  .c41 {
     font-size: 1.625rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c38 {
+  .c41 {
     font-size: 1.75rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c38 {
+  .c41 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c38 {
+  .c41 {
     padding-left: 1rem;
   }
 }
@@ -1293,61 +1314,73 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 }
 
+@media (min-width:37.5rem) {
+  .c21 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c21 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c66 {
+  .c69 {
     margin-bottom: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c14 {
+  .c11 {
     width: calc(50% - 0.5rem);
     margin-bottom: 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c14 {
+  .c11 {
     width: calc(50% - 0.5rem);
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c14 {
+  .c11 {
     width: initial;
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) {
-  .c30 {
+  .c33 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c30 {
+  .c33 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c16 {
     width: 50%;
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c22 {
+  .c16 {
     width: 50%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c22 {
+  .c16 {
     display: block;
     width: initial;
     padding: initial;
@@ -1356,13 +1389,13 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:37.5rem) {
-  .c32 {
+  .c35 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c32 {
+  .c35 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -1370,7 +1403,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c32 {
+  .c35 {
     display: block;
     width: initial;
     padding: initial;
@@ -1379,7 +1412,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c13 {
+  .c10 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -1387,7 +1420,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c29 {
+  .c32 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -1395,69 +1428,97 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:25rem) {
-  .c31 {
+  .c34 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c31 > * {
+  .c34 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c26 {
+  .c19 {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c26 {
+  .c19 {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c26 {
+  .c19 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c34 {
+  .c37 {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c34 {
+  .c37 {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c34 {
+  .c37 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c34 {
+  .c37 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
+  .c57 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c57 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c65 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c65 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c54 {
     font-size: 1.25rem;
     line-height: 1.625rem;
@@ -1472,133 +1533,105 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c62 {
+  .c63 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c62 {
+  .c63 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c51 {
+  .c64 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c51 {
+  .c64 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c60 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c60 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c61 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c61 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c55 {
+  .c58 {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c55 {
+  .c58 {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c56 {
+  .c59 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c56 {
+  .c59 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c56 {
+  .c59 {
     background-color: transparent;
     outline: none;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c63 {
+  .c66 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c63 {
+  .c66 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c63 {
+  .c66 {
     background-color: transparent;
     outline: none;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c48 > time {
+  .c51 > time {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c48 > time {
+  .c51 > time {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c43 {
+  .c46 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1610,64 +1643,64 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width:37.5rem) {
-  .c39 {
+  .c42 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c39 {
+  .c42 {
     max-width: 63rem;
     padding-bottom: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c37 {
+  .c40 {
     padding-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c37 {
+  .c40 {
     max-width: 63rem;
     padding-top: 2rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c11 {
+  .c24 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c24 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c11 {
+  .c24 {
     padding: 0 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c11:first-child {
+  .c24:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c18 {
+  .c26 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c26 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
@@ -1679,54 +1712,66 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 }
 
+@media (min-width:37.5rem) {
+  .c9 {
+    margin-top: 1.5rem;
+  }
+}
+
 @media (min-width:63rem) {
-  .c65 {
+  .c9 {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c68 {
     max-width: 63rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c36 {
+  .c39 {
     margin: 2rem -0.5rem 0;
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c36 {
+  .c39 {
     margin: 2rem -1rem 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c36 {
+  .c39 {
     margin: 1.5rem -1rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c23 {
+  .c17 {
     font-size: 1.75rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c23 {
+  .c17 {
     font-size: 2rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c33 {
+  .c36 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c36 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
@@ -1752,12 +1797,103 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
         صفحه افغانستان
       </h1>
       <section
-        aria-labelledby="WatchListen"
+        aria-labelledby="Top-story"
         class="c2"
         role="region"
       >
         <div
           class="c3"
+        >
+          <div
+            class="c4"
+          />
+          <h2
+            class="c5"
+          >
+            <span
+              class="c6"
+            >
+              <span
+                class="c7"
+              >
+                <span
+                  class="c8"
+                  dir="rtl"
+                  id="Top-story"
+                >
+                  Top story - Afghanistan
+                </span>
+              </span>
+            </span>
+          </h2>
+        </div>
+        <div
+          class="c9"
+        >
+          <div
+            class="c10"
+            data-e2e="story-promo"
+          >
+            <div
+              class="c11"
+              dir="rtl"
+            >
+              <div
+                class="c12"
+              >
+                <div
+                  class="c13"
+                >
+                  <img
+                    alt="هبت الله آخوندزاده"
+                    class="c14"
+                    sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg"
+                    srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 320w, https://ichef.bbci.co.uk/news/624/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 624w"
+                    width="624"
+                  />
+                </div>
+                <div
+                  class="c15"
+                />
+              </div>
+            </div>
+            <div
+              class="c16"
+              dir="rtl"
+            >
+              <h3
+                class="c17"
+              >
+                <a
+                  class="c18"
+                  href="/persian/afghanistan-52735886"
+                >
+                  رهبر طالبان به آمریکا: اجازه ندهید موافقتنامه‌مان با ناکامی رو به رو شود؛ ارگ: پیام رهبر طالبان ارزش ندارد
+                </a>
+              </h3>
+              <p
+                class="c19"
+              >
+                ملا هبت الله آخوندزاده، رهبر طالبان در یک پیام به مناسبت عید فطر، از آمریکا خواسته که به کسی اجازه ندهد که موافقتنامه صلح آنها را با مانع، تاخیر و ناکامی رو به رو سازد. در همین حال سخنگوی رئیس جمهوری افغانستان گفته با ادامه خشونت‌ها از سوی طالبان، پیام عیدی رهبر این گروه "ارزشی ندارد.".
+              </p>
+              <time
+                class="c20"
+                datetime="2020-05-20"
+              >
+                ۳۱ اردیبهشت ۱۳۹۹ - ۲۰ مه ۲۰۲۰
+              </time>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        aria-labelledby="WatchListen"
+        class="c2"
+        role="region"
+      >
+        <div
+          class="c21"
         >
           <div
             class="c4"
@@ -1783,27 +1919,28 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
           </h2>
         </div>
         <ul
-          class="c9 c10"
+          class="c22 c23"
           dir="rtl"
           role="list"
         >
           <li
-            class="c11 c12"
+            class="c24 c25"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c13"
+              class="c10"
+              data-e2e="story-promo"
             >
               <div
-                class="c14"
+                class="c11"
                 dir="rtl"
               >
                 <div
-                  class="c15"
+                  class="c12"
                 >
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -1814,19 +1951,19 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </div>
                   </div>
                   <div
-                    class="c17"
+                    class="c15"
                   >
                     <div
                       aria-hidden="true"
-                      class="c18"
+                      class="c26"
                       dir="rtl"
                     >
                       <div
-                        class="c19"
+                        class="c27"
                       >
                         <svg
                           aria-hidden="true"
-                          class="c20"
+                          class="c28"
                           focusable="false"
                           height="12px"
                           viewBox="0 0 32 32"
@@ -1837,7 +1974,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           />
                         </svg>
                         <time
-                          class="c21"
+                          class="c29"
                           datetime="PT2M32S"
                         >
                           2:32
@@ -1848,21 +1985,21 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 </div>
               </div>
               <div
-                class="c22"
+                class="c16"
                 dir="rtl"
               >
                 <h3
-                  class="c23"
+                  class="c17"
                 >
                   <a
-                    class="c24"
+                    class="c18"
                     href="/persian/afghanistan-52726383"
                   >
                     <span
                       role="text"
                     >
                       <span
-                        class="c25"
+                        class="c30"
                       >
                         ویدیو
                         , 
@@ -1871,20 +2008,20 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان
                       </span>
                       <span
-                        class="c25"
+                        class="c30"
                       >
-                        , 2,32
+                        , مدت 2,32
                       </span>
                     </span>
                   </a>
                 </h3>
                 <p
-                  class="c26"
+                  class="c19"
                 >
                   در حالیکه شمار رسمی مبتلایان به ویروس کرونا از چهار و نیم میلیون نفر عبور کرده، این روزها کشورهای آمریکای لاتین به کانون های اصلی شیوع تبدیل شده‌اند..
                 </p>
                 <time
-                  class="c27"
+                  class="c20"
                   datetime="2020-05-19"
                 >
                   ۳۰ اردیبهشت ۱۳۹۹ - ۱۹ مه ۲۰۲۰
@@ -1893,22 +2030,23 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="c11 c28"
+            class="c24 c31"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c29"
+              class="c32"
+              data-e2e="story-promo"
             >
               <div
-                class="c30"
+                class="c33"
                 dir="rtl"
               >
                 <div
-                  class="c15"
+                  class="c12"
                 >
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -1919,19 +2057,19 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </div>
                   </div>
                   <div
-                    class="c31"
+                    class="c34"
                   >
                     <div
                       aria-hidden="true"
-                      class="c18"
+                      class="c26"
                       dir="rtl"
                     >
                       <div
-                        class="c19"
+                        class="c27"
                       >
                         <svg
                           aria-hidden="true"
-                          class="c20"
+                          class="c28"
                           focusable="false"
                           height="12px"
                           viewBox="0 0 32 32"
@@ -1942,7 +2080,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           />
                         </svg>
                         <time
-                          class="c21"
+                          class="c29"
                           datetime="PT2M12S"
                         >
                           2:12
@@ -1953,21 +2091,21 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 </div>
               </div>
               <div
-                class="c32"
+                class="c35"
                 dir="rtl"
               >
                 <h3
-                  class="c33"
+                  class="c36"
                 >
                   <a
-                    class="c24"
+                    class="c18"
                     href="/persian/afghanistan-52710877"
                   >
                     <span
                       role="text"
                     >
                       <span
-                        class="c25"
+                        class="c30"
                       >
                         ویدیو
                         , 
@@ -1976,20 +2114,20 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         حمله انتحاری طالبان به دفتر امنیت ملی درغزنی
                       </span>
                       <span
-                        class="c25"
+                        class="c30"
                       >
-                        , 2,12
+                        , مدت 2,12
                       </span>
                     </span>
                   </a>
                 </h3>
                 <p
-                  class="c34"
+                  class="c37"
                 >
                   مقام‌های محلی غزنی گفته‌اند در حمله صبح امروز طالبان در شهر غزنی در جنوب افغانستان هفت نفر کشته و چهل نفر زخمی شده‌اند.
                 </p>
                 <time
-                  class="c27"
+                  class="c20"
                   datetime="2020-05-18"
                 >
                   ۲۹ اردیبهشت ۱۳۹۹ - ۱۸ مه ۲۰۲۰
@@ -1998,22 +2136,23 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="c11 c28"
+            class="c24 c31"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c29"
+              class="c32"
+              data-e2e="story-promo"
             >
               <div
-                class="c30"
+                class="c33"
                 dir="rtl"
               >
                 <div
-                  class="c15"
+                  class="c12"
                 >
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -2024,19 +2163,19 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </div>
                   </div>
                   <div
-                    class="c31"
+                    class="c34"
                   >
                     <div
                       aria-hidden="true"
-                      class="c18"
+                      class="c26"
                       dir="rtl"
                     >
                       <div
-                        class="c19"
+                        class="c27"
                       >
                         <svg
                           aria-hidden="true"
-                          class="c20"
+                          class="c28"
                           focusable="false"
                           height="12px"
                           viewBox="0 0 32 32"
@@ -2047,7 +2186,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           />
                         </svg>
                         <time
-                          class="c21"
+                          class="c29"
                           datetime="PT6M14S"
                         >
                           6:14
@@ -2058,21 +2197,21 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 </div>
               </div>
               <div
-                class="c32"
+                class="c35"
                 dir="rtl"
               >
                 <h3
-                  class="c33"
+                  class="c36"
                 >
                   <a
-                    class="c24"
+                    class="c18"
                     href="/persian/afghanistan-52699256"
                   >
                     <span
                       role="text"
                     >
                       <span
-                        class="c25"
+                        class="c30"
                       >
                         ویدیو
                         , 
@@ -2081,20 +2220,20 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         توافقنامه‌ای پایان بخش اختلافات چند ماهه غنی و عبدالله
                       </span>
                       <span
-                        class="c25"
+                        class="c30"
                       >
-                        , 6,14
+                        , مدت 6,14
                       </span>
                     </span>
                   </a>
                 </h3>
                 <p
-                  class="c34"
+                  class="c37"
                 >
                   در افغانستان عبدالله عبدالله با امضای یک توافق از ادعای خود به عنوان رییس جمهوری گذشت و اشرف غنی را به عنوان رییس دولت پذیرفت.
                 </p>
                 <time
-                  class="c27"
+                  class="c20"
                   datetime="2020-05-17"
                 >
                   ۲۸ اردیبهشت ۱۳۹۹ - ۱۷ مه ۲۰۲۰
@@ -2103,22 +2242,23 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="c11 c28"
+            class="c24 c31"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c29"
+              class="c32"
+              data-e2e="story-promo"
             >
               <div
-                class="c30"
+                class="c33"
                 dir="rtl"
               >
                 <div
-                  class="c15"
+                  class="c12"
                 >
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -2129,19 +2269,19 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </div>
                   </div>
                   <div
-                    class="c31"
+                    class="c34"
                   >
                     <div
                       aria-hidden="true"
-                      class="c18"
+                      class="c26"
                       dir="rtl"
                     >
                       <div
-                        class="c19"
+                        class="c27"
                       >
                         <svg
                           aria-hidden="true"
-                          class="c20"
+                          class="c28"
                           focusable="false"
                           height="12px"
                           viewBox="0 0 32 32"
@@ -2152,7 +2292,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           />
                         </svg>
                         <time
-                          class="c21"
+                          class="c29"
                           datetime="PT3M21S"
                         >
                           3:21
@@ -2163,21 +2303,21 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 </div>
               </div>
               <div
-                class="c32"
+                class="c35"
                 dir="rtl"
               >
                 <h3
-                  class="c33"
+                  class="c36"
                 >
                   <a
-                    class="c24"
+                    class="c18"
                     href="/persian/afghanistan-52651714"
                   >
                     <span
                       role="text"
                     >
                       <span
-                        class="c25"
+                        class="c30"
                       >
                         ویدیو
                         , 
@@ -2186,20 +2326,20 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         واکنش‌ها به حملات اخیر افغانستان؛ دعوت به همکاری طالبان با دولت
                       </span>
                       <span
-                        class="c25"
+                        class="c30"
                       >
-                        , 3,21
+                        , مدت 3,21
                       </span>
                     </span>
                   </a>
                 </h3>
                 <p
-                  class="c34"
+                  class="c37"
                 >
                   وزارت صحت افغانستان اعلام کرده که شمار قربانیان حمله به بیمارستان کابل به ۲۴ نفر رسیده‌است.
                 </p>
                 <time
-                  class="c27"
+                  class="c20"
                   datetime="2020-05-13"
                 >
                   ۲۴ اردیبهشت ۱۳۹۹ - ۱۳ مه ۲۰۲۰
@@ -2208,22 +2348,23 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="c11 c28"
+            class="c24 c31"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c29"
+              class="c32"
+              data-e2e="story-promo"
             >
               <div
-                class="c30"
+                class="c33"
                 dir="rtl"
               >
                 <div
-                  class="c15"
+                  class="c12"
                 >
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -2234,19 +2375,19 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </div>
                   </div>
                   <div
-                    class="c31"
+                    class="c34"
                   >
                     <div
                       aria-hidden="true"
-                      class="c18"
+                      class="c26"
                       dir="rtl"
                     >
                       <div
-                        class="c19"
+                        class="c27"
                       >
                         <svg
                           aria-hidden="true"
-                          class="c20"
+                          class="c28"
                           focusable="false"
                           height="12px"
                           viewBox="0 0 32 32"
@@ -2257,7 +2398,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           />
                         </svg>
                         <time
-                          class="c21"
+                          class="c29"
                           datetime="PT4M48S"
                         >
                           4:48
@@ -2268,21 +2409,21 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 </div>
               </div>
               <div
-                class="c32"
+                class="c35"
                 dir="rtl"
               >
                 <h3
-                  class="c33"
+                  class="c36"
                 >
                   <a
-                    class="c24"
+                    class="c18"
                     href="/persian/afghanistan-52640314"
                   >
                     <span
                       role="text"
                     >
                       <span
-                        class="c25"
+                        class="c30"
                       >
                         ویدیو
                         , 
@@ -2291,20 +2432,20 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         روایت بازماندگان از حادثه مرزی ایران و افغانستان
                       </span>
                       <span
-                        class="c25"
+                        class="c30"
                       >
-                        , 4,48
+                        , مدت 4,48
                       </span>
                     </span>
                   </a>
                 </h3>
                 <p
-                  class="c34"
+                  class="c37"
                 >
                   سخنگوی وزارت خارجه ایران، دست داشتن نیروی انتظامی در مرگ شهروندان افغانستان در مرز دو کشور را تکذیب کرده‌است.
                 </p>
                 <time
-                  class="c27"
+                  class="c20"
                   datetime="2020-05-12"
                 >
                   ۲۳ اردیبهشت ۱۳۹۹ - ۱۲ مه ۲۰۲۰
@@ -2316,12 +2457,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
       </section>
       <section
         aria-labelledby="Radio-Schedule"
-        class="c35 c36"
+        class="c38 c39"
         lang="fa-AF"
         role="region"
       >
         <div
-          class="c3 c37"
+          class="c21 c40"
         >
           <h2
             class="c5"
@@ -2333,7 +2474,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 class="c7"
               >
                 <span
-                  class="c38"
+                  class="c41"
                   dir="rtl"
                   id="Radio-Schedule"
                 >
@@ -2344,33 +2485,33 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
           </h2>
         </div>
         <div
-          class="c39"
+          class="c42"
           data-e2e="radio-schedule"
         >
           <ul
-            class="c40 c41"
+            class="c43 c44"
             dir="rtl"
             role="list"
           >
             <li
-              class="c42 c43"
+              class="c45 c46"
               data-e2e="onDemand"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="c44"
+                class="c47"
               >
                 <div
-                  class="c45"
+                  class="c48"
                 >
                   <span
-                    class="c46"
+                    class="c49"
                     dir="rtl"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c47"
+                      class="c50"
                       focusable="false"
                       height="13"
                       viewBox="0 0 13 13"
@@ -2386,11 +2527,11 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   </span>
                   <span
                     aria-hidden="true"
-                    class="c48"
+                    class="c51"
                     dir="rtl"
                   >
                     <time
-                      class="c27"
+                      class="c20"
                       datetime="2020-03-26"
                     >
                       ۰۵:۳۰
@@ -2399,16 +2540,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 </div>
               </div>
               <div
-                class="c49"
+                class="c52"
               >
                 <div
-                  class="c50"
+                  class="c53"
                 >
                   <h3
-                    class="c51"
+                    class="c54"
                   >
                     <a
-                      class="c52"
+                      class="c55"
                       href="/persian/bbc_dari_radio/w172x1rwggbcdq8"
                     >
                       <span
@@ -2417,14 +2558,14 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                       >
                         نبض خبر
                         <span
-                          class="c25"
+                          class="c30"
                         >
                           , 
                           ۰۵:۳۰
                           , 
                         </span>
                         <span
-                          class="c53 c54"
+                          class="c56 c57"
                         >
                           ۲۶ مارس ۲۰۲۰
                         </span>
@@ -2432,20 +2573,20 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </a>
                   </h3>
                   <p
-                    class="c55"
+                    class="c58"
                   >
                     تازه ترین خبرهای جهان
                   </p>
                 </div>
                 <div
-                  class="c56"
+                  class="c59"
                 >
                   <span
-                    class="c57"
+                    class="c60"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c58"
+                      class="c61"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
@@ -2460,12 +2601,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </svg>
                   </span>
                   <time
-                    class="c59"
+                    class="c62"
                     datetime="PT3M"
                     dir="rtl"
                   >
                     <span
-                      class="c25"
+                      class="c30"
                     >
                        ۰۳،۰۰ المدة الزمنية 
                     </span>
@@ -2480,24 +2621,24 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               </div>
             </li>
             <li
-              class="c42 c43"
+              class="c45 c46"
               data-e2e="onDemand"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="c44"
+                class="c47"
               >
                 <div
-                  class="c45"
+                  class="c48"
                 >
                   <span
-                    class="c46"
+                    class="c49"
                     dir="rtl"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c47"
+                      class="c50"
                       focusable="false"
                       height="13"
                       viewBox="0 0 13 13"
@@ -2513,11 +2654,11 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   </span>
                   <span
                     aria-hidden="true"
-                    class="c48"
+                    class="c51"
                     dir="rtl"
                   >
                     <time
-                      class="c27"
+                      class="c20"
                       datetime="2020-03-26"
                     >
                       ۰۲:۳۰
@@ -2526,16 +2667,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 </div>
               </div>
               <div
-                class="c49"
+                class="c52"
               >
                 <div
-                  class="c50"
+                  class="c53"
                 >
                   <h3
-                    class="c51"
+                    class="c54"
                   >
                     <a
-                      class="c52"
+                      class="c55"
                       href="/persian/bbc_dari_radio/w3csz8fk"
                     >
                       <span
@@ -2544,14 +2685,14 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                       >
                         چشم انداز بامدادی 2
                         <span
-                          class="c25"
+                          class="c30"
                         >
                           , 
                           ۰۲:۳۰
                           , 
                         </span>
                         <span
-                          class="c53 c54"
+                          class="c56 c57"
                         >
                           ۲۶ مارس ۲۰۲۰
                         </span>
@@ -2559,20 +2700,20 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </a>
                   </h3>
                   <p
-                    class="c55"
+                    class="c58"
                   >
                     تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
                   </p>
                 </div>
                 <div
-                  class="c56"
+                  class="c59"
                 >
                   <span
-                    class="c57"
+                    class="c60"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c58"
+                      class="c61"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
@@ -2587,12 +2728,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </svg>
                   </span>
                   <time
-                    class="c59"
+                    class="c62"
                     datetime="PT29M30S"
                     dir="rtl"
                   >
                     <span
-                      class="c25"
+                      class="c30"
                     >
                        ۲۹،۳۰ المدة الزمنية 
                     </span>
@@ -2607,24 +2748,24 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               </div>
             </li>
             <li
-              class="c42 c43"
+              class="c45 c46"
               data-e2e="onDemand"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="c44"
+                class="c47"
               >
                 <div
-                  class="c45"
+                  class="c48"
                 >
                   <span
-                    class="c46"
+                    class="c49"
                     dir="rtl"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c47"
+                      class="c50"
                       focusable="false"
                       height="13"
                       viewBox="0 0 13 13"
@@ -2640,11 +2781,11 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   </span>
                   <span
                     aria-hidden="true"
-                    class="c48"
+                    class="c51"
                     dir="rtl"
                   >
                     <time
-                      class="c27"
+                      class="c20"
                       datetime="2020-03-26"
                     >
                       ۰۱:۳۰
@@ -2653,16 +2794,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 </div>
               </div>
               <div
-                class="c49"
+                class="c52"
               >
                 <div
-                  class="c50"
+                  class="c53"
                 >
                   <h3
-                    class="c51"
+                    class="c54"
                   >
                     <a
-                      class="c52"
+                      class="c55"
                       href="/persian/bbc_dari_radio/w3csz7tn"
                     >
                       <span
@@ -2671,14 +2812,14 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                       >
                         چشم انداز بامدادی 1
                         <span
-                          class="c25"
+                          class="c30"
                         >
                           , 
                           ۰۱:۳۰
                           , 
                         </span>
                         <span
-                          class="c53 c54"
+                          class="c56 c57"
                         >
                           ۲۶ مارس ۲۰۲۰
                         </span>
@@ -2686,20 +2827,20 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </a>
                   </h3>
                   <p
-                    class="c55"
+                    class="c58"
                   >
                     تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
                   </p>
                 </div>
                 <div
-                  class="c56"
+                  class="c59"
                 >
                   <span
-                    class="c57"
+                    class="c60"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c58"
+                      class="c61"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
@@ -2714,12 +2855,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </svg>
                   </span>
                   <time
-                    class="c59"
+                    class="c62"
                     datetime="PT29M30S"
                     dir="rtl"
                   >
                     <span
-                      class="c25"
+                      class="c30"
                     >
                        ۲۹،۳۰ المدة الزمنية 
                     </span>
@@ -2734,24 +2875,24 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               </div>
             </li>
             <li
-              class="c42 c43"
+              class="c45 c46"
               data-e2e="next"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="c44"
+                class="c47"
               >
                 <div
-                  class="c45"
+                  class="c48"
                 >
                   <span
-                    class="c46"
+                    class="c49"
                     dir="rtl"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c47"
+                      class="c50"
                       focusable="false"
                       height="13"
                       viewBox="0 0 13 13"
@@ -2767,11 +2908,11 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   </span>
                   <span
                     aria-hidden="true"
-                    class="c48"
+                    class="c51"
                     dir="rtl"
                   >
                     <time
-                      class="c27"
+                      class="c20"
                       datetime="2030-01-01"
                     >
                       ۰۹:۰۰
@@ -2780,54 +2921,54 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 </div>
               </div>
               <div
-                class="c49"
+                class="c52"
               >
                 <div
-                  class="c50"
+                  class="c53"
                 >
                   <h3
-                    class="c60"
+                    class="c63"
                   >
                     <span
                       class=""
                       role="text"
                     >
                       <span
-                        class="c61"
+                        class="c64"
                         dir="rtl"
                       >
                         بعدی 
                       </span>
                       چشم انداز بامدادی 1
                       <span
-                        class="c25"
+                        class="c30"
                       >
                         , 
                         ۰۹:۰۰
                         , 
                       </span>
                       <span
-                        class="c53 c62"
+                        class="c56 c65"
                       >
                         ۱ ژانویه ۲۰۳۰
                       </span>
                     </span>
                   </h3>
                   <p
-                    class="c55"
+                    class="c58"
                   >
                     تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
                   </p>
                 </div>
                 <div
-                  class="c63"
+                  class="c66"
                 >
                   <span
-                    class="c64"
+                    class="c67"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c58"
+                      class="c61"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
@@ -2842,12 +2983,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </svg>
                   </span>
                   <time
-                    class="c59"
+                    class="c62"
                     datetime="PT26M30S"
                     dir="rtl"
                   >
                     <span
-                      class="c25"
+                      class="c30"
                     >
                        ۲۶،۳۰ المدة الزمنية 
                     </span>
@@ -2870,7 +3011,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
         role="region"
       >
         <div
-          class="c3"
+          class="c21"
         >
           <div
             class="c4"
@@ -2896,27 +3037,28 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
           </h2>
         </div>
         <ul
-          class="c9 c10"
+          class="c22 c23"
           dir="rtl"
           role="list"
         >
           <li
-            class="c11 c12"
+            class="c24 c25"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c13"
+              class="c10"
+              data-e2e="story-promo"
             >
               <div
-                class="c14"
+                class="c11"
                 dir="rtl"
               >
                 <div
-                  class="c15"
+                  class="c12"
                 >
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -2927,31 +3069,31 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </div>
                   </div>
                   <div
-                    class="c17"
+                    class="c15"
                   />
                 </div>
               </div>
               <div
-                class="c22"
+                class="c16"
                 dir="rtl"
               >
                 <h3
-                  class="c23"
+                  class="c17"
                 >
                   <a
-                    class="c24"
+                    class="c18"
                     href="/persian/afghanistan-52722865"
                   >
                     پشت پرده توافق غنی و عبدالله؛ مارشال شدن دوستم و ماجراهای دیگر
                   </a>
                 </h3>
                 <p
-                  class="c26"
+                  class="c19"
                 >
                   چانه‌زنی برای دست‌یابی به یک توافق سیاسی بین اشرف غنی، رئیس جمهوری و عبدالله عبدالله که همزمان با او اعلام ریاست جمهوری کرده بود، از اوایل اسفند/حوت سال گذشته خورشیدی آغاز شد و حدود سه ماه زمان گرفت. مذاکراتی که پشت درهای بسته برگزار می‌شد به قول منابعی که با آنها صحبت کرده‌ام بارها به بن‌بست رسید و جلسات بارها با عصبانیت یکی از دو طرف مذاکره بی‌نتیجه پایان یافت.
                 </p>
                 <time
-                  class="c27"
+                  class="c20"
                   datetime="2020-05-20"
                 >
                   ۳۱ اردیبهشت ۱۳۹۹ - ۲۰ مه ۲۰۲۰
@@ -2960,22 +3102,23 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="c11 c28"
+            class="c24 c31"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c29"
+              class="c32"
+              data-e2e="story-promo"
             >
               <div
-                class="c30"
+                class="c33"
                 dir="rtl"
               >
                 <div
-                  class="c15"
+                  class="c12"
                 >
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -2986,31 +3129,31 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </div>
                   </div>
                   <div
-                    class="c31"
+                    class="c34"
                   />
                 </div>
               </div>
               <div
-                class="c32"
+                class="c35"
                 dir="rtl"
               >
                 <h3
-                  class="c33"
+                  class="c36"
                 >
                   <a
-                    class="c24"
+                    class="c18"
                     href="/persian/afghanistan-52697976"
                   >
                     کرونا گردشگران را در افغانستان زمین‌گیر کرد
                   </a>
                 </h3>
                 <p
-                  class="c34"
+                  class="c37"
                 >
                   شیوع ویروس کرونا در افغانستان گردشگری را در این کشور با رکود مواجه کرده و اماکن توریستی از شرق تا غرب و از شمال تا جنوب بر روی گردشگران بسته شده است. از صنعت توریزم که هم دولت نفع می‌برد و هم مردم، حالا با رکود بی‌سابقه مواجه شده است.
                 </p>
                 <time
-                  class="c27"
+                  class="c20"
                   datetime="2020-05-19"
                 >
                   ۳۰ اردیبهشت ۱۳۹۹ - ۱۹ مه ۲۰۲۰
@@ -3019,22 +3162,23 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="c11 c28"
+            class="c24 c31"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c29"
+              class="c32"
+              data-e2e="story-promo"
             >
               <div
-                class="c30"
+                class="c33"
                 dir="rtl"
               >
                 <div
-                  class="c15"
+                  class="c12"
                 >
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -3045,31 +3189,31 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </div>
                   </div>
                   <div
-                    class="c31"
+                    class="c34"
                   />
                 </div>
               </div>
               <div
-                class="c32"
+                class="c35"
                 dir="rtl"
               >
                 <h3
-                  class="c33"
+                  class="c36"
                 >
                   <a
-                    class="c24"
+                    class="c18"
                     href="/persian/blog-viewpoints-52616632"
                   >
                     ناظران می‌گویند؛ توافقنامه غنی و عبدالله؛ آخرین میخ بر تابوت دموکراسی افغانستان؟
                   </a>
                 </h3>
                 <p
-                  class="c34"
+                  class="c37"
                 >
                   سانگه صدیقی، فعال سیاسی و مدنی در مطلبی برای صفحه ناظران بی‌بی‌سی فارسی به توافق‌نامه بین محمد اشرف غنی و عبدالله پرداخته است و آن را "زوال دموکراسی" خوانده است.
                 </p>
                 <time
-                  class="c27"
+                  class="c20"
                   datetime="2020-05-18"
                 >
                   ۲۹ اردیبهشت ۱۳۹۹ - ۱۸ مه ۲۰۲۰
@@ -3078,22 +3222,23 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="c11 c28"
+            class="c24 c31"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c29"
+              class="c32"
+              data-e2e="story-promo"
             >
               <div
-                class="c30"
+                class="c33"
                 dir="rtl"
               >
                 <div
-                  class="c15"
+                  class="c12"
                 >
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -3104,31 +3249,31 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </div>
                   </div>
                   <div
-                    class="c31"
+                    class="c34"
                   />
                 </div>
               </div>
               <div
-                class="c32"
+                class="c35"
                 dir="rtl"
               >
                 <h3
-                  class="c33"
+                  class="c36"
                 >
                   <a
-                    class="c24"
+                    class="c18"
                     href="/persian/afghanistan-52700014"
                   >
                     توافق‌نامه غنی و عبدالله؛ اختلاف چه بود و چگونه حل شد؟
                   </a>
                 </h3>
                 <p
-                  class="c34"
+                  class="c37"
                 >
                   محمد اشرف غنی، رئیس جمهور افغانستان موافقت‌نامه‌ای با عبدالله عبدالله، رئیس اجرایی پیشین امضا کرده است. با امضای این موافقت‌نامه میان دو رقیب سیاسی، جنجال پس از اعلام نتیجه انتخابات اخیر افغانستان پس از نزدیک به پنج ماه پایان یافت. اختلاف بین این دو رهبر چه بود و چگونه حل شد؟
                 </p>
                 <time
-                  class="c27"
+                  class="c20"
                   datetime="2020-05-17"
                 >
                   ۲۸ اردیبهشت ۱۳۹۹ - ۱۷ مه ۲۰۲۰
@@ -3137,22 +3282,23 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="c11 c28"
+            class="c24 c31"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c29"
+              class="c32"
+              data-e2e="story-promo"
             >
               <div
-                class="c30"
+                class="c33"
                 dir="rtl"
               >
                 <div
-                  class="c15"
+                  class="c12"
                 >
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -3163,31 +3309,31 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </div>
                   </div>
                   <div
-                    class="c31"
+                    class="c34"
                   />
                 </div>
               </div>
               <div
-                class="c32"
+                class="c35"
                 dir="rtl"
               >
                 <h3
-                  class="c33"
+                  class="c36"
                 >
                   <a
-                    class="c24"
+                    class="c18"
                     href="/persian/blog-viewpoints-52692067"
                   >
                     'آرمان ایران، داشتن نفوذ شبیه عراق در افغانستان نیست'
                   </a>
                 </h3>
                 <p
-                  class="c34"
+                  class="c37"
                 >
                   نویسنده در این یادداشت که برای صفحه ناظران فرستاده، می‌گوید که "آرمان ایران، داشتنِ نفوذ شبیه به عراق در افغانستان نیست" اما دارای منافع در افغانستان است از جمله صادرات و روابط تجاری و گاهی دشمن مشترک مانند داعش.
                 </p>
                 <time
-                  class="c27"
+                  class="c20"
                   datetime="2020-05-16"
                 >
                   ۲۷ اردیبهشت ۱۳۹۹ - ۱۶ مه ۲۰۲۰
@@ -3199,12 +3345,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
       </section>
       <section
         aria-labelledby="Most-Read"
-        class="c65"
+        class="c68"
         data-e2e="most-read"
         role="region"
       >
         <div
-          class="c3 c66"
+          class="c21 c69"
         >
           <div
             class="c4"
@@ -3230,43 +3376,43 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
           </h2>
         </div>
         <ol
-          class="c10 c67"
+          class="c23 c70"
           dir="rtl"
           role="list"
         >
           <li
-            class="c68 c69"
+            class="c71 c72"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c70"
+              class="c73"
             >
               <div
-                class="c71"
+                class="c74"
                 dir="rtl"
               >
                 <span
-                  class="c72"
+                  class="c75"
                 >
                   ۱
                 </span>
               </div>
               <div
-                class="c73"
+                class="c76"
                 dir="rtl"
               >
                 <a
-                  class="c74"
+                  class="c77"
                   href="/persian/world-50317704"
                 >
                   توافق با جدایی‌طلبان یمن؛ ایران اعتراض کرد، سازمان ملل استقبال
                 </a>
                 <div
-                  class="c75"
+                  class="c78"
                 >
                   <time
-                    class="c27"
+                    class="c20"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -3276,38 +3422,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="c68 c69"
+            class="c71 c72"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c70"
+              class="c73"
             >
               <div
-                class="c76"
+                class="c79"
                 dir="rtl"
               >
                 <span
-                  class="c72"
+                  class="c75"
                 >
                   ۲
                 </span>
               </div>
               <div
-                class="c73"
+                class="c76"
                 dir="rtl"
               >
                 <a
-                  class="c74"
+                  class="c77"
                   href="/persian/iran-50319870"
                 >
                   فراخوان آذری جهرمی برای مناظره اینستاگرامی - زرآبادی: در مجلس مناظره کنیم
                 </a>
                 <div
-                  class="c75"
+                  class="c78"
                 >
                   <time
-                    class="c27"
+                    class="c20"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -3317,38 +3463,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="c68 c69"
+            class="c71 c72"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c70"
+              class="c73"
             >
               <div
-                class="c71"
+                class="c74"
                 dir="rtl"
               >
                 <span
-                  class="c72"
+                  class="c75"
                 >
                   ۳
                 </span>
               </div>
               <div
-                class="c73"
+                class="c76"
                 dir="rtl"
               >
                 <a
-                  class="c74"
+                  class="c77"
                   href="/persian/world-50320610"
                 >
                   ترکیه: همسر ابوبکر بغدادی را 'دستگیر کردیم'
                 </a>
                 <div
-                  class="c75"
+                  class="c78"
                 >
                   <time
-                    class="c27"
+                    class="c20"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -3358,38 +3504,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="c68 c69"
+            class="c71 c72"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c70"
+              class="c73"
             >
               <div
-                class="c76"
+                class="c79"
                 dir="rtl"
               >
                 <span
-                  class="c72"
+                  class="c75"
                 >
                   ۴
                 </span>
               </div>
               <div
-                class="c73"
+                class="c76"
                 dir="rtl"
               >
                 <a
-                  class="c74"
+                  class="c77"
                   href="/persian/world-50316456"
                 >
                   غنی سازی مجدد در فردو: مکرون اقدام ایران را 'عمیقا مایه نگرانی' خواند
                 </a>
                 <div
-                  class="c75"
+                  class="c78"
                 >
                   <time
-                    class="c27"
+                    class="c20"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -3399,38 +3545,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="c68 c69"
+            class="c71 c72"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c70"
+              class="c73"
             >
               <div
-                class="c71"
+                class="c74"
                 dir="rtl"
               >
                 <span
-                  class="c72"
+                  class="c75"
                 >
                   ۵
                 </span>
               </div>
               <div
-                class="c73"
+                class="c76"
                 dir="rtl"
               >
                 <a
-                  class="c74"
+                  class="c77"
                   href="/persian/magazine-50249226"
                 >
                   دوازده دلیل حکمرانی حشرات: سوسک می‌تواند دو هفته بدون سر زنده بماند
                 </a>
                 <div
-                  class="c75"
+                  class="c78"
                 >
                   <time
-                    class="c27"
+                    class="c20"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -3440,38 +3586,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="c68 c69"
+            class="c71 c72"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c70"
+              class="c73"
             >
               <div
-                class="c77"
+                class="c80"
                 dir="rtl"
               >
                 <span
-                  class="c72"
+                  class="c75"
                 >
                   ۶
                 </span>
               </div>
               <div
-                class="c73"
+                class="c76"
                 dir="rtl"
               >
                 <a
-                  class="c74"
+                  class="c77"
                   href="/persian/world-50317700"
                 >
                   انتخابات ایالتی آمریکا؛ دموکرات‌ها از جمهوری‌خواهان پیش افتادند
                 </a>
                 <div
-                  class="c75"
+                  class="c78"
                 >
                   <time
-                    class="c27"
+                    class="c20"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -3481,38 +3627,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="c68 c69"
+            class="c71 c72"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c70"
+              class="c73"
             >
               <div
-                class="c78"
+                class="c81"
                 dir="rtl"
               >
                 <span
-                  class="c72"
+                  class="c75"
                 >
                   ۷
                 </span>
               </div>
               <div
-                class="c73"
+                class="c76"
                 dir="rtl"
               >
                 <a
-                  class="c74"
+                  class="c77"
                   href="/persian/sport-50322486"
                 >
                   عراق اردن را به عنوان میزبان بازی با ایران معرفی کرد
                 </a>
                 <div
-                  class="c75"
+                  class="c78"
                 >
                   <time
-                    class="c27"
+                    class="c20"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -3522,38 +3668,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="c68 c69"
+            class="c71 c72"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c70"
+              class="c73"
             >
               <div
-                class="c77"
+                class="c80"
                 dir="rtl"
               >
                 <span
-                  class="c72"
+                  class="c75"
                 >
                   ۸
                 </span>
               </div>
               <div
-                class="c73"
+                class="c76"
                 dir="rtl"
               >
                 <a
-                  class="c74"
+                  class="c77"
                   href="/persian/iran-features-50310665"
                 >
                   آیا تهران بازی هسته ای را به هم می‌زند؟
                 </a>
                 <div
-                  class="c75"
+                  class="c78"
                 >
                   <time
-                    class="c27"
+                    class="c20"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -3563,38 +3709,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="c68 c69"
+            class="c71 c72"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c70"
+              class="c73"
             >
               <div
-                class="c78"
+                class="c81"
                 dir="rtl"
               >
                 <span
-                  class="c72"
+                  class="c75"
                 >
                   ۹
                 </span>
               </div>
               <div
-                class="c73"
+                class="c76"
                 dir="rtl"
               >
                 <a
-                  class="c74"
+                  class="c77"
                   href="/persian/world-50316450"
                 >
                   آمریکا: دو ایرانی اتهام جمع‌آوری اطلاعات علیه سازمان مجاهدین در خاک آمریکا را پذیرفتند
                 </a>
                 <div
-                  class="c75"
+                  class="c78"
                 >
                   <time
-                    class="c27"
+                    class="c20"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -3604,38 +3750,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="c68 c69"
+            class="c71 c72"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="c70"
+              class="c73"
             >
               <div
-                class="c77"
+                class="c80"
                 dir="rtl"
               >
                 <span
-                  class="c72"
+                  class="c75"
                 >
                   ۱۰
                 </span>
               </div>
               <div
-                class="c73"
+                class="c76"
                 dir="rtl"
               >
                 <a
-                  class="c74"
+                  class="c77"
                   href="/persian/sport-50318030"
                 >
                   فوتبال ایران و عراق؛ ایران: امن است بازی می‌کنیم، فیفا: ناامن است بازی نکنید
                 </a>
                 <div
-                  class="c75"
+                  class="c78"
                 >
                   <time
-                    class="c27"
+                    class="c20"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -3679,7 +3825,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   font-style: normal;
 }
 
-.c7 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3689,19 +3835,38 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   flex-direction: column;
 }
 
-.c6 {
+.c27 {
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6:focus,
-.c6:hover {
+.c27:focus,
+.c27:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c31 {
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3721,25 +3886,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 .c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c9 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3758,7 +3904,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   align-items: center;
 }
 
-.c10 {
+.c29 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3789,6 +3935,21 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   z-index: 0;
   color: #3F3F42;
   margin-top: 2rem;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.c26 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
 }
 
 .c5 {
@@ -3796,7 +3957,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   padding: 0;
 }
 
-.c34 {
+.c11 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -3804,65 +3965,65 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   width: 100%;
 }
 
-.c27 {
+.c41 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c21 {
+.c38 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 100%;
 }
 
-.c35 {
+.c16 {
   display: inline-block;
   vertical-align: top;
 }
 
-.c29 {
+.c43 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c16 {
+.c35 {
   display: inline-block;
   vertical-align: top;
   width: 100%;
 }
 
-.c33 {
+.c10 {
   position: relative;
 }
 
-.c26 {
+.c40 {
+  position: relative;
+}
+
+.c34 {
+  position: relative;
+}
+
+.c12 {
   position: relative;
 }
 
 .c15 {
-  position: relative;
-}
-
-.c22 {
-  position: relative;
-}
-
-.c24 {
   position: absolute;
   bottom: 0;
 }
 
-.c24 > * {
+.c15 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c28 > * {
+.c42 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
@@ -3889,29 +4050,47 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   padding-bottom: 0.5rem;
 }
 
-.c13 {
+.c22 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c32 {
   padding: 0.5rem 0 1rem;
 }
 
-.c13:last-child {
+.c32:last-child {
   border: none;
 }
 
-.c13:first-child {
+.c32:first-child {
   padding-top: 0;
 }
 
-.c13:last-child {
+.c32:last-child {
   padding-bottom: 0;
 }
 
-.c11 {
+.c30 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c23 {
+.c14 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
+.c13 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -3924,7 +4103,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c38 {
+.c46 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -3935,6 +4114,47 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   padding-bottom: 56.187290969899664%;
   width: 100%;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c21 {
+  position: relative;
+  z-index: 2;
+  padding: 1rem 0 0;
+}
+
+.c23 {
+  border-top: 1px solid #F2F2F2;
+  padding: 0.5rem 0;
+}
+
+.c25 {
+  display: inline;
+  vertical-align: middle;
+}
+
+.c24 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c24:hover,
+.c24:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c24:visited {
+  color: #6E6E73;
+}
+
+.c24 svg {
+  margin: 0;
 }
 
 .c2 {
@@ -3949,19 +4169,8 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-}
-
-.c30 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .c36 {
@@ -3971,8 +4180,19 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+}
+
+.c44 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c18 {
@@ -4071,14 +4291,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @supports (display:grid) {
-  .c12 {
+  .c31 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c32 {
+  .c45 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -4087,7 +4307,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c32 {
+  .c45 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -4096,7 +4316,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c32 {
+  .c45 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -4105,7 +4325,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c32 {
+  .c45 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -4114,7 +4334,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c32 {
+  .c45 {
     width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -4123,7 +4343,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:80rem) {
-  .c32 {
+  .c45 {
     width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -4132,13 +4352,13 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @supports (display:grid) {
-  .c32 {
+  .c45 {
     display: block;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c25 {
+  .c39 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -4147,7 +4367,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c25 {
+  .c39 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -4156,7 +4376,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c25 {
+  .c39 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -4165,7 +4385,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c25 {
+  .c39 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -4174,7 +4394,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c25 {
+  .c39 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -4183,7 +4403,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:80rem) {
-  .c25 {
+  .c39 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -4192,13 +4412,13 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @supports (display:grid) {
-  .c25 {
+  .c39 {
     display: block;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c14 {
+  .c33 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -4207,7 +4427,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c14 {
+  .c33 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -4216,7 +4436,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c14 {
+  .c33 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -4225,7 +4445,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c14 {
+  .c33 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -4234,7 +4454,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c14 {
+  .c33 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -4243,7 +4463,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:80rem) {
-  .c14 {
+  .c33 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -4252,7 +4472,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @supports (display:grid) {
-  .c14 {
+  .c33 {
     display: block;
   }
 }
@@ -4272,7 +4492,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c7 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -4281,7 +4501,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c28 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -4290,47 +4510,47 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c8 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c8 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c8 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c8 {
     padding-right: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c29 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c29 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c29 {
     margin: 0;
   }
 }
@@ -4363,54 +4583,66 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:37.5rem) {
-  .c34 {
+  .c26 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c26 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
     width: calc(50% - 0.5rem);
     margin-bottom: 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c34 {
+  .c11 {
     width: calc(50% - 0.5rem);
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c34 {
+  .c11 {
     width: initial;
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) {
-  .c27 {
+  .c41 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c27 {
+  .c41 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c21 {
+  .c38 {
     padding-left: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width:63rem) {
-  .c21 {
+  .c38 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c21 {
+  .c38 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6,1fr);
@@ -4419,20 +4651,20 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:37.5rem) {
-  .c35 {
+  .c16 {
     width: 50%;
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c35 {
+  .c16 {
     width: 50%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c35 {
+  .c16 {
     display: block;
     width: initial;
     padding: initial;
@@ -4441,13 +4673,13 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:37.5rem) {
-  .c29 {
+  .c43 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c29 {
+  .c43 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -4455,7 +4687,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c29 {
+  .c43 {
     display: block;
     width: initial;
     padding: initial;
@@ -4464,20 +4696,20 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c35 {
     padding-right: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width:63rem) {
-  .c16 {
+  .c35 {
     width: 33.33%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c16 {
+  .c35 {
     display: block;
     width: initial;
     padding: initial;
@@ -4489,13 +4721,13 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (max-width:62.9375rem) {
-  .c16 >time {
+  .c35 >time {
     padding-bottom: 0.5rem;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c33 {
+  .c10 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -4503,7 +4735,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c26 {
+  .c40 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -4511,7 +4743,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c15 {
+  .c34 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -4519,14 +4751,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width:25rem) {
-  .c28 {
+  .c42 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c28 > * {
+  .c42 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
@@ -4546,14 +4778,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c19 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:63rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c19 {
     display: none;
     visibility: hidden;
@@ -4574,7 +4799,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
+@media (max-width:37.4375rem) {
+  .c37 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:63rem) {
   .c37 {
     display: none;
     visibility: hidden;
@@ -4582,26 +4814,40 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (max-width:62.9375rem) {
-  .c13 {
+  .c32 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c32 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c13 {
+  .c32 {
     padding: 0 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c13:first-child {
+  .c32:first-child {
     padding-top: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c24 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c24 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -4611,45 +4857,57 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 }
 
+@media (min-width:37.5rem) {
+  .c9 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    margin-top: 2rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c17 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c17 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c30 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c30 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c36 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c36 {
+  .c17 {
     font-size: 1.75rem;
     line-height: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c36 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c36 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c44 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c44 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -4673,7 +4931,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
         РУС
       </h1>
       <section
-        aria-labelledby="Verticals"
+        aria-labelledby="Top-story"
         class="c2"
         role="region"
       >
@@ -4686,20 +4944,135 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           <h2
             class="c5"
           >
-            <a
-              aria-labelledby="Verticals"
+            <span
               class="c6"
-              href="http://www.bbc.com/ukrainian/magazine_russian"
             >
               <span
                 class="c7"
               >
                 <span
                   class="c8"
+                  dir="ltr"
+                  id="Top-story"
+                >
+                  Головне
+                </span>
+              </span>
+            </span>
+          </h2>
+        </div>
+        <div
+          class="c9"
+        >
+          <div
+            class="c10"
+            data-e2e="story-promo"
+          >
+            <div
+              class="c11"
+              dir="ltr"
+            >
+              <div
+                class="c12"
+              >
+                <div
+                  class="c13"
+                >
+                  <img
+                    alt="трамвай"
+                    class="c14"
+                    sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/1667D/production/_112337719_gettyimages-1210623351.jpg"
+                    srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/1667D/production/_112337719_gettyimages-1210623351.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/1667D/production/_112337719_gettyimages-1210623351.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/1667D/production/_112337719_gettyimages-1210623351.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/1667D/production/_112337719_gettyimages-1210623351.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/1667D/production/_112337719_gettyimages-1210623351.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1667D/production/_112337719_gettyimages-1210623351.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/1667D/production/_112337719_gettyimages-1210623351.jpg 660w"
+                    width="976"
+                  />
+                </div>
+                <div
+                  class="c15"
+                />
+              </div>
+            </div>
+            <div
+              class="c16"
+              dir="ltr"
+            >
+              <h3
+                class="c17"
+              >
+                <a
+                  class="c18"
+                  href="/ukrainian/news-russian-52721557"
+                >
+                  Правительство запустит общественный транспорт. Но не во всех областях
+                </a>
+              </h3>
+              <p
+                class="c19"
+              >
+                Президент призывает дать людям возможность добираться на работу. В то же время Минздрав говорит, что ситуация в восьми регионах не позволяет запускать там транспорт.
+              </p>
+              <time
+                class="c20"
+                datetime="2020-05-19"
+              >
+                19 мая 2020
+              </time>
+              <div
+                class="c21"
+                data-e2e="index-alsos"
+              >
+                <h4
+                  class="c22"
+                >
+                  Новости по теме
+                </h4>
+                <div
+                  class="c23"
+                >
+                  <a
+                    class="c24"
+                    href="/ukrainian/features-russian-52633464"
+                  >
+                    <span
+                      class="c25"
+                    >
+                      Как Минск стал спасительным хабом для застрявших за рубежом украинцев
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        aria-labelledby="Verticals"
+        class="c2"
+        role="region"
+      >
+        <div
+          class="c26"
+        >
+          <div
+            class="c4"
+          />
+          <h2
+            class="c5"
+          >
+            <a
+              aria-labelledby="Verticals"
+              class="c27"
+              href="http://www.bbc.com/ukrainian/magazine_russian"
+            >
+              <span
+                class="c6"
+              >
+                <span
+                  class="c28"
                   role="text"
                 >
                   <span
-                    class="c9"
+                    class="c8"
                     dir="ltr"
                     id="Verticals"
                   >
@@ -4707,7 +5080,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </span>
                   <span
                     aria-hidden="true"
-                    class="c10"
+                    class="c29"
                     dir="ltr"
                   >
                     Посмотреть все
@@ -4718,24 +5091,25 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </h2>
         </div>
         <ul
-          class="c11 c12"
+          class="c30 c31"
           dir="ltr"
           role="list"
         >
           <li
-            class="c13 c14"
+            class="c32 c33"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c15"
+              class="c34"
+              data-e2e="story-promo"
             >
               <div
-                class="c16"
+                class="c35"
                 dir="ltr"
               >
                 <h3
-                  class="c17"
+                  class="c36"
                 >
                   <a
                     class="c18"
@@ -4745,7 +5119,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   Как справиться со скукой и стрессом во время карантина? Для кого-то лучшим "помощником" стал алкоголь.
                 </p>
@@ -4757,14 +5131,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 </time>
               </div>
               <div
-                class="c21"
+                class="c38"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -4775,29 +5149,30 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c24"
+                    class="c15"
                   />
                 </div>
               </div>
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -4808,16 +5183,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -4827,7 +5202,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   Личность человека не остается одинаковой на протяжении всей жизни, как считали ранее. Недавно исследователи выяснили - наш характер с возрастом улучшается.
                 </p>
@@ -4848,7 +5223,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
         role="region"
       >
         <div
-          class="c3"
+          class="c26"
         >
           <div
             class="c4"
@@ -4857,13 +5232,13 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             class="c5"
           >
             <span
-              class="c7"
+              class="c6"
             >
               <span
-                class="c31"
+                class="c7"
               >
                 <span
-                  class="c9"
+                  class="c8"
                   dir="ltr"
                   id="Also-in-the-news"
                 >
@@ -4874,24 +5249,25 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </h2>
         </div>
         <ul
-          class="c11 c12"
+          class="c30 c31"
           dir="ltr"
           role="list"
         >
           <li
-            class="c13 c14"
+            class="c32 c33"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c15"
+              class="c34"
+              data-e2e="story-promo"
             >
               <div
-                class="c16"
+                class="c35"
                 dir="ltr"
               >
                 <h3
-                  class="c17"
+                  class="c36"
                 >
                   <a
                     class="c18"
@@ -4901,7 +5277,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   На украинском сайте компании уже доступен перечень товаров и цены. С сегодняшнего дня можно делать заказы.
                 </p>
@@ -4913,14 +5289,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 </time>
               </div>
               <div
-                class="c21"
+                class="c38"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -4931,29 +5307,30 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c24"
+                    class="c15"
                   />
                 </div>
               </div>
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -4964,16 +5341,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -4983,7 +5360,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   Семья Робертсонов 38 дней дрейфовала в открытом океане, после того как их маленькую яхту перевернула и потопила косатка.
                 </p>
@@ -4997,22 +5374,23 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -5023,16 +5401,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -5042,7 +5420,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   Многие украинцы из-за пандемии оказались заблокированными далеко за границей: из-за закрытия украинского неба добраться домой им очень сложно.
                 </p>
@@ -5056,22 +5434,23 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -5082,16 +5461,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -5101,7 +5480,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   Мэр Киева Виталий Кличко заявил, что наземный транспорт в столице начнет восстанавливать нормальную работу с 22 мая, а об открытии метро с 25 мая он будет просить правительство. Все из-за транспортного коллапса.
                 </p>
@@ -5115,22 +5494,23 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -5141,16 +5521,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -5160,7 +5540,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   Власти Швейцарии заявили, что бабушки и дедушки могут обнимать своих внуков в возрасте до 10 лет.
                 </p>
@@ -5174,22 +5554,23 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -5200,16 +5581,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -5219,7 +5600,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   Могла ли эпидемия Covid-19 произойти из-за утечки вируса?
                 </p>
@@ -5233,22 +5614,23 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -5259,16 +5641,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -5278,7 +5660,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   Кабинет министров отрабатывает возможность открыть рынки в стране на этой неделе.
                 </p>
@@ -5292,22 +5674,23 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -5318,16 +5701,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -5337,7 +5720,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   Что можете сделать именно вы, чтобы остановить распространение неправдивой информации?
                 </p>
@@ -5351,22 +5734,23 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -5377,16 +5761,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -5396,7 +5780,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   Почему один за другим в Украине происходят эти явления, с чем они связаны и когда закончатся?
                 </p>
@@ -5410,22 +5794,23 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -5436,16 +5821,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -5455,7 +5840,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   Коронавирус распространился уже почти во всем мире. Так какие симптомы имеет эта болезнь и как от нее защититься?
                 </p>
@@ -5476,7 +5861,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
         role="region"
       >
         <div
-          class="c3"
+          class="c26"
         >
           <div
             class="c4"
@@ -5486,18 +5871,18 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           >
             <a
               aria-labelledby="Picture-galleries"
-              class="c6"
+              class="c27"
               href="http://www.bbc.com/ukrainian/russian/media/photogalleries"
             >
               <span
-                class="c7"
+                class="c6"
               >
                 <span
-                  class="c8"
+                  class="c28"
                   role="text"
                 >
                   <span
-                    class="c9"
+                    class="c8"
                     dir="ltr"
                     id="Picture-galleries"
                   >
@@ -5505,7 +5890,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </span>
                   <span
                     aria-hidden="true"
-                    class="c10"
+                    class="c29"
                     dir="ltr"
                   >
                     Посмотреть все
@@ -5516,27 +5901,28 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </h2>
         </div>
         <ul
-          class="c11 c12"
+          class="c30 c31"
           dir="ltr"
           role="list"
         >
           <li
-            class="c13 c32"
+            class="c32 c45"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c33"
+              class="c10"
+              data-e2e="story-promo"
             >
               <div
-                class="c34"
+                class="c11"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -5547,16 +5933,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c24"
+                    class="c15"
                   />
                 </div>
               </div>
               <div
-                class="c35"
+                class="c16"
                 dir="ltr"
               >
                 <h3
-                  class="c36"
+                  class="c17"
                 >
                   <a
                     class="c18"
@@ -5566,7 +5952,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c37"
+                  class="c19"
                 >
                   Завоевать доверие животного - дело непростое, но результат того стоит, считает фотограф.
                 </p>
@@ -5580,22 +5966,23 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c38"
+                    class="c46"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -5606,16 +5993,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -5625,7 +6012,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   .
                 </p>
@@ -5639,22 +6026,23 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -5665,16 +6053,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -5684,7 +6072,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   .
                 </p>
@@ -5698,22 +6086,23 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -5724,16 +6113,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -5743,7 +6132,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   В школу четырехлетнюю принцессу повели ее родители - принц Уильям и герцогиня Кейт, а также старший брат Джордж.
                 </p>
@@ -5757,22 +6146,23 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -5783,16 +6173,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -5802,7 +6192,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   Задолго до того, как коты завоевали интернет, Уолтер Чандоха пленил мир своими фото. Он фотографировал пушистых моделей в течение 70 лет.
                 </p>
@@ -5823,7 +6213,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
         role="region"
       >
         <div
-          class="c3"
+          class="c26"
         >
           <div
             class="c4"
@@ -5832,13 +6222,13 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             class="c5"
           >
             <span
-              class="c7"
+              class="c6"
             >
               <span
-                class="c31"
+                class="c7"
               >
                 <span
-                  class="c9"
+                  class="c8"
                   dir="ltr"
                   id="Features"
                 >
@@ -5849,24 +6239,25 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </h2>
         </div>
         <ul
-          class="c11 c12"
+          class="c30 c31"
           dir="ltr"
           role="list"
         >
           <li
-            class="c13 c14"
+            class="c32 c33"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c15"
+              class="c34"
+              data-e2e="story-promo"
             >
               <div
-                class="c16"
+                class="c35"
                 dir="ltr"
               >
                 <h3
-                  class="c17"
+                  class="c36"
                 >
                   <a
                     class="c18"
@@ -5876,7 +6267,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   Максим Степанов - третий министр, возглавляющий Минздрав во время пандемии коронавируса. В интервью ВВС News Украина он прокомментировал конфликт вокруг закупок лекарств, а также рассказал, когда откроют детсады и когда медиками привезут костюмы из Китая.
                 </p>
@@ -5888,14 +6279,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 </time>
               </div>
               <div
-                class="c21"
+                class="c38"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -5906,29 +6297,30 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c24"
+                    class="c15"
                   />
                 </div>
               </div>
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -5939,16 +6331,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -5958,7 +6350,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   В соцсетях и некоторых СМИ решение немецкого регулятора называют победой, но действительно ли это победа?
                 </p>
@@ -5972,22 +6364,23 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -5998,16 +6391,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -6017,7 +6410,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   Интересно, что тестирование прекратили не из-за их провала - а возможно, как раз наоборот.
                 </p>
@@ -6031,22 +6424,23 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -6057,16 +6451,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -6076,7 +6470,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   Ученые пытаются найти метод лечения Covid-19 или разработать вакцину, которая позволила бы смягчить карантинные меры, включая социальное дистанцирование. Вероятным кандидатом в спасители человечества называют ламу.
                 </p>
@@ -6090,22 +6484,23 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -6116,16 +6511,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -6135,7 +6530,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   Несмотря на то, что карантин, согласно решению правительства, будет действовать в Украине как минимум до 22 мая, ряд ограничений снимут уже с понедельника.
                 </p>
@@ -6149,22 +6544,23 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="c13 c25"
+            class="c32 c39"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="c26"
+              class="c40"
+              data-e2e="story-promo"
             >
               <div
-                class="c27"
+                class="c41"
                 dir="ltr"
               >
                 <div
-                  class="c22"
+                  class="c12"
                 >
                   <div
-                    class="c23"
+                    class="c13"
                   >
                     <div
                       class="lazyload-wrapper"
@@ -6175,16 +6571,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="c28"
+                    class="c42"
                   />
                 </div>
               </div>
               <div
-                class="c29"
+                class="c43"
                 dir="ltr"
               >
                 <h3
-                  class="c30"
+                  class="c44"
                 >
                   <a
                     class="c18"
@@ -6194,7 +6590,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="c19"
+                  class="c37"
                 >
                   Одно из исследований выявило мутацию, которая, по словам ученых, может сделать коронавирус более заразным.
                 </p>

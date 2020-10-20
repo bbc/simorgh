@@ -25,6 +25,7 @@ import { C_GHOST } from '@bbc/psammead-styles/colours';
 
 import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 import { storyItem } from '#models/propTypes/storyItem';
+import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import {
   GridWrapper as LegacyGridWrapper,
@@ -77,7 +78,7 @@ const gridMarginSmall = css`
   }
 `;
 
-const Wrapper = styled(ConstrainedLargeGrid)`
+const StyledConstrainedLargeGrid = styled(ConstrainedLargeGrid)`
   ${gelGridMargin}
   ${gridMarginSmall}
   ${({ columnType }) =>
@@ -149,7 +150,7 @@ const CpsOnwardJourney = ({
   labelId,
   title,
   content,
-  isMapContent,
+  isMediaContent,
   parentColumns,
   promoListComponent,
   promoComponent,
@@ -159,12 +160,19 @@ const CpsOnwardJourney = ({
   columnType,
   skipLink,
 }) => {
-  const a11yAttributes = {
-    as: 'section',
-    role: 'region',
-    'aria-labelledby': labelId,
-  };
   const { script, service, dir } = useContext(ServiceContext);
+  const { pageType } = useContext(RequestContext);
+
+  const isMostWatched = pageType === 'mostWatched';
+  const a11yAttributes = isMostWatched
+    ? {
+        as: 'div',
+      }
+    : { as: 'section', role: 'region', 'aria-labelledby': labelId };
+
+  const Wrapper = isMediaContent
+    ? styled(ConstrainedLargeGrid)`` // Necessary for styling
+    : StyledConstrainedLargeGrid;
   const CpsOnwardJourneyWrapper = ({ children }) =>
     parentColumns ? (
       <Wrapper
@@ -172,6 +180,7 @@ const CpsOnwardJourney = ({
         parentColumns={parentColumns}
         columnType={columnType}
         {...a11yAttributes}
+        isMediaContent={isMediaContent}
       >
         {children}
       </Wrapper>
@@ -223,7 +232,7 @@ const CpsOnwardJourney = ({
             {promoComponent({ promo: singleContent, dir })}
           </SingleContentWrapper>
         ) : (
-          promoListComponent({ promoItems: content, dir, isMapContent })
+          promoListComponent({ promoItems: content, dir, isMediaContent })
         )}
       </OptionallyRenderedSkipWrapper>
     </CpsOnwardJourneyWrapper>
@@ -234,7 +243,7 @@ CpsOnwardJourney.propTypes = {
   labelId: string.isRequired,
   title: string,
   content: arrayOf(shape(storyItem)),
-  isMapContent: bool,
+  isMediaContent: bool,
   parentColumns: shape({
     group0: number,
     group1: number,
@@ -259,7 +268,7 @@ CpsOnwardJourney.propTypes = {
 CpsOnwardJourney.defaultProps = {
   content: [],
   title: '',
-  isMapContent: false,
+  isMediaContent: false,
   parentColumns: null,
   sectionLabelOverrideAs: null,
   sectionLabelBar: true,

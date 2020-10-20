@@ -41,6 +41,7 @@ export const service = {
     datetimeLocale: `tr-tr`,
     service: 'turkce',
     serviceName: 'News Türkçe',
+    languageName: 'Turkish',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcturkce',
     twitterSite: '@bbcturkce',
@@ -238,7 +239,7 @@ export const service = {
           text: 'Çerezler',
         },
         {
-          href: 'https://www.bbc.com/turkce/kurumsal-36767474',
+          href: 'https://www.bbc.co.uk/send/u50853841',
           text: "BBC'yle temas kurun",
         },
         {

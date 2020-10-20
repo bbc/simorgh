@@ -53,7 +53,7 @@ Object {
 exports[`Canonical On Demand Radio Page Footer Link should match text and url 7`] = `
 Object {
   "text": "زموږ سره اړیکي",
-  "url": "https://www.bbc.co.uk/pashto/institutional-37622768",
+  "url": "https://www.bbc.co.uk/send/u50853533",
 }
 `;
 
@@ -143,6 +143,8 @@ exports[`Canonical On Demand Radio Page I can see the episode summary 1`] = `"د
 exports[`Canonical On Demand Radio Page I can see the episode title 1`] = `"۱ می ۲۰۲۰"`;
 
 exports[`Canonical On Demand Radio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png"`;
+
+exports[`Canonical On Demand Radio Page Main heading should match text 1`] = `"ماښامنۍ خپرونه, ۱ می ۲۰۲۰"`;
 
 exports[`Canonical On Demand Radio Page Media Player a11y assistive technology can read the media player title 1`] = `"اډیو پلیئر"`;
 
@@ -241,6 +243,11 @@ Object {
         "height": 576,
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
         "width": 1024,
+      },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "ps",
+        "name": "Pashto",
       },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/pashto/bbc_pashto_radio/w3ct0lz1",

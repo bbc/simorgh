@@ -97,7 +97,7 @@ exports[`AMP On Demand T V Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=68&p=pashto.bbc_pashto_tv.w172xcldhhrdqgb.page&r=%24%7BscreenWidth%7Dx%24%7BscreenHeight%7Dx%24%7BscreenColorDepth%7D&re=%24%7BavailableScreenWidth%7Dx%24%7BavailableScreenHeight%7D&hl=%24%7Btimestamp%7D&lng=%24%7BbrowserLanguage%7D&x1=[urn%3Abbc%3Apips%3Aw13xttn4]&x2=[amp]&x3=[news-pashto]&x4=[ps]&x5=[%24%7BsourceUrl%7D]&x6=[%24%7BdocumentReferrer%7D]&x7=[player-episode]&x8=[simorgh]&x9=[%D9%86%DA%93%DB%8D%2B%D8%AF%D8%A7%2B%D9%88%D8%AE%D8%AA%2B-%2BBBC%2BNews%2B%D9%BE%DA%9A%D8%AA%D9%88]&ref=%24%7BdocumentReferrer%7D",
+    "pageview": "\${base}s=598343&s2=68&p=pashto.bbc_pashto_tv.w172xcldhhrdqgb.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Apips%3Aw13xttn4]&x2=[amp]&x3=[news-pashto]&x4=[ps]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[%D9%86%DA%93%DB%8D%2B%D8%AF%D8%A7%2B%D9%88%D8%AE%D8%AA%2B-%2BBBC%2BNews%2B%D9%BE%DA%9A%D8%AA%D9%88]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -186,7 +186,7 @@ Object {
 exports[`AMP On Demand T V Page Footer Link should match text and url 7`] = `
 Object {
   "text": "زموږ سره اړیکي",
-  "url": "https://www.bbc.co.uk/pashto/institutional-37622768",
+  "url": "https://www.bbc.co.uk/send/u50853533",
 }
 `;
 
@@ -274,6 +274,8 @@ exports[`AMP On Demand T V Page I can see the brand title 1`] = `"نړۍ دا و
 exports[`AMP On Demand T V Page I can see the episode summary 1`] = `"د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."`;
 
 exports[`AMP On Demand T V Page I can see the episode title 1`] = `"۲۷ می ۲۰۲۰"`;
+
+exports[`AMP On Demand T V Page Main heading should match text 1`] = `"نړۍ دا وخت, ۲۷ می ۲۰۲۰"`;
 
 exports[`AMP On Demand T V Page Media Player a11y assistive technology can read the media player title 1`] = `"ویډیو پلیئر"`;
 
@@ -372,6 +374,11 @@ Object {
         "height": 576,
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
         "width": 1024,
+      },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "ps",
+        "name": "Pashto",
       },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/pashto/bbc_pashto_tv/tv_programmes/w13xttn4",

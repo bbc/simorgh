@@ -33,6 +33,7 @@ export const service = {
     datetimeLocale: `vi`,
     service: 'vietnamese',
     serviceName: 'Tiếng Việt',
+    languageName: 'Vietnamese',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcvietnamese',
     twitterSite: '@bbcvietnamese',
@@ -225,7 +226,7 @@ export const service = {
           text: 'Cookie',
         },
         {
-          href: 'https://www.bbc.com/vietnamese/institutional-37623842',
+          href: 'https://www.bbc.co.uk/send/u50853951',
           text: 'Liên hệ BBC',
         },
         {

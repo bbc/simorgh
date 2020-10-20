@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `ha`,
     service: 'hausa',
     serviceName: 'Hausa',
+    languageName: 'Hausa',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbchausa',
     twitterSite: '@bbchausa',
@@ -205,9 +206,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: true,
-      frontPagePosition: 'Verticals',
-      frequenciesPageUrl: '/hausa/institutional/2011/11/000001_mitocinmu',
       frequenciesPageLabel: 'Mitocinmu da sauko da sautin labarai',
       header: 'Shirye-shiryenmu',
       durationLabel: 'Tsawon lokaci %duration%',
@@ -242,7 +240,7 @@ export const service = {
           text: "Ka'idoji",
         },
         {
-          href: 'https://www.bbc.com/hausa/game-da-mu-37377092',
+          href: 'https://www.bbc.co.uk/send/u50853335',
           text: 'Tuntubi BBC',
         },
         {

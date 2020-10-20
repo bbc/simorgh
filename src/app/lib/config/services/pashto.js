@@ -37,6 +37,7 @@ export const service = {
     datetimeLocale: 'ps',
     service: 'pashto',
     serviceName: 'Pashto',
+    languageName: 'Pashto',
     altCalendar: jalaali,
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcpashto',
@@ -209,8 +210,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: true,
-      frontPagePosition: 'Interactivity',
       frequenciesPageUrl: '/pashto/institutional/2012/03/000001_frequencies',
       frequenciesPageLabel: 'راديويي څپې',
       header: 'تازه خبرونه واورئ',
@@ -246,7 +245,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/pashto/institutional-37622768',
+          href: 'https://www.bbc.co.uk/send/u50853533',
           text: 'زموږ سره اړیکي',
         },
         {

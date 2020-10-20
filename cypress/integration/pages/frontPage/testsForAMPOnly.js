@@ -1,3 +1,5 @@
+import runAMPAdsTests from '../../../support/helpers/adsTests/testsForAMPOnly';
+
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRunForAMPOnly = ({ service, pageType }) => {
@@ -10,16 +12,6 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   pageType,
 }) =>
   describe(`Amp Tests for ${service} ${pageType}`, () => {
-    describe('AMP Status', () => {
-      it('should return a 200 response', () => {
-        cy.testResponseCodeAndType(
-          `${Cypress.env('currentPath')}.amp`,
-          200,
-          'text/html',
-        );
-      });
-    });
-
     it('should contain an amp-img', () => {
       cy.get('li')
         .should('be.visible')
@@ -27,6 +19,10 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           cy.get('amp-img').should('be.visible');
         });
     });
+
+    if (Cypress.env('APP_ENV') === 'local') {
+      runAMPAdsTests({ service });
+    }
   });
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.

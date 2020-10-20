@@ -23,6 +23,7 @@ export const service = {
     datetimeLocale: 'ig',
     service: 'igbo',
     serviceName: 'Igbo',
+    languageName: 'Igbo',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
     defaultImageAltText: 'BBC News Ìgbò',
     dir: 'ltr',
@@ -253,7 +254,7 @@ export const service = {
           text: 'Kuki',
         },
         {
-          href: 'https://www.bbc.com/igbo/institutional-43090448',
+          href: 'https://www.bbc.co.uk/send/u50853379',
           text: 'Kpọtụrụ BBC',
         },
         {

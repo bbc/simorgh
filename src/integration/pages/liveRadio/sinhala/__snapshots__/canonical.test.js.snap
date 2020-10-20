@@ -46,7 +46,7 @@ Object {
 exports[`Canonical Sinhala Live Radio Page Footer Link should match text and url 6`] = `
 Object {
   "text": "බීබීසී අමතන්න",
-  "url": "https://www.bbc.com/sinhala/institutional-36019593",
+  "url": "https://www.bbc.co.uk/send/u50853687",
 }
 `;
 
@@ -193,6 +193,11 @@ Object {
         "height": 576,
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png",
         "width": 1024,
+      },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "si",
+        "name": "Sinhala",
       },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/sinhala/bbc_sinhala_radio/liveradio",

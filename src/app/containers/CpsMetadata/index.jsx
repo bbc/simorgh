@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string, arrayOf, shape } from 'prop-types';
+import { string, arrayOf, shape, bool } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Metadata from '../Metadata';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
@@ -14,6 +14,7 @@ const CpsMetadata = ({
   imageLocator,
   imageAltText,
   aboutTags,
+  hasAppleItunesAppBanner,
 }) => {
   const { service, articleAuthor } = useContext(ServiceContext);
   const brandedImage = imageLocator
@@ -29,6 +30,7 @@ const CpsMetadata = ({
       image={brandedImage}
       imageAltText={imageAltText}
       aboutTags={aboutTags}
+      hasAppleItunesAppBanner={hasAppleItunesAppBanner}
     >
       <meta name="article:author" content={articleAuthor} />
       <meta name="article:published_time" content={firstPublished} />
@@ -57,12 +59,14 @@ CpsMetadata.propTypes = {
   imageLocator: string,
   imageAltText: string,
   aboutTags: arrayOf(tagPropTypes),
+  hasAppleItunesAppBanner: bool,
 };
 
 CpsMetadata.defaultProps = {
   imageLocator: null,
   imageAltText: null,
   aboutTags: [],
+  hasAppleItunesAppBanner: false,
 };
 
 export default CpsMetadata;

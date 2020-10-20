@@ -46,7 +46,7 @@ Object {
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 6`] = `
 Object {
   "text": "Зв'язатися з BBC",
-  "url": "https://www.bbc.com/ukrainian/institutional-38146278",
+  "url": "https://www.bbc.co.uk/send/u50853885",
 }
 `;
 
@@ -228,6 +228,11 @@ Object {
         "height": 576,
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
         "width": 1024,
+      },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "ru-UA",
+        "name": "Russian",
       },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/ukrainian/ukraine_in_russian",

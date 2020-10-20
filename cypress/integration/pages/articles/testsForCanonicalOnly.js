@@ -19,10 +19,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   variant,
 }) =>
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
-    it('should not have an AMP attribute on the main article', () => {
-      cy.get('html').should('not.have.attr', 'amp');
-    });
-
     if (appToggles.chartbeatAnalytics.enabled) {
       describe('Chartbeat', () => {
         if (envConfig.chartbeatEnabled) {
@@ -35,14 +31,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         }
       });
     }
-
-    it('should include ampHTML tag', () => {
-      cy.get('head link[rel="amphtml"]').should(
-        'have.attr',
-        'href',
-        `${window.location.origin}${Cypress.env('currentPath')}.amp`,
-      );
-    });
 
     if (serviceHasCaption(service)) {
       describe('Image with placeholder', () => {
@@ -162,7 +150,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
       // temporarily disable this test until this issue is completed to investigate it:
       // https://github.com/bbc/simorgh-infrastructure/issues/983
-      it.skip('should render an iframe with a valid URL when a user clicks play', () => {
+      it('should render an iframe with a valid URL when a user clicks play', () => {
         cy.window().then(win => {
           const body = win.SIMORGH_DATA.pageData;
           const media = getBlockData('video', body);
@@ -177,7 +165,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               .then(() => {
                 cy.get(`iframe[src="${embedUrl}"]`).should('be.visible');
               });
-            cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
+            cy.testResponseCodeAndTypeRetry(embedUrl, 200, 'text/html');
           }
         });
       });

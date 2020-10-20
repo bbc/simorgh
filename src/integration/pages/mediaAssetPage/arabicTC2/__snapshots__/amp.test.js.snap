@@ -97,7 +97,7 @@ exports[`AMP Media Asset Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=5&p=worldnews%3A%3Aarabic.worldnews.2015.11.151120_t_arabic_av.page&r=%24%7BscreenWidth%7Dx%24%7BscreenHeight%7Dx%24%7BscreenColorDepth%7D&re=%24%7BavailableScreenWidth%7Dx%24%7BavailableScreenHeight%7D&hl=%24%7Btimestamp%7D&lng=%24%7BbrowserLanguage%7D&x1=[urn%3Abbc%3Atopcat%3A22d6ef3c-8f6e-11e5-b707-b2517c19ac20]&x2=[amp]&x3=[news-arabic]&x4=[ar]&x5=[%24%7BsourceUrl%7D]&x6=[%24%7BdocumentReferrer%7D]&x7=[article-media-asset]&x8=[simorgh]&x9=[%D8%B4%D8%B1%D9%83%D8%A9%2B%D8%B4%D8%A7%D8%B1%D8%A8%2B%D9%84%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7%D8%AA%2B%D8%AA%D8%AD%D8%AB%2B%D9%85%D9%88%D8%B8%D9%81%D9%8A%D9%87%D8%A7%2B%D8%B9%D9%84%D9%89%2B%D8%B4%D8%B1%D8%A7%D8%A1%2B%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%D9%87%D8%A7%2B-%2BBBC%2BNews%2B%D8%B9%D8%B1%D8%A8%D9%8A]&x11=[2015-11-20T10%3A09%3A33.000Z]&x12=[2015-11-20T10%3A09%3A33.000Z]&ref=%24%7BdocumentReferrer%7D",
+    "pageview": "\${base}s=598343&s2=5&p=worldnews%3A%3Aarabic.worldnews.2015.11.151120_t_arabic_av.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Atopcat%3A22d6ef3c-8f6e-11e5-b707-b2517c19ac20]&x2=[amp]&x3=[news-arabic]&x4=[ar]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-media-asset]&x8=[simorgh]&x9=[%D8%B4%D8%B1%D9%83%D8%A9%2B%D8%B4%D8%A7%D8%B1%D8%A8%2B%D9%84%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7%D8%AA%2B%D8%AA%D8%AD%D8%AB%2B%D9%85%D9%88%D8%B8%D9%81%D9%8A%D9%87%D8%A7%2B%D8%B9%D9%84%D9%89%2B%D8%B4%D8%B1%D8%A7%D8%A1%2B%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%D9%87%D8%A7%2B-%2BBBC%2BNews%2B%D8%B9%D8%B1%D8%A8%D9%8A]&x11=[2015-11-20T10%3A09%3A33.000Z]&x12=[2015-11-20T10%3A09%3A33.000Z]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -186,7 +186,7 @@ Object {
 exports[`AMP Media Asset Page Footer Link should match text and url 7`] = `
 Object {
   "text": "اتصل بـ بي بي سي",
-  "url": "https://www.bbc.com/arabic/institutional-37731355",
+  "url": "https://www.bbc.co.uk/send/u50853203",
 }
 `;
 
@@ -216,28 +216,28 @@ Object {
 exports[`AMP Media Asset Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "شرق أوسط",
-  "url": "/arabic/middleeast",
+  "url": "/arabic/topics/ckdxnj6g4znt",
 }
 `;
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "عالم",
-  "url": "/arabic/world",
+  "url": "/arabic/topics/c719d2el19nt",
 }
 `;
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "علوم وتكنولوجيا",
-  "url": "/arabic/scienceandtech",
+  "url": "/arabic/topics/c719d2ely7xt",
 }
 `;
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "صحة",
-  "url": "/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+  "url": "/arabic/topics/c95y3q70znjt",
 }
 `;
 
@@ -251,14 +251,14 @@ Object {
 exports[`AMP Media Asset Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "صحافة",
-  "url": "/arabic/inthepress",
+  "url": "/arabic/topics/c08gmd9rp97t",
 }
 `;
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "ترند",
-  "url": "/arabic/trending",
+  "url": "/arabic/topics/c404vr23x4dt",
 }
 `;
 
@@ -276,9 +276,7 @@ Object {
 }
 `;
 
-exports[`AMP Media Asset Page I can see the headline 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
-
-exports[`AMP Media Asset Page I can see the timestamp 1`] = `"20 نوفمبر/ تشرين الثاني 2015"`;
+exports[`AMP Media Asset Page Main heading should match text 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
 exports[`AMP Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"مشغل وسائط"`;
 
@@ -392,6 +390,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "ar",
+        "name": "Arabic",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av",
         "@type": "WebPage",
@@ -461,3 +464,10 @@ exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"https://news.files.b
 exports[`AMP Media Asset Page SEO Twitter site 1`] = `"@BBCArabic"`;
 
 exports[`AMP Media Asset Page SEO Twitter title 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها - BBC News عربي"`;
+
+exports[`AMP Media Asset Page Timestamp should match text and date 1`] = `
+Object {
+  "date": "2015-11-20",
+  "text": "20 نوفمبر/ تشرين الثاني 2015",
+}
+`;

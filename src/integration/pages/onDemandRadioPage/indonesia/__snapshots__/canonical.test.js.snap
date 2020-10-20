@@ -53,7 +53,7 @@ Object {
 exports[`Canonical On Demand Radio Page Footer Link should match text and url 7`] = `
 Object {
   "text": "Hubungi BBC",
-  "url": "https://www.bbc.com/indonesia/institutional-37818427",
+  "url": "https://www.bbc.co.uk/send/u50853401",
 }
 `;
 
@@ -122,6 +122,8 @@ exports[`Canonical On Demand Radio Page I can see the episode summary 1`] = `"Be
 exports[`Canonical On Demand Radio Page I can see the episode title 1`] = `"27 April 2020"`;
 
 exports[`Canonical On Demand Radio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b4828.png"`;
+
+exports[`Canonical On Demand Radio Page Main heading should match text 1`] = `"Dunia Pagi Ini, 27 April 2020"`;
 
 exports[`Canonical On Demand Radio Page Media Player a11y assistive technology can read the media player title 1`] = `"Pemutar Audio"`;
 
@@ -220,6 +222,11 @@ Object {
         "height": 576,
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png",
         "width": 1024,
+      },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "id",
+        "name": "Indonesian",
       },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/indonesia/bbc_indonesian_radio/w172xh267fpn19l",

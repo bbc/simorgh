@@ -35,6 +35,7 @@ export const service = {
     datetimeLocale: 'ur',
     service: 'urdu',
     serviceName: 'Urdu',
+    languageName: 'Urdu',
     serviceLocalizedName: 'اردو',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcurdu',
@@ -198,7 +199,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: false,
       header: 'ایف ایم بلیٹن',
       durationLabel: '%duration% دورانیہ',
     },
@@ -233,7 +233,7 @@ export const service = {
           text: 'کوکیز',
         },
         {
-          href: 'https://www.bbc.com/urdu/institutional-37588285',
+          href: 'https://www.bbc.co.uk/send/u50853907',
           text: 'بی بی سی سے رابطہ کریں',
         },
         {

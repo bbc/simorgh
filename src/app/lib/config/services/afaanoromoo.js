@@ -33,6 +33,7 @@ export const service = {
     datetimeLocale: `om`,
     service: 'afaanoromoo',
     serviceName: 'Afaan Oromoo',
+    languageName: 'Oromo',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews',
     twitterSite: '@BBCNews',
@@ -199,7 +200,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: false,
       header: 'Dhaggeeffadhaa',
       durationLabel: 'Turtii %duration%',
     },
@@ -233,7 +233,7 @@ export const service = {
           text: 'Kuus-yaadannoo',
         },
         {
-          href: 'https://www.bbc.com/afaanoromoo/institutional-42228538',
+          href: 'https://www.bbc.co.uk/send/u50777768',
           text: 'BBC qunnami',
         },
         {

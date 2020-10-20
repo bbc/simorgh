@@ -53,7 +53,7 @@ Object {
 exports[`Canonical Korean Live Radio Page Footer Link should match text and url 7`] = `
 Object {
   "text": "고객센터",
-  "url": "https://www.bbc.com/korean/institutional-42224941",
+  "url": "https://www.bbc.co.uk/send/u50853423",
 }
 `;
 
@@ -200,6 +200,11 @@ Object {
         "height": 576,
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/korean.png",
         "width": 1024,
+      },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "ko",
+        "name": "Korean",
       },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/korean/bbc_korean_radio/liveradio",

@@ -230,7 +230,7 @@ const baseServiceConfig = {
         text: 'Cookies',
       },
       {
-        href: 'https://www.bbc.com/ukrainian/institutional-38146278',
+        href: 'https://www.bbc.co.uk/send/u50853885',
         text: "Зв'язатися з BBC",
       },
       {
@@ -289,12 +289,14 @@ export const service = {
     ...baseServiceConfig,
     datetimeLocale: 'uk',
     locale: 'uk_UA',
+    languageName: 'Ukrainian',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'uk',
     lang: 'uk',
   },
   'ru-UA': {
     ...baseServiceConfig,
+    languageName: 'Russian',
     translations: {
       ...baseServiceConfig.translations,
       ...russianMainTranslations,

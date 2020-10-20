@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `mr`,
     service: 'marathi',
     serviceName: 'Marathi',
+    languageName: 'Marathi',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsmarathi',
     twitterSite: '@bbcnewsmarathi',
@@ -228,7 +229,7 @@ export const service = {
           text: 'कुकीज',
         },
         {
-          href: 'https://www.bbc.com/marathi/institutional-42227676',
+          href: 'https://www.bbc.co.uk/send/u50853467',
           text: 'बीबीसीशी संपर्क साधा',
         },
         {

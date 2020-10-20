@@ -1,7 +1,7 @@
 /* eslint-disable consistent-return */
 import {
   isAvailable,
-  dataEndpointOverride,
+  overrideRendererOnTest,
   getEmbedUrl,
   isBrand,
 } from '../../../support/helpers/onDemandRadioTv';
@@ -12,10 +12,12 @@ export default ({ service, pageType, variant, isAmp }) => {
     describe('Video Player', () => {
       it('should render an iframe with a valid URL', () => {
         cy.request(
-          `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
+          `${Cypress.env('currentPath')}.json${overrideRendererOnTest()}`,
         ).then(({ body: jsonData }) => {
           if (!isAvailable(jsonData)) {
-            return cy.log(`Episode unavailable: ${Cypress.env('currentPath')}`);
+            return cy.log(
+              `Episode is not available: ${Cypress.env('currentPath')}`,
+            );
           }
 
           const language = appConfig[service][variant].lang;
@@ -27,7 +29,7 @@ export default ({ service, pageType, variant, isAmp }) => {
             const iframeURL = isBrandPage ? iframe.prop('src') : embedUrl;
 
             cy.get(`iframe[src*="${iframeURL}"]`).should('be.visible');
-            cy.testResponseCodeAndType(iframeURL, 200, 'text/html');
+            cy.testResponseCodeAndTypeRetry(iframeURL, 200, 'text/html');
           });
         });
       });

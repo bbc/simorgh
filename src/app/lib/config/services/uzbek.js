@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `uz`,
     service: 'uzbek',
     serviceName: 'Uzbek',
+    languageName: 'Uzbek',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcuzbek',
     twitterSite: '@bbcuzbek',
@@ -234,7 +235,7 @@ export const service = {
           text: 'Куки(Cookies)',
         },
         {
-          href: 'https://www.bbc.com/uzbek/institutional-36826360',
+          href: 'https://www.bbc.co.uk/send/u50853929',
           text: 'Би-би-си билан боғланиш',
         },
         {

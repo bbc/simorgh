@@ -97,7 +97,7 @@ exports[`AMP Story Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=62&p=world%3A%3Amundo.world.story.51266689.page&r=%24%7BscreenWidth%7Dx%24%7BscreenHeight%7Dx%24%7BscreenColorDepth%7D&re=%24%7BavailableScreenWidth%7Dx%24%7BavailableScreenHeight%7D&hl=%24%7Btimestamp%7D&lng=%24%7BbrowserLanguage%7D&x1=[urn%3Abbc%3Acps%3Afaf2993a-dcc0-0746-81a6-a6aca4cd59b1]&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[%24%7BsourceUrl%7D]&x6=[%24%7BdocumentReferrer%7D]&x7=[article]&x8=[simorgh]&x9=[Brexit%3A%2Bqu%C3%A9%2Bcambiar%C3%A1%2Bpara%2Bvisitar%2C%2Btrabajar%2By%2Bestudiar%2Ben%2BReino%2BUnido%2Btras%2Bla%2Bsalida%2Bdel%2Bpa%C3%ADs%2Bde%2Bla%2BUni%C3%B3n%2BEuropea%2B-%2BBBC%2BNews%2BMundo]&x11=[2020-01-30T06%3A35%3A49.000Z]&x12=[2020-01-31T23%3A08%3A08.000Z]&x14=[0b0bfd5a-81b8-43fa-91fc-57f1fcd24487~2e91364c-5c77-4660-b76e-d76202785e64~6a73afa3-ea6b-45c1-80bb-49060b99f864~9a18805c-fb88-40ba-9763-bcc121d5d55c~ca170ae3-99c1-48db-9b67-2866f85e7342~f94293fd-ff83-400e-8bc0-89ec01930fce]&x16=[WS%20-%20Give%20me%20perspective]&x17=[Explainer]&ref=%24%7BdocumentReferrer%7D",
+    "pageview": "\${base}s=598343&s2=62&p=world%3A%3Amundo.world.story.51266689.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3Afaf2993a-dcc0-0746-81a6-a6aca4cd59b1]&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Brexit%3A%2Bqu%C3%A9%2Bcambiar%C3%A1%2Bpara%2Bvisitar%2C%2Btrabajar%2By%2Bestudiar%2Ben%2BReino%2BUnido%2Btras%2Bla%2Bsalida%2Bdel%2Bpa%C3%ADs%2Bde%2Bla%2BUni%C3%B3n%2BEuropea%2B-%2BBBC%2BNews%2BMundo]&x11=[2020-01-30T06%3A35%3A49.000Z]&x12=[2020-01-31T23%3A08%3A08.000Z]&x14=[0b0bfd5a-81b8-43fa-91fc-57f1fcd24487~2e91364c-5c77-4660-b76e-d76202785e64~6a73afa3-ea6b-45c1-80bb-49060b99f864~9a18805c-fb88-40ba-9763-bcc121d5d55c~ca170ae3-99c1-48db-9b67-2866f85e7342~f94293fd-ff83-400e-8bc0-89ec01930fce]&x16=[WS%20-%20Give%20me%20perspective]&x17=[Explainer]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -186,7 +186,7 @@ Object {
 exports[`AMP Story Page Footer Link should match text and url 7`] = `
 Object {
   "text": "Contacta a la BBC",
-  "url": "https://www.bbc.com/mundo/institucional-36400011",
+  "url": "https://www.bbc.co.uk/send/u50853489",
 }
 `;
 
@@ -229,68 +229,96 @@ Object {
 
 exports[`AMP Story Page Header Navigation link should match text and url 4`] = `
 Object {
-  "text": "Economía",
-  "url": "/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342",
+  "text": "EE.UU. 2020",
+  "url": "/mundo/noticias-internacional-53826365",
 }
 `;
 
 exports[`AMP Story Page Header Navigation link should match text and url 5`] = `
 Object {
-  "text": "Tecnología",
-  "url": "/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a",
+  "text": "¿Hablas español?",
+  "url": "/mundo/noticias-50160896",
 }
 `;
 
 exports[`AMP Story Page Header Navigation link should match text and url 6`] = `
-Object {
-  "text": "Ciencia",
-  "url": "/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 7`] = `
-Object {
-  "text": "Salud",
-  "url": "/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 8`] = `
-Object {
-  "text": "Cultura",
-  "url": "/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 9`] = `
-Object {
-  "text": "Deportes",
-  "url": "/mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 10`] = `
-Object {
-  "text": "Video",
-  "url": "/mundo/media/video",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "Hay Festival",
   "url": "/mundo/noticias-36795069",
 }
 `;
 
+exports[`AMP Story Page Header Navigation link should match text and url 7`] = `
+Object {
+  "text": "Economía",
+  "url": "/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342",
+}
+`;
+
+exports[`AMP Story Page Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "Ciencia",
+  "url": "/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+}
+`;
+
+exports[`AMP Story Page Header Navigation link should match text and url 9`] = `
+Object {
+  "text": "Salud",
+  "url": "/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+}
+`;
+
+exports[`AMP Story Page Header Navigation link should match text and url 10`] = `
+Object {
+  "text": "Cultura",
+  "url": "/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864",
+}
+`;
+
+exports[`AMP Story Page Header Navigation link should match text and url 11`] = `
+Object {
+  "text": "Tecnología",
+  "url": "/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a",
+}
+`;
+
 exports[`AMP Story Page Header Navigation link should match text and url 12`] = `
+Object {
+  "text": "Video",
+  "url": "/mundo/media/video",
+}
+`;
+
+exports[`AMP Story Page Header Navigation link should match text and url 13`] = `
 Object {
   "text": "Centroamérica Cuenta",
   "url": "/mundo/noticias-43826245",
 }
 `;
 
-exports[`AMP Story Page Lead image I can see an image with a caption 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
+exports[`AMP Story Page Header Navigation link should match text and url 14`] = `
+Object {
+  "text": "BBC Extra",
+  "url": "/mundo/noticias-48908206",
+}
+`;
+
+exports[`AMP Story Page Image Caption should match text 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
+
+exports[`AMP Story Page Image should match snapshot 1`] = `
+<amp-img
+  alt="A person holding a union jack umbrella in front of Big Ben"
+  attribution="Getty Images"
+  height="549"
+  layout="responsive"
+  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 800w"
+  width="976"
+/>
+`;
+
+exports[`AMP Story Page Main heading should match text 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -442,6 +470,11 @@ Object {
         "url": "https://ichef.test.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "es",
+        "name": "Spanish",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/mundo/noticias-internacional-51266689",
         "@type": "WebPage",
@@ -499,8 +532,9 @@ exports[`AMP Story Page SEO Twitter site 1`] = `"@bbcmundo"`;
 
 exports[`AMP Story Page SEO Twitter title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
 
-exports[`AMP Story Page Social Embeds I can see the caption accompanying a YouTube embed 1`] = `"Título del video, Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad"`;
-
-exports[`AMP Story Page Social Embeds I can see the skip link 1`] = `"Saltar contenido de YouTube, 1"`;
-
-exports[`AMP Story Page Social Embeds I can see the skip link destination 1`] = `"Fin del contenido de YouTube, 1"`;
+exports[`AMP Story Page Timestamp should match text and date 1`] = `
+Object {
+  "date": "2020-01-30",
+  "text": "30 enero 2020",
+}
+`;

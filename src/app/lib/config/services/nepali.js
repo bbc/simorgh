@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `ne`,
     service: 'nepali',
     serviceName: 'Nepali',
+    languageName: 'Nepali',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnepali',
     twitterSite: '@bbcnepali',
@@ -200,7 +201,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: false,
       header: 'पछिल्लो कार्यक्रम सुन्नुहोस्',
       durationLabel: 'अवधि %duration%',
     },
@@ -234,7 +234,7 @@ export const service = {
           text: 'कुकीज',
         },
         {
-          href: 'https://www.bbc.com/nepali/institutional-38159617',
+          href: 'https://www.bbc.co.uk/send/u50853511',
           text: 'बीबीसीलाई सम्पर्क गर्नुहोस्',
         },
         {
@@ -260,7 +260,7 @@ export const service = {
       },
       {
         title: 'पछिल्लो कार्यक्रम',
-        url: '/nepali/multimedia/radio_programmes',
+        url: '/nepali/media-54029171',
       },
       {
         title: 'भिडियो',

@@ -502,7 +502,19 @@ describe('IndexPageSection Container', () => {
       expect(container.children).toHaveLength(0);
     });
 
-    it('should render null when there is no strapline', () => {
+    it('should render null when there is no strapline and is not the 1st section', () => {
+      const { container } = render(
+        <ServiceContextProvider service="igbo">
+          <IndexPageSection group={hasNoStrapline} sectionNumber={1} />
+        </ServiceContextProvider>,
+      );
+
+      // container is a <div> which would contain the rendered elements...
+      // IF THERE WERE ANY!
+      expect(container.children).toHaveLength(0);
+    });
+
+    it('should render when there is no strapline but is the 1st section', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
           <IndexPageSection group={hasNoStrapline} sectionNumber={0} />
@@ -511,7 +523,7 @@ describe('IndexPageSection Container', () => {
 
       // container is a <div> which would contain the rendered elements...
       // IF THERE WERE ANY!
-      expect(container.children).toHaveLength(0);
+      expect(container.children).toHaveLength(1);
     });
 
     it('should not render the story promo inside a list when only one item exists', () => {
@@ -523,6 +535,32 @@ describe('IndexPageSection Container', () => {
 
       expect(container.getElementsByTagName('ul')).toHaveLength(0);
       expect(container.getElementsByTagName('li')).toHaveLength(0);
+    });
+
+    it('should render text if the strapline is empty and is the 1st section ', () => {
+      const { container } = render(
+        <ServiceContextProvider service="igbo">
+          <IndexPageSection group={group} sectionNumber={0} />
+        </ServiceContextProvider>,
+      );
+
+      // container is a <div> which would contain the rendered elements...
+      // IF THERE WERE ANY!
+      expect(container.children).toHaveLength(1);
+      expect(container.children).toMatchSnapshot();
+    });
+
+    it('should render empty text if the strapline is empty and is not the 1st section ', () => {
+      const { container } = render(
+        <ServiceContextProvider service="igbo">
+          <IndexPageSection group={hasNoStrapline} sectionNumber={1} />
+        </ServiceContextProvider>,
+      );
+
+      // container is a <div> which would contain the rendered elements...
+      // IF THERE WERE ANY!
+      expect(container.children).toHaveLength(0);
+      expect(container.children).toMatchSnapshot();
     });
 
     it('should not lazyload the story promo image if it is a top story', () => {

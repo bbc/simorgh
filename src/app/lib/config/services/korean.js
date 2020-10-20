@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `ko`,
     service: 'korean',
     serviceName: 'Korean',
+    languageName: 'Korean',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnews',
     twitterSite: '@bbcnews',
@@ -195,8 +196,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: true,
-      frontPagePosition: 'Section 1',
       header: 'BBC 코리아 라디오',
       durationLabel: '방송 길이 %duration%',
     },
@@ -230,7 +229,7 @@ export const service = {
           text: '쿠키정책',
         },
         {
-          href: 'https://www.bbc.com/korean/institutional-42224941',
+          href: 'https://www.bbc.co.uk/send/u50853423',
           text: '고객센터',
         },
         {

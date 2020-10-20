@@ -53,7 +53,7 @@ Object {
 exports[`Canonical Story Page Footer Link should match text and url 7`] = `
 Object {
   "text": "Би-Би-Си менен байланышыңыз",
-  "url": "https://www.bbc.com/kyrgyz/institutional-38157284",
+  "url": "https://www.bbc.co.uk/send/u50853445",
 }
 `;
 
@@ -83,14 +83,14 @@ Object {
 exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "Кыргызстан",
-  "url": "/kyrgyz/kyrgyzstan",
+  "url": "/kyrgyz/topics/cz74kjpyk07t",
 }
 `;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "Дүйнө",
-  "url": "/kyrgyz/world",
+  "url": "/kyrgyz/topics/ck2l9z012nkt",
 }
 `;
 
@@ -118,7 +118,7 @@ Object {
 exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "Журнал",
-  "url": "/kyrgyz/magazine",
+  "url": "/kyrgyz/magazine-54071664",
 }
 `;
 
@@ -129,7 +129,21 @@ Object {
 }
 `;
 
+exports[`Canonical Story Page Image Caption should match text 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
+
+exports[`Canonical Story Page Image should match snapshot 1`] = `
+<img
+  alt="social media"
+  class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/11D53/test/_63734037_socialmedia.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 624w"
+  width="624"
+/>
+`;
+
 exports[`Canonical Story Page Lead image I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
+
+exports[`Canonical Story Page Main heading should match text 1`] = `"Test STY for social embeds"`;
 
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -240,6 +254,11 @@ Object {
         "url": "https://ichef.test.bbci.co.uk/news/1024/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "ky",
+        "name": "Kyrgyz",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/kyrgyz/23292889",
         "@type": "WebPage",
@@ -297,10 +316,9 @@ exports[`Canonical Story Page SEO Twitter site 1`] = `"@bbckyrgyz"`;
 
 exports[`Canonical Story Page SEO Twitter title 1`] = `"Test STY for social embeds - BBC News Кыргыз Кызматы"`;
 
-exports[`Canonical Story Page Social Embeds I can see a link to the original content in a fallback 1`] = `"Facebook баракчадан көбүрөк пост окуу"`;
-
-exports[`Canonical Story Page Social Embeds I can see the caption accompanying a YouTube embed 1`] = `"Видеонун түшүндүрмөсү, Эскертүү: Жарнамалар болушу ыктымал"`;
-
-exports[`Canonical Story Page Social Embeds I can see the skip link 1`] = `"YouTube баракчаны өткөрүп жиберүү, пост, 1"`;
-
-exports[`Canonical Story Page Social Embeds I can see the skip link destination 1`] = `"YouTube посттун аягы, 1"`;
+exports[`Canonical Story Page Timestamp should match text and date 1`] = `
+Object {
+  "date": "2020-04-24",
+  "text": "24 апрель 2020",
+}
+`;

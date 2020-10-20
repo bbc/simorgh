@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `gu`,
     service: 'gujarati',
     serviceName: 'Gujarati',
+    languageName: 'Gujarati',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsgujarati',
     twitterSite: '@bbcnewsgujarati',
@@ -232,7 +233,7 @@ export const service = {
           text: 'કુકીઝ',
         },
         {
-          href: 'https://www.bbc.com/gujarati/institutional-42224948',
+          href: 'https://www.bbc.co.uk/send/u50853313',
           text: 'બીબીસીનો સંપર્ક કરો',
         },
         {

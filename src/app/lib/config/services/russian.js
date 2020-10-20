@@ -195,6 +195,7 @@ export const service = {
     datetimeLocale: `ru`,
     service: 'russian',
     serviceName: 'Russian',
+    languageName: 'Russian',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcrussian',
     twitterSite: '@bbcrussian',
@@ -256,7 +257,7 @@ export const service = {
           text: 'Куки',
         },
         {
-          href: 'https://www.bbc.com/russian/institutional-36517237',
+          href: 'https://www.bbc.co.uk/send/u50853643',
           text: 'Связаться с Би-би-си',
         },
         {
@@ -287,6 +288,10 @@ export const service = {
       {
         title: 'Коронавирус',
         url: '/russian/in-depth-51962199',
+      },
+      {
+        title: 'Выборы в США',
+        url: '/russian/topics/c8jvq6n6kdxt',
       },
       {
         title: 'Истории',
