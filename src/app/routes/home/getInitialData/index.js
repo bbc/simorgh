@@ -1,5 +1,6 @@
 import pipe from 'ramda/src/pipe';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 import filterUnknownContentTypes from '#app/routes/utils/sharedDataTransformers/filterUnknownContentTypes';
@@ -69,6 +70,7 @@ export default async ({ path: pathname, service, pageType, toggles }) => {
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
+    console.log(message);
     return { error: message, status };
   }
 };

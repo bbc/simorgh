@@ -131,7 +131,7 @@ describe('Get initial data from front page', () => {
     expect(pageData.radioScheduleData).not.toBeTruthy();
   });
 
-  describe.only('Has US Election Banner', () => {
+  describe('Has US Election Banner', () => {
     beforeEach(() => {
       fetchMock.restore();
     });

@@ -73,7 +73,6 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const description = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
   const radioScheduleData = path(['radioScheduleData'], pageData);
-  const radioSchedulePosition = path(['frontPagePosition'], radioSchedule);
   const radioSchedulePosition = path(['radioSchedulePosition'], pageData);
   const usElectionResultsOembed = path(['usElectionOembed'], pageData);
 
@@ -87,11 +86,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   );
 
   // Most Read is required to render above useful-links if it exists
-  
-  
-  
-  
-  
+
   const hasUsefulLinks =
     findIndex(group => group.type === 'useful-links')(groups) > -1;
 
