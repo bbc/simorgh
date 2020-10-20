@@ -2,7 +2,7 @@
 import React from 'react';
 import { string, number } from 'prop-types';
 import { Helmet } from 'react-helmet';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { GEL_SPACING_QUIN } from '@bbc/gel-foundations/spacings';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 
