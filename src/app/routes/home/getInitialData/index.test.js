@@ -1,6 +1,5 @@
 import fetchMock from 'fetch-mock';
 import getInitialData from '.';
-import getConfig from '../../utils/getConfig';
 
 // Fixture Data
 import frontPageJsonHausa from '#data/hausa/frontpage/index.json';
