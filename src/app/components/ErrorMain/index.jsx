@@ -23,7 +23,6 @@ const StatusCode = styled.span`
   padding: 2.5rem 0 0.5rem 0;
 `;
 
-// confirm no true/false strings are in snapshots
 const Heading = styled.h1`
   ${({ script }) => script && getCanon(script)};
   ${({ service }) => getSerifMedium(service)}
