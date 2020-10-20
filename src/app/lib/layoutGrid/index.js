@@ -1,4 +1,3 @@
-import { css } from 'styled-components';
 import {
   GEL_MARGIN_BELOW_400PX,
   GEL_GUTTER_BELOW_600PX,
@@ -52,12 +51,12 @@ const fourOfSixColumnsMaxWidthScaleable = `66.67%`;
 const specifiedOrMaximum = (specified, maximum) =>
   specified > maximum ? maximum : specified;
 
-const nestedGrid = css`
+const nestedGrid = `
   display: grid;
   grid-column-gap: ${GEL_SPACING_DBL};
 `;
 
-export const gelGridMargin = css`
+export const gelGridMargin = `
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: 0 ${GEL_MARGIN_BELOW_400PX};
   }
@@ -75,7 +74,7 @@ export const gelGridMargin = css`
   1008+: no explicit margin, since we use 16px gutters as margin
 */
 
-export const layoutGridWrapper = css`
+export const layoutGridWrapper = `
   margin: 0 auto;
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
@@ -107,7 +106,7 @@ export const layoutGridWrapper = css`
   }
 `;
 
-export const layoutGridItemLargeNoMargin = css`
+export const layoutGridItemLargeNoMargin = `
   @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     grid-column: 1 / span 6;
   }
@@ -119,12 +118,12 @@ export const layoutGridItemLargeNoMargin = css`
   }
 `;
 
-export const layoutGridItemLarge = css`
+export const layoutGridItemLarge = `
   ${layoutGridItemLargeNoMargin}
   ${gelGridMargin}
 `;
 
-export const layoutGridItemMediumNoMargin = css`
+export const layoutGridItemMediumNoMargin = `
   grid-column: 1 / span 6;
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     ${({ padding = {} }) =>
@@ -152,12 +151,12 @@ export const layoutGridItemMediumNoMargin = css`
   }
 `;
 
-export const layoutGridItemMedium = css`
+export const layoutGridItemMedium = `
   ${gelGridMargin}
   ${layoutGridItemMediumNoMargin}
 `;
 
-export const layoutGridItemSmall = css`
+export const layoutGridItemSmall = `
   ${gelGridMargin}
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -189,11 +188,11 @@ export const layoutGridItemSmall = css`
   }
 `;
 
-export const layoutGridItem = css`
+export const layoutGridItem = `
   grid-column: 1 / -1;
 `;
 
-export const nestedGridItemSmallCss = css`
+export const nestedGridItemSmallCss = `
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     grid-column: ${props => props.gridColumnStart} / span
       ${props =>
@@ -223,7 +222,7 @@ export const nestedGridItemSmallCss = css`
   }
 `;
 
-export const nestedGridItemMediumCss = css`
+export const nestedGridItemMediumCss = `
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     grid-column: ${props => props.gridColumnStart} / span
       ${props =>
@@ -246,7 +245,7 @@ export const nestedGridItemMediumCss = css`
   }
 `;
 
-export const nestedGridItemLargeCss = css`
+export const nestedGridItemLargeCss = `
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     grid-column: ${props => props.gridColumnStart} / span
       ${props =>
@@ -272,7 +271,7 @@ export const nestedGridItemLargeCss = css`
   }
 `;
 
-export const gridContainerLargeCss = css`
+export const gridContainerLargeCss = `
   ${nestedGrid}
   @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-template-columns: repeat(6, 1fr);
@@ -282,7 +281,7 @@ export const gridContainerLargeCss = css`
   }
 `;
 
-export const gridContainerMediumCss = css`
+export const gridContainerMediumCss = `
   ${nestedGrid}
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -300,7 +299,7 @@ export const gridContainerMediumCss = css`
   }
 `;
 
-export const gridContainerSmallCss = css`
+export const gridContainerSmallCss = `
   ${nestedGrid}
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {

@@ -1,6 +1,6 @@
 import { node, number } from 'prop-types';
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
