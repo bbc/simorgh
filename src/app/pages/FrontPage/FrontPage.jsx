@@ -64,7 +64,6 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     serviceLocalizedName,
     translations,
     frontPageTitle,
-    radioSchedule,
   } = useContext(ServiceContext);
 
   const { enabled: adsEnabled } = useToggle('ads');
@@ -74,9 +73,10 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const description = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
   const radioScheduleData = path(['radioScheduleData'], pageData);
-  const radioScheduleOnPage = path(['onFrontPage'], radioSchedule);
   const radioSchedulePosition = path(['frontPagePosition'], radioSchedule);
+  const radioSchedulePosition = path(['radioSchedulePosition'], pageData);
   const usElectionResultsOembed = path(['usElectionOembed'], pageData);
+
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
 
   const offScreenText = (
@@ -87,6 +87,11 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   );
 
   // Most Read is required to render above useful-links if it exists
+  
+  
+  
+  
+  
   const hasUsefulLinks =
     findIndex(group => group.type === 'useful-links')(groups) > -1;
 
@@ -116,7 +121,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}
-              {radioScheduleOnPage &&
+              {radioScheduleData &&
                 radioSchedulePosition === group.semanticGroupName && (
                   <StyledRadioScheduleContainer
                     initialData={radioScheduleData}

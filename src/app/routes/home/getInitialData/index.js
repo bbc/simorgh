@@ -1,8 +1,7 @@
 import pipe from 'ramda/src/pipe';
-import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
-import getConfig from '#app/routes/utils/getConfig';
 import filterUnknownContentTypes from '#app/routes/utils/sharedDataTransformers/filterUnknownContentTypes';
 import filterEmptyGroupItems from '#app/routes/utils/sharedDataTransformers/filterEmptyGroupItems';
 import squashTopStories from '#app/routes/utils/sharedDataTransformers/squashTopStories';
@@ -18,23 +17,8 @@ const transformJson = pipe(
   filterGroupsWithoutStraplines,
 );
 
-export const hasRadioSchedule = async (service, variant) => {
-  const config = await getConfig(service, variant);
-
-  const serviceHasRadioSchedule = pathOr(
-    false,
-    ['radioSchedule', 'hasRadioSchedule'],
-    config,
-  );
-
-  const radioScheduleOnFrontPage = pathOr(
-    false,
-    ['radioSchedule', 'onFrontPage'],
-    config,
-  );
-
-  return serviceHasRadioSchedule && radioScheduleOnFrontPage;
-};
+const getRadioScheduleToggle = path(['frontPageRadioSchedule', 'enabled']);
+const getRadioSchedulePosition = path(['frontPageRadioSchedule', 'value']);
 
 const fetchElectionsOembed = async service => {
   const usElectionOembedPath = `/${service}/election/us2020/results/oembed`;
@@ -54,21 +38,22 @@ const fetchElectionsOembed = async service => {
   return null;
 };
 
-export default async ({ path, service, variant, pageType, toggles }) => {
+export default async ({ path: pathname, service, pageType, toggles }) => {
   try {
-    const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
-    const pageDataPromise = fetchPageData({ path, pageType });
+    const pageDataPromise = fetchPageData({ path: pathname, pageType });
+    const radioScheduleIsEnabled = getRadioScheduleToggle(toggles);
+    const radioSchedulePosition = getRadioSchedulePosition(toggles);
     const pageHasUsElectionsBanner = pathOr(
       false,
       ['us2020ElectionBanner'],
       toggles,
     );
 
-    const { json, status } = pageHasRadioSchedule
+    const { json, status } = radioScheduleIsEnabled
       ? await withRadioSchedule({
           pageDataPromise,
           service,
-          path,
+          path: pathname,
           pageType: 'Home',
         })
       : await pageDataPromise;
@@ -77,6 +62,7 @@ export default async ({ path, service, variant, pageType, toggles }) => {
       status,
       pageData: {
         ...transformJson(json),
+        radioSchedulePosition,
         ...(pageHasUsElectionsBanner
           ? await fetchElectionsOembed(service)
           : null),
