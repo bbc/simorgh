@@ -23,8 +23,8 @@ const BrandTitle = styled.span`
 `;
 
 const Datestamp = styled.span`
-  ${({ script }) => script && getDoublePica(script)};
-  ${({ service }) => getSansRegular(service)};
+  ${({ script }) => script && getDoublePica(script)}
+  ${({ service }) => getSansRegular(service)}
   margin: 0;
 `;
 

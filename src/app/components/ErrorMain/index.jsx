@@ -15,7 +15,7 @@ import idSanitiser from '#lib/utilities/idSanitiser';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 
 const StatusCode = styled.span`
-  ${props => (props.script ? getParagon(props.script) : '')};
+  ${props => (props.script ? getParagon(props.script) : '')}
   color: ${C_POSTBOX};
   display: block;
   font-family: ${GEL_FF_REITH_SANS};
@@ -24,7 +24,7 @@ const StatusCode = styled.span`
 `;
 
 const Heading = styled.h1`
-  ${({ script }) => script && getCanon(script)};
+  ${({ script }) => script && getCanon(script)}
   ${({ service }) => getSerifMedium(service)}
   color: ${C_SHADOW};
   margin-top: 0;
