@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
