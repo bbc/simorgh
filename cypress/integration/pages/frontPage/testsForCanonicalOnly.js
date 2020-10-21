@@ -27,6 +27,8 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({ service }) => {
           cy.get('[class^="IndexPageContainer-sc-1yb6vt4-0"]').should(
             'be.visible',
           );
+        } else {
+          cy.log('This service is not expected to have the banner');
         }
       });
     });
