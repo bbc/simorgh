@@ -2,7 +2,7 @@
 
 exports[`Media Asset Page AV player should render version (live audio stream) 1`] = `
 <DocumentFragment>
-  .c1 {
+  .c3 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -14,7 +14,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   margin: 0;
 }
 
-.c7 {
+.c9 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -27,22 +27,22 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c4 {
+.c6 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c11 {
+.c13 {
   grid-column: 1 / span 6;
 }
 
-.c21 {
+.c23 {
   display: grid;
   grid-column-gap: 1rem;
 }
 
-.c9 {
+.c11 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -54,7 +54,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   padding: 2rem 0;
 }
 
-.c15 {
+.c17 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -62,7 +62,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   font-weight: inherit;
 }
 
-.c13 {
+.c15 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -73,11 +73,11 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   padding-bottom: 0.25rem;
 }
 
-.c13:last-child {
+.c15:last-child {
   padding-bottom: 1rem;
 }
 
-.c14 {
+.c16 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -88,25 +88,25 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   margin: 0;
 }
 
-.c16 {
+.c18 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c16:visited {
+.c18:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c16:focus,
-.c16:hover {
+.c18:focus,
+.c18:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c18 {
+.c20 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -116,11 +116,11 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   list-style-type: none;
 }
 
-.c18 > li {
+.c20 > li {
   position: relative;
 }
 
-.c18 > li::before {
+.c20 > li::before {
   top: 0.5rem;
   content: ' ';
   position: absolute;
@@ -130,21 +130,21 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   left: -1rem;
 }
 
-.c19 {
+.c21 {
   margin-bottom: 1rem;
 }
 
-.c17 {
+.c19 {
   margin-bottom: 1.5rem;
 }
 
-.c3 {
+.c5 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.c24 {
+.c26 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -158,7 +158,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   left: 0;
 }
 
-.c23 {
+.c25 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -171,30 +171,28 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c2 {
+.c4 {
   margin-top: 0.5rem;
 }
 
-.c2 figure {
+.c4 figure {
   padding-bottom: 1rem;
 }
 
-.c10 {
+.c12 {
   padding: 0.5rem 0 2rem;
 }
 
-.c0 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
+.c1 {
   width: 100%;
   padding-bottom: 1.5rem;
 }
 
-.c12 {
+.c14 {
   padding-bottom: 1rem;
 }
 
-.c6 {
+.c8 {
   position: absolute;
   left: 0;
   top: 0;
@@ -202,7 +200,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   height: 100%;
 }
 
-.c5 {
+.c7 {
   z-index: 1;
   border: 0;
   left: 0;
@@ -214,309 +212,350 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 }
 
 @media (max-width:25rem) {
-  .c11 {
+  .c13 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c11 {
+  .c13 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c13 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c11 {
+  .c13 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c11 {
+  .c13 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c11 {
+  .c13 {
     max-width: initial;
   }
 }
 
 @media (max-width:63rem) {
-  .c8 {
+  .c10 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c8 {
+  .c10 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c8 {
+  .c10 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c8 {
+  .c10 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c8 {
+  .c10 {
     padding: 0 1rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c20 {
+  .c22 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c20 {
+  .c22 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c20 {
+  .c22 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c22 {
+  .c24 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c22 {
+  .c24 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c22 {
+  .c24 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c22 {
+  .c24 {
     grid-column: 1 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c25 {
+  .c27 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c25 {
+  .c27 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c25 {
+  .c27 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c25 {
+  .c27 {
     grid-column: 1 / span 10;
   }
 }
 
 @media (max-width:79.9375rem) {
-  .c21 {
+  .c23 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c21 {
+  .c23 {
     grid-template-columns: repeat(12,1fr);
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c9 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c9 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c13 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c18 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c18 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (max-width:63rem) {
-  .c2 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (min-width:25rem) {
-  .c2 {
-    margin-top: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c2 {
-    padding: 0.5rem 0 0;
-    margin-top: 2rem;
-  }
-
-  .c2 figure {
-    padding-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c10 {
-    padding: 1rem 0 2.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
   }
 }
 
 @supports (display:grid) {
   .c0 {
     display: grid;
-    max-width: initial;
-    margin: initial;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c11 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c15 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c20 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c20 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c4 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c4 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c4 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (min-width:25rem) {
+  .c4 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c0 {
-    padding-bottom: 2rem;
+  .c4 {
+    padding: 0.5rem 0 0;
+    margin-top: 2rem;
+  }
+
+  .c4 figure {
+    padding-bottom: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
   .c12 {
+    padding: 1rem 0 2.5rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c14 {
     padding-bottom: 1.5rem;
   }
 }
@@ -544,351 +583,357 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
             </div>
             <noscript />
             <main
-              class="c0"
+              class="c0 c1"
+              dir="ltr"
               role="main"
             >
-              <h1
-                class="c1"
-                id="content"
-                tabindex="-1"
-              >
-                Ўзбек деҳқонининг косаси нега оқармайдиshort
-              </h1>
               <div
                 class="c2"
+                dir="ltr"
               >
-                <figure
+                <h1
                   class="c3"
+                  id="content"
+                  tabindex="-1"
                 >
-                  <div
-                    class="c4"
+                  Ўзбек деҳқонининг косаси нега оқармайдиshort
+                </h1>
+                <div
+                  class="c4"
+                >
+                  <figure
+                    class="c5"
                   >
-                    <iframe
-                      allow="autoplay; fullscreen"
-                      allowfullscreen=""
-                      class="c5"
-                      scrolling="no"
-                      src="https://test.bbc.com/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
-                      title="Медиа плейер"
-                    />
                     <div
                       class="c6"
                     >
-                      <div
+                      <iframe
+                        allow="autoplay; fullscreen"
+                        allowfullscreen=""
                         class="c7"
+                        scrolling="no"
+                        src="https://test.bbc.com/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
+                        title="Медиа плейер"
                       />
+                      <div
+                        class="c8"
+                      >
+                        <div
+                          class="c9"
+                        />
+                      </div>
+                      <noscript />
                     </div>
-                    <noscript />
-                  </div>
-                </figure>
-              </div>
-              <div
-                class="c8"
-              >
-                <strong
-                  aria-hidden="true"
-                  class="c9 c10"
+                  </figure>
+                </div>
+                <div
+                  class="c10"
                 >
-                  Ўзбек деҳқонининг косаси нега оқармайдиshort
-                </strong>
-              </div>
-              <div
-                class="c11 c12"
-              >
-                <time
-                  class="c13"
-                  datetime="2019-09-13"
+                  <strong
+                    aria-hidden="true"
+                    class="c11 c12"
+                  >
+                    Ўзбек деҳқонининг косаси нега оқармайдиshort
+                  </strong>
+                </div>
+                <div
+                  class="c13 c14"
                 >
-                  13 сентябр 2019
-                </time>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  <b>
-                    Ўзбек деҳқонининг косаси нега оқармайди
-                  </b>
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  <b>
-                    Ўзбек деҳқонининг косаси нега оқармайди
-                  </b>
-                  <b>
-                     heading
-                  </b>
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  <i
+                  <time
                     class="c15"
+                    datetime="2019-09-13"
+                  >
+                    13 сентябр 2019
+                  </time>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
                   >
                     <b>
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </b>
-                  </i>
-                  <i
-                    class="c15"
+                  </p>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
                   >
+                    <b>
+                      Ўзбек деҳқонининг косаси нега оқармайди
+                    </b>
                     <b>
                        heading
                     </b>
-                  </i>
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  <b>
-                    Ўзбек деҳқонининг косаси нега оқармайди
-                  </b>
-                  <b>
-                     crosshead 
-                  </b>
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  Шу йил апрел ойида Ўзбекистон Президенти Ислом 
-                  <a
-                    class="c16"
-                    href="https://bbc.com/uzbek"
-                  >
-                    Каримов ўзининг
-                  </a>
-                   Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  Шу вақтгача ҳам ўзбекистонлик деҳқонлар ўз маҳсулотларини хорижга олиб 
-                  <b>
-                    чиқишда турли муаммоларга юз тутиб
-                  </b>
-                   келишган, апрель ойида президент қарори билан "Ўзагроэкспорт" мева-сабзавот маҳсулотларини экспорт қилиш билан шуғулланадиган ташқи савдо компанияси ҳам ташкил қилинди.
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  Ўз мева-сабзавотини Россияга олиб чиқишда бу компания ёрдамига умид қилган боғбонларнинг гилослари бузила бошлагани ҳақидаги хабарлар ҳам тарқалди..
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  Ҳозирда Ўзбекистонда айни пишиқчилик ва етиштирилган маҳсулот учун кенгроқ бозор топиш масаласи яна долзарб турар экан, мамлакат раҳбарининг сўзларидан сўнг вазият нақадар ўзгарган?
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  Би-би-си билан суҳбатда иқтисодий таҳлилчи Анвар Ҳусаиновнинг айтишича, юқори минбардан айтилган сўзларга қарамай, қишлоқ хўжалиги маҳсулотларини хорижга, жумладан Россия бозорига олиб чиқишда ҳануз кўплаб муаммолар мавжуд.
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  "Албатта ўтган йилларга қараганда маҳсулотлар экспорти анча кўпайган. Россиядан юк машиналари келиб, тўғридан-тўғри деҳқонлардан нақд пулга 
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
+                  </p>
+                </div>
                 <div
-                  class="c17"
+                  class="c13"
                 >
-                  <ul
-                    class="c18"
-                    dir="ltr"
-                    role="list"
+                  <p
+                    class="c16"
                   >
-                    <li
-                      class="c19"
-                      role="listitem"
-                    >
-                      Ўзбек деҳқонининг косаси нега оқармайди
-                    </li>
-                    <li
-                      class="c19"
-                      role="listitem"
-                    >
-                      Ўзбек деҳқонининг косаси нега оқармайди
-                    </li>
-                    <li
-                      class="c19"
-                      role="listitem"
+                    <i
+                      class="c17"
                     >
                       <b>
                         Ўзбек деҳқонининг косаси нега оқармайди
                       </b>
-                    </li>
-                    <li
-                      class="c19"
-                      role="listitem"
+                    </i>
+                    <i
+                      class="c17"
                     >
-                      Ўзбек деҳқонининг косаси нега оқармайди
-                    </li>
-                  </ul>
+                      <b>
+                         heading
+                      </b>
+                    </i>
+                  </p>
                 </div>
-              </div>
-              <div
-                class="c11"
-              >
                 <div
-                  class="c17"
+                  class="c13"
                 >
-                  <ul
-                    class="c18"
-                    dir="ltr"
-                    role="list"
+                  <p
+                    class="c16"
                   >
-                    <li
-                      class="c19"
-                      role="listitem"
-                    >
-                      <a
-                        class="c16"
-                        href="https://bbc.com/uzbek"
-                      >
-                        Ўзбек деҳқонининг косаси нега оқармайди
-                      </a>
-                    </li>
-                    <li
-                      class="c19"
-                      role="listitem"
-                    >
-                      <a
-                        class="c16"
-                        href="https://bbc.com/uzbek"
-                      >
-                        Ўзбек деҳқонининг косаси нега оқармайди
-                      </a>
-                    </li>
-                    <li
-                      class="c19"
-                      role="listitem"
-                    >
-                      <a
-                        class="c16"
-                        href="https://bbc.com/uzbek"
-                      >
-                        Ўзбек деҳқонининг косаси нега оқармайди
-                      </a>
-                    </li>
-                    <li
-                      class="c19"
-                      role="listitem"
-                    >
-                      <a
-                        class="c16"
-                        href="https://bbc.com/uzbek"
-                      >
-                        Ўзбек деҳқонининг косаси нега оқармайди
-                      </a>
-                    </li>
-                  </ul>
+                    <b>
+                      Ўзбек деҳқонининг косаси нега оқармайди
+                    </b>
+                    <b>
+                       crosshead 
+                    </b>
+                  </p>
                 </div>
-              </div>
-              <div
-                class="c20"
-              >
-                <figure
-                  class="c3"
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    Шу йил апрел ойида Ўзбекистон Президенти Ислом 
+                    <a
+                      class="c18"
+                      href="https://bbc.com/uzbek"
+                    >
+                      Каримов ўзининг
+                    </a>
+                     Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.
+                  </p>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    Шу вақтгача ҳам ўзбекистонлик деҳқонлар ўз маҳсулотларини хорижга олиб 
+                    <b>
+                      чиқишда турли муаммоларга юз тутиб
+                    </b>
+                     келишган, апрель ойида президент қарори билан "Ўзагроэкспорт" мева-сабзавот маҳсулотларини экспорт қилиш билан шуғулланадиган ташқи савдо компанияси ҳам ташкил қилинди.
+                  </p>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    Ўз мева-сабзавотини Россияга олиб чиқишда бу компания ёрдамига умид қилган боғбонларнинг гилослари бузила бошлагани ҳақидаги хабарлар ҳам тарқалди..
+                  </p>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    Ҳозирда Ўзбекистонда айни пишиқчилик ва етиштирилган маҳсулот учун кенгроқ бозор топиш масаласи яна долзарб турар экан, мамлакат раҳбарининг сўзларидан сўнг вазият нақадар ўзгарган?
+                  </p>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    Би-би-си билан суҳбатда иқтисодий таҳлилчи Анвар Ҳусаиновнинг айтишича, юқори минбардан айтилган сўзларга қарамай, қишлоқ хўжалиги маҳсулотларини хорижга, жумладан Россия бозорига олиб чиқишда ҳануз кўплаб муаммолар мавжуд.
+                  </p>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    "Албатта ўтган йилларга қараганда маҳсулотлар экспорти анча кўпайган. Россиядан юк машиналари келиб, тўғридан-тўғри деҳқонлардан нақд пулга 
+                  </p>
+                </div>
+                <div
+                  class="c13"
                 >
                   <div
-                    class="c21"
+                    class="c19"
+                  >
+                    <ul
+                      class="c20"
+                      dir="ltr"
+                      role="list"
+                    >
+                      <li
+                        class="c21"
+                        role="listitem"
+                      >
+                        Ўзбек деҳқонининг косаси нега оқармайди
+                      </li>
+                      <li
+                        class="c21"
+                        role="listitem"
+                      >
+                        Ўзбек деҳқонининг косаси нега оқармайди
+                      </li>
+                      <li
+                        class="c21"
+                        role="listitem"
+                      >
+                        <b>
+                          Ўзбек деҳқонининг косаси нега оқармайди
+                        </b>
+                      </li>
+                      <li
+                        class="c21"
+                        role="listitem"
+                      >
+                        Ўзбек деҳқонининг косаси нега оқармайди
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <div
+                    class="c19"
+                  >
+                    <ul
+                      class="c20"
+                      dir="ltr"
+                      role="list"
+                    >
+                      <li
+                        class="c21"
+                        role="listitem"
+                      >
+                        <a
+                          class="c18"
+                          href="https://bbc.com/uzbek"
+                        >
+                          Ўзбек деҳқонининг косаси нега оқармайди
+                        </a>
+                      </li>
+                      <li
+                        class="c21"
+                        role="listitem"
+                      >
+                        <a
+                          class="c18"
+                          href="https://bbc.com/uzbek"
+                        >
+                          Ўзбек деҳқонининг косаси нега оқармайди
+                        </a>
+                      </li>
+                      <li
+                        class="c21"
+                        role="listitem"
+                      >
+                        <a
+                          class="c18"
+                          href="https://bbc.com/uzbek"
+                        >
+                          Ўзбек деҳқонининг косаси нега оқармайди
+                        </a>
+                      </li>
+                      <li
+                        class="c21"
+                        role="listitem"
+                      >
+                        <a
+                          class="c18"
+                          href="https://bbc.com/uzbek"
+                        >
+                          Ўзбек деҳқонининг косаси нега оқармайди
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="c22"
+                >
+                  <figure
+                    class="c5"
                   >
                     <div
-                      class="c22"
+                      class="c23"
                     >
                       <div
-                        class="c23"
+                        class="c24"
                       >
                         <div
-                          class="lazyload-wrapper"
+                          class="c25"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <noscript />
+                          <p
+                            class="c26"
+                            role="text"
+                          >
+                            <span
+                              class="c3"
+                            >
+                              Сурат манбаси, 
+                            </span>
+                            <span
+                              lang="en-GB"
+                            >
+                              AFP
+                            </span>
+                          </p>
                         </div>
-                        <noscript />
-                        <p
-                          class="c24"
-                          role="text"
-                        >
-                          <span
-                            class="c1"
-                          >
-                            Сурат манбаси, 
-                          </span>
-                          <span
-                            lang="en-GB"
-                          >
-                            AFP
-                          </span>
-                        </p>
                       </div>
+                      <div
+                        class="c27"
+                      />
                     </div>
-                    <div
-                      class="c25"
-                    />
-                  </div>
-                </figure>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
+                  </figure>
+                </div>
+                <div
+                  class="c13"
                 >
-                  Ўзбек деҳқонининг косаси нега оқармайди transmission info 
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
+                  <p
+                    class="c16"
+                  >
+                    Ўзбек деҳқонининг косаси нега оқармайди transmission info 
+                  </p>
+                </div>
+                <div
+                  class="c13"
                 >
-                  Ўзбек деҳқонининг косаси нега оқармайди footer 
-                </p>
+                  <p
+                    class="c16"
+                  >
+                    Ўзбек деҳқонининг косаси нега оқармайди footer 
+                  </p>
+                </div>
               </div>
             </main>
           </div>
@@ -901,7 +946,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 
 exports[`Media Asset Page should render component 1`] = `
 <DocumentFragment>
-  .c53 {
+  .c55 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -910,7 +955,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 0.75rem;
 }
 
-.c52 {
+.c54 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -919,7 +964,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 0.8125rem;
 }
 
-.c1 {
+.c3 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -931,7 +976,7 @@ exports[`Media Asset Page should render component 1`] = `
   margin: 0;
 }
 
-.c7 {
+.c9 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -944,27 +989,27 @@ exports[`Media Asset Page should render component 1`] = `
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c4 {
+.c6 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c28 {
+.c30 {
   margin: 0 auto;
   padding-bottom: 2rem;
 }
 
-.c11 {
+.c13 {
   grid-column: 1 / span 6;
 }
 
-.c22 {
+.c24 {
   display: grid;
   grid-column-gap: 1rem;
 }
 
-.c9 {
+.c11 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -976,7 +1021,7 @@ exports[`Media Asset Page should render component 1`] = `
   padding: 2rem 0;
 }
 
-.c15 {
+.c17 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -987,7 +1032,7 @@ exports[`Media Asset Page should render component 1`] = `
   padding: 1.5rem 0;
 }
 
-.c20 {
+.c22 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -995,7 +1040,7 @@ exports[`Media Asset Page should render component 1`] = `
   font-weight: inherit;
 }
 
-.c13 {
+.c15 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -1006,11 +1051,11 @@ exports[`Media Asset Page should render component 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c13:last-child {
+.c15:last-child {
   padding-bottom: 1rem;
 }
 
-.c49 {
+.c51 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -1020,7 +1065,7 @@ exports[`Media Asset Page should render component 1`] = `
   font-style: normal;
 }
 
-.c14 {
+.c16 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1031,25 +1076,25 @@ exports[`Media Asset Page should render component 1`] = `
   margin: 0;
 }
 
-.c19 {
+.c21 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c19:visited {
+.c21:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c19:focus,
-.c19:hover {
+.c21:focus,
+.c21:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c17 {
+.c19 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1059,11 +1104,11 @@ exports[`Media Asset Page should render component 1`] = `
   list-style-type: none;
 }
 
-.c17 > li {
+.c19 > li {
   position: relative;
 }
 
-.c17 > li::before {
+.c19 > li::before {
   top: 0.5rem;
   content: ' ';
   position: absolute;
@@ -1073,21 +1118,21 @@ exports[`Media Asset Page should render component 1`] = `
   left: -1rem;
 }
 
-.c18 {
+.c20 {
   margin-bottom: 1rem;
 }
 
-.c16 {
+.c18 {
   margin-bottom: 1.5rem;
 }
 
-.c3 {
+.c5 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.c25 {
+.c27 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -1101,7 +1146,7 @@ exports[`Media Asset Page should render component 1`] = `
   left: 0;
 }
 
-.c27 {
+.c29 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1112,20 +1157,20 @@ exports[`Media Asset Page should render component 1`] = `
   width: 100%;
 }
 
-.c27 > p {
+.c29 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c27 > p:last-child {
+.c29 > p:last-child {
   padding-bottom: 0;
 }
 
-.c27 i {
+.c29 i {
   font-style: normal;
 }
 
-.c24 {
+.c26 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1138,15 +1183,15 @@ exports[`Media Asset Page should render component 1`] = `
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c2 {
+.c4 {
   margin-top: 0.5rem;
 }
 
-.c2 figure {
+.c4 figure {
   padding-bottom: 1rem;
 }
 
-.c34 {
+.c36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1156,7 +1201,7 @@ exports[`Media Asset Page should render component 1`] = `
   flex-direction: column;
 }
 
-.c35 {
+.c37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1175,7 +1220,7 @@ exports[`Media Asset Page should render component 1`] = `
   align-items: baseline;
 }
 
-.c36 {
+.c38 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1194,59 +1239,59 @@ exports[`Media Asset Page should render component 1`] = `
   align-items: center;
 }
 
-.c32 {
+.c34 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c30 {
+.c32 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
   margin-top: 2rem;
 }
 
-.c33 {
+.c35 {
   margin: 0;
   padding: 0;
 }
 
-.c29 {
+.c31 {
   margin-bottom: 1rem;
 }
 
-.c31 {
+.c33 {
   margin-top: 0;
 }
 
-.c43 {
+.c45 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c46 {
+.c48 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c41 {
+.c43 {
   position: relative;
 }
 
-.c44 {
+.c46 {
   position: relative;
 }
 
-.c45 > * {
+.c47 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c50 {
+.c52 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1257,7 +1302,7 @@ exports[`Media Asset Page should render component 1`] = `
   display: block;
 }
 
-.c51 {
+.c53 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1269,48 +1314,46 @@ exports[`Media Asset Page should render component 1`] = `
   height: 100%;
 }
 
-.c54 {
+.c56 {
   padding: 0 0.25rem;
 }
 
-.c39 {
+.c41 {
   padding: 0.5rem 0 1rem;
 }
 
-.c39:last-child {
+.c41:last-child {
   border: none;
 }
 
-.c39:first-child {
+.c41:first-child {
   padding-top: 0;
 }
 
-.c39:last-child {
+.c41:last-child {
   padding-bottom: 0;
 }
 
-.c37 {
+.c39 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c10 {
+.c12 {
   padding: 0.5rem 0 2rem;
 }
 
-.c0 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
+.c1 {
   width: 100%;
   padding-bottom: 1.5rem;
 }
 
-.c12 {
+.c14 {
   padding-bottom: 1rem;
 }
 
-.c6 {
+.c8 {
   position: absolute;
   left: 0;
   top: 0;
@@ -1318,7 +1361,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 100%;
 }
 
-.c5 {
+.c7 {
   z-index: 1;
   border: 0;
   left: 0;
@@ -1329,7 +1372,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 100%;
 }
 
-.c47 {
+.c49 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1340,7 +1383,7 @@ exports[`Media Asset Page should render component 1`] = `
   line-height: 1.25rem;
 }
 
-.c48 {
+.c50 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1349,7 +1392,7 @@ exports[`Media Asset Page should render component 1`] = `
   overflow-wrap: anywhere;
 }
 
-.c48:before {
+.c50:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1361,50 +1404,50 @@ exports[`Media Asset Page should render component 1`] = `
   z-index: 1;
 }
 
-.c48:hover,
-.c48:focus {
+.c50:hover,
+.c50:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c48:visited {
+.c50:visited {
   color: #6E6E73;
 }
 
 @media (max-width:37.4375rem) {
-  .c28 {
+  .c30 {
     grid-column-gap: 0.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c28 {
+  .c30 {
     grid-column-gap: 1rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c28 {
+  .c30 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c28 {
+  .c30 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c28 {
+  .c30 {
     grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
     max-width: 46.4rem;
   }
 }
 
 @supports (display:grid) {
-  .c28 {
+  .c30 {
     display: grid;
     max-width: initial;
     margin: initial;
@@ -1412,386 +1455,234 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (max-width:25rem) {
-  .c11 {
+  .c13 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c11 {
+  .c13 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c13 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c11 {
+  .c13 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c11 {
+  .c13 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c11 {
+  .c13 {
     max-width: initial;
   }
 }
 
 @media (max-width:63rem) {
-  .c8 {
+  .c10 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c8 {
+  .c10 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c8 {
+  .c10 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c8 {
+  .c10 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c8 {
+  .c10 {
     padding: 0 1rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c21 {
+  .c23 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c21 {
+  .c23 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c21 {
+  .c23 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c23 {
+  .c25 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c23 {
+  .c25 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c23 {
+  .c25 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c23 {
+  .c25 {
     grid-column: 1 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c26 {
+  .c28 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c26 {
+  .c28 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c26 {
+  .c28 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c26 {
+  .c28 {
     grid-column: 1 / span 10;
   }
 }
 
 @media (max-width:79.9375rem) {
-  .c22 {
+  .c24 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c22 {
+  .c24 {
     grid-template-columns: repeat(12,1fr);
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c9 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c9 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c15 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c15 {
-    padding-top: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c13 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c49 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c49 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c17 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c17 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c27 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c27 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c27 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .c27 {
-    padding: 0.5rem 0 0;
-  }
-}
-
-@media (max-width:63rem) {
-  .c2 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (min-width:25rem) {
-  .c2 {
-    margin-top: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c2 {
-    padding: 0.5rem 0 0;
-    margin-top: 2rem;
-  }
-
-  .c2 figure {
-    padding-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c35 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c36 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c36 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c36 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c36 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c32 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c32 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c30 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c30 {
-    margin-bottom: 1.5rem;
-  }
-}
-
 @supports (display:grid) {
-  .c38 {
+  .c0 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
+  .c2 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
   .c40 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c42 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1800,7 +1691,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c40 {
+  .c42 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1809,7 +1700,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c40 {
+  .c42 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1818,7 +1709,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c40 {
+  .c42 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -1827,7 +1718,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c40 {
+  .c42 {
     width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -1836,7 +1727,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c40 {
+  .c42 {
     width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -1845,69 +1736,294 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @supports (display:grid) {
-  .c40 {
+  .c42 {
     display: block;
   }
 }
 
-@media (max-width:63rem) {
-  .c29 {
-    grid-column: 1 / span 6;
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c11 {
+    font-size: 2rem;
+    line-height: 2.25rem;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c29 {
-    grid-column: 3 / span 6;
+@media (min-width:37.5rem) {
+  .c11 {
+    font-size: 2.75rem;
+    line-height: 3rem;
   }
 }
 
-@media (min-width:80rem) {
-  .c29 {
-    grid-column: 6 / span 12;
+@media (min-width:37.5rem) {
+  .c11 {
+    padding: 2.5rem 0;
   }
 }
 
-@media (max-width:25rem) {
-  .c29 {
-    padding: 0 0.5rem;
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c17 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
+@media (min-width:37.5rem) {
+  .c17 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    padding-top: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c15 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c51 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c51 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c19 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c29 {
-    padding: 0 1rem;
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c29 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c29 {
+    padding: 0.5rem 1rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c29 {
+    padding: 0.5rem 0 0;
+  }
+}
+
+@media (max-width:63rem) {
+  .c4 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c4 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c4 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (min-width:25rem) {
+  .c4 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    padding: 0.5rem 0 0;
+    margin-top: 2rem;
+  }
+
+  .c4 figure {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c37 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c38 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c34 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c34 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c32 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c32 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c31 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c31 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c31 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c31 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c31 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c31 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c43 {
+  .c45 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c43 {
+  .c45 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c46 {
+  .c48 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c46 {
+  .c48 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -1915,7 +2031,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c46 {
+  .c48 {
     display: block;
     width: initial;
     padding: initial;
@@ -1924,7 +2040,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c41 {
+  .c43 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -1932,137 +2048,105 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c45 {
+  .c47 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c45 > * {
+  .c47 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c50 {
+  .c52 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c50 {
+  .c52 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c42 {
+  .c44 {
     display: grid;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c39 {
+  .c41 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c39 {
+  .c41 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c39 {
+  .c41 {
     padding: 0 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c39:first-child {
+  .c41:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c39 {
+  .c41 {
     border-bottom: 0.0625rem solid #F2F2F2;
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c10 {
+  .c12 {
     padding: 1rem 0 2.5rem;
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c0 {
-    padding-bottom: 2rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c12 {
+  .c14 {
     padding-bottom: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c47 {
+  .c49 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c47 {
+  .c49 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
@@ -2091,622 +2175,628 @@ exports[`Media Asset Page should render component 1`] = `
             </div>
             <noscript />
             <main
-              class="c0"
+              class="c0 c1"
+              dir="ltr"
               role="main"
             >
-              <h1
-                class="c1"
-                id="content"
-                tabindex="-1"
-              >
-                Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & &lt; &gt;
-              </h1>
               <div
                 class="c2"
+                dir="ltr"
               >
-                <figure
+                <h1
                   class="c3"
+                  id="content"
+                  tabindex="-1"
                 >
-                  <div
-                    class="c4"
+                  Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & &lt; &gt;
+                </h1>
+                <div
+                  class="c4"
+                >
+                  <figure
+                    class="c5"
                   >
-                    <iframe
-                      allow="autoplay; fullscreen"
-                      allowfullscreen=""
-                      class="c5"
-                      scrolling="no"
-                      src="https://test.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
-                      title="Media player"
-                    />
                     <div
                       class="c6"
                     >
-                      <div
+                      <iframe
+                        allow="autoplay; fullscreen"
+                        allowfullscreen=""
                         class="c7"
+                        scrolling="no"
+                        src="https://test.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
+                        title="Media player"
                       />
+                      <div
+                        class="c8"
+                      >
+                        <div
+                          class="c9"
+                        />
+                      </div>
+                      <noscript />
                     </div>
-                    <noscript />
-                  </div>
-                </figure>
-              </div>
-              <div
-                class="c8"
-              >
-                <strong
-                  aria-hidden="true"
-                  class="c9 c10"
+                  </figure>
+                </div>
+                <div
+                  class="c10"
                 >
-                  Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & &lt; &gt;
-                </strong>
-              </div>
-              <div
-                class="c11 c12"
-              >
-                <time
-                  class="c13"
-                  datetime="2019-09-13"
+                  <strong
+                    aria-hidden="true"
+                    class="c11 c12"
+                  >
+                    Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & &lt; &gt;
+                  </strong>
+                </div>
+                <div
+                  class="c13 c14"
                 >
-                  13 September 2019
-                </time>
-                <div>
                   <time
-                    class="c13"
-                    datetime="2019-11-20"
+                    class="c15"
+                    datetime="2019-09-13"
                   >
-                    New Informate 20 November 2019
+                    13 September 2019
                   </time>
+                  <div>
+                    <time
+                      class="c15"
+                      datetime="2019-11-20"
+                    >
+                      New Informate 20 November 2019
+                    </time>
+                  </div>
                 </div>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  <b>
-                    This is an introduction in bold. & &lt; &gt;
-                  </b>
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <h2
-                  class="c15"
-                  id="This-is-a-heading-<->"
-                  tabindex="-1"
-                >
-                  This is a heading & &lt; &gt;
-                </h2>
-              </div>
-              <div
-                class="c11"
-              >
-                <h2
-                  class="c15"
-                  id="This-is-a-subheading-<->"
-                  tabindex="-1"
-                >
-                  This is a subheading & &lt; &gt;
-                </h2>
-              </div>
-              <div
-                class="c11"
-              >
-                <h2
-                  class="c15"
-                  id="This-is-a-crosshead-<->"
-                  tabindex="-1"
-                >
-                  This is a crosshead & &lt; &gt;
-                </h2>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  Bulleted list:
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
                 <div
-                  class="c16"
+                  class="c13"
                 >
-                  <ul
-                    class="c17"
-                    dir="ltr"
-                    role="list"
+                  <p
+                    class="c16"
                   >
-                    <li
-                      class="c18"
-                      role="listitem"
-                    >
-                      <a
-                        class="c19"
-                        href="http://www.bbc.com/afrique/23248423"
-                      >
-                        &lt;Media Asset Page&gt;
-                      </a>
-                    </li>
-                    <li
-                      class="c18"
-                      role="listitem"
-                    >
-                      <a
-                        class="c19"
-                        href="http://www.bbc.com/afrique/23248423"
-                      >
-                        &lt;Media Asset Page&gt;
-                      </a>
-                    </li>
-                    <li
-                      class="c18"
-                      role="listitem"
-                    >
-                      <a
-                        class="c19"
-                        href="http://www.bbc.com/afrique/23248423"
-                      >
-                        &lt;Media Asset Page&gt;
-                      </a>
-                    </li>
-                    <li
-                      class="c18"
-                      role="listitem"
-                    >
-                      <a
-                        class="c19"
-                        href="https://bbc.com/pidgin"
-                      >
-                        this is the link text
-                      </a>
-                    </li>
-                    <li
-                      class="c18"
-                      role="listitem"
-                    >
-                      <a
-                        class="c19"
-                        href="https://bbc.com/pidgin"
-                      >
-                        this is the link text
-                      </a>
-                    </li>
-                    <li
-                      class="c18"
-                      role="listitem"
-                    >
-                      <a
-                        class="c19"
-                        href="https://bbc.com/pidgin"
-                      >
-                        this is the link text
-                      </a>
-                    </li>
-                  </ul>
+                    <b>
+                      This is an introduction in bold. & &lt; &gt;
+                    </b>
+                  </p>
                 </div>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  Numbered list:
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
                 <div
-                  class="c16"
+                  class="c13"
                 >
-                  <ul
+                  <h2
                     class="c17"
-                    dir="ltr"
-                    role="list"
+                    id="This-is-a-heading-<->"
+                    tabindex="-1"
                   >
-                    <li
-                      class="c18"
-                      role="listitem"
-                    >
-                      <a
-                        class="c19"
-                        href="http://www.bbc.com/afrique/23248423"
-                      >
-                        &lt;Media Asset Page&gt;
-                      </a>
-                    </li>
-                    <li
-                      class="c18"
-                      role="listitem"
-                    >
-                      <a
-                        class="c19"
-                        href="http://www.bbc.com/afrique/23248423"
-                      >
-                        &lt;Media Asset Page&gt;
-                      </a>
-                    </li>
-                    <li
-                      class="c18"
-                      role="listitem"
-                    >
-                      <a
-                        class="c19"
-                        href="http://www.bbc.com/afrique/23248423"
-                      >
-                        &lt;Media Asset Page&gt;
-                      </a>
-                    </li>
-                    <li
-                      class="c18"
-                      role="listitem"
-                    >
-                      <a
-                        class="c19"
-                        href="https://bbc.com/pidgin"
-                      >
-                        this is the link text
-                      </a>
-                    </li>
-                    <li
-                      class="c18"
-                      role="listitem"
-                    >
-                      <a
-                        class="c19"
-                        href="https://bbc.com/pidgin"
-                      >
-                        this is the link text
-                      </a>
-                    </li>
-                    <li
-                      class="c18"
-                      role="listitem"
-                    >
-                      <a
-                        class="c19"
-                        href="https://bbc.com/pidgin"
-                      >
-                        this is the link text
-                      </a>
-                    </li>
-                  </ul>
+                    This is a heading & &lt; &gt;
+                  </h2>
                 </div>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
+                <div
+                  class="c13"
                 >
-                  Lorem ipsum dolor sit amet, 
-                  <b>
-                    consectetur
-                  </b>
-                   adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  <b>
-                     ullamco laboris nisi ut aliquip 
-                  </b>
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                  <i
-                    class="c20"
+                  <h2
+                    class="c17"
+                    id="This-is-a-subheading-<->"
+                    tabindex="-1"
                   >
-                     in voluptate velit esse cillum 
-                  </i>
-                  dolore "eu fugiat nulla" pariatur. 
-                  <a
-                    class="c19"
-                    href="https://bbc.com/pidgin"
+                    This is a subheading & &lt; &gt;
+                  </h2>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <h2
+                    class="c17"
+                    id="This-is-a-crosshead-<->"
+                    tabindex="-1"
                   >
-                    Excepteur
-                  </a>
-                   sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
+                    This is a crosshead & &lt; &gt;
+                  </h2>
+                </div>
+                <div
+                  class="c13"
                 >
-                  Testing special characters: !"£$%^&*()_+=-{}[]:@~;'#&lt;&gt;?,./\\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  Table:
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  Social media embed:
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  Quote box:
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  Correspondent quote box:
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  Fact box:
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  ­
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
-                >
-                  Lorem ipsum
-                  <a
-                    class="c19"
-                    href="https://bbc.com/pidgin"
+                  <p
+                    class="c16"
                   >
-                     dolor sit amet
-                  </a>
-                  , consectetur adipiscing elit
-                </p>
-              </div>
-              <div
-                class="c21"
-              >
-                <figure
-                  class="c3"
+                    This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    Bulleted list:
+                  </p>
+                </div>
+                <div
+                  class="c13"
                 >
                   <div
-                    class="c22"
+                    class="c18"
                   >
-                    <div
-                      class="c23"
+                    <ul
+                      class="c19"
+                      dir="ltr"
+                      role="list"
                     >
-                      <div
-                        class="c24"
+                      <li
+                        class="c20"
+                        role="listitem"
                       >
-                        <div
-                          class="lazyload-wrapper"
+                        <a
+                          class="c21"
+                          href="http://www.bbc.com/afrique/23248423"
                         >
-                          <div
-                            class="lazyload-placeholder"
-                          />
-                        </div>
-                        <noscript />
-                        <p
-                          class="c25"
-                          role="text"
-                        >
-                          <span
-                            class="c1"
-                          >
-                            Wia dis foto come from, 
-                          </span>
-                          <span
-                            lang="en-GB"
-                          >
-                            Google
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      class="c26"
-                    >
-                      <figcaption
-                        class="c27"
+                          &lt;Media Asset Page&gt;
+                        </a>
+                      </li>
+                      <li
+                        class="c20"
+                        role="listitem"
                       >
-                        <span
-                          class="c1"
+                        <a
+                          class="c21"
+                          href="http://www.bbc.com/afrique/23248423"
                         >
-                          Wetin we call dis foto, 
-                        </span>
-                        <p>
-                          Psammead was named after the mythical sand creature
-                        </p>
-                      </figcaption>
-                    </div>
+                          &lt;Media Asset Page&gt;
+                        </a>
+                      </li>
+                      <li
+                        class="c20"
+                        role="listitem"
+                      >
+                        <a
+                          class="c21"
+                          href="http://www.bbc.com/afrique/23248423"
+                        >
+                          &lt;Media Asset Page&gt;
+                        </a>
+                      </li>
+                      <li
+                        class="c20"
+                        role="listitem"
+                      >
+                        <a
+                          class="c21"
+                          href="https://bbc.com/pidgin"
+                        >
+                          this is the link text
+                        </a>
+                      </li>
+                      <li
+                        class="c20"
+                        role="listitem"
+                      >
+                        <a
+                          class="c21"
+                          href="https://bbc.com/pidgin"
+                        >
+                          this is the link text
+                        </a>
+                      </li>
+                      <li
+                        class="c20"
+                        role="listitem"
+                      >
+                        <a
+                          class="c21"
+                          href="https://bbc.com/pidgin"
+                        >
+                          this is the link text
+                        </a>
+                      </li>
+                    </ul>
                   </div>
-                </figure>
-              </div>
-              <div
-                class="c21"
-              >
-                <figure
-                  class="c3"
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    Numbered list:
+                  </p>
+                </div>
+                <div
+                  class="c13"
                 >
                   <div
-                    class="c22"
+                    class="c18"
+                  >
+                    <ul
+                      class="c19"
+                      dir="ltr"
+                      role="list"
+                    >
+                      <li
+                        class="c20"
+                        role="listitem"
+                      >
+                        <a
+                          class="c21"
+                          href="http://www.bbc.com/afrique/23248423"
+                        >
+                          &lt;Media Asset Page&gt;
+                        </a>
+                      </li>
+                      <li
+                        class="c20"
+                        role="listitem"
+                      >
+                        <a
+                          class="c21"
+                          href="http://www.bbc.com/afrique/23248423"
+                        >
+                          &lt;Media Asset Page&gt;
+                        </a>
+                      </li>
+                      <li
+                        class="c20"
+                        role="listitem"
+                      >
+                        <a
+                          class="c21"
+                          href="http://www.bbc.com/afrique/23248423"
+                        >
+                          &lt;Media Asset Page&gt;
+                        </a>
+                      </li>
+                      <li
+                        class="c20"
+                        role="listitem"
+                      >
+                        <a
+                          class="c21"
+                          href="https://bbc.com/pidgin"
+                        >
+                          this is the link text
+                        </a>
+                      </li>
+                      <li
+                        class="c20"
+                        role="listitem"
+                      >
+                        <a
+                          class="c21"
+                          href="https://bbc.com/pidgin"
+                        >
+                          this is the link text
+                        </a>
+                      </li>
+                      <li
+                        class="c20"
+                        role="listitem"
+                      >
+                        <a
+                          class="c21"
+                          href="https://bbc.com/pidgin"
+                        >
+                          this is the link text
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    Lorem ipsum dolor sit amet, 
+                    <b>
+                      consectetur
+                    </b>
+                     adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    <b>
+                       ullamco laboris nisi ut aliquip 
+                    </b>
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    <i
+                      class="c22"
+                    >
+                       in voluptate velit esse cillum 
+                    </i>
+                    dolore "eu fugiat nulla" pariatur. 
+                    <a
+                      class="c21"
+                      href="https://bbc.com/pidgin"
+                    >
+                      Excepteur
+                    </a>
+                     sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    Testing special characters: !"£$%^&*()_+=-{}[]:@~;'#&lt;&gt;?,./\\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ
+                  </p>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#
+                  </p>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    Table:
+                  </p>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    Social media embed:
+                  </p>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    Quote box:
+                  </p>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    Correspondent quote box:
+                  </p>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    Fact box:
+                  </p>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    ­
+                  </p>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    Lorem ipsum
+                    <a
+                      class="c21"
+                      href="https://bbc.com/pidgin"
+                    >
+                       dolor sit amet
+                    </a>
+                    , consectetur adipiscing elit
+                  </p>
+                </div>
+                <div
+                  class="c23"
+                >
+                  <figure
+                    class="c5"
                   >
                     <div
-                      class="c23"
+                      class="c24"
                     >
                       <div
-                        class="c24"
+                        class="c25"
                       >
                         <div
-                          class="lazyload-wrapper"
+                          class="c26"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <noscript />
+                          <p
+                            class="c27"
+                            role="text"
+                          >
+                            <span
+                              class="c3"
+                            >
+                              Wia dis foto come from, 
+                            </span>
+                            <span
+                              lang="en-GB"
+                            >
+                              Google
+                            </span>
+                          </p>
                         </div>
-                        <noscript />
-                        <p
-                          class="c25"
-                          role="text"
+                      </div>
+                      <div
+                        class="c28"
+                      >
+                        <figcaption
+                          class="c29"
                         >
                           <span
-                            class="c1"
+                            class="c3"
                           >
-                            Wia dis foto come from, 
+                            Wetin we call dis foto, 
                           </span>
-                          <span
-                            lang="en-GB"
-                          >
-                            Butterfly person
-                          </span>
-                        </p>
+                          <p>
+                            Psammead was named after the mythical sand creature
+                          </p>
+                        </figcaption>
                       </div>
                     </div>
-                    <div
-                      class="c26"
-                    >
-                      <figcaption
-                        class="c27"
-                      >
-                        <span
-                          class="c1"
-                        >
-                          Wetin we call dis foto, 
-                        </span>
-                        <p>
-                          A pretty little butterfly & &lt; &gt;
-                        </p>
-                      </figcaption>
-                    </div>
-                  </div>
-                </figure>
-              </div>
-              <div
-                class="c11"
-              >
-                <div
-                  class="c16"
-                >
-                  <ul
-                    class="c17"
-                    dir="ltr"
-                    role="list"
-                  >
-                    <li
-                      class="c18"
-                      role="listitem"
-                    >
-                      sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </li>
-                    <li
-                      class="c18"
-                      role="listitem"
-                    >
-                      sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </li>
-                    <li
-                      class="c18"
-                      role="listitem"
-                    >
-                      sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </li>
-                    <li
-                      class="c18"
-                      role="listitem"
-                    >
-                      v3 draft
-                    </li>
-                  </ul>
+                  </figure>
                 </div>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
+                <div
+                  class="c23"
                 >
-                  This is transmission info 
-                </p>
-              </div>
-              <div
-                class="c11"
-              >
-                <p
-                  class="c14"
+                  <figure
+                    class="c5"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c25"
+                      >
+                        <div
+                          class="c26"
+                        >
+                          <div
+                            class="lazyload-wrapper"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <noscript />
+                          <p
+                            class="c27"
+                            role="text"
+                          >
+                            <span
+                              class="c3"
+                            >
+                              Wia dis foto come from, 
+                            </span>
+                            <span
+                              lang="en-GB"
+                            >
+                              Butterfly person
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="c28"
+                      >
+                        <figcaption
+                          class="c29"
+                        >
+                          <span
+                            class="c3"
+                          >
+                            Wetin we call dis foto, 
+                          </span>
+                          <p>
+                            A pretty little butterfly & &lt; &gt;
+                          </p>
+                        </figcaption>
+                      </div>
+                    </div>
+                  </figure>
+                </div>
+                <div
+                  class="c13"
                 >
-                  This is the footer 
-                </p>
+                  <div
+                    class="c18"
+                  >
+                    <ul
+                      class="c19"
+                      dir="ltr"
+                      role="list"
+                    >
+                      <li
+                        class="c20"
+                        role="listitem"
+                      >
+                        sunt in culpa qui officia deserunt mollit anim id est laborum
+                      </li>
+                      <li
+                        class="c20"
+                        role="listitem"
+                      >
+                        sunt in culpa qui officia deserunt mollit anim id est laborum
+                      </li>
+                      <li
+                        class="c20"
+                        role="listitem"
+                      >
+                        sunt in culpa qui officia deserunt mollit anim id est laborum
+                      </li>
+                      <li
+                        class="c20"
+                        role="listitem"
+                      >
+                        v3 draft
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    This is transmission info 
+                  </p>
+                </div>
+                <div
+                  class="c13"
+                >
+                  <p
+                    class="c16"
+                  >
+                    This is the footer 
+                  </p>
+                </div>
               </div>
             </main>
             <section
               aria-labelledby="related-content-heading"
-              class="c28"
+              class="c30"
               data-e2e="related-content-heading"
               role="region"
             >
               <div
-                class="c29"
+                class="c31"
               >
                 <div
-                  class="c30 c31"
+                  class="c32 c33"
                 >
                   <div
-                    class="c32"
+                    class="c34"
                   />
                   <h2
-                    class="c33"
+                    class="c35"
                   >
                     <span
-                      class="c34"
+                      class="c36"
                     >
                       <span
-                        class="c35"
+                        class="c37"
                       >
                         <span
-                          class="c36"
+                          class="c38"
                           dir="ltr"
                           id="related-content-heading"
                         >
@@ -2717,28 +2807,28 @@ exports[`Media Asset Page should render component 1`] = `
                   </h2>
                 </div>
                 <ol
-                  class="c37 c38"
+                  class="c39 c40"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="c39 c40"
+                    class="c41 c42"
                     dir="ltr"
                     role="listitem"
                   >
                     <div
-                      class="c41 c42"
+                      class="c43 c44"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="c43"
+                        class="c45"
                         dir="ltr"
                       >
                         <div
-                          class="c44"
+                          class="c46"
                         >
                           <div
-                            class="c24"
+                            class="c26"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -2749,26 +2839,26 @@ exports[`Media Asset Page should render component 1`] = `
                             </div>
                           </div>
                           <div
-                            class="c45"
+                            class="c47"
                           />
                         </div>
                       </div>
                       <div
-                        class="c46"
+                        class="c48"
                         dir="ltr"
                       >
                         <h3
-                          class="c47"
+                          class="c49"
                         >
                           <a
-                            class="c48"
+                            class="c50"
                             href="/pidgin/tori-23145776"
                           >
                             Police Arrest 3 ontop Anambra Church Attack
                           </a>
                         </h3>
                         <time
-                          class="c49"
+                          class="c51"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -2777,23 +2867,23 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="c39 c40"
+                    class="c41 c42"
                     dir="ltr"
                     role="listitem"
                   >
                     <div
-                      class="c41 c42"
+                      class="c43 c44"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="c43"
+                        class="c45"
                         dir="ltr"
                       >
                         <div
-                          class="c44"
+                          class="c46"
                         >
                           <div
-                            class="c24"
+                            class="c26"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -2804,26 +2894,26 @@ exports[`Media Asset Page should render component 1`] = `
                             </div>
                           </div>
                           <div
-                            class="c45"
+                            class="c47"
                           />
                         </div>
                       </div>
                       <div
-                        class="c46"
+                        class="c48"
                         dir="ltr"
                       >
                         <h3
-                          class="c47"
+                          class="c49"
                         >
                           <a
-                            class="c48"
+                            class="c50"
                             href="/pidgin/tori-23143754"
                           >
                             Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
                           </a>
                         </h3>
                         <time
-                          class="c49"
+                          class="c51"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -2832,38 +2922,38 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="c39 c40"
+                    class="c41 c42"
                     dir="ltr"
                     role="listitem"
                   >
                     <div
-                      class="c41 c42"
+                      class="c43 c44"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="c43"
+                        class="c45"
                         dir="ltr"
                       >
                         <div
-                          class="c44"
+                          class="c46"
                         >
                           <div
-                            class="c7"
+                            class="c9"
                           />
                           <div
-                            class="c45"
+                            class="c47"
                           >
                             <div
                               aria-hidden="true"
-                              class="c50"
+                              class="c52"
                               dir="ltr"
                             >
                               <div
-                                class="c51"
+                                class="c53"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="c52"
+                                  class="c54"
                                   focusable="false"
                                   height="13px"
                                   viewBox="0 0 32 26"
@@ -2884,21 +2974,21 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c46"
+                        class="c48"
                         dir="ltr"
                       >
                         <h3
-                          class="c47"
+                          class="c49"
                         >
                           <a
-                            class="c48"
+                            class="c50"
                             href="/pidgin/23146654"
                           >
                             <span
                               role="text"
                             >
                               <span
-                                class="c1"
+                                class="c3"
                               >
                                 Image gallery, 
                               </span>
@@ -2909,7 +2999,7 @@ exports[`Media Asset Page should render component 1`] = `
                           </a>
                         </h3>
                         <time
-                          class="c49"
+                          class="c51"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -2918,23 +3008,23 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="c39 c40"
+                    class="c41 c42"
                     dir="ltr"
                     role="listitem"
                   >
                     <div
-                      class="c41 c42"
+                      class="c43 c44"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="c43"
+                        class="c45"
                         dir="ltr"
                       >
                         <div
-                          class="c44"
+                          class="c46"
                         >
                           <div
-                            class="c24"
+                            class="c26"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -2945,19 +3035,19 @@ exports[`Media Asset Page should render component 1`] = `
                             </div>
                           </div>
                           <div
-                            class="c45"
+                            class="c47"
                           >
                             <div
                               aria-hidden="true"
-                              class="c50"
+                              class="c52"
                               dir="ltr"
                             >
                               <div
-                                class="c51"
+                                class="c53"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="c53"
+                                  class="c55"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 13 12"
@@ -2971,7 +3061,7 @@ exports[`Media Asset Page should render component 1`] = `
                                   />
                                 </svg>
                                 <time
-                                  class="c54"
+                                  class="c56"
                                   datetime="PT15S"
                                 >
                                   0:15
@@ -2982,21 +3072,21 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c46"
+                        class="c48"
                         dir="ltr"
                       >
                         <h3
-                          class="c47"
+                          class="c49"
                         >
                           <a
-                            class="c48"
+                            class="c50"
                             href="/pidgin/media-23147054"
                           >
                             <span
                               role="text"
                             >
                               <span
-                                class="c1"
+                                class="c3"
                               >
                                 Make you listen, 
                               </span>
@@ -3004,7 +3094,7 @@ exports[`Media Asset Page should render component 1`] = `
                                 BBC News Pidgin One Minute News
                               </span>
                               <span
-                                class="c1"
+                                class="c3"
                               >
                                 , Duration 0,15
                               </span>
@@ -3012,7 +3102,7 @@ exports[`Media Asset Page should render component 1`] = `
                           </a>
                         </h3>
                         <time
-                          class="c49"
+                          class="c51"
                           datetime="2017-08-17"
                         >
                           17th August 2017

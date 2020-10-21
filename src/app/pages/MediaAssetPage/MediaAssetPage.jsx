@@ -57,7 +57,7 @@ const MediaAssetPage = ({ pageData }) => {
 
   const StyledGelPageGrid = styled(GelPageGrid)`
     width: 100%;
-    flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
+    padding-bottom: ${GEL_SPACING_TRPL};
   `;
 
   const getIndexImageLocator = () => {
