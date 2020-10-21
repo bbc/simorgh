@@ -35,23 +35,23 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     if (serviceHasCaption(service)) {
       describe('Image with placeholder', () => {
         it('should have a visible image that is not lazyloaded', () => {
-          cy.get('div[class^="ImagePlaceholder"]')
+          cy.get('div[class*="ImagePlaceholder"]')
             .eq(0)
             .should('be.visible')
             .should('to.have.descendants', 'img')
             .within(() => {
-              cy.get('div[class^="lazyload-placeholder"]').should('not.exist');
+              cy.get('div[class*="lazyload-placeholder"]').should('not.exist');
             });
         });
 
         it('should have a visible image that is lazyloaded and has a noscript fallback image', () => {
-          cy.get('div[class^="ImagePlaceholder"]')
+          cy.get('div[class*="ImagePlaceholder"]')
             .eq(1)
             .scrollIntoView()
             .should('be.visible')
             .within(() => {
               cy.get('noscript').contains('<img ');
-              cy.get('div[class^="lazyload-placeholder"]').should('exist');
+              cy.get('div[class*="lazyload-placeholder"]').should('exist');
             });
         });
 
