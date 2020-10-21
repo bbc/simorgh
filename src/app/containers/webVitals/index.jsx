@@ -12,7 +12,7 @@ const WebVitals = () => {
   const { pageType } = useContext(RequestContext);
   const { enabled } = useToggle('webVitalsMonitoring');
 
-  // Checks if the users has opted into performance tracking and if the feature toggle is enabled
+  // Checks if readers have opted into performance tracking and if the feature toggle is enabled
   const isWebVitalsEnabled = personalisationEnabled && enabled;
 
   const webVitalsConfig = {
