@@ -87,8 +87,8 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         cy.window().then(win => {
           const media = getBlockData('video', win.SIMORGH_DATA.pageData);
           if (media) {
-            cy.get('div[class^="StyledVideoContainer"]').within(() => {
-              cy.get('div[class^="StyledPlaceholder"] > img')
+            cy.get('div[class*="StyledVideoContainer"]').within(() => {
+              cy.get('div[class*="StyledPlaceholder"] > img')
                 .should('be.visible')
                 .should('have.attr', 'src')
                 .should('not.be.empty');
@@ -106,12 +106,12 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               media.model.blocks[1].model.blocks[0].model.versions[0].warnings
                 .long;
 
-            cy.get('div[class^="StyledVideoContainer"]')
+            cy.get('div[class*="StyledVideoContainer"]')
               .eq(0)
               .within(() => {
                 // Check for video with guidance message
                 if (longGuidanceWarning) {
-                  cy.get('div[class^="StyledPlaceholder"]')
+                  cy.get('div[class*="StyledPlaceholder"]')
                     .within(() => {
                       cy.get('strong');
                     })
@@ -119,7 +119,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
                     .and('contain', longGuidanceWarning);
                   // Check for video with no guidance message
                 } else {
-                  cy.get('div[class^="StyledGuidance"]').should('not.exist');
+                  cy.get('div[class*="StyledGuidance"]').should('not.exist');
                 }
               });
           }
@@ -133,7 +133,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             const aresMediaBlocks = media.model.blocks[1].model.blocks[0];
             const { durationISO8601 } = aresMediaBlocks.model.versions[0];
 
-            cy.get('div[class^="StyledVideoContainer"]').within(() => {
+            cy.get('div[class*="StyledVideoContainer"]').within(() => {
               cy.get('button')
                 .should('be.visible')
                 .within(() => {
