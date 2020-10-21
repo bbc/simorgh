@@ -78,14 +78,11 @@ const gridMarginSmall = `
   }
 `;
 
-const StyledConstrainedLargeGrid = styled(ConstrainedLargeGrid)`
+const StyledConstrainedLargeGrid = styled('div')`
   ${gelGridMargin}
   ${gridMarginSmall}
   ${({ columnType }) =>
-    columnType === 'main' &&
-    `
-    padding: 0 ${GEL_SPACING_DBL};
-  `}
+    columnType === 'main' ? `padding: 0 ${GEL_SPACING_DBL};` : ''}
 `;
 
 const LegacyGridItemConstrainedLarge = styled(GridItemConstrainedLarge)`
@@ -171,7 +168,7 @@ const CpsOnwardJourney = ({
     : { as: 'section', role: 'region', 'aria-labelledby': labelId };
 
   const Wrapper = isMediaContent
-    ? ConstrainedLargeGrid
+    ? styled(ConstrainedLargeGrid)``
     : StyledConstrainedLargeGrid;
   const CpsOnwardJourneyWrapper = ({ children }) =>
     parentColumns ? (
