@@ -16,7 +16,7 @@ const MockOembedData = {
 
 // eslint-disable-next-line react/prop-types
 const ElectionsBannerWithContext = ({ oembed, isAmp = false }) => (
-  <RequestContext.Provider value={{ isAmp: isAmp }}>
+  <RequestContext.Provider value={{ isAmp }}>
     <ToggleContext.Provider
       value={{
         toggleState: {
@@ -37,7 +37,7 @@ describe('ElectionBanner', () => {
   describe('when on AMP', () => {
     isNull(
       'should return null',
-      <ElectionsBannerWithContext oembed={MockOembedData} isAmp={true} />,
+      <ElectionsBannerWithContext oembed={MockOembedData} isAmp />,
     );
   });
 
