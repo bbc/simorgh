@@ -1,8 +1,11 @@
+// Hooks
 import { useContext } from 'react';
+import useWebVitals from '@bbc/web-vitals';
+import useToggle from '#hooks/useToggle';
+
+// Contexts
 import { UserContext } from '#contexts/UserContext';
 import { RequestContext } from '#contexts/RequestContext';
-import useToggle from '#hooks/useToggle';
-import useWebVitals from '@bbc/web-vitals';
 
 const WebVitals = () => {
   const { personalisationEnabled } = useContext(UserContext);
