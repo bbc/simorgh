@@ -11,6 +11,26 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({ service }) => {
   if (Cypress.env('APP_ENV') === 'local') {
     runCanonicalAdsTests({ service });
   }
+  describe(`No testsToAlwaysRunForCanonicalOnly to run for ${service}`, () => {
+    describe(`US Election Banner`, () => {
+      it('should have US Election banner for Hindi, Arabic, Portuguese, Mundo, Persian, Russian', () => {
+        const servicesWithBanner = [
+          'hindi',
+          'arabic',
+          'portuguese',
+          'mundo',
+          'persian',
+          'russian',
+        ];
+        if (servicesWithBanner.includes(service)) {
+          cy.get('[class^="gel-wrap"]').should('be.visible');
+          cy.get('[class^="IndexPageContainer-sc-1yb6vt4-0"]').should(
+            'be.visible',
+          );
+        }
+      });
+    });
+  });
 };
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
