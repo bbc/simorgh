@@ -40,6 +40,7 @@ describe('Local Server', () => {
     ${'IDX'}                           | ${'/persian/afghanistan.json'}                                   | ${'/persian/afghanistan/index.json'}
     ${'Africa Eye TV Brand'}           | ${'/worldservice/tv/africa_eye/w13xttpn.json'}                   | ${'/worldservice/tv/africa_eye/w13xttpn.json'}
     ${'Africa Eye TV Episode'}         | ${'/worldservice/tv/africa_eye/p08jbbg.json'}                    | ${'/worldservice/tv/africa_eye/p08jbbg.json'}
+    ${'Elections oEmbed'}              | ${'/mundo/election/us2020/results/oembed.json'}                  | ${'/mundo/election/us2020/results/oembed.json'}
   `(
     '$pageType data file should be served for $dataPath',
     async ({ dataPath, expectedDataFile }) => {
