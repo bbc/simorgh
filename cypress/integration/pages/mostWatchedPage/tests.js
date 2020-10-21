@@ -72,7 +72,7 @@ export default ({ service, pageType, variant }) => {
               } else {
                 cy.log(maxNumberofItems);
                 cy.get('[data-e2e=most-watched-heading]').within(() => {
-                  cy.get('[class^="MostWatchedOl"]')
+                  cy.get('[data-e2e=most-watched-ol]')
                     .find('>li')
                     .its('length')
                     .should('eq', expectedNumberOfItems);

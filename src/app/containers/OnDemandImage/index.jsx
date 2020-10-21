@@ -41,7 +41,7 @@ const OnDemandImage = ({ imageUrl, dir }) => {
   const sizes = '(min-width: 1008px) 228px, 30vw';
 
   return (
-    <ImageContainer dir={dir}>
+    <ImageContainer data-e2e="on-demand-image" dir={dir}>
       <ImageWithPlaceholder
         src={src}
         alt={alt}
