@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { number, string, shape } from 'prop-types';
 import styled from 'styled-components';
-import { RequestContext } from '#contexts/RequestContext';
 
 // Styling
 import {
@@ -14,6 +13,9 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
+
+// Contexts
+import { RequestContext } from '#contexts/RequestContext';
 
 // Utilities
 import useToggle from '#hooks/useToggle';
