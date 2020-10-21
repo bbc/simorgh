@@ -12,7 +12,7 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import last from 'ramda/src/last';
 import MediaMessage from './MediaMessage';
-import { GridWrapper } from '#lib/styledGrid';
+import Grid, { GelPageGrid } from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -36,9 +36,11 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const MediaAssetPage = ({ pageData }) => {
   const { canonicalLink, isAmp } = useContext(RequestContext);
+  const { dir } = useContext(ServiceContext);
   const isLegacyMediaAssetPage = () => canonicalLink.split('/').length > 7;
 
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -53,6 +55,11 @@ const MediaAssetPage = ({ pageData }) => {
     ['relatedContent', 'groups', 0, 'promos'],
     pageData,
   );
+
+  const StyledGelPageGrid = styled(GelPageGrid)`
+    width: 100%;
+    flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
+  `;
 
   const getIndexImageLocator = () => {
     const indexImagePath = pathOr(
@@ -123,7 +130,7 @@ const MediaAssetPage = ({ pageData }) => {
     unavailableMedia: MediaMessage,
   };
 
-  const StyledGrid = styled(GridWrapper)`
+  const StyledGrid = styled(GelPageGrid)`
     width: 100%;
     padding-bottom: ${GEL_SPACING_TRPL};
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -166,9 +173,44 @@ const MediaAssetPage = ({ pageData }) => {
         imageLocator={indexImageLocator}
       />
       <ATIAnalytics data={pageData} />
-      <StyledGrid as="main" role="main">
-        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </StyledGrid>
+      <StyledGelPageGrid
+        forwardedAs="main"
+        role="main"
+        dir={dir}
+        columns={{
+          group0: 6,
+          group1: 6,
+          group2: 6,
+          group3: 6,
+          group4: 8,
+          group5: 20,
+        }}
+        enableGelGutters
+      >
+        <Grid
+          item
+          dir={dir}
+          startOffset={{
+            group0: 1,
+            group1: 1,
+            group2: 1,
+            group3: 1,
+            group4: 2,
+            group5: 5,
+          }}
+          columns={{
+            group0: 6,
+            group1: 6,
+            group2: 6,
+            group3: 6,
+            group4: 6,
+            group5: 12,
+          }}
+          margins={{ group0: true, group1: true, group2: true, group3: true }}
+        >
+          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+        </Grid>
+      </StyledGelPageGrid>
       <CpsRelatedContent content={relatedContent} isMediaContent />
       {!isAmp && <MostWatchedContainer data={mostWatchedData} />}
     </>
