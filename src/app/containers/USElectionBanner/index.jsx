@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { number, string, shape } from 'prop-types';
 import styled from 'styled-components';
+import { RequestContext } from '#contexts/RequestContext';
 
 // Styling
 import {
@@ -39,9 +40,10 @@ const StyledWrapper = styled.div`
 `;
 
 const USElectionBanner = ({ oembed }) => {
+  const { isAmp } = useContext(RequestContext);
   const { enabled } = useToggle('us2020ElectionBanner');
 
-  if (!enabled || !oembed) return null;
+  if (!enabled || !oembed || isAmp) return null;
 
   return (
     <FrontPageSection>
