@@ -6,19 +6,10 @@ import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
 import ServiceWorkerContainer from '../containers/ServiceWorker';
 import { ServiceContext } from '../contexts/ServiceContext';
-import useWebVitals from '@bbc/web-vitals';
+import WebVitals from '#containers/webVitals';
 
 const PageWrapper = ({ children }) => {
   const { fonts: fontFunctions } = useContext(ServiceContext);
-
-  const webVitalsConfig = {
-    enabled: true,
-    reportingEndpoint: process.env.SIMORGH_WEBVITALS_REPORTING_ENDPOINT,
-    sampleRate: process.env.SIMORGH_WEBVITALS_SAMPLING_RATE,
-    loggerCallback: () => console.error,
-  };
-
-  useWebVitals(webVitalsConfig);
 
   const fonts = fontFunctions.map(getFonts => getFonts());
 
@@ -27,6 +18,7 @@ const PageWrapper = ({ children }) => {
       <GlobalStyles fonts={fonts} />
       <ServiceWorkerContainer />
       <ManifestContainer />
+      <WebVitals />
       <HeaderContainer />
       {children}
       <FooterContainer />
