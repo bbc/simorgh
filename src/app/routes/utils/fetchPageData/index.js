@@ -39,6 +39,7 @@ export const getUrl = pathname => {
  * @param {number} timeout Optional parameter to provide a custom timeout
  * for request for 'secondary data'. The fetch timeout defaults to the 'primary
  * data' timeout if this is not provided.
+ * Timeout values here: https://github.com/bbc/simorgh/blob/latest/src/app/lib/utilities/getFetchTimeouts/index.js
  * @param {...string} loggerArgs Additional arguments for richer logging.
  */
 const fetchPageData = async ({ path, timeout, ...loggerArgs }) => {
