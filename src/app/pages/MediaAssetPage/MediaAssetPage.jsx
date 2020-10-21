@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
@@ -130,14 +129,6 @@ const MediaAssetPage = ({ pageData }) => {
     unavailableMedia: MediaMessage,
   };
 
-  const StyledGrid = styled(GelPageGrid)`
-    width: 100%;
-    padding-bottom: ${GEL_SPACING_TRPL};
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      padding-bottom: ${GEL_SPACING_QUAD};
-    }
-  `;
-
   const StyledTimestamp = styled(Timestamp)`
     padding-bottom: ${GEL_SPACING_DBL};
 
@@ -206,7 +197,6 @@ const MediaAssetPage = ({ pageData }) => {
             group4: 6,
             group5: 12,
           }}
-          margins={{ group0: true, group1: true, group2: true, group3: true }}
         >
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </Grid>
