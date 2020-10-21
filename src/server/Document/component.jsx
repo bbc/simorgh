@@ -81,7 +81,7 @@ const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
       <body {...ampGeoPendingAttrs}>
         {/* disabling the rule that bans the use of dangerouslySetInnerHTML until a more appropriate implementation can be implemented */}
         {/* eslint-disable-next-line react/no-danger */}
-        <StyledDiv id="root" dangerouslySetInnerHTML={{ __html: app }} />
+        <StyledDiv id="root" dangerouslySetInnerHTML={{ __html: html }} />
         {scriptsAllowed && (
           <script
             /* eslint-disable-next-line react/no-danger */

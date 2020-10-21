@@ -22,6 +22,10 @@ const MostWatchedOl = styled.ol`
   padding: 0;
 `;
 
+MostWatchedOl.defaultProps = {
+  role: 'list',
+};
+
 const RelatedContentPromoList = ({ promoItems, dir, isMediaContent }) => {
   return (
     <Grid
@@ -33,7 +37,7 @@ const RelatedContentPromoList = ({ promoItems, dir, isMediaContent }) => {
         group4: 8,
         group5: 8,
       }}
-      as={isMediaContent ? <MostWatchedOl role="list" /> : StoryPromoUl}
+      as={isMediaContent ? MostWatchedOl : StoryPromoUl}
       enableGelGutters
       dir={dir}
     >

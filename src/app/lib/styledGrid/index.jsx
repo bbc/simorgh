@@ -28,28 +28,28 @@ import {
 } from '../layoutGrid';
 
 export const GridWrapper = styled.div`
-  ${layoutGridWrapper};
+  ${layoutGridWrapper}
   padding-bottom: ${GEL_SPACING_QUAD};
 `;
 
 export const GridItemConstrainedSmall = styled.div`
-  ${layoutGridItemSmall};
+  ${layoutGridItemSmall}
 `;
 
 export const GridItemConstrainedMedium = styled.div`
-  ${layoutGridItemMedium};
+  ${layoutGridItemMedium}
 `;
 
 export const GridItemConstrainedMediumNoMargin = styled.div`
-  ${layoutGridItemMediumNoMargin};
+  ${layoutGridItemMediumNoMargin}
 `;
 
 export const GridItemConstrainedLarge = styled.div`
-  ${layoutGridItemLarge};
+  ${layoutGridItemLarge}
 `;
 
 export const GridItemConstrainedLargeNoMargin = styled.div`
-  ${layoutGridItemLargeNoMargin};
+  ${layoutGridItemLargeNoMargin}
 `;
 
 export const GridItemConstrainedLargeWithTopMargin = styled(
