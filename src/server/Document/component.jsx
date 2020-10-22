@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import styled from '@emotion/styled';
 import {
@@ -53,11 +54,20 @@ const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
         <ResourceHints assetOrigins={assetOrigins} />
         {title}
         {isAmp ? (
-          <style amp-custom="" data-emotion-css={ids.join(' ')}>
-            {css}
-          </style>
+          <style
+            amp-custom=""
+            data-emotion-css={ids.join(' ')}
+            dangerouslySetInnerHTML={{
+              __html: css,
+            }}
+          />
         ) : (
-          <style data-emotion-css={ids.join(' ')}>{css}</style>
+          <style
+            data-emotion-css={ids.join(' ')}
+            dangerouslySetInnerHTML={{
+              __html: css,
+            }}
+          />
         )}
         {helmetLinkTags}
         {headScript}
@@ -79,12 +89,9 @@ const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
         )}
       </head>
       <body {...ampGeoPendingAttrs}>
-        {/* disabling the rule that bans the use of dangerouslySetInnerHTML until a more appropriate implementation can be implemented */}
-        {/* eslint-disable-next-line react/no-danger */}
         <StyledDiv id="root" dangerouslySetInnerHTML={{ __html: html }} />
         {scriptsAllowed && (
           <script
-            /* eslint-disable-next-line react/no-danger */
             dangerouslySetInnerHTML={{
               __html: `window.SIMORGH_DATA=${serialisedData}`,
             }}
@@ -94,10 +101,6 @@ const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
         {scriptsAllowed && (
           <script
             type="text/javascript"
-            // Justification:
-            // - we need this to be a blocking script that runs before the page first renders
-            // - the content is static text so there is no real XSS risk
-            /* eslint-disable-next-line react/no-danger */
             dangerouslySetInnerHTML={{
               __html: `document.documentElement.classList.remove("no-js");`,
             }}
