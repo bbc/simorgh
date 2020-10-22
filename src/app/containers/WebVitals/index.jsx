@@ -12,8 +12,6 @@ const WebVitals = () => {
   const { pageType } = useContext(RequestContext);
   const { enabled, value: toggleSampleRate } = useToggle('webVitalsMonitoring');
 
-  // console.log(sampleRate);
-
   // Checks if readers have opted into performance tracking and if the feature toggle is enabled
   const isWebVitalsEnabled = personalisationEnabled && enabled;
 
