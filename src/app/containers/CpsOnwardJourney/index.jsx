@@ -171,7 +171,7 @@ const CpsOnwardJourney = ({
     : { as: 'section', role: 'region', 'aria-labelledby': labelId };
 
   const Wrapper = isMediaContent
-    ? styled(ConstrainedLargeGrid)`` // Necessary for styling
+    ? ConstrainedLargeGrid
     : StyledConstrainedLargeGrid;
   const CpsOnwardJourneyWrapper = ({ children }) =>
     parentColumns ? (
