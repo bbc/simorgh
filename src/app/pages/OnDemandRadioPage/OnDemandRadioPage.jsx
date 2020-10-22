@@ -105,7 +105,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         openGraphType="website"
       />
       <StyledGelPageGrid
-        forwardedAs="main"
+        as="main"
         role="main"
         dir={dir}
         columns={getGroups(6, 6, 6, 6, 8, 20)}

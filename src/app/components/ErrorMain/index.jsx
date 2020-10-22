@@ -53,7 +53,7 @@ const ErrorMain = ({
   service,
 }) => (
   <StyledGelPageGrid
-    forwardedAs="main"
+    as="main"
     role="main"
     dir={dir}
     columns={{
