@@ -423,6 +423,10 @@ const invalidLegacyPageRoutes = [
   '/ukchina/',
   '/ukchina/simp',
   '/ukchina/simp/',
+  '/mundo/23263889/recommendations',
+  '/ukchina/recommendations/trad',
+  '/zhongwen/sty-secondary-column/simp',
+  '/mundo/sty-secondary-column',
 ];
 
 describe('legacyAssetPagePath', () => {
