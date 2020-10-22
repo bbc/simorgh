@@ -14,7 +14,15 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({ service }) => {
   describe(`No testsToAlwaysRunForCanonicalOnly to run for ${service}`, () => {
     describe(`US Election Banner`, () => {
       it('should have US Election banner for Hindi, Arabic, Portuguese, Mundo, Persian, Russian', () => {
-        const servicesWithBanner = [
+        cy.getToggles(config[service].name);
+         cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
+            const usElectionBannerEnabled = path(
+              ['us2020ElectionBanner', 'enabled'],
+              toggles,
+            );
+            if (usElectionBannerEnabled) {
+            ...
+        }
           'hindi',
           'arabic',
           'portuguese',
