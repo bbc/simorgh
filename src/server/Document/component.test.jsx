@@ -17,10 +17,6 @@ describe('Document Component', () => {
       <script src="igbo.js" />
     </>
   );
-  // const styleTags = (
-  //   <style data-styled-components="abc">{'html { color: red; }'}</style>
-  // );
-  // const styleTagsAmp = <style amp-custom="">{'html { color: red; }'}</style>;
 
   // eslint-disable-next-line react/prop-types
   const TestDocumentComponent = ({ service, isAmp }) => (
