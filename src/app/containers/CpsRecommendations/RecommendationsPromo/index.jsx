@@ -33,7 +33,7 @@ const RecommendationsPromo = ({ promo, dir }) => {
       enableGelGutters
       dir={dir}
     >
-      <StyledStoryPromoWrapper>
+      <StyledStoryPromoWrapper data-e2e="story-promo-wrapper">
         <StoryPromo
           item={promo}
           dir={dir}

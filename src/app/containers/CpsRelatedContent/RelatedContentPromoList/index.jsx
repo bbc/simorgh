@@ -24,6 +24,7 @@ const MostWatchedOl = styled.ol`
 
 MostWatchedOl.defaultProps = {
   role: 'list',
+  'data-e2e': 'most-watched-ol',
 };
 
 const RelatedContentPromoList = ({ promoItems, dir, isMediaContent }) => {

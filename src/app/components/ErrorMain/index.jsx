@@ -53,7 +53,7 @@ const ErrorMain = ({
   service,
 }) => (
   <StyledGelPageGrid
-    forwardedAs="main"
+    as="main"
     role="main"
     dir={dir}
     columns={{
@@ -87,7 +87,9 @@ const ErrorMain = ({
       }}
       margins={{ group0: true, group1: true, group2: true, group3: true }}
     >
-      <StatusCode script={script}>{statusCode}</StatusCode>
+      <StatusCode data-e2e="status-code" script={script}>
+        {statusCode}
+      </StatusCode>
       <Heading id="content" script={script} service={service} tabIndex="-1">
         {title}
       </Heading>

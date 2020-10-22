@@ -82,7 +82,7 @@ const LiveRadioPage = ({ pageData }) => {
       <LinkedData type="RadioChannel" seoTitle={name} />
 
       <StyledGelPageGrid
-        forwardedAs="main"
+        as="main"
         role="main"
         dir={dir}
         columns={{
