@@ -11,51 +11,7 @@ exports[`IncludeContainer should render a VJ include on an Amp page with toggles
 `;
 
 exports[`IncludeContainer should render a fallback for VJs on an Amp page when isAmpSupported is set to false 1`] = `
-.emotion-4 {
-  grid-column: 1 / span 6;
-  display: grid;
-}
-
-@media (max-width:25rem) {
-  .emotion-4 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-4 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-4 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-4 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-4 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-4 {
-    max-width: initial;
-  }
-}
-
-.emotion-2 {
+.c1 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -83,22 +39,15 @@ exports[`IncludeContainer should render a fallback for VJs on an Amp page when i
   border: 0.0625rem solid transparent;
 }
 
-@media (min-width:20rem) {
-  .emotion-2 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-.emotion-0 {
+.c2 {
   margin: 0 1.5rem;
 }
 
-.emotion-0 strong {
+.c2 strong {
   font-weight: normal;
 }
 
-.emotion-0 a {
+.c2 a {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -109,25 +58,76 @@ exports[`IncludeContainer should render a fallback for VJs on an Amp page when i
   text-decoration: none;
 }
 
-.emotion-0 a:visited {
+.c2 a:visited {
   color: #6E6E73;
 }
 
-.emotion-0 a:hover,
-.emotion-0 a:focus {
+.c2 a:hover,
+.c2 a:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
+.c0 {
+  grid-column: 1 / span 6;
+  display: grid;
+}
+
+@media (min-width:20rem) {
+  .c1 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    max-width: initial;
+  }
+}
+
 <div>
   <div
-    class="emotion-4 emotion-5"
+    class="c0"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="c1"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="c2"
       >
         <div>
           <strong>

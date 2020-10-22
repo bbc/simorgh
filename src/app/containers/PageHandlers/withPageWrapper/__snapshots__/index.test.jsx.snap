@@ -1,13 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`with pageWrapper should render correctly 1`] = `
-<div>
-  <div
-    id="defaultPageWrapper"
-  >
-    <h1>
-      Hola
-    </h1>
-  </div>
+<div
+  id="defaultPageWrapper"
+>
+  <h1>
+    Hola
+  </h1>
 </div>
 `;

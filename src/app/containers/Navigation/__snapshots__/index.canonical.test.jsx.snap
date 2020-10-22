@@ -1,78 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Canonical Navigation snapshots should correctly render Canonical navigation 1`] = `
-.emotion-14 {
-  position: relative;
-  background-color: #B80000;
-  border-top: 0.0625rem solid #FFFFFF;
-}
-
-.emotion-14 .e1lim4kn3::after {
-  left: 0;
-}
-
-.emotion-12 {
-  position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.emotion-8 {
-  position: relative;
-}
-
-.emotion-4 {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  background-color: transparent;
-  border: 0;
-  float: left;
-  height: 2.75rem;
-  width: 2.75rem;
-}
-
-.emotion-4:hover,
-.emotion-4:focus {
-  cursor: pointer;
-  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
-}
-
-.emotion-4:hover::after,
-.emotion-4:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  border: 0.25rem solid #FFFFFF;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-4 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) {
-  .emotion-4 {
-    height: 2.75rem;
-    width: 2.75rem;
-  }
-}
-
-.emotion-4 svg {
-  vertical-align: middle;
-}
-
-.emotion-0 {
-  color: #fff;
-  fill: currentColor;
-}
-
-.emotion-2 {
+.c5 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -84,8 +13,105 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
   margin: 0;
 }
 
+.c4 {
+  color: #fff;
+  fill: currentColor;
+}
+
+.c7 {
+  background-color: #222222;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  visibility: hidden;
+}
+
+.c3 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.c3:hover,
+.c3:focus {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.c3:hover::after,
+.c3:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c3 svg {
+  vertical-align: middle;
+}
+
+.c1 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c0 {
+  position: relative;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
+}
+
+.c0 .c8::after {
+  left: 0;
+}
+
+.c2 {
+  position: relative;
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c7 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) {
+  .c3 {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
 @media (max-width:37.4375rem) {
-  .emotion-6 {
+  .c6 {
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-scroll-behavior: auto;
@@ -100,11 +126,11 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
     -ms-overflow-style: none;
   }
 
-  .emotion-6::-webkit-scrollbar {
+  .c6::-webkit-scrollbar {
     display: none;
   }
 
-  .emotion-6:after {
+  .c6:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -116,102 +142,68 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
     pointer-events: none;
     background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
   }
-
-@media (min-width:25rem) {
-    .emotion-6:after {
-      width: 6rem;
-    }
-}
 }
 
-.emotion-10 {
-  background-color: #222222;
-  clear: both;
-  overflow: hidden;
-  height: 0;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
-  transition-timing-function: cubic-bezier(0,0,0.58,1);
-  visibility: hidden;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-10 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (prefers-reduced-motion:reduce) {
-  .emotion-10 {
-    -webkit-transition: none;
-    transition: none;
-  }
-}
-
-<div>
-  <nav
-    class="emotion-14 emotion-15"
-    dir="ltr"
-    role="navigation"
+<nav
+  class="c0"
+  dir="ltr"
+  role="navigation"
+>
+  <div
+    class="c1"
   >
     <div
-      class="emotion-12 emotion-13"
+      class="c2"
     >
-      <div
-        class="emotion-8 emotion-9"
+      <button
+        aria-expanded="false"
+        class="c3"
+        dir="ltr"
+        type="button"
       >
-        <button
-          aria-expanded="false"
-          class="emotion-4 emotion-5"
-          dir="ltr"
-          type="button"
+        <svg
+          aria-hidden="true"
+          class="c4"
+          focusable="false"
+          height="2.75rem"
+          viewBox="0 0 44 44"
+          width="2.75rem"
         >
-          <svg
-            aria-hidden="true"
-            class="emotion-0 emotion-1"
-            focusable="false"
-            height="2.75rem"
-            viewBox="0 0 44 44"
-            width="2.75rem"
-          >
-            <path
-              d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
-            />
-          </svg>
-          <span
-            class="emotion-2 emotion-3"
-          >
-            menu
-          </span>
-        </button>
-        <div
-          class="emotion-6 emotion-7"
-          dir="ltr"
+          <path
+            d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+          />
+        </svg>
+        <span
+          class="c5"
         >
-          <ul
-            data-testid="scrollable-list"
-          >
-            <li>
-              List Items
-            </li>
-          </ul>
-        </div>
-      </div>
+          menu
+        </span>
+      </button>
       <div
-        class="emotion-10 emotion-11"
-        height="0"
+        class="c6"
+        dir="ltr"
       >
         <ul
-          data-testid="dropdown"
+          data-testid="scrollable-list"
         >
           <li>
-            Dropdown Items
+            List Items
           </li>
         </ul>
       </div>
     </div>
-  </nav>
-</div>
+    <div
+      class="c7"
+      height="0"
+    >
+      <ul
+        data-testid="dropdown"
+      >
+        <li>
+          Dropdown Items
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 `;

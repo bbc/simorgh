@@ -1,213 +1,205 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Consent Banner Text should correctly render banner text in the UK 1`] = `
-.emotion-0 {
+.c0 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #BEBEBE;
 }
 
+.c0 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 a:focus,
+.c0 a:hover {
+  color: #FFFFFF;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+  .c0 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c0 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c0 {
     margin: 0;
     float: left;
     width: 53%;
   }
 }
 
-.emotion-0 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 a:focus,
-.emotion-0 a:hover {
-  color: #FFFFFF;
-}
-
-<div>
-  <p
-    class="emotion-0 emotion-1"
-    dir="ltr"
-  >
-    Just some text
-  </p>
-</div>
+<p
+  class="c0"
+  dir="ltr"
+>
+  Just some text
+</p>
 `;
 
 exports[`Consent Banner Text should correctly render banner text outside the UK 1`] = `
-.emotion-0 {
+.c0 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #BEBEBE;
 }
 
+.c0 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 a:focus,
+.c0 a:hover {
+  color: #FFFFFF;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+  .c0 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c0 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c0 {
     margin: 0;
     float: left;
     width: 53%;
   }
 }
 
-.emotion-0 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 a:focus,
-.emotion-0 a:hover {
-  color: #FFFFFF;
-}
-
-<div>
-  <p
-    class="emotion-0 emotion-1"
-    dir="ltr"
-  >
-    Just some international text
-  </p>
-</div>
+<p
+  class="c0"
+  dir="ltr"
+>
+  Just some international text
+</p>
 `;
 
 exports[`Consent Banner Text should correctly render banner text with a link in the UK 1`] = `
-.emotion-0 {
+.c0 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #BEBEBE;
 }
 
+.c0 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 a:focus,
+.c0 a:hover {
+  color: #FFFFFF;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+  .c0 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c0 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c0 {
     margin: 0;
     float: left;
     width: 53%;
   }
 }
 
-.emotion-0 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 a:focus,
-.emotion-0 a:hover {
-  color: #FFFFFF;
-}
-
-<div>
-  <p
-    class="emotion-0 emotion-1"
-    dir="ltr"
+<p
+  class="c0"
+  dir="ltr"
+>
+  Some text 
+  <a
+    href="https://www.bbc.co.uk"
   >
-    Some text 
-    <a
-      href="https://www.bbc.co.uk"
-    >
-      with a link
-    </a>
-     followed by text.
-  </p>
-</div>
+    with a link
+  </a>
+   followed by text.
+</p>
 `;
 
 exports[`Consent Banner Text should correctly render banner text with a link outside the UK 1`] = `
-.emotion-0 {
+.c0 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #BEBEBE;
 }
 
+.c0 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 a:focus,
+.c0 a:hover {
+  color: #FFFFFF;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+  .c0 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c0 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c0 {
     margin: 0;
     float: left;
     width: 53%;
   }
 }
 
-.emotion-0 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 a:focus,
-.emotion-0 a:hover {
-  color: #FFFFFF;
-}
-
-<div>
-  <p
-    class="emotion-0 emotion-1"
-    dir="ltr"
+<p
+  class="c0"
+  dir="ltr"
+>
+  Some international text
+  <a
+    href="https://www.bbc.com"
   >
-    Some international text
-    <a
-      href="https://www.bbc.com"
-    >
-      with an international link
-    </a>
-     followed by international text.
-  </p>
-</div>
+    with an international link
+  </a>
+   followed by international text.
+</p>
 `;

@@ -1,53 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AmpIncludeContainer should render for a valid IDT2 include 1`] = `
-.emotion-0 {
+.c0 {
   grid-column: 1 / span 6;
   display: grid;
 }
 
 @media (max-width:25rem) {
-  .emotion-0 {
+  .c0 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-0 {
+  .c0 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c0 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-0 {
+  .c0 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-0 {
+  .c0 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .emotion-0 {
+  .c0 {
     max-width: initial;
   }
 }
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="c0"
   >
     <amp-img
       alt="image alt text"

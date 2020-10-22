@@ -1,45 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ElectionBanner with oEmbed data should render correctly 1`] = `
-.emotion-2 {
+.c0 {
   margin: 0 auto;
   width: 100%;
 }
 
-@media (min-width:63rem) {
-  .emotion-2 {
-    max-width: 63rem;
-  }
-}
-
-.emotion-0 {
+.c1 {
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
 }
 
+@media (min-width:63rem) {
+  .c0 {
+    max-width: 63rem;
+  }
+}
+
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c1 {
     margin-top: 2rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .emotion-0 {
+  .c1 {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 }
 
-<div>
+<div
+  class="c0"
+>
   <div
-    class="emotion-2 emotion-3"
+    class="c1"
   >
-    <div
-      class="emotion-0 emotion-1"
-    >
-      <div>
-        Hello
-      </div>
+    <div>
+      Hello
     </div>
   </div>
 </div>

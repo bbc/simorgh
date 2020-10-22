@@ -1,50 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ParagraphContainer should render correctly 1`] = `
-.emotion-6 {
-  grid-column: 1 / span 6;
-}
-
-@media (max-width:25rem) {
-  .emotion-6 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-6 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-6 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-6 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-6 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-6 {
-    max-width: initial;
-  }
-}
-
-.emotion-4 {
+.c1 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -55,39 +12,7 @@ exports[`ParagraphContainer should render correctly 1`] = `
   margin: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-.emotion-2 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
-
-.emotion-2:focus,
-.emotion-2:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
-}
-
-.emotion-0 {
+.c3 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -95,80 +20,110 @@ exports[`ParagraphContainer should render correctly 1`] = `
   font-weight: inherit;
 }
 
-<div>
-  <div
-    class="emotion-6 emotion-7"
-  >
-    <p
-      class="emotion-4 emotion-5"
-    >
-      <b>
-        This is some text.
-      </b>
-      <a
-        class="emotion-2 emotion-3"
-        href="/bbc-test"
-      >
-        Some text
-        <b>
-           for the 
-        </b>
-        <i
-          class="emotion-0 emotion-1"
-        >
-           link!
-        </i>
-      </a>
-    </p>
-  </div>
-</div>
-`;
+.c2 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
 
-exports[`ParagraphContainer should render correctly with inline block 1`] = `
-.emotion-6 {
+.c2:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c2:focus,
+.c2:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.c0 {
   grid-column: 1 / span 6;
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
 @media (max-width:25rem) {
-  .emotion-6 {
+  .c0 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-6 {
+  .c0 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-6 {
+  .c0 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-6 {
+  .c0 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-6 {
+  .c0 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .emotion-6 {
+  .c0 {
     max-width: initial;
   }
 }
 
-.emotion-4 {
+<div
+  class="c0"
+>
+  <p
+    class="c1"
+  >
+    <b>
+      This is some text.
+    </b>
+    <a
+      class="c2"
+      href="/bbc-test"
+    >
+      Some text
+      <b>
+         for the 
+      </b>
+      <i
+        class="c3"
+      >
+         link!
+      </i>
+    </a>
+  </p>
+</div>
+`;
+
+exports[`ParagraphContainer should render correctly with inline block 1`] = `
+.c1 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -179,66 +134,107 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
   margin: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-.emotion-0 {
+.c3 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-0:visited {
+.c3:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-0:focus,
-.emotion-0:hover {
+.c3:focus,
+.c3:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.emotion-2 {
+.c2 {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-<div>
-  <div
-    class="emotion-6 emotion-7"
+.c0 {
+  grid-column: 1 / span 6;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    max-width: initial;
+  }
+}
+
+<div
+  class="c0"
+>
+  <p
+    class="c1"
   >
-    <p
-      class="emotion-4 emotion-5"
+    <b>
+      This is some text.
+    </b>
+    <span
+      class="c2"
+      lang="fa"
     >
-      <b>
-        This is some text.
-      </b>
-      <span
-        class="emotion-2 emotion-3"
-        lang="fa"
+      <a
+        aria-label="چیسربرگرundefined"
+        class="c3"
+        href="https://google.com"
       >
-        <a
-          aria-label="چیسربرگرundefined"
-          class="emotion-0 emotion-1"
-          href="https://google.com"
-        >
-          چیسربرگر
-        </a>
-      </span>
-    </p>
-  </div>
+        چیسربرگر
+      </a>
+    </span>
+  </p>
 </div>
 `;

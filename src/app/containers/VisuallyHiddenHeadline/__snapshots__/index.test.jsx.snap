@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`VisuallyHiddenHeadline with headline data should render correctly 1`] = `
-.emotion-0 {
+.c0 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -13,19 +13,17 @@ exports[`VisuallyHiddenHeadline with headline data should render correctly 1`] =
   margin: 0;
 }
 
-<div>
-  <h1
-    class="emotion-0 emotion-1"
-    id="content"
-    tabindex="-1"
-  >
-    This is a headline!
-  </h1>
-</div>
+<h1
+  class="c0"
+  id="content"
+  tabindex="-1"
+>
+  This is a headline!
+</h1>
 `;
 
 exports[`VisuallyHiddenHeadline with plain text headline should render h1 containing correct text 1`] = `
-.emotion-0 {
+.c0 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -37,13 +35,11 @@ exports[`VisuallyHiddenHeadline with plain text headline should render h1 contai
   margin: 0;
 }
 
-<div>
-  <h1
-    class="emotion-0 emotion-1"
-    id="content"
-    tabindex="-1"
-  >
-    Plain headline
-  </h1>
-</div>
+<h1
+  class="c0"
+  id="content"
+  tabindex="-1"
+>
+  Plain headline
+</h1>
 `;

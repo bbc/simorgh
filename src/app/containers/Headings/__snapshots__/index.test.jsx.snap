@@ -1,37 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Headings with headline data should render correctly 1`] = `
-@media (max-width:63rem) {
-  .emotion-2 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-2 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-2 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .emotion-2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-2 {
-    padding: 0 1rem;
-  }
-}
-
-.emotion-0 {
+.c1 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -44,77 +14,75 @@ exports[`Headings with headline data should render correctly 1`] = `
   overflow-wrap: anywhere;
 }
 
+.c1:focus {
+  outline: none;
+}
+
+@media (max-width:63rem) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+  .c1 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c1 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c1 {
     padding: 2.5rem 0;
   }
 }
 
-.emotion-0:focus {
-  outline: none;
-}
-
-<div>
-  <div
-    class="emotion-2 emotion-3"
+<div
+  class="c0"
+>
+  <h1
+    class="c1"
+    id="content"
+    tabindex="-1"
   >
-    <h1
-      class="emotion-0 emotion-1"
-      id="content"
-      tabindex="-1"
-    >
-      This is a headline!
-    </h1>
-  </div>
+    This is a headline!
+  </h1>
 </div>
 `;
 
 exports[`Headings with plain text headline should render h1 containing correct text 1`] = `
-@media (max-width:63rem) {
-  .emotion-2 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-2 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-2 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .emotion-2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-2 {
-    padding: 0 1rem;
-  }
-}
-
-.emotion-0 {
+.c1 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -127,90 +95,75 @@ exports[`Headings with plain text headline should render h1 containing correct t
   overflow-wrap: anywhere;
 }
 
+.c1:focus {
+  outline: none;
+}
+
+@media (max-width:63rem) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+  .c1 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c1 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c1 {
     padding: 2.5rem 0;
   }
 }
 
-.emotion-0:focus {
-  outline: none;
-}
-
-<div>
-  <div
-    class="emotion-2 emotion-3"
+<div
+  class="c0"
+>
+  <h1
+    class="c1"
+    id="content"
+    tabindex="-1"
   >
-    <h1
-      class="emotion-0 emotion-1"
-      id="content"
-      tabindex="-1"
-    >
-      Plain headline
-    </h1>
-  </div>
+    Plain headline
+  </h1>
 </div>
 `;
 
 exports[`Headings with plain text subheadline should render h2 containing correct text 1`] = `
-.emotion-2 {
-  grid-column: 1 / span 6;
-}
-
-@media (max-width:25rem) {
-  .emotion-2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-2 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-2 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-2 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-2 {
-    max-width: initial;
-  }
-}
-
-.emotion-0 {
+.c1 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -221,73 +174,84 @@ exports[`Headings with plain text subheadline should render h2 containing correc
   padding: 1.5rem 0;
 }
 
+.c0 {
+  grid-column: 1 / span 6;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+  .c1 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c1 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c1 {
     padding-top: 2rem;
   }
 }
 
-<div>
-  <div
-    class="emotion-2 emotion-3"
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    max-width: initial;
+  }
+}
+
+<div
+  class="c0"
+>
+  <h2
+    class="c1"
+    id="Plain-subheadline"
+    tabindex="-1"
   >
-    <h2
-      class="emotion-0 emotion-1"
-      id="Plain-subheadline"
-      tabindex="-1"
-    >
-      Plain subheadline
-    </h2>
-  </div>
+    Plain subheadline
+  </h2>
 </div>
 `;
 
 exports[`Headings with rich text headline with bold text should render h1 with <b> tag 1`] = `
-@media (max-width:63rem) {
-  .emotion-2 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-2 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-2 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .emotion-2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-2 {
-    padding: 0 1rem;
-  }
-}
-
-.emotion-0 {
+.c1 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -300,79 +264,85 @@ exports[`Headings with rich text headline with bold text should render h1 with <
   overflow-wrap: anywhere;
 }
 
+.c1:focus {
+  outline: none;
+}
+
+@media (max-width:63rem) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+  .c1 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c1 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c1 {
     padding: 2.5rem 0;
   }
 }
 
-.emotion-0:focus {
-  outline: none;
-}
-
-<div>
-  <div
-    class="emotion-2 emotion-3"
+<div
+  class="c0"
+>
+  <h1
+    class="c1"
+    id="content"
+    tabindex="-1"
   >
-    <h1
-      class="emotion-0 emotion-1"
-      id="content"
-      tabindex="-1"
-    >
-      <b>
-        All is bold
-      </b>
-    </h1>
-  </div>
+    <b>
+      All is bold
+    </b>
+  </h1>
 </div>
 `;
 
 exports[`Headings with rich text headline with italic text should render h1 with <i> tag 1`] = `
-@media (max-width:63rem) {
-  .emotion-4 {
-    grid-column: 1 / span 6;
-  }
+.c2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-4 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-4 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .emotion-4 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-4 {
-    padding: 0 1rem;
-  }
-}
-
-.emotion-2 {
+.c1 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -385,89 +355,87 @@ exports[`Headings with rich text headline with italic text should render h1 with
   overflow-wrap: anywhere;
 }
 
+.c1:focus {
+  outline: none;
+}
+
+@media (max-width:63rem) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+  .c1 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .c1 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .c1 {
     padding: 2.5rem 0;
   }
 }
 
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-0 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  font-family: inherit;
-  font-weight: inherit;
-}
-
-<div>
-  <div
-    class="emotion-4 emotion-5"
+<div
+  class="c0"
+>
+  <h1
+    class="c1"
+    id="content"
+    tabindex="-1"
   >
-    <h1
-      class="emotion-2 emotion-3"
-      id="content"
-      tabindex="-1"
+    <i
+      class="c2"
     >
-      <i
-        class="emotion-0 emotion-1"
-      >
-        All is italic
-      </i>
-    </h1>
-  </div>
+      All is italic
+    </i>
+  </h1>
 </div>
 `;
 
 exports[`Headings with rich text should render headline with bold & italic text should render h1 with <i><b> tags 1`] = `
-@media (max-width:63rem) {
-  .emotion-4 {
-    grid-column: 1 / span 6;
-  }
+.c2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-4 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-4 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .emotion-4 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-4 {
-    padding: 0 1rem;
-  }
-}
-
-.emotion-2 {
+.c1 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -480,91 +448,89 @@ exports[`Headings with rich text should render headline with bold & italic text 
   overflow-wrap: anywhere;
 }
 
+.c1:focus {
+  outline: none;
+}
+
+@media (max-width:63rem) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+  .c1 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .c1 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .c1 {
     padding: 2.5rem 0;
   }
 }
 
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-0 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  font-family: inherit;
-  font-weight: inherit;
-}
-
-<div>
-  <div
-    class="emotion-4 emotion-5"
+<div
+  class="c0"
+>
+  <h1
+    class="c1"
+    id="content"
+    tabindex="-1"
   >
-    <h1
-      class="emotion-2 emotion-3"
-      id="content"
-      tabindex="-1"
+    <i
+      class="c2"
     >
-      <i
-        class="emotion-0 emotion-1"
-      >
-        <b>
-          All is bold and italic
-        </b>
-      </i>
-    </h1>
-  </div>
+      <b>
+        All is bold and italic
+      </b>
+    </i>
+  </h1>
 </div>
 `;
 
 exports[`Headings with rich text should render headline with italic & bold text should render h1 with <b><i> tags 1`] = `
-@media (max-width:63rem) {
-  .emotion-4 {
-    grid-column: 1 / span 6;
-  }
+.c2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-4 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-4 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .emotion-4 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-4 {
-    padding: 0 1rem;
-  }
-}
-
-.emotion-2 {
+.c1 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -577,91 +543,89 @@ exports[`Headings with rich text should render headline with italic & bold text 
   overflow-wrap: anywhere;
 }
 
+.c1:focus {
+  outline: none;
+}
+
+@media (max-width:63rem) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+  .c1 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .c1 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .c1 {
     padding: 2.5rem 0;
   }
 }
 
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-0 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  font-family: inherit;
-  font-weight: inherit;
-}
-
-<div>
-  <div
-    class="emotion-4 emotion-5"
+<div
+  class="c0"
+>
+  <h1
+    class="c1"
+    id="content"
+    tabindex="-1"
   >
-    <h1
-      class="emotion-2 emotion-3"
-      id="content"
-      tabindex="-1"
-    >
-      <b>
-        <i
-          class="emotion-0 emotion-1"
-        >
-          All is italic and bold
-        </i>
-      </b>
-    </h1>
-  </div>
+    <b>
+      <i
+        class="c2"
+      >
+        All is italic and bold
+      </i>
+    </b>
+  </h1>
 </div>
 `;
 
 exports[`Headings with rich text with different attributes should render headline with only middle of text italic should render correctly 1`] = `
-@media (max-width:63rem) {
-  .emotion-4 {
-    grid-column: 1 / span 6;
-  }
+.c2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-4 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-4 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .emotion-4 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-4 {
-    padding: 0 1rem;
-  }
-}
-
-.emotion-2 {
+.c1 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -674,104 +638,81 @@ exports[`Headings with rich text with different attributes should render headlin
   overflow-wrap: anywhere;
 }
 
+.c1:focus {
+  outline: none;
+}
+
+@media (max-width:63rem) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+  .c1 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .c1 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .c1 {
     padding: 2.5rem 0;
   }
 }
 
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-0 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  font-family: inherit;
-  font-weight: inherit;
-}
-
-<div>
-  <div
-    class="emotion-4 emotion-5"
+<div
+  class="c0"
+>
+  <h1
+    class="c1"
+    id="content"
+    tabindex="-1"
   >
-    <h1
-      class="emotion-2 emotion-3"
-      id="content"
-      tabindex="-1"
+    This is 
+    <i
+      class="c2"
     >
-      This is 
-      <i
-        class="emotion-0 emotion-1"
-      >
-        very
-      </i>
-       important
-    </h1>
-  </div>
+      very
+    </i>
+     important
+  </h1>
 </div>
 `;
 
 exports[`Headings with subheadline data should render correctly 1`] = `
-.emotion-2 {
-  grid-column: 1 / span 6;
-}
-
-@media (max-width:25rem) {
-  .emotion-2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-2 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-2 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-2 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-2 {
-    max-width: initial;
-  }
-}
-
-.emotion-0 {
+.c1 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -782,37 +723,78 @@ exports[`Headings with subheadline data should render correctly 1`] = `
   padding: 1.5rem 0;
 }
 
+.c0 {
+  grid-column: 1 / span 6;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+  .c1 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c1 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c1 {
     padding-top: 2rem;
   }
 }
 
-<div>
-  <div
-    class="emotion-2 emotion-3"
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    max-width: initial;
+  }
+}
+
+<div
+  class="c0"
+>
+  <h2
+    class="c1"
+    id="This-is-a-subheadline"
+    tabindex="-1"
   >
-    <h2
-      class="emotion-0 emotion-1"
-      id="This-is-a-subheadline"
-      tabindex="-1"
-    >
-      This is a subheadline
-    </h2>
-  </div>
+    This is a subheadline
+  </h2>
 </div>
 `;

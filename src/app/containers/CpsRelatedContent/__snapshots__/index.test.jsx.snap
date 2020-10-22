@@ -2,137 +2,7 @@
 
 exports[`CpsRelatedContent should render Story Promo components when given appropriate data 1`] = `
 <DocumentFragment>
-  .emotion-83 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
-@media (max-width:37.4375rem) {
-  .emotion-83 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-83 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .emotion-83 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-83 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-83 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-83 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-.emotion-81 {
-  margin-bottom: 1rem;
-}
-
-@media (max-width:63rem) {
-  .emotion-81 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-81 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-81 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .emotion-81 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-81 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-81 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-.emotion-11 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-  margin-top: 0;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-11 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-11 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-.emotion-0 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .emotion-0 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-0 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-.emotion-8 {
-  margin: 0;
-  padding: 0;
-}
-
-.emotion-6 {
+  .c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -142,7 +12,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   flex-direction: column;
 }
 
-.emotion-4 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -161,16 +31,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   align-items: baseline;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-4 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-.emotion-2 {
+.c8 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -189,309 +50,86 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   align-items: center;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
+.c4 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
+.c2 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    padding-right: 1rem;
-  }
-}
-
-.emotion-79 {
-  list-style-type: none;
+.c5 {
   margin: 0;
   padding: 0;
 }
 
-@supports (display:grid) {
-  .emotion-79 {
-    display: grid;
-    position: initial;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-79 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
+.c21 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-79 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
+.c0 {
+  margin: 0 auto;
+  padding-bottom: 2rem;
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-79 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
+.c1 {
+  margin-bottom: 1rem;
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-79 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 1rem;
-    }
+.c3 {
+  margin-top: 0;
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-79 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(8,1fr);
-      grid-column-end: span 8;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-79 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(8,1fr);
-      grid-column-end: span 8;
-      grid-column-gap: 1rem;
-    }
-}
-}
-
-.emotion-34 {
-  padding: 0.5rem 0 1rem;
-}
-
-@media (max-width:62.9375rem) {
-  .emotion-34 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
-.emotion-34:last-child {
-  border: none;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-34 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-34 {
-    padding: 0 0 1.5rem;
-  }
-}
-
-.emotion-34:first-child {
-  padding-top: 0;
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-34:first-child {
-    padding-top: 1rem;
-  }
-}
-
-.emotion-34:last-child {
-  padding-bottom: 0;
-}
-
-@media (max-width:14.9375rem) {
-  .emotion-34 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-34 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-34 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-34 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-34 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-34 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-34 {
-    display: block;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-34 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-34 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-34 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-34 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-34 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(4,1fr);
-      grid-column-end: span 4;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-34 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(4,1fr);
-      grid-column-end: span 4;
-    }
-}
-}
-
-.emotion-31 {
-  position: relative;
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-31 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-
-@media (min-width:37.5rem) {
-    .emotion-31 {
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:63rem) {
-    .emotion-31 {
-      display: block;
-    }
-}
-}
-
-.emotion-19 {
+.c14 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-@media (min-width:63rem) {
-  .emotion-19 {
-    display: block;
-    width: 100%;
-  }
+.c18 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-19 {
-    width: initial;
-    grid-column: 1 / span 2;
-  }
-}
-
-.emotion-17 {
+.c13 {
   position: relative;
 }
 
-.emotion-13 {
+.c15 {
+  position: relative;
+}
+
+.c17 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c22 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c16 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -504,62 +142,29 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-@media (min-width:25rem) {
-  .emotion-15 {
-    position: absolute;
-    bottom: 0;
-  }
+.c11 {
+  padding: 0.5rem 0 1rem;
 }
 
-.emotion-15 > * {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
+.c11:last-child {
+  border: none;
 }
 
-@media (max-width:24.9375rem) {
-  .emotion-15 > * {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
-  }
+.c11:first-child {
+  padding-top: 0;
 }
 
-.emotion-29 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+.c11:last-child {
+  padding-bottom: 0;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-29 {
-    padding: 0 1rem;
-  }
+.c9 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-@media (min-width:63rem) {
-  .emotion-29 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-29 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-
-@media (min-width:63rem) {
-    .emotion-29 {
-      padding-top: 0.5rem;
-    }
-}
-}
-
-.emotion-25 {
+.c19 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -570,21 +175,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   line-height: 1.25rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-25 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-25 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-.emotion-23 {
+.c20 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -593,7 +184,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   overflow-wrap: anywhere;
 }
 
-.emotion-23:before {
+.c20:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -605,78 +196,358 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   z-index: 1;
 }
 
-.emotion-23:hover,
-.emotion-23:focus {
+.c20:hover,
+.c20:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-23:visited {
+.c20:visited {
   color: #6E6E73;
 }
 
-.emotion-21 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-27 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
+@media (min-width:37.5rem) {
+  .c7 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-27 {
+  .c8 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c4 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c10 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c12 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c12 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c12 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c12 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c12 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c12 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c12 {
+    display: block;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c14 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c14 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c18 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c18 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c18 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c13 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c17 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c17 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c22 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-27 {
+  .c22 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
+@media (max-width:62.9375rem) {
+  .c11 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c11 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c11:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c19 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 <section
     aria-labelledby="related-content-heading"
-    class="emotion-83 emotion-84"
+    class="c0"
     data-e2e="related-content-heading"
     role="region"
   >
     <div
-      class="emotion-81 emotion-82"
+      class="c1"
     >
       <div
-        class="emotion-10 emotion-11 emotion-12"
+        class="c2 c3"
       >
         <div
-          class="emotion-0 emotion-1"
+          class="c4"
         />
         <h2
-          class="emotion-8 emotion-9"
+          class="c5"
         >
           <span
-            class="emotion-6 emotion-7"
+            class="c6"
           >
             <span
-              class="emotion-4 emotion-5"
+              class="c7"
             >
               <span
-                class="emotion-2 emotion-3"
+                class="c8"
                 dir="ltr"
                 id="related-content-heading"
               >
@@ -687,27 +558,28 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
         </h2>
       </div>
       <ul
-        class="emotion-33 emotion-79 emotion-80"
+        class="c9 c10"
         dir="ltr"
         role="list"
       >
         <li
-          class="emotion-33 emotion-34 emotion-35"
+          class="c11 c12"
           dir="ltr"
+          role="listitem"
         >
           <div
-            class="emotion-31 emotion-32"
+            class="c13"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-19 emotion-20"
+              class="c14"
               dir="ltr"
             >
               <div
-                class="emotion-17 emotion-18"
+                class="c15"
               >
                 <div
-                  class="emotion-13 emotion-14"
+                  class="c16"
                 >
                   <div
                     class="lazyload-wrapper"
@@ -718,26 +590,26 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   </div>
                 </div>
                 <div
-                  class="emotion-15 emotion-16"
+                  class="c17"
                 />
               </div>
             </div>
             <div
-              class="emotion-29 emotion-30"
+              class="c18"
               dir="ltr"
             >
               <h3
-                class="emotion-25 emotion-26"
+                class="c19"
               >
                 <a
-                  class="emotion-23 emotion-24"
+                  class="c20"
                   href="/pidgin/44508901"
                 >
                   <span
                     role="text"
                   >
                     <span
-                      class="emotion-21 emotion-22"
+                      class="c21"
                     >
                       , 
                     </span>
@@ -748,7 +620,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                 </a>
               </h3>
               <time
-                class="emotion-27 emotion-28"
+                class="c22"
                 datetime="1970-01-18"
               >
                 18th January 1970
@@ -757,22 +629,23 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
           </div>
         </li>
         <li
-          class="emotion-33 emotion-34 emotion-35"
+          class="c11 c12"
           dir="ltr"
+          role="listitem"
         >
           <div
-            class="emotion-31 emotion-32"
+            class="c13"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-19 emotion-20"
+              class="c14"
               dir="ltr"
             >
               <div
-                class="emotion-17 emotion-18"
+                class="c15"
               >
                 <div
-                  class="emotion-13 emotion-14"
+                  class="c16"
                 >
                   <div
                     class="lazyload-wrapper"
@@ -783,26 +656,26 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   </div>
                 </div>
                 <div
-                  class="emotion-15 emotion-16"
+                  class="c17"
                 />
               </div>
             </div>
             <div
-              class="emotion-29 emotion-30"
+              class="c18"
               dir="ltr"
             >
               <h3
-                class="emotion-25 emotion-26"
+                class="c19"
               >
                 <a
-                  class="emotion-23 emotion-24"
+                  class="c20"
                   href="/pidgin/tori-46975713"
                 >
                   How light companies dey use estimated billing show Nigerians pepper
                 </a>
               </h3>
               <time
-                class="emotion-27 emotion-28"
+                class="c22"
                 datetime="1970-01-18"
               >
                 18th January 1970
@@ -811,22 +684,23 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
           </div>
         </li>
         <li
-          class="emotion-33 emotion-34 emotion-35"
+          class="c11 c12"
           dir="ltr"
+          role="listitem"
         >
           <div
-            class="emotion-31 emotion-32"
+            class="c13"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-19 emotion-20"
+              class="c14"
               dir="ltr"
             >
               <div
-                class="emotion-17 emotion-18"
+                class="c15"
               >
                 <div
-                  class="emotion-13 emotion-14"
+                  class="c16"
                 >
                   <div
                     class="lazyload-wrapper"
@@ -837,26 +711,26 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   </div>
                 </div>
                 <div
-                  class="emotion-15 emotion-16"
+                  class="c17"
                 />
               </div>
             </div>
             <div
-              class="emotion-29 emotion-30"
+              class="c18"
               dir="ltr"
             >
               <h3
-                class="emotion-25 emotion-26"
+                class="c19"
               >
                 <a
-                  class="emotion-23 emotion-24"
+                  class="c20"
                   href="/pidgin/tori-42494678"
                 >
                   Nigeria: Wetin 5,222 megawatts electric fit do?
                 </a>
               </h3>
               <time
-                class="emotion-27 emotion-28"
+                class="c22"
                 datetime="1970-01-18"
               >
                 18th January 1970
@@ -872,137 +746,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 
 exports[`CpsRelatedContent should render Story Promo components without <ul> when given single item in collection 1`] = `
 <DocumentFragment>
-  .emotion-41 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
-@media (max-width:37.4375rem) {
-  .emotion-41 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-41 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .emotion-41 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-41 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-41 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-41 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-.emotion-39 {
-  margin-bottom: 1rem;
-}
-
-@media (max-width:63rem) {
-  .emotion-39 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-39 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-39 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .emotion-39 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-39 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-39 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-.emotion-11 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-  margin-top: 0;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-11 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-11 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-.emotion-0 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .emotion-0 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-0 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-.emotion-8 {
-  margin: 0;
-  padding: 0;
-}
-
-.emotion-6 {
+  .c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1012,7 +756,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   flex-direction: column;
 }
 
-.emotion-4 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1031,16 +775,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   align-items: baseline;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-4 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-.emotion-2 {
+.c8 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1059,82 +794,97 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   align-items: center;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
+.c4 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    padding-right: 1rem;
-  }
-}
-
-.emotion-33 {
+.c2 {
   position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-33 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-
-@media (min-width:37.5rem) {
-    .emotion-33 {
-      grid-column-gap: 1rem;
-    }
+.c5 {
+  margin: 0;
+  padding: 0;
 }
 
-@media (min-width:63rem) {
-    .emotion-33 {
-      display: block;
-    }
-}
+.c19 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
-.emotion-19 {
+.c0 {
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.c1 {
+  margin-bottom: 1rem;
+}
+
+.c3 {
+  margin-top: 0;
+}
+
+.c12 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-@media (min-width:63rem) {
-  .emotion-19 {
-    display: block;
-    width: 100%;
-  }
+.c16 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-19 {
-    width: initial;
-    grid-column: 1 / span 2;
-  }
-}
-
-.emotion-17 {
+.c11 {
   position: relative;
 }
 
-.emotion-13 {
+.c13 {
+  position: relative;
+}
+
+.c15 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c20 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c21 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c14 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1147,62 +897,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-@media (min-width:25rem) {
-  .emotion-15 {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-.emotion-15 > * {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
-}
-
-@media (max-width:24.9375rem) {
-  .emotion-15 > * {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
-  }
-}
-
-.emotion-31 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-31 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-31 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-31 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-
-@media (min-width:63rem) {
-    .emotion-31 {
-      padding-top: 0.5rem;
-    }
-}
-}
-
-.emotion-25 {
+.c17 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1213,21 +908,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   line-height: 1.25rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-25 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-25 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-.emotion-23 {
+.c18 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1236,7 +917,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   overflow-wrap: anywhere;
 }
 
-.emotion-23:before {
+.c18:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1248,196 +929,314 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   z-index: 1;
 }
 
-.emotion-23:hover,
-.emotion-23:focus {
+.c18:hover,
+.c18:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-23:visited {
+.c18:visited {
   color: #6E6E73;
 }
 
-.emotion-21 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-29 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
+@media (min-width:37.5rem) {
+  .c7 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-29 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
+  .c8 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-29 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
+  .c8 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c4 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c10 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-37 {
+  .c9 {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-37 {
+  .c9 {
     padding-bottom: 1.5rem;
   }
 }
 
-@supports (display:grid) {
-  .emotion-35 {
-    display: grid;
-    position: initial;
+@media (min-width:63rem) {
+  .c12 {
+    display: block;
+    width: 100%;
   }
-
-@media (max-width:14.9375rem) {
-    .emotion-35 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 0.5rem;
-    }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-35 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 0.5rem;
-    }
+@supports (grid-template-columns:fit-content(200px)) {
+  .c12 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-35 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 0.5rem;
-    }
+@media (min-width:37.5rem) {
+  .c16 {
+    padding: 0 1rem;
+  }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-35 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 1rem;
-    }
+@media (min-width:63rem) {
+  .c16 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-35 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(2,1fr);
-      grid-column-end: span 2;
-      grid-column-gap: 1rem;
-    }
+@supports (grid-template-columns:fit-content(200px)) {
+  .c16 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
 }
 
-@media (min-width:80rem) {
-    .emotion-35 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(2,1fr);
-      grid-column-end: span 2;
-      grid-column-gap: 1rem;
-    }
-}
+@supports (grid-template-columns:fit-content(200px)) {
+  .c11 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
 }
 
-.emotion-27 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
+@media (min-width:25rem) {
+  .c15 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c15 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-27 {
+  .c20 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-27 {
+  .c20 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-27 {
+  .c20 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-27 {
+  .c20 {
     display: none;
     visibility: hidden;
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c21 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c21 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c17 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 <section
     aria-labelledby="related-content-heading"
-    class="emotion-41 emotion-42"
+    class="c0"
     data-e2e="related-content-heading"
     role="region"
   >
     <div
-      class="emotion-39 emotion-40"
+      class="c1"
     >
       <div
-        class="emotion-10 emotion-11 emotion-12"
+        class="c2 c3"
       >
         <div
-          class="emotion-0 emotion-1"
+          class="c4"
         />
         <h2
-          class="emotion-8 emotion-9"
+          class="c5"
         >
           <span
-            class="emotion-6 emotion-7"
+            class="c6"
           >
             <span
-              class="emotion-4 emotion-5"
+              class="c7"
             >
               <span
-                class="emotion-2 emotion-3"
+                class="c8"
                 dir="ltr"
                 id="related-content-heading"
               >
@@ -1448,25 +1247,25 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
         </h2>
       </div>
       <div
-        class="emotion-37 emotion-38"
+        class="c9"
       >
         <div
-          class="emotion-35 emotion-36"
+          class="c10"
           dir="ltr"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="c11"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-19 emotion-20"
+              class="c12"
               dir="ltr"
             >
               <div
-                class="emotion-17 emotion-18"
+                class="c13"
               >
                 <div
-                  class="emotion-13 emotion-14"
+                  class="c14"
                 >
                   <div
                     class="lazyload-wrapper"
@@ -1477,26 +1276,26 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                   </div>
                 </div>
                 <div
-                  class="emotion-15 emotion-16"
+                  class="c15"
                 />
               </div>
             </div>
             <div
-              class="emotion-31 emotion-32"
+              class="c16"
               dir="ltr"
             >
               <h3
-                class="emotion-25 emotion-26"
+                class="c17"
               >
                 <a
-                  class="emotion-23 emotion-24"
+                  class="c18"
                   href="/pidgin/44508901"
                 >
                   <span
                     role="text"
                   >
                     <span
-                      class="emotion-21 emotion-22"
+                      class="c19"
                     >
                       , 
                     </span>
@@ -1507,12 +1306,12 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                 </a>
               </h3>
               <p
-                class="emotion-27 emotion-28"
+                class="c20"
               >
                 James den Kwesi Ansah want convert most of Ghana's cassava waste into cheap electricity supply for schools, hospitals den villages.
               </p>
               <time
-                class="emotion-29 emotion-30"
+                class="c21"
                 datetime="1970-01-18"
               >
                 18th January 1970

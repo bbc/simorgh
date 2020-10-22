@@ -1,15 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Fragment with an unknown attribute should ignore the attribute 1`] = `
-<div>
-  <b>
-    This is some text with a bold and unknown attribute
-  </b>
-</div>
+<b>
+  This is some text with a bold and unknown attribute
+</b>
 `;
 
 exports[`Fragment with bold and italic attributes should render text wrapped in bold and italic DOM elements 1`] = `
-.emotion-0 {
+.c0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -17,27 +15,23 @@ exports[`Fragment with bold and italic attributes should render text wrapped in 
   font-weight: inherit;
 }
 
-<div>
-  <i
-    class="emotion-0 emotion-1"
-  >
-    <b>
-      This is some text with bold and italic attributes
-    </b>
-  </i>
-</div>
+<i
+  class="c0"
+>
+  <b>
+    This is some text with bold and italic attributes
+  </b>
+</i>
 `;
 
 exports[`Fragment with bold attributes should render text wrapped in a bold DOM element 1`] = `
-<div>
-  <b>
-    This is some text with bold attributes
-  </b>
-</div>
+<b>
+  This is some text with bold attributes
+</b>
 `;
 
 exports[`Fragment with italic attributes in Farsi should render text wrapped in an italic DOM element 1`] = `
-.emotion-0 {
+.c0 {
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -45,17 +39,15 @@ exports[`Fragment with italic attributes in Farsi should render text wrapped in 
   font-weight: inherit;
 }
 
-<div>
-  <i
-    class="emotion-0 emotion-1"
-  >
-    This is some text with italic attributes
-  </i>
-</div>
+<i
+  class="c0"
+>
+  This is some text with italic attributes
+</i>
 `;
 
 exports[`Fragment with italic attributes should render text wrapped in an italic DOM element 1`] = `
-.emotion-0 {
+.c0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -63,13 +55,11 @@ exports[`Fragment with italic attributes should render text wrapped in an italic
   font-weight: inherit;
 }
 
-<div>
-  <i
-    class="emotion-0 emotion-1"
-  >
-    This is some text with italic attributes
-  </i>
-</div>
+<i
+  class="c0"
+>
+  This is some text with italic attributes
+</i>
 `;
 
 exports[`Fragment with no attributes should render just text 1`] = `

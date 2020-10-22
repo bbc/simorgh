@@ -1,37 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FauxHeadline with headline data should render correctly 1`] = `
-@media (max-width:63rem) {
-  .emotion-3 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-3 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-3 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .emotion-3 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-3 {
-    padding: 0 1rem;
-  }
-}
-
-.emotion-1 {
+.c1 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -41,81 +11,82 @@ exports[`FauxHeadline with headline data should render correctly 1`] = `
   display: block;
   margin: 0;
   padding: 2rem 0;
+}
+
+.c2 {
   padding: 0.5rem 0 2rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-1 {
+  .c1 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-1 {
+  .c1 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-1 {
+  .c1 {
     padding: 2.5rem 0;
   }
 }
 
+@media (max-width:63rem) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:63rem) {
-  .emotion-1 {
+  .c2 {
     padding: 1rem 0 2.5rem;
   }
 }
 
-<div>
-  <div
-    class="emotion-3 emotion-4"
+<div
+  class="c0"
+>
+  <strong
+    aria-hidden="true"
+    class="c1 c2"
   >
-    <strong
-      aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2"
-    >
-      This is a headline!
-    </strong>
-  </div>
+    This is a headline!
+  </strong>
 </div>
 `;
 
 exports[`FauxHeadline with plain text headline should render <strong> containing correct text 1`] = `
-@media (max-width:63rem) {
-  .emotion-3 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-3 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-3 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .emotion-3 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-3 {
-    padding: 0 1rem;
-  }
-}
-
-.emotion-1 {
+.c1 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -125,45 +96,76 @@ exports[`FauxHeadline with plain text headline should render <strong> containing
   display: block;
   margin: 0;
   padding: 2rem 0;
+}
+
+.c2 {
   padding: 0.5rem 0 2rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-1 {
+  .c1 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-1 {
+  .c1 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-1 {
+  .c1 {
     padding: 2.5rem 0;
   }
 }
 
+@media (max-width:63rem) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:63rem) {
-  .emotion-1 {
+  .c2 {
     padding: 1rem 0 2.5rem;
   }
 }
 
-<div>
-  <div
-    class="emotion-3 emotion-4"
+<div
+  class="c0"
+>
+  <strong
+    aria-hidden="true"
+    class="c1 c2"
   >
-    <strong
-      aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2"
-    >
-      Plain headline
-    </strong>
-  </div>
+    Plain headline
+  </strong>
 </div>
 `;
