@@ -111,6 +111,7 @@
     "@bbc/psammead-timestamp-container": "^5.0.8",
     "@bbc/psammead-useful-links": "^3.0.2",
     "@bbc/psammead-visually-hidden-text": "^2.0.1",
+    "@bbc/web-vitals": "^1.0.1",
     "@emotion/cache": "^10.0.29",
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",

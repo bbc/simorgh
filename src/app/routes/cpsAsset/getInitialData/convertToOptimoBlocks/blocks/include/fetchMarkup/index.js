@@ -6,6 +6,7 @@ import {
   INCLUDE_FETCH_ERROR,
   INCLUDE_REQUEST_RECEIVED,
 } from '#lib/logger.const';
+import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 
 const logger = nodeLogger(__filename);
 
@@ -17,7 +18,7 @@ const fetchMarkup = async url => {
     /* The timeout value here is arbitrary and subject to change. It's purpose is to ensure that pending promises do not delay page rendering on the server.
       Using isomorphic-fetch means we use window.fetch, which does not have a timeout option, on the client and node-fetch, which does, on the server.
     */
-    const res = await fetch(url, { timeout: 3000 });
+    const res = await fetch(url, { timeout: SECONDARY_DATA_TIMEOUT });
     if (res.status !== 200) {
       logger.error(INCLUDE_FETCH_ERROR, {
         status: res.status,

@@ -6,6 +6,7 @@ import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
 import ServiceWorkerContainer from '../containers/ServiceWorker';
 import { ServiceContext } from '../contexts/ServiceContext';
+import WebVitals from '#app/containers/WebVitals';
 
 const PageWrapper = ({ children }) => {
   const { fonts: fontFunctions } = useContext(ServiceContext);
@@ -17,6 +18,7 @@ const PageWrapper = ({ children }) => {
       <GlobalStyles fonts={fonts} />
       <ServiceWorkerContainer />
       <ManifestContainer />
+      <WebVitals />
       <HeaderContainer />
       {children}
       <FooterContainer />
