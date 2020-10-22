@@ -1,6 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Document Component should render AMP version correctly 1`] = `
+.emotion-0 {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #FDFDFD;
+}
+
 <html
   data-reactroot=""
   lang="test"
@@ -30,16 +42,17 @@ exports[`Document Component should render AMP version correctly 1`] = `
     >
       Test title
     </title>
+    <style
+      amp-custom=""
+      data-emotion-css="7prgni-StyledLink"
+    >
+      .css-7prgni-StyledLink{display:inline-block;}
+    </style>
     <link
       data-react-helmet="true"
       href="https://www.bbc.com/news/articles/c6v11qzyv8po"
       rel="canonical"
     />
-    <style
-      amp-custom=""
-    >
-      html { color: red; }
-    </style>
     <style
       amp-boilerplate=""
     >
@@ -76,7 +89,7 @@ exports[`Document Component should render AMP version correctly 1`] = `
     class="amp-geo-pending"
   >
     <div
-      class="StyledDiv-sc-1dngwtn-0 riLLS"
+      class="emotion-0 emotion-1"
       id="root"
     >
       <h1
@@ -90,6 +103,18 @@ exports[`Document Component should render AMP version correctly 1`] = `
 `;
 
 exports[`Document Component should render correctly 1`] = `
+.emotion-0 {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #FDFDFD;
+}
+
 <html
   class="no-js"
   data-reactroot=""
@@ -120,20 +145,20 @@ exports[`Document Component should render correctly 1`] = `
     >
       Test title
     </title>
+    <style
+      data-emotion-css="7prgni-StyledLink"
+    >
+      .css-7prgni-StyledLink{display:inline-block;}
+    </style>
     <link
       data-react-helmet="true"
       href="https://www.bbc.com/news/articles/c6v11qzyv8po"
       rel="canonical"
     />
-    <style
-      data-styled-components="abc"
-    >
-      html { color: red; }
-    </style>
   </head>
   <body>
     <div
-      class="StyledDiv-sc-1dngwtn-0 riLLS"
+      class="emotion-0 emotion-1"
       id="root"
     >
       <h1
