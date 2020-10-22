@@ -1,7 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ArticleTimestamp should render a 'created' Timestamp correctly 1`] = `
-.c1 {
+.emotion-2 {
+  grid-column: 1 / span 6;
+}
+
+@media (max-width:25rem) {
+  .emotion-2 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-2 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-2 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-2 {
+    grid-column: 2 / span 4;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-2 {
+    max-width: initial;
+  }
+}
+
+@supports (display:grid) {
+@media (min-width:80rem) {
+    .emotion-2 {
+      max-height: 0;
+      padding-top: 0.25rem;
+    }
+}
+}
+
+.emotion-0 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -12,81 +64,92 @@ exports[`ArticleTimestamp should render a 'created' Timestamp correctly 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c1:last-child {
-  padding-bottom: 1rem;
-}
-
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .emotion-0 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .emotion-0 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
+.emotion-0:last-child {
+  padding-bottom: 1rem;
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 2 / span 4;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    max-width: initial;
-  }
-}
-
-<div
-  class="c0"
->
-  <time
-    class="c1"
-    datetime="2018-07-07"
+<div>
+  <div
+    class="emotion-2 emotion-3"
   >
-    7 July 2018
-  </time>
+    <time
+      class="emotion-0 emotion-1"
+      datetime="2018-07-07"
+    >
+      7 July 2018
+    </time>
+  </div>
 </div>
 `;
 
 exports[`ArticleTimestamp should render both a 'created' and an 'updated' Timestamp correctly 1`] = `
-.c1 {
+.emotion-4 {
+  grid-column: 1 / span 6;
+}
+
+@media (max-width:25rem) {
+  .emotion-4 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-4 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-4 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-4 {
+    grid-column: 2 / span 4;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-4 {
+    max-width: initial;
+  }
+}
+
+@supports (display:grid) {
+@media (min-width:80rem) {
+    .emotion-4 {
+      max-height: 0;
+      padding-top: 0.25rem;
+    }
+}
+}
+
+.emotion-0 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -97,89 +160,100 @@ exports[`ArticleTimestamp should render both a 'created' and an 'updated' Timest
   padding-bottom: 0.25rem;
 }
 
-.c1:last-child {
-  padding-bottom: 1rem;
-}
-
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .emotion-0 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .emotion-0 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
+.emotion-0:last-child {
+  padding-bottom: 1rem;
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 2 / span 4;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    max-width: initial;
-  }
-}
-
-<div
-  class="c0"
->
-  <time
-    class="c1"
-    datetime="2018-07-07"
+<div>
+  <div
+    class="emotion-4 emotion-5"
   >
-    7 July 2018
-  </time>
-  <div>
     <time
-      class="c1"
-      datetime="2019-03-15"
+      class="emotion-0 emotion-1"
+      datetime="2018-07-07"
     >
-      Updated 15 March 2019
+      7 July 2018
     </time>
+    <div>
+      <time
+        class="emotion-0 emotion-1"
+        datetime="2019-03-15"
+      >
+        Updated 15 March 2019
+      </time>
+    </div>
   </div>
 </div>
 `;
 
 exports[`ArticleTimestamp should render with a prefix 1`] = `
-.c1 {
+.emotion-4 {
+  grid-column: 1 / span 6;
+}
+
+@media (max-width:25rem) {
+  .emotion-4 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-4 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-4 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-4 {
+    grid-column: 2 / span 4;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-4 {
+    max-width: initial;
+  }
+}
+
+@supports (display:grid) {
+@media (min-width:80rem) {
+    .emotion-4 {
+      max-height: 0;
+      padding-top: 0.25rem;
+    }
+}
+}
+
+.emotion-0 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -190,89 +264,100 @@ exports[`ArticleTimestamp should render with a prefix 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c1:last-child {
-  padding-bottom: 1rem;
-}
-
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .emotion-0 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .emotion-0 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
+.emotion-0:last-child {
+  padding-bottom: 1rem;
+}
+
+<div>
+  <div
+    class="emotion-4 emotion-5"
+  >
+    <time
+      class="emotion-0 emotion-1"
+      datetime="2018-07-07"
+    >
+      7 julio 2018
+    </time>
+    <div>
+      <time
+        class="emotion-0 emotion-1"
+        datetime="2019-03-15"
+      >
+        Actualizado 15 marzo 2019
+      </time>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ArticleTimestamp should render with a suffix 1`] = `
+.emotion-4 {
+  grid-column: 1 / span 6;
+}
+
 @media (max-width:25rem) {
-  .c0 {
+  .emotion-4 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
+  .emotion-4 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c0 {
+  .emotion-4 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
+  .emotion-4 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .emotion-4 {
     grid-column: 2 / span 4;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
+  .emotion-4 {
     max-width: initial;
   }
 }
 
-<div
-  class="c0"
->
-  <time
-    class="c1"
-    datetime="2018-07-07"
-  >
-    7 julio 2018
-  </time>
-  <div>
-    <time
-      class="c1"
-      datetime="2019-03-15"
-    >
-      Actualizado 15 marzo 2019
-    </time>
-  </div>
-</div>
-`;
+@supports (display:grid) {
+@media (min-width:80rem) {
+    .emotion-4 {
+      max-height: 0;
+      padding-top: 0.25rem;
+    }
+}
+}
 
-exports[`ArticleTimestamp should render with a suffix 1`] = `
-.c1 {
+.emotion-0 {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #6E6E73;
@@ -283,89 +368,100 @@ exports[`ArticleTimestamp should render with a suffix 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c1:last-child {
-  padding-bottom: 1rem;
-}
-
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .emotion-0 {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .emotion-0 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
+.emotion-0:last-child {
+  padding-bottom: 1rem;
+}
+
+<div>
+  <div
+    class="emotion-4 emotion-5"
+  >
+    <time
+      class="emotion-0 emotion-1"
+      datetime="2018-07-07"
+    >
+      ७ जुलाई २०१८
+    </time>
+    <div>
+      <time
+        class="emotion-0 emotion-1"
+        datetime="2019-03-15"
+      >
+        १५ मार्च २०१९ अद्यावधिक
+      </time>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ArticleTimestamp should render with no suffix or prefix 1`] = `
+.emotion-2 {
+  grid-column: 1 / span 6;
+}
+
 @media (max-width:25rem) {
-  .c0 {
+  .emotion-2 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
+  .emotion-2 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c0 {
+  .emotion-2 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
+  .emotion-2 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .emotion-2 {
     grid-column: 2 / span 4;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
+  .emotion-2 {
     max-width: initial;
   }
 }
 
-<div
-  class="c0"
->
-  <time
-    class="c1"
-    datetime="2018-07-07"
-  >
-    ७ जुलाई २०१८
-  </time>
-  <div>
-    <time
-      class="c1"
-      datetime="2019-03-15"
-    >
-      १५ मार्च २०१९ अद्यावधिक
-    </time>
-  </div>
-</div>
-`;
+@supports (display:grid) {
+@media (min-width:80rem) {
+    .emotion-2 {
+      max-height: 0;
+      padding-top: 0.25rem;
+    }
+}
+}
 
-exports[`ArticleTimestamp should render with no suffix or prefix 1`] = `
-.c1 {
+.emotion-0 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -376,75 +472,34 @@ exports[`ArticleTimestamp should render with no suffix or prefix 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c1:last-child {
-  padding-bottom: 1rem;
-}
-
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .emotion-0 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .emotion-0 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
+.emotion-0:last-child {
+  padding-bottom: 1rem;
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 2 / span 4;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    max-width: initial;
-  }
-}
-
-<div
-  class="c0"
->
-  <time
-    class="c1"
-    datetime="2018-07-07"
+<div>
+  <div
+    class="emotion-2 emotion-3"
   >
-    7 julio 2018
-  </time>
+    <time
+      class="emotion-0 emotion-1"
+      datetime="2018-07-07"
+    >
+      7 julio 2018
+    </time>
+  </div>
 </div>
 `;

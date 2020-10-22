@@ -1,7 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BulletedListContainer should render ltr correctly 1`] = `
-.c2 {
+.emotion-8 {
+  grid-column: 1 / span 6;
+}
+
+@media (max-width:25rem) {
+  .emotion-8 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-8 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-8 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-8 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-8 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-8 {
+    max-width: initial;
+  }
+}
+
+.emotion-6 {
+  margin-bottom: 1.5rem;
+}
+
+.emotion-4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -11,115 +58,122 @@ exports[`BulletedListContainer should render ltr correctly 1`] = `
   list-style-type: none;
 }
 
-.c2 > li {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-4 > li {
   position: relative;
 }
 
-.c2 > li::before {
+.emotion-4 > li::before {
   top: 0.5rem;
   content: ' ';
   position: absolute;
   border-width: 1rem;
   border: 0.1875rem solid #3F3F42;
+  background-color: #3F3F42;
   border-radius: 50%;
   left: -1rem;
 }
 
-.c3 {
+.emotion-0 {
   margin-bottom: 1rem;
 }
 
-.c0 {
+<div>
+  <div
+    class="emotion-8 emotion-9"
+  >
+    <div
+      class="emotion-6 emotion-7"
+    >
+      <ul
+        class="emotion-4 emotion-5"
+        dir="ltr"
+        role="list"
+      >
+        <li
+          class="emotion-0 emotion-1"
+          role="listitem"
+        >
+          It is unordered
+        </li>
+        <li
+          class="emotion-0 emotion-1"
+          role="listitem"
+        >
+          It has three list items
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`BulletedListContainer should render rtl correctly 1`] = `
+.emotion-8 {
   grid-column: 1 / span 6;
 }
 
-.c1 {
-  margin-bottom: 1.5rem;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
 @media (max-width:25rem) {
-  .c0 {
+  .emotion-8 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
+  .emotion-8 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c0 {
+  .emotion-8 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
+  .emotion-8 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .emotion-8 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
+  .emotion-8 {
     max-width: initial;
   }
 }
 
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <ul
-      class="c2"
-      dir="ltr"
-      role="list"
-    >
-      <li
-        class="c3"
-        role="listitem"
-      >
-        It is unordered
-      </li>
-      <li
-        class="c3"
-        role="listitem"
-      >
-        It has three list items
-      </li>
-    </ul>
-  </div>
-</div>
-`;
+.emotion-6 {
+  margin-bottom: 1.5rem;
+}
 
-exports[`BulletedListContainer should render rtl correctly 1`] = `
-.c2 {
+.emotion-0 {
+  margin-bottom: 1rem;
+}
+
+.emotion-4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -129,109 +183,61 @@ exports[`BulletedListContainer should render rtl correctly 1`] = `
   list-style-type: none;
 }
 
-.c2 > li {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+.emotion-4 > li {
   position: relative;
 }
 
-.c2 > li::before {
+.emotion-4 > li::before {
   top: 0.5rem;
   content: ' ';
   position: absolute;
   border-width: 1rem;
   border: 0.1875rem solid #3F3F42;
+  background-color: #3F3F42;
   border-radius: 50%;
   right: -1rem;
 }
 
-.c3 {
-  margin-bottom: 1rem;
-}
-
-.c0 {
-  grid-column: 1 / span 6;
-}
-
-.c1 {
-  margin-bottom: 1.5rem;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    max-width: initial;
-  }
-}
-
-<div
-  class="c0"
->
+<div>
   <div
-    class="c1"
+    class="emotion-8 emotion-9"
   >
-    <ul
-      class="c2"
-      dir="rtl"
-      role="list"
+    <div
+      class="emotion-6 emotion-7"
     >
-      <li
-        class="c3"
-        role="listitem"
+      <ul
+        class="emotion-4 emotion-5"
+        dir="rtl"
+        role="list"
       >
-        It is unordered
-      </li>
-      <li
-        class="c3"
-        role="listitem"
-      >
-        It has three list items
-      </li>
-    </ul>
+        <li
+          class="emotion-0 emotion-1"
+          role="listitem"
+        >
+          It is unordered
+        </li>
+        <li
+          class="emotion-0 emotion-1"
+          role="listitem"
+        >
+          It has three list items
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 `;

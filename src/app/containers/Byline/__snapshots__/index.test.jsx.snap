@@ -1,7 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Byline should render correctly for STY pages with name and title 1`] = `
-.c1 {
+.emotion-8 {
+  grid-column: 1 / span 6;
+}
+
+@media (max-width:25rem) {
+  .emotion-8 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-8 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-8 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-8 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-8 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-8 {
+    max-width: initial;
+  }
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -12,7 +55,7 @@ exports[`Byline should render correctly for STY pages with name and title 1`] = 
   display: flex;
 }
 
-.c2 {
+.emotion-4 {
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
@@ -25,86 +68,45 @@ exports[`Byline should render correctly for STY pages with name and title 1`] = 
   line-height: 1.125rem;
 }
 
-.c3 {
-  color: #3F3F42;
-}
-
-.c4 {
-  color: #6E6E73;
-}
-
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 @media (min-width:37.5rem) {
-  .c2 {
+  .emotion-4 {
     font-size: 0.875rem;
   }
 }
 
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
+.emotion-0 {
+  color: #3F3F42;
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
+.emotion-2 {
+  color: #6E6E73;
 }
 
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    max-width: initial;
-  }
-}
-
-<div
-  class="c0"
->
+<div>
   <div
-    class="c1"
+    class="emotion-8 emotion-9"
   >
-    <ul
-      class="c2"
-      role="list"
+    <div
+      class="emotion-6 emotion-7"
     >
-      <li
-        class="c3"
-        role="listitem"
+      <ul
+        class="emotion-4 emotion-5"
+        role="list"
       >
-        John Smith
-      </li>
-      <li
-        class="c4"
-        role="listitem"
-      >
-        Art Editor
-      </li>
-    </ul>
+        <li
+          class="emotion-0 emotion-1"
+          role="listitem"
+        >
+          John Smith
+        </li>
+        <li
+          class="emotion-2 emotion-3"
+          role="listitem"
+        >
+          Art Editor
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 `;

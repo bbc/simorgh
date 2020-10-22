@@ -1,19 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Copyright with news service context 1`] = `
-.c1 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c0 {
+.emotion-2 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -27,21 +15,7 @@ exports[`should render Copyright with news service context 1`] = `
   left: 0;
 }
 
-<p
-  class="c0"
-  role="text"
->
-  <span
-    class="c1"
-  >
-    Image source, 
-  </span>
-  This is some copyright text
-</p>
-`;
-
-exports[`should render Copyright with persian service context 1`] = `
-.c1 {
+.emotion-0 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -53,7 +27,35 @@ exports[`should render Copyright with persian service context 1`] = `
   margin: 0;
 }
 
-.c0 {
+<div>
+  <p
+    class="emotion-2 emotion-3"
+    role="text"
+  >
+    <span
+      class="emotion-0 emotion-1"
+    >
+      Image source, 
+    </span>
+    This is some copyright text
+  </p>
+</div>
+`;
+
+exports[`should render Copyright with persian service context 1`] = `
+.emotion-0 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-2 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -67,19 +69,21 @@ exports[`should render Copyright with persian service context 1`] = `
   right: 0;
 }
 
-<p
-  class="c0"
-  role="text"
->
-  <span
-    class="c1"
+<div>
+  <p
+    class="emotion-2 emotion-3"
+    role="text"
   >
-     ، منبع تصویر
-  </span>
-  <span
-    lang="en-GB"
-  >
-    Getty Images
-  </span>
-</p>
+    <span
+      class="emotion-0 emotion-1"
+    >
+       ، منبع تصویر
+    </span>
+    <span
+      lang="en-GB"
+    >
+      Getty Images
+    </span>
+  </p>
+</div>
 `;
