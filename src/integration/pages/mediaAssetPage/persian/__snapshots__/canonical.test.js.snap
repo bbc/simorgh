@@ -180,10 +180,10 @@ Object {
 
 exports[`Canonical Media Asset Page I can see the placeholder loading image 1`] = `
 <div
-  class="LoadingImageWrapper-fuo2ed-0 gyUHhp"
+  class="css-z3isei-LoadingImageWrapper eqo19v60"
 >
   <div
-    class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+    class="css-12oj33f-ImagePlaceholder e1whu0"
   />
 </div>
 `;
@@ -388,7 +388,7 @@ exports[`Canonical Media Asset Page outer iframe has z-index of 1 1`] = `
 <iframe
   allow="autoplay; fullscreen"
   allowfullscreen=""
-  class="StyledIframe-fuo2ed-1 lfcupi"
+  class="css-4k1mri-StyledIframe eqo19v61"
   scrolling="no"
   src="https://test.bbc.com/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa"
   title="پخش صدا و تصویر"

@@ -143,7 +143,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         }
       />
       <StyledGelPageGrid
-        forwardedAs="main"
+        as="main"
         role="main"
         dir={dir}
         columns={getGroups(6, 6, 6, 6, 8, 20)}
