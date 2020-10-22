@@ -63,7 +63,11 @@ describe('Render Document', () => {
       expect(document.redirectUrl).toBe(null);
 
       expect(server.renderToStaticMarkup.mock.calls[0][0].props).toStrictEqual({
-        app: 'no',
+        app: {
+          css: '',
+          html: 'no',
+          ids: [],
+        },
         assetOrigins: '__mock_asset_origins__',
         data: { test: 'data' },
         helmet: undefined,
