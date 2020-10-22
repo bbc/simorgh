@@ -1,4 +1,6 @@
+import path from 'ramda/src/path';
 import runCanonicalAdsTests from '../../../support/helpers/adsTests/testsForCanonicalOnly';
+import config from '../../../support/config/services';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -11,30 +13,17 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({ service }) => {
   if (Cypress.env('APP_ENV') === 'local') {
     runCanonicalAdsTests({ service });
   }
-  describe(`No testsToAlwaysRunForCanonicalOnly to run for ${service}`, () => {
-    describe(`US Election Banner`, () => {
-      it('should have US Election banner for Hindi, Arabic, Portuguese, Mundo, Persian, Russian', () => {
-        cy.getToggles(config[service].name);
-         cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
-            const usElectionBannerEnabled = path(
-              ['us2020ElectionBanner', 'enabled'],
-              toggles,
-            );
-            if (usElectionBannerEnabled) {
-            ...
-        }
-          'hindi',
-          'arabic',
-          'portuguese',
-          'mundo',
-          'persian',
-          'russian',
-        ];
-        if (servicesWithBanner.includes(service)) {
-          cy.get('[class^="gel-wrap"]').should('be.visible');
-          cy.get('[class^="IndexPageContainer-sc-1yb6vt4-0"]').should(
-            'be.visible',
-          );
+
+  describe(`US Election Banner`, () => {
+    it('should have US Election banner if toggle is enabled', () => {
+      cy.getToggles(config[service].name);
+      cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
+        const usElectionBannerEnabled = path(
+          ['us2020ElectionBanner', 'enabled'],
+          toggles,
+        );
+        if (usElectionBannerEnabled) {
+          cy.get('[data-e2e="us-election-banner"]').should('be.visible');
         } else {
           cy.log('This service is not expected to have the banner');
         }
