@@ -94,6 +94,7 @@ const directives = {
       'https://www.bbc.co.uk', // STY include indepthtoolkit
       'https://news.files.bbci.co.uk', // STY include
       'https://mybbc-analytics.files.bbci.co.uk',
+      'https://europe-west1-bbc-otg-traf-mgr-bq-prod-4591.cloudfunctions.net', // Web-Vitals monitoring
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
@@ -123,6 +124,7 @@ const directives = {
       'https://news.files.bbci.co.uk', // STY include
       'https://news.test.files.bbci.co.uk', // STY include
       'https://mybbc-analytics.files.bbci.co.uk',
+      'https://europe-west1-bbc-otg-traf-mgr-bq-dev-4105.cloudfunctions.net', // Web-Vitals monitoring
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
