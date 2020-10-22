@@ -48,8 +48,7 @@ const fourOfSixColumnsMaxWidthScaleable = `66.67%`;
 
 // if the specified grid span is wider than the maximum width the grid will expand
 // with an extra grid-gap, so we need this to prevent that from happening
-const specifiedOrMaximum = (specified, maximum) =>
-  specified > maximum ? maximum : specified;
+const specifiedOrMaximum = Math.min;
 
 const nestedGrid = `
   display: grid;
@@ -123,26 +122,28 @@ export const layoutGridItemLarge = `
   ${gelGridMargin}
 `;
 
-export const layoutGridItemMediumNoMargin = `
+export const layoutGridItemMediumNoMargin = ({
+  padding = {},
+  gridColumnStart,
+  gridSpan,
+}) => `
   grid-column: 1 / span 6;
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    ${({ padding = {} }) =>
-      padding.group2 ? `padding: 0 ${padding.group2}` : ''};
+    ${padding.group2 ? `padding: 0 ${padding.group2}` : ''};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     grid-column: 1 / span 5;
     max-width: ${fiveOfSixColumnsMaxWidthScaleable};
-    ${({ padding = {} }) =>
-      padding.group3 ? `padding: 0 ${padding.group3}` : ''};
+    ${padding.group3 ? `padding: 0 ${padding.group3}` : ''};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column: 3 / span 5;
     max-width: ${fiveOfSixColumnsMaxWidthGroup4};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    grid-column: ${props => props.gridColumnStart} / span
-      ${props => specifiedOrMaximum(props.gridSpan, 22)};
+    grid-column: ${gridColumnStart} / span
+      ${specifiedOrMaximum(gridSpan, 22)};
     max-width: ${tenOfTwelveColumnsMaxWidthGroup5};
   }
 
@@ -151,18 +152,17 @@ export const layoutGridItemMediumNoMargin = `
   }
 `;
 
-export const layoutGridItemMedium = `
+export const layoutGridItemMedium = props => `
   ${gelGridMargin}
-  ${layoutGridItemMediumNoMargin}
+  ${layoutGridItemMediumNoMargin(props)}
 `;
 
-export const layoutGridItemSmall = `
+export const layoutGridItemSmall = ({ padding = {} }) => `
   ${gelGridMargin}
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     grid-column: 1 / span 6;
-    ${({ padding = {} }) =>
-      padding.group2 ? `padding: 0 ${padding.group2}` : ''};
+    ${padding.group2 ? `padding: 0 ${padding.group2}` : ''};
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     grid-column: 1 / span 4;
@@ -171,8 +171,7 @@ export const layoutGridItemSmall = `
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     grid-column: 1 / span 5;
     max-width: ${fiveOfSixColumnsMaxWidthScaleable};
-    ${({ padding = {} }) =>
-      padding.group3 ? `padding: 0 ${padding.group3}` : ''};
+    ${padding.group3 ? `padding: 0 ${padding.group3}` : ''};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column: 3 / span 4;
@@ -192,82 +191,73 @@ export const layoutGridItem = `
   grid-column: 1 / -1;
 `;
 
-export const nestedGridItemSmallCss = `
+export const nestedGridItemSmallCss = ({
+  marginLeft = {},
+  gridSpan,
+  gridColumnStart,
+}) => `
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    grid-column: ${props => props.gridColumnStart} / span
-      ${props =>
-        specifiedOrMaximum(props.gridSpan.group1 || props.gridSpan.default, 6)};
+    grid-column: ${gridColumnStart} / span
+      ${specifiedOrMaximum(gridSpan.group1 || gridSpan.default, 6)};
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    grid-column: ${props => props.gridColumnStart} / span
-      ${props =>
-        specifiedOrMaximum(props.gridSpan.group2 || props.gridSpan.default, 4)};
+    grid-column: ${gridColumnStart} / span
+      ${specifiedOrMaximum(gridSpan.group2 || gridSpan.default, 4)};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    grid-column: ${props => props.gridColumnStart} / span
-      ${props =>
-        specifiedOrMaximum(props.gridSpan.group3 || props.gridSpan.default, 5)};
-    ${({ marginLeft = {} }) =>
-      marginLeft.group3 ? `margin-left: ${marginLeft.group3}` : ''};
+    grid-column: ${gridColumnStart} / span
+      ${specifiedOrMaximum(gridSpan.group3 || gridSpan.default, 5)};
+    ${marginLeft.group3 ? `margin-left: ${marginLeft.group3}` : ''};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    grid-column: ${props => props.gridColumnStart} / span
-      ${props =>
-        specifiedOrMaximum(props.gridSpan.group4 || props.gridSpan.default, 4)};
+    grid-column: ${gridColumnStart} / span
+      ${specifiedOrMaximum(gridSpan.group4 || gridSpan.default, 4)};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    grid-column: ${props => props.gridColumnStart} / span
-      ${props =>
-        specifiedOrMaximum(props.gridSpan.group5 || props.gridSpan.default, 8)};
+    grid-column: ${gridColumnStart} / span
+      ${specifiedOrMaximum(gridSpan.group5 || gridSpan.default, 8)};
   }
 `;
 
-export const nestedGridItemMediumCss = `
+export const nestedGridItemMediumCss = ({
+  marginLeft = {},
+  gridSpan,
+  gridColumnStart,
+}) => `
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    grid-column: ${props => props.gridColumnStart} / span
-      ${props =>
-        specifiedOrMaximum(props.gridSpan.group3 || props.gridSpan.default, 5)};
-    ${({ marginLeft = {} }) =>
-      marginLeft.group3 ? `margin-left: ${marginLeft.group3}` : ''};
+    grid-column: ${gridColumnStart} / span
+      ${specifiedOrMaximum(gridSpan.group3 || gridSpan.default, 5)};
+    ${marginLeft.group3 ? `margin-left: ${marginLeft.group3}` : ''};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    grid-column: ${props => props.gridColumnStart} / span
-      ${props =>
-        specifiedOrMaximum(props.gridSpan.group4 || props.gridSpan.default, 5)};
+    grid-column: ${gridColumnStart} / span
+      ${specifiedOrMaximum(gridSpan.group4 || gridSpan.default, 5)};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    grid-column: ${props => props.gridColumnStart} / span
-      ${props =>
-        specifiedOrMaximum(
-          props.gridSpan.group5 || props.gridSpan.default,
-          10,
-        )};
+    grid-column: ${gridColumnStart} / span
+      ${specifiedOrMaximum(gridSpan.group5 || gridSpan.default, 10)};
   }
 `;
 
-export const nestedGridItemLargeCss = `
+export const nestedGridItemLargeCss = props => `
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    grid-column: ${props => props.gridColumnStart} / span
-      ${props =>
-        specifiedOrMaximum(props.gridSpan.group2 || props.gridSpan.default, 6)};
+    grid-column: ${props.gridColumnStart} / span
+      ${specifiedOrMaximum(props.gridSpan.group2 || props.gridSpan.default, 6)};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    grid-column: ${props => props.gridColumnStart} / span
-      ${props =>
-        specifiedOrMaximum(props.gridSpan.group3 || props.gridSpan.default, 6)};
+    grid-column: ${props.gridColumnStart} / span
+      ${specifiedOrMaximum(props.gridSpan.group3 || props.gridSpan.default, 6)};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    grid-column: ${props => props.gridColumnStart} / span
-      ${props =>
-        specifiedOrMaximum(props.gridSpan.group4 || props.gridSpan.default, 6)};
+    grid-column: ${props.gridColumnStart} / span
+      ${specifiedOrMaximum(props.gridSpan.group4 || props.gridSpan.default, 6)};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    grid-column: ${props => props.gridColumnStart} / span
-      ${props =>
-        specifiedOrMaximum(
-          props.gridSpan.group5 || props.gridSpan.default,
-          12,
-        )};
+    grid-column: ${props.gridColumnStart} / span
+      ${specifiedOrMaximum(
+        props.gridSpan.group5 || props.gridSpan.default,
+        12,
+      )};
   }
 `;
 

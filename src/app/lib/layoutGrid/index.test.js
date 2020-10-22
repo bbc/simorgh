@@ -1,20 +1,20 @@
 import * as layoutGridExports from '.';
 
 const expectedLayoutGridExports = {
-  gelGridMargin: 'object',
-  layoutGridWrapper: 'object',
-  layoutGridItemLargeNoMargin: 'object',
-  layoutGridItemLarge: 'object',
-  layoutGridItemMediumNoMargin: 'object',
-  layoutGridItemMedium: 'object',
-  layoutGridItemSmall: 'object',
-  layoutGridItem: 'object',
-  nestedGridItemSmallCss: 'object',
-  nestedGridItemMediumCss: 'object',
-  nestedGridItemLargeCss: 'object',
-  gridContainerLargeCss: 'object',
-  gridContainerMediumCss: 'object',
-  gridContainerSmallCss: 'object',
+  gelGridMargin: 'string',
+  layoutGridWrapper: 'string',
+  layoutGridItemLargeNoMargin: 'string',
+  layoutGridItemLarge: 'string',
+  layoutGridItemMediumNoMargin: 'function',
+  layoutGridItemMedium: 'function',
+  layoutGridItemSmall: 'function',
+  layoutGridItem: 'string',
+  nestedGridItemSmallCss: 'function',
+  nestedGridItemMediumCss: 'function',
+  nestedGridItemLargeCss: 'function',
+  gridContainerLargeCss: 'string',
+  gridContainerMediumCss: 'string',
+  gridContainerSmallCss: 'string',
 };
 
 const errorIfMissingKey = (keys, object, message) => {
@@ -38,10 +38,13 @@ const checkTypesOfExports = (cssExports, expectedCssExports) => {
   cssExportsByName.forEach(actualExportName => {
     const actualExportValue = cssExports[actualExportName];
     const expectedExport = expectedCssExports[actualExportName];
-    const typeCheck = typeof actualExportValue === expectedExport; // eslint-disable-line valid-typeof
 
-    // if this fails it is likely that an export is missing from the unit test expectation
-    expect(typeCheck).toBe(true);
+    // eslint-disable-next-line valid-typeof
+    if (typeof actualExportValue !== expectedExport) {
+      throw new Error(
+        `Expected '${actualExportName}' to be a ${expectedExport} but it is a ${typeof actualExportValue}.`,
+      );
+    }
   });
 };
 
