@@ -13,7 +13,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install Node Modules
-        run: npm ci
+        run: |
+          npm ci
+          npm run build
       - name: Integration Tests
         run: npm run test:integration:ci
         env:

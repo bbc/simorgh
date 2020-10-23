@@ -1,4 +1,4 @@
-name: Simorgh CI - Integration Tests
+name: Simorgh CI - Unit Tests
 on: [push]
 jobs:
   build:
@@ -12,8 +12,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install Node Modules
-        run: npm ci
+      - name: Install & Build Simorgh
+        run: |
+          npm ci
+          npm run build
       - name: Unit Tests
         run: npm run test:unit
         env:
