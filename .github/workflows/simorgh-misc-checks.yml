@@ -24,9 +24,18 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install & Build Simorgh
-        run: |
-          npm ci
-          npm run build
-      - name: Unit Tests
-        run: npm run test:unit
+
+      - name: Install Node Modules
+        run: npm ci
+
+      - name: Apache License Checker
+        run: npx apache2-license-checker
+
+      - name: Duplicate Dependency Checker
+        run: npm run test:dependencies
+
+      - name: Linting
+        run: npm run test:lint
+
+      - name: Chromatic UI Tests # we should only run these one, they currently run on codebuild
+        run: # npx chromatic test run --build-script-name build:storybook --exit-once-uploaded --no-interactive

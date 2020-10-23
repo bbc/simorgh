@@ -9,6 +9,10 @@ on:
       - '**'
       - '!latest'
 jobs:
+  env:
+    CI: true
+    LOG_LEVEL: 'error'
+
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -24,6 +28,3 @@ jobs:
         run: npm ci
       - name: Integration Tests
         run: npm run test:integration -- --ci
-        env:
-          CI: true
-          LOG_LEVEL: 'error'
