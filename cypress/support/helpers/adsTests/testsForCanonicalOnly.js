@@ -30,11 +30,6 @@ export default ({ service }) => {
                 jsonData,
               );
 
-              const hasTopStoriesSection = path(
-                ['metadata', 'blockTypes'],
-                jsonData,
-              ).includes('top-stories');
-
               // Bootstrap script should exist on Canonical
               cy.get('head script[src*="dotcom-bootstrap.js"]').should('exist');
               cy.get('head script[type="text/javascript"]').should(scripts => {
@@ -50,14 +45,7 @@ export default ({ service }) => {
               // Leaderboard & MPU
               cy.get('[data-e2e="advertisement"]').within(() => {
                 cy.get('[id="dotcom-leaderboard"]').should('exist');
-
-                if (hasTopStoriesSection) {
-                  cy.get('[id="dotcom-mpu"]').should('exist');
-                } else {
-                  cy.log(
-                    `MPU Ad not displayed because top-stories section does not exist`,
-                  );
-                }
+                cy.get('[id="dotcom-mpu"]').should('exist');
               });
             });
           } else {
