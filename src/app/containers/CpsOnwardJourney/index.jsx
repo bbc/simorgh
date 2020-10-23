@@ -186,7 +186,7 @@ const CpsOnwardJourney = ({
       </Wrapper>
     ) : (
       <GridWrapper data-e2e={labelId} {...a11yAttributes}>
-        <LegacyGridItemConstrainedLarge>
+        <LegacyGridItemConstrainedLarge dir={dir}>
           {children}
         </LegacyGridItemConstrainedLarge>
       </GridWrapper>
