@@ -1,4 +1,4 @@
-name: Simorgh CI - Unit Tests
+name: Simorgh CI - Miscellaneous Checks
 on:
   push:
     branches:
