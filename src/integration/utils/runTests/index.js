@@ -4,7 +4,7 @@ const { exec, spawn } = require('child_process');
 const argv = require('minimist')(process.argv.slice(2));
 const ora = require('ora');
 
-const isCI = argv.ci;
+const onlyRunTests = Boolean(argv.onlyRunTests);
 const isDev = Boolean(argv.dev);
 process.env.DEV_MODE = isDev;
 
@@ -12,7 +12,8 @@ const getJestArgs = () =>
   process.argv
     .slice(2)
     .filter(flag => !flag.startsWith('--pageTypes='))
-    .filter(flag => !flag.startsWith('--dev'));
+    .filter(flag => !flag.startsWith('--dev'))
+    .filter(flag => !flag.startsWith('--onlyRunTests'));
 
 const getFilesToTest = pageTypes => {
   if (pageTypes) {
@@ -66,7 +67,7 @@ const runTests = () =>
     });
   });
 
-if (isCI) {
+if (onlyRunTests) {
   runTests().catch(() => {
     process.exit(1);
   });
