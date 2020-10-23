@@ -15,7 +15,7 @@ jobs:
       - name: Install Node Modules
         run: npm ci
       - name: Integration Tests
-        run: npm run test:integration
+        run: npm run start && npm run test:integration:ci
         env:
           CI: true
           LOG_LEVEL: 'error'
