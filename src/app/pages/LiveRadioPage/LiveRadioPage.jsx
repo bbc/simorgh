@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { string, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import { Headline } from '@bbc/psammead-headings';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import Paragraph from '@bbc/psammead-paragraph';
 import { useLocation } from 'react-router-dom';
@@ -24,8 +25,10 @@ const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${pr
 const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
 const StyledGelPageGrid = styled(GelPageGrid)`
-  width: 100%;
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    width: 100%;
+  }
 `;
 
 const LiveRadioPage = ({ pageData }) => {
