@@ -4096,7 +4096,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/mundo/noticias-internacional-53826365'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/mundo/noticias-internacional-23055705'],
@@ -9091,8 +9091,8 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/urdu/world-53692225'],
-            enabled: false,
+            paths: ['/urdu/science-51314202'],
+            enabled: true,
           },
           test: {
             paths: ['/urdu/world-23075586'],
@@ -9946,8 +9946,8 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/zhongwen/simp/world-54547455'],
+            enabled: true,
           },
           test: {
             paths: ['/zhongwen/simp/23161271'],
@@ -10163,8 +10163,8 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/zhongwen/trad/world-54547455'],
+            enabled: true,
           },
           test: {
             paths: ['/zhongwen/trad/23161271'],
