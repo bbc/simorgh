@@ -16,3 +16,5 @@ jobs:
           CI: true
           LOG_LEVEL: 'error'
           CYPRESS_SKIP_EU: true
+          CYPRESS_SMOKE: true
+          CYPRESS_APP_ENV: 'local'
