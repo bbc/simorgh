@@ -37,33 +37,49 @@ exports[`FauxHeadline with headline data should render correctly 1`] = `
   }
 }
 
-@media (max-width:63rem) {
+@media (max-width:14.9375rem) {
   .c0 {
-    grid-column: 1 / span 6;
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    grid-column: 3 / span 6;
+    margin-left: 33.333333333333336%;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    grid-column: 6 / span 12;
+    margin-left: 33.333333333333336%;
   }
 }
 
-@media (max-width:25rem) {
+@supports (display:grid) {
   .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
+    display: block;
   }
 }
 
@@ -75,6 +91,7 @@ exports[`FauxHeadline with headline data should render correctly 1`] = `
 
 <div
   class="c0"
+  dir="ltr"
 >
   <strong
     aria-hidden="true"
@@ -122,33 +139,49 @@ exports[`FauxHeadline with plain text headline should render <strong> containing
   }
 }
 
-@media (max-width:63rem) {
+@media (max-width:14.9375rem) {
   .c0 {
-    grid-column: 1 / span 6;
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    grid-column: 3 / span 6;
+    margin-left: 33.333333333333336%;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    grid-column: 6 / span 12;
+    margin-left: 33.333333333333336%;
   }
 }
 
-@media (max-width:25rem) {
+@supports (display:grid) {
   .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
+    display: block;
   }
 }
 
@@ -160,6 +193,7 @@ exports[`FauxHeadline with plain text headline should render <strong> containing
 
 <div
   class="c0"
+  dir="ltr"
 >
   <strong
     aria-hidden="true"

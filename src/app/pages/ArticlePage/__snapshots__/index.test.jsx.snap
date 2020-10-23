@@ -1,16 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
-.c1 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
 .c4 {
-  grid-column: 1 / span 6;
-}
-
-.c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -23,11 +14,11 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   overflow-wrap: anywhere;
 }
 
-.c3:focus {
+.c4:focus {
   outline: none;
 }
 
-.c5 {
+.c6 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -126,7 +117,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   padding-bottom: 1.5rem;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -136,7 +127,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   flex-direction: column;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -155,7 +146,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   align-items: baseline;
 }
 
-.c13 {
+.c14 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -174,19 +165,19 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   align-items: center;
 }
 
-.c9 {
+.c10 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c7 {
+.c8 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
   margin-top: 2rem;
 }
 
-.c10 {
+.c11 {
   margin: 0;
   padding: 0;
 }
@@ -198,167 +189,102 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   flex-grow: 1;
 }
 
-@media (max-width:37.4375rem) {
-  .c1 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c1 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
 @supports (display:grid) {
   .c1 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:25rem) {
-  .c4 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c4 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c4 {
-    max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c2 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c24 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c24 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@supports (display:grid) {
-  .c14 {
     display: grid;
     position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c3 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c3 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c3 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c3 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c3 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c3 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c5 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c5 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c5 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c5 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c5 {
+    margin-left: 40%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c5 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .c5 {
+    display: block;
   }
 }
 
@@ -413,6 +339,68 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 @supports (display:grid) {
   .c16 {
     display: block;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c24 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c24 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -686,7 +674,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c13 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -695,39 +683,39 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c14 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c14 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c14 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c14 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c9 {
+  .c10 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c10 {
     position: absolute;
     left: 0;
     right: 0;
@@ -736,43 +724,43 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c8 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c7 {
+  .c8 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c8 {
+  .c9 {
     margin-bottom: 1rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c6 {
+  .c7 {
     margin: 0 0.5rem 1.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c6 {
+  .c7 {
     margin: 0 1rem 2rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c6 {
+  .c7 {
     margin: 0 1rem 2.5rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c6 {
+  .c7 {
     width: 100%;
     margin: 0 auto 1.5rem;
     padding: 0 1rem;
@@ -790,13 +778,15 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
     role="main"
   >
     <div
-      class="c1"
+      class="c1 c2"
+      dir="ltr"
     >
       <div
-        class="c2"
+        class="c3"
+        dir="ltr"
       >
         <h1
-          class="c3"
+          class="c4"
           id="content"
           tabindex="-1"
         >
@@ -804,10 +794,11 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
         </h1>
       </div>
       <div
-        class="c4"
+        class="c5"
+        dir="ltr"
       >
         <p
-          class="c5"
+          class="c6"
         >
           A paragraph in Pidgin.
         </p>
@@ -816,27 +807,27 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   </main>
   <section
     aria-labelledby="Most-Read"
-    class="c6"
+    class="c7"
     data-e2e="most-read"
     role="region"
   >
     <div
-      class="c7 c8"
+      class="c8 c9"
     >
       <div
-        class="c9"
+        class="c10"
       />
       <h2
-        class="c10"
+        class="c11"
       >
         <span
-          class="c11"
+          class="c12"
         >
           <span
-            class="c12"
+            class="c13"
           >
             <span
-              class="c13"
+              class="c14"
               dir="ltr"
               id="Most-Read"
             >
@@ -847,7 +838,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
       </h2>
     </div>
     <ol
-      class="c14 c15"
+      class="c1 c15"
       dir="ltr"
       role="list"
     >
@@ -1267,16 +1258,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 `;
 
 exports[`should render a news article correctly 1`] = `
-.c1 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
 .c4 {
-  grid-column: 1 / span 6;
-}
-
-.c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1289,11 +1271,11 @@ exports[`should render a news article correctly 1`] = `
   overflow-wrap: anywhere;
 }
 
-.c3:focus {
+.c4:focus {
   outline: none;
 }
 
-.c5 {
+.c6 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1311,144 +1293,148 @@ exports[`should render a news article correctly 1`] = `
   flex-grow: 1;
 }
 
-@media (max-width:37.4375rem) {
-  .c1 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c1 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
 @supports (display:grid) {
   .c1 {
     display: grid;
-    max-width: initial;
-    margin: initial;
+    position: initial;
   }
 }
 
-@media (max-width:25rem) {
-  .c4 {
+@media (max-width:14.9375rem) {
+  .c3 {
     padding: 0 0.5rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c3 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c3 {
     padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c4 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c3 {
+    padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c4 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
+  .c3 {
+    margin-left: 33.333333333333336%;
   }
 }
 
 @media (min-width:80rem) {
-  .c4 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
+  .c3 {
+    margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display:grid) {
-  .c4 {
-    max-width: initial;
+  .c3 {
+    display: block;
   }
 }
 
-@media (max-width:63rem) {
-  .c2 {
-    grid-column: 1 / span 6;
+@media (max-width:14.9375rem) {
+  .c5 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c5 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c5 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c5 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c5 {
+    margin-left: 40%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c5 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .c5 {
+    display: block;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
-    grid-column: 3 / span 6;
+    margin: 0 auto;
+    max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
+    margin: 0 auto;
+    max-width: 80rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c4 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c4 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c4 {
     padding: 2.5rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c6 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c6 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -1464,13 +1450,15 @@ exports[`should render a news article correctly 1`] = `
     role="main"
   >
     <div
-      class="c1"
+      class="c1 c2"
+      dir="ltr"
     >
       <div
-        class="c2"
+        class="c3"
+        dir="ltr"
       >
         <h1
-          class="c3"
+          class="c4"
           id="content"
           tabindex="-1"
         >
@@ -1478,10 +1466,11 @@ exports[`should render a news article correctly 1`] = `
         </h1>
       </div>
       <div
-        class="c4"
+        class="c5"
+        dir="ltr"
       >
         <p
-          class="c5"
+          class="c6"
         >
           A paragraph.
         </p>
@@ -1492,16 +1481,7 @@ exports[`should render a news article correctly 1`] = `
 `;
 
 exports[`should render a rtl article (persian) with most read correctly 1`] = `
-.c1 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
 .c4 {
-  grid-column: 1 / span 6;
-}
-
-.c3 {
   font-size: 2rem;
   line-height: 2.625rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1514,11 +1494,11 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   overflow-wrap: anywhere;
 }
 
-.c3:focus {
+.c4:focus {
   outline: none;
 }
 
-.c5 {
+.c6 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1617,7 +1597,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   padding-bottom: 1.5rem;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1627,7 +1607,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   flex-direction: column;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1646,7 +1626,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   align-items: baseline;
 }
 
-.c13 {
+.c14 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1665,19 +1645,19 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   align-items: center;
 }
 
-.c9 {
+.c10 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c7 {
+.c8 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
   margin-top: 2rem;
 }
 
-.c10 {
+.c11 {
   margin: 0;
   padding: 0;
 }
@@ -1689,165 +1669,8 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   flex-grow: 1;
 }
 
-@media (max-width:37.4375rem) {
-  .c1 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c1 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
 @supports (display:grid) {
   .c1 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:25rem) {
-  .c4 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c4 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c4 {
-    max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c2 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 2.375rem;
-    line-height: 2.875rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 2.75rem;
-    line-height: 3.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c24 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c24 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c14 {
     display: grid;
     position: initial;
   }
@@ -1904,6 +1727,160 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 @supports (display:grid) {
   .c16 {
     display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c3 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c3 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c3 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c3 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c3 {
+    margin-right: 33.333333333333336%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    margin-right: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c3 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c5 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c5 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c5 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c5 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c5 {
+    margin-right: 40%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c5 {
+    margin-right: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .c5 {
+    display: block;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 2.375rem;
+    line-height: 2.875rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 2.75rem;
+    line-height: 3.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c24 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c24 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -2177,7 +2154,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c13 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -2186,39 +2163,39 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c14 {
     font-size: 1.625rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c14 {
     font-size: 1.75rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c14 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c14 {
     padding-left: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c9 {
+  .c10 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c10 {
     position: absolute;
     left: 0;
     right: 0;
@@ -2227,43 +2204,43 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c8 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c7 {
+  .c8 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c8 {
+  .c9 {
     margin-bottom: 1rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c6 {
+  .c7 {
     margin: 0 0.5rem 1.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c6 {
+  .c7 {
     margin: 0 1rem 2rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c6 {
+  .c7 {
     margin: 0 1rem 2.5rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c6 {
+  .c7 {
     width: 100%;
     margin: 0 auto 1.5rem;
     padding: 0 1rem;
@@ -2281,13 +2258,15 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
     role="main"
   >
     <div
-      class="c1"
+      class="c1 c2"
+      dir="rtl"
     >
       <div
-        class="c2"
+        class="c3"
+        dir="rtl"
       >
         <h1
-          class="c3"
+          class="c4"
           id="content"
           tabindex="-1"
         >
@@ -2295,10 +2274,11 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
         </h1>
       </div>
       <div
-        class="c4"
+        class="c5"
+        dir="rtl"
       >
         <p
-          class="c5"
+          class="c6"
         >
           یک پاراگراف.
         </p>
@@ -2307,27 +2287,27 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   </main>
   <section
     aria-labelledby="Most-Read"
-    class="c6"
+    class="c7"
     data-e2e="most-read"
     role="region"
   >
     <div
-      class="c7 c8"
+      class="c8 c9"
     >
       <div
-        class="c9"
+        class="c10"
       />
       <h2
-        class="c10"
+        class="c11"
       >
         <span
-          class="c11"
+          class="c12"
         >
           <span
-            class="c12"
+            class="c13"
           >
             <span
-              class="c13"
+              class="c14"
               dir="rtl"
               id="Most-Read"
             >
@@ -2338,7 +2318,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
       </h2>
     </div>
     <ol
-      class="c14 c15"
+      class="c1 c15"
       dir="rtl"
       role="list"
     >

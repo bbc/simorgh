@@ -2,29 +2,29 @@
 
 exports[`CpsRelatedContent should render Top Stories components when given appropriate data 1`] = `
 <DocumentFragment>
-  .c10 {
+  .c12 {
   padding: 0.5rem 0 1rem;
 }
 
-.c10:last-child {
+.c12:last-child {
   border: none;
 }
 
-.c10:first-child {
+.c12:first-child {
   padding-top: 0;
 }
 
-.c10:last-child {
+.c12:last-child {
   padding-bottom: 0;
 }
 
-.c9 {
+.c11 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -34,7 +34,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   flex-direction: column;
 }
 
-.c7 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -53,7 +53,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   align-items: baseline;
 }
 
-.c8 {
+.c10 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -72,37 +72,32 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   align-items: center;
 }
 
-.c4 {
+.c6 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c2 {
+.c4 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
   margin-top: 2rem;
 }
 
-.c5 {
+.c7 {
   margin: 0;
   padding: 0;
 }
 
-.c0 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
-.c1 {
+.c3 {
   margin-bottom: 1rem;
 }
 
-.c3 {
+.c5 {
   margin-top: 0;
 }
 
-.c12 {
+.c14 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -110,24 +105,24 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   width: 100%;
 }
 
-.c12 >div {
+.c14 >div {
   vertical-align: middle;
 }
 
-.c12 >div {
+.c14 >div {
   display: inline-block;
   vertical-align: initial;
 }
 
-.c12 svg {
+.c14 svg {
   margin: 0;
 }
 
-.c11 {
+.c13 {
   position: relative;
 }
 
-.c15 {
+.c17 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -137,7 +132,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   font-style: normal;
 }
 
-.c13 {
+.c15 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -149,7 +144,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   display: inline;
 }
 
-.c14 {
+.c16 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -158,7 +153,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   overflow-wrap: anywhere;
 }
 
-.c14:before {
+.c16:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -170,42 +165,42 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   z-index: 1;
 }
 
-.c14:hover,
-.c14:focus {
+.c16:hover,
+.c16:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c14:visited {
+.c16:visited {
   color: #6E6E73;
 }
 
 @media (max-width:62.9375rem) {
-  .c10 {
+  .c12 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c12 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c10 {
+  .c12 {
     padding: 0 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c10:first-child {
+  .c12:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c9 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -214,39 +209,39 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
+  .c10 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c10 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c10 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c10 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c4 {
+  .c6 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c6 {
     position: absolute;
     left: 0;
     right: 0;
@@ -255,101 +250,98 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c4 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c2 {
+  .c4 {
     margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
   }
 }
 
 @supports (display:grid) {
   .c0 {
     display: grid;
-    max-width: initial;
-    margin: initial;
+    position: initial;
   }
 }
 
-@media (max-width:63rem) {
-  .c1 {
-    grid-column: 1 / span 6;
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
-    grid-column: 3 / span 6;
+    margin: 0 auto;
+    max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c1 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
+    margin: 0 auto;
+    max-width: 80rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c14 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c12 {
+  .c14 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -357,7 +349,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c12 {
+  .c14 {
     display: block;
     width: initial;
     padding: initial;
@@ -367,7 +359,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c11 {
+  .c13 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -375,28 +367,28 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
+  .c17 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c15 {
+  .c17 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
@@ -404,30 +396,32 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 <section
     aria-labelledby="top-stories-heading"
-    class="c0"
+    class="c0 c1"
     data-e2e="top-stories-heading"
+    dir="ltr"
     role="region"
   >
     <div
-      class="c1"
+      class="c2 c3"
+      dir="ltr"
     >
       <div
-        class="c2 c3"
+        class="c4 c5"
       >
         <div
-          class="c4"
+          class="c6"
         />
         <h2
-          class="c5"
+          class="c7"
         >
           <span
-            class="c6"
+            class="c8"
           >
             <span
-              class="c7"
+              class="c9"
             >
               <span
-                class="c8"
+                class="c10"
                 dir="ltr"
                 id="top-stories-heading"
               >
@@ -438,33 +432,33 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
         </h2>
       </div>
       <ul
-        class="c9"
+        class="c11"
         role="list"
       >
         <li
-          class="c10"
+          class="c12"
           role="listitem"
         >
           <div
-            class="c11"
+            class="c13"
             data-e2e="story-promo"
           >
             <div
-              class="c12"
+              class="c14"
               dir="ltr"
             >
               <h3
-                class="c13"
+                class="c15"
               >
                 <a
-                  class="c14"
+                  class="c16"
                   href="/mundo/noticias-internacional-51939501"
                 >
                   China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
                 </a>
               </h3>
               <time
-                class="c15"
+                class="c17"
                 datetime="2020-02-03"
               >
                 3rd February 2020
@@ -473,29 +467,29 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
           </div>
         </li>
         <li
-          class="c10"
+          class="c12"
           role="listitem"
         >
           <div
-            class="c11"
+            class="c13"
             data-e2e="story-promo"
           >
             <div
-              class="c12"
+              class="c14"
               dir="ltr"
             >
               <h3
-                class="c13"
+                class="c15"
               >
                 <a
-                  class="c14"
+                  class="c16"
                   href="/pidgin/tori-51945757"
                 >
                   Nigeria don get five new cases of Coronavirus - See how e happun
                 </a>
               </h3>
               <time
-                class="c15"
+                class="c17"
                 datetime="2020-02-03"
               >
                 3rd February 2020
@@ -511,7 +505,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 exports[`CpsRelatedContent should render Top Stories components when without <ul> 1`] = `
 <DocumentFragment>
-  .c6 {
+  .c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -521,7 +515,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   flex-direction: column;
 }
 
-.c7 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -540,7 +534,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   align-items: baseline;
 }
 
-.c8 {
+.c10 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -559,37 +553,32 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   align-items: center;
 }
 
-.c4 {
+.c6 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c2 {
+.c4 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
   margin-top: 2rem;
 }
 
-.c5 {
+.c7 {
   margin: 0;
   padding: 0;
 }
 
-.c0 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
-.c1 {
+.c3 {
   margin-bottom: 1rem;
 }
 
-.c3 {
+.c5 {
   margin-top: 0;
 }
 
-.c11 {
+.c13 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -597,24 +586,24 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   width: 100%;
 }
 
-.c11 >div {
+.c13 >div {
   vertical-align: middle;
 }
 
-.c11 >div {
+.c13 >div {
   display: inline-block;
   vertical-align: initial;
 }
 
-.c11 svg {
+.c13 svg {
   margin: 0;
 }
 
-.c10 {
+.c12 {
   position: relative;
 }
 
-.c14 {
+.c16 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -624,7 +613,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   font-style: normal;
 }
 
-.c12 {
+.c14 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -636,7 +625,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   display: inline;
 }
 
-.c13 {
+.c15 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -645,7 +634,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   overflow-wrap: anywhere;
 }
 
-.c13:before {
+.c15:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -657,18 +646,18 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   z-index: 1;
 }
 
-.c13:hover,
-.c13:focus {
+.c15:hover,
+.c15:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c13:visited {
+.c15:visited {
   color: #6E6E73;
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c9 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -677,39 +666,39 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
+  .c10 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c10 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c10 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c10 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c4 {
+  .c6 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c6 {
     position: absolute;
     left: 0;
     right: 0;
@@ -718,113 +707,110 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c4 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c2 {
+  .c4 {
     margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
   }
 }
 
 @supports (display:grid) {
   .c0 {
     display: grid;
-    max-width: initial;
-    margin: initial;
+    position: initial;
   }
 }
 
-@media (max-width:63rem) {
-  .c1 {
-    grid-column: 1 / span 6;
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
-    grid-column: 3 / span 6;
+    margin: 0 auto;
+    max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c1 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
+    margin: 0 auto;
+    max-width: 80rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c9 {
+  .c11 {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c9 {
+  .c11 {
     padding-bottom: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c13 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c11 {
+  .c13 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -832,7 +818,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c11 {
+  .c13 {
     display: block;
     width: initial;
     padding: initial;
@@ -842,7 +828,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c10 {
+  .c12 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -850,28 +836,28 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
+  .c16 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c14 {
+  .c16 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
+  .c14 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c14 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
@@ -879,30 +865,32 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 
 <section
     aria-labelledby="top-stories-heading"
-    class="c0"
+    class="c0 c1"
     data-e2e="top-stories-heading"
+    dir="ltr"
     role="region"
   >
     <div
-      class="c1"
+      class="c2 c3"
+      dir="ltr"
     >
       <div
-        class="c2 c3"
+        class="c4 c5"
       >
         <div
-          class="c4"
+          class="c6"
         />
         <h2
-          class="c5"
+          class="c7"
         >
           <span
-            class="c6"
+            class="c8"
           >
             <span
-              class="c7"
+              class="c9"
             >
               <span
-                class="c8"
+                class="c10"
                 dir="ltr"
                 id="top-stories-heading"
               >
@@ -913,28 +901,28 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
         </h2>
       </div>
       <div
-        class="c9"
+        class="c11"
       >
         <div
-          class="c10"
+          class="c12"
           data-e2e="story-promo"
         >
           <div
-            class="c11"
+            class="c13"
             dir="ltr"
           >
             <h3
-              class="c12"
+              class="c14"
             >
               <a
-                class="c13"
+                class="c15"
                 href="/mundo/noticias-internacional-51939501"
               >
                 China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
               </a>
             </h3>
             <time
-              class="c14"
+              class="c16"
               datetime="2020-02-03"
             >
               3rd February 2020

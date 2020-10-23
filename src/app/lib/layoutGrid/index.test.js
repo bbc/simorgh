@@ -2,13 +2,6 @@ import * as layoutGridExports from '.';
 
 const expectedLayoutGridExports = {
   gelGridMargin: 'object',
-  layoutGridWrapper: 'object',
-  layoutGridItemLargeNoMargin: 'object',
-  layoutGridItemLarge: 'object',
-  layoutGridItemMediumNoMargin: 'object',
-  layoutGridItemMedium: 'object',
-  layoutGridItemSmall: 'object',
-  layoutGridItem: 'object',
   nestedGridItemSmallCss: 'object',
   nestedGridItemMediumCss: 'object',
   nestedGridItemLargeCss: 'object',

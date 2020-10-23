@@ -17,7 +17,7 @@ import {
 
 // if the specified grid span is wider than the maximum width the grid will expand
 // with an extra grid-gap, so we need this to prevent that from happening
-export const specifiedOrMaximum = (specified, maximum) =>
+const specifiedOrMaximum = (specified, maximum) =>
   specified > maximum ? maximum : specified;
 
 const nestedGrid = css`
@@ -32,10 +32,6 @@ export const gelGridMargin = css`
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     padding: 0 ${GEL_MARGIN_ABOVE_400PX};
   }
-`;
-
-export const layoutGridItem = css`
-  grid-column: 1 / -1;
 `;
 
 export const nestedGridItemSmallCss = css`

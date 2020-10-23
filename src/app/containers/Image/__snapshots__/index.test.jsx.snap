@@ -25,24 +25,6 @@ exports[`Image with data should render a lazyload container instead of an image 
   grid-column-gap: 1rem;
 }
 
-@media (max-width:63rem) {
-  .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
-  }
-}
-
 @media (max-width:37.4375rem) {
   .c3 {
     grid-column: 1 / span 6;
@@ -103,8 +85,51 @@ exports[`Image with data should render a lazyload container instead of an image 
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: block;
+  }
+}
+
 <div
   class="c0"
+  dir="ltr"
 >
   <figure
     class="c1"
@@ -173,24 +198,6 @@ exports[`Image with data should render an image with alt text 1`] = `
   grid-column-gap: 1rem;
 }
 
-@media (max-width:63rem) {
-  .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
-  }
-}
-
 @media (max-width:37.4375rem) {
   .c3 {
     grid-column: 1 / span 6;
@@ -251,8 +258,51 @@ exports[`Image with data should render an image with alt text 1`] = `
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: block;
+  }
+}
+
 <div
   class="c0"
+  dir="ltr"
 >
   <figure
     class="c1"
@@ -380,24 +430,6 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 }
 
-@media (max-width:63rem) {
-  .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
-  }
-}
-
 @media (max-width:37.4375rem) {
   .c3 {
     grid-column: 1 / span 6;
@@ -458,8 +490,51 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: block;
+  }
+}
+
 <div
   class="c0"
+  dir="ltr"
 >
   <figure
     class="c1"
@@ -564,24 +639,6 @@ exports[`Image with data should render an image with alt text and offscreen copy
   grid-column-gap: 1rem;
 }
 
-@media (max-width:63rem) {
-  .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
-  }
-}
-
 @media (max-width:37.4375rem) {
   .c3 {
     grid-column: 1 / span 6;
@@ -642,8 +699,51 @@ exports[`Image with data should render an image with alt text and offscreen copy
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: block;
+  }
+}
+
 <div
   class="c0"
+  dir="ltr"
 >
   <figure
     class="c1"
@@ -746,24 +846,6 @@ exports[`Image with data should render an image with other originCode - this wou
   grid-column-gap: 1rem;
 }
 
-@media (max-width:63rem) {
-  .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
-  }
-}
-
 @media (max-width:37.4375rem) {
   .c3 {
     grid-column: 1 / span 6;
@@ -824,8 +906,51 @@ exports[`Image with data should render an image with other originCode - this wou
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: block;
+  }
+}
+
 <div
   class="c0"
+  dir="ltr"
 >
   <figure
     class="c1"
