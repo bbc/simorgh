@@ -1,5 +1,8 @@
 name: Simorgh CI - E2E Tests
-on: [push]
+on:
+  push:
+    branches:
+      - '!latest'
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
