@@ -1,0 +1,32 @@
+name: Simorgh CI - Unit Tests
+on:
+  push:
+    branches:
+      - '**'
+      - '!latest'
+  pull_request:
+    branches:
+      - '**'
+      - '!latest'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    env:
+      CI: true
+      LOG_LEVEL: 'error'
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install & Build Simorgh
+        run: |
+          npm ci
+          npm run build
+      - name: Unit Tests
+        run: npm run test:unit
