@@ -8,8 +8,6 @@ export default async ({ service, variant, pageType, toggles, path }) => {
     ? 'live'
     : process.env.SIMORGH_APP_ENV;
 
-  console.log(`env is dis: ${process.env.SIMORGH_APP_ENV}`);
-
   try {
     const mostWatchedUrl = getMostWatchedUrl({ service, variant, env });
     const { json, status } = await fetchPageData({
