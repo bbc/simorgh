@@ -14,6 +14,7 @@ import {
   recommendationsDataRegex,
   secondaryColumnDataRegexPath,
   africaEyeTVDataPath,
+  liveRadioDataPath,
 } from '#app/routes/utils/regex';
 import { LOCAL_SENDFILE_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
@@ -92,6 +93,17 @@ export default server => {
 
       sendDataFile(res, dataFilePath, next);
     })
+    .get(liveRadioDataPath, async ({ params }, res, next) => {
+      const { service, masterBrand } = params;
+
+      const dataFilePath = constructDataFilePath({
+        pageType: 'liveRadio',
+        service,
+        masterBrand,
+      });
+
+      sendDataFile(res, dataFilePath, next);
+    })
     .get(onDemandRadioDataPath, async ({ params }, res, next) => {
       const { service, serviceId, mediaId } = params;
 
@@ -129,17 +141,6 @@ export default server => {
         variant,
       });
 
-      sendDataFile(res, dataFilePath, next);
-    })
-    .get(legacyAssetPageDataPath, async ({ params }, res, next) => {
-      const { service, assetUri, variant } = params;
-
-      const dataFilePath = constructDataFilePath({
-        pageType: 'legacyAssets',
-        service,
-        assetUri,
-        variant,
-      });
       sendDataFile(res, dataFilePath, next);
     })
     .get(secondaryColumnDataRegexPath, async ({ params }, res, next) => {
@@ -191,6 +192,17 @@ export default server => {
         sendDataFile(res, dataFilePath, next);
       },
     )
+    .get(legacyAssetPageDataPath, async ({ params }, res, next) => {
+      const { service, assetUri, variant } = params;
+
+      const dataFilePath = constructDataFilePath({
+        pageType: 'legacyAssets',
+        service,
+        assetUri,
+        variant,
+      });
+      sendDataFile(res, dataFilePath, next);
+    })
     .get('/static/js/comscore/main-:version.js', ({ params }, res, next) => {
       const { version } = params;
       const localComscorePath = path.join(
