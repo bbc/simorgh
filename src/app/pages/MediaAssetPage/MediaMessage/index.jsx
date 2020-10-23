@@ -15,7 +15,7 @@ import {
 
 import { MediaMessage } from '@bbc/psammead-media-player';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { GridItemConstrainedLarge } from '#lib/styledGrid';
+import { GridItemConstrainedLarge } from '#app/components/Grid';
 import nodeLogger from '#lib/logger.node';
 import { NO_TRANSLATION_FOUND } from '#lib/logger.const';
 

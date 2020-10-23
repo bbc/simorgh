@@ -6,7 +6,7 @@ import {
   GridItemConstrainedLargeNoMargin,
   GridItemConstrainedMedium,
   GridItemConstrainedSmall,
-} from '#lib/styledGrid';
+} from '#app/components/Grid';
 import { createSrcset } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import urlWithPageAnchor from '#lib/utilities/pageAnchor';

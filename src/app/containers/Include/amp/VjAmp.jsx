@@ -9,7 +9,7 @@ import { C_EBON } from '@bbc/psammead-styles/colours';
 import { getSansBold } from '@bbc/psammead-styles/font-styles';
 import { GEL_PICA } from '@bbc/gel-foundations/typography';
 import { Helmet } from 'react-helmet';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import { GridItemConstrainedMedium } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const KEYLINE_WIDTH = '0.125rem';

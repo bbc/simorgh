@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import MediaPlayerContainer from '../MediaPlayer';
 import { RequestContext } from '#contexts/RequestContext';
-import { GridItemConstrainedMediumNoMargin } from '#lib/styledGrid';
+import { GridItemConstrainedMediumNoMargin } from '#app/components/Grid';
 import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,

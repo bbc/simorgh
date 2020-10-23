@@ -1,17 +1,19 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import {
+  NestedGridItemSmall,
+  NestedGridItemMedium,
+  NestedGridItemLarge,
+} from '.';
+import {
   GridWrapper,
   GridItemConstrainedSmall,
   GridItemConstrainedMedium,
   GridItemConstrainedMediumNoMargin,
   GridItemConstrainedLarge,
   GridItemConstrainedLargeNoMargin,
-  NestedGridItemSmall,
-  NestedGridItemMedium,
-  NestedGridItemLarge,
   PopOutGridItemMedium,
-} from '.';
+} from '../../components/Grid';
 
 describe('Styled GridWrapper items', () => {
   describe('GridWrapper', () => {

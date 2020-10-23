@@ -28,10 +28,10 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import {
-  GridWrapper as LegacyGridWrapper,
+  GridWrapper,
   GridItemConstrainedLarge,
-} from '#lib/styledGrid';
-import { gelGridMargin } from '#app/lib/layoutGrid';
+  gelGridMargin,
+} from '#app/components/Grid';
 
 const constrainedLargeGridColumns = {
   group0: 1,
@@ -185,11 +185,11 @@ const CpsOnwardJourney = ({
         {children}
       </Wrapper>
     ) : (
-      <LegacyGridWrapper data-e2e={labelId} {...a11yAttributes}>
+      <GridWrapper data-e2e={labelId} {...a11yAttributes}>
         <LegacyGridItemConstrainedLarge>
           {children}
         </LegacyGridItemConstrainedLarge>
-      </LegacyGridWrapper>
+      </GridWrapper>
     );
 
   CpsOnwardJourneyWrapper.propTypes = {

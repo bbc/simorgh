@@ -6,7 +6,7 @@ import fragment from '../Fragment';
 import InlineLink from '../InlineLink';
 import Inline from '../InlineContainer';
 import { paragraphModelPropTypes } from '#models/propTypes/paragraph';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import { GridItemConstrainedMedium } from '#app/components/Grid';
 
 const componentsToRender = { fragment, urlLink: InlineLink, inline: Inline };
 

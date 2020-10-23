@@ -2,17 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
 import {
+  NestedGridItemSmall,
+  NestedGridItemMedium,
+  NestedGridItemLarge,
+} from '.';
+
+import {
   GridWrapper,
   GridItemConstrainedSmall,
   GridItemConstrainedMedium,
   GridItemConstrainedMediumNoMargin,
   GridItemConstrainedLarge,
   GridItemConstrainedLargeNoMargin,
-  NestedGridItemSmall,
-  NestedGridItemMedium,
-  NestedGridItemLarge,
   PopOutGridItemMedium,
-} from '.';
+} from '../../components/Grid';
 
 const red = '#ffaacc';
 const orange = '#ffddcc';

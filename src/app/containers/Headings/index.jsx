@@ -11,7 +11,7 @@ import idSanitiser from '#lib/utilities/idSanitiser';
 import {
   GridItemConstrainedMedium,
   GridItemConstrainedLarge,
-} from '#lib/styledGrid';
+} from '#app/components/Grid';
 
 const StyledHeadline = styled(Headline)`
   :focus {

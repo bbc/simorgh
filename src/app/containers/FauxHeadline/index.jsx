@@ -14,7 +14,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { headlineModelPropTypes } from '#models/propTypes/headline';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';
-import { GridItemConstrainedLarge } from '#lib/styledGrid';
+import { GridItemConstrainedLarge } from '#app/components/Grid';
 
 // missing CSS 'display: block;' in psammead branch `explicitly-set-h1-styles-display-and-font-weight`
 const FauxHeadline = props => <Headline as="strong" {...props} />;

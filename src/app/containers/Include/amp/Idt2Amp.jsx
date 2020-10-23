@@ -2,7 +2,7 @@ import React from 'react';
 import { string, shape, number } from 'prop-types';
 import styled from 'styled-components';
 import { AmpImg } from '@bbc/psammead-image';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import { GridItemConstrainedMedium } from '#app/components/Grid';
 
 const IncludeGrid = styled(GridItemConstrainedMedium)`
   display: grid;

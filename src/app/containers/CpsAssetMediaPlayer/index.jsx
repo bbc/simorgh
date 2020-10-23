@@ -15,7 +15,7 @@ import {
 } from '@bbc/gel-foundations/spacings';
 
 import MediaPlayerContainer from '../MediaPlayer';
-import { GridItemConstrainedLargeNoMargin } from '#lib/styledGrid';
+import { GridItemConstrainedLargeNoMargin } from '#app/components/Grid';
 import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,

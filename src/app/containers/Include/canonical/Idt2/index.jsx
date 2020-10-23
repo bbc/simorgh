@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import { Img } from '@bbc/psammead-image';
 import { GEL_SPACING_QUIN } from '@bbc/gel-foundations/spacings';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import { GridItemConstrainedMedium } from '#app/components/Grid';
 
 const IncludeGrid = styled(GridItemConstrainedMedium)`
   display: grid;

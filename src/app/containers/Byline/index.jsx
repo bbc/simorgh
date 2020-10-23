@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Byline from '@bbc/psammead-byline';
 import { ServiceContext } from '#contexts/ServiceContext';
 import bylineBlockPropTypes from '#models/propTypes/byline';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import { GridItemConstrainedMedium } from '#app/components/Grid';
 
 const BylineContainer = ({ blocks, className }) => {
   const { service } = useContext(ServiceContext);

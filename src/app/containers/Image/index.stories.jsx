@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import ImageContainer from '.';
-import { GridWrapper } from '#lib/styledGrid';
+import { GridWrapper } from '#app/components/Grid';
 import {
   custom,
   imageData,

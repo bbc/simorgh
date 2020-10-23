@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { bool, element } from 'prop-types';
 import styled from 'styled-components';
-import { GridWrapper, GridItemConstrainedMedium } from '#lib/styledGrid';
+import { GridWrapper, GridItemConstrainedMedium } from '#app/components/Grid';
 
 let timeout;
 const LoadingMain = styled.main`
