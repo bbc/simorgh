@@ -1,0 +1,21 @@
+name: Simorgh CI - Integration Tests
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install Node Modules
+        run: npm ci
+      - name: Unit Tests
+        run: npm run test:unit
+        env:
+          CI: true
+          LOG_LEVEL: 'error'
