@@ -29,7 +29,6 @@ import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadin
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
-import DarkModeGlobalStyles from '#lib/utilities/darkMode';
 import AVPlayer from '#containers/AVPlayer';
 
 const getGroups = (zero, one, two, three, four, five) => ({
@@ -113,7 +112,6 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
   return (
     <>
-      <DarkModeGlobalStyles />
       <ChartbeatAnalytics data={pageData} />
       <ATIAnalytics data={pageData} />
       <ComscoreAnalytics />
