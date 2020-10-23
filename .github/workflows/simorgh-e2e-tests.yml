@@ -2,6 +2,11 @@ name: Simorgh CI - E2E Tests
 on:
   push:
     branches:
+      - '**'
+      - '!latest'
+  pull_request:
+    branches:
+      - '**'
       - '!latest'
 jobs:
   cypress-run:

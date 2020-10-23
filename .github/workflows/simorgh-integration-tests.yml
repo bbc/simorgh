@@ -2,6 +2,11 @@ name: Simorgh CI - Integration Tests
 on:
   push:
     branches:
+      - '**'
+      - '!latest'
+  pull_request:
+    branches:
+      - '**'
       - '!latest'
 jobs:
   build:
