@@ -58,6 +58,7 @@ afterEach(() => {
   jest.clearAllMocks();
   fetchMock.restore();
   window.dotcom = undefined;
+  delete process.env.SIMORGH_APP_ENV;
 });
 
 const getMatchingRoute = pathname =>
@@ -213,6 +214,7 @@ it('should route to and render a front page', async () => {
 });
 
 it('should route to and render a skeleton most watched page', async () => {
+  process.env.SIMORGH_APP_ENV = 'local';
   const pathname = '/pidgin/media/video';
   fetchMock.mock('http://localhost/pidgin/mostwatched.json', mostWatchedData);
 
