@@ -9,7 +9,7 @@ import {
   AMP_CONSENT_JS,
   AMP_ANALYTICS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
+import { C_GHOST, C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import ResourceHints from '#app/components/ResourceHints';
 import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
@@ -28,7 +28,7 @@ const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: ${C_GHOST};
+    background-color: ${data.darkMode ? C_MIDNIGHT_BLACK : C_GHOST};
   `;
 
   const { html, css, ids } = app;
