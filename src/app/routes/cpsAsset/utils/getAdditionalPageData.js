@@ -8,6 +8,7 @@ import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 import getMostWatchedEndpoint from '#lib/utilities/getMostWatchedUrl';
 import getSecondaryColumnUrl from '#lib/utilities/getSecondaryColumnUrl';
 import getRecommendationsUrl from '#lib/utilities/getRecommendationsUrl';
+import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 
 const noop = () => {};
 
@@ -62,7 +63,7 @@ const validateResponse = ({ status, json }, name) => {
 };
 
 const fetchUrl = ({ name, path, ...loggerArgs }) =>
-  fetchPageData({ path, ...loggerArgs })
+  fetchPageData({ path, timeout: SECONDARY_DATA_TIMEOUT, ...loggerArgs })
     .then(response => validateResponse(response, name))
     .catch(noop);
 

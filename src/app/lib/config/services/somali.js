@@ -287,7 +287,7 @@ export const service = {
       },
       {
         title: 'Barnaamijyada Idaacadda',
-        url: '/somali/ka_qayb_gal/programmes',
+        url: '/somali/media-54071665',
       },
     ],
   },
