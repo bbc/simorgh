@@ -25,7 +25,7 @@ jobs:
           npm ci
           npm run build
       - name: Unit Tests
-        run: npm run test:unit -- --changedSince=latest
+        run: npm run test:unit
         env:
           CI: true
           LOG_LEVEL: 'error'
