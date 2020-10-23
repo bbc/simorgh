@@ -10,15 +10,19 @@ import { RequestContext } from '#contexts/RequestContext';
 const WebVitals = () => {
   const { personalisationEnabled } = useContext(UserContext);
   const { pageType } = useContext(RequestContext);
-  const { enabled } = useToggle('webVitalsMonitoring');
+  const { enabled, value: toggleSampleRate } = useToggle('webVitalsMonitoring');
 
   // Checks if readers have opted into performance tracking and if the feature toggle is enabled
   const isWebVitalsEnabled = personalisationEnabled && enabled;
 
+  const sampleRate = Number(
+    toggleSampleRate || process.env.SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE,
+  );
+
   const webVitalsConfig = {
     enabled: isWebVitalsEnabled,
     reportingEndpoint: process.env.SIMORGH_WEBVITALS_REPORTING_ENDPOINT,
-    sampleRate: process.env.SIMORGH_WEBVITALS_SAMPLING_RATE,
+    sampleRate,
     reportParams: { pageType },
   };
 
