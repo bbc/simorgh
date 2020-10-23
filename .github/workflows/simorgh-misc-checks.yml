@@ -1,4 +1,4 @@
-name: Simorgh CI - Miscellaneous Checks
+name: Simorgh CI - Licences, Dependencies, Lint, Chromatic UI
 on:
   push:
     branches:
