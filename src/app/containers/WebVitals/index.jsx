@@ -15,9 +15,8 @@ const WebVitals = () => {
   // Checks if readers have opted into performance tracking and if the feature toggle is enabled
   const isWebVitalsEnabled = personalisationEnabled && enabled;
 
-  const sampleRate = parseInt(
+  const sampleRate = Number(
     toggleSampleRate || process.env.SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE,
-    10,
   );
 
   const webVitalsConfig = {
