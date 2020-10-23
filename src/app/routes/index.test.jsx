@@ -236,6 +236,7 @@ it('should route to and render a skeleton most watched page', async () => {
 });
 
 it('should route to and render a media asset page', async () => {
+  process.env.SIMORGH_APP_ENV = 'local';
   const pathname = '/yoruba/media-23256797';
   fetchMock.mock(`http://localhost${pathname}.json`, mediaAssetPageJson);
   fetchMock.mock('http://localhost/yoruba/mostwatched.json', mostWatchedData);
@@ -259,6 +260,7 @@ it('should route to and render a media asset page', async () => {
 });
 
 it('should route to and render a media asset page', async () => {
+  process.env.SIMORGH_APP_ENV = 'local';
   const pathname = '/yoruba/media-23256797';
   fetchMock.mock(`http://localhost${pathname}.json`, mediaAssetPageJson);
   fetchMock.mock('http://localhost/yoruba/mostwatched.json', mostWatchedData);
@@ -284,6 +286,7 @@ it('should route to and render a media asset page', async () => {
 });
 
 it('should route to and render a legacy media asset page', async () => {
+  process.env.SIMORGH_APP_ENV = 'local';
   const pathname = '/azeri/multimedia/2012/09/120919_georgia_prison_video';
   fetchMock.mock(`http://localhost${pathname}.json`, legacyMediaAssetPage);
   fetchMock.mock('http://localhost/azeri/mostwatched.json', mostWatchedData);
