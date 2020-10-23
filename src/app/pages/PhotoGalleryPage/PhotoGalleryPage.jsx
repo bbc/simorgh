@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
@@ -30,8 +30,10 @@ import {
   getFirstPublished,
   getLastPublished,
 } from '#lib/utilities/parseAssetData';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const PhotoGalleryPage = ({ pageData }) => {
+  const { dir } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
@@ -117,6 +119,7 @@ const PhotoGalleryPage = ({ pageData }) => {
         forwardedAs="main"
         role="main"
         enableGelGutters
+        dir={dir}
         columns={{
           group0: 6,
           group1: 6,
