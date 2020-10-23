@@ -1,4 +1,4 @@
-import { node, number } from 'prop-types';
+import { node } from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import {
