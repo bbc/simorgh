@@ -16,7 +16,6 @@ jobs:
         node-version: [12.x]
     env:
       CI: true
-      LOG_LEVEL: 'error'
 
     steps:
       - uses: actions/checkout@v1
@@ -38,4 +37,4 @@ jobs:
         run: npm run test:lint
 
       - name: Chromatic UI Tests # we should only run these one, they currently run on codebuild
-        run: # npx chromatic test run --build-script-name build:storybook --exit-once-uploaded --no-interactive
+        run: echo "run chromatic QA tests"
