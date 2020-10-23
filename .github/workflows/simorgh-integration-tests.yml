@@ -14,6 +14,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install Node Modules
         run: npm ci
+      - name: Build Simorgh
+        run: npm run build
       - name: Integration Tests
         run: npm run start && npm run test:integration:ci
         env:
