@@ -9,10 +9,6 @@ on:
       - '**'
       - '!latest'
 jobs:
-  env:
-    CI: true
-    LOG_LEVEL: 'error'
-
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -39,3 +35,7 @@ jobs:
 
       - name: Chromatic UI Tests # we should only run these one, they currently run on codebuild
         run: # npx chromatic test run --build-script-name build:storybook --exit-once-uploaded --no-interactive
+
+  env:
+    CI: true
+    LOG_LEVEL: 'error'

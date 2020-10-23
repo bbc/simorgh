@@ -9,13 +9,6 @@ on:
       - '**'
       - '!latest'
 jobs:
-  env:
-    CI: true
-    LOG_LEVEL: 'error'
-    CYPRESS_SKIP_EU: true
-    CYPRESS_SMOKE: true
-    CYPRESS_APP_ENV: 'local'
-
   cypress-run:
     runs-on: ubuntu-latest
     steps:
@@ -26,3 +19,10 @@ jobs:
         with:
           build: npm run build
           start: npm start
+
+  env:
+    CI: true
+    LOG_LEVEL: 'error'
+    CYPRESS_SKIP_EU: true
+    CYPRESS_SMOKE: true
+    CYPRESS_APP_ENV: 'local'

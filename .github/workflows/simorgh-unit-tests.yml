@@ -9,10 +9,6 @@ on:
       - '**'
       - '!latest'
 jobs:
-  env:
-    CI: true
-    LOG_LEVEL: 'error'
-
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -30,3 +26,7 @@ jobs:
           npm run build
       - name: Unit Tests
         run: npm run test:unit
+
+  env:
+    CI: true
+    LOG_LEVEL: 'error'
