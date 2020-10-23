@@ -6,9 +6,7 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
-
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-
 import pathOr from 'ramda/src/pathOr';
 import last from 'ramda/src/last';
 import MediaMessage from './MediaMessage';
@@ -35,6 +33,7 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { GelPageGrid } from '#app/components/Grid';
 
 const StyledTimestamp = styled(Timestamp)`
@@ -47,6 +46,7 @@ const StyledTimestamp = styled(Timestamp)`
 
 const MediaAssetPage = ({ pageData }) => {
   const { canonicalLink, isAmp } = useContext(RequestContext);
+  const { dir } = useContext(ServiceContext);
   const isLegacyMediaAssetPage = () => canonicalLink.split('/').length > 7;
 
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -167,9 +167,10 @@ const MediaAssetPage = ({ pageData }) => {
       />
       <ATIAnalytics data={pageData} />
       <StyledGelPageGrid
-        as="main"
+        forwardedAs="main"
         role="main"
         enableGelGutters
+        dir={dir}
         columns={{
           group0: 6,
           group1: 6,

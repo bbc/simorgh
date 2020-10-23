@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import { string, bool } from 'prop-types';
 import styled from 'styled-components';
@@ -13,7 +13,7 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
-
+import { ServiceContext } from '#contexts/ServiceContext';
 import MediaPlayerContainer from '../MediaPlayer';
 import { GridItemConstrainedLargeNoMargin } from '#app/components/Grid';
 import {
@@ -58,8 +58,8 @@ const CpsAssetMediaPlayer = ({
   hasBottomPadding,
   showCaption,
 }) => {
+  const { dir } = useContext(ServiceContext);
   if (!assetUri) return null;
-
   const mediaBlock = filterForBlockType(blocks, 'aresMedia');
   const metadataBlock = filterForBlockType(
     path(['model', 'blocks'], mediaBlock),
@@ -69,7 +69,7 @@ const CpsAssetMediaPlayer = ({
   const available = path(['model', 'available'], metadataBlock);
 
   return (
-    <Wrapper hasBottomPadding={hasBottomPadding}>
+    <Wrapper hasBottomPadding={hasBottomPadding} dir={dir}>
       <MediaPlayerContainer
         blocks={blocks}
         assetId={assetUri.substr(1)}

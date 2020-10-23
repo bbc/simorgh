@@ -80,7 +80,7 @@ const ArticlePageMostReadSection = styled(MostReadSection)`
 `;
 
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
-  const { articleAuthor } = useContext(ServiceContext);
+  const { articleAuthor, dir } = useContext(ServiceContext);
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
@@ -127,6 +127,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <StyledMain role="main">
         <GelPageGrid
           enableGelGutters
+          dir={dir}
           columns={{
             group0: 6,
             group1: 6,

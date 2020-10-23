@@ -11,10 +11,10 @@ import { GridItemConstrainedMedium } from '#app/components/Grid';
 const componentsToRender = { fragment, urlLink: InlineLink, inline: Inline };
 
 const ParagraphContainer = ({ blocks }) => {
-  const { script, service } = useContext(ServiceContext);
+  const { script, service, dir } = useContext(ServiceContext);
 
   return (
-    <GridItemConstrainedMedium>
+    <GridItemConstrainedMedium dir={dir}>
       <Paragraph script={script} service={service}>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </Paragraph>

@@ -33,6 +33,7 @@ const ArticleTimestamp = ({
     service,
     timezone,
     altCalendar,
+    dir,
   } = useContext(ServiceContext);
 
   if (!isValidDateTime(firstPublished) || !isValidDateTime(lastPublished)) {
@@ -74,7 +75,7 @@ const ArticleTimestamp = ({
   });
 
   return (
-    <Wrapper className={className}>
+    <Wrapper className={className} dir={dir}>
       <FirstPublishedTimestamp {...timestampProps} {...firstPublishedProps} />
       {displayLastUpdatedTimestamp && (
         // Div has been used for No CSS formatting see #5554

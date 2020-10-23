@@ -38,7 +38,7 @@ const sanitiseSubheadline = (type, text) => {
 };
 
 const HeadingsContainer = ({ blocks, type }) => {
-  const { script, service } = useContext(ServiceContext);
+  const { script, service, dir } = useContext(ServiceContext);
   const Heading = Headings[type];
   const GridConstrain = GridConstraints[type];
 
@@ -59,7 +59,7 @@ const HeadingsContainer = ({ blocks, type }) => {
   const id = type === 'headline' ? headingId : subHeadingId;
 
   return (
-    <GridConstrain>
+    <GridConstrain dir={dir}>
       <Heading script={script} service={service} id={id} tabIndex="-1">
         {renderText()}
       </Heading>
