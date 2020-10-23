@@ -2436,7 +2436,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/hindi'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/hindi'],
@@ -3982,7 +3982,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/mundo'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/mundo'],
@@ -4859,7 +4859,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/persian'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/persian'],
@@ -5373,7 +5373,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/portuguese'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/portuguese'],

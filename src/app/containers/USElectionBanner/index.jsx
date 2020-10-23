@@ -48,7 +48,7 @@ const USElectionBanner = ({ oembed }) => {
   if (!enabled || !oembed || isAmp) return null;
 
   return (
-    <FrontPageSection>
+    <FrontPageSection data-e2e="us-election-banner">
       <StyledWrapper dangerouslySetInnerHTML={createMarkup(oembed)} />
     </FrontPageSection>
   );

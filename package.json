@@ -42,7 +42,7 @@
     "test:unit": "test -z $CI && jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" || jest --ci --runInBand --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\"",
     "test:unit:watch": "npm run test:unit -- --watch",
     "test:integration": "node src/integration/utils/runTests/index.js",
-    "test:integration:ci": "JEST_SILENT_REPORTER_DOTS=true npm run test:integration -- --ci --reporters=jest-silent-reporter",
+    "test:integration:ci": "JEST_SILENT_REPORTER_DOTS=true npm run test:integration -- --ci --onlyRunTests --reporters=jest-silent-reporter",
     "test:linkey": "node scripts/linkeySetup.js && jest src/app/lib/config/services/*.test.js --verbose true; npm run test:linkey:cleanup",
     "test:linkey:cleanup": "find src/app/lib/config/services -type f -name '*.test.js' -delete",
     "updateMinorPatch": "rm -rf node_modules/ && npm install && npm update && npm install",
