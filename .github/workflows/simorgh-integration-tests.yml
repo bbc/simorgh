@@ -14,6 +14,10 @@ jobs:
     strategy:
       matrix:
         node-version: [12.x]
+    env:
+      CI: true
+      LOG_LEVEL: 'error'
+
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js ${{ matrix.node-version }}
@@ -24,6 +28,3 @@ jobs:
         run: npm ci
       - name: Integration Tests
         run: npm run test:integration -- --ci
-  env:
-    CI: true
-    LOG_LEVEL: 'error'
