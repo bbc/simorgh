@@ -4107,7 +4107,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
     },
     specialFeatures: {
@@ -5064,7 +5064,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/persian/science-52004647'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/persian/23278332'],
@@ -9958,7 +9958,7 @@ module.exports = () => ({
             enabled: false,
           },
         },
-        smoke: false,
+        smoke: true,
       },
     },
     specialFeatures: {
@@ -10175,7 +10175,7 @@ module.exports = () => ({
             enabled: false,
           },
         },
-        smoke: false,
+        smoke: true,
       },
     },
     specialFeatures: {
