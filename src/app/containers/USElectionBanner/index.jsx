@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { number, string, shape } from 'prop-types';
 import styled from 'styled-components';
 
@@ -13,6 +13,9 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
+
+// Contexts
+import { RequestContext } from '#contexts/RequestContext';
 
 // Utilities
 import useToggle from '#hooks/useToggle';
@@ -39,12 +42,13 @@ const StyledWrapper = styled.div`
 `;
 
 const USElectionBanner = ({ oembed }) => {
+  const { isAmp } = useContext(RequestContext);
   const { enabled } = useToggle('us2020ElectionBanner');
 
-  if (!enabled || !oembed) return null;
+  if (!enabled || !oembed || isAmp) return null;
 
   return (
-    <FrontPageSection>
+    <FrontPageSection data-e2e="us-election-banner">
       <StyledWrapper dangerouslySetInnerHTML={createMarkup(oembed)} />
     </FrontPageSection>
   );
