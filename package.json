@@ -170,7 +170,7 @@
     "@testing-library/react-hooks": "^3.4.2",
     "amphtml-validator": "^1.0.33",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.5.2",
+    "babel-jest": "^26.6.1",
     "babel-loader": "^8.1.0",
     "babel-plugin-dynamic-import-node": "^2.3.3",
     "babel-plugin-styled-components": "^1.11.1",
