@@ -114,7 +114,7 @@
     "@bbc/web-vitals": "^1.0.1",
     "@loadable/component": "~5.12.0",
     "@loadable/server": "~5.12.0",
-    "@loadable/webpack-plugin": "^5.13.0",
+    "@loadable/webpack-plugin": "^5.14.0",
     "aws-embedded-metrics": "^2.0.0",
     "compression": "^1.7.4",
     "core-js": "^3.6.5",
