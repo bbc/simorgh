@@ -120,7 +120,7 @@
     "core-js": "^3.6.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "express-static-gzip": "^2.0.8",
+    "express-static-gzip": "^2.1.0",
     "gnu-terry-pratchett": "0.0.2",
     "helmet": "^4.1.1",
     "helmet-csp": "^3.1.0",
