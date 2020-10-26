@@ -86,15 +86,6 @@ const mockRouteProps = ({
   });
 };
 
-// styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
-//   collectStyles: jest.fn().mockReturnValue(<h1>Mock app</h1>),
-//   getStyleElement: jest.fn().mockReturnValue(<style />),
-// }));
-
-// jest.mock('./styles', () => ({
-//   getStyleTag: jest.fn().mockImplementation(() => <style />),
-// }));
-
 jest.mock('./utilities/customMetrics');
 
 const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
@@ -130,7 +121,7 @@ const testRenderedData = ({
 
   expect(status).toBe(200);
 
-  expect(reactDomServer.renderToString).toHaveBeenCalledWith(<h1>Mock app</h1>);
+  expect(reactDomServer.renderToString).toHaveBeenCalled();
 
   expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
     <Document
@@ -1325,9 +1316,7 @@ describe('Server', () => {
 
         expect(status).toBe(404);
 
-        expect(reactDomServer.renderToString).toHaveBeenCalledWith(
-          <h1>Mock app</h1>,
-        );
+        expect(reactDomServer.renderToString).toHaveBeenCalled();
 
         expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
           <Document
