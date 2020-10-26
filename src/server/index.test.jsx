@@ -1339,6 +1339,8 @@ describe('Server', () => {
           />,
         );
 
+        expect(renderDocumentSpy).toHaveBeenCalled();
+
         expect(text).toEqual(
           '<!doctype html><html><body><h1>Mock app</h1></body></html>',
         );
