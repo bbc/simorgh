@@ -1,8 +1,6 @@
 import React from 'react';
 import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
-import * as emotionCore from '@emotion/core';
-import * as createEmotionServer from 'create-emotion-server';
 import dotenv from 'dotenv';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
@@ -87,27 +85,6 @@ const mockRouteProps = ({
     },
   });
 };
-
-/**
- * Emotion mocks.
- */
-// emotionCore.CacheProvider = jest.fn().mockReturnValue(() => <h1>Mock app</h1>);
-
-// jest.mock('@loadable/server', () => ({
-//   ChunkExtractor: () => ({
-//     collectChunks: arg => arg,
-//     getScriptElements: () => '__mock_script_elements__',
-//   }),
-// }));
-
-// createEmotionServer.extractCritical = jest
-//   .fn()
-//   .mockImplementation(() => <h1>Mock app</h1>);
-// jest.mock('create-emotion-server', () => ({
-//   extractCritical: arg => arg,
-// }));
-
-// jest.mock('@emotion/cache');
 
 // styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
 //   collectStyles: jest.fn().mockReturnValue(<h1>Mock app</h1>),
