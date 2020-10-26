@@ -1,7 +1,8 @@
 import React from 'react';
 import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
-// import * as styledComponents from 'styled-components';
+import * as emotionCore from '@emotion/core';
+import * as createEmotionServer from 'create-emotion-server';
 import dotenv from 'dotenv';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
@@ -87,6 +88,27 @@ const mockRouteProps = ({
   });
 };
 
+/**
+ * Emotion mocks.
+ */
+// emotionCore.CacheProvider = jest.fn().mockReturnValue(() => <h1>Mock app</h1>);
+
+// jest.mock('@loadable/server', () => ({
+//   ChunkExtractor: () => ({
+//     collectChunks: arg => arg,
+//     getScriptElements: () => '__mock_script_elements__',
+//   }),
+// }));
+
+// createEmotionServer.extractCritical = jest
+//   .fn()
+//   .mockImplementation(() => <h1>Mock app</h1>);
+// jest.mock('create-emotion-server', () => ({
+//   extractCritical: arg => arg,
+// }));
+
+// jest.mock('@emotion/cache');
+
 // styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
 //   collectStyles: jest.fn().mockReturnValue(<h1>Mock app</h1>),
 //   getStyleElement: jest.fn().mockReturnValue(<style />),
@@ -135,7 +157,11 @@ const testRenderedData = ({
 
   expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
     <Document
-      app="<h1>Mock app</h1>"
+      app={{
+        css: '',
+        ids: [],
+        html: '<h1>Mock app</h1>',
+      }}
       assetOrigins={assetOrigins}
       data={successDataResponse}
       helmet={{ head: 'tags' }}
@@ -1328,7 +1354,11 @@ describe('Server', () => {
 
         expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
           <Document
-            app="<h1>Mock app</h1>"
+            app={{
+              css: '',
+              ids: [],
+              html: '<h1>Mock app</h1>',
+            }}
             assetOrigins={[
               'https://cookie-oven.api.bbc.co.uk',
               'https://ichef.bbci.co.uk',
