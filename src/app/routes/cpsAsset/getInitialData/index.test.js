@@ -10,9 +10,11 @@ import mapJson from '#data/pidgin/cpsAssets/media-23256549.json';
 describe('getInitialData', () => {
   afterEach(() => {
     jest.clearAllMocks();
+    delete process.env.SIMORGH_APP_ENV;
   });
 
   it('should return essential data for a page to render', async () => {
+    process.env.SIMORGH_APP_ENV = 'local';
     fetchMock.mock(
       'http://localhost/mock-map-path.json',
       JSON.stringify(mapJson),
