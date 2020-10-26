@@ -71,13 +71,17 @@ export default async ({
   toggles,
 }) => {
   try {
+    const env = pathname.includes('renderer_env=live')
+      ? 'live'
+      : process.env.SIMORGH_APP_ENV;
     const { json, status } = await fetchPageData({ path: pathname, pageType });
 
-    const additionalPageData = await getAdditionalPageData(
-      json,
+    const additionalPageData = await getAdditionalPageData({
+      pageData: json,
       service,
       variant,
-    );
+      env,
+    });
     const processedAdditionalData = processMostWatched({
       data: additionalPageData,
       service,

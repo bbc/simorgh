@@ -16,6 +16,8 @@ const pageTypes = [
   'onDemandTV',
   'mediaAssetPage',
   'storyPage',
+  'idxPage',
+  'featureIndexPage',
 ];
 
 const getPageString = async url => {

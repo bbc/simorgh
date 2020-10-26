@@ -186,7 +186,7 @@ Object {
 exports[`AMP On Demand T V Page Footer Link should match text and url 7`] = `
 Object {
   "text": "La xiriir BBC",
-  "url": "https://www.bbc.com/somali/hayadeed-37098613",
+  "url": "https://www.bbc.co.uk/send/u50853709",
 }
 `;
 
@@ -251,7 +251,7 @@ Object {
 exports[`AMP On Demand T V Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "Barnaamijyada Idaacadda",
-  "url": "/somali/ka_qayb_gal/programmes",
+  "url": "/somali/media-54071665",
 }
 `;
 

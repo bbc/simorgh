@@ -230,7 +230,7 @@ const baseServiceConfig = {
         text: 'Cookies',
       },
       {
-        href: 'https://www.bbc.com/ukrainian/institutional-38146278',
+        href: 'https://www.bbc.co.uk/send/u50853885',
         text: "Зв'язатися з BBC",
       },
       {

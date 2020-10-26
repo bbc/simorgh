@@ -358,7 +358,7 @@ describe('ATI Analytics Container', () => {
 
       expect(mockCanonical.mock.calls[0][0]).toMatchInlineSnapshot(`
         Object {
-          "pageviewParams": "s=598343&s2=3&p=afrique.feature_index.48465371.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A447a95b6-1c9f-e544-bf60-e23452e7fa71]&x2=[responsive]&x3=[news-afrique]&x4=[fr]&x5=[http%253A%252F%252Flocalhost%252F]&x8=[simorgh]&x9=[Tout%2Bsavoir%2Bsur%2Bla%2BCAN%2B2019%2B-%2BBBC%2BNews%2BAfrique]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]",
+          "pageviewParams": "s=598343&s2=3&p=afrique.feature_index.48465371.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A447a95b6-1c9f-e544-bf60-e23452e7fa71]&x2=[responsive]&x3=[news-afrique]&x4=[fr]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-section]&x8=[simorgh]&x9=[Tout%2Bsavoir%2Bsur%2Bla%2BCAN%2B2019%2B-%2BBBC%2BNews%2BAfrique]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]",
         }
       `);
     });
@@ -375,7 +375,7 @@ describe('ATI Analytics Container', () => {
 
       expect(mockAmp.mock.calls[0][0]).toMatchInlineSnapshot(`
         Object {
-          "pageviewParams": "s=598343&s2=3&p=afrique.feature_index.48465371.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A447a95b6-1c9f-e544-bf60-e23452e7fa71]&x2=[amp]&x3=[news-afrique]&x4=[fr]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x8=[simorgh]&x9=[Tout%2Bsavoir%2Bsur%2Bla%2BCAN%2B2019%2B-%2BBBC%2BNews%2BAfrique]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&ref=\${documentReferrer}",
+          "pageviewParams": "s=598343&s2=3&p=afrique.feature_index.48465371.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A447a95b6-1c9f-e544-bf60-e23452e7fa71]&x2=[amp]&x3=[news-afrique]&x4=[fr]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-section]&x8=[simorgh]&x9=[Tout%2Bsavoir%2Bsur%2Bla%2BCAN%2B2019%2B-%2BBBC%2BNews%2BAfrique]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&ref=\${documentReferrer}",
         }
       `);
     });

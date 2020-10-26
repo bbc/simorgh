@@ -7,6 +7,7 @@
 | `comscoreAnalytics`     | Capture Comscore Analytics | | |
 | `cpsRecommendations`    | Display Recommendations | | |
 | `enableFetchingToggles` | Enable fetching toggle values from remote Toggles Config API for specified services | | |
+| `frontPageRadioSchedule` | Display Radio Schedule on Front Pages | The section of the front page to display the schedule component | `Features`, `Verticals`, `Section 1`, `Interactivity` |
 | `include`               | Display Include on Story (STY) Pages | | |
 | `liveRadioSchedule`     | Display Radio Schedule on Live Radio Pages | | |
 | `mostRead`              | Display Most Read | | |
@@ -15,7 +16,6 @@
 | `preroll`               | Display Preroll Advertisements on Media Asset (MAP) Pages | | |
 | `scriptLink`            | Display Script Switching link for services with variants | | |
 | `socialEmbed`           | Display Social Embeds on Story (STY) Pages | | |
-| `storyPageAds`          | Display Advertisements on Story (STY) Pages | | |
 | `variantCookie`         | Set variant cookie for services with variants | | |
 
 ## Default (Fallback) Values

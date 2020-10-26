@@ -6,7 +6,7 @@ import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import afriqueFeatureIdxPageData from '#data/afrique/cpsAssets/48465371';
+import urduPageData from '#data/urdu/cpsAssets/science-51314202';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import FeatureIdxPage from '.';
 
@@ -14,27 +14,32 @@ const mockToggles = {
   comscoreAnalytics: {
     enabled: true,
   },
+  ads: {
+    enabled: false,
+  },
 };
 
-const requestContextData = ({ service = 'afrique' }) => ({
+const requestContextData = ({ service = 'urdu', showAdsBasedOnLocation }) => ({
   pageType: 'FIX',
   service,
   pathname: '/pathname',
   data: { status: 200 },
+  showAdsBasedOnLocation,
 });
 
 // eslint-disable-next-line react/prop-types
 const FeatureIdxPageWithContext = ({
   isAmp = false,
-  service = 'afrique',
+  service = 'urdu',
   toggles = mockToggles,
+  showAdsBasedOnLocation,
   ...props
 }) => (
   <BrowserRouter>
     <ToggleContextProvider toggles={toggles}>
       <RequestContextProvider
         isAmp={isAmp}
-        {...requestContextData({ service })}
+        {...requestContextData({ service, showAdsBasedOnLocation })}
       >
         <ServiceContextProvider service={service}>
           <FeatureIdxPage {...props} />
@@ -116,80 +121,198 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   );
 });
 
+jest.mock('#containers/Ad/Canonical/CanonicalAdBootstrapJs', () => {
+  const CanonicalAdBootstrapJs = () => (
+    <div data-testid="adBootstrap">bootstrap</div>
+  );
+  return CanonicalAdBootstrapJs;
+});
+
 describe('Feature Idx Page', () => {
   let pageData;
 
   beforeEach(async () => {
     fetchMock.mock(
       'http://localhost/some-feature-idx-page-path.json',
-      JSON.stringify(afriqueFeatureIdxPageData),
+      JSON.stringify(urduPageData),
     );
+
     ({ pageData } = await getInitialData({
       path: 'some-feature-idx-page-path',
-      service: 'afrique',
+      service: 'urdu',
     }));
   });
 
   afterEach(() => {
     fetchMock.restore();
+    jest.clearAllMocks();
   });
 
   describe('snapshots', () => {
-    it('should render an afrique feature idx page correctly', async () => {
-      let container;
-      await act(async () => {
-        container = render(<FeatureIdxPageWithContext pageData={pageData} />)
-          .container;
-      });
-      expect(container).toMatchSnapshot();
-    });
+    it.each`
+      platform       | withAds
+      ${'amp'}       | ${true}
+      ${'amp'}       | ${false}
+      ${'canonical'} | ${true}
+      ${'canonical'} | ${false}
+    `(
+      'should render correctly on $platform when withAds is $withAds',
+      async ({ platform, withAds }) => {
+        const isAmp = platform === 'amp';
 
-    it('should render an afrique amp feature idx page', async () => {
-      let container;
-      await act(async () => {
-        container = render(
-          <FeatureIdxPageWithContext pageData={pageData} isAmp />,
-        ).container;
-      });
-      expect(container).toMatchSnapshot();
-    });
+        const toggles = {
+          ads: {
+            enabled: withAds,
+          },
+        };
+
+        const showAdsBasedOnLocation = withAds;
+
+        let container;
+        await act(async () => {
+          ({ container } = render(
+            <FeatureIdxPageWithContext
+              pageData={pageData}
+              isAmp={isAmp}
+              showAdsBasedOnLocation={showAdsBasedOnLocation}
+              toggles={toggles}
+            />,
+          ));
+          expect(container).toMatchSnapshot();
+        });
+      },
+    );
   });
 
   describe('Assertions', () => {
     it('should render visually hidden text as h1', async () => {
       let container;
       await act(async () => {
-        container = render(<FeatureIdxPageWithContext pageData={pageData} />)
-          .container;
+        ({ container } = render(
+          <FeatureIdxPageWithContext pageData={pageData} />,
+        ));
+
+        const h1 = container.querySelector('h1');
+        const content = h1.getAttribute('id');
+        const tabIndex = h1.getAttribute('tabIndex');
+
+        expect(content).toEqual('content');
+        expect(tabIndex).toBe('-1');
+
+        expect(h1.textContent).toMatchInlineSnapshot(
+          `"کورونا وائرس: تحقیق، تشخیص اور احتیاط"`,
+        );
       });
-
-      const h1 = container.querySelector('h1');
-      const content = h1.getAttribute('id');
-      const tabIndex = h1.getAttribute('tabIndex');
-
-      expect(content).toEqual('content');
-      expect(tabIndex).toBe('-1');
-
-      // const span = h1.querySelector('span');
-      // expect(span.getAttribute('role')).toEqual('text');
-      expect(h1.textContent).toEqual('Tout savoir sur la CAN 2019');
-
-      // const langSpan = span.querySelector('span');
-      // expect(langSpan.getAttribute('lang')).toEqual('en-GB');
-      // expect(langSpan.textContent).toEqual('BBC News');
     });
 
-    it('should render feature index page sections', async () => {
+    it('should render flattened sections', async () => {
       let container;
       await act(async () => {
-        container = render(<FeatureIdxPageWithContext pageData={pageData} />)
-          .container;
+        ({ container } = render(
+          <FeatureIdxPageWithContext pageData={pageData} />,
+        ));
+
+        const sections = container.querySelectorAll('section');
+        expect(sections).toHaveLength(4);
+        sections.forEach(section => {
+          expect(section.getAttribute('role')).toEqual('region');
+
+          const strapline = section.querySelector('h2');
+          expect(strapline.textContent).toMatchSnapshot();
+        });
+      });
+    });
+
+    describe('Ads', () => {
+      it.each`
+        adsEnabled | showAdsBasedOnLocation | scenario
+        ${false}   | ${true}                | ${'ads feature toggle is not enabled'}
+        ${true}    | ${false}               | ${'ads not permitted to be shown in location'}
+      `(
+        'should not render because $scenario',
+        async ({ showAdsBasedOnLocation, adsEnabled }) => {
+          const toggles = {
+            ads: {
+              enabled: adsEnabled,
+            },
+          };
+
+          let queryByTestId;
+          let container;
+          await act(async () => {
+            ({ container, queryByTestId } = render(
+              <FeatureIdxPageWithContext
+                pageData={pageData}
+                showAdsBasedOnLocation={showAdsBasedOnLocation}
+                toggles={toggles}
+              />,
+            ));
+          });
+
+          const leaderboardAd = container.querySelector(
+            '[id="dotcom-leaderboard"]',
+          );
+          expect(leaderboardAd).not.toBeInTheDocument();
+
+          const mpuAd = container.querySelector('[id="dotcom-mpu"]');
+          expect(mpuAd).not.toBeInTheDocument();
+
+          const adBootstrap = queryByTestId('adBootstrap');
+          expect(adBootstrap).not.toBeInTheDocument();
+        },
+      );
+
+      it('should render leaderboard and MPU ads when the ads toggle is enabled and is first section', async () => {
+        const toggles = {
+          ads: {
+            enabled: true,
+          },
+        };
+
+        let getByTestId;
+        await act(async () => {
+          ({ getByTestId } = render(
+            <FeatureIdxPageWithContext
+              pageData={pageData}
+              showAdsBasedOnLocation
+              toggles={toggles}
+            />,
+          ));
+        });
+
+        const leaderboardAd = document.querySelector(
+          '[id="dotcom-leaderboard"]',
+        );
+        expect(leaderboardAd).toBeInTheDocument();
+
+        const mpuAd = document.querySelector('[id="dotcom-mpu"]');
+        expect(mpuAd).toBeInTheDocument();
+
+        const adBootstrap = getByTestId('adBootstrap');
+        expect(adBootstrap).toBeInTheDocument();
       });
 
-      const sections = container.querySelectorAll('section');
-      expect(sections).toHaveLength(10);
-      sections.forEach(section => {
-        expect(section.getAttribute('role')).toEqual('region');
+      it('should not render canonical ad bootstrap on amp', async () => {
+        process.env.SIMORGH_APP_ENV = 'test';
+        const toggles = {
+          ads: {
+            enabled: true,
+          },
+        };
+
+        let queryByTestId;
+        await act(async () => {
+          ({ queryByTestId } = render(
+            <FeatureIdxPageWithContext
+              pageData={pageData}
+              toggles={toggles}
+              showAdsBasedOnLocation={false}
+            />,
+          ));
+        });
+
+        const adBootstrap = queryByTestId('adBootstrap');
+        expect(adBootstrap).not.toBeInTheDocument();
       });
     });
   });

@@ -8,12 +8,12 @@ const getCanonicalUrl = (origin, pathname) => {
 };
 
 const getUkCanonicalUrl = url => {
-  const tldRegex = /(.com|.co.uk)/g;
+  const tldRegex = /(\.com|\.co\.uk)/g;
   return url.replace(tldRegex, '.co.uk');
 };
 
 const getNonUkCanonicalUrl = url => {
-  const tldRegex = /(.com|.co.uk)/g;
+  const tldRegex = /(\.com|\.co\.uk)/g;
   return url.replace(tldRegex, '.com');
 };
 

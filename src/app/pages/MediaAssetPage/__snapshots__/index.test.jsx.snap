@@ -2998,7 +2998,7 @@ exports[`Media Asset Page should render component 1`] = `
                               <span
                                 class="c1"
                               >
-                                Audio, 
+                                Make you listen, 
                               </span>
                               <span>
                                 BBC News Pidgin One Minute News
@@ -3006,7 +3006,7 @@ exports[`Media Asset Page should render component 1`] = `
                               <span
                                 class="c1"
                               >
-                                , 0,15
+                                , Duration 0,15
                               </span>
                             </span>
                           </a>

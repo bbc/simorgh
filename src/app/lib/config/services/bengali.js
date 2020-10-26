@@ -207,7 +207,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: false,
       header: 'রেডিও অনুষ্ঠান',
       durationLabel: 'স্থিতিকাল %duration%',
     },
@@ -241,7 +240,7 @@ export const service = {
           text: 'কুকিজ',
         },
         {
-          href: 'https://www.bbc.com//bengali/institutional-37289967',
+          href: 'https://www.bbc.co.uk/send/u50853247',
           text: 'বিবিসির সঙ্গে যোগাযোগ করুন',
         },
         {
@@ -260,6 +259,10 @@ export const service = {
       {
         title: 'মূলপাতা',
         url: '/bengali',
+      },
+      {
+        title: 'আমেরিকায় নির্বাচন ২০২০',
+        url: '/bengali/53988070',
       },
       {
         title: 'করোনাভাইরাস',

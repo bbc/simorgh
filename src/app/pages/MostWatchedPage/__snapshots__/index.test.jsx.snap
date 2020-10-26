@@ -496,6 +496,12 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
   }
 }
 
+@media (max-width:24.9375rem) {
+  .c6 {
+    padding-top: 0.5rem;
+  }
+}
+
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c6 {
     padding-bottom: 0.5rem;

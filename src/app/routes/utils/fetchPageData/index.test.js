@@ -5,8 +5,11 @@ import { DATA_FETCH_ERROR, DATA_REQUEST_RECEIVED } from '#lib/logger.const';
 
 const expectedBaseUrl = 'http://localhost';
 const requestedPathname = '/path/to/asset';
+const fullTestPath = 'https://test.bbc.com/hausa/mostwatched.json';
+const fullLivePath = 'https://www.bbc.com/hausa/mostwatched.json';
 const expectedUrl = `${expectedBaseUrl}${requestedPathname}.json`;
 const pageType = 'Fetch Page Data';
+const requestOrigin = 'Jest Test';
 
 afterEach(() => {
   jest.clearAllMocks();
@@ -33,13 +36,14 @@ describe('fetchPageData', () => {
       });
     });
 
-    it('should log pageType if passed in as a parameter', async () => {
-      await fetchPageData({ path: requestedPathname, pageType });
+    it('should log additional arguments if passed', async () => {
+      await fetchPageData({ path: requestedPathname, pageType, requestOrigin });
 
       expect(loggerMock.info).toBeCalledWith(DATA_REQUEST_RECEIVED, {
         data: expectedUrl,
         path: requestedPathname,
         pageType,
+        requestOrigin,
       });
     });
   });
@@ -55,16 +59,28 @@ describe('fetchPageData', () => {
       );
     });
 
-    it('should call fetch with correct url', async () => {
+    it('should call fetch with the correct url when passed the pathname', async () => {
       await fetchPageData({ path: requestedPathname, pageType });
 
-      expect(fetch).toHaveBeenCalledWith(expectedUrl);
+      expect(fetch).toHaveBeenCalledWith(expectedUrl, { timeout: 4500 });
+    });
+
+    it('should call fetch with the correct url when passed the full test path', async () => {
+      await fetchPageData({ path: fullTestPath, pageType });
+
+      expect(fetch).toHaveBeenCalledWith(fullTestPath, { timeout: 4500 });
+    });
+
+    it('should call fetch with the correct url when passed the full live path', async () => {
+      await fetchPageData({ path: fullLivePath, pageType });
+
+      expect(fetch).toHaveBeenCalledWith(fullLivePath, { timeout: 4500 });
     });
 
     it('should call fetch on amp pages without .amp in pathname', async () => {
       await fetchPageData({ path: requestedPathname, pageType });
 
-      expect(fetch).toHaveBeenCalledWith(expectedUrl);
+      expect(fetch).toHaveBeenCalledWith(expectedUrl, { timeout: 4500 });
     });
 
     it('should return expected response', async () => {

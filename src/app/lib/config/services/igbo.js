@@ -254,7 +254,7 @@ export const service = {
           text: 'Kuki',
         },
         {
-          href: 'https://www.bbc.com/igbo/institutional-43090448',
+          href: 'https://www.bbc.co.uk/send/u50853379',
           text: 'Kpọtụrụ BBC',
         },
         {

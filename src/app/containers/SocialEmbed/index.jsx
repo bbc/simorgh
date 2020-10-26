@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import styled from 'styled-components';
+import Lazyload from 'react-lazyload';
 import {
   AmpSocialEmbed,
   CanonicalSocialEmbed,
@@ -14,6 +15,7 @@ import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import useToggle from '#hooks/useToggle';
 import socialEmbedBlockPropTypes from '#models/propTypes/socialEmbed';
 import createTranslations from './translations';
+import EnrichTweet from './enrichTweet';
 
 const logger = nodeLogger(__filename);
 
@@ -22,6 +24,8 @@ const logger = nodeLogger(__filename);
  * NB Tweets max-out at 500px, which is represented as 31.25rem.
  */
 const MAX_WIDTH = '31.25rem';
+
+const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
 const Wrapper = styled.div`
   margin-right: auto;
@@ -69,9 +73,27 @@ const SocialEmbedContainer = ({ blocks }) => {
     href,
   });
 
+  const socialEmbed = (
+    <CanonicalSocialEmbed
+      provider={provider}
+      service={service}
+      oEmbed={oEmbed}
+      fallback={fallback}
+      skipLink={skipLink}
+      caption={caption}
+    />
+  );
+
+  const enrichedSocialEmbed =
+    provider === 'twitter' ? (
+      <EnrichTweet>{socialEmbed}</EnrichTweet>
+    ) : (
+      socialEmbed
+    );
+
   return (
     <GridItemConstrainedMedium>
-      <Wrapper provider={provider}>
+      <Wrapper provider={provider} data-e2e={`${provider}-embed-${href}`}>
         {isAmp ? (
           <AmpSocialEmbed
             provider={provider}
@@ -82,14 +104,9 @@ const SocialEmbedContainer = ({ blocks }) => {
             caption={caption}
           />
         ) : (
-          <CanonicalSocialEmbed
-            provider={provider}
-            service={service}
-            oEmbed={oEmbed}
-            fallback={fallback}
-            skipLink={skipLink}
-            caption={caption}
-          />
+          <Lazyload offset={LAZYLOAD_OFFSET} once>
+            {enrichedSocialEmbed}
+          </Lazyload>
         )}
       </Wrapper>
     </GridItemConstrainedMedium>

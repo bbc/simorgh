@@ -194,7 +194,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: false,
       header: 'ያድምጡ',
       durationLabel: 'ርዝመት %duration%',
     },
@@ -228,7 +227,7 @@ export const service = {
           text: 'ኩኪዎች',
         },
         {
-          href: 'https://www.bbc.com/amharic/institutional-42228117',
+          href: 'https://www.bbc.co.uk/send/u50853181',
           text: 'ቢቢሲን ያግኙ',
         },
         {

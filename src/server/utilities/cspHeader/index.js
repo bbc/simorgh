@@ -1,6 +1,5 @@
 import csp from 'helmet-csp';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
-import routes from '#app/routes';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 
 /*
@@ -40,6 +39,10 @@ const advertisingDirectives = {
     'https://*.g.doubleclick.net',
     'https://tpc.googlesyndication.com',
     'https://*.google.com',
+    'https://dt.adsafeprotected.com',
+    'https://dtvc.adsafeprotected.com',
+    'https://fwvc.adsafeprotected.com',
+    'https://pixel.adsafeprotected.com',
   ],
   scriptSrc: [
     'https://ad.crwdcntrl.net',
@@ -91,6 +94,7 @@ const directives = {
       'https://www.bbc.co.uk', // STY include indepthtoolkit
       'https://news.files.bbci.co.uk', // STY include
       'https://mybbc-analytics.files.bbci.co.uk',
+      'https://europe-west1-bbc-otg-traf-mgr-bq-prod-4591.cloudfunctions.net', // Web-Vitals monitoring
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
@@ -120,6 +124,7 @@ const directives = {
       'https://news.files.bbci.co.uk', // STY include
       'https://news.test.files.bbci.co.uk', // STY include
       'https://mybbc-analytics.files.bbci.co.uk',
+      'https://europe-west1-bbc-otg-traf-mgr-bq-dev-4105.cloudfunctions.net', // Web-Vitals monitoring
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
@@ -326,6 +331,7 @@ const directives = {
   styleSrc: {
     ampLive: [
       'https://news.files.bbci.co.uk', // STY include styles
+      'https://static.bbci.co.uk', // STY Includes
       "'unsafe-inline'",
     ],
     canonicalLive: [
@@ -334,10 +340,12 @@ const directives = {
       'https://ton.twimg.com', // Social Embeds
       'https://news.files.bbci.co.uk', // STY includes
       'https://static.bbc.co.uk', // STY include
+      'https://static.bbci.co.uk', // STY Includes
       "'unsafe-inline'",
     ],
     ampNonLive: [
       'https://news.files.bbci.co.uk', // STY include styles
+      'https://static.bbci.co.uk', // STY Includes
       "'unsafe-inline'",
     ],
     canonicalNonLive: [
@@ -348,6 +356,7 @@ const directives = {
       'https://news.test.files.bbci.co.uk', // STY includes
       'https://static.bbc.co.uk', // STY include
       'http://static.bbc.co.uk', // STY include
+      'https://static.bbci.co.uk', // STY Includes
       "'unsafe-inline'",
     ],
   },
@@ -452,7 +461,7 @@ const helmetCsp = ({ isAmp, isLive }) => ({
 });
 
 const injectCspHeader = (req, res, next) => {
-  const { isAmp } = getRouteProps(routes, req.url);
+  const { isAmp } = getRouteProps(req.url);
   const originHeader = req.headers['bbc-origin'];
   const { origin } = getOriginContext(originHeader);
 

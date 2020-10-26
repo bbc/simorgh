@@ -62,6 +62,9 @@
     },
     "language-subtag-registry@*": {
       "reason": "Licensed under MIT; https://github.com/mattcg/language-subtag-registry#credits-and-collaboration"
+    },
+    "tslib@*": {
+      "reason": "Licenced under BSD Zero Clause license; https://github.com/microsoft/tslib/blob/master/LICENSE.txt"
     }
   }
 }

@@ -1,6 +1,12 @@
 import React from 'react';
+import { render, act } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import WithLoading from '.';
+
+const wait = duration =>
+  new Promise(resolve => {
+    setTimeout(resolve, duration);
+  });
 
 describe('withLoading HOC', () => {
   const Component = () => <h1>Hola</h1>;
@@ -18,5 +24,43 @@ describe('withLoading HOC', () => {
       `should return the passed in component`,
       <LoadingHOC />,
     );
+  });
+
+  describe(`and the loading indicator`, () => {
+    it(`should not show the loading indicator before a set amount of time`, async () => {
+      let queryByTestId;
+
+      await act(async () => {
+        ({ queryByTestId } = render(<LoadingHOC loading />));
+
+        await wait(400);
+      });
+
+      expect(queryByTestId('loading')).not.toBeInTheDocument();
+    });
+
+    it(`should show the loading indicator after a set amount of time`, async () => {
+      let queryByTestId;
+
+      await act(async () => {
+        ({ queryByTestId } = render(<LoadingHOC loading />));
+
+        await wait(600);
+      });
+
+      expect(queryByTestId('loading')).toBeInTheDocument();
+    });
+
+    it(`should not show the loading indicator if loading is false (even after a set amount of time)`, async () => {
+      let queryByTestId;
+
+      await act(async () => {
+        ({ queryByTestId } = render(<LoadingHOC loading={false} />));
+
+        await wait(600);
+      });
+
+      expect(queryByTestId('loading')).not.toBeInTheDocument();
+    });
   });
 });
