@@ -1,5 +1,4 @@
 import path from 'path';
-
 import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ChunkExtractor } from '@loadable/server';
@@ -7,7 +6,6 @@ import { CacheProvider } from '@emotion/core';
 import createEmotionServer from 'create-emotion-server';
 import createCache from '@emotion/cache';
 import { Helmet } from 'react-helmet';
-
 import { ServerApp } from '#app/containers/App';
 import getAssetOrigins from '../utilities/getAssetOrigins';
 import DocumentComponent from './component';
