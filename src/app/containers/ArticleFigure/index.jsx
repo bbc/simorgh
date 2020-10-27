@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   string,
   number,
@@ -13,6 +13,7 @@ import Grid from '@bbc/psammead-grid';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const renderCopyright = copyright =>
   copyright && <Copyright>{copyright}</Copyright>;
@@ -34,6 +35,7 @@ const ArticleFigure = ({
   srcset,
   showCopyright,
 }) => {
+  const { dir } = useContext(ServiceContext);
   let parentColumns = {
     group0: 6,
     group1: 6,
@@ -66,7 +68,7 @@ const ArticleFigure = ({
 
   return (
     <Figure>
-      <Grid enableGelGutters columns={parentColumns}>
+      <Grid dir={dir} enableGelGutters columns={parentColumns}>
         <Grid
           item
           startOffset={{
