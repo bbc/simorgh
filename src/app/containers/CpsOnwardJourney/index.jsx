@@ -146,6 +146,10 @@ OptionallyRenderedSkipWrapper.defaultProps = {
   skipLink: null,
 };
 
+const StyledGridWrapper = styled(GridWrapper)`
+  padding-bottom: 2rem;
+`;
+
 const CpsOnwardJourney = ({
   labelId,
   title,
@@ -166,9 +170,9 @@ const CpsOnwardJourney = ({
   const isMostWatched = pageType === 'mostWatched';
   const a11yAttributes = isMostWatched
     ? {
-        forwaredAs: 'div',
+        as: 'div',
       }
-    : { forwaredAs: 'section', role: 'region', 'aria-labelledby': labelId };
+    : { as: 'section', role: 'region', 'aria-labelledby': labelId };
 
   const Wrapper = isMediaContent
     ? styled(LargeGrid)`` // Necessary for styling
@@ -185,15 +189,9 @@ const CpsOnwardJourney = ({
         {children}
       </Wrapper>
     ) : (
-      <GridWrapper
-        data-e2e={labelId}
-        {...a11yAttributes}
-        css={css`
-          padding-bottom: 2rem;
-        `}
-      >
+      <StyledGridWrapper data-e2e={labelId} {...a11yAttributes}>
         <LegacyGridItemLarge dir={dir}>{children}</LegacyGridItemLarge>
-      </GridWrapper>
+      </StyledGridWrapper>
     );
 
   CpsOnwardJourneyWrapper.propTypes = {
