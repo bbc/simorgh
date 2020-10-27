@@ -3,10 +3,10 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import { imageModelPropTypes } from '#models/propTypes/image';
 import ArticleFigure from '../ArticleFigure';
 import {
-  GridItemConstrainedLargeNoMargin,
-  GridItemConstrainedMedium,
-  GridItemConstrainedSmall,
-} from '#lib/styledGrid';
+  GridItemLargeNoMargin,
+  GridItemMedium,
+  GridItemSmall,
+} from '#app/components/Grid';
 import { createSrcset } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import urlWithPageAnchor from '#lib/utilities/pageAnchor';
@@ -58,25 +58,17 @@ const ImageContainer = ({ blocks, position }) => {
   const srcSet = createSrcset(originCode, locator, width);
   const lazyLoad = shouldLazyLoad(position);
 
-  let Wrapper = GridItemConstrainedLargeNoMargin;
+  let GridWrapper = GridItemLargeNoMargin;
 
   if (height === width) {
-    Wrapper = GridItemConstrainedMedium;
+    GridWrapper = GridItemMedium;
   }
   if (height > width) {
-    Wrapper = GridItemConstrainedSmall;
+    GridWrapper = GridItemSmall;
   }
 
-  // This grid contain will be refactored in
-  // https://github.com/bbc/simorgh/issues/1369
-  // https://github.com/bbc/simorgh/issues/1319
   return (
-    <Wrapper
-      padding={{
-        group2: '0px',
-        group3: '0px',
-      }}
-    >
+    <GridWrapper>
       <ArticleFigure
         alt={altText}
         captionBlock={captionBlock}
@@ -91,7 +83,7 @@ const ImageContainer = ({ blocks, position }) => {
         fade
         type="image"
       />
-    </Wrapper>
+    </GridWrapper>
   );
 };
 
