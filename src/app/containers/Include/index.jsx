@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
-import styled from 'styled-components';
 import { pathOr } from 'ramda';
 
 import EmbedError from '@bbc/psammead-embed-error';
@@ -9,7 +8,7 @@ import { INCLUDE_RENDERED } from '#lib/logger.const';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import { GridItemMedium } from '#app/components/Grid';
 
 import Canonical from './canonical';
 import Idt2Canonical from './canonical/Idt2';
@@ -29,10 +28,6 @@ const componentsToRender = {
     vj: props => <Canonical {...props} />,
   },
 };
-
-const FallbackGrid = styled(GridItemConstrainedMedium)`
-  display: grid;
-`;
 
 const IncludeContainer = props => {
   const { isAmp, canonicalLink } = useContext(RequestContext);
@@ -56,7 +51,7 @@ const IncludeContainer = props => {
 
   if (!isAmpSupported && isAmp) {
     return (
-      <FallbackGrid>
+      <GridItemMedium>
         <EmbedError
           message={errorMessage}
           link={{
@@ -64,7 +59,7 @@ const IncludeContainer = props => {
             href: `${canonicalLink}#include-${index + 1}`,
           }}
         />
-      </FallbackGrid>
+      </GridItemMedium>
     );
   }
 

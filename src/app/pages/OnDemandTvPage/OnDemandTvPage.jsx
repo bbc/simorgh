@@ -77,14 +77,9 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     durationISO8601,
   } = pageData;
 
-  const {
-    lang,
-    timezone,
-    datetimeLocale,
-    dir,
-    service,
-    translations,
-  } = useContext(ServiceContext);
+  const { lang, timezone, datetimeLocale, service, translations } = useContext(
+    ServiceContext,
+  );
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
 
@@ -145,13 +140,11 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       <StyledGelPageGrid
         forwardedAs="main"
         role="main"
-        dir={dir}
         columns={getGroups(6, 6, 6, 6, 8, 20)}
         enableGelGutters
       >
         <Grid
           item
-          dir={dir}
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           columns={getGroups(6, 6, 6, 6, 6, 12)}
           margins={getGroups(true, true, true, true, false, false)}
@@ -184,7 +177,6 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         </Grid>
         <Grid
           item
-          dir={dir}
           columns={getGroups(6, 6, 6, 6, 5, 10)}
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           margins={getGroups(true, true, true, true, false, false)}

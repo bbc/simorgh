@@ -38,10 +38,6 @@ exports[`ParagraphContainer should render correctly 1`] = `
   color: #B80000;
 }
 
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 1rem;
@@ -56,47 +52,55 @@ exports[`ParagraphContainer should render correctly 1`] = `
   }
 }
 
-@media (max-width:25rem) {
+@media (max-width:14.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
     padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
+    padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
+    margin-left: 20%;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
+    margin-left: 40%;
   }
 }
 
 @supports (display:grid) {
   .c0 {
-    max-width: initial;
+    display: block;
   }
 }
 
 <div
   class="c0"
+  dir="ltr"
 >
   <p
     class="c1"
@@ -157,10 +161,6 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
   margin: 0;
 }
 
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 1rem;
@@ -175,47 +175,55 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
   }
 }
 
-@media (max-width:25rem) {
+@media (max-width:14.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
     padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
+    padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
+    margin-left: 20%;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
+    margin-left: 40%;
   }
 }
 
 @supports (display:grid) {
   .c0 {
-    max-width: initial;
+    display: block;
   }
 }
 
 <div
   class="c0"
+  dir="ltr"
 >
   <p
     class="c1"

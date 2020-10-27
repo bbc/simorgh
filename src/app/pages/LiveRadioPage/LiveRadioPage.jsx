@@ -41,7 +41,6 @@ const LiveRadioPage = ({ pageData }) => {
   const {
     script,
     service,
-    dir,
     lang,
     liveRadioOverrides,
     translations,
@@ -84,7 +83,6 @@ const LiveRadioPage = ({ pageData }) => {
       <StyledGelPageGrid
         forwardedAs="main"
         role="main"
-        dir={dir}
         columns={{
           group0: 6,
           group1: 6,
@@ -97,7 +95,6 @@ const LiveRadioPage = ({ pageData }) => {
       >
         <Grid
           item
-          dir={dir}
           startOffset={{
             group0: 1,
             group1: 1,
