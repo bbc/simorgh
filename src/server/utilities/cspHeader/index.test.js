@@ -58,6 +58,7 @@ describe('cspHeader', () => {
         'https://gel.files.bbci.co.uk',
         'https://ws-downloads.files.bbci.co.uk',
         'https://news.files.bbci.co.uk',
+        "'self'",
       ],
       frameSrcExpectation: [
         'https://polling.bbc.co.uk',
@@ -153,6 +154,7 @@ describe('cspHeader', () => {
         'https://ws-downloads.files.bbci.co.uk',
         'https://static.bbci.co.uk',
         'https://news.files.bbci.co.uk',
+        "'self'",
       ],
       frameSrcExpectation: [
         'https://emp.bbc.com',
@@ -292,6 +294,7 @@ describe('cspHeader', () => {
         'https://gel.files.bbci.co.uk',
         'https://ws-downloads.files.bbci.co.uk',
         'https://news.test.files.bbci.co.uk',
+        "'self'",
       ],
       frameSrcExpectation: [
         'https://polling.bbc.co.uk',
@@ -402,6 +405,7 @@ describe('cspHeader', () => {
         'https://ws-downloads.files.bbci.co.uk',
         'https://static.bbci.co.uk',
         'https://news.test.files.bbci.co.uk',
+        "'self'",
       ],
       frameSrcExpectation: [
         'https://emp.bbc.com',

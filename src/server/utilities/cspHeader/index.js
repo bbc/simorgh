@@ -365,23 +365,27 @@ const directives = {
       'https://gel.files.bbci.co.uk', // Reith fonts
       'https://ws-downloads.files.bbci.co.uk', // Other WS fonts
       'https://news.files.bbci.co.uk', // STY Includes
+      "'self'",
     ],
     canonicalLive: [
       'https://gel.files.bbci.co.uk', // Reith fonts
       'https://ws-downloads.files.bbci.co.uk', // Other WS fonts
       'https://static.bbci.co.uk', // STY includes
       'https://news.files.bbci.co.uk', // STY Includes
+      "'self'",
     ],
     ampNonLive: [
       'https://gel.files.bbci.co.uk', // Reith fonts
       'https://ws-downloads.files.bbci.co.uk', // Other WS fonts
       'https://news.test.files.bbci.co.uk', // STY Includes
+      "'self'",
     ],
     canonicalNonLive: [
       'https://gel.files.bbci.co.uk', // Reith fonts
       'https://ws-downloads.files.bbci.co.uk', // Other WS fonts
       'https://static.bbci.co.uk', // STY includes
       'https://news.test.files.bbci.co.uk', // STY Includes
+      "'self'",
     ],
   },
   mediaSrc: {
