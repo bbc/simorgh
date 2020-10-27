@@ -1,13 +1,13 @@
 import React from 'react';
 import { string, shape, number } from 'prop-types';
 import { AmpImg } from '@bbc/psammead-image';
-import { GridItemConstrainedMedium } from '#app/components/Grid';
+import { GridItemMedium } from '#app/components/Grid';
 
 const Idt2Amp = ({ imageBlock }) =>
   imageBlock ? (
-    <GridItemConstrainedMedium>
+    <GridItemMedium>
       <AmpImg {...imageBlock} />
-    </GridItemConstrainedMedium>
+    </GridItemMedium>
   ) : null;
 
 Idt2Amp.propTypes = {

@@ -3,9 +3,9 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import { imageModelPropTypes } from '#models/propTypes/image';
 import ArticleFigure from '../ArticleFigure';
 import {
-  GridItemConstrainedLargeNoMargin,
-  GridItemConstrainedMedium,
-  GridItemConstrainedSmall,
+  GridItemLargeNoMargin,
+  GridItemMedium,
+  GridItemSmall,
 } from '#app/components/Grid';
 import { createSrcset } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
@@ -60,13 +60,13 @@ const ImageContainer = ({ blocks, position }) => {
   const srcSet = createSrcset(originCode, locator, width);
   const lazyLoad = shouldLazyLoad(position);
 
-  let Wrapper = GridItemConstrainedLargeNoMargin;
+  let Wrapper = GridItemLargeNoMargin;
 
   if (height === width) {
-    Wrapper = GridItemConstrainedMedium;
+    Wrapper = GridItemMedium;
   }
   if (height > width) {
-    Wrapper = GridItemConstrainedSmall;
+    Wrapper = GridItemSmall;
   }
 
   // This grid contain will be refactored in

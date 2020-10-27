@@ -8,7 +8,7 @@ import { INCLUDE_RENDERED } from '#lib/logger.const';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
-import { GridItemConstrainedMedium } from '#app/components/Grid';
+import { GridItemMedium } from '#app/components/Grid';
 
 import Canonical from './canonical';
 import Idt2Canonical from './canonical/Idt2';
@@ -51,7 +51,7 @@ const IncludeContainer = props => {
 
   if (!isAmpSupported && isAmp) {
     return (
-      <GridItemConstrainedMedium>
+      <GridItemMedium>
         <EmbedError
           message={errorMessage}
           link={{
@@ -59,7 +59,7 @@ const IncludeContainer = props => {
             href: `${canonicalLink}#include-${index + 1}`,
           }}
         />
-      </GridItemConstrainedMedium>
+      </GridItemMedium>
     );
   }
 

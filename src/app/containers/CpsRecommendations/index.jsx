@@ -10,7 +10,7 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import CpsOnwardJourney from '../CpsOnwardJourney';
-import { GridItemConstrainedMediumNoMargin } from '#app/components/Grid';
+import { GridItemMediumNoMargin } from '#app/components/Grid';
 import RecommendationsPromo from './RecommendationsPromo';
 import RecommendationsPromoList from './RecommendationsPromoList';
 
@@ -50,7 +50,7 @@ const CpsRecommendations = ({ items, parentColumns }) => {
   };
 
   return (
-    <GridItemConstrainedMediumNoMargin>
+    <GridItemMediumNoMargin>
       <RecommendationsWrapper>
         <CpsOnwardJourney
           labelId="recommendations-heading"
@@ -66,7 +66,7 @@ const CpsRecommendations = ({ items, parentColumns }) => {
           skipLink={skipLinkProps}
         />
       </RecommendationsWrapper>
-    </GridItemConstrainedMediumNoMargin>
+    </GridItemMediumNoMargin>
   );
 };
 

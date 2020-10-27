@@ -134,7 +134,7 @@ export const GridWrapper = ({ as, ...props }) => (
   />
 );
 
-export const GridItemConstrainedSmall = styled(({ as, dir, ...props }) => (
+export const GridItemSmall = styled(({ as, dir, ...props }) => (
   <Grid
     {...props}
     forwardedAs={as}
@@ -161,7 +161,7 @@ export const GridItemConstrainedSmall = styled(({ as, dir, ...props }) => (
   ${layoutGridItemSmall}
 `;
 
-export const GridItemConstrainedMedium = ({
+export const GridItemMedium = ({
   as,
   gridColumnStart,
   gridSpan,
@@ -200,7 +200,7 @@ export const GridItemConstrainedMedium = ({
   />
 );
 
-export const GridItemConstrainedMediumNoMargin = ({
+export const GridItemMediumNoMargin = ({
   as,
   dir,
   gridColumnStart,
@@ -231,7 +231,7 @@ export const GridItemConstrainedMediumNoMargin = ({
   />
 );
 
-export const GridItemConstrainedLarge = ({ as, dir, ...props }) => (
+export const GridItemLarge = ({ as, dir, ...props }) => (
   <Grid
     {...props}
     dir={dir}
@@ -264,7 +264,7 @@ export const GridItemConstrainedLarge = ({ as, dir, ...props }) => (
   />
 );
 
-export const GridItemConstrainedLargeNoMargin = ({ as, dir, ...props }) => (
+export const GridItemLargeNoMargin = ({ as, dir, ...props }) => (
   <Grid
     {...props}
     forwardedAs={as}
@@ -293,7 +293,7 @@ export const GridItemConstrainedLargeNoMargin = ({ as, dir, ...props }) => (
 // The max-height must be 0 at Group 5 breakpoints so that
 // the item does not force the following sibling item downwards.
 
-const PopOutAtGroup5 = styled(GridItemConstrainedMedium)`
+const PopOutAtGroup5 = styled(GridItemMedium)`
   @supports (display: grid) {
     @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
       max-height: 0; /* [1] */
@@ -311,14 +311,14 @@ ArticlePageGrid.propTypes = {
   as: string,
 };
 
-GridItemConstrainedLarge.propTypes = {
+GridItemLarge.propTypes = {
   // eslint-disable-next-line react/require-default-props
   as: string,
   // eslint-disable-next-line react/require-default-props
   dir: string,
 };
 
-GridItemConstrainedLargeNoMargin.propTypes = {
+GridItemLargeNoMargin.propTypes = {
   // eslint-disable-next-line react/require-default-props
   as: string,
   // eslint-disable-next-line react/require-default-props
@@ -330,7 +330,7 @@ GridWrapper.propTypes = {
   as: string,
 };
 
-GridItemConstrainedMediumNoMargin.propTypes = {
+GridItemMediumNoMargin.propTypes = {
   // eslint-disable-next-line react/require-default-props
   as: string,
   // eslint-disable-next-line react/require-default-props
@@ -339,7 +339,7 @@ GridItemConstrainedMediumNoMargin.propTypes = {
   gridSpan: number,
 };
 
-GridItemConstrainedMedium.propTypes = {
+GridItemMedium.propTypes = {
   // eslint-disable-next-line react/require-default-props
   as: string,
   // eslint-disable-next-line react/require-default-props
@@ -348,12 +348,12 @@ GridItemConstrainedMedium.propTypes = {
   gridSpan: number,
 };
 
-GridItemConstrainedMediumNoMargin.defaultProps = {
+GridItemMediumNoMargin.defaultProps = {
   gridColumnStart: 5,
   gridSpan: 10,
 };
 
-GridItemConstrainedMedium.defaultProps = {
+GridItemMedium.defaultProps = {
   gridColumnStart: 5,
   gridSpan: 10,
 };

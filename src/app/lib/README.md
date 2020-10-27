@@ -8,7 +8,7 @@ NB This is not a global styles directory. Global styles should be avoided in all
 
 ## Logging
 
-Simorgh uses the [winston](https://github.com/winstonjs/winston) library for logging. 
+Simorgh uses the [winston](https://github.com/winstonjs/winston) library for logging.
 
 The logger requires `filename` as a parameter, which is written to the server log along with the timestamp e.g. `2020-01-01 12:00:00.000 info [server/index.jsx] ...`
 
@@ -22,7 +22,7 @@ const logger = nodeLogger(__filename);
 
 There are 5 different log levels available - `error`, `warn`, `info`, `debug`, `verbose`.
 
-The logger requires 2 parameters: `event` (string) and `message` (object). 
+The logger requires 2 parameters: `event` (string) and `message` (object).
 
 The event should be a constant, added to [logger.const.js](logger.const.js). When adding or updating values in this file, ensure that any relevant dashboards are also updated, as this information may be useful when investigating application issues.
 
@@ -31,6 +31,7 @@ The message should include detailed information, where possible, to assist engin
 Refer to [src/server/index.jsx](../../server/index.jsx) for implementation examples.
 
 To log an error:
+
 ```
 import { DATA_FETCH_ERROR } from '#lib/logger.const';
 
@@ -42,6 +43,7 @@ logger.error(DATA_FETCH_ERROR, {
 ```
 
 The same format applies for the other log levels:
+
 ```
 const message = {
   details: 'some additional information'
@@ -50,12 +52,15 @@ const message = {
 
 logger.warn(EVENT_NAME, message);
 ```
+
 ```
 logger.info(EVENT_NAME, message);
 ```
+
 ```
 logger.debug(EVENT_NAME, message);
 ```
+
 ```
 logger.verbose(EVENT_NAME, message);
 ```
@@ -158,7 +163,7 @@ Therefore to meet all requirements we implement the following CSS grid where gut
 
 ### Nested grid usage
 
-As of [#1680](https://github.com/bbc/simorgh/pull/1680) there are a new set of containers called `NestedGridItem`s. They occupy the same part of the grid as the corresponding `GridItemConstrained` but have an internal grid which maps to it.
+As of [#1680](https://github.com/bbc/simorgh/pull/1680) there are a new set of containers called `NestedGridItem`s. They occupy the same part of the grid as the corresponding `GridItem` but have an internal grid which maps to it.
 
 <img width="1280" alt="A screenshot of nested grid items" src="https://user-images.githubusercontent.com/19362408/57520118-cdc09000-7314-11e9-8657-d5d798c0b018.png"> 
 In this screenshot the external grid is a very pale blue and the internal grid of the `NestedGridItemLarge` is red.

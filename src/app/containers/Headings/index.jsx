@@ -8,10 +8,7 @@ import { headlineModelPropTypes } from '#models/propTypes/headline';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';
 import idSanitiser from '#lib/utilities/idSanitiser';
-import {
-  GridItemConstrainedMedium,
-  GridItemConstrainedLarge,
-} from '#app/components/Grid';
+import { GridItemMedium, GridItemLarge } from '#app/components/Grid';
 
 const StyledHeadline = styled(Headline)`
   :focus {
@@ -26,8 +23,8 @@ const Headings = {
 };
 
 const GridConstraints = {
-  headline: GridItemConstrainedLarge,
-  subheadline: GridItemConstrainedMedium,
+  headline: GridItemLarge,
+  subheadline: GridItemMedium,
 };
 
 const sanitiseSubheadline = (type, text) => {

@@ -4,7 +4,7 @@ import { string, number } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { GEL_SPACING_QUIN } from '@bbc/gel-foundations/spacings';
-import { GridItemConstrainedMedium } from '#app/components/Grid';
+import { GridItemMedium } from '#app/components/Grid';
 
 /**
  * Prevent Includes from being wider than their parent, whilst
@@ -36,7 +36,7 @@ const CanonicalIncludeContainer = ({ html, type, index }) => {
   const configureAdditionalScripts = `require.config({ paths:${paths} });`;
 
   return (
-    <GridItemConstrainedMedium>
+    <GridItemMedium>
       {requireIncludeTypes.includes(type) && (
         <Helmet>
           <script
@@ -52,7 +52,7 @@ const CanonicalIncludeContainer = ({ html, type, index }) => {
         id={`include-${index + 1}`}
         tabIndex="-1"
       />
-    </GridItemConstrainedMedium>
+    </GridItemMedium>
   );
 };
 
