@@ -90,6 +90,7 @@ const StyledLargeGrid = styled(LargeGrid)`
 
 const LegacyGridItemLarge = styled(GridItemLarge)`
   ${gridMarginSmall}
+  padding-bottom: 2rem;
 `;
 
 const StyledSectionLabel = styled(SectionLabel)`
@@ -146,10 +147,6 @@ OptionallyRenderedSkipWrapper.defaultProps = {
   skipLink: null,
 };
 
-const StyledGridWrapper = styled(GridWrapper)`
-  padding-bottom: 2rem;
-`;
-
 const CpsOnwardJourney = ({
   labelId,
   title,
@@ -172,7 +169,7 @@ const CpsOnwardJourney = ({
     ? {
         as: 'div',
       }
-    : { forwardedAs: 'section', role: 'region', 'aria-labelledby': labelId };
+    : { as: 'section', role: 'region', 'aria-labelledby': labelId };
 
   const Wrapper = isMediaContent
     ? styled(LargeGrid)`` // Necessary for styling
@@ -189,9 +186,9 @@ const CpsOnwardJourney = ({
         {children}
       </Wrapper>
     ) : (
-      <StyledGridWrapper data-e2e={labelId} {...a11yAttributes}>
+      <GridWrapper data-e2e={labelId} {...a11yAttributes}>
         <LegacyGridItemLarge dir={dir}>{children}</LegacyGridItemLarge>
-      </StyledGridWrapper>
+      </GridWrapper>
     );
 
   CpsOnwardJourneyWrapper.propTypes = {
