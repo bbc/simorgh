@@ -107,13 +107,11 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       <StyledGelPageGrid
         forwardedAs="main"
         role="main"
-        dir={dir}
         columns={getGroups(6, 6, 6, 6, 8, 20)}
         enableGelGutters
       >
         <Grid
           item
-          dir={dir}
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           columns={getGroups(6, 6, 6, 6, 6, 12)}
           margins={getGroups(true, true, true, true, false, false)}
@@ -123,7 +121,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             columns={getGroups(6, 6, 6, 6, 6, 6)}
             enableGelGutters
           >
-            <Grid dir={dir} item columns={getGroups(6, 6, 4, 4, 4, 4)}>
+            <Grid item columns={getGroups(6, 6, 4, 4, 4, 4)}>
               <StyledRadioHeadingContainer
                 idAttr={idAttr}
                 brandTitle={brandTitle}
@@ -131,8 +129,8 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
               />
               <OnDemandParagraphContainer text={summary} />
             </Grid>
-            <Grid dir={dir} item columns={getGroups(0, 0, 2, 2, 2, 2)}>
-              <EpisodeImage imageUrl={imageUrl} dir={dir} />
+            <Grid item columns={getGroups(0, 0, 2, 2, 2, 2)}>
+              <EpisodeImage imageUrl={imageUrl} />
             </Grid>
           </StyledGelWrapperGrid>
           {mediaIsAvailable ? (

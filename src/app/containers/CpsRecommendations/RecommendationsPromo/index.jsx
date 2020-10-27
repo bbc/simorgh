@@ -31,7 +31,6 @@ const RecommendationsPromo = ({ promo, dir }) => {
         group5: 1,
       }}
       enableGelGutters
-      dir={dir}
     >
       <StyledStoryPromoWrapper>
         <StoryPromo
