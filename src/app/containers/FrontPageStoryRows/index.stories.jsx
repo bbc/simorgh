@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Grid from '@bbc/psammead-grid';
 import { withKnobs } from '@storybook/addon-knobs';
+import Grid from '#app/components/Grid';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { topStoryColumns } from './storyColumns';
@@ -46,7 +46,7 @@ const getRow = (RowType, dir = 'ltr', displayImages = true) => {
         pageType="article"
         service="news"
       >
-        <Grid enableGelGutters columns={topStoryColumns} dir={dir}>
+        <Grid enableGelGutters columns={topStoryColumns}>
           <RowType dir={dir} displayImages={displayImages} />
         </Grid>
       </RequestContextProvider>

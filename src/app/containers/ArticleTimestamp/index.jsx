@@ -30,7 +30,6 @@ const ArticleTimestamp = ({
     service,
     timezone,
     altCalendar,
-    dir,
   } = useContext(ServiceContext);
 
   if (!isValidDateTime(firstPublished) || !isValidDateTime(lastPublished)) {
@@ -63,7 +62,7 @@ const ArticleTimestamp = ({
     suffix: articleTimestampSuffix,
   };
 
-  const Wrapper = popOut ? PopOutGridItemMedium : GridItemMedium;
+  const GridWrapper = popOut ? PopOutGridItemMedium : GridItemMedium;
 
   const displayLastUpdatedTimestamp = shouldDisplayLastUpdatedTimestamp({
     minutesTolerance,
@@ -72,7 +71,7 @@ const ArticleTimestamp = ({
   });
 
   return (
-    <Wrapper className={className} dir={dir}>
+    <GridWrapper className={className}>
       <FirstPublishedTimestamp {...timestampProps} {...firstPublishedProps} />
       {displayLastUpdatedTimestamp && (
         // Div has been used for No CSS formatting see #5554
@@ -80,7 +79,7 @@ const ArticleTimestamp = ({
           <LastUpdatedTimestamp {...timestampProps} {...lastPublishedProps} />
         </div>
       )}
-    </Wrapper>
+    </GridWrapper>
   );
 };
 

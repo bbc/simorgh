@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled, { css } from 'styled-components';
 import { string, node, number } from 'prop-types';
-import Grid from '@bbc/psammead-grid';
+import GRID from '@bbc/psammead-grid';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -15,6 +15,13 @@ import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
+import { ServiceContext } from '#contexts/ServiceContext';
+
+const Grid = props => {
+  const { dir } = useContext(ServiceContext);
+
+  return <GRID dir={dir} {...props} />;
+};
 
 const fourOfSixColumnsMaxWidthGroup4 = `30rem`;
 /* (group4ColWidth 6.75rem * 4) + (3 * 16px gutters) = 27rem + 3rem = 30rem */
@@ -118,11 +125,10 @@ export const GridWrapper = ({ as, ...props }) => (
   />
 );
 
-export const GridItemSmall = styled(({ as, dir, ...props }) => (
+export const GridItemSmall = styled(({ as, ...props }) => (
   <Grid
     {...props}
     forwardedAs={as}
-    dir={dir}
     item
     startOffset={{
       group0: 1,
@@ -145,17 +151,10 @@ export const GridItemSmall = styled(({ as, dir, ...props }) => (
   ${layoutGridItemSmall}
 `;
 
-export const GridItemMedium = ({
-  as,
-  gridColumnStart,
-  gridSpan,
-  dir,
-  ...props
-}) => (
+export const GridItemMedium = ({ as, gridColumnStart, gridSpan, ...props }) => (
   <Grid
     {...props}
     forwardedAs={as}
-    dir={dir}
     item
     margins={{
       group0: true,
@@ -186,7 +185,6 @@ export const GridItemMedium = ({
 
 export const GridItemMediumNoMargin = ({
   as,
-  dir,
   gridColumnStart,
   gridSpan,
   ...props
@@ -194,7 +192,6 @@ export const GridItemMediumNoMargin = ({
   <Grid
     {...props}
     forwardedAs={as}
-    dir={dir}
     item
     startOffset={{
       group0: 1,
@@ -215,10 +212,9 @@ export const GridItemMediumNoMargin = ({
   />
 );
 
-export const GridItemLarge = ({ as, dir, ...props }) => (
+export const GridItemLarge = ({ as, ...props }) => (
   <Grid
     {...props}
-    dir={dir}
     forwardedAs={as}
     item
     margins={{
@@ -248,11 +244,10 @@ export const GridItemLarge = ({ as, dir, ...props }) => (
   />
 );
 
-export const GridItemLargeNoMargin = ({ as, dir, ...props }) => (
+export const GridItemLargeNoMargin = ({ as, ...props }) => (
   <Grid
     {...props}
     forwardedAs={as}
-    dir={dir}
     item
     startOffset={{
       group0: 1,
@@ -292,22 +287,18 @@ export const PopOutGridItemMedium = props => {
 
 GridItemLarge.propTypes = {
   as: string,
-  dir: string,
 };
 
 GridItemLarge.defaultProps = {
   as: undefined,
-  dir: 'ltr',
 };
 
 GridItemLargeNoMargin.propTypes = {
   as: string,
-  dir: string,
 };
 
 GridItemLargeNoMargin.defaultProps = {
   as: undefined,
-  dir: 'ltr',
 };
 
 GridWrapper.propTypes = {
@@ -320,26 +311,22 @@ GridWrapper.defaultProps = {
 
 GridItemMediumNoMargin.propTypes = {
   as: string,
-  dir: string,
   gridColumnStart: number,
   gridSpan: number,
 };
 
 GridItemMediumNoMargin.defaultProps = {
   as: undefined,
-  dir: 'ltr',
 };
 
 GridItemMedium.propTypes = {
   as: string,
-  dir: string,
   gridColumnStart: number,
   gridSpan: number,
 };
 
 GridItemMedium.defaultProps = {
   as: undefined,
-  dir: 'ltr',
 };
 
 GridItemMediumNoMargin.defaultProps = {

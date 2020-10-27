@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import MediaPlayerContainer from '../MediaPlayer';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemMediumNoMargin } from '#app/components/Grid';
 import {
   mediaPlayerPropTypes,
@@ -10,10 +9,9 @@ import {
 
 const ArticleMediaPlayerContainer = ({ blocks }) => {
   const { id } = useContext(RequestContext);
-  const { dir } = useContext(ServiceContext);
 
   return (
-    <GridItemMediumNoMargin dir={dir}>
+    <GridItemMediumNoMargin>
       <MediaPlayerContainer
         blocks={blocks}
         assetId={id}

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { imageModelPropTypes } from '#models/propTypes/image';
 import ArticleFigure from '../ArticleFigure';
@@ -10,7 +10,6 @@ import {
 import { createSrcset } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import urlWithPageAnchor from '#lib/utilities/pageAnchor';
-import { ServiceContext } from '#contexts/ServiceContext';
 
 const DEFAULT_IMAGE_RES = 640;
 const LAZYLOAD_FROM_BLOCK = 3;
@@ -29,7 +28,6 @@ const shouldLazyLoad = position =>
   !!urlWithPageAnchor() || position[0] > LAZYLOAD_FROM_BLOCK;
 
 const ImageContainer = ({ blocks, position }) => {
-  const { dir } = useContext(ServiceContext);
   if (!blocks) {
     return null;
   }
@@ -60,17 +58,17 @@ const ImageContainer = ({ blocks, position }) => {
   const srcSet = createSrcset(originCode, locator, width);
   const lazyLoad = shouldLazyLoad(position);
 
-  let Wrapper = GridItemLargeNoMargin;
+  let GridWrapper = GridItemLargeNoMargin;
 
   if (height === width) {
-    Wrapper = GridItemMedium;
+    GridWrapper = GridItemMedium;
   }
   if (height > width) {
-    Wrapper = GridItemSmall;
+    GridWrapper = GridItemSmall;
   }
 
   return (
-    <Wrapper dir={dir}>
+    <GridWrapper>
       <ArticleFigure
         alt={altText}
         captionBlock={captionBlock}
@@ -85,7 +83,7 @@ const ImageContainer = ({ blocks, position }) => {
         fade
         type="image"
       />
-    </Wrapper>
+    </GridWrapper>
   );
 };
 

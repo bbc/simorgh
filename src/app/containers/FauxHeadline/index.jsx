@@ -28,7 +28,7 @@ const StyledFauxHeadline = styled(FauxHeadline)`
 `;
 
 const FauxHeadlineContainer = ({ blocks }) => {
-  const { script, service, dir } = useContext(ServiceContext);
+  const { script, service } = useContext(ServiceContext);
 
   const arrayOfFragments = path(
     ['0', 'model', 'blocks', '0', 'model', 'blocks'],
@@ -45,7 +45,7 @@ const FauxHeadlineContainer = ({ blocks }) => {
   );
 
   return (
-    <GridItemLarge dir={dir}>
+    <GridItemLarge>
       <StyledFauxHeadline script={script} service={service} aria-hidden="true">
         {renderText()}
       </StyledFauxHeadline>
