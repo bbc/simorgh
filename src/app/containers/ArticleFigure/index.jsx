@@ -83,7 +83,7 @@ const ArticleFigure = ({
             group2: height > width ? 4 : 6,
             group3: height > width ? 4 : 6,
             group4: height > width ? 4 : 6,
-            group5: height > width ? 6 : 12,
+            group5: height > width ? 10 : 12,
           }}
         >
           <ImageWithPlaceholder
