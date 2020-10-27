@@ -35,12 +35,8 @@ const CanonicalIncludeContainer = ({ html, type, index }) => {
 
   const configureAdditionalScripts = `require.config({ paths:${paths} });`;
 
-  const IncludeGrid = styled(GridItemConstrainedMedium)`
-    display: grid;
-  `;
-
   return (
-    <IncludeGrid>
+    <GridItemConstrainedMedium>
       {requireIncludeTypes.includes(type) && (
         <Helmet>
           <script
@@ -56,7 +52,7 @@ const CanonicalIncludeContainer = ({ html, type, index }) => {
         id={`include-${index + 1}`}
         tabIndex="-1"
       />
-    </IncludeGrid>
+    </GridItemConstrainedMedium>
   );
 };
 
