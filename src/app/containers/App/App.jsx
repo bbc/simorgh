@@ -1,13 +1,24 @@
-import { useEffect, useLayoutEffect, useState, useRef } from 'react';
+/* eslint-disable react/prop-types */
+import React, { useEffect, useLayoutEffect, useState, useRef } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router';
 import pick from 'ramda/src/pick';
 import mergeAll from 'ramda/src/mergeAll';
 import path from 'ramda/src/path';
+import styled from '@emotion/styled';
+import { C_GHOST, C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
 import getToggles from '#lib/utilities/getToggles';
 import routes from '#app/routes';
+
+const StyledApp = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: ${({ darkMode }) =>
+    darkMode ? C_MIDNIGHT_BLACK : C_GHOST};
+`;
 
 const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
   const pageType = path(['route', 'pageType'], routeProps);
@@ -88,13 +99,17 @@ export const App = ({ location, initialData, bbcOrigin, history }) => {
     }
   }, [routeHasChanged]);
 
-  return renderRoutes(routes, {
-    ...state,
-    bbcOrigin,
-    previousPath,
-    loading: routeHasChanged,
-    showAdsBasedOnLocation,
-  });
+  return (
+    <StyledApp darkMode={initialData.darkMode}>
+      {renderRoutes(routes, {
+        ...state,
+        bbcOrigin,
+        previousPath,
+        loading: routeHasChanged,
+        showAdsBasedOnLocation,
+      })}
+    </StyledApp>
+  );
 };
 
 export default withRouter(App);

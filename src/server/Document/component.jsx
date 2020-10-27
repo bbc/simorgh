@@ -1,6 +1,5 @@
-/* eslint-disable react/no-danger */
+/* eslint-disable react/no-danger, react/prop-types */
 import React from 'react';
-import styled from '@emotion/styled';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
@@ -9,12 +8,10 @@ import {
   AMP_CONSENT_JS,
   AMP_ANALYTICS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
-import { C_GHOST, C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import ResourceHints from '#app/components/ResourceHints';
 import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
 
-/* eslint-disable react/prop-types */
 const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
@@ -23,13 +20,6 @@ const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
   const headScript = helmet.script.toComponent();
   const serialisedData = serialiseForScript(data);
   const scriptsAllowed = !isAmp;
-
-  const StyledDiv = styled.div`
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: ${data.darkMode ? C_MIDNIGHT_BLACK : C_GHOST};
-  `;
 
   const { html, css, ids } = app;
 
@@ -89,7 +79,7 @@ const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
         )}
       </head>
       <body {...ampGeoPendingAttrs}>
-        <StyledDiv id="root" dangerouslySetInnerHTML={{ __html: html }} />
+        <div id="root" dangerouslySetInnerHTML={{ __html: html }} />
         {scriptsAllowed && (
           <script
             dangerouslySetInnerHTML={{
