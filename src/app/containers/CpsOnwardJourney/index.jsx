@@ -172,7 +172,7 @@ const CpsOnwardJourney = ({
     ? {
         as: 'div',
       }
-    : { as: 'section', role: 'region', 'aria-labelledby': labelId };
+    : { forwardedAs: 'section', role: 'region', 'aria-labelledby': labelId };
 
   const Wrapper = isMediaContent
     ? styled(LargeGrid)`` // Necessary for styling
