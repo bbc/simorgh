@@ -33,7 +33,7 @@ import {
   gelGridMargin,
 } from '#app/components/Grid';
 
-const constrainedLargeGridColumns = {
+const LargeGridColumns = {
   group0: 1,
   group1: 1,
   group2: 1,
@@ -42,10 +42,10 @@ const constrainedLargeGridColumns = {
   group5: 12,
 };
 
-const ConstrainedLargeGrid = ({ children, ...gridProps }) => (
+const LargeGrid = ({ children, ...gridProps }) => (
   <Grid
     {...gridProps}
-    columns={constrainedLargeGridColumns}
+    columns={LargeGridColumns}
     margins={{
       group0: true,
       group1: true,
@@ -67,7 +67,7 @@ const ConstrainedLargeGrid = ({ children, ...gridProps }) => (
   </Grid>
 );
 
-ConstrainedLargeGrid.propTypes = {
+LargeGrid.propTypes = {
   children: node.isRequired,
 };
 
@@ -78,7 +78,7 @@ const gridMarginSmall = css`
   }
 `;
 
-const StyledConstrainedLargeGrid = styled(ConstrainedLargeGrid)`
+const StyledLargeGrid = styled(LargeGrid)`
   ${gelGridMargin}
   ${gridMarginSmall}
   ${({ columnType }) =>
@@ -166,13 +166,13 @@ const CpsOnwardJourney = ({
   const isMostWatched = pageType === 'mostWatched';
   const a11yAttributes = isMostWatched
     ? {
-        as: 'div',
+        forwaredAs: 'div',
       }
-    : { as: 'section', role: 'region', 'aria-labelledby': labelId };
+    : { forwaredAs: 'section', role: 'region', 'aria-labelledby': labelId };
 
   const Wrapper = isMediaContent
-    ? styled(ConstrainedLargeGrid)`` // Necessary for styling
-    : StyledConstrainedLargeGrid;
+    ? styled(LargeGrid)`` // Necessary for styling
+    : StyledLargeGrid;
   const CpsOnwardJourneyWrapper = ({ children }) =>
     parentColumns ? (
       <Wrapper
@@ -205,7 +205,7 @@ const CpsOnwardJourney = ({
   const [singleContent] = content;
 
   const WrapperItem = ({ children }) => (
-    <Wrapper parentColumns={constrainedLargeGridColumns} item>
+    <Wrapper parentColumns={LargeGridColumns} item>
       {children}
     </Wrapper>
   );
