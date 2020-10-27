@@ -12,7 +12,7 @@ exports[`Canonical Story Page Includes I can see a fallback image when there are
 
 exports[`Canonical Story Page Includes IDT2 I can see a "dataPic" 1`] = `
 <script
-  src="https://news.test.files.bbci.co.uk/include/idt2/static/js/dataPic.8f264bc5.js"
+  src="https://news.test.files.bbci.co.uk/include/idt2/static/js/dataPic.651280db.js"
   type="text/javascript"
 />
 `;
