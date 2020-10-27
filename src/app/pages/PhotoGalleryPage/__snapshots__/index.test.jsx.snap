@@ -592,12 +592,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   }
 }
 
-@media (max-width:25rem) {
-  .c15 {
-    padding: 0 0px;
-  }
-}
-
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c15 {
     max-width: 66.67%;
@@ -607,7 +601,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c15 {
     max-width: 83.33%;
-    padding: 0 0px;
   }
 }
 
@@ -2336,12 +2329,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   }
 }
 
-@media (max-width:25rem) {
-  .c17 {
-    padding: 0 0px;
-  }
-}
-
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c17 {
     max-width: 66.67%;
@@ -2351,7 +2338,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c17 {
     max-width: 83.33%;
-    padding: 0 0px;
   }
 }
 
@@ -7846,12 +7832,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-@media (max-width:25rem) {
-  .c18 {
-    padding: 0 0px;
-  }
-}
-
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c18 {
     max-width: 66.67%;
@@ -7861,7 +7841,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c18 {
     max-width: 83.33%;
-    padding: 0 0px;
   }
 }
 

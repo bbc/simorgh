@@ -93,72 +93,6 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c4 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c4 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c4 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c4 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c4 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c4 {
-    display: block;
-  }
-}
-
 <figure
   class="c0"
 >
@@ -185,10 +119,6 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
         </noscript>
       </div>
     </div>
-    <div
-      class="c4"
-      dir="ltr"
-    />
   </div>
 </figure>
 `;
@@ -286,72 +216,6 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c4 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c4 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c4 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c4 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c4 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c4 {
-    display: block;
-  }
-}
-
 <figure
   class="c0"
 >
@@ -376,10 +240,6 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
         />
       </div>
     </div>
-    <div
-      class="c4"
-      dir="ltr"
-    />
   </div>
 </figure>
 `;
@@ -1351,72 +1211,6 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c6 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c6 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c6 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c6 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c6 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c6 {
-    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c6 {
-    display: block;
-  }
-}
-
 <figure
   class="c0"
 >
@@ -1452,10 +1246,6 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
         </p>
       </div>
     </div>
-    <div
-      class="c6"
-      dir="ltr"
-    />
   </div>
 </figure>
 `;
@@ -1559,72 +1349,6 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c5 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c5 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c5 {
-    width: calc(6/4*(100% - 4 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
-    width: calc(5/5*(100% - 5 * 1rem) + 4 * 1rem - 0%);
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c5 {
-    width: calc(5/4*(100% - 4 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    width: calc(10/8*(100% - 8 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c5 {
-    display: block;
-  }
-}
-
 <figure
   class="c0"
 >
@@ -1647,10 +1371,6 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
         />
       </div>
     </div>
-    <div
-      class="c5"
-      dir="ltr"
-    />
   </div>
 </figure>
 `;
@@ -1754,72 +1474,6 @@ exports[`ArticleFigure should render an image and caption for a square with nest
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c5 {
-    width: calc(6/5*(100% - 5 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c5 {
-    width: calc(6/5*(100% - 5 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c5 {
-    width: calc(6/5*(100% - 5 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
-    width: calc(5/5*(100% - 5 * 1rem) + 4 * 1rem - 0%);
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c5 {
-    width: calc(5/5*(100% - 5 * 1rem) + 4 * 1rem - 0%);
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    width: calc(10/10*(100% - 10 * 1rem) + 9 * 1rem - 0%);
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c5 {
-    display: block;
-  }
-}
-
 <figure
   class="c0"
 >
@@ -1842,10 +1496,6 @@ exports[`ArticleFigure should render an image and caption for a square with nest
         />
       </div>
     </div>
-    <div
-      class="c5"
-      dir="ltr"
-    />
   </div>
 </figure>
 `;
@@ -1949,72 +1599,6 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c5 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c5 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c5 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c5 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c5 {
-    display: block;
-  }
-}
-
 <figure
   class="c0"
 >
@@ -2037,10 +1621,6 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
         />
       </div>
     </div>
-    <div
-      class="c5"
-      dir="ltr"
-    />
   </div>
 </figure>
 `;
@@ -3030,72 +2610,6 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c7 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c7 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c7 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c7 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c7 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c7 {
-    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c7 {
-    display: block;
-  }
-}
-
 <figure
   class="c0"
 >
@@ -3129,10 +2643,6 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
         </p>
       </div>
     </div>
-    <div
-      class="c7"
-      dir="ltr"
-    />
   </div>
 </figure>
 `;
