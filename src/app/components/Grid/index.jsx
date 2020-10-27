@@ -110,7 +110,7 @@ export const CPSPageGrid = ({ children, ...props }) => (
 export const GridWrapper = ({ as, ...props }) => (
   <GelPageGrid
     {...props}
-    forwardedAs={as}
+    as={as}
     enableGelGutters
     columns={{
       group0: 6,
@@ -126,7 +126,7 @@ export const GridWrapper = ({ as, ...props }) => (
 export const GridItemSmall = styled(({ as, ...props }) => (
   <Grid
     {...props}
-    forwardedAs={as}
+    as={as}
     item
     startOffset={{
       group0: 1,
@@ -152,7 +152,7 @@ export const GridItemSmall = styled(({ as, ...props }) => (
 export const GridItemMedium = ({ as, gridColumnStart, gridSpan, ...props }) => (
   <Grid
     {...props}
-    forwardedAs={as}
+    as={as}
     item
     margins={{
       group0: true,
@@ -189,7 +189,7 @@ export const GridItemMediumNoMargin = ({
 }) => (
   <Grid
     {...props}
-    forwardedAs={as}
+    as={as}
     item
     startOffset={{
       group0: 1,
@@ -213,7 +213,7 @@ export const GridItemMediumNoMargin = ({
 export const GridItemLarge = ({ as, ...props }) => (
   <Grid
     {...props}
-    forwardedAs={as}
+    as={as}
     item
     margins={{
       group0: true,
@@ -245,7 +245,7 @@ export const GridItemLarge = ({ as, ...props }) => (
 export const GridItemLargeNoMargin = ({ as, ...props }) => (
   <Grid
     {...props}
-    forwardedAs={as}
+    as={as}
     item
     startOffset={{
       group0: 1,
