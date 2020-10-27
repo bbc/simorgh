@@ -275,7 +275,7 @@ export const GridItemConstrainedLargeNoMargin = ({ as, dir, ...props }) => (
       group1: 1,
       group2: 1,
       group3: 1,
-      group4: 3,
+      group4: 2,
       group5: 5,
     }}
     columns={{
