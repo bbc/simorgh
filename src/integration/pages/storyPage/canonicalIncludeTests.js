@@ -6,7 +6,6 @@ export default () => {
           'script[src*="https://news.test.files.bbci.co.uk/include/idt2/static/js/dataPic"]',
         );
         expect(scriptEl).toBeInTheDocument();
-        expect(scriptEl).toMatchSnapshot();
       });
     });
 
