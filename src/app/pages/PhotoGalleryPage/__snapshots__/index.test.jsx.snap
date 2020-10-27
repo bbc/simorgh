@@ -98,7 +98,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c20 {
+.c19 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -269,61 +269,37 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (max-width:14.9375rem) {
   .c9 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c9 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c9 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c9 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c9 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c9 {
-    width: calc(12/12*(100% - 12 * 1rem) + 11 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -335,61 +311,37 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (max-width:14.9375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c11 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c11 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c11 {
-    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -450,132 +402,42 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (max-width:14.9375rem) {
   .c17 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c17 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c17 {
-    width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c17 {
-    width: calc(4/5*(100% - 5 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c17 {
-    width: calc(4/4*(100% - 4 * 1rem) + 3 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c17 {
-    width: calc(10/8*(100% - 8 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @supports (display:grid) {
   .c17 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c19 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c19 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c19 {
-    width: calc(6/4*(100% - 4 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c19 {
-    width: calc(5/5*(100% - 5 * 1rem) + 4 * 1rem - 0%);
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c19 {
-    width: calc(5/4*(100% - 4 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c19 {
-    width: calc(10/8*(100% - 8 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c19 {
     display: block;
   }
 }
@@ -876,7 +738,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                       </div>
                     </div>
                     <div
-                      class="c19"
+                      class="c11"
                       dir="ltr"
                     >
                       <figcaption
@@ -911,7 +773,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                       dir="ltr"
                     >
                       <div
-                        class="c20"
+                        class="c19"
                       >
                         <div
                           class="lazyload-wrapper"
@@ -1007,7 +869,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                       dir="ltr"
                     >
                       <div
-                        class="c20"
+                        class="c19"
                       >
                         <div
                           class="lazyload-wrapper"
@@ -1831,7 +1693,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c22 {
+.c21 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -2006,61 +1868,37 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (max-width:14.9375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c11 {
-    width: calc(12/12*(100% - 12 * 1rem) + 11 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -2072,61 +1910,37 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (max-width:14.9375rem) {
   .c13 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c13 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c13 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c13 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c13 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c13 {
-    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -2187,132 +2001,42 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (max-width:14.9375rem) {
   .c19 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c19 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c19 {
-    width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c19 {
-    width: calc(4/5*(100% - 5 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c19 {
-    width: calc(4/4*(100% - 4 * 1rem) + 3 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c19 {
-    width: calc(10/8*(100% - 8 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @supports (display:grid) {
   .c19 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c21 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c21 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c21 {
-    width: calc(6/4*(100% - 4 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c21 {
-    width: calc(5/5*(100% - 5 * 1rem) + 4 * 1rem - 0%);
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c21 {
-    width: calc(5/4*(100% - 4 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c21 {
-    width: calc(10/8*(100% - 8 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c21 {
     display: block;
   }
 }
@@ -2645,7 +2369,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           </div>
                         </div>
                         <div
-                          class="c21"
+                          class="c13"
                           dir="ltr"
                         >
                           <figcaption
@@ -2680,7 +2404,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           dir="ltr"
                         >
                           <div
-                            class="c22"
+                            class="c21"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -2776,7 +2500,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           dir="ltr"
                         >
                           <div
-                            class="c22"
+                            class="c21"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -3970,61 +3694,37 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (max-width:14.9375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c11 {
-    width: calc(12/12*(100% - 12 * 1rem) + 11 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -4036,61 +3736,37 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (max-width:14.9375rem) {
   .c13 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c13 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c13 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c13 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c13 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c13 {
-    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -4104,60 +3780,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   .c26 {
     display: grid;
     position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c28 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c28 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c28 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c28 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c28 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c28 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -5547,61 +5169,37 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (max-width:14.9375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c11 {
-    width: calc(12/12*(100% - 12 * 1rem) + 11 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -5613,61 +5211,37 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (max-width:14.9375rem) {
   .c15 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c15 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c15 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c15 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c15 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c15 {
-    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -6816,7 +6390,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   padding-bottom: 1rem;
 }
 
-.c57 {
+.c56 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -6893,7 +6467,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   font-style: normal;
 }
 
-.c52 {
+.c51 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -6932,7 +6506,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c23 {
+.c22 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -6945,7 +6519,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c24 {
+.c23 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -6958,7 +6532,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c25 {
+.c24 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -6971,7 +6545,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c26 {
+.c25 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -6984,7 +6558,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c27 {
+.c26 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -6997,7 +6571,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c28 {
+.c27 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -7010,7 +6584,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c29 {
+.c28 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -7023,7 +6597,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c30 {
+.c29 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -7036,7 +6610,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c31 {
+.c30 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -7049,7 +6623,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c32 {
+.c31 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -7062,7 +6636,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c33 {
+.c32 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -7075,7 +6649,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c34 {
+.c33 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -7088,7 +6662,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c35 {
+.c34 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -7101,7 +6675,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c42 {
+.c41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7111,7 +6685,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   flex-direction: column;
 }
 
-.c43 {
+.c42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7130,7 +6704,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   align-items: baseline;
 }
 
-.c44 {
+.c43 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -7149,76 +6723,76 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   align-items: center;
 }
 
-.c40 {
+.c39 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c38 {
+.c37 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
   margin-top: 2rem;
 }
 
-.c41 {
+.c40 {
   margin: 0;
   padding: 0;
 }
 
-.c37 {
+.c36 {
   margin-bottom: 1rem;
   padding-bottom: 2rem;
 }
 
-.c39 {
+.c38 {
   margin-top: 0;
 }
 
-.c50 {
+.c49 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c54 {
+.c53 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c49 {
+.c48 {
   position: relative;
 }
 
-.c51 {
+.c50 {
   position: relative;
 }
 
-.c53 > * {
+.c52 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c47 {
+.c46 {
   padding: 0.5rem 0 1rem;
 }
 
-.c47:last-child {
+.c46:last-child {
   border: none;
 }
 
-.c47:first-child {
+.c46:first-child {
   padding-top: 0;
 }
 
-.c47:last-child {
+.c46:last-child {
   padding-bottom: 0;
 }
 
-.c45 {
+.c44 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -7236,7 +6810,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   padding-bottom: 1rem;
 }
 
-.c55 {
+.c54 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -7247,7 +6821,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   line-height: 1.25rem;
 }
 
-.c56 {
+.c55 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -7256,7 +6830,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   overflow-wrap: anywhere;
 }
 
-.c56:before {
+.c55:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -7268,13 +6842,13 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   z-index: 1;
 }
 
-.c56:hover,
-.c56:focus {
+.c55:hover,
+.c55:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c56:visited {
+.c55:visited {
   color: #6E6E73;
 }
 
@@ -7428,61 +7002,37 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (max-width:14.9375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c11 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c11 {
-    width: calc(12/12*(100% - 12 * 1rem) + 11 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -7494,61 +7044,37 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (max-width:14.9375rem) {
   .c15 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c15 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c15 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c15 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c15 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c15 {
-    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -7609,61 +7135,37 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (max-width:14.9375rem) {
   .c20 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c20 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c20 {
-    width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c20 {
-    width: calc(4/5*(100% - 5 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c20 {
-    width: calc(4/4*(100% - 4 * 1rem) + 3 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c20 {
-    width: calc(10/8*(100% - 8 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -7673,148 +7175,28 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c22 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c22 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c22 {
-    width: calc(6/4*(100% - 4 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c22 {
-    width: calc(5/5*(100% - 5 * 1rem) + 4 * 1rem - 0%);
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c22 {
-    width: calc(5/4*(100% - 4 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c22 {
-    width: calc(10/8*(100% - 8 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
 @supports (display:grid) {
-  .c22 {
-    display: block;
-  }
-}
-
-@supports (display:grid) {
-  .c46 {
+  .c45 {
     display: grid;
     position: initial;
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c48 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c48 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c48 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c48 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c48 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c48 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
 @supports (display:grid) {
-  .c48 {
+  .c47 {
     display: block;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c36 {
+  .c35 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c36 {
+  .c35 {
     margin: 0 auto;
     max-width: 80rem;
   }
@@ -7897,14 +7279,14 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c57 {
+  .c56 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c57 {
+  .c56 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -7951,7 +7333,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width:37.5rem) {
-  .c43 {
+  .c42 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -7960,39 +7342,39 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c44 {
+  .c43 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c44 {
+  .c43 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c44 {
+  .c43 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c44 {
+  .c43 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c40 {
+  .c39 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c40 {
+  .c39 {
     position: absolute;
     left: 0;
     right: 0;
@@ -8001,45 +7383,45 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width:37.5rem) {
-  .c38 {
+  .c37 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c38 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
   .c37 {
     margin-bottom: 1.5rem;
   }
 }
 
+@media (min-width:37.5rem) {
+  .c36 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (min-width:63rem) {
-  .c50 {
+  .c49 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c50 {
+  .c49 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c54 {
+  .c53 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c54 {
+  .c53 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -8047,7 +7429,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c54 {
+  .c53 {
     display: block;
     width: initial;
     padding: initial;
@@ -8056,7 +7438,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c49 {
+  .c48 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -8064,39 +7446,39 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width:25rem) {
-  .c53 {
+  .c52 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c53 > * {
+  .c52 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c47 {
+  .c46 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c47 {
+  .c46 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c47 {
+  .c46 {
     padding: 0 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c47:first-child {
+  .c46:first-child {
     padding-top: 1rem;
   }
 }
@@ -8128,14 +7510,14 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c55 {
+  .c54 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c55 {
+  .c54 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
@@ -8309,7 +7691,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                         </div>
                         <div
-                          class="c22"
+                          class="c15"
                           dir="ltr"
                         >
                           <figcaption
@@ -8322,6 +7704,69 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             </span>
                             <p>
                               28 may 1918-ci il suverenliyi haqqında bəyənnamə. Azərbaycan Xalq Cümhuriyyəti cəmi 2 ildən sonra süquta uğrasa da, ölkə tarixinin ən mühüm hadisələrindən biri sayılır.
+                            </p>
+                          </figcaption>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+                  <div
+                    class="c17 c18"
+                    dir="ltr"
+                  >
+                    <figure
+                      class="c9"
+                    >
+                      <div
+                        class="c19"
+                        dir="ltr"
+                      >
+                        <div
+                          class="c20"
+                          dir="ltr"
+                        >
+                          <div
+                            class="c22"
+                          >
+                            <div
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
+                            <noscript />
+                            <p
+                              class="c13"
+                              role="text"
+                            >
+                              <span
+                                class="c14"
+                              >
+                                Şəklin mənbəyi, 
+                              </span>
+                              <span
+                                lang="en-GB"
+                              >
+                                Milli Arxiv
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="c15"
+                          dir="ltr"
+                        >
+                          <figcaption
+                            class="c16"
+                          >
+                            <span
+                              class="c14"
+                            >
+                              Şəklin alt yazısı, 
+                            </span>
+                            <p>
+                              AXC Nazrilər Şurasının sədri və daxili işlər naziri vəzifələrini icra etmiş Fətəli Xan Xoyski. 1875-ci ildə doğulan Xoyski ADR-nin (Azərbaycan Demokratik Respublikası) yaradıcılarından biridir. O, Zaqafqaziya Federativ Respublikası hökumətində maarif naziri, Milli Hökumətin birinci və üçüncü kabinetlərində baş nazir, beşinci kabinetində isə xarici işlər naziri vəzifəsini tutub. Xoyski türk (Azərbaycan) dilinin dövlət dili elan edilməsi haqqında 27 iyun 1918-ci il tarixli qərara imza atıb. O, 1920-ci ildə qətlə yetirilib.
                             </p>
                           </figcaption>
                         </div>
@@ -8372,7 +7817,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                         </div>
                         <div
-                          class="c22"
+                          class="c15"
                           dir="ltr"
                         >
                           <figcaption
@@ -8384,7 +7829,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               Şəklin alt yazısı, 
                             </span>
                             <p>
-                              AXC Nazrilər Şurasının sədri və daxili işlər naziri vəzifələrini icra etmiş Fətəli Xan Xoyski. 1875-ci ildə doğulan Xoyski ADR-nin (Azərbaycan Demokratik Respublikası) yaradıcılarından biridir. O, Zaqafqaziya Federativ Respublikası hökumətində maarif naziri, Milli Hökumətin birinci və üçüncü kabinetlərində baş nazir, beşinci kabinetində isə xarici işlər naziri vəzifəsini tutub. Xoyski türk (Azərbaycan) dilinin dövlət dili elan edilməsi haqqında 27 iyun 1918-ci il tarixli qərara imza atıb. O, 1920-ci ildə qətlə yetirilib.
+                              Məmməd Əmin Rəsulzadə - Müsavat partiyasının lideri, AXC Milli şurasının sədri.
                             </p>
                           </figcaption>
                         </div>
@@ -8435,7 +7880,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                         </div>
                         <div
-                          class="c22"
+                          class="c15"
                           dir="ltr"
                         >
                           <figcaption
@@ -8447,7 +7892,70 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               Şəklin alt yazısı, 
                             </span>
                             <p>
-                              Məmməd Əmin Rəsulzadə - Müsavat partiyasının lideri, AXC Milli şurasının sədri.
+                              Əlimərdan bəy Topşubaşov - AXC hökumətinin üzvü və parlamentin sədri. Paris sülh konfransına getmiş nümayəndə heyətinin üzvü.
+                            </p>
+                          </figcaption>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+                  <div
+                    class="c17 c18"
+                    dir="ltr"
+                  >
+                    <figure
+                      class="c9"
+                    >
+                      <div
+                        class="c19"
+                        dir="ltr"
+                      >
+                        <div
+                          class="c20"
+                          dir="ltr"
+                        >
+                          <div
+                            class="c22"
+                          >
+                            <div
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
+                            <noscript />
+                            <p
+                              class="c13"
+                              role="text"
+                            >
+                              <span
+                                class="c14"
+                              >
+                                Şəklin mənbəyi, 
+                              </span>
+                              <span
+                                lang="en-GB"
+                              >
+                                Milli Arxiv
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="c15"
+                          dir="ltr"
+                        >
+                          <figcaption
+                            class="c16"
+                          >
+                            <span
+                              class="c14"
+                            >
+                              Şəklin alt yazısı, 
+                            </span>
+                            <p>
+                              Həsən bəy Ağayev Müsavat partiyasının üzvü olub. 1918-ci ildə ADR parlament sədrinin ilk müavini seçilir. Qafqazda kifayət qədər nüfuzlu şəxs sayılıb və Azərbaycanı Şimali Qafqaz Dağlılar qurultayında təmsil edib. O, 1919-cu ildə vəzifəsinə yenidən seçilə bilmir və Məmməd Yusif Cəfərov onun yerinə sədr müavini olur.
                             </p>
                           </figcaption>
                         </div>
@@ -8492,139 +8000,13 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               <span
                                 lang="en-GB"
                               >
-                                Milli Arxiv
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                        <div
-                          class="c22"
-                          dir="ltr"
-                        >
-                          <figcaption
-                            class="c16"
-                          >
-                            <span
-                              class="c14"
-                            >
-                              Şəklin alt yazısı, 
-                            </span>
-                            <p>
-                              Əlimərdan bəy Topşubaşov - AXC hökumətinin üzvü və parlamentin sədri. Paris sülh konfransına getmiş nümayəndə heyətinin üzvü.
-                            </p>
-                          </figcaption>
-                        </div>
-                      </div>
-                    </figure>
-                  </div>
-                  <div
-                    class="c17 c18"
-                    dir="ltr"
-                  >
-                    <figure
-                      class="c9"
-                    >
-                      <div
-                        class="c19"
-                        dir="ltr"
-                      >
-                        <div
-                          class="c20"
-                          dir="ltr"
-                        >
-                          <div
-                            class="c23"
-                          >
-                            <div
-                              class="lazyload-wrapper"
-                            >
-                              <div
-                                class="lazyload-placeholder"
-                              />
-                            </div>
-                            <noscript />
-                            <p
-                              class="c13"
-                              role="text"
-                            >
-                              <span
-                                class="c14"
-                              >
-                                Şəklin mənbəyi, 
-                              </span>
-                              <span
-                                lang="en-GB"
-                              >
-                                Milli Arxiv
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                        <div
-                          class="c22"
-                          dir="ltr"
-                        >
-                          <figcaption
-                            class="c16"
-                          >
-                            <span
-                              class="c14"
-                            >
-                              Şəklin alt yazısı, 
-                            </span>
-                            <p>
-                              Həsən bəy Ağayev Müsavat partiyasının üzvü olub. 1918-ci ildə ADR parlament sədrinin ilk müavini seçilir. Qafqazda kifayət qədər nüfuzlu şəxs sayılıb və Azərbaycanı Şimali Qafqaz Dağlılar qurultayında təmsil edib. O, 1919-cu ildə vəzifəsinə yenidən seçilə bilmir və Məmməd Yusif Cəfərov onun yerinə sədr müavini olur.
-                            </p>
-                          </figcaption>
-                        </div>
-                      </div>
-                    </figure>
-                  </div>
-                  <div
-                    class="c17 c18"
-                    dir="ltr"
-                  >
-                    <figure
-                      class="c9"
-                    >
-                      <div
-                        class="c19"
-                        dir="ltr"
-                      >
-                        <div
-                          class="c20"
-                          dir="ltr"
-                        >
-                          <div
-                            class="c26"
-                          >
-                            <div
-                              class="lazyload-wrapper"
-                            >
-                              <div
-                                class="lazyload-placeholder"
-                              />
-                            </div>
-                            <noscript />
-                            <p
-                              class="c13"
-                              role="text"
-                            >
-                              <span
-                                class="c14"
-                              >
-                                Şəklin mənbəyi, 
-                              </span>
-                              <span
-                                lang="en-GB"
-                              >
                                 MİLLİ ARXİV
                               </span>
                             </p>
                           </div>
                         </div>
                         <div
-                          class="c22"
+                          class="c15"
                           dir="ltr"
                         >
                           <figcaption
@@ -8659,7 +8041,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <div
-                            class="c27"
+                            class="c26"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -8722,7 +8104,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <div
-                            class="c28"
+                            class="c27"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -8785,7 +8167,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <div
-                            class="c29"
+                            class="c28"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -8813,7 +8195,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                         </div>
                         <div
-                          class="c22"
+                          class="c15"
                           dir="ltr"
                         >
                           <figcaption
@@ -8848,7 +8230,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <div
-                            class="c30"
+                            class="c29"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -8876,7 +8258,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                         </div>
                         <div
-                          class="c22"
+                          class="c15"
                           dir="ltr"
                         >
                           <figcaption
@@ -8911,7 +8293,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <div
-                            class="c31"
+                            class="c30"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -8974,7 +8356,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <div
-                            class="c32"
+                            class="c31"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -9037,7 +8419,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <div
-                            class="c33"
+                            class="c32"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -9100,7 +8482,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <div
-                            class="c34"
+                            class="c33"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -9226,7 +8608,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <div
-                            class="c35"
+                            class="c34"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -9289,7 +8671,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <div
-                            class="c23"
+                            class="c22"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -9317,7 +8699,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                         </div>
                         <div
-                          class="c22"
+                          class="c15"
                           dir="ltr"
                         >
                           <figcaption
@@ -9352,7 +8734,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <div
-                            class="c23"
+                            class="c22"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -9380,7 +8762,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                         </div>
                         <div
-                          class="c22"
+                          class="c15"
                           dir="ltr"
                         >
                           <figcaption
@@ -9401,32 +8783,32 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   </div>
                   <section
                     aria-labelledby="related-content-heading"
-                    class="c0 c36"
+                    class="c0 c35"
                     data-e2e="related-content-heading"
                     dir="ltr"
                     role="region"
                   >
                     <div
-                      class="c2 c37"
+                      class="c2 c36"
                       dir="ltr"
                     >
                       <div
-                        class="c38 c39"
+                        class="c37 c38"
                       >
                         <div
-                          class="c40"
+                          class="c39"
                         />
                         <h2
-                          class="c41"
+                          class="c40"
                         >
                           <span
-                            class="c42"
+                            class="c41"
                           >
                             <span
-                              class="c43"
+                              class="c42"
                             >
                               <span
-                                class="c44"
+                                class="c43"
                                 dir="ltr"
                                 id="related-content-heading"
                               >
@@ -9437,28 +8819,28 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </h2>
                       </div>
                       <ul
-                        class="c45 c46"
+                        class="c44 c45"
                         dir="ltr"
                         role="list"
                       >
                         <li
-                          class="c47 c48"
+                          class="c46 c47"
                           dir="ltr"
                           role="listitem"
                         >
                           <div
-                            class="c49"
+                            class="c48"
                             data-e2e="story-promo"
                           >
                             <div
-                              class="c50"
+                              class="c49"
                               dir="ltr"
                             >
                               <div
-                                class="c51"
+                                class="c50"
                               >
                                 <div
-                                  class="c52"
+                                  class="c51"
                                 >
                                   <div
                                     class="lazyload-wrapper"
@@ -9469,26 +8851,26 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                   </div>
                                 </div>
                                 <div
-                                  class="c53"
+                                  class="c52"
                                 />
                               </div>
                             </div>
                             <div
-                              class="c54"
+                              class="c53"
                               dir="ltr"
                             >
                               <h3
-                                class="c55"
+                                class="c54"
                               >
                                 <a
-                                  class="c56"
+                                  class="c55"
                                   href="/azeri/azerbaijan-44124647"
                                 >
                                   ADR və Qazaxdan Qarsadək müsəlman dəhlizi ideyası
                                 </a>
                               </h3>
                               <time
-                                class="c57"
+                                class="c56"
                                 datetime="2018-05-17"
                               >
                                 17 May 2018
@@ -9497,23 +8879,23 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                         </li>
                         <li
-                          class="c47 c48"
+                          class="c46 c47"
                           dir="ltr"
                           role="listitem"
                         >
                           <div
-                            class="c49"
+                            class="c48"
                             data-e2e="story-promo"
                           >
                             <div
-                              class="c50"
+                              class="c49"
                               dir="ltr"
                             >
                               <div
-                                class="c51"
+                                class="c50"
                               >
                                 <div
-                                  class="c52"
+                                  class="c51"
                                 >
                                   <div
                                     class="lazyload-wrapper"
@@ -9524,26 +8906,26 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                   </div>
                                 </div>
                                 <div
-                                  class="c53"
+                                  class="c52"
                                 />
                               </div>
                             </div>
                             <div
-                              class="c54"
+                              class="c53"
                               dir="ltr"
                             >
                               <h3
-                                class="c55"
+                                class="c54"
                               >
                                 <a
-                                  class="c56"
+                                  class="c55"
                                   href="/azeri/azerbaijan-43540056"
                                 >
                                   ADR-100: Türk Əsgəri üçün Cəbrayıl çörəyi
                                 </a>
                               </h3>
                               <time
-                                class="c57"
+                                class="c56"
                                 datetime="2018-03-27"
                               >
                                 27 Mart 2018
@@ -9552,23 +8934,23 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                         </li>
                         <li
-                          class="c47 c48"
+                          class="c46 c47"
                           dir="ltr"
                           role="listitem"
                         >
                           <div
-                            class="c49"
+                            class="c48"
                             data-e2e="story-promo"
                           >
                             <div
-                              class="c50"
+                              class="c49"
                               dir="ltr"
                             >
                               <div
-                                class="c51"
+                                class="c50"
                               >
                                 <div
-                                  class="c52"
+                                  class="c51"
                                 >
                                   <div
                                     class="lazyload-wrapper"
@@ -9579,26 +8961,26 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                   </div>
                                 </div>
                                 <div
-                                  class="c53"
+                                  class="c52"
                                 />
                               </div>
                             </div>
                             <div
-                              class="c54"
+                              class="c53"
                               dir="ltr"
                             >
                               <h3
-                                class="c55"
+                                class="c54"
                               >
                                 <a
-                                  class="c56"
+                                  class="c55"
                                   href="/azeri/azerbaijan-44022776"
                                 >
                                   Borçalı: Tortdan hərəyə bir tikə - təkbaşına isə onu yemək olmaz
                                 </a>
                               </h3>
                               <time
-                                class="c57"
+                                class="c56"
                                 datetime="2018-05-10"
                               >
                                 10 May 2018
@@ -9607,23 +8989,23 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                         </li>
                         <li
-                          class="c47 c48"
+                          class="c46 c47"
                           dir="ltr"
                           role="listitem"
                         >
                           <div
-                            class="c49"
+                            class="c48"
                             data-e2e="story-promo"
                           >
                             <div
-                              class="c50"
+                              class="c49"
                               dir="ltr"
                             >
                               <div
-                                class="c51"
+                                class="c50"
                               >
                                 <div
-                                  class="c52"
+                                  class="c51"
                                 >
                                   <div
                                     class="lazyload-wrapper"
@@ -9634,26 +9016,26 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                   </div>
                                 </div>
                                 <div
-                                  class="c53"
+                                  class="c52"
                                 />
                               </div>
                             </div>
                             <div
-                              class="c54"
+                              class="c53"
                               dir="ltr"
                             >
                               <h3
-                                class="c55"
+                                class="c54"
                               >
                                 <a
-                                  class="c56"
+                                  class="c55"
                                   href="/azeri/azerbaijan-43713137"
                                 >
                                   Cümhuriyyət hökuməti Azərbaycanı necə idarə edirdi? İlk 6 ayın hadisələri
                                 </a>
                               </h3>
                               <time
-                                class="c57"
+                                class="c56"
                                 datetime="2018-04-10"
                               >
                                 10 Aprel 2018
@@ -9662,23 +9044,23 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                         </li>
                         <li
-                          class="c47 c48"
+                          class="c46 c47"
                           dir="ltr"
                           role="listitem"
                         >
                           <div
-                            class="c49"
+                            class="c48"
                             data-e2e="story-promo"
                           >
                             <div
-                              class="c50"
+                              class="c49"
                               dir="ltr"
                             >
                               <div
-                                class="c51"
+                                class="c50"
                               >
                                 <div
-                                  class="c52"
+                                  class="c51"
                                 >
                                   <div
                                     class="lazyload-wrapper"
@@ -9689,26 +9071,26 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                   </div>
                                 </div>
                                 <div
-                                  class="c53"
+                                  class="c52"
                                 />
                               </div>
                             </div>
                             <div
-                              class="c54"
+                              class="c53"
                               dir="ltr"
                             >
                               <h3
-                                class="c55"
+                                class="c54"
                               >
                                 <a
-                                  class="c56"
+                                  class="c55"
                                   href="/azeri/azerbaijan-37688691"
                                 >
                                   1918-1991: Bir müstəqilliyin iki bəyanı
                                 </a>
                               </h3>
                               <time
-                                class="c57"
+                                class="c56"
                                 datetime="2016-10-18"
                               >
                                 18 Oktyabr 2016
@@ -9717,23 +9099,23 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                         </li>
                         <li
-                          class="c47 c48"
+                          class="c46 c47"
                           dir="ltr"
                           role="listitem"
                         >
                           <div
-                            class="c49"
+                            class="c48"
                             data-e2e="story-promo"
                           >
                             <div
-                              class="c50"
+                              class="c49"
                               dir="ltr"
                             >
                               <div
-                                class="c51"
+                                class="c50"
                               >
                                 <div
-                                  class="c52"
+                                  class="c51"
                                 >
                                   <div
                                     class="lazyload-wrapper"
@@ -9744,19 +9126,19 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                   </div>
                                 </div>
                                 <div
-                                  class="c53"
+                                  class="c52"
                                 />
                               </div>
                             </div>
                             <div
-                              class="c54"
+                              class="c53"
                               dir="ltr"
                             >
                               <h3
-                                class="c55"
+                                class="c54"
                               >
                                 <a
-                                  class="c56"
+                                  class="c55"
                                   href="/azeri/azerbaijan-37691096"
                                 >
                                   <span
@@ -9774,7 +9156,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 </a>
                               </h3>
                               <time
-                                class="c57"
+                                class="c56"
                                 datetime="2016-10-18"
                               >
                                 18 Oktyabr 2016
@@ -9783,23 +9165,23 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                         </li>
                         <li
-                          class="c47 c48"
+                          class="c46 c47"
                           dir="ltr"
                           role="listitem"
                         >
                           <div
-                            class="c49"
+                            class="c48"
                             data-e2e="story-promo"
                           >
                             <div
-                              class="c50"
+                              class="c49"
                               dir="ltr"
                             >
                               <div
-                                class="c51"
+                                class="c50"
                               >
                                 <div
-                                  class="c52"
+                                  class="c51"
                                 >
                                   <div
                                     class="lazyload-wrapper"
@@ -9810,26 +9192,26 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                   </div>
                                 </div>
                                 <div
-                                  class="c53"
+                                  class="c52"
                                 />
                               </div>
                             </div>
                             <div
-                              class="c54"
+                              class="c53"
                               dir="ltr"
                             >
                               <h3
-                                class="c55"
+                                class="c54"
                               >
                                 <a
-                                  class="c56"
+                                  class="c55"
                                   href="/azeri/azerbaijan-43499221"
                                 >
                                   1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?
                                 </a>
                               </h3>
                               <time
-                                class="c57"
+                                class="c56"
                                 datetime="2018-03-22"
                               >
                                 22 Mart 2018
@@ -9838,23 +9220,23 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                         </li>
                         <li
-                          class="c47 c48"
+                          class="c46 c47"
                           dir="ltr"
                           role="listitem"
                         >
                           <div
-                            class="c49"
+                            class="c48"
                             data-e2e="story-promo"
                           >
                             <div
-                              class="c50"
+                              class="c49"
                               dir="ltr"
                             >
                               <div
-                                class="c51"
+                                class="c50"
                               >
                                 <div
-                                  class="c52"
+                                  class="c51"
                                 >
                                   <div
                                     class="lazyload-wrapper"
@@ -9865,26 +9247,26 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                   </div>
                                 </div>
                                 <div
-                                  class="c53"
+                                  class="c52"
                                 />
                               </div>
                             </div>
                             <div
-                              class="c54"
+                              class="c53"
                               dir="ltr"
                             >
                               <h3
-                                class="c55"
+                                class="c54"
                               >
                                 <a
-                                  class="c56"
+                                  class="c55"
                                   href="/azeri/azerbaijan-44004471"
                                 >
                                   #ADR100 Zaqatala: Azərbaycanın qalib gəldiyi mübahisə
                                 </a>
                               </h3>
                               <time
-                                class="c57"
+                                class="c56"
                                 datetime="2018-05-04"
                               >
                                 4 May 2018
@@ -9893,23 +9275,23 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                         </li>
                         <li
-                          class="c47 c48"
+                          class="c46 c47"
                           dir="ltr"
                           role="listitem"
                         >
                           <div
-                            class="c49"
+                            class="c48"
                             data-e2e="story-promo"
                           >
                             <div
-                              class="c50"
+                              class="c49"
                               dir="ltr"
                             >
                               <div
-                                class="c51"
+                                class="c50"
                               >
                                 <div
-                                  class="c52"
+                                  class="c51"
                                 >
                                   <div
                                     class="lazyload-wrapper"
@@ -9920,26 +9302,26 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                   </div>
                                 </div>
                                 <div
-                                  class="c53"
+                                  class="c52"
                                 />
                               </div>
                             </div>
                             <div
-                              class="c54"
+                              class="c53"
                               dir="ltr"
                             >
                               <h3
-                                class="c55"
+                                class="c54"
                               >
                                 <a
-                                  class="c56"
+                                  class="c55"
                                   href="/azeri/azerbaijan-43870815"
                                 >
                                   Cümhuriyyət hökumətinin İranla əlaqələri necə idi?
                                 </a>
                               </h3>
                               <time
-                                class="c57"
+                                class="c56"
                                 datetime="2018-04-29"
                               >
                                 29 Aprel 2018

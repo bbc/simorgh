@@ -352,61 +352,37 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 
 @media (max-width:14.9375rem) {
   .c23 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c23 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c23 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c23 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c23 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c23 {
-    width: calc(12/12*(100% - 12 * 1rem) + 11 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -1536,61 +1512,37 @@ exports[`Media Asset Page should render component 1`] = `
 
 @media (max-width:14.9375rem) {
   .c24 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c24 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c24 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c24 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c24 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c24 {
-    width: calc(12/12*(100% - 12 * 1rem) + 11 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -1602,61 +1554,37 @@ exports[`Media Asset Page should render component 1`] = `
 
 @media (max-width:14.9375rem) {
   .c27 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c27 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c27 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c27 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c27 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c27 {
-    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -1670,60 +1598,6 @@ exports[`Media Asset Page should render component 1`] = `
   .c39 {
     display: grid;
     position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c41 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c41 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c41 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c41 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c41 {
-    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c41 {
-    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 

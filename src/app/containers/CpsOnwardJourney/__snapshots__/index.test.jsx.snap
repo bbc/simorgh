@@ -1216,6 +1216,18 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 0.8125rem;
+  }
+}
+
 @supports (display:grid) {
   .c0 {
     display: grid;
@@ -1266,18 +1278,6 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 @supports (display:grid) {
   .c2 {
     display: block;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 0.8125rem;
   }
 }
 
@@ -1582,6 +1582,18 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 0.8125rem;
+  }
+}
+
 @supports (display:grid) {
   .c0 {
     display: grid;
@@ -1632,18 +1644,6 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 @supports (display:grid) {
   .c2 {
     display: block;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 0.8125rem;
   }
 }
 

@@ -880,61 +880,37 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (max-width:14.9375rem) {
   .c15 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c15 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c15 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c15 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c15 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c15 {
-    width: calc(12/12*(100% - 12 * 1rem) + 11 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -946,61 +922,37 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (max-width:14.9375rem) {
   .c19 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c19 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c19 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c19 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c19 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c19 {
-    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -4243,61 +4195,37 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (max-width:14.9375rem) {
   .c17 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c17 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c17 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c17 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c17 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c17 {
-    width: calc(12/12*(100% - 12 * 1rem) + 11 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -4309,61 +4237,37 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (max-width:14.9375rem) {
   .c21 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c21 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c21 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c21 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c21 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c21 {
-    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -6659,61 +6563,37 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (max-width:14.9375rem) {
   .c17 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c17 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c17 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c17 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c17 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c17 {
-    width: calc(12/12*(100% - 12 * 1rem) + 11 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -6725,61 +6605,37 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (max-width:14.9375rem) {
   .c21 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c21 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c21 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c21 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c21 {
-    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c21 {
-    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 

@@ -172,40 +172,40 @@ exports[`BulletedListContainer should render rtl correctly 1`] = `
 @media (max-width:14.9375rem) {
   .c0 {
     padding: 0 0.5rem;
-    margin-left: 0%;
+    margin-right: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
     padding: 0 0.5rem;
-    margin-left: 0%;
+    margin-right: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
     padding: 0 1rem;
-    margin-left: 0%;
+    margin-right: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
     padding: 0 1rem;
-    margin-left: 0%;
+    margin-right: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 20%;
+    margin-right: 20%;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    margin-left: 40%;
+    margin-right: 40%;
   }
 }
 
@@ -217,7 +217,7 @@ exports[`BulletedListContainer should render rtl correctly 1`] = `
 
 <div
   class="c0"
-  dir="ltr"
+  dir="rtl"
 >
   <div
     class="c1"
