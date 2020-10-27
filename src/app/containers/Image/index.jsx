@@ -69,17 +69,8 @@ const ImageContainer = ({ blocks, position }) => {
     Wrapper = GridItemSmall;
   }
 
-  // This grid contain will be refactored in
-  // https://github.com/bbc/simorgh/issues/1369
-  // https://github.com/bbc/simorgh/issues/1319
   return (
-    <Wrapper
-      dir={dir}
-      padding={{
-        group2: '0px',
-        group3: '0px',
-      }}
-    >
+    <Wrapper dir={dir}>
       <ArticleFigure
         alt={altText}
         captionBlock={captionBlock}

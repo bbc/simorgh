@@ -100,27 +100,29 @@ const ArticleFigure = ({
             {showCopyright && renderCopyright(copyright)}
           </ImageWithPlaceholder>
         </Grid>
-        <Grid
-          item
-          startOffset={{
-            group0: 1,
-            group1: 1,
-            group2: 1,
-            group3: 1,
-            group4: 1,
-            group5: 1,
-          }}
-          columns={{
-            group0: 6,
-            group1: 6,
-            group2: 6,
-            group3: 5,
-            group4: 5,
-            group5: 10,
-          }}
-        >
-          {renderCaption(captionBlock, type)}
-        </Grid>
+        {captionBlock && (
+          <Grid
+            item
+            startOffset={{
+              group0: 1,
+              group1: 1,
+              group2: 1,
+              group3: 1,
+              group4: 1,
+              group5: 1,
+            }}
+            columns={{
+              group0: 6,
+              group1: 6,
+              group2: 6,
+              group3: 5,
+              group4: 5,
+              group5: 10,
+            }}
+          >
+            {renderCaption(captionBlock, type)}
+          </Grid>
+        )}
       </Grid>
     </Figure>
   );
