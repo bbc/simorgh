@@ -193,61 +193,37 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
 
 @media (max-width:14.9375rem) {
   .c4 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c4 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c4 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c4 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
     margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c4 {
-    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 12.5%;
-    display: inline-block;
-    vertical-align: top;
+    margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width:80rem) {
   .c4 {
-    width: calc(11/20*(100% - 20 * 1rem) + 10 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 5%;
-    display: inline-block;
-    vertical-align: top;
+    margin-left: 9.090909090909092%;
   }
 }
 
@@ -261,60 +237,6 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
   .c8 {
     display: grid;
     position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c10 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c10 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c10 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c10 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c10 {
-    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c10 {
-    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 

@@ -297,14 +297,12 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       )}
       {isAdsEnabled && <AdContainer slotType="leaderboard" />}
       <StoryPageGrid
-        dir={dir}
         columns={gridColumns}
         enableGelGutters
         margins={gridMargins}
       >
         <GridPrimaryColumn
           item
-          dir={dir}
           columns={gridColsMain}
           startOffset={gridOffset}
           parentColumns={gridColumns}
@@ -319,7 +317,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         </GridPrimaryColumn>
         <GridSecondaryColumn
           item
-          dir={dir}
           columns={gridColsSecondary}
           parentColumns={gridColumns}
           // `serviceLang` is defined when the language the page is written in is different to the
