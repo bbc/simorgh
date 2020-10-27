@@ -1,6 +1,5 @@
 # Simorgh
 
-[![Build Status](https://travis-ci.org/bbc/simorgh.svg?branch=latest)](https://travis-ci.org/bbc/simorgh)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/test_coverage)](https://codeclimate.com/github/bbc/simorgh/test_coverage)
 [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh)
 [![dependencies Status](https://david-dm.org/bbc/simorgh/status.svg)](https://david-dm.org/bbc/simorgh)
@@ -309,7 +308,7 @@ This loads a user interface which easily allows for individual tests to be run a
 
 There are several environment variables you can use with our test suite, which are:
 
-| Environment variable  | Effect                                                                                                        | Possible values                                   |
+| Environment variable | Effect                                                                                                        | Possible values                                   |
 | -------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
 | CYPRESS_ONLY_SERVICE | Restricts to running only the specified service                                                               | A single service i.e. `CYPRESS_ONLY_SERVICE=urdu` |
 | CYPRESS_APP_ENV      | Runs the tests in a specific environment                                                                      | `test`, `local`, `live`                           |
