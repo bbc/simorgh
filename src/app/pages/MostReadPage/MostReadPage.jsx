@@ -42,7 +42,6 @@ const MarginWrapper = styled.div`
 const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
     brandName,
-    dir,
     lang,
     mostRead: { header },
   } = useContext(ServiceContext);
@@ -52,7 +51,6 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
       <IndexHeading id="content">{header}</IndexHeading>
       <MarginWrapper>
         <GelPageGrid
-          dir={dir}
           columns={{
             group0: 6,
             group1: 6,
@@ -65,7 +63,6 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         >
           <Grid
             item
-            dir={dir}
             startOffset={{
               group0: 1,
               group1: 1,

@@ -40,7 +40,6 @@ const RelatedContentPromoList = ({ promoItems, dir, isMediaContent }) => {
       }}
       as={isMediaContent ? MostWatchedOl : StoryPromoUl}
       enableGelGutters
-      dir={dir}
     >
       {promoItems.map(item => (
         <Grid
@@ -55,7 +54,6 @@ const RelatedContentPromoList = ({ promoItems, dir, isMediaContent }) => {
           }}
           as={isMediaContent ? MediaStoryPromoLi : StoryPromoLi}
           key={item.id || item.uri}
-          dir={dir}
         >
           <StoryPromo
             item={item}

@@ -15,7 +15,7 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import Grid from '@bbc/psammead-grid';
+import Grid from '#app/components/Grid';
 import UsefulLinksComponent from './UsefulLinks';
 import { ServiceContext } from '#contexts/ServiceContext';
 import groupShape from '#models/propTypes/frontPageGroup';
@@ -132,12 +132,7 @@ const renderPromos = ({ items, isFirstSection, dir, showAllPromos }) => {
           sectionHasSingleStory
         />
       ) : (
-        <Grid
-          columns={parentGridColumns}
-          enableGelGutters
-          dir={dir}
-          as={StoryPromoUl}
-        >
+        <Grid columns={parentGridColumns} enableGelGutters as={StoryPromoUl}>
           {renderedRows}
         </Grid>
       )}
