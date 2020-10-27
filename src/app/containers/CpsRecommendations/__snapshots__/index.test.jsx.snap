@@ -293,7 +293,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 40%;
+    margin-left: 20%;
   }
 }
 
@@ -850,7 +850,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 40%;
+    margin-left: 20%;
   }
 }
 
@@ -1717,7 +1717,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 40%;
+    margin-left: 20%;
   }
 }
 

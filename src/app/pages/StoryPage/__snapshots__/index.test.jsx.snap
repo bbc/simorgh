@@ -252,11 +252,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c14 {
-  display: grid;
-  grid-column-gap: 1rem;
-}
-
 .c29 {
   padding-top: 56.25%;
   position: relative;
@@ -772,7 +767,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c4 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -818,7 +813,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c6 {
-    margin-left: 40%;
+    margin-left: 20%;
   }
 }
 
@@ -860,7 +855,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c12 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -872,6 +867,145 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @supports (display:grid) {
   .c12 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c14 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c15 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c15 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c15 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c15 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c15 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c15 {
+    width: calc(12/12*(100% - 12 * 1rem) + 11 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c15 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c19 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c19 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c19 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c19 {
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c19 {
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c19 {
+    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c19 {
     display: block;
   }
 }
@@ -1055,66 +1189,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @media (min-width:63rem) {
   .c20 {
     padding: 0.5rem 0 0;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c15 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c15 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c15 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c15 {
-    grid-column: 1 / span 12;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c19 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c19 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c19 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:80rem) {
-  .c19 {
-    grid-column: 1 / span 10;
-  }
-}
-
-@media (max-width:79.9375rem) {
-  .c14 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:80rem) {
-  .c14 {
-    grid-template-columns: repeat(12,1fr);
   }
 }
 
@@ -1504,9 +1578,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     >
                       <div
                         class="c14"
+                        dir="ltr"
                       >
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <div
                             class="c16"
@@ -1538,6 +1614,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                         <div
                           class="c19"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c20"
@@ -1680,9 +1757,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     >
                       <div
                         class="c14"
+                        dir="ltr"
                       >
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <div
                             class="c16"
@@ -1714,6 +1793,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                         <div
                           class="c19"
+                          dir="ltr"
                         />
                       </div>
                     </figure>
@@ -3225,238 +3305,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 `;
 
 exports[`Story Page should render correctly when the secondary column data is not available 1`] = `
-<html
-  dir="ltr"
-  lang="pcm"
->
-  <head>
-    <title>
-      STY - Blood pressure drugs dey work better - BBC News Pidgin
-    </title>
-    <link
-      href="https://www.test.bbc.com/pidgin/world-23252817"
-      rel="canonical"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/pidgin/world-23252817.amp"
-      rel="amphtml"
-    />
-    <link
-      href="http://localhost:7080/pidgin/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
-      rel="apple-touch-icon"
-      sizes="96x96"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-128x128.png"
-      rel="apple-touch-icon"
-      sizes="128x128"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-180x180.png"
-      rel="apple-touch-icon"
-      sizes="180x180"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-      sizes="192x192"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-384x384.png"
-      rel="apple-touch-icon"
-      sizes="384x384"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
-      rel="apple-touch-icon"
-      sizes="512x512"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
-      rel="icon"
-      sizes="72x72"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
-      rel="icon"
-      sizes="96x96"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
-      rel="icon"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      content="IE=edge"
-      http-equiv="X-UA-Compatible"
-    />
-    <meta
-      charset="utf-8"
-    />
-    <meta
-      content="noodp,noydir"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      name="viewport"
-    />
-    <meta
-      content="BBC News Pidgin"
-      name="apple-mobile-web-app-title"
-    />
-    <meta
-      content="BBC News Pidgin"
-      name="application-name"
-    />
-    <meta
-      content="This is a test asset used in Simorgh, please do not edit it without asking."
-      name="description"
-    />
-    <meta
-      content="100004154058350"
-      property="fb:admins"
-    />
-    <meta
-      content="1609039196070050"
-      property="fb:app_id"
-    />
-    <meta
-      content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
-      property="fb:pages"
-    />
-    <meta
-      content="yes"
-      name="mobile-web-app-capable"
-    />
-    <meta
-      content="#B80000"
-      name="msapplication-TileColor"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
-      name="msapplication-TileImage"
-    />
-    <meta
-      content="This is a test asset used in Simorgh, please do not edit it without asking."
-      property="og:description"
-    />
-    <meta
-      content="https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
-      property="og:image"
-    />
-    <meta
-      content="Some people at the NTA awards"
-      property="og:image:alt"
-    />
-    <meta
-      content="pcm"
-      property="og:locale"
-    />
-    <meta
-      content="BBC News Pidgin"
-      property="og:site_name"
-    />
-    <meta
-      content="STY - Blood pressure drugs dey work better - BBC News Pidgin"
-      property="og:title"
-    />
-    <meta
-      content="article"
-      property="og:type"
-    />
-    <meta
-      content="https://www.test.bbc.com/pidgin/world-23252817"
-      property="og:url"
-    />
-    <meta
-      content="summary_large_image"
-      name="twitter:card"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:creator"
-    />
-    <meta
-      content="This is a test asset used in Simorgh, please do not edit it without asking."
-      name="twitter:description"
-    />
-    <meta
-      content="Some people at the NTA awards"
-      name="twitter:image:alt"
-    />
-    <meta
-      content="https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
-      name="twitter:image:src"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:site"
-    />
-    <meta
-      content="STY - Blood pressure drugs dey work better - BBC News Pidgin"
-      name="twitter:title"
-    />
-    <meta
-      content="https://www.facebook.com/bbcnews"
-      name="article:author"
-    />
-    <meta
-      content="2019-10-23T12:39:30.000Z"
-      name="article:published_time"
-    />
-    <meta
-      content="2019-10-23T12:39:32.000Z"
-      name="article:modified_time"
-    />
-    <script
-      type="application/ld+json"
-    >
-      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","inLanguage":{"@type":"Language","name":"Nigerian Pidgin","alternateName":"pcm"},"author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
-    </script>
-    <script
-      type="application/ld+json"
-    >
-      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"}
-    </script>
-  </head>
-  <body>
-    .c39 {
+.c39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3710,11 +3559,6 @@ exports[`Story Page should render correctly when the secondary column data is no
   padding-bottom: 56.25%;
   width: 100%;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-.c16 {
-  display: grid;
-  grid-column-gap: 1rem;
 }
 
 .c31 {
@@ -4059,7 +3903,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c4 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -4105,7 +3949,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c6 {
-    margin-left: 40%;
+    margin-left: 20%;
   }
 }
 
@@ -4147,7 +3991,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c14 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -4159,6 +4003,145 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @supports (display:grid) {
   .c14 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c16 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c17 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c17 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c17 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c17 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c17 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c17 {
+    width: calc(12/12*(100% - 12 * 1rem) + 11 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c17 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c21 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c21 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c21 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c21 {
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c21 {
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c21 {
+    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c21 {
     display: block;
   }
 }
@@ -4359,66 +4342,6 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c17 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c17 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c17 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c17 {
-    grid-column: 1 / span 12;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c21 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c21 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c21 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:80rem) {
-  .c21 {
-    grid-column: 1 / span 10;
-  }
-}
-
-@media (max-width:79.9375rem) {
-  .c16 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:80rem) {
-  .c16 {
-    grid-template-columns: repeat(12,1fr);
-  }
-}
-
 @media (min-width:25rem) {
   .c30 {
     margin-top: 1rem;
@@ -4562,7 +4485,238 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
-<div>
+<html
+  dir="ltr"
+  lang="pcm"
+>
+  <head>
+    <title>
+      STY - Blood pressure drugs dey work better - BBC News Pidgin
+    </title>
+    <link
+      href="https://www.test.bbc.com/pidgin/world-23252817"
+      rel="canonical"
+    />
+    <link
+      href="https://www.test.bbc.co.uk/pidgin/world-23252817.amp"
+      rel="amphtml"
+    />
+    <link
+      href="http://localhost:7080/pidgin/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noodp,noydir"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="BBC News Pidgin"
+      name="apple-mobile-web-app-title"
+    />
+    <meta
+      content="BBC News Pidgin"
+      name="application-name"
+    />
+    <meta
+      content="This is a test asset used in Simorgh, please do not edit it without asking."
+      name="description"
+    />
+    <meta
+      content="100004154058350"
+      property="fb:admins"
+    />
+    <meta
+      content="1609039196070050"
+      property="fb:app_id"
+    />
+    <meta
+      content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
+      property="fb:pages"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <meta
+      content="#B80000"
+      name="msapplication-TileColor"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta
+      content="This is a test asset used in Simorgh, please do not edit it without asking."
+      property="og:description"
+    />
+    <meta
+      content="https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+      property="og:image"
+    />
+    <meta
+      content="Some people at the NTA awards"
+      property="og:image:alt"
+    />
+    <meta
+      content="pcm"
+      property="og:locale"
+    />
+    <meta
+      content="BBC News Pidgin"
+      property="og:site_name"
+    />
+    <meta
+      content="STY - Blood pressure drugs dey work better - BBC News Pidgin"
+      property="og:title"
+    />
+    <meta
+      content="article"
+      property="og:type"
+    />
+    <meta
+      content="https://www.test.bbc.com/pidgin/world-23252817"
+      property="og:url"
+    />
+    <meta
+      content="summary_large_image"
+      name="twitter:card"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:creator"
+    />
+    <meta
+      content="This is a test asset used in Simorgh, please do not edit it without asking."
+      name="twitter:description"
+    />
+    <meta
+      content="Some people at the NTA awards"
+      name="twitter:image:alt"
+    />
+    <meta
+      content="https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+      name="twitter:image:src"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:site"
+    />
+    <meta
+      content="STY - Blood pressure drugs dey work better - BBC News Pidgin"
+      name="twitter:title"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
+      content="2019-10-23T12:39:30.000Z"
+      name="article:published_time"
+    />
+    <meta
+      content="2019-10-23T12:39:32.000Z"
+      name="article:modified_time"
+    />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","inLanguage":{"@type":"Language","name":"Nigerian Pidgin","alternateName":"pcm"},"author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
+    </script>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"}
+    </script>
+  </head>
+  <body>
+    <div>
       <div
         id="ContextsContainer"
       >
@@ -4654,9 +4808,11 @@ exports[`Story Page should render correctly when the secondary column data is no
                         >
                           <div
                             class="c16"
+                            dir="ltr"
                           >
                             <div
                               class="c17"
+                              dir="ltr"
                             >
                               <div
                                 class="c18"
@@ -4688,6 +4844,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             </div>
                             <div
                               class="c21"
+                              dir="ltr"
                             >
                               <figcaption
                                 class="c22"
@@ -4830,9 +4987,11 @@ exports[`Story Page should render correctly when the secondary column data is no
                         >
                           <div
                             class="c16"
+                            dir="ltr"
                           >
                             <div
                               class="c17"
+                              dir="ltr"
                             >
                               <div
                                 class="c18"
@@ -4864,6 +5023,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             </div>
                             <div
                               class="c21"
+                              dir="ltr"
                             />
                           </div>
                         </figure>

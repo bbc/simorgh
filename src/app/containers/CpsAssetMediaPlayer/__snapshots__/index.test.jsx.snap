@@ -57,7 +57,7 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -194,7 +194,7 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -314,7 +314,7 @@ exports[`MediaPlayer render the amp player 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -442,7 +442,7 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 

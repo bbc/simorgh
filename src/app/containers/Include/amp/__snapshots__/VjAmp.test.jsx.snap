@@ -77,7 +77,7 @@ exports[`VJ include container on Amp should render an amp-iframe with an image p
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 40%;
+    margin-left: 20%;
   }
 }
 

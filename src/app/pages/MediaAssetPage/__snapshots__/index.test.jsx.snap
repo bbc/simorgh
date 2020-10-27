@@ -1147,11 +1147,6 @@ exports[`Media Asset Page should render component 1`] = `
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c23 {
-  display: grid;
-  grid-column-gap: 1rem;
-}
-
 .c4 {
   margin-top: 0.5rem;
 }
@@ -1227,6 +1222,7 @@ exports[`Media Asset Page should render component 1`] = `
 
 .c30 {
   margin-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .c32 {
@@ -1416,7 +1412,7 @@ exports[`Media Asset Page should render component 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c3 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -1462,7 +1458,7 @@ exports[`Media Asset Page should render component 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c10 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -1508,7 +1504,7 @@ exports[`Media Asset Page should render component 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c13 {
-    margin-left: 40%;
+    margin-left: 20%;
   }
 }
 
@@ -1520,6 +1516,145 @@ exports[`Media Asset Page should render component 1`] = `
 
 @supports (display:grid) {
   .c13 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c23 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c24 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c24 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c24 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c24 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c24 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c24 {
+    width: calc(12/12*(100% - 12 * 1rem) + 11 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c24 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c27 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c27 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c27 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c27 {
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c27 {
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c27 {
+    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c27 {
     display: block;
   }
 }
@@ -1724,66 +1859,6 @@ exports[`Media Asset Page should render component 1`] = `
 @media (min-width:63rem) {
   .c28 {
     padding: 0.5rem 0 0;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c24 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c24 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c24 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c24 {
-    grid-column: 1 / span 12;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c27 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c27 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c27 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:80rem) {
-  .c27 {
-    grid-column: 1 / span 10;
-  }
-}
-
-@media (max-width:79.9375rem) {
-  .c23 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:80rem) {
-  .c23 {
-    grid-template-columns: repeat(12,1fr);
   }
 }
 
@@ -2504,9 +2579,11 @@ exports[`Media Asset Page should render component 1`] = `
                 >
                   <div
                     class="c23"
+                    dir="ltr"
                   >
                     <div
                       class="c24"
+                      dir="ltr"
                     >
                       <div
                         class="c25"
@@ -2538,6 +2615,7 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                     <div
                       class="c27"
+                      dir="ltr"
                     >
                       <figcaption
                         class="c28"
@@ -2564,9 +2642,11 @@ exports[`Media Asset Page should render component 1`] = `
                 >
                   <div
                     class="c23"
+                    dir="ltr"
                   >
                     <div
                       class="c24"
+                      dir="ltr"
                     >
                       <div
                         class="c25"
@@ -2598,6 +2678,7 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                     <div
                       class="c27"
+                      dir="ltr"
                     >
                       <figcaption
                         class="c28"

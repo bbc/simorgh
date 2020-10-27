@@ -67,7 +67,7 @@ exports[`FauxHeadline with headline data should render correctly 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -169,7 +169,7 @@ exports[`FauxHeadline with plain text headline should render <strong> containing
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 

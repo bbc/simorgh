@@ -48,7 +48,7 @@ exports[`withLoading HOC and the loading prop set to true should return the load
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c3 {
-    margin-left: 40%;
+    margin-left: 20%;
   }
 }
 

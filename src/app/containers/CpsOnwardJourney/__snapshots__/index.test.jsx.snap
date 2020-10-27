@@ -3,6 +3,7 @@
 exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 .c3 {
   margin-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 @supports (display:grid) {
@@ -42,7 +43,7 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -127,6 +128,7 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 .c3 {
   margin-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 @supports (display:grid) {
@@ -166,7 +168,7 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -300,6 +302,7 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 
 .c3 {
   margin-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .c5 {
@@ -406,7 +409,7 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -572,6 +575,7 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 
 .c3 {
   margin-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .c5 {
@@ -678,7 +682,7 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -839,6 +843,7 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 
 .c3 {
   margin-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .c5 {
@@ -930,7 +935,7 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -1141,6 +1146,7 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 
 .c3 {
   margin-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .c7 {
@@ -1247,7 +1253,7 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -1506,6 +1512,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 
 .c3 {
   margin-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .c7 {
@@ -1612,7 +1619,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 

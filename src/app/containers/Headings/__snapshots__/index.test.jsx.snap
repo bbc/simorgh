@@ -48,7 +48,7 @@ exports[`Headings with headline data should render correctly 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -146,7 +146,7 @@ exports[`Headings with plain text headline should render h1 containing correct t
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -258,7 +258,7 @@ exports[`Headings with plain text subheadline should render h2 containing correc
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 40%;
+    margin-left: 20%;
   }
 }
 
@@ -336,7 +336,7 @@ exports[`Headings with rich text headline with bold text should render h1 with <
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -444,7 +444,7 @@ exports[`Headings with rich text headline with italic text should render h1 with
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -554,7 +554,7 @@ exports[`Headings with rich text should render headline with bold & italic text 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -666,7 +666,7 @@ exports[`Headings with rich text should render headline with italic & bold text 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -778,7 +778,7 @@ exports[`Headings with rich text with different attributes should render headlin
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -896,7 +896,7 @@ exports[`Headings with subheadline data should render correctly 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 40%;
+    margin-left: 20%;
   }
 }
 

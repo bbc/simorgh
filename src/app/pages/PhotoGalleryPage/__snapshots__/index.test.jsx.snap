@@ -111,16 +111,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c8 {
-  display: grid;
-  grid-column-gap: 1rem;
-}
-
-.c16 {
-  display: grid;
-  grid-column-gap: 1rem;
-}
-
 .c1 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -166,7 +156,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -212,7 +202,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c4 {
-    margin-left: 40%;
+    margin-left: 20%;
   }
 }
 
@@ -254,7 +244,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c6 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -266,6 +256,145 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @supports (display:grid) {
   .c6 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c8 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c9 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c9 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c9 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c9 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c9 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c9 {
+    width: calc(12/12*(100% - 12 * 1rem) + 11 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c9 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c11 {
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c11 {
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c11 {
     display: block;
   }
 }
@@ -296,7 +425,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c14 {
-    margin-left: 50%;
+    margin-left: 25%;
   }
 }
 
@@ -308,6 +437,145 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @supports (display:grid) {
   .c14 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c16 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c17 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c17 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c17 {
+    width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c17 {
+    width: calc(4/5*(100% - 5 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c17 {
+    width: calc(4/4*(100% - 4 * 1rem) + 3 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c17 {
+    width: calc(10/8*(100% - 8 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c17 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c19 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c19 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c19 {
+    width: calc(6/4*(100% - 4 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c19 {
+    width: calc(5/5*(100% - 5 * 1rem) + 4 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c19 {
+    width: calc(5/4*(100% - 4 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c19 {
+    width: calc(10/8*(100% - 8 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c19 {
     display: block;
   }
 }
@@ -421,163 +689,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   }
 }
 
-@media (max-width:24.9375rem) {
-  .c17 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c17 {
-    grid-column: 1 / span 4;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c17 {
-    grid-column: 1 / span 4;
-    margin-left: 1em;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c17 {
-    grid-column: 1 / span 4;
-  }
-}
-
-@media (min-width:80rem) {
-  .c17 {
-    grid-column: 1 / span 8;
-  }
-}
-
-@media (max-width:24.9375rem) {
-  .c19 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c19 {
-    grid-column: 1 / span 4;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c19 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c19 {
-    grid-column: 1 / span 4;
-  }
-}
-
-@media (min-width:80rem) {
-  .c19 {
-    grid-column: 1 / span 8;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c9 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c9 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c9 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c9 {
-    grid-column: 1 / span 12;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c11 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c11 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c11 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:80rem) {
-  .c11 {
-    grid-column: 1 / span 10;
-  }
-}
-
-@media (max-width:79.9375rem) {
-  .c8 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:80rem) {
-  .c8 {
-    grid-template-columns: repeat(12,1fr);
-  }
-}
-
-@media (max-width:25rem) {
-  .c16 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c16 {
-    grid-template-columns: repeat(4,1fr);
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c16 {
-    grid-template-columns: repeat(5,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c16 {
-    grid-template-columns: repeat(4,1fr);
-  }
-}
-
-@media (min-width:80rem) {
-  .c16 {
-    grid-template-columns: repeat(8,1fr);
-  }
-}
-
-@supports (display:grid) {
-  .c16 {
-    max-width: initial;
-  }
-}
-
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     margin: 0 auto;
@@ -656,9 +767,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                 >
                   <div
                     class="c8"
+                    dir="ltr"
                   >
                     <div
                       class="c9"
+                      dir="ltr"
                     >
                       <div
                         class="c10"
@@ -675,6 +788,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     </div>
                     <div
                       class="c11"
+                      dir="ltr"
                     >
                       <figcaption
                         class="c12"
@@ -701,9 +815,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                 >
                   <div
                     class="c8"
+                    dir="ltr"
                   >
                     <div
                       class="c9"
+                      dir="ltr"
                     >
                       <div
                         class="c10"
@@ -720,6 +836,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     </div>
                     <div
                       class="c11"
+                      dir="ltr"
                     >
                       <figcaption
                         class="c12"
@@ -746,9 +863,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                 >
                   <div
                     class="c16"
+                    dir="ltr"
                   >
                     <div
                       class="c17"
+                      dir="ltr"
                     >
                       <div
                         class="c18"
@@ -765,6 +884,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     </div>
                     <div
                       class="c19"
+                      dir="ltr"
                     >
                       <figcaption
                         class="c12"
@@ -791,9 +911,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                 >
                   <div
                     class="c8"
+                    dir="ltr"
                   >
                     <div
                       class="c9"
+                      dir="ltr"
                     >
                       <div
                         class="c20"
@@ -810,6 +932,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     </div>
                     <div
                       class="c11"
+                      dir="ltr"
                     >
                       <figcaption
                         class="c12"
@@ -836,9 +959,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                 >
                   <div
                     class="c8"
+                    dir="ltr"
                   >
                     <div
                       class="c9"
+                      dir="ltr"
                     >
                       <div
                         class="c10"
@@ -855,6 +980,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     </div>
                     <div
                       class="c11"
+                      dir="ltr"
                     >
                       <figcaption
                         class="c12"
@@ -881,9 +1007,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                 >
                   <div
                     class="c8"
+                    dir="ltr"
                   >
                     <div
                       class="c9"
+                      dir="ltr"
                     >
                       <div
                         class="c20"
@@ -900,6 +1028,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     </div>
                     <div
                       class="c11"
+                      dir="ltr"
                     >
                       <figcaption
                         class="c12"
@@ -926,9 +1055,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                 >
                   <div
                     class="c8"
+                    dir="ltr"
                   >
                     <div
                       class="c9"
+                      dir="ltr"
                     >
                       <div
                         class="c10"
@@ -945,6 +1076,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     </div>
                     <div
                       class="c11"
+                      dir="ltr"
                     >
                       <figcaption
                         class="c12"
@@ -971,9 +1103,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                 >
                   <div
                     class="c8"
+                    dir="ltr"
                   >
                     <div
                       class="c9"
+                      dir="ltr"
                     >
                       <div
                         class="c10"
@@ -990,6 +1124,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     </div>
                     <div
                       class="c11"
+                      dir="ltr"
                     >
                       <figcaption
                         class="c12"
@@ -1016,9 +1151,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                 >
                   <div
                     class="c8"
+                    dir="ltr"
                   >
                     <div
                       class="c9"
+                      dir="ltr"
                     >
                       <div
                         class="c10"
@@ -1035,6 +1172,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     </div>
                     <div
                       class="c11"
+                      dir="ltr"
                     >
                       <figcaption
                         class="c12"
@@ -1061,9 +1199,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                 >
                   <div
                     class="c8"
+                    dir="ltr"
                   >
                     <div
                       class="c9"
+                      dir="ltr"
                     >
                       <div
                         class="c10"
@@ -1080,6 +1220,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     </div>
                     <div
                       class="c11"
+                      dir="ltr"
                     >
                       <figcaption
                         class="c12"
@@ -1106,9 +1247,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                 >
                   <div
                     class="c8"
+                    dir="ltr"
                   >
                     <div
                       class="c9"
+                      dir="ltr"
                     >
                       <div
                         class="c10"
@@ -1125,6 +1268,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     </div>
                     <div
                       class="c11"
+                      dir="ltr"
                     >
                       <figcaption
                         class="c12"
@@ -1151,9 +1295,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                 >
                   <div
                     class="c8"
+                    dir="ltr"
                   >
                     <div
                       class="c9"
+                      dir="ltr"
                     >
                       <div
                         class="c10"
@@ -1170,6 +1316,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     </div>
                     <div
                       class="c11"
+                      dir="ltr"
                     >
                       <figcaption
                         class="c12"
@@ -1196,9 +1343,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                 >
                   <div
                     class="c8"
+                    dir="ltr"
                   >
                     <div
                       class="c9"
+                      dir="ltr"
                     >
                       <div
                         class="c10"
@@ -1215,6 +1364,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     </div>
                     <div
                       class="c11"
+                      dir="ltr"
                     >
                       <figcaption
                         class="c12"
@@ -1241,9 +1391,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                 >
                   <div
                     class="c8"
+                    dir="ltr"
                   >
                     <div
                       class="c9"
+                      dir="ltr"
                     >
                       <div
                         class="c10"
@@ -1260,6 +1412,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     </div>
                     <div
                       class="c11"
+                      dir="ltr"
                     >
                       <figcaption
                         class="c12"
@@ -1286,9 +1439,11 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                 >
                   <div
                     class="c8"
+                    dir="ltr"
                   >
                     <div
                       class="c9"
+                      dir="ltr"
                     >
                       <div
                         class="c10"
@@ -1305,6 +1460,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     </div>
                     <div
                       class="c11"
+                      dir="ltr"
                     >
                       <figcaption
                         class="c12"
@@ -1695,16 +1851,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c10 {
-  display: grid;
-  grid-column-gap: 1rem;
-}
-
-.c18 {
-  display: grid;
-  grid-column-gap: 1rem;
-}
-
 .c1 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -1754,7 +1900,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -1800,7 +1946,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c4 {
-    margin-left: 40%;
+    margin-left: 20%;
   }
 }
 
@@ -1842,7 +1988,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c8 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -1854,6 +2000,145 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @supports (display:grid) {
   .c8 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c10 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    width: calc(12/12*(100% - 12 * 1rem) + 11 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c11 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c13 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c13 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c13 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c13 {
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c13 {
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c13 {
+    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c13 {
     display: block;
   }
 }
@@ -1884,7 +2169,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c16 {
-    margin-left: 50%;
+    margin-left: 25%;
   }
 }
 
@@ -1896,6 +2181,145 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @supports (display:grid) {
   .c16 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c18 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c19 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c19 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c19 {
+    width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c19 {
+    width: calc(4/5*(100% - 5 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c19 {
+    width: calc(4/4*(100% - 4 * 1rem) + 3 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c19 {
+    width: calc(10/8*(100% - 8 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c19 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c21 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c21 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c21 {
+    width: calc(6/4*(100% - 4 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c21 {
+    width: calc(5/5*(100% - 5 * 1rem) + 4 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c21 {
+    width: calc(5/4*(100% - 4 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c21 {
+    width: calc(10/8*(100% - 8 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c21 {
     display: block;
   }
 }
@@ -2023,163 +2447,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   }
 }
 
-@media (max-width:24.9375rem) {
-  .c19 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c19 {
-    grid-column: 1 / span 4;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c19 {
-    grid-column: 1 / span 4;
-    margin-left: 1em;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c19 {
-    grid-column: 1 / span 4;
-  }
-}
-
-@media (min-width:80rem) {
-  .c19 {
-    grid-column: 1 / span 8;
-  }
-}
-
-@media (max-width:24.9375rem) {
-  .c21 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c21 {
-    grid-column: 1 / span 4;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c21 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c21 {
-    grid-column: 1 / span 4;
-  }
-}
-
-@media (min-width:80rem) {
-  .c21 {
-    grid-column: 1 / span 8;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c11 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c11 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c11 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c11 {
-    grid-column: 1 / span 12;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c13 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c13 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c13 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:80rem) {
-  .c13 {
-    grid-column: 1 / span 10;
-  }
-}
-
-@media (max-width:79.9375rem) {
-  .c10 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:80rem) {
-  .c10 {
-    grid-template-columns: repeat(12,1fr);
-  }
-}
-
-@media (max-width:25rem) {
-  .c18 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c18 {
-    grid-template-columns: repeat(4,1fr);
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c18 {
-    grid-template-columns: repeat(5,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c18 {
-    grid-template-columns: repeat(4,1fr);
-  }
-}
-
-@media (min-width:80rem) {
-  .c18 {
-    grid-template-columns: repeat(8,1fr);
-  }
-}
-
-@supports (display:grid) {
-  .c18 {
-    max-width: initial;
-  }
-}
-
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     margin: 0 auto;
@@ -2276,9 +2543,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -2295,6 +2564,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -2321,9 +2591,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -2340,6 +2612,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -2366,9 +2639,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="c18"
+                        dir="ltr"
                       >
                         <div
                           class="c19"
+                          dir="ltr"
                         >
                           <div
                             class="c20"
@@ -2385,6 +2660,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                         </div>
                         <div
                           class="c21"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -2411,9 +2687,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c22"
@@ -2430,6 +2708,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -2456,9 +2735,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -2475,6 +2756,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -2501,9 +2783,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c22"
@@ -2520,6 +2804,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -2546,9 +2831,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -2565,6 +2852,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -2591,9 +2879,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -2610,6 +2900,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -2636,9 +2927,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -2655,6 +2948,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -2681,9 +2975,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -2700,6 +2996,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -2726,9 +3023,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -2745,6 +3044,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -2771,9 +3071,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -2790,6 +3092,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -2816,9 +3119,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -2835,6 +3140,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -2861,9 +3167,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -2880,6 +3188,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -2906,9 +3215,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -2925,6 +3236,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -3322,11 +3634,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c10 {
-  display: grid;
-  grid-column-gap: 1rem;
-}
-
 .c22 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3394,6 +3701,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 .c17 {
   margin-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .c19 {
@@ -3563,7 +3871,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -3609,7 +3917,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c4 {
-    margin-left: 40%;
+    margin-left: 20%;
   }
 }
 
@@ -3651,7 +3959,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c8 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -3663,6 +3971,145 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @supports (display:grid) {
   .c8 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c10 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    width: calc(12/12*(100% - 12 * 1rem) + 11 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c11 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c13 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c13 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c13 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c13 {
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c13 {
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c13 {
+    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c13 {
     display: block;
   }
 }
@@ -3833,66 +4280,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 @media (min-width:63rem) {
   .c14 {
     padding: 0.5rem 0 0;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c11 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c11 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c11 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c11 {
-    grid-column: 1 / span 12;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c13 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c13 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c13 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:80rem) {
-  .c13 {
-    grid-column: 1 / span 10;
-  }
-}
-
-@media (max-width:79.9375rem) {
-  .c10 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:80rem) {
-  .c10 {
-    grid-template-columns: repeat(12,1fr);
   }
 }
 
@@ -4171,9 +4558,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -4190,6 +4579,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -4216,9 +4606,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -4235,6 +4627,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -4261,9 +4654,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -4280,6 +4675,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -4306,9 +4702,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -4325,6 +4723,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -4351,9 +4750,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -4370,6 +4771,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -4396,9 +4798,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -4415,6 +4819,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -4441,9 +4846,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -4460,6 +4867,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -4486,9 +4894,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -4505,6 +4915,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -4531,9 +4942,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -4550,6 +4963,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -4576,9 +4990,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -4595,6 +5011,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -4621,9 +5038,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -4640,6 +5059,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         </div>
                         <div
                           class="c13"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c14"
@@ -4979,11 +5399,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c10 {
-  display: grid;
-  grid-column-gap: 1rem;
-}
-
 .c1 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -5033,7 +5448,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -5079,7 +5494,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c4 {
-    margin-left: 40%;
+    margin-left: 20%;
   }
 }
 
@@ -5121,7 +5536,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c8 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -5133,6 +5548,145 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @supports (display:grid) {
   .c8 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c10 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    width: calc(12/12*(100% - 12 * 1rem) + 11 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c11 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c15 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c15 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c15 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c15 {
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c15 {
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c15 {
+    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c15 {
     display: block;
   }
 }
@@ -5208,66 +5762,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 @media (min-width:63rem) {
   .c16 {
     padding: 0.5rem 0 0;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c11 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c11 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c11 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c11 {
-    grid-column: 1 / span 12;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c15 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c15 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c15 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:80rem) {
-  .c15 {
-    grid-column: 1 / span 10;
-  }
-}
-
-@media (max-width:79.9375rem) {
-  .c10 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:80rem) {
-  .c10 {
-    grid-template-columns: repeat(12,1fr);
   }
 }
 
@@ -5593,9 +6087,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -5627,6 +6123,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                         </div>
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -5653,9 +6150,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -5687,6 +6186,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                         </div>
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -5713,9 +6213,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -5747,6 +6249,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                         </div>
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -5773,9 +6276,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -5807,6 +6312,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                         </div>
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -5833,9 +6339,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -5867,6 +6375,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                         </div>
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -5893,9 +6402,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -5927,6 +6438,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                         </div>
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -5953,9 +6465,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -5987,6 +6501,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                         </div>
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -6600,16 +7115,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c10 {
-  display: grid;
-  grid-column-gap: 1rem;
-}
-
-.c19 {
-  display: grid;
-  grid-column-gap: 1rem;
-}
-
 .c42 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6677,6 +7182,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 .c37 {
   margin-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .c39 {
@@ -6823,7 +7329,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -6869,7 +7375,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c4 {
-    margin-left: 40%;
+    margin-left: 20%;
   }
 }
 
@@ -6911,7 +7417,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c8 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -6923,6 +7429,145 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @supports (display:grid) {
   .c8 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c10 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    width: calc(12/12*(100% - 12 * 1rem) + 11 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c11 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c15 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c15 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c15 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c15 {
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c15 {
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c15 {
+    width: calc(10/12*(100% - 12 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c15 {
     display: block;
   }
 }
@@ -6953,7 +7598,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c17 {
-    margin-left: 50%;
+    margin-left: 25%;
   }
 }
 
@@ -6965,6 +7610,145 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @supports (display:grid) {
   .c17 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c19 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c20 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c20 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c20 {
+    width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c20 {
+    width: calc(4/5*(100% - 5 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c20 {
+    width: calc(4/4*(100% - 4 * 1rem) + 3 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c20 {
+    width: calc(10/8*(100% - 8 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c20 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c22 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c22 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c22 {
+    width: calc(6/4*(100% - 4 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c22 {
+    width: calc(5/5*(100% - 5 * 1rem) + 4 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c22 {
+    width: calc(5/4*(100% - 4 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c22 {
+    width: calc(10/8*(100% - 8 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c22 {
     display: block;
   }
 }
@@ -7184,163 +7968,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @media (min-width:63rem) {
   .c16 {
     padding: 0.5rem 0 0;
-  }
-}
-
-@media (max-width:24.9375rem) {
-  .c20 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c20 {
-    grid-column: 1 / span 4;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c20 {
-    grid-column: 1 / span 4;
-    margin-left: 1em;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c20 {
-    grid-column: 1 / span 4;
-  }
-}
-
-@media (min-width:80rem) {
-  .c20 {
-    grid-column: 1 / span 8;
-  }
-}
-
-@media (max-width:24.9375rem) {
-  .c22 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c22 {
-    grid-column: 1 / span 4;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c22 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c22 {
-    grid-column: 1 / span 4;
-  }
-}
-
-@media (min-width:80rem) {
-  .c22 {
-    grid-column: 1 / span 8;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c11 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c11 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c11 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c11 {
-    grid-column: 1 / span 12;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c15 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c15 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c15 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:80rem) {
-  .c15 {
-    grid-column: 1 / span 10;
-  }
-}
-
-@media (max-width:79.9375rem) {
-  .c10 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:80rem) {
-  .c10 {
-    grid-template-columns: repeat(12,1fr);
-  }
-}
-
-@media (max-width:25rem) {
-  .c19 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c19 {
-    grid-template-columns: repeat(4,1fr);
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c19 {
-    grid-template-columns: repeat(5,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c19 {
-    grid-template-columns: repeat(4,1fr);
-  }
-}
-
-@media (min-width:80rem) {
-  .c19 {
-    grid-template-columns: repeat(8,1fr);
-  }
-}
-
-@supports (display:grid) {
-  .c19 {
-    max-width: initial;
   }
 }
 
@@ -7605,9 +8232,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -7639,6 +8268,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -7665,9 +8295,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c19"
+                        dir="ltr"
                       >
                         <div
                           class="c20"
+                          dir="ltr"
                         >
                           <div
                             class="c21"
@@ -7699,6 +8331,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c22"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -7725,9 +8358,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c19"
+                        dir="ltr"
                       >
                         <div
                           class="c20"
+                          dir="ltr"
                         >
                           <div
                             class="c23"
@@ -7759,6 +8394,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c22"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -7785,9 +8421,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c19"
+                        dir="ltr"
                       >
                         <div
                           class="c20"
+                          dir="ltr"
                         >
                           <div
                             class="c24"
@@ -7819,6 +8457,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c22"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -7845,9 +8484,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c19"
+                        dir="ltr"
                       >
                         <div
                           class="c20"
+                          dir="ltr"
                         >
                           <div
                             class="c25"
@@ -7879,6 +8520,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c22"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -7905,9 +8547,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c19"
+                        dir="ltr"
                       >
                         <div
                           class="c20"
+                          dir="ltr"
                         >
                           <div
                             class="c23"
@@ -7939,6 +8583,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c22"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -7965,9 +8610,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c19"
+                        dir="ltr"
                       >
                         <div
                           class="c20"
+                          dir="ltr"
                         >
                           <div
                             class="c26"
@@ -7999,6 +8646,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c22"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -8025,9 +8673,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c27"
@@ -8059,6 +8709,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -8085,9 +8736,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c28"
@@ -8119,6 +8772,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -8145,9 +8799,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c19"
+                        dir="ltr"
                       >
                         <div
                           class="c20"
+                          dir="ltr"
                         >
                           <div
                             class="c29"
@@ -8179,6 +8835,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c22"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -8205,9 +8862,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c19"
+                        dir="ltr"
                       >
                         <div
                           class="c20"
+                          dir="ltr"
                         >
                           <div
                             class="c30"
@@ -8239,6 +8898,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c22"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -8265,9 +8925,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c31"
@@ -8299,6 +8961,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -8325,9 +8988,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c32"
@@ -8359,6 +9024,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -8385,9 +9051,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c33"
@@ -8419,6 +9087,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -8445,9 +9114,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c34"
@@ -8479,6 +9150,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -8505,9 +9177,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c12"
@@ -8539,6 +9213,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -8565,9 +9240,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c10"
+                        dir="ltr"
                       >
                         <div
                           class="c11"
+                          dir="ltr"
                         >
                           <div
                             class="c35"
@@ -8599,6 +9276,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -8625,9 +9303,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c19"
+                        dir="ltr"
                       >
                         <div
                           class="c20"
+                          dir="ltr"
                         >
                           <div
                             class="c23"
@@ -8659,6 +9339,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c22"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"
@@ -8685,9 +9366,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="c19"
+                        dir="ltr"
                       >
                         <div
                           class="c20"
+                          dir="ltr"
                         >
                           <div
                             class="c23"
@@ -8719,6 +9402,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="c22"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c16"

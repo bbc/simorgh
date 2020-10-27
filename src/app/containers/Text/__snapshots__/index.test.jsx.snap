@@ -56,7 +56,7 @@ exports[`TextContainer with data should render correctly 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    margin-left: 40%;
+    margin-left: 20%;
   }
 }
 

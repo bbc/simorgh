@@ -81,6 +81,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 
 .c3 {
   margin-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .c5 {
@@ -300,7 +301,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -819,6 +820,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 
 .c3 {
   margin-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .c5 {
@@ -1027,7 +1029,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
-    margin-left: 33.333333333333336%;
+    margin-left: 16.666666666666668%;
   }
 }
 
