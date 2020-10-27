@@ -102,22 +102,6 @@ export const CPSPageGrid = ({ children, ...props }) => (
   </StyledCPSPageGrid>
 );
 
-export const ArticlePageGrid = ({ as, ...props }) => (
-  <Grid
-    {...props}
-    forwardedAs={as}
-    enableGelGutters
-    columns={{
-      group0: 6,
-      group1: 6,
-      group2: 6,
-      group3: 6,
-      group4: 8,
-      group5: 20,
-    }}
-  />
-);
-
 export const GridWrapper = ({ as, ...props }) => (
   <GelPageGrid
     {...props}
@@ -306,46 +290,56 @@ export const PopOutGridItemMedium = props => {
   return <PopOutAtGroup5 {...props}>{children}</PopOutAtGroup5>;
 };
 
-ArticlePageGrid.propTypes = {
-  // eslint-disable-next-line react/require-default-props
+GridItemLarge.propTypes = {
   as: string,
+  dir: string,
 };
 
-GridItemLarge.propTypes = {
-  // eslint-disable-next-line react/require-default-props
-  as: string,
-  // eslint-disable-next-line react/require-default-props
-  dir: string,
+GridItemLarge.defaultProps = {
+  as: undefined,
+  dir: 'ltr',
 };
 
 GridItemLargeNoMargin.propTypes = {
-  // eslint-disable-next-line react/require-default-props
   as: string,
-  // eslint-disable-next-line react/require-default-props
   dir: string,
+};
+
+GridItemLargeNoMargin.defaultProps = {
+  as: undefined,
+  dir: 'ltr',
 };
 
 GridWrapper.propTypes = {
-  // eslint-disable-next-line react/require-default-props
   as: string,
+};
+
+GridWrapper.defaultProps = {
+  as: undefined,
 };
 
 GridItemMediumNoMargin.propTypes = {
-  // eslint-disable-next-line react/require-default-props
   as: string,
-  // eslint-disable-next-line react/require-default-props
   dir: string,
   gridColumnStart: number,
   gridSpan: number,
 };
 
+GridItemMediumNoMargin.defaultProps = {
+  as: undefined,
+  dir: 'ltr',
+};
+
 GridItemMedium.propTypes = {
-  // eslint-disable-next-line react/require-default-props
   as: string,
-  // eslint-disable-next-line react/require-default-props
   dir: string,
   gridColumnStart: number,
   gridSpan: number,
+};
+
+GridItemMedium.defaultProps = {
+  as: undefined,
+  dir: 'ltr',
 };
 
 GridItemMediumNoMargin.defaultProps = {
