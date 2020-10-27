@@ -145,7 +145,7 @@ export const GridItemConstrainedSmall = styled(({ as, dir, ...props }) => (
       group1: 1,
       group2: 1,
       group3: 1,
-      group4: 3,
+      group4: 2,
       group5: 5,
     }}
     columns={{
@@ -186,7 +186,7 @@ export const GridItemConstrainedMedium = ({
       group1: 1,
       group2: 1,
       group3: 1,
-      group4: 3,
+      group4: 2,
       group5: gridColumnStart,
     }}
     columns={{
@@ -217,7 +217,7 @@ export const GridItemConstrainedMediumNoMargin = ({
       group1: 1,
       group2: 1,
       group3: 1,
-      group4: 3,
+      group4: 2,
       group5: gridColumnStart,
     }}
     columns={{
@@ -250,7 +250,7 @@ export const GridItemConstrainedLarge = ({ as, dir, ...props }) => (
       group1: 1,
       group2: 1,
       group3: 1,
-      group4: 3,
+      group4: 2,
       group5: 5,
     }}
     columns={{
@@ -275,7 +275,7 @@ export const GridItemConstrainedLargeNoMargin = ({ as, dir, ...props }) => (
       group1: 1,
       group2: 1,
       group3: 1,
-      group4: 3,
+      group4: 2,
       group5: 5,
     }}
     columns={{
