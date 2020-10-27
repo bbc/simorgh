@@ -7,6 +7,7 @@ export default ({
   variant = '',
   assetUri,
   episodeId,
+  masterBrand,
 }) => {
   let dataPath;
 
@@ -30,6 +31,14 @@ export default ({
         'tv',
         pageType,
         `${episodeId}.json`,
+      );
+    case 'liveRadio':
+      return path.join(
+        process.cwd(),
+        'data',
+        service,
+        masterBrand,
+        'liveradio.json',
       );
     default:
       dataPath = `${id}${variant}.json`;

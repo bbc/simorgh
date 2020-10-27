@@ -176,4 +176,16 @@ describe('constructDataFilePath', () => {
       ).toEqual(`${DATA_PATH}/data/worldservice/tv/africa_eye/12345678.json`);
     });
   });
+
+  describe('Live Radio', () => {
+    it('should construct correct data file path', () => {
+      expect(
+        constructDataFilePath({
+          pageType: 'liveRadio',
+          service: 'korean',
+          masterBrand: 'bbc_korean_radio',
+        }),
+      ).toEqual(`${DATA_PATH}/data/korean/bbc_korean_radio/liveradio.json`);
+    });
+  });
 });

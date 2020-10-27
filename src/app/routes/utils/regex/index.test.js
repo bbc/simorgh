@@ -414,11 +414,11 @@ const validLegacyPageRoutes = [
   '/ukchina/simp/cool_britannia/people_in_uk/2016/09/160927_people_lord_mayor',
   '/ukchina/simp/elt/english_now/2014/12/141205_media_english_hiv',
   '/ukchina/simp/uk_education/tianshu/091124_tianshu_iv_cityvc2',
+  '/ukchina/trad/in_depth/cluster_brazil_worldcup',
+  '/vietnamese/in_depth/us_election_2016',
 ];
 
 const invalidLegacyPageRoutes = [
-  // Asset URI begin with a 6 digit date
-  '/hausa/multimedia/2014/05/hip_hop_40years_gallery',
   '/ukchina',
   '/ukchina/',
   '/ukchina/simp',
