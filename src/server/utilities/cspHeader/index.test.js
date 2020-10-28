@@ -57,6 +57,7 @@ describe('cspHeader', () => {
       fontSrcExpectation: [
         'https://gel.files.bbci.co.uk',
         'https://ws-downloads.files.bbci.co.uk',
+        'https://news.files.bbci.co.uk',
       ],
       frameSrcExpectation: [
         'https://polling.bbc.co.uk',
@@ -151,6 +152,7 @@ describe('cspHeader', () => {
         'https://gel.files.bbci.co.uk',
         'https://ws-downloads.files.bbci.co.uk',
         'https://static.bbci.co.uk',
+        'https://news.files.bbci.co.uk',
       ],
       frameSrcExpectation: [
         'https://emp.bbc.com',
@@ -289,6 +291,7 @@ describe('cspHeader', () => {
       fontSrcExpectation: [
         'https://gel.files.bbci.co.uk',
         'https://ws-downloads.files.bbci.co.uk',
+        'https://news.test.files.bbci.co.uk',
       ],
       frameSrcExpectation: [
         'https://polling.bbc.co.uk',
@@ -398,6 +401,7 @@ describe('cspHeader', () => {
         'https://gel.files.bbci.co.uk',
         'https://ws-downloads.files.bbci.co.uk',
         'https://static.bbci.co.uk',
+        'https://news.test.files.bbci.co.uk',
       ],
       frameSrcExpectation: [
         'https://emp.bbc.com',
@@ -553,7 +557,9 @@ describe('cspHeader', () => {
         });
 
         it(`Then it has this fontSrc`, () => {
-          expect(generateFontSrc({ isAmp })).toEqual(fontSrcExpectation);
+          expect(generateFontSrc({ isAmp, isLive })).toEqual(
+            fontSrcExpectation,
+          );
         });
 
         it(`Then it has this frameSrc`, () => {

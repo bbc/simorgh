@@ -9,17 +9,10 @@ import {
   bool,
 } from 'prop-types';
 import Figure from '@bbc/psammead-figure';
+import Grid from '#app/components/Grid';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
-import {
-  NestedGridParentLarge,
-  NestedGridParentMedium,
-  NestedGridParentSmall,
-  NestedGridItemChildSmall,
-  NestedGridItemChildMedium,
-  NestedGridItemChildLarge,
-} from '#lib/styledGrid';
 
 const renderCopyright = copyright =>
   copyright && <Copyright>{copyright}</Copyright>;
@@ -41,33 +34,57 @@ const ArticleFigure = ({
   srcset,
   showCopyright,
 }) => {
-  const imageSpan = {
-    default: '6',
-    group5: '12',
+  let parentColumns = {
+    group0: 6,
+    group1: 6,
+    group2: 6,
+    group3: 6,
+    group4: 6,
+    group5: 12,
   };
-  let ParentWrapper = NestedGridParentLarge;
-  let ChildWrapper = NestedGridItemChildLarge;
 
   if (height === width) {
-    ParentWrapper = NestedGridParentMedium;
-    ChildWrapper = NestedGridItemChildMedium;
+    parentColumns = {
+      group0: 5,
+      group1: 5,
+      group2: 5,
+      group3: 5,
+      group4: 5,
+      group5: 10,
+    };
   }
   if (height > width) {
-    ParentWrapper = NestedGridParentSmall;
-    ChildWrapper = NestedGridItemChildSmall;
-    imageSpan.default = '4';
-    imageSpan.group1 = '6';
+    parentColumns = {
+      group0: 6,
+      group1: 6,
+      group2: 4,
+      group3: 5,
+      group4: 4,
+      group5: 8,
+    };
   }
 
   return (
     <Figure>
-      <ParentWrapper>
-        <ChildWrapper
-          gridColumnStart={1}
-          marginLeft={{
-            group3: '1em',
+      <Grid enableGelGutters columns={parentColumns}>
+        <Grid
+          item
+          startOffset={{
+            group0: 1,
+            group1: 1,
+            group2: 1,
+            group3: 1,
+            group4: 1,
+            group5: 1,
           }}
-          gridSpan={imageSpan}
+          columns={{
+            group0: 6,
+            group1: 6,
+            group2: height > width ? 4 : 6,
+            group3: height > width ? 4 : 6,
+            group4: height > width ? 4 : 6,
+            group5: height > width ? 10 : 12,
+          }}
         >
           <ImageWithPlaceholder
             ratio={ratio}
@@ -82,19 +99,31 @@ const ArticleFigure = ({
           >
             {showCopyright && renderCopyright(copyright)}
           </ImageWithPlaceholder>
-        </ChildWrapper>
-        <ChildWrapper
-          gridColumnStart={1}
-          gridSpan={{
-            default: '6',
-            group3: '5',
-            group4: '5',
-            group5: '10',
-          }}
-        >
-          {renderCaption(captionBlock, type)}
-        </ChildWrapper>
-      </ParentWrapper>
+        </Grid>
+        {captionBlock && (
+          <Grid
+            item
+            startOffset={{
+              group0: 1,
+              group1: 1,
+              group2: 1,
+              group3: 1,
+              group4: 1,
+              group5: 1,
+            }}
+            columns={{
+              group0: 6,
+              group1: 6,
+              group2: 6,
+              group3: 5,
+              group4: 5,
+              group5: 10,
+            }}
+          >
+            {renderCaption(captionBlock, type)}
+          </Grid>
+        )}
+      </Grid>
     </Figure>
   );
 };

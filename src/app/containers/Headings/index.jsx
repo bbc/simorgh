@@ -8,10 +8,7 @@ import { headlineModelPropTypes } from '#models/propTypes/headline';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';
 import idSanitiser from '#lib/utilities/idSanitiser';
-import {
-  GridItemConstrainedMedium,
-  GridItemConstrainedLarge,
-} from '#lib/styledGrid';
+import { GridItemMedium, GridItemLarge } from '#app/components/Grid';
 
 const StyledHeadline = styled(Headline)`
   :focus {
@@ -25,9 +22,9 @@ const Headings = {
   subheadline: SubHeading,
 };
 
-const GridConstraints = {
-  headline: GridItemConstrainedLarge,
-  subheadline: GridItemConstrainedMedium,
+const GridItems = {
+  headline: GridItemLarge,
+  subheadline: GridItemMedium,
 };
 
 const sanitiseSubheadline = (type, text) => {
@@ -40,7 +37,7 @@ const sanitiseSubheadline = (type, text) => {
 const HeadingsContainer = ({ blocks, type }) => {
   const { script, service } = useContext(ServiceContext);
   const Heading = Headings[type];
-  const GridConstrain = GridConstraints[type];
+  const GridItem = GridItems[type];
 
   const arrayOfFragments = blocks[0].model.blocks[0].model.blocks;
 
@@ -59,11 +56,11 @@ const HeadingsContainer = ({ blocks, type }) => {
   const id = type === 'headline' ? headingId : subHeadingId;
 
   return (
-    <GridConstrain>
+    <GridItem>
       <Heading script={script} service={service} id={id} tabIndex="-1">
         {renderText()}
       </Heading>
-    </GridConstrain>
+    </GridItem>
   );
 };
 
