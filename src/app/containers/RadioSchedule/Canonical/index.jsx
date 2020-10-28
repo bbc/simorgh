@@ -52,6 +52,7 @@ const RadioScheduleSectionLabel = styled(SectionLabel)`
   width: 100%; /* Needed for IE11 */
   padding-top: ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin: 0 auto;
     padding-top: ${GEL_SPACING_TRPL};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
