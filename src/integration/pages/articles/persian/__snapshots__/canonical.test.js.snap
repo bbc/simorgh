@@ -125,7 +125,7 @@ Object {
 exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
 Object {
   "text": "ايران",
-  "url": "/persian/iran",
+  "url": "/persian/topics/ckdxnwvwwjnt",
 }
 `;
 
@@ -139,42 +139,42 @@ Object {
 exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
 Object {
   "text": "جهان",
-  "url": "/persian/world",
+  "url": "/persian/topics/c1d8ye58xl8t",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
 Object {
   "text": "هنر",
-  "url": "/persian/arts",
+  "url": "/persian/topics/c9wpm0epm45t",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 12`] = `
 Object {
   "text": "ورزش",
-  "url": "/persian/sport",
+  "url": "/persian/topics/cnq6879k7yjt",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 13`] = `
 Object {
   "text": "اقتصاد",
-  "url": "/persian/business",
+  "url": "/persian/topics/cl8l9mvlllqt",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 14`] = `
 Object {
   "text": "دانش",
-  "url": "/persian/science",
+  "url": "/persian/topics/cp0e57wejkzt",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 15`] = `
 Object {
   "text": "ناظران می‌گویند",
-  "url": "/persian/blogs/viewpoints",
+  "url": "/persian/blogs-54099951",
 }
 `;
 
