@@ -40,7 +40,7 @@ const LargeGridColumns = {
 };
 
 const Wrapper = styled.div`
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     padding: 0px 1rem;
   }
 `;
@@ -144,6 +144,8 @@ OptionallyRenderedSkipWrapper.defaultProps = {
 };
 
 const CpsOnwardJourney = ({
+  className,
+  LabelComponent,
   labelId,
   title,
   content,
@@ -169,7 +171,7 @@ const CpsOnwardJourney = ({
 
   const CpsOnwardJourneyWrapper = ({ children }) =>
     parentColumns ? (
-      <Wrapper data-e2e={labelId} {...a11yAttributes}>
+      <Wrapper data-e2e={labelId} {...a11yAttributes} className={className}>
         {children}
       </Wrapper>
     ) : (
@@ -190,7 +192,7 @@ const CpsOnwardJourney = ({
     <CpsOnwardJourneyWrapper>
       <OptionallyRenderedSkipWrapper skipLink={skipLink} service={service}>
         {title ? (
-          <StyledSectionLabel
+          <LabelComponent
             script={script}
             service={service}
             dir={dir}
@@ -201,7 +203,7 @@ const CpsOnwardJourney = ({
             backgroundColor={sectionLabelBackground}
           >
             {title}
-          </StyledSectionLabel>
+          </LabelComponent>
         ) : null}
         {hasSingleContent ? (
           <SingleContentWrapper columnType={columnType}>
@@ -216,6 +218,7 @@ const CpsOnwardJourney = ({
 };
 
 CpsOnwardJourney.propTypes = {
+  className: string,
   labelId: string.isRequired,
   title: string,
   content: arrayOf(shape(storyItem)),
@@ -242,6 +245,7 @@ CpsOnwardJourney.propTypes = {
 };
 
 CpsOnwardJourney.defaultProps = {
+  className: '',
   content: [],
   title: '',
   isMediaContent: false,
@@ -250,6 +254,7 @@ CpsOnwardJourney.defaultProps = {
   sectionLabelBar: true,
   sectionLabelBackground: C_GHOST,
   skipLink: null,
+  LabelComponent: StyledSectionLabel,
 };
 
 export default CpsOnwardJourney;
