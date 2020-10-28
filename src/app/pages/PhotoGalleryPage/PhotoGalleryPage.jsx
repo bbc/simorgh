@@ -114,7 +114,7 @@ const PhotoGalleryPage = ({ pageData }) => {
       <ComscoreAnalytics />
 
       <StyledGelPageGrid
-        forwardedAs="main"
+        as="main"
         role="main"
         enableGelGutters
         columns={{
