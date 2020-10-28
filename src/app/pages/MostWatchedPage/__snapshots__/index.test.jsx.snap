@@ -10,6 +10,10 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
   height: 0.75rem;
 }
 
+.c3 {
+  width: 100%;
+}
+
 .c0 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
