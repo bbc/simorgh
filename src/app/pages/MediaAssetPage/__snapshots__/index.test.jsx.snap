@@ -956,6 +956,10 @@ exports[`Media Asset Page should render component 1`] = `
   overflow: hidden;
 }
 
+.c29 {
+  width: 100%;
+}
+
 .c11 {
   font-size: 1.75rem;
   line-height: 2rem;

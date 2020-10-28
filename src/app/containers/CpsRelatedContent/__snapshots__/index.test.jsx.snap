@@ -79,6 +79,10 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   margin: 0;
 }
 
+.c1 {
+  width: 100%;
+}
+
 .c3 {
   margin-bottom: 1rem;
   padding-bottom: 2rem;
@@ -762,6 +766,10 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   position: absolute;
   width: 1px;
   margin: 0;
+}
+
+.c1 {
+  width: 100%;
 }
 
 .c3 {

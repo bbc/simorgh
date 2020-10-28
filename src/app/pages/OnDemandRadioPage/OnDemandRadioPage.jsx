@@ -38,7 +38,6 @@ const getGroups = (zero, one, two, three, four, five) => ({
 });
 
 const StyledGelPageGrid = styled(GelPageGrid)`
-  width: 100%;
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
 

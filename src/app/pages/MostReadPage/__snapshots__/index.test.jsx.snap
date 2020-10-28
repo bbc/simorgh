@@ -89,6 +89,10 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   font-style: normal;
 }
 
+.c5 {
+  width: 100%;
+}
+
 .c0 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;

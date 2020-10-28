@@ -24,7 +24,6 @@ const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${pr
 const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
 const StyledGelPageGrid = styled(GelPageGrid)`
-  width: 100%;
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
 
