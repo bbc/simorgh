@@ -246,7 +246,7 @@ export const service = {
           text: 'कुकीज़',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853379',
+          href: 'https://www.bbc.co.uk/send/u50853357',
           text: 'बीबीसी से संपर्क करें',
         },
         {
