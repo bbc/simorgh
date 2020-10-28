@@ -8,6 +8,7 @@ import {
   func,
   bool,
   oneOf,
+  element,
 } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled from '@emotion/styled';
@@ -16,7 +17,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_SPACING_DBL,
@@ -219,6 +219,7 @@ const CpsOnwardJourney = ({
 
 CpsOnwardJourney.propTypes = {
   className: string,
+  LabelComponent: element,
   labelId: string.isRequired,
   title: string,
   content: arrayOf(shape(storyItem)),
