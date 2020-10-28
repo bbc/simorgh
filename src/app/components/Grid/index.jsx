@@ -17,6 +17,15 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 
+export const getGelGroups = (zero, one, two, three, four, five) => ({
+  group0: zero,
+  group1: one,
+  group2: two,
+  group3: three,
+  group4: four,
+  group5: five,
+});
+
 const Grid = props => {
   const { dir } = useContext(ServiceContext);
 
@@ -94,14 +103,7 @@ const StyledCPSPageGrid = styled(Grid)`
 
 export const CPSPageGrid = ({ children, ...props }) => (
   <StyledCPSPageGrid
-    columns={{
-      group0: 6,
-      group1: 6,
-      group2: 6,
-      group3: 6,
-      group4: 8,
-      group5: 8,
-    }}
+    columns={getGelGroups(6, 6, 6, 6, 8, 8)}
     enableGelGutters
     {...props}
   >
@@ -114,14 +116,7 @@ export const GridWrapper = ({ as, ...props }) => (
     {...props}
     forwardedAs={as}
     enableGelGutters
-    columns={{
-      group0: 6,
-      group1: 6,
-      group2: 6,
-      group3: 6,
-      group4: 8,
-      group5: 20,
-    }}
+    columns={getGelGroups(6, 6, 6, 6, 8, 20)}
   />
 );
 
@@ -130,22 +125,8 @@ export const GridItemSmall = styled(({ as, ...props }) => (
     {...props}
     forwardedAs={as}
     item
-    startOffset={{
-      group0: 1,
-      group1: 1,
-      group2: 1,
-      group3: 1,
-      group4: 2,
-      group5: 5,
-    }}
-    columns={{
-      group0: 6,
-      group1: 6,
-      group2: 4,
-      group3: 5,
-      group4: 4,
-      group5: 8,
-    }}
+    startOffset={getGelGroups(1, 1, 1, 1, 2, 5)}
+    columns={getGelGroups(6, 6, 4, 5, 4, 8)}
   />
 ))`
   ${layoutGridItemSmall}
@@ -156,30 +137,9 @@ export const GridItemMedium = ({ as, gridColumnStart, gridSpan, ...props }) => (
     {...props}
     forwardedAs={as}
     item
-    margins={{
-      group0: true,
-      group1: true,
-      group2: true,
-      group3: true,
-      group4: false,
-      group5: false,
-    }}
-    startOffset={{
-      group0: 1,
-      group1: 1,
-      group2: 1,
-      group3: 1,
-      group4: 2,
-      group5: gridColumnStart,
-    }}
-    columns={{
-      group0: 6,
-      group1: 6,
-      group2: 6,
-      group3: 5,
-      group4: 5,
-      group5: gridSpan,
-    }}
+    margins={getGelGroups(true, true, true, true, false, false)}
+    startOffset={getGelGroups(1, 1, 1, 1, 2, gridColumnStart)}
+    columns={getGelGroups(6, 6, 6, 5, 5, gridSpan)}
   />
 );
 
@@ -193,22 +153,8 @@ export const GridItemMediumNoMargin = ({
     {...props}
     forwardedAs={as}
     item
-    startOffset={{
-      group0: 1,
-      group1: 1,
-      group2: 1,
-      group3: 1,
-      group4: 2,
-      group5: gridColumnStart,
-    }}
-    columns={{
-      group0: 6,
-      group1: 6,
-      group2: 6,
-      group3: 5,
-      group4: 5,
-      group5: gridSpan,
-    }}
+    startOffset={getGelGroups(1, 1, 1, 1, 2, gridColumnStart)}
+    columns={getGelGroups(6, 6, 6, 5, 5, gridSpan)}
   />
 );
 
@@ -217,30 +163,9 @@ export const GridItemLarge = ({ as, ...props }) => (
     {...props}
     forwardedAs={as}
     item
-    margins={{
-      group0: true,
-      group1: true,
-      group2: true,
-      group3: true,
-      group4: false,
-      group5: false,
-    }}
-    startOffset={{
-      group0: 1,
-      group1: 1,
-      group2: 1,
-      group3: 1,
-      group4: 2,
-      group5: 5,
-    }}
-    columns={{
-      group0: 6,
-      group1: 6,
-      group2: 6,
-      group3: 6,
-      group4: 6,
-      group5: 12,
-    }}
+    margins={getGelGroups(true, true, true, true, false, false)}
+    startOffset={getGelGroups(1, 1, 1, 1, 2, 5)}
+    columns={getGelGroups(6, 6, 6, 6, 6, 12)}
   />
 );
 
@@ -249,22 +174,8 @@ export const GridItemLargeNoMargin = ({ as, ...props }) => (
     {...props}
     forwardedAs={as}
     item
-    startOffset={{
-      group0: 1,
-      group1: 1,
-      group2: 1,
-      group3: 1,
-      group4: 2,
-      group5: 5,
-    }}
-    columns={{
-      group0: 6,
-      group1: 6,
-      group2: 6,
-      group3: 6,
-      group4: 6,
-      group5: 12,
-    }}
+    startOffset={getGelGroups(1, 1, 1, 1, 2, 5)}
+    columns={getGelGroups(6, 6, 6, 6, 6, 12)}
   />
 );
 
