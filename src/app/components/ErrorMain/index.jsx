@@ -32,7 +32,6 @@ const Heading = styled.h1`
 
 const StyledGelPageGrid = styled(GelPageGrid)`
   padding-bottom: 4rem;
-  flex-grow: 1;
 `;
 
 const CustomParagraph = styled(Paragraph)`

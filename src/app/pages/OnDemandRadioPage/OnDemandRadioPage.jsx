@@ -37,10 +37,6 @@ const getGroups = (zero, one, two, three, four, five) => ({
   group5: five,
 });
 
-const StyledGelPageGrid = styled(GelPageGrid)`
-  flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
-`;
-
 const StyledGelWrapperGrid = styled(GelPageGrid)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     padding-top: ${GEL_SPACING_TRPL};
@@ -103,7 +99,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         description={shortSynopsis}
         openGraphType="website"
       />
-      <StyledGelPageGrid
+      <GelPageGrid
         forwardedAs="main"
         role="main"
         columns={getGroups(6, 6, 6, 6, 8, 20)}
@@ -166,7 +162,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             }
           />
         </Grid>
-      </StyledGelPageGrid>
+      </GelPageGrid>
       {radioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />
       )}
