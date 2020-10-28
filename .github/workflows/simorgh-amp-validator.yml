@@ -16,7 +16,6 @@ jobs:
         node-version: [12.x]
     env:
       CI: true
-      NODE_ENV: 'production'
       LOG_LEVEL: 'error'
 
     steps:
@@ -28,7 +27,7 @@ jobs:
       - name: Install & Build Simorgh
         run: |
           npm ci
-          npm run build
+          npm run build:local
       - name: Start Simorgh Server
         run: nohup node build/server.js > /dev/null 2>&1 &
       - name: Run AMP Validator
