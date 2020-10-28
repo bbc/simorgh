@@ -130,7 +130,6 @@ const MediaAssetPage = ({ pageData }) => {
   };
 
   const StyledGelPageGrid = styled(GelPageGrid)`
-    width: 100%;
     padding-bottom: ${GEL_SPACING_TRPL};
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
       padding-bottom: ${GEL_SPACING_QUAD};

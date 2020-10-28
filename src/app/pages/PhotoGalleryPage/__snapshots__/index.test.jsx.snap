@@ -112,10 +112,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 }
 
 .c1 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+  width: 100%;
   padding-bottom: 1.5rem;
 }
 
@@ -1707,10 +1704,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 }
 
 .c1 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+  width: 100%;
   padding-bottom: 1.5rem;
 }
 
@@ -3223,6 +3217,10 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   height: 0.8125rem;
 }
 
+.c16 {
+  width: 100%;
+}
+
 .c3 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -3491,10 +3489,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 .c1 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+  width: 100%;
   padding-bottom: 1.5rem;
 }
 
@@ -5008,10 +5003,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 }
 
 .c1 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+  width: 100%;
   padding-bottom: 1.5rem;
 }
 
@@ -6358,7 +6350,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
     </script>
   </head>
   <body>
-    .c3 {
+    .c35 {
+  width: 100%;
+}
+
+.c3 {
   font-size: 1.75rem;
   line-height: 2.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -6799,10 +6795,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 .c1 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+  width: 100%;
   padding-bottom: 1.5rem;
 }
 

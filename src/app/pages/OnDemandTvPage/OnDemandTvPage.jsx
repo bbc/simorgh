@@ -44,7 +44,6 @@ const getGroups = (zero, one, two, three, four, five) => ({
 const StyledGelPageGrid = styled(GelPageGrid)`
   padding-bottom: ${GEL_SPACING_QUAD};
   width: 100%;
-  flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
 
 const StyledVideoPlayer = styled(AVPlayer)`
