@@ -1,9 +1,5 @@
 import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
-import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
-import getBaseUrl from './utils/getBaseUrl';
-import onClient from '#lib/utilities/onClient';
-import isLive from '#lib/utilities/isLive';
 import {
   DATA_REQUEST_RECEIVED,
   DATA_NOT_FOUND,
@@ -16,22 +12,9 @@ import {
 } from '#lib/statusCodes.const';
 import getErrorStatusCode from './utils/getErrorStatusCode';
 import { PRIMARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
+import getUrl from './utils/getUrl';
 
 const logger = nodeLogger(__filename);
-
-const baseUrl = onClient()
-  ? getBaseUrl(window.location.origin)
-  : process.env.SIMORGH_BASE_URL;
-
-export const getUrl = pathname => {
-  if (!pathname) return '';
-
-  const ampRegex = /.amp$/;
-  const params = isLive() ? '' : getQueryString(pathname);
-  const basePath = getUrlPath(pathname);
-
-  return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
-};
 
 /**
  * An isomorphic fetch wrapper for pages, with error and log handling.

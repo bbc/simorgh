@@ -17,7 +17,6 @@ const RecommendationsPromoList = ({ promoItems, dir }) => (
     }}
     as={StoryPromoUl}
     enableGelGutters
-    dir={dir}
   >
     {promoItems.map(item => (
       <Grid
@@ -33,7 +32,6 @@ const RecommendationsPromoList = ({ promoItems, dir }) => (
         as={StoryPromoLiBase}
         border={false}
         key={item.id || item.uri}
-        dir={dir}
       >
         {RecommendationsPromo({ promo: item, dir })}
       </Grid>
