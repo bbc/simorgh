@@ -29,29 +29,27 @@ const RecommendationsWrapper = styled.div`
   background-color: ${C_LUNAR};
   padding-bottom: ${GEL_SPACING};
   margin-bottom: ${GEL_SPACING_TRPL};
-  margin: ${GEL_SPACING_DBL} 0;
+  margin: ${GEL_SPACING_TRPL} 0;
   padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
+    margin: 0 0 ${GEL_SPACING_TRPL} 0;
+    padding: 0 0 ${GEL_SPACING_DBL} 0;
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin: 0 ${GEL_SPACING_DBL};
+    margin: 0 0 ${GEL_SPACING_TRPL} 0;
     padding: ${GEL_SPACING_DBL} 0;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin: 0;
+    margin: 0 0 ${GEL_SPACING_TRPL};
     padding: ${GEL_SPACING_DBL};
   }
 `;
 
 const LabelComponent = styled(SectionLabel)`
-  margin: 0 0 ${GEL_SPACING};
+  margin: 0;
   padding: 0;
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin-top: 0;
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin-bottom: ${GEL_SPACING};
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin: 0 0 ${GEL_SPACING_DBL};
   }
 `;
 
