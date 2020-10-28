@@ -12,9 +12,11 @@ import {
 import SectionLabel from '@bbc/psammead-section-label';
 import styled from '@emotion/styled';
 import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_SPACING_DBL,
@@ -26,11 +28,7 @@ import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 import { storyItem } from '#models/propTypes/storyItem';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import Grid, {
-  GridWrapper,
-  GridItemLarge,
-  gelGridMargin,
-} from '#app/components/Grid';
+import Grid, { GridWrapper, GridItemLarge } from '#app/components/Grid';
 
 const LargeGridColumns = {
   group0: 1,
@@ -40,6 +38,12 @@ const LargeGridColumns = {
   group4: 6,
   group5: 12,
 };
+
+const Wrapper = styled.div`
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
+    padding: 0px 1rem;
+  }
+`;
 
 const LargeGrid = ({ children, ...gridProps }) => (
   <Grid
@@ -77,16 +81,6 @@ const gridMarginSmall = `
   }
 `;
 
-const StyledLargeGrid = styled(LargeGrid)`
-  ${gelGridMargin}
-  ${gridMarginSmall}
-  ${({ columnType }) =>
-    columnType === 'main' &&
-    `
-    padding: 0 ${GEL_SPACING_DBL};
-  `}
-`;
-
 const LegacyGridItemLarge = styled(GridItemLarge)`
   ${gridMarginSmall}
   padding-bottom: 2rem;
@@ -94,6 +88,9 @@ const LegacyGridItemLarge = styled(GridItemLarge)`
 
 const StyledSectionLabel = styled(SectionLabel)`
   margin-top: 0;
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin-top: 0;
+  }
   ${({ columnType }) =>
     columnType === 'main' &&
     `
@@ -170,18 +167,9 @@ const CpsOnwardJourney = ({
       }
     : { as: 'section', role: 'region', 'aria-labelledby': labelId };
 
-  const Wrapper = isMediaContent
-    ? styled(LargeGrid)`` // Necessary for styling
-    : StyledLargeGrid;
   const CpsOnwardJourneyWrapper = ({ children }) =>
     parentColumns ? (
-      <Wrapper
-        data-e2e={labelId}
-        parentColumns={parentColumns}
-        columnType={columnType}
-        {...a11yAttributes}
-        isMediaContent={isMediaContent}
-      >
+      <Wrapper data-e2e={labelId} {...a11yAttributes}>
         {children}
       </Wrapper>
     ) : (
@@ -197,16 +185,6 @@ const CpsOnwardJourney = ({
   if (!content.length) return null;
   const hasSingleContent = content.length === 1;
   const [singleContent] = content;
-
-  const WrapperItem = ({ children }) => (
-    <Wrapper parentColumns={LargeGridColumns} item>
-      {children}
-    </Wrapper>
-  );
-
-  WrapperItem.propTypes = {
-    children: node.isRequired,
-  };
 
   return (
     <CpsOnwardJourneyWrapper>
