@@ -3,18 +3,14 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+import { MEDIA_QUERY_TYPOGRAPHY } from '@bbc/gel-foundations/breakpoints';
 import OnDemandHeading from '.';
 
 const StyledRadioHeadingContainer = styled(OnDemandHeading)`
-  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_DBL};
-  }
+  padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_DBL};
 
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+  /* We need a media query here to explicitly overwrite the Headline media query within Psammead  */
+  ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
     padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_DBL};
   }
 `;
