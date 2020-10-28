@@ -165,7 +165,7 @@ const MediaAssetPage = ({ pageData }) => {
       />
       <ATIAnalytics data={pageData} />
       <StyledGelPageGrid
-        as="main"
+        forwardedAs="main"
         role="main"
         enableGelGutters
         columns={{
