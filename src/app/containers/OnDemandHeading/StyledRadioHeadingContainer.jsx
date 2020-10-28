@@ -9,7 +9,7 @@ import OnDemandHeading from '.';
 const StyledRadioHeadingContainer = styled(OnDemandHeading)`
   padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_DBL};
 
-  /* We need a media query here to explicitly overwrite the Headline media query within Psammead  */
+  /* We need a media query here to explicitly overwrite the same media query within psammead-headings' Headline  */
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
     padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_DBL};
   }
