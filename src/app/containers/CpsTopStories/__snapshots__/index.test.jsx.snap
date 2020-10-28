@@ -89,6 +89,10 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   padding: 0;
 }
 
+.c1 {
+  width: 100%;
+}
+
 .c3 {
   margin-bottom: 1rem;
   padding-bottom: 2rem;
@@ -569,6 +573,10 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 .c7 {
   margin: 0;
   padding: 0;
+}
+
+.c1 {
+  width: 100%;
 }
 
 .c3 {

@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
+.c1 {
+  width: 100%;
+}
+
 .c3 {
   margin-bottom: 1rem;
   padding-bottom: 2rem;
@@ -126,6 +130,10 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 `;
 
 exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
+.c1 {
+  width: 100%;
+}
+
 .c3 {
   margin-bottom: 1rem;
   padding-bottom: 2rem;
@@ -298,6 +306,10 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 .c7 {
   margin: 0;
   padding: 0;
+}
+
+.c1 {
+  width: 100%;
 }
 
 .c3 {
@@ -573,6 +585,10 @@ exports[`CpsOnwardJourney renders section label with with alternative background
   padding: 0;
 }
 
+.c1 {
+  width: 100%;
+}
+
 .c3 {
   margin-bottom: 1rem;
   padding-bottom: 2rem;
@@ -839,6 +855,10 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 .c6 {
   margin: 0;
   padding: 0;
+}
+
+.c1 {
+  width: 100%;
 }
 
 .c3 {
@@ -1142,6 +1162,10 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+}
+
+.c1 {
+  width: 100%;
 }
 
 .c3 {
@@ -1508,6 +1532,10 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+}
+
+.c1 {
+  width: 100%;
 }
 
 .c3 {

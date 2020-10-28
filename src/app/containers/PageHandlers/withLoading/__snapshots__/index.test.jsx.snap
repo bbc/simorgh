@@ -7,6 +7,10 @@ exports[`withLoading HOC and no loading prop should return the passed in compone
 `;
 
 exports[`withLoading HOC and the loading prop set to true should return the loading component 1`] = `
+.c2 {
+  width: 100%;
+}
+
 .c0 {
   min-height: 100vh;
 }

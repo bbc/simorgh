@@ -89,6 +89,10 @@ exports[`CpsRelatedContent should render Story Feature components when given app
   padding: 0;
 }
 
+.c1 {
+  width: 100%;
+}
+
 .c3 {
   margin-bottom: 1rem;
   padding-bottom: 2rem;
@@ -656,6 +660,10 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 .c7 {
   margin: 0;
   padding: 0;
+}
+
+.c1 {
+  width: 100%;
 }
 
 .c3 {
