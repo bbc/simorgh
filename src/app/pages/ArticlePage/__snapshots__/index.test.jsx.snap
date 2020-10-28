@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
+.c2 {
+  width: 100%;
+}
+
 .c4 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -1258,6 +1262,10 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 `;
 
 exports[`should render a news article correctly 1`] = `
+.c2 {
+  width: 100%;
+}
+
 .c4 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -1481,6 +1489,10 @@ exports[`should render a news article correctly 1`] = `
 `;
 
 exports[`should render a rtl article (persian) with most read correctly 1`] = `
+.c2 {
+  width: 100%;
+}
+
 .c4 {
   font-size: 2rem;
   line-height: 2.625rem;
