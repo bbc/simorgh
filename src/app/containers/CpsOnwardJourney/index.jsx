@@ -8,7 +8,7 @@ import {
   func,
   bool,
   oneOf,
-  element,
+  elementType,
 } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled from '@emotion/styled';
@@ -219,7 +219,7 @@ const CpsOnwardJourney = ({
 
 CpsOnwardJourney.propTypes = {
   className: string,
-  LabelComponent: element,
+  LabelComponent: elementType,
   labelId: string.isRequired,
   title: string,
   content: arrayOf(shape(storyItem)),
@@ -247,6 +247,7 @@ CpsOnwardJourney.propTypes = {
 
 CpsOnwardJourney.defaultProps = {
   className: '',
+  LabelComponent: StyledSectionLabel,
   content: [],
   title: '',
   isMediaContent: false,
@@ -255,7 +256,6 @@ CpsOnwardJourney.defaultProps = {
   sectionLabelBar: true,
   sectionLabelBackground: C_GHOST,
   skipLink: null,
-  LabelComponent: StyledSectionLabel,
 };
 
 export default CpsOnwardJourney;
