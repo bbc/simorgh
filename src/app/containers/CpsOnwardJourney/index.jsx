@@ -41,7 +41,7 @@ const LargeGridColumns = {
 
 const Wrapper = styled.div`
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    padding: 0px 1rem;
+    padding: 0px ${GEL_SPACING_DBL};
   }
 `;
 
