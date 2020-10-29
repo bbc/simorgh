@@ -39,3 +39,6 @@ jobs:
 
       - name: Linting
         run: npm run test:lint
+
+      - name: NPM Audit
+        run: npx audit-ci --config audit-ci.json
