@@ -1,10 +1,21 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, number } from 'prop-types';
 import styled from '@emotion/styled';
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import { C_LUNAR } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING, GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '@bbc/gel-foundations/spacings';
+import SectionLabel from '@bbc/psammead-section-label';
 
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -18,6 +29,27 @@ const RecommendationsWrapper = styled.div`
   background-color: ${C_LUNAR};
   padding-bottom: ${GEL_SPACING};
   margin-bottom: ${GEL_SPACING_TRPL};
+  margin: ${GEL_SPACING_TRPL} 0;
+  padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    margin: 0 0 ${GEL_SPACING_TRPL};
+    padding: 0 0 ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin: 0 0 ${GEL_SPACING_TRPL};
+    padding: ${GEL_SPACING_DBL} 0;
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding: ${GEL_SPACING_DBL};
+  }
+`;
+
+const LabelComponent = styled(SectionLabel)`
+  margin: 0;
+  padding: 0;
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin: 0 0 ${GEL_SPACING_DBL};
+  }
 `;
 
 const CpsRecommendations = ({ items, parentColumns }) => {
@@ -53,6 +85,7 @@ const CpsRecommendations = ({ items, parentColumns }) => {
     <GridItemMediumNoMargin>
       <RecommendationsWrapper>
         <CpsOnwardJourney
+          LabelComponent={LabelComponent}
           labelId="recommendations-heading"
           title={title}
           content={items}
