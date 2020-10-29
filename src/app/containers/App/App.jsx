@@ -6,7 +6,7 @@ import pick from 'ramda/src/pick';
 import mergeAll from 'ramda/src/mergeAll';
 import path from 'ramda/src/path';
 import styled from '@emotion/styled';
-import { C_GHOST, C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
+import { C_GHOST } from '@bbc/psammead-styles/colours';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
 import getToggles from '#lib/utilities/getToggles';
@@ -16,8 +16,7 @@ const StyledApp = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: ${({ darkMode }) =>
-    darkMode ? C_MIDNIGHT_BLACK : C_GHOST};
+  background-color: ${C_GHOST};
 `;
 
 const mapToState = ({ pathname, initialData, routeProps, toggles }) => {

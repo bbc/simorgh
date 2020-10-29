@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
-import { node } from 'prop-types';
+import { node, shape, bool } from 'prop-types';
+import pathOr from 'ramda/src/pathOr';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
 import styled from '@emotion/styled';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
+import { C_GHOST, C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
@@ -15,17 +16,19 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: ${C_GHOST};
+  background-color: ${({ darkMode }) =>
+    darkMode ? C_MIDNIGHT_BLACK : C_GHOST};
 `;
 
 const Content = styled.div`
   flex-grow: 1;
 `;
 
-const PageWrapper = ({ children }) => {
+const PageWrapper = ({ children, pageData }) => {
   const { fonts: fontFunctions } = useContext(ServiceContext);
-
   const fonts = fontFunctions.map(getFonts => getFonts());
+
+  const isDarkMode = pathOr(false, ['darkMode'], pageData);
 
   return (
     <>
@@ -33,7 +36,7 @@ const PageWrapper = ({ children }) => {
       <ServiceWorkerContainer />
       <ManifestContainer />
       <WebVitals />
-      <Wrapper id="main-wrapper">
+      <Wrapper id="main-wrapper" darkMode={isDarkMode}>
         <HeaderContainer />
         <Content>{children}</Content>
         <FooterContainer />
@@ -44,6 +47,11 @@ const PageWrapper = ({ children }) => {
 
 PageWrapper.propTypes = {
   children: node.isRequired,
+  pageData: shape({ darkMode: bool }),
+};
+
+PageWrapper.defaultProps = {
+  pageData: {},
 };
 
 export default PageWrapper;
