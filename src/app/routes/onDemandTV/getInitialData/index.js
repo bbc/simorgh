@@ -22,8 +22,8 @@ export default async ({ path: pathname, pageType }) => {
 
     return {
       status,
-      darkMode: true,
       pageData: {
+        darkMode: true,
         metadata: { type: 'On Demand TV' },
         language: get(['metadata', 'language']),
         brandTitle: get(['metadata', 'title']),
