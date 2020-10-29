@@ -1,87 +1,84 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
-.c0 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
 .c1 {
+  width: 100%;
+}
+
+.c3 {
   margin-bottom: 1rem;
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
+  padding-bottom: 2rem;
 }
 
 @supports (display:grid) {
   .c0 {
     display: grid;
-    max-width: initial;
-    margin: initial;
+    position: initial;
   }
 }
 
-@media (max-width:63rem) {
-  .c1 {
-    grid-column: 1 / span 6;
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
-    grid-column: 3 / span 6;
+    margin: 0 auto;
+    max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c1 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
+    margin: 0 auto;
+    max-width: 80rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     margin-bottom: 1.5rem;
   }
 }
@@ -89,12 +86,14 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 <div>
   <section
     aria-labelledby="heading-label"
-    class="c0"
+    class="c0 c1"
     data-e2e="heading-label"
+    dir="ltr"
     role="region"
   >
     <div
-      class="c1"
+      class="c2 c3"
+      dir="ltr"
     >
       <ul>
         <li
@@ -131,87 +130,84 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 `;
 
 exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
-.c0 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
 .c1 {
+  width: 100%;
+}
+
+.c3 {
   margin-bottom: 1rem;
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
+  padding-bottom: 2rem;
 }
 
 @supports (display:grid) {
   .c0 {
     display: grid;
-    max-width: initial;
-    margin: initial;
+    position: initial;
   }
 }
 
-@media (max-width:63rem) {
-  .c1 {
-    grid-column: 1 / span 6;
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
-    grid-column: 3 / span 6;
+    margin: 0 auto;
+    max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c1 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
+    margin: 0 auto;
+    max-width: 80rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     margin-bottom: 1.5rem;
   }
 }
@@ -219,12 +215,14 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 <div>
   <section
     aria-labelledby="heading-label"
-    class="c0"
+    class="c0 c1"
     data-e2e="heading-label"
+    dir="ltr"
     role="region"
   >
     <div
-      class="c1"
+      class="c2 c3"
+      dir="ltr"
     >
       <div
         class=""
@@ -245,817 +243,6 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 `;
 
 exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c8 {
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c4 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c2 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-}
-
-.c5 {
-  margin: 0;
-  padding: 0;
-}
-
-.c0 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
-.c1 {
-  margin-bottom: 1rem;
-}
-
-.c3 {
-  margin-top: 0;
-  margin: 0;
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c4 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c2 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c1 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    padding: 1rem 0;
-  }
-}
-
-<div>
-  <section
-    aria-labelledby="heading-label"
-    class="c0"
-    data-e2e="heading-label"
-    role="region"
-  >
-    <div
-      class="c1"
-    >
-      <div
-        class="c2 c3"
-      >
-        <div
-          class="c4"
-        />
-        <strong
-          class="c5"
-        >
-          <span
-            class="c6"
-          >
-            <span
-              class="c7"
-            >
-              <span
-                class="c8"
-                dir="ltr"
-                id="heading-label"
-              >
-                The Foo Section
-              </span>
-            </span>
-          </span>
-        </strong>
-      </div>
-      <div
-        class=""
-      >
-        <div
-          dir="ltr"
-        >
-          <a
-            href="/mundo/foo0"
-          >
-            Foo in the news 0
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-`;
-
-exports[`CpsOnwardJourney renders section label with with alternative background colour 1`] = `
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c8 {
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #222222;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c4 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c2 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-}
-
-.c5 {
-  margin: 0;
-  padding: 0;
-}
-
-.c0 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
-.c1 {
-  margin-bottom: 1rem;
-}
-
-.c3 {
-  margin-top: 0;
-  margin: 0;
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c4 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c2 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c1 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    padding: 1rem 0;
-  }
-}
-
-<div>
-  <section
-    aria-labelledby="heading-label"
-    class="c0"
-    data-e2e="heading-label"
-    role="region"
-  >
-    <div
-      class="c1"
-    >
-      <div
-        class="c2 c3"
-      >
-        <div
-          class="c4"
-        />
-        <h2
-          class="c5"
-        >
-          <span
-            class="c6"
-          >
-            <span
-              class="c7"
-            >
-              <span
-                class="c8"
-                dir="ltr"
-                id="heading-label"
-              >
-                The Foo Section
-              </span>
-            </span>
-          </span>
-        </h2>
-      </div>
-      <div
-        class=""
-      >
-        <div
-          dir="ltr"
-        >
-          <a
-            href="/mundo/foo0"
-          >
-            Foo in the news 0
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-`;
-
-exports[`CpsOnwardJourney renders section label with without bar under section label 1`] = `
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c7 {
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c2 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-}
-
-.c4 {
-  margin: 0;
-  padding: 0;
-}
-
-.c0 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
-.c1 {
-  margin-bottom: 1rem;
-}
-
-.c3 {
-  margin-top: 0;
-  margin: 0;
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c7 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    padding-right: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c2 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c1 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    padding: 1rem 0;
-  }
-}
-
-<div>
-  <section
-    aria-labelledby="heading-label"
-    class="c0"
-    data-e2e="heading-label"
-    role="region"
-  >
-    <div
-      class="c1"
-    >
-      <div
-        class="c2 c3"
-      >
-        <h2
-          class="c4"
-        >
-          <span
-            class="c5"
-          >
-            <span
-              class="c6"
-            >
-              <span
-                class="c7"
-                dir="ltr"
-                id="heading-label"
-              >
-                The Foo Section
-              </span>
-            </span>
-          </span>
-        </h2>
-      </div>
-      <div
-        class=""
-      >
-        <div
-          dir="ltr"
-        >
-          <a
-            href="/mundo/foo0"
-          >
-            Foo in the news 0
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-`;
-
-exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1121,61 +308,13 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
   padding: 0;
 }
 
-.c2 {
-  position: relative;
+.c1 {
+  width: 100%;
 }
 
 .c3 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
-  color: #222222;
-  display: block;
-  left: 0;
-  line-height: 1;
-  padding: 0.75rem;
-  position: absolute;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  top: 0;
-  z-index: 10;
-}
-
-.c3:not(:focus):not(:active) {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c11 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c0 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
-.c1 {
   margin-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .c5 {
@@ -1245,90 +384,75 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 0.8125rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column-gap: 0.5rem;
+    display: grid;
+    position: initial;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
   }
 }
 
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
+  .c2 {
+    margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
+  .c2 {
+    margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c1 {
-    grid-column: 1 / span 6;
+  .c2 {
+    display: block;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
-    grid-column: 3 / span 6;
+    margin: 0 auto;
+    max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c1 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
+    margin: 0 auto;
+    max-width: 80rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     margin-bottom: 1.5rem;
   }
 }
@@ -1342,29 +466,556 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 <div>
   <section
     aria-labelledby="heading-label"
-    class="c0"
+    class="c0 c1"
     data-e2e="heading-label"
+    dir="ltr"
     role="region"
   >
     <div
-      class="c1"
+      class="c2 c3"
+      dir="ltr"
     >
       <div
-        class="c2"
+        class="c4 c5"
       >
-        <a
-          class="c3"
-          href="#end-of-the-foo-section"
-        >
-          skip the foo section
-        </a>
         <div
-          class="c4 c5"
+          class="c6"
+        />
+        <strong
+          class="c7"
         >
-          <div
-            class="c6"
-          />
-          <h2
+          <span
+            class="c8"
+          >
+            <span
+              class="c9"
+            >
+              <span
+                class="c10"
+                dir="ltr"
+                id="heading-label"
+              >
+                The Foo Section
+              </span>
+            </span>
+          </span>
+        </strong>
+      </div>
+      <div
+        class=""
+      >
+        <div
+          dir="ltr"
+        >
+          <a
+            href="/mundo/foo0"
+          >
+            Foo in the news 0
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`CpsOnwardJourney renders section label with with alternative background colour 1`] = `
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c10 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #222222;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c4 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+}
+
+.c7 {
+  margin: 0;
+  padding: 0;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c3 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+.c5 {
+  margin-top: 0;
+  margin: 0;
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c10 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c6 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    padding: 1rem 0;
+  }
+}
+
+<div>
+  <section
+    aria-labelledby="heading-label"
+    class="c0 c1"
+    data-e2e="heading-label"
+    dir="ltr"
+    role="region"
+  >
+    <div
+      class="c2 c3"
+      dir="ltr"
+    >
+      <div
+        class="c4 c5"
+      >
+        <div
+          class="c6"
+        />
+        <h2
+          class="c7"
+        >
+          <span
+            class="c8"
+          >
+            <span
+              class="c9"
+            >
+              <span
+                class="c10"
+                dir="ltr"
+                id="heading-label"
+              >
+                The Foo Section
+              </span>
+            </span>
+          </span>
+        </h2>
+      </div>
+      <div
+        class=""
+      >
+        <div
+          dir="ltr"
+        >
+          <a
+            href="/mundo/foo0"
+          >
+            Foo in the news 0
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`CpsOnwardJourney renders section label with without bar under section label 1`] = `
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c9 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+}
+
+.c6 {
+  margin: 0;
+  padding: 0;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c3 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+.c5 {
+  margin-top: 0;
+  margin: 0;
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c9 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    padding: 1rem 0;
+  }
+}
+
+<div>
+  <section
+    aria-labelledby="heading-label"
+    class="c0 c1"
+    data-e2e="heading-label"
+    dir="ltr"
+    role="region"
+  >
+    <div
+      class="c2 c3"
+      dir="ltr"
+    >
+      <div
+        class="c4 c5"
+      >
+        <h2
+          class="c6"
+        >
+          <span
             class="c7"
           >
             <span
@@ -1372,9 +1023,352 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
             >
               <span
                 class="c9"
+                dir="ltr"
+                id="heading-label"
+              >
+                The Foo Section
+              </span>
+            </span>
+          </span>
+        </h2>
+      </div>
+      <div
+        class=""
+      >
+        <div
+          dir="ltr"
+        >
+          <a
+            href="/mundo/foo0"
+          >
+            Foo in the news 0
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c12 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c8 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c6 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+}
+
+.c9 {
+  margin: 0;
+  padding: 0;
+}
+
+.c4 {
+  position: relative;
+}
+
+.c5 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+.c5:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c13 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c3 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+.c7 {
+  margin-top: 0;
+  margin: 0;
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c8 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c6 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 0.8125rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    padding: 1rem 0;
+  }
+}
+
+<div>
+  <section
+    aria-labelledby="heading-label"
+    class="c0 c1"
+    data-e2e="heading-label"
+    dir="ltr"
+    role="region"
+  >
+    <div
+      class="c2 c3"
+      dir="ltr"
+    >
+      <div
+        class="c4"
+      >
+        <a
+          class="c5"
+          href="#end-of-the-foo-section"
+        >
+          skip the foo section
+        </a>
+        <div
+          class="c6 c7"
+        >
+          <div
+            class="c8"
+          />
+          <h2
+            class="c9"
+          >
+            <span
+              class="c10"
+            >
+              <span
+                class="c11"
               >
                 <span
-                  class="c10"
+                  class="c12"
                   dir="ltr"
                   id="heading-label"
                 >
@@ -1414,7 +1408,7 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
           </li>
         </ul>
         <p
-          class="c11"
+          class="c13"
           id="end-of-the-foo-section"
           tabindex="-1"
         >
@@ -1427,7 +1421,7 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 `;
 
 exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
-.c8 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1437,7 +1431,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   flex-direction: column;
 }
 
-.c9 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1456,7 +1450,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   align-items: baseline;
 }
 
-.c10 {
+.c12 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1475,28 +1469,28 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   align-items: center;
 }
 
-.c6 {
+.c8 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c4 {
+.c6 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
   margin-top: 2rem;
 }
 
-.c7 {
+.c9 {
   margin: 0;
   padding: 0;
 }
 
-.c2 {
+.c4 {
   position: relative;
 }
 
-.c3 {
+.c5 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1516,7 +1510,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   z-index: 10;
 }
 
-.c3:not(:focus):not(:active) {
+.c5:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -1528,7 +1522,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   margin: 0;
 }
 
-.c11 {
+.c13 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -1538,24 +1532,24 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
-}
-
-.c0 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
 }
 
 .c1 {
-  margin-bottom: 1rem;
+  width: 100%;
 }
 
-.c5 {
+.c3 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+.c7 {
   margin-top: 0;
   margin: 0;
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c11 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1564,39 +1558,39 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c12 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c12 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c12 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c12 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c6 {
+  .c8 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c8 {
     position: absolute;
     left: 0;
     right: 0;
@@ -1605,107 +1599,104 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c6 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c4 {
+  .c6 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c5 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c5 {
     font-size: 0.8125rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
   }
 }
 
 @supports (display:grid) {
   .c0 {
     display: grid;
-    max-width: initial;
-    margin: initial;
+    position: initial;
   }
 }
 
-@media (max-width:63rem) {
-  .c1 {
-    grid-column: 1 / span 6;
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
-    grid-column: 3 / span 6;
+    margin: 0 auto;
+    max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c1 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
+    margin: 0 auto;
+    max-width: 80rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c7 {
     padding: 1rem 0;
   }
 }
@@ -1713,39 +1704,41 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 <div>
   <section
     aria-labelledby="heading-label"
-    class="c0"
+    class="c0 c1"
     data-e2e="heading-label"
+    dir="ltr"
     role="region"
   >
     <div
-      class="c1"
+      class="c2 c3"
+      dir="ltr"
     >
       <div
-        class="c2"
+        class="c4"
       >
         <a
-          class="c3"
+          class="c5"
           href="#end-of-the-foo-section"
         >
           skip the foo section
         </a>
         <div
-          class="c4 c5"
+          class="c6 c7"
         >
           <div
-            class="c6"
+            class="c8"
           />
           <h2
-            class="c7"
+            class="c9"
           >
             <span
-              class="c8"
+              class="c10"
             >
               <span
-                class="c9"
+                class="c11"
               >
                 <span
-                  class="c10"
+                  class="c12"
                   dir="ltr"
                   id="heading-label"
                 >
@@ -1769,7 +1762,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
           </div>
         </div>
         <p
-          class="c11"
+          class="c13"
           id="end-of-the-foo-section"
           tabindex="-1"
         >

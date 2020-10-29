@@ -6,7 +6,7 @@ import { arrayOf, shape, oneOf } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '../Blocks';
 import listItem, { ListItemPropTypes } from '../BulletedListItem';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import { GridItemMedium } from '#app/components/Grid';
 
 const componentsToRender = { listItem };
 
@@ -18,13 +18,13 @@ const BulletedListContainer = ({ blocks }) => {
   const { script, service, dir } = useContext(ServiceContext);
 
   return (
-    <GridItemConstrainedMedium>
+    <GridItemMedium>
       <Wrapper>
         <BulletedList script={script} service={service} dir={dir}>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </BulletedList>
       </Wrapper>
-    </GridItemConstrainedMedium>
+    </GridItemMedium>
   );
 };
 

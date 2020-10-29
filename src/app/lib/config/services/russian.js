@@ -299,7 +299,7 @@ export const service = {
       },
       {
         title: 'Видео',
-        url: '/russian/media/video',
+        url: '/russian/in-depth-54439028',
       },
       {
         title: 'Фильмы',

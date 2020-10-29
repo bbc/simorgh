@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Byline from '@bbc/psammead-byline';
 import { ServiceContext } from '#contexts/ServiceContext';
 import bylineBlockPropTypes from '#models/propTypes/byline';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import { GridItemMedium } from '#app/components/Grid';
 
 const BylineContainer = ({ blocks, className }) => {
   const { service } = useContext(ServiceContext);
@@ -15,9 +15,9 @@ const BylineContainer = ({ blocks, className }) => {
 
   if (name && title) {
     return (
-      <GridItemConstrainedMedium className={className}>
+      <GridItemMedium className={className}>
         <Byline service={service} name={name} title={title} />
-      </GridItemConstrainedMedium>
+      </GridItemMedium>
     );
   }
   return null;

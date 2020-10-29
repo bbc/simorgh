@@ -16,10 +16,6 @@ exports[`ArticleTimestamp should render a 'created' Timestamp correctly 1`] = `
   padding-bottom: 1rem;
 }
 
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 0.875rem;
@@ -34,47 +30,55 @@ exports[`ArticleTimestamp should render a 'created' Timestamp correctly 1`] = `
   }
 }
 
-@media (max-width:25rem) {
+@media (max-width:14.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
     padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
+    padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
+    margin-left: 20%;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    grid-column: 2 / span 4;
-    max-width: 38.5rem;
+    margin-left: 0%;
   }
 }
 
 @supports (display:grid) {
   .c0 {
-    max-width: initial;
+    display: block;
   }
 }
 
 <div
-  class="c0"
+  class="c0 "
+  dir="ltr"
 >
   <time
     class="c1"
@@ -101,10 +105,6 @@ exports[`ArticleTimestamp should render both a 'created' and an 'updated' Timest
   padding-bottom: 1rem;
 }
 
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 0.875rem;
@@ -119,47 +119,55 @@ exports[`ArticleTimestamp should render both a 'created' and an 'updated' Timest
   }
 }
 
-@media (max-width:25rem) {
+@media (max-width:14.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
     padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
+    padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
+    margin-left: 20%;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    grid-column: 2 / span 4;
-    max-width: 38.5rem;
+    margin-left: 0%;
   }
 }
 
 @supports (display:grid) {
   .c0 {
-    max-width: initial;
+    display: block;
   }
 }
 
 <div
-  class="c0"
+  class="c0 "
+  dir="ltr"
 >
   <time
     class="c1"
@@ -194,10 +202,6 @@ exports[`ArticleTimestamp should render with a prefix 1`] = `
   padding-bottom: 1rem;
 }
 
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 0.875rem;
@@ -212,47 +216,55 @@ exports[`ArticleTimestamp should render with a prefix 1`] = `
   }
 }
 
-@media (max-width:25rem) {
+@media (max-width:14.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
     padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
+    padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
+    margin-left: 20%;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    grid-column: 2 / span 4;
-    max-width: 38.5rem;
+    margin-left: 0%;
   }
 }
 
 @supports (display:grid) {
   .c0 {
-    max-width: initial;
+    display: block;
   }
 }
 
 <div
-  class="c0"
+  class="c0 "
+  dir="ltr"
 >
   <time
     class="c1"
@@ -287,10 +299,6 @@ exports[`ArticleTimestamp should render with a suffix 1`] = `
   padding-bottom: 1rem;
 }
 
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 0.875rem;
@@ -305,47 +313,55 @@ exports[`ArticleTimestamp should render with a suffix 1`] = `
   }
 }
 
-@media (max-width:25rem) {
+@media (max-width:14.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
     padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
+    padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
+    margin-left: 20%;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    grid-column: 2 / span 4;
-    max-width: 38.5rem;
+    margin-left: 0%;
   }
 }
 
 @supports (display:grid) {
   .c0 {
-    max-width: initial;
+    display: block;
   }
 }
 
 <div
-  class="c0"
+  class="c0 "
+  dir="ltr"
 >
   <time
     class="c1"
@@ -380,10 +396,6 @@ exports[`ArticleTimestamp should render with no suffix or prefix 1`] = `
   padding-bottom: 1rem;
 }
 
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 0.875rem;
@@ -398,47 +410,55 @@ exports[`ArticleTimestamp should render with no suffix or prefix 1`] = `
   }
 }
 
-@media (max-width:25rem) {
+@media (max-width:14.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
     padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
+    padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
+    margin-left: 20%;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    grid-column: 2 / span 4;
-    max-width: 38.5rem;
+    margin-left: 0%;
   }
 }
 
 @supports (display:grid) {
   .c0 {
-    max-width: initial;
+    display: block;
   }
 }
 
 <div
-  class="c0"
+  class="c0 "
+  dir="ltr"
 >
   <time
     class="c1"

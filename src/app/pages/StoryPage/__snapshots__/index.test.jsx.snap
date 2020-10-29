@@ -95,15 +95,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   font-weight: inherit;
 }
 
-.c6 {
-  grid-column: 1 / span 6;
-}
-
-.c14 {
-  display: grid;
-  grid-column-gap: 1rem;
-}
-
 .c5 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -520,10 +511,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 .c1 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   width: 100%;
   margin: 0 auto;
 }
@@ -746,6 +733,231 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c4 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c4 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c4 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c4 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c4 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c4 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c4 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c6 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c6 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .c6 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c12 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c12 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c12 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c12 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c12 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c12 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c12 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c14 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c15 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c15 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c15 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c15 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c15 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c15 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display:grid) {
+  .c15 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c19 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c19 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c19 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c19 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c19 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c19 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display:grid) {
+  .c19 {
+    display: block;
+  }
+}
+
 @supports (display:grid) {
   .c41 {
     display: grid;
@@ -840,153 +1052,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@media (max-width:25rem) {
-  .c6 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c6 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c6 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c6 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c6 {
-    max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c4 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c4 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c4 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:63rem) {
-  .c12 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c12 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c12 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c15 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c15 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c15 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c15 {
-    grid-column: 1 / span 12;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c19 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c19 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c19 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:80rem) {
-  .c19 {
-    grid-column: 1 / span 10;
-  }
-}
-
-@media (max-width:79.9375rem) {
-  .c14 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:80rem) {
-  .c14 {
-    grid-template-columns: repeat(12,1fr);
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c5 {
     font-size: 2rem;
@@ -1072,24 +1137,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @media (min-width:63rem) {
   .c20 {
     padding: 0.5rem 0 0;
-  }
-}
-
-@media (max-width:63rem) {
-  .c28 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c28 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c28 {
-    grid-column: 6 / span 12;
   }
 }
 
@@ -1434,6 +1481,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                 >
                   <div
                     class="c4"
+                    dir="ltr"
                   >
                     <h1
                       class="c5"
@@ -1445,6 +1493,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c6 c7"
+                    dir="ltr"
                   >
                     <div
                       class="c8"
@@ -1470,15 +1519,18 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c12"
+                    dir="ltr"
                   >
                     <figure
                       class="c13"
                     >
                       <div
                         class="c14"
+                        dir="ltr"
                       >
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <div
                             class="c16"
@@ -1510,6 +1562,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                         <div
                           class="c19"
+                          dir="ltr"
                         >
                           <figcaption
                             class="c20"
@@ -1529,6 +1582,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c6"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1549,6 +1603,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c6"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1570,6 +1625,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c6"
+                    dir="ltr"
                   >
                     <div
                       class="c24"
@@ -1621,6 +1677,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c6"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1641,15 +1698,18 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c12"
+                    dir="ltr"
                   >
                     <figure
                       class="c13"
                     >
                       <div
                         class="c14"
+                        dir="ltr"
                       >
                         <div
                           class="c15"
+                          dir="ltr"
                         >
                           <div
                             class="c16"
@@ -1679,14 +1739,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             </p>
                           </div>
                         </div>
-                        <div
-                          class="c19"
-                        />
                       </div>
                     </figure>
                   </div>
                   <div
                     class="c6"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1698,6 +1756,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c6"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1707,6 +1766,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c6"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1718,6 +1778,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c6"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1733,6 +1794,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c6"
+                    dir="ltr"
                   >
                     <div
                       class="c24"
@@ -1784,6 +1846,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c6"
+                    dir="ltr"
                   >
                     <div
                       class="c27"
@@ -1800,6 +1863,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c6"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1808,7 +1872,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     </p>
                   </div>
                   <div
-                    class="c28"
+                    class="c12 c28"
+                    dir="ltr"
                   >
                     <figure
                       class="c13"
@@ -1842,6 +1907,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c6"
+                    dir="ltr"
                   >
                     <h2
                       class="c31"
@@ -1853,6 +1919,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c6"
+                    dir="ltr"
                   >
                     <h2
                       class="c31"
@@ -1864,6 +1931,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c6"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1873,6 +1941,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c6"
+                    dir="ltr"
                   >
                     <h2
                       class="c31"
@@ -1884,6 +1953,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c6"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1893,6 +1963,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c6"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1908,6 +1979,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c6"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -3492,15 +3564,6 @@ exports[`Story Page should render correctly when the secondary column data is no
   font-weight: inherit;
 }
 
-.c6 {
-  grid-column: 1 / span 6;
-}
-
-.c16 {
-  display: grid;
-  grid-column-gap: 1rem;
-}
-
 .c5 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -3817,10 +3880,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 .c1 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   width: 100%;
   margin: 0 auto;
 }
@@ -3985,6 +4044,231 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c4 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c4 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c4 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c4 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c4 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c4 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c4 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c6 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c6 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .c6 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c14 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c14 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c14 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c14 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c14 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c14 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c14 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c16 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c17 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c17 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c17 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c17 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c17 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c17 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display:grid) {
+  .c17 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c21 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c21 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c21 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c21 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c21 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c21 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display:grid) {
+  .c21 {
+    display: block;
+  }
+}
+
 @supports (display:grid) {
   .c43 {
     display: grid;
@@ -4076,153 +4360,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 @media (min-width:37.5rem) {
   .c33 {
     padding-top: 2rem;
-  }
-}
-
-@media (max-width:25rem) {
-  .c6 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c6 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c6 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c6 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c6 {
-    max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c4 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c4 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c4 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:63rem) {
-  .c14 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c14 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c14 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c17 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c17 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c17 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c17 {
-    grid-column: 1 / span 12;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c21 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c21 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c21 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:80rem) {
-  .c21 {
-    grid-column: 1 / span 10;
-  }
-}
-
-@media (max-width:79.9375rem) {
-  .c16 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:80rem) {
-  .c16 {
-    grid-template-columns: repeat(12,1fr);
   }
 }
 
@@ -4325,24 +4462,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 @media (min-width:63rem) {
   .c22 {
     padding: 0.5rem 0 0;
-  }
-}
-
-@media (max-width:63rem) {
-  .c30 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c30 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c30 {
-    grid-column: 6 / span 12;
   }
 }
 
@@ -4525,6 +4644,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                     >
                       <div
                         class="c4"
+                        dir="ltr"
                       >
                         <h1
                           class="c5"
@@ -4536,6 +4656,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c6 c7"
+                        dir="ltr"
                       >
                         <div
                           class="c8"
@@ -4561,6 +4682,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c6 c12"
+                        dir="ltr"
                       >
                         <time
                           class="c13"
@@ -4571,15 +4693,18 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c14"
+                        dir="ltr"
                       >
                         <figure
                           class="c15"
                         >
                           <div
                             class="c16"
+                            dir="ltr"
                           >
                             <div
                               class="c17"
+                              dir="ltr"
                             >
                               <div
                                 class="c18"
@@ -4611,6 +4736,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             </div>
                             <div
                               class="c21"
+                              dir="ltr"
                             >
                               <figcaption
                                 class="c22"
@@ -4630,6 +4756,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -4650,6 +4777,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -4671,6 +4799,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <div
                           class="c26"
@@ -4722,6 +4851,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -4742,15 +4872,18 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c14"
+                        dir="ltr"
                       >
                         <figure
                           class="c15"
                         >
                           <div
                             class="c16"
+                            dir="ltr"
                           >
                             <div
                               class="c17"
+                              dir="ltr"
                             >
                               <div
                                 class="c18"
@@ -4780,14 +4913,12 @@ exports[`Story Page should render correctly when the secondary column data is no
                                 </p>
                               </div>
                             </div>
-                            <div
-                              class="c21"
-                            />
                           </div>
                         </figure>
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -4799,6 +4930,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -4808,6 +4940,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -4819,6 +4952,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -4834,6 +4968,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <div
                           class="c26"
@@ -4885,6 +5020,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <div
                           class="c29"
@@ -4901,6 +5037,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -4909,7 +5046,8 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </p>
                       </div>
                       <div
-                        class="c30"
+                        class="c14 c30"
+                        dir="ltr"
                       >
                         <figure
                           class="c15"
@@ -4943,6 +5081,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <h2
                           class="c33"
@@ -4954,6 +5093,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -4963,6 +5103,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <h2
                           class="c33"
@@ -4974,6 +5115,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -4983,6 +5125,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -4998,6 +5141,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -5629,15 +5773,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   font-weight: inherit;
 }
 
-.c6 {
-  grid-column: 1 / span 6;
-}
-
-.c16 {
-  display: grid;
-  grid-column-gap: 1rem;
-}
-
 .c5 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -6051,10 +6186,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 .c1 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   width: 100%;
   margin: 0 auto;
 }
@@ -6277,6 +6408,231 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c4 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c4 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c4 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c4 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c4 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c4 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c4 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c6 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c6 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .c6 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c14 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c14 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c14 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c14 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c14 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c14 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .c14 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c16 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c17 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c17 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c17 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c17 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c17 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c17 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display:grid) {
+  .c17 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c21 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c21 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c21 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c21 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c21 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c21 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display:grid) {
+  .c21 {
+    display: block;
+  }
+}
+
 @supports (display:grid) {
   .c43 {
     display: grid;
@@ -6368,153 +6724,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @media (min-width:37.5rem) {
   .c33 {
     padding-top: 2rem;
-  }
-}
-
-@media (max-width:25rem) {
-  .c6 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c6 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c6 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c6 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c6 {
-    max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c4 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c4 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c4 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:63rem) {
-  .c14 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c14 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c14 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c17 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c17 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c17 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c17 {
-    grid-column: 1 / span 12;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c21 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c21 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c21 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:80rem) {
-  .c21 {
-    grid-column: 1 / span 10;
-  }
-}
-
-@media (max-width:79.9375rem) {
-  .c16 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:80rem) {
-  .c16 {
-    grid-template-columns: repeat(12,1fr);
   }
 }
 
@@ -6617,24 +6826,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @media (min-width:63rem) {
   .c22 {
     padding: 0.5rem 0 0;
-  }
-}
-
-@media (max-width:63rem) {
-  .c30 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c30 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c30 {
-    grid-column: 6 / span 12;
   }
 }
 
@@ -7203,6 +7394,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     >
                       <div
                         class="c4"
+                        dir="ltr"
                       >
                         <h1
                           class="c5"
@@ -7214,6 +7406,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c6 c7"
+                        dir="ltr"
                       >
                         <div
                           class="c8"
@@ -7239,6 +7432,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c6 c12"
+                        dir="ltr"
                       >
                         <time
                           class="c13"
@@ -7249,15 +7443,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c14"
+                        dir="ltr"
                       >
                         <figure
                           class="c15"
                         >
                           <div
                             class="c16"
+                            dir="ltr"
                           >
                             <div
                               class="c17"
+                              dir="ltr"
                             >
                               <div
                                 class="c18"
@@ -7289,6 +7486,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                             <div
                               class="c21"
+                              dir="ltr"
                             >
                               <figcaption
                                 class="c22"
@@ -7308,6 +7506,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -7328,6 +7527,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -7349,6 +7549,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <div
                           class="c26"
@@ -7400,6 +7601,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -7420,15 +7622,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c14"
+                        dir="ltr"
                       >
                         <figure
                           class="c15"
                         >
                           <div
                             class="c16"
+                            dir="ltr"
                           >
                             <div
                               class="c17"
+                              dir="ltr"
                             >
                               <div
                                 class="c18"
@@ -7458,14 +7663,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 </p>
                               </div>
                             </div>
-                            <div
-                              class="c21"
-                            />
                           </div>
                         </figure>
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -7477,6 +7680,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -7486,6 +7690,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -7497,6 +7702,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -7512,6 +7718,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <div
                           class="c26"
@@ -7563,6 +7770,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <div
                           class="c29"
@@ -7579,6 +7787,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -7587,7 +7796,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </p>
                       </div>
                       <div
-                        class="c30"
+                        class="c14 c30"
+                        dir="ltr"
                       >
                         <figure
                           class="c15"
@@ -7621,6 +7831,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <h2
                           class="c33"
@@ -7632,6 +7843,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -7641,6 +7853,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <h2
                           class="c33"
@@ -7652,6 +7865,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -7661,6 +7875,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
@@ -7676,6 +7891,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c6"
+                        dir="ltr"
                       >
                         <p
                           class="c23"
