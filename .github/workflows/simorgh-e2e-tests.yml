@@ -28,4 +28,5 @@ jobs:
           start: npm start
       - name: Run 3rd Party E2Es
         uses: cypress-io/github-action@v2
+        with:
           project: 3rdPartyCypress
