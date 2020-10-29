@@ -1102,18 +1102,6 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                         Stories
                       </a>
                     </li>
-                    <li
-                      class="c21 c22"
-                      dir="ltr"
-                      role="listitem"
-                    >
-                      <a
-                        class="c23"
-                        href="/news/video_and_audio/headlines"
-                      >
-                        Video & Audio
-                      </a>
-                    </li>
                   </ul>
                 </div>
               </div>
@@ -1244,17 +1232,6 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                       href="/news/stories"
                     >
                       Stories
-                    </a>
-                  </li>
-                  <li
-                    class="c26"
-                    role="listitem"
-                  >
-                    <a
-                      class="c27"
-                      href="/news/video_and_audio/headlines"
-                    >
-                      Video & Audio
                     </a>
                   </li>
                 </ul>
