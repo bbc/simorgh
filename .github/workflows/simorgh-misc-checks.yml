@@ -16,6 +16,7 @@ jobs:
         node-version: [12.x]
     env:
       CI: true
+      CHROMATIC_APP_CODE: ${{ secrets.CHROMATIC_APP_CODE }}
 
     steps:
       - uses: actions/checkout@v1
@@ -37,4 +38,4 @@ jobs:
         run: npm run test:lint
 
       - name: Chromatic UI Tests # we should only run these one, they currently run on codebuild
-        run: echo "run chromatic QA tests"
+        run: npx chromatic test run --build-script-name build:storybook --exit-once-uploaded --no-interactive --skip 'dependabot/**' --project-token "$CHROMATIC_APP_CODE"
