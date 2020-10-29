@@ -1,0 +1,36 @@
+name: Simorgh CI - AMP Validation & bbc-a11y
+on:
+  push:
+    branches:
+      - '**'
+      - '!latest'
+  pull_request:
+    branches:
+      - '**'
+      - '!latest'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    env:
+      CI: true
+      LOG_LEVEL: 'error'
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install & Build Simorgh
+        run: |
+          npm ci
+          npm run build:local
+      - name: Start Simorgh Server
+        run: nohup node build/server.js > /dev/null 2>&1 &
+      - name: Run AMP Validator
+        run: npm run amp:validate
+      - name: Run bbc-a11y
+        run: npm run bbcA11y:ci
