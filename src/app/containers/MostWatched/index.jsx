@@ -10,7 +10,7 @@ import RelatedContentPromoList from '../CpsRelatedContent/RelatedContentPromoLis
 
 const StyledCpsOnwardJourney = styled(CpsOnwardJourney)`
   @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding: 0rem;
+    padding: 0;
   }
 `;
 
