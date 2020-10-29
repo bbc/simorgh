@@ -1,4 +1,4 @@
-name: Simorgh CI - AMP Validation & bbc-a11y
+name: Simorgh CI - AMP, BBC-A11Y, Lighthouse Tests
 on:
   push:
     branches:
@@ -24,13 +24,20 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+
       - name: Install & Build Simorgh
         run: |
           npm ci
           npm run build:local
+
       - name: Start Simorgh Server
         run: nohup node build/server.js > /dev/null 2>&1 &
+
       - name: Run AMP Validator
         run: npm run amp:validate
+
       - name: Run bbc-a11y
         run: npm run bbcA11y:ci
+
+      - name: Run Lighthouse
+        run: npm run lighthouse
