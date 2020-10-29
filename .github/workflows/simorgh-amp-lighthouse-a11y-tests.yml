@@ -1,4 +1,4 @@
-name: Simorgh CI - AMP Validation & bbc-a11y
+name: Simorgh CI - AMP, BBC-A11Y, Lighthouse Tests
 on:
   push:
     branches:
