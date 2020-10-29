@@ -21,7 +21,6 @@ import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import MetadataContainer from '#containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
-import IndexMain from '#app/components/PageLayout/IndexMain';
 import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
 import IndexHeading from '#containers/IndexHeading';
 
@@ -103,7 +102,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={header} />
-      <IndexMain data-e2e="most-read">
+      <main role="main" data-e2e="most-read">
         <IndexPageContainer>
           <MostReadContainer
             mostReadEndpointOverride={mostReadEndpointOverride}
@@ -113,7 +112,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
             serverRenderOnAmp
           />
         </IndexPageContainer>
-      </IndexMain>
+      </main>
     </>
   );
 };

@@ -200,7 +200,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   `;
 
   const StoryPageGrid = styled(GelPageGrid)`
-    flex-grow: 1;
     width: 100%; /* Needed for IE11 */
     margin: 0 auto;
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -239,14 +238,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     }
   `;
 
-  const MostReadSection = styled.section``;
-
   const MostReadWrapper = ({ children }) => (
-    <MostReadSection
-      role="region"
-      aria-labelledby="Most-Read"
-      data-e2e="most-read"
-    >
+    // eslint-disable-next-line jsx-a11y/no-redundant-roles
+    <section role="region" aria-labelledby="Most-Read" data-e2e="most-read">
       <SectionLabel
         script={script}
         labelId="Most-Read"
@@ -256,7 +250,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         {header}
       </SectionLabel>
       {children}
-    </MostReadSection>
+    </section>
   );
 
   MostReadWrapper.propTypes = {
