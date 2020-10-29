@@ -511,10 +511,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 .c1 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   width: 100%;
   margin: 0 auto;
 }
@@ -3884,10 +3880,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 .c1 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   width: 100%;
   margin: 0 auto;
 }
@@ -6194,10 +6186,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 .c1 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   width: 100%;
   margin: 0 auto;
 }

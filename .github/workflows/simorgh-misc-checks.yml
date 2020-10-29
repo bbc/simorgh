@@ -16,6 +16,7 @@ jobs:
         node-version: [12.x]
     env:
       CI: true
+      CHROMATIC_APP_CODE: ${{ secrets.CHROMATIC_APP_CODE }}
 
     steps:
       - uses: actions/checkout@v1
@@ -27,6 +28,9 @@ jobs:
       - name: Install Node Modules
         run: npm ci
 
+      - name: Chromatic UI Tests
+        run: npx chromatic test run --build-script-name build:storybook --exit-once-uploaded --no-interactive --project-token "$CHROMATIC_APP_CODE"
+
       - name: Apache License Checker
         run: npx apache2-license-checker
 
@@ -35,6 +39,3 @@ jobs:
 
       - name: Linting
         run: npm run test:lint
-
-      - name: Chromatic UI Tests # we should only run these one, they currently run on codebuild
-        run: echo "run chromatic QA tests"

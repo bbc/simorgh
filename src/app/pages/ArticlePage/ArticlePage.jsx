@@ -57,10 +57,6 @@ const componentsToRender = {
   timestamp,
 };
 
-const StyledMain = styled.main`
-  flex-grow: 1;
-`;
-
 const ArticlePageMostReadSection = styled(MostReadSection)`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     margin: 0 ${GEL_MARGIN_BELOW_400PX} ${GEL_SPACING_TRPL};
@@ -124,7 +120,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         dateModified={lastPublished}
         aboutTags={aboutTags}
       />
-      <StyledMain role="main">
+      <main role="main">
         <GelPageGrid
           enableGelGutters
           columns={{
@@ -141,7 +137,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
             componentsToRender={componentsToRender}
           />
         </GelPageGrid>
-      </StyledMain>
+      </main>
       <MostReadContainer
         mostReadEndpointOverride={mostReadEndpointOverride}
         wrapper={MostReadWrapper}
