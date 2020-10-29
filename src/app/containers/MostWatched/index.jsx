@@ -1,11 +1,18 @@
 import React, { useContext } from 'react';
+import styled from '@emotion/styled';
 import { arrayOf, shape, bool } from 'prop-types';
-
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import RelatedContentPromo from '../CpsRelatedContent/RelatedContentPromo';
 import RelatedContentPromoList from '../CpsRelatedContent/RelatedContentPromoList';
+
+const StyledCpsOnwardJourney = styled(CpsOnwardJourney)`
+  @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding: 0rem;
+  }
+`;
 
 const MostWatched = ({ data, isMostWatchedPage }) => {
   const { mostWatched } = useContext(ServiceContext);
@@ -25,7 +32,7 @@ const MostWatched = ({ data, isMostWatchedPage }) => {
   };
 
   return (
-    <CpsOnwardJourney
+    <StyledCpsOnwardJourney
       parentColumns={isMostWatchedPage ? parentColumns : undefined}
       labelId="most-watched-heading"
       data-e2e="most-watched"
