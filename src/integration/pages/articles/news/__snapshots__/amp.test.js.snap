@@ -246,13 +246,6 @@ Object {
 }
 `;
 
-exports[`AMP Articles Header Navigation link should match text and url 12`] = `
-Object {
-  "text": "Video & Audio",
-  "url": "/news/video_and_audio/headlines",
-}
-`;
-
 exports[`AMP Articles Image Caption should match text 1`] = `"Image caption, The residents of Ligsalz8 believe they have found the answer to the expensive cost of renting in Munich"`;
 
 exports[`AMP Articles Image should match snapshot 1`] = `
