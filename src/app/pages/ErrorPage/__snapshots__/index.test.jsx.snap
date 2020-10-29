@@ -42,10 +42,6 @@ exports[`ErrorPage should correctly render for 404 1`] = `
 .c1 {
   width: 100%;
   padding-bottom: 4rem;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 .c5 {
@@ -374,10 +370,6 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
 .c1 {
   width: 100%;
   padding-bottom: 4rem;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 .c5 {
@@ -656,10 +648,6 @@ exports[`ErrorPage should correctly render for 500 1`] = `
 .c1 {
   width: 100%;
   padding-bottom: 4rem;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 .c5 {
@@ -933,10 +921,6 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 .c1 {
   width: 100%;
   padding-bottom: 4rem;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 .c5 {
@@ -1210,10 +1194,6 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
 .c1 {
   width: 100%;
   padding-bottom: 4rem;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 .c5 {

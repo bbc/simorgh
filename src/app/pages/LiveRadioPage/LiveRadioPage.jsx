@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { string, shape } from 'prop-types';
-import styled from 'styled-components';
 import { Headline } from '@bbc/psammead-headings';
 import pathOr from 'ramda/src/pathOr';
 import Paragraph from '@bbc/psammead-paragraph';
@@ -22,10 +21,6 @@ import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
 
 const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
-
-const StyledGelPageGrid = styled(GelPageGrid)`
-  flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
-`;
 
 const LiveRadioPage = ({ pageData }) => {
   const {
@@ -79,7 +74,7 @@ const LiveRadioPage = ({ pageData }) => {
       />
       <LinkedData type="RadioChannel" seoTitle={name} />
 
-      <StyledGelPageGrid
+      <GelPageGrid
         forwardedAs="main"
         role="main"
         columns={{
@@ -133,7 +128,7 @@ const LiveRadioPage = ({ pageData }) => {
             placeholderSrc={audioPlaceholderImageSrc}
           />
         </Grid>
-      </StyledGelPageGrid>
+      </GelPageGrid>
       {hasRadioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />
       )}
