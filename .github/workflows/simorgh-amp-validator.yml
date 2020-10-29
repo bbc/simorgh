@@ -32,3 +32,5 @@ jobs:
         run: nohup node build/server.js > /dev/null 2>&1 &
       - name: Run AMP Validator
         run: npm run amp:validate
+      - name: Run bbc-a11y
+        run: npm run bbc-a11y
