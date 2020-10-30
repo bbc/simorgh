@@ -25,11 +25,14 @@ jobs:
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        runs:
+          git log ${{ github.event.before }} ${{ github.event.head }} --merges --pretty=oneline
         with:
           tag_name: 2.0.0
           release_name: 2.0.0
           body: |
-            ${{ github.event.commits }}
+            Head: ${{ github.event.head }} 
+            Before: ${{ github.event.before }}
 
           draft: true
           prerelease: false
