@@ -16,7 +16,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RELEASE_BRANCHES: 'github-release-action, latest'
-          INITIAL_VERSION: 1.332.0
 
       - name: Create Release
         id: create_release
