@@ -29,7 +29,7 @@ jobs:
           tag_name: 2.0.0
           release_name: Release 2.0.0
           body: |
-            ${{ github.event.ref }}
+            ${{ github.event.pull_request }}
 
           draft: true
           prerelease: false
