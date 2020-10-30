@@ -28,6 +28,7 @@ jobs:
         with:
           tag_name: ${{ steps.release_tag.outputs.new_tag }}
           release_name: Release ${{ steps.release_tag.outputs.new_tag }}
-          body: Version: ${{ steps.release_tag.outputs.new_tag }}
+          body: |
+            Version: ${{ steps.release_tag.outputs.new_tag }}
           draft: false
           prerelease: false
