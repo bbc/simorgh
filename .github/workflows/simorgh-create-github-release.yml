@@ -29,6 +29,8 @@ jobs:
           tag_name: 2.0.0
           release_name: Release 2.0.0
           body: |
+            Version: 2.0.0
+
             ${{ github.event.commits[github.event.commits.distinct_size].message }}
           draft: true
           prerelease: false
