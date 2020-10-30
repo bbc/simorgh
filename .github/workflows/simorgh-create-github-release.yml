@@ -30,6 +30,6 @@ jobs:
           release_name: Release 2.0.0
           body: |
             Last Commit: ${{ github.event.commits[github.event.commits.distinct_size - 1].message }}
-
+            Commit 2
           draft: true
           prerelease: false
