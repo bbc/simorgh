@@ -1,6 +1,9 @@
 name: Simorgh CD - Create Release Tag
 
-on: ['push']
+on:
+  push:
+    branches:
+      - 'latest'
 
 jobs:
   build:
@@ -15,7 +18,7 @@ jobs:
         uses: anothrNick/github-tag-action@1.26.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RELEASE_BRANCHES: 'github-release-action, latest'
+          RELEASE_BRANCHES: 'latest'
 
       - name: Create Release
         id: create_release
@@ -25,10 +28,6 @@ jobs:
         with:
           tag_name: ${{ steps.release_tag.outputs.new_tag }}
           release_name: Release ${{ steps.release_tag.outputs.new_tag }}
-          body: |
-            Changes in this Release
-            ${{ steps.release_tag.outputs.tag }}
-            ${{ steps.release_tag.outputs.new_tag }}
-            ${{ steps.release_tag.outputs.part }}
-          draft: true
+          body: Version: ${{ steps.release_tag.outputs.new_tag }}
+          draft: false
           prerelease: false
