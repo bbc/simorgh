@@ -15,7 +15,8 @@ jobs:
         uses: anothrNick/github-tag-action@1.26.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          WITH_V: true
+          RELEASE_BRANCHES: 'github-release-action, latest'
+          VERBOSE: true
 
       - name: Create Release
         id: create_release
@@ -27,7 +28,8 @@ jobs:
           release_name: Release ${{ steps.release_tag.outputs.new_tag }}
           body: |
             Changes in this Release
-            - First Change
-            - Second Change
+            ${{ steps.release_tag.outputs.tag }}
+            ${{ steps.release_tag.outputs.new_tag }}
+            ${{ steps.release_tag.outputs.part }}
           draft: true
           prerelease: false
