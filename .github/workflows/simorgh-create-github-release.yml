@@ -29,7 +29,7 @@ jobs:
           git log ${{ github.event.before }} ${{ github.event.head }} --merges --pretty=oneline
         with:
           tag_name: 2.0.0
-          release_name: 2.0.0
+          release_name: Release 2.0.0
           body: |
             Head: ${{ github.event.head }} 
             Before: ${{ github.event.before }}
