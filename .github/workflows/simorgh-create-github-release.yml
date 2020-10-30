@@ -10,15 +10,15 @@ jobs:
     name: Create Release Tag
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    #   - name: Checkout code
+    #     uses: actions/checkout@v2
 
-      - name: Bump version and push tag
-        id: release_tag
-        uses: anothrNick/github-tag-action@1.26.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RELEASE_BRANCHES: 'release-action-body'
+    #   - name: Bump version and push tag
+    #     id: release_tag
+    #     uses: anothrNick/github-tag-action@1.26.0
+    #     env:
+    #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #       RELEASE_BRANCHES: 'release-action-body'
 
       - name: Create Release
         id: create_release
@@ -26,12 +26,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: ${{ steps.release_tag.outputs.new_tag }}
-          release_name: Release ${{ steps.release_tag.outputs.new_tag }}
+          tag_name: 2.0.0
+          release_name: 2.0.0
           body: |
-            Version: ${{ steps.release_tag.outputs.new_tag }}
-
-            ${{ github.event.commits.map(commit -> commit.url) }}
+            ${{ github.event.commits }}
 
           draft: true
           prerelease: false
