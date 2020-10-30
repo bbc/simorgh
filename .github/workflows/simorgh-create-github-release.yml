@@ -3,7 +3,7 @@ name: Simorgh CD - Create Release Tag
 on:
   push:
     branches:
-      - 'latest'
+      - 'release-action-body, latest'
 
 jobs:
   build:
