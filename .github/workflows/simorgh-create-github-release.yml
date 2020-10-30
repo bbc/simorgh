@@ -32,7 +32,7 @@ jobs:
           release_name: Release 2.0.0
           body: |
             ${{ github.event.commits[0].message }}
-            ${{ github.event.commits[0].message }}
+            ${{ github.event.commits[1].message }}
 
           draft: true
           prerelease: false
