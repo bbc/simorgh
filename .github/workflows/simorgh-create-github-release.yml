@@ -7,12 +7,13 @@ jobs:
     name: Create Release Tag
     runs-on: ubuntu-latest
     outputs:
-      next_tag: ${{steps.step2.outputs.new_tag}}
+      next_tag: ${{steps.release_tag.outputs.new_tag}}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Bump version and push tag
+        id: release_tag
         uses: anothrNick/github-tag-action@1.26.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
