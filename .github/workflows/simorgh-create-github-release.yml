@@ -31,7 +31,7 @@ jobs:
           body: |
             Version: ${{ steps.release_tag.outputs.new_tag }}
 
-            ${{ github.event.commits.map(commit -> commit.url) }}
+            ${{ github.event.commits.join('\n') }}
 
           draft: true
           prerelease: false
