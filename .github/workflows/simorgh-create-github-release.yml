@@ -1,13 +1,11 @@
-name: Simorgh CD - Create Release Tag & Release
+name: Simorgh CD - Create Release Tag
 
 on: ['push']
 
 jobs:
-  create_tag:
+  build:
     name: Create Release Tag
     runs-on: ubuntu-latest
-    outputs:
-      next_tag: ${{steps.release_tag.outputs.new_tag}}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -17,13 +15,7 @@ jobs:
         uses: anothrNick/github-tag-action@1.26.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  create_release:
-    name: Create Release
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+          WITH_V: true
 
       - name: Create Release
         id: create_release
@@ -31,8 +23,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: ${{ needs.create_tag.outputs.next_tag}}
-          release_name: Release ${{ needs.create_tag.outputs.next_tag }}
+          tag_name: ${{ steps.release_tag.outputs.new_tag }}
+          release_name: Release ${{ steps.release_tag.outputs.new_tag }}
           body: |
             Changes in this Release
             - First Change
