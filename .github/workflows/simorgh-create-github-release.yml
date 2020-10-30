@@ -31,7 +31,7 @@ jobs:
           body: |
             Version: ${{ steps.release_tag.outputs.new_tag }}
 
-            ${{ github.event.commits.join('\n') }}
+            ${{ github.event.commits.toString() }}
 
           draft: true
           prerelease: false
