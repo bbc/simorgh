@@ -31,8 +31,8 @@ jobs:
           tag_name: 2.0.0
           release_name: Release 2.0.0
           body: |
-            Head: ${{ github.event.head }} 
-            Before: ${{ github.event.before }}
+            ${{ github.event.commits[0].message }}
+            ${{ github.event.commits[0].message }}
 
           draft: true
           prerelease: false
