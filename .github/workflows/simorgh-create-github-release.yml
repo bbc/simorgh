@@ -27,9 +27,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
           tag_name: 2.0.0
-          release_name: 2.0.0
+          release_name: Release 2.0.0
           body: |
-            ${{ github.event.commits }}
+            ${{ github.event.ref }}
 
           draft: true
           prerelease: false
