@@ -562,17 +562,6 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
                   Stories
                 </a>
               </li>
-              <li
-                class="c7"
-                role="listitem"
-              >
-                <a
-                  class="c8"
-                  href="/news/video_and_audio/headlines"
-                >
-                  Video & Audio
-                </a>
-              </li>
             </ul>
           </div>
           <div
@@ -725,18 +714,6 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
                   href="/news/stories"
                 >
                   Stories
-                </a>
-              </li>
-              <li
-                class="c13 c14"
-                dir="ltr"
-                role="listitem"
-              >
-                <a
-                  class="c17"
-                  href="/news/video_and_audio/headlines"
-                >
-                  Video & Audio
                 </a>
               </li>
             </ul>
@@ -1233,17 +1210,6 @@ exports[`Navigation Container should correctly render amp navigation on non-home
                   Stories
                 </a>
               </li>
-              <li
-                class="c7"
-                role="listitem"
-              >
-                <a
-                  class="c8"
-                  href="/news/video_and_audio/headlines"
-                >
-                  Video & Audio
-                </a>
-              </li>
             </ul>
           </div>
           <div
@@ -1385,18 +1351,6 @@ exports[`Navigation Container should correctly render amp navigation on non-home
                   href="/news/stories"
                 >
                   Stories
-                </a>
-              </li>
-              <li
-                class="c12 c13"
-                dir="ltr"
-                role="listitem"
-              >
-                <a
-                  class="c14"
-                  href="/news/video_and_audio/headlines"
-                >
-                  Video & Audio
                 </a>
               </li>
             </ul>
@@ -1893,17 +1847,6 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
                   Stories
                 </a>
               </li>
-              <li
-                class="c7"
-                role="listitem"
-              >
-                <a
-                  class="c8"
-                  href="/news/video_and_audio/headlines"
-                >
-                  Video & Audio
-                </a>
-              </li>
             </ul>
           </div>
           <div
@@ -2045,18 +1988,6 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
                   href="/news/stories"
                 >
                   Stories
-                </a>
-              </li>
-              <li
-                class="c12 c13"
-                dir="ltr"
-                role="listitem"
-              >
-                <a
-                  class="c14"
-                  href="/news/video_and_audio/headlines"
-                >
-                  Video & Audio
                 </a>
               </li>
             </ul>
@@ -2609,18 +2540,6 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
               Stories
             </a>
           </li>
-          <li
-            class="c8 c9"
-            dir="ltr"
-            role="listitem"
-          >
-            <a
-              class="c12"
-              href="/news/video_and_audio/headlines"
-            >
-              Video & Audio
-            </a>
-          </li>
         </ul>
       </div>
     </div>
@@ -2763,17 +2682,6 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
             href="/news/stories"
           >
             Stories
-          </a>
-        </li>
-        <li
-          class="c15"
-          role="listitem"
-        >
-          <a
-            class="c16"
-            href="/news/video_and_audio/headlines"
-          >
-            Video & Audio
           </a>
         </li>
       </ul>
@@ -3243,18 +3151,6 @@ exports[`Navigation Container should correctly render canonical navigation on no
               Stories
             </a>
           </li>
-          <li
-            class="c8 c9"
-            dir="ltr"
-            role="listitem"
-          >
-            <a
-              class="c10"
-              href="/news/video_and_audio/headlines"
-            >
-              Video & Audio
-            </a>
-          </li>
         </ul>
       </div>
     </div>
@@ -3385,17 +3281,6 @@ exports[`Navigation Container should correctly render canonical navigation on no
             href="/news/stories"
           >
             Stories
-          </a>
-        </li>
-        <li
-          class="c13"
-          role="listitem"
-        >
-          <a
-            class="c14"
-            href="/news/video_and_audio/headlines"
-          >
-            Video & Audio
           </a>
         </li>
       </ul>
@@ -3865,18 +3750,6 @@ exports[`Navigation Container should correctly render canonical navigation on no
               Stories
             </a>
           </li>
-          <li
-            class="c8 c9"
-            dir="ltr"
-            role="listitem"
-          >
-            <a
-              class="c10"
-              href="/news/video_and_audio/headlines"
-            >
-              Video & Audio
-            </a>
-          </li>
         </ul>
       </div>
     </div>
@@ -4007,17 +3880,6 @@ exports[`Navigation Container should correctly render canonical navigation on no
             href="/news/stories"
           >
             Stories
-          </a>
-        </li>
-        <li
-          class="c13"
-          role="listitem"
-        >
-          <a
-            class="c14"
-            href="/news/video_and_audio/headlines"
-          >
-            Video & Audio
           </a>
         </li>
       </ul>
