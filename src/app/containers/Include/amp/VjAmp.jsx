@@ -24,10 +24,6 @@ const AmpHead = () => (
   </Helmet>
 );
 
-const IncludeGrid = styled(GridItemMedium)`
-  display: grid;
-`;
-
 const AmpIframe = ({ children, className, width, height, src }) => (
   <amp-iframe
     class={className}
@@ -88,7 +84,7 @@ const VjAmp = ({ ampMetadata: { imageWidth, imageHeight, image, src } }) => {
   return (
     <>
       <AmpHead />
-      <IncludeGrid>
+      <GridItemMedium>
         <StyledAmpIframe
           width={imageWidth}
           height={imageHeight}
@@ -100,7 +96,7 @@ const VjAmp = ({ ampMetadata: { imageWidth, imageHeight, image, src } }) => {
           </div>
           <amp-img layout="fill" src={image} placeholder />
         </StyledAmpIframe>
-      </IncludeGrid>
+      </GridItemMedium>
     </>
   );
 };
