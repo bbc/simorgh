@@ -83,7 +83,7 @@ Object {
 exports[`Canonical On Demand T V Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "افغانستان",
-  "url": "/pashto/afghanistan",
+  "url": "/pashto/topics/cr50y57xj52t",
 }
 `;
 
@@ -97,21 +97,21 @@ Object {
 exports[`Canonical On Demand T V Page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "نړۍ",
-  "url": "/pashto/world",
+  "url": "/pashto/topics/cxe2wdp2dv3t",
 }
 `;
 
 exports[`Canonical On Demand T V Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "ښځې",
-  "url": "/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+  "url": "/pashto/topics/cr50y5rq23gt",
 }
 `;
 
 exports[`Canonical On Demand T V Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "لوبې",
-  "url": "/pashto/sport",
+  "url": "/pashto/topics/cr50y59q860t",
 }
 `;
 
@@ -132,7 +132,7 @@ Object {
 exports[`Canonical On Demand T V Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "کالم",
-  "url": "/pashto/columns",
+  "url": "/pashto/columns-54029178",
 }
 `;
 

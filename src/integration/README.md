@@ -46,6 +46,12 @@ To run tests updating existing snapshots
 npm run test:integration -- -u
 ```
 
+To run tests without building and starting the app
+
+```
+npm run test:integration -- --onlyRunTests
+```
+
 Any other Jest CLI args and flags can be passed along in the `test:integration` script.
 
 ## How to write tests

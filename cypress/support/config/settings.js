@@ -2436,7 +2436,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/hindi'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/hindi'],
@@ -3982,7 +3982,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/mundo'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/mundo'],
@@ -4096,7 +4096,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/mundo/noticias-internacional-53826365'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/mundo/noticias-internacional-23055705'],
@@ -4107,7 +4107,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
     },
     specialFeatures: {
@@ -4743,14 +4743,14 @@ module.exports = () => ({
           },
           test: {
             paths: ['/pashto/sport-23079770'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/pashto/columns-54029178'],
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
     },
     specialFeatures: {
@@ -4859,7 +4859,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/persian'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/persian'],
@@ -5064,7 +5064,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/persian/science-52004647'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/persian/23278332'],
@@ -5295,7 +5295,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/pidgin/tori-23133559'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/pidgin/tori-23133559'],
@@ -5373,7 +5373,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/portuguese'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/portuguese'],
@@ -9091,8 +9091,8 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/urdu/world-53692225'],
-            enabled: false,
+            paths: ['/urdu/science-51314202'],
+            enabled: true,
           },
           test: {
             paths: ['/urdu/world-23075586'],
@@ -9946,19 +9946,19 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/zhongwen/simp/world-54113945'],
-            enabled: false,
+            paths: ['/zhongwen/simp/world-54547455'],
+            enabled: true,
           },
           test: {
             paths: ['/zhongwen/simp/23161271'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/zhongwen/simp/world-54113945'],
             enabled: true,
           },
+          local: {
+            paths: [],
+            enabled: false,
+          },
         },
-        smoke: false,
+        smoke: true,
       },
     },
     specialFeatures: {
@@ -10163,19 +10163,19 @@ module.exports = () => ({
       featureIndexPage: {
         environments: {
           live: {
-            paths: ['/zhongwen/trad/world-54113945'],
-            enabled: false,
+            paths: ['/zhongwen/trad/world-54547455'],
+            enabled: true,
           },
           test: {
             paths: ['/zhongwen/trad/23161271'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/zhongwen/trad/world-54113945'],
             enabled: true,
           },
+          local: {
+            paths: [],
+            enabled: false,
+          },
         },
-        smoke: false,
+        smoke: true,
       },
     },
     specialFeatures: {

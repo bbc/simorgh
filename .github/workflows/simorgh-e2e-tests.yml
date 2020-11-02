@@ -1,0 +1,32 @@
+name: Simorgh CI - E2E & 3rd Party Tests
+on:
+  push:
+    branches:
+      - '**'
+      - '!latest'
+  pull_request:
+    branches:
+      - '**'
+      - '!latest'
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+      LOG_LEVEL: 'error'
+      CYPRESS_SKIP_EU: true
+      CYPRESS_SMOKE: true
+      CYPRESS_APP_ENV: 'local'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Run Simorgh E2Es
+        uses: cypress-io/github-action@v2
+        with:
+          build: npm run build
+          start: npm start
+      - name: Run 3rd Party E2Es
+        uses: cypress-io/github-action@v2
+        with:
+          project: ./3rdPartyCypress

@@ -6,13 +6,10 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
-
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-
 import pathOr from 'ramda/src/pathOr';
 import last from 'ramda/src/last';
 import MediaMessage from './MediaMessage';
-import { GridWrapper } from '#lib/styledGrid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -36,6 +33,15 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import { RequestContext } from '#contexts/RequestContext';
+import { GelPageGrid } from '#app/components/Grid';
+
+const StyledTimestamp = styled(Timestamp)`
+  padding-bottom: ${GEL_SPACING_DBL};
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding-bottom: ${GEL_SPACING_TRPL};
+  }
+`;
 
 const MediaAssetPage = ({ pageData }) => {
   const { canonicalLink, isAmp } = useContext(RequestContext);
@@ -123,19 +129,10 @@ const MediaAssetPage = ({ pageData }) => {
     unavailableMedia: MediaMessage,
   };
 
-  const StyledGrid = styled(GridWrapper)`
-    width: 100%;
+  const StyledGelPageGrid = styled(GelPageGrid)`
     padding-bottom: ${GEL_SPACING_TRPL};
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
       padding-bottom: ${GEL_SPACING_QUAD};
-    }
-  `;
-
-  const StyledTimestamp = styled(Timestamp)`
-    padding-bottom: ${GEL_SPACING_DBL};
-
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      padding-bottom: ${GEL_SPACING_TRPL};
     }
   `;
 
@@ -166,9 +163,22 @@ const MediaAssetPage = ({ pageData }) => {
         imageLocator={indexImageLocator}
       />
       <ATIAnalytics data={pageData} />
-      <StyledGrid as="main" role="main">
+      <StyledGelPageGrid
+        forwardedAs="main"
+        role="main"
+        enableGelGutters
+        columns={{
+          group0: 6,
+          group1: 6,
+          group2: 6,
+          group3: 6,
+          group4: 8,
+          group5: 20,
+        }}
+      >
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </StyledGrid>
+      </StyledGelPageGrid>
+
       <CpsRelatedContent content={relatedContent} isMediaContent />
       {!isAmp && <MostWatchedContainer data={mostWatchedData} />}
     </>

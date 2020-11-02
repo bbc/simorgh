@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { string, shape } from 'prop-types';
-import styled from 'styled-components';
 import { Headline } from '@bbc/psammead-headings';
 import pathOr from 'ramda/src/pathOr';
 import Paragraph from '@bbc/psammead-paragraph';
@@ -23,11 +22,6 @@ const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${pr
 
 const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
-const StyledGelPageGrid = styled(GelPageGrid)`
-  width: 100%;
-  flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
-`;
-
 const LiveRadioPage = ({ pageData }) => {
   const {
     language,
@@ -41,7 +35,6 @@ const LiveRadioPage = ({ pageData }) => {
   const {
     script,
     service,
-    dir,
     lang,
     liveRadioOverrides,
     translations,
@@ -81,10 +74,9 @@ const LiveRadioPage = ({ pageData }) => {
       />
       <LinkedData type="RadioChannel" seoTitle={name} />
 
-      <StyledGelPageGrid
+      <GelPageGrid
         forwardedAs="main"
         role="main"
-        dir={dir}
         columns={{
           group0: 6,
           group1: 6,
@@ -97,7 +89,6 @@ const LiveRadioPage = ({ pageData }) => {
       >
         <Grid
           item
-          dir={dir}
           startOffset={{
             group0: 1,
             group1: 1,
@@ -137,7 +128,7 @@ const LiveRadioPage = ({ pageData }) => {
             placeholderSrc={audioPlaceholderImageSrc}
           />
         </Grid>
-      </StyledGelPageGrid>
+      </GelPageGrid>
       {hasRadioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />
       )}

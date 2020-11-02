@@ -1,6 +1,6 @@
 import { setWindowValue, resetWindowValue } from '@bbc/psammead-test-helpers';
 import loggerMock from '#testHelpers/loggerMock'; // Must be imported before fetchPageData
-import fetchPageData, { getUrl } from '.';
+import fetchPageData from '.';
 import { DATA_FETCH_ERROR, DATA_REQUEST_RECEIVED } from '#lib/logger.const';
 
 const expectedBaseUrl = 'http://localhost';
@@ -62,25 +62,25 @@ describe('fetchPageData', () => {
     it('should call fetch with the correct url when passed the pathname', async () => {
       await fetchPageData({ path: requestedPathname, pageType });
 
-      expect(fetch).toHaveBeenCalledWith(expectedUrl);
+      expect(fetch).toHaveBeenCalledWith(expectedUrl, { timeout: 4500 });
     });
 
     it('should call fetch with the correct url when passed the full test path', async () => {
       await fetchPageData({ path: fullTestPath, pageType });
 
-      expect(fetch).toHaveBeenCalledWith(fullTestPath);
+      expect(fetch).toHaveBeenCalledWith(fullTestPath, { timeout: 4500 });
     });
 
     it('should call fetch with the correct url when passed the full live path', async () => {
       await fetchPageData({ path: fullLivePath, pageType });
 
-      expect(fetch).toHaveBeenCalledWith(fullLivePath);
+      expect(fetch).toHaveBeenCalledWith(fullLivePath, { timeout: 4500 });
     });
 
     it('should call fetch on amp pages without .amp in pathname', async () => {
       await fetchPageData({ path: requestedPathname, pageType });
 
-      expect(fetch).toHaveBeenCalledWith(expectedUrl);
+      expect(fetch).toHaveBeenCalledWith(expectedUrl, { timeout: 4500 });
     });
 
     it('should return expected response', async () => {
@@ -285,91 +285,6 @@ describe('fetchPageData', () => {
           });
         },
       );
-    });
-  });
-});
-
-describe('getUrl', () => {
-  it('should return empty string when pathname empty', () => {
-    expect(getUrl('')).toEqual('');
-  });
-
-  it('should return empty string when pathname null', () => {
-    expect(getUrl(null)).toEqual('');
-  });
-
-  it('should return empty string when pathname undefined', () => {
-    expect(getUrl(undefined)).toEqual('');
-  });
-
-  it('should return url', () => {
-    expect(getUrl('/test/article')).toEqual(
-      'http://localhost/test/article.json',
-    );
-  });
-
-  it('should remove .amp from url', () => {
-    expect(getUrl('/test/article.amp')).toEqual(
-      'http://localhost/test/article.json',
-    );
-  });
-
-  describe('where application environment', () => {
-    describe('is not live', () => {
-      beforeEach(() => {
-        process.env.SIMORGH_APP_ENV = 'not-live';
-      });
-
-      it('should append single query string parameter', () => {
-        expect(getUrl('/test/article?param=test')).toEqual(
-          'http://localhost/test/article.json?param=test',
-        );
-      });
-
-      it('should append multiple query string parameters', () => {
-        expect(getUrl('/test/article?first=1&second=2')).toEqual(
-          'http://localhost/test/article.json?first=1&second=2',
-        );
-      });
-
-      it('should remove .amp from url with params', () => {});
-      expect(getUrl('/test/article.amp?param=test')).toEqual(
-        'http://localhost/test/article.json?param=test',
-      );
-    });
-
-    describe('is live', () => {
-      beforeEach(() => {
-        process.env.SIMORGH_APP_ENV = 'live';
-      });
-
-      it('should remove single query string parameter from url', () => {
-        expect(getUrl('/test/article?param=test')).toEqual(
-          'http://localhost/test/article.json',
-        );
-      });
-
-      it('should remove multiple query string parameter from url', () => {
-        expect(getUrl('/test/article?first=1&second=2')).toEqual(
-          'http://localhost/test/article.json',
-        );
-      });
-
-      it('should remove .amp and single query string parameter from url', () => {
-        expect(getUrl('/test/article.amp?param=test')).toEqual(
-          'http://localhost/test/article.json',
-        );
-      });
-
-      it('should remove .amp and multiple query string parameters from url', () => {
-        expect(getUrl('/test/article.amp?first=1&second=2')).toEqual(
-          'http://localhost/test/article.json',
-        );
-      });
-    });
-
-    afterAll(() => {
-      delete process.env.SIMORGH_APP_ENV;
     });
   });
 });

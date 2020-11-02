@@ -15,7 +15,6 @@ const RelatedContentPromo = ({ promo, dir }) => (
       group5: 2,
     }}
     enableGelGutters
-    dir={dir}
   >
     <StoryPromo item={promo} dir={dir} />
   </Grid>

@@ -14,6 +14,7 @@ import {
   recommendationsDataRegex,
   secondaryColumnDataRegexPath,
   africaEyeTVDataPath,
+  liveRadioDataPath,
 } from '#app/routes/utils/regex';
 import { LOCAL_SENDFILE_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
@@ -92,6 +93,17 @@ export default server => {
 
       sendDataFile(res, dataFilePath, next);
     })
+    .get(liveRadioDataPath, async ({ params }, res, next) => {
+      const { service, masterBrand } = params;
+
+      const dataFilePath = constructDataFilePath({
+        pageType: 'liveRadio',
+        service,
+        masterBrand,
+      });
+
+      sendDataFile(res, dataFilePath, next);
+    })
     .get(onDemandRadioDataPath, async ({ params }, res, next) => {
       const { service, serviceId, mediaId } = params;
 
@@ -131,17 +143,6 @@ export default server => {
 
       sendDataFile(res, dataFilePath, next);
     })
-    .get(legacyAssetPageDataPath, async ({ params }, res, next) => {
-      const { service, assetUri, variant } = params;
-
-      const dataFilePath = constructDataFilePath({
-        pageType: 'legacyAssets',
-        service,
-        assetUri,
-        variant,
-      });
-      sendDataFile(res, dataFilePath, next);
-    })
     .get(secondaryColumnDataRegexPath, async ({ params }, res, next) => {
       const { service, variant } = params;
       const dataFilePath = constructDataFilePath({
@@ -173,6 +174,32 @@ export default server => {
       const dataFilePath = constructDataFilePath({
         pageType: 'africa_eye',
         episodeId,
+      });
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(
+      '/:service/election/us2020/results/oembed.json',
+      ({ params }, res, next) => {
+        const dataFilePath = path.join(
+          process.cwd(),
+          'data',
+          params.service,
+          'election',
+          'us2020',
+          'results',
+          'oembed.json',
+        );
+        sendDataFile(res, dataFilePath, next);
+      },
+    )
+    .get(legacyAssetPageDataPath, async ({ params }, res, next) => {
+      const { service, assetUri, variant } = params;
+
+      const dataFilePath = constructDataFilePath({
+        pageType: 'legacyAssets',
+        service,
+        assetUri,
+        variant,
       });
       sendDataFile(res, dataFilePath, next);
     })
