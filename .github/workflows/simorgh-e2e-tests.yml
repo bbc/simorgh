@@ -1,4 +1,4 @@
-name: Simorgh CI - E2E & 3rd Party Tests
+name: Simorgh CI - Cypress E2E Tests
 on:
   push:
     branches:
