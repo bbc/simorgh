@@ -30,6 +30,7 @@ jobs:
       - name: Deploy Storybook
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
+          GIT_CONFIG_NAME: bbc-news-frameworks
           GIT_CONFIG_EMAIL: DENewsSimorghDev@bbc.co.uk
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
