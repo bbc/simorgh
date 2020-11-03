@@ -32,7 +32,10 @@ jobs:
         run: npx chromatic test run --build-script-name build:storybook --exit-once-uploaded --no-interactive --project-token "$CHROMATIC_APP_CODE"
 
       - name: Code Climate Test Coverage
-        run: ./cc-test-reporter after-build -t lcov --debug --exit-code 0
+        run: |
+          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter	
+          chmod +x ./cc-test-reporter
+          ./cc-test-reporter after-build -t lcov --debug --exit-code 0
 
       - name: Apache License Checker
         run: npx apache2-license-checker
