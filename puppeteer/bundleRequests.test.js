@@ -58,13 +58,19 @@ describe('Js bundle requests', () => {
             });
 
             it('only loads expected js bundles', () => {
+              const { name: serviceName } = config[service];
+              const serviceRegex =
+                config[service].name === 'ukrainian'
+                  ? 'ukrainian|russian'
+                  : serviceName;
+
               requests
                 .filter(url => url.endsWith('.js'))
                 .filter(isJsBundle)
                 .forEach(url => {
                   expect(url).toMatch(
                     new RegExp(
-                      `(\\/static\\/js\\/(?:comscore\\/)?(main|framework|commons|shared|${config[service].name}|.+Page)-.+?.js)|(\\/static\\/.+?-lib-.+?.js)`,
+                      `(\\/static\\/js\\/(?:comscore\\/)?(main|framework|commons|shared|${serviceRegex}|.+Page)-.+?.js)|(\\/static\\/.+?-lib-.+?.js)`,
                       'g',
                     ),
                   );
