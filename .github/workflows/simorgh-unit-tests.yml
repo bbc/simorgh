@@ -17,6 +17,7 @@ jobs:
     env:
       CI: true
       LOG_LEVEL: 'error'
+      CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
 
     steps:
       - uses: actions/checkout@v1
