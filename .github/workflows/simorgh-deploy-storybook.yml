@@ -29,6 +29,9 @@ jobs:
 
       - name: Deploy Storybook
         uses: JamesIves/github-pages-deploy-action@3.7.1
+        run: |
+          git config --global user.name "simorgh-bbc"
+          git config --global user.email "DENewsSimorghDev@bbc.co.uk"
         with:
           GIT_CONFIG_NAME: simorgh-bbc
           GIT_CONFIG_EMAIL: DENewsSimorghDev@bbc.co.uk
