@@ -31,6 +31,9 @@ jobs:
       - name: Chromatic UI Tests
         run: npx chromatic test run --build-script-name build:storybook --exit-once-uploaded --no-interactive --project-token "$CHROMATIC_APP_CODE"
 
+      - name: Code Climate Test Coverage
+        run: ./cc-test-reporter after-build -t lcov --debug --exit-code 0
+
       - name: Apache License Checker
         run: npx apache2-license-checker
 
