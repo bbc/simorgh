@@ -3,11 +3,13 @@ import getMostWatchedUrl from '#lib/utilities/getMostWatchedUrl';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import processMostWatched from '../../utils/processMostWatched';
 
-export default async ({ service, variant, pageType, toggles }) => {
+export default async ({ service, variant, pageType, toggles, path }) => {
+  const env = path.includes('renderer_env=live')
+    ? 'live'
+    : process.env.SIMORGH_APP_ENV;
+
   try {
-    const mostWatchedUrl = getMostWatchedUrl({ service, variant }).split(
-      '.',
-    )[0];
+    const mostWatchedUrl = getMostWatchedUrl({ service, variant, env });
     const { json, status } = await fetchPageData({
       path: mostWatchedUrl,
       pageType,

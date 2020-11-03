@@ -186,7 +186,7 @@ Object {
 exports[`AMP Front Page Footer Link should match text and url 7`] = `
 Object {
   "text": "Call BBC",
-  "url": "https://www.bbc.com/pidgin/institutional-42188215",
+  "url": "https://www.bbc.co.uk/send/u50853577",
 }
 `;
 

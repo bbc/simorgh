@@ -230,7 +230,7 @@ const baseServiceConfig = {
         text: 'Cookies',
       },
       {
-        href: 'https://www.bbc.com/ukrainian/institutional-38146278',
+        href: 'https://www.bbc.co.uk/send/u50853885',
         text: "Зв'язатися з BBC",
       },
       {
@@ -255,27 +255,23 @@ const baseServiceConfig = {
     },
     {
       title: 'Наука',
-      url: '/ukrainian/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
+      url: '/ukrainian/topics/cyx5kzy4w5yt',
     },
     {
       title: 'Технології',
-      url: '/ukrainian/topics/31684f19-84d6-41f6-b033-7ae08098572a',
+      url: '/ukrainian/topics/cxnykv9q4kpt',
     },
     {
       title: 'Здоров’я',
-      url: '/ukrainian/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
+      url: '/ukrainian/topics/cwr9jqqqq13t',
     },
     {
       title: 'Журнал',
-      url: '/ukrainian/magazine',
+      url: '/ukrainian/53725237',
     },
     {
       title: 'Книга року BBC',
       url: '/ukrainian/features-50320117',
-    },
-    {
-      title: 'Блоги',
-      url: '/ukrainian/blogs',
     },
     {
       title: 'РУС',

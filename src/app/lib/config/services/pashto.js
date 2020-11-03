@@ -210,8 +210,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: true,
-      frontPagePosition: 'Interactivity',
       frequenciesPageUrl: '/pashto/institutional/2012/03/000001_frequencies',
       frequenciesPageLabel: 'راديويي څپې',
       header: 'تازه خبرونه واورئ',
@@ -247,7 +245,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/pashto/institutional-37622768',
+          href: 'https://www.bbc.co.uk/send/u50853533',
           text: 'زموږ سره اړیکي',
         },
         {
@@ -268,7 +266,7 @@ export const service = {
       },
       {
         title: 'افغانستان',
-        url: '/pashto/afghanistan',
+        url: '/pashto/topics/cr50y57xj52t',
       },
       {
         title: 'پښتونخوا',
@@ -276,15 +274,15 @@ export const service = {
       },
       {
         title: 'نړۍ',
-        url: '/pashto/world',
+        url: '/pashto/topics/cxe2wdp2dv3t',
       },
       {
         title: 'ښځې',
-        url: '/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862',
+        url: '/pashto/topics/cr50y5rq23gt',
       },
       {
         title: 'لوبې',
-        url: '/pashto/sport',
+        url: '/pashto/topics/cr50y59q860t',
       },
       {
         title: 'ويډيوګانې',
@@ -296,7 +294,7 @@ export const service = {
       },
       {
         title: 'کالم',
-        url: '/pashto/columns',
+        url: '/pashto/columns-54029178',
       },
     ],
   },

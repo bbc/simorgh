@@ -11,7 +11,6 @@ import {
   renderAlternateLinks,
   renderAppleItunesApp,
 } from './utils';
-import useToggle from '#hooks/useToggle';
 
 const ENGLISH_SERVICES = ['news'];
 const FACEBOOK_ADMIN_ID = 100004154058350;
@@ -109,10 +108,6 @@ const MetadataContainer = ({
   const metaImage = image || defaultImage;
   const metaImageAltText = imageAltText || defaultImageAltText;
 
-  const { enabled: appleItunesAppToggleEnabled } = useToggle(
-    'apple_itunes_app',
-  );
-
   return (
     <Helmet htmlAttributes={htmlAttributes}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -134,7 +129,6 @@ const MetadataContainer = ({
         iTunesAppId,
         canonicalLink,
         isAmp,
-        appleItunesAppToggleEnabled,
         hasAppleItunesAppBanner,
       })}
       <meta name="apple-mobile-web-app-title" content={brandName} />

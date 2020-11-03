@@ -23,20 +23,8 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
           });
         });
       }
-      if (['photoGalleryPage', 'storyPage'].includes(pageType)) {
-        describe('CPS PGL and STY Tests', () => {
-          it('should render at least one image', () => {
-            cy.get('figure').first().find('img').should('be.visible');
-          });
-        });
-      }
     });
   }
-  describe(`Canonical Tests`, () => {
-    it('should not have an AMP attribute on the page', () => {
-      cy.get('html').should('not.have.attr', 'amp');
-    });
-  });
 };
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.

@@ -3,6 +3,7 @@ import path from 'ramda/src/path';
 import styled from 'styled-components';
 import { arrayOf, shape, node } from 'prop-types';
 import {
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -26,6 +27,10 @@ import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ATIAnalytics from '#containers/ATIAnalytics';
 
 const StyledIndexHeading = styled(IndexHeading)`
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    padding-top: ${GEL_SPACING};
+  }
+
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     padding-bottom: ${GEL_SPACING};
     padding-top: ${GEL_SPACING_DBL};
@@ -42,7 +47,6 @@ const StyledIndexPageContainer = styled(IndexPageContainer)`
 
 const MostWatchedPage = ({ pageData }) => {
   const {
-    dir,
     brandName,
     lang,
     mostWatched: { header },
@@ -52,7 +56,6 @@ const MostWatchedPage = ({ pageData }) => {
 
   const MostWatchedWrapper = ({ children }) => (
     <GelPageGrid
-      dir={dir}
       columns={{
         group0: 6,
         group1: 6,
@@ -65,7 +68,6 @@ const MostWatchedPage = ({ pageData }) => {
     >
       <Grid
         item
-        dir={dir}
         startOffset={{
           group0: 1,
           group1: 1,

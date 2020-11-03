@@ -229,7 +229,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/azeri/institutional-37131054',
+          href: 'https://www.bbc.co.uk/send/u50853225',
           text: 'BBC ilə Əlaqə',
         },
         {
@@ -250,15 +250,15 @@ export const service = {
       },
       {
         title: 'Azərbaycan',
-        url: '/azeri/azerbaijan',
+        url: '/azeri/topics/c7zp571g7y7t',
       },
       {
         title: 'Region',
-        url: '/azeri/region',
+        url: '/azeri/topics/czpveq9ll8pt',
       },
       {
         title: 'Beynəlxalq',
-        url: '/azeri/international',
+        url: '/azeri/topics/cde15l4vn02t',
       },
       {
         title: 'Dərgi',

@@ -186,7 +186,7 @@ Object {
 exports[`AMP On Demand Radio Page Footer Link should match text and url 7`] = `
 Object {
   "text": "زموږ سره اړیکي",
-  "url": "https://www.bbc.co.uk/pashto/institutional-37622768",
+  "url": "https://www.bbc.co.uk/send/u50853533",
 }
 `;
 
@@ -216,7 +216,7 @@ Object {
 exports[`AMP On Demand Radio Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "افغانستان",
-  "url": "/pashto/afghanistan",
+  "url": "/pashto/topics/cr50y57xj52t",
 }
 `;
 
@@ -230,21 +230,21 @@ Object {
 exports[`AMP On Demand Radio Page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "نړۍ",
-  "url": "/pashto/world",
+  "url": "/pashto/topics/cxe2wdp2dv3t",
 }
 `;
 
 exports[`AMP On Demand Radio Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "ښځې",
-  "url": "/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+  "url": "/pashto/topics/cr50y5rq23gt",
 }
 `;
 
 exports[`AMP On Demand Radio Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "لوبې",
-  "url": "/pashto/sport",
+  "url": "/pashto/topics/cr50y59q860t",
 }
 `;
 
@@ -265,7 +265,7 @@ Object {
 exports[`AMP On Demand Radio Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "کالم",
-  "url": "/pashto/columns",
+  "url": "/pashto/columns-54029178",
 }
 `;
 
@@ -276,6 +276,8 @@ exports[`AMP On Demand Radio Page I can see the episode summary 1`] = `"د نړ�
 exports[`AMP On Demand Radio Page I can see the episode title 1`] = `"۱۸ می ۲۰۲۰"`;
 
 exports[`AMP On Demand Radio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png"`;
+
+exports[`AMP On Demand Radio Page Main heading should match text 1`] = `"وروستي خبرونه, ۱۸ می ۲۰۲۰"`;
 
 exports[`AMP On Demand Radio Page Media Player a11y assistive technology can read the media player title 1`] = `"اډیو پلیئر"`;
 

@@ -53,7 +53,7 @@ Object {
 exports[`Canonical Media Asset Page Footer Link should match text and url 7`] = `
 Object {
   "text": "تماس با بی بی سی",
-  "url": "https://www.bbc.com/persian/institutional-37542244",
+  "url": "https://www.bbc.co.uk/send/u50853555",
 }
 `;
 
@@ -82,96 +82,101 @@ Object {
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 2`] = `
 Object {
+  "text": "انتخابات آمریکا",
+  "url": "/persian/world-54468359",
+}
+`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 3`] = `
+Object {
   "text": "کرونا",
   "url": "/persian/science-52004647",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 3`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "پخش زنده",
   "url": "/persian/media-49522521",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 4`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "ویدیو",
   "url": "/persian/media/video",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "تلویزیون",
   "url": "/persian/tv-and-radio-37434377",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "رادیو",
   "url": "/persian/tv-and-radio-37434376",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "ايران",
-  "url": "/persian/iran",
+  "url": "/persian/topics/ckdxnwvwwjnt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "افغانستان",
   "url": "/persian/afghanistan",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 9`] = `
-Object {
-  "text": "جهان",
-  "url": "/persian/world",
-}
-`;
-
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 10`] = `
 Object {
-  "text": "هنر",
-  "url": "/persian/arts",
+  "text": "جهان",
+  "url": "/persian/topics/c1d8ye58xl8t",
 }
 `;
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 11`] = `
 Object {
-  "text": "ورزش",
-  "url": "/persian/sport",
+  "text": "هنر",
+  "url": "/persian/topics/c9wpm0epm45t",
 }
 `;
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 12`] = `
 Object {
-  "text": "اقتصاد",
-  "url": "/persian/business",
+  "text": "ورزش",
+  "url": "/persian/topics/cnq6879k7yjt",
 }
 `;
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 13`] = `
 Object {
-  "text": "دانش",
-  "url": "/persian/science",
+  "text": "اقتصاد",
+  "url": "/persian/topics/cl8l9mvlllqt",
 }
 `;
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 14`] = `
 Object {
-  "text": "ناظران می‌گویند",
-  "url": "/persian/blogs/viewpoints",
+  "text": "دانش",
+  "url": "/persian/topics/cp0e57wejkzt",
 }
 `;
 
-exports[`Canonical Media Asset Page I can see the headline 1`] = `"Trump long headline"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 15`] = `
+Object {
+  "text": "ناظران می‌گویند",
+  "url": "/persian/blogs-54099951",
+}
+`;
 
 exports[`Canonical Media Asset Page I can see the placeholder loading image 1`] = `
 <div
@@ -183,7 +188,7 @@ exports[`Canonical Media Asset Page I can see the placeholder loading image 1`] 
 </div>
 `;
 
-exports[`Canonical Media Asset Page I can see the timestamp 1`] = `"۲۶ بهمن ۱۳۹۷ - ۱۵ فوریه ۲۰۱۹"`;
+exports[`Canonical Media Asset Page Main heading should match text 1`] = `"Trump long headline"`;
 
 exports[`Canonical Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"پخش صدا و تصویر"`;
 
@@ -371,6 +376,13 @@ exports[`Canonical Media Asset Page SEO Twitter image src 1`] = `"https://ichef.
 exports[`Canonical Media Asset Page SEO Twitter site 1`] = `"@bbcpersian"`;
 
 exports[`Canonical Media Asset Page SEO Twitter title 1`] = `"Trump short headline - BBC News فارسی"`;
+
+exports[`Canonical Media Asset Page Timestamp should match text and date 1`] = `
+Object {
+  "date": "2019-02-15",
+  "text": "۲۶ بهمن ۱۳۹۷ - ۱۵ فوریه ۲۰۱۹",
+}
+`;
 
 exports[`Canonical Media Asset Page outer iframe has z-index of 1 1`] = `
 <iframe

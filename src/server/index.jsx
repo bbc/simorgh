@@ -82,15 +82,8 @@ server
   .use(gnuTP())
   .get('/status', (req, res) => {
     res.status(200).send(getBuildMetadata());
-  });
-
-// Set Up Local Server
-if (process.env.SIMORGH_APP_ENV === 'local') {
-  local(server);
-} else {
-  // Prod only logging - response time
-  server.use(logResponseTime);
-}
+  })
+  .use(logResponseTime);
 
 /*
  * Application env routes
@@ -118,106 +111,107 @@ server
         }
       });
     },
-  )
-  .get(
-    '/*',
-    injectCspHeaderProdBuild,
-    async ({ url, headers, path: urlPath }, res) => {
-      logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
-        url,
-        headers,
+  );
+
+// Set Up Local Server
+if (process.env.SIMORGH_APP_ENV === 'local') {
+  local(server);
+}
+
+// Catch all for all routes
+server.get(
+  '/*',
+  injectCspHeaderProdBuild,
+  async ({ url, headers, path: urlPath }, res) => {
+    logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
+      url,
+      headers,
+    });
+
+    let derivedPageType = 'Unknown';
+
+    try {
+      const {
+        service,
+        isAmp,
+        route: { getInitialData, pageType },
+        variant,
+      } = getRouteProps(urlPath);
+
+      // Set derivedPageType based on matched route
+      derivedPageType = pageType || derivedPageType;
+
+      const toggles = await getToggles(service);
+
+      const data = await getInitialData({
+        path: url,
+        service,
+        variant,
+        pageType,
+        toggles,
       });
 
-      let derivedPageType = 'Unknown';
+      data.toggles = toggles;
+      data.path = urlPath;
+      data.timeOnServer = Date.now();
+      data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
 
-      try {
-        const {
-          service,
-          isAmp,
-          route: { getInitialData, pageType },
-          variant,
-        } = getRouteProps(routes, urlPath);
-
-        // Set derivedPageType based on matched route
-        derivedPageType = pageType || derivedPageType;
-
-        const toggles = await getToggles(service);
-
-        const data = await getInitialData({
-          path: url,
-          service,
-          variant,
-          pageType,
-          toggles,
-        });
-
-        data.toggles = toggles;
-        data.path = urlPath;
-        data.timeOnServer = Date.now();
-        data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
-
-        const { status } = data;
-        // Set derivedPageType based on returned page data
-        if (status === OK) {
-          derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
-        } else {
-          sendCustomMetric({
-            metricName: NON_200_RESPONSE,
-            statusCode: status,
-            pageType: derivedPageType,
-            requestUrl: url,
-          });
-        }
-
-        const bbcOrigin = headers['bbc-origin'];
-        const result = await renderDocument({
-          bbcOrigin,
-          data,
-          isAmp,
-          routes,
-          service,
-          url,
-          variant,
-        });
-
-        logger.info(ROUTING_INFORMATION, {
-          url,
-          status,
-          pageType: derivedPageType,
-        });
-
-        logger.debug(ROUTING_INFORMATION, {
-          url,
-          status,
-          pageType: derivedPageType,
-        });
-
-        if (result.redirectUrl) {
-          res.redirect(301, result.redirectUrl);
-        } else if (result.html) {
-          res.status(status).send(result.html);
-        } else {
-          throw new Error('unknown result');
-        }
-      } catch ({ message, status = 500 }) {
+      const { status } = data;
+      // Set derivedPageType based on returned page data
+      if (status === OK) {
+        derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
+      } else {
         sendCustomMetric({
           metricName: NON_200_RESPONSE,
           statusCode: status,
           pageType: derivedPageType,
           requestUrl: url,
         });
-
-        logger.error(SERVER_SIDE_REQUEST_FAILED, {
-          status,
-          message,
-          url,
-          headers,
-        });
-
-        // Return an internal server error for any uncaught errors
-        res.status(500).send(message);
       }
-    },
-  );
+
+      const bbcOrigin = headers['bbc-origin'];
+      const result = await renderDocument({
+        bbcOrigin,
+        data,
+        isAmp,
+        routes,
+        service,
+        url,
+        variant,
+      });
+
+      logger.info(ROUTING_INFORMATION, {
+        url,
+        status,
+        pageType: derivedPageType,
+      });
+
+      if (result.redirectUrl) {
+        res.redirect(301, result.redirectUrl);
+      } else if (result.html) {
+        res.status(status).send(result.html);
+      } else {
+        throw new Error('unknown result');
+      }
+    } catch ({ message, status = 500 }) {
+      sendCustomMetric({
+        metricName: NON_200_RESPONSE,
+        statusCode: status,
+        pageType: derivedPageType,
+        requestUrl: url,
+      });
+
+      logger.error(SERVER_SIDE_REQUEST_FAILED, {
+        status,
+        message,
+        url,
+        headers,
+      });
+
+      // Return an internal server error for any uncaught errors
+      res.status(500).send(message);
+    }
+  },
+);
 
 export default server;

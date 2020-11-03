@@ -107,8 +107,24 @@ describe('Logger node - for the server', () => {
         });
       });
 
-      it('sets up console transport', () => {
+      it('does not create a console transport by default', () => {
         process.env.LOG_DIR = 'foobarDir';
+        require('./logger.node');
+
+        expect(winston.transports.Console).not.toHaveBeenCalled();
+      });
+
+      it('does not create a console transport when process.LOG_TO_CONSOLE is false', () => {
+        process.env.LOG_DIR = 'foobarDir';
+        process.env.LOG_TO_CONSOLE = 'false';
+        require('./logger.node');
+
+        expect(winston.transports.Console).not.toHaveBeenCalled();
+      });
+
+      it('sets up console transport when process.LOG_TO_CONSOLE is true', () => {
+        process.env.LOG_DIR = 'foobarDir';
+        process.env.LOG_TO_CONSOLE = 'true';
         require('./logger.node');
 
         expect(winston.transports.Console).toHaveBeenCalledWith({

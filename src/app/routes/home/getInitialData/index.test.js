@@ -1,8 +1,11 @@
 import fetchMock from 'fetch-mock';
-import getInitialData, { hasRadioSchedule } from '.';
-import frontPageJson from '#data/hausa/frontpage/index.json';
+import getInitialData from '.';
+
+// Fixture Data
+import frontPageJsonHausa from '#data/hausa/frontpage/index.json';
+import frontPageJsonMundo from '#data/mundo/frontpage/index.json';
 import radioScheduleJson from '#data/hausa/bbc_hausa_radio/schedule.json';
-import getConfig from '../../utils/getConfig';
+import usEelectionOembedMundo from '#data/mundo/election/us2020/results/oembed.json';
 
 jest.mock('../../utils/getConfig', () => jest.fn());
 
@@ -15,14 +18,11 @@ describe('Get initial data from front page', () => {
   });
 
   it('should return data for a page without radio schedules to render', async () => {
-    getConfig.mockImplementationOnce(() => ({
-      radioSchedule: {
-        hasRadioSchedule: false,
-        onFrontPage: false,
-      },
-    }));
+    fetchMock.mock(
+      'http://localhost/mock-frontpage-path.json',
+      frontPageJsonHausa,
+    );
 
-    fetchMock.mock('http://localhost/mock-frontpage-path.json', frontPageJson);
     const { pageData } = await getInitialData({
       path: 'mock-frontpage-path',
       service: 'hausa',
@@ -38,22 +38,25 @@ describe('Get initial data from front page', () => {
   });
 
   it('should return data to render a front page with radio schedules', async () => {
-    getConfig.mockImplementationOnce(() => ({
-      radioSchedule: {
-        hasRadioSchedule: true,
-        onFrontPage: true,
-      },
-    }));
-
-    fetchMock.mock('http://localhost/mock-frontpage-path.json', frontPageJson);
+    fetchMock.mock(
+      'http://localhost/mock-frontpage-path.json',
+      frontPageJsonHausa,
+    );
     fetchMock.mock(
       'http://localhost/hausa/bbc_hausa_radio/schedule.json',
       radioScheduleJson,
     );
+
     const { pageData } = await getInitialData({
       path: 'mock-frontpage-path',
       service: 'hausa',
       pageType,
+      toggles: {
+        frontPageRadioSchedule: {
+          enabled: true,
+          value: 'Features',
+        },
+      },
     });
 
     expect(pageData.metadata.language).toEqual('ha');
@@ -67,22 +70,24 @@ describe('Get initial data from front page', () => {
   });
 
   it('should return data for service with radio schedules, but without radio schedules on front page', async () => {
-    getConfig.mockImplementationOnce(() => ({
-      radioSchedule: {
-        hasRadioSchedule: true,
-        onFrontPage: false,
-      },
-    }));
-
-    fetchMock.mock('http://localhost/mock-frontpage-path.json', frontPageJson);
+    fetchMock.mock(
+      'http://localhost/mock-frontpage-path.json',
+      frontPageJsonHausa,
+    );
     fetchMock.mock(
       'http://localhost/hausa/bbc_hausa_radio/schedule.json',
       radioScheduleJson,
     );
+
     const { pageData } = await getInitialData({
       path: 'mock-frontpage-path',
       service: 'hausa',
       pageType,
+      toggles: {
+        frontPageRadioSchedule: {
+          enabled: false,
+        },
+      },
     });
 
     expect(pageData.metadata.language).toEqual('ha');
@@ -96,22 +101,23 @@ describe('Get initial data from front page', () => {
   });
 
   it('should return page data for misconfigured service without radio schedules, but with radio schedules on front page', async () => {
-    getConfig.mockImplementationOnce(() => ({
-      radioSchedule: {
-        hasRadioSchedule: false,
-        onFrontPage: true,
-      },
-    }));
-
-    fetchMock.mock('http://localhost/mock-frontpage-path.json', frontPageJson);
+    fetchMock.mock(
+      'http://localhost/mock-frontpage-path.json',
+      frontPageJsonHausa,
+    );
     fetchMock.mock(
       'http://localhost/hausa/bbc_hausa_radio/schedule.json',
-      radioScheduleJson,
+      null,
     );
     const { pageData } = await getInitialData({
       path: 'mock-frontpage-path',
       service: 'hausa',
       pageType,
+      toggles: {
+        frontPageRadioSchedule: {
+          enabled: true,
+        },
+      },
     });
 
     expect(pageData.metadata.language).toEqual('ha');
@@ -124,49 +130,63 @@ describe('Get initial data from front page', () => {
     expect(pageData.radioScheduleData).not.toBeTruthy();
   });
 
-  describe('hasRadioSchedule', () => {
-    it('returns true if service and front page has radio schedule', async () => {
-      getConfig.mockImplementationOnce(() => ({
-        radioSchedule: {
-          hasRadioSchedule: true,
-          onFrontPage: true,
-        },
-      }));
-
-      expect(await hasRadioSchedule('mock-service')).toBe(true);
+  describe('Has US Election Banner', () => {
+    beforeEach(() => {
+      fetchMock.restore();
     });
 
-    it('returns false if service has radio schedule but front page does not', async () => {
-      getConfig.mockImplementationOnce(() => ({
-        radioSchedule: {
-          hasRadioSchedule: true,
-          onFrontPage: false,
-        },
-      }));
+    it('Should fetch US Election oEmbed data', async () => {
+      fetchMock.mock(
+        'http://localhost/mock-frontpage-path.json',
+        frontPageJsonMundo,
+      );
+      fetchMock.mock(
+        'http://localhost/mundo/election/us2020/results/oembed.json',
+        usEelectionOembedMundo,
+      );
 
-      expect(await hasRadioSchedule('mock-service')).toBe(false);
+      const toggles = {
+        us2020ElectionBanner: { enabled: true },
+      };
+
+      const { pageData } = await getInitialData({
+        path: 'mock-frontpage-path',
+        service: 'mundo',
+        pageType,
+        toggles,
+      });
+
+      expect(pageData.usElectionOembed).toEqual(usEelectionOembedMundo);
     });
 
-    it('returns false if neither service or front page has radio schedule', async () => {
-      getConfig.mockImplementationOnce(() => ({
-        radioSchedule: {
-          hasRadioSchedule: false,
-          onFrontPage: false,
-        },
-      }));
+    describe('when oEmbed response 404s', () => {
+      beforeEach(() => {
+        fetchMock.restore();
+      });
 
-      expect(await hasRadioSchedule('mock-service')).toBe(false);
-    });
+      it('should not add oEmbed data to the pageData object', async () => {
+        fetchMock.mock(
+          'http://localhost/mock-frontpage-path.json',
+          frontPageJsonMundo,
+        );
+        fetchMock.mock(
+          'http://localhost/mundo/election/us2020/results/oembed.json',
+          404,
+        );
 
-    it('returns false if neither service is misconfigured to not have radio schedule, but service has', async () => {
-      getConfig.mockImplementationOnce(() => ({
-        radioSchedule: {
-          hasRadioSchedule: false,
-          onFrontPage: true,
-        },
-      }));
+        const toggles = {
+          us2020ElectionBanner: { enabled: true },
+        };
 
-      expect(await hasRadioSchedule('mock-service')).toBe(false);
+        const { pageData } = await getInitialData({
+          path: 'mock-frontpage-path',
+          service: 'mundo',
+          pageType,
+          toggles,
+        });
+
+        expect(pageData.usElectionOembed).toBeFalsy();
+      });
     });
   });
 });

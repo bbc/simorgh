@@ -1,9 +1,5 @@
 import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
-import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
-import getBaseUrl from './utils/getBaseUrl';
-import onClient from '#lib/utilities/onClient';
-import isLive from '#lib/utilities/isLive';
 import {
   DATA_REQUEST_RECEIVED,
   DATA_NOT_FOUND,
@@ -15,30 +11,32 @@ import {
   UPSTREAM_CODES_TO_PROPAGATE_IN_SIMORGH,
 } from '#lib/statusCodes.const';
 import getErrorStatusCode from './utils/getErrorStatusCode';
+import { PRIMARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
+import getUrl from './utils/getUrl';
 
 const logger = nodeLogger(__filename);
 
-const baseUrl = onClient()
-  ? getBaseUrl(window.location.origin)
-  : process.env.SIMORGH_BASE_URL;
+/**
+ * An isomorphic fetch wrapper for pages, with error and log handling.
+ * @param {string} path The URL of a resource to fetch.
+ * @param {number} timeout Optional parameter to provide a custom timeout
+ * for request for 'secondary data'. The fetch timeout defaults to the 'primary
+ * data' timeout if this is not provided.
+ * Timeout values here: https://github.com/bbc/simorgh/blob/latest/src/app/lib/utilities/getFetchTimeouts/index.js
+ * @param {...string} loggerArgs Additional arguments for richer logging.
+ */
+const fetchPageData = async ({ path, timeout, ...loggerArgs }) => {
+  const url = path.startsWith('http') ? path : getUrl(path);
+  const effectiveTimeout = timeout || PRIMARY_DATA_TIMEOUT;
 
-export const getUrl = pathname => {
-  if (!pathname) return '';
-
-  const ampRegex = /.amp$/;
-  const params = isLive() ? '' : getQueryString(pathname);
-  const basePath = getUrlPath(pathname);
-
-  return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
-};
-
-export default async ({ path, pageType }) => {
-  const url = getUrl(path);
-
-  logger.info(DATA_REQUEST_RECEIVED, { data: url, pageType, path });
+  logger.info(DATA_REQUEST_RECEIVED, {
+    data: url,
+    path,
+    ...loggerArgs,
+  });
 
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, { timeout: effectiveTimeout });
     const { status } = response;
 
     if (status === OK) {
@@ -74,10 +72,12 @@ export default async ({ path, pageType }) => {
       data: url,
       status: simorghError.status,
       error: message,
-      pageType,
       path,
+      ...loggerArgs,
     });
 
     throw simorghError;
   }
 };
+
+export default fetchPageData;

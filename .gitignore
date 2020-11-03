@@ -15,3 +15,4 @@ simorgh.report.html
 simorgh.report.json
 cypress/integration/123PlaygroundForTests/*
 src/app/lib/config/services/*.test.js
+.env

@@ -53,7 +53,7 @@ Object {
 exports[`Canonical Most Read Page Footer Link should match text and url 7`] = `
 Object {
   "text": "Liên hệ BBC",
-  "url": "https://www.bbc.com/vietnamese/institutional-37623842",
+  "url": "https://www.bbc.co.uk/send/u50853951",
 }
 `;
 
@@ -157,6 +157,8 @@ exports[`Canonical Most Read Page I can see the list items 8`] = `"8Vụ 39 ngư
 exports[`Canonical Most Read Page I can see the list items 9`] = `"9HRW kêu gọi trả tự do cho nhà hoạt động Nguyễn Ngọc ÁnhCập nhật gần nhất: 6 tháng 11 năm 2019"`;
 
 exports[`Canonical Most Read Page I can see the list items 10`] = `"10Lỗ hổng thiên đàng và một căn bệnh mãn tínhCập nhật gần nhất: 6 tháng 11 năm 2019"`;
+
+exports[`Canonical Most Read Page Main heading should match text 1`] = `"Đọc nhiều nhất"`;
 
 exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {

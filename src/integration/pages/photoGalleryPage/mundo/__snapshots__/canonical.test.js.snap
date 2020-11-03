@@ -171,6 +171,16 @@ Object {
 }
 `;
 
+exports[`Canonical Photo Gallery Page Image Caption should match text 1`] = `"Pie de foto, En tenis, las competidoras en los juegos de principios del siglo XX utilizaban vestidos y medias largas, algo impensable para los estándares de la actualidad. Fue hasta 1920 en Amberes cuando las mujeres tuvieron participación reconocida oficialmente."`;
+
+exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
+<noscript>
+  &lt;img srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 480w, https://ichef.bbci.co.uk/news/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 549w" alt="Tenista de 1904" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg" width="549" class="StyledImg-sc-7vx2mr-0 dQLeqZ"/&gt;
+</noscript>
+`;
+
+exports[`Canonical Photo Gallery Page Main heading should match text 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos"`;
+
 exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,
@@ -365,3 +375,10 @@ exports[`Canonical Photo Gallery Page SEO Twitter image src 1`] = `"https://iche
 exports[`Canonical Photo Gallery Page SEO Twitter site 1`] = `"@bbcmundo"`;
 
 exports[`Canonical Photo Gallery Page SEO Twitter title 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos - BBC News Mundo"`;
+
+exports[`Canonical Photo Gallery Page Timestamp should match text and date 1`] = `
+Object {
+  "date": "2016-08-07",
+  "text": "7 agosto 2016",
+}
+`;

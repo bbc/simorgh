@@ -1,6 +1,6 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
-import { getEmbedUrl } from './helper';
+import getEmbedUrl from '../../../support/helpers/getEmbedUrl';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 
 // For testing important features that differ between services, e.g. Timestamps.
@@ -37,16 +37,8 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
       });
 
       it('embed URL should be reachable', () => {
-        cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
+        cy.testResponseCodeAndTypeRetry(embedUrl, 200, 'text/html');
       });
-    });
-
-    describe('Chartbeat', () => {
-      if (envConfig.chartbeatEnabled) {
-        it('should have chartbeat config UID', () => {
-          cy.hasAmpChartbeatConfigUid();
-        });
-      }
     });
   });
 

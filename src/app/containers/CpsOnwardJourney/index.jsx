@@ -20,19 +20,19 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
-import Grid from '@bbc/psammead-grid';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 
 import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 import { storyItem } from '#models/propTypes/storyItem';
+import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import {
-  GridWrapper as LegacyGridWrapper,
-  GridItemConstrainedLarge,
-} from '#lib/styledGrid';
-import { gelGridMargin } from '#app/lib/layoutGrid';
+import Grid, {
+  GridWrapper,
+  GridItemLarge,
+  gelGridMargin,
+} from '#app/components/Grid';
 
-const constrainedLargeGridColumns = {
+const LargeGridColumns = {
   group0: 1,
   group1: 1,
   group2: 1,
@@ -41,10 +41,10 @@ const constrainedLargeGridColumns = {
   group5: 12,
 };
 
-const ConstrainedLargeGrid = ({ children, ...gridProps }) => (
+const LargeGrid = ({ children, ...gridProps }) => (
   <Grid
     {...gridProps}
-    columns={constrainedLargeGridColumns}
+    columns={LargeGridColumns}
     margins={{
       group0: true,
       group1: true,
@@ -66,7 +66,7 @@ const ConstrainedLargeGrid = ({ children, ...gridProps }) => (
   </Grid>
 );
 
-ConstrainedLargeGrid.propTypes = {
+LargeGrid.propTypes = {
   children: node.isRequired,
 };
 
@@ -77,7 +77,7 @@ const gridMarginSmall = css`
   }
 `;
 
-const StyledConstrainedLargeGrid = styled(ConstrainedLargeGrid)`
+const StyledLargeGrid = styled(LargeGrid)`
   ${gelGridMargin}
   ${gridMarginSmall}
   ${({ columnType }) =>
@@ -87,8 +87,9 @@ const StyledConstrainedLargeGrid = styled(ConstrainedLargeGrid)`
   `}
 `;
 
-const LegacyGridItemConstrainedLarge = styled(GridItemConstrainedLarge)`
+const LegacyGridItemLarge = styled(GridItemLarge)`
   ${gridMarginSmall}
+  padding-bottom: 2rem;
 `;
 
 const StyledSectionLabel = styled(SectionLabel)`
@@ -159,15 +160,19 @@ const CpsOnwardJourney = ({
   columnType,
   skipLink,
 }) => {
-  const a11yAttributes = {
-    as: 'section',
-    role: 'region',
-    'aria-labelledby': labelId,
-  };
   const { script, service, dir } = useContext(ServiceContext);
+  const { pageType } = useContext(RequestContext);
+
+  const isMostWatched = pageType === 'mostWatched';
+  const a11yAttributes = isMostWatched
+    ? {
+        as: 'div',
+      }
+    : { as: 'section', role: 'region', 'aria-labelledby': labelId };
+
   const Wrapper = isMediaContent
-    ? styled(ConstrainedLargeGrid)`` // Necessary for styling
-    : StyledConstrainedLargeGrid;
+    ? styled(LargeGrid)`` // Necessary for styling
+    : StyledLargeGrid;
   const CpsOnwardJourneyWrapper = ({ children }) =>
     parentColumns ? (
       <Wrapper
@@ -180,11 +185,9 @@ const CpsOnwardJourney = ({
         {children}
       </Wrapper>
     ) : (
-      <LegacyGridWrapper data-e2e={labelId} {...a11yAttributes}>
-        <LegacyGridItemConstrainedLarge>
-          {children}
-        </LegacyGridItemConstrainedLarge>
-      </LegacyGridWrapper>
+      <GridWrapper data-e2e={labelId} {...a11yAttributes}>
+        <LegacyGridItemLarge dir={dir}>{children}</LegacyGridItemLarge>
+      </GridWrapper>
     );
 
   CpsOnwardJourneyWrapper.propTypes = {
@@ -196,7 +199,7 @@ const CpsOnwardJourney = ({
   const [singleContent] = content;
 
   const WrapperItem = ({ children }) => (
-    <Wrapper parentColumns={constrainedLargeGridColumns} item>
+    <Wrapper parentColumns={LargeGridColumns} item>
       {children}
     </Wrapper>
   );

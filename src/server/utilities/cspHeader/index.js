@@ -1,6 +1,5 @@
 import csp from 'helmet-csp';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
-import routes from '#app/routes';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 
 /*
@@ -40,6 +39,10 @@ const advertisingDirectives = {
     'https://*.g.doubleclick.net',
     'https://tpc.googlesyndication.com',
     'https://*.google.com',
+    'https://dt.adsafeprotected.com',
+    'https://dtvc.adsafeprotected.com',
+    'https://fwvc.adsafeprotected.com',
+    'https://pixel.adsafeprotected.com',
   ],
   scriptSrc: [
     'https://ad.crwdcntrl.net',
@@ -91,6 +94,7 @@ const directives = {
       'https://www.bbc.co.uk', // STY include indepthtoolkit
       'https://news.files.bbci.co.uk', // STY include
       'https://mybbc-analytics.files.bbci.co.uk',
+      'https://europe-west1-bbc-otg-traf-mgr-bq-prod-4591.cloudfunctions.net', // Web-Vitals monitoring
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
@@ -120,6 +124,7 @@ const directives = {
       'https://news.files.bbci.co.uk', // STY include
       'https://news.test.files.bbci.co.uk', // STY include
       'https://mybbc-analytics.files.bbci.co.uk',
+      'https://europe-west1-bbc-otg-traf-mgr-bq-dev-4105.cloudfunctions.net', // Web-Vitals monitoring
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
@@ -200,6 +205,7 @@ const directives = {
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.cdninstagram.com', // Social Embeds, <amp-instagram />
       ...advertisingDirectives.imgSrc,
+      'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
       "data: 'self'",
     ],
     canonicalLive: [
@@ -215,7 +221,9 @@ const directives = {
       'https://ton.twimg.com', // Social Embeds
       'https://news.bbcimg.co.uk', // STY include
       'https://static.bbc.co.uk', // STY include
+      'https://static.files.bbci.co.uk', // Static assets
       ...advertisingDirectives.imgSrc,
+      'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
       "data: 'self'", // needed at the end to maintain proper order
     ],
     ampNonLive: [
@@ -233,6 +241,7 @@ const directives = {
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.cdninstagram.com', // Social Embeds, <amp-instagram />
       ...advertisingDirectives.imgSrc,
+      'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
       "data: 'self'",
     ],
     canonicalNonLive: [
@@ -254,7 +263,9 @@ const directives = {
       'https://news.bbcimg.co.uk', // STY include
       'https://static.bbc.co.uk', // STY include
       'http://static.bbc.co.uk', // localhost STY include
+      'https://static.files.bbci.co.uk', // Static assets
       ...advertisingDirectives.imgSrc,
+      'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
       "data: 'self'", // needed at the end to maintain proper order
     ],
   },
@@ -282,6 +293,7 @@ const directives = {
       'https://passport-control.test.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - test
       'https://passport-control.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - live
       'https://public.flourish.studio', // STY includes
+      'https://static.files.bbci.co.uk', // Static assets
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
@@ -314,6 +326,7 @@ const directives = {
       'https://passport-control.test.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - test
       'https://passport-control.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - live
       'https://public.flourish.studio', // STY includes
+      'https://static.files.bbci.co.uk', // Static assets
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
@@ -322,6 +335,7 @@ const directives = {
   styleSrc: {
     ampLive: [
       'https://news.files.bbci.co.uk', // STY include styles
+      'https://static.bbci.co.uk', // STY Includes
       "'unsafe-inline'",
     ],
     canonicalLive: [
@@ -330,10 +344,12 @@ const directives = {
       'https://ton.twimg.com', // Social Embeds
       'https://news.files.bbci.co.uk', // STY includes
       'https://static.bbc.co.uk', // STY include
+      'https://static.bbci.co.uk', // STY Includes
       "'unsafe-inline'",
     ],
     ampNonLive: [
       'https://news.files.bbci.co.uk', // STY include styles
+      'https://static.bbci.co.uk', // STY Includes
       "'unsafe-inline'",
     ],
     canonicalNonLive: [
@@ -344,18 +360,32 @@ const directives = {
       'https://news.test.files.bbci.co.uk', // STY includes
       'https://static.bbc.co.uk', // STY include
       'http://static.bbc.co.uk', // STY include
+      'https://static.bbci.co.uk', // STY Includes
       "'unsafe-inline'",
     ],
   },
   fontSrc: {
-    amp: [
+    ampLive: [
       'https://gel.files.bbci.co.uk', // Reith fonts
       'https://ws-downloads.files.bbci.co.uk', // Other WS fonts
+      'https://news.files.bbci.co.uk', // STY Includes
     ],
-    canonical: [
+    canonicalLive: [
       'https://gel.files.bbci.co.uk', // Reith fonts
       'https://ws-downloads.files.bbci.co.uk', // Other WS fonts
       'https://static.bbci.co.uk', // STY includes
+      'https://news.files.bbci.co.uk', // STY Includes
+    ],
+    ampNonLive: [
+      'https://gel.files.bbci.co.uk', // Reith fonts
+      'https://ws-downloads.files.bbci.co.uk', // Other WS fonts
+      'https://news.test.files.bbci.co.uk', // STY Includes
+    ],
+    canonicalNonLive: [
+      'https://gel.files.bbci.co.uk', // Reith fonts
+      'https://ws-downloads.files.bbci.co.uk', // Other WS fonts
+      'https://static.bbci.co.uk', // STY includes
+      'https://news.test.files.bbci.co.uk', // STY Includes
     ],
   },
   mediaSrc: {
@@ -389,8 +419,12 @@ export const generateDefaultSrc = () => {
   return [...advertisingDirectives.defaultSrc, "'self'"];
 };
 
-export const generateFontSrc = ({ isAmp }) =>
-  isAmp ? directives.fontSrc.amp : directives.fontSrc.canonical;
+export const generateFontSrc = ({ isAmp, isLive }) => {
+  if (!isLive && isAmp) return directives.fontSrc.ampNonLive;
+  if (!isLive && !isAmp) return directives.fontSrc.canonicalNonLive;
+  if (isLive && isAmp) return directives.fontSrc.ampLive;
+  return directives.fontSrc.canonicalLive;
+};
 
 export const generateFrameSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.frameSrc.ampNonLive;
@@ -435,7 +469,7 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'default-src': generateDefaultSrc(),
     'child-src': generateChildSrc({ isAmp }),
     'connect-src': generateConnectSrc({ isAmp, isLive }),
-    'font-src': generateFontSrc({ isAmp }),
+    'font-src': generateFontSrc({ isAmp, isLive }),
     'frame-src': generateFrameSrc({ isAmp, isLive }),
     'img-src': generateImgSrc({ isAmp, isLive }),
     'script-src': generateScriptSrc({ isAmp, isLive }),
@@ -448,7 +482,7 @@ const helmetCsp = ({ isAmp, isLive }) => ({
 });
 
 const injectCspHeader = (req, res, next) => {
-  const { isAmp } = getRouteProps(routes, req.url);
+  const { isAmp } = getRouteProps(req.url);
   const originHeader = req.headers['bbc-origin'];
   const { origin } = getOriginContext(originHeader);
 

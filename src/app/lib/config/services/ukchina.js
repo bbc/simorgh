@@ -79,7 +79,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/ukchina/simp/institutional-38733406',
+          href: 'https://www.bbc.co.uk/send/u50853863',
           text: '联络BBC',
         },
         {

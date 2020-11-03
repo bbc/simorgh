@@ -235,7 +235,7 @@ export const service = {
           text: 'కుకీలు',
         },
         {
-          href: 'https://www.bbc.com/telugu/institutional-42227910',
+          href: 'https://www.bbc.co.uk/send/u50853775',
           text: 'బీబీసీని సంప్రదించండి',
         },
         {

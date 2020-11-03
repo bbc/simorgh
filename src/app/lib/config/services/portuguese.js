@@ -248,7 +248,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/portuguese/institutional-36202456',
+          href: 'https://www.bbc.co.uk/send/u50853599',
           text: 'Fale com a BBC',
         },
         {
@@ -278,35 +278,31 @@ export const service = {
       },
       {
         title: 'Brasil',
-        url: '/portuguese/brasil',
+        url: '/portuguese/topics/cz74k717pw5t',
       },
       {
         title: 'Internacional',
-        url: '/portuguese/internacional',
+        url: '/portuguese/topics/cmdm4ynm24kt',
       },
       {
         title: 'Economia',
-        url: '/portuguese/topics/ca170ae3-99c1-48db-9b67-2866f85e7342',
+        url: '/portuguese/topics/cvjp2jr0k9rt',
       },
       {
         title: 'Saúde',
-        url: '/portuguese/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
+        url: '/portuguese/topics/c340q430z4vt',
       },
       {
         title: 'Ciência',
-        url: '/portuguese/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
+        url: '/portuguese/topics/cr50y580rjxt',
       },
       {
         title: 'Tecnologia',
-        url: '/portuguese/topics/31684f19-84d6-41f6-b033-7ae08098572a',
-      },
-      {
-        title: 'Aprenda Inglês',
-        url: '/portuguese/aprenda_ingles',
+        url: '/portuguese/topics/c404v027pd4t',
       },
       {
         title: '#SalaSocial',
-        url: '/portuguese/salasocial',
+        url: '/portuguese/topics/cx6pxx22x5pt',
       },
       {
         title: 'Vídeos',

@@ -65,7 +65,6 @@ export const renderAppleItunesApp = ({
   iTunesAppId,
   canonicalLink,
   isAmp,
-  appleItunesAppToggleEnabled,
   hasAppleItunesAppBanner,
 }) => {
   const isCanonical = !isAmp;
@@ -74,7 +73,6 @@ export const renderAppleItunesApp = ({
     iTunesAppId,
     canonicalLink,
     isCanonical,
-    appleItunesAppToggleEnabled,
     hasAppleItunesAppBanner,
   ].every(Boolean);
 

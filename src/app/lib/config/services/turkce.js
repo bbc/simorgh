@@ -239,7 +239,7 @@ export const service = {
           text: 'Çerezler',
         },
         {
-          href: 'https://www.bbc.com/turkce/kurumsal-36767474',
+          href: 'https://www.bbc.co.uk/send/u50853841',
           text: "BBC'yle temas kurun",
         },
         {
@@ -272,28 +272,24 @@ export const service = {
         url: '/turkce/media/video',
       },
       {
-        title: 'Dergi',
-        url: '/turkce/dergi',
-      },
-      {
         title: 'Spor',
-        url: '/turkce/spor',
+        url: '/turkce/topics/c340qx04vwwt',
       },
       {
         title: 'Ekonomi',
-        url: '/turkce/topics/ca170ae3-99c1-48db-9b67-2866f85e7342',
+        url: '/turkce/topics/cg726y2k82dt',
       },
       {
         title: 'Bilim',
-        url: '/turkce/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
+        url: '/turkce/topics/c404v74nk56t',
       },
       {
         title: 'Teknoloji',
-        url: '/turkce/topics/31684f19-84d6-41f6-b033-7ae08098572a',
+        url: '/turkce/topics/c2dwqnwkvnqt',
       },
       {
         title: 'Sağlık',
-        url: '/turkce/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
+        url: '/turkce/topics/cnq68n6wgzdt',
       },
     ],
   },
