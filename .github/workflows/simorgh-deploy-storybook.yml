@@ -17,8 +17,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+
       - name: Build Storybook
         run: |
+          npm install
           npm run build:storybook
           npx gh-pages@2.0.1 -d storybook_dist
         env:
