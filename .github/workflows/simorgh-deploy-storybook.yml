@@ -22,9 +22,14 @@ jobs:
           node-version: '12'
 
       - name: Build Storybook
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          git remote set-url origin "https://${secrets.GITHUB_TOKEN}@github.com/bbc/simorgh.git"
+        # These user config values are needed to avoid an error being thrown.
+        # These aren't used for authentication -the provided GitHub token is used instead.
+          git config user.email "foo@bar.com"
+          git config user.name "BBC News CI"
           npm install
           npm run build:storybook
           npx gh-pages@2.0.1 -d storybook_dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
