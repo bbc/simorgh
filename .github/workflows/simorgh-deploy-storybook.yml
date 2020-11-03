@@ -2,7 +2,8 @@ name: Deploy Storybook
 
 # Run this workflow every time a new commit pushed to your repository
 on: push
-  branches: deploy-storybook-gh-action
+  branches:
+    - deploy-storybook-gh-action
 
 jobs:
   # Set the job key. The key is displayed as the job name
