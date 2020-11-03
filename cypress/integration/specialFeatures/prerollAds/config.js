@@ -34,13 +34,13 @@ export const mapsWithPreroll = {
     {
       service: 'zhongwen',
       paths: [
-        'https://www.bbc.com/zhongwen/simp/science-53136501', // CPS Video. advertising enabled, preroll enabled for zhongwen service
+        'https://www.bbc.com/zhongwen/simp/science-53136501', // CPS Video, advertising enabled, preroll enabled for zhongwen service
       ],
     },
     {
       service: 'russian',
       paths: [
-        // 'https://www.bbc.com/russian/media-52728860', // CPS Video
+        'https://www.bbc.com/russian/media-52728860', // CPS Video, advertising enabled, preroll enabled for russian service
       ],
     },
   ],
