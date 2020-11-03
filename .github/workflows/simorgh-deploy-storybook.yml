@@ -1,0 +1,25 @@
+name: Deploy Storybook
+
+# Run this workflow every time a new commit pushed to your repository
+on: push
+
+jobs:
+  # Set the job key. The key is displayed as the job name
+  # when a job name is not provided
+  deploy-storybook:
+    # Name the Job
+    name: Deploy Storybook to GitHub pages
+    # Set the type of machine to run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build Storybook
+        run: |
+          npm run build:storybook
+          npx gh-pages@2.0.1 -d storybook_dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
