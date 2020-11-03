@@ -1,22 +1,16 @@
 name: Deploy Storybook
 
-# Run this workflow every time a new commit pushed to your repository
 on:
   push:
     branches:
-      - deploy-storybook-gh-action
+      - latest
 
 jobs:
-  # Set the job key. The key is displayed as the job name
-  # when a job name is not provided
   deploy-storybook:
-    # Name the Job
     name: Deploy Storybook to GitHub pages
-    # Set the type of machine to run on
     runs-on: ubuntu-latest
 
     steps:
-      # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
         with:
@@ -33,6 +27,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: storybook_dist # The folder the action should deploy.
+          BRANCH: gh-pages
+          FOLDER: storybook_dist
           CLEAN: true # Automatically remove deleted files from the deploy branch
