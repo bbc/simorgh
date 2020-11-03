@@ -18,7 +18,7 @@ jobs:
 
       - name: Install and Build
         run: |
-          npm install
+          npm ci
           npm run build:storybook
           git config --global user.name "simorgh-bbc"
           git config --global user.email "DENewsSimorghDev@bbc.co.uk"
