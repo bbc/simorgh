@@ -2,6 +2,7 @@ name: Deploy Storybook
 
 # Run this workflow every time a new commit pushed to your repository
 on: push
+  branches: deploy-storybook-gh-action
 
 jobs:
   # Set the job key. The key is displayed as the job name
@@ -16,18 +17,18 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - uses: actions/setup-node@v1
         with:
-          node-version: '12'
+          persist-credentials: false
 
-      - name: Build Storybook
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install and Build
         run: |
-          git remote set-url origin "https://${{secrets.GITHUB_TOKEN}}@github.com/bbc/simorgh.git"
-          git config user.email "foo@bar.com"
-          git config user.name "BBC News CI"
           npm install
           npm run build:storybook
-          npx gh-pages@2.0.1 -d storybook_dist
+
+      - name: Deploy Storybook
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: storybook_dist # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
