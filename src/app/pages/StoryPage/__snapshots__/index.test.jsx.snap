@@ -95,6 +95,24 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   font-weight: inherit;
 }
 
+.c22 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c22:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c22:focus,
+.c22:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
 .c5 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -131,24 +149,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
-}
-
-.c22 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c22:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
-
-.c22:focus,
-.c22:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
 }
 
 .c25 {
@@ -3564,6 +3564,24 @@ exports[`Story Page should render correctly when the secondary column data is no
   font-weight: inherit;
 }
 
+.c24 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c24:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c24:focus,
+.c24:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
 .c5 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -3615,24 +3633,6 @@ exports[`Story Page should render correctly when the secondary column data is no
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
-}
-
-.c24 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c24:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
-
-.c24:focus,
-.c24:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
 }
 
 .c27 {
@@ -5773,6 +5773,24 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   font-weight: inherit;
 }
 
+.c24 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c24:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c24:focus,
+.c24:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
 .c5 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -5824,24 +5842,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
-}
-
-.c24 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c24:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
-
-.c24:focus,
-.c24:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
 }
 
 .c27 {

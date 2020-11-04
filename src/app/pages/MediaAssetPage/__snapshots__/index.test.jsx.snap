@@ -53,6 +53,24 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   font-weight: inherit;
 }
 
+.c18 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c18:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c18:focus,
+.c18:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
 .c15 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -77,24 +95,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
-}
-
-.c18 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c18:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
-
-.c18:focus,
-.c18:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
 }
 
 .c20 {
@@ -991,6 +991,24 @@ exports[`Media Asset Page should render component 1`] = `
   font-weight: inherit;
 }
 
+.c21 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c21:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c21:focus,
+.c21:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
 .c15 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -1025,24 +1043,6 @@ exports[`Media Asset Page should render component 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
-}
-
-.c21 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c21:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
-
-.c21:focus,
-.c21:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
 }
 
 .c19 {
