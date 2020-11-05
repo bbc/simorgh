@@ -3,7 +3,7 @@ name: Simorgh CD - Create Release Tag
 on:
   push:
     branches:
-      - 'latest'
+      - 'release-notes'
 
 jobs:
   build:
@@ -18,7 +18,7 @@ jobs:
         uses: anothrNick/github-tag-action@1.26.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RELEASE_BRANCHES: 'latest'
+          RELEASE_BRANCHES: 'release-notes'
 
       - name: Create Release
         id: create_release
