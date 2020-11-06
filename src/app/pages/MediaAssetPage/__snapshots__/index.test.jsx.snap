@@ -2,7 +2,100 @@
 
 exports[`Media Asset Page AV player should render version (live audio stream) 1`] = `
 <DocumentFragment>
-  .c2 {
+  .emotion-130 {
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+@supports (display:grid) {
+  .emotion-130 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-130 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-130 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-130 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-130 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-130 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-130 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-130 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-130 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-130 {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+}
+
+.emotion-0 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -14,26 +107,306 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   margin: 0;
 }
 
-.c9 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #ECEAE7;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 30%;
-  padding-bottom: 56.25%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+.emotion-13 {
+  margin-top: 0.5rem;
 }
 
-.c6 {
+@media (max-width:14.9375rem) {
+  .emotion-13 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-13 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-13 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-13 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-13 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-13 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-13 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-13 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-13 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-13 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-13 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-13 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-13 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+.emotion-13 figure {
+  padding-bottom: 1rem;
+}
+
+@media (min-width:25rem) {
+  .emotion-13 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-13 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-13 {
+    padding: 0.5rem 0 0;
+    margin-top: 2rem;
+  }
+
+  .emotion-13 figure {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.emotion-10 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.emotion-8 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c11 {
+.emotion-2 {
+  z-index: 1;
+  border: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-6 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-4 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 60px 17px;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+@media (min-width:25rem) {
+  .emotion-4 {
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-4 {
+    background-size: 93px 27px;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-18 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-18 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-18 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-18 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-18 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-18 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-18 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-18 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-18 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-18 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-18 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-18 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-18 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+.emotion-16 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -45,15 +418,161 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   padding: 2rem 0;
 }
 
-.c17 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  font-family: inherit;
-  font-weight: inherit;
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-16 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
 }
 
-.c15 {
+@media (min-width:37.5rem) {
+  .emotion-16 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-16 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .emotion-16 {
+    padding: 0.5rem 0 2rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-16 {
+    padding: 1rem 0 2.5rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-23 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-23 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-23 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-23 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-23 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-23 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-23 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-23 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-23 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-23 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-23 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-23 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-23 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(10,1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (max-width:62.9375rem) {
+  .emotion-23 {
+    padding-bottom: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-23 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.emotion-20 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -64,11 +583,135 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   padding-bottom: 0.25rem;
 }
 
-.c15:last-child {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-20 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-20 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-20:last-child {
   padding-bottom: 1rem;
 }
 
-.c16 {
+@media (max-width:14.9375rem) {
+  .emotion-27 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-27 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-27 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-27 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-27 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-27 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-27 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-27 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-27 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-27 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-27 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-27 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-27 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(10,1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+}
+}
+
+.emotion-25 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -79,25 +722,25 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   margin: 0;
 }
 
-.c18 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-25 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
 }
 
-.c18:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
+@media (min-width:37.5rem) {
+  .emotion-25 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
 }
 
-.c18:focus,
-.c18:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
+.emotion-81 {
+  margin-bottom: 1.5rem;
 }
 
-.c20 {
+.emotion-79 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -107,35 +750,337 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   list-style-type: none;
 }
 
-.c20 > li {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-79 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-79 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-79 > li {
   position: relative;
 }
 
-.c20 > li::before {
+.emotion-79 > li::before {
   top: 0.5rem;
   content: ' ';
   position: absolute;
   border-width: 1rem;
   border: 0.1875rem solid #3F3F42;
+  background-color: #3F3F42;
   border-radius: 50%;
   left: -1rem;
 }
 
-.c21 {
+.emotion-71 {
   margin-bottom: 1rem;
 }
 
-.c19 {
-  margin-bottom: 1.5rem;
+.emotion-45 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.c5 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
+.emotion-45:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
 }
 
-.c25 {
+.emotion-45:focus,
+.emotion-45:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.emotion-33 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-119 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-119 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-119 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-119 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-119 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-119 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-119 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-119 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-119 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-119 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-119 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-119 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-119 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+@supports (display:grid) {
+  .emotion-115 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-115 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-115 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-115 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-115 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-115 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-115 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-113 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-113 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-113 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-113 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-113 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-113 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-113 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-113 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-113 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-113 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-113 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-113 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-113 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 1;
+    }
+}
+}
+
+.emotion-109 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -149,364 +1094,8 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   left: 0;
 }
 
-.c24 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #ECEAE7;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 30%;
-  padding-bottom: 56.25%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-.c4 {
-  margin-top: 0.5rem;
-}
-
-.c4 figure {
-  padding-bottom: 1rem;
-}
-
-.c12 {
-  padding: 0.5rem 0 2rem;
-}
-
-.c14 {
-  padding-bottom: 1rem;
-}
-
-.c1 {
-  width: 100%;
-  padding-bottom: 1.5rem;
-}
-
-.c8 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.c7 {
-  z-index: 1;
-  border: 0;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c3 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c3 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .c3 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c10 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c10 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c10 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c10 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c10 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c10 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .c10 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c13 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c13 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c13 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c13 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c13 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c13 {
-    margin-left: 40%;
-  }
-}
-
-@supports (display:grid) {
-  .c13 {
-    display: block;
-  }
-}
-
-@supports (display:grid) {
-  .c22 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c23 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c23 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c23 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c23 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c23 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c23 {
-    margin-left: 0%;
-  }
-}
-
-@supports (display:grid) {
-  .c23 {
-    display: block;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c11 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c11 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c15 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c16 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c20 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c4 {
-    margin-top: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c4 {
-    padding: 0.5rem 0 0;
-    margin-top: 2rem;
-  }
-
-  .c4 figure {
-    padding-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c12 {
-    padding: 1rem 0 2.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c14 {
-    padding-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c1 {
-    padding-bottom: 2rem;
-  }
+.emotion-132 {
+  padding-bottom: 2rem;
 }
 
 <div
@@ -532,40 +1121,40 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
             </div>
             <noscript />
             <main
-              class="c0 c1"
+              class="emotion-129 emotion-130 emotion-14"
               dir="ltr"
               role="main"
             >
               <h1
-                class="c2"
+                class="emotion-0 emotion-1"
                 id="content"
                 tabindex="-1"
               >
                 Ўзбек деҳқонининг косаси нега оқармайдиshort
               </h1>
               <div
-                class="c3 c4"
+                class="emotion-12 emotion-13 emotion-14"
                 dir="ltr"
               >
                 <figure
-                  class="c5"
+                  class="emotion-10 emotion-11"
                 >
                   <div
-                    class="c6"
+                    class="emotion-8 emotion-9"
                   >
                     <iframe
                       allow="autoplay; fullscreen"
                       allowfullscreen=""
-                      class="c7"
+                      class="emotion-2 emotion-3"
                       scrolling="no"
                       src="https://test.bbc.com/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
                       title="Медиа плейер"
                     />
                     <div
-                      class="c8"
+                      class="emotion-6 emotion-7"
                     >
                       <div
-                        class="c9"
+                        class="emotion-4 emotion-5"
                       />
                     </div>
                     <noscript />
@@ -573,33 +1162,33 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </figure>
               </div>
               <div
-                class="c10"
+                class="emotion-18 emotion-14"
                 dir="ltr"
               >
                 <strong
                   aria-hidden="true"
-                  class="c11 c12"
+                  class="emotion-15 emotion-16 emotion-17"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайдиshort
                 </strong>
               </div>
               <div
-                class="c13 c14"
+                class="emotion-22 emotion-23 emotion-14"
                 dir="ltr"
               >
                 <time
-                  class="c15"
+                  class="emotion-20 emotion-21"
                   datetime="2019-09-13"
                 >
                   13 сентябр 2019
                 </time>
               </div>
               <div
-                class="c13"
+                class="emotion-27 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-25 emotion-26"
                 >
                   <b>
                     Ўзбек деҳқонининг косаси нега оқармайди
@@ -607,11 +1196,11 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-27 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-25 emotion-26"
                 >
                   <b>
                     Ўзбек деҳқонининг косаси нега оқармайди
@@ -622,21 +1211,21 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-27 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-25 emotion-26"
                 >
                   <i
-                    class="c17"
+                    class="emotion-33 emotion-34"
                   >
                     <b>
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </b>
                   </i>
                   <i
-                    class="c17"
+                    class="emotion-33 emotion-34"
                   >
                     <b>
                        heading
@@ -645,11 +1234,11 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-27 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-25 emotion-26"
                 >
                   <b>
                     Ўзбек деҳқонининг косаси нега оқармайди
@@ -660,15 +1249,15 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-27 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-25 emotion-26"
                 >
                   Шу йил апрел ойида Ўзбекистон Президенти Ислом 
                   <a
-                    class="c18"
+                    class="emotion-45 emotion-46"
                     href="https://bbc.com/uzbek"
                   >
                     Каримов ўзининг
@@ -677,11 +1266,11 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-27 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-25 emotion-26"
                 >
                   Шу вақтгача ҳам ўзбекистонлик деҳқонлар ўз маҳсулотларини хорижга олиб 
                   <b>
@@ -691,71 +1280,71 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-27 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-25 emotion-26"
                 >
                   Ўз мева-сабзавотини Россияга олиб чиқишда бу компания ёрдамига умид қилган боғбонларнинг гилослари бузила бошлагани ҳақидаги хабарлар ҳам тарқалди..
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-27 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-25 emotion-26"
                 >
                   Ҳозирда Ўзбекистонда айни пишиқчилик ва етиштирилган маҳсулот учун кенгроқ бозор топиш масаласи яна долзарб турар экан, мамлакат раҳбарининг сўзларидан сўнг вазият нақадар ўзгарган?
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-27 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-25 emotion-26"
                 >
                   Би-би-си билан суҳбатда иқтисодий таҳлилчи Анвар Ҳусаиновнинг айтишича, юқори минбардан айтилган сўзларга қарамай, қишлоқ хўжалиги маҳсулотларини хорижга, жумладан Россия бозорига олиб чиқишда ҳануз кўплаб муаммолар мавжуд.
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-27 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-25 emotion-26"
                 >
                   "Албатта ўтган йилларга қараганда маҳсулотлар экспорти анча кўпайган. Россиядан юк машиналари келиб, тўғридан-тўғри деҳқонлардан нақд пулга 
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-27 emotion-14"
                 dir="ltr"
               >
                 <div
-                  class="c19"
+                  class="emotion-81 emotion-82"
                 >
                   <ul
-                    class="c20"
+                    class="emotion-79 emotion-80"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="c21"
+                      class="emotion-71 emotion-72"
                       role="listitem"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </li>
                     <li
-                      class="c21"
+                      class="emotion-71 emotion-72"
                       role="listitem"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </li>
                     <li
-                      class="c21"
+                      class="emotion-71 emotion-72"
                       role="listitem"
                     >
                       <b>
@@ -763,7 +1352,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                       </b>
                     </li>
                     <li
-                      class="c21"
+                      class="emotion-71 emotion-72"
                       role="listitem"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
@@ -772,56 +1361,56 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </div>
               </div>
               <div
-                class="c13"
+                class="emotion-27 emotion-14"
                 dir="ltr"
               >
                 <div
-                  class="c19"
+                  class="emotion-81 emotion-82"
                 >
                   <ul
-                    class="c20"
+                    class="emotion-79 emotion-80"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="c21"
+                      class="emotion-71 emotion-72"
                       role="listitem"
                     >
                       <a
-                        class="c18"
+                        class="emotion-45 emotion-46"
                         href="https://bbc.com/uzbek"
                       >
                         Ўзбек деҳқонининг косаси нега оқармайди
                       </a>
                     </li>
                     <li
-                      class="c21"
+                      class="emotion-71 emotion-72"
                       role="listitem"
                     >
                       <a
-                        class="c18"
+                        class="emotion-45 emotion-46"
                         href="https://bbc.com/uzbek"
                       >
                         Ўзбек деҳқонининг косаси нега оқармайди
                       </a>
                     </li>
                     <li
-                      class="c21"
+                      class="emotion-71 emotion-72"
                       role="listitem"
                     >
                       <a
-                        class="c18"
+                        class="emotion-45 emotion-46"
                         href="https://bbc.com/uzbek"
                       >
                         Ўзбек деҳқонининг косаси нега оқармайди
                       </a>
                     </li>
                     <li
-                      class="c21"
+                      class="emotion-71 emotion-72"
                       role="listitem"
                     >
                       <a
-                        class="c18"
+                        class="emotion-45 emotion-46"
                         href="https://bbc.com/uzbek"
                       >
                         Ўзбек деҳқонининг косаси нега оқармайди
@@ -831,22 +1420,22 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </div>
               </div>
               <div
-                class="c3"
+                class="emotion-119 emotion-14"
                 dir="ltr"
               >
                 <figure
-                  class="c5"
+                  class="emotion-10 emotion-11"
                 >
                   <div
-                    class="c22"
+                    class="emotion-115 emotion-14"
                     dir="ltr"
                   >
                     <div
-                      class="c23"
+                      class="emotion-113 emotion-14"
                       dir="ltr"
                     >
                       <div
-                        class="c24"
+                        class="emotion-4 emotion-5"
                       >
                         <div
                           class="lazyload-wrapper"
@@ -857,11 +1446,11 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                         </div>
                         <noscript />
                         <p
-                          class="c25"
+                          class="emotion-109 emotion-110"
                           role="text"
                         >
                           <span
-                            class="c2"
+                            class="emotion-0 emotion-1"
                           >
                             Сурат манбаси, 
                           </span>
@@ -877,26 +1466,29 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </figure>
               </div>
               <div
-                class="c13"
+                class="emotion-27 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-25 emotion-26"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайди transmission info 
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-27 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-25 emotion-26"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайди footer 
                 </p>
               </div>
             </main>
+            <div
+              class="emotion-132 emotion-133"
+            />
           </div>
         </div>
       </div>
@@ -907,25 +1499,100 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 
 exports[`Media Asset Page should render component 1`] = `
 <DocumentFragment>
-  .c54 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.8125rem;
-  height: 0.75rem;
+  .emotion-224 {
+  width: 100%;
+  padding-bottom: 1.5rem;
 }
 
-.c53 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 1rem;
-  height: 0.8125rem;
+@supports (display:grid) {
+  .emotion-224 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-224 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
-.c2 {
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-224 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-224 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-224 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-224 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-224 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-224 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-224 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-224 {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+}
+
+.emotion-0 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -937,30 +1604,306 @@ exports[`Media Asset Page should render component 1`] = `
   margin: 0;
 }
 
-.c9 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #ECEAE7;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 30%;
-  padding-bottom: 56.25%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+.emotion-13 {
+  margin-top: 0.5rem;
 }
 
-.c6 {
+@media (max-width:14.9375rem) {
+  .emotion-13 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-13 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-13 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-13 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-13 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-13 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-13 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-13 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-13 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-13 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-13 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-13 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-13 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+.emotion-13 figure {
+  padding-bottom: 1rem;
+}
+
+@media (min-width:25rem) {
+  .emotion-13 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-13 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-13 {
+    padding: 0.5rem 0 0;
+    margin-top: 2rem;
+  }
+
+  .emotion-13 figure {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.emotion-10 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.emotion-8 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c29 {
+.emotion-2 {
+  z-index: 1;
+  border: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
   width: 100%;
+  height: 100%;
 }
 
-.c11 {
+.emotion-6 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-4 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 60px 17px;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+@media (min-width:25rem) {
+  .emotion-4 {
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-4 {
+    background-size: 93px 27px;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-18 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-18 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-18 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-18 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-18 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-18 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-18 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-18 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-18 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-18 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-18 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-18 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-18 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+.emotion-16 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -972,26 +1915,161 @@ exports[`Media Asset Page should render component 1`] = `
   padding: 2rem 0;
 }
 
-.c17 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding: 1.5rem 0;
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-16 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
 }
 
-.c22 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  font-family: inherit;
-  font-weight: inherit;
+@media (min-width:37.5rem) {
+  .emotion-16 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
 }
 
-.c15 {
+@media (min-width:37.5rem) {
+  .emotion-16 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .emotion-16 {
+    padding: 0.5rem 0 2rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-16 {
+    padding: 1rem 0 2.5rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-25 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-25 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-25 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-25 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-25 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-25 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-25 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-25 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-25 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-25 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-25 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-25 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-25 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(10,1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (max-width:62.9375rem) {
+  .emotion-25 {
+    padding-bottom: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-25 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.emotion-20 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -1002,21 +2080,135 @@ exports[`Media Asset Page should render component 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c15:last-child {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-20 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-20 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-20:last-child {
   padding-bottom: 1rem;
 }
 
-.c50 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
+@media (max-width:14.9375rem) {
+  .emotion-29 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
 }
 
-.c16 {
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-29 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-29 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-29 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-29 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-29 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-29 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-29 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-29 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-29 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-29 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-29 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-29 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(10,1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+}
+}
+
+.emotion-27 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1027,25 +2219,56 @@ exports[`Media Asset Page should render component 1`] = `
   margin: 0;
 }
 
-.c21 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-27 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
 }
 
-.c21:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
+@media (min-width:37.5rem) {
+  .emotion-27 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
 }
 
-.c21:focus,
-.c21:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
+.emotion-31 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding: 1.5rem 0;
 }
 
-.c19 {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-31 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-31 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-31 {
+    padding-top: 2rem;
+  }
+}
+
+.emotion-77 {
+  margin-bottom: 1.5rem;
+}
+
+.emotion-75 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1055,35 +2278,337 @@ exports[`Media Asset Page should render component 1`] = `
   list-style-type: none;
 }
 
-.c19 > li {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-75 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-75 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-75 > li {
   position: relative;
 }
 
-.c19 > li::before {
+.emotion-75 > li::before {
   top: 0.5rem;
   content: ' ';
   position: absolute;
   border-width: 1rem;
   border: 0.1875rem solid #3F3F42;
+  background-color: #3F3F42;
   border-radius: 50%;
   left: -1rem;
 }
 
-.c20 {
+.emotion-53 {
   margin-bottom: 1rem;
 }
 
-.c18 {
-  margin-bottom: 1.5rem;
+.emotion-51 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.c5 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
+.emotion-51:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
 }
 
-.c26 {
+.emotion-51:focus,
+.emotion-51:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.emotion-115 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-179 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-179 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-179 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-179 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-179 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-179 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-179 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-179 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-179 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-179 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-179 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-179 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-179 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+@supports (display:grid) {
+  .emotion-175 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-175 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-175 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-175 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-175 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-175 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-175 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-167 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-167 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-167 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-167 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-167 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-167 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-167 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-167 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-167 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-167 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-167 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-167 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-167 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 1;
+    }
+}
+}
+
+.emotion-163 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -1097,7 +2622,109 @@ exports[`Media Asset Page should render component 1`] = `
   left: 0;
 }
 
-.c28 {
+@media (max-width:14.9375rem) {
+  .emotion-173 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-173 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-173 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-173 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-173 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-173 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-173 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-173 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-173 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-173 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-173 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-173 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-173 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(10,1fr);
+      grid-column-end: span 10;
+      grid-column-start: 1;
+    }
+}
+}
+
+.emotion-171 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1108,41 +2735,303 @@ exports[`Media Asset Page should render component 1`] = `
   width: 100%;
 }
 
-.c28 > p {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-171 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-171 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-171 {
+    padding: 0.5rem 1rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-171 {
+    padding: 0.5rem 0 0;
+  }
+}
+
+.emotion-171 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c28 > p:last-child {
+.emotion-171 > p:last-child {
   padding-bottom: 0;
 }
 
-.c28 i {
+.emotion-171 i {
   font-style: normal;
 }
 
-.c25 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #ECEAE7;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 30%;
-  padding-bottom: 56.25%;
+.emotion-354 {
   width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c4 {
-  margin-top: 0.5rem;
+@supports (display:grid) {
+  .emotion-354 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-354 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
-.c4 figure {
-  padding-bottom: 1rem;
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-354 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
-.c35 {
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-354 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-354 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-354 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-354 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-354 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-354 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+.emotion-351 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-351 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-351 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-351 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-351 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-351 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-351 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-351 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-351 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-351 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-351 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-351 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-351 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-351 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (min-width:37.5rem) {
+  .emotion-351 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-237 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+  margin-top: 0;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-237 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-237 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-237 {
+    margin-top: 0;
+  }
+}
+
+.emotion-226 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .emotion-226 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-226 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+.emotion-234 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-232 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1152,7 +3041,7 @@ exports[`Media Asset Page should render component 1`] = `
   flex-direction: column;
 }
 
-.c36 {
+.emotion-230 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1171,7 +3060,16 @@ exports[`Media Asset Page should render component 1`] = `
   align-items: baseline;
 }
 
-.c37 {
+@media (min-width:37.5rem) {
+  .emotion-230 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-228 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1190,141 +3088,323 @@ exports[`Media Asset Page should render component 1`] = `
   align-items: center;
 }
 
-.c33 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-228 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
 }
 
-.c31 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
+@media (min-width:37.5rem) {
+  .emotion-228 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
 }
 
-.c34 {
+@media (min-width:37.5rem) {
+  .emotion-228 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-228 {
+    padding-right: 1rem;
+  }
+}
+
+.emotion-348 {
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c30 {
-  margin-bottom: 1rem;
-  padding-bottom: 2rem;
+@supports (display:grid) {
+  .emotion-348 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-348 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
-.c32 {
-  margin-top: 0;
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-348 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
-.c44 {
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-348 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-348 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-348 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-348 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+.emotion-259 {
+  padding: 0.5rem 0 1rem;
+}
+
+@media (max-width:62.9375rem) {
+  .emotion-259 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+.emotion-259:last-child {
+  border: none;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-259 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-259 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+.emotion-259:first-child {
+  padding-top: 0;
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-259:first-child {
+    padding-top: 1rem;
+  }
+}
+
+.emotion-259:last-child {
+  padding-bottom: 0;
+}
+
+@media (min-width:63rem) {
+  .emotion-259 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+    padding: 1rem 0 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-259 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-259 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-259 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-259 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-259 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-259 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-259 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+    }
+}
+}
+
+.emotion-256 {
+  position: relative;
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .emotion-256 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+
+@media (min-width:37.5rem) {
+    .emotion-256 {
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) {
+    .emotion-256 {
+      display: block;
+    }
+}
+}
+
+@media (min-width:63rem) {
+  .emotion-256 {
+    display: grid;
+  }
+}
+
+.emotion-245 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c47 {
+@media (min-width:63rem) {
+  .emotion-245 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .emotion-245 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+.emotion-243 {
+  position: relative;
+}
+
+@media (min-width:25rem) {
+  .emotion-241 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.emotion-241 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+@media (max-width:24.9375rem) {
+  .emotion-241 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+.emotion-253 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c42 {
-  position: relative;
+@media (min-width:37.5rem) {
+  .emotion-253 {
+    padding: 0 1rem;
+  }
 }
 
-.c45 {
-  position: relative;
+@media (min-width:63rem) {
+  .emotion-253 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
 }
 
-.c46 > * {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
+@supports (grid-template-columns:fit-content(200px)) {
+  .emotion-253 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+
+@media (min-width:63rem) {
+    .emotion-253 {
+      padding-top: 0.5rem;
+    }
+}
 }
 
-.c51 {
-  color: #222222;
-  background-color: #FFFFFF;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  display: block;
-}
-
-.c52 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.c55 {
-  padding: 0 0.25rem;
-}
-
-.c40 {
-  padding: 0.5rem 0 1rem;
-}
-
-.c40:last-child {
-  border: none;
-}
-
-.c40:first-child {
-  padding-top: 0;
-}
-
-.c40:last-child {
-  padding-bottom: 0;
-}
-
-.c38 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.c12 {
-  padding: 0.5rem 0 2rem;
-}
-
-.c14 {
-  padding-bottom: 1rem;
-}
-
-.c1 {
-  width: 100%;
-  padding-bottom: 1.5rem;
-}
-
-.c8 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.c7 {
-  z-index: 1;
-  border: 0;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.c48 {
+.emotion-249 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1335,7 +3415,21 @@ exports[`Media Asset Page should render component 1`] = `
   line-height: 1.25rem;
 }
 
-.c49 {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-249 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-249 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-247 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1344,7 +3438,7 @@ exports[`Media Asset Page should render component 1`] = `
   overflow-wrap: anywhere;
 }
 
-.c49:before {
+.emotion-247:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1356,642 +3450,101 @@ exports[`Media Asset Page should render component 1`] = `
   z-index: 1;
 }
 
-.c49:hover,
-.c49:focus {
+.emotion-247:hover,
+.emotion-247:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c49:visited {
+.emotion-247:visited {
   color: #6E6E73;
 }
 
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c3 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c3 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .c3 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c10 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c10 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c10 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c10 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c10 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c10 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .c10 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c13 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c13 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c13 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c13 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c13 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c13 {
-    margin-left: 40%;
-  }
-}
-
-@supports (display:grid) {
-  .c13 {
-    display: block;
-  }
-}
-
-@supports (display:grid) {
-  .c23 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c24 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c24 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c24 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c24 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c24 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c24 {
-    margin-left: 0%;
-  }
-}
-
-@supports (display:grid) {
-  .c24 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c27 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c27 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c27 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c27 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c27 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c27 {
-    margin-left: 0%;
-  }
-}
-
-@supports (display:grid) {
-  .c27 {
-    display: block;
-  }
-}
-
-@supports (display:grid) {
-  .c39 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@supports (display:grid) {
-  .c41 {
-    display: block;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c29 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c29 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
+.emotion-251 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c11 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c11 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c17 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c17 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c17 {
-    padding-top: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
+  .emotion-251 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c15 {
+  .emotion-251 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c50 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c50 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
+.emotion-289 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: block;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c16 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c19 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c19 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c28 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c28 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c28 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .c28 {
-    padding: 0.5rem 0 0;
-  }
-}
-
-@media (min-width:25rem) {
-  .c4 {
-    margin-top: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c4 {
-    padding: 0.5rem 0 0;
-    margin-top: 2rem;
-  }
-
-  .c4 figure {
-    padding-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c36 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c37 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c37 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c37 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c37 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c33 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c33 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c31 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c31 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c30 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c44 {
-    display: block;
-    width: 100%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c44 {
-    width: initial;
-    grid-column: 1 / span 2;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c47 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c47 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c47 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c42 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c46 {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-@media (max-width:24.9375rem) {
-  .c46 > * {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c51 {
+  .emotion-289 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c51 {
+  .emotion-289 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-@media (min-width:63rem) {
-  .c43 {
-    display: grid;
-  }
+.emotion-287 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
 }
 
-@media (max-width:62.9375rem) {
-  .c40 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
+.emotion-285 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 0.8125rem;
 }
 
-@media (min-width:37.5rem) {
-  .c40 {
-    padding: 1rem 0 1rem;
-  }
+.emotion-315 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
 }
 
-@media (min-width:63rem) {
-  .c40 {
-    padding: 0 0 1.5rem;
-  }
+.emotion-317 {
+  padding: 0 0.25rem;
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c40:first-child {
-    padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c40 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c12 {
-    padding: 1rem 0 2.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c14 {
-    padding-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c1 {
-    padding-bottom: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c48 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c48 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
+.emotion-356 {
+  padding-bottom: 2rem;
 }
 
 <div
@@ -2017,40 +3570,40 @@ exports[`Media Asset Page should render component 1`] = `
             </div>
             <noscript />
             <main
-              class="c0 c1"
+              class="emotion-223 emotion-224 emotion-14"
               dir="ltr"
               role="main"
             >
               <h1
-                class="c2"
+                class="emotion-0 emotion-1"
                 id="content"
                 tabindex="-1"
               >
                 Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & &lt; &gt;
               </h1>
               <div
-                class="c3 c4"
+                class="emotion-12 emotion-13 emotion-14"
                 dir="ltr"
               >
                 <figure
-                  class="c5"
+                  class="emotion-10 emotion-11"
                 >
                   <div
-                    class="c6"
+                    class="emotion-8 emotion-9"
                   >
                     <iframe
                       allow="autoplay; fullscreen"
                       allowfullscreen=""
-                      class="c7"
+                      class="emotion-2 emotion-3"
                       scrolling="no"
                       src="https://test.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
                       title="Media player"
                     />
                     <div
-                      class="c8"
+                      class="emotion-6 emotion-7"
                     >
                       <div
-                        class="c9"
+                        class="emotion-4 emotion-5"
                       />
                     </div>
                     <noscript />
@@ -2058,29 +3611,29 @@ exports[`Media Asset Page should render component 1`] = `
                 </figure>
               </div>
               <div
-                class="c10"
+                class="emotion-18 emotion-14"
                 dir="ltr"
               >
                 <strong
                   aria-hidden="true"
-                  class="c11 c12"
+                  class="emotion-15 emotion-16 emotion-17"
                 >
                   Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & &lt; &gt;
                 </strong>
               </div>
               <div
-                class="c13 c14"
+                class="emotion-24 emotion-25 emotion-14"
                 dir="ltr"
               >
                 <time
-                  class="c15"
+                  class="emotion-20 emotion-21"
                   datetime="2019-09-13"
                 >
                   13 September 2019
                 </time>
                 <div>
                   <time
-                    class="c15"
+                    class="emotion-20 emotion-21"
                     datetime="2019-11-20"
                   >
                     New Informate 20 November 2019
@@ -2088,11 +3641,11 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-27 emotion-28"
                 >
                   <b>
                     This is an introduction in bold. & &lt; &gt;
@@ -2100,11 +3653,11 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <h2
-                  class="c17"
+                  class="emotion-31 emotion-32"
                   id="This-is-a-heading-<->"
                   tabindex="-1"
                 >
@@ -2112,11 +3665,11 @@ exports[`Media Asset Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <h2
-                  class="c17"
+                  class="emotion-31 emotion-32"
                   id="This-is-a-subheading-<->"
                   tabindex="-1"
                 >
@@ -2124,11 +3677,11 @@ exports[`Media Asset Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <h2
-                  class="c17"
+                  class="emotion-31 emotion-32"
                   id="This-is-a-crosshead-<->"
                   tabindex="-1"
                 >
@@ -2136,98 +3689,98 @@ exports[`Media Asset Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-27 emotion-28"
                 >
                   This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-27 emotion-28"
                 >
                   Bulleted list:
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <div
-                  class="c18"
+                  class="emotion-77 emotion-78"
                 >
                   <ul
-                    class="c19"
+                    class="emotion-75 emotion-76"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="c20"
+                      class="emotion-53 emotion-54"
                       role="listitem"
                     >
                       <a
-                        class="c21"
+                        class="emotion-51 emotion-52"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="c20"
+                      class="emotion-53 emotion-54"
                       role="listitem"
                     >
                       <a
-                        class="c21"
+                        class="emotion-51 emotion-52"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="c20"
+                      class="emotion-53 emotion-54"
                       role="listitem"
                     >
                       <a
-                        class="c21"
+                        class="emotion-51 emotion-52"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="c20"
+                      class="emotion-53 emotion-54"
                       role="listitem"
                     >
                       <a
-                        class="c21"
+                        class="emotion-51 emotion-52"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
                       </a>
                     </li>
                     <li
-                      class="c20"
+                      class="emotion-53 emotion-54"
                       role="listitem"
                     >
                       <a
-                        class="c21"
+                        class="emotion-51 emotion-52"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
                       </a>
                     </li>
                     <li
-                      class="c20"
+                      class="emotion-53 emotion-54"
                       role="listitem"
                     >
                       <a
-                        class="c21"
+                        class="emotion-51 emotion-52"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
@@ -2237,88 +3790,88 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-27 emotion-28"
                 >
                   Numbered list:
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <div
-                  class="c18"
+                  class="emotion-77 emotion-78"
                 >
                   <ul
-                    class="c19"
+                    class="emotion-75 emotion-76"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="c20"
+                      class="emotion-53 emotion-54"
                       role="listitem"
                     >
                       <a
-                        class="c21"
+                        class="emotion-51 emotion-52"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="c20"
+                      class="emotion-53 emotion-54"
                       role="listitem"
                     >
                       <a
-                        class="c21"
+                        class="emotion-51 emotion-52"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="c20"
+                      class="emotion-53 emotion-54"
                       role="listitem"
                     >
                       <a
-                        class="c21"
+                        class="emotion-51 emotion-52"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="c20"
+                      class="emotion-53 emotion-54"
                       role="listitem"
                     >
                       <a
-                        class="c21"
+                        class="emotion-51 emotion-52"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
                       </a>
                     </li>
                     <li
-                      class="c20"
+                      class="emotion-53 emotion-54"
                       role="listitem"
                     >
                       <a
-                        class="c21"
+                        class="emotion-51 emotion-52"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
                       </a>
                     </li>
                     <li
-                      class="c20"
+                      class="emotion-53 emotion-54"
                       role="listitem"
                     >
                       <a
-                        class="c21"
+                        class="emotion-51 emotion-52"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
@@ -2328,11 +3881,11 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-27 emotion-28"
                 >
                   Lorem ipsum dolor sit amet, 
                   <b>
@@ -2344,13 +3897,13 @@ exports[`Media Asset Page should render component 1`] = `
                   </b>
                   ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                   <i
-                    class="c22"
+                    class="emotion-115 emotion-116"
                   >
                      in voluptate velit esse cillum 
                   </i>
                   dolore "eu fugiat nulla" pariatur. 
                   <a
-                    class="c21"
+                    class="emotion-51 emotion-52"
                     href="https://bbc.com/pidgin"
                   >
                     Excepteur
@@ -2359,95 +3912,95 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-27 emotion-28"
                 >
                   Testing special characters: !"£$%^&*()_+=-{}[]:@~;'#&lt;&gt;?,./\\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-27 emotion-28"
                 >
                   ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-27 emotion-28"
                 >
                   Table:
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-27 emotion-28"
                 >
                   Social media embed:
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-27 emotion-28"
                 >
                   Quote box:
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-27 emotion-28"
                 >
                   Correspondent quote box:
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-27 emotion-28"
                 >
                   Fact box:
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-27 emotion-28"
                 >
                   ­
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-27 emotion-28"
                 >
                   Lorem ipsum
                   <a
-                    class="c21"
+                    class="emotion-51 emotion-52"
                     href="https://bbc.com/pidgin"
                   >
                      dolor sit amet
@@ -2456,22 +4009,22 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="c3"
+                class="emotion-179 emotion-14"
                 dir="ltr"
               >
                 <figure
-                  class="c5"
+                  class="emotion-10 emotion-11"
                 >
                   <div
-                    class="c23"
+                    class="emotion-175 emotion-14"
                     dir="ltr"
                   >
                     <div
-                      class="c24"
+                      class="emotion-167 emotion-14"
                       dir="ltr"
                     >
                       <div
-                        class="c25"
+                        class="emotion-4 emotion-5"
                       >
                         <div
                           class="lazyload-wrapper"
@@ -2482,11 +4035,11 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                         <noscript />
                         <p
-                          class="c26"
+                          class="emotion-163 emotion-164"
                           role="text"
                         >
                           <span
-                            class="c2"
+                            class="emotion-0 emotion-1"
                           >
                             Wia dis foto come from, 
                           </span>
@@ -2499,14 +4052,14 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c27"
+                      class="emotion-173 emotion-14"
                       dir="ltr"
                     >
                       <figcaption
-                        class="c28"
+                        class="emotion-171 emotion-172"
                       >
                         <span
-                          class="c2"
+                          class="emotion-0 emotion-1"
                         >
                           Wetin we call dis foto, 
                         </span>
@@ -2519,22 +4072,22 @@ exports[`Media Asset Page should render component 1`] = `
                 </figure>
               </div>
               <div
-                class="c3"
+                class="emotion-179 emotion-14"
                 dir="ltr"
               >
                 <figure
-                  class="c5"
+                  class="emotion-10 emotion-11"
                 >
                   <div
-                    class="c23"
+                    class="emotion-175 emotion-14"
                     dir="ltr"
                   >
                     <div
-                      class="c24"
+                      class="emotion-167 emotion-14"
                       dir="ltr"
                     >
                       <div
-                        class="c25"
+                        class="emotion-4 emotion-5"
                       >
                         <div
                           class="lazyload-wrapper"
@@ -2545,11 +4098,11 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                         <noscript />
                         <p
-                          class="c26"
+                          class="emotion-163 emotion-164"
                           role="text"
                         >
                           <span
-                            class="c2"
+                            class="emotion-0 emotion-1"
                           >
                             Wia dis foto come from, 
                           </span>
@@ -2562,14 +4115,14 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c27"
+                      class="emotion-173 emotion-14"
                       dir="ltr"
                     >
                       <figcaption
-                        class="c28"
+                        class="emotion-171 emotion-172"
                       >
                         <span
-                          class="c2"
+                          class="emotion-0 emotion-1"
                         >
                           Wetin we call dis foto, 
                         </span>
@@ -2582,37 +4135,37 @@ exports[`Media Asset Page should render component 1`] = `
                 </figure>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <div
-                  class="c18"
+                  class="emotion-77 emotion-78"
                 >
                   <ul
-                    class="c19"
+                    class="emotion-75 emotion-76"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="c20"
+                      class="emotion-53 emotion-54"
                       role="listitem"
                     >
                       sunt in culpa qui officia deserunt mollit anim id est laborum
                     </li>
                     <li
-                      class="c20"
+                      class="emotion-53 emotion-54"
                       role="listitem"
                     >
                       sunt in culpa qui officia deserunt mollit anim id est laborum
                     </li>
                     <li
-                      class="c20"
+                      class="emotion-53 emotion-54"
                       role="listitem"
                     >
                       sunt in culpa qui officia deserunt mollit anim id est laborum
                     </li>
                     <li
-                      class="c20"
+                      class="emotion-53 emotion-54"
                       role="listitem"
                     >
                       v3 draft
@@ -2621,21 +4174,21 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-27 emotion-28"
                 >
                   This is transmission info 
                 </p>
               </div>
               <div
-                class="c13"
+                class="emotion-29 emotion-14"
                 dir="ltr"
               >
                 <p
-                  class="c16"
+                  class="emotion-27 emotion-28"
                 >
                   This is the footer 
                 </p>
@@ -2643,32 +4196,32 @@ exports[`Media Asset Page should render component 1`] = `
             </main>
             <section
               aria-labelledby="related-content-heading"
-              class="c0 c29"
+              class="emotion-353 emotion-354 emotion-14"
               data-e2e="related-content-heading"
               dir="ltr"
               role="region"
             >
               <div
-                class="c10 c30"
+                class="emotion-350 emotion-351 emotion-14"
                 dir="ltr"
               >
                 <div
-                  class="c31 c32"
+                  class="emotion-236 emotion-237 emotion-238"
                 >
                   <div
-                    class="c33"
+                    class="emotion-226 emotion-227"
                   />
                   <h2
-                    class="c34"
+                    class="emotion-234 emotion-235"
                   >
                     <span
-                      class="c35"
+                      class="emotion-232 emotion-233"
                     >
                       <span
-                        class="c36"
+                        class="emotion-230 emotion-231"
                       >
                         <span
-                          class="c37"
+                          class="emotion-228 emotion-229"
                           dir="ltr"
                           id="related-content-heading"
                         >
@@ -2679,28 +4232,28 @@ exports[`Media Asset Page should render component 1`] = `
                   </h2>
                 </div>
                 <ol
-                  class="c38 c39"
+                  class="emotion-14 emotion-348 emotion-349"
+                  data-e2e="most-watched-ol"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="c40 c41"
+                    class="emotion-14 emotion-259 emotion-260"
                     dir="ltr"
-                    role="listitem"
                   >
                     <div
-                      class="c42 c43"
+                      class="emotion-255 emotion-256 emotion-257"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="c44"
+                        class="emotion-245 emotion-246"
                         dir="ltr"
                       >
                         <div
-                          class="c45"
+                          class="emotion-243 emotion-244"
                         >
                           <div
-                            class="c25"
+                            class="emotion-4 emotion-5"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -2711,26 +4264,26 @@ exports[`Media Asset Page should render component 1`] = `
                             </div>
                           </div>
                           <div
-                            class="c46"
+                            class="emotion-241 emotion-242"
                           />
                         </div>
                       </div>
                       <div
-                        class="c47"
+                        class="emotion-253 emotion-254"
                         dir="ltr"
                       >
                         <h3
-                          class="c48"
+                          class="emotion-249 emotion-250"
                         >
                           <a
-                            class="c49"
+                            class="emotion-247 emotion-248"
                             href="/pidgin/tori-23145776"
                           >
                             Police Arrest 3 ontop Anambra Church Attack
                           </a>
                         </h3>
                         <time
-                          class="c50"
+                          class="emotion-251 emotion-21"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -2739,23 +4292,22 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="c40 c41"
+                    class="emotion-14 emotion-259 emotion-260"
                     dir="ltr"
-                    role="listitem"
                   >
                     <div
-                      class="c42 c43"
+                      class="emotion-255 emotion-256 emotion-257"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="c44"
+                        class="emotion-245 emotion-246"
                         dir="ltr"
                       >
                         <div
-                          class="c45"
+                          class="emotion-243 emotion-244"
                         >
                           <div
-                            class="c25"
+                            class="emotion-4 emotion-5"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -2766,26 +4318,26 @@ exports[`Media Asset Page should render component 1`] = `
                             </div>
                           </div>
                           <div
-                            class="c46"
+                            class="emotion-241 emotion-242"
                           />
                         </div>
                       </div>
                       <div
-                        class="c47"
+                        class="emotion-253 emotion-254"
                         dir="ltr"
                       >
                         <h3
-                          class="c48"
+                          class="emotion-249 emotion-250"
                         >
                           <a
-                            class="c49"
+                            class="emotion-247 emotion-248"
                             href="/pidgin/tori-23143754"
                           >
                             Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
                           </a>
                         </h3>
                         <time
-                          class="c50"
+                          class="emotion-251 emotion-21"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -2794,38 +4346,37 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="c40 c41"
+                    class="emotion-14 emotion-259 emotion-260"
                     dir="ltr"
-                    role="listitem"
                   >
                     <div
-                      class="c42 c43"
+                      class="emotion-255 emotion-256 emotion-257"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="c44"
+                        class="emotion-245 emotion-246"
                         dir="ltr"
                       >
                         <div
-                          class="c45"
+                          class="emotion-243 emotion-244"
                         >
                           <div
-                            class="c9"
+                            class="emotion-4 emotion-5"
                           />
                           <div
-                            class="c46"
+                            class="emotion-241 emotion-242"
                           >
                             <div
                               aria-hidden="true"
-                              class="c51"
+                              class="emotion-289 emotion-290"
                               dir="ltr"
                             >
                               <div
-                                class="c52"
+                                class="emotion-287 emotion-288"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="c53"
+                                  class="emotion-285 emotion-286"
                                   focusable="false"
                                   height="13px"
                                   viewBox="0 0 32 26"
@@ -2846,21 +4397,21 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c47"
+                        class="emotion-253 emotion-254"
                         dir="ltr"
                       >
                         <h3
-                          class="c48"
+                          class="emotion-249 emotion-250"
                         >
                           <a
-                            class="c49"
+                            class="emotion-247 emotion-248"
                             href="/pidgin/23146654"
                           >
                             <span
                               role="text"
                             >
                               <span
-                                class="c2"
+                                class="emotion-0 emotion-1"
                               >
                                 Image gallery, 
                               </span>
@@ -2871,7 +4422,7 @@ exports[`Media Asset Page should render component 1`] = `
                           </a>
                         </h3>
                         <time
-                          class="c50"
+                          class="emotion-251 emotion-21"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -2880,23 +4431,22 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="c40 c41"
+                    class="emotion-14 emotion-259 emotion-260"
                     dir="ltr"
-                    role="listitem"
                   >
                     <div
-                      class="c42 c43"
+                      class="emotion-255 emotion-256 emotion-257"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="c44"
+                        class="emotion-245 emotion-246"
                         dir="ltr"
                       >
                         <div
-                          class="c45"
+                          class="emotion-243 emotion-244"
                         >
                           <div
-                            class="c25"
+                            class="emotion-4 emotion-5"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -2907,19 +4457,19 @@ exports[`Media Asset Page should render component 1`] = `
                             </div>
                           </div>
                           <div
-                            class="c46"
+                            class="emotion-241 emotion-242"
                           >
                             <div
                               aria-hidden="true"
-                              class="c51"
+                              class="emotion-289 emotion-290"
                               dir="ltr"
                             >
                               <div
-                                class="c52"
+                                class="emotion-287 emotion-288"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="c54"
+                                  class="emotion-315 emotion-316"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 13 12"
@@ -2933,7 +4483,7 @@ exports[`Media Asset Page should render component 1`] = `
                                   />
                                 </svg>
                                 <time
-                                  class="c55"
+                                  class="emotion-317 emotion-318"
                                   datetime="PT15S"
                                 >
                                   0:15
@@ -2944,21 +4494,21 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c47"
+                        class="emotion-253 emotion-254"
                         dir="ltr"
                       >
                         <h3
-                          class="c48"
+                          class="emotion-249 emotion-250"
                         >
                           <a
-                            class="c49"
+                            class="emotion-247 emotion-248"
                             href="/pidgin/media-23147054"
                           >
                             <span
                               role="text"
                             >
                               <span
-                                class="c2"
+                                class="emotion-0 emotion-1"
                               >
                                 Make you listen, 
                               </span>
@@ -2966,7 +4516,7 @@ exports[`Media Asset Page should render component 1`] = `
                                 BBC News Pidgin One Minute News
                               </span>
                               <span
-                                class="c2"
+                                class="emotion-0 emotion-1"
                               >
                                 , Duration 0,15
                               </span>
@@ -2974,7 +4524,7 @@ exports[`Media Asset Page should render component 1`] = `
                           </a>
                         </h3>
                         <time
-                          class="c50"
+                          class="emotion-251 emotion-21"
                           datetime="2017-08-17"
                         >
                           17th August 2017
@@ -2985,6 +4535,9 @@ exports[`Media Asset Page should render component 1`] = `
                 </ol>
               </div>
             </section>
+            <div
+              class="emotion-356 emotion-357"
+            />
           </div>
         </div>
       </div>
