@@ -100,7 +100,6 @@ const AmpAd = ({ slotType }) => {
   }
 
   return (
-    // eslint-disable-next-line jsx-a11y/no-redundant-roles
     <>
       <Helmet>
         {AMP_ADS_JS}

@@ -2,7 +2,6 @@ import React from 'react';
 import { node, string } from 'prop-types';
 
 const MostReadSection = ({ children, className }) => (
-  // eslint-disable-next-line jsx-a11y/no-redundant-roles
   <section
     className={className}
     role="region"
