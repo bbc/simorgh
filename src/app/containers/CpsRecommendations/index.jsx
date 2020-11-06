@@ -27,8 +27,6 @@ import RecommendationsPromoList from './RecommendationsPromoList';
 
 const RecommendationsWrapper = styled.div`
   background-color: ${C_LUNAR};
-  padding-bottom: ${GEL_SPACING};
-  margin-bottom: ${GEL_SPACING_TRPL};
   margin: ${GEL_SPACING_TRPL} 0;
   padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
