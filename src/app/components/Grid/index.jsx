@@ -108,10 +108,9 @@ export const CPSPageGrid = ({ children, ...props }) => (
   </StyledCPSPageGrid>
 );
 
-export const GridWrapper = ({ as, ...props }) => (
+export const GridWrapper = props => (
   <GelPageGrid
     {...props}
-    as={as}
     enableGelGutters
     columns={{
       group0: 6,
@@ -124,10 +123,9 @@ export const GridWrapper = ({ as, ...props }) => (
   />
 );
 
-export const GridItemSmall = styled(({ as, ...props }) => (
+export const GridItemSmall = styled(props => (
   <Grid
     {...props}
-    as={as}
     item
     startOffset={{
       group0: 1,
@@ -150,10 +148,9 @@ export const GridItemSmall = styled(({ as, ...props }) => (
   ${layoutGridItemSmall}
 `;
 
-export const GridItemMedium = ({ as, gridColumnStart, gridSpan, ...props }) => (
+export const GridItemMedium = ({ gridColumnStart, gridSpan, ...props }) => (
   <Grid
     {...props}
-    as={as}
     item
     margins={{
       group0: true,
@@ -183,14 +180,12 @@ export const GridItemMedium = ({ as, gridColumnStart, gridSpan, ...props }) => (
 );
 
 export const GridItemMediumNoMargin = ({
-  as,
   gridColumnStart,
   gridSpan,
   ...props
 }) => (
   <Grid
     {...props}
-    as={as}
     item
     startOffset={{
       group0: 1,
@@ -211,10 +206,9 @@ export const GridItemMediumNoMargin = ({
   />
 );
 
-export const GridItemLarge = ({ as, ...props }) => (
+export const GridItemLarge = props => (
   <Grid
     {...props}
-    as={as}
     item
     margins={{
       group0: true,
@@ -243,10 +237,9 @@ export const GridItemLarge = ({ as, ...props }) => (
   />
 );
 
-export const GridItemLargeNoMargin = ({ as, ...props }) => (
+export const GridItemLargeNoMargin = props => (
   <Grid
     {...props}
-    as={as}
     item
     startOffset={{
       group0: 1,
@@ -279,10 +272,9 @@ const PopOutAtGroup5 = styled(GridItemMedium)`
     }
   }
 `;
-export const PopOutGridItemMedium = props => {
-  const { children } = props;
-  return <PopOutAtGroup5 {...props}>{children}</PopOutAtGroup5>;
-};
+export const PopOutGridItemMedium = ({ children, ...props }) => (
+  <PopOutAtGroup5 {...props}>{children}</PopOutAtGroup5>
+);
 
 GridItemLarge.propTypes = {
   as: string,
