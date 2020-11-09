@@ -2,7 +2,7 @@ module.exports = {
   ci: {
     collect: {
       url:
-        process.env.ENV === 'live'
+        process.env.LIGHTHOUSE_APP_ENV === 'live'
           ? [
               'https://www.bbc.com/arabic',
               'https://www.bbc.com/persian/afghanistan',
