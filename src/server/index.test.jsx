@@ -1,7 +1,6 @@
 import React from 'react';
 import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
-import * as styledComponents from 'styled-components';
 import dotenv from 'dotenv';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
@@ -87,15 +86,6 @@ const mockRouteProps = ({
   });
 };
 
-styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
-  collectStyles: jest.fn().mockReturnValue(<h1>Mock app</h1>),
-  getStyleElement: jest.fn().mockReturnValue(<style />),
-}));
-
-jest.mock('./styles', () => ({
-  getStyleTag: jest.fn().mockImplementation(() => <style />),
-}));
-
 jest.mock('./utilities/customMetrics');
 
 const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
@@ -131,18 +121,21 @@ const testRenderedData = ({
 
   expect(status).toBe(200);
 
-  expect(reactDomServer.renderToString).toHaveBeenCalledWith(<h1>Mock app</h1>);
+  expect(reactDomServer.renderToString).toHaveBeenCalled();
 
   expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
     <Document
-      app="<h1>Mock app</h1>"
+      app={{
+        css: '',
+        ids: [],
+        html: '<h1>Mock app</h1>',
+      }}
       assetOrigins={assetOrigins}
       data={successDataResponse}
       helmet={{ head: 'tags' }}
       isAmp={isAmp}
       service={service}
       scripts="__mock_script_elements__"
-      styleTags={<style />}
     />,
   );
 
@@ -1323,13 +1316,15 @@ describe('Server', () => {
 
         expect(status).toBe(404);
 
-        expect(reactDomServer.renderToString).toHaveBeenCalledWith(
-          <h1>Mock app</h1>,
-        );
+        expect(reactDomServer.renderToString).toHaveBeenCalled();
 
         expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
           <Document
-            app="<h1>Mock app</h1>"
+            app={{
+              css: '',
+              ids: [],
+              html: '<h1>Mock app</h1>',
+            }}
             assetOrigins={[
               'https://cookie-oven.api.bbc.co.uk',
               'https://ichef.bbci.co.uk',
@@ -1341,9 +1336,10 @@ describe('Server', () => {
             isAmp={isAmp}
             service={service}
             scripts="__mock_script_elements__"
-            styleTags={<style />}
           />,
         );
+
+        expect(renderDocumentSpy).toHaveBeenCalled();
 
         expect(text).toEqual(
           '<!doctype html><html><body><h1>Mock app</h1></body></html>',

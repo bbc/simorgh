@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { string, bool } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,

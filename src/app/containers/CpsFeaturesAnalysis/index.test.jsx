@@ -73,7 +73,7 @@ describe('CpsRelatedContent', () => {
 
     const { asFragment } = renderFeaturesAnalysis();
 
-    expect(document.querySelectorAll(`li[class^='StoryPromoLi']`).length).toBe(
+    expect(document.querySelectorAll(`li[class*='StoryPromoLi']`).length).toBe(
       features.length,
     );
 
@@ -89,7 +89,7 @@ describe('CpsRelatedContent', () => {
       content: topFeaturesOneItem,
     });
 
-    expect(document.querySelector(`li[class^='StoryPromoLi']`)).toBeNull();
+    expect(document.querySelector(`li[class*='StoryPromoLi']`)).toBeNull();
 
     expect(document.querySelector(`ul`)).toBeNull();
 
@@ -112,7 +112,7 @@ describe('CpsRelatedContent', () => {
 
   it('should not render Features and Analysis components if no data is passed', () => {
     renderFeaturesAnalysisNull();
-    expect(document.querySelectorAll(`li[class^='StoryPromoLi']`).length).toBe(
+    expect(document.querySelectorAll(`li[class*='StoryPromoLi']`).length).toBe(
       0,
     );
   });

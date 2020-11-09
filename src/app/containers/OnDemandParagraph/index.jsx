@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { string, bool } from 'prop-types';
 import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
