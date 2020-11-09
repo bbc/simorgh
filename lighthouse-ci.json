@@ -1,0 +1,10 @@
+{
+  "live": [
+    "https://www.bbc.com/korean/bbc_korean_radio/liveradio",
+    "https://www.bbc.com/afrique/media/video"
+  ],
+  "test": [
+    "https://www.test.bbc.com/korean/bbc_korean_radio/liveradio",
+    "https://www.test.bbc.com/afrique/media/video"
+  ]
+}
