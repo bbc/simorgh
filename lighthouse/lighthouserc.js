@@ -2,7 +2,7 @@ module.exports = {
   ci: {
     collect: {
       url:
-        process.env === 'live'
+        process.env.ENV === 'live'
           ? [
               'https://www.bbc.com/arabic',
               'https://www.bbc.com/persian/afghanistan',
