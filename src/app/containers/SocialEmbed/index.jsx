@@ -27,12 +27,7 @@ const MAX_WIDTH = '31.25rem';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
-const Wrapper = styled.div`
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: ${GEL_SPACING_TRPL};
-  max-width: ${MAX_WIDTH};
-`;
+
 
 const SocialEmbedContainer = ({ blocks }) => {
   const { isAmp } = useContext(RequestContext);
@@ -49,6 +44,16 @@ const SocialEmbedContainer = ({ blocks }) => {
   if (!href) return null;
 
   const oEmbed = path(['embed', 'oembed'], model);
+  const lazyLoadHeight = path(['embed', 'fallback_image', 'fallback_image_height'], model);
+
+  const Wrapper = styled.div`
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: ${GEL_SPACING_TRPL};
+  max-width: ${MAX_WIDTH};
+  max-height: ${lazyLoadHeight + 'px'};
+`;
+
 
   const {
     fallback: fallbackTranslations,
@@ -104,7 +109,7 @@ const SocialEmbedContainer = ({ blocks }) => {
             caption={caption}
           />
         ) : (
-          <Lazyload offset={LAZYLOAD_OFFSET} once>
+          <Lazyload offset={LAZYLOAD_OFFSET} once height={lazyLoadHeight}>
             {enrichedSocialEmbed}
           </Lazyload>
         )}
