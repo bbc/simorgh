@@ -1,0 +1,46 @@
+module.exports = {
+  ci: {
+    collect: {
+      url:
+        process.env === 'live'
+          ? [
+              'https://www.bbc.com/arabic',
+              'https://www.bbc.com/persian/afghanistan',
+              'https://www.bbc.com/korean/bbc_korean_radio/liveradio',
+              'https://www.bbc.com/vietnamese/popular/read',
+              'https://www.bbc.com/afrique/media/video',
+              'https://www.bbc.com/pashto/bbc_pashto_radio/programmes/p056fcjb',
+              'https://www.bbc.com/pashto/bbc_pashto_tv/tv_programmes/w13xttn4',
+            ]
+          : ['https://test.bbc.com/korean/bbc_korean_radio/liveradio'],
+      numberOfRuns: 3,
+      settings: {
+        chromeFlags: '--no-sandbox --headless',
+      },
+    },
+    assert: {
+      includePassedAssertions: true,
+      assertions: {
+        'categories:performance': [
+          'error',
+          { aggregationMethod: 'optimistic', minScore: 0.7 },
+        ],
+        'categories:accessibility': [
+          'error',
+          { aggregationMethod: 'optimistic', minScore: 0.9 },
+        ],
+        'categories:best-practices': [
+          'error',
+          { aggregationMethod: 'optimistic', minScore: 0.9 },
+        ],
+        'categories:seo': [
+          'error',
+          { aggregationMethod: 'optimistic', minScore: 0.9 },
+        ],
+      },
+    },
+    upload: {
+      target: 'temporary-public-storage',
+    },
+  },
+};
