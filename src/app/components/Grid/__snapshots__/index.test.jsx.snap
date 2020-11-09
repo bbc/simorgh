@@ -2,94 +2,444 @@
 
 exports[`Grid should render CPSPageGrid 1`] = `
 @supports (display:grid) {
-  .c2 {
+  .emotion-0 {
     display: block;
   }
+
+@media (max-width:14.9375rem) {
+    .emotion-0 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-end: span 2;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-0 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-end: span 2;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-0 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-end: span 2;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-0 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-end: span 2;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-0 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-end: span 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-0 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-end: span 2;
+    }
+}
 }
 
 @supports (display:grid) {
-  .c0 {
+  .emotion-3 {
     display: grid;
     position: initial;
   }
+
+@media (max-width:14.9375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
 }
 
 @media (min-width:63rem) {
-  .c1 {
+  .emotion-3 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
-<div
-  class="c0 c1"
-  dir="ltr"
->
+<div>
   <div
-    class="c2"
+    class="emotion-2 emotion-3 emotion-1"
     dir="ltr"
   >
-    <p>
-      CPS page grid
-    </p>
+    <div
+      class="emotion-0 emotion-1"
+      dir="ltr"
+    >
+      <p>
+        CPS page grid
+      </p>
+    </div>
   </div>
 </div>
 `;
 
 exports[`Grid should render CPSPageGrid with additional props 1`] = `
 @supports (display:grid) {
-  .c1 {
+  .emotion-0 {
     display: block;
   }
+
+@media (max-width:14.9375rem) {
+    .emotion-0 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-end: span 2;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-0 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-end: span 2;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-0 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-end: span 2;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-0 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-end: span 2;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-0 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-end: span 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-0 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-end: span 2;
+    }
+}
+}
+
+@supports (display:grid) {
+  .emotion-3 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
 }
 
 @media (min-width:63rem) {
-  .c0 {
+  .emotion-3 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
-<main
-  class="c0"
-  role="main"
->
-  <div
-    class="c1"
+<div>
+  <main
+    class="emotion-2 emotion-3 emotion-1"
     dir="ltr"
+    role="main"
   >
-    <p>
-      CPS page grid
-    </p>
-  </div>
-</main>
+    <div
+      class="emotion-0 emotion-1"
+      dir="ltr"
+    >
+      <p>
+        CPS page grid
+      </p>
+    </div>
+  </main>
+</div>
 `;
 
 exports[`Grid should render Grid with columns 1`] = `
 @supports (display:grid) {
-  .c0 {
+  .emotion-2 {
     display: grid;
     position: initial;
   }
+
+@media (max-width:14.9375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+}
 }
 
 @supports (display:grid) {
-  .c1 {
+  .emotion-0 {
     display: block;
   }
+
+@media (max-width:14.9375rem) {
+    .emotion-0 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-end: span 2;
+    }
 }
 
-<div
-  class="c0"
-  dir="ltr"
->
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-0 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-end: span 2;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-0 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-end: span 2;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-0 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-end: span 2;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-0 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-end: span 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-0 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-end: span 2;
+    }
+}
+}
+
+<div>
   <div
-    class="c1"
+    class="emotion-2 emotion-1"
     dir="ltr"
   >
-    <p>
-      item spanning 2 out of 6 columns
-    </p>
+    <div
+      class="emotion-0 emotion-1"
+      dir="ltr"
+    >
+      <p>
+        item spanning 2 out of 6 columns
+      </p>
+    </div>
   </div>
 </div>
 `;

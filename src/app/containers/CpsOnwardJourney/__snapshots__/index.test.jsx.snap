@@ -1,84 +1,208 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
-.c1 {
+.emotion-4 {
   width: 100%;
 }
 
-.c3 {
-  margin-bottom: 1rem;
-  padding-bottom: 2rem;
-}
-
 @supports (display:grid) {
-  .c0 {
+  .emotion-4 {
     display: grid;
     position: initial;
   }
-}
 
 @media (max-width:14.9375rem) {
-  .c2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
+    .emotion-4 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
+    .emotion-4 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
+    .emotion-4 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
+    .emotion-4 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
-    margin-left: 16.666666666666668%;
-  }
+    .emotion-4 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
 }
 
 @media (min-width:80rem) {
-  .c2 {
-    margin-left: 33.333333333333336%;
-  }
+    .emotion-4 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
 }
-
-@supports (display:grid) {
-  .c2 {
-    display: block;
-  }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
+  .emotion-4 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .emotion-4 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
+.emotion-1 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-1 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-1 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-1 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-1 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-1 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-1 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-1 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-1 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-1 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-1 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-1 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
 @media (min-width:37.5rem) {
-  .c3 {
+  .emotion-1 {
     margin-bottom: 1.5rem;
   }
 }
@@ -86,13 +210,13 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 <div>
   <section
     aria-labelledby="heading-label"
-    class="c0 c1"
+    class="emotion-3 emotion-4 emotion-2"
     data-e2e="heading-label"
     dir="ltr"
     role="region"
   >
     <div
-      class="c2 c3"
+      class="emotion-0 emotion-1 emotion-2"
       dir="ltr"
     >
       <ul>
@@ -130,84 +254,208 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 `;
 
 exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
-.c1 {
+.emotion-6 {
   width: 100%;
 }
 
-.c3 {
-  margin-bottom: 1rem;
-  padding-bottom: 2rem;
-}
-
 @supports (display:grid) {
-  .c0 {
+  .emotion-6 {
     display: grid;
     position: initial;
   }
-}
 
 @media (max-width:14.9375rem) {
-  .c2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
-    margin-left: 16.666666666666668%;
-  }
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
 }
 
 @media (min-width:80rem) {
-  .c2 {
-    margin-left: 33.333333333333336%;
-  }
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
 }
-
-@supports (display:grid) {
-  .c2 {
-    display: block;
-  }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
+  .emotion-6 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .emotion-6 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
+.emotion-3 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-3 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-3 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-3 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-3 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-3 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-3 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-3 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
 @media (min-width:37.5rem) {
-  .c3 {
+  .emotion-3 {
     margin-bottom: 1.5rem;
   }
 }
@@ -215,17 +463,17 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 <div>
   <section
     aria-labelledby="heading-label"
-    class="c0 c1"
+    class="emotion-5 emotion-6 emotion-4"
     data-e2e="heading-label"
     dir="ltr"
     role="region"
   >
     <div
-      class="c2 c3"
+      class="emotion-2 emotion-3 emotion-4"
       dir="ltr"
     >
       <div
-        class=""
+        class="emotion-0 emotion-1"
       >
         <div
           dir="ltr"
@@ -243,7 +491,271 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 `;
 
 exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
-.c8 {
+.emotion-19 {
+  width: 100%;
+}
+
+@supports (display:grid) {
+  .emotion-19 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-19 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-19 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+.emotion-16 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-16 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-16 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-16 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-16 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-16 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-16 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-16 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (min-width:37.5rem) {
+  .emotion-16 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-11 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+  margin-top: 0;
+  margin: 0;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-11 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-11 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-11 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-11 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-0 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .emotion-0 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.5rem;
+  }
+}
+
+.emotion-8 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -253,7 +765,7 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
   flex-direction: column;
 }
 
-.c9 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -272,7 +784,16 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
   align-items: baseline;
 }
 
-.c10 {
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-2 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -291,207 +812,61 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
   align-items: center;
 }
 
-.c6 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c4 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-}
-
-.c7 {
-  margin: 0;
-  padding: 0;
-}
-
-.c1 {
-  width: 100%;
-}
-
-.c3 {
-  margin-bottom: 1rem;
-  padding-bottom: 2rem;
-}
-
-.c5 {
-  margin-top: 0;
-  margin: 0;
-}
-
-@media (min-width:37.5rem) {
-  .c9 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .emotion-2 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .emotion-2 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .emotion-2 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .emotion-2 {
     padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c6 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c4 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .c2 {
-    display: block;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    padding: 1rem 0;
   }
 }
 
 <div>
   <section
     aria-labelledby="heading-label"
-    class="c0 c1"
+    class="emotion-18 emotion-19 emotion-17"
     data-e2e="heading-label"
     dir="ltr"
     role="region"
   >
     <div
-      class="c2 c3"
+      class="emotion-15 emotion-16 emotion-17"
       dir="ltr"
     >
       <div
-        class="c4 c5"
+        class="emotion-10 emotion-11 emotion-12"
       >
         <div
-          class="c6"
+          class="emotion-0 emotion-1"
         />
         <strong
-          class="c7"
+          class="emotion-8 emotion-9"
         >
           <span
-            class="c8"
+            class="emotion-6 emotion-7"
           >
             <span
-              class="c9"
+              class="emotion-4 emotion-5"
             >
               <span
-                class="c10"
+                class="emotion-2 emotion-3"
                 dir="ltr"
                 id="heading-label"
               >
@@ -502,7 +877,7 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
         </strong>
       </div>
       <div
-        class=""
+        class="emotion-13 emotion-14"
       >
         <div
           dir="ltr"
@@ -520,7 +895,271 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 `;
 
 exports[`CpsOnwardJourney renders section label with with alternative background colour 1`] = `
-.c8 {
+.emotion-19 {
+  width: 100%;
+}
+
+@supports (display:grid) {
+  .emotion-19 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-19 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-19 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+.emotion-16 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-16 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-16 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-16 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-16 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-16 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-16 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-16 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (min-width:37.5rem) {
+  .emotion-16 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-11 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+  margin-top: 0;
+  margin: 0;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-11 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-11 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-11 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-11 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-0 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .emotion-0 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.5rem;
+  }
+}
+
+.emotion-8 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -530,7 +1169,7 @@ exports[`CpsOnwardJourney renders section label with with alternative background
   flex-direction: column;
 }
 
-.c9 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -549,7 +1188,16 @@ exports[`CpsOnwardJourney renders section label with with alternative background
   align-items: baseline;
 }
 
-.c10 {
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-2 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -568,207 +1216,61 @@ exports[`CpsOnwardJourney renders section label with with alternative background
   align-items: center;
 }
 
-.c6 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c4 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-}
-
-.c7 {
-  margin: 0;
-  padding: 0;
-}
-
-.c1 {
-  width: 100%;
-}
-
-.c3 {
-  margin-bottom: 1rem;
-  padding-bottom: 2rem;
-}
-
-.c5 {
-  margin-top: 0;
-  margin: 0;
-}
-
-@media (min-width:37.5rem) {
-  .c9 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .emotion-2 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .emotion-2 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .emotion-2 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .emotion-2 {
     padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c6 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c4 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .c2 {
-    display: block;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    padding: 1rem 0;
   }
 }
 
 <div>
   <section
     aria-labelledby="heading-label"
-    class="c0 c1"
+    class="emotion-18 emotion-19 emotion-17"
     data-e2e="heading-label"
     dir="ltr"
     role="region"
   >
     <div
-      class="c2 c3"
+      class="emotion-15 emotion-16 emotion-17"
       dir="ltr"
     >
       <div
-        class="c4 c5"
+        class="emotion-10 emotion-11 emotion-12"
       >
         <div
-          class="c6"
+          class="emotion-0 emotion-1"
         />
         <h2
-          class="c7"
+          class="emotion-8 emotion-9"
         >
           <span
-            class="c8"
+            class="emotion-6 emotion-7"
           >
             <span
-              class="c9"
+              class="emotion-4 emotion-5"
             >
               <span
-                class="c10"
+                class="emotion-2 emotion-3"
                 dir="ltr"
                 id="heading-label"
               >
@@ -779,7 +1281,7 @@ exports[`CpsOnwardJourney renders section label with with alternative background
         </h2>
       </div>
       <div
-        class=""
+        class="emotion-13 emotion-14"
       >
         <div
           dir="ltr"
@@ -797,7 +1299,251 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 `;
 
 exports[`CpsOnwardJourney renders section label with without bar under section label 1`] = `
-.c7 {
+.emotion-17 {
+  width: 100%;
+}
+
+@supports (display:grid) {
+  .emotion-17 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-17 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-17 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-17 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-17 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-17 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-17 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-17 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-17 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+.emotion-14 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-14 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-14 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-14 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-14 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-14 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-14 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-14 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-14 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-14 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-14 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-14 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-14 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-14 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (min-width:37.5rem) {
+  .emotion-14 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-9 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+  margin-top: 0;
+  margin: 0;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-9 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-9 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-9 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-9 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-6 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -807,7 +1553,7 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
   flex-direction: column;
 }
 
-.c8 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -826,7 +1572,16 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
   align-items: baseline;
 }
 
-.c9 {
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-0 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -845,184 +1600,58 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
   align-items: center;
 }
 
-.c4 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-}
-
-.c6 {
-  margin: 0;
-  padding: 0;
-}
-
-.c1 {
-  width: 100%;
-}
-
-.c3 {
-  margin-bottom: 1rem;
-  padding-bottom: 2rem;
-}
-
-.c5 {
-  margin-top: 0;
-  margin: 0;
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .emotion-0 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .emotion-0 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .emotion-0 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .emotion-0 {
     padding-right: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c4 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .c2 {
-    display: block;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    padding: 1rem 0;
   }
 }
 
 <div>
   <section
     aria-labelledby="heading-label"
-    class="c0 c1"
+    class="emotion-16 emotion-17 emotion-15"
     data-e2e="heading-label"
     dir="ltr"
     role="region"
   >
     <div
-      class="c2 c3"
+      class="emotion-13 emotion-14 emotion-15"
       dir="ltr"
     >
       <div
-        class="c4 c5"
+        class="emotion-8 emotion-9 emotion-10"
       >
         <h2
-          class="c6"
+          class="emotion-6 emotion-7"
         >
           <span
-            class="c7"
+            class="emotion-4 emotion-5"
           >
             <span
-              class="c8"
+              class="emotion-2 emotion-3"
             >
               <span
-                class="c9"
+                class="emotion-0 emotion-1"
                 dir="ltr"
                 id="heading-label"
               >
@@ -1033,7 +1662,7 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
         </h2>
       </div>
       <div
-        class=""
+        class="emotion-11 emotion-12"
       >
         <div
           dir="ltr"
@@ -1051,7 +1680,271 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 `;
 
 exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
-.c10 {
+.emotion-23 {
+  width: 100%;
+}
+
+@supports (display:grid) {
+  .emotion-23 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-23 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-23 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-23 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-23 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-23 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-23 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-23 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-23 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+.emotion-20 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-20 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-20 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-20 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-20 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-20 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-20 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-20 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-20 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-20 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-20 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-20 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-20 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-20 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (min-width:37.5rem) {
+  .emotion-20 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-13 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+  margin-top: 0;
+  margin: 0;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-13 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-13 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-13 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-13 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-2 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .emotion-2 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.5rem;
+  }
+}
+
+.emotion-10 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1061,7 +1954,7 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
   flex-direction: column;
 }
 
-.c11 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1080,7 +1973,16 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
   align-items: baseline;
 }
 
-.c12 {
+@media (min-width:37.5rem) {
+  .emotion-6 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-4 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1099,28 +2001,37 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
   align-items: center;
 }
 
-.c8 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-4 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
 }
 
-.c6 {
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    padding-right: 1rem;
+  }
+}
+
+.emotion-17 {
   position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
 }
 
-.c9 {
-  margin: 0;
-  padding: 0;
-}
-
-.c4 {
-  position: relative;
-}
-
-.c5 {
+.emotion-0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1140,235 +2051,80 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
   z-index: 10;
 }
 
-.c5:not(:focus):not(:active) {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c13 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c1 {
-  width: 100%;
-}
-
-.c3 {
-  margin-bottom: 1rem;
-  padding-bottom: 2rem;
-}
-
-.c7 {
-  margin-top: 0;
-  margin: 0;
-}
-
-@media (min-width:37.5rem) {
-  .c11 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c8 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c6 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .emotion-0 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .emotion-0 {
     font-size: 0.8125rem;
   }
 }
 
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    position: initial;
-  }
+.emotion-0:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
-@media (max-width:14.9375rem) {
-  .c2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .c2 {
-    display: block;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    padding: 1rem 0;
-  }
+.emotion-15 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 <div>
   <section
     aria-labelledby="heading-label"
-    class="c0 c1"
+    class="emotion-22 emotion-23 emotion-21"
     data-e2e="heading-label"
     dir="ltr"
     role="region"
   >
     <div
-      class="c2 c3"
+      class="emotion-19 emotion-20 emotion-21"
       dir="ltr"
     >
       <div
-        class="c4"
+        class="emotion-17 emotion-18"
       >
         <a
-          class="c5"
+          class="emotion-0 emotion-1"
           href="#end-of-the-foo-section"
         >
           skip the foo section
         </a>
         <div
-          class="c6 c7"
+          class="emotion-12 emotion-13 emotion-14"
         >
           <div
-            class="c8"
+            class="emotion-2 emotion-3"
           />
           <h2
-            class="c9"
+            class="emotion-10 emotion-11"
           >
             <span
-              class="c10"
+              class="emotion-8 emotion-9"
             >
               <span
-                class="c11"
+                class="emotion-6 emotion-7"
               >
                 <span
-                  class="c12"
+                  class="emotion-4 emotion-5"
                   dir="ltr"
                   id="heading-label"
                 >
@@ -1408,7 +2164,7 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
           </li>
         </ul>
         <p
-          class="c13"
+          class="emotion-15 emotion-16"
           id="end-of-the-foo-section"
           tabindex="-1"
         >
@@ -1421,7 +2177,271 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 `;
 
 exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
-.c10 {
+.emotion-25 {
+  width: 100%;
+}
+
+@supports (display:grid) {
+  .emotion-25 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-25 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-25 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-25 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-25 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-25 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-25 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-25 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-25 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+.emotion-22 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-22 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-22 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-22 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-22 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-22 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-22 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-22 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-22 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-22 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-22 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-22 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-22 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-22 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (min-width:37.5rem) {
+  .emotion-22 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-13 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+  margin-top: 0;
+  margin: 0;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-13 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-13 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-13 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-13 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-2 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .emotion-2 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.5rem;
+  }
+}
+
+.emotion-10 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1431,7 +2451,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   flex-direction: column;
 }
 
-.c11 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1450,7 +2470,16 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   align-items: baseline;
 }
 
-.c12 {
+@media (min-width:37.5rem) {
+  .emotion-6 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-4 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1469,28 +2498,37 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   align-items: center;
 }
 
-.c8 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-4 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
 }
 
-.c6 {
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    padding-right: 1rem;
+  }
+}
+
+.emotion-19 {
   position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
 }
 
-.c9 {
-  margin: 0;
-  padding: 0;
-}
-
-.c4 {
-  position: relative;
-}
-
-.c5 {
+.emotion-0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1510,235 +2548,80 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   z-index: 10;
 }
 
-.c5:not(:focus):not(:active) {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c13 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c1 {
-  width: 100%;
-}
-
-.c3 {
-  margin-bottom: 1rem;
-  padding-bottom: 2rem;
-}
-
-.c7 {
-  margin-top: 0;
-  margin: 0;
-}
-
-@media (min-width:37.5rem) {
-  .c11 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c8 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c6 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .emotion-0 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .emotion-0 {
     font-size: 0.8125rem;
   }
 }
 
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    position: initial;
-  }
+.emotion-0:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
-@media (max-width:14.9375rem) {
-  .c2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .c2 {
-    display: block;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    padding: 1rem 0;
-  }
+.emotion-17 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 <div>
   <section
     aria-labelledby="heading-label"
-    class="c0 c1"
+    class="emotion-24 emotion-25 emotion-23"
     data-e2e="heading-label"
     dir="ltr"
     role="region"
   >
     <div
-      class="c2 c3"
+      class="emotion-21 emotion-22 emotion-23"
       dir="ltr"
     >
       <div
-        class="c4"
+        class="emotion-19 emotion-20"
       >
         <a
-          class="c5"
+          class="emotion-0 emotion-1"
           href="#end-of-the-foo-section"
         >
           skip the foo section
         </a>
         <div
-          class="c6 c7"
+          class="emotion-12 emotion-13 emotion-14"
         >
           <div
-            class="c8"
+            class="emotion-2 emotion-3"
           />
           <h2
-            class="c9"
+            class="emotion-10 emotion-11"
           >
             <span
-              class="c10"
+              class="emotion-8 emotion-9"
             >
               <span
-                class="c11"
+                class="emotion-6 emotion-7"
               >
                 <span
-                  class="c12"
+                  class="emotion-4 emotion-5"
                   dir="ltr"
                   id="heading-label"
                 >
@@ -1749,7 +2632,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
           </h2>
         </div>
         <div
-          class=""
+          class="emotion-15 emotion-16"
         >
           <div
             dir="ltr"
@@ -1762,7 +2645,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
           </div>
         </div>
         <p
-          class="c13"
+          class="emotion-17 emotion-18"
           id="end-of-the-foo-section"
           tabindex="-1"
         >

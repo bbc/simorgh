@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Script Link should render correctly 1`] = `
-.c1 {
+.emotion-2 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -16,60 +16,62 @@ exports[`Script Link should render correctly 1`] = `
   margin: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.c2 {
-  margin: 0.1875rem;
-  display: inline-block;
-  height: calc(100%);
-  padding: 0 0.5rem;
-}
-
-.c0:hover .c2,
-.c0:focus .c2 {
-  margin: 0;
-  border: 0.1875rem solid #FFFFFF;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .emotion-2 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .emotion-2 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c1 {
+  .emotion-2 {
     line-height: calc(2.25rem - 0.5rem);
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c1 {
+  .emotion-2 {
     height: 2.5rem;
   }
 }
 
+.emotion-0 {
+  margin: 0.1875rem;
+  display: inline-block;
+  height: calc(100%);
+  padding: 0 0.5rem;
+}
+
+.emotion-3:hover .emotion-0,
+.emotion-3:focus .emotion-0 {
+  margin: 0;
+  border: 0.1875rem solid #FFFFFF;
+}
+
 @media (max-width:37.4375rem) {
-  .c2 {
+  .emotion-0 {
     line-height: calc(2.5rem - 0.5rem);
   }
 }
 
-<a
-  class="c0 c1"
-  data-variant="cyr"
-  href="/serbian/cyr"
->
-  <span
-    class="c2"
+<div>
+  <a
+    class="emotion-2 emotion-3"
+    data-variant="cyr"
+    href="/serbian/cyr"
   >
-    Ћир
-  </span>
-</a>
+    <span
+      class="emotion-0 emotion-1"
+    >
+      Ћир
+    </span>
+  </a>
+</div>
 `;
