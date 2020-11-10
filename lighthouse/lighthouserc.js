@@ -1,6 +1,6 @@
 const AUDIT_URLS = {
   FRONT_PAGE: {
-    live: ['https://test.bbc.com/arabic'],
+    live: ['https://www.bbc.com/arabic'],
     test: ['https://www.test.bbc.com/arabic'],
   },
 
