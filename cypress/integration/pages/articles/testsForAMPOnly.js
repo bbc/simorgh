@@ -34,7 +34,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
         cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
           const media = getBlockData('video', body);
           if (media && media.type === 'video') {
-            cy.get('div[class^="StyledVideoContainer"]').within(() => {
+            cy.get('div[class*="StyledVideoContainer"]').within(() => {
               cy.get('amp-img')
                 .should('have.attr', 'src')
                 .should('not.be.empty');
