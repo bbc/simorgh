@@ -54,7 +54,7 @@ module.exports = ({
        */
       filename: START_DEV_SERVER
         ? 'static/js/[name].js'
-        : 'static/js/[name].[chunkhash:8].js', // hash based on the contents of the file
+        : 'static/js/[name].[contenthash:8].js', // hash based on the contents of the file
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       publicPath: START_DEV_SERVER
         ? `http://localhost:${webpackDevServerPort}/`
