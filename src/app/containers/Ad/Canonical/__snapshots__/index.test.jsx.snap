@@ -1,7 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad with dotcom-bootstrap script 1`] = `
-.emotion-0 {
+<html>
+  <head>
+    <script
+      async="true"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      type="module"
+    />
+    <script
+      async="true"
+      nomodule="nomodule"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
+    />
+  </head>
+  <body>
+    .c0 {
   background-color: #F8F8F8;
   display: none;
   visibility: hidden;
@@ -9,7 +23,7 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
 }
 
 @media (min-width:18.75rem) {
-  .emotion-0 {
+  .c0 {
     min-height: 5.1875rem;
     display: -webkit-box;
     display: -webkit-flex;
@@ -27,42 +41,44 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
 }
 
 @media (min-width:19.75rem) {
-  .emotion-0 {
+  .c0 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c0 {
     min-height: 17.6875rem;
   }
 }
 
 <div>
-  <section
-    aria-hidden="true"
-    aria-label="Advertisement 2"
-    class="emotion-0 emotion-1"
-    data-e2e="advertisement"
-    role="region"
-  >
-    <div
-      class="dotcom-ad"
-      id="dotcom-mpu"
-    />
-  </section>
-</div>
+      <section
+        aria-hidden="true"
+        aria-label="Advertisement 2"
+        class="c0"
+        data-e2e="advertisement"
+        role="region"
+      >
+        <div
+          class="dotcom-ad"
+          id="dotcom-mpu"
+        />
+      </section>
+    </div>
+  </body>
+</html>
 `;
 
 exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderboard ad with dotcom-bootstrap script 1`] = `
-.emotion-0 {
+.c0 {
   background-color: #F8F8F8;
   display: none;
   visibility: hidden;
 }
 
 @media (min-width:20rem) {
-  .emotion-0 {
+  .c0 {
     margin-top: 0.5rem;
     min-height: 5.1875rem;
     display: -webkit-box;
@@ -81,42 +97,58 @@ exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderb
 }
 
 @media (min-width:21rem) {
-  .emotion-0 {
+  .c0 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) {
-  .emotion-0 {
+  .c0 {
     min-height: 5.8125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c0 {
     min-height: 7.6875rem;
   }
 }
 
 @media (min-width:58.75rem) {
-  .emotion-0 {
+  .c0 {
     min-height: 17.6875rem;
     padding: 0.5rem 1rem;
   }
 }
 
-<div>
-  <section
-    aria-hidden="true"
-    aria-label="Advertisement"
-    class="emotion-0 emotion-1"
-    data-e2e="advertisement"
-    role="region"
-  >
-    <div
-      class="dotcom-ad"
-      id="dotcom-leaderboard"
+<html>
+  <head>
+    <script
+      async="true"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      type="module"
     />
-  </section>
-</div>
+    <script
+      async="true"
+      nomodule="nomodule"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
+    />
+  </head>
+  <body>
+    <div>
+      <section
+        aria-hidden="true"
+        aria-label="Advertisement"
+        class="c0"
+        data-e2e="advertisement"
+        role="region"
+      >
+        <div
+          class="dotcom-ad"
+          id="dotcom-leaderboard"
+        />
+      </section>
+    </div>
+  </body>
+</html>
 `;

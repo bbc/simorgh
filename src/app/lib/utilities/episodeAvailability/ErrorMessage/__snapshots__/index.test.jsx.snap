@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`episodeAvailability - Error Message should correctly render for expired episodes with audio skin 1`] = `
-.emotion-4 {
+.c1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -9,7 +9,7 @@ exports[`episodeAvailability - Error Message should correctly render for expired
   height: 100%;
 }
 
-.emotion-2 {
+.c2 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -25,19 +25,7 @@ exports[`episodeAvailability - Error Message should correctly render for expired
   background-color: rgba(34,34,34,0.75);
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    font-size: 0.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .emotion-2 {
-    background-color: transparent;
-  }
-}
-
-.emotion-0 {
+.c3 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -45,36 +33,48 @@ exports[`episodeAvailability - Error Message should correctly render for expired
   padding: 0.5rem;
 }
 
-@media screen and (-ms-high-contrast:active) {
-  .emotion-0 {
-    background-color: window;
-  }
-}
-
-@media (min-width:25rem) {
-  .emotion-0 {
-    padding: 1rem;
-  }
-}
-
-.emotion-6 {
+.c0 {
   position: relative;
   min-height: 165px;
   margin-bottom: 2rem;
 }
 
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c2 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c3 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c3 {
+    padding: 1rem;
+  }
+}
+
 <div>
   <div
-    class="emotion-6 emotion-7"
+    class="c0"
   >
     <div
-      class="emotion-4 emotion-5"
+      class="c1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="c2"
       >
         <strong
-          class="emotion-0 emotion-1"
+          class="c3"
         >
           Dis thing no dey again
         </strong>
@@ -85,32 +85,7 @@ exports[`episodeAvailability - Error Message should correctly render for expired
 `;
 
 exports[`episodeAvailability - Error Message should correctly render for future episodes with video skin 1`] = `
-.emotion-6 {
-  margin: 2.5rem 0 1.5rem;
-  padding-top: 56.25%;
-  position: relative;
-  overflow: hidden;
-}
-
-@media (max-width:62.9375rem) {
-  .emotion-6 {
-    margin-top: 1rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .emotion-6 {
-    margin: 1rem -1rem 0;
-  }
-}
-
-@media (max-width:24.9375rem) {
-  .emotion-6 {
-    margin: 0.5rem -0.5rem 0;
-  }
-}
-
-.emotion-4 {
+.c1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -118,7 +93,7 @@ exports[`episodeAvailability - Error Message should correctly render for future 
   height: 100%;
 }
 
-.emotion-2 {
+.c2 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -134,19 +109,7 @@ exports[`episodeAvailability - Error Message should correctly render for future 
   background-color: rgba(34,34,34,0.75);
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    font-size: 0.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .emotion-2 {
-    background-color: transparent;
-  }
-}
-
-.emotion-0 {
+.c3 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -154,30 +117,67 @@ exports[`episodeAvailability - Error Message should correctly render for future 
   padding: 0.5rem;
 }
 
+.c0 {
+  margin: 2.5rem 0 1.5rem;
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 0.875rem;
+  }
+}
+
 @media screen and (-ms-high-contrast:active) {
-  .emotion-0 {
+  .c2 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c3 {
     background-color: window;
   }
 }
 
 @media (min-width:25rem) {
-  .emotion-0 {
+  .c3 {
     padding: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    margin: 1rem -1rem 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c0 {
+    margin: 0.5rem -0.5rem 0;
   }
 }
 
 <div>
   <div
-    class="emotion-6 emotion-7"
+    class="c0"
   >
     <div
-      class="emotion-4 emotion-5"
+      class="c1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="c2"
       >
         <strong
-          class="emotion-0 emotion-1"
+          class="c3"
         >
           De thing wey de here never ready for you to play.
         </strong>

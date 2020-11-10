@@ -2,7 +2,8 @@
 
 ## Usage
 
-When using an extended Grid component, e.g. `FrontPageGrid`, you can change the element that's rendered by using the `as` prop.
+When using one of the extended Grid components, e.g. `FrontPageGrid`, if you wish to extend it using the `as` prop, you'll need to use `forwardedAs`. This prop enables you to pass down the element down further than one level.
+
 e.g.
-`<Grid as="main" role="main>...</Grid>`
-`<FrontPageGrid as="main" role="main>...</FrontPageGrid>`
+`<Grid forwardedAs="main" role="main ....>...</Grid>`
+`<FrontPageGrid forwardedAs="main" role="main ....>...</FrontPageGrid>`

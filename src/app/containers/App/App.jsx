@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useLayoutEffect, useState, useRef } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router';

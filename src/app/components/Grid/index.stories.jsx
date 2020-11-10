@@ -37,7 +37,7 @@ storiesOf('Components|Grid', module)
   })
   .add('Grid as Main', () => {
     return (
-      <Grid as="main" role="main" {...outerGridProps}>
+      <Grid forwardedAs="main" role="main" {...outerGridProps}>
         <Grid {...gridItemProps}>
           <p>Item with Main element as the parent grid</p>
         </Grid>

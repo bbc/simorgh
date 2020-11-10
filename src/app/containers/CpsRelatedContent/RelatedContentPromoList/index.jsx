@@ -1,6 +1,6 @@
 import React from 'react';
 import { arrayOf, bool, shape, string } from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
@@ -16,16 +16,13 @@ const MediaStoryPromoLi = styled(StoryPromoLi)`
   }
 `;
 
-const MostWatchedOl = styled.ol`
+const MostWatchedOl = styled.ol.attrs({
+  role: 'list',
+})`
   list-style-type: none;
   margin: 0;
   padding: 0;
 `;
-
-MostWatchedOl.defaultProps = {
-  role: 'list',
-  'data-e2e': 'most-watched-ol',
-};
 
 const RelatedContentPromoList = ({ promoItems, dir, isMediaContent }) => {
   return (

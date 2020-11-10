@@ -1,17 +1,14 @@
-import path from 'path';
 import React from 'react';
-import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ChunkExtractor } from '@loadable/server';
-import { CacheProvider } from '@emotion/core';
-import createEmotionServer from 'create-emotion-server';
-import createCache from '@emotion/cache';
+import path from 'path';
+import { renderToString, renderToStaticMarkup } from 'react-dom/server';
+import { ServerStyleSheet } from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { ServerApp } from '#app/containers/App';
 import getAssetOrigins from '../utilities/getAssetOrigins';
-import DocumentComponent from './component';
 
-const cache = createCache();
-const { extractCritical } = createEmotionServer(cache);
+import { getStyleTag } from '../styles';
+import DocumentComponent from './component';
 
 const renderDocument = async ({
   bbcOrigin,
@@ -21,6 +18,8 @@ const renderDocument = async ({
   service,
   url,
 }) => {
+  const sheet = new ServerStyleSheet();
+
   const statsFile = path.resolve(
     `${__dirname}/public/loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,
   );
@@ -29,20 +28,18 @@ const renderDocument = async ({
 
   const context = {};
 
-  const app = extractCritical(
-    renderToString(
-      extractor.collectChunks(
-        <CacheProvider value={cache}>
-          <ServerApp
-            location={url}
-            routes={routes}
-            data={data}
-            bbcOrigin={bbcOrigin}
-            context={context}
-            service={service}
-            isAmp={isAmp}
-          />
-        </CacheProvider>,
+  const app = renderToString(
+    extractor.collectChunks(
+      sheet.collectStyles(
+        <ServerApp
+          location={url}
+          routes={routes}
+          data={data}
+          bbcOrigin={bbcOrigin}
+          context={context}
+          service={service}
+          isAmp={isAmp}
+        />,
       ),
     ),
   );
@@ -69,6 +66,7 @@ const renderDocument = async ({
       scripts={scripts}
       app={app}
       data={data}
+      styleTags={getStyleTag(sheet, isAmp)}
       helmet={headHelmet}
       service={service}
       isAmp={isAmp}

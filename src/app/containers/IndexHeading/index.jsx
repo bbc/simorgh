@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { node } from 'prop-types';
 import IndexHeading from '@bbc/psammead-heading-index';
 import {

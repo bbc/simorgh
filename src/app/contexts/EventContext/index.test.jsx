@@ -21,12 +21,8 @@ afterEach(() => {
   jest.clearAllMocks();
 });
 
-/**
- * The following tests fail on 'latest' after a package-lock.json update. They
- * are being skipped to allow the merge of #8171, but need to be revisited.
- */
 describe('EventContext', () => {
-  it.skip('should call hooks', () => {
+  it('should call hooks', () => {
     render(
       <EventContextProvider>
         <Component />
@@ -61,7 +57,7 @@ describe('EventContext', () => {
       handler: func.isRequired,
     };
 
-    it.skip('should useEffect and match snapshot', () => {
+    it('should useEffect and match snapshot', () => {
       const handler = jest.fn();
       const { container } = render(
         <EventContextProvider>
@@ -74,7 +70,7 @@ describe('EventContext', () => {
       expect(handler).not.toHaveBeenCalled();
     });
 
-    it.skip('should call handler', () => {
+    it('should call handler', () => {
       const handler = jest.fn();
       const { container } = render(
         <EventContextProvider>

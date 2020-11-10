@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import moment from 'moment';
 import { storiesOf } from '@storybook/react';
 import { string, func, arrayOf, shape } from 'prop-types';

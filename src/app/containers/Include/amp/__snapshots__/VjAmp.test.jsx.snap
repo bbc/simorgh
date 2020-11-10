@@ -1,117 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`VJ include container on Amp should render an amp-iframe with an image placeholder 1`] = `
-@media (max-width:14.9375rem) {
-  .emotion-2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-2 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-2 {
-    margin-left: 40%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-2 {
-    display: block;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(10,1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
-    }
-}
-}
-
-.emotion-0 > [overflow] {
+.c1 > [overflow] {
   background: linear-gradient( 0deg,#fff 0%,rgba(255,255,255,1) 75%,rgba(255,255,255,0) 100% );
   display: -webkit-box;
   display: -webkit-flex;
@@ -123,7 +13,7 @@ exports[`VJ include container on Amp should render an amp-iframe with an image p
   justify-content: center;
 }
 
-.emotion-0 > [overflow]::after {
+.c1 > [overflow]::after {
   background-color: #fff;
   border-top: 0.125rem solid #222222;
   content: '';
@@ -136,7 +26,7 @@ exports[`VJ include container on Amp should render an amp-iframe with an image p
   z-index: -10;
 }
 
-.emotion-0 > [overflow] button {
+.c1 > [overflow] button {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   background-color: #222222;
@@ -147,26 +37,72 @@ exports[`VJ include container on Amp should render an amp-iframe with an image p
   padding: 0.5rem 1rem;
 }
 
+.c1 > [overflow] button:hover,
+.c1 > [overflow] button:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (max-width:14.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: block;
+  }
+}
+
 @media (min-width:20rem) {
-  .emotion-0 > [overflow] button {
+  .c1 > [overflow] button {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-0 > [overflow] button:hover,
-.emotion-0 > [overflow] button:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
 <div>
   <div
-    class="emotion-2 emotion-3"
+    class="c0"
     dir="ltr"
   >
     <amp-iframe
-      class="emotion-0 emotion-1"
+      class="c1"
       height="360"
       layout="responsive"
       resizable=""

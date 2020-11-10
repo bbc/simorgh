@@ -47,7 +47,6 @@ module.exports = (shell = {}) => {
           'react-dom$': 'react-dom/profiling',
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
-        'safe-buffer': path.resolve(__dirname, 'node_modules/safe-buffer'),
       },
     },
     devServer: {

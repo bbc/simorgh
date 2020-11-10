@@ -1,33 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Inline english inline span in persian service article 1`] = `
-.emotion-0 {
+.c0 {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-<div>
-  <span
-    class="emotion-0 emotion-1"
-    lang="en"
-  >
-    This is text in a Inline.
-  </span>
-</div>
+<span
+  class="c0"
+  lang="en"
+>
+  This is text in a Inline.
+</span>
 `;
 
 exports[`Inline persian inline span in english service article 1`] = `
-.emotion-0 {
+.c0 {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-<div>
-  <span
-    class="emotion-0 emotion-1"
-    lang="fa"
-  >
-    بعض محتوى النص
-  </span>
-</div>
+<span
+  class="c0"
+  lang="fa"
+>
+  بعض محتوى النص
+</span>
 `;

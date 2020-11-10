@@ -2,7 +2,7 @@ import React from 'react';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { shape, string, oneOfType } from 'prop-types';
 import Grid from '../../../components/Grid';
 import StoryPromo from '../../StoryPromo';
@@ -32,7 +32,7 @@ const RecommendationsPromo = ({ promo, dir }) => {
       }}
       enableGelGutters
     >
-      <StyledStoryPromoWrapper data-e2e="story-promo-wrapper">
+      <StyledStoryPromoWrapper>
         <StoryPromo
           item={promo}
           dir={dir}

@@ -1,227 +1,99 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`withLoading HOC and no loading prop should return the passed in component 1`] = `
-<div>
-  <h1>
-    Hola
-  </h1>
-</div>
+<h1>
+  Hola
+</h1>
 `;
 
 exports[`withLoading HOC and the loading prop set to true should return the loading component 1`] = `
-.emotion-5 {
-  min-height: 100vh;
-}
-
-.emotion-3 {
+.c2 {
   width: 100%;
 }
 
+.c0 {
+  min-height: 100vh;
+}
+
 @supports (display:grid) {
-  .emotion-3 {
+  .c1 {
     display: grid;
     position: initial;
   }
+}
 
 @media (max-width:14.9375rem) {
-    .emotion-3 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
+  .c3 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-3 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
+  .c3 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-3 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
+  .c3 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-3 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 1rem;
-    }
+  .c3 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-3 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(8,1fr);
-      grid-column-end: span 8;
-      grid-column-gap: 1rem;
-    }
+  .c3 {
+    margin-left: 20%;
+  }
 }
 
 @media (min-width:80rem) {
-    .emotion-3 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(20,1fr);
-      grid-column-end: span 20;
-      grid-column-gap: 1rem;
-    }
+  .c3 {
+    margin-left: 40%;
+  }
 }
+
+@supports (display:grid) {
+  .c3 {
+    display: block;
+  }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-3 {
+  .c2 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-3 {
+  .c2 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-0 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-0 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-0 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-0 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-0 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-0 {
-    margin-left: 40%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-0 {
-    display: block;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-0 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-0 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-0 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-0 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-0 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-0 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(10,1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
-    }
-}
-}
-
-<div>
-  <main
-    class="emotion-5 emotion-6"
-    role="main"
+<main
+  class="c0"
+  role="main"
+>
+  <div
+    class="c1 c2"
+    dir="ltr"
   >
     <div
-      class="emotion-2 emotion-3 emotion-1"
+      class="c3"
       dir="ltr"
-    >
-      <div
-        class="emotion-0 emotion-1"
-        dir="ltr"
-      />
-    </div>
-  </main>
-</div>
+    />
+  </div>
+</main>
 `;

@@ -1,128 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SocialEmbedContainer AMP should render correctly 1`] = `
-@media (max-width:14.9375rem) {
-  .emotion-8 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-8 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-8 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-8 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-8 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-8 {
-    margin-left: 40%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-8 {
-    display: block;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-8 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-8 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-8 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-8 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-8 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-8 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(10,1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
-    }
-}
-}
-
-.emotion-6 {
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 1.5rem;
-  max-width: 31.25rem;
-}
-
-.emotion-4 {
+.c2 {
   position: relative;
 }
 
-.emotion-0 {
+.c3 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -142,202 +25,149 @@ exports[`SocialEmbedContainer AMP should render correctly 1`] = `
   z-index: 10;
 }
 
+.c3:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c1 {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+  max-width: 31.25rem;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+  .c3 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c3 {
     font-size: 0.8125rem;
   }
 }
 
-.emotion-0:not(:focus):not(:active) {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
+@media (max-width:14.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
 }
 
-.emotion-2 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
 }
 
-<div>
-  <div
-    class="emotion-8 emotion-9"
-    dir="ltr"
-  >
-    <div
-      class="emotion-6 emotion-7"
-      data-e2e="twitter-embed-https://twitter.com/MileyCyrus/status/1237210910835392512"
-    >
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: block;
+  }
+}
+
+<html>
+  <head>
+    <script
+      async="true"
+      custom-element="amp-twitter"
+      src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"
+    />
+  </head>
+  <body>
+    <div>
       <div
-        class="emotion-4 emotion-5"
+        class="c0"
+        dir="ltr"
       >
-        <a
-          class="emotion-0 emotion-1"
-          href="#skip-twitter-content-2"
+        <div
+          class="c1"
+          data-e2e="twitter-embed-https://twitter.com/MileyCyrus/status/1237210910835392512"
         >
-          Skip Twitter content, 2
-        </a>
-        <amp-twitter
-          data-tweetid="1237210910835392512"
-          height="9"
-          layout="responsive"
-          width="16"
-        />
-        <p
-          class="emotion-2 emotion-3"
-          id="skip-twitter-content-2"
-          tabindex="-1"
-        >
-          End of Twitter content, 2
-        </p>
+          <div
+            class="c2"
+          >
+            <a
+              class="c3"
+              href="#skip-twitter-content-2"
+            >
+              Skip Twitter content, 2
+            </a>
+            <amp-twitter
+              data-tweetid="1237210910835392512"
+              height="9"
+              layout="responsive"
+              width="16"
+            />
+            <p
+              class="c4"
+              id="skip-twitter-content-2"
+              tabindex="-1"
+            >
+              End of Twitter content, 2
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+  </body>
+</html>
 `;
 
 exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] = `
-@media (max-width:14.9375rem) {
-  .emotion-10 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-10 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-10 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-10 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-10 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-10 {
-    margin-left: 40%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-10 {
-    display: block;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-10 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-10 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-10 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-10 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-10 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-10 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(10,1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
-    }
-}
-}
-
-.emotion-8 {
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 1.5rem;
-  max-width: 31.25rem;
-}
-
-.emotion-6 {
+.c2 {
   position: relative;
 }
 
-.emotion-0 {
+.c3 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -357,19 +187,7 @@ exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] 
   z-index: 10;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-0 {
-    font-size: 0.8125rem;
-  }
-}
-
-.emotion-0:not(:focus):not(:active) {
+.c3:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -381,7 +199,19 @@ exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] 
   margin: 0;
 }
 
-.emotion-2 {
+.c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -392,42 +222,95 @@ exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] 
   justify-content: center;
 }
 
-.emotion-2 .twitter-tweet {
+.c4 .twitter-tweet {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
-.emotion-4 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
+.c1 {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+  max-width: 31.25rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: block;
+  }
 }
 
 <div
-  class="emotion-10 emotion-11"
+  class="c0"
   dir="ltr"
 >
   <div
-    class="emotion-8 emotion-9"
+    class="c1"
     data-e2e="twitter-embed-https://twitter.com/MileyCyrus/status/1237210910835392512"
   >
     <div
-      class="emotion-6 emotion-7"
+      class="c2"
     >
       <a
-        class="emotion-0 emotion-1"
+        class="c3"
         href="#skip-twitter-content-2"
       >
         Skip Twitter content, 2
       </a>
       <div
-        class="emotion-2 emotion-3"
+        class="c4"
       >
         <blockquote
           class="twitter-tweet"
@@ -449,7 +332,7 @@ exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] 
 
       </div>
       <p
-        class="emotion-4 emotion-5"
+        class="c5"
         id="skip-twitter-content-2"
         tabindex="-1"
       >
@@ -461,128 +344,11 @@ exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] 
 `;
 
 exports[`SocialEmbedContainer Canonical should render correctly without an embed block 1`] = `
-@media (max-width:14.9375rem) {
-  .emotion-10 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-10 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-10 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-10 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-10 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-10 {
-    margin-left: 40%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-10 {
-    display: block;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-10 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-10 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-10 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-10 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-10 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-10 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(10,1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
-    }
-}
-}
-
-.emotion-8 {
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 1.5rem;
-  max-width: 31.25rem;
-}
-
-.emotion-6 {
+.c2 {
   position: relative;
 }
 
-.emotion-0 {
+.c3 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -602,19 +368,7 @@ exports[`SocialEmbedContainer Canonical should render correctly without an embed
   z-index: 10;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-0 {
-    font-size: 0.8125rem;
-  }
-}
-
-.emotion-0:not(:focus):not(:active) {
+.c3:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -626,7 +380,7 @@ exports[`SocialEmbedContainer Canonical should render correctly without an embed
   margin: 0;
 }
 
-.emotion-4 {
+.c5 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -638,7 +392,7 @@ exports[`SocialEmbedContainer Canonical should render correctly without an embed
   margin: 0;
 }
 
-.emotion-2 {
+.c4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -650,24 +404,17 @@ exports[`SocialEmbedContainer Canonical should render correctly without an embed
   padding: 1rem;
 }
 
-@media (min-width:20rem) {
-  .emotion-2 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-.emotion-2 p {
+.c4 p {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
-.emotion-2 a,
-.emotion-2 small {
+.c4 a,
+.c4 small {
   display: block;
 }
 
-.emotion-2 a {
+.c4 a {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -676,61 +423,131 @@ exports[`SocialEmbedContainer Canonical should render correctly without an embed
   text-decoration: none;
 }
 
-.emotion-2 a:visited {
+.c4 a:visited {
   color: #6E6E73;
 }
 
-.emotion-2 a:hover,
-.emotion-2 a:focus {
+.c4 a:hover,
+.c4 a:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-2 small {
+.c4 small {
   margin-top: 0.5rem;
   font-size: 0.75rem;
   line-height: 1rem;
 }
 
-<div>
+.c1 {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+  max-width: 31.25rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (min-width:20rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: block;
+  }
+}
+
+<div
+  class="c0"
+  dir="ltr"
+>
   <div
-    class="emotion-10 emotion-11"
-    dir="ltr"
+    class="c1"
+    data-e2e="twitter-embed-https://twitter.com/MileyCyrus/status/1237210910835392512"
   >
     <div
-      class="emotion-8 emotion-9"
-      data-e2e="twitter-embed-https://twitter.com/MileyCyrus/status/1237210910835392512"
+      class="c2"
     >
-      <div
-        class="emotion-6 emotion-7"
+      <a
+        class="c3"
+        href="#skip-twitter-content-1"
       >
-        <a
-          class="emotion-0 emotion-1"
-          href="#skip-twitter-content-1"
-        >
-          Skip Twitter content, 1
-        </a>
-        <div
-          class="emotion-2 emotion-3"
-        >
-          <p>
-            Content is not available
-          </p>
-          <a
-            aria-label="View content on Twitter, external"
-            href="https://twitter.com/MileyCyrus/status/1237210910835392512"
-          >
-            View content on Twitter
-          </a>
-        </div>
-        <p
-          class="emotion-4 emotion-5"
-          id="skip-twitter-content-1"
-          tabindex="-1"
-        >
-          End of Twitter content, 1
+        Skip Twitter content, 1
+      </a>
+      <div
+        class="c4"
+      >
+        <p>
+          Content is not available
         </p>
+        <a
+          aria-label="View content on Twitter, external"
+          href="https://twitter.com/MileyCyrus/status/1237210910835392512"
+        >
+          View content on Twitter
+        </a>
       </div>
+      <p
+        class="c5"
+        id="skip-twitter-content-1"
+        tabindex="-1"
+      >
+        End of Twitter content, 1
+      </p>
     </div>
   </div>
 </div>

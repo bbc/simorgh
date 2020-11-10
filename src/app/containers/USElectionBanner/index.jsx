@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { number, string, shape } from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 // Styling
 import {

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { node } from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -13,7 +13,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import Grid, { GelPageGrid } from '#app/components/Grid';
+import Grid from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
@@ -184,9 +184,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   };
 
   const StyledTimestamp = styled(Timestamp)`
-    @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-      padding-bottom: ${GEL_SPACING_DBL};
-    }
+    padding-bottom: ${GEL_SPACING_DBL};
 
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
       padding-bottom: ${GEL_SPACING_TRPL};
@@ -194,16 +192,14 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   `;
 
   const StyledByline = styled(Byline)`
-    @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-      padding-bottom: ${GEL_SPACING_DBL};
-    }
+    padding-bottom: ${GEL_SPACING_DBL};
 
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
       padding-bottom: ${GEL_SPACING_TRPL};
     }
   `;
 
-  const StoryPageGrid = styled(GelPageGrid)`
+  const StoryPageGrid = styled(Grid)`
     width: 100%; /* Needed for IE11 */
     margin: 0 auto;
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -242,8 +238,14 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     }
   `;
 
+  const MostReadSection = styled.section.attrs(() => ({
+    role: 'region',
+    'aria-labelledby': 'Most-Read',
+    'data-e2e': 'most-read',
+  }))``;
+
   const MostReadWrapper = ({ children }) => (
-    <section role="region" aria-labelledby="Most-Read" data-e2e="most-read">
+    <MostReadSection>
       <SectionLabel
         script={script}
         labelId="Most-Read"
@@ -253,7 +255,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         {header}
       </SectionLabel>
       {children}
-    </section>
+    </MostReadSection>
   );
 
   MostReadWrapper.propTypes = {

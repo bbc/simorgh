@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
 import { string } from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import pathOr from 'ramda/src/pathOr';
 import moment from 'moment';
 import {
@@ -29,7 +29,10 @@ import { RADIO_SCHEDULE_FETCH_ERROR } from '#lib/logger.const';
 
 const logger = webLogger();
 
-const RadioScheduleSection = styled.section`
+const RadioScheduleSection = styled.section.attrs(() => ({
+  role: 'region',
+  'aria-labelledby': 'Radio-Schedule',
+}))`
   background-color: ${C_LUNAR};
   padding: 0 ${GEL_MARGIN_ABOVE_400PX};
 `;
@@ -52,7 +55,6 @@ const RadioScheduleSectionLabel = styled(SectionLabel)`
   width: 100%; /* Needed for IE11 */
   padding-top: ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin: 0 auto;
     padding-top: ${GEL_SPACING_TRPL};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -62,8 +64,8 @@ const RadioScheduleSectionLabel = styled(SectionLabel)`
 `;
 
 const RadioFrequencyLink = styled.a`
-  ${({ script }) => script && getLongPrimer(script)}
-  ${({ service }) => service && getSansRegular(service)}
+  ${({ script }) => script && getLongPrimer(script)};
+  ${({ service }) => service && getSansRegular(service)};
   color: ${C_EBON};
   text-decoration: none;
 
@@ -146,12 +148,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
   }
 
   return (
-    <RadioScheduleSection
-      className={className}
-      role="region"
-      aria-labelledby="Radio-Schedule"
-      {...(lang && { lang })}
-    >
+    <RadioScheduleSection className={className} {...(lang && { lang })}>
       <RadioScheduleSectionLabel
         script={script}
         labelId="Radio-Schedule"
