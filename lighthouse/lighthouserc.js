@@ -6,9 +6,12 @@ const AUDIT_URLS = {
 
   IDX: {
     live: ['https://www.bbc.com/persian/afghanistan'],
-    test: [
-      'https://www.test.bbc.com/persian/afghanistan',
-    ],
+    test: ['https://www.test.bbc.com/persian/afghanistan'],
+  },
+
+  FIX: {
+    live: ['https://www.bbc.com/persian/science-52004647'],
+    test: ['https://www.test.bbc.com/persian/23278332'],
   },
 
   LIVE_RADIO: {
@@ -17,21 +20,21 @@ const AUDIT_URLS = {
   },
 
   OD_RADIO: {
-    live: ['https://www.bbc.com/pashto/bbc_pashto_radio/programmes/p056fcjb',],
+    live: ['https://www.bbc.com/pashto/bbc_pashto_radio/programmes/p056fcjb'],
     test: [
       'https://www.test.bbc.com/pashto/bbc_pashto_radio/programmes/p056fcjb',
     ],
   },
 
   OD_TV: {
-    live: ['https://www.bbc.com/pashto/bbc_pashto_tv/tv_programmes/w13xttn4',],
+    live: ['https://www.bbc.com/pashto/bbc_pashto_tv/tv_programmes/w13xttn4'],
     test: [
       'https://www.test.bbc.com/pashto/bbc_pashto_tv/tv_programmes/w13xttn4',
     ],
   },
 
   MAP: {
-    live: [],
+    live: ['https://www.bbc.com/mundo/media-52123665'],
     test: ['https://www.test.bbc.com/pidgin/23248703'],
   },
 
