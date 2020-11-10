@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import SectionLabel from '@bbc/psammead-section-label';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,

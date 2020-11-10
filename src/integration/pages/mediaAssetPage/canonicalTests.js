@@ -11,7 +11,7 @@ export default service => {
 
   it('I can see the placeholder loading image', () => {
     const loadingImageWrapper = document.querySelector(
-      "div[class*='LoadingImageWrapper']",
+      "div[class^='LoadingImageWrapper']",
     );
     expect(loadingImageWrapper).toBeInTheDocument();
     expect(loadingImageWrapper).toMatchSnapshot();

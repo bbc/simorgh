@@ -15,7 +15,7 @@ const renderNoScriptTrackingPixel = atiPageViewUrl => (
       alt=""
       // This should probably have been a styled component. But the author is
       // lazy and didn't want to write a fuzzy matcher for the unit AND e2e
-      // tests (you can't predict the class names chosen by emotion)
+      // tests (you can't predict the class names chosen by styled-components)
       style={{ position: 'absolute' }}
       src={getNoJsATIPageViewUrl(atiPageViewUrl)}
     />

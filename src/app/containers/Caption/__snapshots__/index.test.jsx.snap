@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render caption text with example Farsi offscreen text 1`] = `
-.emotion-0 {
+.c1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -13,7 +13,7 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   margin: 0;
 }
 
-.emotion-2 {
+.c0 {
   font-size: 1.0625rem;
   line-height: 1.5rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -24,113 +24,61 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   width: 100%;
 }
 
+.c0 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c0 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c0 i {
+  font-style: normal;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+  .c0 {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .c0 {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-2 {
+  .c0 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-2 {
+  .c0 {
     padding: 0.5rem 0 0;
   }
 }
 
-.emotion-2 > p {
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.emotion-2 > p:last-child {
-  padding-bottom: 0;
-}
-
-.emotion-2 i {
-  font-style: normal;
-}
-
-<div>
-  <figcaption
-    class="emotion-2 emotion-3"
+<figcaption
+  class="c0"
+>
+  <span
+    class="c1"
   >
-    <span
-      class="emotion-0 emotion-1"
-    >
-       ، عنوان
-    </span>
-    <p>
-      Some caption text...
-    </p>
-  </figcaption>
-</div>
+     ، عنوان
+  </span>
+  <p>
+    Some caption text...
+  </p>
+</figcaption>
 `;
 
 exports[`should render caption text with example News offscreen text 1`] = `
-.emotion-2 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
-  width: 100%;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-2 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-2 {
-    padding: 0.5rem 0 0;
-  }
-}
-
-.emotion-2 > p {
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.emotion-2 > p:last-child {
-  padding-bottom: 0;
-}
-
-.emotion-2 i {
-  font-style: normal;
-}
-
-.emotion-0 {
+.c1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -142,74 +90,72 @@ exports[`should render caption text with example News offscreen text 1`] = `
   margin: 0;
 }
 
-<div>
-  <figcaption
-    class="emotion-2 emotion-3"
+.c0 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #6E6E73;
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+}
+
+.c0 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c0 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c0 i {
+  font-style: normal;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0.5rem 1rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding: 0.5rem 0 0;
+  }
+}
+
+<figcaption
+  class="c0"
+>
+  <span
+    class="c1"
   >
-    <span
-      class="emotion-0 emotion-1"
-    >
-      Caption, 
-    </span>
-    <p>
-      Some caption text...
-    </p>
-  </figcaption>
-</div>
+    Caption, 
+  </span>
+  <p>
+    Some caption text...
+  </p>
+</figcaption>
 `;
 
 exports[`should render caption with multiple paragraphs 1`] = `
-.emotion-2 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
-  width: 100%;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-2 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-2 {
-    padding: 0.5rem 0 0;
-  }
-}
-
-.emotion-2 > p {
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.emotion-2 > p:last-child {
-  padding-bottom: 0;
-}
-
-.emotion-2 i {
-  font-style: normal;
-}
-
-.emotion-0 {
+.c1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -221,80 +167,78 @@ exports[`should render caption with multiple paragraphs 1`] = `
   margin: 0;
 }
 
-<div>
-  <figcaption
-    class="emotion-2 emotion-3"
+.c0 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #6E6E73;
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+}
+
+.c0 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c0 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c0 i {
+  font-style: normal;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0.5rem 1rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding: 0.5rem 0 0;
+  }
+}
+
+<figcaption
+  class="c0"
+>
+  <span
+    class="c1"
   >
-    <span
-      class="emotion-0 emotion-1"
-    >
-      Caption, 
-    </span>
-    <p>
-      This is paragraph 1
-    </p>
-    <p>
-      This is paragraph 2
-    </p>
-    <p>
-      Paragraph 3
-    </p>
-  </figcaption>
-</div>
+    Caption, 
+  </span>
+  <p>
+    This is paragraph 1
+  </p>
+  <p>
+    This is paragraph 2
+  </p>
+  <p>
+    Paragraph 3
+  </p>
+</figcaption>
 `;
 
 exports[`should render correctly with inline block 1`] = `
-.emotion-6 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
-  width: 100%;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-6 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-6 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-6 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-6 {
-    padding: 0.5rem 0 0;
-  }
-}
-
-.emotion-6 > p {
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.emotion-6 > p:last-child {
-  padding-bottom: 0;
-}
-
-.emotion-6 i {
-  font-style: normal;
-}
-
-.emotion-0 {
+.c1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -306,55 +250,103 @@ exports[`should render correctly with inline block 1`] = `
   margin: 0;
 }
 
-.emotion-4 {
+.c0 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #6E6E73;
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+}
+
+.c0 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-2 {
+.c0 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c0 i {
+  font-style: normal;
+}
+
+.c3 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-2:visited {
+.c3:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-2:focus,
-.emotion-2:hover {
+.c3:focus,
+.c3:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-<div>
-  <figcaption
-    class="emotion-6 emotion-7"
+.c2 {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0.5rem 1rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding: 0.5rem 0 0;
+  }
+}
+
+<figcaption
+  class="c0"
+>
+  <span
+    class="c1"
   >
+    Caption, 
+  </span>
+  <p>
+    <b>
+      This is some text.
+    </b>
     <span
-      class="emotion-0 emotion-1"
+      class="c2"
+      lang="fa"
     >
-      Caption, 
-    </span>
-    <p>
-      <b>
-        This is some text.
-      </b>
-      <span
-        class="emotion-4 emotion-5"
-        lang="fa"
+      <a
+        aria-label="چیسربرگرundefined"
+        class="c3"
+        href="https://google.com"
       >
-        <a
-          aria-label="چیسربرگرundefined"
-          class="emotion-2 emotion-3"
-          href="https://google.com"
-        >
-          چیسربرگر
-        </a>
-      </span>
-    </p>
-  </figcaption>
-</div>
+        چیسربرگر
+      </a>
+    </span>
+  </p>
+</figcaption>
 `;

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import path from 'ramda/src/path';
 import {
   GEL_SPACING,
@@ -7,10 +7,7 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { Headline } from '@bbc/psammead-headings';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -23,9 +20,7 @@ import { GridItemLarge } from '#app/components/Grid';
 const FauxHeadline = props => <Headline as="strong" {...props} />;
 
 const StyledFauxHeadline = styled(FauxHeadline)`
-  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    padding: ${GEL_SPACING} 0 ${GEL_SPACING_QUAD};
-  }
+  padding: ${GEL_SPACING} 0 ${GEL_SPACING_QUAD};
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_QUIN};

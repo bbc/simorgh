@@ -7,6 +7,7 @@ const options = {
   ignoreDirs: ['build'],
   ignoreMatches: [
     'puppeteer',
+    'styled-normalize',
     'isarray',
     'jest-environment-jsdom',
     '@testing-library/dom',

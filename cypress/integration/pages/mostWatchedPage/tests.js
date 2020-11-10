@@ -23,15 +23,15 @@ export default ({ service, pageType, variant }) => {
           if (mostWatchedIsEnabled) {
             cy.request(mostWatchedPath).then(({ body: mostWatchedJson }) => {
               if (mostWatchedJson.totalRecords > 0) {
-                cy.get('[data-e2e="most-watched-heading"]').should('exist');
+                cy.get('[data-e2e=most-watched-heading]').should('exist');
               } else {
                 cy.log('Not enough records to show component');
 
-                cy.get('[data-e2e="most-watched-heading"]').should('not.exist');
+                cy.get('[data-e2e=most-watched-heading]').should('not.exist');
               }
             });
           } else {
-            cy.get('[data-e2e="most-watched-heading"]').should('not.exist');
+            cy.get('[data-e2e=most-watched-heading]').should('not.exist');
           }
         });
       });
@@ -64,15 +64,15 @@ export default ({ service, pageType, variant }) => {
                 mostWatchedJson.totalRecords === 1 ||
                 maxNumberofItems === '1'
               ) {
-                cy.get('[data-e2e="most-watched-heading"]').within(() => {
-                  cy.get('[data-e2e="story-promo"]')
+                cy.get('[data-e2e=most-watched-heading]').within(() => {
+                  cy.get('[data-e2e=story-promo]')
                     .its('length')
                     .should('eq', 1);
                 });
               } else {
                 cy.log(maxNumberofItems);
-                cy.get('[data-e2e="most-watched-heading"]').within(() => {
-                  cy.get('[data-e2e="most-watched-ol"]')
+                cy.get('[data-e2e=most-watched-heading]').within(() => {
+                  cy.get('[class^="MostWatchedOl"]')
                     .find('>li')
                     .its('length')
                     .should('eq', expectedNumberOfItems);

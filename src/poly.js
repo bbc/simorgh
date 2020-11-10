@@ -5,7 +5,7 @@ import 'core-js/es/set';
 
 // Needed by Styled Components
 // IE11, IE10
-// import 'core-js/es/symbol';
+import 'core-js/es/symbol';
 
 // Needed by React Loadable
 // IE11, IE10

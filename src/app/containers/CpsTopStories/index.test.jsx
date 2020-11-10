@@ -74,7 +74,7 @@ describe('CpsRelatedContent', () => {
 
     const { asFragment } = renderTopStories();
 
-    expect(document.querySelectorAll(`li[class*='StoryPromoLi']`).length).toBe(
+    expect(document.querySelectorAll(`li[class^='StoryPromoLi']`).length).toBe(
       topStories.length,
     );
 
@@ -90,7 +90,7 @@ describe('CpsRelatedContent', () => {
 
     const { asFragment } = renderTopStories({ content: topStoriesOneItem });
 
-    expect(document.querySelectorAll(`li[class*='StoryPromoLi']`).length).toBe(
+    expect(document.querySelectorAll(`li[class^='StoryPromoLi']`).length).toBe(
       0,
     );
 
@@ -120,7 +120,7 @@ describe('CpsRelatedContent', () => {
 
   it('should not render Top Stories components if no data is passed', () => {
     renderTopStoriesNull();
-    expect(document.querySelectorAll(`li[class*='StoryPromoLi']`).length).toBe(
+    expect(document.querySelectorAll(`li[class^='StoryPromoLi']`).length).toBe(
       0,
     );
   });

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MPU should render without gel margins at all breakpoints and gel padding at smaller breakpoints 1`] = `
-.emotion-1 {
+.c0 {
   background-color: #F8F8F8;
   display: none;
   visibility: hidden;
@@ -9,7 +9,7 @@ exports[`MPU should render without gel margins at all breakpoints and gel paddin
 }
 
 @media (min-width:18.75rem) {
-  .emotion-1 {
+  .c0 {
     min-height: 5.1875rem;
     display: -webkit-box;
     display: -webkit-flex;
@@ -27,38 +27,38 @@ exports[`MPU should render without gel margins at all breakpoints and gel paddin
 }
 
 @media (min-width:19.75rem) {
-  .emotion-1 {
+  .c0 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-1 {
+  .c0 {
     min-height: 17.6875rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .emotion-1 {
+  .c1 {
     margin: 2rem -0.5rem 0;
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) {
-  .emotion-1 {
+  .c1 {
     margin: 2rem -1rem 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-1 {
+  .c1 {
     margin: 1.5rem -1rem 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .emotion-1 {
+  .c1 {
     padding: 0;
   }
 }
@@ -67,7 +67,7 @@ exports[`MPU should render without gel margins at all breakpoints and gel paddin
   <section
     aria-hidden="true"
     aria-label="Advertisement 2"
-    class="emotion-0 emotion-1 emotion-2"
+    class="c0 c1"
     data-e2e="advertisement"
     role="region"
   >

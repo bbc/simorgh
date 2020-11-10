@@ -113,7 +113,7 @@ export const testsThatFollowSmokeTestConfig = ({
               'text/html',
             );
             cy.visit(`${config[service].name}/404`)
-              .get('[data-e2e="status-code"]')
+              .get('[class^="StatusCode"]')
               .should(
                 'contain',
                 appConfig[config[service].name][variant].translations.error[404]
@@ -127,7 +127,7 @@ export const testsThatFollowSmokeTestConfig = ({
               'text/html',
             );
             cy.visit(`${config[service].name}/500`)
-              .get('[data-e2e="status-code"]')
+              .get('[class^="StatusCode"]')
               .should(
                 'contain',
                 appConfig[config[service].name][variant].translations.error[500]

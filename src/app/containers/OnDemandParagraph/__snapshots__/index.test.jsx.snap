@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MediaPageBlocks Paragraph should render correctly - dark mode 1`] = `
-.emotion-0 {
+.c0 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -13,37 +13,35 @@ exports[`MediaPageBlocks Paragraph should render correctly - dark mode 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+  .c0 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c0 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .emotion-0 {
+  .c0 {
     padding-bottom: 0.5rem;
   }
 }
 
-<div>
-  <p
-    class="emotion-0 emotion-1"
-    id="idAttr"
-  >
-    Example text
-  </p>
-</div>
+<p
+  class="c0"
+  id="idAttr"
+>
+  Example text
+</p>
 `;
 
 exports[`MediaPageBlocks Paragraph should render correctly 1`] = `
-.emotion-0 {
+.c0 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -55,31 +53,29 @@ exports[`MediaPageBlocks Paragraph should render correctly 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+  .c0 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .c0 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .emotion-0 {
+  .c0 {
     padding-bottom: 0.5rem;
   }
 }
 
-<div>
-  <p
-    class="emotion-0 emotion-1"
-    id="idAttr"
-  >
-    Example text
-  </p>
-</div>
+<p
+  class="c0"
+  id="idAttr"
+>
+  Example text
+</p>
 `;

@@ -13,15 +13,13 @@ exports[`Comscore Analytics Container AMP should render comscore amp-analytics c
 `;
 
 exports[`Comscore Analytics Container Canonical should render comscore script when on canonical 1`] = `
-<div>
-  <amp-analytics
-    type="comscore"
+<amp-analytics
+  type="comscore"
+>
+  <script
+    type="application/json"
   >
-    <script
-      type="application/json"
-    >
-      {"vars":{"c2":"17986528"},"extraUrlParams":{"comscorekw":"amp"}}
-    </script>
-  </amp-analytics>
-</div>
+    {"vars":{"c2":"17986528"},"extraUrlParams":{"comscorekw":"amp"}}
+  </script>
+</amp-analytics>
 `;

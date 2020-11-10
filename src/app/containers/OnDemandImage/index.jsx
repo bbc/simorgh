@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import {
   GEL_SPACING_QUAD,
   GEL_SPACING_DBL,
@@ -41,7 +41,7 @@ const OnDemandImage = ({ imageUrl, dir }) => {
   const sizes = '(min-width: 1008px) 228px, 30vw';
 
   return (
-    <ImageContainer data-e2e="on-demand-image" dir={dir}>
+    <ImageContainer dir={dir}>
       <ImageWithPlaceholder
         src={src}
         alt={alt}

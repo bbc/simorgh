@@ -111,9 +111,9 @@ export const testsThatFollowSmokeTestConfig = ({
                   // If an image has a BBC copyright, the copyright holder (<p>) does not appear on images.
                   // This is why we're asserting the value. If the copyright does not appear and is not
                   // 'BBC' then it is clear there is an error with this component.
-                  cy.get('p[class*="Copyright"]').should('not.exist');
+                  cy.get('p[class^="Copyright"]').should('not.exist');
                 } else {
-                  cy.get('p[class*="Copyright"]')
+                  cy.get('p[class^="Copyright"]')
                     .should('be.visible')
                     .and('contain', copyrightHolder);
                 }
@@ -132,7 +132,7 @@ export const testsThatFollowSmokeTestConfig = ({
 
       if (serviceHasInlineLink(service) && Cypress.env('APP_ENV') === 'local') {
         it('should have an inlink link to an article page', () => {
-          cy.get('[class*="InlineLink"]')
+          cy.get('[class^="InlineLink"]')
             .eq(1)
             .should('have.attr', 'href')
             .then(href => {

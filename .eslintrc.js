@@ -40,7 +40,6 @@ module.exports = {
       },
     ],
     'import/extensions': [1, { json: 'ignorePackages' }],
-    'jsx-a11y/no-redundant-roles': 'off',
   },
   settings: {
     'import/resolver': {

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import Lazyload from 'react-lazyload';
 import {
   AmpSocialEmbed,

@@ -2,16 +2,12 @@
 
 exports[`Consent Banner Container should correctly render amp banner 1`] = `
 <div>
-  <div>
-    Amp Cookie banner
-  </div>
+  Amp Cookie banner
 </div>
 `;
 
 exports[`Consent Banner Container should correctly render canonical banner 1`] = `
 <div>
-  <div>
-    Canonical Cookie banner
-  </div>
+  Canonical Cookie banner
 </div>
 `;

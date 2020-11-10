@@ -1,44 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Story Promo Media Indicator should render a photo gallery item correctly 1`] = `
-.emotion-4 {
-  color: #222222;
-  background-color: #FFFFFF;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  display: block;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-4 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.emotion-0 {
+.c2 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -47,39 +10,7 @@ exports[`Story Promo Media Indicator should render a photo gallery item correctl
   height: 0.8125rem;
 }
 
-<div>
-  <div
-    aria-hidden="true"
-    class="emotion-4 emotion-5"
-    dir="ltr"
-  >
-    <div
-      class="emotion-2 emotion-3"
-    >
-      <svg
-        aria-hidden="true"
-        class="emotion-0 emotion-1"
-        focusable="false"
-        height="13px"
-        viewBox="0 0 32 26"
-        width="16px"
-      >
-        <path
-          d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
-        />
-        <circle
-          cx="20"
-          cy="14.02"
-          r="5.5"
-        />
-      </svg>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Story Promo Media Indicator should render a video item correctly 1`] = `
-.emotion-6 {
+.c0 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -90,21 +21,7 @@ exports[`Story Promo Media Indicator should render a video item correctly 1`] = 
   display: block;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-6 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-6 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-.emotion-4 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -116,11 +33,51 @@ exports[`Story Promo Media Indicator should render a video item correctly 1`] = 
   height: 100%;
 }
 
-.emotion-2 {
-  padding: 0 0.25rem;
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
 }
 
-.emotion-0 {
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+<div
+  aria-hidden="true"
+  class="c0"
+  dir="ltr"
+>
+  <div
+    class="c1"
+  >
+    <svg
+      aria-hidden="true"
+      class="c2"
+      focusable="false"
+      height="13px"
+      viewBox="0 0 32 26"
+      width="16px"
+    >
+      <path
+        d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
+      />
+      <circle
+        cx="20"
+        cy="14.02"
+        r="5.5"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Story Promo Media Indicator should render a video item correctly 1`] = `
+.c2 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -129,40 +86,7 @@ exports[`Story Promo Media Indicator should render a video item correctly 1`] = 
   height: 0.75rem;
 }
 
-<div>
-  <div
-    aria-hidden="true"
-    class="emotion-6 emotion-7"
-    dir="ltr"
-  >
-    <div
-      class="emotion-4 emotion-5"
-    >
-      <svg
-        aria-hidden="true"
-        class="emotion-0 emotion-1"
-        focusable="false"
-        height="12px"
-        viewBox="0 0 32 32"
-        width="12px"
-      >
-        <polygon
-          points="3,32 29,16 3,0"
-        />
-      </svg>
-      <time
-        class="emotion-2 emotion-3"
-        datetime="PT1H33M20S"
-      >
-        1:33:20
-      </time>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Story Promo Media Indicator should render an audio item correctly 1`] = `
-.emotion-6 {
+.c0 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -173,21 +97,7 @@ exports[`Story Promo Media Indicator should render an audio item correctly 1`] =
   display: block;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-6 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-6 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-.emotion-4 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -199,7 +109,56 @@ exports[`Story Promo Media Indicator should render an audio item correctly 1`] =
   height: 100%;
 }
 
-.emotion-0 {
+.c3 {
+  padding: 0 0.25rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+<div
+  aria-hidden="true"
+  class="c0"
+  dir="ltr"
+>
+  <div
+    class="c1"
+  >
+    <svg
+      aria-hidden="true"
+      class="c2"
+      focusable="false"
+      height="12px"
+      viewBox="0 0 32 32"
+      width="12px"
+    >
+      <polygon
+        points="3,32 29,16 3,0"
+      />
+    </svg>
+    <time
+      class="c3"
+      datetime="PT1H33M20S"
+    >
+      1:33:20
+    </time>
+  </div>
+</div>
+`;
+
+exports[`Story Promo Media Indicator should render an audio item correctly 1`] = `
+.c2 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -208,47 +167,7 @@ exports[`Story Promo Media Indicator should render an audio item correctly 1`] =
   height: 0.75rem;
 }
 
-.emotion-2 {
-  padding: 0 0.25rem;
-}
-
-<div>
-  <div
-    aria-hidden="true"
-    class="emotion-6 emotion-7"
-    dir="ltr"
-  >
-    <div
-      class="emotion-4 emotion-5"
-    >
-      <svg
-        aria-hidden="true"
-        class="emotion-0 emotion-1"
-        focusable="false"
-        height="12px"
-        viewBox="0 0 13 12"
-        width="13px"
-      >
-        <path
-          d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-        />
-        <path
-          d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-        />
-      </svg>
-      <time
-        class="emotion-2 emotion-3"
-        datetime="PT59S"
-      >
-        0:59
-      </time>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Story Promo Media Indicator should render correctly even without duration 1`] = `
-.emotion-4 {
+.c0 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -259,21 +178,91 @@ exports[`Story Promo Media Indicator should render correctly even without durati
   display: block;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.c3 {
+  padding: 0 0.25rem;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
+  .c0 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 {
+  .c0 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-2 {
+<div
+  aria-hidden="true"
+  class="c0"
+  dir="ltr"
+>
+  <div
+    class="c1"
+  >
+    <svg
+      aria-hidden="true"
+      class="c2"
+      focusable="false"
+      height="12px"
+      viewBox="0 0 13 12"
+      width="13px"
+    >
+      <path
+        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+      />
+      <path
+        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+      />
+    </svg>
+    <time
+      class="c3"
+      datetime="PT59S"
+    >
+      0:59
+    </time>
+  </div>
+</div>
+`;
+
+exports[`Story Promo Media Indicator should render correctly even without duration 1`] = `
+.c2 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.c0 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: block;
+}
+
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -285,55 +274,46 @@ exports[`Story Promo Media Indicator should render correctly even without durati
   height: 100%;
 }
 
-.emotion-0 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
 }
 
-<div>
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+<div
+  aria-hidden="true"
+  class="c0"
+  dir="ltr"
+>
   <div
-    aria-hidden="true"
-    class="emotion-4 emotion-5"
-    dir="ltr"
+    class="c1"
   >
-    <div
-      class="emotion-2 emotion-3"
+    <svg
+      aria-hidden="true"
+      class="c2"
+      focusable="false"
+      height="12px"
+      viewBox="0 0 32 32"
+      width="12px"
     >
-      <svg
-        aria-hidden="true"
-        class="emotion-0 emotion-1"
-        focusable="false"
-        height="12px"
-        viewBox="0 0 32 32"
-        width="12px"
-      >
-        <polygon
-          points="3,32 29,16 3,0"
-        />
-      </svg>
-    </div>
+      <polygon
+        points="3,32 29,16 3,0"
+      />
+    </svg>
   </div>
 </div>
 `;
 
 exports[`Story Promo Media Indicator should render video indicator correctly when inline 1`] = `
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.emotion-0 {
+.c2 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -342,7 +322,7 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
   height: 0.75rem;
 }
 
-.emotion-4 {
+.c0 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -355,48 +335,7 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
   padding-right: 0.5rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-4 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-<div>
-  <div
-    aria-hidden="true"
-    class="emotion-4 emotion-5"
-    dir="ltr"
-  >
-    <div
-      class="emotion-2 emotion-3"
-    >
-      <svg
-        aria-hidden="true"
-        class="emotion-0 emotion-1"
-        focusable="false"
-        height="12px"
-        viewBox="0 0 32 32"
-        width="12px"
-      >
-        <polygon
-          points="3,32 29,16 3,0"
-        />
-      </svg>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Story Promo Media Indicator should render video indicator correctly when inline on RTL 1`] = `
-.emotion-2 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -408,7 +347,46 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
   height: 100%;
 }
 
-.emotion-0 {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+<div
+  aria-hidden="true"
+  class="c0"
+  dir="ltr"
+>
+  <div
+    class="c1"
+  >
+    <svg
+      aria-hidden="true"
+      class="c2"
+      focusable="false"
+      height="12px"
+      viewBox="0 0 32 32"
+      width="12px"
+    >
+      <polygon
+        points="3,32 29,16 3,0"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Story Promo Media Indicator should render video indicator correctly when inline on RTL 1`] = `
+.c2 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -417,7 +395,7 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
   height: 0.75rem;
 }
 
-.emotion-4 {
+.c0 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -430,42 +408,52 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
   padding-left: 0.5rem;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
+  .c0 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 {
+  .c0 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-<div>
+<div
+  aria-hidden="true"
+  class="c0"
+  dir="rtl"
+>
   <div
-    aria-hidden="true"
-    class="emotion-4 emotion-5"
-    dir="rtl"
+    class="c1"
   >
-    <div
-      class="emotion-2 emotion-3"
+    <svg
+      aria-hidden="true"
+      class="c2"
+      focusable="false"
+      height="12px"
+      viewBox="0 0 32 32"
+      width="12px"
     >
-      <svg
-        aria-hidden="true"
-        class="emotion-0 emotion-1"
-        focusable="false"
-        height="12px"
-        viewBox="0 0 32 32"
-        width="12px"
-      >
-        <polygon
-          points="3,32 29,16 3,0"
-        />
-      </svg>
-    </div>
+      <polygon
+        points="3,32 29,16 3,0"
+      />
+    </svg>
   </div>
 </div>
 `;

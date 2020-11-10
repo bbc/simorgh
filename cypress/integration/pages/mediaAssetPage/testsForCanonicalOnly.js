@@ -108,13 +108,13 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
                 );
                 if (mostWatchedJson.totalRecords === 1) {
                   cy.get('[data-e2e=most-watched-heading]').within(() => {
-                    cy.get('[data-e2e="story-promo-wrapper"]')
+                    cy.get('[class^="StoryPromoWrapper"]')
                       .its('length')
                       .should('eq', 1);
                   });
                 } else {
                   cy.get('[data-e2e=most-watched-heading]').within(() => {
-                    cy.get('[data-e2e="most-watched-ol"]')
+                    cy.get('[class^="MostWatchedOl"]')
                       .find('>li')
                       .its('length')
                       .should('eq', expectedNumberOfItems);
