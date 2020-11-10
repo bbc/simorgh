@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
 import { string, node, number } from 'prop-types';
 import GRID from '@bbc/psammead-grid';
 import {
@@ -35,7 +35,7 @@ const fiveOfSixColumnsMaxWidthScaleable = `83.33%`;
 const fourOfSixColumnsMaxWidthScaleable = `66.67%`;
 // (4 / 6) * 100 = 66.6666.. = 66.67%
 
-export const gelGridMargin = css`
+export const gelGridMargin = `
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: 0 ${GEL_MARGIN_BELOW_400PX};
   }
@@ -44,20 +44,18 @@ export const gelGridMargin = css`
   }
 `;
 
-const layoutGridItemSmall = css`
+const layoutGridItemSmall = ({ padding = {} }) => `
   ${gelGridMargin}
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    ${({ padding = {} }) =>
-      padding.group2 ? `padding: 0 ${padding.group2}` : ''};
+    ${padding.group2 ? `padding: 0 ${padding.group2}` : ''};
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     max-width: ${fourOfSixColumnsMaxWidthScaleable};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     max-width: ${fiveOfSixColumnsMaxWidthScaleable};
-    ${({ padding = {} }) =>
-      padding.group3 ? `padding: 0 ${padding.group3}` : ''};
+    ${padding.group3 ? `padding: 0 ${padding.group3}` : ''};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     max-width: ${fourOfSixColumnsMaxWidthGroup4};
@@ -110,10 +108,9 @@ export const CPSPageGrid = ({ children, ...props }) => (
   </StyledCPSPageGrid>
 );
 
-export const GridWrapper = ({ as, ...props }) => (
+export const GridWrapper = props => (
   <GelPageGrid
     {...props}
-    forwardedAs={as}
     enableGelGutters
     columns={{
       group0: 6,
@@ -126,10 +123,9 @@ export const GridWrapper = ({ as, ...props }) => (
   />
 );
 
-export const GridItemSmall = styled(({ as, ...props }) => (
+export const GridItemSmall = styled(props => (
   <Grid
     {...props}
-    forwardedAs={as}
     item
     startOffset={{
       group0: 1,
@@ -152,10 +148,9 @@ export const GridItemSmall = styled(({ as, ...props }) => (
   ${layoutGridItemSmall}
 `;
 
-export const GridItemMedium = ({ as, gridColumnStart, gridSpan, ...props }) => (
+export const GridItemMedium = ({ gridColumnStart, gridSpan, ...props }) => (
   <Grid
     {...props}
-    forwardedAs={as}
     item
     margins={{
       group0: true,
@@ -185,14 +180,12 @@ export const GridItemMedium = ({ as, gridColumnStart, gridSpan, ...props }) => (
 );
 
 export const GridItemMediumNoMargin = ({
-  as,
   gridColumnStart,
   gridSpan,
   ...props
 }) => (
   <Grid
     {...props}
-    forwardedAs={as}
     item
     startOffset={{
       group0: 1,
@@ -213,10 +206,9 @@ export const GridItemMediumNoMargin = ({
   />
 );
 
-export const GridItemLarge = ({ as, ...props }) => (
+export const GridItemLarge = props => (
   <Grid
     {...props}
-    forwardedAs={as}
     item
     margins={{
       group0: true,
@@ -245,10 +237,9 @@ export const GridItemLarge = ({ as, ...props }) => (
   />
 );
 
-export const GridItemLargeNoMargin = ({ as, ...props }) => (
+export const GridItemLargeNoMargin = props => (
   <Grid
     {...props}
-    forwardedAs={as}
     item
     startOffset={{
       group0: 1,
@@ -281,10 +272,9 @@ const PopOutAtGroup5 = styled(GridItemMedium)`
     }
   }
 `;
-export const PopOutGridItemMedium = props => {
-  const { children } = props;
-  return <PopOutAtGroup5 {...props}>{children}</PopOutAtGroup5>;
-};
+export const PopOutGridItemMedium = ({ children, ...props }) => (
+  <PopOutAtGroup5 {...props}>{children}</PopOutAtGroup5>
+);
 
 GridItemLarge.propTypes = {
   as: string,
