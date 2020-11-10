@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { arrayOf, shape, node } from 'prop-types';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -17,7 +17,6 @@ import {
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Grid, { GelPageGrid } from '#app/components/Grid';
-import IndexMain from '#app/components/PageLayout/IndexMain';
 import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
 import IndexHeading from '#containers/IndexHeading';
 import MostWatchedContainer from '#containers/MostWatched';
@@ -105,14 +104,14 @@ const MostWatchedPage = ({ pageData }) => {
       <ATIAnalytics data={pageData} />
       <LinkedData type="WebPage" seoTitle={header} />
       <ChartbeatAnalytics data={pageData} />
-      <IndexMain data-e2e="most-watched">
+      <main role="main" data-e2e="most-watched">
         <StyledIndexPageContainer>
           <MostWatchedWrapper>
             <StyledIndexHeading id="content">{header}</StyledIndexHeading>
             <MostWatchedContainer data={mostWatchedData} isMostWatchedPage />
           </MostWatchedWrapper>
         </StyledIndexPageContainer>
-      </IndexMain>
+      </main>
     </>
   );
 };

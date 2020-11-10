@@ -1,748 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Canonical RadioSchedule With initial data renders correctly for a service 1`] = `
-.c15 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.725rem;
-  height: 0.725rem;
-}
-
-.c28 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.8125rem;
-  height: 0.75rem;
-}
-
-.c22 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c24 {
-  color: #3F3F42;
-  padding: 0.5rem 0;
-  display: inline-block;
-  width: 100%;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
-}
-
-.c32 {
-  color: #6E6E73;
-  padding: 0.5rem 0;
-  display: inline-block;
-  width: 100%;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
-}
-
-.c21 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c21:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c21:hover,
-.c21:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c21:visited {
-  color: #6E6E73;
-}
-
-.c21:hover .c23 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c21:focus .c23 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c18 {
-  padding-top: 0.5rem;
-  background-color: #FFFFFF;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  outline: 0.0625rem solid transparent;
-  height: 100%;
-}
-
-.c19 {
-  padding: 0 0.5rem;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c20 {
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
-  color: #222222;
-  margin: 0;
-}
-
-.c30 {
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
-  color: #6E6E73;
-  margin: 0;
-}
-
-.c31 {
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
-  color: #11708C;
-  display: inline-block;
-  margin-left: 0.5rem;
-}
-
-.c25 {
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  color: #6E6E73;
-  padding-bottom: 1rem;
-  margin: 0;
-}
-
-.c26 {
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  padding: 0.5rem;
-  background-color: #222222;
-  outline: 0.0625rem solid transparent;
-  color: #FFFFFF;
-}
-
-.c33 {
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  padding: 0.5rem;
-  background-color: #FFFFFF;
-  outline: 0.0625rem solid transparent;
-  color: #11708C;
-}
-
-.c27 > svg {
-  color: #FFFFFF;
-  fill: currentColor;
-  width: 1.0625rem;
-  height: 0.75rem;
-  margin: 0;
-}
-
-.c34 > svg {
-  color: #11708C;
-  fill: currentColor;
-  width: 1.0625rem;
-  height: 0.75rem;
-  margin: 0;
-}
-
-.c29 {
-  padding-right: 0.5rem;
-}
-
-.c17 {
-  font-size: 1rem;
-  line-height: 1.25rem;
-  color: #6E6E73;
-  display: block;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-left: 0.25rem;
-}
-
-.c14 > svg {
-  color: #5A5A5A;
-  margin: 0;
-  overflow: visible;
-}
-
-.c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  width: 100%;
-}
-
-.c16 > time {
-  color: #5A5A5A;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c16::after {
-  content: '';
-  border-top: 0.0625rem solid #AEAEB5;
-  top: 1rem;
-  margin-right: 0.625rem;
-  width: 100%;
-}
-
-.c12 {
-  padding-bottom: 0.5rem;
-}
-
-.c9 {
-  padding: 0;
-  margin: 0;
-}
-
-.c11 {
-  position: relative;
-  padding-bottom: 1rem;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c6 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #F2F2F2;
-  margin: 1rem 0;
-  padding-left: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c1 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-}
-
-.c3 {
-  margin: 0;
-  padding: 0;
-}
-
-.c0 {
-  background-color: #F2F2F2;
-  padding: 0 1rem;
-}
-
-.c7 {
-  margin: 0 auto;
-  width: 100%;
-  padding-bottom: 1rem;
-}
-
-.c2 {
-  margin: 0 auto;
-  width: 100%;
-  padding-top: 0.5rem;
-}
-
-.c35 {
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c35:hover,
-.c35:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c35:visited {
-  color: #6E6E73;
-}
-
-@media (max-width:14.9375rem) {
-  .c8 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c8 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c8 {
-    padding: 0 1rem;
-  }
-}
-
-@supports (display:grid) {
-  .c8 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c10 {
-    width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c10 {
-    width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c10 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c10 {
-    width: calc(3/6*(100% - 6 * 1rem) + 2 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c10 {
-    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c10 {
-    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c10 {
-    display: block;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c24 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c24 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c32 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c32 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c20 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c30 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c30 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c31 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c31 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c25 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c25 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c26 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c26 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c26 {
-    background-color: transparent;
-    outline: none;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c33 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c33 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c33 {
-    background-color: transparent;
-    outline: none;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c17 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c17 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c16 > time {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 > time {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c11 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    padding-left: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c1 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c7 {
-    max-width: 63rem;
-    padding-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    padding-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c2 {
-    max-width: 63rem;
-    padding-top: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c35 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c35 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
 <section
   aria-labelledby="Radio-Schedule"
-  class="c0"
+  class=" css-xuay09-RadioScheduleSection emotion-90"
   role="region"
 >
   <div
-    class="c1 c2"
+    class="emotion-4 css-16joe58-SectionLabelWrapper-RadioScheduleSectionLabel emotion-5"
   >
     <h2
-      class="c3"
+      class="css-1333sok-Heading emotion-3"
     >
       <span
-        class="c4"
+        class="css-143m08z-FlexColumn emotion-2"
       >
         <span
-          class="c5"
+          class="css-1jc9b24-FlexRow emotion-1"
         >
           <span
-            class="c6"
+            class="css-123k1wu-Title emotion-0"
             dir="rtl"
             id="Radio-Schedule"
           >
@@ -753,33 +30,33 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
     </h2>
   </div>
   <div
-    class="c7"
+    class="css-pme1b-RadioScheduleWrapper emotion-89"
     data-e2e="radio-schedule"
   >
-    <ul
-      class="c8 c9"
+    <div
+      class="emotion-86 css-129dsgx-GridComponent-StyledGrid emotion-25"
       dir="rtl"
       role="list"
     >
       <li
-        class="c10 c11"
+        class="emotion-24 css-oarqw3-GridComponent-StyledFlexGrid emotion-25"
         data-e2e="onDemand"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c12"
+          class="css-10pzo75-StartTimeWrapper emotion-11"
         >
           <div
-            class="c13"
+            class="css-14jp6ch-Wrapper emotion-10"
           >
             <span
-              class="c14"
+              class="css-cbs0v9-StyledClock emotion-7"
               dir="rtl"
             >
               <svg
                 aria-hidden="true"
-                class="c15"
+                class="css-6a3m3l-CoreIcon-ClockIcon emotion-6"
                 focusable="false"
                 height="13"
                 viewBox="0 0 13 13"
@@ -795,11 +72,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             </span>
             <span
               aria-hidden="true"
-              class="c16"
+              class="css-epwixk-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="c17"
+                class="css-v5wsd3-StyledTimestamp emotion-8"
                 datetime="2020-03-26"
               >
                 02:59
@@ -808,32 +85,31 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
           </div>
         </div>
         <div
-          class="c18"
+          class="css-1p5015p-CardWrapper emotion-23"
         >
           <div
-            class="c19"
+            class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="c20"
+              class="css-4538ei-StyledH3 emotion-15"
             >
               <a
-                class="c21"
+                class="css-1vkbim8-Link-StyledLink emotion-14"
                 href="/arabic/bbc_arabic_radio/w172x9qcpbyctzs"
               >
                 <span
-                  class=""
                   role="text"
                 >
                   العالم هذا الصباح
                   <span
-                    class="c22"
+                    class="css-ow3j0s-VisuallyHiddenText emotion-12"
                   >
                     , 
                     02:59
                     , 
                   </span>
                   <span
-                    class="c23 c24"
+                    class="css-17hnt5z-TitleWrapper emotion-13"
                   >
                     26 مارس/ آذار 2020
                   </span>
@@ -841,20 +117,20 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               </a>
             </h3>
             <p
-              class="c25"
+              class="css-q6ti1l-SummaryWrapper emotion-16"
             >
               الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
             </p>
           </div>
           <div
-            class="c26"
+            class="css-flfzp8-ButtonWrapper emotion-22"
           >
             <span
-              class="c27"
+              class="css-1smn0bu-IconWrapper emotion-19"
             >
               <svg
                 aria-hidden="true"
-                class="c28"
+                class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-18"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -869,18 +145,17 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               </svg>
             </span>
             <time
-              class="c29"
+              class="css-kyxutj-DurationWrapper emotion-21"
               datetime="PT2H"
               dir="rtl"
             >
               <span
-                class="c22"
+                class="css-ow3j0s-VisuallyHiddenText emotion-12"
               >
                  المدة 2،00،00 
               </span>
               <span
                 aria-hidden="true"
-                class=""
               >
                 2:00:00
               </span>
@@ -889,24 +164,24 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
         </div>
       </li>
       <li
-        class="c10 c11"
+        class="emotion-24 css-oarqw3-GridComponent-StyledFlexGrid emotion-25"
         data-e2e="onDemand"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c12"
+          class="css-10pzo75-StartTimeWrapper emotion-11"
         >
           <div
-            class="c13"
+            class="css-14jp6ch-Wrapper emotion-10"
           >
             <span
-              class="c14"
+              class="css-cbs0v9-StyledClock emotion-7"
               dir="rtl"
             >
               <svg
                 aria-hidden="true"
-                class="c15"
+                class="css-6a3m3l-CoreIcon-ClockIcon emotion-6"
                 focusable="false"
                 height="13"
                 viewBox="0 0 13 13"
@@ -922,11 +197,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             </span>
             <span
               aria-hidden="true"
-              class="c16"
+              class="css-epwixk-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="c17"
+                class="css-v5wsd3-StyledTimestamp emotion-8"
                 datetime="2020-03-26"
               >
                 02:30
@@ -935,32 +210,31 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
           </div>
         </div>
         <div
-          class="c18"
+          class="css-1p5015p-CardWrapper emotion-23"
         >
           <div
-            class="c19"
+            class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="c20"
+              class="css-4538ei-StyledH3 emotion-15"
             >
               <a
-                class="c21"
+                class="css-1vkbim8-Link-StyledLink emotion-14"
                 href="/arabic/bbc_arabic_radio/w172xbf7kbvtt4h"
               >
                 <span
-                  class=""
                   role="text"
                 >
                   موجز الأنباء
                   <span
-                    class="c22"
+                    class="css-ow3j0s-VisuallyHiddenText emotion-12"
                   >
                     , 
                     02:30
                     , 
                   </span>
                   <span
-                    class="c23 c24"
+                    class="css-17hnt5z-TitleWrapper emotion-13"
                   >
                     26 مارس/ آذار 2020
                   </span>
@@ -968,20 +242,20 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               </a>
             </h3>
             <p
-              class="c25"
+              class="css-q6ti1l-SummaryWrapper emotion-16"
             >
               نشرة موجزة في دقيقتين لأهم الأنباء الأقليمية والدولية
             </p>
           </div>
           <div
-            class="c26"
+            class="css-flfzp8-ButtonWrapper emotion-22"
           >
             <span
-              class="c27"
+              class="css-1smn0bu-IconWrapper emotion-19"
             >
               <svg
                 aria-hidden="true"
-                class="c28"
+                class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-18"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -996,18 +270,17 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               </svg>
             </span>
             <time
-              class="c29"
+              class="css-kyxutj-DurationWrapper emotion-21"
               datetime="PT2M"
               dir="rtl"
             >
               <span
-                class="c22"
+                class="css-ow3j0s-VisuallyHiddenText emotion-12"
               >
                  المدة 02،00 
               </span>
               <span
                 aria-hidden="true"
-                class=""
               >
                 02:00
               </span>
@@ -1016,24 +289,24 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
         </div>
       </li>
       <li
-        class="c10 c11"
+        class="emotion-24 css-oarqw3-GridComponent-StyledFlexGrid emotion-25"
         data-e2e="onDemand"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c12"
+          class="css-10pzo75-StartTimeWrapper emotion-11"
         >
           <div
-            class="c13"
+            class="css-14jp6ch-Wrapper emotion-10"
           >
             <span
-              class="c14"
+              class="css-cbs0v9-StyledClock emotion-7"
               dir="rtl"
             >
               <svg
                 aria-hidden="true"
-                class="c15"
+                class="css-6a3m3l-CoreIcon-ClockIcon emotion-6"
                 focusable="false"
                 height="13"
                 viewBox="0 0 13 13"
@@ -1049,11 +322,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             </span>
             <span
               aria-hidden="true"
-              class="c16"
+              class="css-epwixk-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="c17"
+                class="css-v5wsd3-StyledTimestamp emotion-8"
                 datetime="2020-03-26"
               >
                 02:00
@@ -1062,32 +335,31 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
           </div>
         </div>
         <div
-          class="c18"
+          class="css-1p5015p-CardWrapper emotion-23"
         >
           <div
-            class="c19"
+            class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="c20"
+              class="css-4538ei-StyledH3 emotion-15"
             >
               <a
-                class="c21"
+                class="css-1vkbim8-Link-StyledLink emotion-14"
                 href="/arabic/bbc_arabic_radio/w172xbdf3m84fx2"
               >
                 <span
-                  class=""
                   role="text"
                 >
                   نشرة الأخبار
                   <span
-                    class="c22"
+                    class="css-ow3j0s-VisuallyHiddenText emotion-12"
                   >
                     , 
                     02:00
                     , 
                   </span>
                   <span
-                    class="c23 c24"
+                    class="css-17hnt5z-TitleWrapper emotion-13"
                   >
                     26 مارس/ آذار 2020
                   </span>
@@ -1095,20 +367,20 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               </a>
             </h3>
             <p
-              class="c25"
+              class="css-q6ti1l-SummaryWrapper emotion-16"
             >
               نشرة اخبارية على رأس الساعة تركز على أهم أخبار المنطقة والعالم وتتضمن تصريحات المسؤولين وإفادات مراسلينا
             </p>
           </div>
           <div
-            class="c26"
+            class="css-flfzp8-ButtonWrapper emotion-22"
           >
             <span
-              class="c27"
+              class="css-1smn0bu-IconWrapper emotion-19"
             >
               <svg
                 aria-hidden="true"
-                class="c28"
+                class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-18"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -1123,18 +395,17 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               </svg>
             </span>
             <time
-              class="c29"
+              class="css-kyxutj-DurationWrapper emotion-21"
               datetime="PT6M"
               dir="rtl"
             >
               <span
-                class="c22"
+                class="css-ow3j0s-VisuallyHiddenText emotion-12"
               >
                  المدة 06،00 
               </span>
               <span
                 aria-hidden="true"
-                class=""
               >
                 06:00
               </span>
@@ -1143,24 +414,24 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
         </div>
       </li>
       <li
-        class="c10 c11"
+        class="emotion-24 css-oarqw3-GridComponent-StyledFlexGrid emotion-25"
         data-e2e="next"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c12"
+          class="css-10pzo75-StartTimeWrapper emotion-11"
         >
           <div
-            class="c13"
+            class="css-14jp6ch-Wrapper emotion-10"
           >
             <span
-              class="c14"
+              class="css-cbs0v9-StyledClock emotion-7"
               dir="rtl"
             >
               <svg
                 aria-hidden="true"
-                class="c15"
+                class="css-6a3m3l-CoreIcon-ClockIcon emotion-6"
                 focusable="false"
                 height="13"
                 viewBox="0 0 13 13"
@@ -1176,11 +447,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             </span>
             <span
               aria-hidden="true"
-              class="c16"
+              class="css-epwixk-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="c17"
+                class="css-v5wsd3-StyledTimestamp emotion-8"
                 datetime="2030-01-01"
               >
                 09:00
@@ -1189,54 +460,53 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
           </div>
         </div>
         <div
-          class="c18"
+          class="css-1p5015p-CardWrapper emotion-23"
         >
           <div
-            class="c19"
+            class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="c30"
+              class="css-18oq6bv-StyledH3 emotion-15"
             >
               <span
-                class=""
                 role="text"
               >
                 <span
-                  class="c31"
+                  class="css-vx3o02-NextLabel emotion-72"
                   dir="rtl"
                 >
                   لاحق 
                 </span>
                 العالم هذا الصباح
                 <span
-                  class="c22"
+                  class="css-ow3j0s-VisuallyHiddenText emotion-12"
                 >
                   , 
                   09:00
                   , 
                 </span>
                 <span
-                  class="c23 c32"
+                  class="css-he85cw-TitleWrapper emotion-13"
                 >
                   1 يناير/ كانون الثاني 2030
                 </span>
               </span>
             </h3>
             <p
-              class="c25"
+              class="css-q6ti1l-SummaryWrapper emotion-16"
             >
               الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
             </p>
           </div>
           <div
-            class="c33"
+            class="css-1x79dlv-ButtonWrapper emotion-22"
           >
             <span
-              class="c34"
+              class="css-1soil44-IconWrapper emotion-19"
             >
               <svg
                 aria-hidden="true"
-                class="c28"
+                class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-18"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -1251,18 +521,17 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               </svg>
             </span>
             <time
-              class="c29"
+              class="css-kyxutj-DurationWrapper emotion-21"
               datetime="PT1H30M30S"
               dir="rtl"
             >
               <span
-                class="c22"
+                class="css-ow3j0s-VisuallyHiddenText emotion-12"
               >
                  المدة 1،30،30 
               </span>
               <span
                 aria-hidden="true"
-                class=""
               >
                 1:30:30
               </span>
@@ -1270,9 +539,9 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
           </div>
         </div>
       </li>
-    </ul>
+    </div>
     <a
-      class="c35"
+      class="css-1e70u3e-RadioFrequencyLink emotion-88"
       href="/arabic/institutional/2011/01/000000_frequencies_radio"
     >
       استقبال البث
@@ -1282,748 +551,25 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 `;
 
 exports[`Canonical RadioSchedule Without initial data renders correctly for a service with a radio schedule and page frequency URL 1`] = `
-.c15 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.725rem;
-  height: 0.725rem;
-}
-
-.c28 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.8125rem;
-  height: 0.75rem;
-}
-
-.c22 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c24 {
-  color: #3F3F42;
-  padding: 0.5rem 0;
-  display: inline-block;
-  width: 100%;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
-}
-
-.c32 {
-  color: #6E6E73;
-  padding: 0.5rem 0;
-  display: inline-block;
-  width: 100%;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
-}
-
-.c21 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c21:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c21:hover,
-.c21:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c21:visited {
-  color: #6E6E73;
-}
-
-.c21:hover .c23 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c21:focus .c23 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c18 {
-  padding-top: 0.5rem;
-  background-color: #FFFFFF;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  outline: 0.0625rem solid transparent;
-  height: 100%;
-}
-
-.c19 {
-  padding: 0 0.5rem;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c20 {
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
-  color: #222222;
-  margin: 0;
-}
-
-.c30 {
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
-  color: #6E6E73;
-  margin: 0;
-}
-
-.c31 {
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
-  color: #11708C;
-  display: inline-block;
-  margin-left: 0.5rem;
-}
-
-.c25 {
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  color: #6E6E73;
-  padding-bottom: 1rem;
-  margin: 0;
-}
-
-.c26 {
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  padding: 0.5rem;
-  background-color: #222222;
-  outline: 0.0625rem solid transparent;
-  color: #FFFFFF;
-}
-
-.c33 {
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  padding: 0.5rem;
-  background-color: #FFFFFF;
-  outline: 0.0625rem solid transparent;
-  color: #11708C;
-}
-
-.c27 > svg {
-  color: #FFFFFF;
-  fill: currentColor;
-  width: 1.0625rem;
-  height: 0.75rem;
-  margin: 0;
-}
-
-.c34 > svg {
-  color: #11708C;
-  fill: currentColor;
-  width: 1.0625rem;
-  height: 0.75rem;
-  margin: 0;
-}
-
-.c29 {
-  padding-right: 0.5rem;
-}
-
-.c17 {
-  font-size: 1rem;
-  line-height: 1.25rem;
-  color: #6E6E73;
-  display: block;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-left: 0.25rem;
-}
-
-.c14 > svg {
-  color: #5A5A5A;
-  margin: 0;
-  overflow: visible;
-}
-
-.c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  width: 100%;
-}
-
-.c16 > time {
-  color: #5A5A5A;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c16::after {
-  content: '';
-  border-top: 0.0625rem solid #AEAEB5;
-  top: 1rem;
-  margin-right: 0.625rem;
-  width: 100%;
-}
-
-.c12 {
-  padding-bottom: 0.5rem;
-}
-
-.c9 {
-  padding: 0;
-  margin: 0;
-}
-
-.c11 {
-  position: relative;
-  padding-bottom: 1rem;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c6 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #F2F2F2;
-  margin: 1rem 0;
-  padding-left: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c1 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-}
-
-.c3 {
-  margin: 0;
-  padding: 0;
-}
-
-.c0 {
-  background-color: #F2F2F2;
-  padding: 0 1rem;
-}
-
-.c7 {
-  margin: 0 auto;
-  width: 100%;
-  padding-bottom: 1rem;
-}
-
-.c2 {
-  margin: 0 auto;
-  width: 100%;
-  padding-top: 0.5rem;
-}
-
-.c35 {
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c35:hover,
-.c35:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c35:visited {
-  color: #6E6E73;
-}
-
-@media (max-width:14.9375rem) {
-  .c8 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c8 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c8 {
-    padding: 0 1rem;
-  }
-}
-
-@supports (display:grid) {
-  .c8 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c10 {
-    width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c10 {
-    width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c10 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c10 {
-    width: calc(3/6*(100% - 6 * 1rem) + 2 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c10 {
-    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c10 {
-    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c10 {
-    display: block;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c24 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c24 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c32 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c32 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c20 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c30 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c30 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c31 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c31 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c25 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c25 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c26 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c26 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c26 {
-    background-color: transparent;
-    outline: none;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c33 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c33 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c33 {
-    background-color: transparent;
-    outline: none;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c17 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c17 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c16 > time {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 > time {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c11 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    padding-left: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c1 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c7 {
-    max-width: 63rem;
-    padding-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    padding-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c2 {
-    max-width: 63rem;
-    padding-top: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c35 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c35 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
 <section
   aria-labelledby="Radio-Schedule"
-  class="c0"
+  class=" css-xuay09-RadioScheduleSection emotion-90"
   role="region"
 >
   <div
-    class="c1 c2"
+    class="emotion-4 css-16joe58-SectionLabelWrapper-RadioScheduleSectionLabel emotion-5"
   >
     <h2
-      class="c3"
+      class="css-1333sok-Heading emotion-3"
     >
       <span
-        class="c4"
+        class="css-143m08z-FlexColumn emotion-2"
       >
         <span
-          class="c5"
+          class="css-1jc9b24-FlexRow emotion-1"
         >
           <span
-            class="c6"
+            class="css-123k1wu-Title emotion-0"
             dir="rtl"
             id="Radio-Schedule"
           >
@@ -2034,33 +580,33 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
     </h2>
   </div>
   <div
-    class="c7"
+    class="css-pme1b-RadioScheduleWrapper emotion-89"
     data-e2e="radio-schedule"
   >
-    <ul
-      class="c8 c9"
+    <div
+      class="emotion-86 css-129dsgx-GridComponent-StyledGrid emotion-25"
       dir="rtl"
       role="list"
     >
       <li
-        class="c10 c11"
+        class="emotion-24 css-oarqw3-GridComponent-StyledFlexGrid emotion-25"
         data-e2e="onDemand"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c12"
+          class="css-10pzo75-StartTimeWrapper emotion-11"
         >
           <div
-            class="c13"
+            class="css-14jp6ch-Wrapper emotion-10"
           >
             <span
-              class="c14"
+              class="css-cbs0v9-StyledClock emotion-7"
               dir="rtl"
             >
               <svg
                 aria-hidden="true"
-                class="c15"
+                class="css-6a3m3l-CoreIcon-ClockIcon emotion-6"
                 focusable="false"
                 height="13"
                 viewBox="0 0 13 13"
@@ -2076,11 +622,11 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             </span>
             <span
               aria-hidden="true"
-              class="c16"
+              class="css-epwixk-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="c17"
+                class="css-v5wsd3-StyledTimestamp emotion-8"
                 datetime="2020-03-26"
               >
                 02:59
@@ -2089,32 +635,31 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
           </div>
         </div>
         <div
-          class="c18"
+          class="css-1p5015p-CardWrapper emotion-23"
         >
           <div
-            class="c19"
+            class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="c20"
+              class="css-4538ei-StyledH3 emotion-15"
             >
               <a
-                class="c21"
+                class="css-1vkbim8-Link-StyledLink emotion-14"
                 href="/arabic/bbc_arabic_radio/w172x9qcpbyctzs"
               >
                 <span
-                  class=""
                   role="text"
                 >
                   العالم هذا الصباح
                   <span
-                    class="c22"
+                    class="css-ow3j0s-VisuallyHiddenText emotion-12"
                   >
                     , 
                     02:59
                     , 
                   </span>
                   <span
-                    class="c23 c24"
+                    class="css-17hnt5z-TitleWrapper emotion-13"
                   >
                     26 مارس/ آذار 2020
                   </span>
@@ -2122,20 +667,20 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               </a>
             </h3>
             <p
-              class="c25"
+              class="css-q6ti1l-SummaryWrapper emotion-16"
             >
               الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
             </p>
           </div>
           <div
-            class="c26"
+            class="css-flfzp8-ButtonWrapper emotion-22"
           >
             <span
-              class="c27"
+              class="css-1smn0bu-IconWrapper emotion-19"
             >
               <svg
                 aria-hidden="true"
-                class="c28"
+                class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-18"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -2150,18 +695,17 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               </svg>
             </span>
             <time
-              class="c29"
+              class="css-kyxutj-DurationWrapper emotion-21"
               datetime="PT2H"
               dir="rtl"
             >
               <span
-                class="c22"
+                class="css-ow3j0s-VisuallyHiddenText emotion-12"
               >
                  المدة 2،00،00 
               </span>
               <span
                 aria-hidden="true"
-                class=""
               >
                 2:00:00
               </span>
@@ -2170,24 +714,24 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
         </div>
       </li>
       <li
-        class="c10 c11"
+        class="emotion-24 css-oarqw3-GridComponent-StyledFlexGrid emotion-25"
         data-e2e="onDemand"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c12"
+          class="css-10pzo75-StartTimeWrapper emotion-11"
         >
           <div
-            class="c13"
+            class="css-14jp6ch-Wrapper emotion-10"
           >
             <span
-              class="c14"
+              class="css-cbs0v9-StyledClock emotion-7"
               dir="rtl"
             >
               <svg
                 aria-hidden="true"
-                class="c15"
+                class="css-6a3m3l-CoreIcon-ClockIcon emotion-6"
                 focusable="false"
                 height="13"
                 viewBox="0 0 13 13"
@@ -2203,11 +747,11 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             </span>
             <span
               aria-hidden="true"
-              class="c16"
+              class="css-epwixk-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="c17"
+                class="css-v5wsd3-StyledTimestamp emotion-8"
                 datetime="2020-03-26"
               >
                 02:30
@@ -2216,32 +760,31 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
           </div>
         </div>
         <div
-          class="c18"
+          class="css-1p5015p-CardWrapper emotion-23"
         >
           <div
-            class="c19"
+            class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="c20"
+              class="css-4538ei-StyledH3 emotion-15"
             >
               <a
-                class="c21"
+                class="css-1vkbim8-Link-StyledLink emotion-14"
                 href="/arabic/bbc_arabic_radio/w172xbf7kbvtt4h"
               >
                 <span
-                  class=""
                   role="text"
                 >
                   موجز الأنباء
                   <span
-                    class="c22"
+                    class="css-ow3j0s-VisuallyHiddenText emotion-12"
                   >
                     , 
                     02:30
                     , 
                   </span>
                   <span
-                    class="c23 c24"
+                    class="css-17hnt5z-TitleWrapper emotion-13"
                   >
                     26 مارس/ آذار 2020
                   </span>
@@ -2249,20 +792,20 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               </a>
             </h3>
             <p
-              class="c25"
+              class="css-q6ti1l-SummaryWrapper emotion-16"
             >
               نشرة موجزة في دقيقتين لأهم الأنباء الأقليمية والدولية
             </p>
           </div>
           <div
-            class="c26"
+            class="css-flfzp8-ButtonWrapper emotion-22"
           >
             <span
-              class="c27"
+              class="css-1smn0bu-IconWrapper emotion-19"
             >
               <svg
                 aria-hidden="true"
-                class="c28"
+                class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-18"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -2277,18 +820,17 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               </svg>
             </span>
             <time
-              class="c29"
+              class="css-kyxutj-DurationWrapper emotion-21"
               datetime="PT2M"
               dir="rtl"
             >
               <span
-                class="c22"
+                class="css-ow3j0s-VisuallyHiddenText emotion-12"
               >
                  المدة 02،00 
               </span>
               <span
                 aria-hidden="true"
-                class=""
               >
                 02:00
               </span>
@@ -2297,24 +839,24 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
         </div>
       </li>
       <li
-        class="c10 c11"
+        class="emotion-24 css-oarqw3-GridComponent-StyledFlexGrid emotion-25"
         data-e2e="onDemand"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c12"
+          class="css-10pzo75-StartTimeWrapper emotion-11"
         >
           <div
-            class="c13"
+            class="css-14jp6ch-Wrapper emotion-10"
           >
             <span
-              class="c14"
+              class="css-cbs0v9-StyledClock emotion-7"
               dir="rtl"
             >
               <svg
                 aria-hidden="true"
-                class="c15"
+                class="css-6a3m3l-CoreIcon-ClockIcon emotion-6"
                 focusable="false"
                 height="13"
                 viewBox="0 0 13 13"
@@ -2330,11 +872,11 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             </span>
             <span
               aria-hidden="true"
-              class="c16"
+              class="css-epwixk-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="c17"
+                class="css-v5wsd3-StyledTimestamp emotion-8"
                 datetime="2020-03-26"
               >
                 02:00
@@ -2343,32 +885,31 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
           </div>
         </div>
         <div
-          class="c18"
+          class="css-1p5015p-CardWrapper emotion-23"
         >
           <div
-            class="c19"
+            class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="c20"
+              class="css-4538ei-StyledH3 emotion-15"
             >
               <a
-                class="c21"
+                class="css-1vkbim8-Link-StyledLink emotion-14"
                 href="/arabic/bbc_arabic_radio/w172xbdf3m84fx2"
               >
                 <span
-                  class=""
                   role="text"
                 >
                   نشرة الأخبار
                   <span
-                    class="c22"
+                    class="css-ow3j0s-VisuallyHiddenText emotion-12"
                   >
                     , 
                     02:00
                     , 
                   </span>
                   <span
-                    class="c23 c24"
+                    class="css-17hnt5z-TitleWrapper emotion-13"
                   >
                     26 مارس/ آذار 2020
                   </span>
@@ -2376,20 +917,20 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               </a>
             </h3>
             <p
-              class="c25"
+              class="css-q6ti1l-SummaryWrapper emotion-16"
             >
               نشرة اخبارية على رأس الساعة تركز على أهم أخبار المنطقة والعالم وتتضمن تصريحات المسؤولين وإفادات مراسلينا
             </p>
           </div>
           <div
-            class="c26"
+            class="css-flfzp8-ButtonWrapper emotion-22"
           >
             <span
-              class="c27"
+              class="css-1smn0bu-IconWrapper emotion-19"
             >
               <svg
                 aria-hidden="true"
-                class="c28"
+                class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-18"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -2404,18 +945,17 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               </svg>
             </span>
             <time
-              class="c29"
+              class="css-kyxutj-DurationWrapper emotion-21"
               datetime="PT6M"
               dir="rtl"
             >
               <span
-                class="c22"
+                class="css-ow3j0s-VisuallyHiddenText emotion-12"
               >
                  المدة 06،00 
               </span>
               <span
                 aria-hidden="true"
-                class=""
               >
                 06:00
               </span>
@@ -2424,24 +964,24 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
         </div>
       </li>
       <li
-        class="c10 c11"
+        class="emotion-24 css-oarqw3-GridComponent-StyledFlexGrid emotion-25"
         data-e2e="next"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c12"
+          class="css-10pzo75-StartTimeWrapper emotion-11"
         >
           <div
-            class="c13"
+            class="css-14jp6ch-Wrapper emotion-10"
           >
             <span
-              class="c14"
+              class="css-cbs0v9-StyledClock emotion-7"
               dir="rtl"
             >
               <svg
                 aria-hidden="true"
-                class="c15"
+                class="css-6a3m3l-CoreIcon-ClockIcon emotion-6"
                 focusable="false"
                 height="13"
                 viewBox="0 0 13 13"
@@ -2457,11 +997,11 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             </span>
             <span
               aria-hidden="true"
-              class="c16"
+              class="css-epwixk-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="c17"
+                class="css-v5wsd3-StyledTimestamp emotion-8"
                 datetime="2030-01-01"
               >
                 09:00
@@ -2470,54 +1010,53 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
           </div>
         </div>
         <div
-          class="c18"
+          class="css-1p5015p-CardWrapper emotion-23"
         >
           <div
-            class="c19"
+            class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="c30"
+              class="css-18oq6bv-StyledH3 emotion-15"
             >
               <span
-                class=""
                 role="text"
               >
                 <span
-                  class="c31"
+                  class="css-vx3o02-NextLabel emotion-72"
                   dir="rtl"
                 >
                   لاحق 
                 </span>
                 العالم هذا الصباح
                 <span
-                  class="c22"
+                  class="css-ow3j0s-VisuallyHiddenText emotion-12"
                 >
                   , 
                   09:00
                   , 
                 </span>
                 <span
-                  class="c23 c32"
+                  class="css-he85cw-TitleWrapper emotion-13"
                 >
                   1 يناير/ كانون الثاني 2030
                 </span>
               </span>
             </h3>
             <p
-              class="c25"
+              class="css-q6ti1l-SummaryWrapper emotion-16"
             >
               الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
             </p>
           </div>
           <div
-            class="c33"
+            class="css-1x79dlv-ButtonWrapper emotion-22"
           >
             <span
-              class="c34"
+              class="css-1soil44-IconWrapper emotion-19"
             >
               <svg
                 aria-hidden="true"
-                class="c28"
+                class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-18"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -2532,18 +1071,17 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               </svg>
             </span>
             <time
-              class="c29"
+              class="css-kyxutj-DurationWrapper emotion-21"
               datetime="PT1H30M30S"
               dir="rtl"
             >
               <span
-                class="c22"
+                class="css-ow3j0s-VisuallyHiddenText emotion-12"
               >
                  المدة 1،30،30 
               </span>
               <span
                 aria-hidden="true"
-                class=""
               >
                 1:30:30
               </span>
@@ -2551,9 +1089,9 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
           </div>
         </div>
       </li>
-    </ul>
+    </div>
     <a
-      class="c35"
+      class="css-1e70u3e-RadioFrequencyLink emotion-88"
       href="/arabic/institutional/2011/01/000000_frequencies_radio"
     >
       استقبال البث

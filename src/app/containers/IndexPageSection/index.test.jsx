@@ -472,7 +472,7 @@ describe('IndexPageSection Container', () => {
       );
 
       expect(
-        container.querySelectorAll('a[class^=SectionLabelLink'),
+        container.querySelectorAll('a[class*=SectionLabelLink'),
       ).toHaveLength(1);
     });
 
@@ -483,7 +483,7 @@ describe('IndexPageSection Container', () => {
         </ServiceContextProvider>,
       );
       const section = container.getElementsByTagName('section')[0];
-      const label = container.querySelector('span[class^=Title]');
+      const label = container.querySelector('span[class*=Title]');
 
       expect(section.getAttribute('aria-labelledby')).toBeDefined();
       expect(label.id).toBeDefined();

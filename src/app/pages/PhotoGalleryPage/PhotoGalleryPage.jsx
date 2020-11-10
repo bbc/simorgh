@@ -1,11 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { GelPageGrid } from '#app/components/Grid';
@@ -77,7 +80,9 @@ const PhotoGalleryPage = ({ pageData }) => {
   `;
 
   const StyledTimestamp = styled(Timestamp)`
-    padding-bottom: ${GEL_SPACING_DBL};
+    @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+      padding-bottom: ${GEL_SPACING_DBL};
+    }
 
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
       padding-bottom: ${GEL_SPACING_TRPL};
@@ -113,7 +118,7 @@ const PhotoGalleryPage = ({ pageData }) => {
       <ComscoreAnalytics />
 
       <StyledGelPageGrid
-        forwardedAs="main"
+        as="main"
         role="main"
         enableGelGutters
         columns={{
