@@ -76,7 +76,7 @@ module.exports = {
       includePassedAssertions: true,
       assertions: {
         'categories:performance': [
-          'error',
+          'warn',
           { aggregationMethod: 'optimistic', minScore: 0.7 },
         ],
         'categories:accessibility': [
