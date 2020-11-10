@@ -49,12 +49,12 @@ const AUDIT_URLS = {
   },
 
   PGL: {
-    live: [],
+    live: ['https://www.bbc.com/arabic/art-and-culture-38260491'],
     test: ['https://www.test.bbc.com/afaanoromoo/oduu-23141286'],
   },
 
   STY: {
-    live: [],
+    live: ['https://www.bbc.com/arabic/sports-54278377'],
     test: [
       'https://www.test.bbc.com/pashto/afghanistan-52643309?renderer_env=live',
     ],
