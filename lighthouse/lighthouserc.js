@@ -84,7 +84,7 @@ module.exports = {
           { aggregationMethod: 'optimistic', minScore: 0.9 },
         ],
         'categories:best-practices': [
-          'error',
+          'warn',
           { aggregationMethod: 'optimistic', minScore: 0.9 },
         ],
         'categories:seo': [
