@@ -18,7 +18,7 @@ const AUDIT_URLS = {
   },
 
   OD_RADIO: {
-    live: [],
+    live: ['https://www.bbc.com/pashto/bbc_pashto_radio/programmes/p056fcjb',],
     test: [
       'https://www.test.bbc.com/pashto/bbc_pashto_radio/programmes/p056fcjb',
     ],
