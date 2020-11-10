@@ -25,7 +25,7 @@ const AUDIT_URLS = {
   },
 
   OD_TV: {
-    live: [],
+    live: ['https://www.bbc.com/pashto/bbc_pashto_tv/tv_programmes/w13xttn4',],
     test: [
       'https://www.test.bbc.com/pashto/bbc_pashto_tv/tv_programmes/w13xttn4',
     ],
