@@ -78,3 +78,26 @@ export const getSecondaryColumnUrl = ({ service, variant }) =>
   variant
     ? `/${service}/sty-secondary-column/${variant}`
     : `/${service}/sty-secondary-column`;
+
+export const getAssetTypeCode = pathOr(null, ['assetTypeCode']);
+
+export const getHeadlineUrlAndLive = (item, isAssetTypeCode) => {
+  let headline;
+  let url;
+  // eslint-disable-next-line no-shadow
+  let isLive;
+
+  if (isAssetTypeCode !== null) {
+    headline = pathOr(null, ['name'], item);
+    url = pathOr(null, ['uri'], item);
+  } else {
+    headline = pathOr(null, ['headlines', 'headline'], item);
+    url = pathOr(null, ['locators', 'assetUri'], item);
+    isLive = pathOr(null, ['cpsType'], item) === 'LIV';
+  }
+  return {
+    headline,
+    url,
+    isLive,
+  };
+};
