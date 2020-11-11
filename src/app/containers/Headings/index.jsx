@@ -6,6 +6,7 @@ import { textDefaultPropTypes } from '#models/propTypes';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { headlineModelPropTypes } from '#models/propTypes/headline';
 import Fragment from '../Fragment';
+import InlineContainer from '../InlineContainer';
 import Blocks from '../Blocks';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { GridItemMedium, GridItemLarge } from '#app/components/Grid';
@@ -45,7 +46,7 @@ const HeadingsContainer = ({ blocks, type }) => {
     return null;
   }
   const { text } = blocks[0].model.blocks[0].model;
-  const componentsToRender = { fragment: Fragment };
+  const componentsToRender = { fragment: Fragment, inline: InlineContainer };
 
   const renderText = () => (
     <Blocks blocks={arrayOfFragments} componentsToRender={componentsToRender} />

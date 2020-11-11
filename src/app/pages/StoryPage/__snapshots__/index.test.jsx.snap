@@ -2098,7 +2098,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                         dir="ltr"
                       >
                         <h1
-                          class="css-1dwveqw-Headline-StyledHeadline emotion-0"
+                          class="css-1rb3qn7-Headline-StyledHeadline emotion-0"
                           id="content"
                           tabindex="-1"
                         >
@@ -3382,7 +3382,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         dir="ltr"
                       >
                         <h1
-                          class="css-1dwveqw-Headline-StyledHeadline emotion-0"
+                          class="css-1rb3qn7-Headline-StyledHeadline emotion-0"
                           id="content"
                           tabindex="-1"
                         >
