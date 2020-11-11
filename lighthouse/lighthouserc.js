@@ -45,7 +45,7 @@ const AUDIT_URLS = {
 
   MOST_WATCHED: {
     live: ['https://www.bbc.com/afrique/media/video'],
-    test: ['https://test.bbc.com/afrique/media/video'],
+    test: ['https://www.test.bbc.com/afrique/media/video'],
   },
 
   PGL: {
