@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { string, arrayOf, shape, bool } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Metadata from '../Metadata';
-import getBrandedImage from '#lib/utilities/getBrandedImage';
+import { getBrandedImage } from '#lib/utilities/getUrlHelpers';
 
 const CpsMetadata = ({
   title,
