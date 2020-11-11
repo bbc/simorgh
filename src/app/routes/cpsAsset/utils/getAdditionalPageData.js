@@ -4,7 +4,7 @@ import getAssetType from './getAssetType';
 import getAssetUri from './getAssetUri';
 import hasRecommendations from './hasRecommendations';
 import fetchPageData from '../../utils/fetchPageData';
-import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
+import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers';
 import getMostWatchedEndpoint from '#lib/utilities/getMostWatchedUrl';
 import getSecondaryColumnUrl from '#lib/utilities/getSecondaryColumnUrl';
 import getRecommendationsUrl from '#lib/utilities/getRecommendationsUrl';

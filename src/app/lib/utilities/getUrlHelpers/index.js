@@ -42,3 +42,13 @@ export const getEmbedUrl = ({ type, mediaId, isAmp = false, queryString }) => {
 
 export const getBrandedImage = (locator, service) =>
   `${process.env.SIMORGH_ICHEF_BASE_URL}/news/1024/branded_${service}/${locator}`;
+
+export const getMostReadEndpoint = ({ service, variant }) =>
+  variant
+    ? `/${service}/mostread/${variant}.json`
+    : `/${service}/mostread.json`;
+
+export const getLocalMostReadEndpoint = ({ service, variant = 'default' }) =>
+  `./data/${service}/mostRead/${
+    variant === 'default' ? 'index' : variant
+  }.json`;

@@ -1,4 +1,9 @@
-import { getBrandedImage, getEmbedUrl } from '.';
+import {
+  getBrandedImage,
+  getEmbedUrl,
+  getLocalMostReadEndpoint,
+  getMostReadEndpoint,
+} from '.';
 
 describe('getUrlHelpers', () => {
   describe('getEmbedUrl', () => {
@@ -275,6 +280,35 @@ describe('getUrlHelpers', () => {
         'https://ichef.bbci.co.uk/news/1024/branded_korean/729E/test/_63724392_gettyimages-1098075358.jpg';
 
       expect(actual).toEqual(expected);
+    });
+  });
+  describe('getMostReadEndpoint', () => {
+    describe('getMostReadEndpoint', () => {
+      it('should return endpoint when passed service', () => {
+        expect(getMostReadEndpoint({ service: 'hausa' })).toBe(
+          '/hausa/mostread.json',
+        );
+      });
+      it('should return endpoint when passed service and variant', () => {
+        expect(
+          getMostReadEndpoint({ service: 'serbian', variant: 'lat' }),
+        ).toBe('/serbian/mostread/lat.json');
+      });
+    });
+    describe('getLocalMostReadEndpoint', () => {
+      it('should return endpoint when passed service', () => {
+        expect(getLocalMostReadEndpoint({ service: 'hausa' })).toBe(
+          './data/hausa/mostRead/index.json',
+        );
+      });
+      it('should return endpoint when passed service & variant', () => {
+        expect(
+          getLocalMostReadEndpoint({
+            service: 'serbian',
+            variant: 'lat',
+          }),
+        ).toBe('./data/serbian/mostRead/lat.json');
+      });
     });
   });
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { getLocalMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
+import { getLocalMostReadEndpoint } from '#lib/utilities/getUrlHelpers';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { service as ukrainianConfig } from '#lib/config/services/ukrainian';

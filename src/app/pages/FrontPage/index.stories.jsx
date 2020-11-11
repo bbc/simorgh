@@ -9,7 +9,7 @@ import serbianLatData from '#data/serbian/frontpage/lat';
 import { service as arabicConfig } from '#lib/config/services/arabic';
 import { service as igboConfig } from '#lib/config/services/igbo';
 import { service as serbianConfig } from '#lib/config/services/serbian';
-import { getLocalMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
+import { getLocalMostReadEndpoint } from '#lib/utilities/getUrlHelpers';
 import FrontPage from '.';
 
 const serviceDataSets = {
