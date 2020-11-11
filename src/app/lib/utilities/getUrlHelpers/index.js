@@ -1,3 +1,4 @@
+import pathOr from 'ramda/src/pathOr';
 import isLive from '../isLive';
 
 const AV_ROUTE = 'ws/av-embeds';
@@ -52,3 +53,6 @@ export const getLocalMostReadEndpoint = ({ service, variant = 'default' }) =>
   `./data/${service}/mostRead/${
     variant === 'default' ? 'index' : variant
   }.json`;
+
+export const getMasterBrand = (externalId, liveRadioIdOverrides) =>
+  pathOr(externalId, ['masterBrand', externalId], liveRadioIdOverrides);

@@ -15,8 +15,7 @@ import AVPlayer from '#containers/AVPlayer';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import getMediaId from '#lib/utilities/getMediaId';
-import getMasterbrand from '#lib/utilities/getMasterbrand';
-import { getEmbedUrl } from '#lib/utilities/getUrlHelpers';
+import { getEmbedUrl, getMasterBrand } from '#lib/utilities/getUrlHelpers';
 
 const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
 
@@ -44,7 +43,7 @@ const LiveRadioPage = ({ pageData }) => {
   const assetId = 'liveradio';
   const mediaId = getMediaId({
     assetId,
-    masterBrand: getMasterbrand(masterBrand, liveRadioOverrides),
+    masterBrand: getMasterBrand(masterBrand, liveRadioOverrides),
     lang,
     service,
   });

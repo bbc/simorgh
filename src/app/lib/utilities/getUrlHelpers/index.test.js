@@ -1,8 +1,10 @@
+/* eslint-disable import/named */
 import {
   getBrandedImage,
   getEmbedUrl,
   getLocalMostReadEndpoint,
   getMostReadEndpoint,
+  getMasterBrand,
 } from '.';
 
 describe('getUrlHelpers', () => {
@@ -309,6 +311,28 @@ describe('getUrlHelpers', () => {
           }),
         ).toBe('./data/serbian/mostRead/lat.json');
       });
+    });
+  });
+  describe('getMasterBrand', () => {
+    const brand = 'brand';
+    const assetId = 'liveradio';
+
+    it('should find value', () => {
+      const masterbrand = getMasterBrand('liveradio', {
+        masterBrand: {
+          liveradio: brand,
+        },
+      });
+      expect(masterbrand).toBe(brand);
+    });
+
+    it('should not find value and use external id', () => {
+      const masterbrand = getMasterBrand(assetId, {
+        masterBrand: {
+          nothing: brand,
+        },
+      });
+      expect(masterbrand).toBe(assetId);
     });
   });
 });
