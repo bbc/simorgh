@@ -18,7 +18,7 @@ import {
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import Caption from '../Caption';
 import Metadata from './Metadata';
-import getEmbedUrl from '#lib/utilities/getEmbedUrl';
+import { getEmbedUrl } from '#lib/utilities/getUrlHelpers';
 import { getPlaceholderSrcSet } from '#lib/utilities/srcSet';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import formatDuration from '#lib/utilities/formatDuration';
