@@ -1,0 +1,32 @@
+name: Deploy Storybook
+
+on:
+  push:
+    branches:
+      - latest
+
+jobs:
+  deploy-storybook:
+    name: Deploy Storybook to GitHub pages
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build:storybook
+          git config --global user.name "simorgh-bbc"
+          git config --global user.email "DENewsSimorghDev@bbc.co.uk"
+
+      - name: Deploy Storybook
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: storybook_dist
+          CLEAN: true # Automatically remove deleted files from the deploy branch
