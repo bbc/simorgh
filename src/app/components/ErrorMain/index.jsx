@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, arrayOf, shape } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import InlineLink from '@bbc/psammead-inline-link';
 import Paragraph from '@bbc/psammead-paragraph';
 import { C_POSTBOX, C_SHADOW } from '@bbc/psammead-styles/colours';
@@ -15,7 +15,7 @@ import idSanitiser from '#lib/utilities/idSanitiser';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 
 const StatusCode = styled.span`
-  ${props => (props.script ? getParagon(props.script) : '')};
+  ${props => (props.script ? getParagon(props.script) : '')}
   color: ${C_POSTBOX};
   display: block;
   font-family: ${GEL_FF_REITH_SANS};
@@ -24,7 +24,7 @@ const StatusCode = styled.span`
 `;
 
 const Heading = styled.h1`
-  ${({ script }) => script && getCanon(script)};
+  ${({ script }) => script && getCanon(script)}
   ${({ service }) => getSerifMedium(service)}
   color: ${C_SHADOW};
   margin-top: 0;
@@ -51,7 +51,7 @@ const ErrorMain = ({
   service,
 }) => (
   <StyledGelPageGrid
-    forwardedAs="main"
+    as="main"
     role="main"
     columns={{
       group0: 6,
@@ -83,7 +83,9 @@ const ErrorMain = ({
       }}
       margins={{ group0: true, group1: true, group2: true, group3: true }}
     >
-      <StatusCode script={script}>{statusCode}</StatusCode>
+      <StatusCode script={script} data-e2e="status-code">
+        {statusCode}
+      </StatusCode>
       <Heading id="content" script={script} service={service} tabIndex="-1">
         {title}
       </Heading>

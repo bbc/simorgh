@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger, react/prop-types */
 import React from 'react';
 import {
   AMP_SCRIPT,
@@ -11,16 +12,7 @@ import serialiseForScript from '#lib/utilities/serialiseForScript';
 import ResourceHints from '#app/components/ResourceHints';
 import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
 
-/* eslint-disable react/prop-types */
-const Document = ({
-  assetOrigins,
-  app,
-  data,
-  styleTags,
-  helmet,
-  isAmp,
-  scripts,
-}) => {
+const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
@@ -28,6 +20,9 @@ const Document = ({
   const headScript = helmet.script.toComponent();
   const serialisedData = serialiseForScript(data);
   const scriptsAllowed = !isAmp;
+
+  const { html, css, ids } = app;
+
   // The JS to remove the no-js class will not run on AMP, therefore only add it to canonical
   const noJsHtmlAttrs = !isAmp && { className: 'no-js' };
 
@@ -48,8 +43,23 @@ const Document = ({
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <ResourceHints assetOrigins={assetOrigins} />
         {title}
+        {isAmp ? (
+          <style
+            amp-custom=""
+            data-emotion-css={ids.join(' ')}
+            dangerouslySetInnerHTML={{
+              __html: css,
+            }}
+          />
+        ) : (
+          <style
+            data-emotion-css={ids.join(' ')}
+            dangerouslySetInnerHTML={{
+              __html: css,
+            }}
+          />
+        )}
         {helmetLinkTags}
-        {styleTags}
         {headScript}
         {isAmp && (
           <>
@@ -69,12 +79,9 @@ const Document = ({
         )}
       </head>
       <body {...ampGeoPendingAttrs}>
-        {/* disabling the rule that bans the use of dangerouslySetInnerHTML until a more appropriate implementation can be implemented */}
-        {/* eslint-disable-next-line react/no-danger */}
-        <div id="root" dangerouslySetInnerHTML={{ __html: app }} />
+        <div id="root" dangerouslySetInnerHTML={{ __html: html }} />
         {scriptsAllowed && (
           <script
-            /* eslint-disable-next-line react/no-danger */
             dangerouslySetInnerHTML={{
               __html: `window.SIMORGH_DATA=${serialisedData}`,
             }}
@@ -84,10 +91,6 @@ const Document = ({
         {scriptsAllowed && (
           <script
             type="text/javascript"
-            // Justification:
-            // - we need this to be a blocking script that runs before the page first renders
-            // - the content is static text so there is no real XSS risk
-            /* eslint-disable-next-line react/no-danger */
             dangerouslySetInnerHTML={{
               __html: `document.documentElement.classList.remove("no-js");`,
             }}
