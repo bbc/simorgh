@@ -3,7 +3,7 @@ name: Deploy Storybook
 on:
   push:
     branches:
-      - latest
+      - test-storybook-deploy
 
 jobs:
   deploy-storybook:
@@ -26,6 +26,8 @@ jobs:
       - name: Deploy Storybook
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
+          GIT_CONFIG_NAME: simorgh-bbc
+          GIT_CONFIG_EMAIL: DENewsSimorghDev@bbc.co.uk
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
           FOLDER: storybook_dist
