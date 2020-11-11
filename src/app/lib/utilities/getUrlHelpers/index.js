@@ -73,3 +73,8 @@ export const getLocalRadioScheduleEndpoint = ({
   service,
   radioService = service,
 }) => `./data/${service}/bbc_${radioService}_radio/schedule.json`;
+
+export const getSecondaryColumnUrl = ({ service, variant }) =>
+  variant
+    ? `/${service}/sty-secondary-column/${variant}`
+    : `/${service}/sty-secondary-column`;
