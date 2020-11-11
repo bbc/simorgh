@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MostReadCanonical - LastUpdated should render LastUpdated correctly 1`] = `
-.c0 {
+.emotion-0 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -12,23 +12,25 @@ exports[`MostReadCanonical - LastUpdated should render LastUpdated correctly 1`]
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c0 {
+  .emotion-0 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c0 {
+  .emotion-0 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-<time
-  class="c0"
-  datetime="1970-01-11"
->
-  Last Updated: 11 January 1970
-</time>
+<div>
+  <time
+    class="emotion-0 emotion-1"
+    datetime="1970-01-11"
+  >
+    Last Updated: 11 January 1970
+  </time>
+</div>
 `;

@@ -1,7 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 1`] = `
-.c0 {
+.emotion-0 {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    padding-bottom: 0;
+    word-break: break-word;
+    line-height: 3.5rem;
+  }
+}
+
+.emotion-2 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-6 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -13,103 +63,55 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
   padding: 2rem 0;
 }
 
-.c2 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c1 {
-  display: inline-block;
-  width: 100%;
-  padding-bottom: 0.5rem;
-  word-break: break-word;
-}
-
-.c3 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin: 0;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c0 {
+  .emotion-6 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c0 {
+  .emotion-6 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c0 {
+  .emotion-6 {
     padding: 2.5rem 0;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c1 {
-    padding-bottom: 0;
-    word-break: break-word;
-    line-height: 3.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-<h1
-  class="c0"
->
-  <span
-    role="text"
+<div>
+  <h1
+    class=" emotion-6 emotion-7"
   >
     <span
-      class="c1"
+      role="text"
     >
-      Dunia Pagi Ini
+      <span
+        class="emotion-0 emotion-1"
+      >
+        Dunia Pagi Ini
+      </span>
+      <span
+        class="emotion-2 emotion-3"
+      >
+        , 
+      </span>
+      <span
+        class="emotion-4 emotion-5"
+      >
+        27 April 2020
+      </span>
     </span>
-    <span
-      class="c2"
-    >
-      , 
-    </span>
-    <span
-      class="c3"
-    >
-      27 April 2020
-    </span>
-  </span>
-</h1>
+  </h1>
+</div>
 `;
 
 exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
-.c0 {
+.emotion-6 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -121,7 +123,42 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
   padding: 2rem 0;
 }
 
-.c2 {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-6 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-6 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-6 {
+    padding: 2.5rem 0;
+  }
+}
+
+.emotion-0 {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    padding-bottom: 0;
+    word-break: break-word;
+    line-height: 3.5rem;
+  }
+}
+
+.emotion-2 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -133,14 +170,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
   margin: 0;
 }
 
-.c1 {
-  display: inline-block;
-  width: 100%;
-  padding-bottom: 0.5rem;
-  word-break: break-word;
-}
-
-.c3 {
+.emotion-4 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -150,68 +180,42 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c0 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    padding-bottom: 0;
-    word-break: break-word;
-    line-height: 3.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .emotion-4 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .emotion-4 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
-<h1
-  class="c0"
->
-  <span
-    role="text"
+<div>
+  <h1
+    class=" emotion-6 emotion-7"
   >
     <span
-      class="c1"
+      role="text"
     >
-      Dunia Pagi Ini
+      <span
+        class="emotion-0 emotion-1"
+      >
+        Dunia Pagi Ini
+      </span>
+      <span
+        class="emotion-2 emotion-3"
+      >
+        , 
+      </span>
+      <span
+        class="emotion-4 emotion-5"
+      >
+        27 April 2020
+      </span>
     </span>
-    <span
-      class="c2"
-    >
-      , 
-    </span>
-    <span
-      class="c3"
-    >
-      27 April 2020
-    </span>
-  </span>
-</h1>
+  </h1>
+</div>
 `;

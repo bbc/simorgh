@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { bool, shape, number } from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -43,12 +43,12 @@ const StyledSection = styled.section`
 const FirstSectionTopMargin = styled.div`
   ${({ oneItem }) =>
     oneItem
-      ? css`
+      ? `
           @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
             margin-top: ${GEL_SPACING_TRPL};
           }
         `
-      : css`
+      : `
           @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
             margin-top: ${GEL_SPACING};
           }
