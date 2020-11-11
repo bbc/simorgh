@@ -3,7 +3,7 @@ name: Deploy Storybook
 on:
   push:
     branches:
-      - test-storybook-deploy
+      - latest
 
 jobs:
   deploy-storybook:
