@@ -9,7 +9,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
-import { getLocalRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
+import { getLocalRadioScheduleEndpoint } from '#lib/utilities/getUrlHelpers';
 
 // Currently, only these services have radio schedule data
 const radioServices = {
