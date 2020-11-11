@@ -30,16 +30,17 @@ exports[`Document Component should render AMP version correctly 1`] = `
     >
       Test title
     </title>
+    <style
+      amp-custom=""
+      data-emotion-css="7prgni-StyledLink"
+    >
+      .css-7prgni-StyledLink{display:inline-block;}
+    </style>
     <link
       data-react-helmet="true"
       href="https://www.bbc.com/news/articles/c6v11qzyv8po"
       rel="canonical"
     />
-    <style
-      amp-custom=""
-    >
-      html { color: red; }
-    </style>
     <style
       amp-boilerplate=""
     >
@@ -119,16 +120,16 @@ exports[`Document Component should render correctly 1`] = `
     >
       Test title
     </title>
+    <style
+      data-emotion-css="7prgni-StyledLink"
+    >
+      .css-7prgni-StyledLink{display:inline-block;}
+    </style>
     <link
       data-react-helmet="true"
       href="https://www.bbc.com/news/articles/c6v11qzyv8po"
       rel="canonical"
     />
-    <style
-      data-styled-components="abc"
-    >
-      html { color: red; }
-    </style>
   </head>
   <body>
     <div

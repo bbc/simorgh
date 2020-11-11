@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { oneOf } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { Helmet } from 'react-helmet';
 import {
   AMP_ACCESS_JS,
@@ -29,7 +29,7 @@ const AdSection = styled.section`
 
 const AdContainer = styled.div`
   ${({ slotType }) =>
-    slotType === 'mpu' ? ampMpuStyles : ampLeaderboardStyles};
+    slotType === 'mpu' ? ampMpuStyles : ampLeaderboardStyles}
 `;
 
 const StyledWrapper = styled.div`
@@ -49,8 +49,8 @@ const DisplayWrapper = styled(AccessDiv)`
   }
 `;
 
-const StyledLink = styled.a.attrs({ tabIndex: '-1' })`
-  ${({ script }) => script && getMinion(script)};
+const StyledLink = styled.a`
+  ${({ script }) => script && getMinion(script)}
   ${({ service }) => getSansRegular(service)}
   color: ${C_RHINO};
   text-decoration: none;
@@ -100,7 +100,6 @@ const AmpAd = ({ slotType }) => {
   }
 
   return (
-    // eslint-disable-next-line jsx-a11y/no-redundant-roles
     <>
       <Helmet>
         {AMP_ADS_JS}
@@ -124,6 +123,7 @@ const AmpAd = ({ slotType }) => {
                 script={script}
                 service={service}
                 dir={dir}
+                tabIndex="-1"
               >
                 {label}
               </StyledLink>

@@ -1,12 +1,15 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import last from 'ramda/src/last';
 import MediaMessage from './MediaMessage';
@@ -36,7 +39,9 @@ import { RequestContext } from '#contexts/RequestContext';
 import { GelPageGrid } from '#app/components/Grid';
 
 const StyledTimestamp = styled(Timestamp)`
-  padding-bottom: ${GEL_SPACING_DBL};
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    padding-bottom: ${GEL_SPACING_DBL};
+  }
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     padding-bottom: ${GEL_SPACING_TRPL};
@@ -132,8 +137,13 @@ const MediaAssetPage = ({ pageData }) => {
   const StyledGelPageGrid = styled(GelPageGrid)`
     padding-bottom: ${GEL_SPACING_TRPL};
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      width: 100%;
       padding-bottom: ${GEL_SPACING_QUAD};
     }
+  `;
+
+  const MostWatchedWrapper = styled.div`
+    padding-bottom: ${GEL_SPACING_QUAD};
   `;
 
   return (
@@ -164,7 +174,7 @@ const MediaAssetPage = ({ pageData }) => {
       />
       <ATIAnalytics data={pageData} />
       <StyledGelPageGrid
-        forwardedAs="main"
+        as="main"
         role="main"
         enableGelGutters
         columns={{
@@ -180,7 +190,11 @@ const MediaAssetPage = ({ pageData }) => {
       </StyledGelPageGrid>
 
       <CpsRelatedContent content={relatedContent} isMediaContent />
-      {!isAmp && <MostWatchedContainer data={mostWatchedData} />}
+      {!isAmp && (
+        <MostWatchedWrapper>
+          <MostWatchedContainer data={mostWatchedData} />
+        </MostWatchedWrapper>
+      )}
     </>
   );
 };
