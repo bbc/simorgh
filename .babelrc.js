@@ -1,16 +1,9 @@
 var plugins = [
+  'emotion',
   '@babel/plugin-proposal-object-rest-spread', // allows ...spread notation
   '@babel/plugin-syntax-dynamic-import', // allows `await import()` syntax
   '@babel/plugin-transform-runtime',
   '@loadable/babel-plugin',
-  [
-    'babel-plugin-styled-components',
-    {
-      ssr: true, // avoid checksum mismatches (different class generation between client & server)
-      fileName: false, // prevent filename forming part of class name (duplication)
-      pure: true, // aides dead code elimination
-    },
-  ],
 ];
 
 // allows dynamic `import()` in Node tests.

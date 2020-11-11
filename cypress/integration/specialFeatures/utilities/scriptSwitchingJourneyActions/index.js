@@ -1,13 +1,13 @@
 const clickFirstLink = () => {
-  cy.get('a[class^="Link"]').first().click();
+  cy.get('a[class*="Link"]').first().click();
 };
 
 const clickFirstMapLink = () => {
-  cy.get('div[class^="StyledMediaIndicator"]').then($styledMediaIndicators => {
+  cy.get('div[class*="StyledMediaIndicator"]').then($styledMediaIndicators => {
     if ($styledMediaIndicators.length > 0) {
-      cy.get('div[class^="StyledMediaIndicator"]')
+      cy.get('div[class*="StyledMediaIndicator"]')
         .first()
-        .parentsUntil('li[class^="StoryPromoLi"]')
+        .parentsUntil('li[class*="StoryPromoLi"]')
         .within(() => {
           clickFirstLink();
         });
@@ -29,7 +29,7 @@ export const clickHomePageLink = product => {
 };
 
 export const clickPromoLinkOnHomePage = pageType => {
-  cy.get('li[class^="StoryPromoLi"]').within(() => {
+  cy.get('li[class*="StoryPromoLi"]').within(() => {
     // If it is a MAP test, find first MAP within a StoryPromoLi item and click it
     if (pageType === 'mediaAssetPage') {
       clickFirstMapLink();
