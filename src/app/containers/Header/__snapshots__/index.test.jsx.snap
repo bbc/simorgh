@@ -727,13 +727,15 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
             Pidgin
           </span>
         </a>
-        <a
-          class="emotion-20 emotion-21"
-          dir="ltr"
-          href="#content"
-        >
-          Waka go wetin de inside
-        </a>
+        <div>
+          <a
+            class="emotion-20 emotion-21"
+            dir="ltr"
+            href="#content"
+          >
+            Waka go wetin de inside
+          </a>
+        </div>
       </div>
     </div>
     <nav
@@ -1710,13 +1712,15 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             Pidgin
           </span>
         </a>
-        <a
-          class="emotion-20 emotion-21"
-          dir="ltr"
-          href="#content"
-        >
-          Waka go wetin de inside
-        </a>
+        <div>
+          <a
+            class="emotion-20 emotion-21"
+            dir="ltr"
+            href="#content"
+          >
+            Waka go wetin de inside
+          </a>
+        </div>
       </div>
     </div>
     <nav
@@ -2693,13 +2697,15 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             Pidgin
           </span>
         </a>
-        <a
-          class="emotion-20 emotion-21"
-          dir="ltr"
-          href="#content"
-        >
-          Waka go wetin de inside
-        </a>
+        <div>
+          <a
+            class="emotion-20 emotion-21"
+            dir="ltr"
+            href="#content"
+          >
+            Waka go wetin de inside
+          </a>
+        </div>
       </div>
     </div>
     <nav
