@@ -7,7 +7,6 @@ on:
   pull_request:
     branches:
       - '**'
-      - '!latest'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -43,6 +42,6 @@ jobs:
         run: npm run lighthouse
 
       - name: Run Puppeteer Tests
-        run: | 
+        run: |
           npm install --no-save puppeteer
           npm run test:puppeteer

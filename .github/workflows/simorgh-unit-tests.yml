@@ -7,7 +7,6 @@ on:
   pull_request:
     branches:
       - '**'
-      - '!latest'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -31,6 +30,7 @@ jobs:
           npm run build
 
       - name: Setup Code Climate Test Coverage
+        if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
         run: |
           curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter	
           chmod +x ./cc-test-reporter	
