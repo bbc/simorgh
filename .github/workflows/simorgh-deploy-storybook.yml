@@ -26,7 +26,7 @@ jobs:
       - name: Deploy Storybook
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SIMORGH_DEV_STORYBOOK_RELEASE }}
           BRANCH: gh-pages
           FOLDER: storybook_dist
           CLEAN: true # Automatically remove deleted files from the deploy branch
