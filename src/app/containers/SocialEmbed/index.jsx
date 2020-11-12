@@ -27,7 +27,13 @@ const MAX_WIDTH = '31.25rem';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
-
+const Wrapper = styled.div`
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: ${GEL_SPACING_TRPL};
+  max-width: ${MAX_WIDTH};
+  ${({ maxHeight }) => (maxHeight ? `max-height: ${maxHeight}px;` : ``)}
+`;
 
 const SocialEmbedContainer = ({ blocks }) => {
   const { isAmp } = useContext(RequestContext);
@@ -44,16 +50,10 @@ const SocialEmbedContainer = ({ blocks }) => {
   if (!href) return null;
 
   const oEmbed = path(['embed', 'oembed'], model);
-  const lazyLoadHeight = path(['embed', 'fallback_image', 'fallback_image_height'], model);
-
-  const Wrapper = styled.div`
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: ${GEL_SPACING_TRPL};
-  max-width: ${MAX_WIDTH};
-  max-height: ${lazyLoadHeight + 'px'};
-`;
-
+  const maxHeight = path(
+    ['embed', 'fallback_image', 'fallback_image_height'],
+    model,
+  );
 
   const {
     fallback: fallbackTranslations,
@@ -98,7 +98,11 @@ const SocialEmbedContainer = ({ blocks }) => {
 
   return (
     <GridItemMedium>
-      <Wrapper provider={provider} data-e2e={`${provider}-embed-${href}`}>
+      <Wrapper
+        provider={provider}
+        data-e2e={`${provider}-embed-${href}`}
+        maxHeight={maxHeight}
+      >
         {isAmp ? (
           <AmpSocialEmbed
             provider={provider}
@@ -109,7 +113,7 @@ const SocialEmbedContainer = ({ blocks }) => {
             caption={caption}
           />
         ) : (
-          <Lazyload offset={LAZYLOAD_OFFSET} once height={lazyLoadHeight}>
+          <Lazyload offset={LAZYLOAD_OFFSET} once height={maxHeight}>
             {enrichedSocialEmbed}
           </Lazyload>
         )}
