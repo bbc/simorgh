@@ -7,7 +7,6 @@ on:
   pull_request:
     branches:
       - '**'
-      - '!latest'
 jobs:
   build:
     runs-on: ubuntu-latest

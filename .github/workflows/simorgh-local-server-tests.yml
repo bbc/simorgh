@@ -30,6 +30,7 @@ jobs:
           npm run build:local
 
       - name: Start Simorgh Server
+        if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
         run: nohup node build/server.js > /dev/null 2>&1 &
 
       - name: Run AMP Validator

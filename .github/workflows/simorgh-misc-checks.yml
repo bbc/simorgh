@@ -7,7 +7,6 @@ on:
   pull_request:
     branches:
       - '**'
-      - '!latest'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,6 +28,7 @@ jobs:
         run: npm ci
 
       - name: Chromatic UI Tests
+        if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
         run: npx chromatic test run --build-script-name build:storybook --exit-once-uploaded --no-interactive --project-token "$CHROMATIC_APP_CODE"
 
       - name: Apache License Checker
