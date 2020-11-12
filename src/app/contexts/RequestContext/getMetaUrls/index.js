@@ -1,20 +1,19 @@
+import { AMP_REGEX, TLD_REGEX } from '#app/lib/regex.const';
+
 const getAmpUrl = url => `${url}.amp`;
 
 const getCanonicalUrl = (origin, pathname) => {
-  const ampRegex = /(.amp)/g;
   const canonicalUrl = `${origin}${pathname}`;
 
-  return canonicalUrl.replace(ampRegex, '');
+  return canonicalUrl.replace(AMP_REGEX, '');
 };
 
 const getUkCanonicalUrl = url => {
-  const tldRegex = /(\.com|\.co\.uk)/g;
-  return url.replace(tldRegex, '.co.uk');
+  return url.replace(TLD_REGEX, '.co.uk');
 };
 
 const getNonUkCanonicalUrl = url => {
-  const tldRegex = /(\.com|\.co\.uk)/g;
-  return url.replace(tldRegex, '.com');
+  return url.replace(TLD_REGEX, '.com');
 };
 
 const getMetaUrls = (origin, pathname) => {
