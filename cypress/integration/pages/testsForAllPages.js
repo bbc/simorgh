@@ -22,20 +22,20 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
           cy.viewport(320, 480);
           cy.get('nav')
-            .find('div[class^="StyledScrollableNav"]')
+            .find('div[class*="StyledScrollableNav"]')
             .should('be.visible');
 
           cy.get('nav')
-            .find('ul[class^="DropdownUl"]')
+            .find('ul[class*="DropdownUl"]')
             .should('not.be.visible');
 
           cy.get('nav button').click();
 
           cy.get('nav')
-            .find('div[class^="StyledScrollableNav"]')
+            .find('div[class*="StyledScrollableNav"]')
             .should('not.be.visible');
 
-          cy.get('nav').find('ul[class^="DropdownUl"]').should('be.visible');
+          cy.get('nav').find('ul[class*="DropdownUl"]').should('be.visible');
         });
       }
     });
