@@ -1,13 +1,11 @@
 name: Auto Cancel Previous CI Runs
 on:
-  push:
+  create:
     branches:
       - '**'
-      - '!latest'
   pull_request:
     branches:
       - '**'
-      - '!latest'
 jobs:
   cleanup-runs:
     runs-on: ubuntu-latest
