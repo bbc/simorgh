@@ -10,9 +10,6 @@ import { ServerApp } from '#app/containers/App';
 import getAssetOrigins from '../utilities/getAssetOrigins';
 import DocumentComponent from './component';
 
-const cache = createCache();
-const { extractCritical } = createEmotionServer(cache);
-
 const renderDocument = async ({
   bbcOrigin,
   data,
@@ -21,6 +18,9 @@ const renderDocument = async ({
   service,
   url,
 }) => {
+  const cache = createCache();
+  const { extractCritical } = createEmotionServer(cache);
+
   const statsFile = path.resolve(
     `${__dirname}/public/loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,
   );
