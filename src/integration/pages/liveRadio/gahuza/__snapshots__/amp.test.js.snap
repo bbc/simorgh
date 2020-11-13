@@ -236,12 +236,26 @@ Object {
 
 exports[`AMP Live Radio Header Navigation link should match text and url 5`] = `
 Object {
+  "text": "Afrika",
+  "url": "/gahuza/topics/crvnv566zx9t",
+}
+`;
+
+exports[`AMP Live Radio Header Navigation link should match text and url 6`] = `
+Object {
+  "text": "Mpuzamahanga",
+  "url": "/gahuza/topics/c9dvd93jjkkt",
+}
+`;
+
+exports[`AMP Live Radio Header Navigation link should match text and url 7`] = `
+Object {
   "text": "Imikino",
   "url": "/gahuza/topics/c5qvpq0jzy7t",
 }
 `;
 
-exports[`AMP Live Radio Header Navigation link should match text and url 6`] = `
+exports[`AMP Live Radio Header Navigation link should match text and url 8`] = `
 Object {
   "text": "Video",
   "url": "/gahuza/media/video",
