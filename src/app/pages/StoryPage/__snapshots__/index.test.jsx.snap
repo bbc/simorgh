@@ -2083,7 +2083,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                   comscore
                 </div>
                 <div
-                  class="emotion-203 css-1qehi2u-GridComponent-GelPageGrid-StoryPageGrid emotion-1"
+                  class="emotion-203 css-1rncctf-GridComponent-GelPageGrid-StoryPageGrid emotion-1"
                   dir="ltr"
                 >
                   <div
@@ -2497,7 +2497,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </p>
                       </div>
                       <div
-                        class="emotion-74 css-110t8ea-GridComponent-Wrapper emotion-1"
+                        class="emotion-74 css-4hid47-GridComponent-Wrapper emotion-1"
                         dir="ltr"
                       >
                         <figure
@@ -3367,7 +3367,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   comscore
                 </div>
                 <div
-                  class="emotion-345 css-1qehi2u-GridComponent-GelPageGrid-StoryPageGrid emotion-1"
+                  class="emotion-345 css-1rncctf-GridComponent-GelPageGrid-StoryPageGrid emotion-1"
                   dir="ltr"
                 >
                   <div
@@ -3781,7 +3781,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </p>
                       </div>
                       <div
-                        class="emotion-74 css-110t8ea-GridComponent-Wrapper emotion-1"
+                        class="emotion-74 css-4hid47-GridComponent-Wrapper emotion-1"
                         dir="ltr"
                       >
                         <figure
@@ -3932,7 +3932,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     dir="ltr"
                   >
                     <div
-                      class="css-1prllb-ResponsiveComponentWrapper emotion-129"
+                      class="css-zxtmnv-ResponsiveComponentWrapper emotion-129"
                     >
                       <section
                         aria-labelledby="top-stories-heading"
@@ -4064,7 +4064,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </section>
                     </div>
                     <div
-                      class="css-1prllb-ResponsiveComponentWrapper emotion-129"
+                      class="css-zxtmnv-ResponsiveComponentWrapper emotion-129"
                     >
                       <section
                         aria-labelledby="features-analysis-heading"

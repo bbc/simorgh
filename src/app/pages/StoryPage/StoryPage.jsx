@@ -5,6 +5,7 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
+  GEL_SPACING_SEXT,
 } from '@bbc/gel-foundations/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
 import {
@@ -238,6 +239,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const ResponsiveComponentWrapper = styled.div`
     margin-bottom: ${GEL_SPACING_TRPL};
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      margin-bottom: ${GEL_SPACING_SEXT};
       padding: ${GEL_SPACING_DBL};
     }
   `;

@@ -217,6 +217,12 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   padding-bottom: 1rem;
 }
 
+@media (max-width:24.9375rem) {
+  .emotion-13 {
+    margin-top: 0.5rem;
+  }
+}
+
 @media (min-width:25rem) {
   .emotion-13 {
     margin-top: 1rem;
@@ -1714,6 +1720,12 @@ exports[`Media Asset Page should render component 1`] = `
   padding-bottom: 1rem;
 }
 
+@media (max-width:24.9375rem) {
+  .emotion-13 {
+    margin-top: 0.5rem;
+  }
+}
+
 @media (min-width:25rem) {
   .emotion-13 {
     margin-top: 1rem;
@@ -2861,7 +2873,6 @@ exports[`Media Asset Page should render component 1`] = `
 
 .emotion-351 {
   margin-bottom: 1rem;
-  padding-bottom: 2rem;
 }
 
 @media (max-width:14.9375rem) {
@@ -2977,6 +2988,20 @@ exports[`Media Asset Page should render component 1`] = `
 @media (min-width:37.5rem) {
   .emotion-351 {
     margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-351 {
+    padding: 1.5rem;
+    margin: 2rem;
+  }
+}
+
+@media (max-width:37.5rem) {
+  .emotion-351 {
+    padding: 2rem;
+    margin: rem;
   }
 }
 

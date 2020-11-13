@@ -2648,7 +2648,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     role="region"
                   >
                     <div
-                      class="emotion-131 css-ow4mdm-GridComponent-LegacyGridItemLarge emotion-1"
+                      class="emotion-131 css-1dpxdx6-GridComponent-LegacyGridItemLarge emotion-1"
                       dir="ltr"
                     >
                       <div
@@ -5121,7 +5121,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     role="region"
                   >
                     <div
-                      class="emotion-316 css-ow4mdm-GridComponent-LegacyGridItemLarge emotion-1"
+                      class="emotion-316 css-1dpxdx6-GridComponent-LegacyGridItemLarge emotion-1"
                       dir="ltr"
                     >
                       <div
