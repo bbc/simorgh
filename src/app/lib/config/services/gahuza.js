@@ -266,6 +266,14 @@ export const service = {
         url: '/gahuza/topics/c9dvd93jjkkt',
       },
       {
+        title: 'Afrika',
+        url: '/gahuza/topics/crvnv566zx9t',
+      },
+      {
+        title: 'Mpuzamahanga',
+        url: '/gahuza/topics/c9dvd93jjkkt',
+      },
+      {
         title: 'Imikino',
         url: '/gahuza/topics/c5qvpq0jzy7t',
       },
