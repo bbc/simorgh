@@ -114,10 +114,6 @@ export const service = {
         url: '/ukchina/simp',
       },
       {
-        title: 'BBC精选',
-        url: '/ukchina/simp/horizon',
-      },
-      {
         title: '视频内容',
         url: '/ukchina/simp/media/video',
       },
@@ -325,10 +321,6 @@ export const service = {
       {
         title: '主頁',
         url: '/ukchina/trad',
-      },
-      {
-        title: 'BBC精選',
-        url: '/ukchina/trad/horizon',
       },
       {
         title: '視頻內容',
