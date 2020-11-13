@@ -24,6 +24,7 @@ const logger = nodeLogger(__filename);
  * NB Tweets max-out at 500px, which is represented as 31.25rem.
  */
 const MAX_WIDTH = '31.25rem';
+const MIN_HEIGHT = 300;
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
@@ -32,7 +33,8 @@ const Wrapper = styled.div`
   margin-left: auto;
   margin-bottom: ${GEL_SPACING_TRPL};
   max-width: ${MAX_WIDTH};
-  ${({ maxHeight }) => (maxHeight ? `max-height: ${maxHeight}px;` : ``)}
+  ${({ maxHeight }) =>
+    maxHeight ? `max-height: ${maxHeight}px;` : `min-height: ${MIN_HEIGHT}px`}
 `;
 
 const SocialEmbedContainer = ({ blocks }) => {
@@ -50,10 +52,9 @@ const SocialEmbedContainer = ({ blocks }) => {
   if (!href) return null;
 
   const oEmbed = path(['embed', 'oembed'], model);
-  const maxHeight = path(
-    ['embed', 'fallback_image', 'fallback_image_height'],
-    model,
-  );
+  const maxHeight = path(['height'], oEmbed);
+
+  const lazyLoadHeight = maxHeight || MIN_HEIGHT;
 
   const {
     fallback: fallbackTranslations,
@@ -113,7 +114,7 @@ const SocialEmbedContainer = ({ blocks }) => {
             caption={caption}
           />
         ) : (
-          <Lazyload offset={LAZYLOAD_OFFSET} once height={maxHeight}>
+          <Lazyload offset={LAZYLOAD_OFFSET} once height={lazyLoadHeight}>
             {enrichedSocialEmbed}
           </Lazyload>
         )}
