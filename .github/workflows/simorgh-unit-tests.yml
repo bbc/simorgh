@@ -1,9 +1,8 @@
 name: Simorgh CI - Unit Tests & Code Coverage
 on:
-  push:
+  create:
     branches:
       - '**'
-      - '!latest'
   pull_request:
     branches:
       - '**'

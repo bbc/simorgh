@@ -1,9 +1,8 @@
 name: Simorgh CI - AMP Validation, bbc-a11y, Lighthouse & Puppeteer Tests
 on:
-  push:
+  create:
     branches:
       - '**'
-      - '!latest'
   pull_request:
     branches:
       - '**'

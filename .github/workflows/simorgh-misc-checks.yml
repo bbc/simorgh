@@ -1,9 +1,8 @@
 name: Simorgh CI - Licences, Dependencies, Lint, Chromatic UI, NPM Audit
 on:
-  push:
+  create:
     branches:
       - '**'
-      - '!latest'
   pull_request:
     branches:
       - '**'
