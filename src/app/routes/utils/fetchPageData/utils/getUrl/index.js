@@ -2,6 +2,7 @@ import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
 import getBaseUrl from '../getBaseUrl';
 import onClient from '#lib/utilities/onClient';
 import isLive from '#lib/utilities/isLive';
+import { AMP_REGEX } from '#app/lib/regex.const';
 
 const baseUrl = onClient()
   ? getBaseUrl(window.location.origin)
@@ -10,8 +11,7 @@ const baseUrl = onClient()
 export default pathname => {
   if (!pathname) return '';
 
-  const ampRegex = /\.amp$/;
   const params = isLive() ? '' : getQueryString(pathname);
   const basePath = getUrlPath(pathname);
-  return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
+  return `${baseUrl}${basePath.replace(AMP_REGEX, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
 };

@@ -11,7 +11,6 @@ def messageColor = 'danger'
 
 def stageName = ""
 def packageName = 'simorgh.zip'
-def storybookDist = 'storybook.zip'
 def staticAssetsDist = 'static.zip'
 
 def installDependencies(){
@@ -22,14 +21,6 @@ def buildApplication(){
   sh 'npm run build'
 }
 
-def runDevelopmentTests(){
-  sh 'make developmentTests'
-}
-
-def runProductionTests(){
-  sh 'make productionTests'
-}
-
 def pruneDevDependencies(){
   sh 'npm prune --production'
 }
@@ -37,16 +28,6 @@ def pruneDevDependencies(){
 def getCommitInfo = {
   appGitCommit = sh(returnStdout: true, script: "git rev-parse HEAD")
   appGitCommitAuthor = sh(returnStdout: true, script: "git --no-pager show -s --format='%an' ${appGitCommit}").trim()
-}
-
-def setBuildTagInfo(gitCommit, gitCommitAuthor) {
-  """
-  *${env.JOB_NAME} [build #${env.BUILD_NUMBER}]*
-  ${env.BUILD_URL}
-  *Author*: ${gitCommitAuthor}
-  *Commit Hash*
-  ${gitCommit}
-  """
 }
 
 def messageContent(title, text, stageName, gitCommit) {
@@ -85,21 +66,6 @@ def buildStaticAssets(env, tag) {
   stash name: "staticAssets${tag}", includes: "static${tag}.zip"
 }
 
-def cancelPreviousBuilds() {
-  def jobName = env.JOB_NAME
-  def buildNumber = env.BUILD_NUMBER.toInteger()
-  def currentJob = Jenkins.instance.getItemByFullName(jobName)
-
-// Iterating over the builds for specific job
-  for (def build : currentJob.builds) {
-    // If there is a build that is currently running and it's not current build
-    if (build.isBuilding() && build.number.toInteger() != buildNumber) {
-        // Stop the previous build
-        build.doStop()
-    }
-  }
-}
-
 pipeline {
   agent any
   options {
@@ -117,14 +83,6 @@ pipeline {
     booleanParam(name: 'SKIP_OOH_CHECK', defaultValue: false, description: 'Allow Simorgh deployment to LIVE outside the set Out of Hours (O.O.H) time span.')
   }
   stages {
-    stage ('Check and stop previous running builds') {
-      when {
-        expression { env.BRANCH_NAME != 'latest' }
-      }
-      steps {
-        cancelPreviousBuilds()
-      }
-    }
     stage ('Install Dependencies') {
       agent {
         docker {
@@ -136,98 +94,21 @@ pipeline {
         installDependencies()
       }
     }
-
-    // Do not run on latest
-    stage ('Build for Test') {
-      when {
-        expression { env.BRANCH_NAME != 'latest' }
-      }
-      agent {
-        docker {
-          image "${nodeImage}"
-          reuseNode true
-        }
-      }
-      steps {
-        buildApplication()
-      }
-    }
-
-    stage ('Test') {
-      failFast true
-      parallel {
-
-        // Do not run on latest, as these tests ran in the PR checks
-        stage ('Test Development') {
-          when {
-            expression { env.BRANCH_NAME != 'latest' }
-          }
-          agent {
-            docker {
-              image "${nodeImage}"
-              reuseNode true
-            }
-          }
-          steps {
-            runDevelopmentTests()
-          }
-        }
-
-        // Do not run on latest, as these tests ran in the PR checks
-        stage ('Test Production') {
-          when {
-            expression { env.BRANCH_NAME != 'latest' }
-          }
-          agent {
-            docker {
-              image "${nodeImage}"
-              reuseNode true
-            }
-          }
-          steps {
-            runProductionTests()
-          }
-        }
-      }
-      post {
-        always {
-          script {
-            stageName = env.STAGE_NAME
-          }
-        }
-      }
-    }
     stage ('Build for Release') {
       when {
         expression { env.BRANCH_NAME == 'latest' }
       }
       failFast true
-      parallel {
-        stage ('Build Static Assets') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              reuseNode true
-            }
-          }
-          steps {
-            buildStaticAssets("test", "TEST")
-            buildStaticAssets("live", "LIVE")
+      stage ('Build Static Assets') {
+        agent {
+          docker {
+            image "${nodeImage}"
+            reuseNode true
           }
         }
-        stage ('Build Storybook Dist') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              reuseNode true
-            }
-          }
-          steps {
-            sh "rm -f storybook.zip"
-            sh 'make buildStorybook'
-            zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
-            stash name: 'simorgh_storybook', includes: storybookDist
-          }
+        steps {
+          buildStaticAssets("test", "TEST")
+          buildStaticAssets("live", "LIVE")
         }
       }
       post {
@@ -278,12 +159,6 @@ pipeline {
         skipDefaultCheckout true
       }
       steps {
-        // This stage triggers the B/G deployment when merging Simorgh
-        // build(
-        //   job: 'simorgh-blue-green/add-alb-updater-lambda',
-        //   propagate: false,
-        //   wait: false
-        // )
         unstash 'simorgh'
         script {
           def run = build(
