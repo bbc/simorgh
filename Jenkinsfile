@@ -94,22 +94,20 @@ pipeline {
         installDependencies()
       }
     }
-    stage ('Build for Release') {
+    stage ('Build Static Assets') {
       when {
         expression { env.BRANCH_NAME == 'latest' }
       }
       failFast true
-      stage ('Build Static Assets') {
-        agent {
-          docker {
-            image "${nodeImage}"
-            reuseNode true
-          }
+      agent {
+        docker {
+          image "${nodeImage}"
+          reuseNode true
         }
-        steps {
-          buildStaticAssets("test", "TEST")
-          buildStaticAssets("live", "LIVE")
-        }
+      }
+      steps {
+        buildStaticAssets("test", "TEST")
+        buildStaticAssets("live", "LIVE")
       }
       post {
         always {
