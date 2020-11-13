@@ -298,10 +298,6 @@ export const service = {
         title: 'वीडियो',
         url: '/hindi/media/video',
       },
-      {
-        title: 'बीबीसी स्पेशल',
-        url: '/hindi/in_depth',
-      },
     ],
   },
 };
