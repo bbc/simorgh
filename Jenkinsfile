@@ -57,7 +57,7 @@ def messageContent(title, text, stageName, gitCommit) {
 }
 
 def notifySlack(messageParameters) {
-  def title = "*${messageParameters.buildStatus} on \"${messageParameters.branchName}\" [build #${env.BUILD_NUMBER}]*"
+  def title = "*${messageParameters.buildStatus} on  \"${messageParameters.branchName}\" [build #${env.BUILD_NUMBER}]*"
 
   def text = "*Author*: ${messageParameters.gitCommitAuthor}"
 
