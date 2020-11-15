@@ -176,7 +176,7 @@
     "babel-jest": "^26.5.2",
     "babel-loader": "^8.1.0",
     "babel-plugin-dynamic-import-node": "^2.3.3",
-    "babel-plugin-emotion": "^10.0.33",
+    "babel-plugin-emotion": "^11.0.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "bbc-a11y": "^2.4.2",
     "brotli-webpack-plugin": "^1.1.0",
