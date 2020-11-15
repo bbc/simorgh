@@ -134,7 +134,7 @@
     "js-cookie": "^2.2.1",
     "lru-cache": "^6.0.0",
     "moment": "^2.29.1",
-    "moment-timezone": "^0.5.31",
+    "moment-timezone": "^0.5.32",
     "morgan": "^1.10.0",
     "path-to-regexp": "^6.2.0",
     "polyfill-crypto.getrandomvalues": "1.0.0",
