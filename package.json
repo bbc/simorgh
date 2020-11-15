@@ -169,7 +169,7 @@
     "@storybook/react": "^5.3.21",
     "@storybook/theming": "^6.0.28",
     "@testing-library/dom": "^7.24.5",
-    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.1",
     "@testing-library/react-hooks": "^3.4.2",
     "amphtml-validator": "^1.0.33",
