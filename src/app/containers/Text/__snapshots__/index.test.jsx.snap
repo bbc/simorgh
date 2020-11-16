@@ -136,6 +136,12 @@ exports[`TextContainer with data should render correctly 1`] = `
   }
 }
 
+@media (min-width:63rem) {
+  .emotion-0 {
+    padding-right: 40px;
+  }
+}
+
 <div>
   <div
     class="emotion-2 emotion-3"
