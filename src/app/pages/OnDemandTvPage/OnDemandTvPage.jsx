@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { shape, string, number, bool, func } from 'prop-types';
 import {
   GEL_SPACING,
@@ -29,7 +29,6 @@ import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadin
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
-import DarkModeGlobalStyles from '#lib/utilities/darkMode';
 import AVPlayer from '#containers/AVPlayer';
 
 const getGroups = (zero, one, two, three, four, five) => ({
@@ -43,7 +42,9 @@ const getGroups = (zero, one, two, three, four, five) => ({
 
 const StyledGelPageGrid = styled(GelPageGrid)`
   padding-bottom: ${GEL_SPACING_QUAD};
-  width: 100%;
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    width: 100%;
+  }
 `;
 
 const StyledVideoPlayer = styled(AVPlayer)`
@@ -107,7 +108,6 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
   return (
     <>
-      <DarkModeGlobalStyles />
       <ChartbeatAnalytics data={pageData} />
       <ATIAnalytics data={pageData} />
       <ComscoreAnalytics />
@@ -137,7 +137,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         }
       />
       <StyledGelPageGrid
-        forwardedAs="main"
+        as="main"
         role="main"
         columns={getGroups(6, 6, 6, 6, 8, 20)}
         enableGelGutters

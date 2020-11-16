@@ -1,6 +1,6 @@
 import React from 'react';
 import { node, string, shape } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import detokenise from '@bbc/psammead-detokeniser';
 import { visuallyHiddenTextStyle } from '@bbc/psammead-visually-hidden-text';
 import { C_EBON, C_WHITE } from '@bbc/psammead-styles/colours';

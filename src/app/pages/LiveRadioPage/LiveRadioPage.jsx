@@ -75,7 +75,7 @@ const LiveRadioPage = ({ pageData }) => {
       <LinkedData type="RadioChannel" seoTitle={name} />
 
       <GelPageGrid
-        forwardedAs="main"
+        as="main"
         role="main"
         columns={{
           group0: 6,
