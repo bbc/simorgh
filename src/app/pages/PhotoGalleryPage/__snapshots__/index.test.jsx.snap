@@ -34,7 +34,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                 dir="ltr"
               >
                 <h1
-                  class="css-1dwveqw-Headline-StyledHeadline emotion-0"
+                  class="css-1rb3qn7-Headline-StyledHeadline emotion-0"
                   id="content"
                   tabindex="-1"
                 >
@@ -1053,7 +1053,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     dir="ltr"
                   >
                     <h1
-                      class="css-1dwveqw-Headline-StyledHeadline emotion-0"
+                      class="css-1rb3qn7-Headline-StyledHeadline emotion-0"
                       id="content"
                       tabindex="-1"
                     >
@@ -2084,7 +2084,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     dir="ltr"
                   >
                     <h1
-                      class="css-1dwveqw-Headline-StyledHeadline emotion-0"
+                      class="css-1rb3qn7-Headline-StyledHeadline emotion-0"
                       id="content"
                       tabindex="-1"
                     >
@@ -3107,7 +3107,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     dir="ltr"
                   >
                     <h1
-                      class="css-1dwveqw-Headline-StyledHeadline emotion-0"
+                      class="css-1rb3qn7-Headline-StyledHeadline emotion-0"
                       id="content"
                       tabindex="-1"
                     >
@@ -3888,7 +3888,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     dir="ltr"
                   >
                     <h1
-                      class="css-10afknl-Headline-StyledHeadline emotion-0"
+                      class="css-1bh6n7z-Headline-StyledHeadline emotion-0"
                       id="content"
                       tabindex="-1"
                     >
