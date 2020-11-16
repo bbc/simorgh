@@ -4,9 +4,9 @@ import getAssetType from './getAssetType';
 import getAssetUri from './getAssetUri';
 import hasRecommendations from './hasRecommendations';
 import fetchPageData from '../../utils/fetchPageData';
-import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
+import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import getMostWatchedEndpoint from '#lib/utilities/getMostWatchedUrl';
-import getSecondaryColumnUrl from '#lib/utilities/getSecondaryColumnUrl';
+import getSecondaryColumnUrl from '#lib/utilities/getUrlHelpers/getSecondaryColumnUrl';
 import getRecommendationsUrl from '#lib/utilities/getRecommendationsUrl';
 import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 

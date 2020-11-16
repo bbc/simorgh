@@ -28,7 +28,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
-import getEmbedUrl from '#lib/utilities/getEmbedUrl';
+import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import AVPlayer from '#containers/AVPlayer';
 
 const getGroups = (zero, one, two, three, four, five) => ({
