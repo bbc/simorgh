@@ -26,15 +26,19 @@ export const getBootstrapSrc = (queryString, useLegacy = false) => {
     'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-bootstrap.js';
   const adsLegacyLiveScript =
     'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-bootstrap-legacy.js';
+
   const useLiveSrc = isLive() || queryString.includes('ads-js-env=live');
+
   if (useLiveSrc) {
     return useLegacy ? adsLegacyLiveScript : adsLiveScript;
   }
   return useLegacy ? adsLegacyTestScript : adsTestScript;
 };
 
-const getPreloadUrls = (pageType, queryString) => {
-  if (isLive()) {
+export const getPreloadUrls = queryString => {
+  const useLiveSrc = isLive() || queryString.includes('ads-js-env=live');
+
+  if (useLiveSrc) {
     return [
       getBootstrapSrc(queryString),
       getBootstrapSrc(queryString, true),
@@ -52,7 +56,7 @@ const getPreloadUrls = (pageType, queryString) => {
 };
 
 const CanonicalAd = ({ slotType, className }) => {
-  const { pageType, showAdsBasedOnLocation } = useContext(RequestContext);
+  const { showAdsBasedOnLocation } = useContext(RequestContext);
   const location = useLocation();
   const queryString = location.search;
   const { translations, dir } = useContext(ServiceContext);
@@ -89,10 +93,11 @@ const CanonicalAd = ({ slotType, className }) => {
     <>
       <Helmet>
         {/* PreLoad Ad Scripts */}
-        {getPreloadUrls(pageType, queryString).map(script => (
+        {getPreloadUrls(queryString).map(script => (
           <link rel="preload" href={script} as="script" key={script} />
         ))}
 
+        {/* Add Ad scripts to document head */}
         <script type="module" src={getBootstrapSrc(queryString)} async />
         <script
           nomodule="nomodule"
@@ -100,6 +105,7 @@ const CanonicalAd = ({ slotType, className }) => {
           async
         />
       </Helmet>
+
       <AdContainer
         slotType={slotType}
         aria-label={ariaLabel}
