@@ -11,7 +11,6 @@ def messageColor = 'danger'
 
 def stageName = ""
 def packageName = 'simorgh.zip'
-def storybookDist = 'storybook.zip'
 def staticAssetsDist = 'static.zip'
 
 def installDependencies(){
@@ -95,38 +94,20 @@ pipeline {
         installDependencies()
       }
     }
-    stage ('Build for Release') {
+    stage ('Build Static Assets') {
       when {
         expression { env.BRANCH_NAME == 'latest' }
       }
       failFast true
-      parallel {
-        stage ('Build Static Assets') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              reuseNode true
-            }
-          }
-          steps {
-            buildStaticAssets("test", "TEST")
-            buildStaticAssets("live", "LIVE")
-          }
+      agent {
+        docker {
+          image "${nodeImage}"
+          reuseNode true
         }
-        stage ('Build Storybook Dist') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              reuseNode true
-            }
-          }
-          steps {
-            sh "rm -f storybook.zip"
-            sh 'make buildStorybook'
-            zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
-            stash name: 'simorgh_storybook', includes: storybookDist
-          }
-        }
+      }
+      steps {
+        buildStaticAssets("test", "TEST")
+        buildStaticAssets("live", "LIVE")
       }
       post {
         always {
