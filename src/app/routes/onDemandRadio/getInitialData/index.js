@@ -80,6 +80,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
         ),
         episodeAvailability: getEpisodeAvailability(json),
         radioScheduleData: getRadioScheduleData(json),
+        recentEpisodes: get(['relatedContent', 'groups', 0, 'promos']),
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {

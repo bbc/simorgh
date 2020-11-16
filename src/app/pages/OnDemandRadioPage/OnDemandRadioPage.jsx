@@ -21,12 +21,48 @@ import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import RadioScheduleContainer from '#containers/RadioSchedule';
+import RecentEpisodes from '#containers/RecentEpisodes';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
 const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
 
 const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
+
+const exampleEpisodes = [
+  {
+    id: '1',
+    url: 'https://www.bbc.com/blahasda',
+    brandTitle: 'Magazine de la Culture',
+    date: '4 Avril 2020',
+    duration: 'PT3M',
+    durationLabel: 'Durée',
+    time: '14:00',
+    locale: 'fr',
+  },
+  {
+    id: '2',
+    url: 'https://www.bbc.com/1',
+    brandTitle: 'Le Journal',
+    episodeTitle: "Le premier rendez-vous d'information de la soirée.",
+    date: '20 octobre 2020',
+    duration: 'PT1H30M',
+    durationLabel: 'Durée',
+    time: '14:00',
+    locale: 'fr',
+  },
+  {
+    id: '3',
+    url: 'https://www.bbc.com/2',
+    brandTitle: 'Afrique Avenir',
+    episodeTitle: 'Tout savoir sur les jeunes entrepreneurs africains.',
+    date: '21 octobre 2020',
+    duration: 'PT59M',
+    durationLabel: 'Durée',
+    time: '14:00',
+    locale: 'fr',
+  },
+];
 
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
@@ -59,6 +95,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     durationISO8601,
     thumbnailImageUrl,
     radioScheduleData,
+    recentEpisodes,
   } = pageData;
 
   const { isAmp } = useContext(RequestContext);
@@ -162,6 +199,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
                 : []
             }
           />
+          <RecentEpisodes episodes={exampleEpisodes} dir={dir} bar={false} />
         </Grid>
       </GelPageGrid>
       {radioScheduleData && (
