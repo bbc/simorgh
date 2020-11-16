@@ -6,6 +6,7 @@ import { formatDuration } from '@bbc/psammead-timestamp-container/utilities';
 import SectionLabel from '@bbc/psammead-section-label';
 import { C_WHITE, C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
 import {
+  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
@@ -18,8 +19,7 @@ import EpisodeList from '@bbc/psammead-episode-list';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledSpan = styled.span`
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 0 ${GEL_SPACING};
 `;
 
 const Spacer = styled.aside`
