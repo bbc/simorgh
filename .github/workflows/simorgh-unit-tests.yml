@@ -19,7 +19,6 @@ jobs:
       CI: true
       LOG_LEVEL: 'error'
       CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-      GIT_BRANCH: ${{ GITHUB_REF }}
       GIT_COMMIT_SHA: ${{ github.sha }}
 
     steps:
@@ -41,9 +40,13 @@ jobs:
           curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter	
           chmod +x ./cc-test-reporter	
           ./cc-test-reporter before-build
+        env:
+          GIT_BRANCH: ${{ GITHUB_REF }}
 
       - name: Unit Tests
         run: npm run test:unit
 
       - name: Report Code Climate Test Coverage
         run: ./cc-test-reporter after-build -t lcov --debug --exit-code 0
+        env:
+          GIT_BRANCH: ${{ GITHUB_REF }}
