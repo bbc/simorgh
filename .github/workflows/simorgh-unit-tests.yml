@@ -20,6 +20,7 @@ jobs:
       LOG_LEVEL: 'error'
       CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
       GIT_COMMIT_SHA: ${{ github.sha }}
+      GIT_BRANCH: ${{ github.ref }}
 
     steps:
       - uses: actions/checkout@v1
@@ -41,8 +42,6 @@ jobs:
           curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter	
           chmod +x ./cc-test-reporter	
           ./cc-test-reporter before-build
-        env:
-          GIT_BRANCH: $(echo git symbolic-ref --short HEAD)
 
       - name: Unit Tests
         run: npm run test:unit
