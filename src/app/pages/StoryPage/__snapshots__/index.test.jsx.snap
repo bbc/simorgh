@@ -449,7 +449,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       >
                         <div
                           class="lazyload-placeholder"
-                          style="height: 300px;"
                         />
                       </div>
                     </div>
@@ -2475,7 +2474,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                         dir="ltr"
                       >
                         <div
-                          class="css-1aa4v4h-Wrapper emotion-65"
+                          class="css-1emiest-Wrapper emotion-65"
                           data-e2e="twitter-embed-https://twitter.com/casualafro/status/1184522157050748929"
                         >
                           <div
@@ -2483,7 +2482,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                           >
                             <div
                               class="lazyload-placeholder"
-                              style="height: 300px;"
                             />
                           </div>
                         </div>
@@ -3760,7 +3758,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         dir="ltr"
                       >
                         <div
-                          class="css-1aa4v4h-Wrapper emotion-65"
+                          class="css-1emiest-Wrapper emotion-65"
                           data-e2e="twitter-embed-https://twitter.com/casualafro/status/1184522157050748929"
                         >
                           <div
@@ -3768,7 +3766,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           >
                             <div
                               class="lazyload-placeholder"
-                              style="height: 300px;"
                             />
                           </div>
                         </div>
