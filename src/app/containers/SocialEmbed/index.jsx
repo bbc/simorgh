@@ -22,8 +22,8 @@ const logger = nodeLogger(__filename);
 /**
  * MAX_WIDTH        Ensures all embeds assume the same width. (Tweets max-out
  *                  at 500px, which is why this is set to 31.25rem.)
- * LAZYLOAD_OFFSET  The distance in pixels below the viewport before an embed
- *                  is allowed to load.
+ * LAZYLOAD_OFFSET  The distance in pixels above or below the viewport before
+ *                  an embed is allowed to load.
  */
 const MAX_WIDTH = '31.25rem';
 const LAZYLOAD_OFFSET = 250;
