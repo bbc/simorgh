@@ -41,7 +41,7 @@ jobs:
           chmod +x ./cc-test-reporter	
           ./cc-test-reporter before-build
         env:
-          GIT_BRANCH: ${{ GITHUB_REF }}
+          GIT_BRANCH: ${{ env.GITHUB_REF }}
 
       - name: Unit Tests
         run: npm run test:unit
@@ -49,4 +49,4 @@ jobs:
       - name: Report Code Climate Test Coverage
         run: ./cc-test-reporter after-build -t lcov --debug --exit-code 0
         env:
-          GIT_BRANCH: ${{ GITHUB_REF }}
+          GIT_BRANCH: ${{ env.GITHUB_REF }}
