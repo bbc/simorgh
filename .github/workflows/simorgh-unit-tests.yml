@@ -41,7 +41,7 @@ jobs:
           chmod +x ./cc-test-reporter	
           ./cc-test-reporter before-build
         env:
-          GIT_BRANCH: ${{ env.GITHUB_REF }}
+          GIT_BRANCH: ${GITHUB_REF##*/}
 
       - name: Unit Tests
         run: npm run test:unit
