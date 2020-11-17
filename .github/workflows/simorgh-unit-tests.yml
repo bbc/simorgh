@@ -20,7 +20,6 @@ jobs:
       LOG_LEVEL: 'error'
       CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
       GIT_COMMIT_SHA: ${{ github.sha }}
-      GIT_BRANCH: ${{ github.head_ref }}
 
     steps:
       - uses: actions/checkout@v1
@@ -28,6 +27,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+
+      - name: Set GIT_BRANCH Environment Variable For Push Event
+        if: ${{ github.event_name == 'push' }}
+        run: echo "GIT_BRANCH=${{ github.ref }}" >> $GITHUB_ENV
+
+      - name: Set GIT_BRANCH Environment Variable For Pull Request Event
+        if: ${{ github.event_name == 'pull_request' }}
+        run: echo "GIT_BRANCH=${{ github.head_ref }}" >> $GITHUB_ENV
 
       - name: Print GitHub Context
         env:
