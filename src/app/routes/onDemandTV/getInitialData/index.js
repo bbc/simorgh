@@ -10,6 +10,8 @@ import getEpisodeAvailability, {
   getUrl,
 } from '#lib/utilities/episodeAvailability';
 
+import extractRecentEpisodes from './extractRecentEpisodes';
+
 export default async ({ path: pathname, pageType }) => {
   try {
     const onDemandTvDataPath = overrideRendererOnTest(pathname);
@@ -19,6 +21,8 @@ export default async ({ path: pathname, pageType }) => {
     });
 
     const get = pathWithLogging(getUrl(json), TV_MISSING_FIELD, json);
+
+    const episodeId = get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR);
 
     return {
       status,
@@ -49,9 +53,10 @@ export default async ({ path: pathname, pageType }) => {
         ),
         promoBrandTitle: get(['promo', 'brand', 'title']),
         masterBrand: get(['metadata', 'createdBy'], LOG_LEVELS.ERROR),
-        episodeId: get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR),
+        episodeId,
         imageUrl: get(['content', 'blocks', 0, 'imageUrl']),
         episodeAvailability: getEpisodeAvailability(json),
+        recentEpisodes: extractRecentEpisodes(json, { exclude: episodeId }),
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
