@@ -1,13 +1,11 @@
-name: Simorgh CI - Unit Tests
+name: Simorgh CI - Unit Tests & Code Coverage
 on:
-  push:
+  create:
     branches:
       - '**'
-      - '!latest'
   pull_request:
     branches:
       - '**'
-      - '!latest'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,6 +15,7 @@ jobs:
     env:
       CI: true
       LOG_LEVEL: 'error'
+      CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
 
     steps:
       - uses: actions/checkout@v1
@@ -28,5 +27,16 @@ jobs:
         run: |
           npm ci
           npm run build
+
+      - name: Setup Code Climate Test Coverage
+        if: ${{ github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }}
+        run: |
+          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter	
+          chmod +x ./cc-test-reporter	
+          ./cc-test-reporter before-build
+
       - name: Unit Tests
         run: npm run test:unit
+
+      - name: Report Code Climate Test Coverage
+        run: ./cc-test-reporter after-build -t lcov --debug --exit-code 0

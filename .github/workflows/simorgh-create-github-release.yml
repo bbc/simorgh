@@ -29,6 +29,6 @@ jobs:
           tag_name: ${{ steps.release_tag.outputs.new_tag }}
           release_name: Release ${{ steps.release_tag.outputs.new_tag }}
           body: |
-            ${{ github.event.commits[github.event.commits.distinct_size].message }}
+            ${{ github.event.head_commit.message }}
           draft: false
           prerelease: false

@@ -1,13 +1,11 @@
-name: Simorgh CI - AMP, BBC-A11Y, Lighthouse Tests
+name: Simorgh CI - AMP Validation, bbc-a11y, Lighthouse & Puppeteer Tests
 on:
-  push:
+  create:
     branches:
       - '**'
-      - '!latest'
   pull_request:
     branches:
       - '**'
-      - '!latest'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -41,3 +39,8 @@ jobs:
 
       - name: Run Lighthouse
         run: npm run lighthouse
+
+      - name: Run Puppeteer Tests
+        run: |
+          npm install --no-save puppeteer
+          npm run test:puppeteer
