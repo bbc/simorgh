@@ -32,7 +32,7 @@ jobs:
           npm run build
 
       - name: Setup Code Climate Test Coverage
-        if: ${{ github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }}
+        if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }}
         run: |
           curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter	
           chmod +x ./cc-test-reporter	
