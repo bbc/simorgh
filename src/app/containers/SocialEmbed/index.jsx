@@ -58,7 +58,6 @@ const SocialEmbedContainer = ({ blocks }) => {
   if (!href) return null;
 
   const oEmbed = path(['embed', 'oembed'], model);
-  const height = path(['height'], oEmbed);
 
   const {
     fallback: fallbackTranslations,
@@ -118,7 +117,7 @@ const SocialEmbedContainer = ({ blocks }) => {
             caption={caption}
           />
         ) : (
-          <Lazyload offset={LAZYLOAD_OFFSET} once height={height}>
+          <Lazyload offset={LAZYLOAD_OFFSET} once height={oEmbed?.height}>
             {enrichedSocialEmbed}
           </Lazyload>
         )}
