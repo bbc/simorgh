@@ -2,7 +2,7 @@ const config = {
   live: {
     baseUrl: 'https://www.bbc.com',
     dataUrl: 'https://www.bbc.com',
-    assetUrl: 'https://news.files.bbci.co.uk/include/articles/public',
+    assetUrl: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/',
     assetOrigin: 'https://news.files.bbci.co.uk',
     atiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?',
     chartbeatEnabled: false,
@@ -15,7 +15,7 @@ const config = {
   test: {
     baseUrl: 'https://www.test.bbc.com',
     dataUrl: 'https://www.test.bbc.com',
-    assetUrl: 'https://news.test.files.bbci.co.uk/include/articles/public',
+    assetUrl: 'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/',
     assetOrigin: 'https://news.test.files.bbci.co.uk',
     atiUrl: 'https://logws1363.ati-host.net?',
     chartbeatEnabled: true,
