@@ -12,6 +12,7 @@ import getEpisodeAvailability, {
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 import getRadioService from '../../utils/getRadioService';
+import processRecentEpisodes from '../../utils/processRecentEpisodes';
 
 const getRadioScheduleData = path(['radioScheduleData']);
 const getScheduleToggle = path(['onDemandRadioSchedule', 'enabled']);
@@ -80,7 +81,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
         ),
         episodeAvailability: getEpisodeAvailability(json),
         radioScheduleData: getRadioScheduleData(json),
-        recentEpisodes: get(['relatedContent', 'groups', 0, 'promos']),
+        recentEpisodes: processRecentEpisodes(json),
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {

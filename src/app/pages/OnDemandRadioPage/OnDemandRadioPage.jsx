@@ -29,41 +29,6 @@ const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${pr
 
 const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
-const exampleEpisodes = [
-  {
-    id: '1',
-    url: 'https://www.bbc.com/blahasda',
-    brandTitle: 'Magazine de la Culture',
-    date: '4 Avril 2020',
-    duration: 'PT3M',
-    durationLabel: 'Durée',
-    time: '14:00',
-    locale: 'fr',
-  },
-  {
-    id: '2',
-    url: 'https://www.bbc.com/1',
-    brandTitle: 'Le Journal',
-    episodeTitle: "Le premier rendez-vous d'information de la soirée.",
-    date: '20 octobre 2020',
-    duration: 'PT1H30M',
-    durationLabel: 'Durée',
-    time: '14:00',
-    locale: 'fr',
-  },
-  {
-    id: '3',
-    url: 'https://www.bbc.com/2',
-    brandTitle: 'Afrique Avenir',
-    episodeTitle: 'Tout savoir sur les jeunes entrepreneurs africains.',
-    date: '21 octobre 2020',
-    duration: 'PT59M',
-    durationLabel: 'Durée',
-    time: '14:00',
-    locale: 'fr',
-  },
-];
-
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
   group1: one,
@@ -199,7 +164,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
                 : []
             }
           />
-          <RecentEpisodes episodes={exampleEpisodes} dir={dir} bar={false} />
+          <RecentEpisodes episodes={recentEpisodes} dir={dir} bar={false} />
         </Grid>
       </GelPageGrid>
       {radioScheduleData && (

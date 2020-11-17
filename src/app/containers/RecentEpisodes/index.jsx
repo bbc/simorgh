@@ -2,7 +2,10 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { formatDuration } from '@bbc/psammead-timestamp-container/utilities';
+import {
+  formatDuration,
+  formatUnixTimestamp,
+} from '@bbc/psammead-timestamp-container/utilities';
 import SectionLabel from '@bbc/psammead-section-label';
 import { C_WHITE, C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
 import {
@@ -41,13 +44,35 @@ const StyledSectionLabel = styled(SectionLabel)`
   ${({ darkMode }) => darkMode && `color: ${C_WHITE}`}
 `;
 
+const formattedTimestamp = ({
+  releaseDateTimeStamp,
+  timezone,
+  datetimeLocale,
+  format,
+}) =>
+  formatUnixTimestamp({
+    timestamp: releaseDateTimeStamp,
+    format,
+    timezone,
+    locale: datetimeLocale,
+    isRelative: false,
+  });
+
 const RecentEpisodes = ({ episodes, darkMode, bar }) => {
-  const { translations, service, script, dir } = useContext(ServiceContext);
+  const {
+    translations,
+    service,
+    script,
+    dir,
+    timezone,
+    datetimeLocale,
+  } = useContext(ServiceContext);
   const recentEpisodesTranslation = pathOr(
     'Recent Episodes',
     ['media', 'recentEpisodes'],
     translations,
   );
+  const durationLabel = pathOr('Duration', ['media', 'duration'], translations);
 
   return (
     <Spacer darkMode={darkMode} role="complimentary">
@@ -71,11 +96,22 @@ const RecentEpisodes = ({ episodes, darkMode, bar }) => {
               </EpisodeList.Title>
               <VisuallyHiddenText>, </VisuallyHiddenText>
               <EpisodeList.Description className="episode-list__description--hover episode-list__description--visited">
-                {episode.episodeTitle || `${episode.date}, ${episode.time}`}
+                {episode.episodeTitle ||
+                  `${formattedTimestamp({
+                    releaseDateTimeStamp: episode.date,
+                    timezone,
+                    format: 'LL',
+                    datetimeLocale,
+                  })}, ${formattedTimestamp({
+                    releaseDateTimeStamp: episode.time,
+                    timezone,
+                    format: 'LT',
+                    datetimeLocale,
+                  })}`}
               </EpisodeList.Description>
               <VisuallyHiddenText>, </VisuallyHiddenText>
               <VisuallyHiddenText>
-                {` ${episode.durationLabel} ${formatDuration({
+                {` ${durationLabel} ${formatDuration({
                   duration: episode.duration,
                   format: episode.duration.includes('H') ? 'h,mm,ss' : 'mm,ss',
                   locale: episode.locale,
@@ -83,7 +119,7 @@ const RecentEpisodes = ({ episodes, darkMode, bar }) => {
               </VisuallyHiddenText>
               <EpisodeList.Metadata>
                 <span aria-hidden="true">
-                  {` ${episode.durationLabel} ${formatDuration({
+                  {` ${durationLabel} ${formatDuration({
                     duration: episode.duration,
                     locale: episode.locale,
                   })}`}
@@ -94,7 +130,13 @@ const RecentEpisodes = ({ episodes, darkMode, bar }) => {
               {episode.episodeTitle && (
                 <>
                   {' '}
-                  <StyledSpan aria-hidden>|</StyledSpan> {episode.date}
+                  <StyledSpan aria-hidden>|</StyledSpan> )}
+                  {formattedTimestamp({
+                    releaseDateTimeStamp: episode.date,
+                    timezone,
+                    format: 'LL',
+                    datetimeLocale,
+                  })}
                 </>
               )}
             </EpisodeList.Metadata>
