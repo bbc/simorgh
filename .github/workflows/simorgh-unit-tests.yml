@@ -28,6 +28,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Print GitHub Context
+        env: GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "The event name is ${{ github.event_name }}"
+          echo "$GITHUB_CONTEXT"
+          
       - name: Install & Build Simorgh
         run: |
           echo ${GITHUB_REF##*/}
