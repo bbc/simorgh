@@ -19,6 +19,8 @@ jobs:
       CI: true
       LOG_LEVEL: 'error'
       CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+      GIT_BRANCH: ${GITHUB_REF##*/}
+      GIT_COMMIT_SHA: $GITHUB_SHA
 
     steps:
       - uses: actions/checkout@v1
@@ -34,6 +36,8 @@ jobs:
       - name: Setup Code Climate Test Coverage
         if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }}
         run: |
+          echo $GIT_BRANCH
+          echo $GIT_COMMIT_SHA
           curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter	
           chmod +x ./cc-test-reporter	
           ./cc-test-reporter before-build
