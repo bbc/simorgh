@@ -20,7 +20,7 @@ jobs:
       LOG_LEVEL: 'error'
       CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
       GIT_COMMIT_SHA: ${{ github.sha }}
-      GIT_BRANCH: ${{ github.ref }}
+      GIT_BRANCH: ${{ github.head_ref }}
 
     steps:
       - uses: actions/checkout@v1
@@ -33,6 +33,7 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: |
+          echo "The branch name is $GIT_BRANCH"
           echo "The event name is ${{ github.event_name }}"
           echo "$GITHUB_CONTEXT"
 
