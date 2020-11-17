@@ -19,8 +19,8 @@ jobs:
       CI: true
       LOG_LEVEL: 'error'
       CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-      GIT_BRANCH: $(echo ${GITHUB_REF##*/}
-      GIT_COMMIT_SHA: $(echo $GITHUB_SHA)
+      GIT_BRANCH: ${{ github.ref }}
+      GIT_COMMIT_SHA: ${{ github.sha }}
 
     steps:
       - uses: actions/checkout@v1
