@@ -20,21 +20,27 @@ import EnrichTweet from './enrichTweet';
 const logger = nodeLogger(__filename);
 
 /**
- * MAX_WIDTH ensures all provider embeds take up the same width.
- * NB Tweets max-out at 500px, which is represented as 31.25rem.
+ * MAX_WIDTH        Ensures all embeds assume the same width. (Tweets max-out
+ *                  at 500px, which is why this is set to 31.25rem.)
+ * LAZYLOAD_OFFSET  The distance in pixels below the viewport before an embed
+ *                  is allowed to load.
  */
 const MAX_WIDTH = '31.25rem';
-const MIN_HEIGHT = 300;
+const LAZYLOAD_OFFSET = 250;
 
-const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
+const getWrapperHeightStyles = oEmbed => {
+  const MIN_HEIGHT = '18.75rem';
+  if (oEmbed?.height) return `height: ${oEmbed.height}px`;
+  if (oEmbed) return `min-height: ${MIN_HEIGHT};`;
+  return '';
+};
 
 const Wrapper = styled.div`
   margin-right: auto;
   margin-left: auto;
   margin-bottom: ${GEL_SPACING_TRPL};
   max-width: ${MAX_WIDTH};
-  ${({ maxHeight }) =>
-    maxHeight ? `max-height: ${maxHeight}px;` : `min-height: ${MIN_HEIGHT}px`}
+  ${({ oEmbed }) => getWrapperHeightStyles(oEmbed)}
 `;
 
 const SocialEmbedContainer = ({ blocks }) => {
@@ -52,9 +58,7 @@ const SocialEmbedContainer = ({ blocks }) => {
   if (!href) return null;
 
   const oEmbed = path(['embed', 'oembed'], model);
-  const maxHeight = path(['height'], oEmbed);
-
-  const lazyLoadHeight = maxHeight || MIN_HEIGHT;
+  const height = path(['height'], oEmbed);
 
   const {
     fallback: fallbackTranslations,
@@ -102,7 +106,7 @@ const SocialEmbedContainer = ({ blocks }) => {
       <Wrapper
         provider={provider}
         data-e2e={`${provider}-embed-${href}`}
-        maxHeight={maxHeight}
+        oEmbed={oEmbed}
       >
         {isAmp ? (
           <AmpSocialEmbed
@@ -114,7 +118,7 @@ const SocialEmbedContainer = ({ blocks }) => {
             caption={caption}
           />
         ) : (
-          <Lazyload offset={LAZYLOAD_OFFSET} once height={lazyLoadHeight}>
+          <Lazyload offset={LAZYLOAD_OFFSET} once height={height}>
             {enrichedSocialEmbed}
           </Lazyload>
         )}
