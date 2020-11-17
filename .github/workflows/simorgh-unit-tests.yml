@@ -20,7 +20,7 @@ jobs:
       LOG_LEVEL: 'error'
       CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
       GIT_BRANCH: $(echo ${GITHUB_REF##*/}
-      GIT_COMMIT_SHA: ${{ GITHUB_SHA }}
+      GIT_COMMIT_SHA: $(echo $GITHUB_SHA)
 
     steps:
       - uses: actions/checkout@v1
