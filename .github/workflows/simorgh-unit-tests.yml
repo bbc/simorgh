@@ -19,7 +19,7 @@ jobs:
       CI: true
       LOG_LEVEL: 'error'
       CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-      GIT_BRANCH: ${{ {GITHUB_HEAD_REF##*/} }}
+      GIT_BRANCH: $(echo ${GITHUB_REF##*/}
       GIT_COMMIT_SHA: ${{ GITHUB_SHA }}
 
     steps:
