@@ -29,6 +29,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install & Build Simorgh
         run: |
+          echo ${GITHUB_REF##*/}
           npm ci
           npm run build
 
@@ -41,7 +42,7 @@ jobs:
           chmod +x ./cc-test-reporter	
           ./cc-test-reporter before-build
         env:
-          GIT_BRANCH: $(echo ${GITHUB_REF##*/})
+          GIT_BRANCH: $(echo git symbolic-ref --short HEAD)
 
       - name: Unit Tests
         run: npm run test:unit
