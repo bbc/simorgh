@@ -1,5 +1,6 @@
 import extractRecentEpisodes from '.';
-import pageData from '#data/afrique/bbc_afrique_tv/tv_programmes/w13xttmz.json';
+import videoPageData from '#data/afrique/bbc_afrique_tv/tv_programmes/w13xttmz.json';
+import audioPageData from '#data/indonesia/bbc_indonesian_radio/w13xtt0s.json';
 
 describe('extractRecentEpisodes', () => {
   it.skip('should correctly format episodes', () => {
@@ -8,7 +9,7 @@ describe('extractRecentEpisodes', () => {
 
   it('should correctly format TV episodes using a custom URL formatter', () => {
     expect(
-      extractRecentEpisodes(pageData, {
+      extractRecentEpisodes(videoPageData, {
         limit: 1,
         urlFormatter: (service, id) =>
           `/${service}/${id.split(':').pop().replace('/', '/tv/')}`,
@@ -18,7 +19,6 @@ describe('extractRecentEpisodes', () => {
         id: 'w172xc9xq2gllfk',
         url: '/afrique/bbc_afrique_tv/tv/w172xc9xq2gllfk',
         brandTitle: 'BBC Info',
-        episodeTitle: '', // This asset does not have a custom title - we remove the ares fallback title
         timestamp: 1605285900000,
         duration: 'PT15M',
         image: '//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png',
@@ -27,9 +27,27 @@ describe('extractRecentEpisodes', () => {
     ]);
   });
 
+  it('should correctly format radio episodes', () => {
+    expect(
+      extractRecentEpisodes(audioPageData, {
+        limit: 1,
+      }),
+    ).toEqual([
+      {
+        id: 'w172xnm8j4tz686',
+        url: '/indonesia/bbc_indonesian_radio/w172xnm8j4tz686',
+        brandTitle: 'Dunia Pagi Ini',
+        timestamp: 1605564900000,
+        duration: 'PT15M30S',
+        image: '//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png',
+        altText: 'Dunia Pagi Ini',
+      },
+    ]);
+  });
+
   it('should correctly output multiple episodes', () => {
     expect(
-      extractRecentEpisodes(pageData, {
+      extractRecentEpisodes(videoPageData, {
         limit: 3,
       }).length,
     ).toEqual(3);
@@ -39,7 +57,7 @@ describe('extractRecentEpisodes', () => {
     const episodeCountInPageData = 123; // TODO
     const firstId = 'w172xc9xq2gllfk'; // TODO
     expect(
-      extractRecentEpisodes(pageData, {
+      extractRecentEpisodes(videoPageData, {
         limit: episodeCountInPageData,
         exclude: firstId,
       }).length,
