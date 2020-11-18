@@ -38,6 +38,7 @@ const excludeEpisode = idToExclude => episode => episode.id !== idToExclude;
 const processRecentEpisodes = (
   pageData,
   {
+    enabled,
     recentEpisodesLimit = 4,
     exclude = null,
     urlFormatter = (service, id) => `/${service}/${id.split(':').pop()}`,
@@ -49,7 +50,7 @@ const processRecentEpisodes = (
     pageData,
   ).split('.')[0];
 
-  if (!serviceName) return [];
+  if (!serviceName || !enabled) return [];
 
   return pathOr([], ['relatedContent', 'groups', 0, 'promos'], pageData)
     .filter(validateEpisode)
