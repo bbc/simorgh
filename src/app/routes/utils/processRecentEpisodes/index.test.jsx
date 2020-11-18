@@ -1,15 +1,15 @@
-import extractRecentEpisodes from '.';
+import processRecentEpisodes from '.';
 import videoPageData from '#data/afrique/bbc_afrique_tv/tv_programmes/w13xttmz.json';
 import audioPageData from '#data/indonesia/bbc_indonesian_radio/w13xtt0s.json';
 
-describe('extractRecentEpisodes', () => {
+describe('processRecentEpisodes', () => {
   it.skip('should correctly format episodes', () => {
     expect(0).toEqual(1);
   });
 
   it('should correctly format TV episodes using a custom URL formatter', () => {
     expect(
-      extractRecentEpisodes(videoPageData, {
+      processRecentEpisodes(videoPageData, {
         recentEpisodesLimit: 1,
         enabled: true,
         urlFormatter: (service, id) =>
@@ -30,7 +30,7 @@ describe('extractRecentEpisodes', () => {
 
   it('should correctly format radio episodes', () => {
     expect(
-      extractRecentEpisodes(audioPageData, {
+      processRecentEpisodes(audioPageData, {
         recentEpisodesLimit: 1,
         enabled: true,
       }),
@@ -49,7 +49,7 @@ describe('extractRecentEpisodes', () => {
 
   it('should correctly output multiple episodes', () => {
     expect(
-      extractRecentEpisodes(videoPageData, {
+      processRecentEpisodes(videoPageData, {
         recentEpisodesLimit: 3,
         enabled: true,
       }).length,
@@ -60,7 +60,7 @@ describe('extractRecentEpisodes', () => {
     const episodeCountInPageData = 8; // TODO
     const firstId = 'w172xc9xq2gllfk'; // TODO
     expect(
-      extractRecentEpisodes(videoPageData, {
+      processRecentEpisodes(videoPageData, {
         recentEpisodesLimit: episodeCountInPageData,
         exclude: firstId,
         enabled: true,
