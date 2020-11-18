@@ -162,6 +162,7 @@ export const service = {
         previousRadioShow: 'Ikiganiro ca radiyo giheruka',
         nextRadioShow: 'Ikiganiro ca radiyo gikurikira',
         duration: 'Umwanya bimara',
+        recentEpisodes: 'Ibiganiro byashise',
       },
       socialEmbed: {
         caption: {

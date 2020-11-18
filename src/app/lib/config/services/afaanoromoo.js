@@ -160,6 +160,7 @@ export const service = {
         previousRadioShow: 'Sagantaa raadiyoo dabre',
         nextRadioShow: 'Sagantaa raadiyoo itti aanu',
         duration: 'Turtii',
+        recentEpisodes: 'Sagantaawwan darban',
       },
       socialEmbed: {
         caption: {

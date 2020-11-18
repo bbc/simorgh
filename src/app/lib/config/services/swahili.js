@@ -167,6 +167,7 @@ export const service = {
         previousRadioShow: 'Kipindi kilichopita cha redio',
         nextRadioShow: 'Kipindi kijacho cha redio',
         duration: 'Muda',
+        recentEpisodes: 'Vipindi vilivyopita',
       },
       socialEmbed: {
         caption: {

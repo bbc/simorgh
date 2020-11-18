@@ -167,6 +167,7 @@ export const service = {
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
+        recentEpisodes: 'Мурдагы берүүлөр',
       },
       socialEmbed: {
         caption: {
