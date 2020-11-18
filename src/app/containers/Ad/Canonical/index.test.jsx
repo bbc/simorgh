@@ -111,8 +111,12 @@ describe('getBootstrapSrc', () => {
 });
 
 describe('getPreloadUrls', () => {
+  afterEach(() => {
+    jest.resetAllMocks();
+  });
+
   it('Should return an array of live urls to preload', () => {
-    isLive.mockImplementationOnce(() => true);
+    isLive.mockImplementation(() => true);
 
     expect(getPreloadUrls('')).toEqual(
       expect.arrayContaining([
@@ -125,7 +129,7 @@ describe('getPreloadUrls', () => {
   });
 
   it('Should return an array of test urls to preload', () => {
-    isLive.mockImplementationOnce(() => false);
+    isLive.mockImplementation(() => false);
 
     expect(getPreloadUrls('')).toEqual(
       expect.arrayContaining([
