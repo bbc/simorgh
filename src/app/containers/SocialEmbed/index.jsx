@@ -9,15 +9,11 @@ import {
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import nodeLogger from '#lib/logger.node';
-import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import { GridItemMedium } from '#app/components/Grid';
 import useToggle from '#hooks/useToggle';
 import socialEmbedBlockPropTypes from '#models/propTypes/socialEmbed';
 import createTranslations from './translations';
 import EnrichTweet from './enrichTweet';
-
-const logger = nodeLogger(__filename);
 
 /**
  * MAX_WIDTH        Ensures all embeds assume the same width. (Tweets max-out
@@ -80,11 +76,6 @@ const SocialEmbedContainer = ({ blocks }) => {
   };
 
   const caption = provider === 'youtube' ? captionTranslations : null;
-
-  logger.info(SOCIAL_EMBED_RENDERED, {
-    provider,
-    href,
-  });
 
   const socialEmbed = (
     <CanonicalSocialEmbed
