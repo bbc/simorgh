@@ -33,7 +33,8 @@ const formatEpisode = (episode, { serviceName, urlFormatter }) => {
   };
 };
 
-const excludeEpisode = idToExclude => episode => episode.id !== idToExclude;
+const excludeEpisode = idToExclude => episode =>
+  episode.media.id !== idToExclude;
 
 const processRecentEpisodes = (
   pageData,
