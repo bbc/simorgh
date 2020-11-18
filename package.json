@@ -210,7 +210,7 @@
     "jest": "^26.5.2",
     "jest-emotion": "^10.0.32",
     "jest-fetch-mock": "^3.0.3",
-    "jest-junit": "^11.1.0",
+    "jest-junit": "^12.0.0",
     "jest-serializer-html": "^7.0.0",
     "jest-silent-reporter": "^0.2.1",
     "jsdom": "^16.4.0",
