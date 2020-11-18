@@ -56,8 +56,8 @@ describe('extractRecentEpisodes', () => {
     ).toEqual(3);
   });
 
-  it.skip('should correctly exclude episodes by id', () => {
-    const episodeCountInPageData = 123; // TODO
+  it('should correctly exclude episodes by id', () => {
+    const episodeCountInPageData = 8; // TODO
     const firstId = 'w172xc9xq2gllfk'; // TODO
     expect(
       extractRecentEpisodes(videoPageData, {
