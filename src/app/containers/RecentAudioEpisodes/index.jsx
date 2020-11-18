@@ -29,10 +29,7 @@ const StyledSpan = styled.span`
 
 const Spacer = styled.aside`
   position: relative;
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin-bottom: ${GEL_SPACING_QUAD};
-  }
+  margin-bottom: ${GEL_SPACING_QUAD};
 `;
 const StyledSectionLabel = styled(SectionLabel)`
   margin-bottom: 0;
@@ -43,20 +40,6 @@ const StyledSectionLabel = styled(SectionLabel)`
     margin-bottom: ${GEL_SPACING_TRPL};
   }
 `;
-
-const formattedTimestamp = ({
-  releaseDateTimeStamp,
-  timezone,
-  datetimeLocale,
-  format,
-}) =>
-  formatUnixTimestamp({
-    timestamp: releaseDateTimeStamp,
-    format,
-    timezone,
-    locale: datetimeLocale,
-    isRelative: false,
-  });
 
 const RecentAudioEpisodes = ({ episodes }) => {
   const {
@@ -70,6 +53,15 @@ const RecentAudioEpisodes = ({ episodes }) => {
 
   if (!episodes.length) return null;
   if (isLive()) return null;
+
+  const formattedTimestamp = ({ releaseDateTimeStamp, format }) =>
+    formatUnixTimestamp({
+      timestamp: releaseDateTimeStamp,
+      format,
+      timezone,
+      locale: datetimeLocale,
+      isRelative: false,
+    });
 
   const recentEpisodesTranslation = pathOr(
     'Recent Episodes',
@@ -102,14 +94,10 @@ const RecentAudioEpisodes = ({ episodes }) => {
                 {episode.episodeTitle ||
                   `${formattedTimestamp({
                     releaseDateTimeStamp: episode.timestamp,
-                    timezone,
                     format: 'LL',
-                    datetimeLocale,
                   })}, ${formattedTimestamp({
                     releaseDateTimeStamp: episode.timestamp,
-                    timezone,
                     format: 'HH:mm',
-                    datetimeLocale,
                   })}`}
               </EpisodeList.Description>
               <VisuallyHiddenText>, </VisuallyHiddenText>
@@ -136,9 +124,7 @@ const RecentAudioEpisodes = ({ episodes }) => {
                   <StyledSpan aria-hidden>|</StyledSpan>
                   {formattedTimestamp({
                     releaseDateTimeStamp: episode.timestamp,
-                    timezone,
                     format: 'LL',
-                    datetimeLocale,
                   })}
                 </>
               )}
