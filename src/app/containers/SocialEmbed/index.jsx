@@ -29,8 +29,12 @@ const MAX_WIDTH = '31.25rem';
 const LAZYLOAD_OFFSET = 250;
 
 const getWrapperHeightStyles = oEmbed => {
+  /**
+   * Adjust MIN_HEIGHT to configure the default minimum height of Social Embed
+   * wrappers. This helps reduce layout shift. It is not applied to fallbacks.
+   */
   const MIN_HEIGHT = '18.75rem';
-  if (oEmbed?.height) return `height: ${oEmbed.height}px`;
+  if (oEmbed?.height) return `min-height: ${oEmbed.height / 16}rem`;
   if (oEmbed) return `min-height: ${MIN_HEIGHT};`;
   return '';
 };
