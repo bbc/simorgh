@@ -1,5 +1,7 @@
+/* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
+import pathOr from 'ramda/src/pathOr';
 import EpisodeList from '@bbc/psammead-episode-list';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import {
@@ -30,11 +32,16 @@ const StyledSectionLabel = styled(SectionLabel)`
   }
 `;
 
-// TODO: translations, proptypes, disable on live
+// TODO: proptypes, disable on live
 const RecentVideoEpisodes = ({ episodes }) => {
-  const { script, service, dir, timezone, datetimeLocale } = useContext(
-    ServiceContext,
-  );
+  const {
+    script,
+    service,
+    dir,
+    timezone,
+    datetimeLocale,
+    translations,
+  } = useContext(ServiceContext);
 
   // if (!episodes) return null;
   // if (isLive()) return null;
@@ -48,6 +55,13 @@ const RecentVideoEpisodes = ({ episodes }) => {
       isRelative: false,
     });
 
+  const recentEpisodesTranslation = pathOr(
+    'Recent Episodes',
+    ['media', 'recentEpisodes'],
+    translations,
+  );
+  const durationLabel = pathOr('Duration', ['media', 'duration'], translations);
+
   return (
     <div>
       <StyledSectionLabel
@@ -56,7 +70,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
         dir={dir}
         backgroundColor={C_MIDNIGHT_BLACK}
       >
-        Recent Episodes
+        {recentEpisodesTranslation}
       </StyledSectionLabel>
       <EpisodeList script={script} service={service} dir={dir} darkMode>
         {episodes.map(episode => (
@@ -79,7 +93,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
               </EpisodeList.Description>
               <VisuallyHiddenText>, </VisuallyHiddenText>
               <VisuallyHiddenText>
-                {` Durée ${formatDuration({
+                {`${durationLabel} ${formatDuration({
                   duration: episode.duration,
                   format: episode.duration.includes('H') ? 'h,mm,ss' : 'mm,ss',
                   locale: datetimeLocale,

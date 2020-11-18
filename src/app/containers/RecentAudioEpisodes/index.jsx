@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
@@ -7,7 +8,6 @@ import {
   formatUnixTimestamp,
 } from '@bbc/psammead-timestamp-container/utilities';
 import SectionLabel from '@bbc/psammead-section-label';
-import { C_WHITE, C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -26,7 +26,6 @@ const StyledSpan = styled.span`
 `;
 
 const Spacer = styled.aside`
-  background: ${({ darkMode }) => (darkMode ? C_MIDNIGHT_BLACK : 'unset')};
   position: relative;
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -41,7 +40,6 @@ const StyledSectionLabel = styled(SectionLabel)`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-bottom: ${GEL_SPACING_TRPL};
   }
-  ${({ darkMode }) => darkMode && `color: ${C_WHITE}`}
 `;
 
 const formattedTimestamp = ({
@@ -58,7 +56,7 @@ const formattedTimestamp = ({
     isRelative: false,
   });
 
-const RecentAudioEpisodes = ({ episodes, darkMode, bar }) => {
+const RecentAudioEpisodes = ({ episodes }) => {
   const {
     translations,
     service,
@@ -75,15 +73,8 @@ const RecentAudioEpisodes = ({ episodes, darkMode, bar }) => {
   const durationLabel = pathOr('Duration', ['media', 'duration'], translations);
 
   return (
-    <Spacer darkMode={darkMode} role="complimentary">
-      <StyledSectionLabel
-        script={script}
-        service={service}
-        dir={dir}
-        bar={bar}
-        darkMode={darkMode}
-        {...(darkMode ? { backgroundColor: C_MIDNIGHT_BLACK } : {})}
-      >
+    <Spacer role="complimentary">
+      <StyledSectionLabel script={script} service={service} dir={dir}>
         {recentEpisodesTranslation}
       </StyledSectionLabel>
       <EpisodeList script={script} service={service} dir={dir}>
@@ -98,12 +89,12 @@ const RecentAudioEpisodes = ({ episodes, darkMode, bar }) => {
               <EpisodeList.Description className="episode-list__description--hover episode-list__description--visited">
                 {episode.episodeTitle ||
                   `${formattedTimestamp({
-                    releaseDateTimeStamp: episode.date,
+                    releaseDateTimeStamp: episode.timestamp,
                     timezone,
                     format: 'LL',
                     datetimeLocale,
                   })}, ${formattedTimestamp({
-                    releaseDateTimeStamp: episode.time,
+                    releaseDateTimeStamp: episode.timestamp,
                     timezone,
                     format: 'LT',
                     datetimeLocale,
@@ -132,7 +123,7 @@ const RecentAudioEpisodes = ({ episodes, darkMode, bar }) => {
                   {' '}
                   <StyledSpan aria-hidden>|</StyledSpan> )}
                   {formattedTimestamp({
-                    releaseDateTimeStamp: episode.date,
+                    releaseDateTimeStamp: episode.timestamp,
                     timezone,
                     format: 'LL',
                     datetimeLocale,

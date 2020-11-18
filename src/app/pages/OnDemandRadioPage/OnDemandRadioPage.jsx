@@ -164,11 +164,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
                 : []
             }
           />
-          <RecentAudioEpisodes
-            episodes={recentEpisodes}
-            dir={dir}
-            bar={false}
-          />
+          <RecentAudioEpisodes episodes={recentEpisodes} />
         </Grid>
       </GelPageGrid>
       {radioScheduleData && (
