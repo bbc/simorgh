@@ -244,7 +244,7 @@ Object {
 exports[`AMP Front Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "فيديو",
-  "url": "/arabic/media",
+  "url": "/arabic/media-54706728",
 }
 `;
 
