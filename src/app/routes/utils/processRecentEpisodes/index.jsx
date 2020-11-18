@@ -1,29 +1,25 @@
-import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
+import is from 'ramda/src/is';
 
-// REBECCA
-const formatEpisodeData = episode => {
-  // full url or service/programme/id?
-  return {
-    id: episode.media.id,
-    url: 'https://www.bbc.com/blahasda',
-    brandTitle: episode.brand.title,
-    episodeTitle: episode.media.episodeTitle,
-    date: episode.releaseDateTimestamp,
-    time: episode.media.versions[0].availableFrom,
-    duration: episode.media.versions[0].durationISO8601,
-  };
+const validateEpisode = episode => {
+  const checks = [
+    episode,
+    is(String, episode.id),
+    episode.id.contains(':'),
+    episode.brand,
+    is(String, episode.brand.title),
+    episode.media,
+    is(String, episode.media.id),
+    is(Array, episode.media.versions),
+    episode.media.versions[0],
+    is(String, episode.media.versions[0].durationISO8601),
+  ];
+
+  // TODO: log if invalid
+
+  return checks.every(Boolean);
 };
 
-const processRecentEpisodes = json => {
-  // temp limit for 4 episodes
-  const episodes = path(['relatedContent', 'groups', 0, 'promos'], json).slice(
-    0,
-    4,
-  );
-  return episodes.map(episode => formatEpisodeData(episode));
-};
-
-// RYAN
 const formatEpisode = (episode, service) => {
   // TODO Ramda
   return {
@@ -37,21 +33,34 @@ const formatEpisode = (episode, service) => {
   };
 };
 
+const excludeEpisode = idToExclude => episode => episode.id !== idToExclude;
+
 // TODO: ramda, limit, exclude, validate, logging
-const extractRecentEpisodes = (
+const processRecentEpisodes = (
   pageData,
   { limit = 5, exclude = null } = {},
 ) => {
-  const recentEpisodes = pageData.relatedContent.groups[0].promos;
+  const recentEpisodes = pathOr(
+    [],
+    ['relatedContent', 'groups', 0, 'promos'],
+    pageData,
+  )
+    .filter(validateEpisode)
+    .filter(excludeEpisode(exclude));
 
   if (!recentEpisodes) return [];
 
-  const service = pageData.metadata.analyticsLabels.pageIdentifier.split(
-    '.',
-  )[0];
+  const serviceName = pathOr(
+    '',
+    ['metadata', 'analyticsLabels', 'pageIdentifier', 'promos'],
+    pageData,
+  ).split('.')[0];
 
-  return recentEpisodes.map(episode => formatEpisode(episode, service));
+  if (!serviceName) return [];
+
+  return recentEpisodes
+    .map(episode => formatEpisode(episode, serviceName))
+    .slice(0, limit);
 };
 
 export default processRecentEpisodes;
-// export default extractRecentEpisodes;
