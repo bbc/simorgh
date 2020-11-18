@@ -1,13 +1,14 @@
 name: Simorgh CI - E2E & 3rd Party Tests
 on:
-  push:
+  create:
     branches:
       - '**'
-      - '!latest'
   pull_request:
     branches:
       - '**'
-      - '!latest'
+  push:
+    branches:
+      - latest
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
