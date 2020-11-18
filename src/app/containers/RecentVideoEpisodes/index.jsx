@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
+import { arrayOf, shape, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import EpisodeList from '@bbc/psammead-episode-list';
@@ -19,6 +20,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 
+import isLive from '#lib/utilities/isLive';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledSectionLabel = styled(SectionLabel)`
@@ -43,8 +45,8 @@ const RecentVideoEpisodes = ({ episodes }) => {
     translations,
   } = useContext(ServiceContext);
 
-  // if (!episodes) return null;
-  // if (isLive()) return null;
+  if (!episodes.length) return null;
+  if (isLive()) return null;
 
   const formatDate = timestamp =>
     formatUnixTimestamp({
@@ -69,6 +71,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
         service={service}
         dir={dir}
         backgroundColor={C_MIDNIGHT_BLACK}
+        labelId="recent-episodes"
       >
         {recentEpisodesTranslation}
       </StyledSectionLabel>
@@ -112,6 +115,21 @@ const RecentVideoEpisodes = ({ episodes }) => {
       </EpisodeList>
     </div>
   );
+};
+
+RecentVideoEpisodes.propTypes = {
+  episodes: arrayOf(
+    shape({
+      id: string.isRequired,
+      url: string.isRequired,
+      brandTitle: string.isRequired,
+      episodeTitle: string,
+      timestamp: number.isRequired,
+      duration: string.isRequired,
+      image: string.isRequired,
+      altText: string.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default RecentVideoEpisodes;

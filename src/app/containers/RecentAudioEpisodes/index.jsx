@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
+import { arrayOf, shape, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
@@ -19,6 +20,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import EpisodeList from '@bbc/psammead-episode-list';
+import isLive from '#lib/utilities/isLive';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledSpan = styled.span`
@@ -65,6 +67,10 @@ const RecentAudioEpisodes = ({ episodes }) => {
     timezone,
     datetimeLocale,
   } = useContext(ServiceContext);
+
+  if (!episodes.length) return null;
+  if (isLive()) return null;
+
   const recentEpisodesTranslation = pathOr(
     'Recent Episodes',
     ['media', 'recentEpisodes'],
@@ -74,7 +80,12 @@ const RecentAudioEpisodes = ({ episodes }) => {
 
   return (
     <Spacer role="complimentary">
-      <StyledSectionLabel script={script} service={service} dir={dir}>
+      <StyledSectionLabel
+        script={script}
+        service={service}
+        dir={dir}
+        labelId="recent-episodes"
+      >
         {recentEpisodesTranslation}
       </StyledSectionLabel>
       <EpisodeList script={script} service={service} dir={dir}>
@@ -105,14 +116,14 @@ const RecentAudioEpisodes = ({ episodes }) => {
                 {` ${durationLabel} ${formatDuration({
                   duration: episode.duration,
                   format: episode.duration.includes('H') ? 'h,mm,ss' : 'mm,ss',
-                  locale: episode.locale,
+                  locale: datetimeLocale,
                 })} `}
               </VisuallyHiddenText>
               <EpisodeList.Metadata>
                 <span aria-hidden="true">
                   {` ${durationLabel} ${formatDuration({
                     duration: episode.duration,
-                    locale: episode.locale,
+                    locale: datetimeLocale,
                   })}`}
                 </span>
               </EpisodeList.Metadata>
@@ -121,7 +132,7 @@ const RecentAudioEpisodes = ({ episodes }) => {
               {episode.episodeTitle && (
                 <>
                   {' '}
-                  <StyledSpan aria-hidden>|</StyledSpan> )}
+                  <StyledSpan aria-hidden>|</StyledSpan>
                   {formattedTimestamp({
                     releaseDateTimeStamp: episode.timestamp,
                     timezone,
@@ -138,8 +149,17 @@ const RecentAudioEpisodes = ({ episodes }) => {
   );
 };
 
-RecentAudioEpisodes.propTypes = {};
-
-RecentAudioEpisodes.defaultProps = {};
+RecentAudioEpisodes.propTypes = {
+  episodes: arrayOf(
+    shape({
+      id: string.isRequired,
+      url: string.isRequired,
+      brandTitle: string.isRequired,
+      episodeTitle: string,
+      timestamp: number.isRequired,
+      duration: string.isRequired,
+    }),
+  ).isRequired,
+};
 
 export default RecentAudioEpisodes;
