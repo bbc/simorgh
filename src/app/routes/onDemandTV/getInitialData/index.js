@@ -56,7 +56,11 @@ export default async ({ path: pathname, pageType }) => {
         episodeId,
         imageUrl: get(['content', 'blocks', 0, 'imageUrl']),
         episodeAvailability: getEpisodeAvailability(json),
-        recentEpisodes: processRecentEpisodes(json, { exclude: episodeId }),
+        recentEpisodes: processRecentEpisodes(json, {
+          exclude: episodeId,
+          urlFormatter: (service, id) =>
+            `/${service}/${id.split(':').pop().replace('/', '/tv/')}`,
+        }),
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
