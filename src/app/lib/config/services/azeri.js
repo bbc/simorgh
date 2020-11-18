@@ -262,10 +262,6 @@ export const service = {
         url: '/azeri/topics/cde15l4vn02t',
       },
       {
-        title: 'Dərgi',
-        url: '/azeri/magazine',
-      },
-      {
         title: 'Video',
         url: '/azeri/media/video',
       },

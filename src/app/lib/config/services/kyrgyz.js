@@ -268,24 +268,16 @@ export const service = {
         url: '/kyrgyz/topics/ck2l9z012nkt',
       },
       {
-        title: 'Сапар TV',
-        url: '/kyrgyz/sapartv',
-      },
-      {
         title: 'Видео',
         url: '/kyrgyz/media/video',
       },
       {
         title: 'Маданият/Илим',
-        url: '/kyrgyz/entertainment',
+        url: '/kyrgyz/topics/czp8pjrkgp0t',
       },
       {
         title: 'Журнал',
         url: '/kyrgyz/magazine-54071664',
-      },
-      {
-        title: 'Блог',
-        url: '/kyrgyz/blog',
       },
     ],
   },

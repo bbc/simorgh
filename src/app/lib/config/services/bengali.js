@@ -262,10 +262,6 @@ export const service = {
         url: '/bengali',
       },
       {
-        title: 'আমেরিকায় নির্বাচন ২০২০',
-        url: '/bengali/53988070',
-      },
-      {
         title: 'করোনাভাইরাস',
         url: '/bengali/news-51941294',
       },
