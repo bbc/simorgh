@@ -5,7 +5,7 @@ const validateEpisode = episode => {
   const checks = [
     episode,
     is(String, episode.id),
-    episode.id.contains(':'),
+    episode.id.includes(':'),
     episode.brand,
     is(String, episode.brand.title),
     episode.media,
@@ -14,7 +14,6 @@ const validateEpisode = episode => {
     episode.media.versions[0],
     is(String, episode.media.versions[0].durationISO8601),
   ];
-
   // TODO: log if invalid
 
   return checks.every(Boolean);
@@ -40,6 +39,14 @@ const processRecentEpisodes = (
   pageData,
   { limit = 5, exclude = null } = {},
 ) => {
+  const serviceName = pathOr(
+    '',
+    ['metadata', 'analyticsLabels', 'pageIdentifier'],
+    pageData,
+  ).split('.')[0];
+
+  if (!serviceName) return [];
+
   const recentEpisodes = pathOr(
     [],
     ['relatedContent', 'groups', 0, 'promos'],
@@ -49,14 +56,6 @@ const processRecentEpisodes = (
     .filter(excludeEpisode(exclude));
 
   if (!recentEpisodes) return [];
-
-  const serviceName = pathOr(
-    '',
-    ['metadata', 'analyticsLabels', 'pageIdentifier', 'promos'],
-    pageData,
-  ).split('.')[0];
-
-  if (!serviceName) return [];
 
   return recentEpisodes
     .map(episode => formatEpisode(episode, serviceName))
