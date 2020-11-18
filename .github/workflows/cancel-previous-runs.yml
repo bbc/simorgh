@@ -6,6 +6,9 @@ on:
   pull_request:
     branches:
       - '**'
+  push:
+    branches:
+      - latest
 jobs:
   cleanup-runs:
     runs-on: ubuntu-latest
