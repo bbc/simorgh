@@ -1,4 +1,4 @@
-import extractRecentEpisodes from './extractRecentEpisodes';
+import extractRecentEpisodes from '.';
 import pageData from '#data/afrique/bbc_afrique_tv/tv_programmes/w13xttmz.json';
 
 describe('extractRecentEpisodes', () => {

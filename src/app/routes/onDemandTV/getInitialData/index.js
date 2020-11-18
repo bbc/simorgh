@@ -10,7 +10,7 @@ import getEpisodeAvailability, {
   getUrl,
 } from '#lib/utilities/episodeAvailability';
 
-import extractRecentEpisodes from './extractRecentEpisodes';
+import processRecentEpisodes from '#app/routes/utils/processRecentEpisodes';
 
 export default async ({ path: pathname, pageType }) => {
   try {
@@ -56,7 +56,7 @@ export default async ({ path: pathname, pageType }) => {
         episodeId,
         imageUrl: get(['content', 'blocks', 0, 'imageUrl']),
         episodeAvailability: getEpisodeAvailability(json),
-        recentEpisodes: extractRecentEpisodes(json, { exclude: episodeId }),
+        recentEpisodes: processRecentEpisodes(json, { exclude: episodeId }),
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
