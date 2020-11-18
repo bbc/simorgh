@@ -108,7 +108,7 @@ const RecentAudioEpisodes = ({ episodes }) => {
                   })}, ${formattedTimestamp({
                     releaseDateTimeStamp: episode.timestamp,
                     timezone,
-                    format: 'LT',
+                    format: 'H:m',
                     datetimeLocale,
                   })}`}
               </EpisodeList.Description>
