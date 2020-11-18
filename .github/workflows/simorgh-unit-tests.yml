@@ -19,6 +19,7 @@ jobs:
       CI: true
       LOG_LEVEL: 'error'
       CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+      GIT_COMMIT_SHA: ${{ github.sha }}
 
     steps:
       - uses: actions/checkout@v1
@@ -26,14 +27,35 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+
+      - name: Set GIT_BRANCH Environment Variable For Push Event
+        if: ${{ github.event_name == 'push' }}
+        run: echo "GIT_BRANCH=${{ github.ref }}" >> $GITHUB_ENV
+
+      - name: Set GIT_BRANCH Environment Variable For Pull Request Event
+        if: ${{ github.event_name == 'pull_request' }}
+        run: echo "GIT_BRANCH=${{ github.head_ref }}" >> $GITHUB_ENV
+
+      - name: Print GitHub Context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "The branch name is:"
+          echo "$GIT_BRANCH"
+          echo "The event name is ${{ github.event_name }}"
+          echo "$GITHUB_CONTEXT"
+
       - name: Install & Build Simorgh
         run: |
+          echo ${GITHUB_REF##*/}
           npm ci
           npm run build
 
       - name: Setup Code Climate Test Coverage
         if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }}
         run: |
+          echo $GIT_BRANCH
+          echo $GIT_COMMIT_SHA
           curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter	
           chmod +x ./cc-test-reporter	
           ./cc-test-reporter before-build
