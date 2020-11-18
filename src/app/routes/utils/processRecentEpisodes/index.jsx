@@ -38,7 +38,7 @@ const excludeEpisode = idToExclude => episode => episode.id !== idToExclude;
 const processRecentEpisodes = (
   pageData,
   {
-    limit = 5,
+    limit = 4,
     exclude = null,
     urlFormatter = (service, id) => `/${service}/${id.split(':').pop()}`,
   } = {},
