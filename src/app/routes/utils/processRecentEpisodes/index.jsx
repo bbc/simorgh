@@ -10,7 +10,6 @@ const validateEpisode = episode => {
     is(String, episode.brand.title),
     episode.media,
     is(String, episode.media.id),
-    is(String, episode.media.title),
     is(Array, episode.media.versions),
     episode.media.versions[0],
     is(String, episode.media.versions[0].durationISO8601),
@@ -21,21 +20,12 @@ const validateEpisode = episode => {
   return checks.every(Boolean);
 };
 
-// We have different requirements depending on whether or not editorial title their episodes
-// However, the data always contains a title - ARES populate a default one if it is not defined
-// This function checks if the title appears to be that fallback title, and removes it if so
-const formatTitle = title => {
-  const defaultTitleRegex = /^\d{2}\/\d{2}\/\d{4} GMT$/; // eg: 13/11/2020 GMT
-  if (title.match(defaultTitleRegex)) return '';
-  return title;
-};
-
 const formatEpisode = (episode, { serviceName, urlFormatter }) => {
   return {
     id: episode.media.id,
     url: urlFormatter(serviceName, episode.id),
     brandTitle: episode.brand.title,
-    episodeTitle: formatTitle(episode.media.title),
+    episodeTitle: episode.episodeTitle,
     timestamp: episode.media.versions[0].availableFrom,
     duration: episode.media.versions[0].durationISO8601,
     image: `//${episode.media.imageUrl.replace('$recipe', '768x432')}`,
