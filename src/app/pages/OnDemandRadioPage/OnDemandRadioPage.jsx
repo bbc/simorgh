@@ -21,7 +21,7 @@ import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import RadioScheduleContainer from '#containers/RadioSchedule';
-import RecentEpisodes from '#containers/RecentEpisodes';
+import RecentAudioEpisodes from '#containers/RecentAudioEpisodes';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -164,7 +164,11 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
                 : []
             }
           />
-          <RecentEpisodes episodes={recentEpisodes} dir={dir} bar={false} />
+          <RecentAudioEpisodes
+            episodes={recentEpisodes}
+            dir={dir}
+            bar={false}
+          />
         </Grid>
       </GelPageGrid>
       {radioScheduleData && (

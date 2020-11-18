@@ -58,7 +58,7 @@ const formattedTimestamp = ({
     isRelative: false,
   });
 
-const RecentEpisodes = ({ episodes, darkMode, bar }) => {
+const RecentAudioEpisodes = ({ episodes, darkMode, bar }) => {
   const {
     translations,
     service,
@@ -147,8 +147,8 @@ const RecentEpisodes = ({ episodes, darkMode, bar }) => {
   );
 };
 
-RecentEpisodes.propTypes = {};
+RecentAudioEpisodes.propTypes = {};
 
-RecentEpisodes.defaultProps = {};
+RecentAudioEpisodes.defaultProps = {};
 
-export default RecentEpisodes;
+export default RecentAudioEpisodes;
