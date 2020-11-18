@@ -2,7 +2,10 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import EpisodeList from '@bbc/psammead-episode-list';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { formatDuration } from '@bbc/psammead-timestamp-container/utilities';
+import {
+  formatDuration,
+  formatUnixTimestamp,
+} from '@bbc/psammead-timestamp-container/utilities';
 import SectionLabel from '@bbc/psammead-section-label';
 import { C_WHITE, C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
 import {
@@ -27,10 +30,24 @@ const StyledSectionLabel = styled(SectionLabel)`
   }
 `;
 
-// TODO: locale, translations, proptypes, disable on live
+// TODO: translations, proptypes, disable on live
 const RecentVideoEpisodes = ({ episodes }) => {
-  const { script, service, dir } = useContext(ServiceContext);
+  const { script, service, dir, timezone, datetimeLocale } = useContext(
+    ServiceContext,
+  );
+
   // if (!episodes) return null;
+  // if (isLive()) return null;
+
+  const formatDate = timestamp =>
+    formatUnixTimestamp({
+      timestamp,
+      format: 'D MMMM YYYY',
+      timezone,
+      locale: datetimeLocale,
+      isRelative: false,
+    });
+
   return (
     <div>
       <StyledSectionLabel
@@ -49,7 +66,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
               alt={episode.altText}
               duration={formatDuration({
                 duration: episode.duration,
-                locale: 'fr',
+                locale: datetimeLocale,
               })}
             />
             <VisuallyHiddenText>Video, </VisuallyHiddenText>
@@ -58,21 +75,21 @@ const RecentVideoEpisodes = ({ episodes }) => {
                 {episode.brandTitle}
               </EpisodeList.Title>
               <EpisodeList.Description className="episode-list__description--hover episode-list__description--visited">
-                {episode.episodeTitle || episode.date}
+                {episode.episodeTitle || formatDate(episode.timestamp)}
               </EpisodeList.Description>
               <VisuallyHiddenText>, </VisuallyHiddenText>
               <VisuallyHiddenText>
                 {` Durée ${formatDuration({
                   duration: episode.duration,
                   format: episode.duration.includes('H') ? 'h,mm,ss' : 'mm,ss',
-                  locale: 'fr',
+                  locale: datetimeLocale,
                 })} `}
               </VisuallyHiddenText>
             </EpisodeList.Link>
             {episode.episodeTitle && (
               <span role="text">
                 <EpisodeList.Metadata as="time">
-                  {episode.date}
+                  {formatDate(episode.timestamp)}
                 </EpisodeList.Metadata>
               </span>
             )}

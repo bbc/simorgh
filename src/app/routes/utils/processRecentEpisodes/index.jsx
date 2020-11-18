@@ -13,19 +13,19 @@ const validateEpisode = episode => {
     is(Array, episode.media.versions),
     episode.media.versions[0],
     is(String, episode.media.versions[0].durationISO8601),
+    is(Number, episode.media.versions[0].availableFrom),
   ];
   // TODO: log if invalid
 
   return checks.every(Boolean);
 };
 
-const formatEpisode = (episode, service) => {
-  // TODO Ramda
+const formatEpisode = (episode, { serviceName, urlFormatter }) => {
   return {
     id: episode.media.id,
-    url: `/${service}/${episode.id.split(':').pop().replace('/', '/tv/')}`,
+    url: urlFormatter(serviceName, episode.id),
     brandTitle: episode.brand.title,
-    date: '4 Avril 2020', // TODO
+    timestamp: episode.media.versions[0].availableFrom,
     duration: episode.media.versions[0].durationISO8601,
     image: `//${episode.media.imageUrl.replace('$recipe', '768x432')}`,
     altText: episode.brand.title,
@@ -34,10 +34,13 @@ const formatEpisode = (episode, service) => {
 
 const excludeEpisode = idToExclude => episode => episode.id !== idToExclude;
 
-// TODO: ramda, limit, exclude, validate, logging
 const processRecentEpisodes = (
   pageData,
-  { limit = 5, exclude = null } = {},
+  {
+    limit = 5,
+    exclude = null,
+    urlFormatter = (service, id) => `/${service}/${id.split(':').pop()}`,
+  } = {},
 ) => {
   const serviceName = pathOr(
     '',
@@ -47,18 +50,10 @@ const processRecentEpisodes = (
 
   if (!serviceName) return [];
 
-  const recentEpisodes = pathOr(
-    [],
-    ['relatedContent', 'groups', 0, 'promos'],
-    pageData,
-  )
+  return pathOr([], ['relatedContent', 'groups', 0, 'promos'], pageData)
     .filter(validateEpisode)
-    .filter(excludeEpisode(exclude));
-
-  if (!recentEpisodes) return [];
-
-  return recentEpisodes
-    .map(episode => formatEpisode(episode, serviceName))
+    .filter(excludeEpisode(exclude))
+    .map(episode => formatEpisode(episode, { serviceName, urlFormatter }))
     .slice(0, limit);
 };
 
