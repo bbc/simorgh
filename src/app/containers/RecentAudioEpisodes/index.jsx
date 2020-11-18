@@ -69,6 +69,7 @@ const RecentAudioEpisodes = ({ episodes }) => {
     translations,
   );
   const durationLabel = pathOr('Duration', ['media', 'duration'], translations);
+  const audioLabel = pathOr('Audio', ['media', 'audio'], translations);
 
   return (
     <Spacer role="complimentary">
@@ -85,7 +86,8 @@ const RecentAudioEpisodes = ({ episodes }) => {
         {episodes.map(episode => (
           <EpisodeList.Episode key={episode.id}>
             <EpisodeList.Link href={episode.url}>
-              <VisuallyHiddenText>Audio, </VisuallyHiddenText>
+              {/* these must be concatenated for screen reader UX */}
+              <VisuallyHiddenText>{`${audioLabel}, `}</VisuallyHiddenText>
               <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">
                 {episode.brandTitle}
               </EpisodeList.Title>

@@ -63,6 +63,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
     translations,
   );
   const durationLabel = pathOr('Duration', ['media', 'duration'], translations);
+  const videoLabel = pathOr('Video', ['media', 'video'], translations);
 
   return (
     <div>
@@ -86,7 +87,8 @@ const RecentVideoEpisodes = ({ episodes }) => {
                 locale: datetimeLocale,
               })}
             />
-            <VisuallyHiddenText>Video, </VisuallyHiddenText>
+            {/* these must be concatenated for screen reader UX */}
+            <VisuallyHiddenText>{`${videoLabel}, `}</VisuallyHiddenText>
             <EpisodeList.Link href={episode.url}>
               <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">
                 {episode.brandTitle}
