@@ -103,26 +103,12 @@ Object {
 
 exports[`Canonical Live Radio Header Navigation link should match text and url 5`] = `
 Object {
-  "text": "Afrika",
-  "url": "/gahuza/topics/crvnv566zx9t",
-}
-`;
-
-exports[`Canonical Live Radio Header Navigation link should match text and url 6`] = `
-Object {
-  "text": "Mpuzamahanga",
-  "url": "/gahuza/topics/c9dvd93jjkkt",
-}
-`;
-
-exports[`Canonical Live Radio Header Navigation link should match text and url 7`] = `
-Object {
   "text": "Imikino",
   "url": "/gahuza/topics/c5qvpq0jzy7t",
 }
 `;
 
-exports[`Canonical Live Radio Header Navigation link should match text and url 8`] = `
+exports[`Canonical Live Radio Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Video",
   "url": "/gahuza/media/video",
