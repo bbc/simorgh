@@ -205,42 +205,42 @@ Object {
 exports[`AMP Most Watched Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "پاکستان",
-  "url": "/urdu/pakistan",
+  "url": "/urdu/topics/cjgn7n9zzq7t",
 }
 `;
 
 exports[`AMP Most Watched Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "آس پاس",
-  "url": "/urdu/regional",
+  "url": "/urdu/topics/cl8l9mveql2t",
 }
 `;
 
 exports[`AMP Most Watched Page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "ورلڈ",
-  "url": "/urdu/world",
+  "url": "/urdu/topics/cw57v2pmll9t",
 }
 `;
 
 exports[`AMP Most Watched Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "کھیل",
-  "url": "/urdu/sport",
+  "url": "/urdu/topics/c340q0p2585t",
 }
 `;
 
 exports[`AMP Most Watched Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "فن فنکار",
-  "url": "/urdu/entertainment",
+  "url": "/urdu/topics/ckdxnx900n5t",
 }
 `;
 
 exports[`AMP Most Watched Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "سائنس",
-  "url": "/urdu/science",
+  "url": "/urdu/topics/c40379e2ymxt",
 }
 `;
 
@@ -248,13 +248,6 @@ exports[`AMP Most Watched Page Header Navigation link should match text and url 
 Object {
   "text": "موجودہ صفحہ, ویڈیو",
   "url": "/urdu/media/video",
-}
-`;
-
-exports[`AMP Most Watched Page Header Navigation link should match text and url 9`] = `
-Object {
-  "text": "پنجابی ويڈیو",
-  "url": "/urdu/punjabi_video",
 }
 `;
 
