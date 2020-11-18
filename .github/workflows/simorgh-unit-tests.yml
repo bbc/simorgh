@@ -28,13 +28,15 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      # Sets the GIT_BRANCH env variable on a push event which occurs when we merge a PR. ${GITHUB_REF##*/} is the shorthand syntax for getting the short branch name
       - name: Set GIT_BRANCH Environment Variable For Push Event
         if: ${{ github.event_name == 'push' }}
-        run: echo "GIT_BRANCH=${GITHUB_REF##*/}" >> $GITHUB_ENV
+        run: echo "GIT_BRANCH=$(echo ${GITHUB_REF##*/})" >> $GITHUB_ENV
 
+      # Sets the GIT_BRANCH env variable on a pull request event which occurs when we create/update a PR. ${{ github.head_ref }} is the syntax for getting the short branch name
       - name: Set GIT_BRANCH Environment Variable For Pull Request Event
         if: ${{ github.event_name == 'pull_request' }}
-        run: echo "GIT_BRANCH=$(echo ${GITHUB_REF##*/})" >> $GITHUB_ENV
+        run: echo "GIT_BRANCH=${{ github.head_ref }}" >> $GITHUB_ENV
 
       - name: Print GitHub Context
         env:
