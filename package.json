@@ -228,7 +228,7 @@
     "strip-ansi": "^6.0.0",
     "stylelint": "^13.7.2",
     "stylelint-config-recommended": "^3.0.0",
-    "supertest": "^4.0.2",
+    "supertest": "^6.0.1",
     "swagger-cli": "^4.0.4",
     "terser-webpack-plugin": "^4.2.2",
     "timemachine": "^0.3.1",
