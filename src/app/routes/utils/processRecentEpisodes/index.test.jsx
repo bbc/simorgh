@@ -10,7 +10,8 @@ describe('extractRecentEpisodes', () => {
   it('should correctly format TV episodes using a custom URL formatter', () => {
     expect(
       extractRecentEpisodes(videoPageData, {
-        limit: 1,
+        recentEpisodesLimit: 1,
+        enabled: true,
         urlFormatter: (service, id) =>
           `/${service}/${id.split(':').pop().replace('/', '/tv/')}`,
       }),
@@ -30,7 +31,8 @@ describe('extractRecentEpisodes', () => {
   it('should correctly format radio episodes', () => {
     expect(
       extractRecentEpisodes(audioPageData, {
-        limit: 1,
+        recentEpisodesLimit: 1,
+        enabled: true,
       }),
     ).toEqual([
       {
@@ -48,7 +50,8 @@ describe('extractRecentEpisodes', () => {
   it('should correctly output multiple episodes', () => {
     expect(
       extractRecentEpisodes(videoPageData, {
-        limit: 3,
+        recentEpisodesLimit: 3,
+        enabled: true,
       }).length,
     ).toEqual(3);
   });
@@ -58,8 +61,9 @@ describe('extractRecentEpisodes', () => {
     const firstId = 'w172xc9xq2gllfk'; // TODO
     expect(
       extractRecentEpisodes(videoPageData, {
-        limit: episodeCountInPageData,
+        recentEpisodesLimit: episodeCountInPageData,
         exclude: firstId,
+        enabled: true,
       }).length,
     ).toEqual(episodeCountInPageData - 1);
   });
