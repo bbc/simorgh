@@ -28,11 +28,6 @@ const convertInclude = async (includeBlock, pageData, ...restParams) => {
 
   const isAmp = isAmpPath(pathname);
 
-  if (!href) {
-    logger.error(INCLUDE_MISSING_URL, includeBlock);
-    return null;
-  }
-
   const { includeType, classification } = includeClassifier({
     href,
     isAmpRequest: isAmp,

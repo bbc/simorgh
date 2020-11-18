@@ -324,7 +324,7 @@ describe('getHref', () => {
 
     const href = getHref();
 
-    expect(href).toEqual('https%3A%2F%2Fhref.com');
+    expect(href).toEqual('https://href.com');
   });
 
   it('should return null if href isnt set', () => {
@@ -337,12 +337,12 @@ describe('getHref', () => {
     expect(href).toEqual(null);
   });
 
-  it('should return href with anchor text - encoding the hash', () => {
+  it('should return href with anchor text', () => {
     setWindowValue('location', {
       href: 'https://www.example.com/#anchortext',
     });
     const href = getHref();
-    expect(href).toEqual('https%3A%2F%2Fwww.example.com%2F%23anchortext');
+    expect(href).toEqual('https://www.example.com/#anchortext');
   });
 });
 
@@ -357,7 +357,7 @@ describe('getReferrer', () => {
 
     const referrer = getReferrer();
 
-    expect(referrer).toEqual('https%3A%2F%2Freferrer.com');
+    expect(referrer).toEqual('https://referrer.com');
   });
 
   it('should return null if referrer isnt set', () => {

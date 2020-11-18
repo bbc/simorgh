@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -15,7 +15,7 @@ import {
 
 import { MediaMessage } from '@bbc/psammead-media-player';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { GridItemConstrainedLarge } from '#lib/styledGrid';
+import { GridItemLarge } from '#app/components/Grid';
 import nodeLogger from '#lib/logger.node';
 import { NO_TRANSLATION_FOUND } from '#lib/logger.const';
 
@@ -29,7 +29,7 @@ const StyledMessageContainer = styled.div`
   overflow: hidden;
 `;
 
-const Wrapper = styled(GridItemConstrainedLarge)`
+const Wrapper = styled(GridItemLarge)`
   margin-top: ${GEL_SPACING};
   margin-bottom: ${GEL_SPACING_TRPL};
 

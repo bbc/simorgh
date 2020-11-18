@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `rw`,
     service: 'gahuza',
     serviceName: 'Gahuza',
+    languageName: 'Kinyarwanda',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcgahuza',
     twitterSite: '@bbcgahuza',
@@ -178,6 +179,11 @@ export const service = {
           endTextVisuallyHidden: 'Impera ya %provider_name% ubutumwa',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: "Inkuru iri kw'isonga",
       featuresAnalysisTitle: 'Ivyo BBC Gahuza ibahitiramwo',
     },
@@ -195,7 +201,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: false,
       header: 'Ibiganiro bishya',
       durationLabel: 'Umwanya bimara %duration%',
     },
@@ -229,7 +234,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/gahuza/institutional-35754061',
+          href: 'https://www.bbc.co.uk/send/u50853291',
           text: 'Vugana na BBC',
         },
         {
@@ -249,12 +254,20 @@ export const service = {
         url: '/gahuza',
       },
       {
-        title: 'Amakuru',
-        url: '/gahuza/amakuru',
+        title: 'Ibiyaga binini',
+        url: '/gahuza/topics/c06gq67y3w5t',
+      },
+      {
+        title: 'Afrika',
+        url: '/gahuza/topics/crvnv566zx9t',
+      },
+      {
+        title: 'Mpuzamahanga',
+        url: '/gahuza/topics/c9dvd93jjkkt',
       },
       {
         title: 'Imikino',
-        url: '/gahuza/imikino',
+        url: '/gahuza/topics/c5qvpq0jzy7t',
       },
       {
         title: 'Video',

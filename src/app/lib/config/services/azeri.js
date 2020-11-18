@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `az`,
     service: 'azeri',
     serviceName: 'Azərbaycanca',
+    languageName: 'Azerbaijani',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcazeri',
     twitterSite: '@bbcazeri',
@@ -174,6 +175,11 @@ export const service = {
           endTextVisuallyHidden: 'Paylaşımın sonu %provider_name%',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'Bu günün xəbərləri',
       featuresAnalysisTitle: 'Bunları da oxuyun',
     },
@@ -223,7 +229,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/azeri/institutional-37131054',
+          href: 'https://www.bbc.co.uk/send/u50853225',
           text: 'BBC ilə Əlaqə',
         },
         {
@@ -244,19 +250,15 @@ export const service = {
       },
       {
         title: 'Azərbaycan',
-        url: '/azeri/azerbaijan',
+        url: '/azeri/topics/c7zp571g7y7t',
       },
       {
         title: 'Region',
-        url: '/azeri/region',
+        url: '/azeri/topics/czpveq9ll8pt',
       },
       {
         title: 'Beynəlxalq',
-        url: '/azeri/international',
-      },
-      {
-        title: 'Dərgi',
-        url: '/azeri/magazine',
+        url: '/azeri/topics/cde15l4vn02t',
       },
       {
         title: 'Video',

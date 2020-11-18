@@ -6,6 +6,7 @@ import arabicMostReadData from '#data/arabic/mostRead';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import nepaliMostReadData from '#data/nepali/mostRead';
 import kyrgyzMostReadData from '#data/kyrgyz/mostRead';
+import ukrainianMostReadData from '#data/ukrainian/mostRead';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   setStalePromoTimestamp,
@@ -24,8 +25,9 @@ const MostReadCanonicalWithContext = ({
   endpoint,
   initialData,
   wrapper,
+  pageLang,
 }) => (
-  <ServiceContextProvider service={service}>
+  <ServiceContextProvider service={service} pageLang={pageLang}>
     <CanonicalMostRead
       endpoint={endpoint}
       initialData={initialData}
@@ -154,6 +156,28 @@ describe('MostReadContainerCanonical', () => {
 
       expect(container.querySelectorAll('time').length).toEqual(0);
     });
+  });
+
+  it(`should render ukrainian in russian most read with an overriden datetime locale`, async () => {
+    fetchMock.mock(
+      `www.test.bbc.com/ukrainian/mostread.json`,
+      setStalePromoTimestamp(ukrainianMostReadData),
+    );
+
+    let container;
+    await act(async () => {
+      container = await render(
+        <MostReadCanonicalWithContext
+          service="ukrainian"
+          endpoint="www.test.bbc.com/ukrainian/mostread.json"
+          pageLang="ru"
+        />,
+      ).container;
+    });
+
+    expect(container.querySelectorAll('time')[0].textContent).toEqual(
+      'Останнє оновлення: 11 січня 1970',
+    );
   });
 
   it(`should render with wrapper`, async () => {

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Index Heading snapshot should render correctly for IDX 1`] = `
-.c0 {
+.emotion-0 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -13,50 +13,52 @@ exports[`Index Heading snapshot should render correctly for IDX 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c0 {
+  .emotion-0 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c0 {
+  .emotion-0 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c0 {
+  .emotion-0 {
     padding: 1.5rem 0 0.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c0 {
+  .emotion-0 {
     padding: 1.5rem 0 0;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .emotion-0 {
     width: 100%;
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
-<h1
-  class="c0"
-  dir="ltr"
-  tabindex="-1"
->
-  Index Heading
-</h1>
+<div>
+  <h1
+    class="emotion-0 emotion-1"
+    dir="ltr"
+    tabindex="-1"
+  >
+    Index Heading
+  </h1>
+</div>
 `;
 
 exports[`Index Heading snapshot should render rtl correctly for IDX 1`] = `
-.c0 {
+.emotion-0 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -68,44 +70,46 @@ exports[`Index Heading snapshot should render rtl correctly for IDX 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c0 {
+  .emotion-0 {
     font-size: 1.625rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c0 {
+  .emotion-0 {
     font-size: 1.75rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c0 {
+  .emotion-0 {
     padding: 1.5rem 0 0.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c0 {
+  .emotion-0 {
     padding: 1.5rem 0 0;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .emotion-0 {
     width: 100%;
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
-<h1
-  class="c0"
-  dir="rtl"
-  tabindex="-1"
->
-  Index Heading
-</h1>
+<div>
+  <h1
+    class="emotion-0 emotion-1"
+    dir="rtl"
+    tabindex="-1"
+  >
+    Index Heading
+  </h1>
+</div>
 `;

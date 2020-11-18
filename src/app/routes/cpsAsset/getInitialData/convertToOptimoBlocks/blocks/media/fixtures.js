@@ -48,6 +48,7 @@ export const optimoVideoBlock = {
               model: {
                 advertising: true,
                 available: true,
+                caption: 'Warning: Dis video fit make you feel one kain!',
                 embedding: true,
                 format: 'audio_video',
                 id: 'p07jl3lv',
@@ -94,6 +95,37 @@ export const optimoVideoBlock = {
                   },
                 ],
               },
+            },
+            {
+              model: {
+                blocks: [
+                  {
+                    model: {
+                      blocks: [
+                        {
+                          model: {
+                            blocks: [
+                              {
+                                model: {
+                                  attributes: [],
+                                  text:
+                                    'Warning: Dis video fit make you feel one kain!',
+                                },
+                                type: 'fragment',
+                              },
+                            ],
+                            text:
+                              'Warning: Dis video fit make you feel one kain!',
+                          },
+                          type: 'paragraph',
+                        },
+                      ],
+                    },
+                    type: 'text',
+                  },
+                ],
+              },
+              type: 'caption',
             },
           ],
         },

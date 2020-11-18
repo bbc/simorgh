@@ -158,6 +158,11 @@ export const mainTranslations = {
       endTextVisuallyHidden: 'Контент из %provider_name% окончен',
     },
   },
+  include: {
+    errorMessage:
+      'К сожалению, мы не можем показать вам эту часть истории из-за малого объема мобильной страницы.',
+    linkText: 'Откройте полную версию страницы, чтобы увидеть весь контент.',
+  },
   topStoriesTitle: 'Главное',
   featuresAnalysisTitle: 'Журнал',
 };
@@ -190,6 +195,7 @@ export const service = {
     datetimeLocale: `ru`,
     service: 'russian',
     serviceName: 'Russian',
+    languageName: 'Russian',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcrussian',
     twitterSite: '@bbcrussian',
@@ -201,6 +207,7 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Главная',
+    iTunesAppId: 504278066,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -250,7 +257,7 @@ export const service = {
           text: 'Куки',
         },
         {
-          href: 'https://www.bbc.com/russian/institutional-36517237',
+          href: 'https://www.bbc.co.uk/send/u50853643',
           text: 'Связаться с Би-би-си',
         },
         {
@@ -288,7 +295,7 @@ export const service = {
       },
       {
         title: 'Видео',
-        url: '/russian/media/video',
+        url: '/russian/in-depth-54439028',
       },
       {
         title: 'Фильмы',

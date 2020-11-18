@@ -1,0 +1,81 @@
+{
+  "programme": {
+    "type": "clip",
+    "pid": "p07v3ydx",
+    "expected_child_count": null,
+    "position": null,
+    "image": {
+      "pid": "p07v3z23"
+    },
+    "media_type": "audio_video",
+    "title": "BBC Africa Eye - What Happened Next?",
+    "short_synopsis": "BBC Africa Eye follows up on four of their investigations from 2018.",
+    "medium_synopsis": "BBC Africa Eye follows up on four of their investigations from 2018: ‘Sweet Sweet Codeine’, ‘Betraying the Game’, ‘Rehab Nightmare’ and 'Anatomy of a Killing’.",
+    "long_synopsis": "BBC Africa Eye launched in April 2018, broadcasting bi-weekly in multiple languages across the African continent. They work with a vast network of on-the-ground reporters who methodically uncover hidden local stories and hold power to account using cutting edge techniques. Last year, their network of over a hundred journalists visited over twenty African countries, delivering award winning investigations that have changed lives and had a major impact nationally and across Africa.  \n\nBBC Africa Eye follows up on four of their investigations from 2018: ‘Sweet Sweet Codeine’, that revealed a widespread abuse of codeine in Northern Nigeria, ‘Betraying the Game’ that exposed corruption amongst members of Ghana’s Football Association, ‘Rehab Nightmare’ that looked into reports of abuse in unlicensed drug treatment centres across Nairobi, Kenya and “Anatomy of a Killing’ that investigated a horrifying video circulating on social media that depicted women and children killed by what appeared to be Cameroonian soldiers.",
+    "first_broadcast_date": null,
+    "display_title": {
+      "title": "Africa Eye",
+      "subtitle": "BBC Africa Eye - What Happened Next?"
+    },
+    "ownership": {
+      "service": {
+        "type": null,
+        "id": "bbc_world_service_tv",
+        "key": "worldservicetv",
+        "title": "BBC World Service TV"
+      }
+    },
+    "parent": {
+      "programme": {
+        "type": "brand",
+        "pid": "w13xttpn",
+        "title": "Africa Eye",
+        "short_synopsis": "Original and high-impact BBC investigations from across Africa",
+        "media_type": null,
+        "position": null,
+        "image": {
+          "pid": "p06pqg80"
+        },
+        "expected_child_count": null,
+        "first_broadcast_date": null,
+        "aggregated_episode_count": 25,
+        "ownership": {
+          "service": {
+            "type": null,
+            "id": "bbc_world_service_tv",
+            "key": "worldservicetv",
+            "title": "BBC World Service TV"
+          }
+        }
+      }
+    },
+    "peers": {
+      "previous": null,
+      "next": null
+    },
+    "versions": [
+      {
+        "canonical": 1,
+        "pid": "p07v3ydz",
+        "duration": 2445,
+        "types": [
+          "Original version"
+        ]
+      }
+    ],
+    "links": [],
+    "supporting_content_items": [],
+    "categories": [
+      {
+        "type": "genre",
+        "id": "C00079",
+        "key": "news",
+        "title": "News",
+        "narrower": [],
+        "broader": {},
+        "has_topic_page": false,
+        "sameAs": null
+      }
+    ]
+  }
+}

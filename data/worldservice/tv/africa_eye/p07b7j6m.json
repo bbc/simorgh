@@ -1,0 +1,81 @@
+{
+  "programme": {
+    "type": "clip",
+    "pid": "p07b7j6m",
+    "expected_child_count": null,
+    "position": null,
+    "image": {
+      "pid": "p07b7xw4"
+    },
+    "media_type": "audio_video",
+    "title": "Meet the Night Runners",
+    "short_synopsis": "Meet the Night Runners",
+    "medium_synopsis": "Africa Eye investigates who the night runners are and what motivates them.",
+    "long_synopsis": "The people of rural Kenya have spoken of the night runners for generations. They’re said to be villagers possessed by a demonic spirit which compels them to scare and terrorise their neighbours at night.\n\nBut no one really knows who the night runners are or what motivates them. For BBC Africa Eye, reporter Tom Odula investigates the enigma of the night runners, shining fresh light on the reality behind the myths, and revealing exclusive footage of night runners in action. Please be aware that there are disturbing images in this piece.\n\nSubscribe: http://bit.ly/subscribetoafrica\nWebsite: https://www.bbc.com/africa\nFacebook: https://www.facebook.com/bbcnewsafrica/\nTwitter: https://www.twitter.com/bbcafrica/\nInstagram: https://www.instagram.com/bbcafrica/",
+    "first_broadcast_date": null,
+    "display_title": {
+      "title": "Africa Eye",
+      "subtitle": "Meet the Night Runners"
+    },
+    "ownership": {
+      "service": {
+        "type": null,
+        "id": "bbc_world_service_tv",
+        "key": "worldservicetv",
+        "title": "BBC World Service TV"
+      }
+    },
+    "parent": {
+      "programme": {
+        "type": "brand",
+        "pid": "w13xttpn",
+        "title": "Africa Eye",
+        "short_synopsis": "Original and high-impact BBC investigations from across Africa",
+        "media_type": null,
+        "position": null,
+        "image": {
+          "pid": "p06pqg80"
+        },
+        "expected_child_count": null,
+        "first_broadcast_date": null,
+        "aggregated_episode_count": 25,
+        "ownership": {
+          "service": {
+            "type": null,
+            "id": "bbc_world_service_tv",
+            "key": "worldservicetv",
+            "title": "BBC World Service TV"
+          }
+        }
+      }
+    },
+    "peers": {
+      "previous": null,
+      "next": null
+    },
+    "versions": [
+      {
+        "canonical": 1,
+        "pid": "p07b7j6t",
+        "duration": 3094,
+        "types": [
+          "Original version"
+        ]
+      }
+    ],
+    "links": [],
+    "supporting_content_items": [],
+    "categories": [
+      {
+        "type": "genre",
+        "id": "C00079",
+        "key": "news",
+        "title": "News",
+        "narrower": [],
+        "broader": {},
+        "has_topic_page": false,
+        "sameAs": null
+      }
+    ]
+  }
+}

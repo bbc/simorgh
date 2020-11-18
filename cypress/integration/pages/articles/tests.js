@@ -1,6 +1,5 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import appToggles from '../../../support/helpers/useAppToggles';
 import { getBlockByType, getBlockData } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
@@ -112,9 +111,9 @@ export const testsThatFollowSmokeTestConfig = ({
                   // If an image has a BBC copyright, the copyright holder (<p>) does not appear on images.
                   // This is why we're asserting the value. If the copyright does not appear and is not
                   // 'BBC' then it is clear there is an error with this component.
-                  cy.get('p[class^="Copyright"]').should('not.exist');
+                  cy.get('p[class*="Copyright"]').should('not.exist');
                 } else {
-                  cy.get('p[class^="Copyright"]')
+                  cy.get('p[class*="Copyright"]')
                     .should('be.visible')
                     .and('contain', copyrightHolder);
                 }
@@ -133,7 +132,7 @@ export const testsThatFollowSmokeTestConfig = ({
 
       if (serviceHasInlineLink(service) && Cypress.env('APP_ENV') === 'local') {
         it('should have an inlink link to an article page', () => {
-          cy.get('[class^="InlineLink"]')
+          cy.get('[class*="InlineLink"]')
             .eq(1)
             .should('have.attr', 'href')
             .then(href => {
@@ -158,39 +157,34 @@ export const testsThatFollowSmokeTestConfig = ({
         });
       }
 
-      // `appToggles` tells us whether a feature is toggled on or off in the current environment.
-      if (appToggles.mediaPlayer.enabled) {
-        describe('Media Player', () => {
-          it('should have a visible caption beneath a mediaplayer', () => {
-            cy.request(`${Cypress.env('currentPath')}.json`).then(
-              ({ body }) => {
-                const media = getBlockData('video', body);
-                if (media) {
-                  const captionBlock = getBlockByType(
-                    media.model.blocks,
-                    'caption',
-                  );
+      describe('Media Player', () => {
+        it('should have a visible caption beneath a mediaplayer', () => {
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const media = getBlockData('video', body);
+            if (media) {
+              const captionBlock = getBlockByType(
+                media.model.blocks,
+                'caption',
+              );
 
-                  if (captionBlock) {
-                    const {
-                      text,
-                    } = captionBlock.model.blocks[0].model.blocks[0].model;
+              if (captionBlock) {
+                const {
+                  text,
+                } = captionBlock.model.blocks[0].model.blocks[0].model;
 
-                    cy.get('figcaption')
-                      .eq(1)
-                      .within(() => {
-                        cy.get('p')
-                          .eq(0)
-                          .should('be.visible')
-                          .should('contain', text);
-                      });
-                  }
-                }
-              },
-            );
+                cy.get('figcaption')
+                  .eq(1)
+                  .within(() => {
+                    cy.get('p')
+                      .eq(0)
+                      .should('be.visible')
+                      .should('contain', text);
+                  });
+              }
+            }
           });
         });
-      }
+      });
     });
   });
 };

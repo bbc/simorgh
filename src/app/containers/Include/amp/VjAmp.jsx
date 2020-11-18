@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { shape, string, node } from 'prop-types';
 import {
   GEL_SPACING,
@@ -9,7 +9,7 @@ import { C_EBON } from '@bbc/psammead-styles/colours';
 import { getSansBold } from '@bbc/psammead-styles/font-styles';
 import { GEL_PICA } from '@bbc/gel-foundations/typography';
 import { Helmet } from 'react-helmet';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import { GridItemMedium } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const KEYLINE_WIDTH = '0.125rem';
@@ -23,10 +23,6 @@ const AmpHead = () => (
     />
   </Helmet>
 );
-
-const IncludeGrid = styled(GridItemConstrainedMedium)`
-  display: grid;
-`;
 
 const AmpIframe = ({ children, className, width, height, src }) => (
   <amp-iframe
@@ -75,7 +71,8 @@ const StyledAmpIframe = styled(AmpIframe)`
       cursor: pointer;
       display: block;
       padding: ${GEL_SPACING} ${GEL_SPACING_DBL};
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         text-decoration: underline;
       }
     }
@@ -87,7 +84,7 @@ const VjAmp = ({ ampMetadata: { imageWidth, imageHeight, image, src } }) => {
   return (
     <>
       <AmpHead />
-      <IncludeGrid>
+      <GridItemMedium>
         <StyledAmpIframe
           width={imageWidth}
           height={imageHeight}
@@ -99,7 +96,7 @@ const VjAmp = ({ ampMetadata: { imageWidth, imageHeight, image, src } }) => {
           </div>
           <amp-img layout="fill" src={image} placeholder />
         </StyledAmpIframe>
-      </IncludeGrid>
+      </GridItemMedium>
     </>
   );
 };

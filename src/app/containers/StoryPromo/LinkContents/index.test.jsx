@@ -69,8 +69,10 @@ const mockServiceConfig = {
   translations: {
     media: {
       audio: 'AUDIO',
+      listen: 'LISTEN',
       video: 'VIDEO',
       photogallery: 'PHOTOGALLERY',
+      duration: 'DURATION',
     },
   },
 };

@@ -21,6 +21,7 @@ const baseServiceConfig = {
   datetimeLocale: `zh-cn`,
   service: 'ukchina',
   serviceName: 'UK China',
+  languageName: 'Chinese',
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@BBCChina',
   twitterSite: '@BBCChina',
@@ -78,7 +79,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/ukchina/simp/institutional-38733406',
+          href: 'https://www.bbc.co.uk/send/u50853863',
           text: '联络BBC',
         },
         {
@@ -111,10 +112,6 @@ export const service = {
       {
         title: '主页',
         url: '/ukchina/simp',
-      },
-      {
-        title: 'BBC精选',
-        url: '/ukchina/simp/horizon',
       },
       {
         title: '视频内容',
@@ -245,6 +242,11 @@ export const service = {
           endTextVisuallyHidden: '结尾 %provider_name% 帖子 ',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: '头条内容',
       featuresAnalysisTitle: '特别推荐',
     },
@@ -319,10 +321,6 @@ export const service = {
       {
         title: '主頁',
         url: '/ukchina/trad',
-      },
-      {
-        title: 'BBC精選',
-        url: '/ukchina/trad/horizon',
       },
       {
         title: '視頻內容',
@@ -452,6 +450,11 @@ export const service = {
           text: '跳過 %provider_name% 帖子',
           endTextVisuallyHidden: '結尾 %provider_name% 帖子',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: '頭條內容',
       featuresAnalysisTitle: '特別推薦',

@@ -8,7 +8,7 @@ import runHeaderTests from './header';
 import runFooterTests from './footer';
 
 describe('AMP ukrainian/ukraine_in_russian IDX page', () => {
-  runAmpTests();
+  runAmpTests(service);
   runHeaderTests();
   runFooterTests();
 });

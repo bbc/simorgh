@@ -94,7 +94,10 @@
             "type": "cps"
           }
         ],
-        "semanticGroupName": "Top story"
+        "semanticGroupName": "Top story",
+        "strapline": {
+          "name": "Top story - Afghanistan"
+        }
       },
       {
         "type": "secondary-top-story",

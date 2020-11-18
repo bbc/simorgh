@@ -7,9 +7,7 @@ import {
 } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContext } from '#contexts/ToggleContext';
 import CpsAssetMediaPlayerContainer from '.';
-import { defaultToggles } from '../MediaPlayer/fixtureData';
 import videoBlock from './fixtures';
 
 const GenerateMediaPlayer = ({
@@ -29,13 +27,9 @@ const GenerateMediaPlayer = ({
     pathname="/pathname"
   >
     <ServiceContextProvider service="news">
-      <ToggleContext.Provider
-        value={{ toggleState: defaultToggles, toggleDispatch: jest.fn() }}
-      >
-        <BrowserRouter>
-          <CpsAssetMediaPlayerContainer blocks={blocks} assetUri={assetUri} />
-        </BrowserRouter>
-      </ToggleContext.Provider>
+      <BrowserRouter>
+        <CpsAssetMediaPlayerContainer blocks={blocks} assetUri={assetUri} />
+      </BrowserRouter>
     </ServiceContextProvider>
   </RequestContextProvider>
 );

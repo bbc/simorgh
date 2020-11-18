@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `mr`,
     service: 'marathi',
     serviceName: 'Marathi',
+    languageName: 'Marathi',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsmarathi',
     twitterSite: '@bbcnewsmarathi',
@@ -179,6 +180,11 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% पोस्ट समाप्त',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'मोठ्या बातम्या',
       featuresAnalysisTitle: 'Features',
     },
@@ -223,7 +229,7 @@ export const service = {
           text: 'कुकीज',
         },
         {
-          href: 'https://www.bbc.com/marathi/institutional-42227676',
+          href: 'https://www.bbc.co.uk/send/u50853467',
           text: 'बीबीसीशी संपर्क साधा',
         },
         {

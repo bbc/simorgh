@@ -8,10 +8,13 @@ import {
   IdxDataPath,
   legacyAssetPageDataPath,
   mostReadDataRegexPath,
+  mostWatchedDataPath,
   onDemandRadioDataPath,
   onDemandTvDataPath,
   recommendationsDataRegex,
   secondaryColumnDataRegexPath,
+  africaEyeTVDataPath,
+  liveRadioDataPath,
 } from '#app/routes/utils/regex';
 import { LOCAL_SENDFILE_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
@@ -34,7 +37,7 @@ const sendDataFile = (res, dataFilePath, next) => {
 const PUBLIC_DIRECTORY = 'build/public';
 
 export default server => {
-  server
+  return server
     .use((req, res, next) => {
       if (req.url.substr(-1) === '/' && req.url.length > 1)
         res.redirect(301, req.url.slice(0, -1));
@@ -80,6 +83,27 @@ export default server => {
 
       sendDataFile(res, dataFilePath, next);
     })
+    .get(mostWatchedDataPath, async ({ params }, res, next) => {
+      const { service, variant } = params;
+      const dataFilePath = constructDataFilePath({
+        pageType: 'mostWatched',
+        service,
+        variant,
+      });
+
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(liveRadioDataPath, async ({ params }, res, next) => {
+      const { service, masterBrand } = params;
+
+      const dataFilePath = constructDataFilePath({
+        pageType: 'liveRadio',
+        service,
+        masterBrand,
+      });
+
+      sendDataFile(res, dataFilePath, next);
+    })
     .get(onDemandRadioDataPath, async ({ params }, res, next) => {
       const { service, serviceId, mediaId } = params;
 
@@ -119,17 +143,6 @@ export default server => {
 
       sendDataFile(res, dataFilePath, next);
     })
-    .get(legacyAssetPageDataPath, async ({ params }, res, next) => {
-      const { service, assetUri, variant } = params;
-
-      const dataFilePath = constructDataFilePath({
-        pageType: 'legacyAssets',
-        service,
-        assetUri,
-        variant,
-      });
-      sendDataFile(res, dataFilePath, next);
-    })
     .get(secondaryColumnDataRegexPath, async ({ params }, res, next) => {
       const { service, variant } = params;
       const dataFilePath = constructDataFilePath({
@@ -153,6 +166,41 @@ export default server => {
     .get(IdxDataPath, async ({ params }, res, next) => {
       const { idx } = params;
       const dataFilePath = path.join(process.cwd(), 'data', idx, 'index.json');
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(africaEyeTVDataPath, async ({ params }, res, next) => {
+      const { episodeId } = params;
+
+      const dataFilePath = constructDataFilePath({
+        pageType: 'africa_eye',
+        episodeId,
+      });
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(
+      '/:service/election/us2020/results/oembed.json',
+      ({ params }, res, next) => {
+        const dataFilePath = path.join(
+          process.cwd(),
+          'data',
+          params.service,
+          'election',
+          'us2020',
+          'results',
+          'oembed.json',
+        );
+        sendDataFile(res, dataFilePath, next);
+      },
+    )
+    .get(legacyAssetPageDataPath, async ({ params }, res, next) => {
+      const { service, assetUri, variant } = params;
+
+      const dataFilePath = constructDataFilePath({
+        pageType: 'legacyAssets',
+        service,
+        assetUri,
+        variant,
+      });
       sendDataFile(res, dataFilePath, next);
     })
     .get('/static/js/comscore/main-:version.js', ({ params }, res, next) => {

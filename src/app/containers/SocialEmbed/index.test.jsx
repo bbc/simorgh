@@ -1,3 +1,4 @@
+import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import loggerMock from '#testHelpers/loggerMock';
@@ -5,6 +6,13 @@ import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import SocialEmbedContainer from '.';
 import withContexts from './testHelper';
 import { twitterBlock, twitterBlockNoEmbed } from './fixtures';
+
+/* eslint-disable react/prop-types */
+jest.mock('react-lazyload', () => {
+  return function MockedLazyload({ children }) {
+    return <>{children}</>;
+  };
+});
 
 describe('SocialEmbedContainer', () => {
   afterEach(() => {

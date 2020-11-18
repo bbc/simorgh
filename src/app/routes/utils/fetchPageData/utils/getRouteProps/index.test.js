@@ -1,13 +1,13 @@
 import reactRouterConfig from 'react-router-config';
 import isAmpPath from '#app/routes/utils/isAmpPath';
 import getRouteProps from '.';
-import * as routeFallbackParams from './routeFallbackParams';
+import fallbackServiceParam from './fallbackServiceParam';
 
 jest.mock('react-router-config');
 
-jest.mock('./routeFallbackParams', () => ({
-  fallbackServiceParam: jest.fn().mockImplementation(() => 'fallbackService'),
-}));
+jest.mock('./fallbackServiceParam', () =>
+  jest.fn().mockImplementation(() => 'fallbackService'),
+);
 
 jest.mock('#app/routes/utils/isAmpPath', () =>
   jest.fn().mockImplementation(() => true),
@@ -27,10 +27,10 @@ describe('getRouteProps', () => {
         },
       ]);
 
-      const methodCall = await getRouteProps([], 'url');
+      const methodCall = await getRouteProps('url');
 
       expect(isAmpPath).not.toHaveBeenCalled();
-      expect(routeFallbackParams.fallbackServiceParam).not.toHaveBeenCalled();
+      expect(fallbackServiceParam).not.toHaveBeenCalled();
 
       expect(methodCall).toEqual({
         isAmp: false,
@@ -57,10 +57,10 @@ describe('getRouteProps', () => {
         },
       ]);
 
-      const methodCall = await getRouteProps([], 'url');
+      const methodCall = await getRouteProps('url');
 
       expect(isAmpPath).not.toHaveBeenCalled();
-      expect(routeFallbackParams.fallbackServiceParam).not.toHaveBeenCalled();
+      expect(fallbackServiceParam).not.toHaveBeenCalled();
 
       expect(methodCall).toEqual({
         isAmp: false,
@@ -89,10 +89,10 @@ describe('getRouteProps', () => {
         },
       ]);
 
-      const methodCall = await getRouteProps([], 'url');
+      const methodCall = await getRouteProps('url');
 
       expect(isAmpPath).not.toHaveBeenCalled();
-      expect(routeFallbackParams.fallbackServiceParam).not.toHaveBeenCalled();
+      expect(fallbackServiceParam).not.toHaveBeenCalled();
 
       expect(methodCall).toEqual({
         isAmp: true,
@@ -118,12 +118,10 @@ describe('getRouteProps', () => {
     it('should return fallback service and isAmp. With catch-all route and match', async () => {
       reactRouterConfig.matchRoutes.mockReturnValue([{ route, match }]);
 
-      const methodCall = await getRouteProps([], 'unknownURL');
+      const methodCall = await getRouteProps('unknownURL');
 
       expect(isAmpPath).toHaveBeenCalledWith('unknownURL');
-      expect(routeFallbackParams.fallbackServiceParam).toHaveBeenCalledWith(
-        'unknownURL',
-      );
+      expect(fallbackServiceParam).toHaveBeenCalledWith('unknownURL');
 
       expect(methodCall).toEqual({
         isAmp: true,
@@ -143,7 +141,7 @@ describe('getRouteProps', () => {
     it('should return fallback service and amp with no route, match or Id', async () => {
       reactRouterConfig.matchRoutes.mockReturnValue([]);
 
-      const methodCall = await getRouteProps([], 'fakepath');
+      const methodCall = await getRouteProps('fakepath');
 
       expect(methodCall).toEqual({
         id: undefined,
@@ -154,7 +152,7 @@ describe('getRouteProps', () => {
       });
 
       expect(isAmpPath).toHaveBeenCalled();
-      expect(routeFallbackParams.fallbackServiceParam).toHaveBeenCalled();
+      expect(fallbackServiceParam).toHaveBeenCalled();
     });
   });
 });

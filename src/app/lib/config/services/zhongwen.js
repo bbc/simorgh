@@ -21,6 +21,7 @@ const baseServiceConfig = {
   datetimeLocale: `zh-cn`,
   service: 'zhongwen',
   serviceName: 'News 中文',
+  languageName: 'Chinese',
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcchinese',
   twitterSite: '@bbcchinese',
@@ -84,7 +85,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/zhongwen/simp/institutional-38664417',
+          href: 'https://www.bbc.co.uk/send/u50778626',
           text: '联络BBC',
         },
         {
@@ -114,27 +115,23 @@ export const service = {
       },
       {
         title: '国际',
-        url: '/zhongwen/simp/world',
+        url: '/zhongwen/simp/topics/ck2l9z0em07t',
       },
       {
         title: '两岸',
-        url: '/zhongwen/simp/chinese_news',
+        url: '/zhongwen/simp/topics/cxe2wdp384wt',
       },
       {
         title: '英国',
-        url: '/zhongwen/simp/uk',
-      },
-      {
-        title: '评论',
-        url: '/zhongwen/simp/indepth',
+        url: '/zhongwen/simp/topics/c1nq04exqmlt',
       },
       {
         title: '科技',
-        url: '/zhongwen/simp/science',
+        url: '/zhongwen/simp/topics/c9mjeq29pxlt',
       },
       {
         title: '财经',
-        url: '/zhongwen/simp/business',
+        url: '/zhongwen/simp/topics/cdlxq9k9nqkt',
       },
       {
         title: '视频材料',
@@ -269,6 +266,11 @@ export const service = {
           endTextVisuallyHidden: '结尾 %provider_name% 帖子',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: '头条新闻',
       featuresAnalysisTitle: '特别推荐',
     },
@@ -343,27 +345,23 @@ export const service = {
       },
       {
         title: '國際',
-        url: '/zhongwen/trad/world',
+        url: '/zhongwen/trad/topics/c83plve5vmjt',
       },
       {
         title: '兩岸',
-        url: '/zhongwen/trad/chinese_news',
+        url: '/zhongwen/trad/topics/c9wpm0e5zv9t',
       },
       {
         title: '英國',
-        url: '/zhongwen/trad/uk',
-      },
-      {
-        title: '評論',
-        url: '/zhongwen/trad/indepth',
+        url: '/zhongwen/trad/topics/c1ez1k4emn0t',
       },
       {
         title: '科技',
-        url: '/zhongwen/trad/science',
+        url: '/zhongwen/trad/topics/c32p4kj2yzqt',
       },
       {
         title: '財經',
-        url: '/zhongwen/trad/business',
+        url: '/zhongwen/trad/topics/cq8nqywy37yt',
       },
       {
         title: '視頻材料',
@@ -497,6 +495,11 @@ export const service = {
           text: '跳過 %provider_name% 帖子',
           endTextVisuallyHidden: '結尾 %provider_name% 帖子',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: '頭條新聞',
       featuresAnalysisTitle: '特別推薦',

@@ -36,6 +36,7 @@ export const service = {
     datetimeLocale: `bn`,
     service: 'bengali',
     serviceName: 'Bengali',
+    languageName: 'Bengali',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcbangla',
     twitterSite: '@bbcbangla',
@@ -184,6 +185,11 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'প্রধান খবর',
       featuresAnalysisTitle: 'চিঠিপত্র ও মতামত',
     },
@@ -201,9 +207,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
-      onOnDemandRadioPage: true,
-      onFrontPage: false,
       header: 'রেডিও অনুষ্ঠান',
       durationLabel: 'স্থিতিকাল %duration%',
     },
@@ -237,7 +240,7 @@ export const service = {
           text: 'কুকিজ',
         },
         {
-          href: 'https://www.bbc.com//bengali/institutional-37289967',
+          href: 'https://www.bbc.co.uk/send/u50853247',
           text: 'বিবিসির সঙ্গে যোগাযোগ করুন',
         },
         {

@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `uz`,
     service: 'uzbek',
     serviceName: 'Uzbek',
+    languageName: 'Uzbek',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcuzbek',
     twitterSite: '@bbcuzbek',
@@ -184,6 +185,11 @@ export const service = {
           endTextVisuallyHidden: 'Охири %provider_name% пост',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'Бош мақола',
       featuresAnalysisTitle: 'Муҳаррир танлови',
     },
@@ -229,7 +235,7 @@ export const service = {
           text: 'Куки(Cookies)',
         },
         {
-          href: 'https://www.bbc.com/uzbek/institutional-36826360',
+          href: 'https://www.bbc.co.uk/send/u50853929',
           text: 'Би-би-си билан боғланиш',
         },
         {
@@ -249,32 +255,28 @@ export const service = {
         url: '/uzbek',
       },
       {
-        title: 'Lotinda',
-        url: '/uzbek/lotin',
-      },
-      {
         title: 'Ўзбекистон',
-        url: '/uzbek/uzbekistan',
+        url: '/uzbek/topics/c8y949r98pgt',
       },
       {
         title: 'Минтақа',
-        url: '/uzbek/central_asia',
+        url: '/uzbek/topics/cwr9j9dz4gpt',
       },
       {
         title: 'Дунё',
-        url: '/uzbek/world',
+        url: '/uzbek/topics/cl8l9mved19t',
       },
       {
         title: 'Спорт',
-        url: '/uzbek/sport',
+        url: '/uzbek/topics/cxnykykk1zkt',
       },
       {
         title: 'Илм-Фан',
-        url: '/uzbek/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
+        url: '/uzbek/topics/cg7262681krt',
       },
       {
         title: 'Технология',
-        url: '/uzbek/topics/31684f19-84d6-41f6-b033-7ae08098572a',
+        url: '/uzbek/topics/cjgn7n7v3yjt',
       },
       {
         title: 'Видео',

@@ -20,7 +20,7 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
        * And therefore stops `node_modules` being watched for file changes
        */
       nodeExternals({
-        whitelist: ['webpack/hot/poll?100'],
+        allowlist: ['webpack/hot/poll?100'],
       }),
     ],
     watch: true,

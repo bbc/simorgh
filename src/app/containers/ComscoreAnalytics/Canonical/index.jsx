@@ -10,7 +10,7 @@ const CanonicalComscoreAnalytics = () => {
   const comscoreScript = 'static/js/comscore/main-1.0.js';
 
   useEffect(() => {
-    const csUcfr = personalisationEnabled ? '1' : '0';
+    const csUcfr = personalisationEnabled ? '1' : '';
     /* eslint-disable no-underscore-dangle */
     window._comscore = window._comscore || [];
     window._comscore.push({ c1: '2', c2: '17986528', cs_ucfr: csUcfr });
@@ -24,7 +24,7 @@ const CanonicalComscoreAnalytics = () => {
         src={`${staticAssetsPath}${comscoreScript}`}
       />
       <noscript>
-        {`<img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=0&cv=2.0&cj=1" />`}
+        {`<img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cv=2.0&cj=1" />`}
       </noscript>
     </Helmet>
   );

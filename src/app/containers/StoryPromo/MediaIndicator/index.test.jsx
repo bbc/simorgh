@@ -1,4 +1,5 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import { latin, arabic } from '@bbc/gel-foundations/scripts';
 import MediaIndicator from '.';
@@ -64,6 +65,19 @@ const noDurationItem = {
   media: {
     format: 'video',
     versions: [{}],
+  },
+};
+
+const externalVpidNoCpsTypeItem = {
+  headlines: {
+    headline: 'A video item',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  media: {
+    format: 'video',
+    type: 'external_vpid',
   },
 };
 
@@ -145,6 +159,18 @@ describe('Story Promo Media Indicator', () => {
       service="news"
     />,
   );
+
+  it('should render correctly even without duration and cps type', () => {
+    const { container } = render(
+      <MediaIndicator
+        dir="ltr"
+        item={externalVpidNoCpsTypeItem}
+        script={latin}
+        service="news"
+      />,
+    );
+    expect(container.querySelector('div')).toBeInTheDocument();
+  });
 
   isNull(
     'should not render if item media object has no format',

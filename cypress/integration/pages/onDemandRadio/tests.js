@@ -1,7 +1,7 @@
 /* eslint-disable consistent-return */
 import {
   isAvailable,
-  dataEndpointOverride,
+  overrideRendererOnTest,
   getEmbedUrl,
   isBrand,
 } from '../../../support/helpers/onDemandRadioTv';
@@ -11,13 +11,13 @@ export default ({ service, pageType, variant, isAmp }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
     describe('Brand image visible above 400px, not visible below 400px', () => {
       it(`Should display image on default viewport (1000x660))`, () => {
-        cy.get('div[class^="ImageContainer"]').find('img');
+        cy.get('div[data-e2e="on-demand-image"]').find('img');
       });
 
       it(`Should not display image on iphone-6 screen (375x667)`, () => {
         cy.viewport('iphone-6');
 
-        cy.get('div[class^="ImageContainer"]')
+        cy.get('div[data-e2e="on-demand-image"]')
           .find('img')
           .should('not.be.visible');
       });
@@ -26,10 +26,12 @@ export default ({ service, pageType, variant, isAmp }) => {
     describe('Audio Player', () => {
       it('should render an iframe with a valid URL', () => {
         cy.request(
-          `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
+          `${Cypress.env('currentPath')}.json${overrideRendererOnTest()}`,
         ).then(({ body: jsonData }) => {
           if (!isAvailable(jsonData)) {
-            return cy.log(`Episode unavailable: ${Cypress.env('currentPath')}`);
+            return cy.log(
+              `Episode is not available: ${Cypress.env('currentPath')}`,
+            );
           }
 
           const language = appConfig[service][variant].lang;
@@ -41,7 +43,7 @@ export default ({ service, pageType, variant, isAmp }) => {
             const iframeURL = isBrandPage ? iframe.prop('src') : embedUrl;
 
             cy.get(`iframe[src*="${iframeURL}"]`).should('be.visible');
-            cy.testResponseCodeAndType(iframeURL, 200, 'text/html');
+            cy.testResponseCodeAndTypeRetry(iframeURL, 200, 'text/html');
           });
         });
       });

@@ -97,7 +97,7 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=94&p=ukrainian.ukraine_in_russian.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:40c7c53a-ba2e-8679-e050-380a4e807947]&x2=[amp]&x3=[news-ukrainian]&x4=[ru]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-section]&x8=[simorgh]&x9=[РУС+-+BBC+News+Україна]&x11=[2016-11-22T07:16:56.000Z]&x12=[2020-05-19T14:28:22.000Z]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=94&p=ukrainian.ukraine_in_russian.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A40c7c53a-ba2e-8679-e050-380a4e807947]&x2=[amp]&x3=[news-ukrainian]&x4=[ru]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-section]&x8=[simorgh]&x9=[%D0%A0%D0%A3%D0%A1%2B-%2BBBC%2BNews%2B%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0]&x11=[2016-11-22T07%3A16%3A56.000Z]&x12=[2020-05-19T14%3A28%3A22.000Z]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -179,7 +179,7 @@ Object {
 exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 6`] = `
 Object {
   "text": "Зв'язатися з BBC",
-  "url": "https://www.bbc.com/ukrainian/institutional-38146278",
+  "url": "https://www.bbc.co.uk/send/u50853885",
 }
 `;
 
@@ -218,28 +218,28 @@ Object {
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "Наука",
-  "url": "/ukrainian/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+  "url": "/ukrainian/topics/cyx5kzy4w5yt",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "Технології",
-  "url": "/ukrainian/topics/31684f19-84d6-41f6-b033-7ae08098572a",
+  "url": "/ukrainian/topics/cxnykv9q4kpt",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Здоров’я",
-  "url": "/ukrainian/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+  "url": "/ukrainian/topics/cwr9jqqqq13t",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Журнал",
-  "url": "/ukrainian/magazine",
+  "url": "/ukrainian/53725237",
 }
 `;
 
@@ -251,13 +251,6 @@ Object {
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 8`] = `
-Object {
-  "text": "Блоги",
-  "url": "/ukrainian/blogs",
-}
-`;
-
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "Поточна сторінка, РУС",
   "url": "/ukrainian/ukraine_in_russian",
@@ -362,6 +355,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "ru-UA",
+        "name": "Russian",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/ukrainian/ukraine_in_russian",
         "@type": "WebPage",
@@ -436,6 +434,7 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Story Promo Image should matc
   height="549"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/DE34/production/_111648865_1stimage.png 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/DE34/production/_111648865_1stimage.png 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/DE34/production/_111648865_1stimage.png 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/DE34/production/_111648865_1stimage.png 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/DE34/production/_111648865_1stimage.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/DE34/production/_111648865_1stimage.png 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png 660w"
   width="976"
 />
 `;

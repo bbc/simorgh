@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `pa-in`,
     service: 'punjabi',
     serviceName: 'Punjabi',
+    languageName: 'Punjabi',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewspunjabi',
     twitterSite: '@bbcnewspunjabi',
@@ -170,6 +171,11 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'ਤਾਜ਼ਾ ਘਟਨਾਕ੍ਰਮ',
       featuresAnalysisTitle: 'ਦ੍ਰਿਸ਼ਟੀਕੋਣ',
     },
@@ -244,7 +250,7 @@ export const service = {
           text: 'ਕੁਕੀਜ਼',
         },
         {
-          href: 'https://www.bbc.com/punjabi/institutional-42227903',
+          href: 'https://www.bbc.co.uk/send/u50853621',
           text: 'ਬੀਬੀਸੀ ਨਾਲ ਸੰਪਰਕ ਕਰੋ',
         },
         {

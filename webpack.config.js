@@ -1,5 +1,5 @@
 /* eslint-disable import/no-dynamic-require, global-require */
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
 const MomentTimezoneInclude = require('@bbc/moment-timezone-include');
@@ -47,6 +47,7 @@ module.exports = (shell = {}) => {
           'react-dom$': 'react-dom/profiling',
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
+        'safe-buffer': path.resolve(__dirname, 'node_modules/safe-buffer'),
       },
     },
     devServer: {

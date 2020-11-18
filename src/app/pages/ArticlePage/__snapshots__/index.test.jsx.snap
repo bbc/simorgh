@@ -1,132 +1,389 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
-.c1 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
+.emotion-9 {
+  width: 100%;
 }
 
-.c4 {
-  grid-column: 1 / span 6;
+@supports (display:grid) {
+  .emotion-9 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-9 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
-.c3 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  display: block;
-  margin: 0;
-  padding: 2rem 0;
-  overflow-wrap: anywhere;
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-9 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
-.c3:focus {
-  outline: none;
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-9 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
-.c5 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-9 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
 }
 
-.c24 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-9 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
 }
 
-.c15 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(10,auto);
+@media (min-width:80rem) {
+    .emotion-9 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
 }
 
-.c20 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-9 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-9 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-2 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-2 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-2 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-6 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-6 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-6 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(10,1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (max-width:24.9375rem) {
+  .emotion-197 {
+    margin: 0 0.5rem 1.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-197 {
+    margin: 0 1rem 2rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-197 {
+    margin: 0 1rem 2.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-197 {
+    width: 100%;
+    margin: 0 auto 1.5rem;
+    padding: 0 1rem;
+    max-width: 80rem;
+  }
+}
+
+.emotion-22 {
   position: relative;
-  color: #B80000;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-22 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-22 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-22 {
+    margin-bottom: 1rem;
+  }
+}
+
+.emotion-11 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .emotion-11 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-11 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+.emotion-19 {
   margin: 0;
   padding: 0;
 }
 
-.c22 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-}
-
-.c22:hover,
-.c22:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c22:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c21 {
-  padding-top: 0.375rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.c23 {
-  padding-top: 0.5rem;
-}
-
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
-}
-
-.c17 {
-  position: relative;
-  padding-bottom: 1.5rem;
-}
-
-.c11 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -136,7 +393,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   flex-direction: column;
 }
 
-.c12 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -155,7 +412,570 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   align-items: baseline;
 }
 
-.c13 {
+@media (min-width:37.5rem) {
+  .emotion-15 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-195 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(10,auto);
+}
+
+@supports (display:grid) {
+  .emotion-195 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-195 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-195 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-195 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-195 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-195 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-195 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:37.5rem) {
+  .emotion-195 {
+    grid-template-rows: repeat( 5,auto );
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-195 {
+    grid-auto-flow: row;
+  }
+}
+
+.emotion-39 {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-39 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-39 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-39 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-39 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-39 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-39 {
+    width: calc(20%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-39 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-39 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-39 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-39 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-39 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(3,1fr);
+      grid-column-end: span 3;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-39 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(4,1fr);
+      grid-column-end: span 4;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-39 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(4,1fr);
+      grid-column-end: span 4;
+    }
+}
+}
+
+.emotion-36 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-26 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-26 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-26 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-26 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-26 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+@media (min-width:37.5rem) {
+    .emotion-26 {
+      min-width: 2rem;
+    }
+}
+}
+
+@media (min-width:80rem) {
+  .emotion-26 {
+    min-width: 2rem;
+  }
+}
+
+.emotion-34 {
+  padding-top: 0.375rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .emotion-34 {
+    padding-right: 0;
+  }
+}
+
+.emotion-32 {
+  padding-top: 0.5rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-43 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-43 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-43 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-43 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-43 {
+    min-width: 4rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+@media (min-width:37.5rem) {
+    .emotion-43 {
+      min-width: 2rem;
+    }
+}
+}
+
+@media (min-width:80rem) {
+  .emotion-43 {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-94 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-94 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-94 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-94 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-94 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+@media (min-width:37.5rem) {
+    .emotion-94 {
+      min-width: 2rem;
+    }
+}
+}
+
+@media (min-width:80rem) {
+  .emotion-94 {
+    min-width: 4rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-111 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-111 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-111 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-111 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-111 {
+    min-width: 4rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+@media (min-width:37.5rem) {
+    .emotion-111 {
+      min-width: 4rem;
+    }
+}
+}
+
+@media (min-width:80rem) {
+  .emotion-111 {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-128 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-128 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-128 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-128 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-128 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+@media (min-width:37.5rem) {
+    .emotion-128 {
+      min-width: 4rem;
+    }
+}
+}
+
+@media (min-width:80rem) {
+  .emotion-128 {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-179 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-179 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-179 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-179 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-179 {
+    min-width: 4rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+@media (min-width:37.5rem) {
+    .emotion-179 {
+      min-width: 4rem;
+    }
+}
+}
+
+@media (min-width:80rem) {
+  .emotion-179 {
+    min-width: 4rem;
+  }
+}
+
+.emotion-0 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-0 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    padding: 2.5rem 0;
+  }
+}
+
+.emotion-0:focus {
+  outline: none;
+}
+
+.emotion-4 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-13 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -174,609 +994,145 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   align-items: center;
 }
 
-.c9 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c7 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-}
-
-.c10 {
-  margin: 0;
-  padding: 0;
-}
-
-.c0 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-@media (max-width:37.4375rem) {
-  .c1 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c1 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:25rem) {
-  .c4 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c4 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c4 {
-    max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c2 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c24 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c24 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@supports (display:grid) {
-  .c14 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c16 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c16 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c16 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c16 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c16 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c16 {
-    width: calc(20%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c16 {
-    display: block;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c15 {
-    grid-template-rows: repeat( 5,auto );
-  }
-}
-
-@media (min-width:80rem) {
-  .c15 {
-    grid-auto-flow: row;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c19 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c19 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c19 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c19 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c19 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c19 {
-    min-width: 2rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c25 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c25 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c25 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c25 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c25 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c25 {
-    min-width: 2rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c26 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c26 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c26 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c26 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c26 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c26 {
-    min-width: 4rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c27 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c27 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c27 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c27 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c27 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c27 {
-    min-width: 2rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c28 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c28 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c28 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c28 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c28 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c28 {
-    min-width: 2rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c29 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c29 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c29 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c29 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c29 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c29 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
-    font-size: 2.5rem;
-    line-height: 2.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c20 {
-    font-size: 3.5rem;
-    line-height: 3.75rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c22 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c22 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c21 {
-    padding-right: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .emotion-13 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .emotion-13 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .emotion-13 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .emotion-13 {
     padding-right: 1rem;
   }
 }
 
-@media screen and (-ms-high-contrast:active) {
-  .c9 {
-    border-color: windowText;
+.emotion-24 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-24 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
+  .emotion-24 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+.emotion-28 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-28 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
-    margin-top: 1.5rem;
+  .emotion-28 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
-@media (min-width:63rem) {
-  .c7 {
-    margin-bottom: 1.5rem;
+.emotion-28:hover,
+.emotion-28:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-28:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+@media (min-width:25rem) {
+  .emotion-28 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+    .emotion-28 {
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+    }
+}
+
+@media (min-width:37.5rem) {
+    .emotion-28 {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+}
+}
+
+.emotion-30 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-30 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c8 {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width:24.9375rem) {
-  .c6 {
-    margin: 0 0.5rem 1.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c6 {
-    margin: 0 1rem 2rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c6 {
-    margin: 0 1rem 2.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c6 {
-    width: 100%;
-    margin: 0 auto 1.5rem;
-    padding: 0 1rem;
-    max-width: 80rem;
+@media (min-width:37.5rem) {
+  .emotion-30 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -786,17 +1142,18 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
     chartbeat
   </div>
   <main
-    class="c0"
     role="main"
   >
     <div
-      class="c1"
+      class="emotion-8 emotion-9 emotion-3"
+      dir="ltr"
     >
       <div
-        class="c2"
+        class="emotion-2 emotion-3"
+        dir="ltr"
       >
         <h1
-          class="c3"
+          class="emotion-0 emotion-1"
           id="content"
           tabindex="-1"
         >
@@ -804,10 +1161,11 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
         </h1>
       </div>
       <div
-        class="c4"
+        class="emotion-6 emotion-3"
+        dir="ltr"
       >
         <p
-          class="c5"
+          class="emotion-4 emotion-5"
         >
           A paragraph in Pidgin.
         </p>
@@ -816,27 +1174,27 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   </main>
   <section
     aria-labelledby="Most-Read"
-    class="c6"
+    class=" emotion-197 emotion-198"
     data-e2e="most-read"
     role="region"
   >
     <div
-      class="c7 c8"
+      class="emotion-21 emotion-22 emotion-23"
     >
       <div
-        class="c9"
+        class="emotion-11 emotion-12"
       />
       <h2
-        class="c10"
+        class="emotion-19 emotion-20"
       >
         <span
-          class="c11"
+          class="emotion-17 emotion-18"
         >
           <span
-            class="c12"
+            class="emotion-15 emotion-16"
           >
             <span
-              class="c13"
+              class="emotion-13 emotion-14"
               dir="ltr"
               id="Most-Read"
             >
@@ -847,43 +1205,43 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
       </h2>
     </div>
     <ol
-      class="c14 c15"
+      class="emotion-194 emotion-195 emotion-3"
       dir="ltr"
       role="list"
     >
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="ltr"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c19"
+            class="emotion-26 emotion-27"
             dir="ltr"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               1
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="ltr"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/pidgin/tori-46729879"
             >
               Public Holidays wey go happun for 2019
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-05-21"
               >
                 De one we dem update for: 21st May 2019
@@ -893,38 +1251,38 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
         </div>
       </li>
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="ltr"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c25"
+            class="emotion-43 emotion-27"
             dir="ltr"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               2
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="ltr"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/pidgin/tori-50304653"
             >
               Liberia banks don run out of money
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-11-05"
               >
                 De one we dem update for: 5th November 2019
@@ -934,38 +1292,38 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
         </div>
       </li>
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="ltr"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c19"
+            class="emotion-26 emotion-27"
             dir="ltr"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               3
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="ltr"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/pidgin/tori-50298882"
             >
               Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-11-05"
               >
                 De one we dem update for: 5th November 2019
@@ -975,38 +1333,38 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
         </div>
       </li>
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="ltr"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c25"
+            class="emotion-43 emotion-27"
             dir="ltr"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               4
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="ltr"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/pidgin/tori-50315150"
             >
               Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-11-06"
               >
                 De one we dem update for: 6th November 2019
@@ -1016,38 +1374,38 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
         </div>
       </li>
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="ltr"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c26"
+            class="emotion-94 emotion-27"
             dir="ltr"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               5
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="ltr"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/pidgin/tori-50315157"
             >
               How Balogun market fire kill Policeman for Lagos
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-11-06"
               >
                 De one we dem update for: 6th November 2019
@@ -1057,38 +1415,38 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
         </div>
       </li>
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="ltr"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c27"
+            class="emotion-111 emotion-27"
             dir="ltr"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               6
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="ltr"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/pidgin/tori-50093818"
             >
               Labour, FG finally agree minimum wage salary adjustment
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-10-18"
               >
                 De one we dem update for: 18th October 2019
@@ -1098,38 +1456,38 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
         </div>
       </li>
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="ltr"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c28"
+            class="emotion-128 emotion-27"
             dir="ltr"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               7
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="ltr"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/pidgin/tori-50187218"
             >
               Naira Marley na 'Bad Influence'?
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-10-25"
               >
                 De one we dem update for: 25th October 2019
@@ -1139,38 +1497,38 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
         </div>
       </li>
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="ltr"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c27"
+            class="emotion-111 emotion-27"
             dir="ltr"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               8
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="ltr"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/pidgin/tori-48347911"
             >
               Tins you suppose know about Naira Marley
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-05-23"
               >
                 De one we dem update for: 23rd May 2019
@@ -1180,38 +1538,38 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
         </div>
       </li>
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="ltr"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c28"
+            class="emotion-128 emotion-27"
             dir="ltr"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               9
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="ltr"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/pidgin/sport-50312710"
             >
               Golden Eaglets crash out of Fifa U17 World Cup
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-11-06"
               >
                 De one we dem update for: 6th November 2019
@@ -1221,38 +1579,38 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
         </div>
       </li>
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="ltr"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c29"
+            class="emotion-179 emotion-27"
             dir="ltr"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               10
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="ltr"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/pidgin/tori-42945173"
             >
               Tiger nut drink fit wake up your sex drive - Nutritionist
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-05-21"
               >
                 De one we dem update for: 21st May 2019
@@ -1267,16 +1625,202 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 `;
 
 exports[`should render a news article correctly 1`] = `
-.c1 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
+.emotion-9 {
+  width: 100%;
 }
 
-.c4 {
-  grid-column: 1 / span 6;
+@supports (display:grid) {
+  .emotion-9 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-9 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
-.c3 {
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-9 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-9 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-9 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-9 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-9 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-9 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-9 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-2 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-2 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-2 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-2 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-2 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+.emotion-0 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1289,11 +1833,141 @@ exports[`should render a news article correctly 1`] = `
   overflow-wrap: anywhere;
 }
 
-.c3:focus {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-0 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    padding: 2.5rem 0;
+  }
+}
+
+.emotion-0:focus {
   outline: none;
 }
 
-.c5 {
+@media (max-width:14.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-6 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-6 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-6 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(10,1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+}
+}
+
+.emotion-4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1304,151 +1978,15 @@ exports[`should render a news article correctly 1`] = `
   margin: 0;
 }
 
-.c0 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-@media (max-width:37.4375rem) {
-  .c1 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c1 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:25rem) {
-  .c4 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c4 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c4 {
-    max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c2 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .emotion-4 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .emotion-4 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -1460,17 +1998,18 @@ exports[`should render a news article correctly 1`] = `
     chartbeat
   </div>
   <main
-    class="c0"
     role="main"
   >
     <div
-      class="c1"
+      class="emotion-8 emotion-9 emotion-3"
+      dir="ltr"
     >
       <div
-        class="c2"
+        class="emotion-2 emotion-3"
+        dir="ltr"
       >
         <h1
-          class="c3"
+          class="emotion-0 emotion-1"
           id="content"
           tabindex="-1"
         >
@@ -1478,10 +2017,11 @@ exports[`should render a news article correctly 1`] = `
         </h1>
       </div>
       <div
-        class="c4"
+        class="emotion-6 emotion-3"
+        dir="ltr"
       >
         <p
-          class="c5"
+          class="emotion-4 emotion-5"
         >
           A paragraph.
         </p>
@@ -1492,132 +2032,149 @@ exports[`should render a news article correctly 1`] = `
 `;
 
 exports[`should render a rtl article (persian) with most read correctly 1`] = `
-.c1 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
+.emotion-9 {
+  width: 100%;
 }
 
-.c4 {
-  grid-column: 1 / span 6;
+@supports (display:grid) {
+  .emotion-9 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-9 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
-.c3 {
-  font-size: 2rem;
-  line-height: 2.625rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  display: block;
-  margin: 0;
-  padding: 2rem 0;
-  overflow-wrap: anywhere;
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-9 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
-.c3:focus {
-  outline: none;
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-9 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
-.c5 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-9 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
 }
 
-.c24 {
-  font-size: 1rem;
-  line-height: 1.25rem;
-  color: #6E6E73;
-  display: block;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-9 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
 }
 
-.c15 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(10,auto);
+@media (min-width:80rem) {
+    .emotion-9 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
 }
 
-.c20 {
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-9 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-9 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .emotion-197 {
+    margin: 0 0.5rem 1.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-197 {
+    margin: 0 1rem 2rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-197 {
+    margin: 0 1rem 2.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-197 {
+    width: 100%;
+    margin: 0 auto 1.5rem;
+    padding: 0 1rem;
+    max-width: 80rem;
+  }
+}
+
+.emotion-22 {
   position: relative;
-  color: #B80000;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-22 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-22 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-22 {
+    margin-bottom: 1rem;
+  }
+}
+
+.emotion-19 {
   margin: 0;
   padding: 0;
 }
 
-.c22 {
-  font-size: 1rem;
-  line-height: 1.625rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-}
-
-.c22:hover,
-.c22:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c22:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c21 {
-  padding-top: 0.375rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-.c23 {
-  padding-top: 0.5rem;
-}
-
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
-}
-
-.c17 {
-  position: relative;
-  padding-bottom: 1.5rem;
-}
-
-.c11 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1627,7 +2184,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   flex-direction: column;
 }
 
-.c12 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1646,7 +2203,534 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   align-items: baseline;
 }
 
-.c13 {
+@media (min-width:37.5rem) {
+  .emotion-15 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-195 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(10,auto);
+}
+
+@supports (display:grid) {
+  .emotion-195 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-195 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-195 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-195 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-195 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-195 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-195 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:37.5rem) {
+  .emotion-195 {
+    grid-template-rows: repeat( 5,auto );
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-195 {
+    grid-auto-flow: row;
+  }
+}
+
+.emotion-39 {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-39 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-39 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-39 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-39 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-39 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-39 {
+    width: calc(20%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-39 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-39 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-39 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-39 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-39 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(3,1fr);
+      grid-column-end: span 3;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-39 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(4,1fr);
+      grid-column-end: span 4;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-39 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(4,1fr);
+      grid-column-end: span 4;
+    }
+}
+}
+
+.emotion-36 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-32 {
+  padding-top: 0.5rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-2 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-2 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-2 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-2 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-2 {
+    margin-right: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-2 {
+    margin-right: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-2 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-2 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+.emotion-0 {
+  font-size: 2rem;
+  line-height: 2.625rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-0 {
+    font-size: 2.375rem;
+    line-height: 2.875rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    font-size: 2.75rem;
+    line-height: 3.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    padding: 2.5rem 0;
+  }
+}
+
+.emotion-0:focus {
+  outline: none;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-6 {
+    margin-right: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-6 {
+    margin-right: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-6 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(10,1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+}
+}
+
+.emotion-4 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+.emotion-11 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .emotion-11 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-11 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.625rem;
+  }
+}
+
+.emotion-13 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1665,609 +2749,421 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   align-items: center;
 }
 
-.c9 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c7 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-}
-
-.c10 {
-  margin: 0;
-  padding: 0;
-}
-
-.c0 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-@media (max-width:37.4375rem) {
-  .c1 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c1 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:25rem) {
-  .c4 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c4 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c4 {
-    max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c2 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 2.375rem;
-    line-height: 2.875rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 2.75rem;
-    line-height: 3.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c24 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c24 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c14 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c16 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c16 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c16 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c16 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c16 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c16 {
-    width: calc(20%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c16 {
-    display: block;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c15 {
-    grid-template-rows: repeat( 5,auto );
-  }
-}
-
-@media (min-width:80rem) {
-  .c15 {
-    grid-auto-flow: row;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c19 {
-    min-width: 1rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c19 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c19 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c19 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c19 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c19 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c25 {
-    min-width: 1rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c25 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c25 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c25 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c25 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c25 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c26 {
-    min-width: 1rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c26 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c26 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c26 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c26 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c26 {
-    min-width: 2rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c27 {
-    min-width: 1rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c27 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c27 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c27 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c27 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c27 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c28 {
-    min-width: 1rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c28 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c28 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c28 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c28 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c28 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c29 {
-    min-width: 1rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c29 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c29 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c29 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c29 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c29 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
-    font-size: 2.5rem;
-    line-height: 2.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c20 {
-    font-size: 3.5rem;
-    line-height: 3.75rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c22 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c22 {
-    font-size: 1.375rem;
-    line-height: 1.75rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c21 {
-    padding-left: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .emotion-13 {
     font-size: 1.625rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .emotion-13 {
     font-size: 1.75rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .emotion-13 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .emotion-13 {
     padding-left: 1rem;
   }
 }
 
-@media screen and (-ms-high-contrast:active) {
-  .c9 {
-    border-color: windowText;
+@media (max-width:14.9375rem) {
+  .emotion-26 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-26 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-26 {
+    min-width: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.625rem;
+  .emotion-26 {
+    min-width: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
-    margin-top: 1.5rem;
+  .emotion-26 {
+    min-width: 1.5rem;
   }
 }
 
-@media (min-width:63rem) {
-  .c7 {
-    margin-bottom: 1.5rem;
-  }
+@supports (grid-template-columns:fit-content(200px)) {
+@media (min-width:37.5rem) {
+    .emotion-26 {
+      min-width: 1.5rem;
+    }
 }
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c8 {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width:24.9375rem) {
-  .c6 {
-    margin: 0 0.5rem 1.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c6 {
-    margin: 0 1rem 2rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c6 {
-    margin: 0 1rem 2.5rem;
-  }
 }
 
 @media (min-width:80rem) {
-  .c6 {
-    width: 100%;
-    margin: 0 auto 1.5rem;
-    padding: 0 1rem;
-    max-width: 80rem;
+  .emotion-26 {
+    min-width: 1.5rem;
+  }
+}
+
+.emotion-24 {
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-24 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-24 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+.emotion-34 {
+  padding-top: 0.375rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .emotion-34 {
+    padding-left: 0;
+  }
+}
+
+.emotion-28 {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-28 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-28 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+.emotion-28:hover,
+.emotion-28:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-28:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+@media (min-width:25rem) {
+  .emotion-28 {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+    .emotion-28 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+}
+
+@media (min-width:37.5rem) {
+    .emotion-28 {
+      font-size: 1.625rem;
+      line-height: 2.125rem;
+    }
+}
+}
+
+.emotion-30 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #6E6E73;
+  display: block;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-30 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-30 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-43 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-43 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-43 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-43 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-43 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+@media (min-width:37.5rem) {
+    .emotion-43 {
+      min-width: 1.5rem;
+    }
+}
+}
+
+@media (min-width:80rem) {
+  .emotion-43 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-94 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-94 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-94 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-94 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-94 {
+    min-width: 1.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+@media (min-width:37.5rem) {
+    .emotion-94 {
+      min-width: 1.5rem;
+    }
+}
+}
+
+@media (min-width:80rem) {
+  .emotion-94 {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-111 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-111 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-111 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-111 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-111 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+@media (min-width:37.5rem) {
+    .emotion-111 {
+      min-width: 2rem;
+    }
+}
+}
+
+@media (min-width:80rem) {
+  .emotion-111 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-128 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-128 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-128 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-128 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-128 {
+    min-width: 1.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+@media (min-width:37.5rem) {
+    .emotion-128 {
+      min-width: 2rem;
+    }
+}
+}
+
+@media (min-width:80rem) {
+  .emotion-128 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-179 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-179 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-179 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-179 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-179 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+@media (min-width:37.5rem) {
+    .emotion-179 {
+      min-width: 2rem;
+    }
+}
+}
+
+@media (min-width:80rem) {
+  .emotion-179 {
+    min-width: 2rem;
   }
 }
 
@@ -2277,17 +3173,18 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
     chartbeat
   </div>
   <main
-    class="c0"
     role="main"
   >
     <div
-      class="c1"
+      class="emotion-8 emotion-9 emotion-3"
+      dir="rtl"
     >
       <div
-        class="c2"
+        class="emotion-2 emotion-3"
+        dir="rtl"
       >
         <h1
-          class="c3"
+          class="emotion-0 emotion-1"
           id="content"
           tabindex="-1"
         >
@@ -2295,10 +3192,11 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
         </h1>
       </div>
       <div
-        class="c4"
+        class="emotion-6 emotion-3"
+        dir="rtl"
       >
         <p
-          class="c5"
+          class="emotion-4 emotion-5"
         >
           یک پاراگراف.
         </p>
@@ -2307,27 +3205,27 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   </main>
   <section
     aria-labelledby="Most-Read"
-    class="c6"
+    class=" emotion-197 emotion-198"
     data-e2e="most-read"
     role="region"
   >
     <div
-      class="c7 c8"
+      class="emotion-21 emotion-22 emotion-23"
     >
       <div
-        class="c9"
+        class="emotion-11 emotion-12"
       />
       <h2
-        class="c10"
+        class="emotion-19 emotion-20"
       >
         <span
-          class="c11"
+          class="emotion-17 emotion-18"
         >
           <span
-            class="c12"
+            class="emotion-15 emotion-16"
           >
             <span
-              class="c13"
+              class="emotion-13 emotion-14"
               dir="rtl"
               id="Most-Read"
             >
@@ -2338,43 +3236,43 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
       </h2>
     </div>
     <ol
-      class="c14 c15"
+      class="emotion-194 emotion-195 emotion-3"
       dir="rtl"
       role="list"
     >
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c19"
+            class="emotion-26 emotion-27"
             dir="rtl"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               ۱
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="rtl"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/persian/world-50317704"
             >
               توافق با جدایی‌طلبان یمن؛ ایران اعتراض کرد، سازمان ملل استقبال
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-11-06"
               >
                 به روز شده در ۶ نوامبر ۲۰۱۹
@@ -2384,38 +3282,38 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
         </div>
       </li>
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c25"
+            class="emotion-43 emotion-27"
             dir="rtl"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               ۲
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="rtl"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/persian/iran-50319870"
             >
               فراخوان آذری جهرمی برای مناظره اینستاگرامی - زرآبادی: در مجلس مناظره کنیم
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-11-06"
               >
                 به روز شده در ۶ نوامبر ۲۰۱۹
@@ -2425,38 +3323,38 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
         </div>
       </li>
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c19"
+            class="emotion-26 emotion-27"
             dir="rtl"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               ۳
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="rtl"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/persian/world-50320610"
             >
               ترکیه: همسر ابوبکر بغدادی را 'دستگیر کردیم'
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-11-06"
               >
                 به روز شده در ۶ نوامبر ۲۰۱۹
@@ -2466,38 +3364,38 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
         </div>
       </li>
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c25"
+            class="emotion-43 emotion-27"
             dir="rtl"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               ۴
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="rtl"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/persian/world-50316456"
             >
               غنی سازی مجدد در فردو: مکرون اقدام ایران را 'عمیقا مایه نگرانی' خواند
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-11-06"
               >
                 به روز شده در ۶ نوامبر ۲۰۱۹
@@ -2507,38 +3405,38 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
         </div>
       </li>
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c26"
+            class="emotion-94 emotion-27"
             dir="rtl"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               ۵
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="rtl"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/persian/magazine-50249226"
             >
               دوازده دلیل حکمرانی حشرات: سوسک می‌تواند دو هفته بدون سر زنده بماند
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-11-06"
               >
                 به روز شده در ۶ نوامبر ۲۰۱۹
@@ -2548,38 +3446,38 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
         </div>
       </li>
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c27"
+            class="emotion-111 emotion-27"
             dir="rtl"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               ۶
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="rtl"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/persian/world-50317700"
             >
               انتخابات ایالتی آمریکا؛ دموکرات‌ها از جمهوری‌خواهان پیش افتادند
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-11-06"
               >
                 به روز شده در ۶ نوامبر ۲۰۱۹
@@ -2589,38 +3487,38 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
         </div>
       </li>
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c28"
+            class="emotion-128 emotion-27"
             dir="rtl"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               ۷
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="rtl"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/persian/sport-50322486"
             >
               عراق اردن را به عنوان میزبان بازی با ایران معرفی کرد
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-11-06"
               >
                 به روز شده در ۶ نوامبر ۲۰۱۹
@@ -2630,38 +3528,38 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
         </div>
       </li>
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c27"
+            class="emotion-111 emotion-27"
             dir="rtl"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               ۸
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="rtl"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/persian/iran-features-50310665"
             >
               آیا تهران بازی هسته ای را به هم می‌زند؟
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-11-06"
               >
                 به روز شده در ۶ نوامبر ۲۰۱۹
@@ -2671,38 +3569,38 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
         </div>
       </li>
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c28"
+            class="emotion-128 emotion-27"
             dir="rtl"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               ۹
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="rtl"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/persian/world-50316450"
             >
               آمریکا: دو ایرانی اتهام جمع‌آوری اطلاعات علیه سازمان مجاهدین در خاک آمریکا را پذیرفتند
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-11-06"
               >
                 به روز شده در ۶ نوامبر ۲۰۱۹
@@ -2712,38 +3610,38 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
         </div>
       </li>
       <li
-        class="c16 c17"
+        class="emotion-38 emotion-39 emotion-3"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c18"
+          class="emotion-36 emotion-37"
         >
           <div
-            class="c29"
+            class="emotion-179 emotion-27"
             dir="rtl"
           >
             <span
-              class="c20"
+              class="emotion-24 emotion-25"
             >
               ۱۰
             </span>
           </div>
           <div
-            class="c21"
+            class="emotion-34 emotion-35"
             dir="rtl"
           >
             <a
-              class="c22"
+              class="emotion-28 emotion-29"
               href="/persian/sport-50318030"
             >
               فوتبال ایران و عراق؛ ایران: امن است بازی می‌کنیم، فیفا: ناامن است بازی نکنید
             </a>
             <div
-              class="c23"
+              class="emotion-32 emotion-33"
             >
               <time
-                class="c24"
+                class="emotion-30 emotion-31"
                 datetime="2019-11-06"
               >
                 به روز شده در ۶ نوامبر ۲۰۱۹

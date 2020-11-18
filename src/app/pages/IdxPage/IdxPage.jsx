@@ -1,6 +1,6 @@
 import React, { useContext, Fragment } from 'react';
 import path from 'ramda/src/path';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { node, string } from 'prop-types';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,

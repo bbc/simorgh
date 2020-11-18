@@ -36,6 +36,7 @@ export const service = {
     datetimeLocale: `si`,
     service: 'sinhala',
     serviceName: 'Sinhala',
+    languageName: 'Sinhala',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcsinhala',
     twitterSite: '@bbcsinhala',
@@ -185,6 +186,11 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      include: {
+        errorMessage:
+          'කණගාටුයි, මෙම සැහැල්ලු ජංගම පිටුව තුළ අපට ලිපියේ මෙම කොටස පෙන්විය නොහැක.',
+        linkText: 'අන්තර්ගතයේ සියල්ල දැක ගැනීමට පිටුවේ සම්පූර්ණ අනුවාදය බලන්න',
+      },
       topStoriesTitle: 'ප්‍රධාන පුවත',
       featuresAnalysisTitle: 'දැක්ම',
     },
@@ -229,7 +235,7 @@ export const service = {
           text: 'කුකීස්',
         },
         {
-          href: 'https://www.bbc.com/sinhala/institutional-36019593',
+          href: 'https://www.bbc.co.uk/send/u50853687',
           text: 'බීබීසී අමතන්න',
         },
         {

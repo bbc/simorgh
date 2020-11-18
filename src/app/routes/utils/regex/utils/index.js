@@ -1,8 +1,7 @@
 const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
 const assetUriRegex = '[a-z-_]{0,}[0-9]{8,}';
-const legacyAssetUriRegex =
-  '[a-z-_/]{1,}/[0-9]{4}/[0-9]{2}/[0-9]{6}[a-z0-9-_]{0,}';
+const legacyAssetUriRegex = '[a-z0-9-_]{1,}/[a-z0-9-_/]{1,}';
 const variantRegex = '/simp|/trad|/cyr|/lat';
 const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
 const mediaIdRegex = '[a-z0-9]+';
@@ -51,12 +50,12 @@ export const getCpsAssetRegex = services => {
 
 export const getLegacyAssetRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex}):variant(${variantRegex})?/:assetUri(${legacyAssetUriRegex})?:amp(${ampRegex})?`;
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/:assetUri(${legacyAssetUriRegex}):amp(${ampRegex})?`;
 };
 
 export const getLiveRadioRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:serviceId(${radioMasterBrandRegex})/:mediaId(liveRadio):amp(${ampRegex})?`;
+  return `/:service(${serviceRegex})/:masterBrand(${radioMasterBrandRegex})/:mediaId(liveRadio):amp(${ampRegex})?`;
 };
 
 export const getOnDemandRadioRegex = services => {
@@ -84,6 +83,16 @@ export const getMostReadDataRegex = services => {
   return `/:service(${serviceRegex})/mostread:variant(${variantRegex})?.json`;
 };
 
+export const getMostWatchedDataRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex})/mostwatched:variant(${variantRegex})?.json`;
+};
+
+export const getMostWatchedPageRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/media/video:amp(${ampRegex})?`;
+};
+
 export const getSecondaryColumnDataRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/sty-secondary-column:variant(${variantRegex})?.json`;
@@ -96,4 +105,8 @@ export const getIdxPageRegex = () => {
 export const getRecommendationsDataRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/:assetUri(${assetUriRegex})/recommendations:variant(${variantRegex})?.json`;
+};
+
+export const getAfricaEyeTVPageRegex = () => {
+  return `/worldservice/tv/africa_eye/:episodeId(${mediaIdRegex})?`;
 };

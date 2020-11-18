@@ -52,5 +52,12 @@
       "type": "image/png"
     }
   ],
-  "splash_pages": null
+  "splash_pages": null,
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "uk.co.bbc.russian"
+    }
+  ]
 }

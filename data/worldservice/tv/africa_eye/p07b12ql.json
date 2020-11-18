@@ -1,0 +1,81 @@
+{
+  "programme": {
+    "type": "clip",
+    "pid": "p07b12ql",
+    "expected_child_count": null,
+    "position": null,
+    "image": {
+      "pid": "p07b3f80"
+    },
+    "media_type": "audio_video",
+    "title": "Suicide Stories: Are Kenya's men in crisis?",
+    "short_synopsis": "Suicide Stories: Are Kenya's men in crisis?",
+    "medium_synopsis": "Why so many men in one Kenyan community are killing themselves.",
+    "long_synopsis": "In our series of films looking at the topic of modern masculinity in Africa, the first issue we go into is suicide amongst Kenyan men.\n\nWe went to Nyandarua County located in Central Kenya where 70 people – almost all of them men - killed themselves last year.\n\nBBC Africa Eye's Peter Murimi investigates why this is happening.\n\nFilmed, produced and directed by: Peter Murimi\nProducer: Toni Kamau\nEdited by: Sam Soko\n\nSubscribe: http://bit.ly/subscribetoafrica\nWebsite: https://www.bbc.com/africa\nFacebook: https://www.facebook.com/bbcnewsafrica/\nTwitter: https://www.twitter.com/bbcafrica/\nInstagram: https://www.instagram.com/bbcafrica/",
+    "first_broadcast_date": null,
+    "display_title": {
+      "title": "Africa Eye",
+      "subtitle": "Suicide Stories: Are Kenya's men in crisis?"
+    },
+    "ownership": {
+      "service": {
+        "type": null,
+        "id": "bbc_world_service_tv",
+        "key": "worldservicetv",
+        "title": "BBC World Service TV"
+      }
+    },
+    "parent": {
+      "programme": {
+        "type": "brand",
+        "pid": "w13xttpn",
+        "title": "Africa Eye",
+        "short_synopsis": "Original and high-impact BBC investigations from across Africa",
+        "media_type": null,
+        "position": null,
+        "image": {
+          "pid": "p06pqg80"
+        },
+        "expected_child_count": null,
+        "first_broadcast_date": null,
+        "aggregated_episode_count": 25,
+        "ownership": {
+          "service": {
+            "type": null,
+            "id": "bbc_world_service_tv",
+            "key": "worldservicetv",
+            "title": "BBC World Service TV"
+          }
+        }
+      }
+    },
+    "peers": {
+      "previous": null,
+      "next": null
+    },
+    "versions": [
+      {
+        "canonical": 1,
+        "pid": "p07b12qq",
+        "duration": 741,
+        "types": [
+          "Original version"
+        ]
+      }
+    ],
+    "links": [],
+    "supporting_content_items": [],
+    "categories": [
+      {
+        "type": "genre",
+        "id": "C00079",
+        "key": "news",
+        "title": "News",
+        "narrower": [],
+        "broader": {},
+        "has_topic_page": false,
+        "sameAs": null
+      }
+    ]
+  }
+}

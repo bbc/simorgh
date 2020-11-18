@@ -1,8 +1,6 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getEmbedUrl, hasMedia } from './helpers';
-import appToggles from '../../../support/helpers/useAppToggles';
-import envConfig from '../../../support/config/envs';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -28,7 +26,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
                 const embedUrl = getEmbedUrl(jsonData, language, true);
 
                 cy.get(`amp-iframe[src="${embedUrl}"]`).should('be.visible');
-                cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
+                cy.testResponseCodeAndTypeRetry(embedUrl, 200, 'text/html');
               } else {
                 cy.log(
                   `No media on ${pageType} for ${Cypress.env('currentPath')}`,
@@ -41,14 +39,6 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
         }
       });
     });
-
-    if (appToggles.chartbeatAnalytics.enabled && envConfig.chartbeatEnabled) {
-      describe('Chartbeat', () => {
-        it('should have the correct config UID', () => {
-          cy.hasAmpChartbeatConfigUid();
-        });
-      });
-    }
   });
 };
 

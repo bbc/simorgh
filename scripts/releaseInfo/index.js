@@ -33,6 +33,7 @@ const generateLinks = (service, env, domain) => {
     onDemandRadio,
     idxPage,
     onDemandTV,
+    featureIndexPage,
   } = allServices()[service].pageTypes;
 
   const frontPageURL = getUrl(frontPage, env);
@@ -85,6 +86,11 @@ const generateLinks = (service, env, domain) => {
     output.push(`[onDemandTV](${domain}${onDemandTVURL})`);
   }
 
+  const featureIndexURL = getUrl(featureIndexPage, env);
+  if (featureIndexURL) {
+    output.push(`[FIX](${domain}${featureIndexURL})`);
+  }
+
   return output.join('<br/>');
 };
 
@@ -134,6 +140,13 @@ const generateLaunchDates = service => {
 
     if (serviceLaunch.onDemandTV && serviceLaunch.onDemandTV !== '') {
       output.push(`__On Demand TV__: ${serviceLaunch.onDemandTV}`);
+    }
+
+    if (
+      serviceLaunch.featureIndexPage &&
+      serviceLaunch.featureIndexPage !== ''
+    ) {
+      output.push(`__FIX__: ${serviceLaunch.featureIndexPage}`);
     }
 
     return output.join('<br/>');

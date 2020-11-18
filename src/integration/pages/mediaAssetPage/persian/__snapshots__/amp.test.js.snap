@@ -97,7 +97,7 @@ exports[`AMP Media Asset Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=69&p=iran::persian.iran.media_asset.23231114.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:43667729-4c50-834f-a4b5-c0c95c3cafcf]&x2=[amp]&x3=[news-persian]&x4=[fa]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-media-asset]&x8=[simorgh]&x9=[Trump+long+headline+-+BBC+News+فارسی]&x11=[2019-02-15T12:47:51.000Z]&x12=[2019-02-15T12:47:51.000Z]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=69&p=iran%3A%3Apersian.iran.media_asset.23231114.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A43667729-4c50-834f-a4b5-c0c95c3cafcf]&x2=[amp]&x3=[news-persian]&x4=[fa]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-media-asset]&x8=[simorgh]&x9=[Trump%2Blong%2Bheadline%2B-%2BBBC%2BNews%2B%D9%81%D8%A7%D8%B1%D8%B3%DB%8C]&x11=[2019-02-15T12%3A47%3A51.000Z]&x12=[2019-02-15T12%3A47%3A51.000Z]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -186,7 +186,7 @@ Object {
 exports[`AMP Media Asset Page Footer Link should match text and url 7`] = `
 Object {
   "text": "تماس با بی بی سی",
-  "url": "https://www.bbc.com/persian/institutional-37542244",
+  "url": "https://www.bbc.co.uk/send/u50853555",
 }
 `;
 
@@ -215,98 +215,103 @@ Object {
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 2`] = `
 Object {
+  "text": "انتخابات آمریکا",
+  "url": "/persian/world-54468359",
+}
+`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 3`] = `
+Object {
   "text": "کرونا",
   "url": "/persian/science-52004647",
 }
 `;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 3`] = `
+exports[`AMP Media Asset Page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "پخش زنده",
   "url": "/persian/media-49522521",
 }
 `;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 4`] = `
+exports[`AMP Media Asset Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "ویدیو",
   "url": "/persian/media/video",
 }
 `;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 5`] = `
+exports[`AMP Media Asset Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "تلویزیون",
   "url": "/persian/tv-and-radio-37434377",
 }
 `;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 6`] = `
+exports[`AMP Media Asset Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "رادیو",
   "url": "/persian/tv-and-radio-37434376",
 }
 `;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 7`] = `
+exports[`AMP Media Asset Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "ايران",
-  "url": "/persian/iran",
+  "url": "/persian/topics/ckdxnwvwwjnt",
 }
 `;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 8`] = `
+exports[`AMP Media Asset Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "افغانستان",
   "url": "/persian/afghanistan",
 }
 `;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 9`] = `
-Object {
-  "text": "جهان",
-  "url": "/persian/world",
-}
-`;
-
 exports[`AMP Media Asset Page Header Navigation link should match text and url 10`] = `
 Object {
-  "text": "هنر",
-  "url": "/persian/arts",
+  "text": "جهان",
+  "url": "/persian/topics/c1d8ye58xl8t",
 }
 `;
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 11`] = `
 Object {
-  "text": "ورزش",
-  "url": "/persian/sport",
+  "text": "هنر",
+  "url": "/persian/topics/c9wpm0epm45t",
 }
 `;
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 12`] = `
 Object {
-  "text": "اقتصاد",
-  "url": "/persian/business",
+  "text": "ورزش",
+  "url": "/persian/topics/cnq6879k7yjt",
 }
 `;
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 13`] = `
 Object {
-  "text": "دانش",
-  "url": "/persian/science",
+  "text": "اقتصاد",
+  "url": "/persian/topics/cl8l9mvlllqt",
 }
 `;
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 14`] = `
 Object {
-  "text": "ناظران می‌گویند",
-  "url": "/persian/blogs/viewpoints",
+  "text": "دانش",
+  "url": "/persian/topics/cp0e57wejkzt",
 }
 `;
 
-exports[`AMP Media Asset Page I can see the headline 1`] = `"Trump long headline"`;
+exports[`AMP Media Asset Page Header Navigation link should match text and url 15`] = `
+Object {
+  "text": "ناظران می‌گویند",
+  "url": "/persian/blogs-54099951",
+}
+`;
 
-exports[`AMP Media Asset Page I can see the timestamp 1`] = `"۲۶ بهمن ۱۳۹۷ - ۱۵ فوریه ۲۰۱۹"`;
+exports[`AMP Media Asset Page Main heading should match text 1`] = `"Trump long headline"`;
 
 exports[`AMP Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"پخش صدا و تصویر"`;
 
@@ -417,8 +422,13 @@ Object {
       "image": Object {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+        "url": "https://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg",
         "width": 1024,
+      },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "fa",
+        "name": "Persian",
       },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/persian/iran-23231114",
@@ -458,7 +468,7 @@ Object {
 
 exports[`AMP Media Asset Page SEO OG description 1`] = `"Trump summary text"`;
 
-exports[`AMP Media Asset Page SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
+exports[`AMP Media Asset Page SEO OG image 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
 
 exports[`AMP Media Asset Page SEO OG image alt 1`] = `"Trump getting upset"`;
 
@@ -484,8 +494,15 @@ exports[`AMP Media Asset Page SEO Twitter description 1`] = `"Trump summary text
 
 exports[`AMP Media Asset Page SEO Twitter image alt 1`] = `"Trump getting upset"`;
 
-exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
+exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
 
 exports[`AMP Media Asset Page SEO Twitter site 1`] = `"@bbcpersian"`;
 
 exports[`AMP Media Asset Page SEO Twitter title 1`] = `"Trump short headline - BBC News فارسی"`;
+
+exports[`AMP Media Asset Page Timestamp should match text and date 1`] = `
+Object {
+  "date": "2019-02-15",
+  "text": "۲۶ بهمن ۱۳۹۷ - ۱۵ فوریه ۲۰۱۹",
+}
+`;

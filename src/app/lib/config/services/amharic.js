@@ -36,6 +36,7 @@ export const service = {
     datetimeLocale: 'am',
     service: 'amharic',
     serviceName: 'Amharic',
+    languageName: 'Amharic',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnews',
     twitterSite: '@bbcnews',
@@ -171,6 +172,11 @@ export const service = {
           endTextVisuallyHidden: 'የ %provider_name% ይዘት መጨረሻ',
         },
       },
+      include: {
+        errorMessage:
+          'ይቅርታ፤ የዚህን ይዘት የተወሰነ ክፍል ለሞባይል አመቺ በሆነ መልክ ልናቀርብ አልቻልንም።',
+        linkText: 'በገጹ ላይ ያሉትን ሁሉንም ይዘቶች ለማየት ሙሉውን ይዘት ይመልከቱ  ',
+      },
       topStoriesTitle: 'እንዳያመልጥዎ',
       featuresAnalysisTitle: 'ከየፈርጁ',
     },
@@ -188,9 +194,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
-      onOnDemandRadioPage: true,
-      onFrontPage: false,
       header: 'ያድምጡ',
       durationLabel: 'ርዝመት %duration%',
     },
@@ -224,7 +227,7 @@ export const service = {
           text: 'ኩኪዎች',
         },
         {
-          href: 'https://www.bbc.com/amharic/institutional-42228117',
+          href: 'https://www.bbc.co.uk/send/u50853181',
           text: 'ቢቢሲን ያግኙ',
         },
         {

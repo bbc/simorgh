@@ -39,6 +39,7 @@ export const service = {
     datetimeLocale: `cy`,
     service: 'cymrufyw',
     serviceName: 'Cymru Fyw',
+    languageName: 'Welsh',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCCymruFyw',
     twitterSite: '@BBCCymruFyw',

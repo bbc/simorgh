@@ -33,6 +33,7 @@ export const service = {
     datetimeLocale: `ja`,
     service: 'japanese',
     serviceName: 'Japan',
+    languageName: 'Japanese',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsjapan',
     twitterSite: '@bbcnewsjapan',
@@ -171,6 +172,11 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% の投稿の終わり',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'トップ記事',
       featuresAnalysisTitle: '読み物・解説',
     },
@@ -241,6 +247,10 @@ export const service = {
       {
         title: 'コロナウイルス',
         url: '/japanese/52137815',
+      },
+      {
+        title: '米大統領選',
+        url: '/japanese/53969845',
       },
       {
         title: '日本',

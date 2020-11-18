@@ -1,13 +1,11 @@
 export default {
   ADS: 'ads',
   CHARTBEAT_ANALYTICS: 'chartbeatAnalytics',
-  CINEMA_MODE_TV: 'cinemaModeTV',
   COMSCORE_ANALYTICS: 'comscoreAnalytics',
   CPS_RECOMMENDATIONS: 'cpsRecommendations',
   ENABLE_FETCHING_TOGGLES: 'enableFetchingToggles',
   INCLUDE: 'include',
   LIVE_RADIO_SCHEDULE: 'liveRadioSchedule',
-  LOG_MEDIA_PLAYER_STATUS: 'logMediaPlayerStatus',
   MEDIA_PLAYER: 'mediaPlayer',
   MOST_READ: 'mostRead',
   NAVIGATION_ON_ARTICLES: 'navOnArticles',

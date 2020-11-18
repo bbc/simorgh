@@ -1,13 +1,11 @@
 import {
   runCommonCrossPlatformTests,
   runMediaPlayerEmbedTests,
-  runMainHeadingTests,
 } from '../../common';
 
-export default () => {
-  runCommonCrossPlatformTests();
+export default service => {
+  runCommonCrossPlatformTests(service);
   runMediaPlayerEmbedTests();
-  runMainHeadingTests();
 
   describe('Summary', () => {
     const summaryEl = document.querySelector('main p');

@@ -81,7 +81,16 @@ describe('ServiceContextProvider', () => {
         service: 'ukrainian',
         variant: undefined,
         pageLang: 'ru',
-        expectedTranslation: 'Главное',
+        expectedTranslation: 'Новости по теме',
+        assertionValue: 'relatedContent',
+      },
+      {
+        description:
+          'should load ukrainian translations for secondary column translations',
+        service: 'ukrainian',
+        variant: undefined,
+        pageLang: 'ru',
+        expectedTranslation: 'Головне',
         assertionValue: 'topStoriesTitle',
       },
       {
@@ -127,7 +136,6 @@ describe('ServiceContextProvider', () => {
               </ServiceContextProvider>,
             ).container;
           });
-
           expect(container.firstChild.innerHTML).toEqual(expectedTranslation);
         });
       },

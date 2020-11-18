@@ -23,6 +23,7 @@ export const service = {
     datetimeLocale: 'pcm',
     service: 'pidgin',
     serviceName: 'Pidgin',
+    languageName: 'Nigerian Pidgin',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
     defaultImageAltText: 'BBC News Pidgin',
     dir: 'ltr',
@@ -180,6 +181,11 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'Top Tori',
       featuresAnalysisTitle: 'Informate me',
     },
@@ -261,7 +267,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/pidgin/institutional-42188215',
+          href: 'https://www.bbc.co.uk/send/u50853577',
           text: 'Call BBC',
         },
         {

@@ -1,5 +1,6 @@
 import path from 'ramda/src/path';
 import pathEq from 'ramda/src/pathEq';
+
 import envConfig from '../config/envs';
 
 // the externalId `bbc_oromo_radio` is overriden to `bbc_afaanoromoo` in production code
@@ -21,7 +22,7 @@ export const getEmbedUrl = ({ body, language, isAmp }) => {
   const { pid } = body.metadata.locators;
 
   const embedUrl = [
-    envConfig.avEmbedBaseUrl,
+    isAmp ? envConfig.avEmbedBaseUrlAmp : envConfig.avEmbedBaseUrlCanonical,
     'ws/av-embeds/media',
     serviceName,
     brandId,
@@ -37,6 +38,12 @@ export const isAvailable = pathEq(
   'available',
 );
 
+export const getEpisodeAvailability = path([
+  'content',
+  'blocks',
+  0,
+  'availability',
+]);
 export const isBrand = jsonData => {
   const pageID = path(
     ['metadata', 'analyticsLabels', 'pageIdentifier'],
@@ -45,7 +52,7 @@ export const isBrand = jsonData => {
   return pageID.includes('programmes');
 };
 
-export const dataEndpointOverride = () => {
+export const overrideRendererOnTest = () => {
   if (Cypress.env('APP_ENV') === 'test') {
     return '?renderer_env=live';
   }

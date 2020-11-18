@@ -1,5 +1,6 @@
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
+import paths from 'ramda/src/paths';
 
 const DEFAULT_IMAGE_RES = '1024x576';
 
@@ -13,11 +14,16 @@ export const getThumbnailUri = aresMetadataBlock => {
   return `https://${imageUrl.replace('$recipe', DEFAULT_IMAGE_RES)}`;
 };
 export const getUploadDate = aresMetadataBlock => {
-  const uploadDate = pathOr(
-    null,
-    ['model', 'versions', [0], 'availableFrom'],
+  const [availableFrom, firstPublished] = paths(
+    [
+      ['model', 'versions', [0], 'availableFrom'],
+      ['model', 'firstPublished'],
+    ],
     aresMetadataBlock,
   );
+
+  const uploadDate = availableFrom || firstPublished || null;
+
   return new Date(uploadDate).toISOString();
 };
 

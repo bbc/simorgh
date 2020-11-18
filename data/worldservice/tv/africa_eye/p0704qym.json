@@ -1,0 +1,81 @@
+{
+  "programme": {
+    "type": "clip",
+    "pid": "p0704qym",
+    "expected_child_count": null,
+    "position": null,
+    "image": {
+      "pid": "p070bslw"
+    },
+    "media_type": "audio_video",
+    "title": "Kenya's Gangster Killing Cop",
+    "short_synopsis": "Africa Eye joins Nairobi officer Ahmed Rashid as he seeks to rid the streets of criminals.",
+    "medium_synopsis": "In 2017, mobile footage of a plain-clothed policeman gunning down two apparently unarmed men went viral in Kenya. But who is this cop and what prompted the shooting?",
+    "long_synopsis": "In 2017, mobile footage of a plain-clothed policeman gunning down two apparently unarmed men went viral in Kenya. But who is this cop and what prompted the shooting?\n\nBBC Africa Eye joins controversial officer Ahmed Rashid as he seeks to rid the streets of gangsters and criminals. For the first time cameras are allowed to follow his team in action in the Somali neighbourhood of Eastleigh, Nairobi. We hear from those who praise his unit and those who condemn them for what they say are a spate of extra-judicial killings.\n\nYouTube: http://bit.ly/subscribetoafrica \nWebsite: https://www.bbc.co.uk/programmes/w13xttpn\nFacebook: https://www.facebook.com/bbcnewsafrica/\nTwitter: https://www.twitter.com/bbcafrica/ \nInstagram: https://www.instagram.com/bbcafrica/",
+    "first_broadcast_date": null,
+    "display_title": {
+      "title": "Africa Eye",
+      "subtitle": "Kenya's Gangster Killing Cop"
+    },
+    "ownership": {
+      "service": {
+        "type": null,
+        "id": "bbc_world_service_tv",
+        "key": "worldservicetv",
+        "title": "BBC World Service TV"
+      }
+    },
+    "parent": {
+      "programme": {
+        "type": "brand",
+        "pid": "w13xttpn",
+        "title": "Africa Eye",
+        "short_synopsis": "Original and high-impact BBC investigations from across Africa",
+        "media_type": null,
+        "position": null,
+        "image": {
+          "pid": "p06pqg80"
+        },
+        "expected_child_count": null,
+        "first_broadcast_date": null,
+        "aggregated_episode_count": 25,
+        "ownership": {
+          "service": {
+            "type": null,
+            "id": "bbc_world_service_tv",
+            "key": "worldservicetv",
+            "title": "BBC World Service TV"
+          }
+        }
+      }
+    },
+    "peers": {
+      "previous": null,
+      "next": null
+    },
+    "versions": [
+      {
+        "canonical": 1,
+        "pid": "p0704qyp",
+        "duration": 1680,
+        "types": [
+          "Original version"
+        ]
+      }
+    ],
+    "links": [],
+    "supporting_content_items": [],
+    "categories": [
+      {
+        "type": "genre",
+        "id": "C00079",
+        "key": "news",
+        "title": "News",
+        "narrower": [],
+        "broader": {},
+        "has_topic_page": false,
+        "sameAs": null
+      }
+    ]
+  }
+}

@@ -45,9 +45,6 @@
     "sha.js@*": {
       "reason": "Licensed under MIT; https://github.com/crypto-browserify/sha.js#license-mit"
     },
-    "storybook-chromatic@*": {
-      "reason:": "Used only in dev-dependencies and with the explicit approval of the company ChromaticQA"
-    },
     "store2@*": {
       "reason": "Licensed under MIT; https://github.com/nbubna/store/blob/master/LICENSE-MIT"
     },
@@ -62,6 +59,9 @@
     },
     "language-subtag-registry@*": {
       "reason": "Licensed under MIT; https://github.com/mattcg/language-subtag-registry#credits-and-collaboration"
+    },
+    "tslib@*": {
+      "reason": "Licenced under BSD Zero Clause license; https://github.com/microsoft/tslib/blob/master/LICENSE.txt"
     }
   }
 }

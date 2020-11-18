@@ -1,7 +1,7 @@
 import path from 'ramda/src/path';
-import deepClone from 'ramda/src/clone';
 import splitAt from 'ramda/src/splitAt';
 import { getNthCpsParagraphIndex } from '../helpers';
+import deepClone from '../../../utils/jsonClone';
 
 const insertRecommendationsBlock = (recommendationBlock, blocks) => {
   const fifthParagraphIndex = getNthCpsParagraphIndex(blocks, 5);

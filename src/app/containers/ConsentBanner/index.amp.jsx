@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import AmpGeo from '@bbc/psammead-amp-geo';
 import Banner from './Banner/index.amp';
 

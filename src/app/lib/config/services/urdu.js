@@ -35,6 +35,7 @@ export const service = {
     datetimeLocale: 'ur',
     service: 'urdu',
     serviceName: 'Urdu',
+    languageName: 'Urdu',
     serviceLocalizedName: 'اردو',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcurdu',
@@ -176,6 +177,11 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% پوسٹ کا اختتام',
         },
       },
+      include: {
+        errorMessage:
+          'ہم معذرت خواہ ہیں کہ ہم کہانی کے اس حصے کو اس لائٹ ویٹ موبائل صفحے پر نہیں دکھا سکتے',
+        linkText: 'تمام مواد دیکھنے کے لیے اس صفحے کا مکمل ورژن دیکھیں',
+      },
       topStoriesTitle: 'اہم خبریں',
       featuresAnalysisTitle: 'فیچر اور تجزیے',
     },
@@ -193,9 +199,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
-      onOnDemandRadioPage: true,
-      onFrontPage: false,
       header: 'ایف ایم بلیٹن',
       durationLabel: '%duration% دورانیہ',
     },
@@ -230,7 +233,7 @@ export const service = {
           text: 'کوکیز',
         },
         {
-          href: 'https://www.bbc.com/urdu/institutional-37588285',
+          href: 'https://www.bbc.co.uk/send/u50853907',
           text: 'بی بی سی سے رابطہ کریں',
         },
         {
@@ -252,35 +255,31 @@ export const service = {
       },
       {
         title: 'پاکستان',
-        url: '/urdu/pakistan',
+        url: '/urdu/topics/cjgn7n9zzq7t',
       },
       {
         title: 'آس پاس',
-        url: '/urdu/regional',
+        url: '/urdu/topics/cl8l9mveql2t',
       },
       {
         title: 'ورلڈ',
-        url: '/urdu/world',
+        url: '/urdu/topics/cw57v2pmll9t',
       },
       {
         title: 'کھیل',
-        url: '/urdu/sport',
+        url: '/urdu/topics/c340q0p2585t',
       },
       {
         title: 'فن فنکار',
-        url: '/urdu/entertainment',
+        url: '/urdu/topics/ckdxnx900n5t',
       },
       {
         title: 'سائنس',
-        url: '/urdu/science',
+        url: '/urdu/topics/c40379e2ymxt',
       },
       {
         title: 'ویڈیو',
         url: '/urdu/media/video',
-      },
-      {
-        title: 'پنجابی ويڈیو',
-        url: '/urdu/punjabi_video',
       },
     ],
   },

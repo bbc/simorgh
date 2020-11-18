@@ -7,7 +7,7 @@ import featuresRtl from '#pages/StoryPage/featuresAnalysisRtl.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
 
-const getFeaturesAnalysis = platform => ({ service, dir, data }) => (
+const getFeaturesAnalysis = platform => (service, dir, data) => (
   <div dir={dir}>
     {/* The above simulates dir being added at the page level */}
     <ServiceContextProvider service={service}>
@@ -29,63 +29,27 @@ const ampFeaturesAnalysis = getFeaturesAnalysis('amp');
 
 storiesOf('Containers|CPS Features & Analysis/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
-  .add('igbo (ltr)', () =>
-    canonicalFeaturesAnalysis({
-      service: 'igbo',
-      dir: 'ltr',
-      data: features,
-    }),
-  )
+  .add('igbo (ltr)', () => canonicalFeaturesAnalysis('igbo', 'ltr', features))
   .add('arabic (rtl)', () =>
-    canonicalFeaturesAnalysis({
-      service: 'arabic',
-      dir: 'rtl',
-      data: featuresRtl,
-    }),
+    canonicalFeaturesAnalysis('arabic', 'rtl', featuresRtl),
   )
   .add('igbo (ltr) with one item', () =>
-    canonicalFeaturesAnalysis({
-      service: 'igbo',
-      dir: 'ltr',
-      data: [features[0]],
-    }),
+    canonicalFeaturesAnalysis('igbo', 'ltr', [features[0]]),
   )
   .add('arabic (rtl) with one item', () =>
-    canonicalFeaturesAnalysis({
-      service: 'arabic',
-      dir: 'rtl',
-      data: [featuresRtl[0]],
-    }),
+    canonicalFeaturesAnalysis('arabic', 'rtl', [featuresRtl[0]]),
   );
 
 storiesOf('Containers|CPS Features & Analysis/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
-  .add('igbo (ltr) - amp', () =>
-    ampFeaturesAnalysis({
-      service: 'igbo',
-      dir: 'ltr',
-      data: features,
-    }),
-  )
+  .add('igbo (ltr) - amp', () => ampFeaturesAnalysis('igbo', 'ltr', features))
   .add('arabic (rtl) - amp', () =>
-    ampFeaturesAnalysis({
-      service: 'arabic',
-      dir: 'rtl',
-      data: featuresRtl,
-    }),
+    ampFeaturesAnalysis('arabic', 'rtl', featuresRtl),
   )
   .add('igbo (ltr) with one item', () =>
-    canonicalFeaturesAnalysis({
-      service: 'igbo',
-      dir: 'ltr',
-      data: [features[0]],
-    }),
+    canonicalFeaturesAnalysis('igbo', 'ltr', [features[0]]),
   )
   .add('arabic (rtl) with one item', () =>
-    canonicalFeaturesAnalysis({
-      service: 'arabic',
-      dir: 'rtl',
-      data: [featuresRtl[0]],
-    }),
+    canonicalFeaturesAnalysis('arabic', 'rtl', [featuresRtl[0]]),
   );

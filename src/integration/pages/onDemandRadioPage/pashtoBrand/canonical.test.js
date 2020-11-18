@@ -8,7 +8,7 @@ import runCanonicalTests from '../canonicalTests';
 
 describe('Canonical', () => {
   describe(pageType, () => {
-    runCrossPlatformTests();
+    runCrossPlatformTests(service);
     runCanonicalTests();
   });
 });

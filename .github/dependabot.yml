@@ -1,0 +1,38 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+    time: "03:00"
+  open-pull-requests-limit: 100
+  labels:
+  - dependencies
+  milestone: 107
+  versioning-strategy: increase
+  ignore:
+  - dependency-name: "@bbc/psammead-story-promo-list"
+    versions:
+    - ">= 1.0.1.a"
+    - "< 1.0.2"
+  - dependency-name: react-amphtml
+    versions:
+    - "> 3.0.1"
+  - dependency-name: snyk
+    versions:
+    - ">= 1.185.5.a"
+    - "< 1.185.6"
+  - dependency-name: "@storybook/react"
+    versions:
+    - ">= 5.1.3.a"
+    - "< 5.1.4"
+  - dependency-name: uuid
+    versions:
+    - ">= 7.a"
+    - "< 8"
+  - dependency-name: uuid
+    versions:
+    - ">= 8.a"
+    - "< 9"
+  rebase-strategy: disabled

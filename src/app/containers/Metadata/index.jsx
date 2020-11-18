@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string, node, shape, arrayOf } from 'prop-types';
+import { string, node, shape, arrayOf, bool } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
@@ -9,6 +9,7 @@ import {
   renderAmpHtml,
   getAppleTouchUrl,
   renderAlternateLinks,
+  renderAppleItunesApp,
 } from './utils';
 
 const ENGLISH_SERVICES = ['news'];
@@ -47,6 +48,7 @@ const MetadataContainer = ({
   image,
   imageAltText,
   children,
+  hasAppleItunesAppBanner,
 }) => {
   const {
     isAmp,
@@ -69,6 +71,7 @@ const MetadataContainer = ({
     themeColor,
     twitterCreator,
     twitterSite,
+    iTunesAppId,
   } = useContext(ServiceContext);
   const appleTouchIcon = getAppleTouchUrl(service);
   const isEnglishService = ENGLISH_SERVICES.includes(service);
@@ -122,6 +125,12 @@ const MetadataContainer = ({
         !isEnglishService &&
         alternateLinksWsSites.map(renderAlternateLinks)}
       {renderAmpHtml(ampLink, isAmp)}
+      {renderAppleItunesApp({
+        iTunesAppId,
+        canonicalLink,
+        isAmp,
+        hasAppleItunesAppBanner,
+      })}
       <meta name="apple-mobile-web-app-title" content={brandName} />
       <meta name="application-name" content={brandName} />
       <meta name="description" content={description} />
@@ -185,6 +194,7 @@ MetadataContainer.propTypes = {
   image: string,
   imageAltText: string,
   children: node,
+  hasAppleItunesAppBanner: bool,
 };
 
 MetadataContainer.defaultProps = {
@@ -194,6 +204,7 @@ MetadataContainer.defaultProps = {
   image: null,
   imageAltText: null,
   children: null,
+  hasAppleItunesAppBanner: false,
 };
 
 export default MetadataContainer;

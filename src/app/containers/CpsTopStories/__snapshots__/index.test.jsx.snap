@@ -2,64 +2,264 @@
 
 exports[`CpsRelatedContent should render Top Stories components when given appropriate data 1`] = `
 <DocumentFragment>
-  .c10 {
-  padding: 0.5rem 0 1rem;
+  .emotion-43 {
+  width: 100%;
 }
 
-.c10:last-child {
-  border: none;
+@supports (display:grid) {
+  .emotion-43 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-43 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
-.c10:first-child {
-  padding-top: 0;
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-43 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
-.c10:last-child {
-  padding-bottom: 0;
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-43 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
-.c9 {
-  list-style-type: none;
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-43 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-43 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-43 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-43 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-43 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+.emotion-40 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-40 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-40 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-40 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-40 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-40 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-40 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-40 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-40 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-40 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-40 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-40 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-40 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-40 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (min-width:37.5rem) {
+  .emotion-40 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-11 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+  margin-top: 0;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-11 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-11 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-11 {
+    margin-top: 0;
+  }
+}
+
+.emotion-0 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .emotion-0 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+.emotion-8 {
   margin: 0;
   padding: 0;
 }
 
-.c12 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-  width: 100%;
-}
-
-.c12 >div {
-  vertical-align: middle;
-}
-
-.c12 >div {
-  display: inline-block;
-  vertical-align: initial;
-}
-
-.c12 svg {
-  margin: 0;
-}
-
-.c11 {
-  position: relative;
-}
-
-.c15 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c6 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -69,7 +269,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   flex-direction: column;
 }
 
-.c7 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -88,7 +288,16 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   align-items: baseline;
 }
 
-.c8 {
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-2 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -107,37 +316,154 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   align-items: center;
 }
 
-.c4 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
 }
 
-.c2 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
 }
 
-.c5 {
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    padding-right: 1rem;
+  }
+}
+
+.emotion-37 {
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c0 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
+.emotion-23 {
+  padding: 0.5rem 0 1rem;
 }
 
-.c1 {
-  margin-bottom: 1rem;
+@media (max-width:62.9375rem) {
+  .emotion-23 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
 }
 
-.c3 {
-  margin-top: 0;
+.emotion-23:last-child {
+  border: none;
 }
 
-.c13 {
+@media (min-width:37.5rem) {
+  .emotion-23 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-23 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+.emotion-23:first-child {
+  padding-top: 0;
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-23:first-child {
+    padding-top: 1rem;
+  }
+}
+
+.emotion-23:last-child {
+  padding-bottom: 0;
+}
+
+.emotion-21 {
+  position: relative;
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .emotion-21 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+
+@media (min-width:37.5rem) {
+    .emotion-21 {
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) {
+    .emotion-21 {
+      display: block;
+    }
+}
+}
+
+.emotion-19 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-19 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-19 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+.emotion-19 >div {
+  vertical-align: middle;
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .emotion-19 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+    grid-column: 1 / span 6;
+  }
+
+@media (min-width:63rem) {
+    .emotion-19 {
+      padding-top: 0;
+    }
+}
+}
+
+.emotion-19 >div {
+  display: inline-block;
+  vertical-align: initial;
+}
+
+.emotion-19 svg {
+  margin: 0;
+}
+
+.emotion-15 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -149,7 +475,21 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   display: inline;
 }
 
-.c14 {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-13 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -158,7 +498,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   overflow-wrap: anywhere;
 }
 
-.c14:before {
+.emotion-13:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -170,264 +510,68 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   z-index: 1;
 }
 
-.c14:hover,
-.c14:focus {
+.emotion-13:hover,
+.emotion-13:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c14:visited {
+.emotion-13:visited {
   color: #6E6E73;
 }
 
-@media (max-width:62.9375rem) {
-  .c10 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c10 {
-    padding: 0 0 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c10:first-child {
-    padding-top: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c12 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c12 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-    grid-column: 1 / span 6;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c11 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
+.emotion-17 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
+  .emotion-17 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c15 {
+  .emotion-17 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c7 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c4 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c2 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c1 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c13 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
 <section
     aria-labelledby="top-stories-heading"
-    class="c0"
-    data-e2e="related-content"
+    class="emotion-42 emotion-43 emotion-41"
+    data-e2e="top-stories-heading"
+    dir="ltr"
     role="region"
   >
     <div
-      class="c1"
+      class="emotion-39 emotion-40 emotion-41"
+      dir="ltr"
     >
       <div
-        class="c2 c3"
+        class="emotion-10 emotion-11 emotion-12"
       >
         <div
-          class="c4"
+          class="emotion-0 emotion-1"
         />
         <h2
-          class="c5"
+          class="emotion-8 emotion-9"
         >
           <span
-            class="c6"
+            class="emotion-6 emotion-7"
           >
             <span
-              class="c7"
+              class="emotion-4 emotion-5"
             >
               <span
-                class="c8"
+                class="emotion-2 emotion-3"
                 dir="ltr"
                 id="top-stories-heading"
               >
@@ -438,32 +582,32 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
         </h2>
       </div>
       <ul
-        class="c9"
+        class="emotion-37 emotion-38"
         role="list"
       >
         <li
-          class="c10"
-          role="listitem"
+          class="emotion-23 emotion-24"
         >
           <div
-            class="c11"
+            class="emotion-21 emotion-22"
+            data-e2e="story-promo"
           >
             <div
-              class="c12"
+              class="emotion-19 emotion-20"
               dir="ltr"
             >
               <h3
-                class="c13"
+                class="emotion-15 emotion-16"
               >
                 <a
-                  class="c14"
+                  class="emotion-13 emotion-14"
                   href="/mundo/noticias-internacional-51939501"
                 >
                   China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
                 </a>
               </h3>
               <time
-                class="c15"
+                class="emotion-17 emotion-18"
                 datetime="2020-02-03"
               >
                 3rd February 2020
@@ -472,28 +616,28 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
           </div>
         </li>
         <li
-          class="c10"
-          role="listitem"
+          class="emotion-23 emotion-24"
         >
           <div
-            class="c11"
+            class="emotion-21 emotion-22"
+            data-e2e="story-promo"
           >
             <div
-              class="c12"
+              class="emotion-19 emotion-20"
               dir="ltr"
             >
               <h3
-                class="c13"
+                class="emotion-15 emotion-16"
               >
                 <a
-                  class="c14"
+                  class="emotion-13 emotion-14"
                   href="/pidgin/tori-51945757"
                 >
                   Nigeria don get five new cases of Coronavirus - See how e happun
                 </a>
               </h3>
               <time
-                class="c15"
+                class="emotion-17 emotion-18"
                 datetime="2020-02-03"
               >
                 3rd February 2020
@@ -509,42 +653,264 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 exports[`CpsRelatedContent should render Top Stories components when without <ul> 1`] = `
 <DocumentFragment>
-  .c11 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+  .emotion-29 {
   width: 100%;
 }
 
-.c11 >div {
-  vertical-align: middle;
+@supports (display:grid) {
+  .emotion-29 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-29 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
-.c11 >div {
-  display: inline-block;
-  vertical-align: initial;
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-29 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
-.c11 svg {
-  margin: 0;
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-29 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
 }
 
-.c10 {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-29 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-29 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-29 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-29 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-29 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+.emotion-26 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-26 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-26 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-26 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-26 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-26 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-26 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-26 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-26 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-26 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-26 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-26 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-26 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-26 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (min-width:37.5rem) {
+  .emotion-26 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-11 {
   position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+  margin-top: 0;
 }
 
-.c14 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
+@media (min-width:37.5rem) {
+  .emotion-11 {
+    margin-top: 1.5rem;
+  }
 }
 
-.c6 {
+@media (min-width:63rem) {
+  .emotion-11 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-11 {
+    margin-top: 0;
+  }
+}
+
+.emotion-0 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .emotion-0 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+.emotion-8 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -554,7 +920,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   flex-direction: column;
 }
 
-.c7 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -573,7 +939,16 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   align-items: baseline;
 }
 
-.c8 {
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-2 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -592,37 +967,108 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   align-items: center;
 }
 
-.c4 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
 }
 
-.c2 {
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    padding-right: 1rem;
+  }
+}
+
+.emotion-21 {
   position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
 }
 
-.c5 {
+@supports (grid-template-columns:fit-content(200px)) {
+  .emotion-21 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+
+@media (min-width:37.5rem) {
+    .emotion-21 {
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) {
+    .emotion-21 {
+      display: block;
+    }
+}
+}
+
+.emotion-19 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-19 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-19 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+.emotion-19 >div {
+  vertical-align: middle;
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .emotion-19 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+    grid-column: 1 / span 6;
+  }
+
+@media (min-width:63rem) {
+    .emotion-19 {
+      padding-top: 0;
+    }
+}
+}
+
+.emotion-19 >div {
+  display: inline-block;
+  vertical-align: initial;
+}
+
+.emotion-19 svg {
   margin: 0;
-  padding: 0;
 }
 
-.c0 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
-.c1 {
-  margin-bottom: 1rem;
-}
-
-.c3 {
-  margin-top: 0;
-}
-
-.c12 {
+.emotion-15 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -634,7 +1080,21 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   display: inline;
 }
 
-.c13 {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-13 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -643,7 +1103,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   overflow-wrap: anywhere;
 }
 
-.c13:before {
+.emotion-13:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -655,252 +1115,80 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   z-index: 1;
 }
 
-.c13:hover,
-.c13:focus {
+.emotion-13:hover,
+.emotion-13:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c13:visited {
+.emotion-13:visited {
   color: #6E6E73;
 }
 
-@media (min-width:37.5rem) {
-  .c11 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c11 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c11 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-    grid-column: 1 / span 6;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c10 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
+.emotion-17 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
+  .emotion-17 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c14 {
+  .emotion-17 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c7 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c4 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c2 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c1 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    margin-bottom: 1.5rem;
-  }
-}
-
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c9 {
+  .emotion-23 {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c9 {
+  .emotion-23 {
     padding-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
   }
 }
 
 <section
     aria-labelledby="top-stories-heading"
-    class="c0"
-    data-e2e="related-content"
+    class="emotion-28 emotion-29 emotion-27"
+    data-e2e="top-stories-heading"
+    dir="ltr"
     role="region"
   >
     <div
-      class="c1"
+      class="emotion-25 emotion-26 emotion-27"
+      dir="ltr"
     >
       <div
-        class="c2 c3"
+        class="emotion-10 emotion-11 emotion-12"
       >
         <div
-          class="c4"
+          class="emotion-0 emotion-1"
         />
         <h2
-          class="c5"
+          class="emotion-8 emotion-9"
         >
           <span
-            class="c6"
+            class="emotion-6 emotion-7"
           >
             <span
-              class="c7"
+              class="emotion-4 emotion-5"
             >
               <span
-                class="c8"
+                class="emotion-2 emotion-3"
                 dir="ltr"
                 id="top-stories-heading"
               >
@@ -911,27 +1199,28 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
         </h2>
       </div>
       <div
-        class="c9"
+        class="emotion-23 emotion-24"
       >
         <div
-          class="c10"
+          class="emotion-21 emotion-22"
+          data-e2e="story-promo"
         >
           <div
-            class="c11"
+            class="emotion-19 emotion-20"
             dir="ltr"
           >
             <h3
-              class="c12"
+              class="emotion-15 emotion-16"
             >
               <a
-                class="c13"
+                class="emotion-13 emotion-14"
                 href="/mundo/noticias-internacional-51939501"
               >
                 China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
               </a>
             </h3>
             <time
-              class="c14"
+              class="emotion-17 emotion-18"
               datetime="2020-02-03"
             >
               3rd February 2020

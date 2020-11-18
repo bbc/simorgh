@@ -33,6 +33,7 @@ export const service = {
     datetimeLocale: `my`,
     service: 'burmese',
     serviceName: 'Burmese',
+    languageName: 'Burmese',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcburmese',
     twitterSite: '@bbcburmese',
@@ -188,6 +189,11 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'ထိပ်တန်း သတင်းများ',
       featuresAnalysisTitle: 'ဆောင်းပါး',
     },
@@ -205,9 +211,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
-      onOnDemandRadioPage: true,
-      onFrontPage: false,
       header: 'နောက်ဆုံးလွှင့် အစီအစဉ်များ',
       durationLabel: 'ကြာမြင့်ချိန် %duration%',
     },
@@ -238,7 +241,7 @@ export const service = {
           text: 'ကွတ်ကီး',
         },
         {
-          href: 'https://www.bbc.com/burmese/institutional-37577525',
+          href: 'https://www.bbc.co.uk/send/u50853269',
           text: 'ဘီဘီစီကို ဆက်သွယ်ရန်',
         },
         {

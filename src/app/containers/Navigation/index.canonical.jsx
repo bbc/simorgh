@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import Navigation from '@bbc/psammead-navigation';
 import { node, string, shape } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
@@ -9,7 +9,7 @@ import {
   CanonicalMenuButton,
 } from '@bbc/psammead-navigation/dropdown';
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/dist/breakpoints';
-import useMediaQuery from '#lib/utilities/useMediaQuery';
+import useMediaQuery from '#hooks/useMediaQuery';
 
 const ScrollableWrapper = styled.div`
   position: relative;

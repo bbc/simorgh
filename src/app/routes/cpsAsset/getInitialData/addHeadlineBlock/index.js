@@ -1,6 +1,6 @@
 import pathOr from 'ramda/src/pathOr';
-import deepClone from 'ramda/src/clone';
 import path from 'ramda/src/path';
+import deepClone from '../../../utils/jsonClone';
 import {
   getVisuallyHiddenHeadlineBlock,
   getFauxHeadlineBlock,

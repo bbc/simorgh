@@ -39,6 +39,7 @@ export const service = {
     datetimeLocale: 'en-gb',
     service: 'news',
     serviceName: 'News',
+    languageName: 'English',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews',
     twitterSite: '@BBCNews',
@@ -279,10 +280,6 @@ export const service = {
       {
         title: 'Stories',
         url: '/news/stories',
-      },
-      {
-        title: 'Video & Audio',
-        url: '/news/video_and_audio/headlines',
       },
     ],
   },

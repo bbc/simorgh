@@ -21,7 +21,7 @@ export const getEmbedUrl = (jsonData, language, isAmp = false) => {
   const prefix = jsonData.promo.media.type === 'legacyMedia' ? 'legacy' : 'cps';
 
   const embedUrl = [
-    envConfig.avEmbedBaseUrl,
+    isAmp ? envConfig.avEmbedBaseUrlAmp : envConfig.avEmbedBaseUrlCanonical,
     'ws/av-embeds',
     `${prefix}${jsonData.metadata.locators.assetUri}`,
     getMediaId(jsonData),

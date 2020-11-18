@@ -43,3 +43,42 @@ Cypress.Commands.add(
     );
   },
 );
+Cypress.Commands.add(
+  'testResponseCodeAndTypeRetry',
+  (path, responseCode, type, retriesLeft = 2) => {
+    cy.request({ url: path, retryOnStatusCodeFailure: true }).then(
+      ({ status, headers }) => {
+        expect(status, `Unexpected status code for ${path}`).to.equal(
+          responseCode,
+        );
+        expect(
+          headers['content-type'],
+          `Unexpected content-type for ${path}`,
+        ).to.include(type);
+
+        // Ensure we're not seeing the Mozart fallback during smoke testing
+        if (Cypress.env('SMOKE')) {
+          try {
+            expect(
+              headers,
+              `Mozart fallback response detected for ${path}`,
+            ).not.to.have.property('x-mfa');
+          } catch (e) {
+            if (retriesLeft < 1) {
+              throw e;
+            }
+
+            // Wait before retrying to allow for transient problems to go away
+            // eslint-disable-next-line cypress/no-unnecessary-waiting
+            cy.wait(5000).testResponseCodeAndTypeRetry(
+              path,
+              responseCode,
+              type,
+              retriesLeft - 1,
+            );
+          }
+        }
+      },
+    );
+  },
+);

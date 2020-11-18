@@ -1,15 +1,11 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import { string, shape, number } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 import { Img } from '@bbc/psammead-image';
 import { GEL_SPACING_QUIN } from '@bbc/gel-foundations/spacings';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
-
-const IncludeGrid = styled(GridItemConstrainedMedium)`
-  display: grid;
-`;
+import { GridItemMedium } from '#app/components/Grid';
 
 const Include = styled.div`
   max-width: 100%;
@@ -25,7 +21,7 @@ const Idt2Canonical = ({ html, imageBlock, index }) => {
   const isDisallowed = DISALLOWED_SCRIPTS.test(html);
 
   return (
-    <IncludeGrid>
+    <GridItemMedium>
       {isDisallowed ? (
         <Img src={src} alt={alt} srcset={srcset} id={`include-${index + 1}`} />
       ) : (
@@ -35,7 +31,7 @@ const Idt2Canonical = ({ html, imageBlock, index }) => {
           id={`include-${index + 1}`}
         />
       )}
-    </IncludeGrid>
+    </GridItemMedium>
   );
 };
 

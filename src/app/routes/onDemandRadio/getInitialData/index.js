@@ -11,29 +11,27 @@ import getEpisodeAvailability, {
 } from '#lib/utilities/episodeAvailability';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
-import _hasRadioSchedule from '../../utils/hasRadioSchedule';
 import getRadioService from '../../utils/getRadioService';
 
 const getRadioScheduleData = path(['radioScheduleData']);
+const getScheduleToggle = path(['onDemandRadioSchedule', 'enabled']);
 
-export default async ({ path: pathname, pageType, service }) => {
+export default async ({ path: pathname, pageType, service, toggles }) => {
   try {
     const onDemandRadioDataPath = overrideRendererOnTest(pathname);
-    const hasRadioSchedule = await _hasRadioSchedule({
-      pageType: 'onDemandRadio',
-      service,
-    });
     const pageDataPromise = await fetchPageData({
       path: onDemandRadioDataPath,
       pageType,
     });
+    const scheduleIsEnabled = getScheduleToggle(toggles);
 
-    const { json, status } = hasRadioSchedule
+    const { json, status } = scheduleIsEnabled
       ? await withRadioSchedule({
           pageDataPromise,
           service,
           path: pathname,
           radioService: getRadioService({ service, pathname }),
+          pageType: 'OnDemandRadio',
         })
       : await pageDataPromise;
 

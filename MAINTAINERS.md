@@ -9,7 +9,7 @@
 * @karinathomasbbc
 * @ryanmccombe
 * @jroebu14
-* @rebeccarfmcginnbbc
+* @rebeccamcginn
 * @RichardPK
 * @pharingee
 

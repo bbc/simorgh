@@ -60,7 +60,7 @@ describe('CpsRelatedContent', () => {
 
     const { asFragment } = renderRelatedContent();
 
-    expect(document.querySelectorAll(`li[class^='StoryPromoLi']`).length).toBe(
+    expect(document.querySelectorAll(`li[class*='StoryPromoLi']`).length).toBe(
       promos.length,
     );
 
@@ -76,7 +76,7 @@ describe('CpsRelatedContent', () => {
       content: topRelatedContentsOneItem,
     });
 
-    expect(document.querySelector("li[class^='StoryPromoLi']")).toBeNull();
+    expect(document.querySelector("li[class*='StoryPromoLi']")).toBeNull();
 
     expect(document.querySelector('ul')).toBeNull();
 
@@ -103,7 +103,10 @@ describe('CpsRelatedContent', () => {
       }),
     );
 
-    const { pageData } = await getInitialData('some-cps-path');
+    const { pageData } = await getInitialData({
+      path: 'some-cps-path',
+      service: 'pidgin',
+    });
 
     const transformedPromos = path(
       ['relatedContent', 'groups', 0, 'promos'],

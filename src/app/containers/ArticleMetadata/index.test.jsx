@@ -3,6 +3,7 @@ import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import ArticleMetadata from './index';
 import {
   articleDataNews,
@@ -14,17 +15,19 @@ const getISOStringDate = date => new Date(date).toISOString();
 // eslint-disable-next-line react/prop-types
 const Context = ({ service, children }) => (
   <ServiceContextProvider service={service}>
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.co.uk"
-      id="c0000000000o"
-      isAmp={false}
-      pageType="article"
-      pathname="/pathname"
-      service={service}
-      statusCode={200}
-    >
-      {children}
-    </RequestContextProvider>
+    <ToggleContextProvider>
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp={false}
+        pageType="article"
+        pathname="/pathname"
+        service={service}
+        statusCode={200}
+      >
+        {children}
+      </RequestContextProvider>
+    </ToggleContextProvider>
   </ServiceContextProvider>
 );
 

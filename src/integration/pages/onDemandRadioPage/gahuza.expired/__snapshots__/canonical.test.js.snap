@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Canonical On Demand Radio Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=40&amp;p=gahuza.bbc_gahuza_radio.w172x7rkcj6v0vz.page&amp;x1=[urn:bbc:pips:w172x7rkcj6v0vz]&amp;x2=[responsive]&amp;x3=[news-gahuza]&amp;x4=[rw]&amp;x7=[player-episode]&amp;x8=[simorgh-nojs]&amp;x9=[Amakuru+ya+Gahuzamiryango+-+BBC+News+Gahuza]\\"/>"`;
+exports[`Canonical On Demand Radio Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=40&amp;p=gahuza.bbc_gahuza_radio.w172x7rkcj6v0vz.page&amp;x1=[urn%3Abbc%3Apips%3Aw172x7rkcj6v0vz]&amp;x2=[responsive]&amp;x3=[news-gahuza]&amp;x4=[rw]&amp;x7=[player-episode]&amp;x8=[simorgh-nojs]&amp;x9=[Amakuru%2Bya%2BGahuzamiryango%2B-%2BBBC%2BNews%2BGahuza]\\"/>"`;
 
 exports[`Canonical On Demand Radio Page Expired Episode I can see the 'Content is not available' placeholder 1`] = `"Ibi ntibikiboneka."`;
 

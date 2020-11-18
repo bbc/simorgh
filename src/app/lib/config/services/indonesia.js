@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `id`,
     service: 'indonesia',
     serviceName: 'Indonesia',
+    languageName: 'Indonesian',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcindonesia',
     twitterSite: '@bbcindonesia',
@@ -176,6 +177,11 @@ export const service = {
           endTextVisuallyHidden: 'Lompati %provider_name% pesan',
         },
       },
+      include: {
+        errorMessage:
+          'Maaf, kami tidak dapat menampilkan bagian dari berita ini dalam versi ramah mobile',
+        linkText: 'Lihat versi lengkap di laman untuk melihat seluruh konten',
+      },
       topStoriesTitle: 'Berita Utama',
       featuresAnalysisTitle: 'Majalah',
     },
@@ -193,9 +199,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
-      onOnDemandRadioPage: true,
-      onFrontPage: false,
       header: 'Siaran radio',
       durationLabel: 'Durasi %duration%',
     },
@@ -230,7 +233,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/indonesia/institutional-37818427',
+          href: 'https://www.bbc.co.uk/send/u50853401',
           text: 'Hubungi BBC',
         },
         {

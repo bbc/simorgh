@@ -1,14 +1,15 @@
 /**
  * @service mundo
  * @pathname /mundo/noticias-internacional-51266689
+ * @displayAds true
  */
 
-import runCrossPlatformTests from '../crossPlatformTests';
 import runCanonicalTests from '../canonicalTests';
+import { runAppleItunesAppBannerTests } from '../../../common';
 
 describe('Canonical', () => {
   describe(pageType, () => {
-    runCrossPlatformTests();
-    runCanonicalTests();
+    runCanonicalTests(service);
+    runAppleItunesAppBannerTests();
   });
 });

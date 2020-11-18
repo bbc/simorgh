@@ -1,17 +1,15 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { Headline, SubHeading } from '@bbc/psammead-headings';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { headlineModelPropTypes } from '#models/propTypes/headline';
 import Fragment from '../Fragment';
+import InlineContainer from '../InlineContainer';
 import Blocks from '../Blocks';
 import idSanitiser from '#lib/utilities/idSanitiser';
-import {
-  GridItemConstrainedMedium,
-  GridItemConstrainedLarge,
-} from '#lib/styledGrid';
+import { GridItemMedium, GridItemLarge } from '#app/components/Grid';
 
 const StyledHeadline = styled(Headline)`
   :focus {
@@ -25,9 +23,9 @@ const Headings = {
   subheadline: SubHeading,
 };
 
-const GridConstraints = {
-  headline: GridItemConstrainedLarge,
-  subheadline: GridItemConstrainedMedium,
+const GridItems = {
+  headline: GridItemLarge,
+  subheadline: GridItemMedium,
 };
 
 const sanitiseSubheadline = (type, text) => {
@@ -40,7 +38,7 @@ const sanitiseSubheadline = (type, text) => {
 const HeadingsContainer = ({ blocks, type }) => {
   const { script, service } = useContext(ServiceContext);
   const Heading = Headings[type];
-  const GridConstrain = GridConstraints[type];
+  const GridItem = GridItems[type];
 
   const arrayOfFragments = blocks[0].model.blocks[0].model.blocks;
 
@@ -48,7 +46,7 @@ const HeadingsContainer = ({ blocks, type }) => {
     return null;
   }
   const { text } = blocks[0].model.blocks[0].model;
-  const componentsToRender = { fragment: Fragment };
+  const componentsToRender = { fragment: Fragment, inline: InlineContainer };
 
   const renderText = () => (
     <Blocks blocks={arrayOfFragments} componentsToRender={componentsToRender} />
@@ -59,11 +57,11 @@ const HeadingsContainer = ({ blocks, type }) => {
   const id = type === 'headline' ? headingId : subHeadingId;
 
   return (
-    <GridConstrain>
+    <GridItem>
       <Heading script={script} service={service} id={id} tabIndex="-1">
         {renderText()}
       </Heading>
-    </GridConstrain>
+    </GridItem>
   );
 };
 

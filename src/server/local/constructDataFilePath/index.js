@@ -1,11 +1,20 @@
 import path from 'path';
 
-export default ({ pageType, service, id, variant = '', assetUri }) => {
+export default ({
+  pageType,
+  service,
+  id,
+  variant = '',
+  assetUri,
+  episodeId,
+  masterBrand,
+}) => {
   let dataPath;
 
   switch (pageType) {
     case 'frontpage':
     case 'mostRead':
+    case 'mostWatched':
     case 'secondaryColumn':
     case 'recommendations':
       dataPath = `${variant || 'index'}.json`;
@@ -14,6 +23,23 @@ export default ({ pageType, service, id, variant = '', assetUri }) => {
     case 'legacyAssets':
       dataPath = `${variant}/${assetUri}.json`;
       break;
+    case 'africa_eye':
+      return path.join(
+        process.cwd(),
+        'data',
+        'worldservice',
+        'tv',
+        pageType,
+        `${episodeId}.json`,
+      );
+    case 'liveRadio':
+      return path.join(
+        process.cwd(),
+        'data',
+        service,
+        masterBrand,
+        'liveradio.json',
+      );
     default:
       dataPath = `${id}${variant}.json`;
   }

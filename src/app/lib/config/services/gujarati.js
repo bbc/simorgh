@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `gu`,
     service: 'gujarati',
     serviceName: 'Gujarati',
+    languageName: 'Gujarati',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsgujarati',
     twitterSite: '@bbcnewsgujarati',
@@ -179,6 +180,11 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% કન્ટેન્ટ પૂર્ણ',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'નવાજૂની',
       featuresAnalysisTitle: 'બીબીસી વિશેષ',
     },
@@ -227,7 +233,7 @@ export const service = {
           text: 'કુકીઝ',
         },
         {
-          href: 'https://www.bbc.com/gujarati/institutional-42224948',
+          href: 'https://www.bbc.co.uk/send/u50853313',
           text: 'બીબીસીનો સંપર્ક કરો',
         },
         {

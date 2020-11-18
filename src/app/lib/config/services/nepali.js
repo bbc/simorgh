@@ -10,7 +10,7 @@ export const service = {
     lang: `ne`,
     articleAuthor: `http://www.facebook.com/bbcnews`,
     articleTimestampPrefix: '',
-    articleTimestampSuffix: 'मा अद्यावधिक',
+    articleTimestampSuffix: 'अद्यावधिक',
     atiAnalyticsAppName: 'news-nepali',
     atiAnalyticsProducerId: '63',
     chartbeatDomain: 'nepali.bbc.co.uk',
@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `ne`,
     service: 'nepali',
     serviceName: 'Nepali',
+    languageName: 'Nepali',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnepali',
     twitterSite: '@bbcnepali',
@@ -179,6 +180,10 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% पोस्ट समाप्त',
         },
       },
+      include: {
+        errorMessage: 'मोबाइलपेजमा सामग्रीको यो भाग देखाउन हामी असमर्थ छौँ।',
+        linkText: 'पूरा सामग्री हेर्न यो पेजको पूर्ण संस्करण हेर्नुहोस्।',
+      },
       topStoriesTitle: 'मुख्य समाचार',
       featuresAnalysisTitle: 'अन‌ि यो पनि',
     },
@@ -196,9 +201,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onOnDemandRadioPage: true,
-      onLiveRadioPage: true,
-      onFrontPage: false,
       header: 'पछिल्लो कार्यक्रम सुन्नुहोस्',
       durationLabel: 'अवधि %duration%',
     },
@@ -232,7 +234,7 @@ export const service = {
           text: 'कुकीज',
         },
         {
-          href: 'https://www.bbc.com/nepali/institutional-38159617',
+          href: 'https://www.bbc.co.uk/send/u50853511',
           text: 'बीबीसीलाई सम्पर्क गर्नुहोस्',
         },
         {
@@ -258,7 +260,7 @@ export const service = {
       },
       {
         title: 'पछिल्लो कार्यक्रम',
-        url: '/nepali/multimedia/radio_programmes',
+        url: '/nepali/media-54029171',
       },
       {
         title: 'भिडियो',

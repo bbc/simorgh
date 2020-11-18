@@ -12,12 +12,6 @@ Object {
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
-  "cinemaModeTV": Object {
-    "enabled": true,
-  },
-  "comscoreAnalytics": Object {
-    "enabled": false,
-  },
   "cpsRecommendations": Object {
     "enabled": false,
   },
@@ -28,16 +22,6 @@ Object {
   "include": Object {
     "enabled": true,
   },
-  "liveRadioSchedule": Object {
-    "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|bengali|burmese|hausa|indonesia|korean|nepali|pashto|persian|somali|swahili|tigrinya|urdu)",
-  },
-  "logMediaPlayerStatus": Object {
-    "enabled": false,
-  },
-  "mediaPlayer": Object {
-    "enabled": true,
-  },
   "mostRead": Object {
     "enabled": true,
   },
@@ -45,9 +29,6 @@ Object {
     "enabled": false,
   },
   "navOnArticles": Object {
-    "enabled": true,
-  },
-  "onDemandRadioSchedule": Object {
     "enabled": true,
   },
   "prerollAds": Object {
@@ -80,9 +61,6 @@ Object {
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
-  "cinemaModeTV": Object {
-    "enabled": true,
-  },
   "comscoreAnalytics": Object {
     "enabled": true,
   },
@@ -96,16 +74,6 @@ Object {
   "include": Object {
     "enabled": true,
   },
-  "liveRadioSchedule": Object {
-    "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|bengali|burmese|hausa|indonesia|korean|nepali|pashto|persian|somali|swahili|tigrinya|urdu)",
-  },
-  "logMediaPlayerStatus": Object {
-    "enabled": false,
-  },
-  "mediaPlayer": Object {
-    "enabled": true,
-  },
   "mostRead": Object {
     "enabled": true,
   },
@@ -113,9 +81,6 @@ Object {
     "enabled": true,
   },
   "navOnArticles": Object {
-    "enabled": true,
-  },
-  "onDemandRadioSchedule": Object {
     "enabled": true,
   },
   "prerollAds": Object {
@@ -148,12 +113,6 @@ Object {
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
-  "cinemaModeTV": Object {
-    "enabled": true,
-  },
-  "comscoreAnalytics": Object {
-    "enabled": true,
-  },
   "cpsRecommendations": Object {
     "enabled": true,
   },
@@ -164,16 +123,6 @@ Object {
   "include": Object {
     "enabled": true,
   },
-  "liveRadioSchedule": Object {
-    "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|bengali|burmese|hausa|indonesia|korean|nepali|pashto|persian|somali|swahili|tigrinya|urdu)",
-  },
-  "logMediaPlayerStatus": Object {
-    "enabled": false,
-  },
-  "mediaPlayer": Object {
-    "enabled": true,
-  },
   "mostRead": Object {
     "enabled": true,
   },
@@ -181,9 +130,6 @@ Object {
     "enabled": true,
   },
   "navOnArticles": Object {
-    "enabled": true,
-  },
-  "onDemandRadioSchedule": Object {
     "enabled": true,
   },
   "prerollAds": Object {

@@ -34,7 +34,7 @@ describe('ArticleFigure', () => {
     expect(resize).toBe(false);
     expect(scroll).toBe(true);
     expect(unmountIfInvisible).toBe(false);
-    expect(Object.keys(wrapper.props()).length).toBe(7);
+    expect(Object.keys(wrapper.props()).length).toBe(8);
   });
 
   it('should render a lazyloaded image when lazyLoad set to true', () => {

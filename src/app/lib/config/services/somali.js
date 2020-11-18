@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `so`,
     service: 'somali',
     serviceName: 'Somali',
+    languageName: 'Somali',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcsomali',
     twitterSite: '@bbcsomali',
@@ -189,6 +190,11 @@ export const service = {
           endTextVisuallyHidden: 'Dhammaadka %provider_name% boggan',
         },
       },
+      include: {
+        errorMessage:
+          'Waanu ka xunnahay, qeybta kuma soo bandhigi karno bogga mobile-kaan',
+        linkText: 'Eeg qeybta bogga oo dhan, si xogta oo dhan aad u aragto.',
+      },
       topStoriesTitle: 'Wararka ugu waaweyn',
       featuresAnalysisTitle: 'Xul',
     },
@@ -206,10 +212,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
-      onOnDemandRadioPage: true,
-      onFrontPage: true,
-      frontPagePosition: 'Features',
       header: 'Barnaamijyada Idaacadda',
       durationLabel: 'Muddada %duration%',
     },
@@ -243,7 +245,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/somali/hayadeed-37098613',
+          href: 'https://www.bbc.co.uk/send/u50853709',
           text: 'La xiriir BBC',
         },
         {
@@ -285,7 +287,7 @@ export const service = {
       },
       {
         title: 'Barnaamijyada Idaacadda',
-        url: '/somali/ka_qayb_gal/programmes',
+        url: '/somali/media-54071665',
       },
     ],
   },

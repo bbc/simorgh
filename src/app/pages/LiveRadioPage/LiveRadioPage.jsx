@@ -1,18 +1,9 @@
 import React, { useContext } from 'react';
 import { string, shape } from 'prop-types';
-import styled from 'styled-components';
-import path from 'ramda/src/path';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_QUAD,
-} from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { Headline } from '@bbc/psammead-headings';
 import pathOr from 'ramda/src/pathOr';
 import Paragraph from '@bbc/psammead-paragraph';
 import { useLocation } from 'react-router-dom';
-import useToggle from '#hooks/useToggle';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import MetadataContainer from '../../containers/Metadata';
 import RadioScheduleContainer from '#containers/RadioSchedule';
@@ -31,29 +22,6 @@ const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${pr
 
 const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
-const StyledGelPageGrid = styled(GelPageGrid)`
-  width: 100%;
-  flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
-`;
-
-const StyledAudioPlayer = styled(AVPlayer)`
-  amp-iframe {
-    overflow: visible !important;
-    width: calc(100% + ${GEL_SPACING_DBL});
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-      width: calc(100% + ${GEL_SPACING_QUAD});
-    }
-  }
-  iframe {
-    width: calc(100% + ${GEL_SPACING_DBL});
-    margin: 0 -${GEL_SPACING};
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-      width: calc(100% + ${GEL_SPACING_QUAD});
-      margin: 0 -${GEL_SPACING_DBL};
-    }
-  }
-`;
-
 const LiveRadioPage = ({ pageData }) => {
   const {
     language,
@@ -62,17 +30,14 @@ const LiveRadioPage = ({ pageData }) => {
     heading,
     bodySummary,
     masterBrand,
+    radioScheduleData,
   } = pageData;
-  const radioScheduleData = path(['radioScheduleData'], pageData);
-  const hasRadioScheduleData = Boolean(radioScheduleData);
   const {
     script,
     service,
-    dir,
     lang,
     liveRadioOverrides,
     translations,
-    radioSchedule,
   } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
@@ -83,7 +48,6 @@ const LiveRadioPage = ({ pageData }) => {
     lang,
     service,
   });
-  const radioScheduleOnPage = path(['onLiveRadioPage'], radioSchedule);
   const embedUrl = getEmbedUrl({
     mediaId,
     type: 'media',
@@ -95,11 +59,7 @@ const LiveRadioPage = ({ pageData }) => {
     ['mediaAssetPage', 'audioPlayer'],
     translations,
   );
-
-  const { enabled, value } = useToggle('liveRadioSchedule');
-
-  const radioScheduleIsEnabled =
-    radioScheduleOnPage && enabled && RegExp(value).test(service);
+  const hasRadioScheduleData = Boolean(radioScheduleData);
 
   return (
     <>
@@ -114,10 +74,9 @@ const LiveRadioPage = ({ pageData }) => {
       />
       <LinkedData type="RadioChannel" seoTitle={name} />
 
-      <StyledGelPageGrid
-        forwardedAs="main"
+      <GelPageGrid
+        as="main"
         role="main"
-        dir={dir}
         columns={{
           group0: 6,
           group1: 6,
@@ -130,7 +89,6 @@ const LiveRadioPage = ({ pageData }) => {
       >
         <Grid
           item
-          dir={dir}
           startOffset={{
             group0: 1,
             group1: 1,
@@ -160,7 +118,7 @@ const LiveRadioPage = ({ pageData }) => {
           <Paragraph script={script} service={service}>
             {bodySummary}
           </Paragraph>
-          <StyledAudioPlayer
+          <AVPlayer
             assetId={assetId}
             embedUrl={embedUrl}
             iframeTitle={iframeTitle}
@@ -170,8 +128,8 @@ const LiveRadioPage = ({ pageData }) => {
             placeholderSrc={audioPlaceholderImageSrc}
           />
         </Grid>
-      </StyledGelPageGrid>
-      {radioScheduleIsEnabled && hasRadioScheduleData && (
+      </GelPageGrid>
+      {hasRadioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />
       )}
     </>

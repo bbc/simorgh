@@ -3,12 +3,8 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContext } from '#contexts/ToggleContext';
 import ArticleMediaPlayerContainer from '.';
-import {
-  validAresMediaVideoBlock,
-  defaultToggles,
-} from '../MediaPlayer/fixtureData';
+import { validAresMediaVideoBlock } from '../MediaPlayer/fixtureData';
 
 const GenerateMediaPlayer = ({
   /* eslint-disable react/prop-types */
@@ -26,13 +22,9 @@ const GenerateMediaPlayer = ({
     pathname="/pathname"
   >
     <ServiceContextProvider service="news">
-      <ToggleContext.Provider
-        value={{ toggleState: defaultToggles, toggleDispatch: jest.fn() }}
-      >
-        <BrowserRouter>
-          <ArticleMediaPlayerContainer blocks={blocks} />
-        </BrowserRouter>
-      </ToggleContext.Provider>
+      <BrowserRouter>
+        <ArticleMediaPlayerContainer blocks={blocks} />
+      </BrowserRouter>
     </ServiceContextProvider>
   </RequestContextProvider>
 );

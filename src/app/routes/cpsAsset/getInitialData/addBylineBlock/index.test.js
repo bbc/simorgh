@@ -1,4 +1,4 @@
-import deepClone from 'ramda/src/clone';
+import deepClone from '../../../utils/jsonClone';
 import addBylineBlock from '.';
 
 const styInput = {

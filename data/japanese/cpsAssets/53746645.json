@@ -1,0 +1,935 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "altText": "Kamala Harris standing in front of an American flag",
+        "caption": "カマラ・ハリス上院議員",
+        "copyrightHolder": "Getty Images",
+        "height": 549,
+        "href": "http://c.files.bbci.co.uk/139C0/production/_113902308_gettyimages-1090431902.jpg",
+        "id": "113902308",
+        "path": "/cpsprodpb/139C0/production/_113902308_gettyimages-1090431902.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 976
+      },
+      {
+        "markupType": "plain_text",
+        "role": "introduction",
+        "text": "米大統領選で野党･民主党候補になるジョー･バイデン前副大統領は11日午後（日本時間12日早朝）、共にホワイトハウスを目指す副大統領候補として、カマラ・ハリス上院議員（55、カリフォルニア州選出）を選んだ。検察官出身のハリス氏は、アメリカで初めてアフリカ系とインド系のルーツをもつ女性副大統領候補となる。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "昨年12月まで大統領選に出馬していたハリス上院議員は長いこと、民主党で最有力の副大統領候補と目されていた。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<link><caption>バイデン氏はツイッター</caption><url href=\"https://twitter.com/JoeBiden/status/1293280411150217219?s=20\" platform=\"highweb\"/></link>で、ハリス氏を「選んだと発表するのはとても光栄です」と書いた。ハリス氏は「普通の人のために恐れ知らずに闘う、この国で特に優れた公職者の1人」だとたたえた。",
+        "type": "paragraph"
+      },
+      {
+        "embed": {
+          "fallback_image": {
+            "alt_text": "Twitter post by Joe Biden: I have the great honor to announce that I’ve picked @KamalaHarris — a fearless fighter for the little guy, and one of the country’s finest public servants — as my running mate.",
+            "fallback_image_height": 265,
+            "fallback_image_width": 465
+          },
+          "oembed": {
+            "author_name": "Joe Biden",
+            "author_url": "https://twitter.com/JoeBiden",
+            "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">I have the great honor to announce that I’ve picked <a href=\"https://twitter.com/KamalaHarris?ref_src=twsrc%5Etfw\">@KamalaHarris</a> — a fearless fighter for the little guy, and one of the country’s finest public servants — as my running mate.</p>&mdash; Joe Biden (@JoeBiden) <a href=\"https://twitter.com/JoeBiden/status/1293280411150217219?ref_src=twsrc%5Etfw\">August 11, 2020</a></blockquote>\n",
+            "provider_name": "Twitter",
+            "provider_url": "https://twitter.com",
+            "url": "https://twitter.com/JoeBiden/status/1293280411150217219",
+            "version": "1.0",
+            "width": 550
+          }
+        },
+        "href": "https://twitter.com/JoeBiden/status/1293280411150217219?s=20",
+        "id": "1293280411150217219",
+        "source": "twitter",
+        "type": "social_embed"
+      },
+      {
+        "altText": "Presentational white space",
+        "copyrightHolder": "BBC",
+        "height": 1,
+        "href": "http://c.files.bbci.co.uk/94C2/production/_109028083_1px_white_line-nc.png",
+        "id": "109028083",
+        "path": "/cpsprodpb/94C2/production/_109028083_1px_white_line-nc.png",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 624
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<link><caption>ハリス氏もツイッター</caption><url href=\"https://twitter.com/KamalaHarris/status/1293290197103390721?s=20\" platform=\"highweb\"/></link>で、「ジョー･バイデンは一生をかけて私たちのために闘ってきたので、アメリカ人を団結させることができます。大統領として、私たちの理想に見合うアメリカを築いてくれます。民主党の副大統領候補として彼と一緒に行動すること、彼をなんとしても私たちの最高司令官にすることを、光栄に思います」と書いた。",
+        "type": "paragraph"
+      },
+      {
+        "embed": {
+          "fallback_image": {
+            "alt_text": "Twitter post by Kamala Harris: .@JoeBiden can unify the American people because he's spent his life fighting for us. And as president, he'll build an America that lives up to our ideals.I'm honored to join him as our party's nominee for Vice President, and do what it takes to make him our Commander-in-Chief.",
+            "fallback_image_height": 337,
+            "fallback_image_width": 465
+          },
+          "oembed": {
+            "author_name": "Kamala Harris",
+            "author_url": "https://twitter.com/KamalaHarris",
+            "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">.<a href=\"https://twitter.com/JoeBiden?ref_src=twsrc%5Etfw\">@JoeBiden</a> can unify the American people because he&#39;s spent his life fighting for us. And as president, he&#39;ll build an America that lives up to our ideals.<br><br>I&#39;m honored to join him as our party&#39;s nominee for Vice President, and do what it takes to make him our Commander-in-Chief.</p>&mdash; Kamala Harris (@KamalaHarris) <a href=\"https://twitter.com/KamalaHarris/status/1293290197103390721?ref_src=twsrc%5Etfw\">August 11, 2020</a></blockquote>\n",
+            "provider_name": "Twitter",
+            "provider_url": "https://twitter.com",
+            "url": "https://twitter.com/KamalaHarris/status/1293290197103390721",
+            "version": "1.0",
+            "width": 550
+          }
+        },
+        "href": "https://twitter.com/KamalaHarris/status/1293290197103390721?s=20",
+        "id": "1293290197103390721",
+        "source": "twitter",
+        "type": "social_embed"
+      },
+      {
+        "altText": "Presentational white space",
+        "copyrightHolder": "BBC",
+        "height": 1,
+        "href": "http://c.files.bbci.co.uk/94C2/production/_109028083_1px_white_line-nc.png",
+        "id": "109028083",
+        "path": "/cpsprodpb/94C2/production/_109028083_1px_white_line-nc.png",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 624
+      },
+      {
+        "markupType": "plain_text",
+        "text": "ハリス議員は、ジャマイカ出身の経済学者の父親とインド出身の内分泌学研究者の母親の間にカリフォルニア州オークランドで生まれた。サンフランシスコ地方検事や同州司法長官を経て、2017年に同州選出の連邦上院議員となった。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "5月末から全米で広がる人種差別や警察暴力に反対する抗議運動の最中には、警察改革の必要性を強調していた。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "11月3日の大統領選投票日に向けて、ハリス氏はマイク・ペンス副大統領と10月7日に、ユタ州で討論会に臨む。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "米大統領選で女性が副大統領候補に選ばれるのは、3人目。2008年にはサラ・ペイリン氏が共和党の、1984年にはジェラルディーン・フェラーロ氏が民主党の、それぞれ副大統領候補となったが、いずれも大統領候補が落選した。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "有色人種の女性が、2大政党から副大統領候補になるのはハリス氏が初めて。女性の米大統領もまだ出ていない。",
+        "type": "paragraph"
+      },
+      {
+        "advertising": true,
+        "caption": "【米大統領選2020】 カマラ・ハリス氏はなぜ歴史的な副大統領候補なのか",
+        "embedding": true,
+        "format": "video",
+        "id": "p08ndd94",
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08ndddv.jpg",
+        "smpKind": "programme",
+        "subType": "clip",
+        "synopses": {
+          "short": "【米大統領選2020】 カマラ・ハリス氏はなぜ歴史的な副大統領候補なのか"
+        },
+        "title": "【米大統領選2020】 カマラ・ハリス氏はなぜ歴史的な副大統領候補なのか",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1597209668000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true
+            },
+            "duration": 132,
+            "durationISO8601": "PT2M12S",
+            "types": [
+              "Original"
+            ],
+            "versionId": "p08ndd97",
+            "warnings": {}
+          }
+        ]
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "バイデン氏は今年3月の時点で、自分が大統領候補になれば、<link><caption>副大統領候補には女性を選ぶと約束していた</caption><url href=\"https://www.bbc.com/japanese/51904111\" platform=\"highweb\"/></link>。また、<link><caption>黒人男性が白人警官によって暴行死したことを機に国中に広がった</caption><url href=\"https://www.bbc.com/japanese/video-53216633\" platform=\"highweb\"/></link>、「Black Lives Matter」運動の最中にあって、黒人女性を選ぶよう求める声も高まっていた。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "黒人有権者は民主党にとって伝統的に、重要な支持基盤。民主党予備選で今年初めまで劣勢だったバイデン氏が、<link><caption>南部サウスカロライナ州で圧勝</caption><url href=\"https://www.bbc.com/japanese/51701029\" platform=\"highweb\"/></link>して一気に挽回したのも、<link><caption>黒人票に支えられ</caption><url href=\"https://www.bbc.com/japanese/features-and-analysis-51734171\" platform=\"highweb\"/></link>てのことだった。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "ハリス議員が副大統領候補になると決まったことを受けて、ドナルド・トランプ大統領はホワイトハウスでの定例会見で、ハリス氏が選ばれると予想していた述べた上で、大統領選の予備選では苦労していたと指摘。また、自分が最高裁判事に指名した<link><caption>ブレット・キャヴァノー判事</caption><url href=\"https://www.bbc.com/japanese/49711714\" platform=\"highweb\"/></link>の上院公聴会ではハリス議員の再三の質問の仕方が「本当にひどくて、いやな感じだった」と話した。",
+        "type": "paragraph"
+      },
+      {
+        "altText": "Joe Biden talking to his vice-president candidate Kamala Harris by video link, released by his official campaign photographer",
+        "caption": "バイデン氏は11日にビデオ通話でハリス氏に、副大統領候補になってもらいたいと要請した。写真はバイデン陣営の公式カメラマンが発表した",
+        "copyrightHolder": "Adam Schultz",
+        "height": 549,
+        "href": "http://c.files.bbci.co.uk/4BF0/production/_113904491_biden.jpg",
+        "id": "113904491",
+        "path": "/cpsprodpb/4BF0/production/_113904491_biden.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 976
+      },
+      {
+        "markupType": "plain_text",
+        "text": "ハリス氏を選んだと発表したバイデン氏は、ハリス氏がカリフォルニア州司法長官だった当時、デラウェア州司法長官だった息子の故ボー･バイデン氏（2015年に脳腫瘍のため死去）としばしば一緒に働いていたと振り返った。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "「2人して大銀行と闘い、働く人を助け、虐待される女性や子供を守る様子を、私は眺めていた。当時も2人を誇らしく思ったし、今では彼女と一緒に選挙に臨めることが誇らしい」と、<link><caption>バイデン氏はツイートした</caption><url href=\"https://twitter.com/JoeBiden/status/1293280412144267264?s=20\" platform=\"highweb\"/></link>。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "バイデン陣営は、バイデン氏とハリス氏が12日に、バイデン氏の地元デラウェア州ウイルミントンから演説をすると発表。「この国の魂を取り戻し、勤労世帯のために闘いこの国を前に進める」ことを表明する予定という。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "カマラ・ハリス氏とは",
+        "type": "crosshead"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "ハリス氏は、歴史的に黒人が通う大学として全米有数のハワード大学を卒業。カリフォルニア大学ヘイスティングス･ロースクールを経て、カリフォルニア州アラミーダ郡地方検事事務所で働き始めた。2003年にはサンフランシスコ地方検事となり、2011年からはカリフォルニア州で初のアフリカ系で女性の司法長官となった。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "州司法長官として民主党の中でも新進気鋭の若手として注目されるようになり、2017年にはカリフォルニア州選出の連邦上院議員になった。黒人女性としては史上2人目の上院議員だった。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "上院司法委員会の様々な公聴会では検察官としての経験を活用。出席者に質問を重ねて問い詰めていく様子が全国的にも注目されるようになり、<link><caption>2019年1月には大統領選出馬を発表した</caption><url href=\"https://www.bbc.com/japanese/46955548\" platform=\"highweb\"/></link>。ただし、明確な出馬理由や政策目標を明示することができず、医療改革など主要論点で主張が迷走することもあり、支持は低迷した。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "テレビ討論会では、バイデン氏がかつて人種差別的な議員たちとも協力したことがあるとバイデン氏の過去の言動を批判し、論戦を展開したものの、これも支持獲得にはつながらなかった。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "ハリス氏は「進歩的な検察官」を自認し、自分の経歴の中でも特に左派寄りの成果を強調した。その中には、カリフォルニア州司法省の特別捜査官にボディカメラの着用を初めて義務づけたことや、市民が活用できる犯罪統計データベースの公開なども含まれた。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "容疑者に厳しい検事だったという評価や「カマラはおまわりだ」という表現が、民主党の予備選中には批判として広まり、リベラル派の間の支持拡大を妨げた。しかし、犯罪に手ごわい検察官で司法長官だったという経歴は、中道派や浮動票の獲得が必要な本選では有利に働くかもしれないと言われている。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "ジャマイカ出身の父とインド出身の母をもつハリス氏は、自分のアイデンティティーについて混乱したことはなく、ただ単に自分を「アメリカ人」と呼ぶのだと話していた。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<link><caption>2019年には米紙ワシントン･ポスト</caption><url href=\"https://www.washingtonpost.com/politics/i-am-who-i-am-kamala-harris-daughter-of-indian-and-jamaican-immigrants-defines-herself-simply-as-american/2019/02/02/0b278536-24b7-11e9-ad53-824486280311_story.html\" platform=\"highweb\"/></link>に対して、政治家は出身や肌の色がどうだからこうあらねばならないという「箱」に押し込まれるべきではないと発言。「自分は自分。私はそれで満足です。迷う人もいるかもしれないけど、私はそれでいい」と話していた。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "「いやな上院議員」",
+        "type": "crosshead"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "自分に対抗する副大統領候補にハリス氏が決まったことについて、トランプ氏は定例会見で、「本当ではない話を本当にたくさんしてきた人だ」とハリス議員を批判した。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "「みんなも知っているとおり、予備選ではとても苦戦していた。善戦するはずが、2％程度にとどまった。だから（バイデン氏が）彼女を選んだのに少しびっくりした」",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "トランプ氏はさらにハリス氏が民主党討論会でバイデン氏に「本当にいやな感じ」で「ひどい態度」だったと指摘。「ジョー･バイデンに対してとても失礼だった。自分に対してあれほど失礼な人間を選ぶのは大変だ」と述べた。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "トランプ陣営は、ハリス氏を選んだことでまたしてもバイデン氏が「極左の極端なテーマが押し込まれている、からっぽの器にすぎない」ことが証明されたと攻撃した。",
+        "type": "paragraph"
+      },
+      {
+        "embed": {
+          "fallback_image": {
+            "alt_text": "Twitter post by Donald J. Trump: ",
+            "fallback_image_height": 471,
+            "fallback_image_width": 465
+          },
+          "oembed": {
+            "author_name": "Donald J. Trump",
+            "author_url": "https://twitter.com/realDonaldTrump",
+            "html": "<blockquote class=\"twitter-tweet\"><p lang=\"und\" dir=\"ltr\"><a href=\"https://t.co/jXoffXyZed\">pic.twitter.com/jXoffXyZed</a></p>&mdash; Donald J. Trump (@realDonaldTrump) <a href=\"https://twitter.com/realDonaldTrump/status/1293285949917495300?ref_src=twsrc%5Etfw\">August 11, 2020</a></blockquote>\n",
+            "provider_name": "Twitter",
+            "provider_url": "https://twitter.com",
+            "url": "https://twitter.com/realDonaldTrump/status/1293285949917495300",
+            "version": "1.0",
+            "width": 550
+          }
+        },
+        "href": "https://twitter.com/realDonaldTrump/status/1293285949917495300",
+        "id": "1293285949917495300",
+        "source": "twitter",
+        "type": "social_embed"
+      },
+      {
+        "altText": "Presentational white space",
+        "copyrightHolder": "BBC",
+        "height": 1,
+        "href": "http://c.files.bbci.co.uk/94C2/production/_109028083_1px_white_line-nc.png",
+        "id": "109028083",
+        "path": "/cpsprodpb/94C2/production/_109028083_1px_white_line-nc.png",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 624
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "一方で、バイデン氏が8年間副大統領を務めた際の大統領だったバラク･オバマ氏は、ハリス氏について「これ以上はないというくらい、副大統領になる資格を備えている。職業人としてこれまでずっと、この国の憲法を守り、公平なチャンスを必要とする人たちのために闘ってきた。今日はこの国にとって良い日だ。さあ、勝ちにいこう」と<link><caption>ツイートした</caption><url href=\"https://twitter.com/BarackObama/status/1293295296819220481?s=20\" platform=\"highweb\"/></link>。",
+        "type": "paragraph"
+      },
+      {
+        "embed": {
+          "fallback_image": {
+            "alt_text": "Twitter post by Barack Obama: I’ve known Senator @KamalaHarris for a long time. She is more than prepared for the job. She’s spent her career defending our Constitution and fighting for folks who need a fair shake. This is a good day for our country. Now let’s go win this thing. ",
+            "fallback_image_height": 559,
+            "fallback_image_width": 465
+          },
+          "oembed": {
+            "author_name": "Barack Obama",
+            "author_url": "https://twitter.com/BarackObama",
+            "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">I’ve known Senator <a href=\"https://twitter.com/KamalaHarris?ref_src=twsrc%5Etfw\">@KamalaHarris</a> for a long time. She is more than prepared for the job. She’s spent her career defending our Constitution and fighting for folks who need a fair shake. This is a good day for our country. Now let’s go win this thing. <a href=\"https://t.co/duJhFhWp6g\">pic.twitter.com/duJhFhWp6g</a></p>&mdash; Barack Obama (@BarackObama) <a href=\"https://twitter.com/BarackObama/status/1293295296819220481?ref_src=twsrc%5Etfw\">August 11, 2020</a></blockquote>\n",
+            "provider_name": "Twitter",
+            "provider_url": "https://twitter.com",
+            "url": "https://twitter.com/BarackObama/status/1293295296819220481",
+            "version": "1.0",
+            "width": 550
+          }
+        },
+        "href": "https://twitter.com/BarackObama/status/1293295296819220481?s=20",
+        "id": "1293295296819220481",
+        "source": "twitter",
+        "type": "social_embed"
+      },
+      {
+        "altText": "Presentational white space",
+        "copyrightHolder": "BBC",
+        "height": 1,
+        "href": "http://c.files.bbci.co.uk/94C2/production/_109028083_1px_white_line-nc.png",
+        "id": "109028083",
+        "path": "/cpsprodpb/94C2/production/_109028083_1px_white_line-nc.png",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 624
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "（英語記事　<link><caption>Biden VP pick: Kamala Harris chosen as running mate</caption><url href=\"https://www.bbc.com/news/world-us-canada-53739323\" platform=\"highweb\"/></link>）",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "japanese.story.53746645.page",
+      "cps_asset_id": "53746645",
+      "cps_asset_type": "sty"
+    },
+    "atiAnalytics": {
+      "producerId": "56",
+      "producerName": "JAPANESE"
+    },
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "social_embed",
+      "media",
+      "crosshead"
+    ],
+    "createdBy": "japanese",
+    "firstPublished": 1597197558000,
+    "id": "urn:bbc:ares::asset:japanese/53746645",
+    "includeComments": false,
+    "language": "ja",
+    "lastPublished": 1597197558000,
+    "lastUpdated": 1598266162192,
+    "locators": {
+      "assetId": "53746645",
+      "assetUri": "/japanese/53746645",
+      "cpsUrn": "urn:bbc:content:assetUri:japanese/53746645",
+      "curie": "http://www.bbc.co.uk/asset/4dd1884b-2c5e-4da1-a0bf-e2f064bd5f41"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasContentWarning": false,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false,
+      "suitableForSyndication": true
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "readTime": 1,
+    "tags": {
+      "about": [
+        {
+          "curationList": [
+            {
+              "curationId": "5686cebc-ef20-4184-a164-ad9800608654",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "US election 2020",
+          "thingId": "10f9cc6b-0a52-46d3-bce6-9cd78b34600f",
+          "thingLabel": "2020年米大統領選",
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q22019872"
+          ],
+          "thingType": [
+            "core:Thing",
+            "core:Event",
+            "tagging:TagConcept"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/10f9cc6b-0a52-46d3-bce6-9cd78b34600f#id",
+          "topicId": "cjgn7kqg836t",
+          "topicName": "2020年米大統領選"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "2226e271-2fd2-4b91-990e-edec589e1d39",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Joe Biden",
+          "thingId": "1e80aea5-9931-40e5-bac5-c919d297df08",
+          "thingLabel": "ジョー・バイデン",
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Joe_Biden"
+          ],
+          "thingType": [
+            "tagging:Agent",
+            "tagging:TagConcept",
+            "core:Thing",
+            "core:Person",
+            "tagging:AmbiguousTerm"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/1e80aea5-9931-40e5-bac5-c919d297df08#id",
+          "topicId": "cdv0kn5evk8t",
+          "topicName": "ジョー・バイデン"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "84c28172-f843-4f6f-8e54-33b62018bb05",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Politics",
+          "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+          "thingLabel": "政治",
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Politics"
+          ],
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Theme",
+            "core:Thing"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+          "topicId": "cr50ykzq1g2t",
+          "topicName": "政治"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "e5d8ebe0-2205-4939-ac57-ce970c3958c4",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "United States",
+          "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+          "thingLabel": "アメリカ",
+          "thingSameAs": [
+            "http://sws.geonames.org/6252001/"
+          ],
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Place",
+            "core:Thing"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+          "topicId": "cdr56kqdr70t",
+          "topicName": "アメリカ"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "5cdaa509-63c0-4370-a2c9-a891247b15a8",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Migration",
+          "thingId": "83a45ff0-d5b2-4cdb-be7e-523c6001751b",
+          "thingLabel": "移民",
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Human_migration",
+            "http://www.wikidata.org/entity/Q177626"
+          ],
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Thing",
+            "core:Theme"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/83a45ff0-d5b2-4cdb-be7e-523c6001751b#id",
+          "topicId": "cjgn7kqqvk0t",
+          "topicName": "移民"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "69ef4b67-9460-4307-9426-eb6ae2221419",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Kamala Harris",
+          "thingId": "9bff5537-f5e4-401c-93a2-b0ca484bb131",
+          "thingLabel": "カマラ・ハリス",
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q10853588",
+            "http://dbpedia.org/resource/Kamala_Harris"
+          ],
+          "thingType": [
+            "tagging:Agent",
+            "tagging:TagConcept",
+            "tagging:AmbiguousTerm",
+            "core:Thing",
+            "core:Person"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/9bff5537-f5e4-401c-93a2-b0ca484bb131#id",
+          "topicId": "crn347p5p90t",
+          "topicName": "カマラ・ハリス"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "ffe538f0-6f6f-4162-983a-b340eb716592",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Law and order",
+          "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
+          "thingLabel": "法律",
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Law"
+          ],
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Theme",
+            "core:Thing"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+          "topicId": "cxnyk30526wt",
+          "topicName": "法律"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "95830e00-f530-46a7-b460-952b01b9a122",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Women",
+          "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+          "thingLabel": "女性",
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q467",
+            "http://dbpedia.org/resource/Woman"
+          ],
+          "thingType": [
+            "core:Thing",
+            "tagging:TagConcept",
+            "core:Theme"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+          "topicId": "c7zp5161wnpt",
+          "topicName": "女性"
+        }
+      ]
+    },
+    "timestamp": 1597197558000,
+    "type": "STY",
+    "version": "v1.3.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "【米大統領選2020】 民主党の副大統領候補にカマラ・ハリス上院議員　バイデン氏が発表",
+      "shortHeadline": "【米大統領選2020】 民主党の副大統領候補にカマラ・ハリス上院議員　バイデン氏が発表"
+    },
+    "id": "urn:bbc:ares::asset:japanese/53746645",
+    "indexImage": {
+      "altText": "Kamala Harris standing in front of an American flag",
+      "copyrightHolder": "Getty Images",
+      "height": 1152,
+      "href": "http://c.files.bbci.co.uk/B50E/production/_113905364_gettyimages-1090431902.jpg",
+      "id": "113905364",
+      "path": "/cpsprodpb/B50E/production/_113905364_gettyimages-1090431902.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 2048
+    },
+    "language": "ja",
+    "locators": {
+      "assetId": "53746645",
+      "assetUri": "/japanese/53746645",
+      "cpsUrn": "urn:bbc:content:assetUri:japanese/53746645",
+      "curie": "http://www.bbc.co.uk/asset/4dd1884b-2c5e-4da1-a0bf-e2f064bd5f41"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "summary": "検事出身でカリフォルニア州選出のハリス上院議員は、アメリカの主要政党で初めてアフリカ系とインド系のルーツをもつ女性副大統領候補となる。",
+    "timestamp": 1597197558000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [
+      {
+        "promos": [
+          {
+            "cpsType": "MAP",
+            "headlines": {
+              "headline": "【米大統領選2020】 カマラ・ハリス氏はなぜ歴史的な副大統領候補なのか",
+              "shortHeadline": "【米大統領選2020】 カマラ・ハリス氏はなぜ歴史的な副大統領候補なのか"
+            },
+            "id": "urn:bbc:ares::asset:japanese/video-53746913",
+            "indexImage": {
+              "altText": "Harris family",
+              "copyrightHolder": "Harris Family",
+              "height": 576,
+              "href": "http://c.files.bbci.co.uk/2030/production/_113904280_be9e9a20-829d-4c42-84d0-56de580093a0.jpg",
+              "id": "113904280",
+              "path": "/cpsprodpb/2030/production/_113904280_be9e9a20-829d-4c42-84d0-56de580093a0.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 1024
+            },
+            "language": "ja",
+            "locators": {
+              "assetUri": "/japanese/video-53746913",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/video-53746913"
+            },
+            "media": {
+              "advertising": true,
+              "caption": "【米大統領選2020】 カマラ・ハリス氏はなぜ歴史的な副大統領候補なのか",
+              "embedding": true,
+              "format": "video",
+              "id": "p08ndd94",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08ndddv.jpg",
+              "smpKind": "programme",
+              "subType": "clip",
+              "synopses": {
+                "short": "【米大統領選2020】 カマラ・ハリス氏はなぜ歴史的な副大統領候補なのか"
+              },
+              "title": "【米大統領選2020】 カマラ・ハリス氏はなぜ歴史的な副大統領候補なのか",
+              "type": "media",
+              "versions": [
+                {
+                  "availableFrom": 1597209668000,
+                  "availableTerritories": {
+                    "nonUk": true,
+                    "uk": true
+                  },
+                  "duration": 132,
+                  "durationISO8601": "PT2M12S",
+                  "types": [
+                    "Original"
+                  ],
+                  "versionId": "p08ndd97",
+                  "warnings": {}
+                }
+              ]
+            },
+            "mediaType": "Video",
+            "summary": "検察官出身のハリス氏は、アメリカの主要政党で初めてアフリカ系とインド系のルーツをもつ女性副大統領候補となる。",
+            "timestamp": 1597210473000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "【米大統領選2020】 世論調査を追う　どちらが有利か",
+              "shortHeadline": "【米大統領選2020】 世論調査を追う　どちらが有利か"
+            },
+            "id": "urn:bbc:ares::asset:japanese/features-and-analysis-53681889",
+            "indexImage": {
+              "altText": "Promo image showing Joe Biden and Donald Trump",
+              "copyrightHolder": "BBC",
+              "height": 1152,
+              "href": "http://c.files.bbci.co.uk/110CE/production/_113883896_index_promo_poll_tracker_bw_976.png",
+              "id": "113883896",
+              "path": "/cpsprodpb/110CE/production/_113883896_index_promo_poll_tracker_bw_976.png",
+              "subType": "index",
+              "type": "image",
+              "width": 2048
+            },
+            "language": "ja",
+            "locators": {
+              "assetUri": "/japanese/features-and-analysis-53681889",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/features-and-analysis-53681889"
+            },
+            "summary": "11月3日の米大統領選でどちらが勝つのか。世論調査の推移を追跡する。",
+            "timestamp": 1598266154000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "【米大統領選2020】 トランプ氏、バイデン氏は「神に背いている」　舌戦が激化",
+              "shortHeadline": "【米大統領選2020】 トランプ氏、バイデン氏は「神に背いている」　舌戦が激化"
+            },
+            "id": "urn:bbc:ares::asset:japanese/53689469",
+            "indexImage": {
+              "altText": "US President Donald Trump speaks after touring the Whirlpool Corporation Manufacturing Plant in Clyde, Ohio, on August 6, 2020",
+              "copyrightHolder": "Getty Images",
+              "height": 1152,
+              "href": "http://c.files.bbci.co.uk/B3E6/production/_113845064_trumpindexme.jpg",
+              "id": "113845064",
+              "path": "/cpsprodpb/B3E6/production/_113845064_trumpindexme.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 2048
+            },
+            "language": "ja",
+            "locators": {
+              "assetUri": "/japanese/53689469",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/53689469"
+            },
+            "summary": "トランプ米大統領はオハイオ州での演説で、「ジョー・バイデンは神に背いているし、銃所持にも反対している」と話した。トランプ氏は、福音派のキリスト教徒から力強い支持を得ている。",
+            "timestamp": 1596790062000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "トランプ氏、米大統領選の延期を提案　それはできないと与党･共和党",
+              "shortHeadline": "トランプ氏、米大統領選の延期を提案　それはできないと与党･共和党"
+            },
+            "id": "urn:bbc:ares::asset:japanese/53604376",
+            "indexImage": {
+              "altText": "trump, 30 July",
+              "copyrightHolder": "Reuters",
+              "height": 1152,
+              "href": "http://c.files.bbci.co.uk/14574/production/_113761338_mediaitem113760063.jpg",
+              "id": "113761338",
+              "path": "/cpsprodpb/14574/production/_113761338_mediaitem113760063.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 2048
+            },
+            "language": "ja",
+            "locators": {
+              "assetUri": "/japanese/53604376",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/53604376"
+            },
+            "summary": "トランプ米大統領が、新型コロナウイルス対策のため11月の米大統領選を延期したらどうかとツイートした。これを受け、与党･共和党の幹部は相次ぎ、大統領にその権限はないとくぎを刺した。",
+            "timestamp": 1596164774000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "【米大統領選2020】 バイデン氏、副大統領候補に女性を約束　米民主党討論会",
+              "shortHeadline": "【米大統領選2020】 バイデン氏、副大統領候補に女性を約束　米民主党討論会"
+            },
+            "id": "urn:bbc:ares::asset:japanese/51904111",
+            "indexImage": {
+              "altText": "Joe Biden and Bernie Sanders elbow tap",
+              "copyrightHolder": "Reuters",
+              "height": 1152,
+              "href": "http://c.files.bbci.co.uk/5467/production/_111270612_mediaitem111270517.jpg",
+              "id": "111270612",
+              "path": "/cpsprodpb/5467/production/_111270612_mediaitem111270517.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 2048
+            },
+            "language": "ja",
+            "locators": {
+              "assetUri": "/japanese/51904111",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/51904111"
+            },
+            "summary": "米大統領選の民主党候補選びの討論会が15日開かれ、サンダース上院議員とバイデン前副大統領が一騎打ちを繰り広げた。本選を共に戦う副大統領候補について、バイデン氏は女性の指名を約束した。",
+            "timestamp": 1584344272000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "【米大統領選2020】　ハリス上院議員、バイデン氏を支持表明",
+              "shortHeadline": "【米大統領選2020】　ハリス上院議員、バイデン氏を支持表明"
+            },
+            "id": "urn:bbc:ares::asset:japanese/51796652",
+            "indexImage": {
+              "altText": "Former Vice-President Joe Biden talks with Senator Harris after the conclusion of the 2020 Democratic US presidential debate in Houston, Texas, 12 September 2019",
+              "copyrightHolder": "Reuters",
+              "height": 1152,
+              "href": "http://c.files.bbci.co.uk/17758/production/_111188069_harris.jpg",
+              "id": "111188069",
+              "path": "/cpsprodpb/17758/production/_111188069_harris.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 2048
+            },
+            "language": "ja",
+            "locators": {
+              "assetUri": "/japanese/51796652",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/51796652"
+            },
+            "summary": "昨年12月に民主党候補レースを撤退したカリフォルニア州選出のハリス上院議員は8日、バイデン前副大統領を支持すると表明した。",
+            "timestamp": 1583719757000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "米ハリス上院議員、大統領選の候補指名争いから撤退",
+              "shortHeadline": "米ハリス上院議員、大統領選の候補指名争いから撤退"
+            },
+            "id": "urn:bbc:ares::asset:japanese/50653964",
+            "indexImage": {
+              "altText": "Harris",
+              "copyrightHolder": "Getty Images",
+              "height": 576,
+              "href": "http://c.files.bbci.co.uk/8F29/production/_109994663_gettyimages-1178669283.jpg",
+              "id": "109994663",
+              "path": "/cpsprodpb/8F29/production/_109994663_gettyimages-1178669283.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 1024
+            },
+            "language": "ja",
+            "locators": {
+              "assetUri": "/japanese/50653964",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/50653964"
+            },
+            "summary": "2020年米大統領選に向け、野党・民主党の候補者指名を争っていたカマラ・ハリス上院議員（55、カリフォルニア州）は3日、資金不足を理由に選挙戦からの撤退を表明した。",
+            "timestamp": 1575434003000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "米大統領選・民主党討論、バイデン氏に攻撃集中も善戦",
+              "shortHeadline": "米大統領選・民主党討論、バイデン氏に攻撃集中も善戦"
+            },
+            "id": "urn:bbc:ares::asset:japanese/49188119",
+            "indexImage": {
+              "altText": "Biden and Harris",
+              "copyrightHolder": "Getty Images",
+              "height": 549,
+              "href": "http://c.files.bbci.co.uk/3A87/production/_108138941_biden_harris976getty.jpg",
+              "id": "108138941",
+              "path": "/cpsprodpb/3A87/production/_108138941_biden_harris976getty.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 976
+            },
+            "language": "ja",
+            "locators": {
+              "assetUri": "/japanese/49188119",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/49188119"
+            },
+            "summary": "米ミシガン州デトロイトで31日、2020年大統領選に向けた野党・民主党の候補者によるテレビ討論会が行われた。この日はジョー・バイデン前副大統領や、唯一の黒人女性候補者カマラ・ハリス上院議員（カリフォルニア州）など10人が登壇した。",
+            "timestamp": 1564643259000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "米民主党のカマラ・ハリス上院議員、2020年大統領選出馬を発表",
+              "shortHeadline": "米民主党のカマラ・ハリス上院議員、2020年大統領選出馬を発表"
+            },
+            "id": "urn:bbc:ares::asset:japanese/46955548",
+            "indexImage": {
+              "altText": "File photo: Senator Kamala Harris",
+              "copyrightHolder": "Reuters",
+              "height": 1152,
+              "href": "http://c.files.bbci.co.uk/D6A2/production/_105264945_mediaitem105264944.jpg",
+              "id": "105264945",
+              "path": "/cpsprodpb/D6A2/production/_105264945_mediaitem105264944.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 2048
+            },
+            "language": "ja",
+            "locators": {
+              "assetUri": "/japanese/46955548",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/46955548"
+            },
+            "summary": "カリフォルニア州司法長官を経て上院司法委員会での公聴会審議などで注目されるようになったハリス上院議員は、出馬に「とてもわくわくしている」と話した。",
+            "timestamp": 1548142185000,
+            "type": "cps"
+          }
+        ],
+        "type": "see-alsos"
+      }
+    ],
+    "section": {
+      "name": "ホーム",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/japanese/front_page"
+    },
+    "site": {
+      "name": "Japanese",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/japanese"
+    }
+  }
+}

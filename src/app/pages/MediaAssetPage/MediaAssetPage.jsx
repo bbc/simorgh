@@ -1,17 +1,18 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
-
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-
+import {
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
+import last from 'ramda/src/last';
 import MediaMessage from './MediaMessage';
-import { GridWrapper } from '#lib/styledGrid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -24,6 +25,7 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import CpsAssetMediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
+import MostWatchedContainer from '#containers/MostWatched';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
@@ -33,13 +35,23 @@ import {
   getLastPublished,
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
-
 import { RequestContext } from '#contexts/RequestContext';
+import { GelPageGrid } from '#app/components/Grid';
 
-const isLegacyMediaAssetPage = url => url.split('/').length > 7;
+const StyledTimestamp = styled(Timestamp)`
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    padding-bottom: ${GEL_SPACING_DBL};
+  }
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding-bottom: ${GEL_SPACING_TRPL};
+  }
+`;
 
 const MediaAssetPage = ({ pageData }) => {
-  const requestContext = useContext(RequestContext);
+  const { canonicalLink, isAmp } = useContext(RequestContext);
+  const isLegacyMediaAssetPage = () => canonicalLink.split('/').length > 7;
+
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
@@ -52,14 +64,24 @@ const MediaAssetPage = ({ pageData }) => {
     ['relatedContent', 'groups', 0, 'promos'],
     pageData,
   );
-  const indexImagePath = path(['promo', 'indexImage', 'path'], pageData);
-  const indexImageLocator = indexImagePath
-    ? getImageParts(indexImagePath)[1]
-    : null;
+
+  const getIndexImageLocator = () => {
+    const indexImagePath = pathOr(
+      '',
+      ['promo', 'indexImage', 'path'],
+      pageData,
+    );
+    return last(getImageParts(indexImagePath));
+  };
+
+  const indexImageLocator = isLegacyMediaAssetPage()
+    ? null
+    : getIndexImageLocator();
   const indexImageAltText = path(['promo', 'indexImage', 'altText'], pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
+  const mostWatchedData = path(['mostWatched'], pageData);
 
   const componentsToRender = {
     fauxHeadline,
@@ -75,7 +97,7 @@ const MediaAssetPage = ({ pageData }) => {
 
     // There are niche scenarios where we receive legacy MAPs that contain modern video blocks
     // This is not something we currently support, so we return an error message
-    video: isLegacyMediaAssetPage(requestContext.canonicalLink)
+    video: isLegacyMediaAssetPage()
       ? MediaMessage
       : props => (
           // eslint-disable-next-line react/jsx-indent
@@ -83,6 +105,8 @@ const MediaAssetPage = ({ pageData }) => {
             {...props}
             assetUri={assetUri}
             showLoadingImage
+            hasBottomPadding={false}
+            showCaption={false}
           />
         ),
 
@@ -92,30 +116,34 @@ const MediaAssetPage = ({ pageData }) => {
         assetUri={assetUri}
         isLegacyMedia
         showLoadingImage
+        hasBottomPadding={false}
+        showCaption={false}
       />
     ),
 
     // "Versions" are live streams
     version: props => (
-      <CpsAssetMediaPlayer {...props} assetUri={assetUri} showLoadingImage />
+      <CpsAssetMediaPlayer
+        {...props}
+        assetUri={assetUri}
+        showLoadingImage
+        hasBottomPadding={false}
+        showCaption={false}
+      />
     ),
     unavailableMedia: MediaMessage,
   };
 
-  const StyledGrid = styled(GridWrapper)`
-    width: 100%;
+  const StyledGelPageGrid = styled(GelPageGrid)`
     padding-bottom: ${GEL_SPACING_TRPL};
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      width: 100%;
       padding-bottom: ${GEL_SPACING_QUAD};
     }
   `;
 
-  const StyledTimestamp = styled(Timestamp)`
-    padding-bottom: ${GEL_SPACING_DBL};
-
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      padding-bottom: ${GEL_SPACING_TRPL};
-    }
+  const MostWatchedWrapper = styled.div`
+    padding-bottom: ${GEL_SPACING_QUAD};
   `;
 
   return (
@@ -132,6 +160,7 @@ const MediaAssetPage = ({ pageData }) => {
         imageLocator={indexImageLocator}
         imageAltText={indexImageAltText}
         aboutTags={aboutTags}
+        hasAppleItunesAppBanner
       />
       <LinkedData
         type="Article"
@@ -141,12 +170,31 @@ const MediaAssetPage = ({ pageData }) => {
         datePublished={firstPublished}
         dateModified={lastPublished}
         aboutTags={aboutTags}
+        imageLocator={indexImageLocator}
       />
       <ATIAnalytics data={pageData} />
-      <StyledGrid as="main" role="main">
+      <StyledGelPageGrid
+        as="main"
+        role="main"
+        enableGelGutters
+        columns={{
+          group0: 6,
+          group1: 6,
+          group2: 6,
+          group3: 6,
+          group4: 8,
+          group5: 20,
+        }}
+      >
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </StyledGrid>
-      <CpsRelatedContent content={relatedContent} isMapContent />
+      </StyledGelPageGrid>
+
+      <CpsRelatedContent content={relatedContent} isMediaContent />
+      {!isAmp && (
+        <MostWatchedWrapper>
+          <MostWatchedContainer data={mostWatchedData} />
+        </MostWatchedWrapper>
+      )}
     </>
   );
 };

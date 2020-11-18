@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: 'yo',
     service: 'yoruba',
     serviceName: 'Yoruba',
+    languageName: 'Yoruba',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated
     twitterSite: '@BBCNews', // to be updated
@@ -179,6 +180,11 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'Ìròyìn tó ṣe kókó',
       featuresAnalysisTitle: 'Ìwádìí kíkún lóríi kókó ìròyìn ',
     },
@@ -227,7 +233,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/yoruba/institutional-43091540',
+          href: 'https://www.bbc.co.uk/send/u50853973',
           text: 'Kàn sí BBC',
         },
         {

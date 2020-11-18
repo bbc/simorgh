@@ -6,9 +6,14 @@ import '@bbc/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
 import { mainTranslations as russianMainTranslations } from './russian';
 
+const secondaryColumnTranslations = {
+  topStoriesTitle: 'Головне',
+  featuresAnalysisTitle: 'Докладно',
+};
+
 const baseServiceConfig = {
   articleAuthor: `http://www.facebook.com/bbcnews`,
-  articleTimestampPrefix: 'Оновлення даних: ',
+  articleTimestampPrefix: 'Оновлено: ',
   atiAnalyticsAppName: 'news-ukrainian',
   atiAnalyticsProducerId: '94',
   chartbeatDomain: 'ukrainian.bbc.co.uk',
@@ -49,7 +54,6 @@ const baseServiceConfig = {
     home: 'Головна',
     currentPage: 'Поточна сторінка',
     skipLinkText: 'Перейти до змісту',
-    relatedContent: 'Статті на цю ж тему',
     navMenuText: 'Розділи',
     mediaAssetPage: {
       mediaPlayer: 'Медіаплеєр',
@@ -174,8 +178,14 @@ const baseServiceConfig = {
         endTextVisuallyHidden: 'Кінець %provider_name% допису',
       },
     },
-    topStoriesTitle: 'Головне',
-    featuresAnalysisTitle: 'Докладно',
+    include: {
+      errorMessage:
+        'Вибачте, ми не можемо відобразити цю частину сторінки у мобільній версії.',
+      linkText:
+        'Перегляньте повну версію сторінки, щоб побачити увесь контент.',
+    },
+    relatedContent: 'Статті на цю ж тему',
+    ...secondaryColumnTranslations,
   },
   brandSVG,
   mostRead: {
@@ -220,7 +230,7 @@ const baseServiceConfig = {
         text: 'Cookies',
       },
       {
-        href: 'https://www.bbc.com/ukrainian/institutional-38146278',
+        href: 'https://www.bbc.co.uk/send/u50853885',
         text: "Зв'язатися з BBC",
       },
       {
@@ -245,27 +255,23 @@ const baseServiceConfig = {
     },
     {
       title: 'Наука',
-      url: '/ukrainian/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
+      url: '/ukrainian/topics/cyx5kzy4w5yt',
     },
     {
       title: 'Технології',
-      url: '/ukrainian/topics/31684f19-84d6-41f6-b033-7ae08098572a',
+      url: '/ukrainian/topics/cxnykv9q4kpt',
     },
     {
       title: 'Здоров’я',
-      url: '/ukrainian/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
+      url: '/ukrainian/topics/cwr9jqqqq13t',
     },
     {
       title: 'Журнал',
-      url: '/ukrainian/magazine',
+      url: '/ukrainian/53725237',
     },
     {
       title: 'Книга року BBC',
       url: '/ukrainian/features-50320117',
-    },
-    {
-      title: 'Блоги',
-      url: '/ukrainian/blogs',
     },
     {
       title: 'РУС',
@@ -279,17 +285,21 @@ export const service = {
     ...baseServiceConfig,
     datetimeLocale: 'uk',
     locale: 'uk_UA',
+    languageName: 'Ukrainian',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'uk',
     lang: 'uk',
   },
   'ru-UA': {
     ...baseServiceConfig,
+    languageName: 'Russian',
     translations: {
       ...baseServiceConfig.translations,
       ...russianMainTranslations,
+      ...secondaryColumnTranslations,
     },
     datetimeLocale: 'ru',
+    serviceDatetimeLocale: 'uk',
     locale: 'ru_UA',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'ru',

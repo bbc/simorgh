@@ -2,7 +2,7 @@
 import envConfig from '../../../support/config/envs';
 import {
   isAvailable,
-  dataEndpointOverride,
+  overrideRendererOnTest,
 } from '../../../support/helpers/onDemandRadioTv';
 
 export default ({ service, pageType }) => {
@@ -10,7 +10,7 @@ export default ({ service, pageType }) => {
     describe('Audio Player', () => {
       it('should render an image placeholder', () => {
         cy.request(
-          `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
+          `${Cypress.env('currentPath')}.json${overrideRendererOnTest()}`,
         ).then(({ body: jsonData }) => {
           if (!isAvailable(jsonData)) {
             return cy.log(`Episode unavailable: ${Cypress.env('currentPath')}`);

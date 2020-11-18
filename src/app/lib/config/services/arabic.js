@@ -36,6 +36,7 @@ export const service = {
     datetimeLocale: 'ar',
     service: 'arabic',
     serviceName: 'Arabic',
+    languageName: 'Arabic',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCArabic',
     twitterSite: '@BBCArabic',
@@ -47,6 +48,7 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'الرئيسية',
+    iTunesAppId: 558497376,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -185,7 +187,12 @@ export const service = {
           endTextVisuallyHidden: 'نهاية %provider_name% مشاركة',
         },
       },
-      topStoriesTitle: 'الخبر الرئيسي',
+      include: {
+        errorMessage:
+          'للأسف ليس بمقدورنا إظهار هذا الجزء من القصة على هذه الصفحة الخفيفة من الموبايل ',
+        linkText: 'انظر في السخة الكاملة لترى المحتوى بأكمله',
+      },
+      topStoriesTitle: 'الأخبار الرئيسية',
       featuresAnalysisTitle: 'اخترنا لكم',
     },
     brandSVG,
@@ -202,10 +209,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
-      onOnDemandRadioPage: true,
-      onFrontPage: true,
-      frontPagePosition: 'Features',
       frequenciesPageUrl:
         '/arabic/institutional/2011/01/000000_frequencies_radio',
       frequenciesPageLabel: 'استقبال البث',
@@ -246,7 +249,7 @@ export const service = {
           text: 'ملفات الارتباط Cookies',
         },
         {
-          href: 'https://www.bbc.com/arabic/institutional-37731355',
+          href: 'https://www.bbc.co.uk/send/u50853203',
           text: 'اتصل بـ بي بي سي',
         },
         {
@@ -268,31 +271,31 @@ export const service = {
       },
       {
         title: 'شرق أوسط',
-        url: '/arabic/middleeast',
+        url: '/arabic/topics/ckdxnj6g4znt',
       },
       {
         title: 'عالم',
-        url: '/arabic/world',
+        url: '/arabic/topics/c719d2el19nt',
       },
       {
         title: 'علوم وتكنولوجيا',
-        url: '/arabic/scienceandtech',
+        url: '/arabic/topics/c719d2ely7xt',
       },
       {
         title: 'صحة',
-        url: '/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
+        url: '/arabic/topics/c95y3q70znjt',
       },
       {
         title: 'فيديو',
-        url: '/arabic/media',
+        url: '/arabic/media-54706728',
       },
       {
         title: 'صحافة',
-        url: '/arabic/inthepress',
+        url: '/arabic/topics/c08gmd9rp97t',
       },
       {
         title: 'ترند',
-        url: '/arabic/trending',
+        url: '/arabic/topics/c404vr23x4dt',
       },
       {
         title: 'تحقيقات',

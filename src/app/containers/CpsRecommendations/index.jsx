@@ -1,47 +1,57 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, number } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import { StoryPromoLiBase, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import { C_LUNAR, C_GHOST } from '@bbc/psammead-styles/colours';
+import { C_LUNAR } from '@bbc/psammead-styles/colours';
 import {
   GEL_SPACING,
-  GEL_SPACING_HLF,
+  GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
+import SectionLabel from '@bbc/psammead-section-label';
 
-import StoryPromo from '../StoryPromo';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import CpsOnwardJourney from '../CpsOnwardJourney';
-import Grid from '../../components/Grid';
-import SkipLinkWrapper from '../../components/SkipLinkWrapper';
-import { GridItemConstrainedMediumNoMargin } from '#lib/styledGrid';
-
-const StyledStoryPromoWrapper = styled.div`
-  > div {
-    display: grid;
-    margin: ${GEL_SPACING_HLF} 0;
-    background-color: ${C_GHOST};
-    @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-      margin: ${GEL_SPACING_HLF} 0;
-    }
-  }
-`;
+import { GridItemMediumNoMargin } from '#app/components/Grid';
+import RecommendationsPromo from './RecommendationsPromo';
+import RecommendationsPromoList from './RecommendationsPromoList';
 
 const RecommendationsWrapper = styled.div`
   background-color: ${C_LUNAR};
-  padding-bottom: ${GEL_SPACING};
-  margin-bottom: ${GEL_SPACING_TRPL};
+  margin: ${GEL_SPACING_TRPL} 0;
+  padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    margin: 0 0 ${GEL_SPACING_TRPL};
+    padding: 0 0 ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin: 0 0 ${GEL_SPACING_TRPL};
+    padding: ${GEL_SPACING_DBL} 0;
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding: ${GEL_SPACING_DBL};
+  }
+`;
+
+const LabelComponent = styled(SectionLabel)`
+  margin: 0;
+  padding: 0;
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin: 0 0 ${GEL_SPACING_DBL};
+  }
 `;
 
 const CpsRecommendations = ({ items, parentColumns }) => {
-  const { recommendations, dir, translations, service } = useContext(
-    ServiceContext,
-  );
+  const { recommendations, translations } = useContext(ServiceContext);
   const { enabled } = useToggle('cpsRecommendations');
 
   const { hasStoryRecommendations } = recommendations;
@@ -56,99 +66,38 @@ const CpsRecommendations = ({ items, parentColumns }) => {
 
   const { text, endTextVisuallyHidden } = path(['skipLink'], recommendations);
 
-  const skipLinkTerms = {
+  const terms = {
     '%title%': title,
   };
 
   const endTextId = 'end-of-recommendations';
 
-  const singleTransform = item => {
-    return (
-      <Grid
-        columns={{
-          group0: 1,
-          group1: 1,
-          group2: 1,
-          group3: 1,
-          group4: 1,
-          group5: 1,
-        }}
-        enableGelGutters
-        dir={dir}
-      >
-        <StyledStoryPromoWrapper>
-          <StoryPromo
-            item={item}
-            dir={dir}
-            isRecommendation
-            displaySummary={false}
-          />
-        </StyledStoryPromoWrapper>
-      </Grid>
-    );
+  const skipLinkProps = {
+    endTextId,
+    terms,
+    text,
+    endTextVisuallyHidden,
   };
 
-  const listTransform = promoItems => (
-    <Grid
-      columns={{
-        group0: 1,
-        group1: 1,
-        group2: 1,
-        group3: 1,
-        group4: 1,
-        group5: 1,
-      }}
-      as={StoryPromoUl}
-      enableGelGutters
-      dir={dir}
-    >
-      {promoItems.map(item => (
-        <Grid
-          item
-          columns={{
-            group0: 1,
-            group1: 1,
-            group2: 1,
-            group3: 1,
-            group4: 1,
-            group5: 1,
-          }}
-          as={StoryPromoLiBase}
-          border={false}
-          key={item.id || item.uri}
-          dir={dir}
-        >
-          {singleTransform(item)}
-        </Grid>
-      ))}
-    </Grid>
-  );
-
   return (
-    <GridItemConstrainedMediumNoMargin>
-      <SkipLinkWrapper
-        service={service}
-        endTextId={endTextId}
-        text={text}
-        endTextVisuallyHidden={endTextVisuallyHidden}
-        terms={skipLinkTerms}
-      >
-        <RecommendationsWrapper>
-          <CpsOnwardJourney
-            labelId="recommendations-heading"
-            title={title}
-            content={items}
-            parentColumns={parentColumns}
-            singleTransform={singleTransform}
-            listTransform={listTransform}
-            sectionLabelOverrideAs="strong"
-            sectionLabelBar={false}
-            sectionLabelBackground={C_LUNAR}
-            columnType="main"
-          />
-        </RecommendationsWrapper>
-      </SkipLinkWrapper>
-    </GridItemConstrainedMediumNoMargin>
+    <GridItemMediumNoMargin>
+      <RecommendationsWrapper>
+        <CpsOnwardJourney
+          LabelComponent={LabelComponent}
+          labelId="recommendations-heading"
+          title={title}
+          content={items}
+          parentColumns={parentColumns}
+          promoComponent={RecommendationsPromo}
+          promoListComponent={RecommendationsPromoList}
+          sectionLabelOverrideAs="strong"
+          sectionLabelBar={false}
+          sectionLabelBackground={C_LUNAR}
+          columnType="main"
+          skipLink={skipLinkProps}
+        />
+      </RecommendationsWrapper>
+    </GridItemMediumNoMargin>
   );
 };
 

@@ -123,24 +123,8 @@ describe('buildTvRadioATIUrl', () => {
       requestContext,
       serviceContext,
     );
-    expect(result).toEqual(
-      [
-        's=598285',
-        's2=atiAnalyticsProducerId',
-        'p=pageIdentifier',
-        'r=0x0x24x24',
-        're=1024x768',
-        'hl=00-00-00',
-        'lng=en-US',
-        'x1=[id]',
-        'x2=[responsive]',
-        'x3=[atiAnalyticsAppName]',
-        'x4=[language]',
-        'x5=[http%253A%252F%252Flocalhost%252F]',
-        'x7=[player-live]',
-        'x8=[simorgh]',
-        'x9=[pageTitle]',
-      ].join('&'),
+    expect(result).toMatchInlineSnapshot(
+      `"s=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[id]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[player-live]&x8=[simorgh]&x9=[pageTitle]"`,
     );
   });
 
@@ -150,24 +134,8 @@ describe('buildTvRadioATIUrl', () => {
       requestContext,
       serviceContext,
     );
-    expect(result).toEqual(
-      [
-        's=598285',
-        's2=atiAnalyticsProducerId',
-        'p=pageIdentifier',
-        'r=0x0x24x24',
-        're=1024x768',
-        'hl=00-00-00',
-        'lng=en-US',
-        'x1=[urn:bbc:pips:id]',
-        'x2=[responsive]',
-        'x3=[atiAnalyticsAppName]',
-        'x4=[language]',
-        'x5=[http%253A%252F%252Flocalhost%252F]',
-        'x7=[player-episode]',
-        'x8=[simorgh]',
-        'x9=[pageTitle]',
-      ].join('&'),
+    expect(result).toMatchInlineSnapshot(
+      `"s=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Apips%3Aid]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[player-episode]&x8=[simorgh]&x9=[pageTitle]"`,
     );
   });
 
@@ -177,24 +145,8 @@ describe('buildTvRadioATIUrl', () => {
       requestContext,
       serviceContext,
     );
-    expect(result).toEqual(
-      [
-        's=598285',
-        's2=atiAnalyticsProducerId',
-        'p=pageIdentifier',
-        'r=0x0x24x24',
-        're=1024x768',
-        'hl=00-00-00',
-        'lng=en-US',
-        'x1=[urn:bbc:pips:id]',
-        'x2=[responsive]',
-        'x3=[atiAnalyticsAppName]',
-        'x4=[language]',
-        'x5=[http%253A%252F%252Flocalhost%252F]',
-        'x7=[player-episode]',
-        'x8=[simorgh]',
-        'x9=[pageTitle]',
-      ].join('&'),
+    expect(result).toMatchInlineSnapshot(
+      `"s=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Apips%3Aid]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[player-episode]&x8=[simorgh]&x9=[pageTitle]"`,
     );
   });
 });

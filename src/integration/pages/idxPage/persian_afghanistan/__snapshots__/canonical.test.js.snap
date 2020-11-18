@@ -2,7 +2,7 @@
 
 exports[`Canonical persian/afghanistan IDX page A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
 
-exports[`Canonical persian/afghanistan IDX page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=69&amp;p=persian.afghanistan.page&amp;x1=[urn:bbc:cps:3cda1d8c-ffa2-03ae-e050-380a4e8056f3]&amp;x2=[responsive]&amp;x3=[news-persian]&amp;x4=[fa]&amp;x7=[index-section]&amp;x8=[simorgh-nojs]&amp;x9=[صفحه+افغانستان+-+BBC+News+فارسی]&amp;x11=[2016-09-20T16:06:44.000Z]&amp;x12=[2020-05-20T12:02:54.000Z]\\"/>"`;
+exports[`Canonical persian/afghanistan IDX page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=69&amp;p=persian.afghanistan.page&amp;x1=[urn%3Abbc%3Acps%3A3cda1d8c-ffa2-03ae-e050-380a4e8056f3]&amp;x2=[responsive]&amp;x3=[news-persian]&amp;x4=[fa]&amp;x7=[index-section]&amp;x8=[simorgh-nojs]&amp;x9=[%D8%B5%D9%81%D8%AD%D9%87%2B%D8%A7%D9%81%D8%BA%D8%A7%D9%86%D8%B3%D8%AA%D8%A7%D9%86%2B-%2BBBC%2BNews%2B%D9%81%D8%A7%D8%B1%D8%B3%DB%8C]&amp;x11=[2016-09-20T16%3A06%3A44.000Z]&amp;x12=[2020-05-20T12%3A02%3A54.000Z]\\"/>"`;
 
 exports[`Canonical persian/afghanistan IDX page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
@@ -53,7 +53,7 @@ Object {
 exports[`Canonical persian/afghanistan IDX page Footer Link should match text and url 7`] = `
 Object {
   "text": "تماس با بی بی سی",
-  "url": "https://www.bbc.com/persian/institutional-37542244",
+  "url": "https://www.bbc.co.uk/send/u50853555",
 }
 `;
 
@@ -82,92 +82,99 @@ Object {
 
 exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 2`] = `
 Object {
+  "text": "انتخابات آمریکا",
+  "url": "/persian/world-54468359",
+}
+`;
+
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 3`] = `
+Object {
   "text": "کرونا",
   "url": "/persian/science-52004647",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 3`] = `
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "پخش زنده",
   "url": "/persian/media-49522521",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 4`] = `
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "ویدیو",
   "url": "/persian/media/video",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 5`] = `
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "تلویزیون",
   "url": "/persian/tv-and-radio-37434377",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 6`] = `
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "رادیو",
   "url": "/persian/tv-and-radio-37434376",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 7`] = `
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "ايران",
-  "url": "/persian/iran",
+  "url": "/persian/topics/ckdxnwvwwjnt",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 8`] = `
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "صفحه فعلی, افغانستان",
   "url": "/persian/afghanistan",
 }
 `;
 
-exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 9`] = `
-Object {
-  "text": "جهان",
-  "url": "/persian/world",
-}
-`;
-
 exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 10`] = `
 Object {
-  "text": "هنر",
-  "url": "/persian/arts",
+  "text": "جهان",
+  "url": "/persian/topics/c1d8ye58xl8t",
 }
 `;
 
 exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 11`] = `
 Object {
-  "text": "ورزش",
-  "url": "/persian/sport",
+  "text": "هنر",
+  "url": "/persian/topics/c9wpm0epm45t",
 }
 `;
 
 exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 12`] = `
 Object {
-  "text": "اقتصاد",
-  "url": "/persian/business",
+  "text": "ورزش",
+  "url": "/persian/topics/cnq6879k7yjt",
 }
 `;
 
 exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 13`] = `
 Object {
-  "text": "دانش",
-  "url": "/persian/science",
+  "text": "اقتصاد",
+  "url": "/persian/topics/cl8l9mvlllqt",
 }
 `;
 
 exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 14`] = `
 Object {
+  "text": "دانش",
+  "url": "/persian/topics/cp0e57wejkzt",
+}
+`;
+
+exports[`Canonical persian/afghanistan IDX page Header Navigation link should match text and url 15`] = `
+Object {
   "text": "ناظران می‌گویند",
-  "url": "/persian/blogs/viewpoints",
+  "url": "/persian/blogs-54099951",
 }
 `;
 
@@ -267,6 +274,11 @@ Object {
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
         "width": 1024,
       },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "fa",
+        "name": "Persian",
+      },
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/persian/afghanistan",
         "@type": "WebPage",
@@ -324,21 +336,23 @@ exports[`Canonical persian/afghanistan IDX page SEO Twitter site 1`] = `"@bbcper
 
 exports[`Canonical persian/afghanistan IDX page SEO Twitter title 1`] = `"صفحه افغانستان - BBC News فارسی"`;
 
-exports[`Canonical persian/afghanistan IDX page Sections should match headline text 1`] = `"ویدیو و صدا"`;
+exports[`Canonical persian/afghanistan IDX page Sections should match headline text 1`] = `"Top story - Afghanistan"`;
 
-exports[`Canonical persian/afghanistan IDX page Sections should match headline text 2`] = `"برنامه‌های رادیو"`;
+exports[`Canonical persian/afghanistan IDX page Sections should match headline text 2`] = `"ویدیو و صدا"`;
 
-exports[`Canonical persian/afghanistan IDX page Sections should match headline text 3`] = `"تحلیل و گزارش"`;
+exports[`Canonical persian/afghanistan IDX page Sections should match headline text 3`] = `"برنامه‌های رادیو"`;
 
-exports[`Canonical persian/afghanistan IDX page Story Promo Headline should match text 1`] = `"ویدیو, ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان, 2,32"`;
+exports[`Canonical persian/afghanistan IDX page Sections should match headline text 4`] = `"تحلیل و گزارش"`;
+
+exports[`Canonical persian/afghanistan IDX page Story Promo Headline should match text 1`] = `"رهبر طالبان به آمریکا: اجازه ندهید موافقتنامه‌مان با ناکامی رو به رو شود؛ ارگ: پیام رهبر طالبان ارزش ندارد"`;
 
 exports[`Canonical persian/afghanistan IDX page Story Promo Image should match image 1`] = `
 <img
-  alt="ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان"
-  class="StyledImg-sc-7vx2mr-0 hIxkbt"
+  alt="هبت الله آخوندزاده"
+  class="css-13lcmnl-StyledImg e1enwo3v0"
   sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
-  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg"
-  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 660w"
-  width="976"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 320w, https://ichef.bbci.co.uk/news/624/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 624w"
+  width="624"
 />
 `;

@@ -37,6 +37,7 @@ export const service = {
     datetimeLocale: 'fa',
     service: 'persian',
     serviceName: 'Persian',
+    languageName: 'Persian',
     altCalendar: jalaali,
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcpersian',
@@ -197,6 +198,11 @@ export const service = {
           endTextVisuallyHidden: 'پایان پست %provider_name%',
         },
       },
+      include: {
+        errorMessage:
+          'متأسفانه امکان نمایش این بخش از صفحه در موبایل وجود ندارد',
+        linkText: 'نسخه کامل و تمامی محتوا را ببینید',
+      },
       topStoriesTitle: 'مهمترین خبرها',
       featuresAnalysisTitle: 'گزارش و تحلیل',
     },
@@ -215,10 +221,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
-      onOnDemandRadioPage: true,
-      onFrontPage: false,
-      frontPagePosition: '',
       onIdxPage: true,
       idxPagePosition: 'Features',
       header: 'برنامه‌های رادیو',
@@ -254,7 +256,7 @@ export const service = {
           text: 'کوکی ها',
         },
         {
-          href: 'https://www.bbc.com/persian/institutional-37542244',
+          href: 'https://www.bbc.co.uk/send/u50853555',
           text: 'تماس با بی بی سی',
         },
         {
@@ -272,6 +274,10 @@ export const service = {
       {
         title: 'صفحه اول',
         url: '/persian',
+      },
+      {
+        title: 'انتخابات آمریکا',
+        url: '/persian/world-54468359',
       },
       {
         title: 'کرونا',
@@ -295,7 +301,7 @@ export const service = {
       },
       {
         title: 'ايران',
-        url: '/persian/iran',
+        url: '/persian/topics/ckdxnwvwwjnt',
       },
       {
         title: 'افغانستان',
@@ -303,27 +309,27 @@ export const service = {
       },
       {
         title: 'جهان',
-        url: '/persian/world',
+        url: '/persian/topics/c1d8ye58xl8t',
       },
       {
         title: 'هنر',
-        url: '/persian/arts',
+        url: '/persian/topics/c9wpm0epm45t',
       },
       {
         title: 'ورزش',
-        url: '/persian/sport',
+        url: '/persian/topics/cnq6879k7yjt',
       },
       {
         title: 'اقتصاد',
-        url: '/persian/business',
+        url: '/persian/topics/cl8l9mvlllqt',
       },
       {
         title: 'دانش',
-        url: '/persian/science',
+        url: '/persian/topics/cp0e57wejkzt',
       },
       {
         title: 'ناظران می‌گویند',
-        url: '/persian/blogs/viewpoints',
+        url: '/persian/blogs-54099951',
       },
     ],
   },

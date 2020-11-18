@@ -33,6 +33,7 @@ export const service = {
     datetimeLocale: `om`,
     service: 'afaanoromoo',
     serviceName: 'Afaan Oromoo',
+    languageName: 'Oromo',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews',
     twitterSite: '@BBCNews',
@@ -177,6 +178,11 @@ export const service = {
           endTextVisuallyHidden: 'Xumura maxxansa %provider_name%',
         },
       },
+      include: {
+        errorMessage:
+          'Dhiifama, odeessa kana keessaa kutaa kana, moobaayilarratti agarsiisuu hin dandeenyu',
+        linkText: 'Guutuu qabiyyee ilaaluuf fuula cufa ilaali',
+      },
       topStoriesTitle: 'Isin hin darbiin',
       featuresAnalysisTitle: `Maaltu haasa'ama?`,
     },
@@ -194,9 +200,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
-      onOnDemandRadioPage: true,
-      onFrontPage: false,
       header: 'Dhaggeeffadhaa',
       durationLabel: 'Turtii %duration%',
     },
@@ -230,7 +233,7 @@ export const service = {
           text: 'Kuus-yaadannoo',
         },
         {
-          href: 'https://www.bbc.com/afaanoromoo/institutional-42228538',
+          href: 'https://www.bbc.co.uk/send/u50777768',
           text: 'BBC qunnami',
         },
         {

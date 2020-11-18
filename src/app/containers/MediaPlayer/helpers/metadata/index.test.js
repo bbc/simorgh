@@ -13,6 +13,7 @@ import {
   validAresMediaLiveAudioBlock,
   missingAresMediaMetadataBlock,
   multipleAresMetadataBlock,
+  validLegacyAresMetadataBlock,
 } from '../../fixtureData';
 import { getType } from '#app/containers/ChartbeatAnalytics/utils';
 
@@ -96,9 +97,15 @@ describe('helper', () => {
   });
 
   describe('getUploadDate', () => {
-    it('should return a valid upload date', () => {
+    it('should return a valid upload date if media has versions', () => {
       expect(getUploadDate(validAresMetadataBlock)).toEqual(
         '2018-10-22T14:35:32.000Z',
+      );
+    });
+
+    it('should return a valid upload date using firstPublished date from metadata for legacy media', () => {
+      expect(getUploadDate(validLegacyAresMetadataBlock)).toEqual(
+        '2016-05-05T09:52:25.000Z',
       );
     });
   });

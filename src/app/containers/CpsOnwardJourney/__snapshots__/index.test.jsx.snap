@@ -1,0 +1,2658 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
+.emotion-4 {
+  width: 100%;
+}
+
+@supports (display:grid) {
+  .emotion-4 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-4 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-4 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-4 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-4 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+.emotion-1 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-1 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-1 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-1 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-1 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-1 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-1 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-1 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-1 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-1 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-1 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-1 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (min-width:37.5rem) {
+  .emotion-1 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+<div>
+  <section
+    aria-labelledby="heading-label"
+    class="emotion-3 emotion-4 emotion-2"
+    data-e2e="heading-label"
+    dir="ltr"
+    role="region"
+  >
+    <div
+      class="emotion-0 emotion-1 emotion-2"
+      dir="ltr"
+    >
+      <ul>
+        <li
+          dir="ltr"
+        >
+          <a
+            href="/mundo/foo0"
+          >
+            Foo in the news 0
+          </a>
+        </li>
+        <li
+          dir="ltr"
+        >
+          <a
+            href="/mundo/foo1"
+          >
+            Foo in the news 1
+          </a>
+        </li>
+        <li
+          dir="ltr"
+        >
+          <a
+            href="/mundo/foo2"
+          >
+            Foo in the news 2
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
+.emotion-6 {
+  width: 100%;
+}
+
+@supports (display:grid) {
+  .emotion-6 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-6 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-6 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-6 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+.emotion-3 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-3 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-3 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-3 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-3 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-3 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-3 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-3 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-3 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (min-width:37.5rem) {
+  .emotion-3 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+<div>
+  <section
+    aria-labelledby="heading-label"
+    class="emotion-5 emotion-6 emotion-4"
+    data-e2e="heading-label"
+    dir="ltr"
+    role="region"
+  >
+    <div
+      class="emotion-2 emotion-3 emotion-4"
+      dir="ltr"
+    >
+      <div
+        class="emotion-0 emotion-1"
+      >
+        <div
+          dir="ltr"
+        >
+          <a
+            href="/mundo/foo0"
+          >
+            Foo in the news 0
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
+.emotion-19 {
+  width: 100%;
+}
+
+@supports (display:grid) {
+  .emotion-19 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-19 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-19 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+.emotion-16 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-16 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-16 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-16 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-16 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-16 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-16 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-16 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (min-width:37.5rem) {
+  .emotion-16 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-11 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+  margin-top: 0;
+  margin: 0;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-11 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-11 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-11 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-11 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-0 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .emotion-0 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.5rem;
+  }
+}
+
+.emotion-8 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-2 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-2 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    padding-right: 1rem;
+  }
+}
+
+<div>
+  <section
+    aria-labelledby="heading-label"
+    class="emotion-18 emotion-19 emotion-17"
+    data-e2e="heading-label"
+    dir="ltr"
+    role="region"
+  >
+    <div
+      class="emotion-15 emotion-16 emotion-17"
+      dir="ltr"
+    >
+      <div
+        class="emotion-10 emotion-11 emotion-12"
+      >
+        <div
+          class="emotion-0 emotion-1"
+        />
+        <strong
+          class="emotion-8 emotion-9"
+        >
+          <span
+            class="emotion-6 emotion-7"
+          >
+            <span
+              class="emotion-4 emotion-5"
+            >
+              <span
+                class="emotion-2 emotion-3"
+                dir="ltr"
+                id="heading-label"
+              >
+                The Foo Section
+              </span>
+            </span>
+          </span>
+        </strong>
+      </div>
+      <div
+        class="emotion-13 emotion-14"
+      >
+        <div
+          dir="ltr"
+        >
+          <a
+            href="/mundo/foo0"
+          >
+            Foo in the news 0
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`CpsOnwardJourney renders section label with with alternative background colour 1`] = `
+.emotion-19 {
+  width: 100%;
+}
+
+@supports (display:grid) {
+  .emotion-19 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-19 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-19 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-19 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+.emotion-16 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-16 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-16 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-16 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-16 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-16 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-16 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-16 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-16 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (min-width:37.5rem) {
+  .emotion-16 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-11 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+  margin-top: 0;
+  margin: 0;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-11 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-11 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-11 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-11 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-0 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .emotion-0 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.5rem;
+  }
+}
+
+.emotion-8 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-2 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #222222;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-2 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    padding-right: 1rem;
+  }
+}
+
+<div>
+  <section
+    aria-labelledby="heading-label"
+    class="emotion-18 emotion-19 emotion-17"
+    data-e2e="heading-label"
+    dir="ltr"
+    role="region"
+  >
+    <div
+      class="emotion-15 emotion-16 emotion-17"
+      dir="ltr"
+    >
+      <div
+        class="emotion-10 emotion-11 emotion-12"
+      >
+        <div
+          class="emotion-0 emotion-1"
+        />
+        <h2
+          class="emotion-8 emotion-9"
+        >
+          <span
+            class="emotion-6 emotion-7"
+          >
+            <span
+              class="emotion-4 emotion-5"
+            >
+              <span
+                class="emotion-2 emotion-3"
+                dir="ltr"
+                id="heading-label"
+              >
+                The Foo Section
+              </span>
+            </span>
+          </span>
+        </h2>
+      </div>
+      <div
+        class="emotion-13 emotion-14"
+      >
+        <div
+          dir="ltr"
+        >
+          <a
+            href="/mundo/foo0"
+          >
+            Foo in the news 0
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`CpsOnwardJourney renders section label with without bar under section label 1`] = `
+.emotion-17 {
+  width: 100%;
+}
+
+@supports (display:grid) {
+  .emotion-17 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-17 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-17 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-17 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-17 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-17 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-17 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-17 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-17 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+.emotion-14 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-14 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-14 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-14 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-14 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-14 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-14 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-14 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-14 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-14 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-14 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-14 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-14 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-14 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (min-width:37.5rem) {
+  .emotion-14 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-9 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+  margin-top: 0;
+  margin: 0;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-9 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-9 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-9 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-9 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-6 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-0 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-0 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    padding-right: 1rem;
+  }
+}
+
+<div>
+  <section
+    aria-labelledby="heading-label"
+    class="emotion-16 emotion-17 emotion-15"
+    data-e2e="heading-label"
+    dir="ltr"
+    role="region"
+  >
+    <div
+      class="emotion-13 emotion-14 emotion-15"
+      dir="ltr"
+    >
+      <div
+        class="emotion-8 emotion-9 emotion-10"
+      >
+        <h2
+          class="emotion-6 emotion-7"
+        >
+          <span
+            class="emotion-4 emotion-5"
+          >
+            <span
+              class="emotion-2 emotion-3"
+            >
+              <span
+                class="emotion-0 emotion-1"
+                dir="ltr"
+                id="heading-label"
+              >
+                The Foo Section
+              </span>
+            </span>
+          </span>
+        </h2>
+      </div>
+      <div
+        class="emotion-11 emotion-12"
+      >
+        <div
+          dir="ltr"
+        >
+          <a
+            href="/mundo/foo0"
+          >
+            Foo in the news 0
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
+.emotion-23 {
+  width: 100%;
+}
+
+@supports (display:grid) {
+  .emotion-23 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-23 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-23 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-23 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-23 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-23 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-23 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-23 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-23 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+.emotion-20 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-20 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-20 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-20 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-20 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-20 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-20 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-20 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-20 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-20 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-20 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-20 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-20 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-20 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (min-width:37.5rem) {
+  .emotion-20 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-13 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+  margin-top: 0;
+  margin: 0;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-13 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-13 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-13 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-13 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-2 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .emotion-2 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.5rem;
+  }
+}
+
+.emotion-10 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-6 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-4 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-4 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    padding-right: 1rem;
+  }
+}
+
+.emotion-17 {
+  position: relative;
+}
+
+.emotion-0 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-0 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-0:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-15 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <section
+    aria-labelledby="heading-label"
+    class="emotion-22 emotion-23 emotion-21"
+    data-e2e="heading-label"
+    dir="ltr"
+    role="region"
+  >
+    <div
+      class="emotion-19 emotion-20 emotion-21"
+      dir="ltr"
+    >
+      <div
+        class="emotion-17 emotion-18"
+      >
+        <a
+          class="emotion-0 emotion-1"
+          href="#end-of-the-foo-section"
+        >
+          skip the foo section
+        </a>
+        <div
+          class="emotion-12 emotion-13 emotion-14"
+        >
+          <div
+            class="emotion-2 emotion-3"
+          />
+          <h2
+            class="emotion-10 emotion-11"
+          >
+            <span
+              class="emotion-8 emotion-9"
+            >
+              <span
+                class="emotion-6 emotion-7"
+              >
+                <span
+                  class="emotion-4 emotion-5"
+                  dir="ltr"
+                  id="heading-label"
+                >
+                  The Foo Section
+                </span>
+              </span>
+            </span>
+          </h2>
+        </div>
+        <ul>
+          <li
+            dir="ltr"
+          >
+            <a
+              href="/mundo/foo0"
+            >
+              Foo in the news 0
+            </a>
+          </li>
+          <li
+            dir="ltr"
+          >
+            <a
+              href="/mundo/foo1"
+            >
+              Foo in the news 1
+            </a>
+          </li>
+          <li
+            dir="ltr"
+          >
+            <a
+              href="/mundo/foo2"
+            >
+              Foo in the news 2
+            </a>
+          </li>
+        </ul>
+        <p
+          class="emotion-15 emotion-16"
+          id="end-of-the-foo-section"
+          tabindex="-1"
+        >
+          end of the foo section
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
+.emotion-25 {
+  width: 100%;
+}
+
+@supports (display:grid) {
+  .emotion-25 {
+    display: grid;
+    position: initial;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-25 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-25 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-25 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-25 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-25 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-25 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(20,1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-25 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-25 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+.emotion-22 {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-22 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-22 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-22 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-22 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-22 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-22 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-22 {
+    display: block;
+  }
+
+@media (max-width:14.9375rem) {
+    .emotion-22 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-22 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-22 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-22 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-22 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+}
+
+@media (min-width:80rem) {
+    .emotion-22 {
+      width: initial;
+      margin: 0;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+}
+}
+
+@media (min-width:37.5rem) {
+  .emotion-22 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-13 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+  margin-top: 0;
+  margin: 0;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-13 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-13 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-13 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-13 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-2 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .emotion-2 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.5rem;
+  }
+}
+
+.emotion-10 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-6 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-4 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-4 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 {
+    padding-right: 1rem;
+  }
+}
+
+.emotion-19 {
+  position: relative;
+}
+
+.emotion-0 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-0 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-0:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-17 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <section
+    aria-labelledby="heading-label"
+    class="emotion-24 emotion-25 emotion-23"
+    data-e2e="heading-label"
+    dir="ltr"
+    role="region"
+  >
+    <div
+      class="emotion-21 emotion-22 emotion-23"
+      dir="ltr"
+    >
+      <div
+        class="emotion-19 emotion-20"
+      >
+        <a
+          class="emotion-0 emotion-1"
+          href="#end-of-the-foo-section"
+        >
+          skip the foo section
+        </a>
+        <div
+          class="emotion-12 emotion-13 emotion-14"
+        >
+          <div
+            class="emotion-2 emotion-3"
+          />
+          <h2
+            class="emotion-10 emotion-11"
+          >
+            <span
+              class="emotion-8 emotion-9"
+            >
+              <span
+                class="emotion-6 emotion-7"
+              >
+                <span
+                  class="emotion-4 emotion-5"
+                  dir="ltr"
+                  id="heading-label"
+                >
+                  The Foo Section
+                </span>
+              </span>
+            </span>
+          </h2>
+        </div>
+        <div
+          class="emotion-15 emotion-16"
+        >
+          <div
+            dir="ltr"
+          >
+            <a
+              href="/mundo/foo0"
+            >
+              Foo in the news 0
+            </a>
+          </div>
+        </div>
+        <p
+          class="emotion-17 emotion-18"
+          id="end-of-the-foo-section"
+          tabindex="-1"
+        >
+          end of the foo section
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+`;

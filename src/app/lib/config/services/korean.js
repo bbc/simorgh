@@ -32,6 +32,7 @@ export const service = {
     datetimeLocale: `ko`,
     service: 'korean',
     serviceName: 'Korean',
+    languageName: 'Korean',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnews',
     twitterSite: '@bbcnews',
@@ -173,6 +174,11 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% 포스트 마침',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: '주요뉴스',
       featuresAnalysisTitle: '이 시간 이슈',
     },
@@ -190,10 +196,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
-      onOnDemandRadioPage: true,
-      onFrontPage: true,
-      frontPagePosition: 'Section 1',
       header: 'BBC 코리아 라디오',
       durationLabel: '방송 길이 %duration%',
     },
@@ -227,7 +229,7 @@ export const service = {
           text: '쿠키정책',
         },
         {
-          href: 'https://www.bbc.com/korean/institutional-42224941',
+          href: 'https://www.bbc.co.uk/send/u50853423',
           text: '고객센터',
         },
         {

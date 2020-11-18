@@ -23,6 +23,7 @@ export const service = {
     datetimeLocale: 'ig',
     service: 'igbo',
     serviceName: 'Igbo',
+    languageName: 'Igbo',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
     defaultImageAltText: 'BBC News Ìgbò',
     dir: 'ltr',
@@ -183,6 +184,11 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'Isi akụkọ',
       featuresAnalysisTitle: 'Kọwaara m isi akụkọ',
     },
@@ -248,7 +254,7 @@ export const service = {
           text: 'Kuki',
         },
         {
-          href: 'https://www.bbc.com/igbo/institutional-43090448',
+          href: 'https://www.bbc.co.uk/send/u50853379',
           text: 'Kpọtụrụ BBC',
         },
         {

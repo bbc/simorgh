@@ -20,6 +20,9 @@ describe('Get initial data for live radio', () => {
       path: 'mock-live-radio-path',
       service: 'korean',
       pageType,
+      toggles: {
+        liveRadioSchedule: { enabled: true },
+      },
     });
     expect(pageData.name).toEqual('BBC 코리아 라디오');
     expect(pageData.language).toEqual('ko');

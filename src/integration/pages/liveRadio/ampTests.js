@@ -3,13 +3,15 @@ import {
   runCoreAmpTests,
   runAmpAnalyticsTests,
   runRadioScheduleTests,
+  runSeoAmpTests,
 } from '../../common';
 
-export default () => {
-  runCrossPlatformTests();
+export default service => {
+  runCrossPlatformTests(service);
   runCoreAmpTests();
   runAmpAnalyticsTests();
   runRadioScheduleTests({ isAmp: true });
+  runSeoAmpTests();
 
   it('Media player image placeholder', () => {
     const audioPlaceholderImage = document.querySelector(
