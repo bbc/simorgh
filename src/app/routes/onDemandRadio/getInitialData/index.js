@@ -16,7 +16,7 @@ import processRecentEpisodes from '../../utils/processRecentEpisodes';
 
 const getRadioScheduleData = path(['radioScheduleData']);
 const getScheduleToggle = path(['onDemandRadioSchedule', 'enabled']);
-const getRecentEpisodes = path(['recentAudioEpisodes']);
+const getRecentEpisodesToggle = path(['recentAudioEpisodes']);
 
 export default async ({ path: pathname, pageType, service, toggles }) => {
   try {
@@ -26,8 +26,8 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
       pageType,
     });
     const scheduleIsEnabled = getScheduleToggle(toggles);
-    const recentEpisodes = getRecentEpisodes(toggles);
-    const { enabled, value } = recentEpisodes;
+    const recentEpisodesToggle = getRecentEpisodesToggle(toggles);
+    const { enabled, value } = recentEpisodesToggle;
 
     const { json, status } = scheduleIsEnabled
       ? await withRadioSchedule({
@@ -47,6 +47,8 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
     const get = (fieldPath, logLevel) =>
       logLevel ? withLogging(fieldPath, logLevel) : path(fieldPath, json);
 
+    const episodeId = get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR);
+
     return {
       status,
       pageData: {
@@ -65,7 +67,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
           ['metadata', 'analyticsLabels', 'contentType'],
           LOG_LEVELS.INFO,
         ),
-        episodeId: get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR),
+        episodeId,
         masterBrand: get(['metadata', 'createdBy'], LOG_LEVELS.ERROR),
         releaseDateTimeStamp: get(
           ['metadata', 'releaseDateTimeStamp'],
@@ -85,6 +87,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
         episodeAvailability: getEpisodeAvailability(json),
         radioScheduleData: getRadioScheduleData(json),
         recentEpisodes: processRecentEpisodes(json, {
+          exclude: episodeId,
           enabled,
           recentEpisodesLimit: value,
         }),
