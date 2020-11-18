@@ -30,11 +30,11 @@ jobs:
 
       - name: Set GIT_BRANCH Environment Variable For Push Event
         if: ${{ github.event_name == 'push' }}
-        run: echo "GIT_BRANCH=${{ github.ref }}" >> $GITHUB_ENV
+        run: echo "GIT_BRANCH=${GITHUB_REF##*/}" >> $GITHUB_ENV
 
       - name: Set GIT_BRANCH Environment Variable For Pull Request Event
         if: ${{ github.event_name == 'pull_request' }}
-        run: echo "GIT_BRANCH=${{ github.head_ref }}" >> $GITHUB_ENV
+        run: echo "GIT_BRANCH=${GITHUB_REF##*/}" >> $GITHUB_ENV
 
       - name: Print GitHub Context
         env:
