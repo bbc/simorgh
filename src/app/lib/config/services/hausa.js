@@ -165,6 +165,7 @@ export const service = {
         previousRadioShow: 'Shirye-shiryen rediyo da suka gabata',
         nextRadioShow: 'Shirye-shiryen rediyo na gaba',
         duration: 'Tsawon lokaci',
+        recentEpisodes: 'Kari',
       },
       socialEmbed: {
         caption: {

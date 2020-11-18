@@ -159,6 +159,7 @@ export const service = {
         audio: 'صدا',
         photogallery: 'عکس',
         video: 'ویدیو',
+        recentEpisodes: 'برنامه قبلی',
         bbc_persian_radio: {
           title: 'رادیو فارسی بی‌بی‌سی',
           subtitle:
