@@ -84,6 +84,7 @@ const RecentAudioEpisodes = ({ episodes }) => {
         script={script}
         service={service}
         dir={dir}
+        bar={false}
         labelId="recent-episodes"
       >
         {recentEpisodesTranslation}
