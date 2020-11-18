@@ -259,10 +259,6 @@ export const service = {
         url: '/swahili',
       },
       {
-        title: 'Uchaguzi Tanzania',
-        url: '/swahili/habari-53516858',
-      },
-      {
         title: 'Michezo',
         url: '/swahili/topics/ckdxndddjkxt',
       },
