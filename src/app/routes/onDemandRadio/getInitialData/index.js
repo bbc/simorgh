@@ -16,6 +16,7 @@ import processRecentEpisodes from '../../utils/processRecentEpisodes';
 
 const getRadioScheduleData = path(['radioScheduleData']);
 const getScheduleToggle = path(['onDemandRadioSchedule', 'enabled']);
+const getRecentEpisodesLimit = path(['recentAudioEpisodes', 'value']);
 
 export default async ({ path: pathname, pageType, service, toggles }) => {
   try {
@@ -25,6 +26,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
       pageType,
     });
     const scheduleIsEnabled = getScheduleToggle(toggles);
+    const recentEpisodesLimit = getRecentEpisodesLimit(toggles);
 
     const { json, status } = scheduleIsEnabled
       ? await withRadioSchedule({
@@ -81,7 +83,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
         ),
         episodeAvailability: getEpisodeAvailability(json),
         radioScheduleData: getRadioScheduleData(json),
-        recentEpisodes: processRecentEpisodes(json),
+        recentEpisodes: processRecentEpisodes(json, { recentEpisodesLimit }),
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {

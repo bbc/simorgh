@@ -1,3 +1,4 @@
+import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrl from '../../utils/getPlaceholderImageUrl';
@@ -12,14 +13,16 @@ import getEpisodeAvailability, {
 
 import processRecentEpisodes from '#app/routes/utils/processRecentEpisodes';
 
-export default async ({ path: pathname, pageType }) => {
+const getRecentEpisodesLimit = path(['recentVideoEpisodes', 'value']);
+
+export default async ({ path: pathname, pageType, toggles }) => {
   try {
     const onDemandTvDataPath = overrideRendererOnTest(pathname);
     const { json, status } = await fetchPageData({
       path: onDemandTvDataPath,
       pageType,
     });
-
+    const recentEpisodesLimit = getRecentEpisodesLimit(toggles);
     const get = pathWithLogging(getUrl(json), TV_MISSING_FIELD, json);
 
     const episodeId = get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR);
@@ -58,6 +61,7 @@ export default async ({ path: pathname, pageType }) => {
         episodeAvailability: getEpisodeAvailability(json),
         recentEpisodes: processRecentEpisodes(json, {
           exclude: episodeId,
+          recentEpisodesLimit,
           urlFormatter: (service, id) =>
             `/${service}/${id.split(':').pop().replace('/', '/tv/')}`,
         }),

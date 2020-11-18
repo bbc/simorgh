@@ -38,7 +38,7 @@ const excludeEpisode = idToExclude => episode => episode.id !== idToExclude;
 const processRecentEpisodes = (
   pageData,
   {
-    limit = 4,
+    recentEpisodesLimit = 4,
     exclude = null,
     urlFormatter = (service, id) => `/${service}/${id.split(':').pop()}`,
   } = {},
@@ -55,7 +55,7 @@ const processRecentEpisodes = (
     .filter(validateEpisode)
     .filter(excludeEpisode(exclude))
     .map(episode => formatEpisode(episode, { serviceName, urlFormatter }))
-    .slice(0, limit);
+    .slice(0, recentEpisodesLimit);
 };
 
 export default processRecentEpisodes;
