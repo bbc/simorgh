@@ -115,7 +115,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
           </EpisodeList.Episode>
         ))}
       </EpisodeList>
-    </div>
+    </>
   );
 };
 
