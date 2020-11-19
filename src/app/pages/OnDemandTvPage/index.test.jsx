@@ -14,6 +14,13 @@ import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 
 const OnDemandTvPage = withMediaError(_OnDemandTvPage);
 
+const toggles = {
+  recentVideoEpisodes: {
+    enabled: false,
+    value: 4,
+  },
+};
+
 const Page = ({ pageData, service, isAmp = false }) => (
   <StaticRouter>
     <ToggleContextProvider>
@@ -66,6 +73,7 @@ describe('OnDemand TV Brand Page ', () => {
     const { pageData } = await getInitialData({
       path: 'some-ondemand-tv-path',
       pageType,
+      toggles,
     });
     await renderPage({
       pageData,
@@ -73,7 +81,7 @@ describe('OnDemand TV Brand Page ', () => {
     });
 
     const visuallyHiddenHeadline = document.querySelector(
-      'h1[class^="VisuallyHiddenText"]',
+      'h1[class*="VisuallyHiddenText"]',
     );
 
     expect(visuallyHiddenHeadline).toBeInTheDocument();
@@ -86,6 +94,7 @@ describe('OnDemand TV Brand Page ', () => {
     const { pageData } = await getInitialData({
       path: 'some-ondemand-tv-path',
       pageType,
+      toggles,
     });
     const { getByText } = await renderPage({
       pageData,
@@ -101,6 +110,7 @@ describe('OnDemand TV Brand Page ', () => {
     const { pageData } = await getInitialData({
       path: 'some-ondemand-tv-path',
       pageType,
+      toggles,
     });
     const { container } = await renderPage({
       pageData,
@@ -119,6 +129,7 @@ describe('OnDemand TV Brand Page ', () => {
     const { pageData } = await getInitialData({
       path: 'some-ondemand-tv-path',
       pageType,
+      toggles,
     });
     const { container } = await renderPage({
       pageData,
@@ -134,6 +145,7 @@ describe('OnDemand TV Brand Page ', () => {
     const { pageData } = await getInitialData({
       path: 'some-ondemand-tv-path',
       pageType,
+      toggles,
     });
     const { container } = await renderPage({
       pageData,
@@ -150,6 +162,7 @@ it('should show the datestamp correctly for Pashto OnDemand TV Pages', async () 
   const { pageData } = await getInitialData({
     path: 'some-ondemand-tv-path',
     pageType,
+    toggles,
   });
   const { getByText } = await renderPage({
     pageData,
@@ -165,6 +178,7 @@ it('should show the summary for OnDemand TV Pages', async () => {
   const { pageData } = await getInitialData({
     path: 'some-ondemand-tv-path',
     pageType,
+    toggles,
   });
   const { getByText } = await renderPage({
     pageData,
@@ -184,6 +198,7 @@ it('should show the video player on canonical with no live override', async () =
   const { pageData } = await getInitialData({
     path: 'some-ondemand-tv-path',
     pageType,
+    toggles,
   });
   const { container } = await renderPage({
     pageData,
@@ -204,6 +219,7 @@ it('should show the video player on amp with no live override', async () => {
   const { pageData } = await getInitialData({
     path: 'some-ondemand-tv-path',
     pageType,
+    toggles,
   });
   const { container } = await renderPage({
     pageData,
@@ -225,6 +241,7 @@ it('should show the video player on canonical with live override', async () => {
   const { pageData } = await getInitialData({
     path: 'some-ondemand-tv-path',
     pageType,
+    toggles,
   });
   const { container } = await renderPage({
     pageData,
@@ -244,6 +261,7 @@ it('should show the video player on amp with live override', async () => {
   const { pageData } = await getInitialData({
     path: 'some-ondemand-tv-path',
     pageType,
+    toggles,
   });
   const { container } = await renderPage({
     pageData,
@@ -269,6 +287,7 @@ it('should show the expired content message if episode is expired', async () => 
   const { pageData } = await getInitialData({
     path: 'some-ondemand-tv-path',
     pageType,
+    toggles,
   });
   const { container, getByText } = await renderPage({
     pageData,
@@ -292,6 +311,7 @@ it('should show the future content message if episode is not yet available', asy
   const { pageData } = await getInitialData({
     path: 'some-ondemand-tv-path',
     pageType,
+    toggles,
   });
   const { container, getByText } = await renderPage({
     pageData,
@@ -315,6 +335,7 @@ it('should show the future content message if episode is pending', async () => {
   const { pageData } = await getInitialData({
     path: 'some-ondemand-tv-path',
     pageType,
+    toggles,
   });
   const { container, getByText } = await renderPage({
     pageData,

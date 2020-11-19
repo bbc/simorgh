@@ -140,6 +140,7 @@ export const mainTranslations = {
     previousRadioShow: 'Предыдущая передача',
     nextRadioShow: 'Следующая передача',
     duration: 'Продолжительность',
+    recentEpisodes: 'Прошлые передачи',
   },
   socialEmbed: {
     caption: {
@@ -288,10 +289,6 @@ export const service = {
       {
         title: 'Коронавирус',
         url: '/russian/in-depth-51962199',
-      },
-      {
-        title: 'Выборы в США',
-        url: '/russian/topics/c8jvq6n6kdxt',
       },
       {
         title: 'Истории',

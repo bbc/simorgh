@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Story Promo Link Contents should render with visually hidden text for media promos 1`] = `
-.c0 {
+.emotion-0 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -13,28 +13,30 @@ exports[`Story Promo Link Contents should render with visually hidden text for m
   margin: 0;
 }
 
-<span
-  role="text"
->
+<div>
   <span
-    class="c0"
+    role="text"
   >
-    LISTEN
-    , 
+    <span
+      class="emotion-0 emotion-1"
+    >
+      LISTEN
+      , 
+    </span>
+    <span>
+      An overtyped headline for a media item
+    </span>
+    <span
+      class="emotion-0 emotion-1"
+    >
+      , DURATION 11,06
+    </span>
   </span>
-  <span>
-    An overtyped headline for a media item
-  </span>
-  <span
-    class="c0"
-  >
-    , DURATION 11,06
-  </span>
-</span>
+</div>
 `;
 
 exports[`Story Promo Link Contents should render with visually hidden text for media with overtyped headline 1`] = `
-.c0 {
+.emotion-0 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -46,28 +48,30 @@ exports[`Story Promo Link Contents should render with visually hidden text for m
   margin: 0;
 }
 
-<span
-  role="text"
->
+<div>
   <span
-    class="c0"
+    role="text"
   >
-    LISTEN
-    , 
+    <span
+      class="emotion-0 emotion-1"
+    >
+      LISTEN
+      , 
+    </span>
+    <span>
+      An overtyped headline for a media item
+    </span>
+    <span
+      class="emotion-0 emotion-1"
+    >
+      , DURATION 11,06
+    </span>
   </span>
-  <span>
-    An overtyped headline for a media item
-  </span>
-  <span
-    class="c0"
-  >
-    , DURATION 11,06
-  </span>
-</span>
+</div>
 `;
 
 exports[`Story Promo Link Contents should render with visually hidden text for photogallery promos 1`] = `
-.c0 {
+.emotion-0 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -79,17 +83,19 @@ exports[`Story Promo Link Contents should render with visually hidden text for p
   margin: 0;
 }
 
-<span
-  role="text"
->
+<div>
   <span
-    class="c0"
+    role="text"
   >
-    PHOTOGALLERY
-    , 
+    <span
+      class="emotion-0 emotion-1"
+    >
+      PHOTOGALLERY
+      , 
+    </span>
+    <span>
+      A photo gallery item
+    </span>
   </span>
-  <span>
-    A photo gallery item
-  </span>
-</span>
+</div>
 `;

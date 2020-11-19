@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { shape, string, number, bool, func } from 'prop-types';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
@@ -21,6 +21,7 @@ import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import RadioScheduleContainer from '#containers/RadioSchedule';
+import RecentAudioEpisodes from '#containers/RecentAudioEpisodes';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -59,6 +60,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     durationISO8601,
     thumbnailImageUrl,
     radioScheduleData,
+    recentEpisodes,
   } = pageData;
 
   const { isAmp } = useContext(RequestContext);
@@ -99,8 +101,9 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         description={shortSynopsis}
         openGraphType="website"
       />
+
       <GelPageGrid
-        forwardedAs="main"
+        as="main"
         role="main"
         columns={getGroups(6, 6, 6, 6, 8, 20)}
         enableGelGutters
@@ -161,6 +164,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
                 : []
             }
           />
+          <RecentAudioEpisodes episodes={recentEpisodes} />
         </Grid>
       </GelPageGrid>
       {radioScheduleData && (

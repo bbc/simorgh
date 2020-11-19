@@ -170,6 +170,7 @@ export const service = {
         previousRadioShow: 'पिछला रेडियो शो',
         nextRadioShow: 'अगला रेडियो शो',
         duration: 'अवधि',
+        recentEpisodes: 'प्रसारण का समय',
       },
       socialEmbed: {
         caption: {
@@ -297,10 +298,6 @@ export const service = {
       {
         title: 'वीडियो',
         url: '/hindi/media/video',
-      },
-      {
-        title: 'बीबीसी स्पेशल',
-        url: '/hindi/in_depth',
       },
     ],
   },

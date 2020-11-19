@@ -161,6 +161,7 @@ const baseServiceConfig = {
       previousRadioShow: 'Попередня радіопрограма',
       nextRadioShow: 'Наступна радіопрограма',
       duration: 'Тривалість',
+      recentEpisodes: 'Більше',
     },
     socialEmbed: {
       caption: {

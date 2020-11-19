@@ -171,6 +171,7 @@ export const service = {
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
+        recentEpisodes: 'முந்தைய நிகழ்ச்சிகள்',
       },
       socialEmbed: {
         caption: {

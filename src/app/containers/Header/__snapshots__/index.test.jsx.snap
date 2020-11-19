@@ -1,7 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
-.c12 {
+.emotion-22 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-22 {
+    display: block;
+  }
+}
+
+.emotion-18 {
+  display: inline-block;
+  width: 100%;
+  max-width: 14.880600000000001rem;
+  min-width: 9.9204rem;
+  -webkit-flex: 1 1 9.9204rem;
+  -ms-flex: 1 1 9.9204rem;
+  flex: 1 1 9.9204rem;
+  -ms-flex-preferred-size: 14.880600000000001rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-18 {
+    display: block;
+  }
+}
+
+.emotion-14 {
+  box-sizing: content-box;
+  color: #FFFFFF;
+  fill: currentColor;
+  padding-top: 0.625rem;
+  padding-bottom: 0.375rem;
+  height: 1.5rem;
+  width: 100%;
+  max-width: 14.880600000000001rem;
+  min-width: 9.9204rem;
+  -webkit-flex: 1 1 9.9204rem;
+  -ms-flex: 1 1 9.9204rem;
+  flex: 1 1 9.9204rem;
+  -ms-flex-preferred-size: 14.880600000000001rem;
+}
+
+@media (min-width:25rem) {
+  .emotion-14 {
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-14 {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),print {
+  .emotion-14 {
+    fill: windowText;
+  }
+}
+
+.emotion-19:hover .emotion-14,
+.emotion-19:focus .emotion-14 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+.emotion-16 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-20 {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -23,7 +123,21 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   font-style: normal;
 }
 
-.c12:focus {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-20:focus {
   -webkit-clip-path: none;
   clip-path: none;
   -webkit-clip: auto;
@@ -34,133 +148,39 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   left: 0;
 }
 
-.c11 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
+@media (min-width:25rem) {
+  .emotion-20:focus {
+    top: 0.5rem;
+  }
 }
 
-.c7 {
+@media (max-width:37.4375rem) {
+  .emotion-20 {
+    padding: 0.5rem;
+  }
+}
+
+.emotion-108 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
+}
+
+.emotion-108 .emotion-35::after {
+  left: 0;
+}
+
+.emotion-106 {
+  position: relative;
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.c6 {
-  background-color: #B80000;
-  min-height: 2.5rem;
-  width: 100%;
-  padding: 0 0.5rem;
+.emotion-68 {
+  position: relative;
 }
 
-.c9 {
-  display: inline-block;
-  width: 100%;
-  max-width: 14.880600000000001rem;
-  min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
-}
-
-.c10 {
-  box-sizing: content-box;
-  color: #FFFFFF;
-  fill: currentColor;
-  padding-top: 0.625rem;
-  padding-bottom: 0.375rem;
-  height: 1.5rem;
-  width: 100%;
-  max-width: 14.880600000000001rem;
-  min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
-}
-
-.c8:hover .c10,
-.c8:focus .c10 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 0.25rem solid #FFFFFF;
-  margin-bottom: -0.25rem;
-}
-
-.c17 {
-  color: #fff;
-  fill: currentColor;
-}
-
-.c23 {
-  background-color: #222222;
-  clear: both;
-  overflow: hidden;
-  height: 0;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
-  transition-timing-function: cubic-bezier(0,0,0.58,1);
-  visibility: hidden;
-}
-
-.c24 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0 0.5rem;
-  border-bottom: 0.125rem solid #3F3F42;
-}
-
-.c25 {
-  padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid #3F3F42;
-}
-
-.c25:last-child {
-  padding-bottom: 1rem;
-  border: 0;
-}
-
-.c26 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #FFFFFF;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c26:hover,
-.c26:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c16 {
+.emotion-30 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -171,14 +191,14 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   width: 2.75rem;
 }
 
-.c16:hover,
-.c16:focus {
+.emotion-30:hover,
+.emotion-30:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.c16:hover::after,
-.c16:focus::after {
+.emotion-30:hover::after,
+.emotion-30:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -188,319 +208,31 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c16 svg {
-  vertical-align: middle;
-}
-
-.c14 {
-  position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c19 {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-
-.c22 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #FDFDFD;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.75rem;
-}
-
-.c22:hover::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-}
-
-.c22:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-  top: 0;
-  border: 0.25rem solid #FFFFFF;
-}
-
-.c21 {
-  display: inline-block;
-  position: relative;
-  z-index: 2;
-}
-
-.c13 {
-  position: relative;
-  background-color: #B80000;
-  border-top: 0.0625rem solid #FFFFFF;
-}
-
-.c13 .c20::after {
-  left: 0;
-}
-
-.c15 {
-  position: relative;
-}
-
-.c0 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #323232;
-  padding: 1rem 0.5rem;
-}
-
-.c1 {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c1::after {
-  content: '\\0020';
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-.c2 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  padding: 0;
-  margin: 0;
-}
-
-.c4 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #F6A21D;
-  font-weight: 600;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.c4 li + li {
-  padding-top: 0.5rem;
-}
-
-.c3 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #BEBEBE;
-}
-
-.c3 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c3 a:focus,
-.c3 a:hover {
-  color: #FFFFFF;
-}
-
-.c5 button {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #F6A21D;
-  font-weight: 700;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-.c5 button:focus,
-.c5 button:hover {
-  color: #FFFFFF;
-}
-
-.c5 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5 a:focus,
-.c5 a:hover {
-  color: #FFFFFF;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
 @media (min-width:37.5rem) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c12:focus {
-    top: 0.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c12 {
-    padding: 0.5rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c7 {
-    display: block;
-  }
-}
-
-@media (min-width:25rem) {
-  .c6 {
-    min-height: 3.25rem;
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c9 {
-    display: block;
-  }
-}
-
-@media (min-width:25rem) {
-  .c10 {
-    padding-top: 1rem;
-    padding-bottom: 0.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    padding-top: 1.25rem;
-    padding-bottom: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),print {
-  .c10 {
-    fill: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c23 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (prefers-reduced-motion:reduce) {
-  .c23 {
-    -webkit-transition: none;
-    transition: none;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c26 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c26 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 {
+  .emotion-30 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) {
-  .c16 {
+  .emotion-30 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c19 {
-    overflow: hidden;
-  }
+.emotion-30 svg {
+  vertical-align: middle;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c22 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
+.emotion-26 {
+  color: #fff;
+  fill: currentColor;
 }
 
 @media (max-width:37.4375rem) {
-  .c22 {
-    padding: 0.75rem 0.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c21:last-child {
-    margin-right: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c21::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    width: 80rem;
-    border-bottom: 0.0625rem solid #eab3b3;
-    z-index: -1;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c18 {
+  .emotion-66 {
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-scroll-behavior: auto;
@@ -515,11 +247,11 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
     -ms-overflow-style: none;
   }
 
-  .c18::-webkit-scrollbar {
+  .emotion-66::-webkit-scrollbar {
     display: none;
   }
 
-  .c18:after {
+  .emotion-66:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -531,338 +263,714 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
     pointer-events: none;
     background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
   }
+
+@media (min-width:25rem) {
+    .emotion-66:after {
+      width: 6rem;
+    }
+}
+}
+
+.emotion-64 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-64 {
+    overflow: hidden;
+  }
+}
+
+.emotion-34 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width:37.4375rem) {
+  .emotion-34:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-34::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #eab3b3;
+    z-index: -1;
+  }
+}
+
+.emotion-32 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-32 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-32 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .emotion-32 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.emotion-32:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.emotion-32:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.emotion-104 {
+  background-color: #222222;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  visibility: hidden;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-104 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .emotion-104 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.emotion-102 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.emotion-72 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.emotion-72:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.emotion-70 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-70 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-70 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-70:hover,
+.emotion-70:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-12 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  padding: 1rem 0.5rem;
 }
 
 @media (min-width:25rem) {
-  .c0 {
+  .emotion-12 {
     padding: 1rem;
   }
 }
 
+.emotion-10 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.emotion-10::after {
+  content: '\\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.emotion-0 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .emotion-0 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .emotion-0 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .emotion-0 {
     float: left;
     margin-right: 3.5%;
     width: 22%;
   }
 }
 
+.emotion-2 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #BEBEBE;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .emotion-2 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .emotion-2 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
-    width: 18%;
-    float: right;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
+  .emotion-2 {
     margin: 0;
     float: left;
     width: 53%;
   }
 }
 
+.emotion-2 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2 a:focus,
+.emotion-2 a:hover {
+  color: #FFFFFF;
+}
+
+.emotion-8 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 button {
+  .emotion-8 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-8 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-8 li + li {
+  padding-top: 0.5rem;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-8 {
+    width: 18%;
+    float: right;
+  }
+}
+
+.emotion-4 button {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #F6A21D;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-4 button {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 button {
+  .emotion-4 button {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-<header
-  role="banner"
->
-  <div
-    class="c0"
-    dir="ltr"
+.emotion-4 button:focus,
+.emotion-4 button:hover {
+  color: #FFFFFF;
+}
+
+.emotion-4 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4 a:focus,
+.emotion-4 a:hover {
+  color: #FFFFFF;
+}
+
+.emotion-24 {
+  background-color: #B80000;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+}
+
+@media (min-width:25rem) {
+  .emotion-24 {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+  }
+}
+
+<div>
+  <header
+    role="banner"
   >
     <div
-      class="c1"
+      class="emotion-12 emotion-13"
       dir="ltr"
     >
-      <h2
-        class="c2"
+      <div
+        class="emotion-10 emotion-11"
         dir="ltr"
       >
-        We don update our Privacy and Cookies Policy
-      </h2>
-      <p
-        class="c3"
-        dir="ltr"
-      >
-        We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
-      </p>
-      <ul
-        class="c4"
-        dir="ltr"
-      >
-        <li
-          class="c5"
+        <h2
+          class="emotion-0 emotion-1"
           dir="ltr"
         >
-          <button
-            type="button"
-          >
-            OK
-          </button>
-        </li>
-        <li
-          class="c5"
+          We don update our Privacy and Cookies Policy
+        </h2>
+        <p
+          class="emotion-2 emotion-3"
           dir="ltr"
         >
-          <a
-            href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
-          >
-            Find out wetin don change
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div
-    class="c6"
-  >
-    <div
-      class="c7"
-    >
-      <a
-        class="c8 c9"
-        href="/pidgin"
-      >
-        <svg
-          aria-hidden="true"
-          class="c10"
-          focusable="false"
-          height="24"
-          viewBox="0 0 238 24"
-          xmlns="http://www.w3.org/2000/svg"
+          We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
+        </p>
+        <ul
+          class="emotion-8 emotion-9"
+          dir="ltr"
         >
-          <g
-            fill-rule="evenodd"
-            stroke="#000"
-            stroke-width=".335"
-            style="stroke: #fff;"
+          <li
+            class="emotion-4 emotion-5"
+            dir="ltr"
           >
-            <path
-              d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
-            />
-            <path
-              d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
-            />
-            <path
-              d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM185.18 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.42-.44 1.56 1.56 0 0 0 .5-1.25q0-1.62-2.01-1.62zM194 6.3h1.51v10.57H194zM198.78 16.85V6.3h3.56a7.51 7.51 0 0 1 3.41.65 4.88 4.88 0 0 1 2 1.9 5.29 5.29 0 0 1 .74 2.74 5.18 5.18 0 0 1-.41 2 5.23 5.23 0 0 1-3 2.85 5.33 5.33 0 0 1-1.1.31 14.65 14.65 0 0 1-1.91.08zm3.41-9.21h-1.89v7.86h1.94a7.75 7.75 0 0 0 1.76-.16 4.12 4.12 0 0 0 1-.39 3.59 3.59 0 0 0 .77-.59 3.92 3.92 0 0 0 1.12-2.87 3.63 3.63 0 0 0-1.15-2.78 3.68 3.68 0 0 0-1-.66 4.07 4.07 0 0 0-1-.34 10.57 10.57 0 0 0-1.56-.07zM216.8 11.66h3.55v4.48a9.68 9.68 0 0 1-3.87.85 5.75 5.75 0 0 1-4.2-1.53 5.07 5.07 0 0 1-1.57-3.78 5.26 5.26 0 0 1 1.63-3.94 5.63 5.63 0 0 1 4.08-1.57 7.22 7.22 0 0 1 1.7.19 13.82 13.82 0 0 1 2 .71V8.6a7.43 7.43 0 0 0-3.75-1.1 4 4 0 0 0-2.92 1.18 3.93 3.93 0 0 0-1.19 2.9 3.9 3.9 0 0 0 1.19 2.94 4.23 4.23 0 0 0 3.06 1.14 7.12 7.12 0 0 0 2.17-.42h.14V13h-2zM223.5 6.3h1.5v10.57h-1.5zM236.65 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z"
-            />
-            <path
-              d="M168.37 0v22.59"
-              stroke-width="2"
-            />
-          </g>
-        </svg>
-        <span
-          class="c11"
-          role="text"
-        >
-          <span
-            lang="en-GB"
+            <button
+              type="button"
+            >
+              OK
+            </button>
+          </li>
+          <li
+            class="emotion-4 emotion-5"
+            dir="ltr"
           >
-            BBC News
-          </span>
-          , 
-          Pidgin
-        </span>
-      </a>
-      <a
-        class="c12"
-        dir="ltr"
-        href="#content"
-      >
-        Waka go wetin de inside
-      </a>
+            <a
+              href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            >
+              Find out wetin don change
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <nav
-    class="c13"
-    dir="ltr"
-    role="navigation"
-  >
     <div
-      class="c14"
+      class="emotion-24 emotion-25"
     >
       <div
-        class="c15"
+        class="emotion-22 emotion-23"
       >
-        <button
-          aria-expanded="false"
-          class="c16"
-          dir="ltr"
-          type="button"
+        <a
+          class="emotion-18 emotion-19"
+          href="/pidgin"
         >
           <svg
             aria-hidden="true"
-            class="c17"
+            class="emotion-14 emotion-15"
             focusable="false"
-            height="2.75rem"
-            viewBox="0 0 44 44"
-            width="2.75rem"
+            height="24"
+            viewBox="0 0 238 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
-            />
+            <g
+              fill-rule="evenodd"
+              stroke="#000"
+              stroke-width=".335"
+              style="stroke: #fff;"
+            >
+              <path
+                d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
+              />
+              <path
+                d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
+              />
+              <path
+                d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM185.18 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.42-.44 1.56 1.56 0 0 0 .5-1.25q0-1.62-2.01-1.62zM194 6.3h1.51v10.57H194zM198.78 16.85V6.3h3.56a7.51 7.51 0 0 1 3.41.65 4.88 4.88 0 0 1 2 1.9 5.29 5.29 0 0 1 .74 2.74 5.18 5.18 0 0 1-.41 2 5.23 5.23 0 0 1-3 2.85 5.33 5.33 0 0 1-1.1.31 14.65 14.65 0 0 1-1.91.08zm3.41-9.21h-1.89v7.86h1.94a7.75 7.75 0 0 0 1.76-.16 4.12 4.12 0 0 0 1-.39 3.59 3.59 0 0 0 .77-.59 3.92 3.92 0 0 0 1.12-2.87 3.63 3.63 0 0 0-1.15-2.78 3.68 3.68 0 0 0-1-.66 4.07 4.07 0 0 0-1-.34 10.57 10.57 0 0 0-1.56-.07zM216.8 11.66h3.55v4.48a9.68 9.68 0 0 1-3.87.85 5.75 5.75 0 0 1-4.2-1.53 5.07 5.07 0 0 1-1.57-3.78 5.26 5.26 0 0 1 1.63-3.94 5.63 5.63 0 0 1 4.08-1.57 7.22 7.22 0 0 1 1.7.19 13.82 13.82 0 0 1 2 .71V8.6a7.43 7.43 0 0 0-3.75-1.1 4 4 0 0 0-2.92 1.18 3.93 3.93 0 0 0-1.19 2.9 3.9 3.9 0 0 0 1.19 2.94 4.23 4.23 0 0 0 3.06 1.14 7.12 7.12 0 0 0 2.17-.42h.14V13h-2zM223.5 6.3h1.5v10.57h-1.5zM236.65 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z"
+              />
+              <path
+                d="M168.37 0v22.59"
+                stroke-width="2"
+              />
+            </g>
           </svg>
           <span
-            class="c11"
+            class="emotion-16 emotion-17"
+            role="text"
           >
-            Plenti seshon
+            <span
+              lang="en-GB"
+            >
+              BBC News
+            </span>
+            , 
+            Pidgin
           </span>
-        </button>
+        </a>
+        <div>
+          <a
+            class="emotion-20 emotion-21"
+            dir="ltr"
+            href="#content"
+          >
+            Waka go wetin de inside
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="emotion-108 emotion-109"
+      dir="ltr"
+      role="navigation"
+    >
+      <div
+        class="emotion-106 emotion-107"
+      >
         <div
-          class="c18"
-          dir="ltr"
+          class="emotion-68 emotion-69"
+        >
+          <button
+            aria-expanded="false"
+            class="emotion-30 emotion-31"
+            dir="ltr"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="emotion-26 emotion-27"
+              focusable="false"
+              height="2.75rem"
+              viewBox="0 0 44 44"
+              width="2.75rem"
+            >
+              <path
+                d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+              />
+            </svg>
+            <span
+              class="emotion-16 emotion-17"
+            >
+              Plenti seshon
+            </span>
+          </button>
+          <div
+            class="emotion-66 emotion-67"
+            dir="ltr"
+          >
+            <ul
+              class="emotion-64 emotion-65"
+              role="list"
+            >
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
+                >
+                  Nigeria
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
+                >
+                  Africa
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/world"
+                >
+                  World
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/media/video"
+                >
+                  Video
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                >
+                  Sport
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
+                >
+                  Entertainment
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/popular/read"
+                >
+                  Most popular
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="emotion-104 emotion-105"
+          height="0"
         >
           <ul
-            class="c19"
+            class="emotion-102 emotion-103"
             role="list"
           >
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin"
               >
                 Home
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
               >
                 Nigeria
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
               >
                 Africa
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/world"
               >
                 World
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/media/video"
               >
                 Video
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
               >
                 Sport
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
               >
                 Entertainment
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/popular/read"
               >
                 Most popular
@@ -871,111 +979,128 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
           </ul>
         </div>
       </div>
-      <div
-        class="c23"
-        height="0"
-      >
-        <ul
-          class="c24"
-          role="list"
-        >
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin"
-            >
-              Home
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
-            >
-              Nigeria
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
-            >
-              Africa
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/world"
-            >
-              World
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/media/video"
-            >
-              Video
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
-            >
-              Sport
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
-            >
-              Entertainment
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/popular/read"
-            >
-              Most popular
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+    </nav>
+  </header>
+</div>
 `;
 
 exports[`Header Snapshots should render correctly for WS radio page 1`] = `
-.c12 {
+.emotion-24 {
+  background-color: #B80000;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+@media (min-width:25rem) {
+  .emotion-24 {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+  }
+}
+
+.emotion-22 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-22 {
+    display: block;
+  }
+}
+
+.emotion-18 {
+  display: inline-block;
+  width: 100%;
+  max-width: 14.880600000000001rem;
+  min-width: 9.9204rem;
+  -webkit-flex: 1 1 9.9204rem;
+  -ms-flex: 1 1 9.9204rem;
+  flex: 1 1 9.9204rem;
+  -ms-flex-preferred-size: 14.880600000000001rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-18 {
+    display: block;
+  }
+}
+
+.emotion-14 {
+  box-sizing: content-box;
+  color: #FFFFFF;
+  fill: currentColor;
+  padding-top: 0.625rem;
+  padding-bottom: 0.375rem;
+  height: 1.5rem;
+  width: 100%;
+  max-width: 14.880600000000001rem;
+  min-width: 9.9204rem;
+  -webkit-flex: 1 1 9.9204rem;
+  -ms-flex: 1 1 9.9204rem;
+  flex: 1 1 9.9204rem;
+  -ms-flex-preferred-size: 14.880600000000001rem;
+}
+
+@media (min-width:25rem) {
+  .emotion-14 {
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-14 {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),print {
+  .emotion-14 {
+    fill: windowText;
+  }
+}
+
+.emotion-19:hover .emotion-14,
+.emotion-19:focus .emotion-14 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+.emotion-16 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-20 {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -997,7 +1122,21 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   font-style: normal;
 }
 
-.c12:focus {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-20:focus {
   -webkit-clip-path: none;
   clip-path: none;
   -webkit-clip: auto;
@@ -1008,134 +1147,39 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   left: 0;
 }
 
-.c11 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
+@media (min-width:25rem) {
+  .emotion-20:focus {
+    top: 0.5rem;
+  }
 }
 
-.c7 {
+@media (max-width:37.4375rem) {
+  .emotion-20 {
+    padding: 0.5rem;
+  }
+}
+
+.emotion-108 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
+}
+
+.emotion-108 .emotion-35::after {
+  left: 0;
+}
+
+.emotion-106 {
+  position: relative;
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.c6 {
-  background-color: #B80000;
-  min-height: 2.5rem;
-  width: 100%;
-  padding: 0 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
+.emotion-68 {
+  position: relative;
 }
 
-.c9 {
-  display: inline-block;
-  width: 100%;
-  max-width: 14.880600000000001rem;
-  min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
-}
-
-.c10 {
-  box-sizing: content-box;
-  color: #FFFFFF;
-  fill: currentColor;
-  padding-top: 0.625rem;
-  padding-bottom: 0.375rem;
-  height: 1.5rem;
-  width: 100%;
-  max-width: 14.880600000000001rem;
-  min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
-}
-
-.c8:hover .c10,
-.c8:focus .c10 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 0.25rem solid #FFFFFF;
-  margin-bottom: -0.25rem;
-}
-
-.c17 {
-  color: #fff;
-  fill: currentColor;
-}
-
-.c23 {
-  background-color: #222222;
-  clear: both;
-  overflow: hidden;
-  height: 0;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
-  transition-timing-function: cubic-bezier(0,0,0.58,1);
-  visibility: hidden;
-}
-
-.c24 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0 0.5rem;
-  border-bottom: 0.125rem solid #3F3F42;
-}
-
-.c25 {
-  padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid #3F3F42;
-}
-
-.c25:last-child {
-  padding-bottom: 1rem;
-  border: 0;
-}
-
-.c26 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #FFFFFF;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c26:hover,
-.c26:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c16 {
+.emotion-30 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -1146,14 +1190,14 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   width: 2.75rem;
 }
 
-.c16:hover,
-.c16:focus {
+.emotion-30:hover,
+.emotion-30:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.c16:hover::after,
-.c16:focus::after {
+.emotion-30:hover::after,
+.emotion-30:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1163,319 +1207,31 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c16 svg {
-  vertical-align: middle;
-}
-
-.c14 {
-  position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c19 {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-
-.c22 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #FDFDFD;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.75rem;
-}
-
-.c22:hover::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-}
-
-.c22:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-  top: 0;
-  border: 0.25rem solid #FFFFFF;
-}
-
-.c21 {
-  display: inline-block;
-  position: relative;
-  z-index: 2;
-}
-
-.c13 {
-  position: relative;
-  background-color: #B80000;
-  border-top: 0.0625rem solid #FFFFFF;
-}
-
-.c13 .c20::after {
-  left: 0;
-}
-
-.c15 {
-  position: relative;
-}
-
-.c0 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #323232;
-  padding: 1rem 0.5rem;
-}
-
-.c1 {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c1::after {
-  content: '\\0020';
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-.c2 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  padding: 0;
-  margin: 0;
-}
-
-.c4 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #F6A21D;
-  font-weight: 600;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.c4 li + li {
-  padding-top: 0.5rem;
-}
-
-.c3 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #BEBEBE;
-}
-
-.c3 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c3 a:focus,
-.c3 a:hover {
-  color: #FFFFFF;
-}
-
-.c5 button {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #F6A21D;
-  font-weight: 700;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-.c5 button:focus,
-.c5 button:hover {
-  color: #FFFFFF;
-}
-
-.c5 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5 a:focus,
-.c5 a:hover {
-  color: #FFFFFF;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
 @media (min-width:37.5rem) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c12:focus {
-    top: 0.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c12 {
-    padding: 0.5rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c7 {
-    display: block;
-  }
-}
-
-@media (min-width:25rem) {
-  .c6 {
-    min-height: 3.25rem;
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c9 {
-    display: block;
-  }
-}
-
-@media (min-width:25rem) {
-  .c10 {
-    padding-top: 1rem;
-    padding-bottom: 0.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    padding-top: 1.25rem;
-    padding-bottom: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),print {
-  .c10 {
-    fill: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c23 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (prefers-reduced-motion:reduce) {
-  .c23 {
-    -webkit-transition: none;
-    transition: none;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c26 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c26 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 {
+  .emotion-30 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) {
-  .c16 {
+  .emotion-30 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c19 {
-    overflow: hidden;
-  }
+.emotion-30 svg {
+  vertical-align: middle;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c22 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
+.emotion-26 {
+  color: #fff;
+  fill: currentColor;
 }
 
 @media (max-width:37.4375rem) {
-  .c22 {
-    padding: 0.75rem 0.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c21:last-child {
-    margin-right: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c21::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    width: 80rem;
-    border-bottom: 0.0625rem solid #eab3b3;
-    z-index: -1;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c18 {
+  .emotion-66 {
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-scroll-behavior: auto;
@@ -1490,11 +1246,11 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
     -ms-overflow-style: none;
   }
 
-  .c18::-webkit-scrollbar {
+  .emotion-66::-webkit-scrollbar {
     display: none;
   }
 
-  .c18:after {
+  .emotion-66:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -1506,338 +1262,700 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
     pointer-events: none;
     background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
   }
+
+@media (min-width:25rem) {
+    .emotion-66:after {
+      width: 6rem;
+    }
+}
+}
+
+.emotion-64 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-64 {
+    overflow: hidden;
+  }
+}
+
+.emotion-34 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width:37.4375rem) {
+  .emotion-34:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-34::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #eab3b3;
+    z-index: -1;
+  }
+}
+
+.emotion-32 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-32 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-32 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .emotion-32 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.emotion-32:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.emotion-32:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.emotion-104 {
+  background-color: #222222;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  visibility: hidden;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-104 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .emotion-104 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.emotion-102 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.emotion-72 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.emotion-72:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.emotion-70 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-70 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-70 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-70:hover,
+.emotion-70:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-12 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  padding: 1rem 0.5rem;
 }
 
 @media (min-width:25rem) {
-  .c0 {
+  .emotion-12 {
     padding: 1rem;
   }
 }
 
+.emotion-10 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.emotion-10::after {
+  content: '\\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.emotion-0 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .emotion-0 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .emotion-0 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .emotion-0 {
     float: left;
     margin-right: 3.5%;
     width: 22%;
   }
 }
 
+.emotion-2 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #BEBEBE;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .emotion-2 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .emotion-2 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
-    width: 18%;
-    float: right;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
+  .emotion-2 {
     margin: 0;
     float: left;
     width: 53%;
   }
 }
 
+.emotion-2 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2 a:focus,
+.emotion-2 a:hover {
+  color: #FFFFFF;
+}
+
+.emotion-8 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 button {
+  .emotion-8 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-8 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-8 li + li {
+  padding-top: 0.5rem;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-8 {
+    width: 18%;
+    float: right;
+  }
+}
+
+.emotion-4 button {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #F6A21D;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-4 button {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 button {
+  .emotion-4 button {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-<header
-  role="banner"
->
-  <div
-    class="c0"
-    dir="ltr"
+.emotion-4 button:focus,
+.emotion-4 button:hover {
+  color: #FFFFFF;
+}
+
+.emotion-4 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4 a:focus,
+.emotion-4 a:hover {
+  color: #FFFFFF;
+}
+
+<div>
+  <header
+    role="banner"
   >
     <div
-      class="c1"
+      class="emotion-12 emotion-13"
       dir="ltr"
     >
-      <h2
-        class="c2"
+      <div
+        class="emotion-10 emotion-11"
         dir="ltr"
       >
-        We don update our Privacy and Cookies Policy
-      </h2>
-      <p
-        class="c3"
-        dir="ltr"
-      >
-        We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
-      </p>
-      <ul
-        class="c4"
-        dir="ltr"
-      >
-        <li
-          class="c5"
+        <h2
+          class="emotion-0 emotion-1"
           dir="ltr"
         >
-          <button
-            type="button"
-          >
-            OK
-          </button>
-        </li>
-        <li
-          class="c5"
+          We don update our Privacy and Cookies Policy
+        </h2>
+        <p
+          class="emotion-2 emotion-3"
           dir="ltr"
         >
-          <a
-            href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
-          >
-            Find out wetin don change
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div
-    class="c6"
-  >
-    <div
-      class="c7"
-    >
-      <a
-        class="c8 c9"
-        href="/pidgin"
-      >
-        <svg
-          aria-hidden="true"
-          class="c10"
-          focusable="false"
-          height="24"
-          viewBox="0 0 238 24"
-          xmlns="http://www.w3.org/2000/svg"
+          We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
+        </p>
+        <ul
+          class="emotion-8 emotion-9"
+          dir="ltr"
         >
-          <g
-            fill-rule="evenodd"
-            stroke="#000"
-            stroke-width=".335"
-            style="stroke: #fff;"
+          <li
+            class="emotion-4 emotion-5"
+            dir="ltr"
           >
-            <path
-              d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
-            />
-            <path
-              d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
-            />
-            <path
-              d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM185.18 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.42-.44 1.56 1.56 0 0 0 .5-1.25q0-1.62-2.01-1.62zM194 6.3h1.51v10.57H194zM198.78 16.85V6.3h3.56a7.51 7.51 0 0 1 3.41.65 4.88 4.88 0 0 1 2 1.9 5.29 5.29 0 0 1 .74 2.74 5.18 5.18 0 0 1-.41 2 5.23 5.23 0 0 1-3 2.85 5.33 5.33 0 0 1-1.1.31 14.65 14.65 0 0 1-1.91.08zm3.41-9.21h-1.89v7.86h1.94a7.75 7.75 0 0 0 1.76-.16 4.12 4.12 0 0 0 1-.39 3.59 3.59 0 0 0 .77-.59 3.92 3.92 0 0 0 1.12-2.87 3.63 3.63 0 0 0-1.15-2.78 3.68 3.68 0 0 0-1-.66 4.07 4.07 0 0 0-1-.34 10.57 10.57 0 0 0-1.56-.07zM216.8 11.66h3.55v4.48a9.68 9.68 0 0 1-3.87.85 5.75 5.75 0 0 1-4.2-1.53 5.07 5.07 0 0 1-1.57-3.78 5.26 5.26 0 0 1 1.63-3.94 5.63 5.63 0 0 1 4.08-1.57 7.22 7.22 0 0 1 1.7.19 13.82 13.82 0 0 1 2 .71V8.6a7.43 7.43 0 0 0-3.75-1.1 4 4 0 0 0-2.92 1.18 3.93 3.93 0 0 0-1.19 2.9 3.9 3.9 0 0 0 1.19 2.94 4.23 4.23 0 0 0 3.06 1.14 7.12 7.12 0 0 0 2.17-.42h.14V13h-2zM223.5 6.3h1.5v10.57h-1.5zM236.65 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z"
-            />
-            <path
-              d="M168.37 0v22.59"
-              stroke-width="2"
-            />
-          </g>
-        </svg>
-        <span
-          class="c11"
-          role="text"
-        >
-          <span
-            lang="en-GB"
+            <button
+              type="button"
+            >
+              OK
+            </button>
+          </li>
+          <li
+            class="emotion-4 emotion-5"
+            dir="ltr"
           >
-            BBC News
-          </span>
-          , 
-          Pidgin
-        </span>
-      </a>
-      <a
-        class="c12"
-        dir="ltr"
-        href="#content"
-      >
-        Waka go wetin de inside
-      </a>
+            <a
+              href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            >
+              Find out wetin don change
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <nav
-    class="c13"
-    dir="ltr"
-    role="navigation"
-  >
     <div
-      class="c14"
+      class="emotion-24 emotion-25"
     >
       <div
-        class="c15"
+        class="emotion-22 emotion-23"
       >
-        <button
-          aria-expanded="false"
-          class="c16"
-          dir="ltr"
-          type="button"
+        <a
+          class="emotion-18 emotion-19"
+          href="/pidgin"
         >
           <svg
             aria-hidden="true"
-            class="c17"
+            class="emotion-14 emotion-15"
             focusable="false"
-            height="2.75rem"
-            viewBox="0 0 44 44"
-            width="2.75rem"
+            height="24"
+            viewBox="0 0 238 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
-            />
+            <g
+              fill-rule="evenodd"
+              stroke="#000"
+              stroke-width=".335"
+              style="stroke: #fff;"
+            >
+              <path
+                d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
+              />
+              <path
+                d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
+              />
+              <path
+                d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM185.18 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.42-.44 1.56 1.56 0 0 0 .5-1.25q0-1.62-2.01-1.62zM194 6.3h1.51v10.57H194zM198.78 16.85V6.3h3.56a7.51 7.51 0 0 1 3.41.65 4.88 4.88 0 0 1 2 1.9 5.29 5.29 0 0 1 .74 2.74 5.18 5.18 0 0 1-.41 2 5.23 5.23 0 0 1-3 2.85 5.33 5.33 0 0 1-1.1.31 14.65 14.65 0 0 1-1.91.08zm3.41-9.21h-1.89v7.86h1.94a7.75 7.75 0 0 0 1.76-.16 4.12 4.12 0 0 0 1-.39 3.59 3.59 0 0 0 .77-.59 3.92 3.92 0 0 0 1.12-2.87 3.63 3.63 0 0 0-1.15-2.78 3.68 3.68 0 0 0-1-.66 4.07 4.07 0 0 0-1-.34 10.57 10.57 0 0 0-1.56-.07zM216.8 11.66h3.55v4.48a9.68 9.68 0 0 1-3.87.85 5.75 5.75 0 0 1-4.2-1.53 5.07 5.07 0 0 1-1.57-3.78 5.26 5.26 0 0 1 1.63-3.94 5.63 5.63 0 0 1 4.08-1.57 7.22 7.22 0 0 1 1.7.19 13.82 13.82 0 0 1 2 .71V8.6a7.43 7.43 0 0 0-3.75-1.1 4 4 0 0 0-2.92 1.18 3.93 3.93 0 0 0-1.19 2.9 3.9 3.9 0 0 0 1.19 2.94 4.23 4.23 0 0 0 3.06 1.14 7.12 7.12 0 0 0 2.17-.42h.14V13h-2zM223.5 6.3h1.5v10.57h-1.5zM236.65 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z"
+              />
+              <path
+                d="M168.37 0v22.59"
+                stroke-width="2"
+              />
+            </g>
           </svg>
           <span
-            class="c11"
+            class="emotion-16 emotion-17"
+            role="text"
           >
-            Plenti seshon
+            <span
+              lang="en-GB"
+            >
+              BBC News
+            </span>
+            , 
+            Pidgin
           </span>
-        </button>
+        </a>
+        <div>
+          <a
+            class="emotion-20 emotion-21"
+            dir="ltr"
+            href="#content"
+          >
+            Waka go wetin de inside
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="emotion-108 emotion-109"
+      dir="ltr"
+      role="navigation"
+    >
+      <div
+        class="emotion-106 emotion-107"
+      >
         <div
-          class="c18"
-          dir="ltr"
+          class="emotion-68 emotion-69"
+        >
+          <button
+            aria-expanded="false"
+            class="emotion-30 emotion-31"
+            dir="ltr"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="emotion-26 emotion-27"
+              focusable="false"
+              height="2.75rem"
+              viewBox="0 0 44 44"
+              width="2.75rem"
+            >
+              <path
+                d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+              />
+            </svg>
+            <span
+              class="emotion-16 emotion-17"
+            >
+              Plenti seshon
+            </span>
+          </button>
+          <div
+            class="emotion-66 emotion-67"
+            dir="ltr"
+          >
+            <ul
+              class="emotion-64 emotion-65"
+              role="list"
+            >
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
+                >
+                  Nigeria
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
+                >
+                  Africa
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/world"
+                >
+                  World
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/media/video"
+                >
+                  Video
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                >
+                  Sport
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
+                >
+                  Entertainment
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/popular/read"
+                >
+                  Most popular
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="emotion-104 emotion-105"
+          height="0"
         >
           <ul
-            class="c19"
+            class="emotion-102 emotion-103"
             role="list"
           >
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin"
               >
                 Home
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
               >
                 Nigeria
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
               >
                 Africa
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/world"
               >
                 World
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/media/video"
               >
                 Video
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
               >
                 Sport
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
               >
                 Entertainment
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/popular/read"
               >
                 Most popular
@@ -1846,111 +1964,128 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
           </ul>
         </div>
       </div>
-      <div
-        class="c23"
-        height="0"
-      >
-        <ul
-          class="c24"
-          role="list"
-        >
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin"
-            >
-              Home
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
-            >
-              Nigeria
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
-            >
-              Africa
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/world"
-            >
-              World
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/media/video"
-            >
-              Video
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
-            >
-              Sport
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
-            >
-              Entertainment
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/popular/read"
-            >
-              Most popular
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+    </nav>
+  </header>
+</div>
 `;
 
 exports[`Header Snapshots should render correctly for news article 1`] = `
-.c12 {
+.emotion-24 {
+  background-color: #B80000;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+@media (min-width:25rem) {
+  .emotion-24 {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+  }
+}
+
+.emotion-22 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-22 {
+    display: block;
+  }
+}
+
+.emotion-18 {
+  display: inline-block;
+  width: 100%;
+  max-width: 14.880600000000001rem;
+  min-width: 9.9204rem;
+  -webkit-flex: 1 1 9.9204rem;
+  -ms-flex: 1 1 9.9204rem;
+  flex: 1 1 9.9204rem;
+  -ms-flex-preferred-size: 14.880600000000001rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-18 {
+    display: block;
+  }
+}
+
+.emotion-14 {
+  box-sizing: content-box;
+  color: #FFFFFF;
+  fill: currentColor;
+  padding-top: 0.625rem;
+  padding-bottom: 0.375rem;
+  height: 1.5rem;
+  width: 100%;
+  max-width: 14.880600000000001rem;
+  min-width: 9.9204rem;
+  -webkit-flex: 1 1 9.9204rem;
+  -ms-flex: 1 1 9.9204rem;
+  flex: 1 1 9.9204rem;
+  -ms-flex-preferred-size: 14.880600000000001rem;
+}
+
+@media (min-width:25rem) {
+  .emotion-14 {
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-14 {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),print {
+  .emotion-14 {
+    fill: windowText;
+  }
+}
+
+.emotion-19:hover .emotion-14,
+.emotion-19:focus .emotion-14 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+.emotion-16 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-20 {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -1972,7 +2107,21 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   font-style: normal;
 }
 
-.c12:focus {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-20:focus {
   -webkit-clip-path: none;
   clip-path: none;
   -webkit-clip: auto;
@@ -1983,134 +2132,39 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   left: 0;
 }
 
-.c11 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
+@media (min-width:25rem) {
+  .emotion-20:focus {
+    top: 0.5rem;
+  }
 }
 
-.c7 {
+@media (max-width:37.4375rem) {
+  .emotion-20 {
+    padding: 0.5rem;
+  }
+}
+
+.emotion-108 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
+}
+
+.emotion-108 .emotion-35::after {
+  left: 0;
+}
+
+.emotion-106 {
+  position: relative;
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.c6 {
-  background-color: #B80000;
-  min-height: 2.5rem;
-  width: 100%;
-  padding: 0 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
+.emotion-68 {
+  position: relative;
 }
 
-.c9 {
-  display: inline-block;
-  width: 100%;
-  max-width: 14.880600000000001rem;
-  min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
-}
-
-.c10 {
-  box-sizing: content-box;
-  color: #FFFFFF;
-  fill: currentColor;
-  padding-top: 0.625rem;
-  padding-bottom: 0.375rem;
-  height: 1.5rem;
-  width: 100%;
-  max-width: 14.880600000000001rem;
-  min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
-}
-
-.c8:hover .c10,
-.c8:focus .c10 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 0.25rem solid #FFFFFF;
-  margin-bottom: -0.25rem;
-}
-
-.c17 {
-  color: #fff;
-  fill: currentColor;
-}
-
-.c23 {
-  background-color: #222222;
-  clear: both;
-  overflow: hidden;
-  height: 0;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
-  transition-timing-function: cubic-bezier(0,0,0.58,1);
-  visibility: hidden;
-}
-
-.c24 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0 0.5rem;
-  border-bottom: 0.125rem solid #3F3F42;
-}
-
-.c25 {
-  padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid #3F3F42;
-}
-
-.c25:last-child {
-  padding-bottom: 1rem;
-  border: 0;
-}
-
-.c26 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #FFFFFF;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c26:hover,
-.c26:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c16 {
+.emotion-30 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -2121,14 +2175,14 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   width: 2.75rem;
 }
 
-.c16:hover,
-.c16:focus {
+.emotion-30:hover,
+.emotion-30:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.c16:hover::after,
-.c16:focus::after {
+.emotion-30:hover::after,
+.emotion-30:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -2138,319 +2192,31 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c16 svg {
-  vertical-align: middle;
-}
-
-.c14 {
-  position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c19 {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-
-.c22 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #FDFDFD;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.75rem;
-}
-
-.c22:hover::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-}
-
-.c22:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-  top: 0;
-  border: 0.25rem solid #FFFFFF;
-}
-
-.c21 {
-  display: inline-block;
-  position: relative;
-  z-index: 2;
-}
-
-.c13 {
-  position: relative;
-  background-color: #B80000;
-  border-top: 0.0625rem solid #FFFFFF;
-}
-
-.c13 .c20::after {
-  left: 0;
-}
-
-.c15 {
-  position: relative;
-}
-
-.c0 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #323232;
-  padding: 1rem 0.5rem;
-}
-
-.c1 {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c1::after {
-  content: '\\0020';
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-.c2 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  padding: 0;
-  margin: 0;
-}
-
-.c4 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #F6A21D;
-  font-weight: 600;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.c4 li + li {
-  padding-top: 0.5rem;
-}
-
-.c3 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #BEBEBE;
-}
-
-.c3 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c3 a:focus,
-.c3 a:hover {
-  color: #FFFFFF;
-}
-
-.c5 button {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #F6A21D;
-  font-weight: 700;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-.c5 button:focus,
-.c5 button:hover {
-  color: #FFFFFF;
-}
-
-.c5 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5 a:focus,
-.c5 a:hover {
-  color: #FFFFFF;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
 @media (min-width:37.5rem) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c12:focus {
-    top: 0.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c12 {
-    padding: 0.5rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c7 {
-    display: block;
-  }
-}
-
-@media (min-width:25rem) {
-  .c6 {
-    min-height: 3.25rem;
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c9 {
-    display: block;
-  }
-}
-
-@media (min-width:25rem) {
-  .c10 {
-    padding-top: 1rem;
-    padding-bottom: 0.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    padding-top: 1.25rem;
-    padding-bottom: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),print {
-  .c10 {
-    fill: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c23 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (prefers-reduced-motion:reduce) {
-  .c23 {
-    -webkit-transition: none;
-    transition: none;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c26 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c26 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 {
+  .emotion-30 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) {
-  .c16 {
+  .emotion-30 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c19 {
-    overflow: hidden;
-  }
+.emotion-30 svg {
+  vertical-align: middle;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c22 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
+.emotion-26 {
+  color: #fff;
+  fill: currentColor;
 }
 
 @media (max-width:37.4375rem) {
-  .c22 {
-    padding: 0.75rem 0.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c21:last-child {
-    margin-right: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c21::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    width: 80rem;
-    border-bottom: 0.0625rem solid #eab3b3;
-    z-index: -1;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c18 {
+  .emotion-66 {
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-scroll-behavior: auto;
@@ -2465,11 +2231,11 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
     -ms-overflow-style: none;
   }
 
-  .c18::-webkit-scrollbar {
+  .emotion-66::-webkit-scrollbar {
     display: none;
   }
 
-  .c18:after {
+  .emotion-66:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -2481,338 +2247,700 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
     pointer-events: none;
     background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
   }
+
+@media (min-width:25rem) {
+    .emotion-66:after {
+      width: 6rem;
+    }
+}
+}
+
+.emotion-64 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-64 {
+    overflow: hidden;
+  }
+}
+
+.emotion-34 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width:37.4375rem) {
+  .emotion-34:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-34::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #eab3b3;
+    z-index: -1;
+  }
+}
+
+.emotion-32 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-32 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-32 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .emotion-32 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.emotion-32:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.emotion-32:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.emotion-104 {
+  background-color: #222222;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  visibility: hidden;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-104 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .emotion-104 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.emotion-102 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.emotion-72 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.emotion-72:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.emotion-70 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-70 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-70 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-70:hover,
+.emotion-70:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-12 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  padding: 1rem 0.5rem;
 }
 
 @media (min-width:25rem) {
-  .c0 {
+  .emotion-12 {
     padding: 1rem;
   }
 }
 
+.emotion-10 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.emotion-10::after {
+  content: '\\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.emotion-0 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .emotion-0 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .emotion-0 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .emotion-0 {
     float: left;
     margin-right: 3.5%;
     width: 22%;
   }
 }
 
+.emotion-2 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #BEBEBE;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .emotion-2 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .emotion-2 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
-    width: 18%;
-    float: right;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
+  .emotion-2 {
     margin: 0;
     float: left;
     width: 53%;
   }
 }
 
+.emotion-2 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2 a:focus,
+.emotion-2 a:hover {
+  color: #FFFFFF;
+}
+
+.emotion-8 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 button {
+  .emotion-8 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-8 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-8 li + li {
+  padding-top: 0.5rem;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-8 {
+    width: 18%;
+    float: right;
+  }
+}
+
+.emotion-4 button {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #F6A21D;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-4 button {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 button {
+  .emotion-4 button {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-<header
-  role="banner"
->
-  <div
-    class="c0"
-    dir="ltr"
+.emotion-4 button:focus,
+.emotion-4 button:hover {
+  color: #FFFFFF;
+}
+
+.emotion-4 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4 a:focus,
+.emotion-4 a:hover {
+  color: #FFFFFF;
+}
+
+<div>
+  <header
+    role="banner"
   >
     <div
-      class="c1"
+      class="emotion-12 emotion-13"
       dir="ltr"
     >
-      <h2
-        class="c2"
+      <div
+        class="emotion-10 emotion-11"
         dir="ltr"
       >
-        We don update our Privacy and Cookies Policy
-      </h2>
-      <p
-        class="c3"
-        dir="ltr"
-      >
-        We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
-      </p>
-      <ul
-        class="c4"
-        dir="ltr"
-      >
-        <li
-          class="c5"
+        <h2
+          class="emotion-0 emotion-1"
           dir="ltr"
         >
-          <button
-            type="button"
-          >
-            OK
-          </button>
-        </li>
-        <li
-          class="c5"
+          We don update our Privacy and Cookies Policy
+        </h2>
+        <p
+          class="emotion-2 emotion-3"
           dir="ltr"
         >
-          <a
-            href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
-          >
-            Find out wetin don change
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div
-    class="c6"
-  >
-    <div
-      class="c7"
-    >
-      <a
-        class="c8 c9"
-        href="/pidgin"
-      >
-        <svg
-          aria-hidden="true"
-          class="c10"
-          focusable="false"
-          height="24"
-          viewBox="0 0 238 24"
-          xmlns="http://www.w3.org/2000/svg"
+          We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
+        </p>
+        <ul
+          class="emotion-8 emotion-9"
+          dir="ltr"
         >
-          <g
-            fill-rule="evenodd"
-            stroke="#000"
-            stroke-width=".335"
-            style="stroke: #fff;"
+          <li
+            class="emotion-4 emotion-5"
+            dir="ltr"
           >
-            <path
-              d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
-            />
-            <path
-              d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
-            />
-            <path
-              d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM185.18 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.42-.44 1.56 1.56 0 0 0 .5-1.25q0-1.62-2.01-1.62zM194 6.3h1.51v10.57H194zM198.78 16.85V6.3h3.56a7.51 7.51 0 0 1 3.41.65 4.88 4.88 0 0 1 2 1.9 5.29 5.29 0 0 1 .74 2.74 5.18 5.18 0 0 1-.41 2 5.23 5.23 0 0 1-3 2.85 5.33 5.33 0 0 1-1.1.31 14.65 14.65 0 0 1-1.91.08zm3.41-9.21h-1.89v7.86h1.94a7.75 7.75 0 0 0 1.76-.16 4.12 4.12 0 0 0 1-.39 3.59 3.59 0 0 0 .77-.59 3.92 3.92 0 0 0 1.12-2.87 3.63 3.63 0 0 0-1.15-2.78 3.68 3.68 0 0 0-1-.66 4.07 4.07 0 0 0-1-.34 10.57 10.57 0 0 0-1.56-.07zM216.8 11.66h3.55v4.48a9.68 9.68 0 0 1-3.87.85 5.75 5.75 0 0 1-4.2-1.53 5.07 5.07 0 0 1-1.57-3.78 5.26 5.26 0 0 1 1.63-3.94 5.63 5.63 0 0 1 4.08-1.57 7.22 7.22 0 0 1 1.7.19 13.82 13.82 0 0 1 2 .71V8.6a7.43 7.43 0 0 0-3.75-1.1 4 4 0 0 0-2.92 1.18 3.93 3.93 0 0 0-1.19 2.9 3.9 3.9 0 0 0 1.19 2.94 4.23 4.23 0 0 0 3.06 1.14 7.12 7.12 0 0 0 2.17-.42h.14V13h-2zM223.5 6.3h1.5v10.57h-1.5zM236.65 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z"
-            />
-            <path
-              d="M168.37 0v22.59"
-              stroke-width="2"
-            />
-          </g>
-        </svg>
-        <span
-          class="c11"
-          role="text"
-        >
-          <span
-            lang="en-GB"
+            <button
+              type="button"
+            >
+              OK
+            </button>
+          </li>
+          <li
+            class="emotion-4 emotion-5"
+            dir="ltr"
           >
-            BBC News
-          </span>
-          , 
-          Pidgin
-        </span>
-      </a>
-      <a
-        class="c12"
-        dir="ltr"
-        href="#content"
-      >
-        Waka go wetin de inside
-      </a>
+            <a
+              href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            >
+              Find out wetin don change
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <nav
-    class="c13"
-    dir="ltr"
-    role="navigation"
-  >
     <div
-      class="c14"
+      class="emotion-24 emotion-25"
     >
       <div
-        class="c15"
+        class="emotion-22 emotion-23"
       >
-        <button
-          aria-expanded="false"
-          class="c16"
-          dir="ltr"
-          type="button"
+        <a
+          class="emotion-18 emotion-19"
+          href="/pidgin"
         >
           <svg
             aria-hidden="true"
-            class="c17"
+            class="emotion-14 emotion-15"
             focusable="false"
-            height="2.75rem"
-            viewBox="0 0 44 44"
-            width="2.75rem"
+            height="24"
+            viewBox="0 0 238 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
-            />
+            <g
+              fill-rule="evenodd"
+              stroke="#000"
+              stroke-width=".335"
+              style="stroke: #fff;"
+            >
+              <path
+                d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
+              />
+              <path
+                d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
+              />
+              <path
+                d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM185.18 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.42-.44 1.56 1.56 0 0 0 .5-1.25q0-1.62-2.01-1.62zM194 6.3h1.51v10.57H194zM198.78 16.85V6.3h3.56a7.51 7.51 0 0 1 3.41.65 4.88 4.88 0 0 1 2 1.9 5.29 5.29 0 0 1 .74 2.74 5.18 5.18 0 0 1-.41 2 5.23 5.23 0 0 1-3 2.85 5.33 5.33 0 0 1-1.1.31 14.65 14.65 0 0 1-1.91.08zm3.41-9.21h-1.89v7.86h1.94a7.75 7.75 0 0 0 1.76-.16 4.12 4.12 0 0 0 1-.39 3.59 3.59 0 0 0 .77-.59 3.92 3.92 0 0 0 1.12-2.87 3.63 3.63 0 0 0-1.15-2.78 3.68 3.68 0 0 0-1-.66 4.07 4.07 0 0 0-1-.34 10.57 10.57 0 0 0-1.56-.07zM216.8 11.66h3.55v4.48a9.68 9.68 0 0 1-3.87.85 5.75 5.75 0 0 1-4.2-1.53 5.07 5.07 0 0 1-1.57-3.78 5.26 5.26 0 0 1 1.63-3.94 5.63 5.63 0 0 1 4.08-1.57 7.22 7.22 0 0 1 1.7.19 13.82 13.82 0 0 1 2 .71V8.6a7.43 7.43 0 0 0-3.75-1.1 4 4 0 0 0-2.92 1.18 3.93 3.93 0 0 0-1.19 2.9 3.9 3.9 0 0 0 1.19 2.94 4.23 4.23 0 0 0 3.06 1.14 7.12 7.12 0 0 0 2.17-.42h.14V13h-2zM223.5 6.3h1.5v10.57h-1.5zM236.65 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z"
+              />
+              <path
+                d="M168.37 0v22.59"
+                stroke-width="2"
+              />
+            </g>
           </svg>
           <span
-            class="c11"
+            class="emotion-16 emotion-17"
+            role="text"
           >
-            Plenti seshon
+            <span
+              lang="en-GB"
+            >
+              BBC News
+            </span>
+            , 
+            Pidgin
           </span>
-        </button>
+        </a>
+        <div>
+          <a
+            class="emotion-20 emotion-21"
+            dir="ltr"
+            href="#content"
+          >
+            Waka go wetin de inside
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="emotion-108 emotion-109"
+      dir="ltr"
+      role="navigation"
+    >
+      <div
+        class="emotion-106 emotion-107"
+      >
         <div
-          class="c18"
-          dir="ltr"
+          class="emotion-68 emotion-69"
+        >
+          <button
+            aria-expanded="false"
+            class="emotion-30 emotion-31"
+            dir="ltr"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="emotion-26 emotion-27"
+              focusable="false"
+              height="2.75rem"
+              viewBox="0 0 44 44"
+              width="2.75rem"
+            >
+              <path
+                d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+              />
+            </svg>
+            <span
+              class="emotion-16 emotion-17"
+            >
+              Plenti seshon
+            </span>
+          </button>
+          <div
+            class="emotion-66 emotion-67"
+            dir="ltr"
+          >
+            <ul
+              class="emotion-64 emotion-65"
+              role="list"
+            >
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
+                >
+                  Nigeria
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
+                >
+                  Africa
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/world"
+                >
+                  World
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/media/video"
+                >
+                  Video
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                >
+                  Sport
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
+                >
+                  Entertainment
+                </a>
+              </li>
+              <li
+                class="emotion-34 emotion-35"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-32 emotion-33"
+                  href="/pidgin/popular/read"
+                >
+                  Most popular
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="emotion-104 emotion-105"
+          height="0"
         >
           <ul
-            class="c19"
+            class="emotion-102 emotion-103"
             role="list"
           >
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin"
               >
                 Home
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
               >
                 Nigeria
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
               >
                 Africa
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/world"
               >
                 World
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/media/video"
               >
                 Video
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
               >
                 Sport
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
               >
                 Entertainment
               </a>
             </li>
             <li
-              class="c20 c21"
-              dir="ltr"
+              class="emotion-72 emotion-73"
               role="listitem"
             >
               <a
-                class="c22"
+                class="emotion-70 emotion-71"
                 href="/pidgin/popular/read"
               >
                 Most popular
@@ -2821,105 +2949,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
           </ul>
         </div>
       </div>
-      <div
-        class="c23"
-        height="0"
-      >
-        <ul
-          class="c24"
-          role="list"
-        >
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin"
-            >
-              Home
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
-            >
-              Nigeria
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
-            >
-              Africa
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/world"
-            >
-              World
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/media/video"
-            >
-              Video
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
-            >
-              Sport
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
-            >
-              Entertainment
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/popular/read"
-            >
-              Most popular
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+    </nav>
+  </header>
+</div>
 `;

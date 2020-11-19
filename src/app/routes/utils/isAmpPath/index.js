@@ -1,9 +1,7 @@
 import Url from 'url-parse';
+import { AMP_REGEX } from '#app/lib/regex.const';
 
-const isAmpPath = url => {
+export default url => {
   const { pathname } = new Url(url, true);
-  const ampRegex = /\.amp$/;
-  return ampRegex.test(pathname);
+  return AMP_REGEX.test(pathname);
 };
-
-export default isAmpPath;
