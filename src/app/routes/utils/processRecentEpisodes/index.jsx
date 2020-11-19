@@ -24,7 +24,7 @@ const formatEpisode = (episode, { serviceName, urlFormatter }) => {
     id: episode.media.id,
     url: urlFormatter(serviceName, episode.id),
     brandTitle: episode.brand.title,
-    episodeTitle: episode.episodeTitle,
+    episodeTitle: episode.media.episodeTitle,
     timestamp: episode.media.versions[0].availableFrom,
     duration: episode.media.versions[0].durationISO8601,
     image: `//${episode.media.imageUrl.replace('$recipe', '768x432')}`,
