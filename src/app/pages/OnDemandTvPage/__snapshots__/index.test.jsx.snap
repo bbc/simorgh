@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = `
-.emotion-25 {
+.emotion-27 {
   width: 100%;
   padding-bottom: 2rem;
 }
 
 @supports (display:grid) {
-  .emotion-25 {
+  .emotion-27 {
     display: grid;
     position: initial;
   }
 
 @media (max-width:14.9375rem) {
-    .emotion-25 {
+    .emotion-27 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(6,1fr);
@@ -23,7 +23,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-25 {
+    .emotion-27 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(6,1fr);
@@ -33,7 +33,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-25 {
+    .emotion-27 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(6,1fr);
@@ -43,7 +43,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-25 {
+    .emotion-27 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(6,1fr);
@@ -53,7 +53,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-25 {
+    .emotion-27 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(8,1fr);
@@ -63,7 +63,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width:80rem) {
-    .emotion-25 {
+    .emotion-27 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(20,1fr);
@@ -74,21 +74,21 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-25 {
+  .emotion-27 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-25 {
+  .emotion-27 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-25 {
+  .emotion-27 {
     width: 100%;
   }
 }
@@ -494,7 +494,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   </div>
   <noscript />
   <main
-    class="emotion-24 emotion-25 emotion-19"
+    class="emotion-26 emotion-27 emotion-19"
     dir="rtl"
     role="main"
   >
@@ -557,24 +557,28 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
         د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
       </p>
     </div>
+    <div
+      class="emotion-18 emotion-19"
+      dir="rtl"
+    />
   </main>
 </div>
 `;
 
 exports[`should show the expired content message if episode is expired 1`] = `
-.emotion-26 {
+.emotion-28 {
   width: 100%;
   padding-bottom: 2rem;
 }
 
 @supports (display:grid) {
-  .emotion-26 {
+  .emotion-28 {
     display: grid;
     position: initial;
   }
 
 @media (max-width:14.9375rem) {
-    .emotion-26 {
+    .emotion-28 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(6,1fr);
@@ -584,7 +588,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-26 {
+    .emotion-28 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(6,1fr);
@@ -594,7 +598,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-26 {
+    .emotion-28 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(6,1fr);
@@ -604,7 +608,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-26 {
+    .emotion-28 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(6,1fr);
@@ -614,7 +618,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-26 {
+    .emotion-28 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(8,1fr);
@@ -624,7 +628,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (min-width:80rem) {
-    .emotion-26 {
+    .emotion-28 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(20,1fr);
@@ -635,21 +639,21 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-26 {
+  .emotion-28 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-26 {
+  .emotion-28 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-26 {
+  .emotion-28 {
     width: 100%;
   }
 }
@@ -1086,7 +1090,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
   </div>
   <noscript />
   <main
-    class="emotion-25 emotion-26 emotion-20"
+    class="emotion-27 emotion-28 emotion-20"
     dir="rtl"
     role="main"
   >
@@ -1149,24 +1153,28 @@ exports[`should show the expired content message if episode is expired 1`] = `
         د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
       </p>
     </div>
+    <div
+      class="emotion-19 emotion-20"
+      dir="rtl"
+    />
   </main>
 </div>
 `;
 
 exports[`should show the future content message if episode is not yet available 1`] = `
-.emotion-26 {
+.emotion-28 {
   width: 100%;
   padding-bottom: 2rem;
 }
 
 @supports (display:grid) {
-  .emotion-26 {
+  .emotion-28 {
     display: grid;
     position: initial;
   }
 
 @media (max-width:14.9375rem) {
-    .emotion-26 {
+    .emotion-28 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(6,1fr);
@@ -1176,7 +1184,7 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-26 {
+    .emotion-28 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(6,1fr);
@@ -1186,7 +1194,7 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-26 {
+    .emotion-28 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(6,1fr);
@@ -1196,7 +1204,7 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-26 {
+    .emotion-28 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(6,1fr);
@@ -1206,7 +1214,7 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-26 {
+    .emotion-28 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(8,1fr);
@@ -1216,7 +1224,7 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (min-width:80rem) {
-    .emotion-26 {
+    .emotion-28 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(20,1fr);
@@ -1227,21 +1235,21 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-26 {
+  .emotion-28 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-26 {
+  .emotion-28 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-26 {
+  .emotion-28 {
     width: 100%;
   }
 }
@@ -1678,7 +1686,7 @@ exports[`should show the future content message if episode is not yet available 
   </div>
   <noscript />
   <main
-    class="emotion-25 emotion-26 emotion-20"
+    class="emotion-27 emotion-28 emotion-20"
     dir="rtl"
     role="main"
   >
@@ -1741,24 +1749,28 @@ exports[`should show the future content message if episode is not yet available 
         د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
       </p>
     </div>
+    <div
+      class="emotion-19 emotion-20"
+      dir="rtl"
+    />
   </main>
 </div>
 `;
 
 exports[`should show the future content message if episode is pending 1`] = `
-.emotion-26 {
+.emotion-28 {
   width: 100%;
   padding-bottom: 2rem;
 }
 
 @supports (display:grid) {
-  .emotion-26 {
+  .emotion-28 {
     display: grid;
     position: initial;
   }
 
 @media (max-width:14.9375rem) {
-    .emotion-26 {
+    .emotion-28 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(6,1fr);
@@ -1768,7 +1780,7 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-26 {
+    .emotion-28 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(6,1fr);
@@ -1778,7 +1790,7 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-26 {
+    .emotion-28 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(6,1fr);
@@ -1788,7 +1800,7 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-26 {
+    .emotion-28 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(6,1fr);
@@ -1798,7 +1810,7 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-26 {
+    .emotion-28 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(8,1fr);
@@ -1808,7 +1820,7 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (min-width:80rem) {
-    .emotion-26 {
+    .emotion-28 {
       width: initial;
       margin: 0;
       grid-template-columns: repeat(20,1fr);
@@ -1819,21 +1831,21 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-26 {
+  .emotion-28 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-26 {
+  .emotion-28 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-26 {
+  .emotion-28 {
     width: 100%;
   }
 }
@@ -2270,7 +2282,7 @@ exports[`should show the future content message if episode is pending 1`] = `
   </div>
   <noscript />
   <main
-    class="emotion-25 emotion-26 emotion-20"
+    class="emotion-27 emotion-28 emotion-20"
     dir="rtl"
     role="main"
   >
@@ -2333,6 +2345,10 @@ exports[`should show the future content message if episode is pending 1`] = `
         د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
       </p>
     </div>
+    <div
+      class="emotion-19 emotion-20"
+      dir="rtl"
+    />
   </main>
 </div>
 `;
