@@ -148,9 +148,7 @@ RecentAudioEpisodes.propTypes = {
       timestamp: number.isRequired,
       duration: string.isRequired,
     }),
-  ),
+  ).isRequired,
 };
-
-RecentAudioEpisodes.defaultProps = { episodes: [] };
 
 export default RecentAudioEpisodes;

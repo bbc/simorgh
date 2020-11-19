@@ -53,7 +53,8 @@ describe('processRecentEpisodes', () => {
   });
 
   it('should correctly exclude episodes by id', () => {
-    const episodeCountInPageData = videoPageData.relatedContent.groups[0].promos.length;
+    const episodeCountInPageData =
+      videoPageData.relatedContent.groups[0].promos.length;
     const firstId = videoPageData.relatedContent.groups[0].promos[0].media.id;
     expect(
       processRecentEpisodes(videoPageData, {
@@ -63,5 +64,4 @@ describe('processRecentEpisodes', () => {
       }).length,
     ).toEqual(episodeCountInPageData - 1);
   });
-
 });
