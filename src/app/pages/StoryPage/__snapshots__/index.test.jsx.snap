@@ -2087,7 +2087,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                   dir="ltr"
                 >
                   <div
-                    class="emotion-100 css-ng0vgl-GridComponent-GridPrimaryColumn emotion-1"
+                    class="emotion-100 css-1fhb3ud-GridComponent-GridPrimaryColumn emotion-1"
                     dir="ltr"
                   >
                     <main
@@ -3371,7 +3371,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   dir="ltr"
                 >
                   <div
-                    class="emotion-100 css-ng0vgl-GridComponent-GridPrimaryColumn emotion-1"
+                    class="emotion-100 css-1fhb3ud-GridComponent-GridPrimaryColumn emotion-1"
                     dir="ltr"
                   >
                     <main
