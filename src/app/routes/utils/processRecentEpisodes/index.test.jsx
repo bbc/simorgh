@@ -3,10 +3,6 @@ import videoPageData from '#data/afrique/bbc_afrique_tv/tv_programmes/w13xttmz.j
 import audioPageData from '#data/indonesia/bbc_indonesian_radio/w13xtt0s.json';
 
 describe('processRecentEpisodes', () => {
-  it.skip('should correctly format episodes', () => {
-    expect(0).toEqual(1);
-  });
-
   it('should correctly format TV episodes using a custom URL formatter', () => {
     expect(
       processRecentEpisodes(videoPageData, {
@@ -57,8 +53,8 @@ describe('processRecentEpisodes', () => {
   });
 
   it('should correctly exclude episodes by id', () => {
-    const episodeCountInPageData = 8; // TODO
-    const firstId = 'w172xc9xq2gllfk'; // TODO
+    const episodeCountInPageData = 8;
+    const firstId = 'w172xc9xq2gllfk';
     expect(
       processRecentEpisodes(videoPageData, {
         recentEpisodesLimit: episodeCountInPageData,
