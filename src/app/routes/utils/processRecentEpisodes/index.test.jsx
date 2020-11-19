@@ -53,8 +53,8 @@ describe('processRecentEpisodes', () => {
   });
 
   it('should correctly exclude episodes by id', () => {
-    const episodeCountInPageData = 8;
-    const firstId = 'w172xc9xq2gllfk';
+    const episodeCountInPageData = videoPageData.relatedContent.groups[0].promos.length;
+    const firstId = videoPageData.relatedContent.groups[0].promos[0].media.id;
     expect(
       processRecentEpisodes(videoPageData, {
         recentEpisodesLimit: episodeCountInPageData,
