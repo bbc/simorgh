@@ -66,7 +66,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
   const videoLabel = pathOr('Video', ['media', 'video'], translations);
 
   return (
-    <div>
+    <>
       <StyledSectionLabel
         script={script}
         service={service}
