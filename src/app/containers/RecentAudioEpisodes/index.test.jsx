@@ -12,21 +12,20 @@ const RecentAudioEpisodesWithContext = ({ episodes }) => (
 );
 
 describe('RecentAudioEpisodes', () => {
-  it('renders', async () => {
-    const { container } = render(
-      <RecentAudioEpisodesWithContext episodes={recentAudioFixtures} />,
-    );
-
-    expect(container.querySelectorAll('li').length).toEqual(4);
-  });
-
-  it('renders the translated section label', () => {
+  it('should render the translated section label', () => {
     const { getByText } = render(
       <RecentAudioEpisodesWithContext episodes={recentAudioFixtures} />,
     );
 
     const recentEpisodesLabel = getByText('Siaran sebelumnya');
     expect(recentEpisodesLabel).toBeInTheDocument();
+  });
+  it('should render the list items', async () => {
+    const { container } = render(
+      <RecentAudioEpisodesWithContext episodes={recentAudioFixtures} />,
+    );
+
+    expect(container.querySelectorAll('li').length).toEqual(4);
   });
 
   it('should include the visually hidden audio and date', () => {
