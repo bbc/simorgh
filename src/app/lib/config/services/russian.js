@@ -140,6 +140,7 @@ export const mainTranslations = {
     previousRadioShow: 'Предыдущая передача',
     nextRadioShow: 'Следующая передача',
     duration: 'Продолжительность',
+    recentEpisodes: 'Прошлые передачи',
   },
   socialEmbed: {
     caption: {
