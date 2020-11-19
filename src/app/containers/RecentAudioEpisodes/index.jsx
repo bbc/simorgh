@@ -20,7 +20,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import EpisodeList from '@bbc/psammead-episode-list';
-import isLive from '#lib/utilities/isLive';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledSpan = styled.span`
@@ -52,7 +51,6 @@ const RecentAudioEpisodes = ({ episodes }) => {
   } = useContext(ServiceContext);
 
   if (!episodes.length) return null;
-  if (isLive()) return null;
 
   const formattedTimestamp = ({ releaseDateTimeStamp, format }) =>
     formatUnixTimestamp({

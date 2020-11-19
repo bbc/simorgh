@@ -19,8 +19,6 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-
-import isLive from '#lib/utilities/isLive';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledSectionLabel = styled(SectionLabel)`
@@ -44,7 +42,6 @@ const RecentVideoEpisodes = ({ episodes }) => {
   } = useContext(ServiceContext);
 
   if (!episodes.length) return null;
-  if (isLive()) return null;
 
   const formatDate = timestamp =>
     formatUnixTimestamp({
