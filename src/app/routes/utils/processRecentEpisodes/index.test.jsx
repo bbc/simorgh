@@ -64,7 +64,4 @@ describe('processRecentEpisodes', () => {
     ).toEqual(episodeCountInPageData - 1);
   });
 
-  it.skip('should correctly pass through custom titles', () => {
-    expect(0).toEqual(1);
-  });
 });
