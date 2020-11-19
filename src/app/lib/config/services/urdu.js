@@ -159,6 +159,7 @@ export const service = {
         previousRadioShow: 'گذشتہ ریڈیو پروگرام',
         nextRadioShow: 'اگلا ریڈیو پروگرام',
         duration: 'دورانیہ',
+        recentEpisodes: 'سابق پروگرام',
       },
       socialEmbed: {
         caption: {
