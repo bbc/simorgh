@@ -170,6 +170,7 @@ export const service = {
         previousRadioShow: 'पिछला रेडियो शो',
         nextRadioShow: 'अगला रेडियो शो',
         duration: 'अवधि',
+        recentEpisodes: 'प्रसारण का समय',
       },
       socialEmbed: {
         caption: {
