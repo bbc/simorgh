@@ -33,8 +33,6 @@ const StyledSectionLabel = styled(SectionLabel)`
     margin-bottom: ${GEL_SPACING_TRPL};
   }
 `;
-
-// TODO: proptypes, disable on live
 const RecentVideoEpisodes = ({ episodes }) => {
   const {
     script,
