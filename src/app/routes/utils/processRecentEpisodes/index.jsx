@@ -15,7 +15,6 @@ const validateEpisode = episode => {
     is(String, episode.media.versions[0].durationISO8601),
     is(Number, episode.media.versions[0].availableFrom),
   ];
-  // TODO: log if invalid
 
   return checks.every(Boolean);
 };
