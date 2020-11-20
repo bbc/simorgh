@@ -57,7 +57,9 @@ const FooterWithContext = stub => (
 
 describe(`FooterContainer`, () => {
   beforeEach(() => {
-    global.Date = class extends RealDate {
+    global.Date = class extends (
+      RealDate
+    ) {
       constructor() {
         super();
         return new RealDate('3000-01-01T12:00:00');
