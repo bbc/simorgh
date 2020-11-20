@@ -4,6 +4,7 @@
   https://github.com/bbc/simorgh/blob/latest/docs/JavaScript-Bundling-Strategy.md
  */
 
+const fs = require('fs');
 const crypto = require('crypto');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -14,7 +15,10 @@ const { DuplicatesPlugin } = require('inspectpack/plugin');
 const { getClientEnvVars } = require('./src/clientEnvVars');
 
 const FRAMEWORK_BUNDLES = ['react', 'react-dom'];
-const TOTAL_PAGES = 13;
+const TOTAL_PAGE_TYPES = fs
+  .readdirSync('./src/app/pages')
+  .filter(file => file.match(/[A-Z].+?Page$/)).length;
+
 const DOT_ENV_CONFIG = dotenv.config();
 
 if (DOT_ENV_CONFIG.error) {
@@ -102,7 +106,7 @@ module.exports = ({
           commons: {
             name: 'commons',
             // if a chunk is used on all pages we put it in commons
-            minChunks: TOTAL_PAGES,
+            minChunks: TOTAL_PAGE_TYPES,
             priority: 20,
           },
           lib: {
