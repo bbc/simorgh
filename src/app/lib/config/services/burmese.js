@@ -170,6 +170,7 @@ export const service = {
         previousRadioShow: 'ယခင် ရေဒီယိုအစီအစဉ်',
         nextRadioShow: 'နောက် ရေဒီယိုအစီအစဉ်',
         duration: 'ကြာမြင့်ချိန်',
+        recentEpisodes: 'ထုတ်လွှင့်ပြီး အစီအစဉ်မျာ',
       },
       socialEmbed: {
         caption: {
