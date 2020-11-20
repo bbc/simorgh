@@ -267,20 +267,12 @@ export const service = {
         url: '/somali',
       },
       {
-        title: 'Warar dheeraad ah',
-        url: '/somali/war',
-      },
-      {
         title: 'Ganacsi',
         url: '/somali/topics/2f2db234-3c2d-40a4-b4ac-eea661faadd0',
       },
       {
         title: 'Cayaaraha',
         url: '/somali/cayaaraha',
-      },
-      {
-        title: 'Aqoon Guud',
-        url: '/somali/aqoon_guud',
       },
       {
         title: 'Muuqaal',

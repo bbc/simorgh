@@ -275,7 +275,7 @@ export const service = {
       },
       {
         title: '解説・読み物',
-        url: 'https://www.bbc.com/japanese/features_and_analysis',
+        url: '/japanese/features-and-analysis-54539120',
       },
       {
         title: 'ビデオ',
