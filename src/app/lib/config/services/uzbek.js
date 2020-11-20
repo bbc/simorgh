@@ -168,6 +168,7 @@ export const service = {
         previousRadioShow: 'Аввалги радио дастур',
         nextRadioShow: 'Кейинги радио дастур',
         duration: 'Давомийлиги',
+        recentEpisodes: 'Олдинги дастурлар',
       },
       socialEmbed: {
         caption: {

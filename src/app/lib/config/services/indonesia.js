@@ -159,6 +159,7 @@ export const service = {
         previousRadioShow: 'Siaran radio sebelumnya',
         nextRadioShow: 'Siaran radio berikutnya',
         duration: 'Durasi',
+        recentEpisodes: 'Siaran sebelumnya',
       },
       socialEmbed: {
         caption: {
