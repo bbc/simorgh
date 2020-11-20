@@ -474,7 +474,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         class="emotion-133 emotion-134"
                       >
                         <iframe
-                          allow="autoplay; fullscreen"
+                          allow="autoplay"
                           allowfullscreen=""
                           class="emotion-131 emotion-132"
                           scrolling="no"
@@ -2507,7 +2507,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             class="css-1c6mers-StyledVideoContainer emotion-70"
                           >
                             <iframe
-                              allow="autoplay; fullscreen"
+                              allow="autoplay"
                               allowfullscreen=""
                               class="css-v3kkbc-StyledIframe emotion-69"
                               scrolling="no"
@@ -3791,7 +3791,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             class="css-1c6mers-StyledVideoContainer emotion-70"
                           >
                             <iframe
-                              allow="autoplay; fullscreen"
+                              allow="autoplay"
                               allowfullscreen=""
                               class="css-v3kkbc-StyledIframe emotion-69"
                               scrolling="no"
