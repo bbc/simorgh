@@ -516,7 +516,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
           class="emotion-4 emotion-5"
         >
           <iframe
-            allow="autoplay; fullscreen"
+            allow="autoplay"
             allowfullscreen=""
             class="emotion-2 emotion-3"
             scrolling="no"
