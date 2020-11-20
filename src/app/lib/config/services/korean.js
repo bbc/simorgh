@@ -156,6 +156,7 @@ export const service = {
         previousRadioShow: '이전 라디오 방송',
         nextRadioShow: '다음 라디오 방송',
         duration: '방송 길이',
+        recentEpisodes: '이전',
       },
       socialEmbed: {
         caption: {
