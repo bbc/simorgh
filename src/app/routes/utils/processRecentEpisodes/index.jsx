@@ -12,7 +12,7 @@ const validateEpisode = episode => {
       episode.media,
       is(String, episode.media.id),
       is(Array, episode.media.versions),
-      episode.media.versions.length > 0,
+      episode.media.versions[0],
       is(String, episode.media.versions[0].durationISO8601),
       is(Number, episode.media.versions[0].availableFrom),
     ];
