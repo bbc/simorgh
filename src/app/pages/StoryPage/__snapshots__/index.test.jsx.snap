@@ -2087,7 +2087,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                   dir="ltr"
                 >
                   <div
-                    class="emotion-100 css-ng0vgl-GridComponent-GridPrimaryColumn emotion-1"
+                    class="emotion-100 css-1fhb3ud-GridComponent-GridPrimaryColumn emotion-1"
                     dir="ltr"
                   >
                     <main
@@ -3371,7 +3371,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   dir="ltr"
                 >
                   <div
-                    class="emotion-100 css-ng0vgl-GridComponent-GridPrimaryColumn emotion-1"
+                    class="emotion-100 css-1fhb3ud-GridComponent-GridPrimaryColumn emotion-1"
                     dir="ltr"
                   >
                     <main
@@ -4193,7 +4193,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="css-pzr5mc-MediaIcon-VideoMediaIcon emotion-148"
+                                          class="css-3i242t-MediaIcon-VideoMediaIcon emotion-148"
                                           focusable="false"
                                           height="12px"
                                           viewBox="0 0 32 32"
@@ -4292,7 +4292,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-164"
+                                          class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-164"
                                           focusable="false"
                                           height="12px"
                                           viewBox="0 0 13 12"
@@ -4648,7 +4648,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="css-xz0hvl-MediaIcon-PhotoMediaIcon emotion-228"
+                                          class="css-1i5hibd-MediaIcon-PhotoMediaIcon emotion-228"
                                           focusable="false"
                                           height="13px"
                                           viewBox="0 0 32 26"

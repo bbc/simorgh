@@ -604,7 +604,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
           data-e2e="radio-schedule"
         >
           <div
-            class="emotion-95 css-129dsgx-GridComponent-StyledGrid emotion-6"
+            class="emotion-95 css-1dbqk3h-GridComponent-StyledGrid emotion-6"
             dir="ltr"
             role="list"
           >
@@ -700,7 +700,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-27"
+                      class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-27"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
@@ -825,7 +825,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-27"
+                      class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-27"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
@@ -950,7 +950,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-27"
+                      class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-27"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
@@ -1076,7 +1076,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-27"
+                      class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-27"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
