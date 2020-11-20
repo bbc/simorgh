@@ -21,6 +21,9 @@ describe('Get initial data for on demand radio', () => {
     const { pageData } = await getInitialData({
       path: 'mock-on-demand-radio-path',
       pageType,
+      toggles: {
+        recentAudioEpisodes: { enabled: false, value: 4 },
+      },
     });
 
     expect(pageData.headline).toEqual('ماښامنۍ خپرونه');
@@ -100,6 +103,9 @@ describe('Get initial data for on demand radio', () => {
     await getInitialData({
       path: 'mock-on-demand-radio-path',
       pageType,
+      toggles: {
+        recentAudioEpisodes: { enabled: false, value: 4 },
+      },
     });
 
     const countMissingFieldCalls = mockedFunction => {

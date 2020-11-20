@@ -2,12 +2,13 @@
   "content": {
     "blocks": [
       {
-        "availability": "notAvailable",
         "advertising": false,
+        "availability": "notAvailable",
         "embedding": false,
         "format": "Video",
         "id": "w3ct05mp",
         "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+        "smpKind": "programme",
         "subType": "episode",
         "synopses": {
           "medium": "Le journal télévisé international de BBC Afrique.",
@@ -28,15 +29,13 @@
       "producerId": "3"
     },
     "atiAnalytics": {},
-    "blockTypes": [
-      "media"
-    ],
+    "blockTypes": ["media"],
     "createdBy": "bbc_afrique_tv",
     "firstPublished": 1593380643000,
     "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w3ct05mp",
     "language": "fr",
     "lastPublished": 1593380643000,
-    "lastUpdated": 1593002824709,
+    "lastUpdated": 1605668059194,
     "locators": {
       "brandPid": "w13xttmz",
       "pid": "w3ct05mp"
@@ -47,7 +46,7 @@
     "timestamp": 1593380643000,
     "title": "BBC Info",
     "type": "WSTV",
-    "version": "v1.3.2"
+    "version": "v1.3.8"
   },
   "promo": {
     "brand": {
@@ -75,10 +74,12 @@
     },
     "media": {
       "advertising": false,
+      "availability": "notAvailable",
       "embedding": false,
       "format": "Video",
       "id": "w3ct05mp",
       "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+      "smpKind": "programme",
       "subType": "episode",
       "synopses": {
         "medium": "Le journal télévisé international de BBC Afrique.",
@@ -88,6 +89,7 @@
       "type": "media",
       "versions": []
     },
+    "releaseDateTimestamp": 1593388800000,
     "type": "ws_tv"
   },
   "relatedContent": {
@@ -102,7 +104,7 @@
             "headlines": {
               "headline": "BBC Info"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172xc9pszgj25b",
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172xc9y2bs31b3",
             "indexImage": {
               "altText": null,
               "copyrightHolder": null,
@@ -116,40 +118,42 @@
             },
             "locators": {
               "brandPid": "w13xttmz",
-              "pid": "w172xc9pszgj25b"
+              "pid": "w172xc9y2bs31b3"
             },
             "media": {
               "advertising": false,
+              "availability": "available",
               "embedding": false,
               "format": "Video",
-              "id": "w172xc9pszgj25b",
+              "id": "w172xc9y2bs31b3",
               "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "smpKind": "programme",
               "subType": "episode",
               "synopses": {
                 "medium": "Le journal télévisé international de BBC Afrique.",
                 "short": "Le journal télévisé international de BBC Afrique."
               },
-              "title": "30/06/2020 GMT",
+              "title": "17/11/2020 GMT",
               "type": "media",
               "versions": [
                 {
-                  "availableFrom": 1593535500000,
+                  "availabilityStatus": "available",
+                  "availableFrom": 1605631500000,
                   "availableTerritories": {
                     "nonUk": false,
                     "uk": false,
                     "world": true
                   },
-                  "availableUntil": 1594140300000,
+                  "availableUntil": 1618185600000,
                   "duration": 900,
                   "durationISO8601": "PT15M",
-                  "types": [
-                    "Original"
-                  ],
-                  "versionId": "w1mshj5w17b4l7v",
+                  "types": ["Original"],
+                  "versionId": "w1mshj639lmqkdm",
                   "warnings": {}
                 }
               ]
             },
+            "releaseDateTimestamp": 1605571200000,
             "type": "ws_tv"
           },
           {
@@ -160,7 +164,7 @@
             "headlines": {
               "headline": "BBC Info"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172xc9pszgf587",
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172xc9y2bs04f0",
             "indexImage": {
               "altText": null,
               "copyrightHolder": null,
@@ -174,40 +178,42 @@
             },
             "locators": {
               "brandPid": "w13xttmz",
-              "pid": "w172xc9pszgf587"
+              "pid": "w172xc9y2bs04f0"
             },
             "media": {
               "advertising": false,
+              "availability": "available",
               "embedding": false,
               "format": "Video",
-              "id": "w172xc9pszgf587",
+              "id": "w172xc9y2bs04f0",
               "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "smpKind": "programme",
               "subType": "episode",
               "synopses": {
                 "medium": "Le journal télévisé international de BBC Afrique.",
                 "short": "Le journal télévisé international de BBC Afrique."
               },
-              "title": "29/06/2020 GMT",
+              "title": "16/11/2020 GMT",
               "type": "media",
               "versions": [
                 {
-                  "availableFrom": 1593449100000,
+                  "availabilityStatus": "available",
+                  "availableFrom": 1605545100000,
                   "availableTerritories": {
                     "nonUk": false,
                     "uk": false,
                     "world": true
                   },
-                  "availableUntil": 1594053900000,
+                  "availableUntil": 1618185600000,
                   "duration": 900,
                   "durationISO8601": "PT15M",
-                  "types": [
-                    "Original"
-                  ],
-                  "versionId": "w1mshj5w17b1pbr",
+                  "types": ["Original"],
+                  "versionId": "w1mshj639lmmnhj",
                   "warnings": {}
                 }
               ]
             },
+            "releaseDateTimestamp": 1605484800000,
             "type": "ws_tv"
           },
           {
@@ -218,7 +224,7 @@
             "headlines": {
               "headline": "BBC Info"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172xc9pfq50m8s",
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172xc9xq2gllfk",
             "indexImage": {
               "altText": null,
               "copyrightHolder": null,
@@ -232,40 +238,42 @@
             },
             "locators": {
               "brandPid": "w13xttmz",
-              "pid": "w172xc9pfq50m8s"
+              "pid": "w172xc9xq2gllfk"
             },
             "media": {
               "advertising": false,
+              "availability": "available",
               "embedding": false,
               "format": "Video",
-              "id": "w172xc9pfq50m8s",
+              "id": "w172xc9xq2gllfk",
               "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "smpKind": "programme",
               "subType": "episode",
               "synopses": {
                 "medium": "Le journal télévisé international de BBC Afrique.",
                 "short": "Le journal télévisé international de BBC Afrique."
               },
-              "title": "26/06/2020 GMT",
+              "title": "13/11/2020 GMT",
               "type": "media",
               "versions": [
                 {
-                  "availableFrom": 1593189900000,
+                  "availabilityStatus": "available",
+                  "availableFrom": 1605285900000,
                   "availableTerritories": {
                     "nonUk": false,
                     "uk": false,
                     "world": true
                   },
-                  "availableUntil": 1593794700000,
+                  "availableUntil": 1618185600000,
                   "duration": 900,
                   "durationISO8601": "PT15M",
-                  "types": [
-                    "Original"
-                  ],
-                  "versionId": "w1mshj5vnz0n4c9",
+                  "types": ["Original"],
+                  "versionId": "w1mshj62ybb73j2",
                   "warnings": {}
                 }
               ]
             },
+            "releaseDateTimestamp": 1605225600000,
             "type": "ws_tv"
           },
           {
@@ -276,7 +284,7 @@
             "headlines": {
               "headline": "BBC Info"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172xc9pfq4xqcp",
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172xc9xq2ghpjg",
             "indexImage": {
               "altText": null,
               "copyrightHolder": null,
@@ -290,40 +298,42 @@
             },
             "locators": {
               "brandPid": "w13xttmz",
-              "pid": "w172xc9pfq4xqcp"
+              "pid": "w172xc9xq2ghpjg"
             },
             "media": {
               "advertising": false,
+              "availability": "available",
               "embedding": false,
               "format": "Video",
-              "id": "w172xc9pfq4xqcp",
+              "id": "w172xc9xq2ghpjg",
               "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "smpKind": "programme",
               "subType": "episode",
               "synopses": {
                 "medium": "Le journal télévisé international de BBC Afrique.",
                 "short": "Le journal télévisé international de BBC Afrique."
               },
-              "title": "25/06/2020 GMT",
+              "title": "12/11/2020 GMT",
               "type": "media",
               "versions": [
                 {
-                  "availableFrom": 1593103500000,
+                  "availabilityStatus": "available",
+                  "availableFrom": 1605199500000,
                   "availableTerritories": {
                     "nonUk": false,
                     "uk": false,
                     "world": true
                   },
-                  "availableUntil": 1593708300000,
+                  "availableUntil": 1618185600000,
                   "duration": 900,
                   "durationISO8601": "PT15M",
-                  "types": [
-                    "Original"
-                  ],
-                  "versionId": "w1mshj5vnz0k7g6",
+                  "types": ["Original"],
+                  "versionId": "w1mshj62ybb46lz",
                   "warnings": {}
                 }
               ]
             },
+            "releaseDateTimestamp": 1605139200000,
             "type": "ws_tv"
           },
           {
@@ -334,7 +344,7 @@
             "headlines": {
               "headline": "BBC Info"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172xc9pfq4ttgl",
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172xc9xq2gdsmc",
             "indexImage": {
               "altText": null,
               "copyrightHolder": null,
@@ -348,40 +358,222 @@
             },
             "locators": {
               "brandPid": "w13xttmz",
-              "pid": "w172xc9pfq4ttgl"
+              "pid": "w172xc9xq2gdsmc"
             },
             "media": {
               "advertising": false,
+              "availability": "available",
               "embedding": false,
               "format": "Video",
-              "id": "w172xc9pfq4ttgl",
+              "id": "w172xc9xq2gdsmc",
               "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "smpKind": "programme",
               "subType": "episode",
               "synopses": {
                 "medium": "Le journal télévisé international de BBC Afrique.",
                 "short": "Le journal télévisé international de BBC Afrique."
               },
-              "title": "24/06/2020 GMT",
+              "title": "11/11/2020 GMT",
               "type": "media",
               "versions": [
                 {
-                  "availableFrom": 1593028276000,
+                  "availabilityStatus": "available",
+                  "availableFrom": 1605113100000,
                   "availableTerritories": {
                     "nonUk": false,
                     "uk": false,
                     "world": true
                   },
-                  "availableUntil": 1593621900000,
+                  "availableUntil": 1618185600000,
                   "duration": 900,
                   "durationISO8601": "PT15M",
-                  "types": [
-                    "Original"
-                  ],
-                  "versionId": "w1mshj5vnz0gbk3",
+                  "types": ["Original"],
+                  "versionId": "w1mshj62ybb19pw",
                   "warnings": {}
                 }
               ]
             },
+            "releaseDateTimestamp": 1605052800000,
+            "type": "ws_tv"
+          },
+          {
+            "brand": {
+              "pid": "w13xttmz",
+              "title": "BBC Info"
+            },
+            "headlines": {
+              "headline": "BBC Info"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172xc9xq2g9wq8",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xttmz",
+              "pid": "w172xc9xq2g9wq8"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Video",
+              "id": "w172xc9xq2g9wq8",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "smpKind": "programme",
+              "subType": "episode",
+              "synopses": {
+                "medium": "Le journal télévisé international de BBC Afrique.",
+                "short": "Le journal télévisé international de BBC Afrique."
+              },
+              "title": "10/11/2020 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1605026700000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "types": ["Original"],
+                  "versionId": "w1mshj62yb9ydss",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1604966400000,
+            "type": "ws_tv"
+          },
+          {
+            "brand": {
+              "pid": "w13xttmz",
+              "title": "BBC Info"
+            },
+            "headlines": {
+              "headline": "BBC Info"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172xc9xq2g6zt5",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xttmz",
+              "pid": "w172xc9xq2g6zt5"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Video",
+              "id": "w172xc9xq2g6zt5",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "smpKind": "programme",
+              "subType": "episode",
+              "synopses": {
+                "medium": "Le journal télévisé international de BBC Afrique.",
+                "short": "Le journal télévisé international de BBC Afrique."
+              },
+              "title": "09/11/2020 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1604940300000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "types": ["Original"],
+                  "versionId": "w1mshj62yb9vhwp",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1604880000000,
+            "type": "ws_tv"
+          },
+          {
+            "brand": {
+              "pid": "w13xttmz",
+              "title": "BBC Info"
+            },
+            "headlines": {
+              "headline": "BBC Info"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172xc9xbt4tftq",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xttmz",
+              "pid": "w172xc9xbt4tftq"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Video",
+              "id": "w172xc9xbt4tftq",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "smpKind": "programme",
+              "subType": "episode",
+              "synopses": {
+                "medium": "Le journal télévisé international de BBC Afrique.",
+                "short": "Le journal télévisé international de BBC Afrique."
+              },
+              "title": "06/11/2020 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1604681100000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "types": ["Original"],
+                  "versionId": "w1mshj62l20fyx7",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1604620800000,
             "type": "ws_tv"
           }
         ],
