@@ -36,20 +36,20 @@ export const getBootstrapSrc = (queryString, useLegacy = false) => {
 };
 
 export const getPreloadUrls = queryString => {
-  const useLiveSrc = isLive() || queryString.includes('ads-js-env=live');
+  const preloadUrls = [
+    getBootstrapSrc(queryString),
+    getBootstrapSrc(queryString, true),
+  ];
 
-  if (useLiveSrc) {
+  if (isLive()) {
     return [
-      getBootstrapSrc(queryString),
-      getBootstrapSrc(queryString, true),
+      ...preloadUrls,
       'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-ads.js',
       'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-analytics.js',
     ];
   }
-
   return [
-    getBootstrapSrc(queryString),
-    getBootstrapSrc(queryString, true),
+    ...preloadUrls,
     'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-ads.js',
     'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-analytics.js',
   ];
