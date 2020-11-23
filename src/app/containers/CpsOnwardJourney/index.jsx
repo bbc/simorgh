@@ -95,7 +95,7 @@ const LegacyGridItemLarge = styled(GridItemLarge)`
   }
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     padding: 2rem;
-    margin: rem;
+    margin: 1rem;
   }
 `;
 
