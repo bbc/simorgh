@@ -662,7 +662,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
               class="css-1bxiiiz-StyledAudioContainer emotion-14"
             >
               <iframe
-                allow="autoplay; fullscreen"
+                allow="autoplay"
                 allowfullscreen=""
                 class="css-v3kkbc-StyledIframe emotion-13"
                 scrolling="no"

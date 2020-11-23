@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { cleanup, render, waitFor, act } from '@testing-library/react';
+import { cleanup, render, act } from '@testing-library/react';
 import services from '#server/utilities/serviceConfigs';
 
 // Unmock service context which is mocked globally in jest-setup.js
@@ -33,13 +33,14 @@ describe('ServiceContextProvider', () => {
           variant: variant === 'default' ? null : variant,
         };
 
-        const { container } = render(
-          <ServiceContextProvider {...serviceContextProps}>
-            <Component />
-          </ServiceContextProvider>,
-        );
-
-        await waitFor(() => container.querySelector('span'));
+        let container;
+        await act(async () => {
+          container = await render(
+            <ServiceContextProvider {...serviceContextProps}>
+              <Component />
+            </ServiceContextProvider>,
+          ).container;
+        });
 
         expect(container.firstChild.innerHTML).toEqual(
           services[service][variant].brandName,

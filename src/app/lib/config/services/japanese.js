@@ -155,6 +155,7 @@ export const service = {
         previousRadioShow: '前のラジオ番組',
         nextRadioShow: '次のラジオ番組',
         duration: '所要時間',
+        recentEpisodes: 'さらに',
       },
       socialEmbed: {
         caption: {
