@@ -229,36 +229,22 @@ Object {
 
 exports[`AMP Story Page Header Navigation link should match text and url 4`] = `
 Object {
-  "text": "Сапар TV",
-  "url": "/kyrgyz/sapartv",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 5`] = `
-Object {
   "text": "Видео",
   "url": "/kyrgyz/media/video",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 6`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Маданият/Илим",
-  "url": "/kyrgyz/entertainment",
+  "url": "/kyrgyz/topics/czp8pjrkgp0t",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 7`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Журнал",
   "url": "/kyrgyz/magazine-54071664",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 8`] = `
-Object {
-  "text": "Блог",
-  "url": "/kyrgyz/blog",
 }
 `;
 
