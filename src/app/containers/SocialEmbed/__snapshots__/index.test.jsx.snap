@@ -116,7 +116,6 @@ exports[`SocialEmbedContainer AMP should render correctly 1`] = `
   margin-left: auto;
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
-  min-height: 18.75rem;
 }
 
 .emotion-4 {
@@ -332,7 +331,6 @@ exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] 
   margin-left: auto;
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
-  min-height: 18.75rem;
 }
 
 .emotion-6 {
@@ -573,6 +571,13 @@ exports[`SocialEmbedContainer Canonical should render correctly without an embed
 }
 }
 
+.emotion-8 {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+  max-width: 31.25rem;
+}
+
 .emotion-6 {
   position: relative;
 }
@@ -631,13 +636,6 @@ exports[`SocialEmbedContainer Canonical should render correctly without an embed
   position: absolute;
   width: 1px;
   margin: 0;
-}
-
-.emotion-8 {
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 1.5rem;
-  max-width: 31.25rem;
 }
 
 .emotion-2 {
