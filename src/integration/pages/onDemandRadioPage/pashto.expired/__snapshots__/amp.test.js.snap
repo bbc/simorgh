@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AMP Pashto On Demand TV Page AMP Consent config 1`] = `
+exports[`AMP On Demand Radio Page AMP Consent config 1`] = `
 Object {
   "consents": Object {
     "user-consent": Object {
@@ -22,7 +22,7 @@ Object {
 }
 `;
 
-exports[`AMP Pashto On Demand TV Page AMP Geo config 1`] = `
+exports[`AMP On Demand Radio Page AMP Geo config 1`] = `
 Object {
   "ISOCountryGroups": Object {
     "eea": Array [
@@ -91,11 +91,11 @@ Object {
 }
 `;
 
-exports[`AMP Pashto On Demand TV Page Analytics ATI 1`] = `
+exports[`AMP On Demand Radio Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=68&p=pashto.bbc_pashto_tv.tv.w172xcldhhrhmcf.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Apips%3Aw172xcldhhrhmcf]&x2=[amp]&x3=[news-pashto]&x4=[ps]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[%D9%86%DA%93%DB%8D%2B%D8%AF%D8%A7%2B%D9%88%D8%AE%D8%AA%2B-%2BBBC%2BNews%2B%D9%BE%DA%9A%D8%AA%D9%88]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=68&p=pashto.bbc_pashto_radio.w172x8nvf4bchz5.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Apips%3Aw172x8nvf4bchz5]&x2=[amp]&x3=[news-pashto]&x4=[ps]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[%D9%88%D8%B1%D9%88%D8%B3%D8%AA%D9%8A%2B%D8%AE%D8%A8%D8%B1%D9%88%D9%86%D9%87%2B-%2BBBC%2BNews%2B%D9%BE%DA%9A%D8%AA%D9%88]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -111,20 +111,20 @@ Object {
 }
 `;
 
-exports[`AMP Pashto On Demand TV Page Analytics chartbeat 1`] = `
+exports[`AMP On Demand Radio Page Analytics chartbeat 1`] = `
 Object {
   "vars": Object {
     "contentType": "player-episode",
     "domain": "test.bbc.co.uk",
-    "sections": "Pashto, Pashto - TV",
-    "title": "نړۍ دا وخت - BBC News پښتو",
+    "sections": "Pashto, Pashto - Radio",
+    "title": "وروستي خبرونه - BBC News پښتو",
     "uid": 50924,
     "virtualReferrer": "\${documentReferrer}",
   },
 }
 `;
 
-exports[`AMP Pashto On Demand TV Page Analytics comscore 1`] = `
+exports[`AMP On Demand Radio Page Analytics comscore 1`] = `
 Object {
   "extraUrlParams": Object {
     "comscorekw": "amp",
@@ -135,12 +135,14 @@ Object {
 }
 `;
 
-exports[`AMP Pashto On Demand TV Page Expired Episode I can see the 'Content is not available' placeholder 1`] = `"دغه فایل نور د لاسرسي وړ نه دی."`;
+exports[`AMP On Demand Radio Page Expired Episode I can see the 'Content is not available' placeholder 1`] = `"دغه فایل نور د لاسرسي وړ نه دی."`;
 
-exports[`AMP Pashto On Demand TV Page Expired Episode I can see the brand title 1`] = `"نړۍ دا وخت"`;
+exports[`AMP On Demand Radio Page Expired Episode I can see the brand title 1`] = `"وروستي خبرونه"`;
 
-exports[`AMP Pashto On Demand TV Page Expired Episode I can see the episode summary 1`] = `"د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."`;
+exports[`AMP On Demand Radio Page Expired Episode I can see the episode summary 1`] = `"د نړۍ وروستي خبرونه"`;
 
-exports[`AMP Pashto On Demand TV Page Expired Episode I can see the episode title 1`] = `"۲۸ می ۲۰۲۰"`;
+exports[`AMP On Demand Radio Page Expired Episode I can see the episode title 1`] = `"۴ فبروري ۲۰۲۰"`;
 
-exports[`AMP Pashto On Demand TV Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"نړۍ دا وخت, ۲۸ می ۲۰۲۰"`;
+exports[`AMP On Demand Radio Page Expired Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png"`;
+
+exports[`AMP On Demand Radio Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"وروستي خبرونه, ۴ فبروري ۲۰۲۰"`;
