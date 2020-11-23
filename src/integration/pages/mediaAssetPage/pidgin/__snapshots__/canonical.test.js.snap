@@ -369,7 +369,7 @@ Object {
 
 exports[`Canonical Media Asset Page outer iframe has z-index of 1 1`] = `
 <iframe
-  allow="autoplay; fullscreen"
+  allow="autoplay"
   allowfullscreen=""
   class="css-4k1mri-StyledIframe eqo19v61"
   scrolling="no"

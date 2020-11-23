@@ -1143,7 +1143,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                     class="emotion-8 emotion-9"
                   >
                     <iframe
-                      allow="autoplay; fullscreen"
+                      allow="autoplay"
                       allowfullscreen=""
                       class="emotion-2 emotion-3"
                       scrolling="no"
@@ -3592,7 +3592,7 @@ exports[`Media Asset Page should render component 1`] = `
                     class="emotion-8 emotion-9"
                   >
                     <iframe
-                      allow="autoplay; fullscreen"
+                      allow="autoplay"
                       allowfullscreen=""
                       class="emotion-2 emotion-3"
                       scrolling="no"
