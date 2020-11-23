@@ -3013,7 +3013,7 @@ exports[`Media Asset Page should render component 1`] = `
 @media (max-width:37.5rem) {
   .emotion-351 {
     padding: 2rem;
-    margin: rem;
+    margin: 1rem;
   }
 }
 

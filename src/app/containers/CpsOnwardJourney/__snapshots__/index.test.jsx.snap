@@ -216,7 +216,7 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 @media (max-width:37.5rem) {
   .emotion-1 {
     padding: 2rem;
-    margin: rem;
+    margin: 1rem;
   }
 }
 
@@ -482,7 +482,7 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 @media (max-width:37.5rem) {
   .emotion-3 {
     padding: 2rem;
-    margin: rem;
+    margin: 1rem;
   }
 }
 
@@ -732,7 +732,7 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 @media (max-width:37.5rem) {
   .emotion-16 {
     padding: 2rem;
-    margin: rem;
+    margin: 1rem;
   }
 }
 
@@ -1149,7 +1149,7 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 @media (max-width:37.5rem) {
   .emotion-16 {
     padding: 2rem;
-    margin: rem;
+    margin: 1rem;
   }
 }
 
@@ -1566,7 +1566,7 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 @media (max-width:37.5rem) {
   .emotion-14 {
     padding: 2rem;
-    margin: rem;
+    margin: 1rem;
   }
 }
 
@@ -1960,7 +1960,7 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 @media (max-width:37.5rem) {
   .emotion-20 {
     padding: 2rem;
-    margin: rem;
+    margin: 1rem;
   }
 }
 
@@ -2470,7 +2470,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 @media (max-width:37.5rem) {
   .emotion-22 {
     padding: 2rem;
-    margin: rem;
+    margin: 1rem;
   }
 }
 

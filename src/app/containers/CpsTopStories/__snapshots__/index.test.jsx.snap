@@ -217,7 +217,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 @media (max-width:37.5rem) {
   .emotion-40 {
     padding: 2rem;
-    margin: rem;
+    margin: 1rem;
   }
 }
 
@@ -881,7 +881,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 @media (max-width:37.5rem) {
   .emotion-26 {
     padding: 2rem;
-    margin: rem;
+    margin: 1rem;
   }
 }
 
