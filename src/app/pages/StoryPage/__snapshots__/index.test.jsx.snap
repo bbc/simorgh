@@ -474,7 +474,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         class="emotion-133 emotion-134"
                       >
                         <iframe
-                          allow="autoplay; fullscreen"
+                          allow="autoplay"
                           allowfullscreen=""
                           class="emotion-131 emotion-132"
                           scrolling="no"
@@ -2507,7 +2507,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             class="css-1c6mers-StyledVideoContainer emotion-70"
                           >
                             <iframe
-                              allow="autoplay; fullscreen"
+                              allow="autoplay"
                               allowfullscreen=""
                               class="css-v3kkbc-StyledIframe emotion-69"
                               scrolling="no"
@@ -3791,7 +3791,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             class="css-1c6mers-StyledVideoContainer emotion-70"
                           >
                             <iframe
-                              allow="autoplay; fullscreen"
+                              allow="autoplay"
                               allowfullscreen=""
                               class="css-v3kkbc-StyledIframe emotion-69"
                               scrolling="no"
@@ -4193,7 +4193,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="css-pzr5mc-MediaIcon-VideoMediaIcon emotion-148"
+                                          class="css-3i242t-MediaIcon-VideoMediaIcon emotion-148"
                                           focusable="false"
                                           height="12px"
                                           viewBox="0 0 32 32"
@@ -4292,7 +4292,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-164"
+                                          class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-164"
                                           focusable="false"
                                           height="12px"
                                           viewBox="0 0 13 12"
@@ -4648,7 +4648,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="css-xz0hvl-MediaIcon-PhotoMediaIcon emotion-228"
+                                          class="css-1i5hibd-MediaIcon-PhotoMediaIcon emotion-228"
                                           focusable="false"
                                           height="13px"
                                           viewBox="0 0 32 26"
