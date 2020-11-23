@@ -34,7 +34,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
     data-e2e="radio-schedule"
   >
     <div
-      class="emotion-86 css-129dsgx-GridComponent-StyledGrid emotion-25"
+      class="emotion-86 css-1dbqk3h-GridComponent-StyledGrid emotion-25"
       dir="rtl"
       role="list"
     >
@@ -130,7 +130,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             >
               <svg
                 aria-hidden="true"
-                class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-18"
+                class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-18"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -255,7 +255,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             >
               <svg
                 aria-hidden="true"
-                class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-18"
+                class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-18"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -380,7 +380,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             >
               <svg
                 aria-hidden="true"
-                class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-18"
+                class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-18"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -506,7 +506,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             >
               <svg
                 aria-hidden="true"
-                class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-18"
+                class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-18"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -584,7 +584,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
     data-e2e="radio-schedule"
   >
     <div
-      class="emotion-86 css-129dsgx-GridComponent-StyledGrid emotion-25"
+      class="emotion-86 css-1dbqk3h-GridComponent-StyledGrid emotion-25"
       dir="rtl"
       role="list"
     >
@@ -680,7 +680,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             >
               <svg
                 aria-hidden="true"
-                class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-18"
+                class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-18"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -805,7 +805,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             >
               <svg
                 aria-hidden="true"
-                class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-18"
+                class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-18"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -930,7 +930,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             >
               <svg
                 aria-hidden="true"
-                class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-18"
+                class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-18"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -1056,7 +1056,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             >
               <svg
                 aria-hidden="true"
-                class="css-alzxo0-MediaIcon-AudioMediaIcon emotion-18"
+                class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-18"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"

@@ -171,6 +171,7 @@ export const service = {
         previousRadioShow: 'Barnaamijyadii hore ee Raadiyaha',
         nextRadioShow: 'Barnaamijka Xiga ee Raadiyaha',
         duration: 'Muddada',
+        recentEpisodes: 'Barnaamijyadii Hore',
       },
       socialEmbed: {
         caption: {
