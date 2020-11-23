@@ -167,6 +167,7 @@ export const service = {
         previousRadioShow: 'Kipindi kilichopita cha redio',
         nextRadioShow: 'Kipindi kijacho cha redio',
         duration: 'Muda',
+        recentEpisodes: 'Vipindi vilivyopita',
       },
       socialEmbed: {
         caption: {
@@ -257,10 +258,6 @@ export const service = {
       {
         title: 'Habari',
         url: '/swahili',
-      },
-      {
-        title: 'Uchaguzi Tanzania',
-        url: '/swahili/habari-53516858',
       },
       {
         title: 'Michezo',

@@ -252,7 +252,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
           dir="rtl"
         >
           <div
-            class="emotion-10 css-113v68j-GridComponent-GelPageGrid-StyledGelWrapperGrid emotion-6"
+            class="emotion-10 css-1vwf47c-GridComponent-GelPageGrid-StyledGelWrapperGrid emotion-6"
             dir="ltr"
           >
             <div
@@ -593,7 +593,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
           dir="rtl"
         >
           <div
-            class="emotion-11 css-113v68j-GridComponent-GelPageGrid-StyledGelWrapperGrid emotion-6"
+            class="emotion-11 css-1vwf47c-GridComponent-GelPageGrid-StyledGelWrapperGrid emotion-6"
             dir="ltr"
           >
             <div
@@ -662,7 +662,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
               class="css-1bxiiiz-StyledAudioContainer emotion-14"
             >
               <iframe
-                allow="autoplay; fullscreen"
+                allow="autoplay"
                 allowfullscreen=""
                 class="css-v3kkbc-StyledIframe emotion-13"
                 scrolling="no"

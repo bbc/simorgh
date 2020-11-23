@@ -1337,6 +1337,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 }
 
+@media (max-width:37.5rem) {
+  .emotion-400 {
+    padding: 0;
+  }
+}
+
 .emotion-280 {
   position: relative;
   padding-bottom: 1rem;
