@@ -2,7 +2,6 @@
 /* eslint-disable no-console */
 
 const ora = require('ora');
-const fs = require('fs');
 const chalk = require('chalk');
 const Table = require('cli-table');
 const sortByBundlesTotalAscending = require('./sortByBundlesTotalAscending');
@@ -11,19 +10,18 @@ const createConsoleError = require('./createConsoleError');
 const { getPageBundleData, getServiceBundleData } = require('./getBundleData');
 const { MIN_SIZE, MAX_SIZE } = require('./bundleSizeConfig');
 
-const jsFiles = fs
-  .readdirSync('build/public/static/js')
-  .filter(fileName => fileName.endsWith('.js'));
-const serviceBundleData = getServiceBundleData(jsFiles);
+const serviceBundleData = sortByBundlesTotalAscending(getServiceBundleData());
 const serviceBundlesTotals = serviceBundleData.map(
-  pageBundles => pageBundles[2],
+  ({ totalSize }) => totalSize,
 );
+
 const smallestServiceBundleSize = Math.min(...serviceBundlesTotals);
 const largestServiceBundleSize = Math.max(...serviceBundlesTotals);
 const averageServiceBundleSize = getAverageBundleSize(serviceBundlesTotals);
 
-const pageBundleData = getPageBundleData(jsFiles);
-const pageBundlesTotals = pageBundleData.map(pageBundles => pageBundles[4]);
+const pageBundleData = sortByBundlesTotalAscending(getPageBundleData());
+
+const pageBundlesTotals = pageBundleData.map(({ totalSize }) => totalSize);
 const smallestPageBundleSize = Math.min(...pageBundlesTotals);
 const largestPageBundleSize = Math.max(...pageBundlesTotals);
 const averagePageBundleSize = getAverageBundleSize(pageBundlesTotals);
@@ -34,29 +32,49 @@ const smallestPagePlusServiceBundleSize =
   smallestServiceBundleSize + smallestPageBundleSize;
 
 const serviceBundlesTable = new Table({
-  head: [
-    'Service name',
-    'Service bundle sizes (kB)',
-    'Total service bundle sizes (kB)',
-  ],
+  head: ['Service name', 'bundles', 'Total size (kB)'],
 });
 
 const pageBundlesTable = new Table({
   head: [
     'Page type',
-    'main bundles (kB)',
-    'vendor bundles (kB)',
-    'common bundles (kB)',
-    'Total bundles size (kB)',
+    'main',
+    'framework',
+    'lib',
+    'shared',
+    'commons',
+    'page',
+    'Total size (kB)',
   ],
 });
 
-sortByBundlesTotalAscending(serviceBundleData).forEach(bundle =>
-  serviceBundlesTable.push(bundle),
+pageBundleData.forEach(
+  ({ pageName, main, framework, lib, shared, commons, page, totalSize }) => {
+    const getFileInfo = ({ name, size }) =>
+      `${name.slice(0, 10)}…${name.slice(-6)} (${size}kB)`;
+
+    pageBundlesTable.push([
+      pageName,
+      main.map(getFileInfo).join('\n'),
+      framework.map(getFileInfo).join('\n'),
+      lib.map(getFileInfo).join('\n'),
+      shared.map(getFileInfo).join('\n'),
+      commons.map(getFileInfo).join('\n'),
+      page.map(getFileInfo).join('\n'),
+      totalSize,
+    ]);
+  },
 );
-sortByBundlesTotalAscending(pageBundleData).forEach(bundle =>
-  pageBundlesTable.push(bundle),
-);
+
+serviceBundleData.forEach(({ serviceName, bundles, totalSize }) => {
+  const getFileInfo = ({ name, size }) => `${name} (${size}kB)`;
+
+  serviceBundlesTable.push([
+    serviceName,
+    bundles.map(getFileInfo).join('\n'),
+    totalSize,
+  ]);
+});
 
 const pageSummaryTable = new Table();
 pageSummaryTable.push(
@@ -112,8 +130,8 @@ console.log(servicePageSummaryTable.toString());
 const errors = [];
 
 if (smallestPagePlusServiceBundleSize < MIN_SIZE) {
-  const service = serviceBundleData[0][0];
-  const pageType = pageBundleData[0][0];
+  const service = serviceBundleData[0].serviceName;
+  const pageType = pageBundleData[0].pageName;
   errors.push(
     createConsoleError({
       service,
@@ -125,8 +143,8 @@ if (smallestPagePlusServiceBundleSize < MIN_SIZE) {
 }
 
 if (largestPagePlusServiceBundleSize > MAX_SIZE) {
-  const service = serviceBundleData[serviceBundleData.length - 1][0];
-  const pageType = pageBundleData[pageBundleData.length - 1][0];
+  const service = serviceBundleData[serviceBundleData.length - 1].serviceName;
+  const pageType = pageBundleData[pageBundleData.length - 1].pageName;
   errors.push(
     createConsoleError({
       service,
