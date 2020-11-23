@@ -17,8 +17,8 @@ import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import AVPlayer from '#containers/AVPlayer';
 import EpisodeImage from '#containers/OnDemandImage';
 import LinkedData from '#containers/LinkedData';
-import getMediaId from '#lib/utilities/getUrlHelpers/getMediaId';
-import getMasterbrand from '#lib/utilities/getUrlHelpers/getMasterbrand';
+import getMediaId from '#lib/utilities/getMediaId';
+import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 

@@ -2,7 +2,7 @@ import dropWhile from 'ramda/src/dropWhile';
 import {
   getAssetTypeCode,
   getHeadlineUrlAndLive,
-} from '#lib/utilities/getUrlHelpers/getStoryPromoInfo';
+} from '#lib/utilities/getStoryPromoInfo';
 
 const MAX_ALLOWED_ITEMS_FIRST_SECTION = 13;
 const MAX_ALLOWED_ITEMS = 10;

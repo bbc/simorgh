@@ -18,7 +18,7 @@ import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 import {
   getAssetTypeCode,
   getHeadlineUrlAndLive,
-} from '#lib/utilities/getUrlHelpers/getStoryPromoInfo';
+} from '#lib/utilities/getStoryPromoInfo';
 import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
