@@ -155,6 +155,7 @@ export const service = {
         previousRadioShow: 'ያለፈ የሬዲዮ ስርጭት',
         nextRadioShow: 'ቀጣይ የሬዲዮ ስርጭት',
         duration: 'ርዝመት',
+        recentEpisodes: 'ያለፉ ዝግጅቶች’',
       },
       socialEmbed: {
         caption: {
