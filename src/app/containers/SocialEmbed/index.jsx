@@ -16,6 +16,7 @@ import useToggle from '#hooks/useToggle';
 import socialEmbedBlockPropTypes from '#models/propTypes/socialEmbed';
 import createTranslations from './translations';
 import EnrichTweet from './enrichTweet';
+import EnrichInstagram from './enrichInstagram';
 
 const logger = nodeLogger(__filename);
 
@@ -97,12 +98,17 @@ const SocialEmbedContainer = ({ blocks }) => {
     />
   );
 
-  const enrichedSocialEmbed =
-    provider === 'twitter' ? (
-      <EnrichTweet>{socialEmbed}</EnrichTweet>
-    ) : (
-      socialEmbed
-    );
+  let enrichedSocialEmbed;
+
+  console.log(provider);
+
+  if (provider === 'twitter') {
+    enrichedSocialEmbed = <EnrichTweet>{socialEmbed}</EnrichTweet>;
+  } else if (provider === 'instagram') {
+    enrichedSocialEmbed = <EnrichInstagram>{socialEmbed}</EnrichInstagram>;
+  } else {
+    enrichedSocialEmbed = socialEmbed;
+  }
 
   return (
     <GridItemMedium>
