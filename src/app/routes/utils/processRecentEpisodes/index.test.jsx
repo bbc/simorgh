@@ -1,3 +1,4 @@
+import assocPath from 'ramda/src/assocPath';
 import processRecentEpisodes from '.';
 import videoPageData from '#data/afrique/bbc_afrique_tv/tv_programmes/w13xttmz.json';
 import audioPageData from '#data/indonesia/bbc_indonesian_radio/w13xtt0s.json';
@@ -64,4 +65,20 @@ describe('processRecentEpisodes', () => {
       }).length,
     ).toEqual(episodeCountInPageData - 1);
   });
+});
+
+it('should correctly handle episodes with missing versions', () => {
+  const episodeCountInPageData =
+    videoPageData.relatedContent.groups[0].promos.length;
+  const pageWithMissingVersions = assocPath(
+    ['relatedContent', 'groups', 0, 'promos', 0, 'media', 'versions'],
+    [],
+    videoPageData,
+  );
+  expect(
+    processRecentEpisodes(pageWithMissingVersions, {
+      recentEpisodesLimit: episodeCountInPageData,
+      enabled: true,
+    }).length,
+  ).toEqual(episodeCountInPageData - 1);
 });
