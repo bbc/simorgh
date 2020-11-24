@@ -32,7 +32,10 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
     });
     const scheduleIsEnabled = getScheduleToggle(toggles);
     const recentEpisodesToggle = getRecentEpisodesToggle(toggles);
-    const { enabled, value } = recentEpisodesToggle;
+    const {
+      enabled: showRecentEpisodes,
+      value: recentEpisodesLimit,
+    } = recentEpisodesToggle;
 
     const { json, status } = scheduleIsEnabled
       ? await withRadioSchedule({
@@ -53,10 +56,10 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
       logLevel ? withLogging(fieldPath, logLevel) : path(fieldPath, json);
 
     const episodeId = get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR);
-    const recentEpisodes = enabled
+    const recentEpisodes = showRecentEpisodes
       ? processRecentEpisodes(json, {
           exclude: episodeId,
-          recentEpisodesLimit: value,
+          recentEpisodesLimit,
         })
       : [];
 

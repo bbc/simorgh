@@ -27,15 +27,18 @@ export default async ({ path: pathname, pageType, toggles }) => {
       pageType,
     });
     const recentEpisodesToggle = getRecentEpisodesToggle(toggles);
-    const { enabled, value } = recentEpisodesToggle;
+    const {
+      enabled: showRecentEpisodes,
+      value: recentEpisodesLimit,
+    } = recentEpisodesToggle;
 
     const get = pathWithLogging(getUrl(json), TV_MISSING_FIELD, json);
 
     const episodeId = get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR);
-    const recentEpisodes = enabled
+    const recentEpisodes = showRecentEpisodes
       ? processRecentEpisodes(json, {
           exclude: episodeId,
-          recentEpisodesLimit: value,
+          recentEpisodesLimit,
           urlFormatter: (service, id) =>
             `/${service}/${id.split(':').pop().replace('/', '/tv/')}`,
         })
