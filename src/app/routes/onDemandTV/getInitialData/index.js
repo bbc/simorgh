@@ -13,7 +13,9 @@ import getEpisodeAvailability, {
 
 import processRecentEpisodes from '#app/routes/utils/processRecentEpisodes';
 
-const getRecentEpisodesToggle = pathOr({ enabled: false, value: 4 }, [
+const DEFAULT_TOGGLE_VALUE = { enabled: false, value: 4 };
+
+const getRecentEpisodesToggle = pathOr(DEFAULT_TOGGLE_VALUE, [
   'recentVideoEpisodes',
 ]);
 

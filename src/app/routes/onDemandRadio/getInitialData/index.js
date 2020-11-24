@@ -15,9 +15,11 @@ import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 import getRadioService from '../../utils/getRadioService';
 import processRecentEpisodes from '../../utils/processRecentEpisodes';
 
+const DEFAULT_TOGGLE_VALUE = { enabled: false, value: 4 };
+
 const getRadioScheduleData = path(['radioScheduleData']);
 const getScheduleToggle = path(['onDemandRadioSchedule', 'enabled']);
-const getRecentEpisodesToggle = pathOr({ enabled: false, value: 4 }, [
+const getRecentEpisodesToggle = pathOr(DEFAULT_TOGGLE_VALUE, [
   'recentAudioEpisodes',
 ]);
 
