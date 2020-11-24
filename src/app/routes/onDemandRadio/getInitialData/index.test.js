@@ -41,6 +41,30 @@ describe('Get initial data for on demand radio', () => {
     );
   });
 
+  it('should return essential data for a page to render when the episode toggle is null', async () => {
+    const { pageData } = await getInitialData({
+      path: 'mock-on-demand-radio-path',
+      pageType,
+      toggles: {
+        recentAudioEpisodes: null,
+      },
+    });
+
+    expect(pageData.headline).toEqual('ماښامنۍ خپرونه');
+    expect(pageData.releaseDateTimeStamp).toEqual(1588291200000);
+    expect(pageData.summary).toEqual('د بي بي سي ورلډ سروس څخه پروګرام کول');
+    expect(pageData.language).toEqual('ps');
+    expect(pageData.metadata.type).toEqual('On Demand Radio');
+    expect(pageData.imageUrl).toEqual(
+      'ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png',
+    );
+    expect(pageData.promoBrandTitle).toEqual('ماښامنۍ خپرونه');
+    expect(pageData.durationISO8601).toEqual('PT29M30S');
+    expect(pageData.thumbnailImageUrl).toEqual(
+      'https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png',
+    );
+  });
+
   it('should override renderer on test', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
     await getInitialData({ path: 'mock-live-radio-path', pageType });
