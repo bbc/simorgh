@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
@@ -16,7 +17,9 @@ import processRecentEpisodes from '../../utils/processRecentEpisodes';
 
 const getRadioScheduleData = path(['radioScheduleData']);
 const getScheduleToggle = path(['onDemandRadioSchedule', 'enabled']);
-const getRecentEpisodesToggle = path(['recentAudioEpisodes']);
+const getRecentEpisodesToggle = pathOr({ enabled: false, value: 4 }, [
+  'recentAudioEpisodes',
+]);
 
 export default async ({ path: pathname, pageType, service, toggles }) => {
   try {

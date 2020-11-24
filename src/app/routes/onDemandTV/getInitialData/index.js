@@ -1,4 +1,4 @@
-import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrl from '../../utils/getPlaceholderImageUrl';
@@ -13,7 +13,9 @@ import getEpisodeAvailability, {
 
 import processRecentEpisodes from '#app/routes/utils/processRecentEpisodes';
 
-const getRecentEpisodesToggle = path(['recentVideoEpisodes']);
+const getRecentEpisodesToggle = pathOr({ enabled: false, value: 4 }, [
+  'recentVideoEpisodes',
+]);
 
 export default async ({ path: pathname, pageType, toggles }) => {
   try {
