@@ -28,6 +28,15 @@ describe('RecentAudioEpisodes', () => {
     expect(container.querySelectorAll('li').length).toEqual(4);
   });
 
+  it('should render the episode title when supplied', async () => {
+    const { getByText } = render(
+      <RecentAudioEpisodesWithContext episodes={recentAudioFixtures} />,
+    );
+
+    const episodeTitle = getByText('Wednesday Evening');
+    expect(episodeTitle).toBeInTheDocument();
+  });
+
   it('should include the visually hidden audio and date', () => {
     const { getAllByText } = render(
       <RecentAudioEpisodesWithContext episodes={recentAudioFixtures} />,

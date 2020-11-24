@@ -30,6 +30,7 @@ const recentAudioFixtures = [
     id: 'w172xnm84wjgw3s',
     url: '/indonesia/bbc_indonesian_radio/w172xnm84wjgw3s',
     brandTitle: 'Dunia Pagi Ini',
+    episodeTitle: 'Wednesday Evening',
     timestamp: 1605222900000,
     duration: 'PT15M30S',
     image: '//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png',
