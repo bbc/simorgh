@@ -2,21 +2,25 @@ import pathOr from 'ramda/src/pathOr';
 import is from 'ramda/src/is';
 
 const validateEpisode = episode => {
-  const checks = [
-    episode,
-    is(String, episode.id),
-    episode.id.includes(':'),
-    episode.brand,
-    is(String, episode.brand.title),
-    episode.media,
-    is(String, episode.media.id),
-    is(Array, episode.media.versions),
-    episode.media.versions[0],
-    is(String, episode.media.versions[0].durationISO8601),
-    is(Number, episode.media.versions[0].availableFrom),
-  ];
+  try {
+    const checks = [
+      episode,
+      is(String, episode.id),
+      episode.id.includes(':'),
+      episode.brand,
+      is(String, episode.brand.title),
+      episode.media,
+      is(String, episode.media.id),
+      is(Array, episode.media.versions),
+      episode.media.versions[0],
+      is(String, episode.media.versions[0].durationISO8601),
+      is(Number, episode.media.versions[0].availableFrom),
+    ];
 
-  return checks.every(Boolean);
+    return checks.every(Boolean);
+  } catch {
+    return false;
+  }
 };
 
 const formatEpisode = (episode, { serviceName, urlFormatter }) => {
