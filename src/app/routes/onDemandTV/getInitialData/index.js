@@ -10,13 +10,19 @@ import getEpisodeAvailability, {
   getUrl,
 } from '#lib/utilities/episodeAvailability';
 
-export default async ({ path: pathname, pageType }) => {
+import processRecentEpisodes from '#app/routes/utils/processRecentEpisodes';
+
+const getRecentEpisodesToggle = path(['recentVideoEpisodes']);
+
+export default async ({ path: pathname, pageType, toggles }) => {
   try {
     const onDemandTvDataPath = overrideRendererOnTest(pathname);
     const { json, status } = await fetchPageData({
       path: onDemandTvDataPath,
       pageType,
     });
+    const recentEpisodesToggle = getRecentEpisodesToggle(toggles);
+    const { enabled, value } = recentEpisodesToggle;
 
     const get = pathWithLogging(getUrl(json), TV_MISSING_FIELD, json);
 
@@ -54,6 +60,13 @@ export default async ({ path: pathname, pageType }) => {
         episodeId,
         imageUrl: get(['content', 'blocks', 0, 'imageUrl']),
         episodeAvailability: getEpisodeAvailability(json),
+        recentEpisodes: processRecentEpisodes(json, {
+          exclude: episodeId,
+          enabled,
+          recentEpisodesLimit: value,
+          urlFormatter: (service, id) =>
+            `/${service}/${id.split(':').pop().replace('/', '/tv/')}`,
+        }),
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
