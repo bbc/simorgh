@@ -53,6 +53,12 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
       logLevel ? withLogging(fieldPath, logLevel) : path(fieldPath, json);
 
     const episodeId = get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR);
+    const recentEpisodes = enabled
+      ? processRecentEpisodes(json, {
+          exclude: episodeId,
+          recentEpisodesLimit: value,
+        })
+      : [];
 
     return {
       status,
@@ -91,11 +97,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
         ),
         episodeAvailability: getEpisodeAvailability(json),
         radioScheduleData: getRadioScheduleData(json),
-        recentEpisodes: processRecentEpisodes(json, {
-          exclude: episodeId,
-          enabled,
-          recentEpisodesLimit: value,
-        }),
+        recentEpisodes,
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {

@@ -32,6 +32,14 @@ export default async ({ path: pathname, pageType, toggles }) => {
     const get = pathWithLogging(getUrl(json), TV_MISSING_FIELD, json);
 
     const episodeId = get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR);
+    const recentEpisodes = enabled
+      ? processRecentEpisodes(json, {
+          exclude: episodeId,
+          recentEpisodesLimit: value,
+          urlFormatter: (service, id) =>
+            `/${service}/${id.split(':').pop().replace('/', '/tv/')}`,
+        })
+      : [];
 
     return {
       status,
@@ -65,13 +73,7 @@ export default async ({ path: pathname, pageType, toggles }) => {
         episodeId,
         imageUrl: get(['content', 'blocks', 0, 'imageUrl']),
         episodeAvailability: getEpisodeAvailability(json),
-        recentEpisodes: processRecentEpisodes(json, {
-          exclude: episodeId,
-          enabled,
-          recentEpisodesLimit: value,
-          urlFormatter: (service, id) =>
-            `/${service}/${id.split(':').pop().replace('/', '/tv/')}`,
-        }),
+        recentEpisodes,
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
