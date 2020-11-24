@@ -65,6 +65,19 @@ describe('Get initial data for on demand radio', () => {
     );
   });
 
+  it('should return recent episode data when recentEpisode toggle is enabled', async () => {
+    const { pageData } = await getInitialData({
+      path: 'mock-on-demand-radio-path',
+      pageType,
+      toggles: {
+        recentAudioEpisodes: { enabled: true, value: 4 },
+      },
+    });
+
+    expect(pageData.recentEpisodes.length).toEqual(4);
+    expect(pageData.recentEpisodes[0].id).toEqual('w3ct0m3k');
+  });
+
   it('should override renderer on test', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
     await getInitialData({ path: 'mock-live-radio-path', pageType });

@@ -65,6 +65,19 @@ describe('Get initial data for on demand tv', () => {
     );
   });
 
+  it('should return recent episode data when recentEpisode toggle is enabled', async () => {
+    const { pageData } = await getInitialData({
+      path: 'mock-on-demand-tv-path',
+      pageType,
+      toggles: {
+        recentVideoEpisodes: { enabled: true, value: 3 },
+      },
+    });
+
+    expect(pageData.recentEpisodes.length).toEqual(3);
+    expect(pageData.recentEpisodes[0].id).toEqual('w172xcldhhr9tk7');
+  });
+
   it('should override renderer on test', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
     await getInitialData({ path: 'mock-live-tv-path', pageType });
