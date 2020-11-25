@@ -170,6 +170,7 @@ export const service = {
         previousRadioShow: 'البرنامج الإذاعي السابق',
         nextRadioShow: 'البرنامج الإذاعي اللاحق',
         duration: 'المدة',
+        recentEpisodes: 'البرامج السابقة',
       },
       socialEmbed: {
         caption: {

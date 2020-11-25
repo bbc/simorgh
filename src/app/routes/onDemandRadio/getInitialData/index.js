@@ -43,6 +43,8 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
     const get = (fieldPath, logLevel) =>
       logLevel ? withLogging(fieldPath, logLevel) : path(fieldPath, json);
 
+    const episodeId = get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR);
+
     return {
       status,
       pageData: {
@@ -61,7 +63,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
           ['metadata', 'analyticsLabels', 'contentType'],
           LOG_LEVELS.INFO,
         ),
-        episodeId: get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR),
+        episodeId,
         masterBrand: get(['metadata', 'createdBy'], LOG_LEVELS.ERROR),
         releaseDateTimeStamp: get(
           ['metadata', 'releaseDateTimeStamp'],

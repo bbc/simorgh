@@ -153,6 +153,7 @@ export const service = {
         audio: 'غږ',
         photogallery: 'دعکسونو ګالري',
         video: 'ویډیو',
+        recentEpisodes: 'پخواني پروګرامونه',
         bbc_pashto_radio: {
           title: 'بي بي سي افغانستان (پښتو خپرونه)',
           subtitle:

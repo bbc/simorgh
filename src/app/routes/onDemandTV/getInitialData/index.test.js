@@ -23,6 +23,9 @@ describe('Get initial data for on demand tv', () => {
     const { pageData } = await getInitialData({
       path: 'mock-on-demand-tv-path',
       pageType,
+      toggles: {
+        recentVideoEpisodes: { enabled: false, value: 4 },
+      },
     });
 
     expect(pageData.language).toEqual('ps');
@@ -89,6 +92,9 @@ describe('Get initial data for on demand tv', () => {
     await getInitialData({
       path: 'mock-on-demand-tv-path',
       pageType,
+      toggles: {
+        recentVideoEpisodes: { enabled: false, value: 4 },
+      },
     });
 
     const countMissingFieldCalls = mockedFunction =>
