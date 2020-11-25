@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
@@ -20,7 +21,7 @@ const getPageIdentifier = path([
 
 const getHeading = path(['content', 'blocks', 0, 'text']);
 const getBodySummary = path(['content', 'blocks', 1, 'text']);
-const getScheduleToggle = path(['liveRadioSchedule', 'enabled']);
+const getScheduleToggle = pathOr(false, ['liveRadioSchedule', 'enabled']);
 
 export default async ({ path: pathname, pageType, service, toggles }) => {
   try {

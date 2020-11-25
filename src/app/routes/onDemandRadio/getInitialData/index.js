@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
@@ -14,7 +15,7 @@ import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 import getRadioService from '../../utils/getRadioService';
 
 const getRadioScheduleData = path(['radioScheduleData']);
-const getScheduleToggle = path(['onDemandRadioSchedule', 'enabled']);
+const getScheduleToggle = pathOr(false, ['onDemandRadioSchedule', 'enabled']);
 
 export default async ({ path: pathname, pageType, service, toggles }) => {
   try {
