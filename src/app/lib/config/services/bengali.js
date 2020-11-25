@@ -167,6 +167,7 @@ export const service = {
         previousRadioShow: 'পূর্ববর্তী রেডিও অনুষ্ঠান',
         nextRadioShow: 'পরবর্তী রেডিও অনুষ্ঠান',
         duration: 'স্থিতিকাল',
+        recentEpisodes: 'পুরনো অনুষ্ঠান',
       },
       socialEmbed: {
         caption: {

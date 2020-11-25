@@ -292,7 +292,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="css-pzr5mc-MediaIcon-VideoMediaIcon emotion-3"
+                                  class="css-3i242t-MediaIcon-VideoMediaIcon emotion-3"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 32 32"
@@ -381,7 +381,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="css-pzr5mc-MediaIcon-VideoMediaIcon emotion-3"
+                                  class="css-3i242t-MediaIcon-VideoMediaIcon emotion-3"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 32 32"
@@ -470,7 +470,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="css-pzr5mc-MediaIcon-VideoMediaIcon emotion-3"
+                                  class="css-3i242t-MediaIcon-VideoMediaIcon emotion-3"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 32 32"

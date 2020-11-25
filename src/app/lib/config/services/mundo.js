@@ -169,6 +169,7 @@ export const service = {
         previousRadioShow: 'Programa anterior',
         nextRadioShow: 'Próximo programa',
         duration: 'Duración',
+        recentEpisodes: 'Más',
       },
       socialEmbed: {
         caption: {

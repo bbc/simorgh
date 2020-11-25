@@ -163,6 +163,7 @@ export const service = {
         previousRadioShow: 'पछिल्लो रेडिओ कार्यक्रम',
         nextRadioShow: 'अघिल्लो रेडिओ कार्यक्रम',
         duration: 'समयावधि',
+        recentEpisodes: 'पहिलेका कार्यक्रमहरु',
       },
       socialEmbed: {
         caption: {

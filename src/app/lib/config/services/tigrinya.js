@@ -155,6 +155,7 @@ export const service = {
         previousRadioShow: 'ኣቐዲሙ ዝነበረ ፈነወ ራድዮ',
         nextRadioShow: 'ዝቕጽል ፈነወ ራድዮ',
         duration: 'ዕምሪ ፈነወ',
+        recentEpisodes: 'ዝሓለፉ ክፋላት',
       },
       socialEmbed: {
         caption: {
