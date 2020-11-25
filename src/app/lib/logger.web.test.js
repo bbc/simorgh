@@ -1,6 +1,7 @@
 const loggerWeb = require('./logger.web');
 
 const message = 'test message';
+const event = 'test event';
 global.console = {
   error: jest.fn(),
   warn: jest.fn(),
@@ -22,48 +23,44 @@ describe('Logger Web - for the client-side', () => {
 
   it('logger.error should run console.error', () => {
     const loggerInstance = loggerWeb('');
-    loggerInstance.error(message);
-    expect(global.console.error).toHaveBeenCalledWith(`error - ${message}`);
+    loggerInstance.error(event, message);
+
+    expect(global.console.error).toHaveBeenCalledWith({ event, message });
     expectNotCalled(global.console, ['debug', 'info', 'log', 'warn']);
   });
 
-  it('logger.warn should run console.warn', () => {
+  it('logger.warn should not run console.warn', () => {
     const loggerInstance = loggerWeb('');
     loggerInstance.warn(message);
 
-    expect(global.console.warn).toHaveBeenCalledWith(`warn - ${message}`);
-    expectNotCalled(global.console, ['debug', 'error', 'info', 'log']);
+    expect(global.console.warn).not.toHaveBeenCalled();
   });
 
-  it('logger.info should run console.info', () => {
+  it('logger.info should not run console.info', () => {
     const loggerInstance = loggerWeb('');
     loggerInstance.info(message);
 
-    expect(global.console.info).toHaveBeenCalledWith(`info - ${message}`);
-    expectNotCalled(global.console, ['debug', 'error', 'log', 'warn']);
+    expect(global.console.info).not.toHaveBeenCalled();
   });
 
-  it('logger.debug should run console.debug', () => {
+  it('logger.debug should not run console.debug', () => {
     const loggerInstance = loggerWeb('');
     loggerInstance.debug(message);
 
-    expect(global.console.debug).toHaveBeenCalledWith(`debug - ${message}`);
-    expectNotCalled(global.console, ['error', 'info', 'log', 'warn']);
+    expect(global.console.debug).not.toHaveBeenCalled();
   });
 
-  it('logger.verbose should run console.log', () => {
+  it('logger.verbose should not run console.log', () => {
     const loggerInstance = loggerWeb('');
     loggerInstance.verbose(message);
 
-    expect(global.console.log).toHaveBeenCalledWith(`verbose - ${message}`);
-    expectNotCalled(global.console, ['debug', 'error', 'info', 'warn']);
+    expect(global.console.log).not.toHaveBeenCalled();
   });
 
-  it('logger.silly should run console.log', () => {
+  it('logger.silly should not run console.log', () => {
     const loggerInstance = loggerWeb('');
     loggerInstance.silly(message);
 
-    expect(global.console.log).toHaveBeenCalledWith(`silly - ${message}`);
-    expectNotCalled(global.console, ['debug', 'error', 'info', 'warn']);
+    expect(global.console.log).not.toHaveBeenCalled();
   });
 });
