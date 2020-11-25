@@ -744,7 +744,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 
 @media (min-width:63rem) {
   .emotion-25 {
-    padding-right: 40px;
+    padding-right: 2.5rem;
   }
 }
 
@@ -2253,7 +2253,7 @@ exports[`Media Asset Page should render component 1`] = `
 
 @media (min-width:63rem) {
   .emotion-27 {
-    padding-right: 40px;
+    padding-right: 2.5rem;
   }
 }
 

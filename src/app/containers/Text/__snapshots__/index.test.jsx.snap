@@ -138,7 +138,7 @@ exports[`TextContainer with data should render correctly 1`] = `
 
 @media (min-width:63rem) {
   .emotion-0 {
-    padding-right: 40px;
+    padding-right: 2.5rem;
   }
 }
 
