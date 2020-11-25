@@ -79,7 +79,7 @@ export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
     });
 
     // This test specifically covers an edge case where more than one instagram post is
-    // included in a Story and twitter needs to be prompted to render the instagram post
+    // included in a Story and instagram needs to be prompted to render the instagram post
     // rather than leaving it as core content
     //
     // Specifically it runs against this asset http://localhost:7080/russian/news-55041160
@@ -96,14 +96,14 @@ export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
           );
         });
 
-        if (twitterEmbedBlocks.length > 1) {
+        if (instagramEmbedBlocks.length > 1) {
           const firstInstagramEmbedUrl = path(
             [0, 'model', 'blocks', 0, 'model', 'href'],
-            twitterEmbedBlocks,
+            instagramEmbedBlocks,
           );
           const secondInstagramEmbedUrl = path(
             [1, 'model', 'blocks', 0, 'model', 'href'],
-            twitterEmbedBlocks,
+            instagramEmbedBlocks,
           );
 
           cy.get(
