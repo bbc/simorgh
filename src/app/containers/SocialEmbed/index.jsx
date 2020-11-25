@@ -15,8 +15,6 @@ import { GridItemMedium } from '#app/components/Grid';
 import useToggle from '#hooks/useToggle';
 import socialEmbedBlockPropTypes from '#models/propTypes/socialEmbed';
 import createTranslations from './translations';
-import EnrichTweet from './enrichTweet';
-
 const logger = nodeLogger(__filename);
 
 /**
@@ -86,24 +84,6 @@ const SocialEmbedContainer = ({ blocks }) => {
     href,
   });
 
-  const socialEmbed = (
-    <CanonicalSocialEmbed
-      provider={provider}
-      service={service}
-      oEmbed={oEmbed}
-      fallback={fallback}
-      skipLink={skipLink}
-      caption={caption}
-    />
-  );
-
-  const enrichedSocialEmbed =
-    provider === 'twitter' ? (
-      <EnrichTweet>{socialEmbed}</EnrichTweet>
-    ) : (
-      socialEmbed
-    );
-
   return (
     <GridItemMedium>
       <Wrapper
@@ -122,7 +102,14 @@ const SocialEmbedContainer = ({ blocks }) => {
           />
         ) : (
           <Lazyload offset={LAZYLOAD_OFFSET} once height={oEmbed?.height}>
-            {enrichedSocialEmbed}
+            <CanonicalSocialEmbed
+              provider={provider}
+              service={service}
+              oEmbed={oEmbed}
+              fallback={fallback}
+              skipLink={skipLink}
+              caption={caption}
+            />
           </Lazyload>
         )}
       </Wrapper>

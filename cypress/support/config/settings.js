@@ -5825,15 +5825,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/russian/features-54391793'],
+            paths: ['/russian/features-54391793', '/russian/news-55041160'],
             enabled: true,
           },
           test: {
-            paths: ['/russian/features-54391793'],
+            paths: ['/russian/features-54391793', '/russian/news-55041160'],
             enabled: false,
           },
           local: {
-            paths: ['/russian/features-54391793'],
+            paths: ['/russian/features-54391793', '/russian/news-55041160'],
             enabled: true,
           },
         },
