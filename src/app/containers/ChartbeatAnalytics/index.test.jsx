@@ -11,6 +11,7 @@ import * as testUtils from './utils';
 import * as amp from './amp';
 import { localBaseUrl } from '../../../testHelpers/config';
 import frontPageData from '../../../../data/news/frontpage';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const defaultToggleState = {
   chartbeatAnalytics: {
@@ -90,7 +91,7 @@ describe('Charbeats Analytics Container', () => {
     const { container } = render(
       <ContextWrap
         platform="amp"
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         origin="bbc.com"
         toggleState={toggleState}
       >
@@ -118,7 +119,7 @@ describe('Charbeats Analytics Container', () => {
     const { container } = render(
       <ContextWrap
         platform="canonical"
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         origin="bbc.com"
         toggleState={toggleState}
       >
@@ -134,7 +135,7 @@ describe('Charbeats Analytics Container', () => {
     const { container } = render(
       <ContextWrap
         platform="canonical"
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         origin={localBaseUrl}
       >
         <ChartbeatAnalytics data={frontPageData} />
@@ -174,7 +175,7 @@ describe('Charbeats Analytics Container', () => {
     mount(
       <ContextWrap
         platform="canonical"
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         origin="test.bbc.com"
         toggleState={toggleState}
       >
