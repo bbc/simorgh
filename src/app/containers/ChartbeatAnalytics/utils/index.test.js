@@ -335,7 +335,7 @@ describe('Chartbeat utilities', () => {
       const fixtureData = {
         isAmp: true,
         platform: 'amp',
-        pageType: 'ARTICLE_PAGE',
+        pageType: ARTICLE_PAGE,
         data: {},
         brandName: '',
         chartbeatDomain: 'bbc.co.uk',
