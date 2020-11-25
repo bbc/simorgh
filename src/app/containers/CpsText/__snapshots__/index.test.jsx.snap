@@ -136,6 +136,12 @@ exports[`CpsTextContainer with data should render correctly 1`] = `
   }
 }
 
+@media (min-width:63rem) {
+  .emotion-0 {
+    padding-right: 2.5rem;
+  }
+}
+
 .emotion-24 {
   margin-bottom: 1.5rem;
 }
