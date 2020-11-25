@@ -23,7 +23,7 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
         allowlist: ['webpack/hot/poll?100'],
       }),
     ],
-    watch: true,
+
     node: {
       /**
        * Override webpacks default handling of __dirname
