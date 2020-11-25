@@ -1,6 +1,7 @@
 export const ARTICLE_PAGE = 'article';
 export const FRONT_PAGE = 'frontPage';
 export const MEDIA_PAGE = 'media';
+export const MOST_READ_PAGE = 'mostRead';
 export const MOST_POPULAR_PAGE = 'popular';
 export const LIVE_RADIO_PAGE = 'WS-LIVE';
 export const INDEX_PAGE = 'IDX';
