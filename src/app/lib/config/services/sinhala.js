@@ -168,6 +168,7 @@ export const service = {
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
+        recentEpisodes: 'පෙර වැඩසටහන්',
       },
       socialEmbed: {
         caption: {

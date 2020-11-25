@@ -156,6 +156,7 @@ export const service = {
         previousRadioShow: 'Show radio trước',
         nextRadioShow: 'Show radio sau',
         duration: 'Thời lượng',
+        recentEpisodes: 'Xem thêm',
       },
       socialEmbed: {
         caption: {
