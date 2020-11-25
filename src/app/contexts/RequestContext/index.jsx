@@ -8,8 +8,10 @@ import getMetaUrls from './getMetaUrls';
 import variantPropType from '../../models/propTypes/variants';
 import {
   ARTICLE_PAGE,
+  FRONT_PAGE,
   INDEX_PAGE,
   FEATURE_INDEX_PAGE,
+  MEDIA_PAGE,
   MEDIA_ASSET_PAGE,
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
@@ -75,8 +77,8 @@ RequestContextProvider.propTypes = {
   isAmp: bool.isRequired,
   pageType: oneOf([
     ARTICLE_PAGE,
-    'frontPage',
-    'media',
+    FRONT_PAGE,
+    MEDIA_PAGE,
     'mostRead',
     'mostWatched',
     'error',
