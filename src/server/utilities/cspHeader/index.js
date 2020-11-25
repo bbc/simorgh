@@ -90,6 +90,8 @@ const directives = {
       "'self'",
     ],
     canonicalLive: [
+      'https://flagpoles.gnl-test.bbcverticals.com',
+      'https://flagpoles.gnl-live.bbcverticals.com',
       'https://*.akamaihd.net',
       'https://a1.api.bbc.co.uk/hit.xiti', // ATI
       'https://config.api.bbci.co.uk', // Toggles service
@@ -103,6 +105,8 @@ const directives = {
       "'self'",
     ],
     ampNonLive: [
+      'https://flagpoles.gnl-test.bbcverticals.com',
+      'https://flagpoles.gnl-live.bbcverticals.com',
       'https://*.akamaihd.net',
       'https://cdn.ampproject.org',
       'https://*.ampproject.net', // Social Embeds
@@ -116,6 +120,8 @@ const directives = {
       "'self'",
     ],
     canonicalNonLive: [
+      'https://flagpoles.gnl-test.bbcverticals.com',
+      'https://flagpoles.gnl-live.bbcverticals.com',
       'https://*.akamaihd.net',
       'https://logws1363.ati-host.net', // ATI
       'https://config.test.api.bbci.co.uk', // Toggles service
