@@ -89,7 +89,6 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 
 .emotion-82 {
   margin-bottom: 1rem;
-  padding-bottom: 2rem;
 }
 
 @media (max-width:14.9375rem) {
@@ -205,6 +204,20 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 @media (min-width:37.5rem) {
   .emotion-82 {
     margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-82 {
+    padding: 1.5rem;
+    margin: 2rem;
+  }
+}
+
+@media (max-width:37.5rem) {
+  .emotion-82 {
+    padding: 2rem;
+    margin: 1rem;
   }
 }
 
@@ -1046,7 +1059,6 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 
 .emotion-40 {
   margin-bottom: 1rem;
-  padding-bottom: 2rem;
 }
 
 @media (max-width:14.9375rem) {
@@ -1162,6 +1174,20 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 @media (min-width:37.5rem) {
   .emotion-40 {
     margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-40 {
+    padding: 1.5rem;
+    margin: 2rem;
+  }
+}
+
+@media (max-width:37.5rem) {
+  .emotion-40 {
+    padding: 2rem;
+    margin: 1rem;
   }
 }
 
