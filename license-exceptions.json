@@ -62,6 +62,9 @@
     },
     "tslib@*": {
       "reason": "Licenced under BSD Zero Clause license; https://github.com/microsoft/tslib/blob/master/LICENSE.txt"
+    },
+    "scss-parser@*": {
+      "reason": "Licenced under BSD 3 Clause license; https://github.com/salesforce-ux/scss-parser/blob/master/LICENSE"
     }
   }
 }
