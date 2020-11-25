@@ -107,6 +107,12 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
 }
 }
 
+@media (max-width:24.9375rem) {
+  .emotion-5 {
+    margin-top: 0.5rem;
+  }
+}
+
 @media (min-width:25rem) {
   .emotion-5 {
     margin-top: 1rem;
@@ -283,6 +289,12 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
 }
 }
 
+@media (max-width:24.9375rem) {
+  .emotion-7 {
+    margin-top: 0.5rem;
+  }
+}
+
 @media (min-width:25rem) {
   .emotion-7 {
     margin-top: 1rem;
@@ -336,7 +348,7 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
         class="emotion-2 emotion-3"
       >
         <iframe
-          allow="autoplay; fullscreen"
+          allow="autoplay"
           allowfullscreen=""
           class="emotion-0 emotion-1"
           scrolling="no"
@@ -455,6 +467,12 @@ exports[`MediaPlayer render the amp player 1`] = `
       grid-column-start: 5;
     }
 }
+}
+
+@media (max-width:24.9375rem) {
+  .emotion-5 {
+    margin-top: 0.5rem;
+  }
 }
 
 @media (min-width:25rem) {
@@ -633,6 +651,12 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
 }
 }
 
+@media (max-width:24.9375rem) {
+  .emotion-7 {
+    margin-top: 0.5rem;
+  }
+}
+
 @media (min-width:25rem) {
   .emotion-7 {
     margin-top: 1rem;
@@ -686,7 +710,7 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
         class="emotion-2 emotion-3"
       >
         <iframe
-          allow="autoplay; fullscreen"
+          allow="autoplay"
           allowfullscreen=""
           class="emotion-0 emotion-1"
           scrolling="no"

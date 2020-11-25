@@ -46,7 +46,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                 dir="ltr"
               >
                 <p
-                  class="css-1ehf52w-Paragraph emotion-2"
+                  class="css-1frlble-Paragraph-StyledParagraph emotion-2"
                 >
                   Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan
                 </p>
@@ -1076,7 +1076,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     dir="ltr"
                   >
                     <p
-                      class="css-1ehf52w-Paragraph emotion-5"
+                      class="css-1frlble-Paragraph-StyledParagraph emotion-5"
                     >
                       Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan
                     </p>
@@ -2107,7 +2107,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     dir="ltr"
                   >
                     <p
-                      class="css-1ehf52w-Paragraph emotion-5"
+                      class="css-1frlble-Paragraph-StyledParagraph emotion-5"
                     >
                       Bole Festival wey dey celebrate one popular street food, special dish of roasted plantain and fish with pepper sauce, don start for Port Harcourt Rivers state
                     </p>
@@ -2648,7 +2648,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     role="region"
                   >
                     <div
-                      class="emotion-131 css-ow4mdm-GridComponent-LegacyGridItemLarge emotion-1"
+                      class="emotion-131 css-mhcbpr-GridComponent-LegacyGridItemLarge emotion-1"
                       dir="ltr"
                     >
                       <div
@@ -2778,7 +2778,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                                     >
                                       <svg
                                         aria-hidden="true"
-                                        class="css-xz0hvl-MediaIcon-PhotoMediaIcon emotion-115"
+                                        class="css-1i5hibd-MediaIcon-PhotoMediaIcon emotion-115"
                                         focusable="false"
                                         height="13px"
                                         viewBox="0 0 32 26"
@@ -3130,7 +3130,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     dir="ltr"
                   >
                     <p
-                      class="css-1ehf52w-Paragraph emotion-5"
+                      class="css-1frlble-Paragraph-StyledParagraph emotion-5"
                     >
                       This is a test asset used in Simorgh, please do not edit it without asking.
                     </p>
@@ -3911,7 +3911,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     dir="ltr"
                   >
                     <p
-                      class="css-1ehf52w-Paragraph emotion-5"
+                      class="css-1frlble-Paragraph-StyledParagraph emotion-5"
                     >
                       Bu il mayın 28-də Azərbaycan Xalq Cümhuriyyətinin elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca həmin dövrün siyasi xadimlərinin və hadisələrin arxiv fotolarını təqdim edir.
                     </p>
@@ -5121,7 +5121,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     role="region"
                   >
                     <div
-                      class="emotion-316 css-ow4mdm-GridComponent-LegacyGridItemLarge emotion-1"
+                      class="emotion-316 css-mhcbpr-GridComponent-LegacyGridItemLarge emotion-1"
                       dir="ltr"
                     >
                       <div

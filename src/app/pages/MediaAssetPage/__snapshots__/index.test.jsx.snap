@@ -217,6 +217,12 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   padding-bottom: 1rem;
 }
 
+@media (max-width:24.9375rem) {
+  .emotion-13 {
+    margin-top: 0.5rem;
+  }
+}
+
 @media (min-width:25rem) {
   .emotion-13 {
     margin-top: 1rem;
@@ -736,6 +742,12 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 }
 
+@media (min-width:63rem) {
+  .emotion-25 {
+    padding-right: 2.5rem;
+  }
+}
+
 .emotion-81 {
   margin-bottom: 1.5rem;
 }
@@ -1143,7 +1155,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                     class="emotion-8 emotion-9"
                   >
                     <iframe
-                      allow="autoplay; fullscreen"
+                      allow="autoplay"
                       allowfullscreen=""
                       class="emotion-2 emotion-3"
                       scrolling="no"
@@ -1714,6 +1726,12 @@ exports[`Media Asset Page should render component 1`] = `
   padding-bottom: 1rem;
 }
 
+@media (max-width:24.9375rem) {
+  .emotion-13 {
+    margin-top: 0.5rem;
+  }
+}
+
 @media (min-width:25rem) {
   .emotion-13 {
     margin-top: 1rem;
@@ -2230,6 +2248,12 @@ exports[`Media Asset Page should render component 1`] = `
   .emotion-27 {
     font-size: 1rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-27 {
+    padding-right: 2.5rem;
   }
 }
 
@@ -2861,7 +2885,6 @@ exports[`Media Asset Page should render component 1`] = `
 
 .emotion-351 {
   margin-bottom: 1rem;
-  padding-bottom: 2rem;
 }
 
 @media (max-width:14.9375rem) {
@@ -2977,6 +3000,20 @@ exports[`Media Asset Page should render component 1`] = `
 @media (min-width:37.5rem) {
   .emotion-351 {
     margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-351 {
+    padding: 1.5rem;
+    margin: 2rem;
+  }
+}
+
+@media (max-width:37.5rem) {
+  .emotion-351 {
+    padding: 2rem;
+    margin: 1rem;
   }
 }
 
@@ -3592,7 +3629,7 @@ exports[`Media Asset Page should render component 1`] = `
                     class="emotion-8 emotion-9"
                   >
                     <iframe
-                      allow="autoplay; fullscreen"
+                      allow="autoplay"
                       allowfullscreen=""
                       class="emotion-2 emotion-3"
                       scrolling="no"
