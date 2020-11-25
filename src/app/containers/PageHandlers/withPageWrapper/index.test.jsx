@@ -11,7 +11,7 @@ const dataProps = {
   isAmp: false,
   service: 'news',
   status: 200,
-  route: { pageType: 'article' },
+  route: { pageType: ARTICLE_PAGE },
 };
 
 // eslint-disable-next-line react/prop-types

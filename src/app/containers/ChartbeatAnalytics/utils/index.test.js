@@ -11,6 +11,7 @@ import {
 import onClient from '#lib/utilities/onClient';
 import * as articleUtils from '#lib/analyticsUtils/article';
 import * as frontPageUtils from '#lib/analyticsUtils/indexPage';
+import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 let isOnClient = false;
 
@@ -117,7 +118,7 @@ describe('Chartbeat utilities', () => {
         service: 'news',
         producer: 'wales',
         chapter: 'election 2017',
-        pageType: 'article',
+        pageType: ARTICLE_PAGE,
         description: 'should add chapter and producer to article type',
         expected:
           'News, News - ART, News - wales, News - wales - ART, News - election 2017, News - election 2017 - ART',
@@ -135,7 +136,7 @@ describe('Chartbeat utilities', () => {
         service: 'persian',
         producer: null,
         chapter: null,
-        pageType: 'article',
+        pageType: ARTICLE_PAGE,
         description: 'should not add chapter and producer when not present',
         expected: 'Persian, Persian - ART',
       },
@@ -143,7 +144,7 @@ describe('Chartbeat utilities', () => {
         service: 'news',
         producer: 'foo',
         chapter: null,
-        pageType: 'article',
+        pageType: ARTICLE_PAGE,
         description: 'should not add chapter when not present',
         expected: 'News, News - ART, News - foo, News - foo - ART',
       },
@@ -151,7 +152,7 @@ describe('Chartbeat utilities', () => {
         service: 'news',
         producer: null,
         chapter: 'bar',
-        pageType: 'article',
+        pageType: ARTICLE_PAGE,
         description: 'should not add producer when not present',
         expected: 'News, News - ART, News - bar, News - bar - ART',
       },
@@ -159,7 +160,7 @@ describe('Chartbeat utilities', () => {
         service: 'news',
         producer: 'news',
         chapter: 'baz',
-        pageType: 'article',
+        pageType: ARTICLE_PAGE,
         description: 'should not add producer when producer == service',
         expected: 'News, News - ART, News - baz, News - baz - ART',
       },
@@ -265,13 +266,13 @@ describe('Chartbeat utilities', () => {
     });
 
     test.each`
-      pageType       | brandName        | pageTitle                        | expectedNumberOfCalls
-      ${'index'}     | ${'BBC News'}    | ${'This is an index page title'} | ${1}
-      ${'IDX'}       | ${'BBC Persian'} | ${'This is an IDX page title'}   | ${1}
-      ${'FIX'}       | ${'BBC Afrique'} | ${'This is an FIX page title'}   | ${1}
-      ${'frontPage'} | ${'BBC News'}    | ${'This is a frontpage title'}   | ${1}
-      ${'article'}   | ${null}          | ${'This is an article title'}    | ${1}
-      ${'foo'}       | ${'BBC News'}    | ${null}                          | ${0}
+      pageType        | brandName        | pageTitle                        | expectedNumberOfCalls
+      ${'index'}      | ${'BBC News'}    | ${'This is an index page title'} | ${1}
+      ${'IDX'}        | ${'BBC Persian'} | ${'This is an IDX page title'}   | ${1}
+      ${'FIX'}        | ${'BBC Afrique'} | ${'This is an FIX page title'}   | ${1}
+      ${FRONT_PAGE}   | ${'BBC News'}    | ${'This is a frontpage title'}   | ${1}
+      ${ARTICLE_PAGE} | ${null}          | ${'This is an article title'}    | ${1}
+      ${'foo'}        | ${'BBC News'}    | ${null}                          | ${0}
     `(
       'should call getPageTitle when pageType is $pageType',
       ({ brandName, pageType, pageTitle, expectedNumberOfCalls }) => {
@@ -279,7 +280,7 @@ describe('Chartbeat utilities', () => {
 
         const mockTitle = jest.fn().mockImplementation(() => pageTitle);
 
-        if (pageType === 'article') {
+        if (pageType === ARTICLE_PAGE) {
           articleUtils.getPromoHeadline = mockTitle;
         } else {
           frontPageUtils.getPageTitle = mockTitle;
@@ -334,7 +335,7 @@ describe('Chartbeat utilities', () => {
       const fixtureData = {
         isAmp: true,
         platform: 'amp',
-        pageType: 'article',
+        pageType: 'ARTICLE_PAGE',
         data: {},
         brandName: '',
         chartbeatDomain: 'bbc.co.uk',
