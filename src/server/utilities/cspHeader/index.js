@@ -10,6 +10,8 @@ import getOriginContext from '#contexts/RequestContext/getOriginContext';
 
 const advertisingDirectives = {
   connectSrc: [
+    'https://flagpoles.gnl-test.bbcverticals.com',
+    'https://flagpoles.gnl-live.bbcverticals.com',
     'https://csi.gstatic.com',
     'https://experience.tinypass.com',
     'https://pagead2.googlesyndication.com',
@@ -73,6 +75,8 @@ const advertisingDirectives = {
 const directives = {
   connectSrc: {
     ampLive: [
+      'https://flagpoles.gnl-test.bbcverticals.com',
+      'https://flagpoles.gnl-live.bbcverticals.com',
       'https://*.akamaihd.net',
       'https://a1.api.bbc.co.uk/hit.xiti', // ATI
       'https://config.api.bbci.co.uk', // Toggles service
