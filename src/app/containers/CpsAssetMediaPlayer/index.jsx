@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import { string, bool } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_SPACING,
@@ -13,16 +14,16 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
-
+import { ServiceContext } from '#contexts/ServiceContext';
 import MediaPlayerContainer from '../MediaPlayer';
-import { GridItemConstrainedLargeNoMargin } from '#lib/styledGrid';
+import { GridItemLargeNoMargin } from '#app/components/Grid';
 import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 
-const Wrapper = styled(GridItemConstrainedLargeNoMargin)`
+const Wrapper = styled(GridItemLargeNoMargin)`
   margin-top: ${GEL_SPACING};
 
   ${props =>
@@ -30,6 +31,10 @@ const Wrapper = styled(GridItemConstrainedLargeNoMargin)`
     `figure {
       padding-bottom: ${GEL_SPACING_DBL};
     }`}
+
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    margin-top: ${GEL_SPACING};
+  }
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_DBL};
@@ -58,8 +63,8 @@ const CpsAssetMediaPlayer = ({
   hasBottomPadding,
   showCaption,
 }) => {
+  const { dir } = useContext(ServiceContext);
   if (!assetUri) return null;
-
   const mediaBlock = filterForBlockType(blocks, 'aresMedia');
   const metadataBlock = filterForBlockType(
     path(['model', 'blocks'], mediaBlock),
@@ -69,7 +74,7 @@ const CpsAssetMediaPlayer = ({
   const available = path(['model', 'available'], metadataBlock);
 
   return (
-    <Wrapper hasBottomPadding={hasBottomPadding}>
+    <Wrapper hasBottomPadding={hasBottomPadding} dir={dir}>
       <MediaPlayerContainer
         blocks={blocks}
         assetId={assetUri.substr(1)}

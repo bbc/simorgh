@@ -1,158 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Useful links should render multiple correctly 1`] = `
-.c3 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c3:hover,
-.c3:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c3:visited {
-  color: #6E6E73;
-}
-
-.c1 {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.c2 {
-  padding-top: 0.5rem;
-  width: 100%;
-}
-
-.c0 {
+.emotion-22 {
   padding-bottom: 1.5rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
 @media (min-width:37.5rem) {
-  .c3 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    -webkit-column-count: 2;
-    column-count: 2;
-    -webkit-column-gap: 1rem;
-    column-gap: 1rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c2:first-child {
-    padding-top: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    display: inline-block;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
+  .emotion-22 {
     margin-top: 0.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c0 {
+  .emotion-22 {
     margin-top: 1rem;
   }
 }
 
-<div
-  class="c0"
-  data-e2e="useful-links"
->
-  <ul
-    class="c1"
-    role="list"
-  >
-    <li
-      class="c2"
-      role="listitem"
-    >
-      <a
-        class="c3"
-        href="https://www.bbc.com/igbo/egwuregwu-49946491"
-      >
-        Ethiopia: Ndị uweojii agba gbuola ndị mmadụ
-      </a>
-    </li>
-    <li
-      class="c2"
-      role="listitem"
-    >
-      <a
-        class="c3"
-        href="https://www.bbc.com/igbo/egwuregwu-49946491"
-      >
-        Onye isi ala ndị New Zealand dị ime
-      </a>
-    </li>
-    <li
-      class="c2"
-      role="listitem"
-    >
-      <a
-        class="c3"
-        href="https://www.bbc.com/igbo/egwuregwu-49946491"
-      >
-        Egbuola ndị na-eme ngagharị iwe na Congo
-      </a>
-    </li>
-    <li
-      class="c2"
-      role="listitem"
-    >
-      <a
-        class="c3"
-        href="https://www.bbc.com/igbo/egwuregwu-49946491"
-      >
-        CHAN: Naịjirịa na Guinea nọ na ịrụ Group C
-      </a>
-    </li>
-    <li
-      class="c2"
-      role="listitem"
-    >
-      <a
-        class="c3"
-        href="https://www.bbc.com/igbo/egwuregwu-49946491"
-      >
-        Yabasị a na-achụ TB ọsọ
-      </a>
-    </li>
-  </ul>
-</div>
-`;
+.emotion-20 {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
 
-exports[`Useful links should render one correctly 1`] = `
-.c1 {
+@media (min-width:37.5rem) {
+  .emotion-20 {
+    -webkit-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 1rem;
+    column-gap: 1rem;
+  }
+
+@supports (grid-template-columns:fit-content(200px)) {
+    .emotion-20 {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: repeat( 3,auto );
+      grid-column-gap: 1rem;
+    }
+}
+}
+
+.emotion-2 {
+  padding-top: 0.5rem;
+  width: 100%;
+}
+
+@media (max-width:37.4375rem) {
+  .emotion-2:first-child {
+    padding-top: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    display: inline-block;
+  }
+
+@supports (grid-template-columns:fit-content(200px)) {
+    .emotion-2 {
+      display: block;
+      -webkit-align-self: start;
+      -ms-flex-item-align: start;
+      align-self: start;
+      width: initial;
+    }
+}
+}
+
+.emotion-0 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -163,51 +80,158 @@ exports[`Useful links should render one correctly 1`] = `
   text-decoration: none;
 }
 
-.c1:hover,
-.c1:focus {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c1:visited {
+.emotion-0:visited {
   color: #6E6E73;
 }
 
+<div>
+  <div
+    class="emotion-22 emotion-23"
+    data-e2e="useful-links"
+  >
+    <ul
+      class="emotion-20 emotion-21"
+      role="list"
+    >
+      <li
+        class="emotion-2 emotion-3"
+        role="listitem"
+      >
+        <a
+          class="emotion-0 emotion-1"
+          href="https://www.bbc.com/igbo/egwuregwu-49946491"
+        >
+          Ethiopia: Ndị uweojii agba gbuola ndị mmadụ
+        </a>
+      </li>
+      <li
+        class="emotion-2 emotion-3"
+        role="listitem"
+      >
+        <a
+          class="emotion-0 emotion-1"
+          href="https://www.bbc.com/igbo/egwuregwu-49946491"
+        >
+          Onye isi ala ndị New Zealand dị ime
+        </a>
+      </li>
+      <li
+        class="emotion-2 emotion-3"
+        role="listitem"
+      >
+        <a
+          class="emotion-0 emotion-1"
+          href="https://www.bbc.com/igbo/egwuregwu-49946491"
+        >
+          Egbuola ndị na-eme ngagharị iwe na Congo
+        </a>
+      </li>
+      <li
+        class="emotion-2 emotion-3"
+        role="listitem"
+      >
+        <a
+          class="emotion-0 emotion-1"
+          href="https://www.bbc.com/igbo/egwuregwu-49946491"
+        >
+          CHAN: Naịjirịa na Guinea nọ na ịrụ Group C
+        </a>
+      </li>
+      <li
+        class="emotion-2 emotion-3"
+        role="listitem"
+      >
+        <a
+          class="emotion-0 emotion-1"
+          href="https://www.bbc.com/igbo/egwuregwu-49946491"
+        >
+          Yabasị a na-achụ TB ọsọ
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Useful links should render one correctly 1`] = `
+.emotion-0 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .emotion-0 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .emotion-0 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
+.emotion-0:hover,
+.emotion-0:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:visited {
+  color: #6E6E73;
+}
+
 @media (min-width:37.5rem) {
-  .c0 {
+  .emotion-2 {
     margin-top: 1.5rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c0 {
+  .emotion-2 {
     margin-top: 0.5rem;
   }
 }
 
-<div
-  class="c0"
-  data-e2e="useful-links"
->
-  <a
-    class="c1"
-    href="https://www.bbc.com/igbo/egwuregwu-49946491"
+<div>
+  <div
+    class="emotion-2 emotion-3"
+    data-e2e="useful-links"
   >
-    Ethiopia: Ndị uweojii agba gbuola ndị mmadụ
-  </a>
+    <a
+      class="emotion-0 emotion-1"
+      href="https://www.bbc.com/igbo/egwuregwu-49946491"
+    >
+      Ethiopia: Ndị uweojii agba gbuola ndị mmadụ
+    </a>
+  </div>
 </div>
 `;

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { bool, shape, number } from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -15,7 +15,7 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import Grid from '@bbc/psammead-grid';
+import Grid from '#app/components/Grid';
 import UsefulLinksComponent from './UsefulLinks';
 import { ServiceContext } from '#contexts/ServiceContext';
 import groupShape from '#models/propTypes/frontPageGroup';
@@ -43,12 +43,12 @@ const StyledSection = styled.section`
 const FirstSectionTopMargin = styled.div`
   ${({ oneItem }) =>
     oneItem
-      ? css`
+      ? `
           @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
             margin-top: ${GEL_SPACING_TRPL};
           }
         `
-      : css`
+      : `
           @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
             margin-top: ${GEL_SPACING};
           }
@@ -132,12 +132,7 @@ const renderPromos = ({ items, isFirstSection, dir, showAllPromos }) => {
           sectionHasSingleStory
         />
       ) : (
-        <Grid
-          columns={parentGridColumns}
-          enableGelGutters
-          dir={dir}
-          as={StoryPromoUl}
-        >
+        <Grid columns={parentGridColumns} enableGelGutters as={StoryPromoUl}>
           {renderedRows}
         </Grid>
       )}

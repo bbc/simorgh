@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -26,7 +26,7 @@ import text from '#containers/Text';
 import image from '#containers/Image';
 import Blocks from '#containers/Blocks';
 import timestamp from '#containers/ArticleTimestamp';
-import { GridWrapper } from '#lib/styledGrid';
+import { GelPageGrid } from '#app/components/Grid';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -56,10 +56,6 @@ const componentsToRender = {
   image,
   timestamp,
 };
-
-const StyledMain = styled.main`
-  flex-grow: 1;
-`;
 
 const ArticlePageMostReadSection = styled(MostReadSection)`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
@@ -124,14 +120,24 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         dateModified={lastPublished}
         aboutTags={aboutTags}
       />
-      <StyledMain role="main">
-        <GridWrapper>
+      <main role="main">
+        <GelPageGrid
+          enableGelGutters
+          columns={{
+            group0: 6,
+            group1: 6,
+            group2: 6,
+            group3: 6,
+            group4: 8,
+            group5: 20,
+          }}
+        >
           <Blocks
             blocks={path(['content', 'model', 'blocks'], pageData)}
             componentsToRender={componentsToRender}
           />
-        </GridWrapper>
-      </StyledMain>
+        </GelPageGrid>
+      </main>
       <MostReadContainer
         mostReadEndpointOverride={mostReadEndpointOverride}
         wrapper={MostReadWrapper}

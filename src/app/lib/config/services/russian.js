@@ -140,6 +140,7 @@ export const mainTranslations = {
     previousRadioShow: 'Предыдущая передача',
     nextRadioShow: 'Следующая передача',
     duration: 'Продолжительность',
+    recentEpisodes: 'Прошлые передачи',
   },
   socialEmbed: {
     caption: {
@@ -290,16 +291,12 @@ export const service = {
         url: '/russian/in-depth-51962199',
       },
       {
-        title: 'Выборы в США',
-        url: '/russian/topics/c8jvq6n6kdxt',
-      },
-      {
         title: 'Истории',
         url: '/russian/features-50983593',
       },
       {
         title: 'Видео',
-        url: '/russian/media/video',
+        url: '/russian/in-depth-54439028',
       },
       {
         title: 'Фильмы',

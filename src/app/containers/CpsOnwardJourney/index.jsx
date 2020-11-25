@@ -8,32 +8,31 @@ import {
   func,
   bool,
   oneOf,
+  elementType,
 } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
 import {
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
+  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
-import Grid from '@bbc/psammead-grid';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 
 import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 import { storyItem } from '#models/propTypes/storyItem';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import {
-  GridWrapper as LegacyGridWrapper,
-  GridItemConstrainedLarge,
-} from '#lib/styledGrid';
-import { gelGridMargin } from '#app/lib/layoutGrid';
+import Grid, { GridWrapper, GridItemLarge } from '#app/components/Grid';
 
-const constrainedLargeGridColumns = {
+const LargeGridColumns = {
   group0: 1,
   group1: 1,
   group2: 1,
@@ -42,10 +41,20 @@ const constrainedLargeGridColumns = {
   group5: 12,
 };
 
-const ConstrainedLargeGrid = ({ children, ...gridProps }) => (
+const Wrapper = styled.div`
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    padding: 0 ${GEL_SPACING};
+  }
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    padding: 0 ${GEL_SPACING_DBL};
+  }
+`;
+
+const LargeGrid = ({ children, ...gridProps }) => (
   <Grid
     {...gridProps}
-    columns={constrainedLargeGridColumns}
+    columns={LargeGridColumns}
     margins={{
       group0: true,
       group1: true,
@@ -67,33 +76,34 @@ const ConstrainedLargeGrid = ({ children, ...gridProps }) => (
   </Grid>
 );
 
-ConstrainedLargeGrid.propTypes = {
+LargeGrid.propTypes = {
   children: node.isRequired,
 };
 
-const gridMarginSmall = css`
+const gridMarginSmall = `
   margin-bottom: ${GEL_SPACING_DBL};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-bottom: ${GEL_SPACING_TRPL};
   }
 `;
 
-const StyledConstrainedLargeGrid = styled(ConstrainedLargeGrid)`
-  ${gelGridMargin}
+const LegacyGridItemLarge = styled(GridItemLarge)`
   ${gridMarginSmall}
-  ${({ columnType }) =>
-    columnType === 'main' &&
-    `
-    padding: 0 ${GEL_SPACING_DBL};
-  `}
-`;
-
-const LegacyGridItemConstrainedLarge = styled(GridItemConstrainedLarge)`
-  ${gridMarginSmall}
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    padding: 1.5rem;
+    margin: 2rem;
+  }
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    padding: 2rem;
+    margin: 1rem;
+  }
 `;
 
 const StyledSectionLabel = styled(SectionLabel)`
   margin-top: 0;
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin-top: 0;
+  }
   ${({ columnType }) =>
     columnType === 'main' &&
     `
@@ -147,6 +157,8 @@ OptionallyRenderedSkipWrapper.defaultProps = {
 };
 
 const CpsOnwardJourney = ({
+  className,
+  LabelComponent,
   labelId,
   title,
   content,
@@ -170,26 +182,15 @@ const CpsOnwardJourney = ({
       }
     : { as: 'section', role: 'region', 'aria-labelledby': labelId };
 
-  const Wrapper = isMediaContent
-    ? styled(ConstrainedLargeGrid)`` // Necessary for styling
-    : StyledConstrainedLargeGrid;
   const CpsOnwardJourneyWrapper = ({ children }) =>
     parentColumns ? (
-      <Wrapper
-        data-e2e={labelId}
-        parentColumns={parentColumns}
-        columnType={columnType}
-        {...a11yAttributes}
-        isMediaContent={isMediaContent}
-      >
+      <Wrapper data-e2e={labelId} {...a11yAttributes} className={className}>
         {children}
       </Wrapper>
     ) : (
-      <LegacyGridWrapper data-e2e={labelId} {...a11yAttributes}>
-        <LegacyGridItemConstrainedLarge>
-          {children}
-        </LegacyGridItemConstrainedLarge>
-      </LegacyGridWrapper>
+      <GridWrapper data-e2e={labelId} {...a11yAttributes}>
+        <LegacyGridItemLarge dir={dir}>{children}</LegacyGridItemLarge>
+      </GridWrapper>
     );
 
   CpsOnwardJourneyWrapper.propTypes = {
@@ -200,21 +201,11 @@ const CpsOnwardJourney = ({
   const hasSingleContent = content.length === 1;
   const [singleContent] = content;
 
-  const WrapperItem = ({ children }) => (
-    <Wrapper parentColumns={constrainedLargeGridColumns} item>
-      {children}
-    </Wrapper>
-  );
-
-  WrapperItem.propTypes = {
-    children: node.isRequired,
-  };
-
   return (
     <CpsOnwardJourneyWrapper>
       <OptionallyRenderedSkipWrapper skipLink={skipLink} service={service}>
         {title ? (
-          <StyledSectionLabel
+          <LabelComponent
             script={script}
             service={service}
             dir={dir}
@@ -225,7 +216,7 @@ const CpsOnwardJourney = ({
             backgroundColor={sectionLabelBackground}
           >
             {title}
-          </StyledSectionLabel>
+          </LabelComponent>
         ) : null}
         {hasSingleContent ? (
           <SingleContentWrapper columnType={columnType}>
@@ -240,6 +231,8 @@ const CpsOnwardJourney = ({
 };
 
 CpsOnwardJourney.propTypes = {
+  className: string,
+  LabelComponent: elementType,
   labelId: string.isRequired,
   title: string,
   content: arrayOf(shape(storyItem)),
@@ -266,6 +259,8 @@ CpsOnwardJourney.propTypes = {
 };
 
 CpsOnwardJourney.defaultProps = {
+  className: '',
+  LabelComponent: StyledSectionLabel,
   content: [],
   title: '',
   isMediaContent: false,

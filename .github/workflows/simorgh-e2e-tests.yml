@@ -1,13 +1,14 @@
-name: Simorgh CI - E2E Tests
+name: Simorgh CI - E2E & 3rd Party Tests
 on:
-  push:
+  create:
     branches:
       - '**'
-      - '!latest'
   pull_request:
     branches:
       - '**'
-      - '!latest'
+  push:
+    branches:
+      - latest
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
@@ -21,8 +22,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Cypress run
+      - name: Run Simorgh E2Es
         uses: cypress-io/github-action@v2
         with:
           build: npm run build
           start: npm start
+      - name: Run 3rd Party E2Es
+        uses: cypress-io/github-action@v2
+        with:
+          project: ./3rdPartyCypress

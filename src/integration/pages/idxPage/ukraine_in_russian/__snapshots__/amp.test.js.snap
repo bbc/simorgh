@@ -218,28 +218,28 @@ Object {
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "Наука",
-  "url": "/ukrainian/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+  "url": "/ukrainian/topics/cyx5kzy4w5yt",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "Технології",
-  "url": "/ukrainian/topics/31684f19-84d6-41f6-b033-7ae08098572a",
+  "url": "/ukrainian/topics/cxnykv9q4kpt",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Здоров’я",
-  "url": "/ukrainian/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+  "url": "/ukrainian/topics/cwr9jqqqq13t",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Журнал",
-  "url": "/ukrainian/magazine",
+  "url": "/ukrainian/53725237",
 }
 `;
 
@@ -251,13 +251,6 @@ Object {
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 8`] = `
-Object {
-  "text": "Блоги",
-  "url": "/ukrainian/blogs",
-}
-`;
-
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "Поточна сторінка, РУС",
   "url": "/ukrainian/ukraine_in_russian",

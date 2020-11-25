@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -21,7 +21,6 @@ import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import MetadataContainer from '#containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
-import IndexMain from '#app/components/PageLayout/IndexMain';
 import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
 import IndexHeading from '#containers/IndexHeading';
 
@@ -42,7 +41,6 @@ const MarginWrapper = styled.div`
 const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
     brandName,
-    dir,
     lang,
     mostRead: { header },
   } = useContext(ServiceContext);
@@ -52,7 +50,6 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
       <IndexHeading id="content">{header}</IndexHeading>
       <MarginWrapper>
         <GelPageGrid
-          dir={dir}
           columns={{
             group0: 6,
             group1: 6,
@@ -65,7 +62,6 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         >
           <Grid
             item
-            dir={dir}
             startOffset={{
               group0: 1,
               group1: 1,
@@ -106,7 +102,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={header} />
-      <IndexMain data-e2e="most-read">
+      <main role="main" data-e2e="most-read">
         <IndexPageContainer>
           <MostReadContainer
             mostReadEndpointOverride={mostReadEndpointOverride}
@@ -116,7 +112,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
             serverRenderOnAmp
           />
         </IndexPageContainer>
-      </IndexMain>
+      </main>
     </>
   );
 };

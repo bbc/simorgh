@@ -1,6 +1,6 @@
 import React from 'react';
 import { arrayOf, bool, shape, string } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
@@ -16,13 +16,16 @@ const MediaStoryPromoLi = styled(StoryPromoLi)`
   }
 `;
 
-const MostWatchedOl = styled.ol.attrs({
-  role: 'list',
-})`
+const MostWatchedOl = styled.ol`
   list-style-type: none;
   margin: 0;
   padding: 0;
 `;
+
+MostWatchedOl.defaultProps = {
+  role: 'list',
+  'data-e2e': 'most-watched-ol',
+};
 
 const RelatedContentPromoList = ({ promoItems, dir, isMediaContent }) => {
   return (
@@ -37,7 +40,6 @@ const RelatedContentPromoList = ({ promoItems, dir, isMediaContent }) => {
       }}
       as={isMediaContent ? MostWatchedOl : StoryPromoUl}
       enableGelGutters
-      dir={dir}
     >
       {promoItems.map(item => (
         <Grid
@@ -52,7 +54,6 @@ const RelatedContentPromoList = ({ promoItems, dir, isMediaContent }) => {
           }}
           as={isMediaContent ? MediaStoryPromoLi : StoryPromoLi}
           key={item.id || item.uri}
-          dir={dir}
         >
           <StoryPromo
             item={item}

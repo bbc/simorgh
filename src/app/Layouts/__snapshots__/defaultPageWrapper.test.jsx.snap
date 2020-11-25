@@ -1,7 +1,138 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`defaultPageWrapper should render default page wrapper with children 1`] = `
-.c12 {
+.emotion-206 {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #FDFDFD;
+}
+
+.emotion-24 {
+  background-color: #B80000;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+@media (min-width:25rem) {
+  .emotion-24 {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+  }
+}
+
+.emotion-22 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-22 {
+    display: block;
+  }
+}
+
+.emotion-18 {
+  display: inline-block;
+  width: 100%;
+  max-width: 10.496849999999998rem;
+  min-width: 6.9979rem;
+  -webkit-flex: 1 1 6.9979rem;
+  -ms-flex: 1 1 6.9979rem;
+  flex: 1 1 6.9979rem;
+  -ms-flex-preferred-size: 10.496849999999998rem;
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-18 {
+    display: block;
+  }
+}
+
+.emotion-14 {
+  box-sizing: content-box;
+  color: #FFFFFF;
+  fill: currentColor;
+  padding-top: 0.625rem;
+  padding-bottom: 0.375rem;
+  height: 1.5rem;
+  width: 100%;
+  max-width: 10.496849999999998rem;
+  min-width: 6.9979rem;
+  -webkit-flex: 1 1 6.9979rem;
+  -ms-flex: 1 1 6.9979rem;
+  flex: 1 1 6.9979rem;
+  -ms-flex-preferred-size: 10.496849999999998rem;
+}
+
+@media (min-width:25rem) {
+  .emotion-14 {
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-14 {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),print {
+  .emotion-14 {
+    fill: windowText;
+  }
+}
+
+.emotion-19:hover .emotion-14,
+.emotion-19:focus .emotion-14 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+.emotion-16 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-20 {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -23,7 +154,21 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   font-style: normal;
 }
 
-.c12:focus {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-20:focus {
   -webkit-clip-path: none;
   clip-path: none;
   -webkit-clip: auto;
@@ -34,142 +179,39 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   left: 0;
 }
 
-.c11 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
+@media (min-width:25rem) {
+  .emotion-20:focus {
+    top: 0.5rem;
+  }
 }
 
-.c7 {
+@media (max-width:37.4375rem) {
+  .emotion-20 {
+    padding: 0.5rem;
+  }
+}
+
+.emotion-132 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
+}
+
+.emotion-132 .emotion-35::after {
+  left: 0;
+}
+
+.emotion-130 {
+  position: relative;
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.c6 {
-  background-color: #B80000;
-  min-height: 2.5rem;
-  width: 100%;
-  padding: 0 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
+.emotion-80 {
+  position: relative;
 }
 
-.c27 {
-  background-color: #B80000;
-  min-height: 2.5rem;
-  width: 100%;
-  padding: 0 0.5rem;
-  border-top: 0.0625rem solid transparent;
-}
-
-.c9 {
-  display: inline-block;
-  width: 100%;
-  max-width: 10.496849999999998rem;
-  min-width: 6.9979rem;
-  -webkit-flex: 1 1 6.9979rem;
-  -ms-flex: 1 1 6.9979rem;
-  flex: 1 1 6.9979rem;
-  -ms-flex-preferred-size: 10.496849999999998rem;
-}
-
-.c10 {
-  box-sizing: content-box;
-  color: #FFFFFF;
-  fill: currentColor;
-  padding-top: 0.625rem;
-  padding-bottom: 0.375rem;
-  height: 1.5rem;
-  width: 100%;
-  max-width: 10.496849999999998rem;
-  min-width: 6.9979rem;
-  -webkit-flex: 1 1 6.9979rem;
-  -ms-flex: 1 1 6.9979rem;
-  flex: 1 1 6.9979rem;
-  -ms-flex-preferred-size: 10.496849999999998rem;
-}
-
-.c8:hover .c10,
-.c8:focus .c10 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 0.25rem solid #FFFFFF;
-  margin-bottom: -0.25rem;
-}
-
-.c17 {
-  color: #fff;
-  fill: currentColor;
-}
-
-.c23 {
-  background-color: #222222;
-  clear: both;
-  overflow: hidden;
-  height: 0;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
-  transition-timing-function: cubic-bezier(0,0,0.58,1);
-  visibility: hidden;
-}
-
-.c24 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0 0.5rem;
-  border-bottom: 0.125rem solid #3F3F42;
-}
-
-.c25 {
-  padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid #3F3F42;
-}
-
-.c25:last-child {
-  padding-bottom: 1rem;
-  border: 0;
-}
-
-.c26 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #FFFFFF;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c26:hover,
-.c26:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c16 {
+.emotion-30 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -180,14 +222,14 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   width: 2.75rem;
 }
 
-.c16:hover,
-.c16:focus {
+.emotion-30:hover,
+.emotion-30:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.c16:hover::after,
-.c16:focus::after {
+.emotion-30:hover::after,
+.emotion-30:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -197,398 +239,31 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   border: 0.25rem solid #FFFFFF;
 }
 
-.c16 svg {
-  vertical-align: middle;
-}
-
-.c14 {
-  position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c19 {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-
-.c22 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #FDFDFD;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.75rem;
-}
-
-.c22:hover::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-}
-
-.c22:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-  top: 0;
-  border: 0.25rem solid #FFFFFF;
-}
-
-.c21 {
-  display: inline-block;
-  position: relative;
-  z-index: 2;
-}
-
-.c13 {
-  position: relative;
-  background-color: #B80000;
-  border-top: 0.0625rem solid #FFFFFF;
-}
-
-.c13 .c20::after {
-  left: 0;
-}
-
-.c15 {
-  position: relative;
-}
-
-.c0 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #323232;
-  padding: 1rem 0.5rem;
-}
-
-.c1 {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c1::after {
-  content: '\\0020';
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-.c2 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  padding: 0;
-  margin: 0;
-}
-
-.c4 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #F6A21D;
-  font-weight: 600;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.c4 li + li {
-  padding-top: 0.5rem;
-}
-
-.c3 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #BEBEBE;
-}
-
-.c3 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c3 a:focus,
-.c3 a:hover {
-  color: #FFFFFF;
-}
-
-.c5 button {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #F6A21D;
-  font-weight: 700;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-.c5 button:focus,
-.c5 button:hover {
-  color: #FFFFFF;
-}
-
-.c5 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5 a:focus,
-.c5 a:hover {
-  color: #FFFFFF;
-}
-
-.c33 {
-  padding: 0.5rem 0 0.5rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: block;
-}
-
-.c36 {
-  padding: 0.5rem 0 0.5rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline;
-}
-
-.c32:hover .c34,
-.c32:focus .c34 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c30 {
-  border-bottom: 0.0625rem solid #3F3F42;
-  list-style-type: none;
-  margin: 0;
-  padding: 0 0 0.5rem;
-  -webkit-column-count: 4;
-  column-count: 4;
-}
-
-.c30 > li:first-child {
-  border-bottom: 0.0625rem solid #3F3F42;
-  padding: 0.5rem 0;
-  margin-bottom: 0.5rem;
-  grid-column: 1/-1;
-  width: 100%;
-  -webkit-column-span: all;
-  column-span: all;
-}
-
-.c31 {
-  min-width: 50%;
-  -webkit-column-gap: 1rem;
-  column-gap: 1rem;
-  -webkit-break-inside: avoid-column;
-  break-inside: avoid-column;
-}
-
-.c28 {
-  background-color: #222222;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c29 {
-  max-width: 80rem;
-  margin: 0 auto;
-  padding-top: 0.5rem);
-}
-
-.c35 {
-  color: #FFFFFF;
-  margin: 0;
-  padding: 1rem 0;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
 @media (min-width:37.5rem) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c12:focus {
-    top: 0.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c12 {
-    padding: 0.5rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c7 {
-    display: block;
-  }
-}
-
-@media (min-width:25rem) {
-  .c6 {
-    min-height: 3.25rem;
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c27 {
-    min-height: 3.25rem;
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c9 {
-    display: block;
-  }
-}
-
-@media (min-width:25rem) {
-  .c10 {
-    padding-top: 1rem;
-    padding-bottom: 0.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    padding-top: 1.25rem;
-    padding-bottom: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),print {
-  .c10 {
-    fill: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c23 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (prefers-reduced-motion:reduce) {
-  .c23 {
-    -webkit-transition: none;
-    transition: none;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c26 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c26 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 {
+  .emotion-30 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) {
-  .c16 {
+  .emotion-30 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c19 {
-    overflow: hidden;
-  }
+.emotion-30 svg {
+  vertical-align: middle;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c22 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
+.emotion-26 {
+  color: #fff;
+  fill: currentColor;
 }
 
 @media (max-width:37.4375rem) {
-  .c22 {
-    padding: 0.75rem 0.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c21:last-child {
-    margin-right: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c21::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    width: 80rem;
-    border-bottom: 0.0625rem solid #eab3b3;
-    z-index: -1;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c18 {
+  .emotion-78 {
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-scroll-behavior: auto;
@@ -603,11 +278,11 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
     -ms-overflow-style: none;
   }
 
-  .c18::-webkit-scrollbar {
+  .emotion-78::-webkit-scrollbar {
     display: none;
   }
 
-  .c18:after {
+  .emotion-78:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -619,102 +294,257 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
     pointer-events: none;
     background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
   }
+
+@media (min-width:25rem) {
+    .emotion-78:after {
+      width: 6rem;
+    }
+}
+}
+
+.emotion-76 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-76 {
+    overflow: hidden;
+  }
+}
+
+.emotion-34 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width:37.4375rem) {
+  .emotion-34:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-34::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #eab3b3;
+    z-index: -1;
+  }
+}
+
+.emotion-32 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-32 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-32 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .emotion-32 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.emotion-32:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.emotion-32:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.emotion-128 {
+  background-color: #222222;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  visibility: hidden;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-128 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .emotion-128 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.emotion-126 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.emotion-84 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.emotion-84:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.emotion-82 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-82 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-82 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-82:hover,
+.emotion-82:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-134 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-144 {
+  background-color: #B80000;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-top: 0.0625rem solid transparent;
 }
 
 @media (min-width:25rem) {
-  .c0 {
-    padding: 1rem;
+  .emotion-144 {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+  }
+}
+
+.emotion-204 {
+  background-color: #222222;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (max-width:25rem) {
+  .emotion-204 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .emotion-204 {
+    padding: 0 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    float: left;
-    margin-right: 3.5%;
-    width: 22%;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 0.9375rem;
+  .emotion-204 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
+  .emotion-204 {
+    font-size: 0.8125rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c4 {
-    width: 18%;
-    float: right;
-  }
+.emotion-202 {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-top: 0.5rem);
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    margin: 0;
-    float: left;
-    width: 53%;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 button {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 button {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
+.emotion-194 {
+  border-bottom: 0.0625rem solid #3F3F42;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0.5rem;
+  -webkit-column-count: 4;
+  column-count: 4;
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c30 {
+  .emotion-194 {
     display: grid;
     grid-auto-flow: column;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c30 {
+  .emotion-194 {
     grid-auto-flow: row;
     -webkit-column-count: 1;
     column-count: 1;
@@ -722,7 +552,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width:15rem) and (max-width:37.4375rem) {
-  .c30 {
+  .emotion-194 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat( 5,auto );
@@ -732,7 +562,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c30 {
+  .emotion-194 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat( 4,auto );
@@ -742,7 +572,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c30 {
+  .emotion-194 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat( 3,auto );
@@ -752,7 +582,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width:80rem) {
-  .c30 {
+  .emotion-194 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat( 3,auto );
@@ -761,138 +591,334 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   }
 }
 
-@media (max-width:25rem) {
-  .c28 {
-    padding: 0 0.5rem;
-  }
+.emotion-194 > li:first-of-type {
+  border-bottom: 0.0625rem solid #3F3F42;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  grid-column: 1/-1;
+  width: 100%;
+  -webkit-column-span: all;
+  column-span: all;
+}
+
+.emotion-150 {
+  min-width: 50%;
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
+  -webkit-break-inside: avoid-column;
+  break-inside: avoid-column;
+}
+
+.emotion-148 {
+  padding: 0.5rem 0 0.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+}
+
+.emotion-149:hover .emotion-146,
+.emotion-149:focus .emotion-146 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-200 {
+  color: #FFFFFF;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.emotion-198 {
+  padding: 0.5rem 0 0.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline;
+}
+
+.emotion-12 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  padding: 1rem 0.5rem;
 }
 
 @media (min-width:25rem) {
-  .c28 {
-    padding: 0 1rem;
+  .emotion-12 {
+    padding: 1rem;
   }
 }
 
+.emotion-10 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.emotion-10::after {
+  content: '\\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.emotion-0 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c28 {
+  .emotion-0 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    float: left;
+    margin-right: 3.5%;
+    width: 22%;
+  }
+}
+
+.emotion-2 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #BEBEBE;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-2 {
+    font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c28 {
-    font-size: 0.8125rem;
+  .emotion-2 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 
-<html>
-  <head>
-    <link
-      href="/news/articles/manifest.json"
-      rel="manifest"
-    />
-  </head>
-  <body>
-    <div>
-      <p>
-        I am the GlobalStyles component
-      </p>
-      <p>
-        I am the ServiceWorker component
-      </p>
-      <header
-        role="banner"
+@media (min-width:37.5rem) {
+  .emotion-2 {
+    margin: 0;
+    float: left;
+    width: 53%;
+  }
+}
+
+.emotion-2 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2 a:focus,
+.emotion-2 a:hover {
+  color: #FFFFFF;
+}
+
+.emotion-8 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-8 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-8 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-8 li + li {
+  padding-top: 0.5rem;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-8 {
+    width: 18%;
+    float: right;
+  }
+}
+
+.emotion-4 button {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #F6A21D;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-4 button {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-4 button {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-4 button:focus,
+.emotion-4 button:hover {
+  color: #FFFFFF;
+}
+
+.emotion-4 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4 a:focus,
+.emotion-4 a:hover {
+  color: #FFFFFF;
+}
+
+<div>
+  <p>
+    I am the GlobalStyles component
+  </p>
+  <p>
+    I am the ServiceWorker component
+  </p>
+  <div
+    class="emotion-206 emotion-207"
+    id="main-wrapper"
+  >
+    <header
+      role="banner"
+    >
+      <div
+        class="emotion-12 emotion-13"
+        dir="ltr"
       >
         <div
-          class="c0"
+          class="emotion-10 emotion-11"
           dir="ltr"
         >
-          <div
-            class="c1"
+          <h2
+            class="emotion-0 emotion-1"
             dir="ltr"
           >
-            <h2
-              class="c2"
-              dir="ltr"
-            >
-              We've updated our Privacy and Cookies Policy
-            </h2>
-            <p
-              class="c3"
-              dir="ltr"
-            >
-              We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
-            </p>
-            <ul
-              class="c4"
-              dir="ltr"
-            >
-              <li
-                class="c5"
-                dir="ltr"
-              >
-                <button
-                  type="button"
-                >
-                  OK
-                </button>
-              </li>
-              <li
-                class="c5"
-                dir="ltr"
-              >
-                <a
-                  href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
-                >
-                  Find out what's changed
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div
-          class="c6"
-        >
-          <div
-            class="c7"
+            We've updated our Privacy and Cookies Policy
+          </h2>
+          <p
+            class="emotion-2 emotion-3"
+            dir="ltr"
           >
-            <a
-              class="c8 c9"
-              href="/news"
+            We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
+          </p>
+          <ul
+            class="emotion-8 emotion-9"
+            dir="ltr"
+          >
+            <li
+              class="emotion-4 emotion-5"
+              dir="ltr"
             >
-              <svg
-                aria-hidden="true"
-                class="c10"
-                focusable="false"
-                height="24"
-                viewBox="0 0 167.95 24"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                type="button"
               >
-                <g
-                  fill-rule="evenodd"
-                  stroke="#000"
-                  stroke-width=".335"
-                  style="stroke: #fff;"
-                >
-                  <path
-                    d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
-                  />
-                  <path
-                    d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
-                  />
-                  <path
-                    d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z"
-                  />
-                </g>
-              </svg>
-              <span
-                class="c11"
+                OK
+              </button>
+            </li>
+            <li
+              class="emotion-4 emotion-5"
+              dir="ltr"
+            >
+              <a
+                href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
               >
-                BBC News
-              </span>
-            </a>
+                Find out what's changed
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="emotion-24 emotion-25"
+      >
+        <div
+          class="emotion-22 emotion-23"
+        >
+          <a
+            class="emotion-18 emotion-19"
+            href="/news"
+          >
+            <svg
+              aria-hidden="true"
+              class="emotion-14 emotion-15"
+              focusable="false"
+              height="24"
+              viewBox="0 0 167.95 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                fill-rule="evenodd"
+                stroke="#000"
+                stroke-width=".335"
+                style="stroke: #fff;"
+              >
+                <path
+                  d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
+                />
+                <path
+                  d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
+                />
+                <path
+                  d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z"
+                />
+              </g>
+            </svg>
+            <span
+              class="emotion-16 emotion-17"
+            >
+              BBC News
+            </span>
+          </a>
+          <div>
             <a
-              class="c12"
+              class="emotion-20 emotion-21"
               dir="ltr"
               href="#content"
             >
@@ -900,549 +926,530 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             </a>
           </div>
         </div>
-        <nav
-          class="c13"
-          dir="ltr"
-          role="navigation"
+      </div>
+      <nav
+        class="emotion-132 emotion-133"
+        dir="ltr"
+        role="navigation"
+      >
+        <div
+          class="emotion-130 emotion-131"
         >
           <div
-            class="c14"
+            class="emotion-80 emotion-81"
           >
-            <div
-              class="c15"
+            <button
+              aria-expanded="false"
+              class="emotion-30 emotion-31"
+              dir="ltr"
+              type="button"
             >
-              <button
-                aria-expanded="false"
-                class="c16"
-                dir="ltr"
-                type="button"
+              <svg
+                aria-hidden="true"
+                class="emotion-26 emotion-27"
+                focusable="false"
+                height="2.75rem"
+                viewBox="0 0 44 44"
+                width="2.75rem"
               >
-                <svg
-                  aria-hidden="true"
-                  class="c17"
-                  focusable="false"
-                  height="2.75rem"
-                  viewBox="0 0 44 44"
-                  width="2.75rem"
-                >
-                  <path
-                    d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
-                  />
-                </svg>
-                <span
-                  class="c11"
-                >
-                  Sections
-                </span>
-              </button>
-              <div
-                class="c18"
-                dir="ltr"
+                <path
+                  d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+                />
+              </svg>
+              <span
+                class="emotion-16 emotion-17"
               >
-                <ul
-                  class="c19"
-                  role="list"
-                >
-                  <li
-                    class="c20 c21"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <a
-                      class="c22"
-                      href="/news"
-                    >
-                      Home
-                    </a>
-                  </li>
-                  <li
-                    class="c20 c21"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <a
-                      class="c22"
-                      href="/news/uk"
-                    >
-                      UK
-                    </a>
-                  </li>
-                  <li
-                    class="c20 c21"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <a
-                      class="c22"
-                      href="/news/world"
-                    >
-                      World
-                    </a>
-                  </li>
-                  <li
-                    class="c20 c21"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <a
-                      class="c22"
-                      href="/news/business"
-                    >
-                      Business
-                    </a>
-                  </li>
-                  <li
-                    class="c20 c21"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <a
-                      class="c22"
-                      href="/news/politics"
-                    >
-                      Politics
-                    </a>
-                  </li>
-                  <li
-                    class="c20 c21"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <a
-                      class="c22"
-                      href="/news/technology"
-                    >
-                      Tech
-                    </a>
-                  </li>
-                  <li
-                    class="c20 c21"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <a
-                      class="c22"
-                      href="/news/science_and_environment"
-                    >
-                      Science
-                    </a>
-                  </li>
-                  <li
-                    class="c20 c21"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <a
-                      class="c22"
-                      href="/news/health"
-                    >
-                      Health
-                    </a>
-                  </li>
-                  <li
-                    class="c20 c21"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <a
-                      class="c22"
-                      href="/news/education"
-                    >
-                      Family & Education
-                    </a>
-                  </li>
-                  <li
-                    class="c20 c21"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <a
-                      class="c22"
-                      href="/news/entertainment_and_arts"
-                    >
-                      Entertainment & Arts
-                    </a>
-                  </li>
-                  <li
-                    class="c20 c21"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <a
-                      class="c22"
-                      href="/news/stories"
-                    >
-                      Stories
-                    </a>
-                  </li>
-                  <li
-                    class="c20 c21"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <a
-                      class="c22"
-                      href="/news/video_and_audio/headlines"
-                    >
-                      Video & Audio
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+                Sections
+              </span>
+            </button>
             <div
-              class="c23"
-              height="0"
+              class="emotion-78 emotion-79"
+              dir="ltr"
             >
               <ul
-                class="c24"
+                class="emotion-76 emotion-77"
                 role="list"
               >
                 <li
-                  class="c25"
+                  class="emotion-34 emotion-35"
+                  dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="c26"
+                    class="emotion-32 emotion-33"
                     href="/news"
                   >
                     Home
                   </a>
                 </li>
                 <li
-                  class="c25"
+                  class="emotion-34 emotion-35"
+                  dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="c26"
+                    class="emotion-32 emotion-33"
                     href="/news/uk"
                   >
                     UK
                   </a>
                 </li>
                 <li
-                  class="c25"
+                  class="emotion-34 emotion-35"
+                  dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="c26"
+                    class="emotion-32 emotion-33"
                     href="/news/world"
                   >
                     World
                   </a>
                 </li>
                 <li
-                  class="c25"
+                  class="emotion-34 emotion-35"
+                  dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="c26"
+                    class="emotion-32 emotion-33"
                     href="/news/business"
                   >
                     Business
                   </a>
                 </li>
                 <li
-                  class="c25"
+                  class="emotion-34 emotion-35"
+                  dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="c26"
+                    class="emotion-32 emotion-33"
                     href="/news/politics"
                   >
                     Politics
                   </a>
                 </li>
                 <li
-                  class="c25"
+                  class="emotion-34 emotion-35"
+                  dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="c26"
+                    class="emotion-32 emotion-33"
                     href="/news/technology"
                   >
                     Tech
                   </a>
                 </li>
                 <li
-                  class="c25"
+                  class="emotion-34 emotion-35"
+                  dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="c26"
+                    class="emotion-32 emotion-33"
                     href="/news/science_and_environment"
                   >
                     Science
                   </a>
                 </li>
                 <li
-                  class="c25"
+                  class="emotion-34 emotion-35"
+                  dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="c26"
+                    class="emotion-32 emotion-33"
                     href="/news/health"
                   >
                     Health
                   </a>
                 </li>
                 <li
-                  class="c25"
+                  class="emotion-34 emotion-35"
+                  dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="c26"
+                    class="emotion-32 emotion-33"
                     href="/news/education"
                   >
                     Family & Education
                   </a>
                 </li>
                 <li
-                  class="c25"
+                  class="emotion-34 emotion-35"
+                  dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="c26"
+                    class="emotion-32 emotion-33"
                     href="/news/entertainment_and_arts"
                   >
                     Entertainment & Arts
                   </a>
                 </li>
                 <li
-                  class="c25"
+                  class="emotion-34 emotion-35"
+                  dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="c26"
+                    class="emotion-32 emotion-33"
                     href="/news/stories"
                   >
                     Stories
                   </a>
                 </li>
-                <li
-                  class="c25"
-                  role="listitem"
-                >
-                  <a
-                    class="c26"
-                    href="/news/video_and_audio/headlines"
-                  >
-                    Video & Audio
-                  </a>
-                </li>
               </ul>
             </div>
           </div>
-        </nav>
-      </header>
-      <h2>
-        Child element
-      </h2>
-      <footer
-        role="contentinfo"
-      >
-        <div
-          class="c27"
-        >
           <div
-            class="c7"
-          >
-            <a
-              class="c8 c9"
-              href="/news"
-            >
-              <svg
-                aria-hidden="true"
-                class="c10"
-                focusable="false"
-                height="24"
-                viewBox="0 0 167.95 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g
-                  fill-rule="evenodd"
-                  stroke="#000"
-                  stroke-width=".335"
-                  style="stroke: #fff;"
-                >
-                  <path
-                    d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
-                  />
-                  <path
-                    d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
-                  />
-                  <path
-                    d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z"
-                  />
-                </g>
-              </svg>
-              <span
-                class="c11"
-              >
-                BBC News
-              </span>
-            </a>
-          </div>
-        </div>
-        <div
-          class="c28"
-        >
-          <div
-            class="c29"
+            class="emotion-128 emotion-129"
+            height="0"
           >
             <ul
-              class="c30"
+              class="emotion-126 emotion-127"
               role="list"
             >
               <li
-                class="c31"
+                class="emotion-84 emotion-85"
                 role="listitem"
               >
                 <a
-                  class="c32 c33"
-                  href="https://www.bbc.com/news/help-41670342"
+                  class="emotion-82 emotion-83"
+                  href="/news"
                 >
-                  <span
-                    class="c34"
-                  >
-                    Why you can trust the BBC
-                  </span>
+                  Home
                 </a>
               </li>
               <li
-                class="c31"
+                class="emotion-84 emotion-85"
                 role="listitem"
               >
                 <a
-                  class="c32 c33"
-                  href="https://www.bbc.com/terms"
+                  class="emotion-82 emotion-83"
+                  href="/news/uk"
                 >
-                  <span
-                    class="c34"
-                  >
-                    Terms of Use
-                  </span>
+                  UK
                 </a>
               </li>
               <li
-                class="c31"
+                class="emotion-84 emotion-85"
                 role="listitem"
               >
                 <a
-                  class="c32 c33"
-                  href="https://www.bbc.co.uk/aboutthebbc/"
+                  class="emotion-82 emotion-83"
+                  href="/news/world"
                 >
-                  <span
-                    class="c34"
-                  >
-                    About the BBC
-                  </span>
+                  World
                 </a>
               </li>
               <li
-                class="c31"
+                class="emotion-84 emotion-85"
                 role="listitem"
               >
                 <a
-                  class="c32 c33"
-                  href="https://www.bbc.com/privacy/"
+                  class="emotion-82 emotion-83"
+                  href="/news/business"
                 >
-                  <span
-                    class="c34"
-                  >
-                    Privacy Policy
-                  </span>
+                  Business
                 </a>
               </li>
               <li
-                class="c31"
+                class="emotion-84 emotion-85"
                 role="listitem"
               >
                 <a
-                  class="c32 c33"
-                  href="https://www.bbc.com/usingthebbc/cookies/"
+                  class="emotion-82 emotion-83"
+                  href="/news/politics"
                 >
-                  <span
-                    class="c34"
-                  >
-                    Cookies
-                  </span>
+                  Politics
                 </a>
               </li>
               <li
-                class="c31"
+                class="emotion-84 emotion-85"
                 role="listitem"
               >
                 <a
-                  class="c32 c33"
-                  href="https://www.bbc.com/accessibility/"
+                  class="emotion-82 emotion-83"
+                  href="/news/technology"
                 >
-                  <span
-                    class="c34"
-                  >
-                    Accessibility Help
-                  </span>
+                  Tech
                 </a>
               </li>
               <li
-                class="c31"
+                class="emotion-84 emotion-85"
                 role="listitem"
               >
                 <a
-                  class="c32 c33"
-                  href="https://www.bbc.com/contact/"
+                  class="emotion-82 emotion-83"
+                  href="/news/science_and_environment"
                 >
-                  <span
-                    class="c34"
-                  >
-                    Contact the BBC
-                  </span>
+                  Science
                 </a>
               </li>
               <li
-                class="c31"
+                class="emotion-84 emotion-85"
                 role="listitem"
               >
                 <a
-                  class="c32 c33"
-                  href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
-                  lang="en-GB"
+                  class="emotion-82 emotion-83"
+                  href="/news/health"
                 >
-                  <span
-                    class="c34"
-                  >
-                    AdChoices / Do Not Sell My Info
-                  </span>
+                  Health
+                </a>
+              </li>
+              <li
+                class="emotion-84 emotion-85"
+                role="listitem"
+              >
+                <a
+                  class="emotion-82 emotion-83"
+                  href="/news/education"
+                >
+                  Family & Education
+                </a>
+              </li>
+              <li
+                class="emotion-84 emotion-85"
+                role="listitem"
+              >
+                <a
+                  class="emotion-82 emotion-83"
+                  href="/news/entertainment_and_arts"
+                >
+                  Entertainment & Arts
+                </a>
+              </li>
+              <li
+                class="emotion-84 emotion-85"
+                role="listitem"
+              >
+                <a
+                  class="emotion-82 emotion-83"
+                  href="/news/stories"
+                >
+                  Stories
                 </a>
               </li>
             </ul>
-            <p
-              class="c35"
-            >
-              <span
-                lang="en-GB"
-              >
-                ©
-                 
-              </span>
-              2020 BBC. The BBC is not responsible for the content of external sites.
-               
-              <a
-                class="c32 c36"
-                href="https://www.bbc.co.uk/help/web/links/"
-              >
-                <span
-                  class="c34"
-                >
-                  Read about our approach to external linking.
-                </span>
-              </a>
-            </p>
           </div>
         </div>
-      </footer>
-      ,
+      </nav>
+    </header>
+    <div
+      class="emotion-134 emotion-135"
+    >
+      <h2>
+        Child element
+      </h2>
     </div>
-  </body>
-</html>
+    <footer
+      role="contentinfo"
+    >
+      <div
+        class="emotion-144 emotion-25"
+      >
+        <div
+          class="emotion-22 emotion-23"
+        >
+          <a
+            class="emotion-18 emotion-19"
+            href="/news"
+          >
+            <svg
+              aria-hidden="true"
+              class="emotion-14 emotion-15"
+              focusable="false"
+              height="24"
+              viewBox="0 0 167.95 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                fill-rule="evenodd"
+                stroke="#000"
+                stroke-width=".335"
+                style="stroke: #fff;"
+              >
+                <path
+                  d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
+                />
+                <path
+                  d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
+                />
+                <path
+                  d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z"
+                />
+              </g>
+            </svg>
+            <span
+              class="emotion-16 emotion-17"
+            >
+              BBC News
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        class="emotion-204 emotion-205"
+      >
+        <div
+          class="emotion-202 emotion-203"
+        >
+          <ul
+            class="emotion-194 emotion-195"
+            role="list"
+          >
+            <li
+              class="emotion-150 emotion-151"
+              role="listitem"
+            >
+              <a
+                class="emotion-148 emotion-149"
+                href="https://www.bbc.com/news/help-41670342"
+              >
+                <span
+                  class="emotion-146 emotion-147"
+                >
+                  Why you can trust the BBC
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-150 emotion-151"
+              role="listitem"
+            >
+              <a
+                class="emotion-148 emotion-149"
+                href="https://www.bbc.com/terms"
+              >
+                <span
+                  class="emotion-146 emotion-147"
+                >
+                  Terms of Use
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-150 emotion-151"
+              role="listitem"
+            >
+              <a
+                class="emotion-148 emotion-149"
+                href="https://www.bbc.co.uk/aboutthebbc/"
+              >
+                <span
+                  class="emotion-146 emotion-147"
+                >
+                  About the BBC
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-150 emotion-151"
+              role="listitem"
+            >
+              <a
+                class="emotion-148 emotion-149"
+                href="https://www.bbc.com/privacy/"
+              >
+                <span
+                  class="emotion-146 emotion-147"
+                >
+                  Privacy Policy
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-150 emotion-151"
+              role="listitem"
+            >
+              <a
+                class="emotion-148 emotion-149"
+                href="https://www.bbc.com/usingthebbc/cookies/"
+              >
+                <span
+                  class="emotion-146 emotion-147"
+                >
+                  Cookies
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-150 emotion-151"
+              role="listitem"
+            >
+              <a
+                class="emotion-148 emotion-149"
+                href="https://www.bbc.com/accessibility/"
+              >
+                <span
+                  class="emotion-146 emotion-147"
+                >
+                  Accessibility Help
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-150 emotion-151"
+              role="listitem"
+            >
+              <a
+                class="emotion-148 emotion-149"
+                href="https://www.bbc.com/contact/"
+              >
+                <span
+                  class="emotion-146 emotion-147"
+                >
+                  Contact the BBC
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-150 emotion-151"
+              role="listitem"
+            >
+              <a
+                class="emotion-148 emotion-149"
+                href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                lang="en-GB"
+              >
+                <span
+                  class="emotion-146 emotion-147"
+                >
+                  AdChoices / Do Not Sell My Info
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p
+            class="emotion-200 emotion-201"
+          >
+            <span
+              lang="en-GB"
+            >
+              ©
+               
+            </span>
+            2020 BBC. The BBC is not responsible for the content of external sites.
+             
+            <a
+              class="emotion-198 emotion-149"
+              href="https://www.bbc.co.uk/help/web/links/"
+            >
+              <span
+                class="emotion-146 emotion-147"
+              >
+                Read about our approach to external linking.
+              </span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  ,
+</div>
 `;

@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { oneOf, string } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { C_LUNAR_LIGHT } from '@bbc/psammead-styles/colours';
 import pathOr from 'ramda/src/pathOr';
 import { leaderboardStyles, mpuStyles } from '../utilities/adSlotStyles';
@@ -19,18 +19,40 @@ const AdContainer = styled.section`
 
 export const getBootstrapSrc = (queryString, useLegacy = false) => {
   const adsTestScript =
-    'https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js';
+    'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-bootstrap.js';
   const adsLegacyTestScript =
-    'https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js';
+    'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-bootstrap-legacy.js';
   const adsLiveScript =
-    'https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap.js';
+    'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-bootstrap.js';
   const adsLegacyLiveScript =
-    'https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap-legacy.js';
+    'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-bootstrap-legacy.js';
+
   const useLiveSrc = isLive() || queryString.includes('ads-js-env=live');
+
   if (useLiveSrc) {
     return useLegacy ? adsLegacyLiveScript : adsLiveScript;
   }
   return useLegacy ? adsLegacyTestScript : adsTestScript;
+};
+
+export const getPreloadUrls = queryString => {
+  const preloadUrls = [
+    getBootstrapSrc(queryString),
+    getBootstrapSrc(queryString, true),
+  ];
+
+  if (isLive()) {
+    return [
+      ...preloadUrls,
+      'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-ads.js',
+      'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-analytics.js',
+    ];
+  }
+  return [
+    ...preloadUrls,
+    'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-ads.js',
+    'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-analytics.js',
+  ];
 };
 
 const CanonicalAd = ({ slotType, className }) => {
@@ -70,6 +92,12 @@ const CanonicalAd = ({ slotType, className }) => {
   return (
     <>
       <Helmet>
+        {/* PreLoad Ad Scripts */}
+        {getPreloadUrls(queryString).map(script => (
+          <link rel="preload" href={script} as="script" key={script} />
+        ))}
+
+        {/* Add Ad scripts to document head */}
         <script type="module" src={getBootstrapSrc(queryString)} async />
         <script
           nomodule="nomodule"
@@ -77,6 +105,7 @@ const CanonicalAd = ({ slotType, className }) => {
           async
         />
       </Helmet>
+
       <AdContainer
         slotType={slotType}
         aria-label={ariaLabel}

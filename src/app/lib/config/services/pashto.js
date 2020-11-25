@@ -153,6 +153,7 @@ export const service = {
         audio: 'غږ',
         photogallery: 'دعکسونو ګالري',
         video: 'ویډیو',
+        recentEpisodes: 'پخواني پروګرامونه',
         bbc_pashto_radio: {
           title: 'بي بي سي افغانستان (پښتو خپرونه)',
           subtitle:
@@ -266,7 +267,7 @@ export const service = {
       },
       {
         title: 'افغانستان',
-        url: '/pashto/afghanistan',
+        url: '/pashto/topics/cr50y57xj52t',
       },
       {
         title: 'پښتونخوا',
@@ -274,15 +275,15 @@ export const service = {
       },
       {
         title: 'نړۍ',
-        url: '/pashto/world',
+        url: '/pashto/topics/cxe2wdp2dv3t',
       },
       {
         title: 'ښځې',
-        url: '/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862',
+        url: '/pashto/topics/cr50y5rq23gt',
       },
       {
         title: 'لوبې',
-        url: '/pashto/sport',
+        url: '/pashto/topics/cr50y59q860t',
       },
       {
         title: 'ويډيوګانې',
@@ -294,7 +295,7 @@ export const service = {
       },
       {
         title: 'کالم',
-        url: '/pashto/columns',
+        url: '/pashto/columns-54029178',
       },
     ],
   },

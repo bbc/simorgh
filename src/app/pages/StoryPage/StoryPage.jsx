@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import { node } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
+  GEL_SPACING_SEXT,
 } from '@bbc/gel-foundations/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
 import {
@@ -13,7 +14,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import Grid from '#app/components/Grid';
+import Grid, { GelPageGrid } from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
@@ -184,7 +185,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   };
 
   const StyledTimestamp = styled(Timestamp)`
-    padding-bottom: ${GEL_SPACING_DBL};
+    @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+      padding-bottom: ${GEL_SPACING_DBL};
+    }
 
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
       padding-bottom: ${GEL_SPACING_TRPL};
@@ -192,15 +195,16 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   `;
 
   const StyledByline = styled(Byline)`
-    padding-bottom: ${GEL_SPACING_DBL};
+    @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+      padding-bottom: ${GEL_SPACING_DBL};
+    }
 
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
       padding-bottom: ${GEL_SPACING_TRPL};
     }
   `;
 
-  const StoryPageGrid = styled(Grid)`
-    flex-grow: 1;
+  const StoryPageGrid = styled(GelPageGrid)`
     width: 100%; /* Needed for IE11 */
     margin: 0 auto;
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -235,18 +239,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const ResponsiveComponentWrapper = styled.div`
     margin-bottom: ${GEL_SPACING_TRPL};
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      margin-bottom: ${GEL_SPACING_SEXT};
       padding: ${GEL_SPACING_DBL};
     }
   `;
 
-  const MostReadSection = styled.section.attrs(() => ({
-    role: 'region',
-    'aria-labelledby': 'Most-Read',
-    'data-e2e': 'most-read',
-  }))``;
-
   const MostReadWrapper = ({ children }) => (
-    <MostReadSection>
+    <section role="region" aria-labelledby="Most-Read" data-e2e="most-read">
       <SectionLabel
         script={script}
         labelId="Most-Read"
@@ -256,7 +255,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         {header}
       </SectionLabel>
       {children}
-    </MostReadSection>
+    </section>
   );
 
   MostReadWrapper.propTypes = {
@@ -297,14 +296,12 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       )}
       {isAdsEnabled && <AdContainer slotType="leaderboard" />}
       <StoryPageGrid
-        dir={dir}
         columns={gridColumns}
         enableGelGutters
         margins={gridMargins}
       >
         <GridPrimaryColumn
           item
-          dir={dir}
           columns={gridColsMain}
           startOffset={gridOffset}
           parentColumns={gridColumns}
@@ -319,7 +316,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         </GridPrimaryColumn>
         <GridSecondaryColumn
           item
-          dir={dir}
           columns={gridColsSecondary}
           parentColumns={gridColumns}
           // `serviceLang` is defined when the language the page is written in is different to the

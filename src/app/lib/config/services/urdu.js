@@ -159,6 +159,7 @@ export const service = {
         previousRadioShow: 'گذشتہ ریڈیو پروگرام',
         nextRadioShow: 'اگلا ریڈیو پروگرام',
         duration: 'دورانیہ',
+        recentEpisodes: 'سابق پروگرام',
       },
       socialEmbed: {
         caption: {
@@ -255,35 +256,31 @@ export const service = {
       },
       {
         title: 'پاکستان',
-        url: '/urdu/pakistan',
+        url: '/urdu/topics/cjgn7n9zzq7t',
       },
       {
         title: 'آس پاس',
-        url: '/urdu/regional',
+        url: '/urdu/topics/cl8l9mveql2t',
       },
       {
         title: 'ورلڈ',
-        url: '/urdu/world',
+        url: '/urdu/topics/cw57v2pmll9t',
       },
       {
         title: 'کھیل',
-        url: '/urdu/sport',
+        url: '/urdu/topics/c340q0p2585t',
       },
       {
         title: 'فن فنکار',
-        url: '/urdu/entertainment',
+        url: '/urdu/topics/ckdxnx900n5t',
       },
       {
         title: 'سائنس',
-        url: '/urdu/science',
+        url: '/urdu/topics/c40379e2ymxt',
       },
       {
         title: 'ویڈیو',
         url: '/urdu/media/video',
-      },
-      {
-        title: 'پنجابی ويڈیو',
-        url: '/urdu/punjabi_video',
       },
     ],
   },

@@ -96,36 +96,22 @@ Object {
 
 exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
 Object {
-  "text": "Сапар TV",
-  "url": "/kyrgyz/sapartv",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
-Object {
   "text": "Видео",
   "url": "/kyrgyz/media/video",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Маданият/Илим",
-  "url": "/kyrgyz/entertainment",
+  "url": "/kyrgyz/topics/czp8pjrkgp0t",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Журнал",
   "url": "/kyrgyz/magazine-54071664",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `
-Object {
-  "text": "Блог",
-  "url": "/kyrgyz/blog",
 }
 `;
 
@@ -134,7 +120,7 @@ exports[`Canonical Story Page Image Caption should match text 1`] = `"Сүрөт
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <img
   alt="social media"
-  class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+  class="css-1vsigzm-StyledImg-fadeIn e1enwo3v0"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/11D53/test/_63734037_socialmedia.jpg"
   srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 624w"
   width="624"

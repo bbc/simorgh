@@ -83,42 +83,42 @@ Object {
 exports[`Canonical Feature Index page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "پاکستان",
-  "url": "/urdu/pakistan",
+  "url": "/urdu/topics/cjgn7n9zzq7t",
 }
 `;
 
 exports[`Canonical Feature Index page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "آس پاس",
-  "url": "/urdu/regional",
+  "url": "/urdu/topics/cl8l9mveql2t",
 }
 `;
 
 exports[`Canonical Feature Index page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "ورلڈ",
-  "url": "/urdu/world",
+  "url": "/urdu/topics/cw57v2pmll9t",
 }
 `;
 
 exports[`Canonical Feature Index page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "کھیل",
-  "url": "/urdu/sport",
+  "url": "/urdu/topics/c340q0p2585t",
 }
 `;
 
 exports[`Canonical Feature Index page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "فن فنکار",
-  "url": "/urdu/entertainment",
+  "url": "/urdu/topics/ckdxnx900n5t",
 }
 `;
 
 exports[`Canonical Feature Index page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "سائنس",
-  "url": "/urdu/science",
+  "url": "/urdu/topics/c40379e2ymxt",
 }
 `;
 
@@ -126,13 +126,6 @@ exports[`Canonical Feature Index page Header Navigation link should match text a
 Object {
   "text": "ویڈیو",
   "url": "/urdu/media/video",
-}
-`;
-
-exports[`Canonical Feature Index page Header Navigation link should match text and url 9`] = `
-Object {
-  "text": "پنجابی ويڈیو",
-  "url": "/urdu/punjabi_video",
 }
 `;
 
@@ -307,7 +300,7 @@ exports[`Canonical Feature Index page Story Promo Headline should match text 1`]
 exports[`Canonical Feature Index page Story Promo Image should match image 1`] = `
 <img
   alt="بل گیٹس"
-  class="StyledImg-sc-7vx2mr-0 hIxkbt"
+  class="css-13lcmnl-StyledImg e1enwo3v0"
   sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg"
   srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/B04F/production/_112753154_bill.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/B04F/production/_112753154_bill.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/B04F/production/_112753154_bill.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/B04F/production/_112753154_bill.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/B04F/production/_112753154_bill.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/B04F/production/_112753154_bill.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg 660w"

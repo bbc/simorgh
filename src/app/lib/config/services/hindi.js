@@ -170,6 +170,7 @@ export const service = {
         previousRadioShow: 'पिछला रेडियो शो',
         nextRadioShow: 'अगला रेडियो शो',
         duration: 'अवधि',
+        recentEpisodes: 'प्रसारण का समय',
       },
       socialEmbed: {
         caption: {
@@ -246,7 +247,7 @@ export const service = {
           text: 'कुकीज़',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853379',
+          href: 'https://www.bbc.co.uk/send/u50853357',
           text: 'बीबीसी से संपर्क करें',
         },
         {
@@ -297,10 +298,6 @@ export const service = {
       {
         title: 'वीडियो',
         url: '/hindi/media/video',
-      },
-      {
-        title: 'बीबीसी स्पेशल',
-        url: '/hindi/in_depth',
       },
     ],
   },

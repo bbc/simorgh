@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { shape, string, number, bool, func } from 'prop-types';
 import {
   GEL_SPACING,
@@ -29,7 +29,6 @@ import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadin
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
-import DarkModeGlobalStyles from '#lib/utilities/darkMode';
 import AVPlayer from '#containers/AVPlayer';
 
 const getGroups = (zero, one, two, three, four, five) => ({
@@ -43,8 +42,9 @@ const getGroups = (zero, one, two, three, four, five) => ({
 
 const StyledGelPageGrid = styled(GelPageGrid)`
   padding-bottom: ${GEL_SPACING_QUAD};
-  width: 100%;
-  flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    width: 100%;
+  }
 `;
 
 const StyledVideoPlayer = styled(AVPlayer)`
@@ -77,14 +77,9 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     durationISO8601,
   } = pageData;
 
-  const {
-    lang,
-    timezone,
-    datetimeLocale,
-    dir,
-    service,
-    translations,
-  } = useContext(ServiceContext);
+  const { lang, timezone, datetimeLocale, service, translations } = useContext(
+    ServiceContext,
+  );
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
 
@@ -113,7 +108,6 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
   return (
     <>
-      <DarkModeGlobalStyles />
       <ChartbeatAnalytics data={pageData} />
       <ATIAnalytics data={pageData} />
       <ComscoreAnalytics />
@@ -143,15 +137,13 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         }
       />
       <StyledGelPageGrid
-        forwardedAs="main"
+        as="main"
         role="main"
-        dir={dir}
         columns={getGroups(6, 6, 6, 6, 8, 20)}
         enableGelGutters
       >
         <Grid
           item
-          dir={dir}
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           columns={getGroups(6, 6, 6, 6, 6, 12)}
           margins={getGroups(true, true, true, true, false, false)}
@@ -184,7 +176,6 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         </Grid>
         <Grid
           item
-          dir={dir}
           columns={getGroups(6, 6, 6, 6, 5, 10)}
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           margins={getGroups(true, true, true, true, false, false)}

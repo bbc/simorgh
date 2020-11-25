@@ -85,28 +85,28 @@ Object {
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "Наука",
-  "url": "/ukrainian/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+  "url": "/ukrainian/topics/cyx5kzy4w5yt",
 }
 `;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "Технології",
-  "url": "/ukrainian/topics/31684f19-84d6-41f6-b033-7ae08098572a",
+  "url": "/ukrainian/topics/cxnykv9q4kpt",
 }
 `;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Здоров’я",
-  "url": "/ukrainian/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+  "url": "/ukrainian/topics/cwr9jqqqq13t",
 }
 `;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Журнал",
-  "url": "/ukrainian/magazine",
+  "url": "/ukrainian/53725237",
 }
 `;
 
@@ -118,13 +118,6 @@ Object {
 `;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 8`] = `
-Object {
-  "text": "Блоги",
-  "url": "/ukrainian/blogs",
-}
-`;
-
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "Поточна сторінка, РУС",
   "url": "/ukrainian/ukraine_in_russian",
@@ -304,7 +297,7 @@ exports[`Canonical ukrainian/ukraine_in_russian IDX page Story Promo Headline sh
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Story Promo Image should match image 1`] = `
 <img
   alt="Чоловік з келихом"
-  class="StyledImg-sc-7vx2mr-0 hIxkbt"
+  class="css-13lcmnl-StyledImg e1enwo3v0"
   sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png"
   srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/DE34/production/_111648865_1stimage.png 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/DE34/production/_111648865_1stimage.png 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/DE34/production/_111648865_1stimage.png 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/DE34/production/_111648865_1stimage.png 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/DE34/production/_111648865_1stimage.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/DE34/production/_111648865_1stimage.png 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png 660w"
