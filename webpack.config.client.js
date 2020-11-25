@@ -1,4 +1,11 @@
 /* eslint-disable global-require */
+/*
+  A high level overview of our client-side JavaScript bundling strategy can be found here:
+  https://github.com/bbc/simorgh/blob/latest/docs/JavaScript-Bundling-Strategy.md
+ */
+
+const fs = require('fs');
+const crypto = require('crypto');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const LoadablePlugin = require('@loadable/webpack-plugin');
@@ -6,6 +13,11 @@ const webpack = require('webpack');
 const dotenv = require('dotenv');
 const { DuplicatesPlugin } = require('inspectpack/plugin');
 const { getClientEnvVars } = require('./src/clientEnvVars');
+
+const FRAMEWORK_BUNDLES = ['react', 'react-dom'];
+const TOTAL_PAGE_TYPES = fs
+  .readdirSync('./src/app/pages')
+  .filter(file => file.match(/[A-Z].+?Page$/)).length;
 
 const DOT_ENV_CONFIG = dotenv.config();
 
@@ -31,7 +43,6 @@ module.exports = ({
       ? [
           `webpack-dev-server/client?http://localhost:${webpackDevServerPort}`,
           'webpack/hot/only-dev-server',
-          './src/poly',
           './src/client',
         ]
       : ['./src/poly', './src/client'],
@@ -73,21 +84,82 @@ module.exports = ({
       ],
       // specify min/max file sizes for each JS chunk for optimal performance
       splitChunks: {
-        chunks: 'initial',
+        chunks: 'all',
         automaticNameDelimiter: '-',
-        minSize: 184320, // 180kb
         maxSize: 245760, // 240kb
         cacheGroups: {
-          common: {
-            name: false,
-            minChunks: 2,
+          default: false,
+          vendors: false,
+          framework: {
+            name: 'framework',
             chunks: 'all',
+            // This regex ignores nested copies of framework libraries so they're bundled with their issuer.
+            test: new RegExp(
+              `(?<!node_modules.*)[\\\\/]node_modules[\\\\/](${FRAMEWORK_BUNDLES.join(
+                `|`,
+              )})[\\\\/]`,
+            ),
+            priority: 40,
+            // Don't let webpack eliminate this chunk (prevents this chunk from becoming a part of the commons chunk)
+            enforce: true,
           },
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendor',
+          commons: {
+            name: 'commons',
+            // if a chunk is used on all pages we put it in commons
+            minChunks: TOTAL_PAGE_TYPES,
+            priority: 20,
+          },
+          lib: {
+            // if a module is bigger than 160kb from node_modules we make a separate chunk for it
+            test(module) {
+              return (
+                module.size() > 160000 &&
+                /node_modules[/\\]/.test(module.identifier())
+              );
+            },
+            name(module) {
+              const rawRequest =
+                module.rawRequest &&
+                module.rawRequest.replace(/^@(\w+)[/\\]/, '$1-');
+              if (rawRequest) return `${rawRequest}-lib`;
+
+              const identifier = module.identifier();
+              const trimmedIdentifier = /(?:^|[/\\])node_modules[/\\](.*)/.exec(
+                identifier,
+              );
+              const processedIdentifier =
+                trimmedIdentifier &&
+                trimmedIdentifier[1].replace(/^@(\w+)[/\\]/, '$1-');
+
+              return `${processedIdentifier || identifier}-lib`;
+            },
+            priority: 30,
+            minChunks: 1,
+            reuseExistingChunk: true,
+          },
+          shared: {
+            name(module, chunks) {
+              const cryptoName = crypto
+                .createHash('sha1')
+                .update(
+                  chunks.reduce((acc, chunk) => {
+                    return acc + chunk.name;
+                  }, ''),
+                )
+                .digest('base64')
+                .replace(/\//g, '');
+
+              return `shared-${cryptoName}`;
+            },
+            priority: 10,
+            minChunks: 2,
+            reuseExistingChunk: true,
           },
         },
+        // Keep maximum initial requests to 25
+        maxInitialRequests: 25,
+        // A chunk should be at least 20kb before using splitChunks
+        minSize: 20000,
       },
     },
     node: {
