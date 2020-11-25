@@ -20,9 +20,12 @@ export default async ({ path: pathname, pageType }) => {
 
     const get = pathWithLogging(getUrl(json), TV_MISSING_FIELD, json);
 
+    const episodeId = get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR);
+
     return {
       status,
       pageData: {
+        darkMode: true,
         metadata: { type: 'On Demand TV' },
         language: get(['metadata', 'language']),
         brandTitle: get(['metadata', 'title']),
@@ -48,7 +51,7 @@ export default async ({ path: pathname, pageType }) => {
         ),
         promoBrandTitle: get(['promo', 'brand', 'title']),
         masterBrand: get(['metadata', 'createdBy'], LOG_LEVELS.ERROR),
-        episodeId: get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR),
+        episodeId,
         imageUrl: get(['content', 'blocks', 0, 'imageUrl']),
         episodeAvailability: getEpisodeAvailability(json),
       },

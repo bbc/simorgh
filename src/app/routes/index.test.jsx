@@ -136,6 +136,9 @@ it('should route to and render the onDemand Radio page', async () => {
   const { pageData } = await getInitialData({
     path: pathname,
     pageType,
+    toggles: {
+      recentAudioEpisodes: { enabled: false, value: 4 },
+    },
   });
   const { getByText } = renderRouter({
     pathname,
@@ -160,6 +163,9 @@ it('should route to and render the onDemand TV Brand page', async () => {
   const { pageData } = await getInitialData({
     path: pathname,
     pageType,
+    toggles: {
+      recentVideoEpisodes: { enabled: false, value: 4 },
+    },
   });
   const { getByText } = renderRouter({
     pathname,

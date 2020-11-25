@@ -517,6 +517,7 @@ export const service = {
         previousRadioShow: 'Претходна радио емисија',
         nextRadioShow: 'Следећа радио емисија',
         duration: 'Трајање',
+        recentEpisodes: 'Претходне епизоде',
       },
       socialEmbed: {
         caption: {

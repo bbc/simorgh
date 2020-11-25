@@ -222,161 +222,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
     />
   </head>
   <body>
-    .c3 {
-  font-size: 1.75rem;
-  line-height: 2.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  display: block;
-  margin: 0;
-  padding: 2rem 0;
-}
-
-.c4 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.c1 {
-  width: 100%;
-}
-
-.c6 {
-  height: 165px;
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-.c5 amp-iframe,
-.c5 div > iframe {
-  width: calc(100% + 1rem);
-  margin: 0 -0.5rem;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 2rem;
-    line-height: 2.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 2.75rem;
-    line-height: 3.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .c2 {
-    display: block;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c6 {
-    margin-bottom: 2rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c5 amp-iframe,
-  .c5 div > iframe {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem;
-  }
-}
-
-<div>
+    <div>
       <amp-analytics>
         <script
           type="application/json"
@@ -397,31 +243,31 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
         </script>
       </amp-analytics>
       <main
-        class="c0 c1"
+        class="emotion-6 css-py1rac-GridComponent-GelPageGrid emotion-5"
         dir="ltr"
         role="main"
       >
         <div
-          class="c2"
+          class="css-7yf5z7-GridComponent emotion-5"
           dir="ltr"
         >
           <h1
-            class="c3"
+            class="css-18u3w2y-Headline emotion-0"
             id="content"
             tabindex="-1"
           >
             BBC Afrique Radio
           </h1>
           <p
-            class="c4"
+            class="css-1ehf52w-Paragraph emotion-1"
           >
             Infos, musique et sports
           </p>
           <div
-            class="c5"
+            class="emotion-3 css-14t66qe-Wrapper-AudioPlayer emotion-4"
           >
             <div
-              class="c6"
+              class="css-1bxiiiz-StyledAudioContainer emotion-2"
             >
               <amp-iframe
                 allowfullscreen="allowfullscreen"
@@ -453,893 +299,6 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
 `;
 
 exports[`Radio Page Main should match snapshot for Canonical 1`] = `
-.c23 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.725rem;
-  height: 0.725rem;
-}
-
-.c36 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.8125rem;
-  height: 0.75rem;
-}
-
-.c3 {
-  font-size: 1.75rem;
-  line-height: 2.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  display: block;
-  margin: 0;
-  padding: 2rem 0;
-}
-
-.c4 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.c30 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c32 {
-  color: #3F3F42;
-  padding: 0.5rem 0;
-  display: inline-block;
-  width: 100%;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
-.c40 {
-  color: #6E6E73;
-  padding: 0.5rem 0;
-  display: inline-block;
-  width: 100%;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
-.c29 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.c29:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c29:hover,
-.c29:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c29:visited {
-  color: #6E6E73;
-}
-
-.c29:hover .c31 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c29:focus .c31 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c26 {
-  padding-top: 0.5rem;
-  background-color: #FFFFFF;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  outline: 0.0625rem solid transparent;
-  height: 100%;
-}
-
-.c27 {
-  padding: 0 0.5rem;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c28 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #222222;
-  margin: 0;
-}
-
-.c38 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #6E6E73;
-  margin: 0;
-}
-
-.c39 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #11708C;
-  display: inline-block;
-  margin-right: 0.5rem;
-}
-
-.c33 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  padding-bottom: 1rem;
-  margin: 0;
-}
-
-.c34 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  padding: 0.5rem;
-  background-color: #222222;
-  outline: 0.0625rem solid transparent;
-  color: #FFFFFF;
-}
-
-.c41 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  padding: 0.5rem;
-  background-color: #FFFFFF;
-  outline: 0.0625rem solid transparent;
-  color: #11708C;
-}
-
-.c35 > svg {
-  color: #FFFFFF;
-  fill: currentColor;
-  width: 1.0625rem;
-  height: 0.75rem;
-  margin: 0;
-}
-
-.c42 > svg {
-  color: #11708C;
-  fill: currentColor;
-  width: 1.0625rem;
-  height: 0.75rem;
-  margin: 0;
-}
-
-.c37 {
-  padding-left: 0.5rem;
-}
-
-.c25 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c22 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-right: 0.25rem;
-}
-
-.c22 > svg {
-  color: #5A5A5A;
-  margin: 0;
-  overflow: visible;
-}
-
-.c24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  width: 100%;
-}
-
-.c24 > time {
-  color: #5A5A5A;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c24::after {
-  content: '';
-  border-top: 0.0625rem solid #AEAEB5;
-  top: 1rem;
-  margin-left: 0.625rem;
-  width: 100%;
-}
-
-.c20 {
-  padding-bottom: 0.5rem;
-}
-
-.c17 {
-  padding: 0;
-  margin: 0;
-}
-
-.c19 {
-  position: relative;
-  padding-bottom: 1rem;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c14 {
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #F2F2F2;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c9 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-}
-
-.c11 {
-  margin: 0;
-  padding: 0;
-}
-
-.c8 {
-  background-color: #F2F2F2;
-  padding: 0 1rem;
-}
-
-.c15 {
-  margin: 0 auto;
-  width: 100%;
-  padding-bottom: 1rem;
-}
-
-.c10 {
-  margin: 0 auto;
-  width: 100%;
-  padding-top: 0.5rem;
-}
-
-.c43 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c43:hover,
-.c43:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c43:visited {
-  color: #6E6E73;
-}
-
-.c1 {
-  width: 100%;
-}
-
-.c6 {
-  height: 165px;
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-.c5 amp-iframe,
-.c5 div > iframe {
-  width: calc(100% + 1rem);
-  margin: 0 -0.5rem;
-}
-
-.c7 {
-  border: 0;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 2rem;
-    line-height: 2.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 2.75rem;
-    line-height: 3.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .c2 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c16 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c16 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c16 {
-    padding: 0 1rem;
-  }
-}
-
-@supports (display:grid) {
-  .c16 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c18 {
-    width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c18 {
-    width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c18 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c18 {
-    width: calc(3/6*(100% - 6 * 1rem) + 2 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c18 {
-    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c18 {
-    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c18 {
-    display: block;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c32 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c32 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c40 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c40 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c28 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c28 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c38 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c38 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c39 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c39 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c33 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c33 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c34 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c34 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c34 {
-    background-color: transparent;
-    outline: none;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c41 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c41 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c41 {
-    background-color: transparent;
-    outline: none;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c25 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c25 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c24 > time {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c24 > time {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c19 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c13 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    padding-right: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c9 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c9 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c15 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c15 {
-    max-width: 63rem;
-    padding-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    padding-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c10 {
-    max-width: 63rem;
-    padding-top: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c43 {
-    font-size: 0.9375rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c43 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c6 {
-    margin-bottom: 2rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c5 amp-iframe,
-  .c5 div > iframe {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem;
-  }
-}
-
 <html
   dir="ltr"
   lang="fr"
@@ -1573,36 +532,36 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
         chartbeat
       </div>
       <main
-        class="c0 c1"
+        class="emotion-7 css-py1rac-GridComponent-GelPageGrid emotion-6"
         dir="ltr"
         role="main"
       >
         <div
-          class="c2"
+          class="css-7yf5z7-GridComponent emotion-6"
           dir="ltr"
         >
           <h1
-            class="c3"
+            class="css-18u3w2y-Headline emotion-0"
             id="content"
             tabindex="-1"
           >
             BBC Afrique Radio
           </h1>
           <p
-            class="c4"
+            class="css-1ehf52w-Paragraph emotion-1"
           >
             Infos, musique et sports
           </p>
           <div
-            class="c5"
+            class="emotion-4 css-14t66qe-Wrapper-AudioPlayer emotion-5"
           >
             <div
-              class="c6"
+              class="css-1bxiiiz-StyledAudioContainer emotion-3"
             >
               <iframe
-                allow="autoplay; fullscreen"
+                allow="autoplay"
                 allowfullscreen=""
-                class="c7"
+                class="css-v3kkbc-StyledIframe emotion-2"
                 scrolling="no"
                 src="https://test.bbc.com/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live"
                 title="Lecteur audio"
@@ -1614,23 +573,23 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
       </main>
       <section
         aria-labelledby="Radio-Schedule"
-        class="c8"
+        class=" css-xuay09-RadioScheduleSection emotion-99"
         role="region"
       >
         <div
-          class="c9 c10"
+          class="emotion-13 css-16joe58-SectionLabelWrapper-RadioScheduleSectionLabel emotion-14"
         >
           <h2
-            class="c11"
+            class="css-1333sok-Heading emotion-12"
           >
             <span
-              class="c12"
+              class="css-143m08z-FlexColumn emotion-11"
             >
               <span
-                class="c13"
+                class="css-1jc9b24-FlexRow emotion-10"
               >
                 <span
-                  class="c14"
+                  class="css-4poemy-Title emotion-9"
                   dir="ltr"
                   id="Radio-Schedule"
                 >
@@ -1641,33 +600,33 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
           </h2>
         </div>
         <div
-          class="c15"
+          class="css-pme1b-RadioScheduleWrapper emotion-98"
           data-e2e="radio-schedule"
         >
-          <ul
-            class="c16 c17"
+          <div
+            class="emotion-95 css-1dbqk3h-GridComponent-StyledGrid emotion-6"
             dir="ltr"
             role="list"
           >
             <li
-              class="c18 c19"
+              class="emotion-33 css-oarqw3-GridComponent-StyledFlexGrid emotion-6"
               data-e2e="onDemand"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="c20"
+                class="css-10pzo75-StartTimeWrapper emotion-20"
               >
                 <div
-                  class="c21"
+                  class="css-14jp6ch-Wrapper emotion-19"
                 >
                   <span
-                    class="c22"
+                    class="css-ltm9x5-StyledClock emotion-16"
                     dir="ltr"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c23"
+                      class="css-6a3m3l-CoreIcon-ClockIcon emotion-15"
                       focusable="false"
                       height="13"
                       viewBox="0 0 13 13"
@@ -1683,11 +642,11 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                   </span>
                   <span
                     aria-hidden="true"
-                    class="c24"
+                    class="css-1po43ul-StyledTimestamp emotion-18"
                     dir="ltr"
                   >
                     <time
-                      class="c25"
+                      class="css-1s2kt38-StyledTimestamp emotion-17"
                       datetime="2020-03-26"
                     >
                       05:30
@@ -1696,32 +655,31 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </div>
               </div>
               <div
-                class="c26"
+                class="css-1p5015p-CardWrapper emotion-32"
               >
                 <div
-                  class="c27"
+                  class="css-ed441g-TextWrapper emotion-26"
                 >
                   <h3
-                    class="c28"
+                    class="css-i0f8i2-StyledH3 emotion-24"
                   >
                     <a
-                      class="c29"
+                      class="css-1vkbim8-Link-StyledLink emotion-23"
                       href="/afrique/bbc_afrique_radio/w172x371xccjp2q"
                     >
                       <span
-                        class=""
                         role="text"
                       >
                         Actu Monde
                         <span
-                          class="c30"
+                          class="css-ow3j0s-VisuallyHiddenText emotion-21"
                         >
                           , 
                           05:30
                           , 
                         </span>
                         <span
-                          class="c31 c32"
+                          class="css-1yguufh-TitleWrapper emotion-22"
                         >
                           26 mars 2020
                         </span>
@@ -1729,20 +687,20 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                     </a>
                   </h3>
                   <p
-                    class="c33"
+                    class="css-1yo0f2n-SummaryWrapper emotion-25"
                   >
                     C'est la principale tranche dédiée à l'actualité internationale. De 5H 30 à 6H 30, des interviews d'analystes et des information
                   </p>
                 </div>
                 <div
-                  class="c34"
+                  class="css-179ih91-ButtonWrapper emotion-31"
                 >
                   <span
-                    class="c35"
+                    class="css-1smn0bu-IconWrapper emotion-28"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c36"
+                      class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-27"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
@@ -1757,18 +715,17 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                     </svg>
                   </span>
                   <time
-                    class="c37"
+                    class="css-1qbecwp-DurationWrapper emotion-30"
                     datetime="PT6M"
                     dir="ltr"
                   >
                     <span
-                      class="c30"
+                      class="css-ow3j0s-VisuallyHiddenText emotion-21"
                     >
                        Durée 06,00 
                     </span>
                     <span
                       aria-hidden="true"
-                      class=""
                     >
                       06:00
                     </span>
@@ -1777,24 +734,24 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               </div>
             </li>
             <li
-              class="c18 c19"
+              class="emotion-33 css-oarqw3-GridComponent-StyledFlexGrid emotion-6"
               data-e2e="onDemand"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="c20"
+                class="css-10pzo75-StartTimeWrapper emotion-20"
               >
                 <div
-                  class="c21"
+                  class="css-14jp6ch-Wrapper emotion-19"
                 >
                   <span
-                    class="c22"
+                    class="css-ltm9x5-StyledClock emotion-16"
                     dir="ltr"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c23"
+                      class="css-6a3m3l-CoreIcon-ClockIcon emotion-15"
                       focusable="false"
                       height="13"
                       viewBox="0 0 13 13"
@@ -1810,11 +767,11 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                   </span>
                   <span
                     aria-hidden="true"
-                    class="c24"
+                    class="css-1po43ul-StyledTimestamp emotion-18"
                     dir="ltr"
                   >
                     <time
-                      class="c25"
+                      class="css-1s2kt38-StyledTimestamp emotion-17"
                       datetime="2020-03-26"
                     >
                       05:16
@@ -1823,32 +780,31 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </div>
               </div>
               <div
-                class="c26"
+                class="css-1p5015p-CardWrapper emotion-32"
               >
                 <div
-                  class="c27"
+                  class="css-ed441g-TextWrapper emotion-26"
                 >
                   <h3
-                    class="c28"
+                    class="css-i0f8i2-StyledH3 emotion-24"
                   >
                     <a
-                      class="c29"
+                      class="css-1vkbim8-Link-StyledLink emotion-23"
                       href="/afrique/bbc_afrique_radio/w172x6djbb3rg44"
                     >
                       <span
-                        class=""
                         role="text"
                       >
                         Reportage
                         <span
-                          class="c30"
+                          class="css-ow3j0s-VisuallyHiddenText emotion-21"
                         >
                           , 
                           05:16
                           , 
                         </span>
                         <span
-                          class="c31 c32"
+                          class="css-1yguufh-TitleWrapper emotion-22"
                         >
                           26 mars 2020
                         </span>
@@ -1856,20 +812,20 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                     </a>
                   </h3>
                   <p
-                    class="c33"
+                    class="css-1yo0f2n-SummaryWrapper emotion-25"
                   >
                     Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.
                   </p>
                 </div>
                 <div
-                  class="c34"
+                  class="css-179ih91-ButtonWrapper emotion-31"
                 >
                   <span
-                    class="c35"
+                    class="css-1smn0bu-IconWrapper emotion-28"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c36"
+                      class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-27"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
@@ -1884,18 +840,17 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                     </svg>
                   </span>
                   <time
-                    class="c37"
+                    class="css-1qbecwp-DurationWrapper emotion-30"
                     datetime="PT8M"
                     dir="ltr"
                   >
                     <span
-                      class="c30"
+                      class="css-ow3j0s-VisuallyHiddenText emotion-21"
                     >
                        Durée 08,00 
                     </span>
                     <span
                       aria-hidden="true"
-                      class=""
                     >
                       08:00
                     </span>
@@ -1904,24 +859,24 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               </div>
             </li>
             <li
-              class="c18 c19"
+              class="emotion-33 css-oarqw3-GridComponent-StyledFlexGrid emotion-6"
               data-e2e="onDemand"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="c20"
+                class="css-10pzo75-StartTimeWrapper emotion-20"
               >
                 <div
-                  class="c21"
+                  class="css-14jp6ch-Wrapper emotion-19"
                 >
                   <span
-                    class="c22"
+                    class="css-ltm9x5-StyledClock emotion-16"
                     dir="ltr"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c23"
+                      class="css-6a3m3l-CoreIcon-ClockIcon emotion-15"
                       focusable="false"
                       height="13"
                       viewBox="0 0 13 13"
@@ -1937,11 +892,11 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                   </span>
                   <span
                     aria-hidden="true"
-                    class="c24"
+                    class="css-1po43ul-StyledTimestamp emotion-18"
                     dir="ltr"
                   >
                     <time
-                      class="c25"
+                      class="css-1s2kt38-StyledTimestamp emotion-17"
                       datetime="2020-03-26"
                     >
                       05:15
@@ -1950,32 +905,31 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </div>
               </div>
               <div
-                class="c26"
+                class="css-1p5015p-CardWrapper emotion-32"
               >
                 <div
-                  class="c27"
+                  class="css-ed441g-TextWrapper emotion-26"
                 >
                   <h3
-                    class="c28"
+                    class="css-i0f8i2-StyledH3 emotion-24"
                   >
                     <a
-                      class="c29"
+                      class="css-1vkbim8-Link-StyledLink emotion-23"
                       href="/afrique/bbc_afrique_radio/w172x5n20y5f68g"
                     >
                       <span
-                        class=""
                         role="text"
                       >
                         Bulletin D'informations
                         <span
-                          class="c30"
+                          class="css-ow3j0s-VisuallyHiddenText emotion-21"
                         >
                           , 
                           05:15
                           , 
                         </span>
                         <span
-                          class="c31 c32"
+                          class="css-1yguufh-TitleWrapper emotion-22"
                         >
                           26 mars 2020
                         </span>
@@ -1983,20 +937,20 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                     </a>
                   </h3>
                   <p
-                    class="c33"
+                    class="css-1yo0f2n-SummaryWrapper emotion-25"
                   >
                     Le tour du monde de l'actualité en 2 minutes 
                   </p>
                 </div>
                 <div
-                  class="c34"
+                  class="css-179ih91-ButtonWrapper emotion-31"
                 >
                   <span
-                    class="c35"
+                    class="css-1smn0bu-IconWrapper emotion-28"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c36"
+                      class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-27"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
@@ -2011,18 +965,17 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                     </svg>
                   </span>
                   <time
-                    class="c37"
+                    class="css-1qbecwp-DurationWrapper emotion-30"
                     datetime="PT1M"
                     dir="ltr"
                   >
                     <span
-                      class="c30"
+                      class="css-ow3j0s-VisuallyHiddenText emotion-21"
                     >
                        Durée 01,00 
                     </span>
                     <span
                       aria-hidden="true"
-                      class=""
                     >
                       01:00
                     </span>
@@ -2031,24 +984,24 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               </div>
             </li>
             <li
-              class="c18 c19"
+              class="emotion-33 css-oarqw3-GridComponent-StyledFlexGrid emotion-6"
               data-e2e="next"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="c20"
+                class="css-10pzo75-StartTimeWrapper emotion-20"
               >
                 <div
-                  class="c21"
+                  class="css-14jp6ch-Wrapper emotion-19"
                 >
                   <span
-                    class="c22"
+                    class="css-ltm9x5-StyledClock emotion-16"
                     dir="ltr"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c23"
+                      class="css-6a3m3l-CoreIcon-ClockIcon emotion-15"
                       focusable="false"
                       height="13"
                       viewBox="0 0 13 13"
@@ -2064,11 +1017,11 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                   </span>
                   <span
                     aria-hidden="true"
-                    class="c24"
+                    class="css-1po43ul-StyledTimestamp emotion-18"
                     dir="ltr"
                   >
                     <time
-                      class="c25"
+                      class="css-1s2kt38-StyledTimestamp emotion-17"
                       datetime="2030-01-01"
                     >
                       09:00
@@ -2077,54 +1030,53 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </div>
               </div>
               <div
-                class="c26"
+                class="css-1p5015p-CardWrapper emotion-32"
               >
                 <div
-                  class="c27"
+                  class="css-ed441g-TextWrapper emotion-26"
                 >
                   <h3
-                    class="c38"
+                    class="css-1hrv2u6-StyledH3 emotion-24"
                   >
                     <span
-                      class=""
                       role="text"
                     >
                       <span
-                        class="c39"
+                        class="css-194b0aj-NextLabel emotion-81"
                         dir="ltr"
                       >
                         SUIVANT 
                       </span>
                       A Vous L'antenne
                       <span
-                        class="c30"
+                        class="css-ow3j0s-VisuallyHiddenText emotion-21"
                       >
                         , 
                         09:00
                         , 
                       </span>
                       <span
-                        class="c31 c40"
+                        class="css-1vcreeq-TitleWrapper emotion-22"
                       >
                         1 janvier 2030
                       </span>
                     </span>
                   </h3>
                   <p
-                    class="c33"
+                    class="css-1yo0f2n-SummaryWrapper emotion-25"
                   >
                     Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité 
                   </p>
                 </div>
                 <div
-                  class="c41"
+                  class="css-136xa31-ButtonWrapper emotion-31"
                 >
                   <span
-                    class="c42"
+                    class="css-1soil44-IconWrapper emotion-28"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c36"
+                      class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-27"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
@@ -2139,18 +1091,17 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                     </svg>
                   </span>
                   <time
-                    class="c37"
+                    class="css-1qbecwp-DurationWrapper emotion-30"
                     datetime="PT15M"
                     dir="ltr"
                   >
                     <span
-                      class="c30"
+                      class="css-ow3j0s-VisuallyHiddenText emotion-21"
                     >
                        Durée 15,00 
                     </span>
                     <span
                       aria-hidden="true"
-                      class=""
                     >
                       15:00
                     </span>
@@ -2158,9 +1109,9 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </div>
               </div>
             </li>
-          </ul>
+          </div>
           <a
-            class="c43"
+            class="css-1ld2mqw-RadioFrequencyLink emotion-97"
             href="/afrique/institutionelles/2010/12/000000_schedules_frequencies_afrique"
           >
             Nos fréquences

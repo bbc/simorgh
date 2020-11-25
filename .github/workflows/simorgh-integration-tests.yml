@@ -1,13 +1,14 @@
 name: Simorgh CI - Integration Tests
 on:
-  push:
+  create:
     branches:
       - '**'
-      - '!latest'
   pull_request:
     branches:
       - '**'
-      - '!latest'
+  push:
+    branches:
+      - latest
 jobs:
   build:
     runs-on: ubuntu-latest

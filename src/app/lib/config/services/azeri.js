@@ -158,6 +158,7 @@ export const service = {
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
+        recentEpisodes: 'Daha ətraflı',
       },
       socialEmbed: {
         caption: {
@@ -259,10 +260,6 @@ export const service = {
       {
         title: 'Beynəlxalq',
         url: '/azeri/topics/cde15l4vn02t',
-      },
-      {
-        title: 'Dərgi',
-        url: '/azeri/magazine',
       },
       {
         title: 'Video',
