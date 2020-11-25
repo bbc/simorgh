@@ -14,7 +14,10 @@ import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/i
 import LastUpdated from './LastUpdated';
 import processMostRead from '../utilities/processMostRead';
 import mostReadShape from '../utilities/mostReadShape';
-import { MOST_READ_FETCH_ERROR } from '#lib/logger.const';
+import {
+  MOST_READ_CLIENT_REQUEST,
+  MOST_READ_FETCH_ERROR,
+} from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
@@ -65,6 +68,8 @@ const CanonicalMostRead = ({
       };
 
       const fetchMostReadData = pathname => {
+        logger.info(MOST_READ_CLIENT_REQUEST, { url: endpoint });
+
         return fetch(pathname)
           .then(handleResponse(pathname))
           .catch(error => {

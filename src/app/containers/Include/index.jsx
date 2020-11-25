@@ -3,6 +3,8 @@ import { string } from 'prop-types';
 import { pathOr } from 'ramda';
 
 import EmbedError from '@bbc/psammead-embed-error';
+import nodeLogger from '#lib/logger.node';
+import { INCLUDE_RENDERED } from '#lib/logger.const';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
@@ -12,6 +14,8 @@ import Canonical from './canonical';
 import Idt2Canonical from './canonical/Idt2';
 import Idt2Amp from './amp/Idt2Amp';
 import VjAmp from './amp/VjAmp';
+
+const logger = nodeLogger(__filename);
 
 const componentsToRender = {
   amp: {
@@ -43,7 +47,7 @@ const IncludeContainer = props => {
   );
 
   if (!enabled) return null;
-  const { isAmpSupported, type, index } = props;
+  const { isAmpSupported, href, type, index } = props;
 
   if (!isAmpSupported && isAmp) {
     return (
@@ -58,6 +62,11 @@ const IncludeContainer = props => {
       </GridItemMedium>
     );
   }
+
+  logger.info(INCLUDE_RENDERED, {
+    includeUrl: href,
+    type,
+  });
 
   const platform = isAmp ? 'amp' : 'canonical';
 

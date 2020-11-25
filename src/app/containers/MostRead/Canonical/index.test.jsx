@@ -14,7 +14,10 @@ import {
   setStaleLastRecordTimeStamp,
 } from '../utilities/testHelpers';
 import CanonicalMostRead from '.';
-import { MOST_READ_FETCH_ERROR } from '#lib/logger.const';
+import {
+  MOST_READ_CLIENT_REQUEST,
+  MOST_READ_FETCH_ERROR,
+} from '#lib/logger.const';
 
 /* eslint-disable react/prop-types */
 const MostReadCanonicalWithContext = ({
@@ -223,6 +226,21 @@ describe('MostReadContainerCanonical', () => {
   });
 
   describe('Logging', () => {
+    it('should log MOST_READ_CLIENT_REQUEST when most read data request is received', async () => {
+      await act(async () => {
+        await render(
+          <MostReadCanonicalWithContext
+            service="pidgin"
+            endpoint="www.test.bbc.com/pidgin/mostread.json"
+          />,
+        );
+      });
+
+      expect(nodeLogger.info).toHaveBeenCalledWith(MOST_READ_CLIENT_REQUEST, {
+        url: `www.test.bbc.com/pidgin/mostread.json`,
+      });
+    });
+
     it('should log MOST_READ_FETCH_ERROR when most read data request is not received', async () => {
       fetchMock.mock('www.test.bbc.com/pidgin/mostread.json', 500);
 
