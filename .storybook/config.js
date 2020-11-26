@@ -11,12 +11,14 @@ function loadStories() {
 }
 
 const fontPathMap = [
-  { prefix: 'F_REITH', path: 'fonts/Reith/' },
   { prefix: 'F_ISKOOLA_POTA_BBC', path: 'fonts/IskoolaPota/' },
   { prefix: 'F_LATHA', path: 'fonts/Latha/' },
-  { prefix: 'F_MALLANNA', path: 'fonts/Mallanna/' },
-  { prefix: 'F_NOTO_SANS_ETHIOPIC', path: 'fonts/NotoSansEthiopic/' },
+  { prefix: 'F_MALLANNA', path: 'fonts/Latha/' },
+  { prefix: 'F_NOTO_SANS_ETHIOPIC', path: 'fonts/Latha/' },
   { prefix: 'F_PADAUK', path: 'fonts/Padauk/' },
+  { prefix: 'F_REITH_QALAM', path: 'fonts/ReithQalam/' },
+  { prefix: 'F_REITH_SANS', path: 'fonts/Reith/' },
+  { prefix: 'F_REITH_SERIF', path: 'fonts/Reith/' },
   { prefix: 'F_SHONAR_BANGLA', path: 'fonts/ShonarBangla/' },
 ];
 
@@ -26,7 +28,7 @@ addDecorator(story => (
     <GlobalStyles
       fonts={Object.values(fontFaces).map(fontFace => {
         const fontMap =
-          fontPathMap.find(map => fontFace.name.includes(map.prefix)) ||
+          fontPathMap.find(map => fontFace.name.startsWith(map.prefix)) ||
           fontPathMap[0];
         return fontFace(fontMap.path);
       })}
