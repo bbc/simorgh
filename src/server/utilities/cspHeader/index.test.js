@@ -77,6 +77,7 @@ describe('cspHeader', () => {
         'https://edigitalsurvey.com',
         'https://*.safeframe.googlesyndication.com',
         'https://ad.doubleclick.net',
+        'https://secureframe.doubleclick.net',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -196,6 +197,7 @@ describe('cspHeader', () => {
         'https://edigitalsurvey.com',
         'https://*.safeframe.googlesyndication.com',
         'https://ad.doubleclick.net',
+        'https://secureframe.doubleclick.net',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -344,6 +346,7 @@ describe('cspHeader', () => {
         'https://edigitalsurvey.com',
         'https://*.safeframe.googlesyndication.com',
         'https://ad.doubleclick.net',
+        'https://secureframe.doubleclick.net',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -477,6 +480,7 @@ describe('cspHeader', () => {
         'https://edigitalsurvey.com',
         'https://*.safeframe.googlesyndication.com',
         'https://ad.doubleclick.net',
+        'https://secureframe.doubleclick.net',
         "'self'",
       ],
       imgSrcExpectation: [

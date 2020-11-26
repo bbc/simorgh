@@ -32,6 +32,7 @@ const advertisingDirectives = {
     'https://edigitalsurvey.com',
     'https://*.safeframe.googlesyndication.com',
     'https://ad.doubleclick.net',
+    'https://secureframe.doubleclick.net',
   ],
   imgSrc: [
     'https://collector.effectivemeasure.net',
