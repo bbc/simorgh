@@ -37,7 +37,12 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       });
 
       it('embed URL should be reachable', () => {
-        cy.testResponseCodeAndTypeRetry(embedUrl, 200, 'text/html');
+        cy.testResponseCodeAndTypeRetry({
+          path: embedUrl,
+          responseCode: 200,
+          type: 'text/html',
+          allowFallback: true,
+        });
       });
     });
 
