@@ -1269,10 +1269,10 @@ module.exports = () => ({
           },
           local: {
             paths: ['/bengali/media/video'],
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       photoGalleryPage: {
         environments: {
@@ -5789,17 +5789,18 @@ module.exports = () => ({
         smoke: false,
       },
       mostWatchedPage: {
+        // No Most Watched page for Russian
         environments: {
           live: {
-            paths: ['/russian/media/video'],
+            paths: [''],
             enabled: false,
           },
           test: {
-            paths: ['/russian/media/video'],
+            paths: [''],
             enabled: false,
           },
           local: {
-            paths: ['/russian/media/video'],
+            paths: [''],
             enabled: false,
           },
         },
