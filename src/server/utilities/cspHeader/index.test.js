@@ -48,6 +48,8 @@ describe('cspHeader', () => {
         'https://www.live.bbc.co.uk',
         'https://adservice.google.com',
         'https://tpc.googlesyndication.com',
+        'https://ad.doubleclick.net',
+        'https://googleads.g.doubleclick.net',
         "'self'",
       ],
       defaultSrcExpectation: [
@@ -74,6 +76,7 @@ describe('cspHeader', () => {
         'https://bcp.crwdcntrl.net',
         'https://edigitalsurvey.com',
         'https://*.safeframe.googlesyndication.com',
+        'https://ad.doubleclick.net',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -97,6 +100,8 @@ describe('cspHeader', () => {
         'https://dtvc.adsafeprotected.com',
         'https://fwvc.adsafeprotected.com',
         'https://pixel.adsafeprotected.com',
+        'https://ad.doubleclick.net',
+        'https://googleads.g.doubleclick.net',
         'https://*.googleusercontent.com',
         'https://static.files.bbci.co.uk',
         "data: 'self'",
@@ -152,6 +157,8 @@ describe('cspHeader', () => {
         'https://www.live.bbc.co.uk',
         'https://adservice.google.com',
         'https://tpc.googlesyndication.com',
+        'https://ad.doubleclick.net',
+        'https://googleads.g.doubleclick.net',
         "'self'",
       ],
       defaultSrcExpectation: [
@@ -188,6 +195,7 @@ describe('cspHeader', () => {
         'https://bcp.crwdcntrl.net',
         'https://edigitalsurvey.com',
         'https://*.safeframe.googlesyndication.com',
+        'https://ad.doubleclick.net',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -216,6 +224,8 @@ describe('cspHeader', () => {
         'https://dtvc.adsafeprotected.com',
         'https://fwvc.adsafeprotected.com',
         'https://pixel.adsafeprotected.com',
+        'https://ad.doubleclick.net',
+        'https://googleads.g.doubleclick.net',
         'https://*.googleusercontent.com',
         'https://static.files.bbci.co.uk',
         "data: 'self'",
@@ -303,6 +313,8 @@ describe('cspHeader', () => {
         'https://www.live.bbc.co.uk',
         'https://adservice.google.com',
         'https://tpc.googlesyndication.com',
+        'https://ad.doubleclick.net',
+        'https://googleads.g.doubleclick.net',
         "'self'",
       ],
       defaultSrcExpectation: [
@@ -331,6 +343,7 @@ describe('cspHeader', () => {
         'https://bcp.crwdcntrl.net',
         'https://edigitalsurvey.com',
         'https://*.safeframe.googlesyndication.com',
+        'https://ad.doubleclick.net',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -359,6 +372,8 @@ describe('cspHeader', () => {
         'https://dtvc.adsafeprotected.com',
         'https://fwvc.adsafeprotected.com',
         'https://pixel.adsafeprotected.com',
+        'https://ad.doubleclick.net',
+        'https://googleads.g.doubleclick.net',
         'https://*.googleusercontent.com',
         'https://static.test.files.bbci.co.uk',
         "data: 'self'",
@@ -420,6 +435,8 @@ describe('cspHeader', () => {
         'https://www.live.bbc.co.uk',
         'https://adservice.google.com',
         'https://tpc.googlesyndication.com',
+        'https://ad.doubleclick.net',
+        'https://googleads.g.doubleclick.net',
         "'self'",
       ],
       defaultSrcExpectation: [
@@ -459,6 +476,7 @@ describe('cspHeader', () => {
         'https://bcp.crwdcntrl.net',
         'https://edigitalsurvey.com',
         'https://*.safeframe.googlesyndication.com',
+        'https://ad.doubleclick.net',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -493,6 +511,8 @@ describe('cspHeader', () => {
         'https://dtvc.adsafeprotected.com',
         'https://fwvc.adsafeprotected.com',
         'https://pixel.adsafeprotected.com',
+        'https://ad.doubleclick.net',
+        'https://googleads.g.doubleclick.net',
         'https://*.googleusercontent.com',
         'https://static.test.files.bbci.co.uk',
         "data: 'self'",

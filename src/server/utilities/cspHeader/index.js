@@ -22,6 +22,8 @@ const advertisingDirectives = {
     'https://www.live.bbc.co.uk',
     'https://adservice.google.com',
     'https://tpc.googlesyndication.com',
+    'https://ad.doubleclick.net',
+    'https://googleads.g.doubleclick.net',
   ],
   frameSrc: [
     'https://*.g.doubleclick.net',
@@ -29,6 +31,7 @@ const advertisingDirectives = {
     'https://bcp.crwdcntrl.net',
     'https://edigitalsurvey.com',
     'https://*.safeframe.googlesyndication.com',
+    'https://ad.doubleclick.net',
   ],
   imgSrc: [
     'https://collector.effectivemeasure.net',
@@ -43,6 +46,8 @@ const advertisingDirectives = {
     'https://dtvc.adsafeprotected.com',
     'https://fwvc.adsafeprotected.com',
     'https://pixel.adsafeprotected.com',
+    'https://ad.doubleclick.net',
+    'https://googleads.g.doubleclick.net',
   ],
   scriptSrc: [
     'https://ad.crwdcntrl.net',
