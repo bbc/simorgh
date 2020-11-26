@@ -13,8 +13,8 @@ function loadStories() {
 const fontPathMap = [
   { prefix: 'F_ISKOOLA_POTA_BBC', path: 'fonts/IskoolaPota/' },
   { prefix: 'F_LATHA', path: 'fonts/Latha/' },
-  { prefix: 'F_MALLANNA', path: 'fonts/Latha/' },
-  { prefix: 'F_NOTO_SANS_ETHIOPIC', path: 'fonts/Latha/' },
+  { prefix: 'F_MALLANNA', path: 'fonts/Mallanna/' },
+  { prefix: 'F_NOTO_SANS_ETHIOPIC', path: 'fonts/NotoSansEthiopic/' },
   { prefix: 'F_PADAUK', path: 'fonts/Padauk/' },
   { prefix: 'F_REITH_QALAM', path: 'fonts/ReithQalam/' },
   { prefix: 'F_REITH_SANS', path: 'fonts/Reith/' },
