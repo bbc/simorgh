@@ -30,6 +30,7 @@ import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import AVPlayer from '#containers/AVPlayer';
+import RecentVideoEpisodes from '#containers/RecentVideoEpisodes';
 
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
@@ -75,6 +76,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     promoBrandTitle,
     thumbnailImageUrl,
     durationISO8601,
+    recentEpisodes,
   } = pageData;
 
   const { lang, timezone, datetimeLocale, service, translations } = useContext(
@@ -181,6 +183,14 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           margins={getGroups(true, true, true, true, false, false)}
         >
           <OnDemandParagraphContainer text={shortSynopsis} darkMode />
+        </Grid>
+        <Grid
+          item
+          startOffset={getGroups(1, 1, 1, 1, 2, 5)}
+          columns={getGroups(6, 6, 6, 6, 6, 12)}
+          margins={getGroups(true, true, true, true, false, false)}
+        >
+          <RecentVideoEpisodes episodes={recentEpisodes} />
         </Grid>
       </StyledGelPageGrid>
     </>
