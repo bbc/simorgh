@@ -46,9 +46,9 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 }
 
 .emotion-0 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #6E6E73;
@@ -58,15 +58,15 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-0 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-0 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -144,7 +144,7 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
     position: absolute;
     left: 0;
     right: 0;
-    top: 1.625rem;
+    top: 1.5rem;
   }
 }
 
@@ -192,9 +192,9 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 }
 
 .emotion-4 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   background-color: #FDFDFD;
@@ -212,15 +212,15 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-4 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-4 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -388,24 +388,24 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1.5rem;
-  line-height: 1.875rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-24 {
-    font-size: 1.75rem;
-    line-height: 2.5rem;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-24 {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.75rem;
+    line-height: 2.375rem;
   }
 }
 
@@ -441,9 +441,9 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 }
 
 .emotion-26 {
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -453,15 +453,15 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-26 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-26 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -473,26 +473,26 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 }
 
 .emotion-28 {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   color: #6E6E73;
   display: block;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-28 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-28 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -528,9 +528,9 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 }
 
 .emotion-42 {
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 1rem 0;
@@ -550,15 +550,15 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-42 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-42 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -862,25 +862,25 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 .emotion-62 {
   color: #222222;
   background-color: #FFFFFF;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   display: block;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-62 {
     font-size: 0.75rem;
-    line-height: 1rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-62 {
     font-size: 0.75rem;
-    line-height: 1rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -949,24 +949,24 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-76 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-76 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -983,9 +983,9 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 }
 
 .emotion-78 {
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -995,15 +995,15 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-78 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-78 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -1427,24 +1427,24 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-3149 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-3149 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -11092,9 +11092,9 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 }
 
 .emotion-0 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #6E6E73;
@@ -11104,15 +11104,15 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-0 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-0 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -11190,7 +11190,7 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
     position: absolute;
     left: 0;
     right: 0;
-    top: 1.625rem;
+    top: 1.5rem;
   }
 }
 
@@ -11238,9 +11238,9 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 }
 
 .emotion-4 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   background-color: #FDFDFD;
@@ -11258,15 +11258,15 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-4 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-4 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -11434,24 +11434,24 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1.5rem;
-  line-height: 1.875rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-24 {
-    font-size: 1.75rem;
-    line-height: 2.5rem;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-24 {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.75rem;
+    line-height: 2.375rem;
   }
 }
 
@@ -11487,9 +11487,9 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 }
 
 .emotion-26 {
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -11499,15 +11499,15 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-26 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-26 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -11519,26 +11519,26 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 }
 
 .emotion-28 {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   color: #6E6E73;
   display: block;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-28 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-28 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -11574,9 +11574,9 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 }
 
 .emotion-42 {
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 1rem 0;
@@ -11596,15 +11596,15 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-42 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-42 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -11908,25 +11908,25 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 .emotion-62 {
   color: #222222;
   background-color: #FFFFFF;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   display: block;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-62 {
     font-size: 0.75rem;
-    line-height: 1rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-62 {
     font-size: 0.75rem;
-    line-height: 1rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -11995,24 +11995,24 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-76 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-76 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -12029,9 +12029,9 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 }
 
 .emotion-78 {
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -12041,15 +12041,15 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-78 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-78 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -12473,24 +12473,24 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-3149 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-3149 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -22138,9 +22138,9 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 }
 
 .emotion-0 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #6E6E73;
@@ -22150,15 +22150,15 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-0 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-0 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -22236,7 +22236,7 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
     position: absolute;
     left: 0;
     right: 0;
-    top: 1.625rem;
+    top: 1.5rem;
   }
 }
 
@@ -22284,9 +22284,9 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 }
 
 .emotion-4 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   background-color: #FDFDFD;
@@ -22304,15 +22304,15 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-4 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-4 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -22480,24 +22480,24 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1.5rem;
-  line-height: 1.875rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-26 {
-    font-size: 1.75rem;
-    line-height: 2.5rem;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-26 {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.75rem;
+    line-height: 2.375rem;
   }
 }
 
@@ -22533,9 +22533,9 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 }
 
 .emotion-28 {
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -22545,15 +22545,15 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-28 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-28 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -22565,26 +22565,26 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 }
 
 .emotion-30 {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   color: #6E6E73;
   display: block;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-30 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-30 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -22620,9 +22620,9 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 }
 
 .emotion-44 {
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 1rem 0;
@@ -22642,15 +22642,15 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-44 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-44 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -22954,25 +22954,25 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 .emotion-64 {
   color: #222222;
   background-color: #FFFFFF;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   display: block;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-64 {
     font-size: 0.75rem;
-    line-height: 1rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-64 {
     font-size: 0.75rem;
-    line-height: 1rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -23041,24 +23041,24 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-78 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-78 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -23075,9 +23075,9 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 }
 
 .emotion-80 {
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -23087,15 +23087,15 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-80 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-80 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -23519,24 +23519,24 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-3151 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-3151 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -32917,9 +32917,9 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 }
 
 .emotion-2 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #6E6E73;
@@ -32929,15 +32929,15 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-2 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-2 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -33015,7 +33015,7 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
     position: absolute;
     left: 0;
     right: 0;
-    top: 1.625rem;
+    top: 1.5rem;
   }
 }
 
@@ -33063,9 +33063,9 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 }
 
 .emotion-6 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   background-color: #FDFDFD;
@@ -33083,15 +33083,15 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-6 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-6 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -33259,24 +33259,24 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1.5rem;
-  line-height: 1.875rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-28 {
-    font-size: 1.75rem;
-    line-height: 2.5rem;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-28 {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.75rem;
+    line-height: 2.375rem;
   }
 }
 
@@ -33312,9 +33312,9 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 }
 
 .emotion-30 {
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -33324,15 +33324,15 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-30 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-30 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -33344,26 +33344,26 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 }
 
 .emotion-32 {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   color: #6E6E73;
   display: block;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-32 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-32 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -33399,9 +33399,9 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 }
 
 .emotion-49 {
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 1rem 0;
@@ -33421,15 +33421,15 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-49 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-49 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -33733,25 +33733,25 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 .emotion-69 {
   color: #222222;
   background-color: #FFFFFF;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   display: block;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-69 {
     font-size: 0.75rem;
-    line-height: 1rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-69 {
     font-size: 0.75rem;
-    line-height: 1rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -33820,24 +33820,24 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-83 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-83 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -33854,9 +33854,9 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 }
 
 .emotion-85 {
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -33866,15 +33866,15 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-85 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-85 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -34298,24 +34298,24 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-3156 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-3156 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 

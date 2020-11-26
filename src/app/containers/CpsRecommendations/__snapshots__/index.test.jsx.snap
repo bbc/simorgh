@@ -2340,7 +2340,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 .emotion-0 {
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 0.875rem;
@@ -2384,9 +2384,9 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 .emotion-2 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   background-color: #F2F2F2;
@@ -2404,15 +2404,15 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-2 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-2 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -2457,25 +2457,25 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-23 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-23 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
