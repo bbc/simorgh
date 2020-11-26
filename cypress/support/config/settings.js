@@ -5788,24 +5788,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        // No Most Watched page for Russian
-        environments: {
-          live: {
-            paths: [''],
-            enabled: false,
-          },
-          test: {
-            paths: [''],
-            enabled: false,
-          },
-          local: {
-            paths: [''],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false }, // No Most Watched page for Russian
       photoGalleryPage: {
         environments: {
           live: {
