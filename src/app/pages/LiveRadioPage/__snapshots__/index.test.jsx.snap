@@ -573,7 +573,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
       </main>
       <section
         aria-labelledby="Radio-Schedule"
-        class=" css-xuay09-RadioScheduleSection emotion-99"
+        class=" css-xuay09-RadioScheduleSection emotion-98"
         role="region"
       >
         <div
@@ -600,7 +600,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
           </h2>
         </div>
         <div
-          class="css-pme1b-RadioScheduleWrapper emotion-98"
+          class="css-pme1b-RadioScheduleWrapper emotion-97"
           data-e2e="radio-schedule"
         >
           <div
@@ -1110,12 +1110,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               </div>
             </li>
           </div>
-          <a
-            class="css-1ld2mqw-RadioFrequencyLink emotion-97"
-            href="/afrique/institutionelles/2010/12/000000_schedules_frequencies_afrique"
-          >
-            Nos fréquences
-          </a>
         </div>
       </section>
     </div>
