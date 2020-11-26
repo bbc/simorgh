@@ -78,6 +78,54 @@ export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
       });
     });
 
+    // This test specifically covers an edge case where more than one instagram post is
+    // included in a Story and instagram needs to be prompted to render the instagram post
+    // rather than leaving it as core content
+    //
+    // Specifically it runs against this asset http://localhost:7080/russian/news-55041160
+    // but should pass against any page Story page with 2 or more instagram posts
+    it('Lazy loaded instagram posts enrich', () => {
+      cy.window().then(win => {
+        const jsonData = win.SIMORGH_DATA.pageData;
+
+        const blocks = path(['content', 'model', 'blocks'], jsonData);
+        const instagramEmbedBlocks = blocks.filter(block => {
+          return (
+            block.type === 'social_embed' &&
+            path(['model', 'blocks', 0, 'type'], block) === 'instagram'
+          );
+        });
+
+        if (instagramEmbedBlocks.length > 1) {
+          const firstInstagramEmbedUrl = path(
+            [0, 'model', 'blocks', 0, 'model', 'href'],
+            instagramEmbedBlocks,
+          );
+          const secondInstagramEmbedUrl = path(
+            [1, 'model', 'blocks', 0, 'model', 'href'],
+            instagramEmbedBlocks,
+          );
+
+          cy.get(
+            `[data-e2e="instagram-embed-${firstInstagramEmbedUrl}"]`,
+          ).scrollIntoView();
+          cy.get('.instagram-media-rendered').should('have.length', 1);
+          cy.get(
+            `[data-e2e="instagram-embed-${secondInstagramEmbedUrl}"]`,
+          ).scrollIntoView();
+          // of.at.least is used here instead of having length of exactly 2
+          // so the test does not fail if more than one twitter embed scrolls
+          // into view
+          cy.get('.instagram-media-rendered').should(
+            'have.length.of.at.least',
+            2,
+          );
+        } else {
+          cy.log('No Social Embed exists');
+        }
+      });
+    });
+
     it('link should render if exists on page', () => {
       cy.window().then(win => {
         const jsonData = win.SIMORGH_DATA.pageData;
