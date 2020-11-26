@@ -24,6 +24,7 @@ const advertisingDirectives = {
     'https://tpc.googlesyndication.com',
     'https://ad.doubleclick.net',
     'https://googleads.g.doubleclick.net',
+    'https://securepubads.g.doubleclick.net',
   ],
   frameSrc: [
     'https://*.g.doubleclick.net',
@@ -52,6 +53,7 @@ const advertisingDirectives = {
     'https://static.doubleclick.net',
     'https://www.gstatic.com',
     'https://encrypted-tbn*.gstatic.com',
+    'https://securepubads.g.doubleclick.net',
   ],
   scriptSrc: [
     'https://ad.crwdcntrl.net',
@@ -73,6 +75,11 @@ const advertisingDirectives = {
     'https://gn-web-assets.api.bbc.com',
     'https://www.googletagservices.com',
   ],
+  scriptSrcElem: [
+    'https://securepubads.g.doubleclick.net',
+    'https://bbc.gscontxt.net',
+  ],
+  prefetchSrc: ['https://*.safeframe.googlesyndication.com'],
   defaultSrc: [
     'https://tpc.googlesyndication.com',
     'https://*.safeframe.googlesyndication.com',
@@ -443,6 +450,18 @@ const directives = {
       'https://static.test.files.bbci.co.uk',
     ],
   },
+  scriptSrcElem: {
+    ampLive: [...advertisingDirectives.scriptSrcElem],
+    canonicalLive: [...advertisingDirectives.scriptSrcElem],
+    ampNonLive: [...advertisingDirectives.scriptSrcElem],
+    canonicalNonLive: [...advertisingDirectives.scriptSrcElem],
+  },
+  prefetchSrc: {
+    ampLive: [...advertisingDirectives.prefetchSrc],
+    canonicalLive: [...advertisingDirectives.prefetchSrc],
+    ampNonLive: [...advertisingDirectives.prefetchSrc],
+    canonicalNonLive: [...advertisingDirectives.prefetchSrc],
+  },
 };
 
 export const generateChildSrc = ({ isAmp }) => (isAmp ? ['blob:'] : ["'self'"]);
@@ -503,6 +522,20 @@ export const generateMediaSrc = ({ isAmp, isLive }) => {
 export const generateWorkerSrc = ({ isAmp }) =>
   isAmp ? ['blob:'] : ["'self'"];
 
+export const generateScriptSrcElem = ({ isAmp, isLive }) => {
+  if (!isLive && isAmp) return directives.scriptSrcElem.ampNonLive;
+  if (!isLive && !isAmp) return directives.scriptSrcElem.canonicalNonLive;
+  if (isLive && isAmp) return directives.scriptSrcElem.ampLive;
+  return directives.scriptSrcElem.canonicalLive;
+};
+
+export const generatePrefetchSrc = ({ isAmp, isLive }) => {
+  if (!isLive && isAmp) return directives.prefetchSrc.ampNonLive;
+  if (!isLive && !isAmp) return directives.prefetchSrc.canonicalNonLive;
+  if (isLive && isAmp) return directives.prefetchSrc.ampLive;
+  return directives.prefetchSrc.canonicalLive;
+};
+
 const helmetCsp = ({ isAmp, isLive }) => ({
   directives: {
     'default-src': generateDefaultSrc(),
@@ -515,6 +548,8 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'style-src': generateStyleSrc({ isAmp, isLive }),
     'media-src': generateMediaSrc({ isAmp, isLive }),
     'worker-src': generateWorkerSrc({ isAmp }),
+    'script-src-elem': generateScriptSrcElem({ isAmp, isLive }),
+    'prefetch-src': generatePrefetchSrc({ isAmp, isLive }),
     'report-to': 'default',
     'upgrade-insecure-requests': [],
   },

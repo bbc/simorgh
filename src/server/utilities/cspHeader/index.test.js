@@ -9,6 +9,8 @@ import injectCspHeader, {
   generateStyleSrc,
   generateMediaSrc,
   generateWorkerSrc,
+  generateScriptSrcElem,
+  generatePrefetchSrc,
 } from '.';
 
 const next = jest.fn();
@@ -50,6 +52,7 @@ describe('cspHeader', () => {
         'https://tpc.googlesyndication.com',
         'https://ad.doubleclick.net',
         'https://googleads.g.doubleclick.net',
+        'https://securepubads.g.doubleclick.net',
         "'self'",
       ],
       defaultSrcExpectation: [
@@ -106,6 +109,7 @@ describe('cspHeader', () => {
         'https://static.doubleclick.net',
         'https://www.gstatic.com',
         'https://encrypted-tbn*.gstatic.com',
+        'https://securepubads.g.doubleclick.net',
         'https://*.googleusercontent.com',
         'https://static.files.bbci.co.uk',
         "data: 'self'",
@@ -130,6 +134,11 @@ describe('cspHeader', () => {
         'https://static.files.bbci.co.uk',
       ],
       workerSrcExpectation: ['blob:'],
+      scriptSrcElemExpectation: [
+        'https://securepubads.g.doubleclick.net',
+        'https://bbc.gscontxt.net',
+      ],
+      prefetchSrcExpectation: ['https://*.safeframe.googlesyndication.com'],
     },
     {
       isAmp: false,
@@ -163,6 +172,7 @@ describe('cspHeader', () => {
         'https://tpc.googlesyndication.com',
         'https://ad.doubleclick.net',
         'https://googleads.g.doubleclick.net',
+        'https://securepubads.g.doubleclick.net',
         "'self'",
       ],
       defaultSrcExpectation: [
@@ -234,6 +244,7 @@ describe('cspHeader', () => {
         'https://static.doubleclick.net',
         'https://www.gstatic.com',
         'https://encrypted-tbn*.gstatic.com',
+        'https://securepubads.g.doubleclick.net',
         'https://*.googleusercontent.com',
         'https://static.files.bbci.co.uk',
         "data: 'self'",
@@ -290,6 +301,11 @@ describe('cspHeader', () => {
         'https://static.files.bbci.co.uk',
       ],
       workerSrcExpectation: ["'self'"],
+      scriptSrcElemExpectation: [
+        'https://securepubads.g.doubleclick.net',
+        'https://bbc.gscontxt.net',
+      ],
+      prefetchSrcExpectation: ['https://*.safeframe.googlesyndication.com'],
     },
     {
       isAmp: true,
@@ -323,6 +339,7 @@ describe('cspHeader', () => {
         'https://tpc.googlesyndication.com',
         'https://ad.doubleclick.net',
         'https://googleads.g.doubleclick.net',
+        'https://securepubads.g.doubleclick.net',
         "'self'",
       ],
       defaultSrcExpectation: [
@@ -386,6 +403,7 @@ describe('cspHeader', () => {
         'https://static.doubleclick.net',
         'https://www.gstatic.com',
         'https://encrypted-tbn*.gstatic.com',
+        'https://securepubads.g.doubleclick.net',
         'https://*.googleusercontent.com',
         'https://static.test.files.bbci.co.uk',
         "data: 'self'",
@@ -412,6 +430,11 @@ describe('cspHeader', () => {
         'https://static.test.files.bbci.co.uk',
       ],
       workerSrcExpectation: ['blob:'],
+      scriptSrcElemExpectation: [
+        'https://securepubads.g.doubleclick.net',
+        'https://bbc.gscontxt.net',
+      ],
+      prefetchSrcExpectation: ['https://*.safeframe.googlesyndication.com'],
     },
     {
       isAmp: false,
@@ -449,6 +472,7 @@ describe('cspHeader', () => {
         'https://tpc.googlesyndication.com',
         'https://ad.doubleclick.net',
         'https://googleads.g.doubleclick.net',
+        'https://securepubads.g.doubleclick.net',
         "'self'",
       ],
       defaultSrcExpectation: [
@@ -529,6 +553,7 @@ describe('cspHeader', () => {
         'https://static.doubleclick.net',
         'https://www.gstatic.com',
         'https://encrypted-tbn*.gstatic.com',
+        'https://securepubads.g.doubleclick.net',
         'https://*.googleusercontent.com',
         'https://static.test.files.bbci.co.uk',
         "data: 'self'",
@@ -593,6 +618,11 @@ describe('cspHeader', () => {
         'https://static.test.files.bbci.co.uk',
       ],
       workerSrcExpectation: ["'self'"],
+      scriptSrcElemExpectation: [
+        'https://securepubads.g.doubleclick.net',
+        'https://bbc.gscontxt.net',
+      ],
+      prefetchSrcExpectation: ['https://*.safeframe.googlesyndication.com'],
     },
   ].forEach(
     ({
@@ -610,6 +640,8 @@ describe('cspHeader', () => {
       styleSrcExpectation,
       mediaSrcExpectation,
       workerSrcExpectation,
+      scriptSrcElemExpectation,
+      prefetchSrcExpectation,
     }) => {
       describe(`Given isAmp ${isAmp} & isLive ${isLive}`, () => {
         it(`Then it has this childSrc`, () => {
@@ -668,6 +700,17 @@ describe('cspHeader', () => {
           expect(generateWorkerSrc({ isAmp })).toEqual(workerSrcExpectation);
         });
 
+        it(`Then it has this scriptSrcElem`, () => {
+          expect(generateScriptSrcElem({ isAmp, isLive })).toEqual(
+            scriptSrcElemExpectation,
+          );
+        });
+        it(`Then it has this prefetchSrc`, () => {
+          expect(generatePrefetchSrc({ isAmp, isLive })).toEqual(
+            prefetchSrcExpectation,
+          );
+        });
+
         it(`Then injectCspHeader middleware applies the correct Content-Security-Policy header`, () => {
           const req = {
             url: urlExample,
@@ -700,6 +743,8 @@ describe('cspHeader', () => {
             `style-src ${styleSrcExpectation.join(' ')};` +
             `media-src ${mediaSrcExpectation.join(' ')};` +
             `worker-src ${workerSrcExpectation.join(' ')};` +
+            `script-src-elem ${scriptSrcElemExpectation.join(' ')};` +
+            `prefetch-src ${prefetchSrcExpectation.join(' ')};` +
             `report-to default;` +
             `upgrade-insecure-requests`;
 
