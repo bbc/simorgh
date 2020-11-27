@@ -26,6 +26,7 @@ describe('cspHeader', () => {
       urlExample: 'https://www.bbc.com/pidgin.amp',
       childSrcExpectation: ['blob:'],
       connectSrcExpectation: [
+        'https://flagpoles.gnl-live.bbcverticals.com',
         'https://*.akamaihd.net',
         'https://a1.api.bbc.co.uk/hit.xiti',
         'https://config.api.bbci.co.uk',
@@ -128,6 +129,7 @@ describe('cspHeader', () => {
       urlExample: 'https://www.bbc.com/pidgin',
       childSrcExpectation: ["'self'"],
       connectSrcExpectation: [
+        'https://flagpoles.gnl-live.bbcverticals.com',
         'https://*.akamaihd.net',
         'https://a1.api.bbc.co.uk/hit.xiti',
         'https://config.api.bbci.co.uk',
@@ -278,6 +280,7 @@ describe('cspHeader', () => {
       urlExample: 'https://www.test.bbc.com/pidgin.amp',
       childSrcExpectation: ['blob:'],
       connectSrcExpectation: [
+        'https://flagpoles.gnl-test.bbcverticals.com',
         'https://*.akamaihd.net',
         'https://cdn.ampproject.org',
         'https://*.ampproject.net',
@@ -390,6 +393,7 @@ describe('cspHeader', () => {
       urlExample: 'https://www.test.bbc.com/pidgin',
       childSrcExpectation: ["'self'"],
       connectSrcExpectation: [
+        'https://flagpoles.gnl-test.bbcverticals.com',
         'https://*.akamaihd.net',
         'https://logws1363.ati-host.net',
         'https://config.test.api.bbci.co.uk',
