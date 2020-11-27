@@ -18,7 +18,7 @@ const defaultToggles = {
 
 const articleID = 'c3wmq4d1y3wo';
 
-storiesOf('Containers|Media Player/Canonical', module)
+storiesOf('Containers/Media Player/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
@@ -49,7 +49,7 @@ storiesOf('Containers|Media Player/Canonical', module)
     );
   });
 
-storiesOf('Containers|Media Player/AMP', module)
+storiesOf('Containers/Media Player/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())

@@ -27,7 +27,7 @@ const serviceConfigs = {
   serbian: serbianConfig,
 };
 
-const stories = storiesOf('Pages|Front Page', module).addDecorator(story => (
+const stories = storiesOf('Pages/Front Page', module).addDecorator(story => (
   <WithTimeMachine>{story()}</WithTimeMachine>
 ));
 

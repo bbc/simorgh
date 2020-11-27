@@ -11,7 +11,7 @@ const isAmp = platform => platform === 'AMP';
 const platforms = ['Canonical', 'AMP'];
 
 platforms.forEach(platform => {
-  const mapStories = storiesOf(`Pages|Media Asset Page/${platform}`, module);
+  const mapStories = storiesOf(`Pages/Media Asset Page/${platform}`, module);
 
   mapStories.addDecorator(story => (
     <WithTimeMachine>{story()}</WithTimeMachine>

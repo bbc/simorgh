@@ -34,7 +34,7 @@ const matchFixtures = service => ({
 
 const status = 200;
 
-storiesOf('Pages|Radio Page', module)
+storiesOf('Pages/Radio Page', module)
   .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(withKnobs)
   .addDecorator(

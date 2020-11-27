@@ -46,12 +46,10 @@ const theme = create({
   brandUrl: 'https://github.com/bbc/simorgh',
 });
 
-addParameters({
+export const parameters = {
   options: {
     panelPosition: 'right',
     sidebarAnimcations: true,
     theme,
   },
-});
-
-configure(loadStories, module);
+};

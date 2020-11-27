@@ -24,7 +24,7 @@ const matchFixtures = service => ({
 
 const status = 200;
 
-storiesOf('Pages|OnDemand TV Page', module)
+storiesOf('Pages/OnDemand TV Page', module)
   .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(withKnobs)
   .addDecorator(

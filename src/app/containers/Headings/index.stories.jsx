@@ -15,7 +15,7 @@ const headingsContainerWithContext = (type, blocks) => (
   </ServiceContext.Provider>
 );
 
-storiesOf('Containers|Heading', module)
+storiesOf('Containers/Heading', module)
   .addParameters({ chromatic: { disable: true } })
   .add('default heading', () =>
     headingsContainerWithContext('headline', headline),

@@ -26,7 +26,7 @@ const getSection = platform => (service, data) => (
 const getCanonicalSection = getSection('canonical');
 const getAmpSection = getSection('amp');
 
-storiesOf('Containers|Front Page Section/Canonical', module)
+storiesOf('Containers/Front Page Section/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .add('igbo', () => getCanonicalSection('igbo', igboData.content.groups[0]))
   .add('pidgin', () =>
@@ -49,7 +49,7 @@ storiesOf('Containers|Front Page Section/Canonical', module)
     ),
   );
 
-storiesOf('Containers|Front Page Section/AMP', module)
+storiesOf('Containers/Front Page Section/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
   .add('igbo - amp', () => getAmpSection('igbo', igboData.content.groups[0]))

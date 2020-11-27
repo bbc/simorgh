@@ -7,7 +7,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
-storiesOf('Containers|Navigation/Canonical', module)
+storiesOf('Containers/Navigation/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
@@ -17,7 +17,7 @@ storiesOf('Containers|Navigation/Canonical', module)
     </ServiceContextProvider>
   ));
 
-storiesOf('Containers|Navigation/AMP', module)
+storiesOf('Containers/Navigation/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())

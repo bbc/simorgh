@@ -54,7 +54,7 @@ const renderRadioScheduleContainer = service => (
 );
 
 moment.locale('en-GB'); // needed for Time Machine date string
-const stories = storiesOf('Containers|RadioSchedule', module)
+const stories = storiesOf('Containers/RadioSchedule', module)
   .addDecorator(withKnobs)
   .addDecorator(story => (
     <WithTimeMachine

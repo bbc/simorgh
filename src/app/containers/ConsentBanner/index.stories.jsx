@@ -25,7 +25,7 @@ const getConsentBanner = platform => (
   </ServiceContextProvider>
 );
 
-const stories = storiesOf('Containers|Consent Banner/', module).addParameters({
+const stories = storiesOf('Containers/Consent Banner', module).addParameters({
   chromatic: { disable: true },
 });
 

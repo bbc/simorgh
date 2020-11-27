@@ -18,7 +18,7 @@ import {
 } from './fixtureData';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
-storiesOf('Containers|Article/Article Figure/Canonical', module)
+storiesOf('Containers/Article/Article Figure/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
@@ -40,7 +40,7 @@ storiesOf('Containers|Article/Article Figure/Canonical', module)
   )
   .add('with a lazyloaded image', () => FigureLazyLoadImage);
 
-storiesOf('Containers|Article/Article Figure/AMP', module)
+storiesOf('Containers/Article/Article Figure/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())

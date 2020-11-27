@@ -22,7 +22,7 @@ const platforms = ['Canonical', 'AMP'];
 
 platforms.forEach(platform => {
   const mapMediaPlayerStories = storiesOf(
-    `Containers|MAP Media Player/${platform}`,
+    `Containers/MAP Media Player/${platform}`,
     module,
   );
 
