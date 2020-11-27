@@ -137,6 +137,7 @@ describe('cspHeader', () => {
       scriptSrcElemExpectation: [
         'https://securepubads.g.doubleclick.net',
         'https://bbc.gscontxt.net',
+        "'unsafe-inline'",
       ],
       prefetchSrcExpectation: ['https://*.safeframe.googlesyndication.com'],
     },
@@ -304,6 +305,7 @@ describe('cspHeader', () => {
       scriptSrcElemExpectation: [
         'https://securepubads.g.doubleclick.net',
         'https://bbc.gscontxt.net',
+        "'unsafe-inline'",
       ],
       prefetchSrcExpectation: ['https://*.safeframe.googlesyndication.com'],
     },
@@ -433,6 +435,7 @@ describe('cspHeader', () => {
       scriptSrcElemExpectation: [
         'https://securepubads.g.doubleclick.net',
         'https://bbc.gscontxt.net',
+        "'unsafe-inline'",
       ],
       prefetchSrcExpectation: ['https://*.safeframe.googlesyndication.com'],
     },
@@ -621,6 +624,7 @@ describe('cspHeader', () => {
       scriptSrcElemExpectation: [
         'https://securepubads.g.doubleclick.net',
         'https://bbc.gscontxt.net',
+        "'unsafe-inline'",
       ],
       prefetchSrcExpectation: ['https://*.safeframe.googlesyndication.com'],
     },
