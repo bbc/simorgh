@@ -78,7 +78,7 @@ const advertisingDirectives = {
   scriptSrcElem: [
     'https://securepubads.g.doubleclick.net',
     'https://bbc.gscontxt.net',
-    "'sha256-E+oPH3XkvQOW2FcXABpP3p+lp9RJWtKlPCq82oHsH7k='",
+    "'unsafe-inline'",
   ],
   prefetchSrc: ['https://*.safeframe.googlesyndication.com'],
   defaultSrc: [
