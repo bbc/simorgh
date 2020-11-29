@@ -103,7 +103,7 @@
     "@bbc/psammead-paragraph": "^4.0.1",
     "@bbc/psammead-radio-schedule": "^5.0.3",
     "@bbc/psammead-rich-text-transforms": "^2.0.2",
-    "@bbc/psammead-script-link": "^3.0.2",
+    "@bbc/psammead-script-link": "^3.0.5",
     "@bbc/psammead-section-label": "^7.0.2",
     "@bbc/psammead-sitewide-links": "^6.0.1",
     "@bbc/psammead-social-embed": "^3.0.1",
