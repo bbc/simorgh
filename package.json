@@ -83,7 +83,7 @@
     "@bbc/psammead-calendars": "^2.0.19",
     "@bbc/psammead-caption": "^4.0.1",
     "@bbc/psammead-consent-banner": "^4.0.1",
-    "@bbc/psammead-copyright": "^3.0.1",
+    "@bbc/psammead-copyright": "^3.0.4",
     "@bbc/psammead-detokeniser": "^1.0.0",
     "@bbc/psammead-embed-error": "^3.0.1",
     "@bbc/psammead-episode-list": "0.1.0-alpha.3",
