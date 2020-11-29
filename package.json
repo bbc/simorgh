@@ -167,7 +167,7 @@
     "@loadable/webpack-plugin": "^5.13.0",
     "@storybook/addon-knobs": "^5.3.21",
     "@storybook/react": "^5.3.21",
-    "@storybook/theming": "^5.3.21",
+    "@storybook/theming": "^6.1.8",
     "@testing-library/dom": "^7.28.1",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
