@@ -86,7 +86,7 @@
     "@bbc/psammead-copyright": "^3.0.1",
     "@bbc/psammead-detokeniser": "^1.0.0",
     "@bbc/psammead-embed-error": "^3.0.1",
-    "@bbc/psammead-episode-list": "0.1.0-alpha.3",
+    "@bbc/psammead-episode-list": "0.1.0-alpha.9",
     "@bbc/psammead-figure": "^2.0.0",
     "@bbc/psammead-grid": "^3.0.4",
     "@bbc/psammead-heading-index": "^3.0.1",
