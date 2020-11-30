@@ -291,7 +291,7 @@ export const service = {
       },
       {
         title: 'ځانګړې پاڼې',
-        url: '/pashto/in_depth',
+        url: '/pashto/in-depth-54540873',
       },
       {
         title: 'کالم',
