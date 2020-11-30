@@ -36,7 +36,7 @@ Cypress.Commands.add(
               responseCode,
               type,
               retriesLeft: retriesLeft - 1,
-              allowFallback,
+              allowFallback: false,
             });
           }
         }
