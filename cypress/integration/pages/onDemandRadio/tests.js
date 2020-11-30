@@ -43,7 +43,12 @@ export default ({ service, pageType, variant, isAmp }) => {
             const iframeURL = isBrandPage ? iframe.prop('src') : embedUrl;
 
             cy.get(`iframe[src*="${iframeURL}"]`).should('be.visible');
-            cy.testResponseCodeAndTypeRetry(iframeURL, 200, 'text/html');
+            cy.testResponseCodeAndTypeRetry({
+              path: embedUrl,
+              responseCode: 200,
+              type: 'text/html',
+              allowFallback: true,
+            });
           });
         });
       });
