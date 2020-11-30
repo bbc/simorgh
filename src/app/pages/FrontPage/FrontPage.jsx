@@ -24,7 +24,6 @@ import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { NEGATIVE_MARGIN } from '#lib/styles.const';
-import USElectionBanner from '#containers/USElectionBanner';
 
 const FrontPageMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
@@ -74,7 +73,6 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const seoTitle = path(['promo', 'name'], pageData);
   const radioScheduleData = path(['radioScheduleData'], pageData);
   const radioSchedulePosition = path(['radioSchedulePosition'], pageData);
-  const usElectionResultsOembed = path(['usElectionOembed'], pageData);
 
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
 
@@ -111,7 +109,6 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
         </VisuallyHiddenText>
-        <USElectionBanner oembed={usElectionResultsOembed} />
         <IndexPageContainer>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
