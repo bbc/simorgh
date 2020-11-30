@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions no-param-reassign */
 const webpack = require('webpack');
 const path = require('path');
 const { webpackDirAlias } = require('../dirAlias');
@@ -26,7 +27,7 @@ module.exports = {
           );
         },
       ),
-    ),
+    )
       (config.resolve.modules = [
         path.resolve(__dirname, '..'),
         'node_modules',
