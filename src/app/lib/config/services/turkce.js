@@ -193,7 +193,7 @@ export const service = {
         linkText: 'Tüm içeriği görmek için sayfanın tüm sürümünü görüntüleyin ',
       },
       topStoriesTitle: 'Manşet haber',
-      featuresAnalysisTitle: 'Aramızda Kalmasın',
+      featuresAnalysisTitle: 'Seçtiklerimiz',
     },
     brandSVG,
     mostRead: {
