@@ -52,7 +52,6 @@ const advertisingDirectives = {
     'https://googleads.g.doubleclick.net',
     'https://static.doubleclick.net',
     'https://www.gstatic.com',
-    'https://encrypted-tbn*.gstatic.com',
     'https://securepubads.g.doubleclick.net',
   ],
   scriptSrc: [
