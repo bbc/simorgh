@@ -215,40 +215,26 @@ Object {
 
 exports[`AMP On Demand T V Page Header Navigation link should match text and url 2`] = `
 Object {
-  "text": "Warar dheeraad ah",
-  "url": "/somali/war",
+  "text": "Ganacsi",
+  "url": "/somali/topics/c2dwqd32v4yt",
 }
 `;
 
 exports[`AMP On Demand T V Page Header Navigation link should match text and url 3`] = `
 Object {
-  "text": "Ganacsi",
-  "url": "/somali/topics/2f2db234-3c2d-40a4-b4ac-eea661faadd0",
+  "text": "Cayaaraha",
+  "url": "/somali/topics/cpzd4zj1pn2t",
 }
 `;
 
 exports[`AMP On Demand T V Page Header Navigation link should match text and url 4`] = `
-Object {
-  "text": "Cayaaraha",
-  "url": "/somali/cayaaraha",
-}
-`;
-
-exports[`AMP On Demand T V Page Header Navigation link should match text and url 5`] = `
-Object {
-  "text": "Aqoon Guud",
-  "url": "/somali/aqoon_guud",
-}
-`;
-
-exports[`AMP On Demand T V Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Muuqaal",
   "url": "/somali/media/video",
 }
 `;
 
-exports[`AMP On Demand T V Page Header Navigation link should match text and url 7`] = `
+exports[`AMP On Demand T V Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Barnaamijyada Idaacadda",
   "url": "/somali/media-54071665",
