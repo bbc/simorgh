@@ -9,7 +9,6 @@ import injectCspHeader, {
   generateStyleSrc,
   generateMediaSrc,
   generateWorkerSrc,
-  generateScriptSrcElem,
   generatePrefetchSrc,
 } from '.';
 
@@ -134,11 +133,6 @@ describe('cspHeader', () => {
         'https://static.files.bbci.co.uk',
       ],
       workerSrcExpectation: ['blob:'],
-      scriptSrcElemExpectation: [
-        'https://securepubads.g.doubleclick.net',
-        'https://bbc.gscontxt.net',
-        "'unsafe-inline'",
-      ],
       prefetchSrcExpectation: ['https://*.safeframe.googlesyndication.com'],
     },
     {
@@ -302,11 +296,6 @@ describe('cspHeader', () => {
         'https://static.files.bbci.co.uk',
       ],
       workerSrcExpectation: ["'self'"],
-      scriptSrcElemExpectation: [
-        'https://securepubads.g.doubleclick.net',
-        'https://bbc.gscontxt.net',
-        "'unsafe-inline'",
-      ],
       prefetchSrcExpectation: ['https://*.safeframe.googlesyndication.com'],
     },
     {
@@ -432,11 +421,6 @@ describe('cspHeader', () => {
         'https://static.test.files.bbci.co.uk',
       ],
       workerSrcExpectation: ['blob:'],
-      scriptSrcElemExpectation: [
-        'https://securepubads.g.doubleclick.net',
-        'https://bbc.gscontxt.net',
-        "'unsafe-inline'",
-      ],
       prefetchSrcExpectation: ['https://*.safeframe.googlesyndication.com'],
     },
     {
@@ -621,11 +605,6 @@ describe('cspHeader', () => {
         'https://static.test.files.bbci.co.uk',
       ],
       workerSrcExpectation: ["'self'"],
-      scriptSrcElemExpectation: [
-        'https://securepubads.g.doubleclick.net',
-        'https://bbc.gscontxt.net',
-        "'unsafe-inline'",
-      ],
       prefetchSrcExpectation: ['https://*.safeframe.googlesyndication.com'],
     },
   ].forEach(
@@ -644,7 +623,6 @@ describe('cspHeader', () => {
       styleSrcExpectation,
       mediaSrcExpectation,
       workerSrcExpectation,
-      scriptSrcElemExpectation,
       prefetchSrcExpectation,
     }) => {
       describe(`Given isAmp ${isAmp} & isLive ${isLive}`, () => {
@@ -704,11 +682,6 @@ describe('cspHeader', () => {
           expect(generateWorkerSrc({ isAmp })).toEqual(workerSrcExpectation);
         });
 
-        it(`Then it has this scriptSrcElem`, () => {
-          expect(generateScriptSrcElem({ isAmp, isLive })).toEqual(
-            scriptSrcElemExpectation,
-          );
-        });
         it(`Then it has this prefetchSrc`, () => {
           expect(generatePrefetchSrc({ isAmp, isLive })).toEqual(
             prefetchSrcExpectation,
@@ -747,7 +720,6 @@ describe('cspHeader', () => {
             `style-src ${styleSrcExpectation.join(' ')};` +
             `media-src ${mediaSrcExpectation.join(' ')};` +
             `worker-src ${workerSrcExpectation.join(' ')};` +
-            `script-src-elem ${scriptSrcElemExpectation.join(' ')};` +
             `prefetch-src ${prefetchSrcExpectation.join(' ')};` +
             `report-to default;` +
             `upgrade-insecure-requests`;
