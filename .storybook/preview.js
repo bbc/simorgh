@@ -1,14 +1,8 @@
 import React from 'react';
-import { configure, addDecorator, addParameters } from '@storybook/react';
+import { addDecorator } from '@storybook/react';
 import { create } from '@storybook/theming';
 import * as fontFaces from '@bbc/psammead-styles/fonts';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
-
-const req = require.context('../src/app', true, /\.stories\.jsx$/);
-
-function loadStories() {
-  req.keys().forEach(filename => req(filename));
-}
 
 const fontPathMap = [
   { prefix: 'F_REITH', path: 'fonts/Reith/' },
@@ -47,6 +41,7 @@ const theme = create({
 });
 
 export const parameters = {
+  passArgsFirst: false,
   options: {
     panelPosition: 'right',
     sidebarAnimcations: true,
