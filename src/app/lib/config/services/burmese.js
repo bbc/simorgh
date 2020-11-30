@@ -264,23 +264,23 @@ export const service = {
       },
       {
         title: 'မြန်မာ့ရေးရာ',
-        url: '/burmese/burma',
+        url: '/burmese/topics/c404v08p1wxt',
       },
       {
         title: 'နိုင်ငံတကာ',
-        url: '/burmese/world',
+        url: '/burmese/topics/cnlv9j1z93wt',
       },
       {
         title: 'ဆောင်းပါး',
-        url: '/burmese/in_depth',
+        url: '/burmese/in-depth-54539126',
       },
       {
         title: 'အားကစား',
-        url: '/burmese/sport',
+        url: '/burmese/topics/cxnykndgd87t',
       },
       {
         title: 'ကုန်သွယ်စီးပွား',
-        url: '/burmese/economy',
+        url: '/burmese/topics/c9wpm0en9jdt',
       },
       {
         title: 'ဗီဒီယိုများ',
