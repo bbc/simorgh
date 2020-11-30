@@ -90,12 +90,12 @@ const gridMarginSmall = `
 const LegacyGridItemLarge = styled(GridItemLarge)`
   ${gridMarginSmall}
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    padding: 1.5rem;
-    margin: 2rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    padding: 2rem;
-    margin: 1rem;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 `;
 
