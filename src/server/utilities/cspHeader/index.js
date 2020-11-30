@@ -73,6 +73,8 @@ const advertisingDirectives = {
     'https://tpc.googlesyndication.com',
     'https://gn-web-assets.api.bbc.com',
     'https://www.googletagservices.com',
+    'https://securepubads.g.doubleclick.net',
+    'https://bbc.gscontxt.net',
   ],
   prefetchSrc: ['https://*.safeframe.googlesyndication.com'],
   defaultSrc: [
