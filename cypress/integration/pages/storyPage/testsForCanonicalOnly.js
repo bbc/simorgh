@@ -120,8 +120,6 @@ export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
             'have.length.of.at.least',
             2,
           );
-        } else {
-          cy.log('No Social Embed exists');
         }
       });
     });
@@ -152,8 +150,6 @@ export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
           cy.get(`[href^="#skip-${socialEmbedSource}-content"]`).should(
             'exist',
           );
-        } else {
-          cy.log('No Social Embed exists');
         }
       });
     });
