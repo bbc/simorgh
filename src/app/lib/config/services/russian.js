@@ -63,7 +63,7 @@ const headerFooterTranslations = {
             'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
         },
       },
-      accept: 'Да, согласен',
+      accept: 'Да',
       reject: 'Нет, мне надо посмотреть настройки',
       rejectUrl:
         'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
@@ -152,7 +152,7 @@ export const mainTranslations = {
       linkText: 'Смотреть еще в %provider_name%',
       linkTextSuffixVisuallyHidden: ', внешняя ссылка',
       warningText:
-        'Би-би-си на несет ответственности за содержание других сайтов.',
+        'Би-би-си не несёт ответственности за содержание других сайтов.',
     },
     skipLink: {
       text: 'Пропустить контент из %provider_name%',
