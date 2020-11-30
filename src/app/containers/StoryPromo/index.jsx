@@ -197,8 +197,8 @@ const StoryPromoContainer = ({
     overflow-wrap: anywhere;
   `;
 
-  const renderLinkAs = cpsType === 'MAP' ? ReactRouterLink : 'a';
-  const linkHrefPropName = cpsType === 'MAP' ? 'as' : 'href';
+  const linkComponent = cpsType === 'MAP' ? ReactRouterLink : 'a';
+  const linkProps = cpsType === 'MAP' ? { to: url } : { href: url };
 
   const Info = (
     <>
@@ -209,7 +209,7 @@ const StoryPromoContainer = ({
         promoHasImage={displayImage}
         as={headingTagOverride}
       >
-        <StyledLink as={renderLinkAs} {...{ [linkHrefPropName]: url }}>
+        <StyledLink as={linkComponent} {...linkProps}>
           {isLive ? (
             <LiveLabel
               service={service}
