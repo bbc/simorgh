@@ -58,7 +58,6 @@ const advertisingDirectives = {
     'https://ad.crwdcntrl.net',
     'https://adservice.google.co.uk',
     'https://adservice.google.com',
-    'https://bbc.gscontxt.net',
     'https://bcp.crwdcntrl.net',
     'https://cdn.ampproject.org',
     'https://collector.effectivemeasure.net',
