@@ -258,7 +258,7 @@ Object {
 exports[`AMP On Demand Radio Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "ځانګړې پاڼې",
-  "url": "/pashto/in_depth",
+  "url": "/pashto/in-depth-54540873",
 }
 `;
 
