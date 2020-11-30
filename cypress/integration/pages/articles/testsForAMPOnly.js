@@ -50,7 +50,12 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
             const { lang } = appConfig[service][variant];
             const embedUrl = getVideoEmbedUrl(body, lang, true);
             cy.get(`amp-iframe[src="${embedUrl}"]`).should('be.visible');
-            cy.testResponseCodeAndTypeRetry(embedUrl, 200, 'text/html');
+            cy.testResponseCodeAndTypeRetry({
+              path: embedUrl,
+              responseCode: 200,
+              type: 'text/html',
+              allowFallback: true,
+            });
           }
         });
       });
