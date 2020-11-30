@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link as ReactRouterLink } from 'react-router-dom';
 import { shape, bool, oneOf, oneOfType, string } from 'prop-types';
 import styled from '@emotion/styled';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
@@ -196,6 +197,9 @@ const StoryPromoContainer = ({
     overflow-wrap: anywhere;
   `;
 
+  const renderLinkAs = cpsType === 'MAP' ? ReactRouterLink : 'a';
+  const linkHrefPropName = cpsType === 'MAP' ? 'as' : 'href';
+
   const Info = (
     <>
       <StyledHeadline
@@ -205,7 +209,7 @@ const StoryPromoContainer = ({
         promoHasImage={displayImage}
         as={headingTagOverride}
       >
-        <StyledLink href={url}>
+        <StyledLink as={renderLinkAs} {...{ [linkHrefPropName]: url }}>
           {isLive ? (
             <LiveLabel
               service={service}
