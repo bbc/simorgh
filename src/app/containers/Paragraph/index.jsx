@@ -15,16 +15,19 @@ const componentsToRender = { fragment, urlLink: InlineLink, inline: Inline };
 
 const StyledParagraph = styled(Paragraph)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-right: ${GEL_SPACING_QUIN};
+    ${({ dir }) =>
+      dir === 'ltr'
+        ? `padding-right: ${GEL_SPACING_QUIN};`
+        : `padding-left: ${GEL_SPACING_QUIN};`}
   }
 `;
 
 const ParagraphContainer = ({ blocks }) => {
-  const { script, service } = useContext(ServiceContext);
+  const { script, service, dir } = useContext(ServiceContext);
 
   return (
     <GridItemMedium>
-      <StyledParagraph script={script} service={service}>
+      <StyledParagraph script={script} service={service} dir={dir}>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledParagraph>
     </GridItemMedium>
