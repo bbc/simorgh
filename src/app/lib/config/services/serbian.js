@@ -127,10 +127,6 @@ export const service = {
         url: '/serbian/lat/srbija-52197807',
       },
       {
-        title: 'Izbori u SAD',
-        url: '/serbian/lat/topics/cq04kq3z44pt',
-      },
-      {
         title: 'Srbija',
         url: '/serbian/lat/topics/cr50vdy9q6wt',
       },
@@ -376,10 +372,6 @@ export const service = {
       {
         title: 'Корона вирус',
         url: '/serbian/cyr/srbija-52197807',
-      },
-      {
-        title: 'Избори у САД',
-        url: '/serbian/cyr/topics/c9mj2rzvl9xt',
       },
       {
         title: 'Србија',
