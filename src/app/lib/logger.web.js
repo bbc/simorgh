@@ -2,12 +2,21 @@
 
 class Logger {
   constructor() {
-    this.error = arg => console.error(`error - ${arg}`);
-    this.warn = arg => console.warn(`warn - ${arg}`);
-    this.info = arg => console.info(`info - ${arg}`);
-    this.verbose = arg => console.log(`verbose - ${arg}`);
-    this.debug = arg => console.debug(`debug - ${arg}`);
-    this.silly = arg => console.log(`silly - ${arg}`);
+    if (process.env.NODE_ENV === 'production') {
+      this.error = (event, message) => console.error({ event, message });
+      this.warn = () => () => {};
+      this.info = () => () => {};
+      this.verbose = () => () => {};
+      this.debug = () => () => {};
+      this.silly = () => () => {};
+    } else {
+      this.error = (event, message) => console.error({ event, message });
+      this.warn = (event, message) => console.warn({ event, message });
+      this.info = (event, message) => console.info({ event, message });
+      this.verbose = (event, message) => console.log({ event, message });
+      this.debug = (event, message) => console.debug({ event, message });
+      this.silly = (event, message) => console.log({ event, message });
+    }
   }
 }
 

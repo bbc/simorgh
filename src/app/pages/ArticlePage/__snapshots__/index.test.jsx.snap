@@ -1172,6 +1172,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
       >
         <p
           class="emotion-4 emotion-5"
+          dir="ltr"
         >
           A paragraph in Pidgin.
         </p>
@@ -2034,6 +2035,7 @@ exports[`should render a news article correctly 1`] = `
       >
         <p
           class="emotion-4 emotion-5"
+          dir="ltr"
         >
           A paragraph.
         </p>
@@ -2724,7 +2726,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 
 @media (min-width:63rem) {
   .emotion-4 {
-    padding-right: 2.5rem;
+    padding-left: 2.5rem;
   }
 }
 
@@ -3215,6 +3217,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
       >
         <p
           class="emotion-4 emotion-5"
+          dir="rtl"
         >
           یک پاراگراف.
         </p>
