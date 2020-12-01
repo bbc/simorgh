@@ -107,11 +107,15 @@ export default ({ service, pageType, variant }) => {
                   },
                 );
               } else {
-                cy.get("div[id*='recent-episodes']").should('not.exist');
+                cy.get("ul[class*='css-1ddpce6-StyledEpisodeList']").should(
+                  'not.exist',
+                );
               }
             });
           } else {
-            cy.get("div[id*='recent-episodes']").should('not.exist');
+            cy.get("ul[class*='css-1ddpce6-StyledEpisodeList']").should(
+              'not.exist',
+            );
             cy.log('No recent episodes in data');
           }
         });
