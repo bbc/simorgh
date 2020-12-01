@@ -20,7 +20,8 @@
     "**/123PlaygroundForTests/**",
     "**/specialFeatures/utilities/**",
     "**/specialFeatures/**/testsForAMPOnly.js",
-    "**/specialFeatures/**/testsForCanonicalOnly.js"
+    "**/specialFeatures/**/testsForCanonicalOnly.js",
+    "**/specialFeatures/**/config.js"
   ],
   "defaultCommandTimeout": 10000,
   "pageLoadTimeout": 100000,
