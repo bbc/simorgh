@@ -266,7 +266,7 @@ export const service = {
       },
       {
         title: 'આંતરરાષ્ટ્રીય',
-        url: '/gujarati/international',
+        url: '/gujarati/topics/c83plvezd90t',
       },
     ],
   },

@@ -263,11 +263,11 @@ export const service = {
       },
       {
         title: 'Wasanni',
-        url: '/hausa/wasanni',
+        url: '/hausa/topics/cz74kjgv220t',
       },
       {
         title: 'Nishadi',
-        url: '/hausa/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31',
+        url: '/hausa/topics/cg726kz37wdt',
       },
       {
         title: 'Cikakkun Rahotanni',
@@ -279,7 +279,7 @@ export const service = {
       },
       {
         title: 'Shirye-shirye na Musamman',
-        url: '/hausa/shirye_shirye_na_musamman',
+        url: '/hausa/shirye-shirye-na-musamman-54712348',
       },
       {
         title: 'Shirye-shiryen rediyo',
