@@ -1,6 +1,5 @@
 import React from 'react';
 import { node, string, shape } from 'prop-types';
-import { mount } from 'enzyme';
 import { render } from '@testing-library/react';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -171,7 +170,7 @@ describe('Charbeats Analytics Container', () => {
 
     const mockGetConfig = jest.fn().mockReturnValue(expectedConfig);
     testUtils.getConfig = mockGetConfig;
-    mount(
+    render(
       <ContextWrap
         platform="canonical"
         pageType="article"
