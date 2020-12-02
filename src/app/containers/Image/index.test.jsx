@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'enzyme';
+import { render } from '@testing-library/react';
 import {
   shouldMatchSnapshot,
   isNull,
@@ -88,7 +88,7 @@ describe('Image', () => {
 
     it('should render a lazyload container instead of an image if the image is after the 3rd block', () => {
       // Render using enzyme to capture noscript contents
-      const container = render(<ImageContainer position={[4]} {...data} />);
+      const { container } = render(<ImageContainer position={[4]} {...data} />);
       expect(container).toMatchSnapshot();
     });
 
