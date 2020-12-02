@@ -17,7 +17,7 @@ const WithLoading = Component => {
     useEffect(() => {
       if (loading) {
         timeout = setTimeout(() => {
-          if (loadingMessageRef) {
+          if (loadingMessageRef.current) {
             loadingMessageRef.current.focus();
           }
         }, 500);
