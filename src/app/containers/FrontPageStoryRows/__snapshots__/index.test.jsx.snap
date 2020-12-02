@@ -478,24 +478,24 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   color: #222222;
   margin: 0;
   padding: 0.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-8 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-8 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -553,24 +553,24 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-10 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-10 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -597,24 +597,24 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 1rem;
-  line-height: 1.625rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-16 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-16 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -652,25 +652,25 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 .emotion-31 {
   color: #222222;
   background-color: #FFFFFF;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   display: block;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-31 {
     font-size: 0.75rem;
-    line-height: 1rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-31 {
     font-size: 0.75rem;
-    line-height: 1rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -687,31 +687,31 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-41 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-41 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 .emotion-43 {
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -721,15 +721,15 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-43 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-43 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -748,26 +748,26 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 .emotion-45 {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   color: #6E6E73;
   display: block;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-45 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-45 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -2104,24 +2104,24 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   color: #222222;
   margin: 0;
   padding: 0.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-8 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-8 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -2179,24 +2179,24 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-10 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-10 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -2223,24 +2223,24 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 1rem;
-  line-height: 1.625rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-16 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-16 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -2278,25 +2278,25 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 .emotion-31 {
   color: #222222;
   background-color: #FFFFFF;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   display: block;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-31 {
     font-size: 0.75rem;
-    line-height: 1rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-31 {
     font-size: 0.75rem;
-    line-height: 1rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -2313,31 +2313,31 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-41 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-41 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 .emotion-43 {
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -2347,15 +2347,15 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-43 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-43 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -2374,26 +2374,26 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 .emotion-45 {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   color: #6E6E73;
   display: block;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-45 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-45 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -3749,24 +3749,24 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   color: #222222;
   margin: 0;
   padding: 0.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-8 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-8 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -3824,24 +3824,24 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-10 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-10 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -3868,24 +3868,24 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 1rem;
-  line-height: 1.625rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-16 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-16 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -3930,37 +3930,37 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 }
 
 .emotion-35 {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   color: #6E6E73;
   display: block;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-35 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-35 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
   }
 }
 
 .emotion-29 {
   color: #222222;
   background-color: #FFFFFF;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   display: inline-block;
   vertical-align: middle;
   padding-left: 0.5rem;
@@ -3969,14 +3969,14 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-29 {
     font-size: 0.75rem;
-    line-height: 1rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-29 {
     font-size: 0.75rem;
-    line-height: 1rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -3984,25 +3984,25 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
   display: inline;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-33 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-33 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -4967,24 +4967,24 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
   color: #222222;
   margin: 0;
   padding: 0.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-8 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-8 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -5042,24 +5042,24 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-10 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-10 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -5086,24 +5086,24 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 1rem;
-  line-height: 1.625rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-16 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-16 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
