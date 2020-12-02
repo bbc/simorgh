@@ -196,6 +196,7 @@ exports[`CpsTextContainer with data should render correctly 1`] = `
   >
     <p
       class="emotion-0 emotion-1"
+      dir="ltr"
     >
       This is a 1st paragraph block.
     </p>
@@ -206,6 +207,7 @@ exports[`CpsTextContainer with data should render correctly 1`] = `
   >
     <p
       class="emotion-0 emotion-1"
+      dir="ltr"
     >
       This is a 2nd paragraph block.
     </p>
@@ -216,6 +218,7 @@ exports[`CpsTextContainer with data should render correctly 1`] = `
   >
     <p
       class="emotion-0 emotion-1"
+      dir="ltr"
     >
       This is a 3rd paragraph block.
     </p>
@@ -226,6 +229,7 @@ exports[`CpsTextContainer with data should render correctly 1`] = `
   >
     <p
       class="emotion-0 emotion-1"
+      dir="ltr"
     >
       This is a 4th paragraph block..
     </p>
@@ -236,6 +240,7 @@ exports[`CpsTextContainer with data should render correctly 1`] = `
   >
     <p
       class="emotion-0 emotion-1"
+      dir="ltr"
     >
       This is a 5th paragraph block.
     </p>
