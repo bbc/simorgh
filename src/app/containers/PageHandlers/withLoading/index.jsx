@@ -34,7 +34,7 @@ const WithLoading = Component => {
       <LoadingMain role="main">
         <GridWrapper>
           <GridItemMedium>
-            <div tabIndex="-1" ref={loadingMessageRef}>
+            <div tabIndex="-1" ref={loadingMessageRef} data-testid="loading">
               <VisuallyHiddenText>Loading next page.</VisuallyHiddenText>
             </div>
           </GridItemMedium>
