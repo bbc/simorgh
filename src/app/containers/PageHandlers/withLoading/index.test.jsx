@@ -75,5 +75,17 @@ describe('withLoading HOC', () => {
 
       expect(queryByTestId('loading')).toHaveFocus();
     });
+
+    it(`should not be focused before a set amount of time`, async () => {
+      let queryByTestId;
+
+      await act(async () => {
+        ({ queryByTestId } = render(<LoadingHOC loading />));
+
+        await wait(400);
+      });
+
+      expect(queryByTestId('loading')).not.toHaveFocus();
+    });
   });
 });
