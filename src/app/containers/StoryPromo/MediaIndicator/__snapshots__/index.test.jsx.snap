@@ -420,11 +420,11 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
 .emotion-4 {
   color: #222222;
   background-color: #FFFFFF;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   display: inline-block;
   vertical-align: middle;
   padding-left: 0.5rem;
@@ -433,14 +433,14 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-4 {
     font-size: 0.75rem;
-    line-height: 1rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-4 {
     font-size: 0.75rem;
-    line-height: 1rem;
+    line-height: 1.125rem;
   }
 }
 
