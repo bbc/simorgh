@@ -19,7 +19,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
           class="css-1jc9b24-FlexRow emotion-1"
         >
           <span
-            class="css-123k1wu-Title emotion-0"
+            class="css-64kqar-Title emotion-0"
             dir="rtl"
             id="Radio-Schedule"
           >
@@ -72,11 +72,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             </span>
             <span
               aria-hidden="true"
-              class="css-epwixk-StyledTimestamp emotion-9"
+              class="css-1aa6amh-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="css-v5wsd3-StyledTimestamp emotion-8"
+                class="css-134g7k8-StyledTimestamp emotion-8"
                 datetime="2020-03-26"
               >
                 02:59
@@ -91,7 +91,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="css-4538ei-StyledH3 emotion-15"
+              class="css-1qlnlhe-StyledH3 emotion-15"
             >
               <a
                 class="css-1vkbim8-Link-StyledLink emotion-14"
@@ -109,7 +109,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                     , 
                   </span>
                   <span
-                    class="css-17hnt5z-TitleWrapper emotion-13"
+                    class="css-12bvx0u-TitleWrapper emotion-13"
                   >
                     26 مارس/ آذار 2020
                   </span>
@@ -117,13 +117,13 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               </a>
             </h3>
             <p
-              class="css-q6ti1l-SummaryWrapper emotion-16"
+              class="css-10addoo-SummaryWrapper emotion-16"
             >
               الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
             </p>
           </div>
           <div
-            class="css-flfzp8-ButtonWrapper emotion-22"
+            class="css-19a95nl-ButtonWrapper emotion-22"
           >
             <span
               class="css-1smn0bu-IconWrapper emotion-19"
@@ -197,11 +197,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             </span>
             <span
               aria-hidden="true"
-              class="css-epwixk-StyledTimestamp emotion-9"
+              class="css-1aa6amh-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="css-v5wsd3-StyledTimestamp emotion-8"
+                class="css-134g7k8-StyledTimestamp emotion-8"
                 datetime="2020-03-26"
               >
                 02:30
@@ -216,7 +216,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="css-4538ei-StyledH3 emotion-15"
+              class="css-1qlnlhe-StyledH3 emotion-15"
             >
               <a
                 class="css-1vkbim8-Link-StyledLink emotion-14"
@@ -234,7 +234,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                     , 
                   </span>
                   <span
-                    class="css-17hnt5z-TitleWrapper emotion-13"
+                    class="css-12bvx0u-TitleWrapper emotion-13"
                   >
                     26 مارس/ آذار 2020
                   </span>
@@ -242,13 +242,13 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               </a>
             </h3>
             <p
-              class="css-q6ti1l-SummaryWrapper emotion-16"
+              class="css-10addoo-SummaryWrapper emotion-16"
             >
               نشرة موجزة في دقيقتين لأهم الأنباء الأقليمية والدولية
             </p>
           </div>
           <div
-            class="css-flfzp8-ButtonWrapper emotion-22"
+            class="css-19a95nl-ButtonWrapper emotion-22"
           >
             <span
               class="css-1smn0bu-IconWrapper emotion-19"
@@ -322,11 +322,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             </span>
             <span
               aria-hidden="true"
-              class="css-epwixk-StyledTimestamp emotion-9"
+              class="css-1aa6amh-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="css-v5wsd3-StyledTimestamp emotion-8"
+                class="css-134g7k8-StyledTimestamp emotion-8"
                 datetime="2020-03-26"
               >
                 02:00
@@ -341,7 +341,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="css-4538ei-StyledH3 emotion-15"
+              class="css-1qlnlhe-StyledH3 emotion-15"
             >
               <a
                 class="css-1vkbim8-Link-StyledLink emotion-14"
@@ -359,7 +359,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                     , 
                   </span>
                   <span
-                    class="css-17hnt5z-TitleWrapper emotion-13"
+                    class="css-12bvx0u-TitleWrapper emotion-13"
                   >
                     26 مارس/ آذار 2020
                   </span>
@@ -367,13 +367,13 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               </a>
             </h3>
             <p
-              class="css-q6ti1l-SummaryWrapper emotion-16"
+              class="css-10addoo-SummaryWrapper emotion-16"
             >
               نشرة اخبارية على رأس الساعة تركز على أهم أخبار المنطقة والعالم وتتضمن تصريحات المسؤولين وإفادات مراسلينا
             </p>
           </div>
           <div
-            class="css-flfzp8-ButtonWrapper emotion-22"
+            class="css-19a95nl-ButtonWrapper emotion-22"
           >
             <span
               class="css-1smn0bu-IconWrapper emotion-19"
@@ -447,11 +447,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             </span>
             <span
               aria-hidden="true"
-              class="css-epwixk-StyledTimestamp emotion-9"
+              class="css-1aa6amh-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="css-v5wsd3-StyledTimestamp emotion-8"
+                class="css-134g7k8-StyledTimestamp emotion-8"
                 datetime="2030-01-01"
               >
                 09:00
@@ -466,13 +466,13 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="css-18oq6bv-StyledH3 emotion-15"
+              class="css-9inbco-StyledH3 emotion-15"
             >
               <span
                 role="text"
               >
                 <span
-                  class="css-vx3o02-NextLabel emotion-72"
+                  class="css-1bqrza7-NextLabel emotion-72"
                   dir="rtl"
                 >
                   لاحق 
@@ -486,20 +486,20 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                   , 
                 </span>
                 <span
-                  class="css-he85cw-TitleWrapper emotion-13"
+                  class="css-1jtgrwj-TitleWrapper emotion-13"
                 >
                   1 يناير/ كانون الثاني 2030
                 </span>
               </span>
             </h3>
             <p
-              class="css-q6ti1l-SummaryWrapper emotion-16"
+              class="css-10addoo-SummaryWrapper emotion-16"
             >
               الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
             </p>
           </div>
           <div
-            class="css-1x79dlv-ButtonWrapper emotion-22"
+            class="css-bv6aa2-ButtonWrapper emotion-22"
           >
             <span
               class="css-1soil44-IconWrapper emotion-19"
@@ -541,7 +541,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
       </li>
     </div>
     <a
-      class="css-1e70u3e-RadioFrequencyLink emotion-88"
+      class="css-ab4jf4-RadioFrequencyLink emotion-88"
       href="/arabic/institutional/2011/01/000000_frequencies_radio"
     >
       استقبال البث
@@ -556,6 +556,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
     <style
       data-emotion="css"
     >
+<<<<<<< HEAD
       
       .css-1evx72x-StyledGrid{padding:0;margin:0;}/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9pbmRleC5qc3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBZ0IrQiIsImZpbGUiOiIuLi9zcmMvaW5kZXguanN4Iiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCBzdHlsZWQgZnJvbSAnQGVtb3Rpb24vc3R5bGVkJztcbmltcG9ydCB7IEdFTF9HUk9VUF8zX1NDUkVFTl9XSURUSF9NSU4gfSBmcm9tICdAYmJjL2dlbC1mb3VuZGF0aW9ucy9icmVha3BvaW50cyc7XG5pbXBvcnQgeyBHRUxfU1BBQ0lORywgR0VMX1NQQUNJTkdfREJMIH0gZnJvbSAnQGJiYy9nZWwtZm91bmRhdGlvbnMvc3BhY2luZ3MnO1xuaW1wb3J0IHsgZ3JpZCB9IGZyb20gJ0BiYmMvcHNhbW1lYWQtc3R5bGVzL2RldGVjdGlvbic7XG5pbXBvcnQgR3JpZCBmcm9tICdAYmJjL3BzYW1tZWFkLWdyaWQnO1xuaW1wb3J0IHsgYXJyYXlPZiwgbm9kZSwgbnVtYmVyLCBvbmVPZiwgc2hhcGUsIHN0cmluZyB9IGZyb20gJ3Byb3AtdHlwZXMnO1xuaW1wb3J0IHsgc2NyaXB0UHJvcFR5cGUgfSBmcm9tICdAYmJjL2dlbC1mb3VuZGF0aW9ucy9wcm9wLXR5cGVzJztcbmltcG9ydCBQcm9ncmFtQ2FyZCBmcm9tICcuL1Byb2dyYW1DYXJkJztcbmltcG9ydCBTdGFydFRpbWUgZnJvbSAnLi9TdGFydFRpbWUnO1xuXG5jb25zdCBTdGFydFRpbWVXcmFwcGVyID0gc3R5bGVkLmRpdmBcbiAgcGFkZGluZy1ib3R0b206ICR7R0VMX1NQQUNJTkd9O1xuYDtcblxuLy8gUmVzZXQgZGVmYXVsdCBvZiA8dWw+IHN0eWxlXG5jb25zdCBTdHlsZWRHcmlkID0gc3R5bGVkKEdyaWQpYFxuICBwYWRkaW5nOiAwO1xuICBtYXJnaW46IDA7XG4gIEBtZWRpYSAobWF4LXdpZHRoOiAke0dFTF9HUk9VUF8zX1NDUkVFTl9XSURUSF9NSU59KSB7XG4gICAgcGFkZGluZzogMDtcbiAgfVxuYDtcblxuLy8gVXNpbmcgZmxleC1ib3ggb24gYnJvd3NlcnMgdGhhdCBkbyBub3Qgc3VwcG9ydCBncmlkIHdpbGwgYnJlYWsgZ3JpZCBmYWxsYmFjayBkZWZpbmVkIGluIHBzYW1tZWFkLWdyaWRcbmNvbnN0IFN0eWxlZEZsZXhHcmlkID0gc3R5bGVkKEdyaWQpYFxuICBAc3VwcG9ydHMgKCR7Z3JpZH0pIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIH1cbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBwYWRkaW5nLWJvdHRvbTogJHtHRUxfU1BBQ0lOR19EQkx9O1xuYDtcblxuY29uc3QgcmVuZGVyU2NoZWR1bGUgPSAoe1xuICBzZXJ2aWNlLFxuICBzY3JpcHQsXG4gIGRpcixcbiAgdGltZXpvbmUsXG4gIGxvY2FsZSxcbiAgcHJvZ3JhbSxcbiAgbmV4dExhYmVsLFxuICBsaXZlTGFiZWwsXG4gIGR1cmF0aW9uTGFiZWwsXG4gIGxpbmtDb21wb25lbnQsXG4gIGxpbmtDb21wb25lbnRBdHRyLFxufSkgPT4ge1xuICBjb25zdCB7IHN0YXRlLCBzdGFydFRpbWUsIGxpbmssIGJyYW5kVGl0bGUsIHN1bW1hcnksIGR1cmF0aW9uIH0gPSBwcm9ncmFtO1xuXG4gIHJldHVybiAoXG4gICAgPD5cbiAgICAgIDxTdGFydFRpbWVXcmFwcGVyPlxuICAgICAgICA8U3RhcnRUaW1lXG4gICAgICAgICAgdGltZXN0YW1wPXtzdGFydFRpbWV9XG4gICAgICAgICAgc2VydmljZT17c2VydmljZX1cbiAgICAgICAgICBzY3JpcHQ9e3NjcmlwdH1cbiAgICAgICAgICBsb2NhbGU9e2xvY2FsZX1cbiAgICAgICAgICB0aW1lem9uZT17dGltZXpvbmV9XG4gICAgICAgICAgZGlyPXtkaXJ9XG4gICAgICAgIC8+XG4gICAgICA8L1N0YXJ0VGltZVdyYXBwZXI+XG4gICAgICA8UHJvZ3JhbUNhcmRcbiAgICAgICAgZHVyYXRpb249e2R1cmF0aW9ufVxuICAgICAgICBzdW1tYXJ5PXtzdW1tYXJ5fVxuICAgICAgICBkdXJhdGlvbkxhYmVsPXtkdXJhdGlvbkxhYmVsfVxuICAgICAgICBzZXJ2aWNlPXtzZXJ2aWNlfVxuICAgICAgICBzY3JpcHQ9e3NjcmlwdH1cbiAgICAgICAgZGlyPXtkaXJ9XG4gICAgICAgIGJyYW5kVGl0bGU9e2JyYW5kVGl0bGV9XG4gICAgICAgIHN0YXJ0VGltZT17c3RhcnRUaW1lfVxuICAgICAgICBzdGF0ZT17c3RhdGV9XG4gICAgICAgIGxpbms9e2xpbmt9XG4gICAgICAgIG5leHRMYWJlbD17bmV4dExhYmVsfVxuICAgICAgICBsaXZlTGFiZWw9e2xpdmVMYWJlbH1cbiAgICAgICAgdGltZXpvbmU9e3RpbWV6b25lfVxuICAgICAgICBsb2NhbGU9e2xvY2FsZX1cbiAgICAgICAgbGlua0NvbXBvbmVudD17bGlua0NvbXBvbmVudH1cbiAgICAgICAgbGlua0NvbXBvbmVudEF0dHI9e2xpbmtDb21wb25lbnRBdHRyfVxuICAgICAgLz5cbiAgICA8Lz5cbiAgKTtcbn07XG5cbmNvbnN0IHNjaGVkdWxlc0dyaWRQcm9wcyA9IHtcbiAgZW5hYmxlR2VsR3V0dGVyczogdHJ1ZSxcbiAgY29sdW1uczoge1xuICAgIGdyb3VwMDogNCxcbiAgICBncm91cDE6IDQsXG4gICAgZ3JvdXAyOiA2LFxuICAgIGdyb3VwMzogNixcbiAgICBncm91cDQ6IDgsXG4gICAgZ3JvdXA1OiA4LFxuICB9LFxuICBtYXJnaW5zOiB7XG4gICAgZ3JvdXAwOiB0cnVlLFxuICAgIGdyb3VwMTogdHJ1ZSxcbiAgICBncm91cDI6IHRydWUsXG4gIH0sXG59O1xuXG5jb25zdCBwcm9ncmFtR3JpZFByb3BzID0ge1xuICBpdGVtOiB0cnVlLFxuICBjb2x1bW5zOiB7XG4gICAgZ3JvdXAwOiA0LFxuICAgIGdyb3VwMTogNCxcbiAgICBncm91cDI6IDYsXG4gICAgZ3JvdXAzOiAzLFxuICAgIGdyb3VwNDogMixcbiAgICBncm91cDU6IDIsXG4gIH0sXG59O1xuXG4vKlxuQ3VycmVudGx5LCB3ZSBhcmUgcGFzc2luZyBhIGxpc3Qgb2Ygc2NoZWR1bGVzIHRvIHRoaXMgY29tcG9uZW50IGFuZCBtYXBwaW5nXG50aHJvdWdoIHRoZSBsaXN0IHRvIHJlbmRlciBhIHN0YXItdGltZSBhbmQgcHJvZ3JhbS1jYXJkLCBpbnNpZGUgYSBnaXJkLlxuV2UgaW50ZW5kIHRvIG1vdmUgdGhlIG1hcCBmdW5jdGlvbmFsaXR5IG91dCBvZiBwc2FtbWVhZCBpbiBhIGZ1dHVyZSBpdGVyYXRpb24uXG4qL1xuY29uc3QgUmFkaW9TY2hlZHVsZSA9ICh7IHNjaGVkdWxlcywgZGlyLCAuLi5wcm9wcyB9KSA9PiAoXG4gIDxTdHlsZWRHcmlkIGZvcndhcmRlZEFzPVwidWxcIiBkaXI9e2Rpcn0gey4uLnNjaGVkdWxlc0dyaWRQcm9wc30gcm9sZT1cImxpc3RcIj5cbiAgICB7c2NoZWR1bGVzLm1hcCgoeyBpZCwgLi4ucHJvZ3JhbSB9KSA9PiAoXG4gICAgICA8U3R5bGVkRmxleEdyaWRcbiAgICAgICAgZGlyPXtkaXJ9XG4gICAgICAgIHBhcmVudENvbHVtbnM9e3NjaGVkdWxlc0dyaWRQcm9wcy5jb2x1bW5zfVxuICAgICAgICBwYXJlbnRFbmFibGVHZWxHdXR0ZXJzXG4gICAgICAgIHsuLi5wcm9ncmFtR3JpZFByb3BzfVxuICAgICAgICBrZXk9e2lkfVxuICAgICAgICBhcz1cImxpXCJcbiAgICAgICAgZGF0YS1lMmU9e3Byb2dyYW0uc3RhdGV9XG4gICAgICAgIHJvbGU9XCJsaXN0aXRlbVwiXG4gICAgICA+XG4gICAgICAgIHtyZW5kZXJTY2hlZHVsZSh7IC4uLnByb3BzLCBkaXIsIHByb2dyYW0gfSl9XG4gICAgICA8L1N0eWxlZEZsZXhHcmlkPlxuICAgICkpfVxuICA8L1N0eWxlZEdyaWQ+XG4pO1xuXG5jb25zdCBwcm9ncmFtUHJvcFR5cGVzID0gc2hhcGUoe1xuICBzdGF0ZTogc3RyaW5nLmlzUmVxdWlyZWQsXG4gIHN0YXJ0VGltZTogbnVtYmVyLmlzUmVxdWlyZWQsXG4gIGxpbms6IHN0cmluZy5pc1JlcXVpcmVkLFxuICBicmFuZFRpdGxlOiBzdHJpbmcuaXNSZXF1aXJlZCxcbiAgc3VtbWFyeTogc3RyaW5nLFxuICBkdXJhdGlvbjogc3RyaW5nLmlzUmVxdWlyZWQsXG59KTtcblxuY29uc3Qgc2hhcmVkUHJvcHMgPSB7XG4gIHRpbWV6b25lOiBzdHJpbmcsXG4gIGxvY2FsZTogc3RyaW5nLFxuICBzZXJ2aWNlOiBzdHJpbmcuaXNSZXF1aXJlZCxcbiAgc2NyaXB0OiBzaGFwZShzY3JpcHRQcm9wVHlwZSkuaXNSZXF1aXJlZCxcbiAgbmV4dExhYmVsOiBzdHJpbmcuaXNSZXF1aXJlZCxcbiAgbGl2ZUxhYmVsOiBzdHJpbmcuaXNSZXF1aXJlZCxcbiAgZHVyYXRpb25MYWJlbDogc3RyaW5nLmlzUmVxdWlyZWQsXG4gIGRpcjogb25lT2YoWydydGwnLCAnbHRyJ10pLFxufTtcblxucmVuZGVyU2NoZWR1bGUucHJvcFR5cGVzID0ge1xuICBwcm9ncmFtOiBwcm9ncmFtUHJvcFR5cGVzLmlzUmVxdWlyZWQsXG4gIC4uLnNoYXJlZFByb3BzLFxuICBsaW5rQ29tcG9uZW50OiBub2RlLFxuICBsaW5rQ29tcG9uZW50QXR0cjogc3RyaW5nLFxufTtcblxucmVuZGVyU2NoZWR1bGUuZGVmYXVsdFByb3BzID0ge1xuICBsaW5rQ29tcG9uZW50OiAnYScsXG4gIGxpbmtDb21wb25lbnRBdHRyOiAnaHJlZicsXG59O1xuXG5SYWRpb1NjaGVkdWxlLnByb3BUeXBlcyA9IHtcbiAgc2NoZWR1bGVzOiBhcnJheU9mKHByb2dyYW1Qcm9wVHlwZXMpLmlzUmVxdWlyZWQsXG4gIC4uLnNoYXJlZFByb3BzLFxuICBsaW5rQ29tcG9uZW50OiBub2RlLFxuICBsaW5rQ29tcG9uZW50QXR0cjogc3RyaW5nLFxufTtcblxuLyogZXNsaW50LWRpc2FibGUgcmVhY3QvZGVmYXVsdC1wcm9wcy1tYXRjaC1wcm9wLXR5cGVzICovXG5SYWRpb1NjaGVkdWxlLmRlZmF1bHRQcm9wcyA9IHtcbiAgZGlyOiAnbHRyJyxcbiAgdGltZXpvbmU6ICdFdXJvcGUvTG9uZG9uJyxcbiAgbG9jYWxlOiAnZW4tZ2InLFxuICBsaW5rQ29tcG9uZW50OiAnYScsXG4gIGxpbmtDb21wb25lbnRBdHRyOiAnaHJlZicsXG59O1xuXG5leHBvcnQgZGVmYXVsdCBSYWRpb1NjaGVkdWxlO1xuIl19 */
     </style>
@@ -567,6 +568,539 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
     </style>
     <style
       data-emotion="css"
+=======
+      <span
+        class="css-143m08z-FlexColumn emotion-2"
+      >
+        <span
+          class="css-1jc9b24-FlexRow emotion-1"
+        >
+          <span
+            class="css-64kqar-Title emotion-0"
+            dir="rtl"
+            id="Radio-Schedule"
+          >
+            أحدث نشرة أخبار
+          </span>
+        </span>
+      </span>
+    </h2>
+  </div>
+  <div
+    class="css-pme1b-RadioScheduleWrapper emotion-89"
+    data-e2e="radio-schedule"
+  >
+    <div
+      class="emotion-86 css-1dbqk3h-GridComponent-StyledGrid emotion-25"
+      dir="rtl"
+      role="list"
+    >
+      <li
+        class="emotion-24 css-oarqw3-GridComponent-StyledFlexGrid emotion-25"
+        data-e2e="onDemand"
+        dir="rtl"
+        role="listitem"
+      >
+        <div
+          class="css-10pzo75-StartTimeWrapper emotion-11"
+        >
+          <div
+            class="css-14jp6ch-Wrapper emotion-10"
+          >
+            <span
+              class="css-cbs0v9-StyledClock emotion-7"
+              dir="rtl"
+            >
+              <svg
+                aria-hidden="true"
+                class="css-6a3m3l-CoreIcon-ClockIcon emotion-6"
+                focusable="false"
+                height="13"
+                viewBox="0 0 13 13"
+                width="13"
+              >
+                <path
+                  d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+                />
+                <path
+                  d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+                />
+              </svg>
+            </span>
+            <span
+              aria-hidden="true"
+              class="css-1aa6amh-StyledTimestamp emotion-9"
+              dir="rtl"
+            >
+              <time
+                class="css-134g7k8-StyledTimestamp emotion-8"
+                datetime="2020-03-26"
+              >
+                02:59
+              </time>
+            </span>
+          </div>
+        </div>
+        <div
+          class="css-1p5015p-CardWrapper emotion-23"
+        >
+          <div
+            class="css-ed441g-TextWrapper emotion-17"
+          >
+            <h3
+              class="css-1qlnlhe-StyledH3 emotion-15"
+            >
+              <a
+                class="css-1vkbim8-Link-StyledLink emotion-14"
+                href="/arabic/bbc_arabic_radio/w172x9qcpbyctzs"
+              >
+                <span
+                  role="text"
+                >
+                  العالم هذا الصباح
+                  <span
+                    class="css-ow3j0s-VisuallyHiddenText emotion-12"
+                  >
+                    , 
+                    02:59
+                    , 
+                  </span>
+                  <span
+                    class="css-12bvx0u-TitleWrapper emotion-13"
+                  >
+                    26 مارس/ آذار 2020
+                  </span>
+                </span>
+              </a>
+            </h3>
+            <p
+              class="css-10addoo-SummaryWrapper emotion-16"
+            >
+              الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
+            </p>
+          </div>
+          <div
+            class="css-19a95nl-ButtonWrapper emotion-22"
+          >
+            <span
+              class="css-1smn0bu-IconWrapper emotion-19"
+            >
+              <svg
+                aria-hidden="true"
+                class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-18"
+                focusable="false"
+                height="12px"
+                viewBox="0 0 13 12"
+                width="13px"
+              >
+                <path
+                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                />
+                <path
+                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                />
+              </svg>
+            </span>
+            <time
+              class="css-kyxutj-DurationWrapper emotion-21"
+              datetime="PT2H"
+              dir="rtl"
+            >
+              <span
+                class="css-ow3j0s-VisuallyHiddenText emotion-12"
+              >
+                 المدة 2،00،00 
+              </span>
+              <span
+                aria-hidden="true"
+              >
+                2:00:00
+              </span>
+            </time>
+          </div>
+        </div>
+      </li>
+      <li
+        class="emotion-24 css-oarqw3-GridComponent-StyledFlexGrid emotion-25"
+        data-e2e="onDemand"
+        dir="rtl"
+        role="listitem"
+      >
+        <div
+          class="css-10pzo75-StartTimeWrapper emotion-11"
+        >
+          <div
+            class="css-14jp6ch-Wrapper emotion-10"
+          >
+            <span
+              class="css-cbs0v9-StyledClock emotion-7"
+              dir="rtl"
+            >
+              <svg
+                aria-hidden="true"
+                class="css-6a3m3l-CoreIcon-ClockIcon emotion-6"
+                focusable="false"
+                height="13"
+                viewBox="0 0 13 13"
+                width="13"
+              >
+                <path
+                  d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+                />
+                <path
+                  d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+                />
+              </svg>
+            </span>
+            <span
+              aria-hidden="true"
+              class="css-1aa6amh-StyledTimestamp emotion-9"
+              dir="rtl"
+            >
+              <time
+                class="css-134g7k8-StyledTimestamp emotion-8"
+                datetime="2020-03-26"
+              >
+                02:30
+              </time>
+            </span>
+          </div>
+        </div>
+        <div
+          class="css-1p5015p-CardWrapper emotion-23"
+        >
+          <div
+            class="css-ed441g-TextWrapper emotion-17"
+          >
+            <h3
+              class="css-1qlnlhe-StyledH3 emotion-15"
+            >
+              <a
+                class="css-1vkbim8-Link-StyledLink emotion-14"
+                href="/arabic/bbc_arabic_radio/w172xbf7kbvtt4h"
+              >
+                <span
+                  role="text"
+                >
+                  موجز الأنباء
+                  <span
+                    class="css-ow3j0s-VisuallyHiddenText emotion-12"
+                  >
+                    , 
+                    02:30
+                    , 
+                  </span>
+                  <span
+                    class="css-12bvx0u-TitleWrapper emotion-13"
+                  >
+                    26 مارس/ آذار 2020
+                  </span>
+                </span>
+              </a>
+            </h3>
+            <p
+              class="css-10addoo-SummaryWrapper emotion-16"
+            >
+              نشرة موجزة في دقيقتين لأهم الأنباء الأقليمية والدولية
+            </p>
+          </div>
+          <div
+            class="css-19a95nl-ButtonWrapper emotion-22"
+          >
+            <span
+              class="css-1smn0bu-IconWrapper emotion-19"
+            >
+              <svg
+                aria-hidden="true"
+                class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-18"
+                focusable="false"
+                height="12px"
+                viewBox="0 0 13 12"
+                width="13px"
+              >
+                <path
+                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                />
+                <path
+                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                />
+              </svg>
+            </span>
+            <time
+              class="css-kyxutj-DurationWrapper emotion-21"
+              datetime="PT2M"
+              dir="rtl"
+            >
+              <span
+                class="css-ow3j0s-VisuallyHiddenText emotion-12"
+              >
+                 المدة 02،00 
+              </span>
+              <span
+                aria-hidden="true"
+              >
+                02:00
+              </span>
+            </time>
+          </div>
+        </div>
+      </li>
+      <li
+        class="emotion-24 css-oarqw3-GridComponent-StyledFlexGrid emotion-25"
+        data-e2e="onDemand"
+        dir="rtl"
+        role="listitem"
+      >
+        <div
+          class="css-10pzo75-StartTimeWrapper emotion-11"
+        >
+          <div
+            class="css-14jp6ch-Wrapper emotion-10"
+          >
+            <span
+              class="css-cbs0v9-StyledClock emotion-7"
+              dir="rtl"
+            >
+              <svg
+                aria-hidden="true"
+                class="css-6a3m3l-CoreIcon-ClockIcon emotion-6"
+                focusable="false"
+                height="13"
+                viewBox="0 0 13 13"
+                width="13"
+              >
+                <path
+                  d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+                />
+                <path
+                  d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+                />
+              </svg>
+            </span>
+            <span
+              aria-hidden="true"
+              class="css-1aa6amh-StyledTimestamp emotion-9"
+              dir="rtl"
+            >
+              <time
+                class="css-134g7k8-StyledTimestamp emotion-8"
+                datetime="2020-03-26"
+              >
+                02:00
+              </time>
+            </span>
+          </div>
+        </div>
+        <div
+          class="css-1p5015p-CardWrapper emotion-23"
+        >
+          <div
+            class="css-ed441g-TextWrapper emotion-17"
+          >
+            <h3
+              class="css-1qlnlhe-StyledH3 emotion-15"
+            >
+              <a
+                class="css-1vkbim8-Link-StyledLink emotion-14"
+                href="/arabic/bbc_arabic_radio/w172xbdf3m84fx2"
+              >
+                <span
+                  role="text"
+                >
+                  نشرة الأخبار
+                  <span
+                    class="css-ow3j0s-VisuallyHiddenText emotion-12"
+                  >
+                    , 
+                    02:00
+                    , 
+                  </span>
+                  <span
+                    class="css-12bvx0u-TitleWrapper emotion-13"
+                  >
+                    26 مارس/ آذار 2020
+                  </span>
+                </span>
+              </a>
+            </h3>
+            <p
+              class="css-10addoo-SummaryWrapper emotion-16"
+            >
+              نشرة اخبارية على رأس الساعة تركز على أهم أخبار المنطقة والعالم وتتضمن تصريحات المسؤولين وإفادات مراسلينا
+            </p>
+          </div>
+          <div
+            class="css-19a95nl-ButtonWrapper emotion-22"
+          >
+            <span
+              class="css-1smn0bu-IconWrapper emotion-19"
+            >
+              <svg
+                aria-hidden="true"
+                class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-18"
+                focusable="false"
+                height="12px"
+                viewBox="0 0 13 12"
+                width="13px"
+              >
+                <path
+                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                />
+                <path
+                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                />
+              </svg>
+            </span>
+            <time
+              class="css-kyxutj-DurationWrapper emotion-21"
+              datetime="PT6M"
+              dir="rtl"
+            >
+              <span
+                class="css-ow3j0s-VisuallyHiddenText emotion-12"
+              >
+                 المدة 06،00 
+              </span>
+              <span
+                aria-hidden="true"
+              >
+                06:00
+              </span>
+            </time>
+          </div>
+        </div>
+      </li>
+      <li
+        class="emotion-24 css-oarqw3-GridComponent-StyledFlexGrid emotion-25"
+        data-e2e="next"
+        dir="rtl"
+        role="listitem"
+      >
+        <div
+          class="css-10pzo75-StartTimeWrapper emotion-11"
+        >
+          <div
+            class="css-14jp6ch-Wrapper emotion-10"
+          >
+            <span
+              class="css-cbs0v9-StyledClock emotion-7"
+              dir="rtl"
+            >
+              <svg
+                aria-hidden="true"
+                class="css-6a3m3l-CoreIcon-ClockIcon emotion-6"
+                focusable="false"
+                height="13"
+                viewBox="0 0 13 13"
+                width="13"
+              >
+                <path
+                  d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+                />
+                <path
+                  d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+                />
+              </svg>
+            </span>
+            <span
+              aria-hidden="true"
+              class="css-1aa6amh-StyledTimestamp emotion-9"
+              dir="rtl"
+            >
+              <time
+                class="css-134g7k8-StyledTimestamp emotion-8"
+                datetime="2030-01-01"
+              >
+                09:00
+              </time>
+            </span>
+          </div>
+        </div>
+        <div
+          class="css-1p5015p-CardWrapper emotion-23"
+        >
+          <div
+            class="css-ed441g-TextWrapper emotion-17"
+          >
+            <h3
+              class="css-9inbco-StyledH3 emotion-15"
+            >
+              <span
+                role="text"
+              >
+                <span
+                  class="css-1bqrza7-NextLabel emotion-72"
+                  dir="rtl"
+                >
+                  لاحق 
+                </span>
+                العالم هذا الصباح
+                <span
+                  class="css-ow3j0s-VisuallyHiddenText emotion-12"
+                >
+                  , 
+                  09:00
+                  , 
+                </span>
+                <span
+                  class="css-1jtgrwj-TitleWrapper emotion-13"
+                >
+                  1 يناير/ كانون الثاني 2030
+                </span>
+              </span>
+            </h3>
+            <p
+              class="css-10addoo-SummaryWrapper emotion-16"
+            >
+              الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
+            </p>
+          </div>
+          <div
+            class="css-bv6aa2-ButtonWrapper emotion-22"
+          >
+            <span
+              class="css-1soil44-IconWrapper emotion-19"
+            >
+              <svg
+                aria-hidden="true"
+                class="css-qgh61s-MediaIcon-AudioMediaIcon emotion-18"
+                focusable="false"
+                height="12px"
+                viewBox="0 0 13 12"
+                width="13px"
+              >
+                <path
+                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                />
+                <path
+                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                />
+              </svg>
+            </span>
+            <time
+              class="css-kyxutj-DurationWrapper emotion-21"
+              datetime="PT1H30M30S"
+              dir="rtl"
+            >
+              <span
+                class="css-ow3j0s-VisuallyHiddenText emotion-12"
+              >
+                 المدة 1،30،30 
+              </span>
+              <span
+                aria-hidden="true"
+              >
+                1:30:30
+              </span>
+            </time>
+          </div>
+        </div>
+      </li>
+    </div>
+    <a
+      class="css-ab4jf4-RadioFrequencyLink emotion-88"
+      href="/arabic/institutional/2011/01/000000_frequencies_radio"
+>>>>>>> 3e2f07c1b2d24129f6043b9145498231c24bc114
     >
       
       .css-1dbqk3h-GridComponent-StyledGrid{padding:0;margin:0;}/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9pbmRleC5qc3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBOFFnQyIsImZpbGUiOiIuLi9zcmMvaW5kZXguanN4Iiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IGJvb2wsIG5vZGUsIG51bWJlciwgc2hhcGUsIG9uZU9mIH0gZnJvbSAncHJvcC10eXBlcyc7XG5pbXBvcnQgc3R5bGVkIGZyb20gJ0BlbW90aW9uL3N0eWxlZCc7XG5pbXBvcnQge1xuICBHRUxfTUFSR0lOX0JFTE9XXzQwMFBYLFxuICBHRUxfR1VUVEVSX0JFTE9XXzYwMFBYLFxuICBHRUxfTUFSR0lOX0FCT1ZFXzQwMFBYLFxuICBHRUxfR1VUVEVSX0FCT1ZFXzYwMFBYLFxufSBmcm9tICdAYmJjL2dlbC1mb3VuZGF0aW9ucy9zcGFjaW5ncyc7XG5pbXBvcnQge1xuICBHRUxfR1JPVVBfMF9TQ1JFRU5fV0lEVEhfTUFYLFxuICBHRUxfR1JPVVBfMV9TQ1JFRU5fV0lEVEhfTUlOLFxuICBHRUxfR1JPVVBfMV9TQ1JFRU5fV0lEVEhfTUFYLFxuICBHRUxfR1JPVVBfMl9TQ1JFRU5fV0lEVEhfTUlOLFxuICBHRUxfR1JPVVBfMl9TQ1JFRU5fV0lEVEhfTUFYLFxuICBHRUxfR1JPVVBfM19TQ1JFRU5fV0lEVEhfTUlOLFxuICBHRUxfR1JPVVBfM19TQ1JFRU5fV0lEVEhfTUFYLFxuICBHRUxfR1JPVVBfNF9TQ1JFRU5fV0lEVEhfTUlOLFxuICBHRUxfR1JPVVBfNF9TQ1JFRU5fV0lEVEhfTUFYLFxuICBHRUxfR1JPVVBfNV9TQ1JFRU5fV0lEVEhfTUlOLFxufSBmcm9tICdAYmJjL2dlbC1mb3VuZGF0aW9ucy9icmVha3BvaW50cyc7XG5cbmNvbnN0IGdyb3VwcyA9IHtcbiAgZ3JvdXAwOiB7XG4gICAgbWluOiBudWxsLFxuICAgIG1heDogR0VMX0dST1VQXzBfU0NSRUVOX1dJRFRIX01BWCxcbiAgICBndXR0ZXJTaXplOiBHRUxfR1VUVEVSX0JFTE9XXzYwMFBYLFxuICAgIG1hcmdpblNpemU6IEdFTF9NQVJHSU5fQkVMT1dfNDAwUFgsXG4gIH0sXG4gIGdyb3VwMToge1xuICAgIG1pbjogR0VMX0dST1VQXzFfU0NSRUVOX1dJRFRIX01JTixcbiAgICBtYXg6IEdFTF9HUk9VUF8xX1NDUkVFTl9XSURUSF9NQVgsXG4gICAgZ3V0dGVyU2l6ZTogR0VMX0dVVFRFUl9CRUxPV182MDBQWCxcbiAgICBtYXJnaW5TaXplOiBHRUxfTUFSR0lOX0JFTE9XXzQwMFBYLFxuICB9LFxuICBncm91cDI6IHtcbiAgICBtaW46IEdFTF9HUk9VUF8yX1NDUkVFTl9XSURUSF9NSU4sXG4gICAgbWF4OiBHRUxfR1JPVVBfMl9TQ1JFRU5fV0lEVEhfTUFYLFxuICAgIGd1dHRlclNpemU6IEdFTF9HVVRURVJfQkVMT1dfNjAwUFgsXG4gICAgbWFyZ2luU2l6ZTogR0VMX01BUkdJTl9BQk9WRV80MDBQWCxcbiAgfSxcbiAgZ3JvdXAzOiB7XG4gICAgbWluOiBHRUxfR1JPVVBfM19TQ1JFRU5fV0lEVEhfTUlOLFxuICAgIG1heDogR0VMX0dST1VQXzNfU0NSRUVOX1dJRFRIX01BWCxcbiAgICBndXR0ZXJTaXplOiBHRUxfR1VUVEVSX0FCT1ZFXzYwMFBYLFxuICAgIG1hcmdpblNpemU6IEdFTF9NQVJHSU5fQUJPVkVfNDAwUFgsXG4gIH0sXG4gIGdyb3VwNDoge1xuICAgIG1pbjogR0VMX0dST1VQXzRfU0NSRUVOX1dJRFRIX01JTixcbiAgICBtYXg6IEdFTF9HUk9VUF80X1NDUkVFTl9XSURUSF9NQVgsXG4gICAgZ3V0dGVyU2l6ZTogR0VMX0dVVFRFUl9BQk9WRV82MDBQWCxcbiAgICBtYXJnaW5TaXplOiBHRUxfTUFSR0lOX0FCT1ZFXzQwMFBYLFxuICB9LFxuICBncm91cDU6IHtcbiAgICBtaW46IEdFTF9HUk9VUF81X1NDUkVFTl9XSURUSF9NSU4sXG4gICAgbWF4OiBudWxsLFxuICAgIGd1dHRlclNpemU6IEdFTF9HVVRURVJfQUJPVkVfNjAwUFgsXG4gICAgbWFyZ2luU2l6ZTogR0VMX01BUkdJTl9BQk9WRV80MDBQWCxcbiAgfSxcbn07XG5cbmNvbnN0IG1lZGlhUXVlcnkgPSAoeyBtaW4sIG1heCwgc3R5bGVzIH0pID0+IHtcbiAgaWYgKG1pbiAmJiBtYXgpIHtcbiAgICByZXR1cm4gYFxuICAgICAgQG1lZGlhIChtaW4td2lkdGg6ICR7bWlufSkgYW5kIChtYXgtd2lkdGg6ICR7bWF4fSkge1xuICAgICAgICAke3N0eWxlc31cbiAgICAgIH1cbiAgICBgO1xuICB9XG4gIGlmIChtaW4pIHtcbiAgICByZXR1cm4gYFxuICAgICAgQG1lZGlhIChtaW4td2lkdGg6ICR7bWlufSkge1xuICAgICAgICAke3N0eWxlc31cbiAgICAgIH1cbiAgICBgO1xuICB9XG4gIGlmIChtYXgpIHtcbiAgICByZXR1cm4gYFxuICAgICAgQG1lZGlhIChtYXgtd2lkdGg6ICR7bWF4fSkge1xuICAgICAgICAke3N0eWxlc31cbiAgICAgIH1cbiAgICBgO1xuICB9XG4gIHJldHVybiAnJztcbn07XG5cbmNvbnN0IGdyaWRNZWRpYVF1ZXJpZXMgPSAoe1xuICBjb2x1bW5zLFxuICBtYXJnaW5zLFxuICBncmlkU3RhcnRPZmZzZXQsXG4gIGVuYWJsZUdlbEd1dHRlcnMsXG59KSA9PiB7XG4gIGNvbnN0IHNlbGVjdGVkR3JvdXBzID0gT2JqZWN0LmtleXMoY29sdW1ucyk7XG5cbiAgcmV0dXJuIHNlbGVjdGVkR3JvdXBzLm1hcChncm91cCA9PlxuICAgIG1lZGlhUXVlcnkoe1xuICAgICAgbWluOiBncm91cHNbZ3JvdXBdLm1pbixcbiAgICAgIG1heDogZ3JvdXBzW2dyb3VwXS5tYXgsXG4gICAgICBzdHlsZXM6IGBcbiAgICAgIHdpZHRoOiBpbml0aWFsO1xuICAgICAgbWFyZ2luOiAwO1xuICAgICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoJHtjb2x1bW5zW2dyb3VwXX0sIDFmcik7XG4gICAgICBncmlkLWNvbHVtbi1lbmQ6IHNwYW4gJHtjb2x1bW5zW2dyb3VwXX07XG4gICAgICAke2VuYWJsZUdlbEd1dHRlcnMgPyBgZ3JpZC1jb2x1bW4tZ2FwOiAke2dyb3Vwc1tncm91cF0uZ3V0dGVyU2l6ZX07YCA6IGBgfVxuICAgICAgJHttYXJnaW5zW2dyb3VwXSA/IGBwYWRkaW5nOiAwICR7Z3JvdXBzW2dyb3VwXS5tYXJnaW5TaXplfTtgIDogYGB9XG4gICAgICAke1xuICAgICAgICBncmlkU3RhcnRPZmZzZXQgJiYgZ3JpZFN0YXJ0T2Zmc2V0W2dyb3VwXVxuICAgICAgICAgID8gYGdyaWQtY29sdW1uLXN0YXJ0OiAke2dyaWRTdGFydE9mZnNldFtncm91cF19O2BcbiAgICAgICAgICA6IGBgXG4gICAgICB9YCxcbiAgICB9KSxcbiAgKTtcbn07XG5cbmNvbnN0IHN0YXJ0T2Zmc2V0UGVyY2VudGFnZSA9IChjb2x1bW5zR3JvdXAsIGdyaWRTdGFydE9mZnNldEdyb3VwKSA9PlxuICBgJHsoMTAwIC8gY29sdW1uc0dyb3VwKSAqIChncmlkU3RhcnRPZmZzZXRHcm91cCAtIDEpfSVgO1xuXG5jb25zdCBnZXROZWdhdGl2ZU9mZnNldCA9IChcbiAgY29sdW1uc0dyb3VwLFxuICBwYXJlbnRDb2x1bW5zR3JvdXAsXG4gIGdyaWRTdGFydE9mZnNldCxcbiAgZ3JpZFN0YXJ0T2Zmc2V0R3JvdXAsXG4pID0+IHtcbiAgY29uc3QgaXNWYWxpZE9mZnNldCA9XG4gICAgZ3JpZFN0YXJ0T2Zmc2V0ICYmXG4gICAgZ3JpZFN0YXJ0T2Zmc2V0R3JvdXAgJiZcbiAgICBncmlkU3RhcnRPZmZzZXRHcm91cCA8IHBhcmVudENvbHVtbnNHcm91cCAmJlxuICAgIGNvbHVtbnNHcm91cCA9PT0gcGFyZW50Q29sdW1uc0dyb3VwOyAvLyBpZiBmaWxscyBvdXQgd2hvbGUgcGFnZVxuXG4gIHJldHVybiBpc1ZhbGlkT2Zmc2V0XG4gICAgPyBgIC0gJHtzdGFydE9mZnNldFBlcmNlbnRhZ2UocGFyZW50Q29sdW1uc0dyb3VwLCBncmlkU3RhcnRPZmZzZXRHcm91cCl9YFxuICAgIDogYGA7XG59O1xuXG4vKlxuICogMSBXZSB2ZXJ0aWNhbGx5IGFsaWduIHRvIHRoZSB0b3Agc28gdGhhdCBzaWJsaW5nXG4gKiAgIGdyaWQgaXRlbXMgdGhhdCBhcmUgcGxhY2VkIHNpZGUtYnktc2lkZSB3aXRoaW4gYSByb3dcbiAqICAgaGF2ZSB0aGVpciB0ZXh0IGFuZCBpbWFnZXMgYWxpZ25lZFxuICovXG5jb25zdCBjaGlsZHJlbkZhbGxiYWNrID0gKFxuICBpdGVtLFxuICBkaXIsXG4gIGNvbHVtbnNHcm91cCxcbiAgbWFyZ2luc0dyb3VwLFxuICBtYXJnaW5TaXplLFxuICBwYXJlbnRDb2x1bW5zR3JvdXAsXG4gIHBhcmVudEVuYWJsZUdlbEd1dHRlcnMsXG4gIGd1dHRlclNpemUsXG4gIGdyaWRTdGFydE9mZnNldCxcbiAgZ3JpZFN0YXJ0T2Zmc2V0R3JvdXAsXG4pID0+IHtcbiAgY29uc3QgbmVnYXRpdmVPZmZzZXQgPSBnZXROZWdhdGl2ZU9mZnNldChcbiAgICBjb2x1bW5zR3JvdXAsXG4gICAgcGFyZW50Q29sdW1uc0dyb3VwLFxuICAgIGdyaWRTdGFydE9mZnNldCxcbiAgICBncmlkU3RhcnRPZmZzZXRHcm91cCxcbiAgKTtcbiAgY29uc3QgZ3V0dGVyc1dpdGhpblBhcmVudCA9IHBhcmVudENvbHVtbnNHcm91cCAtIDE7XG4gIGNvbnN0IGd1dHRlcnNXaXRoaW5JdGVtID0gY29sdW1uc0dyb3VwIC0gMTtcbiAgY29uc3QgYWRqdXN0ZWROdW1iZXJPZkd1dHRlcnMgPSBndXR0ZXJzV2l0aGluUGFyZW50ICsgMTsgLy8gVGhpcyBpcyBuZWVkZWQgc2luY2UgdGhpcyBjdXJyZW50IGltcGxlbWVudGF0aW9uIGNhbm5vdCBoYW5kbGUgYSBuZWdhdGl2ZSBtYXJnaW4gb3V0c2lkZSB0aGUgaXRlbXMuXG5cbiAgcmV0dXJuIGAgXG4gICR7bWFyZ2luc0dyb3VwID8gYHBhZGRpbmc6IDAgJHttYXJnaW5TaXplfTtgIDogYGB9XG4gICR7XG4gICAgcGFyZW50RW5hYmxlR2VsR3V0dGVyc1xuICAgICAgPyBgIFxuICAgICAgICB3aWR0aDogY2FsYygke2NvbHVtbnNHcm91cH0vJHtwYXJlbnRDb2x1bW5zR3JvdXB9KigxMDAlIC0gJHthZGp1c3RlZE51bWJlck9mR3V0dGVyc30gKiAke2d1dHRlclNpemV9KSArICR7Z3V0dGVyc1dpdGhpbkl0ZW19ICogJHtndXR0ZXJTaXplfSAke25lZ2F0aXZlT2Zmc2V0fSk7XG4gICAgICAgIGBcbiAgICAgIDogYGBcbiAgfVxuICAke1xuICAgIHBhcmVudEVuYWJsZUdlbEd1dHRlcnMgJiYgaXRlbVxuICAgICAgPyBgbWFyZ2luOiAwICR7cGFyc2VGbG9hdChndXR0ZXJTaXplKSAvIDJ9cmVtO2BcbiAgICAgIDogYGBcbiAgfVxuICAke1xuICAgICFwYXJlbnRFbmFibGVHZWxHdXR0ZXJzXG4gICAgICA/IGB3aWR0aDogY2FsYygke1xuICAgICAgICAgICgxMDAgKiBjb2x1bW5zR3JvdXApIC8gcGFyZW50Q29sdW1uc0dyb3VwXG4gICAgICAgIH0lJHtuZWdhdGl2ZU9mZnNldH0pO2BcbiAgICAgIDogYGBcbiAgfVxuICBcbiAgJHtcbiAgICBncmlkU3RhcnRPZmZzZXRHcm91cCAmJiBncmlkU3RhcnRPZmZzZXRHcm91cCA8IHBhcmVudENvbHVtbnNHcm91cFxuICAgICAgPyBgbWFyZ2luLSR7ZGlyID09PSAnbHRyJyA/ICdsZWZ0JyA6ICdyaWdodCd9OiAke3N0YXJ0T2Zmc2V0UGVyY2VudGFnZShcbiAgICAgICAgICBwYXJlbnRDb2x1bW5zR3JvdXAsXG4gICAgICAgICAgZ3JpZFN0YXJ0T2Zmc2V0R3JvdXAsXG4gICAgICAgICl9O2BcbiAgICAgIDogYGBcbiAgfVxuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIHZlcnRpY2FsLWFsaWduOiB0b3A7IFxuYDtcbn07IC8qIFsxXSAqL1xuXG5jb25zdCBvdXRlckdyaWRGYWxsYmFjayA9IChcbiAgZGlyLFxuICBjb2x1bW5zR3JvdXAsXG4gIG1hcmdpbnNHcm91cCxcbiAgbWFyZ2luU2l6ZSxcbiAgZW5hYmxlR2VsR3V0dGVycyxcbiAgZ3V0dGVyU2l6ZSxcbiAgZ3JpZFN0YXJ0T2Zmc2V0LFxuICBncmlkU3RhcnRPZmZzZXRHcm91cCxcbikgPT4gYFxuICAke21hcmdpbnNHcm91cCA/IGBwYWRkaW5nOiAwICR7bWFyZ2luU2l6ZX07YCA6IGBgfVxuICAke1xuICAgIGdyaWRTdGFydE9mZnNldCAmJiBncmlkU3RhcnRPZmZzZXRHcm91cCA8IGNvbHVtbnNHcm91cFxuICAgICAgPyBgbWFyZ2luLSR7ZGlyID09PSAnbHRyJyA/ICdsZWZ0JyA6ICdyaWdodCd9OiAke3N0YXJ0T2Zmc2V0UGVyY2VudGFnZShcbiAgICAgICAgICBjb2x1bW5zR3JvdXAsXG4gICAgICAgICAgZ3JpZFN0YXJ0T2Zmc2V0R3JvdXAsXG4gICAgICAgICl9YFxuICAgICAgOiBgYFxuICB9YDtcblxuY29uc3QgZ3JpZEZhbGxiYWNrcyA9ICh7XG4gIGl0ZW0sXG4gIGRpcixcbiAgY29sdW1ucyxcbiAgbWFyZ2lucyxcbiAgcGFyZW50Q29sdW1ucyxcbiAgZW5hYmxlR2VsR3V0dGVycyxcbiAgcGFyZW50RW5hYmxlR2VsR3V0dGVycyxcbiAgZ3JpZFN0YXJ0T2Zmc2V0LFxufSkgPT4ge1xuICBjb25zdCBpc091dGVyR3JpZCA9ICFwYXJlbnRDb2x1bW5zO1xuXG4gIGNvbnN0IHNlbGVjdGVkR3JvdXBzID0gT2JqZWN0LmtleXMoY29sdW1ucyk7XG4gIHJldHVybiBgXG4gICAgXG4gICAgICAke3NlbGVjdGVkR3JvdXBzXG4gICAgICAgIC5tYXAoXG4gICAgICAgICAgZ3JvdXAgPT4gYFxuICAgICAgICAgICAgJHttZWRpYVF1ZXJ5KHtcbiAgICAgICAgICAgICAgbWluOiBncm91cHNbZ3JvdXBdLm1pbixcbiAgICAgICAgICAgICAgbWF4OiBncm91cHNbZ3JvdXBdLm1heCxcbiAgICAgICAgICAgICAgc3R5bGVzOiBgXG4gICAgICAgICAgICAgICR7XG4gICAgICAgICAgICAgICAgaXNPdXRlckdyaWRcbiAgICAgICAgICAgICAgICAgID8gb3V0ZXJHcmlkRmFsbGJhY2soXG4gICAgICAgICAgICAgICAgICAgICAgZGlyLFxuICAgICAgICAgICAgICAgICAgICAgIGNvbHVtbnNbZ3JvdXBdLFxuICAgICAgICAgICAgICAgICAgICAgIG1hcmdpbnNbZ3JvdXBdLFxuICAgICAgICAgICAgICAgICAgICAgIGdyb3Vwc1tncm91cF0ubWFyZ2luU2l6ZSxcbiAgICAgICAgICAgICAgICAgICAgICBlbmFibGVHZWxHdXR0ZXJzLFxuICAgICAgICAgICAgICAgICAgICAgIGdyb3Vwc1tncm91cF0uZ3V0dGVyU2l6ZSxcbiAgICAgICAgICAgICAgICAgICAgICBncmlkU3RhcnRPZmZzZXQsXG4gICAgICAgICAgICAgICAgICAgICAgZ3JpZFN0YXJ0T2Zmc2V0W2dyb3VwXSxcbiAgICAgICAgICAgICAgICAgICAgKVxuICAgICAgICAgICAgICAgICAgOiBjaGlsZHJlbkZhbGxiYWNrKFxuICAgICAgICAgICAgICAgICAgICAgIGl0ZW0sXG4gICAgICAgICAgICAgICAgICAgICAgZGlyLFxuICAgICAgICAgICAgICAgICAgICAgIGNvbHVtbnNbZ3JvdXBdLFxuICAgICAgICAgICAgICAgICAgICAgIG1hcmdpbnNbZ3JvdXBdLFxuICAgICAgICAgICAgICAgICAgICAgIGdyb3Vwc1tncm91cF0ubWFyZ2luU2l6ZSxcbiAgICAgICAgICAgICAgICAgICAgICBwYXJlbnRDb2x1bW5zW2dyb3VwXSxcbiAgICAgICAgICAgICAgICAgICAgICBwYXJlbnRFbmFibGVHZWxHdXR0ZXJzLFxuICAgICAgICAgICAgICAgICAgICAgIGdyb3Vwc1tncm91cF0uZ3V0dGVyU2l6ZSxcbiAgICAgICAgICAgICAgICAgICAgICBncmlkU3RhcnRPZmZzZXQsXG4gICAgICAgICAgICAgICAgICAgICAgZ3JpZFN0YXJ0T2Zmc2V0W2dyb3VwXSxcbiAgICAgICAgICAgICAgICAgICAgKVxuICAgICAgICAgICAgICB9YCxcbiAgICAgICAgICAgIH0pfVxuICAgICAgICAgIGAsXG4gICAgICAgIClcbiAgICAgICAgLmpvaW4oJycpfSBcbiAgICBgO1xufTtcblxuY29uc3QgR3JpZENvbXBvbmVudCA9IHN0eWxlZC5kaXZgXG4gICR7Z3JpZEZhbGxiYWNrc31cbiAgQHN1cHBvcnRzIChkaXNwbGF5OiBncmlkKSB7XG4gICAgJHtncmlkTWVkaWFRdWVyaWVzfVxuICAgICR7KHsgaXRlbSB9KSA9PlxuICAgICAgaXRlbSA/IGBkaXNwbGF5OiBibG9jaztgIDogYGRpc3BsYXk6IGdyaWQ7IHBvc2l0aW9uOiBpbml0aWFsO2B9XG4gIH1cbmA7XG5cbmNvbnN0IEdyaWQgPSAoe1xuICBjaGlsZHJlbixcbiAgc3RhcnRPZmZzZXQ6IGdyaWRTdGFydE9mZnNldCwgLy8gYWxpYXMgdGhpcyBwcm9wIHRvIHByZXZlbnQgaXQgcmVuZGVyaW5nIGFzIGFuIGVsZW1lbnQgYXR0cmlidXRlIGUuZy4gPGRpdiBzdGFydG9mZnNldD1cIltvYmplY3QgT2JqZWN0XVwiPlxuICAuLi5vdGhlclByb3BzXG59KSA9PiB7XG4gIGNvbnN0IHJlbmRlckNoaWxkcmVuID0gKCkgPT5cbiAgICBSZWFjdC5DaGlsZHJlbi5tYXAoY2hpbGRyZW4sIGNoaWxkID0+IHtcbiAgICAgIGlmIChjaGlsZCkge1xuICAgICAgICBjb25zdCBpc05lc3RlZEdyaWRDb21wb25lbnQgPSBjaGlsZC50eXBlID09PSBHcmlkO1xuXG4gICAgICAgIGlmIChpc05lc3RlZEdyaWRDb21wb25lbnQpIHtcbiAgICAgICAgICByZXR1cm4gUmVhY3QuY2xvbmVFbGVtZW50KGNoaWxkLCB7XG4gICAgICAgICAgICBwYXJlbnRDb2x1bW5zOiBvdGhlclByb3BzLmNvbHVtbnMsXG4gICAgICAgICAgICBwYXJlbnRFbmFibGVHZWxHdXR0ZXJzOiBvdGhlclByb3BzLmVuYWJsZUdlbEd1dHRlcnMsXG4gICAgICAgICAgfSk7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICAgIHJldHVybiBjaGlsZDtcbiAgICB9KTtcblxuICBjb25zdCByZW5kZXJHcmlkQ29tcG9uZW50ID0gKCkgPT4gKFxuICAgIDxHcmlkQ29tcG9uZW50IHsuLi5vdGhlclByb3BzfSBncmlkU3RhcnRPZmZzZXQ9e2dyaWRTdGFydE9mZnNldH0+XG4gICAgICB7cmVuZGVyQ2hpbGRyZW4oKX1cbiAgICA8L0dyaWRDb21wb25lbnQ+XG4gICk7XG5cbiAgcmV0dXJuIHJlbmRlckdyaWRDb21wb25lbnQoKTtcbn07XG5cbkdyaWQucHJvcFR5cGVzID0ge1xuICBjaGlsZHJlbjogbm9kZS5pc1JlcXVpcmVkLFxuICBkaXI6IG9uZU9mKFsnbHRyJywgJ3J0bCddKSxcbiAgY29sdW1uczogc2hhcGUoe1xuICAgIGdyb3VwMTogbnVtYmVyLmlzUmVxdWlyZWQsXG4gICAgZ3JvdXAyOiBudW1iZXIuaXNSZXF1aXJlZCxcbiAgICBncm91cDM6IG51bWJlci5pc1JlcXVpcmVkLFxuICAgIGdyb3VwNDogbnVtYmVyLmlzUmVxdWlyZWQsXG4gICAgZ3JvdXA1OiBudW1iZXIuaXNSZXF1aXJlZCxcbiAgfSkuaXNSZXF1aXJlZCxcbiAgZW5hYmxlR2VsR3V0dGVyczogYm9vbCxcbiAgZW5hYmxlTmVnYXRpdmVHZWxNYXJnaW5zOiBib29sLFxuICBtYXJnaW5zOiBzaGFwZSh7XG4gICAgZ3JvdXAxOiBib29sLFxuICAgIGdyb3VwMjogYm9vbCxcbiAgICBncm91cDM6IGJvb2wsXG4gICAgZ3JvdXA0OiBib29sLFxuICAgIGdyb3VwNTogYm9vbCxcbiAgfSksXG4gIHN0YXJ0T2Zmc2V0OiBzaGFwZSh7XG4gICAgZ3JvdXAxOiBudW1iZXIsXG4gICAgZ3JvdXAyOiBudW1iZXIsXG4gICAgZ3JvdXAzOiBudW1iZXIsXG4gICAgZ3JvdXA0OiBudW1iZXIsXG4gICAgZ3JvdXA1OiBudW1iZXIsXG4gIH0pLFxuICBpdGVtOiBib29sLFxuICBwYXJlbnRDb2x1bW5zOiBzaGFwZSh7XG4gICAgZ3JvdXAxOiBudW1iZXIsXG4gICAgZ3JvdXAyOiBudW1iZXIsXG4gICAgZ3JvdXAzOiBudW1iZXIsXG4gICAgZ3JvdXA0OiBudW1iZXIsXG4gICAgZ3JvdXA1OiBudW1iZXIsXG4gIH0pLFxufTtcblxuR3JpZC5kZWZhdWx0UHJvcHMgPSB7XG4gIGRpcjogJ2x0cicsXG4gIGVuYWJsZUdlbEd1dHRlcnM6IGZhbHNlLFxuICBtYXJnaW5zOiB7XG4gICAgZ3JvdXAxOiBmYWxzZSxcbiAgICBncm91cDI6IGZhbHNlLFxuICAgIGdyb3VwMzogZmFsc2UsXG4gICAgZ3JvdXA0OiBmYWxzZSxcbiAgICBncm91cDU6IGZhbHNlLFxuICB9LFxuICBzdGFydE9mZnNldDoge30sXG4gIGl0ZW06IGZhbHNlLFxuICBwYXJlbnRDb2x1bW5zOiBudWxsLFxufTtcblxuZXhwb3J0IGRlZmF1bHQgR3JpZDtcbiJdfQ== */
