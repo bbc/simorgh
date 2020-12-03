@@ -1,6 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 jest.mock('./index.canonical', () => () => <div>Canonical Cookie banner</div>);
 jest.mock('./index.amp', () => () => <div>Amp Cookie banner</div>);
@@ -14,7 +15,7 @@ describe('Consent Banner Container', () => {
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
       isAmp
-      pageType="article"
+      pageType={ARTICLE_PAGE}
       service="news"
       statusCode={200}
       pathname="/pathname"
@@ -29,7 +30,7 @@ describe('Consent Banner Container', () => {
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
       isAmp={false}
-      pageType="article"
+      pageType={ARTICLE_PAGE}
       service="news"
       statusCode={200}
       pathname="/pathname"

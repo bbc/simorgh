@@ -9,6 +9,7 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import { service as serbianServiceConfig } from '#lib/config/services/serbian';
 import { service as ukrainianServiceConfig } from '#lib/config/services/ukrainian';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const defaultToggleState = {
   navOnArticles: {
@@ -59,7 +60,7 @@ describe(`Header`, () => {
     shouldMatchSnapshot(
       'should render correctly for news article',
       HeaderContainerWithContext({
-        pageType: 'article',
+        pageType: ARTICLE_PAGE,
         service: 'news',
       }),
     );
@@ -86,7 +87,7 @@ describe(`Header`, () => {
     });
 
     it('should output a nav bar for articles', () => {
-      render(HeaderContainerWithContext({ pageType: 'article' }));
+      render(HeaderContainerWithContext({ pageType: ARTICLE_PAGE }));
       expect(document.querySelector(`header nav`)).not.toBeNull();
     });
 
