@@ -4,7 +4,7 @@ import React from 'react';
 export default () => (
   <div
     dangerouslySetInnerHTML={{
-      __html: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 501.715">
+      __html: `<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 501.715">
 <rect x="10" fill="#F0F0F0" width="360" height="34" />
 <rect x="10" y="42.667" fill="#F0F0F0" width="300" height="34" />
 <rect x="11" y="348.715" fill="#F0F0F0" width="358" height="16" />

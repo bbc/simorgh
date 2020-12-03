@@ -14,7 +14,7 @@ const LoadingMain = styled.main`
 const SkeletonWrapper = styled.div`
   margin-top: ${GEL_SPACING_DBL};
 `;
-const StyledWrapper = styled.div`
+const LoadingMessageWrapper = styled.div`
   outline: 0;
 `;
 
@@ -48,18 +48,18 @@ const WithLoading = Component => {
       <LoadingMain role="main">
         <GridWrapper>
           <GridItemLarge>
-            <StyledWrapper
+            <LoadingMessageWrapper
               tabIndex="-1"
               ref={loadingMessageRef}
               data-testid="loading"
             >
               <VisuallyHiddenText>Loading next page.</VisuallyHiddenText>
-              {showSkeleton && (
-                <SkeletonWrapper data-testid="loading-skeleton">
-                  <Skeleton />
-                </SkeletonWrapper>
-              )}
-            </StyledWrapper>
+            </LoadingMessageWrapper>
+            {showSkeleton && (
+              <SkeletonWrapper data-testid="loading-skeleton">
+                <Skeleton />
+              </SkeletonWrapper>
+            )}
           </GridItemLarge>
         </GridWrapper>
       </LoadingMain>
