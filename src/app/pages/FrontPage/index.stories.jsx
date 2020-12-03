@@ -11,6 +11,7 @@ import { service as igboConfig } from '#lib/config/services/igbo';
 import { service as serbianConfig } from '#lib/config/services/serbian';
 import { getLocalMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 import FrontPage from '.';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const serviceDataSets = {
   arabic: { default: arabicData },
@@ -37,7 +38,7 @@ Object.keys(serviceDataSets).forEach(service => {
       <BrowserRouter>
         <FrontPage
           isAmp={false}
-          pageType="frontPage"
+          pageType={FRONT_PAGE}
           status={200}
           pathname={serviceConfigs[service][variant].navigation[0].url}
           service={service}
