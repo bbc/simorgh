@@ -29,19 +29,6 @@ describe('withLoading HOC', () => {
   });
 
   describe(`and the loading indicator`, () => {
-    // Reinstate after conditional loading logic is re-added
-    // it(`should not show the loading indicator before a set amount of time`, async () => {
-    //   let queryByTestId;
-
-    //   await act(async () => {
-    //     ({ queryByTestId } = render(<LoadingHOC loading />));
-
-    //     await wait(400);
-    //   });
-
-    //   expect(queryByTestId('loading')).not.toBeInTheDocument();
-    // });
-
     it(`should show the loading indicator after a set amount of time`, async () => {
       let queryByTestId;
 
@@ -105,7 +92,7 @@ describe('withLoading HOC', () => {
     expect(queryByTestId('loading-skeleton')).toBeInTheDocument();
   });
 
-  it(`should not show the skeleton a set amount of time`, async () => {
+  it(`should not show the loading skeleton a set amount of time`, async () => {
     let queryByTestId;
 
     await act(async () => {
@@ -117,7 +104,7 @@ describe('withLoading HOC', () => {
     expect(queryByTestId('loading-skeleton')).not.toBeInTheDocument();
   });
 
-  it(`should not show the skeleton if not defined for page type`, async () => {
+  it(`should not show the loading skeleton if not defined for page type`, async () => {
     let queryByTestId;
 
     await act(async () => {
