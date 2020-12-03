@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { bool, element } from 'prop-types';
+import { bool, string, element } from 'prop-types';
 import styled from '@emotion/styled';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
@@ -19,11 +19,14 @@ const WithLoading = Component => {
   const LoadingContainer = ({ loading, ...props }) => {
     const loadingMessageRef = useRef();
     const [showSkeleton, setShowSkeleton] = useState(false);
+    const { pageType } = props;
 
     useEffect(() => {
       if (loading) {
         timeout = setTimeout(() => {
-          setShowSkeleton(true);
+          if (['article', 'MAP', 'STY'].includes(pageType)) {
+            setShowSkeleton(true);
+          }
           if (loadingMessageRef.current) {
             loadingMessageRef.current.focus();
           }
@@ -33,7 +36,7 @@ const WithLoading = Component => {
       return () => {
         clearTimeout(timeout);
       };
-    }, [loading]);
+    }, [loading, pageType]);
 
     if (!loading) return <Component {...props} />;
 
@@ -57,6 +60,7 @@ const WithLoading = Component => {
 
   LoadingContainer.propTypes = {
     loading: bool,
+    pageType: string.isRequired,
   };
 
   LoadingContainer.defaultProps = {
