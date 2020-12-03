@@ -19,7 +19,7 @@ describe('getStatsPageIdentifier', () => {
     },
     {
       service: 'persian',
-      pageType: ARTICLE_PAGE,
+      pageType: 'frontPage',
       expected: 'persian.page',
       summary: 'should return for WS Front Page',
     },
