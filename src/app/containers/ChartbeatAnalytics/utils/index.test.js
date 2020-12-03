@@ -47,65 +47,65 @@ describe('Chartbeat utilities', () => {
   describe('Chartbeat Page Type', () => {
     const types = [
       {
-        type: 'article',
+        pageType: 'article',
         expectedDefaultType: 'New Article',
         expectedShortType: 'ART',
       },
       {
-        type: 'index',
+        pageType: 'index',
         expectedDefaultType: 'Index',
         expectedShortType: 'IDX',
       },
       {
-        type: 'FIX',
+        pageType: 'FIX',
         expectedDefaultType: 'FIX',
         expectedShortType: 'FIX',
       },
       {
-        type: 'MAP',
+        pageType: 'MAP',
         expectedDefaultType: 'article-media-asset',
         expectedShortType: 'article-media-asset',
       },
       {
-        type: 'media',
+        pageType: 'media',
         expectedDefaultType: 'Radio',
         expectedShortType: 'Radio',
       },
       {
-        type: 'mostRead',
+        pageType: 'mostRead',
         expectedDefaultType: 'Most Read',
         expectedShortType: 'Most Read',
       },
       {
-        type: 'mostWatched',
+        pageType: 'mostWatched',
         expectedDefaultType: 'Most Watched',
         expectedShortType: 'Most Watched',
       },
       {
-        type: 'STY',
+        pageType: 'STY',
         expectedDefaultType: 'STY',
         expectedShortType: 'STY',
       },
       {
-        type: 'PGL',
+        pageType: 'PGL',
         expectedDefaultType: 'PGL',
         expectedShortType: 'PGL',
       },
       {
-        type: null,
+        pageType: null,
         expectedDefaultType: null,
         expectedShortType: null,
       },
     ];
 
     types.forEach(
-      ({ type: rawType, expectedDefaultType, expectedShortType }) => {
-        it(`Type ${rawType} should return ${expectedDefaultType} as default`, () => {
-          expect(getType(rawType)).toBe(expectedDefaultType);
+      ({ pageType: rawPageType, expectedDefaultType, expectedShortType }) => {
+        it(`Page type ${rawPageType} should return ${expectedDefaultType} as default`, () => {
+          expect(getType(rawPageType)).toBe(expectedDefaultType);
         });
 
-        it(`Type ${rawType} should return ${expectedShortType} as shorthand`, () => {
-          expect(getType(rawType, true)).toBe(expectedShortType);
+        it(`Page type ${rawPageType} should return ${expectedShortType} as shorthand`, () => {
+          expect(getType(rawPageType, true)).toBe(expectedShortType);
         });
       },
     );
