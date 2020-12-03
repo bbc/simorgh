@@ -55,7 +55,7 @@ const WithLoading = Component => {
             >
               <VisuallyHiddenText>Loading next page.</VisuallyHiddenText>
               {showSkeleton && (
-                <SkeletonWrapper>
+                <SkeletonWrapper data-testid="loading-skeleton">
                   <Skeleton />
                 </SkeletonWrapper>
               )}
