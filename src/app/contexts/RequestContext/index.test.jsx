@@ -5,6 +5,7 @@ import * as getStatsPageIdentifier from './getStatsPageIdentifier';
 import * as getOriginContext from './getOriginContext';
 import * as getEnv from './getEnv';
 import * as getMetaUrls from './getMetaUrls';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const { RequestContextProvider, RequestContext } = require('./index');
 
@@ -44,7 +45,7 @@ const input = {
   bbcOrigin: 'bbcOrigin',
   id: 'id',
   isAmp: true,
-  pageType: 'frontPage',
+  pageType: FRONT_PAGE,
   service: 'service',
   statusCode: 200,
   pathname: '/current-path',
