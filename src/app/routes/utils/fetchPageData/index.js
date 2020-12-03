@@ -1,6 +1,8 @@
+import is from 'ramda/src/is';
 import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
 import {
+  DATA_FETCH_RESPONSE_TIME,
   DATA_REQUEST_RECEIVED,
   DATA_NOT_FOUND,
   DATA_FETCH_ERROR,
@@ -35,9 +37,21 @@ const fetchPageData = async ({ path, timeout, ...loggerArgs }) => {
     ...loggerArgs,
   });
 
+  const shouldLogFetchTime = process && is(Function, process.hrtime);
+
   try {
+    const startHrTime = shouldLogFetchTime ? process.hrtime() : [0, 0];
     const response = await fetch(url, { timeout: effectiveTimeout });
     const { status } = response;
+
+    if (shouldLogFetchTime) {
+      const NS_PER_SEC = 1e9;
+      const elapsedHrTime = process.hrtime(startHrTime);
+      logger.info(DATA_FETCH_RESPONSE_TIME, {
+        path,
+        nanoseconds: elapsedHrTime[0] * NS_PER_SEC + elapsedHrTime[1],
+      });
+    }
 
     if (status === OK) {
       const json = await response.json();
