@@ -14,6 +14,9 @@ const LoadingMain = styled.main`
 const SkeletonWrapper = styled.div`
   margin-top: ${GEL_SPACING_DBL};
 `;
+const StyledWrapper = styled.div`
+  outline: 0;
+`;
 
 const WithLoading = Component => {
   const LoadingContainer = ({ loading, ...props }) => {
@@ -29,6 +32,7 @@ const WithLoading = Component => {
           }
           if (loadingMessageRef.current) {
             loadingMessageRef.current.focus();
+            window.scrollTo(0, 0);
           }
         }, 500);
       }
@@ -44,14 +48,18 @@ const WithLoading = Component => {
       <LoadingMain role="main">
         <GridWrapper>
           <GridItemLarge>
-            <div tabIndex="-1" ref={loadingMessageRef} data-testid="loading">
+            <StyledWrapper
+              tabIndex="-1"
+              ref={loadingMessageRef}
+              data-testid="loading"
+            >
               <VisuallyHiddenText>Loading next page.</VisuallyHiddenText>
               {showSkeleton && (
                 <SkeletonWrapper>
                   <Skeleton />
                 </SkeletonWrapper>
               )}
-            </div>
+            </StyledWrapper>
           </GridItemLarge>
         </GridWrapper>
       </LoadingMain>
