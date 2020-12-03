@@ -4,6 +4,7 @@ import onClient from '#lib/utilities/onClient';
 import { getPromoHeadline } from '#lib/analyticsUtils/article';
 import { getPageTitle } from '#lib/analyticsUtils/indexPage';
 import { getReferrer } from '#lib/analyticsUtils';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const ID_COOKIE = 'ckns_sylphid';
 
@@ -29,7 +30,7 @@ export const getType = (pageType, shorthand = false) => {
     case 'IDX':
     case 'index':
       return shorthand ? 'IDX' : 'Index';
-    case 'article':
+    case ARTICLE_PAGE:
       return shorthand ? 'ART' : 'New Article';
     case 'MAP':
       return 'article-media-asset';
@@ -109,7 +110,7 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
     case 'IDX':
     case 'index':
       return getPageTitle(pageData, brandName);
-    case 'article':
+    case ARTICLE_PAGE:
       return getPromoHeadline(pageData);
     case 'MAP':
       return path(['promo', 'headlines', 'headline'], pageData);
