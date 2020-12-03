@@ -54,6 +54,7 @@ const fetchPageData = async ({
       const elapsedHrTime = process.hrtime(startHrTime);
       logger.info(DATA_FETCH_RESPONSE_TIME, {
         path,
+        status,
         nanoseconds: elapsedHrTime[0] * NS_PER_SEC + elapsedHrTime[1],
       });
     }
