@@ -127,7 +127,7 @@ describe('Chartbeat utilities', () => {
         service: 'news',
         producer: 'business',
         chapter: 'market data',
-        pageType: ARTICLE_PAGE,
+        pageType: 'index',
         description: 'should add chapter and producer to index type',
         expected:
           'News, News - IDX, News - business, News - business - IDX, News - market data, News - market data - IDX',

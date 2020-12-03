@@ -29,7 +29,7 @@ describe('App', () => {
 
   const route = {
     getInitialData: jest.fn().mockResolvedValue({}),
-    pageType: { ARTICLE_PAGE },
+    pageType: ARTICLE_PAGE,
   };
 
   reactRouterConfig.matchRoutes.mockReturnValue([{ route, match }]);
