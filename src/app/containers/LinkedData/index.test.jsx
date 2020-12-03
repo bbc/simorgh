@@ -4,6 +4,7 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import LinkedData from '.';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 // eslint-disable-next-line react/prop-types
 const Context = ({ children, service }) => (
@@ -12,7 +13,7 @@ const Context = ({ children, service }) => (
       bbcOrigin="https://www.test.bbc.com"
       id="c0000000000o"
       isAmp={false}
-      pageType="article"
+      pageType={ARTICLE_PAGE}
       pathname="/pathname"
       service="news"
       statusCode={200}

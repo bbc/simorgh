@@ -9,6 +9,7 @@ import {
   articleDataNews,
   articleDataPersian,
 } from '#pages/ArticlePage/fixtureData';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const getISOStringDate = date => new Date(date).toISOString();
 
@@ -20,7 +21,7 @@ const Context = ({ service, children }) => (
         bbcOrigin="https://www.test.bbc.co.uk"
         id="c0000000000o"
         isAmp={false}
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         pathname="/pathname"
         service={service}
         statusCode={200}

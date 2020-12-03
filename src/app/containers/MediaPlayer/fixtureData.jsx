@@ -5,6 +5,7 @@ import { singleTextBlock } from '#models/blocks';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import MediaPlayerContainer from '.';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const captionBlock = {
   model: {
@@ -463,7 +464,7 @@ const GenerateFixtureData = ({
     statusCode={200}
     platform={platform}
     id="foo"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/pathname"
   >
     <ServiceContextProvider service="news">
