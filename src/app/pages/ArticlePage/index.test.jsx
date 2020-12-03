@@ -14,6 +14,7 @@ import newsMostReadData from '#data/news/mostRead';
 import persianMostReadData from '#data/persian/mostRead';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import { textBlock } from '#models/blocks/index';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
@@ -32,7 +33,7 @@ const Context = ({ service, children }) => (
         bbcOrigin="https://www.test.bbc.co.uk"
         id="c0000000000o"
         isAmp={false}
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         pathname="/pathname"
         service={service}
         statusCode={200}
