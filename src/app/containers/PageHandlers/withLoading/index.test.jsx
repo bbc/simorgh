@@ -27,17 +27,18 @@ describe('withLoading HOC', () => {
   });
 
   describe(`and the loading indicator`, () => {
-    it(`should not show the loading indicator before a set amount of time`, async () => {
-      let queryByTestId;
+    // Reinstate after conditional loading logic is re-added
+    // it(`should not show the loading indicator before a set amount of time`, async () => {
+    //   let queryByTestId;
 
-      await act(async () => {
-        ({ queryByTestId } = render(<LoadingHOC loading />));
+    //   await act(async () => {
+    //     ({ queryByTestId } = render(<LoadingHOC loading />));
 
-        await wait(400);
-      });
+    //     await wait(400);
+    //   });
 
-      expect(queryByTestId('loading')).not.toBeInTheDocument();
-    });
+    //   expect(queryByTestId('loading')).not.toBeInTheDocument();
+    // });
 
     it(`should show the loading indicator after a set amount of time`, async () => {
       let queryByTestId;
@@ -61,6 +62,30 @@ describe('withLoading HOC', () => {
       });
 
       expect(queryByTestId('loading')).not.toBeInTheDocument();
+    });
+
+    it(`should be focused after a set amount of time`, async () => {
+      let queryByTestId;
+
+      await act(async () => {
+        ({ queryByTestId } = render(<LoadingHOC loading />));
+
+        await wait(600);
+      });
+
+      expect(queryByTestId('loading')).toHaveFocus();
+    });
+
+    it(`should not be focused before a set amount of time`, async () => {
+      let queryByTestId;
+
+      await act(async () => {
+        ({ queryByTestId } = render(<LoadingHOC loading />));
+
+        await wait(400);
+      });
+
+      expect(queryByTestId('loading')).not.toHaveFocus();
     });
   });
 });
