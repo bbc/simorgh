@@ -275,7 +275,7 @@ export const service = {
       },
       {
         title: 'ビデオ',
-        url: 'https://www.bbc.com/japanese/video',
+        url: '/japanese/video-55128146',
       },
       {
         title: 'ワールドニュースTV',
