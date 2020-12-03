@@ -41,7 +41,7 @@ const WithLoading = Component => {
       <LoadingMain role="main">
         <GridWrapper>
           <GridItemLarge>
-            <div tabIndex="-1" ref={loadingMessageRef}>
+            <div tabIndex="-1" ref={loadingMessageRef} data-testid="loading">
               <VisuallyHiddenText>Loading next page.</VisuallyHiddenText>
               {showSkeleton && (
                 <SkeletonWrapper>
