@@ -1,22 +1,29 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { bool, element } from 'prop-types';
 import styled from '@emotion/styled';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import Skeleton from './Skeleton';
 
-import { GridWrapper, GridItemMedium } from '#app/components/Grid';
+import { GridWrapper, GridItemLarge } from '#app/components/Grid';
 
 let timeout;
 const LoadingMain = styled.main`
   min-height: 100vh;
 `;
+const SkeletonWrapper = styled.div`
+  margin-top: ${GEL_SPACING_DBL};
+`;
 
 const WithLoading = Component => {
   const LoadingContainer = ({ loading, ...props }) => {
     const loadingMessageRef = useRef();
+    const [showSkeleton, setShowSkeleton] = useState(false);
 
     useEffect(() => {
       if (loading) {
         timeout = setTimeout(() => {
+          setShowSkeleton(true);
           if (loadingMessageRef.current) {
             loadingMessageRef.current.focus();
           }
@@ -33,11 +40,16 @@ const WithLoading = Component => {
     return (
       <LoadingMain role="main">
         <GridWrapper>
-          <GridItemMedium>
+          <GridItemLarge>
             <div tabIndex="-1" ref={loadingMessageRef}>
               <VisuallyHiddenText>Loading next page.</VisuallyHiddenText>
+              {showSkeleton && (
+                <SkeletonWrapper>
+                  <Skeleton />
+                </SkeletonWrapper>
+              )}
             </div>
-          </GridItemMedium>
+          </GridItemLarge>
         </GridWrapper>
       </LoadingMain>
     );
