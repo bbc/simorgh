@@ -23,6 +23,7 @@ import {
   mapWithoutMediaError,
 } from './helpers/fixtureData';
 import StoryPromoContainer from '.';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const onlyOneRelatedItem = {
   ...indexAlsosItem,
@@ -49,7 +50,7 @@ const WrappedStoryPromo = ({ service, platform, ...props }) => (
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
       isAmp={platform === 'amp'}
-      pageType="article"
+      pageType={ARTICLE_PAGE}
       service={service}
       statusCode={200}
       pathname="/pathname"
