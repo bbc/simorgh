@@ -123,7 +123,7 @@ describe('withLoading HOC', () => {
     await act(async () => {
       ({ queryByTestId } = render(<LoadingHOC loading pageType="radio" />));
 
-      await wait(400);
+      await wait(600);
     });
 
     expect(queryByTestId('loading-skeleton')).not.toBeInTheDocument();
