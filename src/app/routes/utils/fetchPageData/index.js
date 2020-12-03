@@ -14,6 +14,7 @@ import {
 } from '#lib/statusCodes.const';
 import getErrorStatusCode from './utils/getErrorStatusCode';
 import { PRIMARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
+import onClient from '#lib/utilities/onClient';
 import getUrl from './utils/getUrl';
 
 const logger = nodeLogger(__filename);
@@ -27,7 +28,12 @@ const logger = nodeLogger(__filename);
  * Timeout values here: https://github.com/bbc/simorgh/blob/latest/src/app/lib/utilities/getFetchTimeouts/index.js
  * @param {...string} loggerArgs Additional arguments for richer logging.
  */
-const fetchPageData = async ({ path, timeout, ...loggerArgs }) => {
+const fetchPageData = async ({
+  path,
+  timeout,
+  shouldLogFetchTime = !onClient(),
+  ...loggerArgs
+}) => {
   const url = path.startsWith('http') ? path : getUrl(path);
   const effectiveTimeout = timeout || PRIMARY_DATA_TIMEOUT;
 
@@ -37,14 +43,14 @@ const fetchPageData = async ({ path, timeout, ...loggerArgs }) => {
     ...loggerArgs,
   });
 
-  const shouldLogFetchTime = process && is(Function, process.hrtime);
+  const canDetermineFetchTime = process && typeof process.hrtime === 'function';
 
   try {
-    const startHrTime = shouldLogFetchTime ? process.hrtime() : [0, 0];
+    const startHrTime = canDetermineFetchTime ? process.hrtime() : [0, 0];
     const response = await fetch(url, { timeout: effectiveTimeout });
     const { status } = response;
 
-    if (shouldLogFetchTime) {
+    if (shouldLogFetchTime && canDetermineFetchTime) {
       const NS_PER_SEC = 1e9;
       const elapsedHrTime = process.hrtime(startHrTime);
       logger.info(DATA_FETCH_RESPONSE_TIME, {

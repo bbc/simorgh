@@ -48,10 +48,11 @@ describe('fetchPageData', () => {
     });
 
     it('should log data fetch response time on server', async () => {
-      window.process.hrtime = () => [1, 0];
+      await fetchPageData({
+        path: requestedPathname,
+        shouldLogFetchTime: true,
+      });
       const loggerCall = loggerMock.info.mock.calls[1];
-
-      await fetchPageData({ path: requestedPathname });
 
       expect(loggerCall[0]).toBe('data_fetch_response_time');
       expect(typeof loggerCall[1].nanoseconds).toBe('number');
