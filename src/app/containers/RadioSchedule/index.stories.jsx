@@ -10,6 +10,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { getLocalRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 // Currently, only these services have radio schedule data
 const radioServices = {
@@ -36,7 +37,7 @@ const renderRadioScheduleContainer = service => (
     <ToggleContextProvider>
       <RequestContextProvider
         isAmp={false}
-        pageType="frontPage"
+        pageType={FRONT_PAGE}
         service={service}
         pathname={`/${service}`}
       >

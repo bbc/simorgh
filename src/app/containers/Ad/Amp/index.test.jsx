@@ -5,6 +5,7 @@ import AmpAd, { AMP_ACCESS_FETCH } from './index';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const adJsonAttributes = slotType => ({
   targeting: {
@@ -18,7 +19,7 @@ const adWithContext = (slotType, toggleContext) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     isAmp
-    pageType="frontPage"
+    pageType={FRONT_PAGE}
     service="afrique"
     pathname="/"
   >

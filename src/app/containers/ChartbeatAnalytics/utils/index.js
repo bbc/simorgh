@@ -4,7 +4,7 @@ import onClient from '#lib/utilities/onClient';
 import { getPromoHeadline } from '#lib/analyticsUtils/article';
 import { getPageTitle } from '#lib/analyticsUtils/indexPage';
 import { getReferrer } from '#lib/analyticsUtils';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const ID_COOKIE = 'ckns_sylphid';
 
@@ -26,7 +26,7 @@ export const getSylphidCookie = () =>
 
 export const getType = (pageType, shorthand = false) => {
   switch (pageType) {
-    case 'frontPage':
+    case FRONT_PAGE:
     case 'IDX':
     case 'index':
       return shorthand ? 'IDX' : 'Index';
@@ -106,7 +106,7 @@ export const buildSections = ({
 
 export const getTitle = ({ pageType, pageData, brandName, title }) => {
   switch (pageType) {
-    case 'frontPage':
+    case FRONT_PAGE:
     case 'IDX':
     case 'index':
       return getPageTitle(pageData, brandName);

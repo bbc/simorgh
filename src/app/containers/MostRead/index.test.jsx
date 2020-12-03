@@ -9,6 +9,7 @@ import pidginMostReadData from '#data/pidgin/mostRead';
 import serbianLatMostReadData from '#data/serbian/mostRead/lat';
 import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 import MostReadContainer from '.';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 /* eslint-disable react/prop-types */
 const MostReadWithContext = ({
@@ -28,7 +29,7 @@ const MostReadWithContext = ({
     <RequestContextProvider
       bbcOrigin={`http://localhost:7080/${service}`}
       isAmp={isAmp}
-      pageType="frontPage"
+      pageType={FRONT_PAGE}
       service={service}
       statusCode={200}
       pathname={`/${service}`}

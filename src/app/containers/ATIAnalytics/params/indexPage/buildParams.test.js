@@ -1,5 +1,6 @@
 import { buildIndexPageATIParams, buildIndexPageATIUrl } from './buildParams';
 import * as analyticsUtils from '#lib/analyticsUtils';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
@@ -121,7 +122,7 @@ describe('indexPage buildParams', () => {
       it('should return the right object', () => {
         const result = buildIndexPageATIParams(
           frontPage,
-          { ...requestContext, pageType: 'frontPage' },
+          { ...requestContext, pageType: FRONT_PAGE },
           serviceContext,
         );
         const validFrontPageURLParams = {
@@ -138,7 +139,7 @@ describe('indexPage buildParams', () => {
       it('should return the right url', () => {
         const result = buildIndexPageATIUrl(
           frontPage,
-          { ...requestContext, pageType: 'frontPage' },
+          { ...requestContext, pageType: FRONT_PAGE },
           serviceContext,
         );
         expect(result).toMatchInlineSnapshot(
