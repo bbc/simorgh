@@ -11,6 +11,7 @@ import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandTV/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
+import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 const OnDemandTvPage = withMediaError(_OnDemandTvPage);
 
@@ -28,7 +29,7 @@ const Page = ({ pageData, service, isAmp = false }) => (
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"
           isAmp={isAmp}
-          pageType="media"
+          pageType={MEDIA_PAGE}
           pathname="/pathname"
           service={service}
           statusCode={200}
