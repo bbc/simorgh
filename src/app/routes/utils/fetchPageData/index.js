@@ -1,4 +1,3 @@
-import is from 'ramda/src/is';
 import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
 import {
