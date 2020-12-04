@@ -27,7 +27,9 @@ const WithLoading = Component => {
     useEffect(() => {
       if (loading) {
         timeout = setTimeout(() => {
-          if (['article', 'MAP', 'STY'].includes(pageType)) {
+          if (
+            ['article', 'map', 'cps', 'sty'].includes(pageType.toLowerCase())
+          ) {
             setShowSkeleton(true);
           }
           if (loadingMessageRef.current) {
