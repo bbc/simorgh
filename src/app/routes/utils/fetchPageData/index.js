@@ -1,6 +1,7 @@
 import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
 import {
+  DATA_FETCH_RESPONSE_TIME,
   DATA_REQUEST_RECEIVED,
   DATA_NOT_FOUND,
   DATA_FETCH_ERROR,
@@ -12,6 +13,7 @@ import {
 } from '#lib/statusCodes.const';
 import getErrorStatusCode from './utils/getErrorStatusCode';
 import { PRIMARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
+import onClient from '#lib/utilities/onClient';
 import getUrl from './utils/getUrl';
 
 const logger = nodeLogger(__filename);
@@ -25,7 +27,12 @@ const logger = nodeLogger(__filename);
  * Timeout values here: https://github.com/bbc/simorgh/blob/latest/src/app/lib/utilities/getFetchTimeouts/index.js
  * @param {...string} loggerArgs Additional arguments for richer logging.
  */
-const fetchPageData = async ({ path, timeout, ...loggerArgs }) => {
+const fetchPageData = async ({
+  path,
+  timeout,
+  shouldLogFetchTime = !onClient(),
+  ...loggerArgs
+}) => {
   const url = path.startsWith('http') ? path : getUrl(path);
   const effectiveTimeout = timeout || PRIMARY_DATA_TIMEOUT;
 
@@ -35,9 +42,22 @@ const fetchPageData = async ({ path, timeout, ...loggerArgs }) => {
     ...loggerArgs,
   });
 
+  const canDetermineFetchTime = process && typeof process.hrtime === 'function';
+
   try {
+    const startHrTime = canDetermineFetchTime ? process.hrtime() : [0, 0];
     const response = await fetch(url, { timeout: effectiveTimeout });
     const { status } = response;
+
+    if (shouldLogFetchTime && canDetermineFetchTime) {
+      const NS_PER_SEC = 1e9;
+      const elapsedHrTime = process.hrtime(startHrTime);
+      logger.info(DATA_FETCH_RESPONSE_TIME, {
+        path,
+        status,
+        nanoseconds: elapsedHrTime[0] * NS_PER_SEC + elapsedHrTime[1],
+      });
+    }
 
     if (status === OK) {
       const json = await response.json();
