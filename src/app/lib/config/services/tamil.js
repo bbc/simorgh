@@ -267,7 +267,7 @@ export const service = {
       },
       {
         title: 'உலகம்',
-        url: '/tamil/global',
+        url: '/tamil/topics/c40379e2n2zt',
       },
       {
         title: 'இந்தியா',
@@ -283,7 +283,7 @@ export const service = {
       },
       {
         title: 'அறிவியல்',
-        url: '/tamil/science',
+        url: '/tamil/topics/c9wpm0exkdpt',
       },
       {
         title: 'சினிமா',

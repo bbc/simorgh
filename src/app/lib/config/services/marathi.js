@@ -259,7 +259,7 @@ export const service = {
       },
       {
         title: 'आंतरराष्ट्रीय',
-        url: '/marathi/international',
+        url: '/marathi/topics/c719d2enyn3t',
       },
       {
         title: 'व्हीडिओ',
