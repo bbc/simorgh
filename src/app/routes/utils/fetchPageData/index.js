@@ -43,21 +43,11 @@ const fetchPageData = async ({
   });
 
   const canDetermineFetchTime = process && typeof process.hrtime === 'function';
+  const startHrTime = canDetermineFetchTime ? process.hrtime() : [0, 0];
 
   try {
-    const startHrTime = canDetermineFetchTime ? process.hrtime() : [0, 0];
     const response = await fetch(url, { timeout: effectiveTimeout });
     const { status } = response;
-
-    if (shouldLogFetchTime && canDetermineFetchTime) {
-      const NS_PER_SEC = 1e9;
-      const elapsedHrTime = process.hrtime(startHrTime);
-      logger.info(DATA_FETCH_RESPONSE_TIME, {
-        path,
-        status,
-        nanoseconds: elapsedHrTime[0] * NS_PER_SEC + elapsedHrTime[1],
-      });
-    }
 
     if (status === OK) {
       const json = await response.json();
@@ -86,6 +76,16 @@ const fetchPageData = async ({
       simorghError.status = status;
     } else {
       simorghError.status = getErrorStatusCode();
+    }
+
+    if (shouldLogFetchTime && canDetermineFetchTime) {
+      const NS_PER_SEC = 1e9;
+      const elapsedHrTime = process.hrtime(startHrTime);
+      logger.info(DATA_FETCH_RESPONSE_TIME, {
+        path,
+        status,
+        nanoseconds: elapsedHrTime[0] * NS_PER_SEC + elapsedHrTime[1],
+      });
     }
 
     logger.error(DATA_FETCH_ERROR, {
