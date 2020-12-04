@@ -19,7 +19,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
           class="css-1jc9b24-FlexRow emotion-1"
         >
           <span
-            class="css-123k1wu-Title emotion-0"
+            class="css-64kqar-Title emotion-0"
             dir="rtl"
             id="Radio-Schedule"
           >
@@ -72,11 +72,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             </span>
             <span
               aria-hidden="true"
-              class="css-vkmtkp-StyledTimestamp emotion-9"
+              class="css-1aa6amh-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="css-1hu5ux-StyledTimestamp emotion-8"
+                class="css-134g7k8-StyledTimestamp emotion-8"
                 datetime="2020-03-26"
               >
                 02:59
@@ -91,7 +91,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="css-pyydww-StyledH3 emotion-15"
+              class="css-1qlnlhe-StyledH3 emotion-15"
             >
               <a
                 class="css-1r6cesg-Link-StyledLink emotion-14"
@@ -109,7 +109,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                     , 
                   </span>
                   <span
-                    class="css-pxqqm2-TitleWrapper emotion-13"
+                    class="css-12bvx0u-TitleWrapper emotion-13"
                   >
                     26 مارس/ آذار 2020
                   </span>
@@ -117,13 +117,13 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               </a>
             </h3>
             <p
-              class="css-2ktk77-SummaryWrapper emotion-16"
+              class="css-10addoo-SummaryWrapper emotion-16"
             >
               الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
             </p>
           </div>
           <div
-            class="css-1l8iqzu-ButtonWrapper emotion-22"
+            class="css-19a95nl-ButtonWrapper emotion-22"
           >
             <span
               class="css-1smn0bu-IconWrapper emotion-19"
@@ -197,11 +197,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             </span>
             <span
               aria-hidden="true"
-              class="css-vkmtkp-StyledTimestamp emotion-9"
+              class="css-1aa6amh-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="css-1hu5ux-StyledTimestamp emotion-8"
+                class="css-134g7k8-StyledTimestamp emotion-8"
                 datetime="2020-03-26"
               >
                 02:30
@@ -216,7 +216,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="css-pyydww-StyledH3 emotion-15"
+              class="css-1qlnlhe-StyledH3 emotion-15"
             >
               <a
                 class="css-1r6cesg-Link-StyledLink emotion-14"
@@ -234,7 +234,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                     , 
                   </span>
                   <span
-                    class="css-pxqqm2-TitleWrapper emotion-13"
+                    class="css-12bvx0u-TitleWrapper emotion-13"
                   >
                     26 مارس/ آذار 2020
                   </span>
@@ -242,13 +242,13 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               </a>
             </h3>
             <p
-              class="css-2ktk77-SummaryWrapper emotion-16"
+              class="css-10addoo-SummaryWrapper emotion-16"
             >
               نشرة موجزة في دقيقتين لأهم الأنباء الأقليمية والدولية
             </p>
           </div>
           <div
-            class="css-1l8iqzu-ButtonWrapper emotion-22"
+            class="css-19a95nl-ButtonWrapper emotion-22"
           >
             <span
               class="css-1smn0bu-IconWrapper emotion-19"
@@ -322,11 +322,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             </span>
             <span
               aria-hidden="true"
-              class="css-vkmtkp-StyledTimestamp emotion-9"
+              class="css-1aa6amh-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="css-1hu5ux-StyledTimestamp emotion-8"
+                class="css-134g7k8-StyledTimestamp emotion-8"
                 datetime="2020-03-26"
               >
                 02:00
@@ -341,7 +341,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="css-pyydww-StyledH3 emotion-15"
+              class="css-1qlnlhe-StyledH3 emotion-15"
             >
               <a
                 class="css-1r6cesg-Link-StyledLink emotion-14"
@@ -359,7 +359,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                     , 
                   </span>
                   <span
-                    class="css-pxqqm2-TitleWrapper emotion-13"
+                    class="css-12bvx0u-TitleWrapper emotion-13"
                   >
                     26 مارس/ آذار 2020
                   </span>
@@ -367,13 +367,13 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               </a>
             </h3>
             <p
-              class="css-2ktk77-SummaryWrapper emotion-16"
+              class="css-10addoo-SummaryWrapper emotion-16"
             >
               نشرة اخبارية على رأس الساعة تركز على أهم أخبار المنطقة والعالم وتتضمن تصريحات المسؤولين وإفادات مراسلينا
             </p>
           </div>
           <div
-            class="css-1l8iqzu-ButtonWrapper emotion-22"
+            class="css-19a95nl-ButtonWrapper emotion-22"
           >
             <span
               class="css-1smn0bu-IconWrapper emotion-19"
@@ -447,11 +447,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             </span>
             <span
               aria-hidden="true"
-              class="css-vkmtkp-StyledTimestamp emotion-9"
+              class="css-1aa6amh-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="css-1hu5ux-StyledTimestamp emotion-8"
+                class="css-134g7k8-StyledTimestamp emotion-8"
                 datetime="2030-01-01"
               >
                 09:00
@@ -466,13 +466,13 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="css-1r3ab2k-StyledH3 emotion-15"
+              class="css-9inbco-StyledH3 emotion-15"
             >
               <span
                 role="text"
               >
                 <span
-                  class="css-1krxifz-NextLabel emotion-72"
+                  class="css-1bqrza7-NextLabel emotion-72"
                   dir="rtl"
                 >
                   لاحق 
@@ -486,20 +486,20 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                   , 
                 </span>
                 <span
-                  class="css-185hclu-TitleWrapper emotion-13"
+                  class="css-1jtgrwj-TitleWrapper emotion-13"
                 >
                   1 يناير/ كانون الثاني 2030
                 </span>
               </span>
             </h3>
             <p
-              class="css-2ktk77-SummaryWrapper emotion-16"
+              class="css-10addoo-SummaryWrapper emotion-16"
             >
               الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
             </p>
           </div>
           <div
-            class="css-1o7bjub-ButtonWrapper emotion-22"
+            class="css-bv6aa2-ButtonWrapper emotion-22"
           >
             <span
               class="css-1soil44-IconWrapper emotion-19"
@@ -541,7 +541,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
       </li>
     </div>
     <a
-      class="css-1e70u3e-RadioFrequencyLink emotion-88"
+      class="css-ab4jf4-RadioFrequencyLink emotion-88"
       href="/arabic/institutional/2011/01/000000_frequencies_radio"
     >
       استقبال البث
@@ -569,7 +569,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
           class="css-1jc9b24-FlexRow emotion-1"
         >
           <span
-            class="css-123k1wu-Title emotion-0"
+            class="css-64kqar-Title emotion-0"
             dir="rtl"
             id="Radio-Schedule"
           >
@@ -622,11 +622,11 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             </span>
             <span
               aria-hidden="true"
-              class="css-vkmtkp-StyledTimestamp emotion-9"
+              class="css-1aa6amh-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="css-1hu5ux-StyledTimestamp emotion-8"
+                class="css-134g7k8-StyledTimestamp emotion-8"
                 datetime="2020-03-26"
               >
                 02:59
@@ -641,7 +641,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="css-pyydww-StyledH3 emotion-15"
+              class="css-1qlnlhe-StyledH3 emotion-15"
             >
               <a
                 class="css-1r6cesg-Link-StyledLink emotion-14"
@@ -659,7 +659,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                     , 
                   </span>
                   <span
-                    class="css-pxqqm2-TitleWrapper emotion-13"
+                    class="css-12bvx0u-TitleWrapper emotion-13"
                   >
                     26 مارس/ آذار 2020
                   </span>
@@ -667,13 +667,13 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               </a>
             </h3>
             <p
-              class="css-2ktk77-SummaryWrapper emotion-16"
+              class="css-10addoo-SummaryWrapper emotion-16"
             >
               الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
             </p>
           </div>
           <div
-            class="css-1l8iqzu-ButtonWrapper emotion-22"
+            class="css-19a95nl-ButtonWrapper emotion-22"
           >
             <span
               class="css-1smn0bu-IconWrapper emotion-19"
@@ -747,11 +747,11 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             </span>
             <span
               aria-hidden="true"
-              class="css-vkmtkp-StyledTimestamp emotion-9"
+              class="css-1aa6amh-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="css-1hu5ux-StyledTimestamp emotion-8"
+                class="css-134g7k8-StyledTimestamp emotion-8"
                 datetime="2020-03-26"
               >
                 02:30
@@ -766,7 +766,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="css-pyydww-StyledH3 emotion-15"
+              class="css-1qlnlhe-StyledH3 emotion-15"
             >
               <a
                 class="css-1r6cesg-Link-StyledLink emotion-14"
@@ -784,7 +784,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                     , 
                   </span>
                   <span
-                    class="css-pxqqm2-TitleWrapper emotion-13"
+                    class="css-12bvx0u-TitleWrapper emotion-13"
                   >
                     26 مارس/ آذار 2020
                   </span>
@@ -792,13 +792,13 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               </a>
             </h3>
             <p
-              class="css-2ktk77-SummaryWrapper emotion-16"
+              class="css-10addoo-SummaryWrapper emotion-16"
             >
               نشرة موجزة في دقيقتين لأهم الأنباء الأقليمية والدولية
             </p>
           </div>
           <div
-            class="css-1l8iqzu-ButtonWrapper emotion-22"
+            class="css-19a95nl-ButtonWrapper emotion-22"
           >
             <span
               class="css-1smn0bu-IconWrapper emotion-19"
@@ -872,11 +872,11 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             </span>
             <span
               aria-hidden="true"
-              class="css-vkmtkp-StyledTimestamp emotion-9"
+              class="css-1aa6amh-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="css-1hu5ux-StyledTimestamp emotion-8"
+                class="css-134g7k8-StyledTimestamp emotion-8"
                 datetime="2020-03-26"
               >
                 02:00
@@ -891,7 +891,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="css-pyydww-StyledH3 emotion-15"
+              class="css-1qlnlhe-StyledH3 emotion-15"
             >
               <a
                 class="css-1r6cesg-Link-StyledLink emotion-14"
@@ -909,7 +909,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                     , 
                   </span>
                   <span
-                    class="css-pxqqm2-TitleWrapper emotion-13"
+                    class="css-12bvx0u-TitleWrapper emotion-13"
                   >
                     26 مارس/ آذار 2020
                   </span>
@@ -917,13 +917,13 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               </a>
             </h3>
             <p
-              class="css-2ktk77-SummaryWrapper emotion-16"
+              class="css-10addoo-SummaryWrapper emotion-16"
             >
               نشرة اخبارية على رأس الساعة تركز على أهم أخبار المنطقة والعالم وتتضمن تصريحات المسؤولين وإفادات مراسلينا
             </p>
           </div>
           <div
-            class="css-1l8iqzu-ButtonWrapper emotion-22"
+            class="css-19a95nl-ButtonWrapper emotion-22"
           >
             <span
               class="css-1smn0bu-IconWrapper emotion-19"
@@ -997,11 +997,11 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             </span>
             <span
               aria-hidden="true"
-              class="css-vkmtkp-StyledTimestamp emotion-9"
+              class="css-1aa6amh-StyledTimestamp emotion-9"
               dir="rtl"
             >
               <time
-                class="css-1hu5ux-StyledTimestamp emotion-8"
+                class="css-134g7k8-StyledTimestamp emotion-8"
                 datetime="2030-01-01"
               >
                 09:00
@@ -1016,13 +1016,13 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             class="css-ed441g-TextWrapper emotion-17"
           >
             <h3
-              class="css-1r3ab2k-StyledH3 emotion-15"
+              class="css-9inbco-StyledH3 emotion-15"
             >
               <span
                 role="text"
               >
                 <span
-                  class="css-1krxifz-NextLabel emotion-72"
+                  class="css-1bqrza7-NextLabel emotion-72"
                   dir="rtl"
                 >
                   لاحق 
@@ -1036,20 +1036,20 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                   , 
                 </span>
                 <span
-                  class="css-185hclu-TitleWrapper emotion-13"
+                  class="css-1jtgrwj-TitleWrapper emotion-13"
                 >
                   1 يناير/ كانون الثاني 2030
                 </span>
               </span>
             </h3>
             <p
-              class="css-2ktk77-SummaryWrapper emotion-16"
+              class="css-10addoo-SummaryWrapper emotion-16"
             >
               الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
             </p>
           </div>
           <div
-            class="css-1o7bjub-ButtonWrapper emotion-22"
+            class="css-bv6aa2-ButtonWrapper emotion-22"
           >
             <span
               class="css-1soil44-IconWrapper emotion-19"
@@ -1091,7 +1091,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
       </li>
     </div>
     <a
-      class="css-1e70u3e-RadioFrequencyLink emotion-88"
+      class="css-ab4jf4-RadioFrequencyLink emotion-88"
       href="/arabic/institutional/2011/01/000000_frequencies_radio"
     >
       استقبال البث

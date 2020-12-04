@@ -297,13 +297,6 @@ Object {
 }
 `;
 
-exports[`AMP Most Read Page Header Navigation link should match text and url 14`] = `
-Object {
-  "text": "BBC Extra",
-  "url": "/mundo/noticias-48908206",
-}
-`;
-
 exports[`AMP Most Read Page I can see the headline 1`] = `"Más leídas"`;
 
 exports[`AMP Most Read Page I can see the list items 1`] = `"1Cómo es posible que Uber sobreviva con pérdidas de US$1.200 millones y sin nunca haber obtenido beneficiosÚltima actualización: 6 noviembre 2019"`;
