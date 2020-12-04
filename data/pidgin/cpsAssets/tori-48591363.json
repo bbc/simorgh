@@ -1,0 +1,180 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:pidgin/tori-48591363",
+    "locators": {
+      "assetUri": "/pidgin/tori-48591363",
+      "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48591363",
+      "curie": "http://www.bbc.co.uk/asset/5c4c246e-5541-9343-888b-dffb06c95ad6",
+      "assetId": "48591363"
+    },
+    "type": "MAP",
+    "createdBy": "pidgin-v6",
+    "language": "pcm",
+    "lastUpdated": 1606751250993,
+    "firstPublished": 1560233406000,
+    "lastPublished": 1560233406000,
+    "timestamp": 1560233406000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "pidgin.news.media_asset.48591363.page",
+      "cps_asset_id": "48591363"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "PIDGIN",
+      "producerId": "70"
+    },
+    "readTime": 1,
+    "siteUri": "/pidgin"
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07csxg6",
+        "subType": "clip",
+        "format": "video",
+        "title": "“If di spoon attract me, most times na to carry am enta studio” – Collins",
+        "synopses": {
+          "short": "“If di spoon attract me, most times na to carry am enta studio” – Collins",
+          "long": "Almost every wia pesin turn you go see art of different kinds but dis one get as e be, unto say na spoon dis pesin take dey do im own work.\n\nAbiniro Collins na Artist for Lagos, south west Nigeria, wey no dey use eye see spoon.\n\nCollins tok say na wen im dey school di idea come, as im bin dey find sometin wey pipo neva too use do art work \n\nCollins say im dream na to create place wey young artists for Nigeria go fit go to get mentor for dia work.\n\nProducers: Usifo Omozokpea & Sarah Tiamiyu",
+          "medium": "Dis artist no dey take eye see spoon, as no be to chop food be di only tin him dey use am do."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07csxwm.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "“If di spoon attract me, most times na to carry am enta studio” – Collins",
+        "versions": [
+          {
+            "versionId": "p07csxg8",
+            "types": ["Original"],
+            "duration": 111,
+            "durationISO8601": "PT1M51S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
+            },
+            "availableFrom": 1560232614000
+          }
+        ],
+        "smpKind": "programme",
+        "type": "media"
+      },
+      {
+        "text": "Almost every wia pesin turn you go see art of different kinds but dis one get as e be, unto say na spoon dis pesin take dey do im own work.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Abiniro Collins na Artist for Lagos, south west Nigeria, wey no dey use eye see spoon.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Collins tok say na wen im dey school di idea come, as im bin dey find sometin wey pipo neva too use do art work ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Collins say im dream na to create place wey young artists for Nigeria go fit go to get mentor for dia work.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<italic>Producers: Usifo Omozokpea &amp; Sarah Tiamiyu</italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "“If di spoon attract me, most times na to carry am enta studio” – Collins",
+      "headline": "“If di spoon attract me, most times na to carry am enta studio” – Collins"
+    },
+    "locators": {
+      "assetUri": "/pidgin/tori-48591363",
+      "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48591363",
+      "curie": "http://www.bbc.co.uk/asset/5c4c246e-5541-9343-888b-dffb06c95ad6",
+      "assetId": "48591363"
+    },
+    "summary": "Dis artist no dey take eye see spoon, as no be to chop food be di only tin him dey use am do.",
+    "timestamp": 1560233406000,
+    "language": "pcm",
+    "media": {
+      "id": "p07csxg6",
+      "subType": "clip",
+      "format": "video",
+      "title": "“If di spoon attract me, most times na to carry am enta studio” – Collins",
+      "synopses": {
+        "short": "“If di spoon attract me, most times na to carry am enta studio” – Collins",
+        "long": "Almost every wia pesin turn you go see art of different kinds but dis one get as e be, unto say na spoon dis pesin take dey do im own work.\n\nAbiniro Collins na Artist for Lagos, south west Nigeria, wey no dey use eye see spoon.\n\nCollins tok say na wen im dey school di idea come, as im bin dey find sometin wey pipo neva too use do art work \n\nCollins say im dream na to create place wey young artists for Nigeria go fit go to get mentor for dia work.\n\nProducers: Usifo Omozokpea & Sarah Tiamiyu",
+        "medium": "Dis artist no dey take eye see spoon, as no be to chop food be di only tin him dey use am do."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07csxwm.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "“If di spoon attract me, most times na to carry am enta studio” – Collins",
+      "versions": [
+        {
+          "versionId": "p07csxg8",
+          "types": ["Original"],
+          "duration": 111,
+          "durationISO8601": "PT1M51S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1560232614000
+        }
+      ],
+      "smpKind": "programme",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "107329096",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/10DE4/production/_107329096_p07csxwm.jpg",
+      "path": "/cpsprodpb/10DE4/production/_107329096_p07csxwm.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Abiniro Collins na spoon artist",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:pidgin/tori-48591363",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Tori",
+      "uri": "/pidgin/tori",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Pidgin",
+      "uri": "/pidgin",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
