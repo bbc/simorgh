@@ -3,6 +3,8 @@ import { render, act } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import WithLoading from '.';
 
+global.scrollTo = jest.fn();
+
 const wait = duration =>
   new Promise(resolve => {
     setTimeout(resolve, duration);
@@ -26,8 +28,26 @@ describe('withLoading HOC', () => {
     );
   });
 
-  describe(`and the loading indicator`, () => {
-    it(`should not show the loading indicator before a set amount of time`, async () => {
+  describe(`and visually hidden loading message`, () => {
+    it(`should render a visually hidden loading message`, async () => {
+      const { queryByTestId } = render(<LoadingHOC loading />);
+
+      expect(queryByTestId('loading-message')).toBeInTheDocument();
+    });
+
+    it(`should focus on the visually hidden loading message after a set amount of time`, async () => {
+      let queryByTestId;
+
+      await act(async () => {
+        ({ queryByTestId } = render(<LoadingHOC loading />));
+
+        await wait(600);
+      });
+
+      expect(queryByTestId('loading-message')).toHaveFocus();
+    });
+
+    it(`should not focus on the visually hidden loading message before a set amount of time`, async () => {
       let queryByTestId;
 
       await act(async () => {
@@ -36,31 +56,7 @@ describe('withLoading HOC', () => {
         await wait(400);
       });
 
-      expect(queryByTestId('loading')).not.toBeInTheDocument();
-    });
-
-    it(`should show the loading indicator after a set amount of time`, async () => {
-      let queryByTestId;
-
-      await act(async () => {
-        ({ queryByTestId } = render(<LoadingHOC loading />));
-
-        await wait(600);
-      });
-
-      expect(queryByTestId('loading')).toBeInTheDocument();
-    });
-
-    it(`should not show the loading indicator if loading is false (even after a set amount of time)`, async () => {
-      let queryByTestId;
-
-      await act(async () => {
-        ({ queryByTestId } = render(<LoadingHOC loading={false} />));
-
-        await wait(600);
-      });
-
-      expect(queryByTestId('loading')).not.toBeInTheDocument();
+      expect(queryByTestId('loading-message')).not.toHaveFocus();
     });
   });
 });

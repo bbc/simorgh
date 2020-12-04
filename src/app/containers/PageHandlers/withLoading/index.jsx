@@ -1,23 +1,35 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { bool, element } from 'prop-types';
 import styled from '@emotion/styled';
-import { GridWrapper, GridItemMedium } from '#app/components/Grid';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+
+import { GridWrapper, GridItemLarge } from '#app/components/Grid';
 
 let timeout;
 const LoadingMain = styled.main`
   min-height: 100vh;
 `;
+const LoadingMessageWrapper = styled.div`
+  outline: 0;
+`;
 
 const WithLoading = Component => {
   const LoadingContainer = ({ loading, ...props }) => {
-    const [showLoading, setShowLoading] = useState(false);
+    const loadingMessageRef = useRef();
+
     useEffect(() => {
       if (loading) {
         timeout = setTimeout(() => {
-          setShowLoading(true);
+          if (loadingMessageRef.current) {
+            loadingMessageRef.current.focus();
+            window.scrollTo(0, 0);
+          }
         }, 500);
       }
-      return () => clearTimeout(timeout);
+
+      return () => {
+        clearTimeout(timeout);
+      };
     }, [loading]);
 
     if (!loading) return <Component {...props} />;
@@ -25,9 +37,15 @@ const WithLoading = Component => {
     return (
       <LoadingMain role="main">
         <GridWrapper>
-          <GridItemMedium>
-            {showLoading && <div data-testid="loading" />}
-          </GridItemMedium>
+          <GridItemLarge>
+            <LoadingMessageWrapper
+              tabIndex="-1"
+              ref={loadingMessageRef}
+              data-testid="loading-message"
+            >
+              <VisuallyHiddenText>Loading next page.</VisuallyHiddenText>
+            </LoadingMessageWrapper>
+          </GridItemLarge>
         </GridWrapper>
       </LoadingMain>
     );
