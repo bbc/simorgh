@@ -46,6 +46,17 @@ describe('fetchPageData', () => {
         requestOrigin,
       });
     });
+
+    it('should log data fetch response time on server', async () => {
+      await fetchPageData({
+        path: requestedPathname,
+        shouldLogFetchTime: true,
+      });
+      const loggerCall = loggerMock.info.mock.calls[1];
+
+      expect(loggerCall[0]).toBe('data_fetch_response_time');
+      expect(typeof loggerCall[1].nanoseconds).toBe('number');
+    });
   });
 
   describe('Successful fetch', () => {
@@ -268,7 +279,6 @@ describe('fetchPageData', () => {
 
     it('should log, and propogate the status code as 502', async () => {
       fetch.mockResponse('Internal server error', { status: 500 });
-
       return fetchPageData({ path: requestedPathname, pageType }).catch(
         ({ message, status }) => {
           expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
