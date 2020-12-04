@@ -168,9 +168,9 @@ export const service = {
         watch: 'பார்க்க',
         liveLabel: 'நேரலை',
         nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        previousRadioShow: 'முந்தைய வானொலி நிகழ்ச்சி',
+        nextRadioShow: 'அடுத்த வானொலி நிகழ்ச்சி',
+        duration: 'கால அளவு',
         recentEpisodes: 'முந்தைய நிகழ்ச்சிகள்',
       },
       socialEmbed: {

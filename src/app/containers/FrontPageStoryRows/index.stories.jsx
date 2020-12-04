@@ -7,6 +7,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { topStoryColumns } from './storyColumns';
 import { TopRow, LeadingRow, RegularRow } from '.';
 import getNumberPromoFixtures from './testHelpers';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 // eslint-disable-next-line react/prop-types
 const TopRowStory = ({ dir, displayImages }) => (
@@ -43,7 +44,7 @@ const getRow = (RowType, dir = 'ltr', displayImages = true) => {
         id="c0000000000o"
         isAmp={false}
         pathname="/pathname"
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         service="news"
       >
         <Grid enableGelGutters columns={topStoryColumns}>

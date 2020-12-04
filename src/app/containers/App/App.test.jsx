@@ -4,6 +4,7 @@ import { render, act } from '@testing-library/react';
 import { App } from './App';
 import getToggles from '#app/lib/utilities/getToggles';
 import routes from '#app/routes';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 jest.mock('react-router-config');
 jest.mock('#app/lib/utilities/getToggles');
@@ -28,7 +29,7 @@ describe('App', () => {
 
   const route = {
     getInitialData: jest.fn().mockResolvedValue({}),
-    pageType: 'article',
+    pageType: ARTICLE_PAGE,
   };
 
   reactRouterConfig.matchRoutes.mockReturnValue([{ route, match }]);

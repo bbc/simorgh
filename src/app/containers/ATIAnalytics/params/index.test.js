@@ -1,5 +1,6 @@
 import { buildATIUrl, buildATIClickParams } from '.';
 import * as analyticsUtils from '#lib/analyticsUtils';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
@@ -151,7 +152,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right article url', () => {
       const url = buildATIUrl(
         article,
-        { ...requestContext, pageType: 'article' },
+        { ...requestContext, pageType: ARTICLE_PAGE },
         serviceContext,
       );
       expect(url).toMatchInlineSnapshot(
@@ -217,7 +218,7 @@ describe('ATIAnalytics params', () => {
     it('should have both ref parameter and x6 referrer url parameter, if referrer url exists', () => {
       const atiUrl = buildATIUrl(
         article,
-        { ...requestContext, pageType: 'article' },
+        { ...requestContext, pageType: ARTICLE_PAGE },
         serviceContext,
       );
       const params = atiUrl.split('&');
@@ -229,7 +230,7 @@ describe('ATIAnalytics params', () => {
     it('should have ref parameter as the last parameter, if referrer url exists', () => {
       const atiUrl = buildATIUrl(
         article,
-        { ...requestContext, pageType: 'article' },
+        { ...requestContext, pageType: ARTICLE_PAGE },
         serviceContext,
       );
       const params = atiUrl.split('&');
@@ -240,7 +241,7 @@ describe('ATIAnalytics params', () => {
     it('should not have ref and x6 parameters, if referrer url does not exist', () => {
       const atiUrl = buildATIUrl(
         article,
-        { ...requestContext, pageType: 'article', previousPath: '' },
+        { ...requestContext, pageType: ARTICLE_PAGE, previousPath: '' },
         serviceContext,
       );
       const params = atiUrl.split('&');
@@ -254,7 +255,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right article params', () => {
       const params = buildATIClickParams(
         article,
-        { ...requestContext, pageType: 'article' },
+        { ...requestContext, pageType: ARTICLE_PAGE },
         serviceContext,
       );
       expect(params).toEqual({
