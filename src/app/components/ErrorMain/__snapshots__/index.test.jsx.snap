@@ -562,8 +562,8 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
 }
 
 .emotion-0 {
-  font-size: 1.5rem;
-  line-height: 1.875rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   color: #B80000;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -573,22 +573,22 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-0 {
-    font-size: 1.75rem;
-    line-height: 2.5rem;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-0 {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.75rem;
+    line-height: 2.375rem;
   }
 }
 
 .emotion-2 {
-  font-size: 2rem;
-  line-height: 2.625rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
@@ -597,22 +597,22 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-2 {
-    font-size: 2.375rem;
-    line-height: 2.875rem;
+    font-size: 1.75rem;
+    line-height: 2.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-2 {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
     line-height: 3.375rem;
   }
 }
 
 .emotion-4 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -623,15 +623,15 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
   }
 }
 
@@ -908,8 +908,8 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
 }
 
 .emotion-0 {
-  font-size: 1.5rem;
-  line-height: 1.875rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   color: #B80000;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -919,22 +919,22 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-0 {
-    font-size: 1.75rem;
-    line-height: 2.5rem;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-0 {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.75rem;
+    line-height: 2.375rem;
   }
 }
 
 .emotion-2 {
-  font-size: 2rem;
-  line-height: 2.625rem;
-  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
@@ -943,22 +943,22 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-2 {
-    font-size: 2.375rem;
-    line-height: 2.875rem;
+    font-size: 1.75rem;
+    line-height: 2.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-2 {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
     line-height: 3.375rem;
   }
 }
 
 .emotion-4 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -969,15 +969,15 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
   }
 }
 
@@ -1254,8 +1254,8 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
 }
 
 .emotion-0 {
-  font-size: 1.5rem;
-  line-height: 1.875rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   color: #B80000;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1265,22 +1265,22 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-0 {
-    font-size: 1.75rem;
-    line-height: 2.5rem;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-0 {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.75rem;
+    line-height: 2.375rem;
   }
 }
 
 .emotion-2 {
-  font-size: 2rem;
-  line-height: 2.625rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
@@ -1289,22 +1289,22 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-2 {
-    font-size: 2.375rem;
-    line-height: 2.875rem;
+    font-size: 1.75rem;
+    line-height: 2.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-2 {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
     line-height: 3.375rem;
   }
 }
 
 .emotion-4 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -1315,15 +1315,15 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
   }
 }
 
@@ -1600,8 +1600,8 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
 }
 
 .emotion-0 {
-  font-size: 1.5rem;
-  line-height: 1.875rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   color: #B80000;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1611,22 +1611,22 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-0 {
-    font-size: 1.75rem;
-    line-height: 2.5rem;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-0 {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.75rem;
+    line-height: 2.375rem;
   }
 }
 
 .emotion-2 {
-  font-size: 2rem;
-  line-height: 2.625rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
@@ -1635,22 +1635,22 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-2 {
-    font-size: 2.375rem;
-    line-height: 2.875rem;
+    font-size: 1.75rem;
+    line-height: 2.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-2 {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
     line-height: 3.375rem;
   }
 }
 
 .emotion-4 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -1661,15 +1661,15 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
   }
 }
 

@@ -4,6 +4,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ConsentBanner from '.';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const getConsentBanner = platform => (
   <ServiceContextProvider service="news">
@@ -12,7 +13,7 @@ const getConsentBanner = platform => (
       isUK
       isAmp={platform === 'amp'}
       origin="https://www.bbc.co.uk"
-      pageType="article"
+      pageType={ARTICLE_PAGE}
       id="c0000000000o"
       service="news"
       statsDestination="NEWS_PS_TEST"

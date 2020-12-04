@@ -1,6 +1,5 @@
 import React from 'react';
 import { node, string, shape } from 'prop-types';
-import { mount } from 'enzyme';
 import { render } from '@testing-library/react';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -11,6 +10,7 @@ import * as testUtils from './utils';
 import * as amp from './amp';
 import { localBaseUrl } from '../../../testHelpers/config';
 import frontPageData from '../../../../data/news/frontpage';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const defaultToggleState = {
   chartbeatAnalytics: {
@@ -90,7 +90,7 @@ describe('Charbeats Analytics Container', () => {
     const { container } = render(
       <ContextWrap
         platform="amp"
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         origin="bbc.com"
         toggleState={toggleState}
       >
@@ -118,7 +118,7 @@ describe('Charbeats Analytics Container', () => {
     const { container } = render(
       <ContextWrap
         platform="canonical"
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         origin="bbc.com"
         toggleState={toggleState}
       >
@@ -134,7 +134,7 @@ describe('Charbeats Analytics Container', () => {
     const { container } = render(
       <ContextWrap
         platform="canonical"
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         origin={localBaseUrl}
       >
         <ChartbeatAnalytics data={frontPageData} />
@@ -171,10 +171,10 @@ describe('Charbeats Analytics Container', () => {
 
     const mockGetConfig = jest.fn().mockReturnValue(expectedConfig);
     testUtils.getConfig = mockGetConfig;
-    mount(
+    render(
       <ContextWrap
         platform="canonical"
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         origin="test.bbc.com"
         toggleState={toggleState}
       >

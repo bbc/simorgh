@@ -3,6 +3,7 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import BannerText from './Text';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const bannerMessaging = {
   uk: {
@@ -34,7 +35,7 @@ const bannerTextWithContext = (message, topLevelDomain) => (
       bbcOrigin={`https://www.test.bbc.${topLevelDomain}`}
       id="c0000000000o"
       isAmp={false}
-      pageType="article"
+      pageType={ARTICLE_PAGE}
       service="news"
       statusCode={200}
       pathname="/pathname"
