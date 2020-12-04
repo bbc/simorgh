@@ -15,7 +15,7 @@ import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
-import injectCspHeader from './utilities/cspHeader';
+// import injectCspHeader from './utilities/cspHeader';
 import {
   SERVICE_WORKER_SENDFILE_ERROR,
   MANIFEST_SENDFILE_ERROR,
@@ -61,8 +61,8 @@ const skipMiddleware = (_req, _res, next) => {
   next();
 };
 
-const injectCspHeaderProdBuild =
-  process.env.NODE_ENV !== 'production' ? skipMiddleware : injectCspHeader;
+const injectCspHeaderProdBuild = skipMiddleware;
+// process.env.NODE_ENV !== 'production' ? skipMiddleware : injectCspHeader;
 
 server
   .disable('x-powered-by')

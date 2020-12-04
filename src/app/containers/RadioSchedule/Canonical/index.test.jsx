@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import fetchMock from 'fetch-mock';
 import { render, act } from '@testing-library/react';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
@@ -12,21 +13,23 @@ const endpoint = 'https://localhost/arabic/bbc_arabic_radio/schedule.json';
 
 /* eslint-disable react/prop-types */
 const RadioScheduleWithContext = ({ initialData, lang }) => (
-  <RequestContextProvider
-    isAmp={false}
-    pageType="frontPage"
-    service="arabic"
-    pathname="/arabic"
-    timeOnServer={Date.now()}
-  >
-    <ServiceContextProvider service="arabic">
-      <CanonicalRadioSchedule
-        initialData={initialData}
-        endpoint={endpoint}
-        lang={lang}
-      />
-    </ServiceContextProvider>
-  </RequestContextProvider>
+  <BrowserRouter>
+    <RequestContextProvider
+      isAmp={false}
+      pageType="frontPage"
+      service="arabic"
+      pathname="/arabic"
+      timeOnServer={Date.now()}
+    >
+      <ServiceContextProvider service="arabic">
+        <CanonicalRadioSchedule
+          initialData={initialData}
+          endpoint={endpoint}
+          lang={lang}
+        />
+      </ServiceContextProvider>
+    </RequestContextProvider>
+  </BrowserRouter>
 );
 
 describe('Canonical RadioSchedule', () => {

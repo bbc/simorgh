@@ -20,7 +20,7 @@ const getBaseUrl = origin => {
 
   /* TODO: Remove this from the PR prior to merging! */
   if (origin.includes('simorgh-infrastructure')) {
-    base = 'https://www.test.bbc';
+    base = 'http://www.bbc';
     tld = '.com';
   }
 

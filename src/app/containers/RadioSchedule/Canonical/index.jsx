@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import 'isomorphic-fetch';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
@@ -173,6 +174,8 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
           liveLabel={liveLabel}
           nextLabel={nextLabel}
           durationLabel={durationLabel}
+          linkComponent={Link}
+          linkComponentAttr="to"
         />
         {frequenciesPageUrl && (
           <RadioFrequencyLink

@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172x6djbb3rg44",
+    "locators": {
+      "pid": "w172x6djbb3rg44",
+      "brandPid": "p0340mwn"
+    },
+    "type": "WSRADIO",
+    "createdBy": "bbc_afrique_radio",
+    "language": "fr",
+    "lastUpdated": 1606989865069,
+    "firstPublished": 1585201856000,
+    "lastPublished": 1585201856000,
+    "timestamp": 1585201856000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "Reportage - BBC News Afrique",
+      "pageIdentifier": "afrique.bbc_afrique_radio.w172x6djbb3rg44.page",
+      "producerId": "3",
+      "contentType": "player-episode",
+      "producer": "AFRIQUE"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "Reportage",
+    "releaseDateTimeStamp": 1585180800000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w172x6djbb3rg44",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "26/03/2020 GMT",
+        "synopses": {
+          "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.",
+          "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+        "embedding": false,
+        "advertising": false,
+        "versions": [],
+        "availability": "notAvailable",
+        "smpKind": "radioProgramme",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Reportage"
+    },
+    "locators": {
+      "pid": "w172x6djbb3rg44",
+      "brandPid": "p0340mwn"
+    },
+    "media": {
+      "id": "w172x6djbb3rg44",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "26/03/2020 GMT",
+      "synopses": {
+        "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.",
+        "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+      "embedding": false,
+      "advertising": false,
+      "versions": [],
+      "availability": "notAvailable",
+      "smpKind": "radioProgramme",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1585180800000,
+    "brand": {
+      "pid": "p0340mwn",
+      "title": "Reportage"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172x6djbb3rg44",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Afrique",
+      "uri": "/afrique",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": []
+      }
+    ]
+  }
+}

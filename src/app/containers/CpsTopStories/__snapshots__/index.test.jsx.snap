@@ -209,15 +209,15 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 @media (min-width:37.5rem) {
   .emotion-40 {
-    padding: 1.5rem;
-    margin: 2rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 }
 
 @media (max-width:37.5rem) {
   .emotion-40 {
-    padding: 2rem;
-    margin: 1rem;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -873,15 +873,15 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 
 @media (min-width:37.5rem) {
   .emotion-26 {
-    padding: 1.5rem;
-    margin: 2rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 }
 
 @media (max-width:37.5rem) {
   .emotion-26 {
-    padding: 2rem;
-    margin: 1rem;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
