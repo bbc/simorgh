@@ -56,6 +56,7 @@ const fetchPageData = async ({
         path,
         status,
         nanoseconds: elapsedHrTime[0] * NS_PER_SEC + elapsedHrTime[1],
+        ...loggerArgs,
       });
     }
 

@@ -27,17 +27,23 @@ const pageTypeUrls = async (
           name: 'mostRead',
           path: getMostReadEndpoint({ service, variant }).replace('.json', ''),
           assetUri,
+          api: 'mostread',
+          apiContext: 'secondary_data'
         },
         {
           name: 'secondaryColumn',
           path: getSecondaryColumnUrl({ service, variant }),
           assetUri,
+          api: 'secondary_column',
+          apiContext: 'secondary_data'
         },
         (await hasRecommendations(service, variant, pageData))
           ? {
               name: 'recommendations',
               path: getRecommendationsUrl({ assetUri, variant }),
               assetUri,
+              api: 'recommendations',
+              apiContext: 'secondary_data'
             }
           : null,
       ].filter(i => i);
@@ -47,6 +53,8 @@ const pageTypeUrls = async (
           name: 'mostWatched',
           path: getMostWatchedEndpoint({ service, variant, env }),
           assetUri,
+          api: 'mostwatched',
+          apiContext: 'secondary_data'
         },
       ];
     default:
