@@ -27,11 +27,9 @@ const WithLoading = Component => {
     useEffect(() => {
       if (loading) {
         timeout = setTimeout(() => {
-          if (
-            ['article', 'map', 'cps', 'sty'].includes(pageType.toLowerCase())
-          ) {
-            setShowSkeleton(true);
-          }
+          // if (['article', 'MAP', 'STY', 'cpsAsset'].includes(pageType)) {
+          setShowSkeleton(true);
+          // }
           if (loadingMessageRef.current) {
             loadingMessageRef.current.focus();
             window.scrollTo(0, 0);
