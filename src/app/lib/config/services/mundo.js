@@ -288,10 +288,6 @@ export const service = {
         url: '/mundo/noticias-internacional-53826365',
       },
       {
-        title: '¿Hablas español?',
-        url: '/mundo/noticias-50160896',
-      },
-      {
         title: 'Hay Festival',
         url: '/mundo/noticias-36795069',
       },
