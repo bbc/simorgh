@@ -1,5 +1,7 @@
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+
 const getStatsPageIdentifier = ({ pageType, service, id }) => {
-  if (pageType === 'article') {
+  if (pageType === ARTICLE_PAGE) {
     return `${service}.articles.${id}.page`;
   }
   if (pageType === 'frontPage') {
