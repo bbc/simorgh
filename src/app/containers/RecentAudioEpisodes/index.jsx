@@ -70,7 +70,7 @@ const RecentAudioEpisodes = ({ episodes }) => {
   const audioLabel = pathOr('Audio', ['media', 'audio'], translations);
 
   return (
-    <Spacer role="complimentary">
+    <Spacer role="complimentary" aria-labelledby="recent-episodes">
       <StyledSectionLabel
         script={script}
         service={service}
@@ -114,18 +114,16 @@ const RecentAudioEpisodes = ({ episodes }) => {
                 </span>
               </EpisodeList.Metadata>
             </EpisodeList.Link>
-            <EpisodeList.Metadata>
-              {episode.episodeTitle && (
-                <>
-                  {' '}
-                  <StyledSpan aria-hidden>|</StyledSpan>
-                  {formattedTimestamp({
-                    timestamp: episode.timestamp,
-                    format: 'LL',
-                  })}
-                </>
-              )}
-            </EpisodeList.Metadata>
+            {episode.episodeTitle && (
+              <EpisodeList.Metadata>
+                {' '}
+                <StyledSpan aria-hidden>|</StyledSpan>
+                {formattedTimestamp({
+                  releaseDateTimeStamp: episode.timestamp,
+                  format: 'LL',
+                })}
+              </EpisodeList.Metadata>
+            )}
           </EpisodeList.Episode>
         ))}
       </EpisodeList>
