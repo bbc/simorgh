@@ -70,7 +70,7 @@ const RecentAudioEpisodes = ({ episodes }) => {
   const audioLabel = pathOr('Audio', ['media', 'audio'], translations);
 
   return (
-    <Spacer role="complimentary" aria-labelledby="recent-episodes">
+    <Spacer role="complimentary">
       <StyledSectionLabel
         script={script}
         service={service}
