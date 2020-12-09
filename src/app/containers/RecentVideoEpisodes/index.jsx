@@ -61,7 +61,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
   const videoLabel = pathOr('Video', ['media', 'video'], translations);
 
   return (
-    <>
+    <aside role="complimentary" aria-labelledby="recent-episodes">
       <StyledSectionLabel
         script={script}
         service={service}
@@ -110,7 +110,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
           </EpisodeList.Episode>
         ))}
       </EpisodeList>
-    </>
+    </aside>
   );
 };
 
