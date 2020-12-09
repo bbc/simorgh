@@ -52,9 +52,9 @@ const RecentAudioEpisodes = ({ episodes }) => {
 
   if (!episodes.length) return null;
 
-  const formattedTimestamp = ({ releaseDateTimeStamp, format }) =>
+  const formattedTimestamp = ({ timestamp, format }) =>
     formatUnixTimestamp({
-      timestamp: releaseDateTimeStamp,
+      timestamp,
       format,
       timezone,
       locale: datetimeLocale,
@@ -93,7 +93,7 @@ const RecentAudioEpisodes = ({ episodes }) => {
               <EpisodeList.Description className="episode-list__description--hover episode-list__description--visited">
                 {episode.episodeTitle ||
                   `${formattedTimestamp({
-                    releaseDateTimeStamp: episode.timestamp,
+                    timestamp: episode.timestamp,
                     format: 'LL',
                   })}`}
               </EpisodeList.Description>
@@ -120,7 +120,7 @@ const RecentAudioEpisodes = ({ episodes }) => {
                   {' '}
                   <StyledSpan aria-hidden>|</StyledSpan>
                   {formattedTimestamp({
-                    releaseDateTimeStamp: episode.timestamp,
+                    timestamp: episode.timestamp,
                     format: 'LL',
                   })}
                 </>
