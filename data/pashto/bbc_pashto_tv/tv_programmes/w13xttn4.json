@@ -133,14 +133,14 @@
               "headline": "نړۍ دا وخت"
             },
             "locators": {
-              "pid": "w172xcldhhr9tk7",
+              "pid": "w172xclqp0l3zkq",
               "brandPid": "w13xttn4"
             },
             "media": {
-              "id": "w172xcldhhr9tk7",
+              "id": "w172xclqp0l3zkq",
               "subType": "episode",
               "format": "Video",
-              "title": "26/05/2020 GMT",
+              "title": "08/12/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
                 "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
@@ -150,20 +150,23 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjgn8mnt8gw",
+                  "versionId": "w1mshjgzg4hmfhc",
                   "types": ["Original"],
-                  "duration": 1440,
-                  "durationISO8601": "PT24M",
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
                   "warnings": {},
                   "availableTerritories": {
                     "uk": false,
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591105500000,
-                  "availableFrom": 1590500700000
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607435760000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "programme",
               "type": "media"
             },
             "indexImage": {
@@ -177,11 +180,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607385600000,
             "brand": {
               "pid": "w13xttn4",
               "title": "نړۍ دا وخت"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcldhhr9tk7",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xclqp0l3zkq",
             "type": "ws_tv"
           },
           {
@@ -189,14 +193,14 @@
               "headline": "نړۍ دا وخت"
             },
             "locators": {
-              "pid": "w172xcldhhr6xn4",
+              "pid": "w172xclqp0l12nm",
               "brandPid": "w13xttn4"
             },
             "media": {
-              "id": "w172xcldhhr6xn4",
+              "id": "w172xclqp0l12nm",
               "subType": "episode",
               "format": "Video",
-              "title": "25/05/2020 GMT",
+              "title": "07/12/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
                 "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
@@ -206,20 +210,23 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjgn8mnqcks",
+                  "versionId": "w1mshjgzg4hjjl8",
                   "types": ["Original"],
-                  "duration": 1440,
-                  "durationISO8601": "PT24M",
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
                   "warnings": {},
                   "availableTerritories": {
                     "uk": false,
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591019100000,
-                  "availableFrom": 1590414300000
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607349360000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "programme",
               "type": "media"
             },
             "indexImage": {
@@ -233,11 +240,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607299200000,
             "brand": {
               "pid": "w13xttn4",
               "title": "نړۍ دا وخت"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcldhhr6xn4",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xclqp0l12nm",
             "type": "ws_tv"
           },
           {
@@ -245,14 +253,14 @@
               "headline": "نړۍ دا وخت"
             },
             "locators": {
-              "pid": "w172xcld47g05gw",
+              "pid": "w172xclq9r8tbhc",
               "brandPid": "w13xttn4"
             },
             "media": {
-              "id": "w172xcld47g05gw",
+              "id": "w172xclq9r8tbhc",
               "subType": "episode",
               "format": "Video",
-              "title": "24/05/2020 GMT",
+              "title": "06/12/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
                 "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
@@ -262,20 +270,23 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjgmxcchmdj",
+                  "versionId": "w1mshjgz2w69sf0",
                   "types": ["Original"],
-                  "duration": 1440,
-                  "durationISO8601": "PT24M",
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
                   "warnings": {},
                   "availableTerritories": {
                     "uk": false,
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590932700000,
-                  "availableFrom": 1590327900000
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607262960000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "programme",
               "type": "media"
             },
             "indexImage": {
@@ -289,11 +300,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607212800000,
             "brand": {
               "pid": "w13xttn4",
               "title": "نړۍ دا وخت"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcld47g05gw",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xclq9r8tbhc",
             "type": "ws_tv"
           },
           {
@@ -301,14 +313,14 @@
               "headline": "نړۍ دا وخت"
             },
             "locators": {
-              "pid": "w172xcld47fx8ks",
+              "pid": "w172xclq9r8qfl8",
               "brandPid": "w13xttn4"
             },
             "media": {
-              "id": "w172xcld47fx8ks",
+              "id": "w172xclq9r8qfl8",
               "subType": "episode",
               "format": "Video",
-              "title": "23/05/2020 GMT",
+              "title": "05/12/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
                 "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
@@ -318,20 +330,23 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjgmxccdqhf",
+                  "versionId": "w1mshjgz2w66whx",
                   "types": ["Original"],
-                  "duration": 1440,
-                  "durationISO8601": "PT24M",
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
                   "warnings": {},
                   "availableTerritories": {
                     "uk": false,
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590846300000,
-                  "availableFrom": 1590241500000
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607176560000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "programme",
               "type": "media"
             },
             "indexImage": {
@@ -345,11 +360,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607126400000,
             "brand": {
               "pid": "w13xttn4",
               "title": "نړۍ دا وخت"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcld47fx8ks",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xclq9r8qfl8",
             "type": "ws_tv"
           },
           {
@@ -357,14 +373,14 @@
               "headline": "نړۍ دا وخت"
             },
             "locators": {
-              "pid": "w172xcld47ftcnp",
+              "pid": "w172xclq9r8mjp5",
               "brandPid": "w13xttn4"
             },
             "media": {
-              "id": "w172xcld47ftcnp",
+              "id": "w172xclq9r8mjp5",
               "subType": "episode",
               "format": "Video",
-              "title": "22/05/2020 GMT",
+              "title": "04/12/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
                 "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
@@ -374,20 +390,23 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjgmxcc9tlb",
+                  "versionId": "w1mshjgz2w63zlt",
                   "types": ["Original"],
-                  "duration": 1440,
-                  "durationISO8601": "PT24M",
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
                   "warnings": {},
                   "availableTerritories": {
                     "uk": false,
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590759900000,
-                  "availableFrom": 1590155100000
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607090160000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "programme",
               "type": "media"
             },
             "indexImage": {
@@ -401,11 +420,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607040000000,
             "brand": {
               "pid": "w13xttn4",
               "title": "نړۍ دا وخت"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcld47ftcnp",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xclq9r8mjp5",
             "type": "ws_tv"
           },
           {
@@ -413,14 +433,14 @@
               "headline": "نړۍ دا وخت"
             },
             "locators": {
-              "pid": "w172wc8vxz7xc13",
+              "pid": "w172xclq9r8jms2",
               "brandPid": "w13xttn4"
             },
             "media": {
-              "id": "w172wc8vxz7xc13",
+              "id": "w172xclq9r8jms2",
               "subType": "episode",
               "format": "Video",
-              "title": "31/03/2018 GMT",
+              "title": "03/12/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
                 "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
@@ -430,19 +450,23 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1msggjvj2dcvb9",
+                  "versionId": "w1mshjgz2w612pq",
                   "types": ["Original"],
-                  "duration": 1620,
-                  "durationISO8601": "PT27M",
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
                   "warnings": {},
                   "availableTerritories": {
                     "uk": false,
                     "nonUk": false,
                     "world": true
                   },
-                  "availableFrom": 1508976000000
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607003760000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "programme",
               "type": "media"
             },
             "indexImage": {
@@ -456,11 +480,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1606953600000,
             "brand": {
               "pid": "w13xttn4",
               "title": "نړۍ دا وخت"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172wc8vxz7xc13",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xclq9r8jms2",
             "type": "ws_tv"
           },
           {
@@ -468,14 +493,14 @@
               "headline": "نړۍ دا وخت"
             },
             "locators": {
-              "pid": "w172vzpc72khqwd",
+              "pid": "w172xclq9r8fqvz",
               "brandPid": "w13xttn4"
             },
             "media": {
-              "id": "w172vzpc72khqwd",
+              "id": "w172xclq9r8fqvz",
               "subType": "episode",
               "format": "Video",
-              "title": "08/03/2018 GMT",
+              "title": "02/12/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
                 "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
@@ -485,19 +510,23 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1msg2jsjmh1w6v",
+                  "versionId": "w1mshjgz2w5y5sm",
                   "types": ["Original"],
-                  "duration": 1620,
-                  "durationISO8601": "PT27M",
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
                   "warnings": {},
                   "availableTerritories": {
                     "uk": false,
                     "nonUk": false,
                     "world": true
                   },
-                  "availableFrom": 1508976000000
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1606917360000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "programme",
               "type": "media"
             },
             "indexImage": {
@@ -511,11 +540,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1606867200000,
             "brand": {
               "pid": "w13xttn4",
               "title": "نړۍ دا وخت"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172vzpc72khqwd",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xclq9r8fqvz",
             "type": "ws_tv"
           },
           {
@@ -523,14 +553,14 @@
               "headline": "نړۍ دا وخت"
             },
             "locators": {
-              "pid": "w172vzpbhjxyfnq",
+              "pid": "w172xclq9r8btyw",
               "brandPid": "w13xttn4"
             },
             "media": {
-              "id": "w172vzpbhjxyfnq",
+              "id": "w172xclq9r8btyw",
               "subType": "episode",
               "format": "Video",
-              "title": "22/02/2018 GMT",
+              "title": "01/12/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
                 "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
@@ -540,19 +570,23 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1msg2jrt2vhl05",
+                  "versionId": "w1mshjgz2w5v8wj",
                   "types": ["Original"],
-                  "duration": 1620,
-                  "durationISO8601": "PT27M",
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
                   "warnings": {},
                   "availableTerritories": {
                     "uk": false,
                     "nonUk": false,
                     "world": true
                   },
-                  "availableFrom": 1508976000000
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1606830960000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "programme",
               "type": "media"
             },
             "indexImage": {
@@ -566,11 +600,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1606780800000,
             "brand": {
               "pid": "w13xttn4",
               "title": "نړۍ دا وخت"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172vzpbhjxyfnq",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xclq9r8btyw",
             "type": "ws_tv"
           }
         ]
