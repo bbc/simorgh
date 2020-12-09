@@ -8,6 +8,7 @@ import {
   formatDuration,
   formatUnixTimestamp,
 } from '@bbc/psammead-timestamp-container/utilities';
+import Timestamp from '@bbc/psammead-timestamp-container';
 import SectionLabel from '@bbc/psammead-section-label';
 import {
   GEL_SPACING,
@@ -48,6 +49,8 @@ const RecentAudioEpisodes = ({ episodes }) => {
     dir,
     timezone,
     datetimeLocale,
+    altCalendar,
+    dateTimeFormat,
   } = useContext(ServiceContext);
 
   if (!episodes.length) return null;
@@ -122,10 +125,16 @@ const RecentAudioEpisodes = ({ episodes }) => {
                 <>
                   {' '}
                   <StyledSpan aria-hidden>|</StyledSpan>
-                  {formattedTimestamp({
-                    releaseDateTimeStamp: episode.timestamp,
-                    format: 'LL',
-                  })}
+                  <Timestamp
+                    timestamp={episode.timestamp}
+                    format="LL"
+                    dateTimeFormat={dateTimeFormat}
+                    script={script}
+                    locale={datetimeLocale}
+                    service={service}
+                    timezone={timezone}
+                    altCalendar={altCalendar}
+                  />
                 </>
               )}
             </EpisodeList.Metadata>
