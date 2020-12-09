@@ -75,7 +75,7 @@ describe('Get initial data for on demand radio', () => {
     });
 
     expect(pageData.recentEpisodes.length).toEqual(4);
-    expect(pageData.recentEpisodes[0].id).toEqual('w3ct0m3k');
+    expect(pageData.recentEpisodes[0].id).toEqual('w3ct155x');
   });
 
   it('should override renderer on test', async () => {
