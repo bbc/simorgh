@@ -117,8 +117,8 @@ const RecentAudioEpisodes = ({ episodes }) => {
                 </span>
               </EpisodeList.Metadata>
             </EpisodeList.Link>
-            <EpisodeList.Metadata>
-              {episode.episodeTitle && (
+            {episode.episodeTitle && (
+              <EpisodeList.Metadata>
                 <>
                   {' '}
                   <StyledSpan aria-hidden>|</StyledSpan>
@@ -127,8 +127,8 @@ const RecentAudioEpisodes = ({ episodes }) => {
                     format: 'LL',
                   })}
                 </>
-              )}
-            </EpisodeList.Metadata>
+              </EpisodeList.Metadata>
+            )}
           </EpisodeList.Episode>
         ))}
       </EpisodeList>
