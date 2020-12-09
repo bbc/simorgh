@@ -95,9 +95,6 @@ const RecentAudioEpisodes = ({ episodes }) => {
                   `${formattedTimestamp({
                     releaseDateTimeStamp: episode.timestamp,
                     format: 'LL',
-                  })}, ${formattedTimestamp({
-                    releaseDateTimeStamp: episode.timestamp,
-                    format: 'HH:mm',
                   })}`}
               </EpisodeList.Description>
               <VisuallyHiddenText>, </VisuallyHiddenText>
