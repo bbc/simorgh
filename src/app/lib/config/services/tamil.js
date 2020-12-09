@@ -168,9 +168,9 @@ export const service = {
         watch: 'பார்க்க',
         liveLabel: 'நேரலை',
         nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        previousRadioShow: 'முந்தைய வானொலி நிகழ்ச்சி',
+        nextRadioShow: 'அடுத்த வானொலி நிகழ்ச்சி',
+        duration: 'கால அளவு',
         recentEpisodes: 'முந்தைய நிகழ்ச்சிகள்',
       },
       socialEmbed: {
@@ -267,7 +267,7 @@ export const service = {
       },
       {
         title: 'உலகம்',
-        url: '/tamil/global',
+        url: '/tamil/topics/c40379e2n2zt',
       },
       {
         title: 'இந்தியா',
@@ -283,7 +283,7 @@ export const service = {
       },
       {
         title: 'அறிவியல்',
-        url: '/tamil/science',
+        url: '/tamil/topics/c9wpm0exkdpt',
       },
       {
         title: 'சினிமா',

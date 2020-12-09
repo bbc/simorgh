@@ -8,6 +8,7 @@ const logCodes = {
   CLUSTER_PROCESS_EXIT: 'cluster_process_exit',
 
   // Data fetch
+  DATA_FETCH_RESPONSE_TIME: 'data_fetch_response_time',
   DATA_FETCH_ERROR: 'data_fetch_error',
   DATA_NOT_FOUND: 'data_response_404',
   DATA_REQUEST_RECEIVED: 'data_request_received',

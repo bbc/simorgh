@@ -9,6 +9,7 @@ import injectCspHeader, {
   generateStyleSrc,
   generateMediaSrc,
   generateWorkerSrc,
+  generatePrefetchSrc,
 } from '.';
 
 const next = jest.fn();
@@ -26,7 +27,7 @@ describe('cspHeader', () => {
       urlExample: 'https://www.bbc.com/pidgin.amp',
       childSrcExpectation: ['blob:'],
       connectSrcExpectation: [
-        'https://flagpoles.gnl-live.bbcverticals.com',
+        'https://gn-flagpoles.api.bbci.co.uk',
         'https://*.akamaihd.net',
         'https://a1.api.bbc.co.uk/hit.xiti',
         'https://config.api.bbci.co.uk',
@@ -48,6 +49,9 @@ describe('cspHeader', () => {
         'https://www.live.bbc.co.uk',
         'https://adservice.google.com',
         'https://tpc.googlesyndication.com',
+        'https://ad.doubleclick.net',
+        'https://googleads.g.doubleclick.net',
+        'https://securepubads.g.doubleclick.net',
         "'self'",
       ],
       defaultSrcExpectation: [
@@ -74,6 +78,8 @@ describe('cspHeader', () => {
         'https://bcp.crwdcntrl.net',
         'https://edigitalsurvey.com',
         'https://*.safeframe.googlesyndication.com',
+        'https://ad.doubleclick.net',
+        'https://secureframe.doubleclick.net',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -97,6 +103,11 @@ describe('cspHeader', () => {
         'https://dtvc.adsafeprotected.com',
         'https://fwvc.adsafeprotected.com',
         'https://pixel.adsafeprotected.com',
+        'https://ad.doubleclick.net',
+        'https://googleads.g.doubleclick.net',
+        'https://static.doubleclick.net',
+        'https://www.gstatic.com',
+        'https://securepubads.g.doubleclick.net',
         'https://*.googleusercontent.com',
         'https://static.files.bbci.co.uk',
         "data: 'self'",
@@ -121,6 +132,7 @@ describe('cspHeader', () => {
         'https://static.files.bbci.co.uk',
       ],
       workerSrcExpectation: ['blob:'],
+      prefetchSrcExpectation: ['https://*.safeframe.googlesyndication.com'],
     },
     {
       isAmp: false,
@@ -129,7 +141,7 @@ describe('cspHeader', () => {
       urlExample: 'https://www.bbc.com/pidgin',
       childSrcExpectation: ["'self'"],
       connectSrcExpectation: [
-        'https://flagpoles.gnl-live.bbcverticals.com',
+        'https://gn-flagpoles.api.bbci.co.uk',
         'https://*.akamaihd.net',
         'https://a1.api.bbc.co.uk/hit.xiti',
         'https://config.api.bbci.co.uk',
@@ -152,6 +164,9 @@ describe('cspHeader', () => {
         'https://www.live.bbc.co.uk',
         'https://adservice.google.com',
         'https://tpc.googlesyndication.com',
+        'https://ad.doubleclick.net',
+        'https://googleads.g.doubleclick.net',
+        'https://securepubads.g.doubleclick.net',
         "'self'",
       ],
       defaultSrcExpectation: [
@@ -188,6 +203,8 @@ describe('cspHeader', () => {
         'https://bcp.crwdcntrl.net',
         'https://edigitalsurvey.com',
         'https://*.safeframe.googlesyndication.com',
+        'https://ad.doubleclick.net',
+        'https://secureframe.doubleclick.net',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -216,6 +233,11 @@ describe('cspHeader', () => {
         'https://dtvc.adsafeprotected.com',
         'https://fwvc.adsafeprotected.com',
         'https://pixel.adsafeprotected.com',
+        'https://ad.doubleclick.net',
+        'https://googleads.g.doubleclick.net',
+        'https://static.doubleclick.net',
+        'https://www.gstatic.com',
+        'https://securepubads.g.doubleclick.net',
         'https://*.googleusercontent.com',
         'https://static.files.bbci.co.uk',
         "data: 'self'",
@@ -239,7 +261,6 @@ describe('cspHeader', () => {
         'https://ad.crwdcntrl.net',
         'https://adservice.google.co.uk',
         'https://adservice.google.com',
-        'https://bbc.gscontxt.net',
         'https://bcp.crwdcntrl.net',
         'https://cdn.ampproject.org',
         'https://collector.effectivemeasure.net',
@@ -254,6 +275,35 @@ describe('cspHeader', () => {
         'https://tpc.googlesyndication.com',
         'https://gn-web-assets.api.bbc.com',
         'https://www.googletagservices.com',
+        'https://securepubads.g.doubleclick.net',
+        'https://bbc.gscontxt.net',
+        'https://adservice.google.co.ve',
+        'https://adservice.google.ru',
+        'https://adservice.google.co.in',
+        'https://adservice.google.com.br',
+        'https://adservice.google.com.mx',
+        'https://adservice.google.com.ec',
+        'https://adservice.google.cl',
+        'https://adservice.google.com.eg',
+        'https://adservice.google.com.sa',
+        'https://adservice.google.com.co',
+        'https://adservice.google.com.ar',
+        'https://adservice.google.com.ua',
+        'https://adservice.google.com.pe',
+        'https://adservice.google.kz',
+        'https://adservice.google.com.hk',
+        'https://adservice.google.es',
+        'https://adservice.google.co.jp',
+        'https://adservice.google.ae',
+        'https://adservice.google.com.tw',
+        'https://adservice.google.com.uy',
+        'https://adservice.google.co.il',
+        'https://adservice.google.com.pr',
+        'https://adservice.google.com.bo',
+        'https://adservice.google.iq',
+        'https://adservice.google.com.gt',
+        'https://adservice.google.com.sg',
+        'https://adservice.google.com.tr',
         "'self'",
         "'unsafe-inline'",
       ],
@@ -272,6 +322,7 @@ describe('cspHeader', () => {
         'https://static.files.bbci.co.uk',
       ],
       workerSrcExpectation: ["'self'"],
+      prefetchSrcExpectation: ['https://*.safeframe.googlesyndication.com'],
     },
     {
       isAmp: true,
@@ -280,7 +331,7 @@ describe('cspHeader', () => {
       urlExample: 'https://www.test.bbc.com/pidgin.amp',
       childSrcExpectation: ['blob:'],
       connectSrcExpectation: [
-        'https://flagpoles.gnl-test.bbcverticals.com',
+        'https://gn-flagpoles.test.api.bbci.co.uk',
         'https://*.akamaihd.net',
         'https://cdn.ampproject.org',
         'https://*.ampproject.net',
@@ -303,6 +354,9 @@ describe('cspHeader', () => {
         'https://www.live.bbc.co.uk',
         'https://adservice.google.com',
         'https://tpc.googlesyndication.com',
+        'https://ad.doubleclick.net',
+        'https://googleads.g.doubleclick.net',
+        'https://securepubads.g.doubleclick.net',
         "'self'",
       ],
       defaultSrcExpectation: [
@@ -331,6 +385,8 @@ describe('cspHeader', () => {
         'https://bcp.crwdcntrl.net',
         'https://edigitalsurvey.com',
         'https://*.safeframe.googlesyndication.com',
+        'https://ad.doubleclick.net',
+        'https://secureframe.doubleclick.net',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -359,6 +415,11 @@ describe('cspHeader', () => {
         'https://dtvc.adsafeprotected.com',
         'https://fwvc.adsafeprotected.com',
         'https://pixel.adsafeprotected.com',
+        'https://ad.doubleclick.net',
+        'https://googleads.g.doubleclick.net',
+        'https://static.doubleclick.net',
+        'https://www.gstatic.com',
+        'https://securepubads.g.doubleclick.net',
         'https://*.googleusercontent.com',
         'https://static.test.files.bbci.co.uk',
         "data: 'self'",
@@ -385,6 +446,7 @@ describe('cspHeader', () => {
         'https://static.test.files.bbci.co.uk',
       ],
       workerSrcExpectation: ['blob:'],
+      prefetchSrcExpectation: ['https://*.safeframe.googlesyndication.com'],
     },
     {
       isAmp: false,
@@ -393,7 +455,7 @@ describe('cspHeader', () => {
       urlExample: 'https://www.test.bbc.com/pidgin',
       childSrcExpectation: ["'self'"],
       connectSrcExpectation: [
-        'https://flagpoles.gnl-test.bbcverticals.com',
+        'https://gn-flagpoles.test.api.bbci.co.uk',
         'https://*.akamaihd.net',
         'https://logws1363.ati-host.net',
         'https://config.test.api.bbci.co.uk',
@@ -420,6 +482,9 @@ describe('cspHeader', () => {
         'https://www.live.bbc.co.uk',
         'https://adservice.google.com',
         'https://tpc.googlesyndication.com',
+        'https://ad.doubleclick.net',
+        'https://googleads.g.doubleclick.net',
+        'https://securepubads.g.doubleclick.net',
         "'self'",
       ],
       defaultSrcExpectation: [
@@ -459,6 +524,8 @@ describe('cspHeader', () => {
         'https://bcp.crwdcntrl.net',
         'https://edigitalsurvey.com',
         'https://*.safeframe.googlesyndication.com',
+        'https://ad.doubleclick.net',
+        'https://secureframe.doubleclick.net',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -493,6 +560,11 @@ describe('cspHeader', () => {
         'https://dtvc.adsafeprotected.com',
         'https://fwvc.adsafeprotected.com',
         'https://pixel.adsafeprotected.com',
+        'https://ad.doubleclick.net',
+        'https://googleads.g.doubleclick.net',
+        'https://static.doubleclick.net',
+        'https://www.gstatic.com',
+        'https://securepubads.g.doubleclick.net',
         'https://*.googleusercontent.com',
         'https://static.test.files.bbci.co.uk',
         "data: 'self'",
@@ -521,7 +593,6 @@ describe('cspHeader', () => {
         'https://ad.crwdcntrl.net',
         'https://adservice.google.co.uk',
         'https://adservice.google.com',
-        'https://bbc.gscontxt.net',
         'https://bcp.crwdcntrl.net',
         'https://cdn.ampproject.org',
         'https://collector.effectivemeasure.net',
@@ -536,6 +607,35 @@ describe('cspHeader', () => {
         'https://tpc.googlesyndication.com',
         'https://gn-web-assets.api.bbc.com',
         'https://www.googletagservices.com',
+        'https://securepubads.g.doubleclick.net',
+        'https://bbc.gscontxt.net',
+        'https://adservice.google.co.ve',
+        'https://adservice.google.ru',
+        'https://adservice.google.co.in',
+        'https://adservice.google.com.br',
+        'https://adservice.google.com.mx',
+        'https://adservice.google.com.ec',
+        'https://adservice.google.cl',
+        'https://adservice.google.com.eg',
+        'https://adservice.google.com.sa',
+        'https://adservice.google.com.co',
+        'https://adservice.google.com.ar',
+        'https://adservice.google.com.ua',
+        'https://adservice.google.com.pe',
+        'https://adservice.google.kz',
+        'https://adservice.google.com.hk',
+        'https://adservice.google.es',
+        'https://adservice.google.co.jp',
+        'https://adservice.google.ae',
+        'https://adservice.google.com.tw',
+        'https://adservice.google.com.uy',
+        'https://adservice.google.co.il',
+        'https://adservice.google.com.pr',
+        'https://adservice.google.com.bo',
+        'https://adservice.google.iq',
+        'https://adservice.google.com.gt',
+        'https://adservice.google.com.sg',
+        'https://adservice.google.com.tr',
         "'self'",
         "'unsafe-inline'",
       ],
@@ -557,6 +657,7 @@ describe('cspHeader', () => {
         'https://static.test.files.bbci.co.uk',
       ],
       workerSrcExpectation: ["'self'"],
+      prefetchSrcExpectation: ['https://*.safeframe.googlesyndication.com'],
     },
   ].forEach(
     ({
@@ -574,6 +675,7 @@ describe('cspHeader', () => {
       styleSrcExpectation,
       mediaSrcExpectation,
       workerSrcExpectation,
+      prefetchSrcExpectation,
     }) => {
       describe(`Given isAmp ${isAmp} & isLive ${isLive}`, () => {
         it(`Then it has this childSrc`, () => {
@@ -632,6 +734,12 @@ describe('cspHeader', () => {
           expect(generateWorkerSrc({ isAmp })).toEqual(workerSrcExpectation);
         });
 
+        it(`Then it has this prefetchSrc`, () => {
+          expect(generatePrefetchSrc({ isAmp, isLive })).toEqual(
+            prefetchSrcExpectation,
+          );
+        });
+
         it(`Then injectCspHeader middleware applies the correct Content-Security-Policy header`, () => {
           const req = {
             url: urlExample,
@@ -664,6 +772,7 @@ describe('cspHeader', () => {
             `style-src ${styleSrcExpectation.join(' ')};` +
             `media-src ${mediaSrcExpectation.join(' ')};` +
             `worker-src ${workerSrcExpectation.join(' ')};` +
+            `prefetch-src ${prefetchSrcExpectation.join(' ')};` +
             `report-to default;` +
             `upgrade-insecure-requests`;
 

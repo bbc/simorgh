@@ -7,6 +7,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { UserContext } from '#contexts/UserContext';
 import ComscoreAnalytics from '.';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const mockToggleDispatch = jest.fn();
 
@@ -66,7 +67,7 @@ describe('Comscore Analytics Container', () => {
       const { container } = render(
         <ContextWrap
           platform="amp"
-          pageType="article"
+          pageType={ARTICLE_PAGE}
           origin="bbc.com"
           comscoreAnalyticsToggle={false}
         >
@@ -81,7 +82,7 @@ describe('Comscore Analytics Container', () => {
       const { container } = render(
         <ContextWrap
           platform="amp"
-          pageType="article"
+          pageType={ARTICLE_PAGE}
           origin="bbc.com"
           comscoreAnalyticsToggle
         >
@@ -99,7 +100,7 @@ describe('Comscore Analytics Container', () => {
       'should render comscore script when on canonical',
       <ContextWrap
         platform="amp"
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         origin="bbc.com"
         comscoreAnalyticsToggle
       >
@@ -111,7 +112,7 @@ describe('Comscore Analytics Container', () => {
       const { container } = render(
         <ContextWrap
           platform="canonical"
-          pageType="article"
+          pageType={ARTICLE_PAGE}
           origin="bbc.com"
           comscoreAnalyticsToggle={false}
         >

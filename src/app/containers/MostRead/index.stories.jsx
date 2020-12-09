@@ -9,6 +9,7 @@ import MostReadContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const staticMostReadURL = (service, variant) =>
   variant !== 'default'
@@ -21,7 +22,7 @@ const renderMostReadContainer = (service, variant, columnLayout) => (
       bbcOrigin={`http://localhost/${service}/articles/c0000000000o`}
       id="c0000000000o"
       isAmp={false}
-      pageType="article"
+      pageType={ARTICLE_PAGE}
       service={service}
       statusCode={200}
       pathname={`/${service}`}

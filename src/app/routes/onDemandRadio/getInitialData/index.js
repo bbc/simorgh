@@ -13,9 +13,15 @@ import getEpisodeAvailability, {
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 import getRadioService from '../../utils/getRadioService';
+import processRecentEpisodes from '../../utils/processRecentEpisodes';
+
+const DEFAULT_TOGGLE_VALUE = { enabled: false, value: 4 };
 
 const getRadioScheduleData = path(['radioScheduleData']);
-const getScheduleToggle = pathOr(false, ['onDemandRadioSchedule', 'enabled']);
+const getScheduleToggle = path(['onDemandRadioSchedule', 'enabled']);
+const getRecentEpisodesToggle = pathOr(DEFAULT_TOGGLE_VALUE, [
+  'recentAudioEpisodes',
+]);
 
 export default async ({ path: pathname, pageType, service, toggles }) => {
   try {
@@ -25,6 +31,11 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
       pageType,
     });
     const scheduleIsEnabled = getScheduleToggle(toggles);
+    const recentEpisodesToggle = getRecentEpisodesToggle(toggles);
+    const {
+      enabled: showRecentEpisodes,
+      value: recentEpisodesLimit,
+    } = recentEpisodesToggle;
 
     const { json, status } = scheduleIsEnabled
       ? await withRadioSchedule({
@@ -45,6 +56,12 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
       logLevel ? withLogging(fieldPath, logLevel) : path(fieldPath, json);
 
     const episodeId = get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR);
+    const recentEpisodes = showRecentEpisodes
+      ? processRecentEpisodes(json, {
+          exclude: episodeId,
+          recentEpisodesLimit,
+        })
+      : [];
 
     return {
       status,
@@ -83,6 +100,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
         ),
         episodeAvailability: getEpisodeAvailability(json),
         radioScheduleData: getRadioScheduleData(json),
+        recentEpisodes,
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {

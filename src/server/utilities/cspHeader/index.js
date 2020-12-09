@@ -22,6 +22,9 @@ const advertisingDirectives = {
     'https://www.live.bbc.co.uk',
     'https://adservice.google.com',
     'https://tpc.googlesyndication.com',
+    'https://ad.doubleclick.net',
+    'https://googleads.g.doubleclick.net',
+    'https://securepubads.g.doubleclick.net',
   ],
   frameSrc: [
     'https://*.g.doubleclick.net',
@@ -29,6 +32,8 @@ const advertisingDirectives = {
     'https://bcp.crwdcntrl.net',
     'https://edigitalsurvey.com',
     'https://*.safeframe.googlesyndication.com',
+    'https://ad.doubleclick.net',
+    'https://secureframe.doubleclick.net',
   ],
   imgSrc: [
     'https://collector.effectivemeasure.net',
@@ -43,12 +48,16 @@ const advertisingDirectives = {
     'https://dtvc.adsafeprotected.com',
     'https://fwvc.adsafeprotected.com',
     'https://pixel.adsafeprotected.com',
+    'https://ad.doubleclick.net',
+    'https://googleads.g.doubleclick.net',
+    'https://static.doubleclick.net',
+    'https://www.gstatic.com',
+    'https://securepubads.g.doubleclick.net',
   ],
   scriptSrc: [
     'https://ad.crwdcntrl.net',
     'https://adservice.google.co.uk',
     'https://adservice.google.com',
-    'https://bbc.gscontxt.net',
     'https://bcp.crwdcntrl.net',
     'https://cdn.ampproject.org',
     'https://collector.effectivemeasure.net',
@@ -63,7 +72,37 @@ const advertisingDirectives = {
     'https://tpc.googlesyndication.com',
     'https://gn-web-assets.api.bbc.com',
     'https://www.googletagservices.com',
+    'https://securepubads.g.doubleclick.net',
+    'https://bbc.gscontxt.net',
+    'https://adservice.google.co.ve',
+    'https://adservice.google.ru',
+    'https://adservice.google.co.in',
+    'https://adservice.google.com.br',
+    'https://adservice.google.com.mx',
+    'https://adservice.google.com.ec',
+    'https://adservice.google.cl',
+    'https://adservice.google.com.eg',
+    'https://adservice.google.com.sa',
+    'https://adservice.google.com.co',
+    'https://adservice.google.com.ar',
+    'https://adservice.google.com.ua',
+    'https://adservice.google.com.pe',
+    'https://adservice.google.kz',
+    'https://adservice.google.com.hk',
+    'https://adservice.google.es',
+    'https://adservice.google.co.jp',
+    'https://adservice.google.ae',
+    'https://adservice.google.com.tw',
+    'https://adservice.google.com.uy',
+    'https://adservice.google.co.il',
+    'https://adservice.google.com.pr',
+    'https://adservice.google.com.bo',
+    'https://adservice.google.iq',
+    'https://adservice.google.com.gt',
+    'https://adservice.google.com.sg',
+    'https://adservice.google.com.tr',
   ],
+  prefetchSrc: ['https://*.safeframe.googlesyndication.com'],
   defaultSrc: [
     'https://tpc.googlesyndication.com',
     'https://*.safeframe.googlesyndication.com',
@@ -73,7 +112,7 @@ const advertisingDirectives = {
 const directives = {
   connectSrc: {
     ampLive: [
-      'https://flagpoles.gnl-live.bbcverticals.com',
+      'https://gn-flagpoles.api.bbci.co.uk',
       'https://*.akamaihd.net',
       'https://a1.api.bbc.co.uk/hit.xiti', // ATI
       'https://config.api.bbci.co.uk', // Toggles service
@@ -87,7 +126,7 @@ const directives = {
       "'self'",
     ],
     canonicalLive: [
-      'https://flagpoles.gnl-live.bbcverticals.com',
+      'https://gn-flagpoles.api.bbci.co.uk',
       'https://*.akamaihd.net',
       'https://a1.api.bbc.co.uk/hit.xiti', // ATI
       'https://config.api.bbci.co.uk', // Toggles service
@@ -102,7 +141,7 @@ const directives = {
       "'self'",
     ],
     ampNonLive: [
-      'https://flagpoles.gnl-test.bbcverticals.com',
+      'https://gn-flagpoles.test.api.bbci.co.uk',
       'https://*.akamaihd.net',
       'https://cdn.ampproject.org',
       'https://*.ampproject.net', // Social Embeds
@@ -117,7 +156,7 @@ const directives = {
       "'self'",
     ],
     canonicalNonLive: [
-      'https://flagpoles.gnl-test.bbcverticals.com',
+      'https://gn-flagpoles.test.api.bbci.co.uk',
       'https://*.akamaihd.net',
       'https://logws1363.ati-host.net', // ATI
       'https://config.test.api.bbci.co.uk', // Toggles service
@@ -434,6 +473,12 @@ const directives = {
       'https://static.test.files.bbci.co.uk',
     ],
   },
+  prefetchSrc: {
+    ampLive: [...advertisingDirectives.prefetchSrc],
+    canonicalLive: [...advertisingDirectives.prefetchSrc],
+    ampNonLive: [...advertisingDirectives.prefetchSrc],
+    canonicalNonLive: [...advertisingDirectives.prefetchSrc],
+  },
 };
 
 export const generateChildSrc = ({ isAmp }) => (isAmp ? ['blob:'] : ["'self'"]);
@@ -494,6 +539,13 @@ export const generateMediaSrc = ({ isAmp, isLive }) => {
 export const generateWorkerSrc = ({ isAmp }) =>
   isAmp ? ['blob:'] : ["'self'"];
 
+export const generatePrefetchSrc = ({ isAmp, isLive }) => {
+  if (!isLive && isAmp) return directives.prefetchSrc.ampNonLive;
+  if (!isLive && !isAmp) return directives.prefetchSrc.canonicalNonLive;
+  if (isLive && isAmp) return directives.prefetchSrc.ampLive;
+  return directives.prefetchSrc.canonicalLive;
+};
+
 const helmetCsp = ({ isAmp, isLive }) => ({
   directives: {
     'default-src': generateDefaultSrc(),
@@ -506,6 +558,7 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'style-src': generateStyleSrc({ isAmp, isLive }),
     'media-src': generateMediaSrc({ isAmp, isLive }),
     'worker-src': generateWorkerSrc({ isAmp }),
+    'prefetch-src': generatePrefetchSrc({ isAmp, isLive }),
     'report-to': 'default',
     'upgrade-insecure-requests': [],
   },

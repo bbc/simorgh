@@ -288,10 +288,6 @@ export const service = {
         url: '/mundo/noticias-internacional-53826365',
       },
       {
-        title: '¿Hablas español?',
-        url: '/mundo/noticias-50160896',
-      },
-      {
         title: 'Hay Festival',
         url: '/mundo/noticias-36795069',
       },
@@ -322,10 +318,6 @@ export const service = {
       {
         title: 'Centroamérica Cuenta',
         url: '/mundo/noticias-43826245',
-      },
-      {
-        title: 'BBC Extra',
-        url: '/mundo/noticias-48908206',
       },
     ],
   },

@@ -167,7 +167,7 @@ export const service = {
         nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        duration: 'ධාවන කාලය',
         recentEpisodes: 'පෙර වැඩසටහන්',
       },
       socialEmbed: {

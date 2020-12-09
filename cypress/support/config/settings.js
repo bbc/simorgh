@@ -1269,10 +1269,10 @@ module.exports = () => ({
           },
           local: {
             paths: ['/bengali/media/video'],
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       photoGalleryPage: {
         environments: {
@@ -5788,23 +5788,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/russian/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/russian/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/russian/media/video'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostWatchedPage: { environments: undefined, smoke: false }, // No Most Watched page for Russian
       photoGalleryPage: {
         environments: {
           live: {
@@ -5825,15 +5809,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/russian/features-54391793'],
+            paths: ['/russian/features-54391793', '/russian/news-55041160'],
             enabled: true,
           },
           test: {
-            paths: ['/russian/features-54391793'],
+            paths: ['/russian/features-54391793', '/russian/news-55041160'],
             enabled: false,
           },
           local: {
-            paths: ['/russian/features-54391793'],
+            paths: ['/russian/features-54391793', '/russian/news-55041160'],
             enabled: true,
           },
         },

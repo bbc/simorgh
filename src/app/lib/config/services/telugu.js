@@ -265,11 +265,11 @@ export const service = {
       },
       {
         title: 'జాతీయం',
-        url: '/telugu/topics/5a08f030-710f-4168-acee-67294a90fc75',
+        url: '/telugu/topics/c5qvp16w7dnt',
       },
       {
         title: 'అంతర్జాతీయం',
-        url: '/telugu/international',
+        url: '/telugu/topics/cvqxn2k1xvdt',
       },
     ],
   },

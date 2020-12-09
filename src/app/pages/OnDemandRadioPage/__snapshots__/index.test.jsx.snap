@@ -252,7 +252,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
           dir="rtl"
         >
           <div
-            class="emotion-10 css-113v68j-GridComponent-GelPageGrid-StyledGelWrapperGrid emotion-6"
+            class="emotion-10 css-1sau5l9-GridComponent-GelPageGrid-StyledGelWrapperGrid emotion-6"
             dir="ltr"
           >
             <div
@@ -260,7 +260,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
               dir="rtl"
             >
               <h1
-                class=" emotion-3 css-jegqo1-Headline-StyledRadioHeadingContainer emotion-4"
+                class=" emotion-3 css-xzk2vv-Headline-StyledRadioHeadingContainer emotion-4"
                 id="content"
                 tabindex="-1"
               >
@@ -278,14 +278,14 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
                     , 
                   </span>
                   <span
-                    class="css-17g9u3u-Datestamp emotion-2"
+                    class="css-y494yu-Datestamp emotion-2"
                   >
                     ۱ می ۲۰۲۰
                   </span>
                 </span>
               </h1>
               <p
-                class="css-1n3vn6m-Paragraph-StyledParagraphComponent emotion-5"
+                class="css-ysakfq-Paragraph-StyledParagraphComponent emotion-5"
               >
                 د بي بي سي ورلډ سروس څخه پروګرام کول
               </p>
@@ -593,7 +593,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
           dir="rtl"
         >
           <div
-            class="emotion-11 css-113v68j-GridComponent-GelPageGrid-StyledGelWrapperGrid emotion-6"
+            class="emotion-11 css-1sau5l9-GridComponent-GelPageGrid-StyledGelWrapperGrid emotion-6"
             dir="ltr"
           >
             <div
@@ -601,7 +601,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
               dir="rtl"
             >
               <h1
-                class=" emotion-3 css-jegqo1-Headline-StyledRadioHeadingContainer emotion-4"
+                class=" emotion-3 css-xzk2vv-Headline-StyledRadioHeadingContainer emotion-4"
                 id="content"
                 tabindex="-1"
               >
@@ -619,14 +619,14 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
                     , 
                   </span>
                   <span
-                    class="css-17g9u3u-Datestamp emotion-2"
+                    class="css-y494yu-Datestamp emotion-2"
                   >
                     ۱ می ۲۰۲۰
                   </span>
                 </span>
               </h1>
               <p
-                class="css-1n3vn6m-Paragraph-StyledParagraphComponent emotion-5"
+                class="css-ysakfq-Paragraph-StyledParagraphComponent emotion-5"
               >
                 د بي بي سي ورلډ سروس څخه پروګرام کول
               </p>
