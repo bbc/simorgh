@@ -117,18 +117,16 @@ const RecentAudioEpisodes = ({ episodes }) => {
                 </span>
               </EpisodeList.Metadata>
             </EpisodeList.Link>
-            <EpisodeList.Metadata>
-              {episode.episodeTitle && (
-                <>
-                  {' '}
-                  <StyledSpan aria-hidden>|</StyledSpan>
-                  {formattedTimestamp({
-                    releaseDateTimeStamp: episode.timestamp,
-                    format: 'LL',
-                  })}
-                </>
-              )}
-            </EpisodeList.Metadata>
+            {episode.episodeTitle && (
+              <EpisodeList.Metadata>
+                {' '}
+                <StyledSpan aria-hidden>|</StyledSpan>
+                {formattedTimestamp({
+                  releaseDateTimeStamp: episode.timestamp,
+                  format: 'LL',
+                })}
+              </EpisodeList.Metadata>
+            )}
           </EpisodeList.Episode>
         ))}
       </EpisodeList>
