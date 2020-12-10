@@ -104,18 +104,17 @@ const RecentVideoEpisodes = ({ episodes }) => {
             </EpisodeList.Link>
             {episode.episodeTitle && (
               <span role="text">
-                <EpisodeList.Metadata>
-                  <Timestamp
-                    timestamp={episode.timestamp}
-                    format="D MMMM YYYY"
-                    dateTimeFormat="YYYY-MM-DD"
-                    padding={false}
-                    script={script}
-                    locale={datetimeLocale}
-                    service={service}
-                    timezone={timezone}
-                  />
-                </EpisodeList.Metadata>
+                <EpisodeList.Metadata
+                  as={Timestamp}
+                  timestamp={episode.timestamp}
+                  format="D MMMM YYYY"
+                  dateTimeFormat="YYYY-MM-DD"
+                  padding={false}
+                  script={script}
+                  locale={datetimeLocale}
+                  service={service}
+                  timezone={timezone}
+                />
               </span>
             )}
           </EpisodeList.Episode>
