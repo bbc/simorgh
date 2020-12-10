@@ -82,7 +82,7 @@ describe('Get initial data for on demand tv', () => {
     await getInitialData({ path: 'mock-live-tv-path', pageType: MEDIA_PAGE });
     expect(spy).toHaveBeenCalledWith({
       path: 'mock-live-tv-path?renderer_env=live',
-      pageType: 'media',
+      pageType: MEDIA_PAGE,
     });
   });
 
@@ -91,7 +91,7 @@ describe('Get initial data for on demand tv', () => {
     await getInitialData({ path: 'mock-live-tv-path', pageType: MEDIA_PAGE });
     expect(spy).toHaveBeenCalledWith({
       path: 'mock-live-tv-path',
-      pageType: 'media',
+      pageType: MEDIA_PAGE,
     });
   });
 

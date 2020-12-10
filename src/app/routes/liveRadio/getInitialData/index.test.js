@@ -44,7 +44,7 @@ describe('Get initial data for live radio', () => {
     });
     expect(spy).toHaveBeenCalledWith({
       path: 'mock-live-radio-path?renderer_env=live',
-      pageType: 'media',
+      pageType: MEDIA_PAGE,
     });
   });
 
@@ -56,7 +56,7 @@ describe('Get initial data for live radio', () => {
     });
     expect(spy).toHaveBeenCalledWith({
       path: 'mock-live-radio-path',
-      pageType: 'media',
+      pageType: MEDIA_PAGE,
     });
   });
 });
