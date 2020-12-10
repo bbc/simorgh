@@ -1,12 +1,13 @@
 import getInitialData from '.';
 import articleJson from '#data/pidgin/articles/cwl08rd38l6o.json';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 fetch.mockResponse(JSON.stringify(articleJson));
 
 it('should return essential data for a page to render', async () => {
   const { pageData } = await getInitialData({
     path: 'mock-article-path',
-    pageType: 'article',
+    pageType: ARTICLE_PAGE,
   });
 
   expect(pageData.metadata.id).toEqual('urn:bbc:ares::article:cwl08rd38l6o');

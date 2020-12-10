@@ -9,6 +9,7 @@ import { validVideoWithCaptionBlock } from './fixtureData';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const defaultToggles = {
   mediaPlayer: {
@@ -30,7 +31,7 @@ storiesOf('Containers/Media Player/Canonical', module)
         platform="canonical"
         pathname="/pathname"
         id={articleID}
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         bbcOrigin="https://www.test.bbc.com"
       >
         <ServiceContextProvider service="news">
@@ -61,7 +62,7 @@ storiesOf('Containers/Media Player/AMP', module)
         service={service}
         platform="amp"
         id="c3wmq4d1y3wo"
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         pathname="/pathname"
         bbcOrigin="https://www.test.bbc.com"
       >

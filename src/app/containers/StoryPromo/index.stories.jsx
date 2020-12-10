@@ -7,6 +7,7 @@ import StoryPromoContainer from '.';
 import fixture from '#data/pidgin/frontpage';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { guideLinkItem } from './helpers/fixtureData';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const mediaFixture = type =>
   pathOr(null, ['content', 'groups'], fixture)
@@ -62,7 +63,7 @@ const getStoryPromo = (
       id="c0000000000o"
       isAmp={platform === 'amp'}
       pathname="/pathname"
-      pageType="article"
+      pageType={ARTICLE_PAGE}
       service="news"
     >
       <StoryPromoContainer
