@@ -73,7 +73,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
       </StyledSectionLabel>
       <EpisodeList script={script} service={service} dir={dir} darkMode>
         {episodes.map(episode => (
-          <EpisodeList.Episode key={episode.id}>
+          <EpisodeList.Episode key={episode.id} dir={dir}>
             <EpisodeList.Image
               src={episode.image}
               alt={episode.altText}
