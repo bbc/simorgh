@@ -75,6 +75,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
         {episodes.map(episode => (
           <EpisodeList.Episode key={episode.id} dir={dir}>
             <EpisodeList.Image
+              dir={dir}
               src={episode.image}
               alt={episode.altText}
               duration={formatDuration({
