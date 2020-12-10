@@ -27,11 +27,8 @@ module.exports = {
           );
         },
       ),
-    )
-      (config.resolve.modules = [
-        path.resolve(__dirname, '..'),
-        'node_modules',
-      ]);
+    );
+
     config.resolve.extensions.push('.js', '.jsx'); // resolves `import '../Foo'` to `../Foo/index.jsx`
     config.resolve.alias = {
       ...config.resolve.alias,
