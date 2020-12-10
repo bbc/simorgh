@@ -33,10 +33,6 @@ const StyledSectionLabel = styled(SectionLabel)`
   }
 `;
 
-const StyledTimestamp = styled(Timestamp)`
-  display: inline;
-`;
-
 const RecentVideoEpisodes = ({ episodes }) => {
   const {
     script,
@@ -109,7 +105,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
             {episode.episodeTitle && (
               <span role="text">
                 <EpisodeList.Metadata>
-                  <StyledTimestamp
+                  <Timestamp
                     timestamp={episode.timestamp}
                     format="D MMMM YYYY"
                     dateTimeFormat="YYYY-MM-DD"
