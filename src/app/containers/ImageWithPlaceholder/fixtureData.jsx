@@ -11,6 +11,7 @@ import {
 import FigureContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',
@@ -26,7 +27,7 @@ const WrappedImageWithPlaceholder = ({ isAmp, ...otherProps }) => (
       service="news"
       statusCode={200}
       pathname="/pathname"
-      pageType="frontPage"
+      pageType={FRONT_PAGE}
     >
       <FigureContainer {...otherProps} />
     </RequestContextProvider>

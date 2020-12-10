@@ -1,5 +1,5 @@
 import getStatsPageIdentifier from '.';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 describe('getStatsPageIdentifier', () => {
   const testScenarios = [
@@ -19,7 +19,7 @@ describe('getStatsPageIdentifier', () => {
     },
     {
       service: 'persian',
-      pageType: 'frontPage',
+      pageType: FRONT_PAGE,
       expected: 'persian.page',
       summary: 'should return for WS Front Page',
     },
