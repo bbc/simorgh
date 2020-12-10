@@ -84,8 +84,8 @@ const RecentVideoEpisodes = ({ episodes }) => {
               })}
             />
             {/* these must be concatenated for screen reader UX */}
-            <VisuallyHiddenText>{`${videoLabel}, `}</VisuallyHiddenText>
             <EpisodeList.Link href={episode.url}>
+              <VisuallyHiddenText>{`${videoLabel}, `}</VisuallyHiddenText>
               <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">
                 {episode.brandTitle}
               </EpisodeList.Title>
