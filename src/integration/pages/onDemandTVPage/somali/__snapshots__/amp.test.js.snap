@@ -245,13 +245,13 @@ exports[`AMP On Demand T V Page I can see the brand title 1`] = `"Caawa Iyo Caal
 
 exports[`AMP On Demand T V Page I can see the episode summary 1`] = `"Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka"`;
 
-exports[`AMP On Demand T V Page I can see the episode title 1`] = `"23 Juunyo 2020"`;
+exports[`AMP On Demand T V Page I can see the episode title 1`] = `"8 Disembar 2020"`;
 
-exports[`AMP On Demand T V Page Main heading should match text 1`] = `"Caawa Iyo Caalamka, 23 Juunyo 2020"`;
+exports[`AMP On Demand T V Page Main heading should match text 1`] = `"Caawa Iyo Caalamka, 8 Disembar 2020"`;
 
 exports[`AMP On Demand T V Page Media Player a11y assistive technology can read the media player title 1`] = `"Ciyaaridda Muuqaalka"`;
 
-exports[`AMP On Demand T V Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/somali/bbc_somali_tv/w172xcmnrdmbygt/so/amp?morph_env=live"`;
+exports[`AMP On Demand T V Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/somali/bbc_somali_tv/w172xcmygv61j1y/so/amp?morph_env=live"`;
 
 exports[`AMP On Demand T V Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -331,7 +331,7 @@ exports[`AMP On Demand T V Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP On Demand T V Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`AMP On Demand T V Page SEO Heading level 1 1`] = `"Caawa Iyo Caalamka, 23 Juunyo 2020"`;
+exports[`AMP On Demand T V Page SEO Heading level 1 1`] = `"Caawa Iyo Caalamka, 8 Disembar 2020"`;
 
 exports[`AMP On Demand T V Page SEO Lang attribute 1`] = `"so"`;
 
@@ -375,10 +375,10 @@ Object {
       "@type": "VideoObject",
       "description": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka",
       "duration": "PT26M30S",
-      "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/media/somali/bbc_somali_tv/w172xcmnrdmbygt/so/amp?morph_env=live",
+      "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/media/somali/bbc_somali_tv/w172xcmygv61j1y/so/amp?morph_env=live",
       "name": "Caawa Iyo Caalamka",
       "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p06hm27g.png",
-      "uploadDate": "2020-06-23T00:00:00.000Z",
+      "uploadDate": "2020-12-08T00:00:00.000Z",
     },
   ],
 }
@@ -418,4 +418,4 @@ exports[`AMP On Demand T V Page SEO Twitter site 1`] = `"@bbcsomali"`;
 
 exports[`AMP On Demand T V Page SEO Twitter title 1`] = `"Caawa Iyo Caalamka - BBC News Somali"`;
 
-exports[`AMP On Demand T V Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Caawa Iyo Caalamka, 23 Juunyo 2020"`;
+exports[`AMP On Demand T V Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Caawa Iyo Caalamka, 8 Disembar 2020"`;

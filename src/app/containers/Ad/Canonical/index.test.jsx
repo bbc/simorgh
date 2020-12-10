@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
-import CanonicalAd, { getBootstrapSrc, getPreloadUrls } from '.';
+import CanonicalAd, { getBootstrapSrc } from '.';
 
 const defaultRequestContextData = {
   showAdsBasedOnLocation: true,
@@ -106,38 +106,6 @@ describe('getBootstrapSrc', () => {
     isLive.mockImplementationOnce(() => false);
     expect(getBootstrapSrc('ads-js-env=live', true)).toBe(
       'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-bootstrap-legacy.js',
-    );
-  });
-});
-
-describe('getPreloadUrls', () => {
-  afterEach(() => {
-    jest.resetAllMocks();
-  });
-
-  it('Should return an array of live urls to preload', () => {
-    isLive.mockImplementation(() => true);
-
-    expect(getPreloadUrls('')).toEqual(
-      expect.arrayContaining([
-        'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-bootstrap.js',
-        'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-bootstrap-legacy.js',
-        'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-ads.js',
-        'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-analytics.js',
-      ]),
-    );
-  });
-
-  it('Should return an array of test urls to preload', () => {
-    isLive.mockImplementation(() => false);
-
-    expect(getPreloadUrls('')).toEqual(
-      expect.arrayContaining([
-        'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-bootstrap.js',
-        'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-bootstrap-legacy.js',
-        'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-ads.js',
-        'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-analytics.js',
-      ]),
     );
   });
 });
