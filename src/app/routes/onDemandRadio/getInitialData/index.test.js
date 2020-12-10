@@ -4,12 +4,11 @@ import getInitialData from '.';
 import * as fetchPageData from '../../utils/fetchPageData';
 import onDemandRadioJson from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
 import { RADIO_MISSING_FIELD } from '#lib/logger.const';
+import { MEDIA_PAGE as pageType } from '#app/routes/utils/pageTypes';
 
 fetch.mockResponse(JSON.stringify(onDemandRadioJson));
 const { env } = process;
 const spy = jest.spyOn(fetchPageData, 'default');
-
-const pageType = 'media';
 
 describe('Get initial data for on demand radio', () => {
   afterEach(() => {

@@ -84,7 +84,7 @@ const getAvailableEpisode = assocPath(
   'available',
 );
 
-const pageType = 'media';
+const pageType = MEDIA_PAGE;
 
 describe('OnDemand Radio Page ', () => {
   beforeEach(() => {

@@ -6,12 +6,11 @@ import getInitialData from '.';
 import * as fetchPageData from '../../utils/fetchPageData';
 import onDemandTvJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4';
 import { TV_MISSING_FIELD } from '#lib/logger.const';
+import { MEDIA_PAGE as pageType } from '#app/routes/utils/pageTypes';
 
 fetch.mockResponse(JSON.stringify(onDemandTvJson));
 const { env } = process;
 const spy = jest.spyOn(fetchPageData, 'default');
-
-const pageType = 'media';
 
 describe('Get initial data for on demand tv', () => {
   afterEach(() => {

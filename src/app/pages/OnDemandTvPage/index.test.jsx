@@ -61,7 +61,7 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
 
 const { env } = process;
 
-const pageType = 'media';
+const pageType = MEDIA_PAGE;
 
 describe('OnDemand TV Brand Page ', () => {
   beforeEach(() => {
