@@ -74,6 +74,33 @@ const advertisingDirectives = {
     'https://www.googletagservices.com',
     'https://securepubads.g.doubleclick.net',
     'https://bbc.gscontxt.net',
+    'https://adservice.google.co.ve',
+    'https://adservice.google.ru',
+    'https://adservice.google.co.in',
+    'https://adservice.google.com.br',
+    'https://adservice.google.com.mx',
+    'https://adservice.google.com.ec',
+    'https://adservice.google.cl',
+    'https://adservice.google.com.eg',
+    'https://adservice.google.com.sa',
+    'https://adservice.google.com.co',
+    'https://adservice.google.com.ar',
+    'https://adservice.google.com.ua',
+    'https://adservice.google.com.pe',
+    'https://adservice.google.kz',
+    'https://adservice.google.com.hk',
+    'https://adservice.google.es',
+    'https://adservice.google.co.jp',
+    'https://adservice.google.ae',
+    'https://adservice.google.com.tw',
+    'https://adservice.google.com.uy',
+    'https://adservice.google.co.il',
+    'https://adservice.google.com.pr',
+    'https://adservice.google.com.bo',
+    'https://adservice.google.iq',
+    'https://adservice.google.com.gt',
+    'https://adservice.google.com.sg',
+    'https://adservice.google.com.tr',
   ],
   prefetchSrc: ['https://*.safeframe.googlesyndication.com'],
   defaultSrc: [
@@ -85,7 +112,7 @@ const advertisingDirectives = {
 const directives = {
   connectSrc: {
     ampLive: [
-      'https://flagpoles.gnl-live.bbcverticals.com',
+      'https://gn-flagpoles.api.bbci.co.uk',
       'https://*.akamaihd.net',
       'https://a1.api.bbc.co.uk/hit.xiti', // ATI
       'https://config.api.bbci.co.uk', // Toggles service
@@ -99,7 +126,7 @@ const directives = {
       "'self'",
     ],
     canonicalLive: [
-      'https://flagpoles.gnl-live.bbcverticals.com',
+      'https://gn-flagpoles.api.bbci.co.uk',
       'https://*.akamaihd.net',
       'https://a1.api.bbc.co.uk/hit.xiti', // ATI
       'https://config.api.bbci.co.uk', // Toggles service
@@ -114,7 +141,7 @@ const directives = {
       "'self'",
     ],
     ampNonLive: [
-      'https://flagpoles.gnl-test.bbcverticals.com',
+      'https://gn-flagpoles.test.api.bbci.co.uk',
       'https://*.akamaihd.net',
       'https://cdn.ampproject.org',
       'https://*.ampproject.net', // Social Embeds
@@ -129,7 +156,7 @@ const directives = {
       "'self'",
     ],
     canonicalNonLive: [
-      'https://flagpoles.gnl-test.bbcverticals.com',
+      'https://gn-flagpoles.test.api.bbci.co.uk',
       'https://*.akamaihd.net',
       'https://logws1363.ati-host.net', // ATI
       'https://config.test.api.bbci.co.uk', // Toggles service

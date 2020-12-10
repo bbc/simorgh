@@ -4,10 +4,10 @@ import getAssetType from './getAssetType';
 import getAssetUri from './getAssetUri';
 import hasRecommendations from './hasRecommendations';
 import fetchPageData from '../../utils/fetchPageData';
-import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
-import getMostWatchedEndpoint from '#lib/utilities/getMostWatchedUrl';
-import getSecondaryColumnUrl from '#lib/utilities/getSecondaryColumnUrl';
-import getRecommendationsUrl from '#lib/utilities/getRecommendationsUrl';
+import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
+import getMostWatchedEndpoint from '#lib/utilities/getUrlHelpers/getMostWatchedUrl';
+import getSecondaryColumnUrl from '#lib/utilities/getUrlHelpers/getSecondaryColumnUrl';
+import getRecommendationsUrl from '#lib/utilities/getUrlHelpers/getRecommendationsUrl';
 import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 
 const noop = () => {};
@@ -27,17 +27,23 @@ const pageTypeUrls = async (
           name: 'mostRead',
           path: getMostReadEndpoint({ service, variant }).replace('.json', ''),
           assetUri,
+          api: 'mostread',
+          apiContext: 'secondary_data',
         },
         {
           name: 'secondaryColumn',
           path: getSecondaryColumnUrl({ service, variant }),
           assetUri,
+          api: 'secondary_column',
+          apiContext: 'secondary_data',
         },
         (await hasRecommendations(service, variant, pageData))
           ? {
               name: 'recommendations',
               path: getRecommendationsUrl({ assetUri, variant }),
               assetUri,
+              api: 'recommendations',
+              apiContext: 'secondary_data',
             }
           : null,
       ].filter(i => i);
@@ -47,6 +53,8 @@ const pageTypeUrls = async (
           name: 'mostWatched',
           path: getMostWatchedEndpoint({ service, variant, env }),
           assetUri,
+          api: 'mostwatched',
+          apiContext: 'secondary_data',
         },
       ];
     default:

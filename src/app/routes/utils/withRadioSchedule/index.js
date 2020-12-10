@@ -1,6 +1,6 @@
 import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
-import { getRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
+import { getRadioScheduleEndpoint } from '#lib/utilities/getUrlHelpers/getRadioSchedulesUrls';
 import { getQueryString } from '#lib/utilities/urlParser';
 import processRadioSchedule from '#containers/RadioSchedule/utilities/processRadioSchedule';
 import {

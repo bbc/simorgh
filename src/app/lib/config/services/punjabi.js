@@ -217,11 +217,11 @@ export const service = {
       },
       {
         title: 'ਭਾਰਤ',
-        url: '/punjabi/topics/5a08f030-710f-4168-acee-67294a90fc75',
+        url: '/punjabi/topics/cz74k76gjqxt',
       },
       {
         title: 'ਕੌਮਾਂਤਰੀ',
-        url: '/punjabi/international',
+        url: '/punjabi/topics/c2lej05e43lt',
       },
     ],
     footer: {

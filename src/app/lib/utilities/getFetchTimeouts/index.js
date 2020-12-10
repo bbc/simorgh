@@ -5,12 +5,12 @@
  * the data required for the fetch is fundamental to serving
  * a meaningful response to the user. The only example of this
  * in Simorgh is the fetch of page data from Ares for each page type.
- * It intentionally matches the mozart timeout for pages requested
+ * It is 500ms less than the mozart timeout for pages requested
  * via the Mozart 'Simorgh' payload; ensuring the Simorgh process
  * is free'ed up to handle subsequent requests when mozart itself will
  * be no longer waiting for Simorgh to respond.
  */
-export const PRIMARY_DATA_TIMEOUT = 4500;
+export const PRIMARY_DATA_TIMEOUT = 4000;
 
 /**
  * This timeout is for fetching 'secondary' data that is not
