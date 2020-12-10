@@ -2095,7 +2095,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                   comscore
                 </div>
                 <div
-                  class="emotion-203 css-1rncctf-GridComponent-GelPageGrid-StoryPageGrid emotion-1"
+                  class="emotion-203 css-k7l19e-GridComponent-GelPageGrid-StoryPageGrid emotion-1"
                   dir="ltr"
                 >
                   <div
@@ -3391,7 +3391,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   comscore
                 </div>
                 <div
-                  class="emotion-345 css-1rncctf-GridComponent-GelPageGrid-StoryPageGrid emotion-1"
+                  class="emotion-345 css-k7l19e-GridComponent-GelPageGrid-StoryPageGrid emotion-1"
                   dir="ltr"
                 >
                   <div
