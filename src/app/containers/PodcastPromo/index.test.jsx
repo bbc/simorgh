@@ -16,16 +16,16 @@ describe('PodcastPromo', () => {
   shouldMatchSnapshot('Should render correctly', <PromoWithContext />);
 
   it('should show when all props are available', async () => {
-    const { getByAltText } = await render(<PromoWithContext />);
-    const element = getByAltText('Что это было?');
+    const { container, getByText } = await render(<PromoWithContext />);
+    const sections = container.getElementsByTagName('section');
+    const element = getByText('Что это было?');
     expect(element).toBeTruthy();
+    expect(sections.length).toBe(1);
   });
 
   it('should show when props are not available', async () => {
-    const { getByAltText } = await render(
-      <PromoWithContext service="pidgin" />,
-    );
-    const element = getByAltText('Что это было?');
-    expect(element).toBeTruthy();
+    const { container } = await render(<PromoWithContext service="pidgin" />);
+    const sections = container.getElementsByTagName('section');
+    expect(sections.length).toBe(0);
   });
 });
