@@ -6,7 +6,7 @@ import getOriginContext from './getOriginContext';
 import getEnv from './getEnv';
 import getMetaUrls from './getMetaUrls';
 import variantPropType from '../../models/propTypes/variants';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 export const RequestContext = React.createContext({});
 
@@ -68,7 +68,7 @@ RequestContextProvider.propTypes = {
   isAmp: bool.isRequired,
   pageType: oneOf([
     ARTICLE_PAGE,
-    'frontPage',
+    FRONT_PAGE,
     'media',
     'mostRead',
     'mostWatched',
