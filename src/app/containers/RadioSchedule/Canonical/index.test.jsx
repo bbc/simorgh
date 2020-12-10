@@ -7,6 +7,7 @@ import processRadioSchedule from '../utilities/processRadioSchedule';
 import CanonicalRadioSchedule from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const endpoint = 'https://localhost/arabic/bbc_arabic_radio/schedule.json';
 
@@ -14,7 +15,7 @@ const endpoint = 'https://localhost/arabic/bbc_arabic_radio/schedule.json';
 const RadioScheduleWithContext = ({ initialData, lang }) => (
   <RequestContextProvider
     isAmp={false}
-    pageType="frontPage"
+    pageType={FRONT_PAGE}
     service="arabic"
     pathname="/arabic"
     timeOnServer={Date.now()}

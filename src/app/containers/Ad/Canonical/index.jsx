@@ -35,26 +35,6 @@ export const getBootstrapSrc = (queryString, useLegacy = false) => {
   return useLegacy ? adsLegacyTestScript : adsTestScript;
 };
 
-export const getPreloadUrls = queryString => {
-  const preloadUrls = [
-    getBootstrapSrc(queryString),
-    getBootstrapSrc(queryString, true),
-  ];
-
-  if (isLive()) {
-    return [
-      ...preloadUrls,
-      'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-ads.js',
-      'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-analytics.js',
-    ];
-  }
-  return [
-    ...preloadUrls,
-    'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-ads.js',
-    'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-analytics.js',
-  ];
-};
-
 const CanonicalAd = ({ slotType, className }) => {
   const { showAdsBasedOnLocation } = useContext(RequestContext);
   const location = useLocation();
@@ -92,11 +72,6 @@ const CanonicalAd = ({ slotType, className }) => {
   return (
     <>
       <Helmet>
-        {/* PreLoad Ad Scripts */}
-        {getPreloadUrls(queryString).map(script => (
-          <link rel="preload" href={script} as="script" key={script} />
-        ))}
-
         {/* Add Ad scripts to document head */}
         <script type="module" src={getBootstrapSrc(queryString)} async />
         <script

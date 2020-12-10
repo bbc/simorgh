@@ -1,4 +1,4 @@
-import isLive from '../isLive';
+import isLive from '../../isLive';
 
 const AV_ROUTE = 'ws/av-embeds';
 
