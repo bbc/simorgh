@@ -26,7 +26,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 const StyledSpan = styled.span`
   padding: 0 ${GEL_SPACING};
 `;
-
 const Spacer = styled.aside`
   position: relative;
   margin-bottom: ${GEL_SPACING_QUAD};
@@ -40,6 +39,9 @@ const StyledSectionLabel = styled(SectionLabel)`
     margin-bottom: ${GEL_SPACING_TRPL};
   }
 `;
+const StyledTimestamp = styled(Timestamp)`
+  display: inline;
+`;
 
 const RecentAudioEpisodes = ({ episodes }) => {
   const {
@@ -49,8 +51,6 @@ const RecentAudioEpisodes = ({ episodes }) => {
     dir,
     timezone,
     datetimeLocale,
-    altCalendar,
-    dateTimeFormat,
   } = useContext(ServiceContext);
 
   if (!episodes.length) return null;
@@ -125,15 +125,15 @@ const RecentAudioEpisodes = ({ episodes }) => {
                 <>
                   {' '}
                   <StyledSpan aria-hidden>|</StyledSpan>
-                  <Timestamp
+                  <StyledTimestamp
                     timestamp={episode.timestamp}
                     format="LL"
-                    dateTimeFormat={dateTimeFormat}
+                    dateTimeFormat="YYYY-MM-DD"
+                    padding={false}
                     script={script}
                     locale={datetimeLocale}
                     service={service}
                     timezone={timezone}
-                    altCalendar={altCalendar}
                   />
                 </>
               )}
