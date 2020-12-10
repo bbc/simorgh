@@ -916,15 +916,13 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
               BBC News
             </span>
           </a>
-          <div>
-            <a
-              class="emotion-20 emotion-21"
-              dir="ltr"
-              href="#content"
-            >
-              Skip to content
-            </a>
-          </div>
+          <a
+            class="emotion-20 emotion-21"
+            dir="ltr"
+            href="#content"
+          >
+            Skip to content
+          </a>
         </div>
       </div>
       <nav
