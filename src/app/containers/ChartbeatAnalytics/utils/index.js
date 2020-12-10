@@ -9,6 +9,7 @@ import {
   FRONT_PAGE,
   MEDIA_PAGE,
   MOST_READ_PAGE,
+  MOST_WATCHED_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 const ID_COOKIE = 'ckns_sylphid';
@@ -43,7 +44,7 @@ export const getType = (pageType, shorthand = false) => {
       return 'Radio';
     case MOST_READ_PAGE:
       return 'Most Read';
-    case 'mostWatched':
+    case MOST_WATCHED_PAGE:
       return 'Most Watched';
     case 'STY':
       return 'STY';
@@ -123,7 +124,7 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
       return path(['pageTitle'], pageData);
     case MOST_READ_PAGE:
       return `${title} - ${brandName}`;
-    case 'mostWatched':
+    case MOST_WATCHED_PAGE:
       return `${title} - ${brandName}`;
     case 'STY':
       return path(['promo', 'headlines', 'headline'], pageData);
@@ -159,7 +160,7 @@ export const getConfig = ({
     pageType,
     pageData: data,
     brandName,
-    title: pageType === 'mostWatched' ? mostWatchedTitle : mostReadTitle,
+    title: pageType === MOST_WATCHED_PAGE ? mostWatchedTitle : mostReadTitle,
   });
   const domain = env !== 'live' ? 'test.bbc.co.uk' : chartbeatDomain;
   const sectionName = path(['relatedContent', 'section', 'name'], data);

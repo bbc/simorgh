@@ -16,6 +16,7 @@ import {
   FRONT_PAGE,
   MEDIA_PAGE,
   MOST_READ_PAGE,
+  MOST_WATCHED_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 let isOnClient = false;
@@ -83,7 +84,7 @@ describe('Chartbeat utilities', () => {
         expectedShortType: 'Most Read',
       },
       {
-        pageType: 'mostWatched',
+        pageType: MOST_WATCHED_PAGE,
         expectedDefaultType: 'Most Watched',
         expectedShortType: 'Most Watched',
       },
@@ -260,12 +261,11 @@ describe('Chartbeat utilities', () => {
     });
 
     it('should return correct title when pageType is mostWatched', () => {
-      const pageType = 'mostWatched';
       const pageData = {};
       const brandName = 'BBC News Afaan Oromoo';
       const title = 'Hedduu kan ilaalaman';
 
-      expect(getTitle({ pageType, pageData, brandName, title })).toBe(
+      expect(getTitle({ MOST_WATCHED_PAGE, pageData, brandName, title })).toBe(
         'Hedduu kan ilaalaman - BBC News Afaan Oromoo',
       );
     });
@@ -726,7 +726,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'mostWatched',
+      pageType: MOST_WATCHED_PAGE,
       data: {
         name: 'Most Watched Page Title',
       },
