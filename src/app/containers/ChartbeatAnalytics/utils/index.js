@@ -8,6 +8,7 @@ import {
   ARTICLE_PAGE,
   FRONT_PAGE,
   MEDIA_PAGE,
+  MOST_READ_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 const ID_COOKIE = 'ckns_sylphid';
@@ -40,7 +41,7 @@ export const getType = (pageType, shorthand = false) => {
       return 'article-media-asset';
     case MEDIA_PAGE:
       return 'Radio';
-    case 'mostRead':
+    case MOST_READ_PAGE:
       return 'Most Read';
     case 'mostWatched':
       return 'Most Watched';
@@ -120,7 +121,7 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
       return path(['promo', 'headlines', 'headline'], pageData);
     case MEDIA_PAGE:
       return path(['pageTitle'], pageData);
-    case 'mostRead':
+    case MOST_READ_PAGE:
       return `${title} - ${brandName}`;
     case 'mostWatched':
       return `${title} - ${brandName}`;

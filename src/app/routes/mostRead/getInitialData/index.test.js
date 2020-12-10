@@ -1,5 +1,6 @@
 import getInitialData from '.';
 import mostReadJson from '#data/pidgin/mostRead';
+import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 
 fetch.mockResponse(JSON.stringify(mostReadJson));
 
@@ -7,7 +8,7 @@ it('should return essential data for a page to render', async () => {
   const { pageData } = await getInitialData({
     path: 'mock-frontpage-path',
     service: 'pidgin',
-    pageType: 'mostRead',
+    pageType: MOST_READ_PAGE,
   });
 
   expect(pageData.lastRecordTimeStamp).toEqual('2030-01-01T17:00:00Z');
