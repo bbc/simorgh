@@ -11,7 +11,7 @@ import {
 import onClient from '#lib/utilities/onClient';
 import * as articleUtils from '#lib/analyticsUtils/article';
 import * as frontPageUtils from '#lib/analyticsUtils/indexPage';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 let isOnClient = false;
 
@@ -270,7 +270,7 @@ describe('Chartbeat utilities', () => {
       ${'index'}      | ${'BBC News'}    | ${'This is an index page title'} | ${1}
       ${'IDX'}        | ${'BBC Persian'} | ${'This is an IDX page title'}   | ${1}
       ${'FIX'}        | ${'BBC Afrique'} | ${'This is an FIX page title'}   | ${1}
-      ${'frontPage'}  | ${'BBC News'}    | ${'This is a frontpage title'}   | ${1}
+      ${FRONT_PAGE}   | ${'BBC News'}    | ${'This is a frontpage title'}   | ${1}
       ${ARTICLE_PAGE} | ${null}          | ${'This is an article title'}    | ${1}
       ${'foo'}        | ${'BBC News'}    | ${null}                          | ${0}
     `(
@@ -364,7 +364,7 @@ describe('Chartbeat utilities', () => {
       const fixtureData = {
         isAmp: false,
         platform: 'canonical',
-        pageType: 'frontPage',
+        pageType: FRONT_PAGE,
         data: {},
         brandName: 'BBC-News',
         chartbeatDomain: 'bbc.co.uk',
@@ -875,7 +875,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'frontPage',
+      pageType: FRONT_PAGE,
       data: {},
       brandName: 'BBC-News',
       chartbeatDomain: 'bbc.co.uk',
@@ -894,7 +894,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'frontPage',
+      pageType: FRONT_PAGE,
       data: {},
       brandName: 'BBC-News',
       chartbeatDomain: 'bbc.co.uk',

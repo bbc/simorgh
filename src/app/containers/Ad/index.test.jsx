@@ -4,6 +4,7 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 import AdContainer from './index';
 
@@ -47,7 +48,7 @@ describe('Ad Container', () => {
             bbcOrigin="https://www.test.bbc.co.uk"
             id="c0000000000o"
             isAmp
-            pageType="frontPage"
+            pageType={FRONT_PAGE}
             service="mundo"
             statusCode={200}
             pathname="/mundo"
@@ -67,7 +68,7 @@ describe('Ad Container', () => {
             bbcOrigin="https://www.test.bbc.co.uk"
             id="c0000000000o"
             isAmp
-            pageType="frontPage"
+            pageType={FRONT_PAGE}
             service="mundo"
             statusCode={200}
             pathname="/mundo"
@@ -89,7 +90,7 @@ describe('Ad Container', () => {
             bbcOrigin="https://www.test.bbc.co.uk"
             id="c0000000000o"
             isAmp={false}
-            pageType="frontPage"
+            pageType={FRONT_PAGE}
             service="mundo"
             statusCode={200}
             pathname="/mundo"
@@ -111,7 +112,7 @@ describe('Ad Container', () => {
             bbcOrigin="https://www.test.bbc.co.uk"
             id="c0000000000o"
             isAmp={false}
-            pageType="frontPage"
+            pageType={FRONT_PAGE}
             service="mundo"
             statusCode={200}
             pathname="/mundo"
