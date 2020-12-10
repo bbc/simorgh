@@ -9,13 +9,14 @@ import pidginData from '#data/pidgin/frontpage/index.json';
 import russianData from '#data/russian/frontpage/index.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const getSection = platform => (service, data) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.com"
       isAmp={platform === 'amp'}
-      pageType="frontPage"
+      pageType={FRONT_PAGE}
       service={service}
     >
       <IndexPageSection group={data} sectionNumber={1} />

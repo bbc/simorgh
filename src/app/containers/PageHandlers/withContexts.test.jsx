@@ -10,7 +10,7 @@ import * as requestContextImports from '#contexts/RequestContext';
 import * as serviceContextImports from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { UserContext } from '#contexts/UserContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 jest.mock('#contexts/RequestContext/getOriginContext', () => jest.fn());
 
@@ -79,7 +79,7 @@ describe('withContexts HOC', () => {
       jest.clearAllMocks();
     });
 
-    const pageTypes = [ARTICLE_PAGE, 'frontPage', 'chicken'];
+    const pageTypes = [ARTICLE_PAGE, FRONT_PAGE, 'chicken'];
 
     pageTypes.forEach(pageType => {
       it(`passing pageType==${pageType} should pass along`, () => {

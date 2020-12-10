@@ -4,6 +4,7 @@ import RadioScheduleContainer from '..';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const getToggleState = enabled => ({
   radioSchedule: { enabled },
@@ -24,7 +25,7 @@ const RadioSchedulesWithContext = ({
   >
     <RequestContextProvider
       isAmp={isAmp}
-      pageType="frontPage"
+      pageType={FRONT_PAGE}
       service={service}
       pathname={`/${service}`}
       timeOnServer={Date.now()}
