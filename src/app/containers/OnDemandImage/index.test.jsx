@@ -4,6 +4,7 @@ import { render, getByAltText } from '@testing-library/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import OnDemandImage from '.';
+import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 // eslint-disable-next-line react/prop-types
 const component = ({ url, isAmp, service }) => (
@@ -11,7 +12,7 @@ const component = ({ url, isAmp, service }) => (
     <RequestContextProvider
       isAmp={isAmp}
       service={service}
-      pageType="media"
+      pageType={MEDIA_PAGE}
       pathname="/path"
     >
       <OnDemandImage imageUrl={url} />

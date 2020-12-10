@@ -9,7 +9,11 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import { service as serbianServiceConfig } from '#lib/config/services/serbian';
 import { service as ukrainianServiceConfig } from '#lib/config/services/ukrainian';
-import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  MEDIA_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 const defaultToggleState = {
   navOnArticles: {
@@ -75,7 +79,7 @@ describe(`Header`, () => {
     shouldMatchSnapshot(
       'should render correctly for WS radio page',
       HeaderContainerWithContext({
-        pageType: 'media',
+        pageType: MEDIA_PAGE,
       }),
     );
   });

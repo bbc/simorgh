@@ -11,6 +11,7 @@ import indonesianPageData from './fixtureData/indonesia';
 import gahuzaPageData from './fixtureData/gahuza';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 const Page = ({
   pageData,
@@ -24,7 +25,7 @@ const Page = ({
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"
           isAmp={isAmp}
-          pageType="media"
+          pageType={MEDIA_PAGE}
           pathname="/pathname"
           service={service}
           statusCode={200}
