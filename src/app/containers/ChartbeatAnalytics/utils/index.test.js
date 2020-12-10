@@ -15,6 +15,7 @@ import {
   ARTICLE_PAGE,
   FRONT_PAGE,
   MEDIA_PAGE,
+  MOST_READ_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 let isOnClient = false;
@@ -77,7 +78,7 @@ describe('Chartbeat utilities', () => {
         expectedShortType: 'Radio',
       },
       {
-        pageType: 'mostRead',
+        pageType: MOST_READ_PAGE,
         expectedDefaultType: 'Most Read',
         expectedShortType: 'Most Read',
       },
@@ -248,7 +249,7 @@ describe('Chartbeat utilities', () => {
 
   describe('Chartbeat Title', () => {
     it('should return correct title when pageType is mostRead', () => {
-      const pageType = 'mostRead';
+      const pageType = MOST_READ_PAGE;
       const pageData = {};
       const brandName = 'BBC News 코리아';
       const title = 'TOP 뉴스';
@@ -691,7 +692,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'mostRead',
+      pageType: MOST_READ_PAGE,
       data: {
         name: 'Most Read Page Title',
       },

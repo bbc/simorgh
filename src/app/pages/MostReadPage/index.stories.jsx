@@ -5,6 +5,7 @@ import { getLocalMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostRe
 import MostReadPage from '.';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import zhongwenSimpData from '#data/zhongwen/mostRead/simp.json';
+import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 
 const stories = storiesOf('Pages|Most Read Page', module);
 
@@ -24,7 +25,7 @@ const stories = storiesOf('Pages|Most Read Page', module);
     return (
       <BrowserRouter>
         <MostReadPage
-          pageType="mostRead"
+          pageType={MOST_READ_PAGE}
           isAmp={false}
           pathname="/path"
           status={200}
