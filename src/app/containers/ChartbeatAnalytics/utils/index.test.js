@@ -261,11 +261,12 @@ describe('Chartbeat utilities', () => {
     });
 
     it('should return correct title when pageType is mostWatched', () => {
+      const pageType = MOST_WATCHED_PAGE;
       const pageData = {};
       const brandName = 'BBC News Afaan Oromoo';
       const title = 'Hedduu kan ilaalaman';
 
-      expect(getTitle({ MOST_WATCHED_PAGE, pageData, brandName, title })).toBe(
+      expect(getTitle({ pageType, pageData, brandName, title })).toBe(
         'Hedduu kan ilaalaman - BBC News Afaan Oromoo',
       );
     });

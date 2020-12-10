@@ -42,11 +42,12 @@ describe('isPgl', () => {
 
 describe('getHeadingTagOverride', () => {
   it('should return h2 if page type is mostWatched', () => {
+    const pageType = MOST_WATCHED_PAGE;
     const isRecommendation = false;
     const isContentTypeGuide = false;
     expect(
       getHeadingTagOverride({
-        MOST_WATCHED_PAGE,
+        pageType,
         isRecommendation,
         isContentTypeGuide,
       }),
