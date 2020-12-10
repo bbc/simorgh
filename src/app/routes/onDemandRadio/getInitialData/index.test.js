@@ -4,7 +4,7 @@ import getInitialData from '.';
 import * as fetchPageData from '../../utils/fetchPageData';
 import onDemandRadioJson from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
 import { RADIO_MISSING_FIELD } from '#lib/logger.const';
-import { MEDIA_PAGE as pageType } from '#app/routes/utils/pageTypes';
+import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 fetch.mockResponse(JSON.stringify(onDemandRadioJson));
 const { env } = process;
@@ -19,7 +19,7 @@ describe('Get initial data for on demand radio', () => {
   it('should return essential data for a page to render', async () => {
     const { pageData } = await getInitialData({
       path: 'mock-on-demand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles: {
         recentAudioEpisodes: { enabled: false, value: 4 },
       },
@@ -43,7 +43,7 @@ describe('Get initial data for on demand radio', () => {
   it('should return essential data for a page to render when the episode toggle is null', async () => {
     const { pageData } = await getInitialData({
       path: 'mock-on-demand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles: {
         recentAudioEpisodes: null,
       },
@@ -67,7 +67,7 @@ describe('Get initial data for on demand radio', () => {
   it('should return recent episode data when recentEpisode toggle is enabled', async () => {
     const { pageData } = await getInitialData({
       path: 'mock-on-demand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles: {
         recentAudioEpisodes: { enabled: true, value: 4 },
       },
@@ -79,19 +79,25 @@ describe('Get initial data for on demand radio', () => {
 
   it('should override renderer on test', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
-    await getInitialData({ path: 'mock-live-radio-path', pageType });
+    await getInitialData({
+      path: 'mock-live-radio-path',
+      pageType: MEDIA_PAGE,
+    });
     expect(spy).toHaveBeenCalledWith({
       path: 'mock-live-radio-path?renderer_env=live',
-      pageType,
+      pageType: MEDIA_PAGE,
     });
   });
 
   it('should not override renderer on live', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
-    await getInitialData({ path: 'mock-live-radio-path', pageType });
+    await getInitialData({
+      path: 'mock-live-radio-path',
+      pageType: MEDIA_PAGE,
+    });
     expect(spy).toHaveBeenCalledWith({
       path: 'mock-live-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
     });
   });
 
@@ -138,7 +144,7 @@ describe('Get initial data for on demand radio', () => {
 
     await getInitialData({
       path: 'mock-on-demand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles: {
         recentAudioEpisodes: { enabled: false, value: 4 },
       },

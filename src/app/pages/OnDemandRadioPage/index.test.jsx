@@ -84,8 +84,6 @@ const getAvailableEpisode = assocPath(
   'available',
 );
 
-const pageType = MEDIA_PAGE;
-
 describe('OnDemand Radio Page ', () => {
   beforeEach(() => {
     process.env = { ...env };
@@ -100,7 +98,7 @@ describe('OnDemand Radio Page ', () => {
 
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles,
     });
 
@@ -116,7 +114,7 @@ describe('OnDemand Radio Page ', () => {
 
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles,
     });
 
@@ -130,7 +128,7 @@ describe('OnDemand Radio Page ', () => {
 
     const { pageData: pageDataWithWithoutVideo } = await getInitialData({
       path: 'some-ondemand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles,
     });
     const { getByText } = await renderPage({
@@ -146,7 +144,7 @@ describe('OnDemand Radio Page ', () => {
 
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles,
     });
     const { getByText } = await renderPage({
@@ -162,7 +160,7 @@ describe('OnDemand Radio Page ', () => {
 
     const { pageData: pageDataWithWithoutVideo } = await getInitialData({
       path: 'some-ondemand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles,
     });
     const { getByText } = await renderPage({
@@ -178,7 +176,7 @@ describe('OnDemand Radio Page ', () => {
 
     const { pageData: pageDataWithWithoutVideo } = await getInitialData({
       path: 'some-ondemand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles,
     });
     const { getByText } = await renderPage({
@@ -194,7 +192,7 @@ describe('OnDemand Radio Page ', () => {
 
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles,
     });
 
@@ -212,7 +210,7 @@ describe('OnDemand Radio Page ', () => {
 
     const { pageData: pageDataWithWithoutVideo } = await getInitialData({
       path: 'some-ondemand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles,
     });
     const { getByText } = await renderPage({
@@ -234,7 +232,7 @@ describe('OnDemand Radio Page ', () => {
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles,
     });
     const { container } = await renderPage({ pageData, service: 'korean' });
@@ -255,7 +253,7 @@ describe('OnDemand Radio Page ', () => {
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles,
     });
     const { container } = await renderPage({ pageData, service: 'korean' });
@@ -275,7 +273,7 @@ describe('OnDemand Radio Page ', () => {
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles,
     });
     const { container } = await renderPage({
@@ -300,7 +298,7 @@ describe('OnDemand Radio Page ', () => {
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles,
     });
     const { container } = await renderPage({
@@ -321,7 +319,7 @@ describe('OnDemand Radio Page ', () => {
     fetch.mockResponse(JSON.stringify(koreanPageData));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles,
     });
     const { container, getByText } = await renderPage({
@@ -348,7 +346,7 @@ describe('OnDemand Radio Page ', () => {
     );
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles,
     });
     const { container, getByText } = await renderPage({
@@ -372,7 +370,7 @@ describe('OnDemand Radio Page ', () => {
     fetch.mockResponse(JSON.stringify(afaanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles,
     });
     const { container } = await renderPage({
@@ -395,7 +393,7 @@ describe('OnDemand Radio Page ', () => {
     fetch.mockResponse(JSON.stringify(afaanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles,
     });
     const { container } = await renderPage({
@@ -419,7 +417,7 @@ describe('OnDemand Radio Page ', () => {
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
-      pageType,
+      pageType: MEDIA_PAGE,
       toggles,
     });
     const { container } = await renderPage({

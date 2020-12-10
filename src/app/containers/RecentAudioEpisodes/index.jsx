@@ -8,6 +8,7 @@ import {
   formatDuration,
   formatUnixTimestamp,
 } from '@bbc/psammead-timestamp-container/utilities';
+import Timestamp from '@bbc/psammead-timestamp-container';
 import SectionLabel from '@bbc/psammead-section-label';
 import {
   GEL_SPACING,
@@ -25,7 +26,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 const StyledSpan = styled.span`
   padding: 0 ${GEL_SPACING};
 `;
-
 const Spacer = styled.aside`
   position: relative;
   margin-bottom: ${GEL_SPACING_QUAD};
@@ -38,6 +38,9 @@ const StyledSectionLabel = styled(SectionLabel)`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-bottom: ${GEL_SPACING_TRPL};
   }
+`;
+const StyledTimestamp = styled(Timestamp)`
+  display: inline;
 `;
 
 const RecentAudioEpisodes = ({ episodes }) => {
@@ -116,12 +119,20 @@ const RecentAudioEpisodes = ({ episodes }) => {
             </EpisodeList.Link>
             {episode.episodeTitle && (
               <EpisodeList.Metadata>
-                {' '}
-                <StyledSpan aria-hidden>|</StyledSpan>
-                {formattedTimestamp({
-                  releaseDateTimeStamp: episode.timestamp,
-                  format: 'LL',
-                })}
+                <>
+                  {' '}
+                  <StyledSpan aria-hidden>|</StyledSpan>
+                  <StyledTimestamp
+                    timestamp={episode.timestamp}
+                    format="LL"
+                    dateTimeFormat="YYYY-MM-DD"
+                    padding={false}
+                    script={script}
+                    locale={datetimeLocale}
+                    service={service}
+                    timezone={timezone}
+                  />
+                </>
               </EpisodeList.Metadata>
             )}
           </EpisodeList.Episode>
