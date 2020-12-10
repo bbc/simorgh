@@ -73,8 +73,9 @@ const RecentVideoEpisodes = ({ episodes }) => {
       </StyledSectionLabel>
       <EpisodeList script={script} service={service} dir={dir} darkMode>
         {episodes.map(episode => (
-          <EpisodeList.Episode key={episode.id}>
+          <EpisodeList.Episode key={episode.id} dir={dir}>
             <EpisodeList.Image
+              dir={dir}
               src={episode.image}
               alt={episode.altText}
               duration={formatDuration({
@@ -83,8 +84,8 @@ const RecentVideoEpisodes = ({ episodes }) => {
               })}
             />
             {/* these must be concatenated for screen reader UX */}
-            <VisuallyHiddenText>{`${videoLabel}, `}</VisuallyHiddenText>
             <EpisodeList.Link href={episode.url}>
+              <VisuallyHiddenText>{`${videoLabel}, `}</VisuallyHiddenText>
               <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">
                 {episode.brandTitle}
               </EpisodeList.Title>
