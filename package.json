@@ -110,7 +110,7 @@
     "@bbc/psammead-story-promo": "^8.0.7",
     "@bbc/psammead-story-promo-list": "^6.0.5",
     "@bbc/psammead-styles": "^7.0.1",
-    "@bbc/psammead-timestamp-container": "^5.0.13",
+    "@bbc/psammead-timestamp-container": "^5.0.15",
     "@bbc/psammead-useful-links": "^3.0.6",
     "@bbc/psammead-visually-hidden-text": "^2.0.1",
     "@bbc/web-vitals": "^1.0.2",

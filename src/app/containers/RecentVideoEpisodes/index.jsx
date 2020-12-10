@@ -5,6 +5,7 @@ import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import EpisodeList from '@bbc/psammead-episode-list';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import Timestamp from '@bbc/psammead-timestamp-container';
 import {
   formatDuration,
   formatUnixTimestamp,
@@ -31,6 +32,7 @@ const StyledSectionLabel = styled(SectionLabel)`
     margin-bottom: ${GEL_SPACING_TRPL};
   }
 `;
+
 const RecentVideoEpisodes = ({ episodes }) => {
   const {
     script,
@@ -103,9 +105,17 @@ const RecentVideoEpisodes = ({ episodes }) => {
             </EpisodeList.Link>
             {episode.episodeTitle && (
               <span role="text">
-                <EpisodeList.Metadata as="time">
-                  {formatDate(episode.timestamp)}
-                </EpisodeList.Metadata>
+                <EpisodeList.Metadata
+                  as={Timestamp}
+                  timestamp={episode.timestamp}
+                  format="D MMMM YYYY"
+                  dateTimeFormat="YYYY-MM-DD"
+                  padding={false}
+                  script={script}
+                  locale={datetimeLocale}
+                  service={service}
+                  timezone={timezone}
+                />
               </span>
             )}
           </EpisodeList.Episode>
