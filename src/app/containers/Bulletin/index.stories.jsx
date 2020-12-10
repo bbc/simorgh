@@ -8,6 +8,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import BulletinContainer from '.';
 import fixture from '#data/igbo/frontpage';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const bulletinFixture = type =>
   pathOr(null, ['content', 'groups'], fixture)
@@ -52,7 +53,7 @@ const getBulletinPromo = (platform, service, item) => (
       bbcOrigin="https://www.test.bbc.co.uk"
       isAmp={platform === 'amp'}
       pathname="/pathname"
-      pageType="frontPage"
+      pageType={FRONT_PAGE}
       service={service}
     >
       <BulletinContainer item={item} />

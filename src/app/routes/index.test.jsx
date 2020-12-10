@@ -28,6 +28,8 @@ import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
 import indexPageJson from '#data/ukrainian/ukraine_in_russian';
 import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
 
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 
 // mock pages/index.js to return a non async page component
@@ -435,7 +437,7 @@ it('should fallback to and render a 500 error page if there is a problem with pa
   });
   const { getByText } = renderRouter({
     pathname,
-    pageType: 'frontPage',
+    pageType: FRONT_PAGE,
     service: 'afrique',
     error: {
       message: error,

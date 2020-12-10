@@ -9,7 +9,7 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import { service as serbianServiceConfig } from '#lib/config/services/serbian';
 import { service as ukrainianServiceConfig } from '#lib/config/services/ukrainian';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const defaultToggleState = {
   navOnArticles: {
@@ -68,7 +68,7 @@ describe(`Header`, () => {
     shouldMatchSnapshot(
       'should render correctly for WS frontPage',
       HeaderContainerWithContext({
-        pageType: 'frontPage',
+        pageType: FRONT_PAGE,
       }),
     );
 
@@ -94,7 +94,7 @@ describe(`Header`, () => {
     it('should render a Brand with a Skip to content link, linking to #content', () => {
       render(
         HeaderContainerWithContext({
-          pageType: 'frontPage',
+          pageType: FRONT_PAGE,
         }),
       );
 
@@ -107,7 +107,7 @@ describe(`Header`, () => {
     it('should not render script link for a service without variants', () => {
       render(
         HeaderContainerWithContext({
-          pageType: 'frontPage',
+          pageType: FRONT_PAGE,
           service: 'pidgin',
           serviceContext: pidginServiceConfig,
         }),
@@ -118,7 +118,7 @@ describe(`Header`, () => {
     it('should render script link for a service with variants', () => {
       const { container } = render(
         HeaderContainerWithContext({
-          pageType: 'frontPage',
+          pageType: FRONT_PAGE,
           service: 'serbian',
           serviceContext: serbianServiceConfig,
           variant: 'cyr',
