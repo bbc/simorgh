@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-expressions no-param-reassign */
+/* eslint-disable no-param-reassign */
 const webpack = require('webpack');
-const path = require('path');
 const { webpackDirAlias } = require('../dirAlias');
 
 module.exports = {
@@ -20,7 +19,6 @@ module.exports = {
       new webpack.NormalModuleReplacementPlugin(
         /(.*)logger.node(\.*)/,
         resource => {
-          // eslint-disable-next-line no-param-reassign
           resource.request = resource.request.replace(
             /logger.node/,
             `logger.web`,
