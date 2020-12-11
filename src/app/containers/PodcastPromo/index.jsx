@@ -34,8 +34,8 @@ const Promo = ({
 
   return (
     <div>
-      <PodcastPromo script={script} service={service} role="region">
-        <PodcastPromo.Title>{title}</PodcastPromo.Title>
+      <PodcastPromo script={script} service={service} role="region" aria-labelledby="podcast-promo">
+        <PodcastPromo.Title id="podcast-promo">{title}</PodcastPromo.Title>
         <PodcastPromo.Card>
           <PodcastPromo.Card.Image>
             <ImageWithPlaceholder
