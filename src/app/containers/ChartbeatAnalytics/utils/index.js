@@ -4,7 +4,11 @@ import onClient from '#lib/utilities/onClient';
 import { getPromoHeadline } from '#lib/analyticsUtils/article';
 import { getPageTitle } from '#lib/analyticsUtils/indexPage';
 import { getReferrer } from '#lib/analyticsUtils';
-import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  MEDIA_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 const ID_COOKIE = 'ckns_sylphid';
 
@@ -34,7 +38,7 @@ export const getType = (pageType, shorthand = false) => {
       return shorthand ? 'ART' : 'New Article';
     case 'MAP':
       return 'article-media-asset';
-    case 'media':
+    case MEDIA_PAGE:
       return 'Radio';
     case 'mostRead':
       return 'Most Read';
@@ -74,7 +78,7 @@ export const buildSections = ({
         buildSectionItem(buildSectionItem(serviceCap, sectionName), pageType),
         buildSectionItem(serviceCap, appendCategory(categoryName)),
       ].join(', ');
-    case 'media':
+    case MEDIA_PAGE:
       return [
         serviceCap,
         ...(pageType
@@ -114,7 +118,7 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
       return getPromoHeadline(pageData);
     case 'MAP':
       return path(['promo', 'headlines', 'headline'], pageData);
-    case 'media':
+    case MEDIA_PAGE:
       return path(['pageTitle'], pageData);
     case 'mostRead':
       return `${title} - ${brandName}`;
@@ -174,7 +178,8 @@ export const getConfig = ({
   });
   const cookie = getSylphidCookie();
   const type = getType(pageType);
-  const contentType = pageType === 'media' ? getTvRadioContentType(data) : type;
+  const contentType =
+    pageType === MEDIA_PAGE ? getTvRadioContentType(data) : type;
   const currentPath = onClient() && window.location.pathname;
   return {
     domain,

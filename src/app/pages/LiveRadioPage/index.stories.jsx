@@ -10,6 +10,7 @@ import tigrinya from './fixtureData/tigrinya';
 import afaanoromoo from './fixtureData/afaanoromoo';
 import amharic from './fixtureData/amharic';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
+import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 const liveRadioFixtures = {
   indonesia,
@@ -53,7 +54,7 @@ storiesOf('Pages/Radio Page', module)
         isAmp={false}
         loading={false}
         error=""
-        pageType="media"
+        pageType={MEDIA_PAGE}
       />
     </BrowserRouter>
   ));
