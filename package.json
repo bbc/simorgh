@@ -6,7 +6,8 @@
   "resolutions": {
     "prismjs": "1.22.0",
     "node-forge": "0.10.0",
-    "ini": "1.3.7"
+    "ini": "1.3.7",
+    "highlight.js": "10.4.1"
   },
   "scripts": {
     "preinstall": "[ \"$npm_config_refer\" != \"ci\" ] && npx npm-force-resolutions || exit 0",
@@ -166,9 +167,9 @@
     "@bbc/psammead-test-helpers": "^5.0.1",
     "@loadable/babel-plugin": "~5.12.0",
     "@loadable/webpack-plugin": "^5.13.0",
-    "@storybook/addon-knobs": "^6.1.8",
-    "@storybook/react": "^6.1.8",
-    "@storybook/theming": "^6.1.8",
+    "@storybook/addon-knobs": "^6.1.10",
+    "@storybook/react": "^6.1.10",
+    "@storybook/theming": "^6.1.10",
     "@testing-library/dom": "^7.28.1",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
