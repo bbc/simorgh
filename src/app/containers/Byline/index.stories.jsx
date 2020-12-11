@@ -6,7 +6,7 @@ import BylineContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
-const stories = storiesOf('Containers|Byline', module)
+const stories = storiesOf('Containers/Byline', module)
   .addParameters({
     chromatic: { disable: true },
   })
