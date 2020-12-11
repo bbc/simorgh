@@ -5,6 +5,7 @@ import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import EpisodeList from '@bbc/psammead-episode-list';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import Timestamp from '@bbc/psammead-timestamp-container';
 import {
   formatDuration,
   formatUnixTimestamp,
@@ -31,6 +32,7 @@ const StyledSectionLabel = styled(SectionLabel)`
     margin-bottom: ${GEL_SPACING_TRPL};
   }
 `;
+
 const RecentVideoEpisodes = ({ episodes }) => {
   const {
     script,
@@ -73,8 +75,9 @@ const RecentVideoEpisodes = ({ episodes }) => {
       </StyledSectionLabel>
       <EpisodeList script={script} service={service} dir={dir} darkMode>
         {episodes.map(episode => (
-          <EpisodeList.Episode key={episode.id}>
+          <EpisodeList.Episode key={episode.id} dir={dir}>
             <EpisodeList.Image
+              dir={dir}
               src={episode.image}
               alt={episode.altText}
               duration={formatDuration({
@@ -83,8 +86,8 @@ const RecentVideoEpisodes = ({ episodes }) => {
               })}
             />
             {/* these must be concatenated for screen reader UX */}
-            <VisuallyHiddenText>{`${videoLabel}, `}</VisuallyHiddenText>
             <EpisodeList.Link href={episode.url}>
+              <VisuallyHiddenText>{`${videoLabel}, `}</VisuallyHiddenText>
               <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">
                 {episode.brandTitle}
               </EpisodeList.Title>
@@ -102,9 +105,17 @@ const RecentVideoEpisodes = ({ episodes }) => {
             </EpisodeList.Link>
             {episode.episodeTitle && (
               <span role="text">
-                <EpisodeList.Metadata as="time">
-                  {formatDate(episode.timestamp)}
-                </EpisodeList.Metadata>
+                <EpisodeList.Metadata
+                  as={Timestamp}
+                  timestamp={episode.timestamp}
+                  format="D MMMM YYYY"
+                  dateTimeFormat="YYYY-MM-DD"
+                  padding={false}
+                  script={script}
+                  locale={datetimeLocale}
+                  service={service}
+                  timezone={timezone}
+                />
               </span>
             )}
           </EpisodeList.Episode>
