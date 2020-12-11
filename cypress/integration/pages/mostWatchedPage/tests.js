@@ -6,6 +6,7 @@ export default ({ service, pageType, variant }) => {
     describe('Most Watched component', () => {
       before(() => {
         cy.getToggles(config[service].name);
+        console.log(config[service].name);
       });
       // Allows constructing most watched path with variant
       const serviceVariant = variant === 'default' ? '' : `/${variant}`;

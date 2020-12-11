@@ -9866,7 +9866,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/zhongwen/simp/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/zhongwen/simp/media/video'],
