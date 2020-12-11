@@ -73,7 +73,7 @@ const RecentAudioEpisodes = ({ episodes }) => {
   const audioLabel = pathOr('Audio', ['media', 'audio'], translations);
 
   const ulProps = { 'data-e2e': 'recent-episodes-list' };
-  const liProps = { 'data-e2es': 'recent-episode-list-item' };
+  const liProps = { 'data-e2e': 'recent-episodes-list-item' };
 
   return (
     <Spacer role="complimentary" aria-labelledby="recent-episodes">
