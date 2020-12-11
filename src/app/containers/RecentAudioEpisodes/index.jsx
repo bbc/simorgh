@@ -72,6 +72,9 @@ const RecentAudioEpisodes = ({ episodes }) => {
   const durationLabel = pathOr('Duration', ['media', 'duration'], translations);
   const audioLabel = pathOr('Audio', ['media', 'audio'], translations);
 
+  const ulProps = { 'data-e2e': 'recent-episodes-list' };
+  const liProps = { 'data-e2es': 'recent-episode-list-item' };
+
   return (
     <Spacer role="complimentary" aria-labelledby="recent-episodes">
       <StyledSectionLabel
@@ -83,7 +86,13 @@ const RecentAudioEpisodes = ({ episodes }) => {
       >
         {recentEpisodesTranslation}
       </StyledSectionLabel>
-      <EpisodeList script={script} service={service} dir={dir}>
+      <EpisodeList
+        script={script}
+        service={service}
+        dir={dir}
+        ulProps={ulProps}
+        liProps={liProps}
+      >
         {episodes.map(episode => (
           <EpisodeList.Episode key={episode.id}>
             <EpisodeList.Link href={episode.url}>
