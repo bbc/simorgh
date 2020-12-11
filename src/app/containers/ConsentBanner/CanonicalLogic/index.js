@@ -14,8 +14,12 @@ const PRIVACY_COOKIE_PREVIOUS_VALUES = ['0', '1'];
 
 const onClient = typeof window !== 'undefined';
 
+// We opted for the sameSite=None attribute below to maintain consistency with Orbit/cross-TLD browsing
+// Setting sameSite=None allows the cookie to be accessed and updated on `.co.uk` and `.com`
+const SAME_SITE_VALUE = 'None';
+
 const setPolicyCookie = (value, logger) => {
-  setCookie(POLICY_COOKIE, value);
+  setCookie({ name: POLICY_COOKIE, value, sameSite: SAME_SITE_VALUE });
   setCookieOven(POLICY_COOKIE, value, logger);
 };
 
@@ -30,11 +34,19 @@ const showCookieBanner = () =>
 const policyCookieSet = () => !!Cookie.get(POLICY_COOKIE);
 
 const setSeenPrivacyBanner = () =>
-  setCookie(PRIVACY_COOKIE, PRIVACY_COOKIE_CURRENT);
+  setCookie({
+    name: PRIVACY_COOKIE,
+    value: PRIVACY_COOKIE_CURRENT,
+    sameSite: SAME_SITE_VALUE,
+  });
 const setDefaultPolicy = logger => setPolicyCookie(POLICY_DENIED, logger);
 const setApprovedPolicy = logger => setPolicyCookie(POLICY_APPROVED, logger);
 const setDismissedCookieBanner = () =>
-  setCookie(EXPLICIT_COOKIE, COOKIE_BANNER_APPROVED);
+  setCookie({
+    name: EXPLICIT_COOKIE,
+    value: COOKIE_BANNER_APPROVED,
+    sameSite: SAME_SITE_VALUE,
+  });
 
 const consentBannerUtilities = ({
   setShowPrivacyBanner,

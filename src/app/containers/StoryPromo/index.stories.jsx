@@ -98,7 +98,7 @@ const getAmpStoryPromo = (
 ) =>
   getStoryPromo('amp', item, promoType, isRecommendation, isSingleColumnLayout);
 
-storiesOf('Containers|Story Promo/Canonical', module)
+storiesOf('Containers/Story Promo/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .add('Audio fixture', () => getCanonicalStoryPromo(audioFixture))
   .add('Video fixture', () => getCanonicalStoryPromo(videoFixture))
@@ -119,7 +119,7 @@ storiesOf('Containers|Story Promo/Canonical', module)
     getCanonicalStoryPromo(recommendationPromo, 'regular', true),
   );
 
-storiesOf('Containers|Story Promo/AMP', module)
+storiesOf('Containers/Story Promo/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
   .add('Audio fixture', () => getAmpStoryPromo(audioFixture))

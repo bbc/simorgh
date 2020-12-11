@@ -2,10 +2,12 @@ import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MetadataContainer from './index';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-
+import {
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  MEDIA_PAGE,
+} from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-
 import {
   articleDataNews,
   articleDataPersian,
@@ -625,7 +627,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id={null}
-    pageType="frontPage"
+    pageType={FRONT_PAGE}
     pathname="/igbo"
     title="Ogbako"
     lang={frontPageData.metadata.language}
@@ -641,7 +643,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id={null}
-    pageType="media"
+    pageType={MEDIA_PAGE}
     pathname="/korean/bbc_korean_radio/liveradio"
     title={liveRadioPageData.promo.name}
     lang={liveRadioPageData.metadata.language}

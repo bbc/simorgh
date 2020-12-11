@@ -15,7 +15,7 @@ import articleData from '#data/news/articles/c5jje4ejkqvo';
 // Not all services have fixtures for article data yet
 // the service selector will be constrained to services that have article fixtures:
 
-storiesOf('Pages|Article Page', module)
+storiesOf('Pages/Article Page', module)
   .addDecorator(withKnobs)
   .add('Articles', () => (
     <ToggleContextProvider>

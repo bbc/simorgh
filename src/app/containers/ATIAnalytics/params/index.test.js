@@ -1,6 +1,10 @@
 import { buildATIUrl, buildATIClickParams } from '.';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  MEDIA_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
@@ -163,7 +167,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right frontPage url', () => {
       const url = buildATIUrl(
         frontPage,
-        { ...requestContext, pageType: 'frontPage' },
+        { ...requestContext, pageType: FRONT_PAGE },
         serviceContext,
       );
       expect(url).toMatchInlineSnapshot(
@@ -185,7 +189,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right media url', () => {
       const url = buildATIUrl(
         media,
-        { ...requestContext, pageType: 'media' },
+        { ...requestContext, pageType: MEDIA_PAGE },
         serviceContext,
       );
       expect(url).toMatchInlineSnapshot(
@@ -283,7 +287,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right frontPage params', () => {
       const params = buildATIClickParams(
         frontPage,
-        { ...requestContext, pageType: 'frontPage' },
+        { ...requestContext, pageType: FRONT_PAGE },
         serviceContext,
       );
       expect(params).toEqual({
@@ -329,7 +333,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right media params', () => {
       const params = buildATIClickParams(
         media,
-        { ...requestContext, pageType: 'media' },
+        { ...requestContext, pageType: MEDIA_PAGE },
         serviceContext,
       );
       expect(params).toEqual({

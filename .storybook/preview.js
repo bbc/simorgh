@@ -1,14 +1,10 @@
+/* eslint-disable import/prefer-default-export */
+
 import React from 'react';
-import { configure, addDecorator, addParameters } from '@storybook/react';
+import { addDecorator } from '@storybook/react';
 import { create } from '@storybook/theming';
 import * as fontFaces from '@bbc/psammead-styles/fonts';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
-
-const req = require.context('../src/app', true, /\.stories\.jsx$/);
-
-function loadStories() {
-  req.keys().forEach(filename => req(filename));
-}
 
 const fontPathMap = [
   { prefix: 'F_ISKOOLA_POTA_BBC', path: 'fonts/IskoolaPota/' },
@@ -44,12 +40,11 @@ const theme = create({
   brandUrl: 'https://github.com/bbc/simorgh',
 });
 
-addParameters({
+export const parameters = {
+  passArgsFirst: false,
   options: {
     panelPosition: 'right',
     sidebarAnimcations: true,
     theme,
   },
-});
-
-configure(loadStories, module);
+};

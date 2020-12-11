@@ -49,7 +49,7 @@ const withSecondaryColumnsKnob = pageData => storyFn => {
     pageData: persianPageData,
   },
 ].forEach(({ service, pageData }) => {
-  return storiesOf('Pages|Story Page', module)
+  return storiesOf('Pages/Story Page', module)
     .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
     .addDecorator(withKnobs)
     .addDecorator(withSecondaryColumnsKnob(pageData))

@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import AVPlayer from '.';
+import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 /* eslint-disable react/prop-types */
 const GenerateFixtureData = ({
@@ -23,7 +24,7 @@ const GenerateFixtureData = ({
     statusCode={200}
     platform={platform}
     id="foo"
-    pageType="media"
+    pageType={MEDIA_PAGE}
     pathname="/pathname"
   >
     <ServiceContextProvider service="news">

@@ -14,6 +14,7 @@ import sendCustomMetrics from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import loggerMock from '#testHelpers/loggerMock';
 import { ROUTING_INFORMATION } from '#lib/logger.const';
+import { FRONT_PAGE, MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -252,7 +253,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
     });
 
     describe('Unknown error within the data fetch, react router or its dependencies', () => {
-      const pageType = 'frontPage';
+      const pageType = FRONT_PAGE;
       beforeEach(() => {
         mockRouteProps({
           service,
@@ -538,7 +539,7 @@ const testMediaPages = ({
     });
 
     describe('404 status code', () => {
-      const pageType = 'media';
+      const pageType = MEDIA_PAGE;
 
       beforeEach(() => {
         mockRouteProps({

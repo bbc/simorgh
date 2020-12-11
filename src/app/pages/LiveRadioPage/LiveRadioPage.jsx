@@ -16,7 +16,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
-import getEmbedUrl from '#lib/utilities/getEmbedUrl';
+import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 
 const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
 

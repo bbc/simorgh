@@ -11,7 +11,11 @@ import {
 import onClient from '#lib/utilities/onClient';
 import * as articleUtils from '#lib/analyticsUtils/article';
 import * as frontPageUtils from '#lib/analyticsUtils/indexPage';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  MEDIA_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 let isOnClient = false;
 
@@ -68,7 +72,7 @@ describe('Chartbeat utilities', () => {
         expectedShortType: 'article-media-asset',
       },
       {
-        pageType: 'media',
+        pageType: MEDIA_PAGE,
         expectedDefaultType: 'Radio',
         expectedShortType: 'Radio',
       },
@@ -183,21 +187,21 @@ describe('Chartbeat utilities', () => {
       },
       {
         service: 'korean',
-        pageType: 'media',
+        pageType: MEDIA_PAGE,
         description: 'should return expected section for live radio',
         masterBrand: 'bbc_korean_radio',
         expected: 'Korean, Korean - Radio',
       },
       {
         service: 'indonesia',
-        pageType: 'media',
+        pageType: MEDIA_PAGE,
         description: 'should return expected section for onDemand radio',
         masterBrand: 'bbc_indonesian_radio',
         expected: 'Indonesia, Indonesia - Radio',
       },
       {
         service: 'pashto',
-        pageType: 'media',
+        pageType: MEDIA_PAGE,
         description: 'should return expected section for ondemand TV',
         masterBrand: 'bbc_pashto_tv',
         expected: 'Pashto, Pashto - TV',
@@ -270,7 +274,7 @@ describe('Chartbeat utilities', () => {
       ${'index'}      | ${'BBC News'}    | ${'This is an index page title'} | ${1}
       ${'IDX'}        | ${'BBC Persian'} | ${'This is an IDX page title'}   | ${1}
       ${'FIX'}        | ${'BBC Afrique'} | ${'This is an FIX page title'}   | ${1}
-      ${'frontPage'}  | ${'BBC News'}    | ${'This is a frontpage title'}   | ${1}
+      ${FRONT_PAGE}   | ${'BBC News'}    | ${'This is a frontpage title'}   | ${1}
       ${ARTICLE_PAGE} | ${null}          | ${'This is an article title'}    | ${1}
       ${'foo'}        | ${'BBC News'}    | ${null}                          | ${0}
     `(
@@ -293,10 +297,10 @@ describe('Chartbeat utilities', () => {
     );
 
     test.each`
-      pageType   | context               | pageTitle
-      ${'media'} | ${'(onDemand TV)'}    | ${'OnDemand TV Page Title'}
-      ${'media'} | ${'(onDemand Radio)'} | ${'OnDemand TV Radio Title'}
-      ${'media'} | ${'(Live Radio)'}     | ${'Live Radio Title'}
+      pageType      | context               | pageTitle
+      ${MEDIA_PAGE} | ${'(onDemand TV)'}    | ${'OnDemand TV Page Title'}
+      ${MEDIA_PAGE} | ${'(onDemand Radio)'} | ${'OnDemand TV Radio Title'}
+      ${MEDIA_PAGE} | ${'(Live Radio)'}     | ${'Live Radio Title'}
     `(
       'should return correct title when pageType is $pageType $context',
       ({ pageType, pageTitle }) => {
@@ -364,7 +368,7 @@ describe('Chartbeat utilities', () => {
       const fixtureData = {
         isAmp: false,
         platform: 'canonical',
-        pageType: 'frontPage',
+        pageType: FRONT_PAGE,
         data: {},
         brandName: 'BBC-News',
         chartbeatDomain: 'bbc.co.uk',
@@ -454,7 +458,7 @@ describe('Chartbeat utilities', () => {
       const fixtureData = {
         isAmp: true,
         platform: 'amp',
-        pageType: 'media',
+        pageType: MEDIA_PAGE,
         data: {
           pageTitle: 'Live Radio Page Title',
           contentType: 'player-live',
@@ -586,7 +590,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: true,
       platform: 'amp',
-      pageType: 'media',
+      pageType: MEDIA_PAGE,
       data: {
         pageTitle: 'OnDemand Radio Page Title',
         contentType: 'player-episode',
@@ -619,7 +623,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: true,
       platform: 'amp',
-      pageType: 'media',
+      pageType: MEDIA_PAGE,
       data: {
         pageTitle: 'OnDemand TV Page Title',
         contentType: 'player-episode',
@@ -652,7 +656,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'media',
+      pageType: MEDIA_PAGE,
       data: {
         pageTitle: 'OnDemand TV Page Title',
         contentType: 'player-episode',
@@ -875,7 +879,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'frontPage',
+      pageType: FRONT_PAGE,
       data: {},
       brandName: 'BBC-News',
       chartbeatDomain: 'bbc.co.uk',
@@ -894,7 +898,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'frontPage',
+      pageType: FRONT_PAGE,
       data: {},
       brandName: 'BBC-News',
       chartbeatDomain: 'bbc.co.uk',
