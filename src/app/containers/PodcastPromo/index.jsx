@@ -59,7 +59,7 @@ const Promo = ({
               {description}
             </PodcastPromo.Card.Description>
             <PodcastPromo.Card.CallToAction>
-              {label}
+              {episodesTranslation}
             </PodcastPromo.Card.CallToAction>
           </PodcastPromo.Card.Content>
         </PodcastPromo.Card>
