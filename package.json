@@ -241,7 +241,7 @@
     "webpack-bundle-analyzer": "^4.1.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.4.0",
+    "webpack-merge": "^5.7.0",
     "webpack-node-externals": "^2.5.2",
     "yaml-js": "^0.2.3"
   },
