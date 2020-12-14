@@ -1,2 +1,2 @@
 (window.webpackJsonp=window.webpackJsonp||[]).push([[2],{867:function(module,__webpack_exports__,__webpack_require__){"use strict";__webpack_require__.r(__webpack_exports__);var _ArticlePage__WEBPACK_IMPORTED_MODULE_0__=__webpack_require__(792),_utils_applyBasicPageHandlers__WEBPACK_IMPORTED_MODULE_1__=__webpack_require__(176);__webpack_exports__.default=Object(_utils_applyBasicPageHandlers__WEBPACK_IMPORTED_MODULE_1__.a)({addVariantHandling:!0})(_ArticlePage__WEBPACK_IMPORTED_MODULE_0__.a)}}]);
-//# sourceMappingURL=ArticlePage.60682f369179fcdf8db8.bundle.js.map
+//# sourceMappingURL=ArticlePage.b732ec54a1ee9fb96e8c.bundle.js.map
