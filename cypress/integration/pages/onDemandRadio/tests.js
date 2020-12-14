@@ -70,8 +70,12 @@ export default ({ service, pageType, variant, isAmp }) => {
             cy.log(
               `Recent Episodes component enabled? ${recentEpisodesEnabled}`,
             );
-
+            // There cannot be more episodes shown than the max allowed
             if (recentEpisodesEnabled) {
+              const recentEpisodesMaxNumber = path(
+                ['recentAudioEpisodes', 'value'],
+                toggles,
+              );
               const currentPath = Cypress.env('currentPath');
               const url =
                 Cypress.env('APP_ENV') === 'test'
@@ -79,14 +83,12 @@ export default ({ service, pageType, variant, isAmp }) => {
                   : `${currentPath}`;
 
               cy.request(getDataUrl(url)).then(({ body }) => {
-                // There cannot be more episodes shown than the max allowed
-                const numberOfRecentEpisodesLimit = 4;
                 const numberOfEpisodesinData =
                   body.relatedContent.groups[0].promos.length;
                 // There cannot be more episodes than the number present in the data
                 const numberOfEpisodesinDataUnderLimit = Math.min(
                   numberOfEpisodesinData,
-                  numberOfRecentEpisodesLimit,
+                  recentEpisodesMaxNumber,
                 );
                 let countAvailableEpisodes = 0;
                 // Count the number of episodes that are available and so will show (there can be unavailable episodes in the list)

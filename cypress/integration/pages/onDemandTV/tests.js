@@ -58,6 +58,7 @@ export default ({ service, pageType, variant, isAmp }) => {
             );
 
             if (recentEpisodesEnabled) {
+              // There cannot be more episodes shown than the max allowed
               const recentEpisodesMaxNumber = path(
                 ['recentVideoEpisodes', 'value'],
                 toggles,
@@ -70,8 +71,6 @@ export default ({ service, pageType, variant, isAmp }) => {
                   : `${currentPath}`;
 
               cy.request(getDataUrl(url)).then(({ body }) => {
-                // There cannot be more episodes shown than the max allowed
-
                 const numberOfEpisodesinData =
                   body.relatedContent.groups[0].promos.length;
                 // There cannot be more episodes than the number present in the data
