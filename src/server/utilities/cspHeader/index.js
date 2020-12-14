@@ -125,7 +125,6 @@ const advertisingDirectives = {
     'https://adservice.google.cv',
     'https://adservice.google.com.mt',
     'https://adservice.google.dk',
-    'https://adservice.google.co.in',
   ],
   prefetchSrc: ['https://*.safeframe.googlesyndication.com'],
   defaultSrc: [
