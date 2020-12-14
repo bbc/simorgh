@@ -184,6 +184,12 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         >
           <OnDemandParagraphContainer text={shortSynopsis} darkMode />
         </Grid>
+      </StyledGelPageGrid>
+
+      <StyledGelPageGrid
+        columns={getGroups(6, 6, 6, 6, 8, 20)}
+        enableGelGutters
+      >
         <Grid
           item
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
