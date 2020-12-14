@@ -108,6 +108,8 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     translations,
   );
 
+  const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
+
   return (
     <>
       <ChartbeatAnalytics data={pageData} />
@@ -186,19 +188,21 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         </Grid>
       </StyledGelPageGrid>
 
-      <StyledGelPageGrid
-        columns={getGroups(6, 6, 6, 6, 8, 20)}
-        enableGelGutters
-      >
-        <Grid
-          item
-          startOffset={getGroups(1, 1, 1, 1, 2, 5)}
-          columns={getGroups(6, 6, 6, 6, 6, 12)}
-          margins={getGroups(true, true, true, true, false, false)}
+      {hasRecentEpisodes && (
+        <StyledGelPageGrid
+          columns={getGroups(6, 6, 6, 6, 8, 20)}
+          enableGelGutters
         >
-          <RecentVideoEpisodes episodes={recentEpisodes} />
-        </Grid>
-      </StyledGelPageGrid>
+          <Grid
+            item
+            startOffset={getGroups(1, 1, 1, 1, 2, 5)}
+            columns={getGroups(6, 6, 6, 6, 6, 12)}
+            margins={getGroups(true, true, true, true, false, false)}
+          >
+            <RecentVideoEpisodes episodes={recentEpisodes} />
+          </Grid>
+        </StyledGelPageGrid>
+      )}
     </>
   );
 };

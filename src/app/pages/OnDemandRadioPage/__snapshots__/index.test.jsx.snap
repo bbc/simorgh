@@ -252,7 +252,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
           dir="rtl"
         >
           <div
-            class="emotion-10 css-gmxq1c-GridComponent-GelPageGrid-StyledGelWrapperGrid emotion-6"
+            class="emotion-10 css-1a91ssy-GridComponent-GelPageGrid-StyledGelWrapperGrid emotion-6"
             dir="ltr"
           >
             <div
@@ -345,15 +345,6 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
           </div>
         </div>
       </main>
-      <div
-        class="emotion-16 css-py1rac-GridComponent-GelPageGrid emotion-6"
-        dir="rtl"
-      >
-        <div
-          class="css-50e7ja-GridComponent emotion-6"
-          dir="rtl"
-        />
-      </div>
     </div>
   </body>
 </html>
@@ -602,7 +593,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
           dir="rtl"
         >
           <div
-            class="emotion-11 css-gmxq1c-GridComponent-GelPageGrid-StyledGelWrapperGrid emotion-6"
+            class="emotion-11 css-1a91ssy-GridComponent-GelPageGrid-StyledGelWrapperGrid emotion-6"
             dir="ltr"
           >
             <div
@@ -683,15 +674,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
           </div>
         </div>
       </main>
-      <div
-        class="emotion-18 css-py1rac-GridComponent-GelPageGrid emotion-6"
-        dir="rtl"
-      >
-        <div
-          class="css-50e7ja-GridComponent emotion-6"
-          dir="rtl"
-        />
-      </div>
     </div>
   </body>
 </html>
@@ -1059,15 +1041,6 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
       </div>
     </div>
   </main>
-  <div
-    class="emotion-34 emotion-35 emotion-12"
-    dir="ltr"
-  >
-    <div
-      class="emotion-32 emotion-12"
-      dir="ltr"
-    />
-  </div>
 </div>
 `;
 
@@ -1433,14 +1406,5 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
       </div>
     </div>
   </main>
-  <div
-    class="emotion-34 emotion-35 emotion-12"
-    dir="ltr"
-  >
-    <div
-      class="emotion-32 emotion-12"
-      dir="ltr"
-    />
-  </div>
 </div>
 `;
