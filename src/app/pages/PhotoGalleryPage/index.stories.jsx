@@ -5,7 +5,7 @@ import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { PhotoGalleryPage } from '..';
 import pageData from './fixtureData';
 
-const pglStories = storiesOf('Pages|Photo Gallery Page', module);
+const pglStories = storiesOf('Pages/Photo Gallery Page', module);
 
 pglStories.addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
 
