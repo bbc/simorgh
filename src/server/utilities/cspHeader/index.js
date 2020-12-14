@@ -119,7 +119,7 @@ const advertisingDirectives = {
     'https://adservice.google.co.id',
     'https://adservice.google.ie',
     'https://adservice.google.cz',
-    'https://adservice.google.com..cy',
+    'https://adservice.google.com.cy',
     'https://adservice.google.at',
     'https://adservice.google.nl',
     'https://adservice.google.cv',
