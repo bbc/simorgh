@@ -55,7 +55,7 @@ const getRow = (RowType, dir = 'ltr', displayImages = true) => {
   );
 };
 
-storiesOf('Containers|Front Page Story Row', module)
+storiesOf('Containers/Front Page Story Row', module)
   .addParameters({
     chromatic: { disable: true },
   })

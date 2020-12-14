@@ -6,7 +6,7 @@ import MostReadPage from '.';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import zhongwenSimpData from '#data/zhongwen/mostRead/simp.json';
 
-const stories = storiesOf('Pages|Most Read Page', module);
+const stories = storiesOf('Pages/Most Read Page', module);
 
 [
   {

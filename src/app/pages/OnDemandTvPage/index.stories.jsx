@@ -7,6 +7,7 @@ import { OnDemandTvPage } from '..';
 import afrique from './fixtureData/afrique';
 import pashto from './fixtureData/pashto';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
+import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 const onDemandTvFixtures = {
   pashto,
@@ -24,7 +25,7 @@ const matchFixtures = service => ({
 
 const status = 200;
 
-storiesOf('Pages|OnDemand TV Page', module)
+storiesOf('Pages/OnDemand TV Page', module)
   .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(withKnobs)
   .addDecorator(
@@ -43,7 +44,7 @@ storiesOf('Pages|OnDemand TV Page', module)
         isAmp={false}
         loading={false}
         error=""
-        pageType="media"
+        pageType={MEDIA_PAGE}
       />
     </BrowserRouter>
   ));

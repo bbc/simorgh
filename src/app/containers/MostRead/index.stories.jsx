@@ -38,7 +38,7 @@ const renderMostReadContainer = (service, variant, columnLayout) => (
   </ToggleContextProvider>
 );
 
-const MOST_READ_STORIES = 'Containers|MostRead/Canonical';
+const MOST_READ_STORIES = 'Containers/MostRead/Canonical';
 const stories = storiesOf(MOST_READ_STORIES, module)
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob({ defaultService: 'pidgin' }))

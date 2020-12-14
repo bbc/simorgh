@@ -12,7 +12,7 @@ import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 
 const promos = mostWatchedData.records.slice(0, 5).map(item => item.promo);
 
-const MOST_WATCHED_STORIES = 'Containers|Most Watched';
+const MOST_WATCHED_STORIES = 'Containers/Most Watched';
 storiesOf(MOST_WATCHED_STORIES, module)
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob({ defaultService: 'pidgin' }))
