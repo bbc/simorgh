@@ -81,13 +81,11 @@ export default ({ service, pageType, variant, isAmp }) => {
                 let countAvailableEpisodes = 0;
                 // Count the number of episodes that are available and so will show (there can be unavailable episodes in the list)
                 for (let i = 0; i < numberOfEpisodesinDataUnderLimit; i += 1) {
-                  console.log(body.relatedContent.groups[0].promos[i]);
                   if (
                     body.relatedContent.groups[0].promos[i].media.versions
                       .length > 0
                   ) {
                     countAvailableEpisodes += 1;
-                    console.log(countAvailableEpisodes);
                   }
                 }
                 // There cannot be more episodes than are AVAILABLE in the data (episodes don't show if versions is empty)
