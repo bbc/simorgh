@@ -60,7 +60,7 @@ export default ({ service, pageType, variant, isAmp }) => {
         cy.getToggles(config[service].name);
       });
       describe('Recent Episodes component', () => {
-        it('should be displayed if the toggle is on, and shows the expected number of items (max 4)', function test() {
+        it('should be displayed if the toggle is on, and shows the expected number of items', function test() {
           cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
             const recentEpisodesEnabled = path(
               ['recentAudioEpisodes', 'enabled'],
@@ -85,13 +85,14 @@ export default ({ service, pageType, variant, isAmp }) => {
                 const numberOfEpisodesinData =
                   body.relatedContent.groups[0].promos.length;
                 // There cannot be more episodes than the number present in the data
-                const numberOfEpisodesinDataUnderLimit = Math.min(
+                const numberOfEpisodesInDataUnderLimit = Math.min(
                   numberOfEpisodesinData,
                   recentEpisodesMaxNumber,
                 );
-                let countAvailableEpisodes = 0;
+
                 // Count the number of episodes that are available and so will show (there can be unavailable episodes in the list)
-                for (let i = 0; i < numberOfEpisodesinDataUnderLimit; i += 1) {
+                let countAvailableEpisodes = 0;
+                for (let i = 0; i < numberOfEpisodesInDataUnderLimit; i += 1) {
                   if (
                     body.relatedContent.groups[0].promos[i].media.versions
                       .length > 0
@@ -101,12 +102,12 @@ export default ({ service, pageType, variant, isAmp }) => {
                 }
                 // There cannot be more episodes than are AVAILABLE in the data (episodes don't show if versions is empty)
                 const expectedNumberOfEpisodes = Math.min(
-                  numberOfEpisodesinDataUnderLimit,
+                  numberOfEpisodesInDataUnderLimit,
                   countAvailableEpisodes,
                 );
 
                 cy.log(
-                  `Number of available episodes ? ${expectedNumberOfEpisodes}`,
+                  `Number of available episodes? ${expectedNumberOfEpisodes}`,
                 );
                 if (expectedNumberOfEpisodes > 0) {
                   cy.get("ul[class*='css-1ddpce6-StyledEpisodeList']").should(
@@ -124,13 +125,14 @@ export default ({ service, pageType, variant, isAmp }) => {
                   cy.get("ul[class*='css-1ddpce6-StyledEpisodeList']").should(
                     'not.exist',
                   );
+                  cy.log('No episodes present or available');
                 }
               });
             } else {
               cy.get("ul[class*='css-1ddpce6-StyledEpisodeList']").should(
                 'not.exist',
               );
-              cy.log('No recent episodes in data');
+              cy.log('Recent episodes is not toggled on for this service');
             }
           });
         });
