@@ -90,8 +90,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   let promoImageAltText = null;
 
   if (pageData.promo.images !== undefined) {
-    const promoImageBlocks =
-      pageData.promo.images.defaultPromoImage.blocks || null;
+    const promoImageBlocks = pageData.promo.images.defaultPromoImage.blocks;
     const promoImageBlock = filterForBlockType(promoImageBlocks, 'rawImage');
     const promoImageAltTextBlock = filterForBlockType(
       promoImageBlocks,
