@@ -21,6 +21,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 
 const StyledSectionLabel = styled(SectionLabel)`
   color: ${C_WHITE};
@@ -37,12 +38,12 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
   const {
     script,
     service,
-    variant,
     dir,
     timezone,
     datetimeLocale,
     translations,
   } = useContext(ServiceContext);
+  const { variant } = useContext(RequestContext);
 
   if (!episodes.length) return null;
 

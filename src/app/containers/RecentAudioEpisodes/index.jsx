@@ -22,6 +22,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import EpisodeList from '@bbc/psammead-episode-list';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 
 const StyledSpan = styled.span`
   padding: 0 ${GEL_SPACING};
@@ -47,12 +48,12 @@ const RecentAudioEpisodes = ({ masterBrand, episodes }) => {
   const {
     translations,
     service,
-    variant,
     script,
     dir,
     timezone,
     datetimeLocale,
   } = useContext(ServiceContext);
+  const { variant } = useContext(RequestContext);
 
   if (!episodes.length) return null;
 
