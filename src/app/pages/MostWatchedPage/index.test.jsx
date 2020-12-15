@@ -8,6 +8,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import MostWatchedPage from './MostWatchedPage';
+import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
 
 const pageData = {
   mostWatched: mostWatchedData.records.slice(0, 3).map(item => item.promo),
@@ -24,7 +25,7 @@ const MostWatchedPageWithContext = ({ isAmp }) => (
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.com"
         isAmp={isAmp}
-        pageType="mostWatched"
+        pageType={MOST_WATCHED_PAGE}
         pathname="/pathname"
         service="pidgin"
         statusCode={200}

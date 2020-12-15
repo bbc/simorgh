@@ -10,6 +10,8 @@ import {
   ARTICLE_PAGE,
   FRONT_PAGE,
   MEDIA_PAGE,
+  MOST_READ_PAGE,
+  MOST_WATCHED_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 export const RequestContext = React.createContext({});
@@ -74,8 +76,8 @@ RequestContextProvider.propTypes = {
     ARTICLE_PAGE,
     FRONT_PAGE,
     MEDIA_PAGE,
-    'mostRead',
-    'mostWatched',
+    MOST_READ_PAGE,
+    MOST_WATCHED_PAGE,
     'error',
     'MAP',
     'FIX',
