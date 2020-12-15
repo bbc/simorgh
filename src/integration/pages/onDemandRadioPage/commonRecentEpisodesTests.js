@@ -4,7 +4,7 @@ export default () => {
       '[data-e2e="recent-episodes-list"]',
     );
 
-    const recentEpisodesListItem = document.querySelector(
+    const recentEpisodesListItems = document.querySelectorAll(
       '[data-e2e="recent-episodes-list-item"]',
     );
 
@@ -13,7 +13,11 @@ export default () => {
     });
 
     it('should contain the list items', () => {
-      expect(recentEpisodesListItem).toBeInTheDocument();
+      recentEpisodesListItems.forEach(itemEl => {
+        expect(itemEl).toBeInTheDocument();
+        expect(itemEl.textContent).toBeTruthy();
+        expect(itemEl.querySelector('a').getAttribute('href')).toBeTruthy();
+      });
     });
   });
 };
