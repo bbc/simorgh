@@ -80,8 +80,6 @@ const RecentAudioEpisodes = ({ masterBrand, episodes }) => {
         .join('/'),
     );
 
-  console.log('masterBrand', masterBrand);
-
   const ulProps = { 'data-e2e': 'recent-episodes-list' };
   const liProps = { 'data-e2e': 'recent-episodes-list-item' };
 
