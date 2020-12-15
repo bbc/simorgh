@@ -46,6 +46,9 @@ import {
   getMentions,
   getLang,
 } from '#lib/utilities/parseAssetData';
+import filterForBlockType from '#lib/utilities/blockHandlers';
+
+const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
 const componentsToRender = {
   headline: headings,
@@ -83,6 +86,21 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
 
+  let promoImage = null;
+  let promoImageAltText = null;
+
+  if (pageData.promo.images !== undefined) {
+    const promoImageBlocks =
+      pageData.promo.images.defaultPromoImage.blocks || null;
+    const promoImageBlock = filterForBlockType(promoImageBlocks, 'rawImage');
+    const promoImageAltTextBlock = filterForBlockType(
+      promoImageBlocks,
+      'altText',
+    );
+    promoImageAltText = getText(promoImageAltTextBlock);
+    promoImage = promoImageBlock.model.locator;
+  }
+
   const MostReadWrapper = ({ children }) => (
     <ArticlePageMostReadSection>
       <MostReadSectionLabel />
@@ -110,6 +128,8 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         mentionsTags={getMentions(pageData)}
         lang={getLang(pageData)}
         description={description}
+        imageLocator={promoImage}
+        imageAltText={promoImageAltText}
       />
       <LinkedData
         showAuthor
@@ -119,6 +139,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         datePublished={firstPublished}
         dateModified={lastPublished}
         aboutTags={aboutTags}
+        imageLocator={promoImage}
       />
       <main role="main">
         <GelPageGrid
