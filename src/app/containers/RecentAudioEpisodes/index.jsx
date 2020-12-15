@@ -73,9 +73,13 @@ const RecentAudioEpisodes = ({ masterBrand, episodes }) => {
   const durationLabel = pathOr('Duration', ['media', 'duration'], translations);
   const audioLabel = pathOr('Audio', ['media', 'audio'], translations);
   const getUrl = episodeId =>
-    [service, variant, masterBrand, 'programmes', episodeId]
-      .filter(Boolean)
-      .join('/');
+    '/'.concat(
+      [service, variant, masterBrand, 'programmes', episodeId]
+        .filter(Boolean)
+        .join('/'),
+    );
+
+  console.log('masterBrand', masterBrand);
 
   const ulProps = { 'data-e2e': 'recent-episodes-list' };
   const liProps = { 'data-e2e': 'recent-episodes-list-item' };

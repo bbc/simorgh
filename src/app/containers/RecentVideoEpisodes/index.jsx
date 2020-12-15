@@ -63,7 +63,11 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
   const durationLabel = pathOr('Duration', ['media', 'duration'], translations);
   const videoLabel = pathOr('Video', ['media', 'video'], translations);
   const getUrl = episodeId =>
-    [service, variant, masterBrand, 'tv', episodeId].filter(Boolean).join('/');
+    '/'.concat(
+      [service, variant, masterBrand, 'tv', episodeId]
+        .filter(Boolean)
+        .join('/'),
+    );
 
   return (
     <aside role="complimentary" aria-labelledby="recent-episodes">
