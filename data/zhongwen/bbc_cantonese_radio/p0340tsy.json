@@ -1,0 +1,476 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_cantonese_radio/p0340tsy",
+    "locators": { "pid": "w172xn6l7ng41qb", "brandPid": "p0340tsy" },
+    "type": "WSRADIO",
+    "createdBy": "bbc_cantonese_radio",
+    "language": "zh",
+    "lastUpdated": 1608050464524,
+    "firstPublished": 1607821636000,
+    "lastPublished": 1607821636000,
+    "timestamp": 1607821636000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "時事一周 - BBC News 中文",
+      "pageIdentifier": "chinese.bbc_cantonese_radio.programmes.p0340tsy.page",
+      "producerId": "38",
+      "contentType": "player-episode",
+      "producer": "CHINESE"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "時事一周",
+    "releaseDateTimeStamp": 1607731200000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w172xn6l7ng41qb",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "12/12/2020 GMT",
+        "synopses": {
+          "short": "本周節目內容：新冠疫苗接種公義問題未解 | 香港國安抓捕持續　中美制裁交鋒 | Facebook遭遇大型反壟斷訴訟 | 英國生活點滴：倫敦過河交通史"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0919b16.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w1mshv906yd1468",
+            "types": ["Original"],
+            "duration": 3600,
+            "durationISO8601": "PT1H",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1610409570000,
+            "availableFrom": 1607817570000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "時事一周 2020年12月12日 23:00 GMT",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "時事一周" },
+    "locators": { "pid": "w172xn6l7ng41qb", "brandPid": "p0340tsy" },
+    "media": {
+      "id": "w172xn6l7ng41qb",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "12/12/2020 GMT",
+      "synopses": {
+        "short": "本周節目內容：新冠疫苗接種公義問題未解 | 香港國安抓捕持續　中美制裁交鋒 | Facebook遭遇大型反壟斷訴訟 | 英國生活點滴：倫敦過河交通史"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0919b16.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w1mshv906yd1468",
+          "types": ["Original"],
+          "duration": 3600,
+          "durationISO8601": "PT1H",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1610409570000,
+          "availableFrom": 1607817570000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "時事一周 2020年12月12日 23:00 GMT",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p0919b16.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p0919b16.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1607731200000,
+    "brand": { "pid": "p0340tsy", "title": "時事一周" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xn6l7ng41qb",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Chinese",
+      "uri": "/chinese",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": { "headline": "時事一周" },
+            "locators": { "pid": "w172xn6kwd4bx3h", "brandPid": "p0340tsy" },
+            "media": {
+              "id": "w172xn6kwd4bx3h",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "05/12/2020 GMT",
+              "synopses": {
+                "short": "英國即將開始大規模疫苗注射；拜登透露對華新政；英國邊境準備好完全脫歐？",
+                "medium": "本周節目內容：英國即將開始大規模疫苗注射 | 拜登透露對華新政 | 英國邊境準備好完全脫歐？ | 英國生活點滴：盛極一時的南倫敦 | 專題：泡菜之爭 | 專題：007金眼睛墜落 | 記者來鴻：巴黎英文書店疫情中的緣份 | 華人談天下：台中交通新體驗"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p090mbt2.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshv8zvp27zlf",
+                  "types": ["Original"],
+                  "duration": 3600,
+                  "durationISO8601": "PT1H",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1609804770000,
+                  "availableFrom": 1607212770000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "時事一周 2020年12月5日23:00 GMT",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p090mbt2.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p090mbt2.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607126400000,
+            "brand": { "pid": "p0340tsy", "title": "時事一周" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xn6kwd4bx3h",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "時事一周" },
+            "locators": { "pid": "w172xn6kj3tkrhn", "brandPid": "p0340tsy" },
+            "media": {
+              "id": "w172xn6kj3tkrhn",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "28/11/2020 GMT",
+              "synopses": {
+                "short": "拜登開始公佈內閣人選；中國外長訪問日本；一代球王馬勒當拿逝世",
+                "medium": "本周節目內容：拜登開始公佈內閣人選 | 中國外長訪問日本 | 一代球王馬勒當拿逝世 | 英國生活點滴：適合家庭的北倫敦 | 專題：牛津年度熱詞 | 記者來鴻：希臘的賊羊肉 | 華人談天下：法國趕上了時代"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08kmy2v.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshv8zhdrgtzl",
+                  "types": ["Original"],
+                  "duration": 3600,
+                  "durationISO8601": "PT1H",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1609199970000,
+                  "availableFrom": 1606607970000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "時事一周 2020年11月28日23:00 GMT",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08kmy2v.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08kmy2v.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1606521600000,
+            "brand": { "pid": "p0340tsy", "title": "時事一周" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xn6kj3tkrhn",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "時事一周" },
+            "locators": { "pid": "w172xn6k4vhslwt", "brandPid": "p0340tsy" },
+            "media": {
+              "id": "w172xn6k4vhslwt",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "21/11/2020 GMT",
+              "synopses": {
+                "short": "特朗普政府撤走大批中東駐軍；商業太空運輸起步；普京立法保護退休總統的玄機",
+                "medium": "本周節目內容：特朗普政府撤走大批中東駐軍 | 商業太空運輸起步 | 普京立法保護退休總統的玄機 | 英國生活點滴：優雅的西倫敦 | 專題：波音737 Max飛機復飛 | 專題：北韓怎樣解決吸煙問題 | 記者來鴻：追憶燕子南飛 | 華人談天下：澳洲經濟的隱憂",
+                "long": "本周節目內容：特朗普政府撤走大批中東駐軍 | 商業太空運輸起步 | 普京立法保護退休總統的玄機 | 英國生活點滴：優雅的西倫敦 | 專題：波音737 Max飛機復飛 | 專題：北韓怎樣解決吸煙問題 | 記者來鴻：追憶燕子南飛 | 華人談天下：澳洲經濟的隱憂"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08kmy2v.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshv8z44fppcr",
+                  "types": ["Original"],
+                  "duration": 3600,
+                  "durationISO8601": "PT1H",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1608595170000,
+                  "availableFrom": 1606003170000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "時事一周 2020年11月21日23:00 GMT",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08kmy2v.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08kmy2v.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1605916800000,
+            "brand": { "pid": "p0340tsy", "title": "時事一周" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xn6k4vhslwt",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "時事一周" },
+            "locators": { "pid": "w172xf3zg8l2v9m", "brandPid": "p0340tsy" },
+            "media": {
+              "id": "w172xf3zg8l2v9m",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "24/10/2020 GMT",
+              "synopses": {
+                "short": "美國總統大選最後一場辯論；日本首相首次外訪的考量；全球航空業困境下國泰大裁員",
+                "medium": "本周節目內容：美國總統大選最後一場辯論 | 日本首相首次外訪的考量 | 全球航空業困境下國泰大裁員 | 英國生活點滴：倫敦的佈局 | 專題：加拿大小鎮改名圖趨吉避凶  | 專題：天才是天生還是努力的結果？ | 記者來鴻：登高山而思歷史 | 華人談天下：嚴防疫情措施對經濟的摧殘"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08kmy2v.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [],
+              "availability": "notAvailable",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "時事一周 2020年10月24日23:00 GMT",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08kmy2v.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08kmy2v.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1603497600000,
+            "brand": { "pid": "p0340tsy", "title": "時事一周" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xf3zg8l2v9m",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "時事一周" },
+            "locators": { "pid": "w172xf3s8q6v9zc", "brandPid": "p0340tsy" },
+            "media": {
+              "id": "w172xf3s8q6v9zc",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "27/06/2020 GMT",
+              "synopses": {
+                "short": "冠狀病毒大流行反覆；美國府院就香港國安法提制裁；俄羅斯總統普京被指為持續執政鋪路",
+                "medium": "本週節目內容：冠狀病毒大流行反覆 | 美國府院就香港國安法提制裁 | 俄羅斯總統普京被指為持續執政鋪路 | 專題：手肘受撞擊的科學 | 專題：狗的生物年齡計算方法 | 記者來鴻：河流擁有法人地位的意義 | 華人談天下：法國人如何適應疫後新生活"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08j7fwg.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [],
+              "availability": "notAvailable",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "時事一周 2020年6月27日 23:00 GMT",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08j7fwg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08j7fwg.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1593216000000,
+            "brand": { "pid": "p0340tsy", "title": "時事一周" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xf3s8q6v9zc",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "時事一周" },
+            "locators": { "pid": "w172xf3nn121twz", "brandPid": "p0340tsy" },
+            "media": {
+              "id": "w172xf3nn121twz",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/04/2020 GMT",
+              "synopses": {
+                "short": "疫情衝擊顯現 中國經濟首現負增長；特朗普停世衛資助　多國譁然；西方質疑中國　解放軍台海「表不滿」……",
+                "medium": "本週節目內容：疫情衝擊顯現 中國經濟首現負增長 | 特朗普停世衛資助　多國譁然 | 西方質疑中國　解放軍台海「表不滿」 | 專題：抗疫醫護的精神創傷 | 記者來鴻：失去驅疫劇的德國古村如何自處？ | 華人談天下：台灣全民抗疫宣傳「戰」"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p089x3jt.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [],
+              "availability": "notAvailable",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "時事一週 2020年4月18日 23:00 GMT",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p089x3jt.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p089x3jt.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1587168000000,
+            "brand": { "pid": "p0340tsy", "title": "時事一周" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xf3nn121twz",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "時事一周" },
+            "locators": { "pid": "w172xf3n8rr8p94", "brandPid": "p0340tsy" },
+            "media": {
+              "id": "w172xf3n8rr8p94",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "11/04/2020 GMT",
+              "synopses": {
+                "short": "《BBC時事一週》──BBC國際台粵語節目，重溫一週國際大事，兩岸四地消息，英國境況。並備有專題環節：〈記者來鴻〉和〈華人談天下〉。",
+                "medium": "本週節目內容：約翰遜染新冠病毒入院引發英國憲制危機 | 武漢解封 | 剛果香港醫生介紹非洲防疫形勢 | 專題：紫外線可對付新冠病毒？ | 記者來鴻：印尼年輕保守派重推「盲婚啞嫁」 | 華人談天下：新冠病毒肆虐紐約　華人的不解"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0899z7l.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [],
+              "availability": "notAvailable",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "時事一週 2020年4月11日 23:00 GMT",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0899z7l.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0899z7l.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1586563200000,
+            "brand": { "pid": "p0340tsy", "title": "時事一周" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xf3n8rr8p94",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "時事一周" },
+            "locators": { "pid": "w172xf3mxhfhjp9", "brandPid": "p0340tsy" },
+            "media": {
+              "id": "w172xf3mxhfhjp9",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "04/04/2020 GMT",
+              "synopses": {
+                "short": "《BBC時事一週》──BBC國際台粵語節目，重溫一週國際大事，兩岸四地消息，英國境況。主要專題環節包括：〈記者來鴻〉、〈華人談天下〉、〈環宇風情〉、〈科技天地〉。",
+                "medium": "本週節目內容：美國特朗普政府改變防疫態度 | 抗疫救經濟　中美財政政策大不同 | 台灣前行政院長郝柏村逝世 | 專題：新冠病毒到底從哪裏來？ | 記者來鴻：走進愛沙尼亞最強「竊聽酒店」 | 華人談天下：法國人隔離生活的得與失"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p088q02p.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [],
+              "availability": "notAvailable",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "時事一週 2020年4月4日 23:00 GMT",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p088q02p.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p088q02p.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1585958400000,
+            "brand": { "pid": "p0340tsy", "title": "時事一周" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xf3mxhfhjp9",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}
