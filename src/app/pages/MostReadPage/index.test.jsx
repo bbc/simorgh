@@ -8,6 +8,7 @@ import MostReadPage from './MostReadPage';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 
 fetch.mockResponse(JSON.stringify(pidginMostReadData));
 
@@ -24,7 +25,7 @@ const MostReadPageWithContext = () => (
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.com"
         isAmp={false}
-        pageType="mostRead"
+        pageType={MOST_READ_PAGE}
         pathname="/pathname"
         service="pidgin"
         statusCode={200}
