@@ -318,7 +318,7 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: ['/afrique/bbc_afrique_radio/w172x601yx5z2n1'],
+            paths: ['/afrique/bbc_afrique_radio/w172xqydyfv659p'],
             enabled: true,
           },
         },
@@ -344,7 +344,7 @@ module.exports = () => ({
             paths: [
               '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,

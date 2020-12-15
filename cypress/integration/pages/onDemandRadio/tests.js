@@ -61,6 +61,7 @@ export default ({ service, pageType, variant, isAmp }) => {
       });
       describe('Recent Episodes component', () => {
         it('should be displayed if the toggle is on, and shows the expected number of items (does not run on local)', function test() {
+          // I can enable tests running on local when I have updated all the fixture data to show the component
           if (Cypress.env('APP_ENV') === 'local') {
             cy.log('Does not run on local');
           } else {
@@ -116,29 +117,29 @@ export default ({ service, pageType, variant, isAmp }) => {
                   cy.log(
                     `Number of available episodes? ${expectedNumberOfEpisodes}`,
                   );
-                  if (expectedNumberOfEpisodes > 0) {
-                    cy.get("ul[class*='css-1ddpce6-StyledEpisodeList']").should(
+                  if (expectedNumberOfEpisodes > 1) {
+                    cy.get('[data-e2e=recent-episodes-list]').should('exist');
+
+                    cy.get('[data-e2e=recent-episodes-list]').within(() => {
+                      cy.get('[data-e2e=recent-episodes-list-item]')
+                        .its('length')
+                        .should('eq', expectedNumberOfEpisodes);
+                    });
+                  }
+                  // If there is only one item, it is not in a list
+                  else if (expectedNumberOfEpisodes === 1) {
+                    cy.get("div[class*='css-1sel12u-Wrapper emzt7w80']").should(
                       'exist',
                     );
-
-                    cy.get("ul[class*='css-1ddpce6-StyledEpisodeList']").within(
-                      () => {
-                        cy.get("li[class*='css-9kvqqh-StyledEpisodeListItem']")
-                          .its('length')
-                          .should('eq', expectedNumberOfEpisodes);
-                      },
-                    );
                   } else {
-                    cy.get("ul[class*='css-1ddpce6-StyledEpisodeList']").should(
+                    cy.get('[data-e2e=recent-episodes-list]').should(
                       'not.exist',
                     );
                     cy.log('No episodes present or available');
                   }
                 });
               } else {
-                cy.get("ul[class*='css-1ddpce6-StyledEpisodeList']").should(
-                  'not.exist',
-                );
+                cy.get('[data-e2e=recent-episodes-list]').should('not.exist');
                 cy.log('Recent episodes is not toggled on for this service');
               }
             });

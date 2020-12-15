@@ -104,7 +104,7 @@ export default ({ service, pageType, variant, isAmp }) => {
                   cy.log(
                     `Number of available episodes? ${expectedNumberOfEpisodes}`,
                   );
-                  if (expectedNumberOfEpisodes > 0) {
+                  if (expectedNumberOfEpisodes > 1) {
                     cy.get("ul[class*='css-1ddpce6-StyledEpisodeList']").should(
                       'exist',
                     );
@@ -115,6 +115,12 @@ export default ({ service, pageType, variant, isAmp }) => {
                           .its('length')
                           .should('eq', expectedNumberOfEpisodes);
                       },
+                    );
+                  }
+                  // If there is only one item, it is not in a list
+                  else if (expectedNumberOfEpisodes === 1) {
+                    cy.get("div[class*='css-1sel12u-Wrapper emzt7w80']").should(
+                      'exist',
                     );
                   } else {
                     cy.get("ul[class*='css-1ddpce6-StyledEpisodeList']").should(
