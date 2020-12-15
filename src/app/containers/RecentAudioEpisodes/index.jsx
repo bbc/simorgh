@@ -73,7 +73,7 @@ const RecentAudioEpisodes = ({ masterBrand, episodes }) => {
   const durationLabel = pathOr('Duration', ['media', 'duration'], translations);
   const audioLabel = pathOr('Audio', ['media', 'audio'], translations);
   const getUrl = episodeId =>
-    [service, variant, masterBrand, '/programmes/', episodeId]
+    [service, variant, masterBrand, 'programmes', episodeId]
       .filter(Boolean)
       .join('/');
 
