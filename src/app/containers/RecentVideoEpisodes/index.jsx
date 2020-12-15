@@ -105,7 +105,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
               </VisuallyHiddenText>
             </EpisodeList.Link>
             {episode.episodeTitle && (
-              <div>
+              <span role="text">
                 <EpisodeList.Metadata
                   as={Timestamp}
                   timestamp={episode.timestamp}
@@ -117,7 +117,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
                   service={service}
                   timezone={timezone}
                 />
-              </div>
+              </span>
             )}
           </EpisodeList.Episode>
         ))}
