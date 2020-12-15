@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { string, shape, arrayOf } from 'prop-types';
 import Metadata from '../Metadata';
+import getBrandedImage from '#lib/utilities/getBrandedImage';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const ArticleMetadata = ({
   articleId,
@@ -13,26 +15,33 @@ const ArticleMetadata = ({
   mentionsTags,
   lang,
   description,
-  image,
+  imageLocator,
   imageAltText,
-}) =>
-  articleId && (
-    <Metadata
-      title={title}
-      lang={lang}
-      description={description}
-      openGraphType="article"
-      aboutTags={aboutTags}
-      mentionsTags={mentionsTags}
-      image={image}
-      imageAltText={imageAltText}
-    >
-      <meta name="article:author" content={author} />
-      <meta name="article:modified_time" content={lastPublished} />
-      <meta name="article:published_time" content={firstPublished} />
-      {section && <meta name="article:section" content={section} />}
-    </Metadata>
+}) => {
+  const { service } = useContext(ServiceContext);
+  const brandedImage = imageLocator
+    ? getBrandedImage(imageLocator, service)
+    : null;
+  return (
+    articleId && (
+      <Metadata
+        title={title}
+        lang={lang}
+        description={description}
+        openGraphType="article"
+        aboutTags={aboutTags}
+        mentionsTags={mentionsTags}
+        image={brandedImage}
+        imageAltText={imageAltText}
+      >
+        <meta name="article:author" content={author} />
+        <meta name="article:modified_time" content={lastPublished} />
+        <meta name="article:published_time" content={firstPublished} />
+        {section && <meta name="article:section" content={section} />}
+      </Metadata>
+    )
   );
+};
 
 const tagPropTypes = shape({
   thingUri: string,
@@ -56,7 +65,7 @@ ArticleMetadata.propTypes = {
   mentionsTags: arrayOf(tagPropTypes),
   lang: string.isRequired,
   description: string.isRequired,
-  image: string,
+  imageLocator: string,
   imageAltText: string,
 };
 
@@ -65,7 +74,7 @@ ArticleMetadata.defaultProps = {
   section: '',
   aboutTags: [],
   mentionsTags: [],
-  image: null,
+  imageLocator: null,
   imageAltText: null,
 };
 
