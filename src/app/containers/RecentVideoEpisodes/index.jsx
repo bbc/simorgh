@@ -33,10 +33,11 @@ const StyledSectionLabel = styled(SectionLabel)`
   }
 `;
 
-const RecentVideoEpisodes = ({ episodes }) => {
+const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
   const {
     script,
     service,
+    variant,
     dir,
     timezone,
     datetimeLocale,
@@ -61,6 +62,10 @@ const RecentVideoEpisodes = ({ episodes }) => {
   );
   const durationLabel = pathOr('Duration', ['media', 'duration'], translations);
   const videoLabel = pathOr('Video', ['media', 'video'], translations);
+  const getUrl = episodeId =>
+    [service, variant, masterBrand, '/tv/', episodeId]
+      .filter(Boolean)
+      .join('/');
 
   return (
     <aside role="complimentary" aria-labelledby="recent-episodes">
@@ -86,7 +91,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
               })}
             />
             {/* these must be concatenated for screen reader UX */}
-            <EpisodeList.Link href={episode.url}>
+            <EpisodeList.Link href={getUrl(episode.id)}>
               <VisuallyHiddenText>{`${videoLabel}, `}</VisuallyHiddenText>
               <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">
                 {episode.brandTitle}
@@ -127,6 +132,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
 };
 
 RecentVideoEpisodes.propTypes = {
+  masterBrand: string.isRequired,
   episodes: arrayOf(
     shape({
       id: string.isRequired,
