@@ -73,6 +73,26 @@ it('should render the article tags', async () => {
   });
 });
 
+it('should render og:image if image provided', async () => {
+  render(
+    <Context service="news">
+      <ArticleMetadata
+        {...propsForNewsInternational}
+        image="c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg"
+        imageAltText="Mock Image Alt Text"
+      />
+    </Context>,
+  );
+
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('head > meta[property="og:image"]')
+        .getAttribute('content'),
+    ).toEqual('c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg');
+  });
+});
+
 it('should render the article section meta tag if section provided', async () => {
   render(
     <Context service="news">

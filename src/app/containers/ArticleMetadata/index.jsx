@@ -13,6 +13,8 @@ const ArticleMetadata = ({
   mentionsTags,
   lang,
   description,
+  image,
+  imageAltText,
 }) =>
   articleId && (
     <Metadata
@@ -22,6 +24,8 @@ const ArticleMetadata = ({
       openGraphType="article"
       aboutTags={aboutTags}
       mentionsTags={mentionsTags}
+      image={image}
+      imageAltText={imageAltText}
     >
       <meta name="article:author" content={author} />
       <meta name="article:modified_time" content={lastPublished} />
@@ -52,6 +56,8 @@ ArticleMetadata.propTypes = {
   mentionsTags: arrayOf(tagPropTypes),
   lang: string.isRequired,
   description: string.isRequired,
+  image: string,
+  imageAltText: string,
 };
 
 ArticleMetadata.defaultProps = {
@@ -59,6 +65,8 @@ ArticleMetadata.defaultProps = {
   section: '',
   aboutTags: [],
   mentionsTags: [],
+  image: null,
+  imageAltText: null,
 };
 
 export default ArticleMetadata;
