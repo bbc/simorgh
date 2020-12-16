@@ -114,7 +114,7 @@ export const buildSections = ({
 export const getTitle = ({ pageType, pageData, brandName, title }) => {
   switch (pageType) {
     case FRONT_PAGE:
-    case 'IDX':
+    case INDEX_PAGE:
     case 'index':
       return getPageTitle(pageData, brandName);
     case ARTICLE_PAGE:
