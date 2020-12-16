@@ -15,6 +15,8 @@ import {
   ARTICLE_PAGE,
   FRONT_PAGE,
   MEDIA_PAGE,
+  MOST_READ_PAGE,
+  MOST_WATCHED_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 let isOnClient = false;
@@ -77,12 +79,12 @@ describe('Chartbeat utilities', () => {
         expectedShortType: 'Radio',
       },
       {
-        pageType: 'mostRead',
+        pageType: MOST_READ_PAGE,
         expectedDefaultType: 'Most Read',
         expectedShortType: 'Most Read',
       },
       {
-        pageType: 'mostWatched',
+        pageType: MOST_WATCHED_PAGE,
         expectedDefaultType: 'Most Watched',
         expectedShortType: 'Most Watched',
       },
@@ -248,7 +250,7 @@ describe('Chartbeat utilities', () => {
 
   describe('Chartbeat Title', () => {
     it('should return correct title when pageType is mostRead', () => {
-      const pageType = 'mostRead';
+      const pageType = MOST_READ_PAGE;
       const pageData = {};
       const brandName = 'BBC News 코리아';
       const title = 'TOP 뉴스';
@@ -259,7 +261,7 @@ describe('Chartbeat utilities', () => {
     });
 
     it('should return correct title when pageType is mostWatched', () => {
-      const pageType = 'mostWatched';
+      const pageType = MOST_WATCHED_PAGE;
       const pageData = {};
       const brandName = 'BBC News Afaan Oromoo';
       const title = 'Hedduu kan ilaalaman';
@@ -691,7 +693,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'mostRead',
+      pageType: MOST_READ_PAGE,
       data: {
         name: 'Most Read Page Title',
       },
@@ -725,7 +727,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'mostWatched',
+      pageType: MOST_WATCHED_PAGE,
       data: {
         name: 'Most Watched Page Title',
       },
