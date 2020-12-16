@@ -10,6 +10,7 @@ import {
   MEDIA_PAGE,
   MOST_READ_PAGE,
   MOST_WATCHED_PAGE,
+  INDEX_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 const ID_COOKIE = 'ckns_sylphid';
@@ -33,7 +34,7 @@ export const getSylphidCookie = () =>
 export const getType = (pageType, shorthand = false) => {
   switch (pageType) {
     case FRONT_PAGE:
-    case 'IDX':
+    case INDEX_PAGE:
     case 'index':
       return shorthand ? 'IDX' : 'Index';
     case ARTICLE_PAGE:
