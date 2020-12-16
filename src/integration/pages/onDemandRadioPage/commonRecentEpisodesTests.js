@@ -15,8 +15,10 @@ export default () => {
     it('should contain the list items', () => {
       recentEpisodesListItems.forEach(itemEl => {
         expect(itemEl).toBeInTheDocument();
-        expect(itemEl.textContent).toBeTruthy();
-        expect(itemEl.querySelector('a').getAttribute('href')).toBeTruthy();
+        expect(itemEl.textContent).toMatchSnapshot();
+        expect(
+          itemEl.querySelector('a').getAttribute('href'),
+        ).toMatchSnapshot();
       });
     });
   });
