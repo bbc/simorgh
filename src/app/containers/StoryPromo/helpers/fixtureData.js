@@ -1,3 +1,4 @@
+import { INDEX_PAGE } from '#app/routes/utils/pageTypes';
 import relItems from '../IndexAlsos/relatedItems';
 
 export const completeItem = {
@@ -264,7 +265,7 @@ export const mapWithMediaError = {
   },
   section: {
     name: 'کور پاڼه',
-    subType: 'IDX',
+    subType: INDEX_PAGE,
     type: 'simple',
     uri: '/pashto/front_page',
   },
@@ -330,7 +331,7 @@ export const mapWithoutMediaError = {
   },
   section: {
     name: 'کور پاڼه',
-    subType: 'IDX',
+    subType: INDEX_PAGE,
     type: 'simple',
     uri: '/pashto/front_page',
   },
