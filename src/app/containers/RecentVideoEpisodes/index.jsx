@@ -91,6 +91,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
               <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">
                 {episode.brandTitle}
               </EpisodeList.Title>
+              <VisuallyHiddenText>, </VisuallyHiddenText>
               <EpisodeList.Description className="episode-list__description--hover episode-list__description--visited">
                 {episode.episodeTitle || formatDate(episode.timestamp)}
               </EpisodeList.Description>
@@ -104,7 +105,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
               </VisuallyHiddenText>
             </EpisodeList.Link>
             {episode.episodeTitle && (
-              <span role="text">
+              <div>
                 <EpisodeList.Metadata
                   as={Timestamp}
                   timestamp={episode.timestamp}
@@ -116,7 +117,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
                   service={service}
                   timezone={timezone}
                 />
-              </span>
+              </div>
             )}
           </EpisodeList.Episode>
         ))}
