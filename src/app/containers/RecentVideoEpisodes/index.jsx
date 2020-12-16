@@ -65,7 +65,7 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
   const videoLabel = pathOr('Video', ['media', 'video'], translations);
   const getUrl = episodeId =>
     '/'.concat(
-      [service, variant, masterBrand, 'tv_programmes', episodeId]
+      [service, variant, masterBrand, 'tv', episodeId]
         .filter(Boolean)
         .join('/'),
     );

@@ -39,9 +39,9 @@ describe('RecentAudioEpisodes', () => {
     );
 
     expect(links).toEqual([
-      'http://localhost/afrique/bbc_afrique_tv/tv_programmes/w172xc9xq2gllfk',
-      'http://localhost/afrique/bbc_afrique_tv/tv_programmes/w172xc9xq2ghpjg',
-      'http://localhost/afrique/bbc_afrique_tv/tv_programmes/w172xc9xq2gdsmc',
+      'http://localhost/afrique/bbc_afrique_tv/tv/w172xc9xq2gllfk',
+      'http://localhost/afrique/bbc_afrique_tv/tv/w172xc9xq2ghpjg',
+      'http://localhost/afrique/bbc_afrique_tv/tv/w172xc9xq2gdsmc',
     ]);
   });
 
