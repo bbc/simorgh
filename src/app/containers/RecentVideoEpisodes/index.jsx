@@ -20,7 +20,9 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
+import { AmpImg } from '@bbc/psammead-image';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 
 const StyledSectionLabel = styled(SectionLabel)`
   color: ${C_WHITE};
@@ -42,8 +44,19 @@ const RecentVideoEpisodes = ({ episodes }) => {
     datetimeLocale,
     translations,
   } = useContext(ServiceContext);
+  const { isAmp } = useContext(RequestContext);
 
   if (!episodes.length) return null;
+
+  // We need to pass additioal props to the Episode.Image component if we're on amp
+  const additionalImageProps = isAmp
+    ? {
+        as: AmpImg,
+        layout: 'responsive',
+        width: 16,
+        height: 9,
+      }
+    : {};
 
   const formatDate = timestamp =>
     formatUnixTimestamp({
@@ -84,6 +97,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
                 duration: episode.duration,
                 locale: datetimeLocale,
               })}
+              {...additionalImageProps}
             />
             {/* these must be concatenated for screen reader UX */}
             <EpisodeList.Link href={episode.url}>
