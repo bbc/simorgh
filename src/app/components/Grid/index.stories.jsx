@@ -25,7 +25,7 @@ const gridItemProps = {
   },
 };
 
-storiesOf('Components|Grid', module)
+storiesOf('Components/Grid', module)
   .add('default', () => {
     return (
       <Grid {...outerGridProps}>

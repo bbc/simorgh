@@ -24,7 +24,7 @@ const WrappedArticleTimestamp = ({ service, ...rest }) => (
   </ServiceContextProvider>
 );
 
-const stories = storiesOf('Containers|Article/Article Timestamp', module)
+const stories = storiesOf('Containers/Article/Article Timestamp', module)
   .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addParameters({ chromatic: { disable: true } });
 

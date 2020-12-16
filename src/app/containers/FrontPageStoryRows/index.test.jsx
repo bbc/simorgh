@@ -4,6 +4,7 @@ import { TopRow, LeadingRow, RegularRow } from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import getNumberPromoFixtures from './testHelpers';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const ImageRow = props => <RegularRow displayImages {...props} />;
 const NoImageRow = props => <RegularRow {...props} />;
@@ -14,7 +15,7 @@ const getRow = (Type, service, dir, number) => (
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
       pathname="/pathname"
-      pageType="frontPage"
+      pageType={FRONT_PAGE}
       isAmp={false}
       service={service}
     >

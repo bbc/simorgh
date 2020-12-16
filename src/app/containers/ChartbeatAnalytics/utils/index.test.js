@@ -11,6 +11,13 @@ import {
 import onClient from '#lib/utilities/onClient';
 import * as articleUtils from '#lib/analyticsUtils/article';
 import * as frontPageUtils from '#lib/analyticsUtils/indexPage';
+import {
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  MEDIA_PAGE,
+  MOST_READ_PAGE,
+  MOST_WATCHED_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 let isOnClient = false;
 
@@ -47,65 +54,65 @@ describe('Chartbeat utilities', () => {
   describe('Chartbeat Page Type', () => {
     const types = [
       {
-        type: 'article',
+        pageType: ARTICLE_PAGE,
         expectedDefaultType: 'New Article',
         expectedShortType: 'ART',
       },
       {
-        type: 'index',
+        pageType: 'index',
         expectedDefaultType: 'Index',
         expectedShortType: 'IDX',
       },
       {
-        type: 'FIX',
+        pageType: 'FIX',
         expectedDefaultType: 'FIX',
         expectedShortType: 'FIX',
       },
       {
-        type: 'MAP',
+        pageType: 'MAP',
         expectedDefaultType: 'article-media-asset',
         expectedShortType: 'article-media-asset',
       },
       {
-        type: 'media',
+        pageType: MEDIA_PAGE,
         expectedDefaultType: 'Radio',
         expectedShortType: 'Radio',
       },
       {
-        type: 'mostRead',
+        pageType: MOST_READ_PAGE,
         expectedDefaultType: 'Most Read',
         expectedShortType: 'Most Read',
       },
       {
-        type: 'mostWatched',
+        pageType: MOST_WATCHED_PAGE,
         expectedDefaultType: 'Most Watched',
         expectedShortType: 'Most Watched',
       },
       {
-        type: 'STY',
+        pageType: 'STY',
         expectedDefaultType: 'STY',
         expectedShortType: 'STY',
       },
       {
-        type: 'PGL',
+        pageType: 'PGL',
         expectedDefaultType: 'PGL',
         expectedShortType: 'PGL',
       },
       {
-        type: null,
+        pageType: null,
         expectedDefaultType: null,
         expectedShortType: null,
       },
     ];
 
     types.forEach(
-      ({ type: rawType, expectedDefaultType, expectedShortType }) => {
-        it(`Type ${rawType} should return ${expectedDefaultType} as default`, () => {
-          expect(getType(rawType)).toBe(expectedDefaultType);
+      ({ pageType: rawPageType, expectedDefaultType, expectedShortType }) => {
+        it(`Page type ${rawPageType} should return ${expectedDefaultType} as default`, () => {
+          expect(getType(rawPageType)).toBe(expectedDefaultType);
         });
 
-        it(`Type ${rawType} should return ${expectedShortType} as shorthand`, () => {
-          expect(getType(rawType, true)).toBe(expectedShortType);
+        it(`Page type ${rawPageType} should return ${expectedShortType} as shorthand`, () => {
+          expect(getType(rawPageType, true)).toBe(expectedShortType);
         });
       },
     );
@@ -117,7 +124,7 @@ describe('Chartbeat utilities', () => {
         service: 'news',
         producer: 'wales',
         chapter: 'election 2017',
-        pageType: 'article',
+        pageType: ARTICLE_PAGE,
         description: 'should add chapter and producer to article type',
         expected:
           'News, News - ART, News - wales, News - wales - ART, News - election 2017, News - election 2017 - ART',
@@ -135,7 +142,7 @@ describe('Chartbeat utilities', () => {
         service: 'persian',
         producer: null,
         chapter: null,
-        pageType: 'article',
+        pageType: ARTICLE_PAGE,
         description: 'should not add chapter and producer when not present',
         expected: 'Persian, Persian - ART',
       },
@@ -143,7 +150,7 @@ describe('Chartbeat utilities', () => {
         service: 'news',
         producer: 'foo',
         chapter: null,
-        pageType: 'article',
+        pageType: ARTICLE_PAGE,
         description: 'should not add chapter when not present',
         expected: 'News, News - ART, News - foo, News - foo - ART',
       },
@@ -151,7 +158,7 @@ describe('Chartbeat utilities', () => {
         service: 'news',
         producer: null,
         chapter: 'bar',
-        pageType: 'article',
+        pageType: ARTICLE_PAGE,
         description: 'should not add producer when not present',
         expected: 'News, News - ART, News - bar, News - bar - ART',
       },
@@ -159,7 +166,7 @@ describe('Chartbeat utilities', () => {
         service: 'news',
         producer: 'news',
         chapter: 'baz',
-        pageType: 'article',
+        pageType: ARTICLE_PAGE,
         description: 'should not add producer when producer == service',
         expected: 'News, News - ART, News - baz, News - baz - ART',
       },
@@ -182,21 +189,21 @@ describe('Chartbeat utilities', () => {
       },
       {
         service: 'korean',
-        pageType: 'media',
+        pageType: MEDIA_PAGE,
         description: 'should return expected section for live radio',
         masterBrand: 'bbc_korean_radio',
         expected: 'Korean, Korean - Radio',
       },
       {
         service: 'indonesia',
-        pageType: 'media',
+        pageType: MEDIA_PAGE,
         description: 'should return expected section for onDemand radio',
         masterBrand: 'bbc_indonesian_radio',
         expected: 'Indonesia, Indonesia - Radio',
       },
       {
         service: 'pashto',
-        pageType: 'media',
+        pageType: MEDIA_PAGE,
         description: 'should return expected section for ondemand TV',
         masterBrand: 'bbc_pashto_tv',
         expected: 'Pashto, Pashto - TV',
@@ -243,7 +250,7 @@ describe('Chartbeat utilities', () => {
 
   describe('Chartbeat Title', () => {
     it('should return correct title when pageType is mostRead', () => {
-      const pageType = 'mostRead';
+      const pageType = MOST_READ_PAGE;
       const pageData = {};
       const brandName = 'BBC News 코리아';
       const title = 'TOP 뉴스';
@@ -254,7 +261,7 @@ describe('Chartbeat utilities', () => {
     });
 
     it('should return correct title when pageType is mostWatched', () => {
-      const pageType = 'mostWatched';
+      const pageType = MOST_WATCHED_PAGE;
       const pageData = {};
       const brandName = 'BBC News Afaan Oromoo';
       const title = 'Hedduu kan ilaalaman';
@@ -265,13 +272,13 @@ describe('Chartbeat utilities', () => {
     });
 
     test.each`
-      pageType       | brandName        | pageTitle                        | expectedNumberOfCalls
-      ${'index'}     | ${'BBC News'}    | ${'This is an index page title'} | ${1}
-      ${'IDX'}       | ${'BBC Persian'} | ${'This is an IDX page title'}   | ${1}
-      ${'FIX'}       | ${'BBC Afrique'} | ${'This is an FIX page title'}   | ${1}
-      ${'frontPage'} | ${'BBC News'}    | ${'This is a frontpage title'}   | ${1}
-      ${'article'}   | ${null}          | ${'This is an article title'}    | ${1}
-      ${'foo'}       | ${'BBC News'}    | ${null}                          | ${0}
+      pageType        | brandName        | pageTitle                        | expectedNumberOfCalls
+      ${'index'}      | ${'BBC News'}    | ${'This is an index page title'} | ${1}
+      ${'IDX'}        | ${'BBC Persian'} | ${'This is an IDX page title'}   | ${1}
+      ${'FIX'}        | ${'BBC Afrique'} | ${'This is an FIX page title'}   | ${1}
+      ${FRONT_PAGE}   | ${'BBC News'}    | ${'This is a frontpage title'}   | ${1}
+      ${ARTICLE_PAGE} | ${null}          | ${'This is an article title'}    | ${1}
+      ${'foo'}        | ${'BBC News'}    | ${null}                          | ${0}
     `(
       'should call getPageTitle when pageType is $pageType',
       ({ brandName, pageType, pageTitle, expectedNumberOfCalls }) => {
@@ -279,7 +286,7 @@ describe('Chartbeat utilities', () => {
 
         const mockTitle = jest.fn().mockImplementation(() => pageTitle);
 
-        if (pageType === 'article') {
+        if (pageType === ARTICLE_PAGE) {
           articleUtils.getPromoHeadline = mockTitle;
         } else {
           frontPageUtils.getPageTitle = mockTitle;
@@ -292,10 +299,10 @@ describe('Chartbeat utilities', () => {
     );
 
     test.each`
-      pageType   | context               | pageTitle
-      ${'media'} | ${'(onDemand TV)'}    | ${'OnDemand TV Page Title'}
-      ${'media'} | ${'(onDemand Radio)'} | ${'OnDemand TV Radio Title'}
-      ${'media'} | ${'(Live Radio)'}     | ${'Live Radio Title'}
+      pageType      | context               | pageTitle
+      ${MEDIA_PAGE} | ${'(onDemand TV)'}    | ${'OnDemand TV Page Title'}
+      ${MEDIA_PAGE} | ${'(onDemand Radio)'} | ${'OnDemand TV Radio Title'}
+      ${MEDIA_PAGE} | ${'(Live Radio)'}     | ${'Live Radio Title'}
     `(
       'should return correct title when pageType is $pageType $context',
       ({ pageType, pageTitle }) => {
@@ -334,7 +341,7 @@ describe('Chartbeat utilities', () => {
       const fixtureData = {
         isAmp: true,
         platform: 'amp',
-        pageType: 'article',
+        pageType: ARTICLE_PAGE,
         data: {},
         brandName: '',
         chartbeatDomain: 'bbc.co.uk',
@@ -363,7 +370,7 @@ describe('Chartbeat utilities', () => {
       const fixtureData = {
         isAmp: false,
         platform: 'canonical',
-        pageType: 'frontPage',
+        pageType: FRONT_PAGE,
         data: {},
         brandName: 'BBC-News',
         chartbeatDomain: 'bbc.co.uk',
@@ -453,7 +460,7 @@ describe('Chartbeat utilities', () => {
       const fixtureData = {
         isAmp: true,
         platform: 'amp',
-        pageType: 'media',
+        pageType: MEDIA_PAGE,
         data: {
           pageTitle: 'Live Radio Page Title',
           contentType: 'player-live',
@@ -585,7 +592,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: true,
       platform: 'amp',
-      pageType: 'media',
+      pageType: MEDIA_PAGE,
       data: {
         pageTitle: 'OnDemand Radio Page Title',
         contentType: 'player-episode',
@@ -618,7 +625,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: true,
       platform: 'amp',
-      pageType: 'media',
+      pageType: MEDIA_PAGE,
       data: {
         pageTitle: 'OnDemand TV Page Title',
         contentType: 'player-episode',
@@ -651,7 +658,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'media',
+      pageType: MEDIA_PAGE,
       data: {
         pageTitle: 'OnDemand TV Page Title',
         contentType: 'player-episode',
@@ -686,7 +693,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'mostRead',
+      pageType: MOST_READ_PAGE,
       data: {
         name: 'Most Read Page Title',
       },
@@ -720,7 +727,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'mostWatched',
+      pageType: MOST_WATCHED_PAGE,
       data: {
         name: 'Most Watched Page Title',
       },
@@ -874,7 +881,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'frontPage',
+      pageType: FRONT_PAGE,
       data: {},
       brandName: 'BBC-News',
       chartbeatDomain: 'bbc.co.uk',
@@ -893,7 +900,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'frontPage',
+      pageType: FRONT_PAGE,
       data: {},
       brandName: 'BBC-News',
       chartbeatDomain: 'bbc.co.uk',

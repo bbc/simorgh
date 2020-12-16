@@ -7,6 +7,7 @@ import StoryPromoContainer from '.';
 import fixture from '#data/pidgin/frontpage';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { guideLinkItem } from './helpers/fixtureData';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const mediaFixture = type =>
   pathOr(null, ['content', 'groups'], fixture)
@@ -62,7 +63,7 @@ const getStoryPromo = (
       id="c0000000000o"
       isAmp={platform === 'amp'}
       pathname="/pathname"
-      pageType="article"
+      pageType={ARTICLE_PAGE}
       service="news"
     >
       <StoryPromoContainer
@@ -97,7 +98,7 @@ const getAmpStoryPromo = (
 ) =>
   getStoryPromo('amp', item, promoType, isRecommendation, isSingleColumnLayout);
 
-storiesOf('Containers|Story Promo/Canonical', module)
+storiesOf('Containers/Story Promo/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .add('Audio fixture', () => getCanonicalStoryPromo(audioFixture))
   .add('Video fixture', () => getCanonicalStoryPromo(videoFixture))
@@ -118,7 +119,7 @@ storiesOf('Containers|Story Promo/Canonical', module)
     getCanonicalStoryPromo(recommendationPromo, 'regular', true),
   );
 
-storiesOf('Containers|Story Promo/AMP', module)
+storiesOf('Containers/Story Promo/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
   .add('Audio fixture', () => getAmpStoryPromo(audioFixture))

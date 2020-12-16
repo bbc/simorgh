@@ -8,6 +8,7 @@ import {
   formatDuration,
   formatUnixTimestamp,
 } from '@bbc/psammead-timestamp-container/utilities';
+import Timestamp from '@bbc/psammead-timestamp-container';
 import SectionLabel from '@bbc/psammead-section-label';
 import {
   GEL_SPACING,
@@ -25,7 +26,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 const StyledSpan = styled.span`
   padding: 0 ${GEL_SPACING};
 `;
-
 const Spacer = styled.aside`
   position: relative;
   margin-bottom: ${GEL_SPACING_QUAD};
@@ -38,6 +38,9 @@ const StyledSectionLabel = styled(SectionLabel)`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-bottom: ${GEL_SPACING_TRPL};
   }
+`;
+const StyledTimestamp = styled(Timestamp)`
+  display: inline;
 `;
 
 const RecentAudioEpisodes = ({ episodes }) => {
@@ -52,9 +55,9 @@ const RecentAudioEpisodes = ({ episodes }) => {
 
   if (!episodes.length) return null;
 
-  const formattedTimestamp = ({ releaseDateTimeStamp, format }) =>
+  const formattedTimestamp = ({ timestamp, format }) =>
     formatUnixTimestamp({
-      timestamp: releaseDateTimeStamp,
+      timestamp,
       format,
       timezone,
       locale: datetimeLocale,
@@ -69,8 +72,11 @@ const RecentAudioEpisodes = ({ episodes }) => {
   const durationLabel = pathOr('Duration', ['media', 'duration'], translations);
   const audioLabel = pathOr('Audio', ['media', 'audio'], translations);
 
+  const ulProps = { 'data-e2e': 'recent-episodes-list' };
+  const liProps = { 'data-e2e': 'recent-episodes-list-item' };
+
   return (
-    <Spacer role="complimentary">
+    <Spacer role="complimentary" aria-labelledby="recent-episodes">
       <StyledSectionLabel
         script={script}
         service={service}
@@ -80,7 +86,13 @@ const RecentAudioEpisodes = ({ episodes }) => {
       >
         {recentEpisodesTranslation}
       </StyledSectionLabel>
-      <EpisodeList script={script} service={service} dir={dir}>
+      <EpisodeList
+        script={script}
+        service={service}
+        dir={dir}
+        ulProps={ulProps}
+        liProps={liProps}
+      >
         {episodes.map(episode => (
           <EpisodeList.Episode key={episode.id}>
             <EpisodeList.Link href={episode.url}>
@@ -93,11 +105,8 @@ const RecentAudioEpisodes = ({ episodes }) => {
               <EpisodeList.Description className="episode-list__description--hover episode-list__description--visited">
                 {episode.episodeTitle ||
                   `${formattedTimestamp({
-                    releaseDateTimeStamp: episode.timestamp,
+                    timestamp: episode.timestamp,
                     format: 'LL',
-                  })}, ${formattedTimestamp({
-                    releaseDateTimeStamp: episode.timestamp,
-                    format: 'HH:mm',
                   })}`}
               </EpisodeList.Description>
               <VisuallyHiddenText>, </VisuallyHiddenText>
@@ -117,18 +126,24 @@ const RecentAudioEpisodes = ({ episodes }) => {
                 </span>
               </EpisodeList.Metadata>
             </EpisodeList.Link>
-            <EpisodeList.Metadata>
-              {episode.episodeTitle && (
+            {episode.episodeTitle && (
+              <EpisodeList.Metadata>
                 <>
                   {' '}
                   <StyledSpan aria-hidden>|</StyledSpan>
-                  {formattedTimestamp({
-                    releaseDateTimeStamp: episode.timestamp,
-                    format: 'LL',
-                  })}
+                  <StyledTimestamp
+                    timestamp={episode.timestamp}
+                    format="LL"
+                    dateTimeFormat="YYYY-MM-DD"
+                    padding={false}
+                    script={script}
+                    locale={datetimeLocale}
+                    service={service}
+                    timezone={timezone}
+                  />
                 </>
-              )}
-            </EpisodeList.Metadata>
+              </EpisodeList.Metadata>
+            )}
           </EpisodeList.Episode>
         ))}
       </EpisodeList>

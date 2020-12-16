@@ -7,6 +7,7 @@ import { OnDemandRadioPage } from '..';
 import indonesia from './fixtureData/indonesia';
 import pashto from './fixtureData/pashto';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
+import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 const onDemandRadioFixtures = {
   indonesia,
@@ -25,7 +26,7 @@ const matchFixtures = service => ({
 
 const status = 200;
 
-storiesOf('Pages|OnDemand Radio Page', module)
+storiesOf('Pages/OnDemand Radio Page', module)
   .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(withKnobs)
   .addDecorator(
@@ -44,7 +45,7 @@ storiesOf('Pages|OnDemand Radio Page', module)
         isAmp={false}
         loading={false}
         error=""
-        pageType="media"
+        pageType={MEDIA_PAGE}
       />
     </BrowserRouter>
   ));

@@ -6,6 +6,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import CpsMetadata from './index';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const getISOStringDate = date => new Date(date).toISOString();
 
@@ -23,7 +24,7 @@ const Context = ({ service, children, toggles = defaultToggles }) => (
         bbcOrigin="https://www.test.bbc.co.uk"
         id="c0000000000o"
         isAmp={false}
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         pathname="/pathname"
         service={service}
         statusCode={200}

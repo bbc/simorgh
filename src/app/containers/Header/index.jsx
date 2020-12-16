@@ -8,6 +8,7 @@ import ConsentBanner from '../ConsentBanner';
 import ScriptLink from './ScriptLink';
 import useToggle from '#hooks/useToggle';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
+import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const HeaderContainer = () => {
   const { pageType } = useContext(RequestContext);
@@ -21,13 +22,13 @@ const HeaderContainer = () => {
     serviceLang,
   } = useContext(ServiceContext);
   const { skipLinkText } = translations;
-  const borderBottom = pageType !== 'frontPage';
+  const borderBottom = pageType !== FRONT_PAGE;
 
   // The article page toggles the nav bar based on environment
   const showNavOnArticles = useToggle('navOnArticles').enabled;
 
   // All other page types show the nav bar at all times
-  const showNav = showNavOnArticles || pageType !== 'article';
+  const showNav = showNavOnArticles || pageType !== ARTICLE_PAGE;
 
   const isOperaMini = useOperaMiniDetection();
 

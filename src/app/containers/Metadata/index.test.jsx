@@ -2,9 +2,12 @@ import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MetadataContainer from './index';
-
+import {
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  MEDIA_PAGE,
+} from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-
 import {
   articleDataNews,
   articleDataPersian,
@@ -80,7 +83,7 @@ const CanonicalNewsInternationalOrigin = () => (
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id="c0000000001o"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/news/articles/c0000000001o"
     {...newsArticleMetadataProps}
   />
@@ -94,7 +97,7 @@ const CanonicalMapInternationalOrigin = () => (
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id="23248703"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/pigdin/23248703"
     {...newsArticleMetadataProps}
   />
@@ -585,7 +588,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotCoDotUKOrigin}
     platform="amp"
     id="c0000000001o"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/news/articles/c0000000001o.amp"
     {...newsArticleMetadataProps}
   />,
@@ -598,7 +601,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id="c4vlle3q337o"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/persian/articles/c4vlle3q337o"
     {...persianArticleMetadataProps}
   />,
@@ -611,7 +614,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotCoDotUKOrigin}
     platform="amp"
     id="c4vlle3q337o"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/persian/articles/c4vlle3q337o.amp"
     {...persianArticleMetadataProps}
   />,
@@ -624,7 +627,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id={null}
-    pageType="frontPage"
+    pageType={FRONT_PAGE}
     pathname="/igbo"
     title="Ogbako"
     lang={frontPageData.metadata.language}
@@ -640,7 +643,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id={null}
-    pageType="media"
+    pageType={MEDIA_PAGE}
     pathname="/korean/bbc_korean_radio/liveradio"
     title={liveRadioPageData.promo.name}
     lang={liveRadioPageData.metadata.language}
@@ -657,7 +660,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id="news-53577781"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/ukrainian/news-53577781"
     description="BBC Ukrainian"
     openGraphType="website"
@@ -673,7 +676,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="amp"
     id="news-53577781"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/ukrainian/news-53577781.amp"
     description="BBC Ukrainian"
     openGraphType="website"
@@ -689,7 +692,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id="news-53577781"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/ukrainian/news-53577781"
     description="BBC Ukrainian"
     openGraphType="website"
@@ -705,7 +708,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="amp"
     id="news-53577781"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/ukrainian/news-53577781.amp"
     description="BBC Ukrainian"
     openGraphType="website"

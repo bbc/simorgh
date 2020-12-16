@@ -4,7 +4,7 @@ import persianAfghanistanIdxData from '#data/persian/afghanistan';
 import ukraineInRussianIdxData from '#data/ukrainian/ukraine_in_russian';
 import IdxPageWithContext from './testHelpers';
 
-const stories = storiesOf('Pages|Idx Page', module);
+const stories = storiesOf('Pages/Idx Page', module);
 
 [
   {

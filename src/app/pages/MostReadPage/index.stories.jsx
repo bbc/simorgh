@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
-import { getLocalMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
+import { getLocalMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import MostReadPage from '.';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import zhongwenSimpData from '#data/zhongwen/mostRead/simp.json';
+import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 
-const stories = storiesOf('Pages|Most Read Page', module);
+const stories = storiesOf('Pages/Most Read Page', module);
 
 [
   {
@@ -24,7 +25,7 @@ const stories = storiesOf('Pages|Most Read Page', module);
     return (
       <BrowserRouter>
         <MostReadPage
-          pageType="mostRead"
+          pageType={MOST_READ_PAGE}
           isAmp={false}
           pathname="/path"
           status={200}

@@ -6,8 +6,9 @@ import HeaderContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
-storiesOf('Containers|Header', module)
+storiesOf('Containers/Header', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
@@ -17,7 +18,7 @@ storiesOf('Containers|Header', module)
         <ServiceContextProvider service={service} variant={variant}>
           <RequestContextProvider
             isAmp={false}
-            pageType="frontPage"
+            pageType={FRONT_PAGE}
             service={service}
             bbcOrigin="https://www.test.bbc.com"
           >

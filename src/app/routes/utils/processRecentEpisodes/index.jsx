@@ -14,7 +14,7 @@ const validateEpisode = episode => {
       is(Array, episode.media.versions),
       episode.media.versions[0],
       is(String, episode.media.versions[0].durationISO8601),
-      is(Number, episode.media.versions[0].availableFrom),
+      is(Number, episode.releaseDateTimestamp),
     ];
 
     return checks.every(Boolean);
@@ -29,7 +29,7 @@ const formatEpisode = (episode, { serviceName, urlFormatter }) => {
     url: urlFormatter(serviceName, episode.id),
     brandTitle: episode.brand.title,
     episodeTitle: episode.media.episodeTitle,
-    timestamp: episode.media.versions[0].availableFrom,
+    timestamp: episode.releaseDateTimestamp,
     duration: episode.media.versions[0].durationISO8601,
     image: `//${episode.media.imageUrl.replace('$recipe', '768x432')}`,
     altText: episode.brand.title,

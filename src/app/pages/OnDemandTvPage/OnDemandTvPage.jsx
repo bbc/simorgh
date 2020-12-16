@@ -28,7 +28,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
-import getEmbedUrl from '#lib/utilities/getEmbedUrl';
+import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import AVPlayer from '#containers/AVPlayer';
 import RecentVideoEpisodes from '#containers/RecentVideoEpisodes';
 
@@ -108,6 +108,8 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     translations,
   );
 
+  const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
+
   return (
     <>
       <ChartbeatAnalytics data={pageData} />
@@ -184,15 +186,23 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         >
           <OnDemandParagraphContainer text={shortSynopsis} darkMode />
         </Grid>
-        <Grid
-          item
-          startOffset={getGroups(1, 1, 1, 1, 2, 5)}
-          columns={getGroups(6, 6, 6, 6, 6, 12)}
-          margins={getGroups(true, true, true, true, false, false)}
-        >
-          <RecentVideoEpisodes episodes={recentEpisodes} />
-        </Grid>
       </StyledGelPageGrid>
+
+      {hasRecentEpisodes && (
+        <StyledGelPageGrid
+          columns={getGroups(6, 6, 6, 6, 8, 20)}
+          enableGelGutters
+        >
+          <Grid
+            item
+            startOffset={getGroups(1, 1, 1, 1, 2, 5)}
+            columns={getGroups(6, 6, 6, 6, 6, 12)}
+            margins={getGroups(true, true, true, true, false, false)}
+          >
+            <RecentVideoEpisodes episodes={recentEpisodes} />
+          </Grid>
+        </StyledGelPageGrid>
+      )}
     </>
   );
 };

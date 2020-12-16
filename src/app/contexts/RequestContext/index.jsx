@@ -6,6 +6,13 @@ import getOriginContext from './getOriginContext';
 import getEnv from './getEnv';
 import getMetaUrls from './getMetaUrls';
 import variantPropType from '../../models/propTypes/variants';
+import {
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  MEDIA_PAGE,
+  MOST_READ_PAGE,
+  MOST_WATCHED_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 export const RequestContext = React.createContext({});
 
@@ -66,11 +73,11 @@ RequestContextProvider.propTypes = {
   id: string,
   isAmp: bool.isRequired,
   pageType: oneOf([
-    'article',
-    'frontPage',
-    'media',
-    'mostRead',
-    'mostWatched',
+    ARTICLE_PAGE,
+    FRONT_PAGE,
+    MEDIA_PAGE,
+    MOST_READ_PAGE,
+    MOST_WATCHED_PAGE,
     'error',
     'MAP',
     'FIX',
