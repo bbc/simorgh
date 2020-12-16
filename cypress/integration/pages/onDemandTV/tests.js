@@ -74,32 +74,10 @@ export default ({ service, pageType, variant, isAmp }) => {
                     : `${currentPath}`;
 
                 cy.request(getDataUrl(url)).then(({ body }) => {
-                  const numberOfEpisodesinData =
-                    body.relatedContent.groups[0].promos.length;
-                  // There cannot be more episodes than the number present in the data
-                  const numberOfEpisodesInDataUnderLimit = Math.min(
-                    numberOfEpisodesinData,
-                    recentEpisodesMaxNumber,
-                  );
                   // Count the number of episodes that are available and so will show (there can be unavailable episodes in the list)
-                  let countAvailableEpisodes = 0;
-                  for (
-                    let i = 0;
-                    i < numberOfEpisodesInDataUnderLimit;
-                    i += 1
-                  ) {
-                    if (
-                      body.relatedContent.groups[0].promos[i].media.versions
-                        .length > 0
-                    ) {
-                      countAvailableEpisodes += 1;
-                    }
-                  }
-                  // There cannot be more episodes than are AVAILABLE in the data (episodes don't show if versions is empty)
-                  const expectedNumberOfEpisodes = Math.min(
-                    numberOfEpisodesInDataUnderLimit,
-                    countAvailableEpisodes,
-                  );
+                  const expectedNumberOfEpisodes = body.relatedContent.groups[0].promos
+                    .filter(({ media }) => media.versions.length)
+                    .slice(0, recentEpisodesMaxNumber).length;
 
                   cy.log(
                     `Number of available episodes? ${expectedNumberOfEpisodes}`,

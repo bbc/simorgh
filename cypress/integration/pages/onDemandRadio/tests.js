@@ -8,7 +8,6 @@ import {
 } from '../../../support/helpers/onDemandRadioTv';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import getDataUrl from '../../../support/helpers/getDataUrl';
-import config from '../../../support/config/services';
 
 export default ({ service, pageType, variant, isAmp }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
@@ -36,7 +35,7 @@ export default ({ service, pageType, variant, isAmp }) => {
               `Episode is not available: ${Cypress.env('currentPath')}`,
             );
           }
-          const language = appConfig[config[service].name][variant].lang;
+          const language = appConfig[service][variant].lang;
           const embedUrl = getEmbedUrl({ body: jsonData, language, isAmp });
           const isBrandPage = isBrand(jsonData);
 
@@ -57,7 +56,7 @@ export default ({ service, pageType, variant, isAmp }) => {
     });
     describe(`Tests for ${service} ${pageType} ${variant} with toggle use`, () => {
       before(() => {
-        cy.getToggles(config[service].name);
+        cy.getToggles(service);
       });
       describe('Recent Episodes component', () => {
         it('should be displayed if the toggle is on, and shows the expected number of items (does not run on local)', function test() {
@@ -65,7 +64,7 @@ export default ({ service, pageType, variant, isAmp }) => {
           if (Cypress.env('APP_ENV') === 'local') {
             cy.log('Does not run on local');
           } else {
-            cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
+            cy.fixture(`toggles/${service}.json`).then(toggles => {
               const recentEpisodesEnabled = path(
                 ['recentAudioEpisodes', 'enabled'],
                 toggles,
@@ -86,33 +85,10 @@ export default ({ service, pageType, variant, isAmp }) => {
                     : `${currentPath}`;
 
                 cy.request(getDataUrl(url)).then(({ body }) => {
-                  const numberOfEpisodesinData =
-                    body.relatedContent.groups[0].promos.length;
-                  // There cannot be more episodes than the number present in the data
-                  const numberOfEpisodesInDataUnderLimit = Math.min(
-                    numberOfEpisodesinData,
-                    recentEpisodesMaxNumber,
-                  );
-
                   // Count the number of episodes that are available and so will show (there can be unavailable episodes in the list)
-                  let countAvailableEpisodes = 0;
-                  for (
-                    let i = 0;
-                    i < numberOfEpisodesInDataUnderLimit;
-                    i += 1
-                  ) {
-                    if (
-                      body.relatedContent.groups[0].promos[i].media.versions
-                        .length > 0
-                    ) {
-                      countAvailableEpisodes += 1;
-                    }
-                  }
-                  // There cannot be more episodes than are AVAILABLE in the data (episodes don't show if versions is empty)
-                  const expectedNumberOfEpisodes = Math.min(
-                    numberOfEpisodesInDataUnderLimit,
-                    countAvailableEpisodes,
-                  );
+                  const expectedNumberOfEpisodes = body.relatedContent.groups[0].promos
+                    .filter(({ media }) => media.versions.length)
+                    .slice(0, recentEpisodesMaxNumber).length;
 
                   cy.log(
                     `Number of available episodes? ${expectedNumberOfEpisodes}`,

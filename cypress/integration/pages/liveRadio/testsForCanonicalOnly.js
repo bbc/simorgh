@@ -20,7 +20,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 }) =>
   describe(`testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {
     beforeEach(() => {
-      cy.getToggles(config[service].name);
+      cy.getToggles(service);
     });
 
     describe('Audio Player', () => {

@@ -1,5 +1,4 @@
 import path from 'ramda/src/path';
-import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 import { isScheduleDataComplete } from '../../../../src/app/containers/RadioSchedule/utilities/evaluateScheduleData';
 
@@ -16,12 +15,12 @@ export default ({ service, pageType, variant }) => {
   });
   describe(`testsForCanonicalOnly for ${service} ${pageType} ${variant}`, () => {
     beforeEach(() => {
-      cy.getToggles(config[service].name);
+      cy.getToggles(service);
     });
 
     describe('Radio Schedule', () => {
       it('should be displayed if there is enough schedule data', function test() {
-        cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
+        cy.fixture(`toggles/${service}.json`).then(toggles => {
           const scheduleIsEnabled = path(
             ['onDemandRadioSchedule', 'enabled'],
             toggles,
