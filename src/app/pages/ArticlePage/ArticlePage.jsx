@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
 import {
@@ -48,8 +49,6 @@ import {
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 
-const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
-
 const componentsToRender = {
   headline: headings,
   subheadline: headings,
@@ -86,19 +85,21 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
 
-  let promoImage = null;
-  let promoImageAltText = null;
+  const promoImageBlocks = pathOr(
+    [],
+    ['promo', 'images', 'defaultPromoImage', 'blocks'],
+    pageData,
+  );
 
-  if (pageData.promo.images !== undefined) {
-    const promoImageBlocks = pageData.promo.images.defaultPromoImage.blocks;
-    const promoImageBlock = filterForBlockType(promoImageBlocks, 'rawImage');
-    const promoImageAltTextBlock = filterForBlockType(
-      promoImageBlocks,
-      'altText',
-    );
-    promoImageAltText = getText(promoImageAltTextBlock);
-    promoImage = promoImageBlock.model.locator;
-  }
+  const promoImageAltText = path(
+    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+    filterForBlockType(promoImageBlocks, 'altText'),
+  );
+
+  const promoImage = path(
+    ['model', 'locator'],
+    filterForBlockType(promoImageBlocks, 'rawImage'),
+  );
 
   const MostReadWrapper = ({ children }) => (
     <ArticlePageMostReadSection>
