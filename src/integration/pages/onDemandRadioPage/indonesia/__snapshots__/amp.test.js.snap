@@ -97,7 +97,7 @@ exports[`AMP On Demand Radio Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=54&p=indonesian.bbc_indonesian_radio.w172xh267fpn19l.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Apips%3Aw172xh267fpn19l]&x2=[amp]&x3=[news-indonesia]&x4=[id]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[Dunia%2BPagi%2BIni%2B-%2BBBC%2BNews%2BIndonesia]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=54&p=indonesia.bbc_indonesian_radio.w172xh267fpn19l.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Apips%3Aw172xh267fpn19l]&x2=[amp]&x3=[news-indonesia]&x4=[id]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[Dunia%2BPagi%2BIni%2B-%2BBBC%2BNews%2BIndonesia]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -264,19 +264,19 @@ exports[`AMP On Demand Radio Page Media Player iframe with valid URL should be r
 
 exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 1`] = `"Audio, Dunia Pagi Ini, 14 Desember 2020,  Durasi 15,30  Durasi 15:30"`;
 
-exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 2`] = `"/indonesian/bbc_indonesian_radio/w172xnm9z732xfp"`;
+exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 2`] = `"/indonesia/bbc_indonesian_radio/w172xnm9z732xfp"`;
 
 exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 3`] = `"Audio, Dunia Pagi Ini, 14 Desember 2020,  Durasi 15,30  Durasi 15:30"`;
 
-exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 4`] = `"/indonesian/bbc_indonesian_radio/w172xnm9z732spk"`;
+exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 4`] = `"/indonesia/bbc_indonesian_radio/w172xnm9z732spk"`;
 
 exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 5`] = `"Audio, Dunia Pagi Ini, 13 Desember 2020,  Durasi 15,30  Durasi 15:30"`;
 
-exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 6`] = `"/indonesian/bbc_indonesian_radio/w172xnm9lysw58f"`;
+exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 6`] = `"/indonesia/bbc_indonesian_radio/w172xnm9lysw58f"`;
 
 exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 7`] = `"Audio, Dunia Pagi Ini, 13 Desember 2020,  Durasi 15,30  Durasi 15:30"`;
 
-exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 8`] = `"/indonesian/bbc_indonesian_radio/w172xnm9lysw1j9"`;
+exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 8`] = `"/indonesia/bbc_indonesian_radio/w172xnm9lysw1j9"`;
 
 exports[`AMP On Demand Radio Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
