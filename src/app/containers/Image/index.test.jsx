@@ -88,12 +88,12 @@ describe('Image', () => {
     );
 
     it('should render a lazyload container instead of an image if the image is after the 3rd block', () => {
-      const noScriptContent = `<img srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w" alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17." src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png" width="640" class="css-1a7chfn-StyledImg-fadeIn e1enwo3v0"/>;`;
-
       render(<ImageContainer position={[4]} {...data} />);
       const noScriptEl = document.querySelector('noscript');
-      expect(noScriptEl).toBeDefined();
-      expect(noScriptEl.textContent).toEqual(noScriptContent);
+      const imageEl = document.querySelector('img');
+
+      expect(noScriptEl).toBeInTheDocument();
+      expect(imageEl).not.toBeInTheDocument();
     });
 
     const dataWithNonBbcCopyright = blockArrayModel([
