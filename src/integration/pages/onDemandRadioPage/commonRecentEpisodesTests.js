@@ -15,7 +15,7 @@ export default () => {
     it('should contain the list items', () => {
       recentEpisodesListItems.forEach(itemEl => {
         expect(itemEl).toBeInTheDocument();
-        expect(itemEl.textContent).toMatchSnapshot();
+        expect(itemEl.textContent.trim()).toMatchSnapshot();
         expect(
           itemEl.querySelector('a').getAttribute('href'),
         ).toMatchSnapshot();
