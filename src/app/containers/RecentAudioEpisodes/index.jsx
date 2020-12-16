@@ -75,9 +75,7 @@ const RecentAudioEpisodes = ({ masterBrand, episodes }) => {
   const audioLabel = pathOr('Audio', ['media', 'audio'], translations);
   const getUrl = episodeId =>
     '/'.concat(
-      [service, variant, masterBrand, 'programmes', episodeId]
-        .filter(Boolean)
-        .join('/'),
+      [service, variant, masterBrand, episodeId].filter(Boolean).join('/'),
     );
 
   const ulProps = { 'data-e2e': 'recent-episodes-list' };

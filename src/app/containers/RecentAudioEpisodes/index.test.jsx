@@ -7,7 +7,10 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 /* eslint-disable react/prop-types */
 const RecentAudioEpisodesWithContext = ({ episodes }) => (
   <ServiceContextProvider service="indonesia">
-    <RecentAudioEpisodes episodes={episodes} />
+    <RecentAudioEpisodes
+      masterBrand="bbc_indonesian_radio"
+      episodes={episodes}
+    />
   </ServiceContextProvider>
 );
 
@@ -20,6 +23,7 @@ describe('RecentAudioEpisodes', () => {
     const recentEpisodesLabel = getByText('Siaran sebelumnya');
     expect(recentEpisodesLabel).toBeInTheDocument();
   });
+
   it('should render the list items', async () => {
     const { container } = render(
       <RecentAudioEpisodesWithContext episodes={recentAudioFixtures} />,
@@ -35,6 +39,23 @@ describe('RecentAudioEpisodes', () => {
 
     const episodeTitle = getByText('Wednesday Evening');
     expect(episodeTitle).toBeInTheDocument();
+  });
+
+  it('should render the list item links', async () => {
+    const { getAllByText } = render(
+      <RecentAudioEpisodesWithContext episodes={recentAudioFixtures} />,
+    );
+
+    const links = getAllByText('Dunia Pagi Ini').map(
+      titleEl => titleEl.closest('a').href,
+    );
+
+    expect(links).toEqual([
+      'http://localhost/indonesia/bbc_indonesian_radio/w172xnm8j4tz686',
+      'http://localhost/indonesia/bbc_indonesian_radio/w172xnm84wjrkv2',
+      'http://localhost/indonesia/bbc_indonesian_radio/w172xnm84wjrg2y',
+      'http://localhost/indonesia/bbc_indonesian_radio/w172xnm84wjgw3s',
+    ]);
   });
 
   it('should include the visually hidden audio and date', () => {
