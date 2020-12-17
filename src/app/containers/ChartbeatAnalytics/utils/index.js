@@ -11,6 +11,7 @@ import {
   MOST_READ_PAGE,
   MOST_WATCHED_PAGE,
   INDEX_PAGE,
+  FEATURE_INDEX_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 const ID_COOKIE = 'ckns_sylphid';
@@ -51,8 +52,8 @@ export const getType = (pageType, shorthand = false) => {
       return 'STY';
     case 'PGL':
       return 'PGL';
-    case 'FIX':
-      return 'FIX';
+    case FEATURE_INDEX_PAGE:
+      return FEATURE_INDEX_PAGE;
     default:
       return null;
   }
@@ -131,7 +132,7 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
       return path(['promo', 'headlines', 'headline'], pageData);
     case 'PGL':
       return path(['promo', 'headlines', 'headline'], pageData);
-    case 'FIX':
+    case FEATURE_INDEX_PAGE:
       return getPageTitle(pageData, brandName);
     default:
       return null;
