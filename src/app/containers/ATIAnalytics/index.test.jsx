@@ -20,7 +20,11 @@ import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  FEATURE_INDEX_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
@@ -356,7 +360,11 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType="FIX" service="afrique">
+        <ContextWrap
+          platform="canonical"
+          pageType={FEATURE_INDEX_PAGE}
+          service="afrique"
+        >
           <ATIAnalytics data={fixAssetData} />
         </ContextWrap>,
       );
@@ -373,7 +381,11 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       render(
-        <ContextWrap platform="amp" pageType="FIX" service="afrique">
+        <ContextWrap
+          platform="amp"
+          pageType={FEATURE_INDEX_PAGE}
+          service="afrique"
+        >
           <ATIAnalytics data={fixAssetData} />
         </ContextWrap>,
       );
