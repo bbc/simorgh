@@ -1,6 +1,10 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
+import { render, mount } from 'enzyme';
+import {
+  isNull,
+  suppressPropWarnings,
+  shouldMatchSnapshot,
+} from '@bbc/psammead-test-helpers';
 import ArticleTimestamp from '.';
 import {
   timestampGenerator,
@@ -14,6 +18,11 @@ const regexDatetime = /[0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
 
 const regexUpdatedDatetime = /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
 const regexUpdatedDate = /^Updated [0-9]{1,2} \w+ [0-9]{4}$/;
+
+const firstChild = wrapper => wrapper[0].children[0].data;
+const secondChild = wrapper => wrapper[1].children[0].children[0].data;
+
+const renderedTimestamps = jsx => render(jsx).get(0).children; // helper as output is wrapped in a grid
 
 // eslint-disable-next-line react/prop-types
 const WrappedArticleTimestamp = ({ service, ...props }) => (
@@ -37,63 +46,48 @@ describe('ArticleTimestamp', () => {
     Date.now = originalDate;
   });
 
-  it("should render a 'created' Timestamp correctly", () => {
-    const { container } = render(
-      <WrappedArticleTimestamp
-        firstPublished={1530947227000} // Sat Jul 07 2018 07:07:07 UTC
-        lastPublished={1530947227000} // Sat Jul 07 2018 07:07:07 UTC
-      />,
-    );
+  shouldMatchSnapshot(
+    "should render a 'created' Timestamp correctly",
+    <WrappedArticleTimestamp
+      firstPublished={1530947227000} // Sat Jul 07 2018 07:07:07 UTC
+      lastPublished={1530947227000} // Sat Jul 07 2018 07:07:07 UTC
+    />,
+  );
 
-    expect(container).toMatchSnapshot();
-  });
+  shouldMatchSnapshot(
+    "should render both a 'created' and an 'updated' Timestamp correctly",
+    <WrappedArticleTimestamp
+      firstPublished={1530947227000} // Sat Jul 07 2018 07:07:07
+      lastPublished={1552666749637} // Fri Mar 15 2019 16:19:09
+    />,
+  );
 
-  it("should render both a 'created' and an 'updated' Timestamp correctly", () => {
-    const { container } = render(
-      <WrappedArticleTimestamp
-        firstPublished={1530947227000} // Sat Jul 07 2018 07:07:07
-        lastPublished={1552666749637} // Fri Mar 15 2019 16:19:09
-      />,
-    );
+  shouldMatchSnapshot(
+    'should render with a prefix',
+    <WrappedArticleTimestamp
+      firstPublished={1530947227000}
+      lastPublished={1552666749637}
+      service="mundo" // Prefix is Actualizado
+    />,
+  );
 
-    expect(container).toMatchSnapshot();
-  });
+  shouldMatchSnapshot(
+    'should render with a suffix',
+    <WrappedArticleTimestamp
+      firstPublished={1530947227000}
+      lastPublished={1552666749637}
+      service="nepali" // Suffix is मा अद्यावधिक
+    />,
+  );
 
-  it('should render with a prefix', () => {
-    const { container } = render(
-      <WrappedArticleTimestamp
-        firstPublished={1530947227000}
-        lastPublished={1552666749637}
-        service="mundo" // Prefix is Actualizado
-      />,
-    );
-
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should render with a suffix', () => {
-    const { container } = render(
-      <WrappedArticleTimestamp
-        firstPublished={1530947227000}
-        lastPublished={1552666749637}
-        service="nepali" // Suffix is मा अद्यावधिक
-      />,
-    );
-
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should render with no suffix or prefix', () => {
-    const { container } = render(
-      <WrappedArticleTimestamp
-        firstPublished={1530947227000}
-        lastPublished={1530947227000}
-        service="mundo"
-      />,
-    );
-
-    expect(container).toMatchSnapshot();
-  });
+  shouldMatchSnapshot(
+    'should render with no suffix or prefix',
+    <WrappedArticleTimestamp
+      firstPublished={1530947227000}
+      lastPublished={1530947227000}
+      service="mundo"
+    />,
+  );
 
   describe('daylight savings time', () => {
     const daylightSavingsBehaviour = ({ descriptor, date, longName }) => {
@@ -106,17 +100,16 @@ describe('ArticleTimestamp', () => {
           intervals: [{ hours: 10, seconds: 25 }],
         });
         Date.now = jest.fn(() => mockCurrentTimestamp);
-        const { getByText } = render(
+        const renderedWrapper = renderedTimestamps(
           <WrappedArticleTimestamp
             firstPublished={moreThanTenHoursAgo}
             lastPublished={moreThanTenHoursAgo}
           />,
         );
 
-        const timeEl = getByText(regexDatetime);
-
-        expect(timeEl).toBeInTheDocument();
-        expect(timeEl.textContent).toContain(descriptor);
+        expect(renderedWrapper.length).toEqual(1);
+        expect(renderedWrapper[0].children[0].data).toMatch(regexDatetime);
+        expect(renderedWrapper[0].children[0].data).toContain(descriptor);
       });
     };
 
@@ -159,16 +152,14 @@ describe('ArticleTimestamp', () => {
       intervals: [{ hours: 3 }],
     });
     Date.now = jest.fn(() => mockCurrentTimestamp);
-    const { getByText } = render(
+    const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={threeHoursAgo}
         lastPublished={threeHoursAgo}
       />,
     );
-    const timeEl = getByText(/hours ago/);
-
-    expect(timeEl).toBeInTheDocument();
-    expect(timeEl.textContent).toEqual('3 hours ago');
+    expect(renderedWrapper.length).toEqual(1);
+    expect(firstChild(renderedWrapper)).toEqual('3 hours ago');
   });
 
   it('should render one timestamp with date & time when firstPublished today and > 10 hours ago and lastPublished === firstPublished', () => {
@@ -176,16 +167,14 @@ describe('ArticleTimestamp', () => {
       intervals: [{ hours: 11 }],
     });
     Date.now = jest.fn(() => mockCurrentTimestamp);
-    const { getByText } = render(
+    const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={elevenHoursAgo}
         lastPublished={elevenHoursAgo}
       />,
     );
-
-    const timeEl = getByText(regexDatetime);
-
-    expect(timeEl).toBeInTheDocument();
+    expect(renderedWrapper.length).toEqual(1);
+    expect(firstChild(renderedWrapper)).toMatch(regexDatetime);
   });
 
   it('should render one timestamp with date when firstPublished before today and lastPublished === firstPublished', () => {
@@ -193,45 +182,39 @@ describe('ArticleTimestamp', () => {
       hours: 24,
       seconds: 1,
     });
-    const { getByText } = render(
+    const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={twentyFourHoursAgo}
         lastPublished={twentyFourHoursAgo}
       />,
     );
-
-    const timeEl = getByText(regexDate);
-
-    expect(timeEl).toBeInTheDocument();
+    expect(renderedWrapper.length).toEqual(1);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
   });
 
   it('should render one timestamp with date when firstPublished before today and lastPublished was published less than 1 minute after firstPublished', () => {
-    const { getByText } = render(
+    const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={1530947280000} // Sat Jul 07 2018 07:08:00 UTC
         lastPublished={1530947286000} // Sat Jul 07 2018 07:08:06 UTC
         minutesTolerance={1}
       />,
     );
-
-    const timeEl = getByText(regexDate);
-
-    expect(timeEl).toBeInTheDocument();
+    expect(renderedWrapper.length).toEqual(1);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
   });
 
   it('should render two timestamps with date when firstPublished before today and lastPublished was published more than 1 minute after firstPublished', () => {
     // this should be relative time rather than separating by different days
-    const { getAllByText } = render(
+    const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={1530947280000} // Sat Jul 07 2018 07:08:00 UTC
         lastPublished={1531047280000} // Sun Jul 08 2018 10:54:40 UTC
         minutesTolerance={1}
       />,
     );
-
-    const timeEl = getAllByText(regexDate);
-
-    expect(timeEl.length).toEqual(2);
+    expect(renderedWrapper.length).toEqual(2);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
   });
 
   it('should render two timestamps - published: date & time, updated: relative when both are today and < 10 hours ago', () => {
@@ -243,18 +226,15 @@ describe('ArticleTimestamp', () => {
       intervals: [{ hours: 5 }, { hours: 3 }],
     });
     Date.now = jest.fn(() => mockCurrentTimestamp);
-    const { getByText } = render(
+    const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={fiveHoursAgo}
         lastPublished={threeHoursAgo}
       />,
     );
-
-    const firstTimeEl = getByText(regexDatetime);
-    const secondTimeEl = getByText(/3 hours ago/);
-
-    expect(firstTimeEl).toBeInTheDocument();
-    expect(secondTimeEl).toBeInTheDocument();
+    expect(renderedWrapper.length).toEqual(2);
+    expect(firstChild(renderedWrapper)).toMatch(regexDatetime);
+    expect(secondChild(renderedWrapper)).toMatch('3 hours ago');
   });
 
   it('should render two timestamps - published: date & time, updated: date & time when both are today and > 10 hours ago', () => {
@@ -266,19 +246,15 @@ describe('ArticleTimestamp', () => {
       intervals: [{ hours: 12 }, { hours: 11 }],
     });
     Date.now = jest.fn(() => mockCurrentTimestamp);
-    const { getAllByText } = render(
+    const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={twelveHoursAgo}
         lastPublished={elevenHoursAgo}
       />,
     );
-
-    const timeEls = getAllByText(regexDatetime);
-    const firstTimeEl = timeEls[0];
-    const secondTimeEl = timeEls[1];
-
-    expect(firstTimeEl).toBeInTheDocument();
-    expect(secondTimeEl.textContent).toMatch(regexUpdatedDatetime);
+    expect(renderedWrapper.length).toEqual(2);
+    expect(firstChild(renderedWrapper)).toMatch(regexDatetime);
+    expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDatetime);
   });
 
   it('should render two timestamps - published: date, updated: date when firstPublished before today and lastPublished before today, but not same day as firstPublished', () => {
@@ -286,19 +262,15 @@ describe('ArticleTimestamp', () => {
       days: 3,
     });
     const twoDaysAgo = timestampGenerator({ days: 2 });
-    const { getAllByText } = render(
+    const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={threeDaysAgo}
         lastPublished={twoDaysAgo}
       />,
     );
-
-    const timeEls = getAllByText(regexDate);
-    const firstTimeEl = timeEls[0];
-    const secondTimeEl = timeEls[1];
-
-    expect(firstTimeEl).toBeInTheDocument();
-    expect(secondTimeEl.textContent).toMatch(regexUpdatedDate);
+    expect(renderedWrapper.length).toEqual(2);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
+    expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDate);
   });
 
   it('should render two timestamps - published: date, updated: date when firstPublished before today and lastPublished today and > 10 hrs ago', () => {
@@ -308,75 +280,62 @@ describe('ArticleTimestamp', () => {
       days: 3,
     });
     const elevenHoursAgo = timestampGenerator({ hours: 11 });
-    const { getAllByText } = render(
+    const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={threeDaysAgo}
         lastPublished={elevenHoursAgo}
       />,
     );
-
-    const timeEls = getAllByText(regexDate);
-    const firstTimeEl = timeEls[0];
-    const secondTimeEl = timeEls[1];
-
-    expect(firstTimeEl).toBeInTheDocument();
-    expect(secondTimeEl.textContent).toMatch(regexUpdatedDate);
+    expect(renderedWrapper.length).toEqual(2);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
+    expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDate);
   });
 
   it('should render one timestamp when firstPublished and lastPublished is the same day, and current time is outside of the lastPublished relative window', () => {
-    const { getByText } = render(
+    const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={1400140005000} // Thu May 15 2014 07:46:45 UTC
         lastPublished={1400153537000} // Thu May 15 2014 11:32:17 UTC
       />,
     );
 
-    const timeEl = getByText(regexDate);
-
-    expect(timeEl).toBeInTheDocument();
+    expect(renderedWrapper.length).toEqual(1);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
   });
 
   it('should render two timestamps when firstPublished and lastPublished is the same day, not today, and current time is within the lastPublished relative window', () => {
     Date.now = jest.fn(() => new Date('2020-02-28T08:20:00Z').getTime());
     const twentyFourHoursAgo = timestampGenerator({ days: 1 });
     const nineHoursAgo = timestampGenerator({ hours: 9 });
-    const { getByText } = render(
+    const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={twentyFourHoursAgo}
         lastPublished={nineHoursAgo}
       />,
     );
 
-    const firstTimeEl = getByText(regexDate);
-    const secondTimeEl = getByText(/hours ago/);
-
-    expect(firstTimeEl).toBeInTheDocument();
-    expect(secondTimeEl).toBeInTheDocument();
+    expect(renderedWrapper.length).toEqual(2);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
   });
 
   describe('With different timezones', () => {
-    const props = {
-      firstPublished: 1565380800000, // Fri Aug 09 2019 20:00:00 UTC
-      lastPublished: 1565380800000, // Fri Aug 09 2019 20:00:00 UTC
-    };
-
     it('should show the correct local date', () => {
-      const { getByText } = render(
+      const props = {
+        firstPublished: 1565380800000, // Fri Aug 09 2019 20:00:00 UTC
+        lastPublished: 1565380800000, // Fri Aug 09 2019 20:00:00 UTC
+      };
+      const newsContainer = mount(
         <WrappedArticleTimestamp {...props} service="news" />,
       );
-      const timeEl = getByText(/9 August 2019/);
-      const time = timeEl.getAttribute('datetime');
 
+      const time = newsContainer.find('time').props().dateTime;
       expect(time).toEqual('2019-08-09');
-    });
 
-    it('should show the correct local date for Bengali', () => {
-      const { getByText } = render(
+      const bengaliContainer = mount(
         <WrappedArticleTimestamp {...props} service="bengali" />,
       );
-      const timeEl = getByText(/১০ অগাস্ট ২০১৯/);
-      const time = timeEl.getAttribute('datetime');
-      expect(time).toEqual('2019-08-10');
+      const bengaliTime = bengaliContainer.find('time').props().dateTime;
+      expect(bengaliTime).toEqual('2019-08-10');
     });
   });
 });
