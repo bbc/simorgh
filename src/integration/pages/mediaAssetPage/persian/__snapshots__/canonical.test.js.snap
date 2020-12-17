@@ -323,7 +323,7 @@ Object {
         "name": "BBC News فارسی",
         "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "thumbnailUrl": "https://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg",
       "url": "http://localhost:7080/persian/iran-23231114",
     },
   ],
