@@ -14,6 +14,7 @@ import {
   MOST_WATCHED_PAGE,
   ERROR_PAGE,
   INDEX_PAGE,
+  FEATURE_INDEX_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 export const RequestContext = React.createContext({});
@@ -82,7 +83,7 @@ RequestContextProvider.propTypes = {
     MOST_WATCHED_PAGE,
     ERROR_PAGE,
     'MAP',
-    'FIX',
+    FEATURE_INDEX_PAGE,
     'STY',
     'PGL',
     INDEX_PAGE,
