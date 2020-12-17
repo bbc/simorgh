@@ -57,6 +57,8 @@ const LinkedData = ({
     url: brandedIndexImage || defaultImage,
   };
 
+  const thumbnailUrl = brandedIndexImage || defaultImage;
+
   const publisher = {
     '@type': ORG_TYPE,
     name: AUTHOR_PUBLISHER_NAME,
@@ -78,7 +80,7 @@ const LinkedData = ({
   const linkedData = {
     '@type': type,
     url: canonicalNonUkLink,
-    ...(isNotRadioChannel && { publisher, thumbnailUrl: defaultImage }),
+    ...(isNotRadioChannel && { publisher, thumbnailUrl }),
     image,
     mainEntityOfPage,
     headline,
