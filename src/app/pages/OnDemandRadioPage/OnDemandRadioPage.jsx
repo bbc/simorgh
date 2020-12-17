@@ -90,6 +90,8 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     translations,
   );
 
+  const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
+
   return (
     <>
       <ATIAnalytics data={pageData} />
@@ -164,9 +166,23 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
                 : []
             }
           />
-          <RecentAudioEpisodes episodes={recentEpisodes} />
         </Grid>
       </GelPageGrid>
+      {hasRecentEpisodes && (
+        <GelPageGrid columns={getGroups(6, 6, 6, 6, 8, 20)} enableGelGutters>
+          <Grid
+            item
+            startOffset={getGroups(1, 1, 1, 1, 2, 5)}
+            columns={getGroups(6, 6, 6, 6, 6, 12)}
+            margins={getGroups(true, true, true, true, false, false)}
+          >
+            <RecentAudioEpisodes
+              masterBrand={masterBrand}
+              episodes={recentEpisodes}
+            />
+          </Grid>
+        </GelPageGrid>
+      )}
       {radioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />
       )}

@@ -43,7 +43,7 @@ const renderRecommendations = (items, service, dir) => {
   );
 };
 
-storiesOf('Containers|CPS Recommendations/LTR (mundo)', module)
+storiesOf('Containers/CPS Recommendations/LTR (mundo)', module)
   .addParameters({ chromatic: { disable: true } })
   .add('multiple items', () =>
     renderRecommendations(mundoRecommendationsData, 'mundo', 'ltr'),
@@ -52,7 +52,7 @@ storiesOf('Containers|CPS Recommendations/LTR (mundo)', module)
     renderRecommendations([mundoRecommendationsData[0]], 'mundo', 'ltr'),
   );
 
-storiesOf('Containers|CPS Recommendations/RTL (arabic)', module)
+storiesOf('Containers/CPS Recommendations/RTL (arabic)', module)
   .addParameters({ chromatic: { disable: true } })
   .add('multiple items', () =>
     renderRecommendations(arabicRecommendationsData, 'arabic', 'rtl'),

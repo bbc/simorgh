@@ -12,7 +12,7 @@ const fragmentBlock = (text, attributes = []) => ({
   },
 });
 
-storiesOf('Containers|InlineLink', module)
+storiesOf('Containers/InlineLink', module)
   .addParameters({ chromatic: { disable: true } })
   .add('internal link', () => (
     <InlineLinkContainer

@@ -27,7 +27,7 @@ const getTopStories = platform => (service, dir, data) => (
 const canonicalTopStories = getTopStories('canonical');
 const ampTopStories = getTopStories('amp');
 
-storiesOf('Containers|CPS Top Stories/Canonical', module)
+storiesOf('Containers/CPS Top Stories/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .add('igbo (ltr)', () => canonicalTopStories('igbo', 'ltr', topStories))
   .add('arabic (rtl)', () =>
@@ -40,7 +40,7 @@ storiesOf('Containers|CPS Top Stories/Canonical', module)
     canonicalTopStories('arabic', 'rtl', [topStoriesRtl[0]]),
   );
 
-storiesOf('Containers|CPS Top Stories/AMP', module)
+storiesOf('Containers/CPS Top Stories/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
   .add('igbo (ltr) - amp', () => ampTopStories('igbo', 'ltr', topStories))

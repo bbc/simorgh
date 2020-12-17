@@ -7,7 +7,7 @@ import pidginMostReadData from '#data/pidgin/mostRead';
 import zhongwenSimpData from '#data/zhongwen/mostRead/simp.json';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 
-const stories = storiesOf('Pages|Most Read Page', module);
+const stories = storiesOf('Pages/Most Read Page', module);
 
 [
   {

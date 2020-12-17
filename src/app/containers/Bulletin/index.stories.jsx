@@ -67,7 +67,7 @@ const getCanonicalBulletin = (service, item) =>
 const getAmpBulletin = (service, item) =>
   getBulletinPromo('amp', service, item);
 
-storiesOf('Containers|Bulletin/Canonical', module)
+storiesOf('Containers/Bulletin/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
@@ -85,7 +85,7 @@ storiesOf('Containers|Bulletin/Canonical', module)
     getCanonicalBulletin(service, audioLiveFixture),
   );
 
-storiesOf('Containers|Bulletin/AMP', module)
+storiesOf('Containers/Bulletin/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
   .addDecorator(withKnobs)

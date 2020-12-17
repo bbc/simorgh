@@ -101,6 +101,47 @@ const advertisingDirectives = {
     'https://adservice.google.com.gt',
     'https://adservice.google.com.sg',
     'https://adservice.google.com.tr',
+    'https://adservice.google.com.pk',
+    'https://adservice.google.de',
+    'https://adservice.google.ca',
+    'https://adservice.google.com.vn',
+    'https://adservice.google.com.py',
+    'https://adservice.google.com.ng',
+    'https://adservice.google.jo',
+    'https://adservice.google.se',
+    'https://adservice.google.com.au',
+    'https://adservice.google.it',
+    'https://adservice.google.com.kh',
+    'https://adservice.google.co.nz',
+    'https://adservice.google.az',
+    'https://adservice.google.fi',
+    'https://adservice.google.com.ro',
+    'https://adservice.google.co.id',
+    'https://adservice.google.ie',
+    'https://adservice.google.cz',
+    'https://adservice.google.com.cy',
+    'https://adservice.google.at',
+    'https://adservice.google.nl',
+    'https://adservice.google.cv',
+    'https://adservice.google.com.mt',
+    'https://adservice.google.dk',
+    'https://adservice.google.com.af',
+    'https://adservice.google.fr',
+    'https://adservice.google.no',
+    'https://adservice.google.com.sv',
+    'https://adservice.google.hn',
+    'https://adservice.google.be',
+    'https://adservice.google.com.ni',
+    'https://adservice.google.ch',
+    'https://adservice.google.co.kr',
+    'https://adservice.google.pl',
+    'https://adservice.google.com.mm',
+    'https://adservice.google.so',
+    'https://adservice.google.co.tz',
+    'https://adservice.google.com.np',
+    'https://adservice.google.lk',
+    'https://adservice.google.lv',
+    'https://adservice.google.ge',
   ],
   prefetchSrc: ['https://*.safeframe.googlesyndication.com'],
   defaultSrc: [
@@ -438,6 +479,7 @@ const directives = {
       'https://static.bbci.co.uk', // STY includes
       'https://news.files.bbci.co.uk', // STY Includes
       'https://static.files.bbci.co.uk',
+      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff', // Adverts
     ],
     ampNonLive: [
       'https://gel.files.bbci.co.uk', // Reith fonts
@@ -451,6 +493,7 @@ const directives = {
       'https://static.bbci.co.uk', // STY includes
       'https://news.test.files.bbci.co.uk', // STY Includes
       'https://static.test.files.bbci.co.uk',
+      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff', // Adverts
     ],
   },
   mediaSrc: {
