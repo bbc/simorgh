@@ -36,7 +36,7 @@ export const getType = (pageType, shorthand = false) => {
     case FRONT_PAGE:
     case INDEX_PAGE:
     case 'index':
-      return shorthand ? 'IDX' : 'Index';
+      return shorthand ? INDEX_PAGE : 'Index';
     case ARTICLE_PAGE:
       return shorthand ? 'ART' : 'New Article';
     case 'MAP':
