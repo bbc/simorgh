@@ -9,7 +9,7 @@ import CpsRelatedContent from '.';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const promos = path(['relatedContent', 'groups', 0, 'promos'], pidginPageData);
 
@@ -43,7 +43,7 @@ const renderRelatedContentNoTitle = ({
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
         isAmp={false}
-        pageType="STY"
+        pageType={STORY_PAGE}
         pathname="/pidgin/tori-49450859"
         service="pidgin"
         statusCode={200}

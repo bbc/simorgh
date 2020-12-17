@@ -17,6 +17,7 @@ import {
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
+  STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 export const RequestContext = React.createContext({});
@@ -86,7 +87,7 @@ RequestContextProvider.propTypes = {
     ERROR_PAGE,
     MEDIA_ASSET_PAGE,
     FEATURE_INDEX_PAGE,
-    'STY',
+    STORY_PAGE,
     PHOTO_GALLERY_PAGE,
     INDEX_PAGE,
   ]).isRequired,

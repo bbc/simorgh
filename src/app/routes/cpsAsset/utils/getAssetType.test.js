@@ -5,13 +5,13 @@ import getAssetType from './getAssetType';
 import mapJson from '#data/pidgin/cpsAssets/media-23256549.json';
 import styJson from '#data/mundo/cpsAssets/23263889.json';
 
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 describe('getAssetType', () => {
-  it('should return an assetType of "STY"', () => {
+  it(`should return an assetType of ${STORY_PAGE}`, () => {
     const assetType = getAssetType(styJson);
 
-    expect(assetType).toEqual('STY');
+    expect(assetType).toEqual(STORY_PAGE);
   });
 
   it(`should return an assetType of ${MEDIA_ASSET_PAGE}`, () => {

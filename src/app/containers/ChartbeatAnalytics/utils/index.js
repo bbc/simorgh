@@ -14,6 +14,7 @@ import {
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
+  STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 const ID_COOKIE = 'ckns_sylphid';
@@ -50,8 +51,8 @@ export const getType = (pageType, shorthand = false) => {
       return 'Most Read';
     case MOST_WATCHED_PAGE:
       return 'Most Watched';
-    case 'STY':
-      return 'STY';
+    case STORY_PAGE:
+      return STORY_PAGE;
     case PHOTO_GALLERY_PAGE:
       return PHOTO_GALLERY_PAGE;
     case FEATURE_INDEX_PAGE:
@@ -96,7 +97,7 @@ export const buildSections = ({
         ...(addProducer ? buildSectionArr(serviceCap, producer, type) : []),
         ...(chapter ? buildSectionArr(serviceCap, chapter, type) : []),
       ].join(', ');
-    case 'STY':
+    case STORY_PAGE:
       return [
         serviceCap,
         buildSectionItem(serviceCap, sectionName),
@@ -130,7 +131,7 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
       return `${title} - ${brandName}`;
     case MOST_WATCHED_PAGE:
       return `${title} - ${brandName}`;
-    case 'STY':
+    case STORY_PAGE:
       return path(['promo', 'headlines', 'headline'], pageData);
     case PHOTO_GALLERY_PAGE:
       return path(['promo', 'headlines', 'headline'], pageData);

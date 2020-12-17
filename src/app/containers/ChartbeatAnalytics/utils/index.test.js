@@ -21,6 +21,7 @@ import {
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
+  STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 let isOnClient = false;
@@ -93,9 +94,9 @@ describe('Chartbeat utilities', () => {
         expectedShortType: 'Most Watched',
       },
       {
-        pageType: 'STY',
-        expectedDefaultType: 'STY',
-        expectedShortType: 'STY',
+        pageType: STORY_PAGE,
+        expectedDefaultType: STORY_PAGE,
+        expectedShortType: STORY_PAGE,
       },
       {
         pageType: PHOTO_GALLERY_PAGE,
@@ -216,7 +217,7 @@ describe('Chartbeat utilities', () => {
         service: 'mundo',
         sectionName: 'STY',
         categoryName: 'mundo',
-        pageType: 'STY',
+        pageType: STORY_PAGE,
         description: 'should add section and category to STYs',
         expected:
           'Mundo, Mundo - STY, Mundo - STY, Mundo - STY - STY, Mundo - mundo-category',
@@ -321,7 +322,7 @@ describe('Chartbeat utilities', () => {
     test.each`
       pageType              | pageTitle
       ${PHOTO_GALLERY_PAGE} | ${'PGL Page Title'}
-      ${'STY'}              | ${'STY Page Title'}
+      ${STORY_PAGE}         | ${'STY Page Title'}
       ${MEDIA_ASSET_PAGE}   | ${'MAP Page Title'}
     `(
       'should return correct title when pageType is $pageType',
@@ -497,7 +498,7 @@ describe('Chartbeat utilities', () => {
       const fixtureData = {
         isAmp: true,
         platform: 'amp',
-        pageType: 'STY',
+        pageType: STORY_PAGE,
         data: {
           promo: {
             headlines: {
@@ -545,7 +546,7 @@ describe('Chartbeat utilities', () => {
       const fixtureData = {
         isAmp: false,
         platform: 'canonical',
-        pageType: 'STY',
+        pageType: STORY_PAGE,
         data: {
           promo: {
             headlines: {
