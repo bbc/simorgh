@@ -19,6 +19,7 @@ import {
   MOST_WATCHED_PAGE,
   INDEX_PAGE,
   FEATURE_INDEX_PAGE,
+  MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 let isOnClient = false;
@@ -71,7 +72,7 @@ describe('Chartbeat utilities', () => {
         expectedShortType: FEATURE_INDEX_PAGE,
       },
       {
-        pageType: 'MAP',
+        pageType: MEDIA_ASSET_PAGE,
         expectedDefaultType: 'article-media-asset',
         expectedShortType: 'article-media-asset',
       },
@@ -184,7 +185,7 @@ describe('Chartbeat utilities', () => {
         service: 'afrique',
         sectionName: 'Media',
         categoryName: 'News',
-        pageType: 'MAP',
+        pageType: MEDIA_ASSET_PAGE,
         description: 'should add section and category to MAPs',
         expected:
           'Afrique, Afrique - Media, Afrique - MAP, Afrique - Media - MAP, Afrique - News-category',
@@ -317,10 +318,10 @@ describe('Chartbeat utilities', () => {
     );
 
     test.each`
-      pageType | pageTitle
-      ${'PGL'} | ${'PGL Page Title'}
-      ${'STY'} | ${'STY Page Title'}
-      ${'MAP'} | ${'MAP Page Title'}
+      pageType            | pageTitle
+      ${'PGL'}            | ${'PGL Page Title'}
+      ${'STY'}            | ${'STY Page Title'}
+      ${MEDIA_ASSET_PAGE} | ${'MAP Page Title'}
     `(
       'should return correct title when pageType is $pageType',
       ({ pageType, pageTitle }) => {
@@ -412,7 +413,7 @@ describe('Chartbeat utilities', () => {
       const fixtureData = {
         isAmp: false,
         platform: 'canonical',
-        pageType: 'MAP',
+        pageType: MEDIA_ASSET_PAGE,
         data: {
           promo: {
             headlines: {

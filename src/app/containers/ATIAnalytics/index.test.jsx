@@ -24,6 +24,7 @@ import {
   ARTICLE_PAGE,
   FRONT_PAGE,
   FEATURE_INDEX_PAGE,
+  MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 analyticsUtils.getAtUserId = jest.fn();
@@ -145,7 +146,7 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       render(
-        <ContextWrap platform="amp" pageType="MAP" service="news">
+        <ContextWrap platform="amp" pageType={MEDIA_ASSET_PAGE} service="news">
           <ATIAnalytics data={mapAssetData} />
         </ContextWrap>,
       );

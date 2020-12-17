@@ -5,6 +5,7 @@ import {
   FRONT_PAGE,
   MEDIA_PAGE,
   INDEX_PAGE,
+  MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 analyticsUtils.getAtUserId = jest.fn();
@@ -201,7 +202,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right MAP url', () => {
       const url = buildATIUrl(
         MAP,
-        { ...requestContext, pageType: 'MAP' },
+        { ...requestContext, pageType: MEDIA_ASSET_PAGE },
         serviceContext,
       );
       expect(url).toMatchInlineSnapshot(
@@ -355,7 +356,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right MAP params', () => {
       const params = buildATIClickParams(
         MAP,
-        { ...requestContext, pageType: 'MAP' },
+        { ...requestContext, pageType: MEDIA_ASSET_PAGE },
         serviceContext,
       );
       expect(params).toEqual({

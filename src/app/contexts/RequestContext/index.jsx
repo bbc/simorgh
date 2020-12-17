@@ -15,6 +15,7 @@ import {
   ERROR_PAGE,
   INDEX_PAGE,
   FEATURE_INDEX_PAGE,
+  MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 export const RequestContext = React.createContext({});
@@ -82,7 +83,7 @@ RequestContextProvider.propTypes = {
     MOST_READ_PAGE,
     MOST_WATCHED_PAGE,
     ERROR_PAGE,
-    'MAP',
+    MEDIA_ASSET_PAGE,
     FEATURE_INDEX_PAGE,
     'STY',
     'PGL',
