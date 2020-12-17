@@ -6,7 +6,7 @@ import afriqueData from '#data/afrique/cpsAssets/48465371';
 import FeatureIdxPage from '.';
 
 const stories = storiesOf(
-  'Pages|Feature Idx Page',
+  'Pages/Feature Idx Page',
   module,
 ).addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
 

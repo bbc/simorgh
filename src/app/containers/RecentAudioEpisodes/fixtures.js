@@ -1,4 +1,4 @@
-const recentAudioFixtures = [
+export const indonesian = [
   {
     id: 'w172xnm8j4tz686',
     url: '/indonesia/bbc_indonesian_radio/w172xnm8j4tz686',
@@ -38,4 +38,23 @@ const recentAudioFixtures = [
   },
 ];
 
-export default recentAudioFixtures;
+export const zhongwen = [
+  {
+    id: 'w172xn6kwd4bx3h',
+    url: '/zhongwen/trad/bbc_cantonese_radio/programmes/w172xn6kwd4bx3h',
+    brandTitle: '時事一周',
+    timestamp: 1605564900000,
+    duration: 'PT15M30S',
+    image: '//ichef.bbci.co.uk/images/ic/768x432/p0919b16.jpg',
+    altText: '時事一周',
+  },
+  {
+    id: 'w172xn6kj3tkrhn',
+    url: '/zhongwen/trad/bbc_cantonese_radio/programmes/w172xn6kj3tkrhn',
+    brandTitle: '時事一周',
+    timestamp: 1605564900000,
+    duration: 'PT15M30S',
+    image: '//ichef.bbci.co.uk/images/ic/768x432/p0919b16.jpg',
+    altText: '時事一周',
+  },
+];

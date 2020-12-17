@@ -250,10 +250,6 @@ export const service = {
         url: '/japanese/52137815',
       },
       {
-        title: '米大統領選',
-        url: '/japanese/53969845',
-      },
-      {
         title: '日本',
         url: '/japanese/topics/cyx5k201n3qt',
       },

@@ -27,7 +27,7 @@ const getFeaturesAnalysis = platform => (service, dir, data) => (
 const canonicalFeaturesAnalysis = getFeaturesAnalysis('canonical');
 const ampFeaturesAnalysis = getFeaturesAnalysis('amp');
 
-storiesOf('Containers|CPS Features & Analysis/Canonical', module)
+storiesOf('Containers/CPS Features & Analysis/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .add('igbo (ltr)', () => canonicalFeaturesAnalysis('igbo', 'ltr', features))
   .add('arabic (rtl)', () =>
@@ -40,7 +40,7 @@ storiesOf('Containers|CPS Features & Analysis/Canonical', module)
     canonicalFeaturesAnalysis('arabic', 'rtl', [featuresRtl[0]]),
   );
 
-storiesOf('Containers|CPS Features & Analysis/AMP', module)
+storiesOf('Containers/CPS Features & Analysis/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
   .add('igbo (ltr) - amp', () => ampFeaturesAnalysis('igbo', 'ltr', features))

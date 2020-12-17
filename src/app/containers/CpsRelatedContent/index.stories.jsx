@@ -31,7 +31,7 @@ const getRelatedContent = platform => (service, dir, data) => (
 const canonicalRelatedContent = getRelatedContent('canonical');
 const ampRelatedContent = getRelatedContent('amp');
 
-storiesOf('Containers|CPS Related Content/Canonical', module)
+storiesOf('Containers/CPS Related Content/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .add('pidgin (ltr)', () =>
     canonicalRelatedContent('pidgin', 'ltr', pidginRelatedContentData),
@@ -46,7 +46,7 @@ storiesOf('Containers|CPS Related Content/Canonical', module)
     canonicalRelatedContent('arabic', 'rtl', [arabicRelatedContentData[0]]),
   );
 
-storiesOf('Containers|CPS Related Content/AMP', module)
+storiesOf('Containers/CPS Related Content/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
   .add('pidgin (ltr) - amp', () =>
