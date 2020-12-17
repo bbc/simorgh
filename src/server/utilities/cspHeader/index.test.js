@@ -180,6 +180,7 @@ describe('cspHeader', () => {
         'https://static.bbci.co.uk',
         'https://news.files.bbci.co.uk',
         'https://static.files.bbci.co.uk',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff',
       ],
       frameSrcExpectation: [
         'https://emp.bbc.com',
@@ -539,6 +540,7 @@ describe('cspHeader', () => {
         'https://static.bbci.co.uk',
         'https://news.test.files.bbci.co.uk',
         'https://static.test.files.bbci.co.uk',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff',
       ],
       frameSrcExpectation: [
         'https://emp.bbc.com',

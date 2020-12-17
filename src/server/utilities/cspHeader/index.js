@@ -479,6 +479,7 @@ const directives = {
       'https://static.bbci.co.uk', // STY includes
       'https://news.files.bbci.co.uk', // STY Includes
       'https://static.files.bbci.co.uk',
+      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff', // Adverts
     ],
     ampNonLive: [
       'https://gel.files.bbci.co.uk', // Reith fonts
@@ -492,6 +493,7 @@ const directives = {
       'https://static.bbci.co.uk', // STY includes
       'https://news.test.files.bbci.co.uk', // STY Includes
       'https://static.test.files.bbci.co.uk',
+      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff', // Adverts
     ],
   },
   mediaSrc: {
