@@ -5,7 +5,11 @@ import {
   getPageTitle,
   getContentType,
 } from '.';
-import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  INDEX_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 describe('getPageIdentifier', () => {
   const goodData = {
@@ -160,7 +164,7 @@ describe('getContentType', () => {
   });
 
   it('should return index-section when pageType is IDX', () => {
-    const contentType = getContentType('IDX');
+    const contentType = getContentType(INDEX_PAGE);
 
     expect(contentType).toEqual('index-section');
   });

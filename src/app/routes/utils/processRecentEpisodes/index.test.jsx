@@ -15,7 +15,6 @@ describe('processRecentEpisodes', () => {
     ).toEqual([
       {
         id: 'w172xc9xq2gllfk',
-        url: '/afrique/bbc_afrique_tv/tv/w172xc9xq2gllfk',
         brandTitle: 'BBC Info',
         timestamp: 1605225600000,
         duration: 'PT15M',
@@ -34,7 +33,6 @@ describe('processRecentEpisodes', () => {
     ).toEqual([
       {
         id: 'w172xnm8j4tz686',
-        url: '/indonesia/bbc_indonesian_radio/w172xnm8j4tz686',
         brandTitle: 'Dunia Pagi Ini',
         timestamp: 1605484800000,
         duration: 'PT15M30S',
