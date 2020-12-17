@@ -13,6 +13,7 @@ import {
   INDEX_PAGE,
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
+  PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 const ID_COOKIE = 'ckns_sylphid';
@@ -51,8 +52,8 @@ export const getType = (pageType, shorthand = false) => {
       return 'Most Watched';
     case 'STY':
       return 'STY';
-    case 'PGL':
-      return 'PGL';
+    case PHOTO_GALLERY_PAGE:
+      return PHOTO_GALLERY_PAGE;
     case FEATURE_INDEX_PAGE:
       return FEATURE_INDEX_PAGE;
     default:
@@ -131,7 +132,7 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
       return `${title} - ${brandName}`;
     case 'STY':
       return path(['promo', 'headlines', 'headline'], pageData);
-    case 'PGL':
+    case PHOTO_GALLERY_PAGE:
       return path(['promo', 'headlines', 'headline'], pageData);
     case FEATURE_INDEX_PAGE:
       return getPageTitle(pageData, brandName);

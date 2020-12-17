@@ -1,5 +1,8 @@
 import { isMap, isPgl, getHeadingTagOverride } from '.';
-import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  MOST_WATCHED_PAGE,
+  PHOTO_GALLERY_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 describe('isMap', () => {
   it('should return true if cpsType is MAP', () => {
@@ -55,7 +58,7 @@ describe('getHeadingTagOverride', () => {
   });
 
   it('should return div if isRecommendation is true', () => {
-    const pageType = 'PGL';
+    const pageType = PHOTO_GALLERY_PAGE;
     const isRecommendation = true;
     const isContentTypeGuide = false;
     expect(
@@ -64,7 +67,7 @@ describe('getHeadingTagOverride', () => {
   });
 
   it('should return div if isContentTypeGuide is true', () => {
-    const pageType = 'PGL';
+    const pageType = PHOTO_GALLERY_PAGE;
     const isRecommendation = false;
     const isContentTypeGuide = true;
     expect(
@@ -73,7 +76,7 @@ describe('getHeadingTagOverride', () => {
   });
 
   it('should return null if page type is not mostWatched and other args are false', () => {
-    const pageType = 'PGL';
+    const pageType = PHOTO_GALLERY_PAGE;
     const isRecommendation = false;
     const isContentTypeGuide = false;
     expect(

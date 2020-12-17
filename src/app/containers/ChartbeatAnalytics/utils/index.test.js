@@ -20,6 +20,7 @@ import {
   INDEX_PAGE,
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
+  PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 let isOnClient = false;
@@ -97,9 +98,9 @@ describe('Chartbeat utilities', () => {
         expectedShortType: 'STY',
       },
       {
-        pageType: 'PGL',
-        expectedDefaultType: 'PGL',
-        expectedShortType: 'PGL',
+        pageType: PHOTO_GALLERY_PAGE,
+        expectedDefaultType: PHOTO_GALLERY_PAGE,
+        expectedShortType: PHOTO_GALLERY_PAGE,
       },
       {
         pageType: null,
@@ -318,10 +319,10 @@ describe('Chartbeat utilities', () => {
     );
 
     test.each`
-      pageType            | pageTitle
-      ${'PGL'}            | ${'PGL Page Title'}
-      ${'STY'}            | ${'STY Page Title'}
-      ${MEDIA_ASSET_PAGE} | ${'MAP Page Title'}
+      pageType              | pageTitle
+      ${PHOTO_GALLERY_PAGE} | ${'PGL Page Title'}
+      ${'STY'}              | ${'STY Page Title'}
+      ${MEDIA_ASSET_PAGE}   | ${'MAP Page Title'}
     `(
       'should return correct title when pageType is $pageType',
       ({ pageType, pageTitle }) => {
