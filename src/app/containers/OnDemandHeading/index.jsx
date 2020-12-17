@@ -40,13 +40,15 @@ const OnDemandHeadingContainer = ({
     ServiceContext,
   );
 
-  const formattedTimestamp = formatUnixTimestamp({
-    timestamp: releaseDateTimeStamp,
-    format: 'LL',
-    timezone,
-    locale: datetimeLocale,
-    isRelative: false,
-  });
+  const formattedTimestamp = releaseDateTimeStamp
+    ? formatUnixTimestamp({
+        timestamp: releaseDateTimeStamp,
+        format: 'LL',
+        timezone,
+        locale: datetimeLocale,
+        isRelative: false,
+      })
+    : '';
 
   const TextWrapper = ariaHidden ? React.Fragment : 'span';
 
@@ -74,7 +76,7 @@ const OnDemandHeadingContainer = ({
 OnDemandHeadingContainer.propTypes = {
   idAttr: string,
   brandTitle: string.isRequired,
-  releaseDateTimeStamp: number.isRequired,
+  releaseDateTimeStamp: number,
   ariaHidden: bool,
   darkMode: bool,
   className: string,
@@ -82,6 +84,7 @@ OnDemandHeadingContainer.propTypes = {
 
 OnDemandHeadingContainer.defaultProps = {
   idAttr: null,
+  releaseDateTimeStamp: null,
   ariaHidden: false,
   darkMode: false,
   className: '',

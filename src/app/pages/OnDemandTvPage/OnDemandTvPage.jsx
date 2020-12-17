@@ -77,6 +77,8 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     thumbnailImageUrl,
     durationISO8601,
     recentEpisodes,
+    episodeTitle,
+    mediumSynopsis,
   } = pageData;
 
   const { lang, timezone, datetimeLocale, service, translations } = useContext(
@@ -182,7 +184,10 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           margins={getGroups(true, true, true, true, false, false)}
         >
-          <OnDemandParagraphContainer text={shortSynopsis} darkMode />
+          <OnDemandParagraphContainer
+            text={episodeTitle ? shortSynopsis : mediumSynopsis}
+            darkMode
+          />
         </Grid>
         <Grid
           item
