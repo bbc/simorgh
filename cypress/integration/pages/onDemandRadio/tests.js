@@ -93,6 +93,7 @@ export default ({ service, pageType, variant, isAmp }) => {
                   cy.log(
                     `Number of available episodes? ${expectedNumberOfEpisodes}`,
                   );
+                  // More than one episode expected
                   if (expectedNumberOfEpisodes > 1) {
                     cy.get('[data-e2e=recent-episodes-list]').should('exist');
 
@@ -104,17 +105,24 @@ export default ({ service, pageType, variant, isAmp }) => {
                   }
                   // If there is only one item, it is not in a list
                   else if (expectedNumberOfEpisodes === 1) {
-                    cy.get("div[class*='css-1sel12u-Wrapper emzt7w80']").should(
-                      'exist',
+                    cy.get('aside[aria-labelledby=recent-episodes]').within(
+                      () => {
+                        cy.get('div[class*="Wrapper"]').should('exist');
+                      },
                     );
-                  } else {
-                    cy.get('[data-e2e=recent-episodes-list]').should(
+                  }
+                  // No items expected
+                  else {
+                    cy.get('aside[aria-labelledby=recent-episodes]').should(
                       'not.exist',
                     );
+
                     cy.log('No episodes present or available');
                   }
                 });
-              } else {
+              } 
+              // Not toggled on for this service
+              else {
                 cy.get('[data-e2e=recent-episodes-list]').should('not.exist');
                 cy.log('Recent episodes is not toggled on for this service');
               }
