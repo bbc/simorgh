@@ -120,7 +120,7 @@ export default ({ service, pageType, variant, isAmp }) => {
                     cy.log('No episodes present or available');
                   }
                 });
-              } 
+              }
               // Not toggled on for this service
               else {
                 cy.get('[data-e2e=recent-episodes-list]').should('not.exist');
