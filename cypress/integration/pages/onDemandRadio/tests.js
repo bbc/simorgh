@@ -1,4 +1,5 @@
 /* eslint-disable consistent-return */
+import path from 'ramda/src/path';
 import {
   isAvailable,
   overrideRendererOnTest,
@@ -6,6 +7,7 @@ import {
   isBrand,
 } from '../../../support/helpers/onDemandRadioTv';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
+import getDataUrl from '../../../support/helpers/getDataUrl';
 
 export default ({ service, pageType, variant, isAmp }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
@@ -33,7 +35,6 @@ export default ({ service, pageType, variant, isAmp }) => {
               `Episode is not available: ${Cypress.env('currentPath')}`,
             );
           }
-
           const language = appConfig[service][variant].lang;
           const embedUrl = getEmbedUrl({ body: jsonData, language, isAmp });
           const isBrandPage = isBrand(jsonData);
@@ -50,6 +51,75 @@ export default ({ service, pageType, variant, isAmp }) => {
               allowFallback: true,
             });
           });
+        });
+      });
+    });
+    describe(`Tests for ${service} ${pageType} ${variant} with toggle use`, () => {
+      before(() => {
+        cy.getToggles(service);
+      });
+      describe('Recent Episodes component', () => {
+        it('should be displayed if the toggle is on, and shows the expected number of items (does not run on local)', function test() {
+          // I can enable tests running on local when I have updated all the fixture data to show the component
+          if (Cypress.env('APP_ENV') === 'local') {
+            cy.log('Does not run on local');
+          } else {
+            cy.fixture(`toggles/${service}.json`).then(toggles => {
+              const recentEpisodesEnabled = path(
+                ['recentAudioEpisodes', 'enabled'],
+                toggles,
+              );
+              cy.log(
+                `Recent Episodes component enabled? ${recentEpisodesEnabled}`,
+              );
+              // There cannot be more episodes shown than the max allowed
+              if (recentEpisodesEnabled) {
+                const recentEpisodesMaxNumber = path(
+                  ['recentAudioEpisodes', 'value'],
+                  toggles,
+                );
+                const currentPath = Cypress.env('currentPath');
+                const url =
+                  Cypress.env('APP_ENV') === 'test'
+                    ? `${currentPath}?renderer_env=live`
+                    : `${currentPath}`;
+
+                cy.request(getDataUrl(url)).then(({ body }) => {
+                  // Count the number of episodes that are available and so will show (there can be unavailable episodes in the list)
+                  const expectedNumberOfEpisodes = body.relatedContent.groups[0].promos
+                    .filter(({ media }) => media.versions.length)
+                    .slice(0, recentEpisodesMaxNumber).length;
+
+                  cy.log(
+                    `Number of available episodes? ${expectedNumberOfEpisodes}`,
+                  );
+                  if (expectedNumberOfEpisodes > 1) {
+                    cy.get('[data-e2e=recent-episodes-list]').should('exist');
+
+                    cy.get('[data-e2e=recent-episodes-list]').within(() => {
+                      cy.get('[data-e2e=recent-episodes-list-item]')
+                        .its('length')
+                        .should('eq', expectedNumberOfEpisodes);
+                    });
+                  }
+                  // If there is only one item, it is not in a list
+                  else if (expectedNumberOfEpisodes === 1) {
+                    cy.get("div[class*='css-1sel12u-Wrapper emzt7w80']").should(
+                      'exist',
+                    );
+                  } else {
+                    cy.get('[data-e2e=recent-episodes-list]').should(
+                      'not.exist',
+                    );
+                    cy.log('No episodes present or available');
+                  }
+                });
+              } else {
+                cy.get('[data-e2e=recent-episodes-list]').should('not.exist');
+                cy.log('Recent episodes is not toggled on for this service');
+              }
+            });
+          }
         });
       });
     });
