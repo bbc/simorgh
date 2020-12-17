@@ -4,6 +4,7 @@ import { StaticRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import MPU from './MPU';
+import { FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
 
 const toggles = {
   ads: {
@@ -22,7 +23,7 @@ describe('MPU', () => {
           <ToggleContextProvider toggles={toggles}>
             <RequestContextProvider
               isAmp={false}
-              pageType="FIX"
+              pageType={FEATURE_INDEX_PAGE}
               service={service}
               pathname="12345678"
               showAdsBasedOnLocation

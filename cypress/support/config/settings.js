@@ -9824,7 +9824,7 @@ module.exports = () => ({
           },
           local: {
             paths: [
-              '/zhongwen/simp/bbc_cantonese_radio/w172xf3r5x8hw4v', // Brand
+              '/zhongwen/simp/bbc_cantonese_radio/w172xn6l7ng41qb', // Brand
             ],
             enabled: false,
           },
