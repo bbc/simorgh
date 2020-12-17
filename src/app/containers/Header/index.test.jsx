@@ -10,6 +10,7 @@ import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import { service as serbianServiceConfig } from '#lib/config/services/serbian';
 import { service as ukrainianServiceConfig } from '#lib/config/services/ukrainian';
 import {
+  INDEX_PAGE,
   ARTICLE_PAGE,
   FRONT_PAGE,
   MEDIA_PAGE,
@@ -138,7 +139,7 @@ describe(`Header`, () => {
     it('should render header with lang when serviceLang is defined', () => {
       const { container } = render(
         HeaderContainerWithContext({
-          pageType: 'IDX',
+          pageType: INDEX_PAGE,
           service: 'ukrainian',
           serviceContext: ukrainianServiceConfig,
           variant: 'ru-UA',
@@ -154,7 +155,7 @@ describe(`Header`, () => {
     it('should render a skip to content link with lang', async () => {
       render(
         HeaderContainerWithContext({
-          pageType: 'IDX',
+          pageType: INDEX_PAGE,
           service: 'ukrainian',
           serviceContext: ukrainianServiceConfig,
           variant: 'ru-UA',
