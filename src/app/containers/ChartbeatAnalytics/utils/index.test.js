@@ -17,6 +17,7 @@ import {
   MEDIA_PAGE,
   MOST_READ_PAGE,
   MOST_WATCHED_PAGE,
+  INDEX_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 let isOnClient = false;
@@ -61,7 +62,7 @@ describe('Chartbeat utilities', () => {
       {
         pageType: 'index',
         expectedDefaultType: 'Index',
-        expectedShortType: 'IDX',
+        expectedShortType: INDEX_PAGE,
       },
       {
         pageType: 'FIX',
@@ -274,7 +275,7 @@ describe('Chartbeat utilities', () => {
     test.each`
       pageType        | brandName        | pageTitle                        | expectedNumberOfCalls
       ${'index'}      | ${'BBC News'}    | ${'This is an index page title'} | ${1}
-      ${'IDX'}        | ${'BBC Persian'} | ${'This is an IDX page title'}   | ${1}
+      ${INDEX_PAGE}   | ${'BBC Persian'} | ${'This is an IDX page title'}   | ${1}
       ${'FIX'}        | ${'BBC Afrique'} | ${'This is an FIX page title'}   | ${1}
       ${FRONT_PAGE}   | ${'BBC News'}    | ${'This is a frontpage title'}   | ${1}
       ${ARTICLE_PAGE} | ${null}          | ${'This is an article title'}    | ${1}
@@ -761,7 +762,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'IDX',
+      pageType: INDEX_PAGE,
       data: {},
       brandName: 'BBC-Persian',
       chartbeatDomain: 'bbc.co.uk',
@@ -841,7 +842,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'IDX',
+      pageType: INDEX_PAGE,
       data: {},
       brandName: 'BBC-Persian',
       chartbeatDomain: 'bbc.co.uk',
