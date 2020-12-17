@@ -321,7 +321,7 @@ Object {
         "name": "BBC News Mundo",
         "publishingPrinciples": "https://www.bbc.com/mundo/institucional-51359666",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+      "thumbnailUrl": "https://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg",
       "url": "http://localhost:7080/mundo/deportes-36935058",
     },
   ],
