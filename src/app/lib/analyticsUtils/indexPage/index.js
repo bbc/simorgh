@@ -1,5 +1,5 @@
 import pathOr from 'ramda/src/pathOr';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { FRONT_PAGE, INDEX_PAGE } from '#app/routes/utils/pageTypes';
 
 export const getPageIdentifier = (indexPageData, service) => {
   return pathOr(
@@ -48,7 +48,7 @@ export const getContentType = pageType => {
   switch (pageType) {
     case FRONT_PAGE:
       return 'index-home';
-    case 'IDX':
+    case INDEX_PAGE:
       return 'index-section';
     case 'FIX':
       return 'index-section';

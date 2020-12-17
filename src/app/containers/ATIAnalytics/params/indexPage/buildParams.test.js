@@ -1,6 +1,6 @@
 import { buildIndexPageATIParams, buildIndexPageATIUrl } from './buildParams';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { FRONT_PAGE, INDEX_PAGE } from '#app/routes/utils/pageTypes';
 
 analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
@@ -89,7 +89,7 @@ describe('indexPage buildParams', () => {
       it('should return the right object', () => {
         const result = buildIndexPageATIParams(
           idxPage,
-          { ...requestContext, pageType: 'IDX' },
+          { ...requestContext, pageType: INDEX_PAGE },
           serviceContext,
         );
         const validIdxPageURLParams = {
@@ -106,7 +106,7 @@ describe('indexPage buildParams', () => {
       it('should return the right url', () => {
         const result = buildIndexPageATIUrl(
           idxPage,
-          { ...requestContext, pageType: 'IDX' },
+          { ...requestContext, pageType: INDEX_PAGE },
           serviceContext,
         );
 
