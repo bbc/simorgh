@@ -5,7 +5,7 @@
     "type": "WSRADIO",
     "createdBy": "bbc_uzbek_radio",
     "language": "uz",
-    "lastUpdated": 1589529753485,
+    "lastUpdated": 1608295797610,
     "firstPublished": 1583569000000,
     "lastPublished": 1583569000000,
     "timestamp": 1583569000000,
@@ -18,15 +18,15 @@
       "producer": "UZBEK"
     },
     "tags": {},
-    "version": "v1.3.0",
+    "version": "v1.3.11",
     "blockTypes": ["media"],
     "title": "Би-би-си Афғонистон учун",
-    "releaseDateTimeStamp": 1583539200000
+    "releaseDateTimeStamp": 1583539200000,
+    "atiAnalytics": {}
   },
   "content": {
     "blocks": [
       {
-        "availability": "notAvailable",
         "id": "w172x9f9qjcq3lm",
         "subType": "episode",
         "format": "Audio",
@@ -39,6 +39,8 @@
         "embedding": false,
         "advertising": false,
         "versions": [],
+        "availability": "notAvailable",
+        "smpKind": "radioProgramme",
         "type": "media"
       }
     ]
@@ -59,6 +61,8 @@
       "embedding": false,
       "advertising": false,
       "versions": [],
+      "availability": "notAvailable",
+      "smpKind": "radioProgramme",
       "type": "media"
     },
     "indexImage": {
@@ -72,6 +76,7 @@
       "copyrightHolder": null,
       "type": "image"
     },
+    "releaseDateTimestamp": 1583539200000,
     "brand": { "pid": "p03414fb", "title": "Би-би-си Афғонистон учун" },
     "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172x9f9qjcq3lm",
     "type": "ws_radio"
@@ -89,12 +94,12 @@
         "promos": [
           {
             "headlines": { "headline": "Би-би-си Афғонистон учун" },
-            "locators": { "pid": "w172xk0b3h1ln53", "brandPid": "p03414fb" },
+            "locators": { "pid": "w172xq3ddqt205m", "brandPid": "p03414fb" },
             "media": {
-              "id": "w172xk0b3h1ln53",
+              "id": "w172xq3ddqt205m",
               "subType": "episode",
               "format": "Audio",
-              "title": "14/05/2020 GMT",
+              "title": "17/12/2020 GMT",
               "synopses": {
                 "short": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари",
                 "medium": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари"
@@ -104,20 +109,23 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpxdplvx7s6",
+                  "versionId": "w1mshx5wxwsv0hp",
                   "types": ["Original"],
-                  "duration": 1800,
-                  "durationISO8601": "PT30M",
+                  "duration": 870,
+                  "durationISO8601": "PT14M30S",
                   "warnings": {},
                   "availableTerritories": {
                     "uk": false,
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1592056770000,
-                  "availableFrom": 1589464770000
+                  "availableUntil": 1610805570000,
+                  "availableFrom": 1608213570000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -131,18 +139,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608163200000,
             "brand": { "pid": "p03414fb", "title": "Би-би-си Афғонистон учун" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xk0b3h1ln53",
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xq3ddqt205m",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Би-би-си Афғонистон учун" },
-            "locators": { "pid": "w172xk0b3h1hr80", "brandPid": "p03414fb" },
+            "locators": { "pid": "w172xq3ddqsz38j", "brandPid": "p03414fb" },
             "media": {
-              "id": "w172xk0b3h1hr80",
+              "id": "w172xq3ddqsz38j",
               "subType": "episode",
               "format": "Audio",
-              "title": "13/05/2020 GMT",
+              "title": "16/12/2020 GMT",
               "synopses": {
                 "short": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари",
                 "medium": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари"
@@ -152,20 +161,23 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpxdplvtbw3",
+                  "versionId": "w1mshx5wxwsr3ll",
                   "types": ["Original"],
-                  "duration": 1800,
-                  "durationISO8601": "PT30M",
+                  "duration": 870,
+                  "durationISO8601": "PT14M30S",
                   "warnings": {},
                   "availableTerritories": {
                     "uk": false,
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591970370000,
-                  "availableFrom": 1589378370000
+                  "availableUntil": 1610719170000,
+                  "availableFrom": 1608127170000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -179,18 +191,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608076800000,
             "brand": { "pid": "p03414fb", "title": "Би-би-си Афғонистон учун" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xk0b3h1hr80",
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xq3ddqsz38j",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Би-би-си Афғонистон учун" },
-            "locators": { "pid": "w172xk0b3h1dvbx", "brandPid": "p03414fb" },
+            "locators": { "pid": "w172xq3ddqsw6cf", "brandPid": "p03414fb" },
             "media": {
-              "id": "w172xk0b3h1dvbx",
+              "id": "w172xq3ddqsw6cf",
               "subType": "episode",
               "format": "Audio",
-              "title": "12/05/2020 GMT",
+              "title": "15/12/2020 GMT",
               "synopses": {
                 "short": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари",
                 "medium": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари"
@@ -200,20 +213,23 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpxdplvqfz0",
+                  "versionId": "w1mshx5wxwsn6ph",
                   "types": ["Original"],
-                  "duration": 1800,
-                  "durationISO8601": "PT30M",
+                  "duration": 870,
+                  "durationISO8601": "PT14M30S",
                   "warnings": {},
                   "availableTerritories": {
                     "uk": false,
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591883970000,
-                  "availableFrom": 1589291970000
+                  "availableUntil": 1610632770000,
+                  "availableFrom": 1608040770000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -227,18 +243,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607990400000,
             "brand": { "pid": "p03414fb", "title": "Би-би-си Афғонистон учун" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xk0b3h1dvbx",
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xq3ddqsw6cf",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Би-би-си Афғонистон учун" },
-            "locators": { "pid": "w172xk0b3h19yft", "brandPid": "p03414fb" },
+            "locators": { "pid": "w172xq3ddqss9gb", "brandPid": "p03414fb" },
             "media": {
-              "id": "w172xk0b3h19yft",
+              "id": "w172xq3ddqss9gb",
               "subType": "episode",
               "format": "Audio",
-              "title": "11/05/2020 GMT",
+              "title": "14/12/2020 GMT",
               "synopses": {
                 "short": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари",
                 "medium": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари"
@@ -248,20 +265,23 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpxdplvmk1x",
+                  "versionId": "w1mshx5wxwsk9sd",
                   "types": ["Original"],
-                  "duration": 1800,
-                  "durationISO8601": "PT30M",
+                  "duration": 870,
+                  "durationISO8601": "PT14M30S",
                   "warnings": {},
                   "availableTerritories": {
                     "uk": false,
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591797570000,
-                  "availableFrom": 1589205570000
+                  "availableUntil": 1610546370000,
+                  "availableFrom": 1607954370000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -275,18 +295,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607904000000,
             "brand": { "pid": "p03414fb", "title": "Би-би-си Афғонистон учун" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xk0b3h19yft",
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xq3ddqss9gb",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Би-би-си Афғонистон учун" },
-            "locators": { "pid": "w172xk09r6r368k", "brandPid": "p03414fb" },
+            "locators": { "pid": "w172xqxbhttnck9", "brandPid": "p03414fb" },
             "media": {
-              "id": "w172xk09r6r368k",
+              "id": "w172xqxbhttnck9",
               "subType": "episode",
               "format": "Audio",
-              "title": "10/05/2020 GMT",
+              "title": "13/12/2020 GMT",
               "synopses": {
                 "short": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари",
                 "medium": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари"
@@ -296,7 +317,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpxdbbkdswn",
+                  "versionId": "w1mshy0jv1gw6p1",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -306,10 +327,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591711170000,
-                  "availableFrom": 1589119170000
+                  "availableUntil": 1610459970000,
+                  "availableFrom": 1607867970000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -323,18 +347,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607817600000,
             "brand": { "pid": "p03414fb", "title": "Би-би-си Афғонистон учун" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xk09r6r368k",
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xqxbhttnck9",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Би-би-си Афғонистон учун" },
-            "locators": { "pid": "w172xk09r6r09cg", "brandPid": "p03414fb" },
+            "locators": { "pid": "w172xqxbhttkgn6", "brandPid": "p03414fb" },
             "media": {
-              "id": "w172xk09r6r09cg",
+              "id": "w172xqxbhttkgn6",
               "subType": "episode",
               "format": "Audio",
-              "title": "09/05/2020 GMT",
+              "title": "12/12/2020 GMT",
               "synopses": {
                 "short": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари",
                 "medium": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари"
@@ -344,7 +369,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpxdbbk9wzk",
+                  "versionId": "w1mshy0jv1gs9ry",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -354,10 +379,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591624770000,
-                  "availableFrom": 1589032770000
+                  "availableUntil": 1610373570000,
+                  "availableFrom": 1607781570000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -371,18 +399,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607731200000,
             "brand": { "pid": "p03414fb", "title": "Би-би-си Афғонистон учун" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xk09r6r09cg",
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xqxbhttkgn6",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Би-би-си Афғонистон учун" },
-            "locators": { "pid": "w172xk09r6qxdgc", "brandPid": "p03414fb" },
+            "locators": { "pid": "w172xq3d1ghcrgw", "brandPid": "p03414fb" },
             "media": {
-              "id": "w172xk09r6qxdgc",
+              "id": "w172xq3d1ghcrgw",
               "subType": "episode",
               "format": "Audio",
-              "title": "08/05/2020 GMT",
+              "title": "11/12/2020 GMT",
               "synopses": {
                 "short": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари",
                 "medium": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари"
@@ -392,20 +421,23 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpxdbbk702g",
+                  "versionId": "w1mshx5wkmh4rsy",
                   "types": ["Original"],
-                  "duration": 1800,
-                  "durationISO8601": "PT30M",
+                  "duration": 870,
+                  "durationISO8601": "PT14M30S",
                   "warnings": {},
                   "availableTerritories": {
                     "uk": false,
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591538370000,
-                  "availableFrom": 1588946370000
+                  "availableUntil": 1610287170000,
+                  "availableFrom": 1607695170000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -419,18 +451,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607644800000,
             "brand": { "pid": "p03414fb", "title": "Би-би-си Афғонистон учун" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xk09r6qxdgc",
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xq3d1ghcrgw",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Би-би-си Афғонистон учун" },
-            "locators": { "pid": "w172xk09r6qthk8", "brandPid": "p03414fb" },
+            "locators": { "pid": "w172xq3d1gh8vks", "brandPid": "p03414fb" },
             "media": {
-              "id": "w172xk09r6qthk8",
+              "id": "w172xq3d1gh8vks",
               "subType": "episode",
               "format": "Audio",
-              "title": "07/05/2020 GMT",
+              "title": "10/12/2020 GMT",
               "synopses": {
                 "short": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари",
                 "medium": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари"
@@ -440,20 +473,23 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpxdbbk435c",
+                  "versionId": "w1mshx5wkmh1vwv",
                   "types": ["Original"],
-                  "duration": 1800,
-                  "durationISO8601": "PT30M",
+                  "duration": 870,
+                  "durationISO8601": "PT14M30S",
                   "warnings": {},
                   "availableTerritories": {
                     "uk": false,
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591451970000,
-                  "availableFrom": 1588859970000
+                  "availableUntil": 1610200770000,
+                  "availableFrom": 1607608770000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -467,8 +503,9 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607558400000,
             "brand": { "pid": "p03414fb", "title": "Би-би-си Афғонистон учун" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xk09r6qthk8",
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xq3d1gh8vks",
             "type": "ws_radio"
           }
         ]
