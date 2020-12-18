@@ -222,9 +222,7 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
             class="lazyload-placeholder"
           />
         </div>
-        <noscript>
-          &lt;img alt="Pauline Clayton" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg" width="640" class="css-13lcmnl-StyledImg e1enwo3v0"/&gt;
-        </noscript>
+        <noscript />
       </div>
     </div>
   </div>
