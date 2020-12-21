@@ -11,7 +11,9 @@ const pageType = 'onDemandRadio';
 Object.keys(config)
   .filter(service => serviceHasPageType(service, pageType))
   .forEach(serviceId => {
-    const { variant, name: service } = config[serviceId];
+    // eslint-disable-next-line prefer-const
+    let { variant, name: service } = config[serviceId];
+
     const paths = getPaths(serviceId, pageType);
     paths.forEach(currentPath => {
       describe(`${pageType} - ${currentPath}`, () => {

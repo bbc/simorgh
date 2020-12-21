@@ -1,5 +1,6 @@
 import getInitialData from '.';
 import mostWatchedJson from '#data/pidgin/mostWatched';
+import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
 
 fetch.mockResponse(JSON.stringify(mostWatchedJson));
 
@@ -7,7 +8,7 @@ it('should return essential data for a page to render', async () => {
   const { pageData } = await getInitialData({
     path: '/pidgin/media/video',
     service: 'pidgin',
-    pageType: 'mostWatched',
+    pageType: MOST_WATCHED_PAGE,
     toggles: {
       mostPopularMediaPage: { enabled: true, value: '5' },
     },

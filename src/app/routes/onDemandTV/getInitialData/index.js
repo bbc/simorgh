@@ -39,8 +39,6 @@ export default async ({ path: pathname, pageType, toggles }) => {
       ? processRecentEpisodes(json, {
           exclude: episodeId,
           recentEpisodesLimit,
-          urlFormatter: (service, id) =>
-            `/${service}/${id.split(':').pop().replace('/', '/tv/')}`,
         })
       : [];
 

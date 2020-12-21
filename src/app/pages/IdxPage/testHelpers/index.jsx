@@ -8,6 +8,7 @@ import { service as persianConfig } from '#lib/config/services/persian';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import IdxPage from '#pages/IdxPage/IdxPage';
+import { INDEX_PAGE } from '#app/routes/utils/pageTypes';
 
 const radioServiceOverride = 'dari';
 
@@ -22,7 +23,7 @@ const IdxPageWithContext = ({ service = 'persian', pageData }) => {
     <BrowserRouter>
       <ToggleContextProvider>
         <RequestContextProvider
-          pageType="IDX"
+          pageType={INDEX_PAGE}
           service={service}
           pathname="/pathname"
           data={{ status: 200 }}

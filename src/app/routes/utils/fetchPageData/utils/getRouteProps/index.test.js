@@ -2,6 +2,7 @@ import reactRouterConfig from 'react-router-config';
 import isAmpPath from '#app/routes/utils/isAmpPath';
 import getRouteProps from '.';
 import fallbackServiceParam from './fallbackServiceParam';
+import { ERROR_PAGE } from '#app/routes/utils/pageTypes';
 
 jest.mock('react-router-config');
 
@@ -111,7 +112,7 @@ describe('getRouteProps', () => {
   });
 
   describe('unknown error route', () => {
-    const route = { route: 'data', pageType: 'error' };
+    const route = { route: 'data', pageType: ERROR_PAGE };
     // This is the match returned for a 'catch all' route.
     const match = { path: '/', url: '/', params: {}, isExact: false };
 
