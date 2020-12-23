@@ -150,16 +150,6 @@ Object {
 }
 `;
 
-exports[`Canonical Media Asset Page I can see the placeholder loading image 1`] = `
-<div
-  class="css-z3isei-LoadingImageWrapper eqo19v60"
->
-  <div
-    class="css-oijotl-ImagePlaceholder e1whu0"
-  />
-</div>
-`;
-
 exports[`Canonical Media Asset Page Main heading should match text 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
 exports[`Canonical Media Asset Page Media Placeholder I can see the placeholder loading image 1`] = `
@@ -375,15 +365,4 @@ Object {
   "date": "2015-11-20",
   "text": "20 نوفمبر/ تشرين الثاني 2015",
 }
-`;
-
-exports[`Canonical Media Asset Page outer iframe has z-index of 1 1`] = `
-<iframe
-  allow="autoplay"
-  allowfullscreen=""
-  class="css-4k1mri-StyledIframe eqo19v61"
-  scrolling="no"
-  src="https://test.bbc.com/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar"
-  title="مشغل وسائط"
-/>
 `;
