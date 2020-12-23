@@ -22,7 +22,7 @@ const BrandTitle = styled.span`
   }
 `;
 
-const Datestamp = styled.span`
+const Subheading = styled.span`
   ${({ script }) => script && getDoublePica(script)}
   ${({ service }) => getSansRegular(service)}
   margin: 0;
@@ -32,6 +32,7 @@ const OnDemandHeadingContainer = ({
   idAttr,
   brandTitle,
   releaseDateTimeStamp,
+  episodeTitle,
   ariaHidden,
   darkMode,
   className,
@@ -40,15 +41,13 @@ const OnDemandHeadingContainer = ({
     ServiceContext,
   );
 
-  const formattedTimestamp = releaseDateTimeStamp
-    ? formatUnixTimestamp({
-        timestamp: releaseDateTimeStamp,
-        format: 'LL',
-        timezone,
-        locale: datetimeLocale,
-        isRelative: false,
-      })
-    : '';
+  const formattedTimestamp = formatUnixTimestamp({
+    timestamp: releaseDateTimeStamp,
+    format: 'LL',
+    timezone,
+    locale: datetimeLocale,
+    isRelative: false,
+  });
 
   const TextWrapper = ariaHidden ? React.Fragment : 'span';
 
@@ -65,9 +64,9 @@ const OnDemandHeadingContainer = ({
       <TextWrapper {...(ariaHidden ? {} : { role: 'text' })}>
         <BrandTitle>{brandTitle}</BrandTitle>
         <VisuallyHiddenText>, </VisuallyHiddenText>
-        <Datestamp script={script} service={service}>
-          {formattedTimestamp}
-        </Datestamp>
+        <Subheading script={script} service={service}>
+          {episodeTitle || formattedTimestamp}
+        </Subheading>
       </TextWrapper>
     </Headline>
   );
@@ -77,6 +76,7 @@ OnDemandHeadingContainer.propTypes = {
   idAttr: string,
   brandTitle: string.isRequired,
   releaseDateTimeStamp: number,
+  episodeTitle: string,
   ariaHidden: bool,
   darkMode: bool,
   className: string,
@@ -85,6 +85,7 @@ OnDemandHeadingContainer.propTypes = {
 OnDemandHeadingContainer.defaultProps = {
   idAttr: null,
   releaseDateTimeStamp: null,
+  episodeTitle: null,
   ariaHidden: false,
   darkMode: false,
   className: '',
