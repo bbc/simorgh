@@ -166,6 +166,8 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
               iframeTitle={iframeTitle}
               hasBottomPadding={false}
               skin="classic"
+              showLoadingImage
+              darkMode
             />
           ) : (
             <MediaError skin="video" />
