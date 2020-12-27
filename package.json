@@ -236,7 +236,7 @@
     "swagger-cli": "^4.0.4",
     "terser-webpack-plugin": "^4.2.2",
     "timemachine": "^0.3.1",
-    "wait-on": "^5.2.0",
+    "wait-on": "^5.2.1",
     "webpack": "^4.44.2",
     "webpack-bundle-analyzer": "^4.1.0",
     "webpack-cli": "^3.3.12",
