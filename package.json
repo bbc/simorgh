@@ -129,7 +129,7 @@
     "express": "^4.17.1",
     "express-static-gzip": "^2.0.8",
     "gnu-terry-pratchett": "0.0.2",
-    "helmet": "^4.1.1",
+    "helmet": "^4.3.1",
     "helmet-csp": "^3.1.0",
     "isarray": "^2.0.5",
     "isomorphic-fetch": "^3.0.0",
