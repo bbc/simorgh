@@ -4,6 +4,7 @@ import { RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR } from '#lib/logger.const';
 import {
   getLastProgramIndex,
   isScheduleDataComplete,
+  isProgramValid,
 } from './evaluateScheduleData';
 
 const logger = nodeLogger(__filename);
@@ -38,7 +39,8 @@ export default (data, service, currentTime) => {
     return null;
   }
 
-  const { schedules = [] } = data;
+  const { initialSchedules = [] } = data;
+  const schedules = initialSchedules.filter(isProgramValid);
   const latestProgramIndex = getLastProgramIndex({ schedules, currentTime });
 
   const scheduleDataIsComplete = isScheduleDataComplete({
@@ -98,5 +100,6 @@ export default (data, service, currentTime) => {
       };
     });
 
+  console.log(processedSchedule);
   return processedSchedule;
 };
