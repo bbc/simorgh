@@ -9,7 +9,7 @@ export const bbcDomains = [
   '*.bbci.com',
 ];
 
-export const adServiceCountryDomains = [
+export const advertisingServiceCountryDomains = [
   'https://adservice.google.co.ve',
   'https://adservice.google.ru',
   'https://adservice.google.co.in',

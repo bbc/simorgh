@@ -12,7 +12,7 @@ import injectCspHeader, {
   generatePrefetchSrc,
 } from '.';
 
-import { bbcDomains, adServiceCountryDomains } from './domainLists';
+import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
 
 const next = jest.fn();
 
@@ -218,7 +218,7 @@ describe('cspHeader', () => {
         'https://www.googletagservices.com',
         'https://securepubads.g.doubleclick.net',
         'https://bbc.gscontxt.net',
-        ...adServiceCountryDomains,
+        ...advertisingServiceCountryDomains,
         "'self'",
         "'unsafe-inline'",
       ],
@@ -436,7 +436,7 @@ describe('cspHeader', () => {
         'https://www.googletagservices.com',
         'https://securepubads.g.doubleclick.net',
         'https://bbc.gscontxt.net',
-        ...adServiceCountryDomains,
+        ...advertisingServiceCountryDomains,
         "'self'",
         "'unsafe-inline'",
       ],

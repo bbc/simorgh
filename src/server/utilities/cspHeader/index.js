@@ -1,7 +1,7 @@
 import csp from 'helmet-csp';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
-import { bbcDomains, adServiceCountryDomains } from './domainLists';
+import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
 
 /*
  * On localhost these CSP headers currently only apply on the production build.
@@ -71,7 +71,7 @@ const advertisingDirectives = {
     'https://www.googletagservices.com',
     'https://securepubads.g.doubleclick.net',
     'https://bbc.gscontxt.net',
-    ...adServiceCountryDomains,
+    ...advertisingServiceCountryDomains,
   ],
   prefetchSrc: ['https://*.safeframe.googlesyndication.com'],
   defaultSrc: [
