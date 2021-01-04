@@ -2765,10 +2765,15 @@ exports[`Media Asset Page should render component 1`] = `
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -2785,15 +2790,10 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-171 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
 @media (min-width:63rem) {
   .emotion-171 {
-    padding: 0.5rem 0 0;
+    width: 100%;
+    margin: 0.5rem 0 0;
   }
 }
 
@@ -2806,8 +2806,19 @@ exports[`Media Asset Page should render component 1`] = `
   padding-bottom: 0;
 }
 
-.emotion-171 i {
-  font-style: normal;
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-171 {
+    margin-left: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-171 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
 }
 
 .emotion-354 {
@@ -4120,6 +4131,7 @@ exports[`Media Asset Page should render component 1`] = `
                     >
                       <figcaption
                         class="emotion-171 emotion-172"
+                        dir="ltr"
                       >
                         <span
                           class="emotion-0 emotion-1"
@@ -4183,6 +4195,7 @@ exports[`Media Asset Page should render component 1`] = `
                     >
                       <figcaption
                         class="emotion-171 emotion-172"
+                        dir="ltr"
                       >
                         <span
                           class="emotion-0 emotion-1"
