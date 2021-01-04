@@ -158,7 +158,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         >
                           <figcaption
                             class="emotion-25 emotion-26"
-                            dir="ltr"
                           >
                             <span
                               class="emotion-15 emotion-16"
@@ -494,7 +493,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       </div>
                       <figcaption
                         class="emotion-25 emotion-26"
-                        dir="ltr"
                       >
                         <span
                           class="emotion-15 emotion-16"
@@ -2204,8 +2202,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                               dir="ltr"
                             >
                               <figcaption
-                                class="css-1gtqteb-Caption emotion-16"
-                                dir="ltr"
+                                class="css-1s76qn-Caption emotion-16"
                               >
                                 <span
                                   class="css-ow3j0s-VisuallyHiddenText emotion-11"
@@ -2540,8 +2537,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             <noscript />
                           </div>
                           <figcaption
-                            class="css-1gtqteb-Caption emotion-16"
-                            dir="ltr"
+                            class="css-1s76qn-Caption emotion-16"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-11"
@@ -3502,8 +3498,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               dir="ltr"
                             >
                               <figcaption
-                                class="css-1gtqteb-Caption emotion-16"
-                                dir="ltr"
+                                class="css-1s76qn-Caption emotion-16"
                               >
                                 <span
                                   class="css-ow3j0s-VisuallyHiddenText emotion-11"
@@ -3838,8 +3833,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             <noscript />
                           </div>
                           <figcaption
-                            class="css-1gtqteb-Caption emotion-16"
-                            dir="ltr"
+                            class="css-1s76qn-Caption emotion-16"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-11"
