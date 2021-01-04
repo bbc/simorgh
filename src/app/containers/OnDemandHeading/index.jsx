@@ -75,7 +75,7 @@ const OnDemandHeadingContainer = ({
 OnDemandHeadingContainer.propTypes = {
   idAttr: string,
   brandTitle: string.isRequired,
-  releaseDateTimeStamp: number,
+  releaseDateTimeStamp: number.isRequired,
   episodeTitle: string,
   ariaHidden: bool,
   darkMode: bool,
@@ -84,7 +84,6 @@ OnDemandHeadingContainer.propTypes = {
 
 OnDemandHeadingContainer.defaultProps = {
   idAttr: null,
-  releaseDateTimeStamp: null,
   episodeTitle: null,
   ariaHidden: false,
   darkMode: false,

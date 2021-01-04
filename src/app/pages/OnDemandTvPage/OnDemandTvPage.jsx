@@ -236,7 +236,7 @@ OnDemandTvPage.propTypes = {
     headline: string,
     shortSynopsis: string,
     brandTitle: string,
-    releaseDateTimeStamp: number.isRequired,
+    releaseDateTimeStamp: number,
     masterBrand: string,
     episodeId: string,
     imageUrl: string,
