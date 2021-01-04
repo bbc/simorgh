@@ -9,7 +9,7 @@ import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities
 
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const Wrapper = styled.spa`
+const Wrapper = styled.span`
   ${({ script }) => script && getLongPrimer(script)}
   ${({ service }) => getSansRegular(service)}
   color: ${C_PEBBLE};
