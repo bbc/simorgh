@@ -3,11 +3,19 @@ import { render } from '@testing-library/react';
 import RecentVideoEpisodes from '.';
 import recentVideoFixtures from './fixtures';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
 
 /* eslint-disable react/prop-types */
-const RecentVideoEpisodesWithContext = ({ episodes }) => (
+const RecentVideoEpisodesWithContext = ({ episodes, isAmp = false }) => (
   <ServiceContextProvider service="afrique">
-    <RecentVideoEpisodes episodes={episodes} />
+    <RequestContextProvider
+      isAmp={isAmp}
+      pathname="test"
+      service="afrique"
+      pageType="media"
+    >
+      <RecentVideoEpisodes episodes={episodes} />
+    </RequestContextProvider>
   </ServiceContextProvider>
 );
 
@@ -48,5 +56,16 @@ describe('RecentAudioEpisodes', () => {
 
     expect(hiddenDuration).toBeDefined();
     expect(hiddenDuration).toContainHTML('15:00');
+  });
+
+  describe('on amp', () => {
+    it('should use amp-img rather than img', () => {
+      const { container } = render(
+        <RecentVideoEpisodesWithContext episodes={recentVideoFixtures} onAmp />,
+      );
+
+      expect(container.querySelector('amp-img')).toBeDefined();
+      expect(container.querySelector('img')).not.toBeDefined();
+    });
   });
 });
