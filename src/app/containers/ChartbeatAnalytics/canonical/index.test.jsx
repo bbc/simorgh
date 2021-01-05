@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { render, act, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import CanonicalChartbeatAnalytics from '.';
 
@@ -55,40 +55,61 @@ describe('CanonicalChartbeatAnalytics', () => {
     />,
   );
 
-  it('should not re-render helment wrapper when config changes to Page B', () => {
-    const wrapper = shallow(
+  it('should not re-render helment wrapper when config changes to Page B', async () => {
+    const { rerender } = render(
       <CanonicalChartbeatAnalytics
         chartbeatConfig={pageAConfig}
         chartbeatSource="//chartbeat.js"
       />,
     );
 
-    wrapper.setProps(pageBConfig);
+    await act(async () => {
+      await rerender(
+        <CanonicalChartbeatAnalytics
+          chartbeatConfig={pageBConfig.chartbeatConfig}
+          chartbeatSource="//chartbeat.js"
+        />,
+      );
+    });
 
-    expect(wrapper.find('script').first().text()).toMatch(/"title":"Page A"/);
+    await waitFor(() => {
+      expect(document.querySelectorAll('script')[0].textContent).toMatch(
+        /"title":"Page A"/,
+      );
+    });
   });
 
-  it('should call the global virtualPage function when props change', () => {
-    const wrapper = mount(
+  it('should call the global virtualPage function when props change', async () => {
+    const { rerender } = render(
       <CanonicalChartbeatAnalytics
         chartbeatConfig={pageAConfig}
         chartbeatSource="//chartbeat.js"
       />,
     );
 
-    wrapper.setProps({
-      chartbeatConfig: {
-        domain: 'test-domain',
-        type: 'article',
-        sections: 'section1 section2',
-        chartbeatUID: 1111,
-        useCanonical: true,
-        virtualReferrer: '/page-A',
-        title: 'Page B',
-        uid: 123,
-      },
+    await act(async () => {
+      await rerender(
+        <CanonicalChartbeatAnalytics
+          chartbeatConfig={{
+            domain: 'test-domain',
+            type: 'article',
+            sections: 'section1 section2',
+            chartbeatUID: 1111,
+            useCanonical: true,
+            virtualReferrer: '/page-A',
+            title: 'Page B',
+            uid: 123,
+          }}
+          chartbeatSource="//chartbeat.js"
+        />,
+      );
     });
-    wrapper.unmount();
+
+    await act(async () => {
+      // unmount
+      await rerender(<div />);
+    });
+
     expect(global.pSUPERFLY.virtualPage).toHaveBeenCalled();
     expect(global.pSUPERFLY.virtualPage).toHaveBeenCalledWith({
       domain: 'test-domain',
@@ -102,9 +123,9 @@ describe('CanonicalChartbeatAnalytics', () => {
     });
   });
 
-  it('should report correct virtual referrer when user navigates back from onward journey', () => {
+  it('should report correct virtual referrer when user navigates back from onward journey', async () => {
     // initial PWA load (Page A)
-    const wrapper = mount(
+    const { rerender } = render(
       <CanonicalChartbeatAnalytics
         chartbeatConfig={pageAConfig}
         chartbeatSource="//chartbeat.js"
@@ -112,13 +133,34 @@ describe('CanonicalChartbeatAnalytics', () => {
     );
 
     // inline link to Page B
-    wrapper.setProps(pageBConfig);
+    await act(async () => {
+      await rerender(
+        <CanonicalChartbeatAnalytics
+          chartbeatConfig={pageBConfig.chartbeatConfig}
+          chartbeatSource="//chartbeat.js"
+        />,
+      );
+    });
 
     // inline link to Page C
-    wrapper.setProps(pageCConfig);
+    await act(async () => {
+      await rerender(
+        <CanonicalChartbeatAnalytics
+          chartbeatConfig={pageCConfig.chartbeatConfig}
+          chartbeatSource="//chartbeat.js"
+        />,
+      );
+    });
 
     // press back, return to Page B
-    wrapper.setProps(pageBConfig);
+    await act(async () => {
+      await rerender(
+        <CanonicalChartbeatAnalytics
+          chartbeatConfig={pageBConfig.chartbeatConfig}
+          chartbeatSource="//chartbeat.js"
+        />,
+      );
+    });
 
     const [
       [firstCall],
