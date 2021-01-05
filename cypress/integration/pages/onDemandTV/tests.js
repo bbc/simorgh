@@ -44,7 +44,7 @@ export default ({ service, pageType, variant, isAmp }) => {
     });
     describe(`Tests for ${service} ${pageType} ${variant} with toggle use`, () => {
       before(() => {
-        cy.getToggles(config[service].name);
+        cy.getToggles(service);
       });
       describe('Recent Episodes component', () => {
         it('should be displayed if the toggle is on, and shows the expected number of items (does not run on local)', function test() {
