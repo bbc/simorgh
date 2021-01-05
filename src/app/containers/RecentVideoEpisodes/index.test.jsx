@@ -78,11 +78,11 @@ describe('RecentAudioEpisodes', () => {
   describe('on amp', () => {
     it('should use amp-img rather than img', () => {
       const { container } = render(
-        <RecentVideoEpisodesWithContext episodes={recentVideoFixtures} onAmp />,
+        <RecentVideoEpisodesWithContext episodes={recentVideoFixtures} isAmp />,
       );
 
       expect(container.querySelector('amp-img')).toBeDefined();
-      expect(container.querySelector('img')).not.toBeDefined();
+      expect(container.querySelector('img')).toBeNull();
     });
   });
 });
