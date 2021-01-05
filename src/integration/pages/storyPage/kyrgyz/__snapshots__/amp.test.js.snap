@@ -139,7 +139,7 @@ Object {
 
 exports[`AMP Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
 
-exports[`AMP Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
+exports[`AMP Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
 exports[`AMP Story Page Footer Link should match text and url 1`] = `
 Object {
