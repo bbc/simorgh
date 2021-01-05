@@ -5,7 +5,7 @@
     "type": "WSRADIO",
     "createdBy": "bbc_urdu_radio",
     "language": "ur",
-    "lastUpdated": 1589529753485,
+    "lastUpdated": 1608295667463,
     "firstPublished": 1583569000000,
     "lastPublished": 1583569000000,
     "timestamp": 1583569000000,
@@ -18,15 +18,15 @@
       "producer": "URDU"
     },
     "tags": {},
-    "version": "v1.3.0",
+    "version": "v1.3.11",
     "blockTypes": ["media"],
     "title": "بی بی سی اردو نیوز بلیٹن",
-    "releaseDateTimeStamp": 1583539200000
+    "releaseDateTimeStamp": 1583539200000,
+    "atiAnalytics": {}
   },
   "content": {
     "blocks": [
       {
-        "availability": "notAvailable",
         "id": "w172x9dx052c8sr",
         "subType": "episode",
         "format": "Audio",
@@ -39,6 +39,8 @@
         "embedding": false,
         "advertising": false,
         "versions": [],
+        "availability": "notAvailable",
+        "smpKind": "radioProgramme",
         "type": "media"
       }
     ]
@@ -59,6 +61,8 @@
       "embedding": false,
       "advertising": false,
       "versions": [],
+      "availability": "notAvailable",
+      "smpKind": "radioProgramme",
       "type": "media"
     },
     "indexImage": {
@@ -72,6 +76,7 @@
       "copyrightHolder": null,
       "type": "image"
     },
+    "releaseDateTimestamp": 1583539200000,
     "brand": { "pid": "p03413l5", "title": "بی بی سی اردو نیوز بلیٹن" },
     "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172x9dx052c8sr",
     "type": "ws_radio"
@@ -89,12 +94,12 @@
         "promos": [
           {
             "headlines": { "headline": "بی بی سی اردو نیوز بلیٹن" },
-            "locators": { "pid": "w172xjzxd3r81vh", "brandPid": "p03413l5" },
+            "locators": { "pid": "w172xphdl903716", "brandPid": "p03413l5" },
             "media": {
-              "id": "w172xjzxd3r81vh",
+              "id": "w172xphdl903716",
               "subType": "episode",
               "format": "Audio",
-              "title": "14/05/2020 GMT",
+              "title": "18/12/2020 GMT",
               "synopses": {
                 "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
                 "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
@@ -104,7 +109,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpwzz7kkngl",
+                  "versionId": "w1mshwkx3fzw7c8",
                   "types": ["Original"],
                   "duration": 600,
                   "durationISO8601": "PT10M",
@@ -114,10 +119,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1592057400000,
-                  "availableFrom": 1589465400000
+                  "availableUntil": 1610885400000,
+                  "availableFrom": 1608293400000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -131,18 +139,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608249600000,
             "brand": { "pid": "p03413l5", "title": "بی بی سی اردو نیوز بلیٹن" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xjzxd3r81vh",
+            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xphdl903716",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "بی بی سی اردو نیوز بلیٹن" },
-            "locators": { "pid": "w172xjzxd3r7y3c", "brandPid": "p03413l5" },
+            "locators": { "pid": "w172xphdl900kmc", "brandPid": "p03413l5" },
             "media": {
-              "id": "w172xjzxd3r7y3c",
+              "id": "w172xphdl900kmc",
               "subType": "episode",
               "format": "Audio",
-              "title": "14/05/2020 GMT",
+              "title": "17/12/2020 GMT",
               "synopses": {
                 "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
                 "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
@@ -152,7 +161,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpwzz7kkjqg",
+                  "versionId": "w1mshwkx3fzskyf",
                   "types": ["Original"],
                   "duration": 600,
                   "durationISO8601": "PT10M",
@@ -162,10 +171,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1592053800000,
-                  "availableFrom": 1589461800000
+                  "availableUntil": 1610806200000,
+                  "availableFrom": 1608214200000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -179,18 +191,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608163200000,
             "brand": { "pid": "p03413l5", "title": "بی بی سی اردو نیوز بلیٹن" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xjzxd3r7y3c",
+            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xphdl900kmc",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "بی بی سی اردو نیوز بلیٹن" },
-            "locators": { "pid": "w172xjzxd3r7tc7", "brandPid": "p03413l5" },
+            "locators": { "pid": "w172xphdl900fw7", "brandPid": "p03413l5" },
             "media": {
-              "id": "w172xjzxd3r7tc7",
+              "id": "w172xphdl900fw7",
               "subType": "episode",
               "format": "Audio",
-              "title": "14/05/2020 GMT",
+              "title": "17/12/2020 GMT",
               "synopses": {
                 "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
                 "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
@@ -200,7 +213,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpwzz7kkdzb",
+                  "versionId": "w1mshwkx3fzsg69",
                   "types": ["Original"],
                   "duration": 600,
                   "durationISO8601": "PT10M",
@@ -210,10 +223,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1592050200000,
-                  "availableFrom": 1589458200000
+                  "availableUntil": 1610802600000,
+                  "availableFrom": 1608210600000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -227,18 +243,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608163200000,
             "brand": { "pid": "p03413l5", "title": "بی بی سی اردو نیوز بلیٹن" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xjzxd3r7tc7",
+            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xphdl900fw7",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "بی بی سی اردو نیوز بلیٹن" },
-            "locators": { "pid": "w172xjzxd3r54yd", "brandPid": "p03413l5" },
+            "locators": { "pid": "w172xphdl900b43", "brandPid": "p03413l5" },
             "media": {
-              "id": "w172xjzxd3r54yd",
+              "id": "w172xphdl900b43",
               "subType": "episode",
               "format": "Audio",
-              "title": "13/05/2020 GMT",
+              "title": "17/12/2020 GMT",
               "synopses": {
                 "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
                 "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
@@ -248,7 +265,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpwzz7kgrkh",
+                  "versionId": "w1mshwkx3fzsbg5",
                   "types": ["Original"],
                   "duration": 600,
                   "durationISO8601": "PT10M",
@@ -258,10 +275,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591971000000,
-                  "availableFrom": 1589379000000
+                  "availableUntil": 1610799000000,
+                  "availableFrom": 1608207000000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -275,18 +295,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608163200000,
             "brand": { "pid": "p03413l5", "title": "بی بی سی اردو نیوز بلیٹن" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xjzxd3r54yd",
+            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xphdl900b43",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "بی بی سی اردو نیوز بلیٹن" },
-            "locators": { "pid": "w172xjzxd3r5168", "brandPid": "p03413l5" },
+            "locators": { "pid": "w172xphdl8zxnq8", "brandPid": "p03413l5" },
             "media": {
-              "id": "w172xjzxd3r5168",
+              "id": "w172xphdl8zxnq8",
               "subType": "episode",
               "format": "Audio",
-              "title": "13/05/2020 GMT",
+              "title": "16/12/2020 GMT",
               "synopses": {
                 "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
                 "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
@@ -296,7 +317,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpwzz7kgmtc",
+                  "versionId": "w1mshwkx3fzpp1b",
                   "types": ["Original"],
                   "duration": 600,
                   "durationISO8601": "PT10M",
@@ -306,10 +327,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591967400000,
-                  "availableFrom": 1589375400000
+                  "availableUntil": 1610719800000,
+                  "availableFrom": 1608127800000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -323,18 +347,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608076800000,
             "brand": { "pid": "p03413l5", "title": "بی بی سی اردو نیوز بلیٹن" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xjzxd3r5168",
+            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xphdl8zxnq8",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "بی بی سی اردو نیوز بلیٹن" },
-            "locators": { "pid": "w172xjzxd3r4xg4", "brandPid": "p03413l5" },
+            "locators": { "pid": "w172xphdl8zxjz4", "brandPid": "p03413l5" },
             "media": {
-              "id": "w172xjzxd3r4xg4",
+              "id": "w172xphdl8zxjz4",
               "subType": "episode",
               "format": "Audio",
-              "title": "13/05/2020 GMT",
+              "title": "16/12/2020 GMT",
               "synopses": {
                 "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
                 "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
@@ -344,7 +369,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpwzz7kgj27",
+                  "versionId": "w1mshwkx3fzpk96",
                   "types": ["Original"],
                   "duration": 600,
                   "durationISO8601": "PT10M",
@@ -354,10 +379,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591963800000,
-                  "availableFrom": 1589371800000
+                  "availableUntil": 1610716200000,
+                  "availableFrom": 1608124200000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -371,18 +399,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608076800000,
             "brand": { "pid": "p03413l5", "title": "بی بی سی اردو نیوز بلیٹن" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xjzxd3r4xg4",
+            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xphdl8zxjz4",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "بی بی سی اردو نیوز بلیٹن" },
-            "locators": { "pid": "w172xjzxd3r2819", "brandPid": "p03413l5" },
+            "locators": { "pid": "w172xphdl8zxf70", "brandPid": "p03413l5" },
             "media": {
-              "id": "w172xjzxd3r2819",
+              "id": "w172xphdl8zxf70",
               "subType": "episode",
               "format": "Audio",
-              "title": "12/05/2020 GMT",
+              "title": "16/12/2020 GMT",
               "synopses": {
                 "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
                 "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
@@ -392,7 +421,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpwzz7kcvnd",
+                  "versionId": "w1mshwkx3fzpfk2",
                   "types": ["Original"],
                   "duration": 600,
                   "durationISO8601": "PT10M",
@@ -402,10 +431,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591884600000,
-                  "availableFrom": 1589292600000
+                  "availableUntil": 1610712600000,
+                  "availableFrom": 1608120600000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -419,18 +451,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608076800000,
             "brand": { "pid": "p03413l5", "title": "بی بی سی اردو نیوز بلیٹن" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xjzxd3r2819",
+            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xphdl8zxf70",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "بی بی سی اردو نیوز بلیٹن" },
-            "locators": { "pid": "w172xjzxd3r2495", "brandPid": "p03413l5" },
+            "locators": { "pid": "w172xphdl8ztrt5", "brandPid": "p03413l5" },
             "media": {
-              "id": "w172xjzxd3r2495",
+              "id": "w172xphdl8ztrt5",
               "subType": "episode",
               "format": "Audio",
-              "title": "12/05/2020 GMT",
+              "title": "15/12/2020 GMT",
               "synopses": {
                 "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
                 "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
@@ -440,7 +473,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpwzz7kcqx8",
+                  "versionId": "w1mshwkx3fzls47",
                   "types": ["Original"],
                   "duration": 600,
                   "durationISO8601": "PT10M",
@@ -450,10 +483,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591881000000,
-                  "availableFrom": 1589289000000
+                  "availableUntil": 1610633400000,
+                  "availableFrom": 1608041400000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -467,8 +503,9 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607990400000,
             "brand": { "pid": "p03413l5", "title": "بی بی سی اردو نیوز بلیٹن" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xjzxd3r2495",
+            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xphdl8ztrt5",
             "type": "ws_radio"
           }
         ]
