@@ -60,13 +60,18 @@ export default ({ service, pageType, variant, isAmp }) => {
       });
       describe('Recent Episodes component', () => {
         it('should be displayed if the toggle is on, and shows the expected number of items', function test() {
-          // I can enable tests running on local when I have updated all the fixture data to show the component
-          if (Cypress.env('APP_ENV') === 'local') {
-            cy.log('Does not run on local');
-          } else {
-            cy.fixture(`toggles/${service}.json`).then(toggles => {
-              const recentEpisodesEnabled = path(
-                ['recentAudioEpisodes', 'enabled'],
+          cy.fixture(`toggles/${service}.json`).then(toggles => {
+            const recentEpisodesEnabled = path(
+              ['recentAudioEpisodes', 'enabled'],
+              toggles,
+            );
+            cy.log(
+              `Recent Episodes component enabled? ${recentEpisodesEnabled}`,
+            );
+            // There cannot be more episodes shown than the max allowed
+            if (recentEpisodesEnabled) {
+              const recentEpisodesMaxNumber = path(
+                ['recentAudioEpisodes', 'value'],
                 toggles,
               );
               const currentPath = Cypress.env('currentPath');
