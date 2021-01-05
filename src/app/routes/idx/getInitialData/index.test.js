@@ -1,6 +1,7 @@
 import getInitialData, { hasRadioSchedule } from '.';
 import idxPageJson from '#data/persian/afghanistan/index.json';
 import getConfig from '../../utils/getConfig';
+import { INDEX_PAGE } from '#app/routes/utils/pageTypes';
 
 fetch.mockResponse(JSON.stringify(idxPageJson));
 jest.mock('../../utils/getConfig', () => jest.fn());
@@ -13,10 +14,10 @@ describe('Get intial data from IDX page', () => {
   it('should return essential data for an IDX page to render', async () => {
     const { pageData } = await getInitialData({
       path: 'mock-idx-page',
-      pageType: 'IDX',
+      pageType: INDEX_PAGE,
     });
 
-    expect(pageData.metadata.type).toEqual('IDX');
+    expect(pageData.metadata.type).toEqual(INDEX_PAGE);
     expect(pageData.content.groups.length).toBeGreaterThan(1);
   });
 });

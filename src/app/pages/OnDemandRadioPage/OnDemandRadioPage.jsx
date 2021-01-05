@@ -176,7 +176,10 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             columns={getGroups(6, 6, 6, 6, 6, 12)}
             margins={getGroups(true, true, true, true, false, false)}
           >
-            <RecentAudioEpisodes episodes={recentEpisodes} />
+            <RecentAudioEpisodes
+              masterBrand={masterBrand}
+              episodes={recentEpisodes}
+            />
           </Grid>
         </GelPageGrid>
       )}

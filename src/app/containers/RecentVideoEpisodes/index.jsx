@@ -35,7 +35,7 @@ const StyledSectionLabel = styled(SectionLabel)`
   }
 `;
 
-const RecentVideoEpisodes = ({ episodes }) => {
+const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
   const {
     script,
     service,
@@ -44,7 +44,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
     datetimeLocale,
     translations,
   } = useContext(ServiceContext);
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, variant } = useContext(RequestContext);
 
   if (!episodes.length) return null;
 
@@ -74,6 +74,12 @@ const RecentVideoEpisodes = ({ episodes }) => {
   );
   const durationLabel = pathOr('Duration', ['media', 'duration'], translations);
   const videoLabel = pathOr('Video', ['media', 'video'], translations);
+  const getUrl = episodeId =>
+    '/'.concat(
+      [service, variant, masterBrand, 'tv', episodeId]
+        .filter(Boolean)
+        .join('/'),
+    );
 
   return (
     <aside role="complimentary" aria-labelledby="recent-episodes">
@@ -100,7 +106,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
               {...additionalImageProps}
             />
             {/* these must be concatenated for screen reader UX */}
-            <EpisodeList.Link href={episode.url}>
+            <EpisodeList.Link href={getUrl(episode.id)}>
               <VisuallyHiddenText>{`${videoLabel}, `}</VisuallyHiddenText>
               <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">
                 {episode.brandTitle}
@@ -119,7 +125,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
               </VisuallyHiddenText>
             </EpisodeList.Link>
             {episode.episodeTitle && (
-              <span role="text">
+              <div>
                 <EpisodeList.Metadata
                   as={Timestamp}
                   timestamp={episode.timestamp}
@@ -131,7 +137,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
                   service={service}
                   timezone={timezone}
                 />
-              </span>
+              </div>
             )}
           </EpisodeList.Episode>
         ))}
@@ -141,6 +147,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
 };
 
 RecentVideoEpisodes.propTypes = {
+  masterBrand: string.isRequired,
   episodes: arrayOf(
     shape({
       id: string.isRequired,

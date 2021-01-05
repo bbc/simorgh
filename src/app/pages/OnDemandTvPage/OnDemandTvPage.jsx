@@ -199,7 +199,10 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             columns={getGroups(6, 6, 6, 6, 6, 12)}
             margins={getGroups(true, true, true, true, false, false)}
           >
-            <RecentVideoEpisodes episodes={recentEpisodes} />
+            <RecentVideoEpisodes
+              masterBrand={masterBrand}
+              episodes={recentEpisodes}
+            />
           </Grid>
         </StyledGelPageGrid>
       )}

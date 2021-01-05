@@ -213,15 +213,15 @@ export const service = {
       },
       {
         title: 'Nigeria',
-        url: '/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9',
+        url: '/pidgin/topics/c2dwqd1zr92t',
       },
       {
         title: 'Africa',
-        url: '/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735',
+        url: '/pidgin/topics/c404v061z85t',
       },
       {
         title: 'World',
-        url: '/pidgin/world',
+        url: '/pidgin/topics/c0823e52dd0t',
       },
       {
         title: 'Video',
@@ -229,11 +229,11 @@ export const service = {
       },
       {
         title: 'Sport',
-        url: '/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592',
+        url: '/pidgin/topics/cjgn7gv77vrt',
       },
       {
         title: 'Entertainment',
-        url: '/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31',
+        url: '/pidgin/topics/cqywjyzk2vyt',
       },
       {
         title: 'Most popular',

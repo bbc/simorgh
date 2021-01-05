@@ -5,7 +5,7 @@
     "type": "WSRADIO",
     "createdBy": "bbc_kyrgyz_radio",
     "language": "ky",
-    "lastUpdated": 1589529870679,
+    "lastUpdated": 1608294253119,
     "firstPublished": 1582550741000,
     "lastPublished": 1582550741000,
     "timestamp": 1582550741000,
@@ -18,15 +18,15 @@
       "producer": "KYRGYZ"
     },
     "tags": {},
-    "version": "v1.3.0",
+    "version": "v1.3.11",
     "blockTypes": ["media"],
     "title": "Лондон сүйлөйт",
-    "releaseDateTimeStamp": 1583452800000
+    "releaseDateTimeStamp": 1583452800000,
+    "atiAnalytics": {}
   },
   "content": {
     "blocks": [
       {
-        "availability": "notAvailable",
         "id": "w3cszwmc",
         "subType": "episode",
         "format": "Audio",
@@ -39,6 +39,8 @@
         "embedding": false,
         "advertising": false,
         "versions": [],
+        "availability": "notAvailable",
+        "smpKind": "radioProgramme",
         "type": "media"
       }
     ]
@@ -59,6 +61,8 @@
       "embedding": false,
       "advertising": false,
       "versions": [],
+      "availability": "notAvailable",
+      "smpKind": "radioProgramme",
       "type": "media"
     },
     "indexImage": {
@@ -72,6 +76,7 @@
       "copyrightHolder": null,
       "type": "image"
     },
+    "releaseDateTimestamp": 1583452800000,
     "brand": { "pid": "p0340xth", "title": "Лондон сүйлөйт" },
     "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_radio/w3cszwmc",
     "type": "ws_radio"
@@ -89,12 +94,12 @@
         "promos": [
           {
             "headlines": { "headline": "Лондон сүйлөйт" },
-            "locators": { "pid": "w3ct0ky7", "brandPid": "p0340xth" },
+            "locators": { "pid": "w3ct16fs", "brandPid": "p0340xth" },
             "media": {
-              "id": "w3ct0ky7",
+              "id": "w3ct16fs",
               "subType": "episode",
               "format": "Audio",
-              "title": "14/05/2020 GMT",
+              "title": "17/12/2020 GMT",
               "synopses": {
                 "short": "Би-Би-Си Кыргыз кызматынын соңку кабарларды талдаган радио берүүсү",
                 "medium": "Би-Би-Си Кыргыз кызматынын соңку кабарларды талдаган радио берүүсү"
@@ -104,7 +109,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqw4ry",
+                  "versionId": "w4hqwwlb",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -114,10 +119,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1592062200000,
-                  "availableFrom": 1589463000000
+                  "availableUntil": 1610811000000,
+                  "availableFrom": 1608211800000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -131,18 +139,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608163200000,
             "brand": { "pid": "p0340xth", "title": "Лондон сүйлөйт" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_radio/w3ct0ky7",
+            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_radio/w3ct16fs",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Лондон сүйлөйт" },
-            "locators": { "pid": "w3ct0l0h", "brandPid": "p0340xth" },
+            "locators": { "pid": "w3ct16j1", "brandPid": "p0340xth" },
             "media": {
-              "id": "w3ct0l0h",
+              "id": "w3ct16j1",
               "subType": "episode",
               "format": "Audio",
-              "title": "13/05/2020 GMT",
+              "title": "16/12/2020 GMT",
               "synopses": {
                 "short": "Би-Би-Си Кыргыз кызматынын соңку кабарларды талдаган радио берүүсү",
                 "medium": "Би-Би-Си Кыргыз кызматынын соңку кабарларды талдаган радио берүүсү"
@@ -152,7 +161,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqw4v6",
+                  "versionId": "w4hqwwnl",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -162,10 +171,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591975800000,
-                  "availableFrom": 1589376600000
+                  "availableUntil": 1610724600000,
+                  "availableFrom": 1608125400000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -179,18 +191,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608076800000,
             "brand": { "pid": "p0340xth", "title": "Лондон сүйлөйт" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_radio/w3ct0l0h",
+            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_radio/w3ct16j1",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Лондон сүйлөйт" },
-            "locators": { "pid": "w3ct0kzc", "brandPid": "p0340xth" },
+            "locators": { "pid": "w3ct16gx", "brandPid": "p0340xth" },
             "media": {
-              "id": "w3ct0kzc",
+              "id": "w3ct16gx",
               "subType": "episode",
               "format": "Audio",
-              "title": "12/05/2020 GMT",
+              "title": "15/12/2020 GMT",
               "synopses": {
                 "short": "Би-Би-Си Кыргыз кызматынын соңку кабарларды талдаган радио берүүсү",
                 "medium": "Би-Би-Си Кыргыз кызматынын соңку кабарларды талдаган радио берүүсү"
@@ -200,7 +213,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqw4t2",
+                  "versionId": "w4hqwwmg",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -210,10 +223,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591889400000,
-                  "availableFrom": 1589290200000
+                  "availableUntil": 1610638200000,
+                  "availableFrom": 1608039000000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -227,18 +243,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607990400000,
             "brand": { "pid": "p0340xth", "title": "Лондон сүйлөйт" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_radio/w3ct0kzc",
+            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_radio/w3ct16gx",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Лондон сүйлөйт" },
-            "locators": { "pid": "w3ct0kx3", "brandPid": "p0340xth" },
+            "locators": { "pid": "w3ct16dn", "brandPid": "p0340xth" },
             "media": {
-              "id": "w3ct0kx3",
+              "id": "w3ct16dn",
               "subType": "episode",
               "format": "Audio",
-              "title": "11/05/2020 GMT",
+              "title": "14/12/2020 GMT",
               "synopses": {
                 "short": "Би-Би-Си Кыргыз кызматынын соңку кабарларды талдаган радио берүүсү",
                 "medium": "Би-Би-Си Кыргыз кызматынын соңку кабарларды талдаган радио берүүсү"
@@ -248,7 +265,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqw4qt",
+                  "versionId": "w4hqwwk6",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -258,10 +275,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591803000000,
-                  "availableFrom": 1589203800000
+                  "availableUntil": 1610551800000,
+                  "availableFrom": 1607952600000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -275,18 +295,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607904000000,
             "brand": { "pid": "p0340xth", "title": "Лондон сүйлөйт" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_radio/w3ct0kx3",
+            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_radio/w3ct16dn",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Лондон сүйлөйт" },
-            "locators": { "pid": "w3ct0kvy", "brandPid": "p0340xth" },
+            "locators": { "pid": "w3ct16ch", "brandPid": "p0340xth" },
             "media": {
-              "id": "w3ct0kvy",
+              "id": "w3ct16ch",
               "subType": "episode",
               "format": "Audio",
-              "title": "08/05/2020 GMT",
+              "title": "11/12/2020 GMT",
               "synopses": {
                 "short": "Би-Би-Си Кыргыз кызматынын соңку кабарларды талдаган радио берүүсү",
                 "medium": "Би-Би-Си Кыргыз кызматынын соңку кабарларды талдаган радио берүүсү"
@@ -296,7 +317,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqw4pn",
+                  "versionId": "w4hqwwj1",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -306,10 +327,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591543800000,
-                  "availableFrom": 1588944600000
+                  "availableUntil": 1610292600000,
+                  "availableFrom": 1607693400000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -323,18 +347,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607644800000,
             "brand": { "pid": "p0340xth", "title": "Лондон сүйлөйт" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_radio/w3ct0kvy",
+            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_radio/w3ct16ch",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Лондон сүйлөйт" },
-            "locators": { "pid": "w3ct0ky6", "brandPid": "p0340xth" },
+            "locators": { "pid": "w3ct16fr", "brandPid": "p0340xth" },
             "media": {
-              "id": "w3ct0ky6",
+              "id": "w3ct16fr",
               "subType": "episode",
               "format": "Audio",
-              "title": "07/05/2020 GMT",
+              "title": "10/12/2020 GMT",
               "synopses": {
                 "short": "Би-Би-Си Кыргыз кызматынын соңку кабарларды талдаган радио берүүсү",
                 "medium": "Би-Би-Си Кыргыз кызматынын соңку кабарларды талдаган радио берүүсү"
@@ -344,7 +369,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqw4rx",
+                  "versionId": "w4hqwwl9",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -354,10 +379,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591457400000,
-                  "availableFrom": 1588858200000
+                  "availableUntil": 1610206200000,
+                  "availableFrom": 1607607000000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -371,18 +399,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607558400000,
             "brand": { "pid": "p0340xth", "title": "Лондон сүйлөйт" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_radio/w3ct0ky6",
+            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_radio/w3ct16fr",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Лондон сүйлөйт" },
-            "locators": { "pid": "w3ct0l0g", "brandPid": "p0340xth" },
+            "locators": { "pid": "w3ct16j0", "brandPid": "p0340xth" },
             "media": {
-              "id": "w3ct0l0g",
+              "id": "w3ct16j0",
               "subType": "episode",
               "format": "Audio",
-              "title": "06/05/2020 GMT",
+              "title": "09/12/2020 GMT",
               "synopses": {
                 "short": "Би-Би-Си Кыргыз кызматынын соңку кабарларды талдаган радио берүүсү",
                 "medium": "Би-Би-Си Кыргыз кызматынын соңку кабарларды талдаган радио берүүсү"
@@ -392,7 +421,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqw4v5",
+                  "versionId": "w4hqwwnk",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -402,10 +431,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591371000000,
-                  "availableFrom": 1588771800000
+                  "availableUntil": 1610119800000,
+                  "availableFrom": 1607520600000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -419,18 +451,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607472000000,
             "brand": { "pid": "p0340xth", "title": "Лондон сүйлөйт" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_radio/w3ct0l0g",
+            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_radio/w3ct16j0",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Лондон сүйлөйт" },
-            "locators": { "pid": "w3ct0kzb", "brandPid": "p0340xth" },
+            "locators": { "pid": "w3ct16gw", "brandPid": "p0340xth" },
             "media": {
-              "id": "w3ct0kzb",
+              "id": "w3ct16gw",
               "subType": "episode",
               "format": "Audio",
-              "title": "05/05/2020 GMT",
+              "title": "08/12/2020 GMT",
               "synopses": {
                 "short": "Би-Би-Си Кыргыз кызматынын соңку кабарларды талдаган радио берүүсү",
                 "medium": "Би-Би-Си Кыргыз кызматынын соңку кабарларды талдаган радио берүүсү"
@@ -440,7 +473,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqw4t1",
+                  "versionId": "w4hqwwmf",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -450,10 +483,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591284600000,
-                  "availableFrom": 1588685400000
+                  "availableUntil": 1610033400000,
+                  "availableFrom": 1607434200000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -467,8 +503,9 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607385600000,
             "brand": { "pid": "p0340xth", "title": "Лондон сүйлөйт" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_radio/w3ct0kzb",
+            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_radio/w3ct16gw",
             "type": "ws_radio"
           }
         ]

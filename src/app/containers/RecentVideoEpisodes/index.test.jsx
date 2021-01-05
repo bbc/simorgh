@@ -14,7 +14,7 @@ const RecentVideoEpisodesWithContext = ({ episodes, isAmp = false }) => (
       service="afrique"
       pageType="media"
     >
-      <RecentVideoEpisodes episodes={episodes} />
+      <RecentVideoEpisodes masterBrand="bbc_afrique_tv" episodes={episodes} />
     </RequestContextProvider>
   </ServiceContextProvider>
 );
@@ -28,12 +28,29 @@ describe('RecentAudioEpisodes', () => {
     const recentEpisodesLabel = getByText('Editions Précédentes');
     expect(recentEpisodesLabel).toBeInTheDocument();
   });
+
   it('should render the list items', async () => {
     const { container } = render(
       <RecentVideoEpisodesWithContext episodes={recentVideoFixtures} />,
     );
 
     expect(container.querySelectorAll('li').length).toEqual(3);
+  });
+
+  it('should render the list item links', async () => {
+    const { getAllByText } = render(
+      <RecentVideoEpisodesWithContext episodes={recentVideoFixtures} />,
+    );
+
+    const links = getAllByText('BBC Info').map(
+      titleEl => titleEl.closest('a').href,
+    );
+
+    expect(links).toEqual([
+      'http://localhost/afrique/bbc_afrique_tv/tv/w172xc9xq2gllfk',
+      'http://localhost/afrique/bbc_afrique_tv/tv/w172xc9xq2ghpjg',
+      'http://localhost/afrique/bbc_afrique_tv/tv/w172xc9xq2gdsmc',
+    ]);
   });
 
   it('should include the visually hidden audio and date', () => {

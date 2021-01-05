@@ -12,6 +12,9 @@ import {
   MEDIA_PAGE,
   MOST_READ_PAGE,
   MOST_WATCHED_PAGE,
+  ERROR_PAGE,
+  INDEX_PAGE,
+  FEATURE_INDEX_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 export const RequestContext = React.createContext({});
@@ -78,12 +81,12 @@ RequestContextProvider.propTypes = {
     MEDIA_PAGE,
     MOST_READ_PAGE,
     MOST_WATCHED_PAGE,
-    'error',
+    ERROR_PAGE,
     'MAP',
-    'FIX',
+    FEATURE_INDEX_PAGE,
     'STY',
     'PGL',
-    'IDX',
+    INDEX_PAGE,
   ]).isRequired,
   service: string.isRequired,
   statusCode: number,

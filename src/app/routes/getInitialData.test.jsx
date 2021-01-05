@@ -1,4 +1,5 @@
 import routes from './index';
+import { ERROR_PAGE } from '#app/routes/utils/pageTypes';
 
 const MOCK_PATH = 'mock-path';
 
@@ -7,7 +8,7 @@ const toggles = {
 };
 
 routes
-  .filter(route => route.pageType !== 'error')
+  .filter(route => route.pageType !== ERROR_PAGE)
   .forEach(({ getInitialData, pageType }) => {
     it(`${pageType} - should handle Ares 404`, async () => {
       global.fetch.mockResponseOnce(JSON.stringify({}), { status: 404 });

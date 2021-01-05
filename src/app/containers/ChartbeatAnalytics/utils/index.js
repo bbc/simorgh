@@ -10,6 +10,8 @@ import {
   MEDIA_PAGE,
   MOST_READ_PAGE,
   MOST_WATCHED_PAGE,
+  INDEX_PAGE,
+  FEATURE_INDEX_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 const ID_COOKIE = 'ckns_sylphid';
@@ -33,9 +35,9 @@ export const getSylphidCookie = () =>
 export const getType = (pageType, shorthand = false) => {
   switch (pageType) {
     case FRONT_PAGE:
-    case 'IDX':
+    case INDEX_PAGE:
     case 'index':
-      return shorthand ? 'IDX' : 'Index';
+      return shorthand ? INDEX_PAGE : 'Index';
     case ARTICLE_PAGE:
       return shorthand ? 'ART' : 'New Article';
     case 'MAP':
@@ -50,8 +52,8 @@ export const getType = (pageType, shorthand = false) => {
       return 'STY';
     case 'PGL':
       return 'PGL';
-    case 'FIX':
-      return 'FIX';
+    case FEATURE_INDEX_PAGE:
+      return FEATURE_INDEX_PAGE;
     default:
       return null;
   }
@@ -113,7 +115,7 @@ export const buildSections = ({
 export const getTitle = ({ pageType, pageData, brandName, title }) => {
   switch (pageType) {
     case FRONT_PAGE:
-    case 'IDX':
+    case INDEX_PAGE:
     case 'index':
       return getPageTitle(pageData, brandName);
     case ARTICLE_PAGE:
@@ -130,7 +132,7 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
       return path(['promo', 'headlines', 'headline'], pageData);
     case 'PGL':
       return path(['promo', 'headlines', 'headline'], pageData);
-    case 'FIX':
+    case FEATURE_INDEX_PAGE:
       return getPageTitle(pageData, brandName);
     default:
       return null;
