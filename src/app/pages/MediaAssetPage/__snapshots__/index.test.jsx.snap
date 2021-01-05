@@ -2808,7 +2808,8 @@ exports[`Media Asset Page should render component 1`] = `
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .emotion-171 {
-    margin-left: 0.5rem;
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
     padding-right: 1rem;
     padding-left: 0.5rem;
   }

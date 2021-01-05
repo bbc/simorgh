@@ -61,7 +61,8 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .emotion-2 {
-    margin-left: 0.5rem;
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
     padding-right: 1rem;
     padding-left: 0.5rem;
   }
@@ -140,7 +141,8 @@ exports[`should render caption text with example News offscreen text 1`] = `
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .emotion-2 {
-    margin-left: 0.5rem;
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
     padding-right: 1rem;
     padding-left: 0.5rem;
   }
@@ -231,7 +233,8 @@ exports[`should render caption with multiple paragraphs 1`] = `
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .emotion-2 {
-    margin-left: 0.5rem;
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
     padding-right: 1rem;
     padding-left: 0.5rem;
   }
@@ -328,7 +331,8 @@ exports[`should render correctly with inline block 1`] = `
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .emotion-6 {
-    margin-left: 0.5rem;
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
     padding-right: 1rem;
     padding-left: 0.5rem;
   }

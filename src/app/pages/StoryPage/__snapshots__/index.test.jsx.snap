@@ -2204,7 +2204,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                               dir="ltr"
                             >
                               <figcaption
-                                class="css-1gtqteb-Caption emotion-16"
+                                class="css-1lbbgjb-Caption emotion-16"
                                 dir="ltr"
                               >
                                 <span
@@ -2540,7 +2540,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             <noscript />
                           </div>
                           <figcaption
-                            class="css-1gtqteb-Caption emotion-16"
+                            class="css-1lbbgjb-Caption emotion-16"
                             dir="ltr"
                           >
                             <span
@@ -3502,7 +3502,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               dir="ltr"
                             >
                               <figcaption
-                                class="css-1gtqteb-Caption emotion-16"
+                                class="css-1lbbgjb-Caption emotion-16"
                                 dir="ltr"
                               >
                                 <span
@@ -3838,7 +3838,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             <noscript />
                           </div>
                           <figcaption
-                            class="css-1gtqteb-Caption emotion-16"
+                            class="css-1lbbgjb-Caption emotion-16"
                             dir="ltr"
                           >
                             <span

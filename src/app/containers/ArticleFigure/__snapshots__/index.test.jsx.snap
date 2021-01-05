@@ -837,7 +837,8 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .emotion-10 {
-    margin-left: 0.5rem;
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
     padding-right: 1rem;
     padding-left: 0.5rem;
   }
@@ -1272,7 +1273,8 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .emotion-6 {
-    margin-left: 0.5rem;
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
     padding-right: 1rem;
     padding-left: 0.5rem;
   }
@@ -1696,7 +1698,8 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .emotion-8 {
-    margin-left: 0.5rem;
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
     padding-right: 1rem;
     padding-left: 0.5rem;
   }
@@ -3138,7 +3141,8 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .emotion-12 {
-    margin-left: 0.5rem;
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
     padding-right: 1rem;
     padding-left: 0.5rem;
   }
@@ -3577,7 +3581,8 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .emotion-8 {
-    margin-left: 0.5rem;
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
     padding-right: 1rem;
     padding-left: 0.5rem;
   }
@@ -4005,7 +4010,8 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .emotion-10 {
-    margin-left: 0.5rem;
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
     padding-right: 1rem;
     padding-left: 0.5rem;
   }
