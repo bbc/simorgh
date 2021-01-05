@@ -51,7 +51,7 @@ export default ({ service, pageType, variant, isAmp }) => {
           if (Cypress.env('APP_ENV') === 'local') {
             cy.log('Does not run on local');
           } else {
-            cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
+            cy.fixture(`toggles/${service}.json`).then(toggles => {
               const recentEpisodesEnabled = path(
                 ['recentVideoEpisodes', 'enabled'],
                 toggles,
