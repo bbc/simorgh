@@ -8,7 +8,6 @@ import {
 } from '../../../support/helpers/onDemandRadioTv';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import getDataUrl from '../../../support/helpers/getDataUrl';
-import config from '../../../support/config/services';
 
 export default ({ service, pageType, variant, isAmp }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
