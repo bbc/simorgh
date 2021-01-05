@@ -6,7 +6,7 @@ exports[`Canonical Media Asset Page Analytics ATI 1`] = `"<img height=\\"1px\\" 
 
 exports[`Canonical Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
-exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`Canonical Media Asset Page Footer Link should match text and url 1`] = `
 Object {
