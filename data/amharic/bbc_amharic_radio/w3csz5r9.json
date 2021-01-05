@@ -5,7 +5,7 @@
     "type": "WSRADIO",
     "createdBy": "bbc_amharic_radio",
     "language": "am",
-    "lastUpdated": 1589529870679,
+    "lastUpdated": 1608292168207,
     "firstPublished": 1582565117000,
     "lastPublished": 1582565117000,
     "timestamp": 1582565117000,
@@ -18,15 +18,15 @@
       "producer": "AMHARIC"
     },
     "tags": {},
-    "version": "v1.3.0",
+    "version": "v1.3.11",
     "blockTypes": ["media"],
     "title": "ቢቢሲ አማርኛ ዜና",
-    "releaseDateTimeStamp": 1583452800000
+    "releaseDateTimeStamp": 1583452800000,
+    "atiAnalytics": {}
   },
   "content": {
     "blocks": [
       {
-        "availability": "available",
         "id": "w3csz5r9",
         "subType": "episode",
         "format": "Audio",
@@ -39,6 +39,8 @@
         "embedding": false,
         "advertising": false,
         "versions": [],
+        "availability": "notAvailable",
+        "smpKind": "radioProgramme",
         "type": "media"
       }
     ]
@@ -59,6 +61,8 @@
       "embedding": false,
       "advertising": false,
       "versions": [],
+      "availability": "notAvailable",
+      "smpKind": "radioProgramme",
       "type": "media"
     },
     "indexImage": {
@@ -72,6 +76,7 @@
       "copyrightHolder": null,
       "type": "image"
     },
+    "releaseDateTimestamp": 1583452800000,
     "brand": { "pid": "w13xttnt", "title": "ቢቢሲ አማርኛ ዜና" },
     "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3csz5r9",
     "type": "ws_radio"
@@ -89,12 +94,12 @@
         "promos": [
           {
             "headlines": { "headline": "ቢቢሲ አማርኛ ዜና" },
-            "locators": { "pid": "w3ct07cd", "brandPid": "w13xttnt" },
+            "locators": { "pid": "w3ct0xr8", "brandPid": "w13xttnt" },
             "media": {
-              "id": "w3ct07cd",
+              "id": "w3ct0xr8",
               "subType": "episode",
               "format": "Audio",
-              "title": "14/05/2020 GMT",
+              "title": "17/12/2020 GMT",
               "synopses": {
                 "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
                 "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
@@ -104,7 +109,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvt59",
+                  "versionId": "w4hqwlt1",
                   "types": ["Original"],
                   "duration": 883,
                   "durationISO8601": "PT14M43S",
@@ -114,10 +119,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1592081070000,
-                  "availableFrom": 1589478270000
+                  "availableUntil": 1610829870000,
+                  "availableFrom": 1608227070000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -131,18 +139,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608163200000,
             "brand": { "pid": "w13xttnt", "title": "ቢቢሲ አማርኛ ዜና" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct07cd",
+            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct0xr8",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "ቢቢሲ አማርኛ ዜና" },
-            "locators": { "pid": "w3ct07fn", "brandPid": "w13xttnt" },
+            "locators": { "pid": "w3ct0xtj", "brandPid": "w13xttnt" },
             "media": {
-              "id": "w3ct07fn",
+              "id": "w3ct0xtj",
               "subType": "episode",
               "format": "Audio",
-              "title": "13/05/2020 GMT",
+              "title": "16/12/2020 GMT",
               "synopses": {
                 "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
                 "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
@@ -152,7 +161,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvt7k",
+                  "versionId": "w4hqwlw9",
                   "types": ["Original"],
                   "duration": 883,
                   "durationISO8601": "PT14M43S",
@@ -162,10 +171,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591994670000,
-                  "availableFrom": 1589391870000
+                  "availableUntil": 1610743470000,
+                  "availableFrom": 1608140670000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -179,18 +191,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608076800000,
             "brand": { "pid": "w13xttnt", "title": "ቢቢሲ አማርኛ ዜና" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct07fn",
+            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct0xtj",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "ቢቢሲ አማርኛ ዜና" },
-            "locators": { "pid": "w3ct07dj", "brandPid": "w13xttnt" },
+            "locators": { "pid": "w3ct0xsd", "brandPid": "w13xttnt" },
             "media": {
-              "id": "w3ct07dj",
+              "id": "w3ct0xsd",
               "subType": "episode",
               "format": "Audio",
-              "title": "12/05/2020 GMT",
+              "title": "15/12/2020 GMT",
               "synopses": {
                 "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
                 "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
@@ -200,7 +213,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvt6f",
+                  "versionId": "w4hqwlv5",
                   "types": ["Original"],
                   "duration": 883,
                   "durationISO8601": "PT14M43S",
@@ -210,10 +223,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591908270000,
-                  "availableFrom": 1589305470000
+                  "availableUntil": 1610657070000,
+                  "availableFrom": 1608054270000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -227,18 +243,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607990400000,
             "brand": { "pid": "w13xttnt", "title": "ቢቢሲ አማርኛ ዜና" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct07dj",
+            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct0xsd",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "ቢቢሲ አማርኛ ዜና" },
-            "locators": { "pid": "w3ct07b8", "brandPid": "w13xttnt" },
+            "locators": { "pid": "w3ct0xq4", "brandPid": "w13xttnt" },
             "media": {
-              "id": "w3ct07b8",
+              "id": "w3ct0xq4",
               "subType": "episode",
               "format": "Audio",
-              "title": "11/05/2020 GMT",
+              "title": "14/12/2020 GMT",
               "synopses": {
                 "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
                 "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
@@ -248,7 +265,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvt45",
+                  "versionId": "w4hqwlrx",
                   "types": ["Original"],
                   "duration": 883,
                   "durationISO8601": "PT14M43S",
@@ -258,10 +275,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591821870000,
-                  "availableFrom": 1589219070000
+                  "availableUntil": 1610570670000,
+                  "availableFrom": 1607967870000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -275,18 +295,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607904000000,
             "brand": { "pid": "w13xttnt", "title": "ቢቢሲ አማርኛ ዜና" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct07b8",
+            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct0xq4",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "ቢቢሲ አማርኛ ዜና" },
-            "locators": { "pid": "w3ct0793", "brandPid": "w13xttnt" },
+            "locators": { "pid": "w3ct0xnz", "brandPid": "w13xttnt" },
             "media": {
-              "id": "w3ct0793",
+              "id": "w3ct0xnz",
               "subType": "episode",
               "format": "Audio",
-              "title": "08/05/2020 GMT",
+              "title": "11/12/2020 GMT",
               "synopses": {
                 "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
                 "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
@@ -296,7 +317,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvt30",
+                  "versionId": "w4hqwlqr",
                   "types": ["Original"],
                   "duration": 883,
                   "durationISO8601": "PT14M43S",
@@ -306,10 +327,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591562670000,
-                  "availableFrom": 1588959870000
+                  "availableUntil": 1610311470000,
+                  "availableFrom": 1607708670000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -323,18 +347,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607644800000,
             "brand": { "pid": "w13xttnt", "title": "ቢቢሲ አማርኛ ዜና" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct0793",
+            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct0xnz",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "ቢቢሲ አማርኛ ዜና" },
-            "locators": { "pid": "w3ct07cc", "brandPid": "w13xttnt" },
+            "locators": { "pid": "w3ct0xr7", "brandPid": "w13xttnt" },
             "media": {
-              "id": "w3ct07cc",
+              "id": "w3ct0xr7",
               "subType": "episode",
               "format": "Audio",
-              "title": "07/05/2020 GMT",
+              "title": "10/12/2020 GMT",
               "synopses": {
                 "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
                 "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
@@ -344,7 +369,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvt58",
+                  "versionId": "w4hqwlt0",
                   "types": ["Original"],
                   "duration": 883,
                   "durationISO8601": "PT14M43S",
@@ -354,10 +379,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591476270000,
-                  "availableFrom": 1588873470000
+                  "availableUntil": 1610225070000,
+                  "availableFrom": 1607622270000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -371,18 +399,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607558400000,
             "brand": { "pid": "w13xttnt", "title": "ቢቢሲ አማርኛ ዜና" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct07cc",
+            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct0xr7",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "ቢቢሲ አማርኛ ዜና" },
-            "locators": { "pid": "w3ct07fm", "brandPid": "w13xttnt" },
+            "locators": { "pid": "w3ct0xth", "brandPid": "w13xttnt" },
             "media": {
-              "id": "w3ct07fm",
+              "id": "w3ct0xth",
               "subType": "episode",
               "format": "Audio",
-              "title": "06/05/2020 GMT",
+              "title": "09/12/2020 GMT",
               "synopses": {
                 "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
                 "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
@@ -392,7 +421,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvt7j",
+                  "versionId": "w4hqwlw8",
                   "types": ["Original"],
                   "duration": 883,
                   "durationISO8601": "PT14M43S",
@@ -402,10 +431,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591389870000,
-                  "availableFrom": 1588787070000
+                  "availableUntil": 1610138670000,
+                  "availableFrom": 1607535870000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -419,18 +451,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607472000000,
             "brand": { "pid": "w13xttnt", "title": "ቢቢሲ አማርኛ ዜና" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct07fm",
+            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct0xth",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "ቢቢሲ አማርኛ ዜና" },
-            "locators": { "pid": "w3ct07dh", "brandPid": "w13xttnt" },
+            "locators": { "pid": "w3ct0xsc", "brandPid": "w13xttnt" },
             "media": {
-              "id": "w3ct07dh",
+              "id": "w3ct0xsc",
               "subType": "episode",
               "format": "Audio",
-              "title": "05/05/2020 GMT",
+              "title": "08/12/2020 GMT",
               "synopses": {
                 "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
                 "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
@@ -440,7 +473,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvt6d",
+                  "versionId": "w4hqwlv4",
                   "types": ["Original"],
                   "duration": 883,
                   "durationISO8601": "PT14M43S",
@@ -450,10 +483,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591303470000,
-                  "availableFrom": 1588700670000
+                  "availableUntil": 1610052270000,
+                  "availableFrom": 1607449470000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -467,8 +503,9 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607385600000,
             "brand": { "pid": "w13xttnt", "title": "ቢቢሲ አማርኛ ዜና" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct07dh",
+            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct0xsc",
             "type": "ws_radio"
           }
         ]

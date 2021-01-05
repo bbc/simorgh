@@ -5,7 +5,7 @@
     "type": "WSRADIO",
     "createdBy": "bbc_arabic_radio",
     "language": "ar",
-    "lastUpdated": 1589529753485,
+    "lastUpdated": 1608292285998,
     "firstPublished": 1582584617000,
     "lastPublished": 1582584617000,
     "timestamp": 1582584617000,
@@ -18,15 +18,15 @@
       "producer": "ARABIC"
     },
     "tags": {},
-    "version": "v1.3.0",
+    "version": "v1.3.11",
     "blockTypes": ["media"],
     "title": "نقطة حوار",
-    "releaseDateTimeStamp": 1583452800000
+    "releaseDateTimeStamp": 1583452800000,
+    "atiAnalytics": {}
   },
   "content": {
     "blocks": [
       {
-        "availability": "available",
         "id": "w3ct01yb",
         "subType": "episode",
         "format": "Audio",
@@ -39,6 +39,8 @@
         "embedding": false,
         "advertising": false,
         "versions": [],
+        "availability": "notAvailable",
+        "smpKind": "radioProgramme",
         "type": "media"
       }
     ]
@@ -59,6 +61,8 @@
       "embedding": false,
       "advertising": false,
       "versions": [],
+      "availability": "notAvailable",
+      "smpKind": "radioProgramme",
       "type": "media"
     },
     "indexImage": {
@@ -72,6 +76,7 @@
       "copyrightHolder": null,
       "type": "image"
     },
+    "releaseDateTimestamp": 1583452800000,
     "brand": { "pid": "p030vh39", "title": "نقطة حوار" },
     "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct01yb",
     "type": "ws_radio"
@@ -89,12 +94,12 @@
         "promos": [
           {
             "headlines": { "headline": "نقطة حوار" },
-            "locators": { "pid": "w3ct094h", "brandPid": "p030vh39" },
+            "locators": { "pid": "w3ct197f", "brandPid": "p030vh39" },
             "media": {
-              "id": "w3ct094h",
+              "id": "w3ct197f",
               "subType": "episode",
               "format": "Audio",
-              "title": "13/05/2020 GMT",
+              "title": "17/12/2020 GMT",
               "synopses": {
                 "short": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت",
                 "medium": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت"
@@ -104,7 +109,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvvyd",
+                  "versionId": "w4hqwzrn",
                   "types": ["Original"],
                   "duration": 1440,
                   "durationISO8601": "PT24M",
@@ -114,10 +119,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1592134200000,
-                  "availableFrom": 1589412600000
+                  "availableUntil": 1610883000000,
+                  "availableFrom": 1608172200000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -131,18 +139,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608163200000,
             "brand": { "pid": "p030vh39", "title": "نقطة حوار" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct094h",
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct197f",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "نقطة حوار" },
-            "locators": { "pid": "w3ct093c", "brandPid": "p030vh39" },
+            "locators": { "pid": "w3ct1969", "brandPid": "p030vh39" },
             "media": {
-              "id": "w3ct093c",
+              "id": "w3ct1969",
               "subType": "episode",
               "format": "Audio",
-              "title": "11/05/2020 GMT",
+              "title": "15/12/2020 GMT",
               "synopses": {
                 "short": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت",
                 "medium": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت"
@@ -152,7 +161,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvvx8",
+                  "versionId": "w4hqwzqj",
                   "types": ["Original"],
                   "duration": 1440,
                   "durationISO8601": "PT24M",
@@ -162,10 +171,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591961400000,
-                  "availableFrom": 1589239800000
+                  "availableUntil": 1610710200000,
+                  "availableFrom": 1607999400000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -179,18 +191,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607990400000,
             "brand": { "pid": "p030vh39", "title": "نقطة حوار" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct093c",
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct1969",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "نقطة حوار" },
-            "locators": { "pid": "w3ct0908", "brandPid": "p030vh39" },
+            "locators": { "pid": "w3ct1940", "brandPid": "p030vh39" },
             "media": {
-              "id": "w3ct0908",
+              "id": "w3ct1940",
               "subType": "episode",
               "format": "Audio",
-              "title": "08/05/2020 GMT",
+              "title": "12/12/2020 GMT",
               "synopses": {
                 "short": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت",
                 "medium": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت"
@@ -200,7 +213,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvvt5",
+                  "versionId": "w4hqwzn7",
                   "types": ["Original"],
                   "duration": 1440,
                   "durationISO8601": "PT24M",
@@ -210,10 +223,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591795800000,
-                  "availableFrom": 1588980600000
+                  "availableUntil": 1610537400000,
+                  "availableFrom": 1607740200000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -227,18 +243,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607731200000,
             "brand": { "pid": "p030vh39", "title": "نقطة حوار" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct0908",
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct1940",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "نقطة حوار" },
-            "locators": { "pid": "w3ct094g", "brandPid": "p030vh39" },
+            "locators": { "pid": "w3ct197d", "brandPid": "p030vh39" },
             "media": {
-              "id": "w3ct094g",
+              "id": "w3ct197d",
               "subType": "episode",
               "format": "Audio",
-              "title": "06/05/2020 GMT",
+              "title": "10/12/2020 GMT",
               "synopses": {
                 "short": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت",
                 "medium": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت"
@@ -248,7 +265,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvvyc",
+                  "versionId": "w4hqwzrm",
                   "types": ["Original"],
                   "duration": 1440,
                   "durationISO8601": "PT24M",
@@ -258,10 +275,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591691400000,
-                  "availableFrom": 1588807800000
+                  "availableUntil": 1610418600000,
+                  "availableFrom": 1607567400000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -275,18 +295,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607558400000,
             "brand": { "pid": "p030vh39", "title": "نقطة حوار" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct094g",
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct197d",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "نقطة حوار" },
-            "locators": { "pid": "w3ct093b", "brandPid": "p030vh39" },
+            "locators": { "pid": "w3ct1968", "brandPid": "p030vh39" },
             "media": {
-              "id": "w3ct093b",
+              "id": "w3ct1968",
               "subType": "episode",
               "format": "Audio",
-              "title": "04/05/2020 GMT",
+              "title": "08/12/2020 GMT",
               "synopses": {
                 "short": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت",
                 "medium": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت"
@@ -296,7 +317,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvvx7",
+                  "versionId": "w4hqwzqh",
                   "types": ["Original"],
                   "duration": 1440,
                   "durationISO8601": "PT24M",
@@ -306,10 +327,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591356600000,
-                  "availableFrom": 1588635000000
+                  "availableUntil": 1610105400000,
+                  "availableFrom": 1607394600000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -323,18 +347,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607385600000,
             "brand": { "pid": "p030vh39", "title": "نقطة حوار" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct093b",
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct1968",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "نقطة حوار" },
-            "locators": { "pid": "w3ct0907", "brandPid": "p030vh39" },
+            "locators": { "pid": "w3ct193z", "brandPid": "p030vh39" },
             "media": {
-              "id": "w3ct0907",
+              "id": "w3ct193z",
               "subType": "episode",
               "format": "Audio",
-              "title": "01/05/2020 GMT",
+              "title": "05/12/2020 GMT",
               "synopses": {
                 "short": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت",
                 "medium": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت"
@@ -344,7 +369,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvvt4",
+                  "versionId": "w4hqwzn6",
                   "types": ["Original"],
                   "duration": 1440,
                   "durationISO8601": "PT24M",
@@ -354,10 +379,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591191000000,
-                  "availableFrom": 1588375800000
+                  "availableUntil": 1609932600000,
+                  "availableFrom": 1607135400000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -371,18 +399,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607126400000,
             "brand": { "pid": "p030vh39", "title": "نقطة حوار" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct0907",
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct193z",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "نقطة حوار" },
-            "locators": { "pid": "w3ct094f", "brandPid": "p030vh39" },
+            "locators": { "pid": "w3ct197c", "brandPid": "p030vh39" },
             "media": {
-              "id": "w3ct094f",
+              "id": "w3ct197c",
               "subType": "episode",
               "format": "Audio",
-              "title": "29/04/2020 GMT",
+              "title": "03/12/2020 GMT",
               "synopses": {
                 "short": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت",
                 "medium": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت"
@@ -392,7 +421,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvvyb",
+                  "versionId": "w4hqwzrl",
                   "types": ["Original"],
                   "duration": 1440,
                   "durationISO8601": "PT24M",
@@ -402,10 +431,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591086600000,
-                  "availableFrom": 1588203000000
+                  "availableUntil": 1609813800000,
+                  "availableFrom": 1606962600000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -419,18 +451,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1606953600000,
             "brand": { "pid": "p030vh39", "title": "نقطة حوار" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct094f",
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct197c",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "نقطة حوار" },
-            "locators": { "pid": "w3ct0939", "brandPid": "p030vh39" },
+            "locators": { "pid": "w3ct1967", "brandPid": "p030vh39" },
             "media": {
-              "id": "w3ct0939",
+              "id": "w3ct1967",
               "subType": "episode",
               "format": "Audio",
-              "title": "27/04/2020 GMT",
+              "title": "01/12/2020 GMT",
               "synopses": {
                 "short": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت",
                 "medium": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت"
@@ -440,7 +473,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvvx6",
+                  "versionId": "w4hqwzqg",
                   "types": ["Original"],
                   "duration": 1440,
                   "durationISO8601": "PT24M",
@@ -450,10 +483,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590751800000,
-                  "availableFrom": 1588030200000
+                  "availableUntil": 1609500600000,
+                  "availableFrom": 1606789800000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -467,8 +503,9 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1606780800000,
             "brand": { "pid": "p030vh39", "title": "نقطة حوار" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct0939",
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct1967",
             "type": "ws_radio"
           }
         ]
