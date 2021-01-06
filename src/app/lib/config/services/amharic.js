@@ -248,7 +248,7 @@ export const service = {
       },
       {
         title: 'ኢትዮጵያ',
-        url: '/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4',
+        url: '/amharic/topics/c7zp57r92v5t',
       },
       {
         title: 'ቪዲዮ',

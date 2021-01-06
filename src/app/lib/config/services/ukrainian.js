@@ -271,6 +271,10 @@ const baseServiceConfig = {
       url: '/ukrainian/53725237',
     },
     {
+      title: 'Відео',
+      url: '/ukrainian/55425840',
+    },
+    {
       title: 'Книга року BBC',
       url: '/ukrainian/features-50320117',
     },
