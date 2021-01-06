@@ -2,6 +2,7 @@ import path from 'ramda/src/path';
 import splitAt from 'ramda/src/splitAt';
 import { getNthCpsParagraphIndex } from '../helpers';
 import deepClone from '../../../utils/jsonClone';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const insertRecommendationsBlock = (recommendationBlock, blocks) => {
   const fifthParagraphIndex = getNthCpsParagraphIndex(blocks, 5);
@@ -21,7 +22,7 @@ const addRecommendationsBlock = originalJson => {
   const { allowAdvertising } = path(['metadata', 'options'], json);
   const blocks = path(['content', 'model', 'blocks'], json);
 
-  if (pageType !== 'STY' || !blocks || !allowAdvertising) {
+  if (pageType !== STORY_PAGE || !blocks || !allowAdvertising) {
     return json;
   }
 

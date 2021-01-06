@@ -5,6 +5,7 @@ import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import MediaAssetPage from '.';
 import pageData from './fixtureData';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const isAmp = platform => platform === 'AMP';
 
@@ -25,7 +26,7 @@ platforms.forEach(platform => {
     return (
       <BrowserRouter>
         <MediaAssetPage
-          pageType="MAP"
+          pageType={MEDIA_ASSET_PAGE}
           isAmp={isAmp(platform)}
           pathname="/pathname"
           status={200}

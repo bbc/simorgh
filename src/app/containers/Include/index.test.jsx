@@ -8,6 +8,7 @@ import * as idt2Amp from './amp/Idt2Amp';
 import * as vjAmp from './amp/VjAmp';
 import * as canonical from './canonical';
 import { INCLUDE_RENDERED } from '#lib/logger.const';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const defaultToggleState = {
   include: {
@@ -58,7 +59,7 @@ const MockContext = ({ toggleState, isAmp, children }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     isAmp={isAmp || false}
-    pageType="STY"
+    pageType={STORY_PAGE}
     service="news"
     statusCode={200}
     pathname="/pathname"

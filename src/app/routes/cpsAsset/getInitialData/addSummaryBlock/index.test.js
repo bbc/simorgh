@@ -1,9 +1,13 @@
 import deepClone from 'ramda/src/clone';
 import addSummaryBlock from '.';
+import {
+  PHOTO_GALLERY_PAGE,
+  MEDIA_ASSET_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 const pglInput = {
   metadata: {
-    type: 'PGL',
+    type: PHOTO_GALLERY_PAGE,
   },
   promo: {
     headlines: {
@@ -27,7 +31,7 @@ const pglInput = {
 
 const mapInput = {
   metadata: {
-    type: 'MAP',
+    type: MEDIA_ASSET_PAGE,
   },
   promo: {
     headlines: {
@@ -55,7 +59,7 @@ describe('addSummaryBlock', () => {
       const input = deepClone(pglInput);
 
       const expected = {
-        metadata: { type: 'PGL' },
+        metadata: { type: PHOTO_GALLERY_PAGE },
         promo: {
           headlines: { headline: 'i am a headline' },
           summary: 'i am a summary',
@@ -87,7 +91,7 @@ describe('addSummaryBlock', () => {
     delete inputMissingBlocks.content.model.blocks;
 
     const expected = {
-      metadata: { type: 'PGL' },
+      metadata: { type: PHOTO_GALLERY_PAGE },
       promo: {
         headlines: {
           headline: 'i am a headline',
