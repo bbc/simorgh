@@ -6,7 +6,7 @@ exports[`Canonical persian/afghanistan IDX page Analytics ATI 1`] = `"<img heigh
 
 exports[`Canonical persian/afghanistan IDX page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
-exports[`Canonical persian/afghanistan IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+exports[`Canonical persian/afghanistan IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
 exports[`Canonical persian/afghanistan IDX page Footer Link should match text and url 1`] = `
 Object {

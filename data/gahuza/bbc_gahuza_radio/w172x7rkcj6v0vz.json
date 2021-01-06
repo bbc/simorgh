@@ -1,14 +1,11 @@
 {
   "metadata": {
     "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172x7rkcj6v0vz",
-    "locators": {
-      "pid": "w172x7rkcj6v0vz",
-      "brandPid": "p0340x2n"
-    },
+    "locators": { "pid": "w172x7rkcj6v0vz", "brandPid": "p0340x2n" },
     "type": "WSRADIO",
     "createdBy": "bbc_gahuza_radio",
     "language": "rw",
-    "lastUpdated": 1589529753485,
+    "lastUpdated": 1608292590089,
     "firstPublished": 1582561533000,
     "lastPublished": 1582561533000,
     "timestamp": 1582561533000,
@@ -21,15 +18,15 @@
       "producer": "GAHUZA"
     },
     "tags": {},
-    "version": "v1.3.0",
+    "version": "v1.3.11",
     "blockTypes": ["media"],
     "title": "Amakuru ya Gahuzamiryango",
-    "releaseDateTimeStamp": 1583452800000
+    "releaseDateTimeStamp": 1583452800000,
+    "atiAnalytics": {}
   },
   "content": {
     "blocks": [
       {
-        "availability": "notAvailable",
         "id": "w172x7rkcj6v0vz",
         "subType": "episode",
         "format": "Audio",
@@ -42,18 +39,15 @@
         "embedding": false,
         "advertising": false,
         "versions": [],
+        "availability": "notAvailable",
+        "smpKind": "radioProgramme",
         "type": "media"
       }
     ]
   },
   "promo": {
-    "headlines": {
-      "headline": "Amakuru ya Gahuzamiryango"
-    },
-    "locators": {
-      "pid": "w172x7rkcj6v0vz",
-      "brandPid": "p0340x2n"
-    },
+    "headlines": { "headline": "Amakuru ya Gahuzamiryango" },
+    "locators": { "pid": "w172x7rkcj6v0vz", "brandPid": "p0340x2n" },
     "media": {
       "id": "w172x7rkcj6v0vz",
       "subType": "episode",
@@ -67,6 +61,8 @@
       "embedding": false,
       "advertising": false,
       "versions": [],
+      "availability": "notAvailable",
+      "smpKind": "radioProgramme",
       "type": "media"
     },
     "indexImage": {
@@ -80,10 +76,8 @@
       "copyrightHolder": null,
       "type": "image"
     },
-    "brand": {
-      "pid": "p0340x2n",
-      "title": "Amakuru ya Gahuzamiryango"
-    },
+    "releaseDateTimestamp": 1583452800000,
+    "brand": { "pid": "p0340x2n", "title": "Amakuru ya Gahuzamiryango" },
     "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172x7rkcj6v0vz",
     "type": "ws_radio"
   },
@@ -99,18 +93,13 @@
         "type": "other-episode",
         "promos": [
           {
-            "headlines": {
-              "headline": "Amakuru ya Gahuzamiryango"
-            },
-            "locators": {
-              "pid": "w172xhgyb8p3gjq",
-              "brandPid": "p0340x2n"
-            },
+            "headlines": { "headline": "Amakuru ya Gahuzamiryango" },
+            "locators": { "pid": "w172xp11bjg01g4", "brandPid": "p0340x2n" },
             "media": {
-              "id": "w172xhgyb8p3gjq",
+              "id": "w172xp11bjg01g4",
               "subType": "episode",
               "format": "Audio",
-              "title": "14/05/2020 GMT",
+              "title": "17/12/2020 GMT",
               "synopses": {
                 "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
                 "medium": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
@@ -120,7 +109,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshncrxj0pfc8",
+                  "versionId": "w1mshw3g9tcx3y2",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -130,10 +119,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1592067570000,
-                  "availableFrom": 1589475570000
+                  "availableUntil": 1610816370000,
+                  "availableFrom": 1608224370000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -147,26 +139,22 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608163200000,
             "brand": {
               "pid": "p0340x2n",
               "title": "Amakuru ya Gahuzamiryango"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172xhgyb8p3gjq",
+            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172xp11bjg01g4",
             "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "Amakuru ya Gahuzamiryango"
-            },
-            "locators": {
-              "pid": "w172xhgyb8p0kmm",
-              "brandPid": "p0340x2n"
-            },
+            "headlines": { "headline": "Amakuru ya Gahuzamiryango" },
+            "locators": { "pid": "w172xp11bjfx4k1", "brandPid": "p0340x2n" },
             "media": {
-              "id": "w172xhgyb8p0kmm",
+              "id": "w172xp11bjfx4k1",
               "subType": "episode",
               "format": "Audio",
-              "title": "13/05/2020 GMT",
+              "title": "16/12/2020 GMT",
               "synopses": {
                 "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
                 "medium": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
@@ -176,7 +164,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshncrxj0ljg5",
+                  "versionId": "w1mshw3g9tct70z",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -186,10 +174,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591981170000,
-                  "availableFrom": 1589389170000
+                  "availableUntil": 1610729970000,
+                  "availableFrom": 1608137970000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -203,26 +194,22 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608076800000,
             "brand": {
               "pid": "p0340x2n",
               "title": "Amakuru ya Gahuzamiryango"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172xhgyb8p0kmm",
+            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172xp11bjfx4k1",
             "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "Amakuru ya Gahuzamiryango"
-            },
-            "locators": {
-              "pid": "w172xhgyb8nxnqj",
-              "brandPid": "p0340x2n"
-            },
+            "headlines": { "headline": "Amakuru ya Gahuzamiryango" },
+            "locators": { "pid": "w172xp11bjft7my", "brandPid": "p0340x2n" },
             "media": {
-              "id": "w172xhgyb8nxnqj",
+              "id": "w172xp11bjft7my",
               "subType": "episode",
               "format": "Audio",
-              "title": "12/05/2020 GMT",
+              "title": "15/12/2020 GMT",
               "synopses": {
                 "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
                 "medium": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
@@ -232,7 +219,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshncrxj0hmk2",
+                  "versionId": "w1mshw3g9tcqb3w",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -242,10 +229,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591894770000,
-                  "availableFrom": 1589302770000
+                  "availableUntil": 1610643570000,
+                  "availableFrom": 1608051570000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -259,26 +249,22 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607990400000,
             "brand": {
               "pid": "p0340x2n",
               "title": "Amakuru ya Gahuzamiryango"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172xhgyb8nxnqj",
+            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172xp11bjft7my",
             "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "Amakuru ya Gahuzamiryango"
-            },
-            "locators": {
-              "pid": "w172xhgyb8ntrtf",
-              "brandPid": "p0340x2n"
-            },
+            "headlines": { "headline": "Amakuru ya Gahuzamiryango" },
+            "locators": { "pid": "w172xp11bjfqbqv", "brandPid": "p0340x2n" },
             "media": {
-              "id": "w172xhgyb8ntrtf",
+              "id": "w172xp11bjfqbqv",
               "subType": "episode",
               "format": "Audio",
-              "title": "11/05/2020 GMT",
+              "title": "14/12/2020 GMT",
               "synopses": {
                 "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
                 "medium": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
@@ -288,7 +274,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshncrxj0dqmz",
+                  "versionId": "w1mshw3g9tcmf6s",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -298,10 +284,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591808370000,
-                  "availableFrom": 1589216370000
+                  "availableUntil": 1610557170000,
+                  "availableFrom": 1607965170000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -315,26 +304,22 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607904000000,
             "brand": {
               "pid": "p0340x2n",
               "title": "Amakuru ya Gahuzamiryango"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172xhgyb8ntrtf",
+            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172xp11bjfqbqv",
             "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "Amakuru ya Gahuzamiryango"
-            },
-            "locators": {
-              "pid": "w172xhgxz0cf6tz",
-              "brandPid": "p0340x2n"
-            },
+            "headlines": { "headline": "Amakuru ya Gahuzamiryango" },
+            "locators": { "pid": "w172xp10z849srd", "brandPid": "p0340x2n" },
             "media": {
-              "id": "w172xhgxz0cf6tz",
+              "id": "w172xp10z849srd",
               "subType": "episode",
               "format": "Audio",
-              "title": "08/05/2020 GMT",
+              "title": "11/12/2020 GMT",
               "synopses": {
                 "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
                 "medium": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
@@ -344,7 +329,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshncrk7q05nj",
+                  "versionId": "w1mshw3fyk26w7b",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -354,10 +339,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591549170000,
-                  "availableFrom": 1588957170000
+                  "availableUntil": 1610297970000,
+                  "availableFrom": 1607705970000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -371,26 +359,22 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607644800000,
             "brand": {
               "pid": "p0340x2n",
               "title": "Amakuru ya Gahuzamiryango"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172xhgxz0cf6tz",
+            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172xp10z849srd",
             "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "Amakuru ya Gahuzamiryango"
-            },
-            "locators": {
-              "pid": "w172xhgxz0cb9xw",
-              "brandPid": "p0340x2n"
-            },
+            "headlines": { "headline": "Amakuru ya Gahuzamiryango" },
+            "locators": { "pid": "w172xp10z846wv9", "brandPid": "p0340x2n" },
             "media": {
-              "id": "w172xhgxz0cb9xw",
+              "id": "w172xp10z846wv9",
               "subType": "episode",
               "format": "Audio",
-              "title": "07/05/2020 GMT",
+              "title": "10/12/2020 GMT",
               "synopses": {
                 "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
                 "medium": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
@@ -400,7 +384,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshncrk7px8rf",
+                  "versionId": "w1mshw3fyk23zb7",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -410,10 +394,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591462770000,
-                  "availableFrom": 1588870770000
+                  "availableUntil": 1610211570000,
+                  "availableFrom": 1607619570000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -427,26 +414,22 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607558400000,
             "brand": {
               "pid": "p0340x2n",
               "title": "Amakuru ya Gahuzamiryango"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172xhgxz0cb9xw",
+            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172xp10z846wv9",
             "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "Amakuru ya Gahuzamiryango"
-            },
-            "locators": {
-              "pid": "w172xhgxz0c7f0s",
-              "brandPid": "p0340x2n"
-            },
+            "headlines": { "headline": "Amakuru ya Gahuzamiryango" },
+            "locators": { "pid": "w172xp10z843zy6", "brandPid": "p0340x2n" },
             "media": {
-              "id": "w172xhgxz0c7f0s",
+              "id": "w172xp10z843zy6",
               "subType": "episode",
               "format": "Audio",
-              "title": "06/05/2020 GMT",
+              "title": "09/12/2020 GMT",
               "synopses": {
                 "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
                 "medium": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
@@ -456,7 +439,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshncrk7ptcvb",
+                  "versionId": "w1mshw3fyk212f4",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -466,10 +449,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591376370000,
-                  "availableFrom": 1588784370000
+                  "availableUntil": 1610125170000,
+                  "availableFrom": 1607533170000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -483,26 +469,22 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607472000000,
             "brand": {
               "pid": "p0340x2n",
               "title": "Amakuru ya Gahuzamiryango"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172xhgxz0c7f0s",
+            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172xp10z843zy6",
             "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "Amakuru ya Gahuzamiryango"
-            },
-            "locators": {
-              "pid": "w172xhgxz0c4j3p",
-              "brandPid": "p0340x2n"
-            },
+            "headlines": { "headline": "Amakuru ya Gahuzamiryango" },
+            "locators": { "pid": "w172xp10z841313", "brandPid": "p0340x2n" },
             "media": {
-              "id": "w172xhgxz0c4j3p",
+              "id": "w172xp10z841313",
               "subType": "episode",
               "format": "Audio",
-              "title": "05/05/2020 GMT",
+              "title": "08/12/2020 GMT",
               "synopses": {
                 "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
                 "medium": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
@@ -512,7 +494,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshncrk7pqgy7",
+                  "versionId": "w1mshw3fyk1y5j1",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -522,10 +504,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591289970000,
-                  "availableFrom": 1588697970000
+                  "availableUntil": 1610038770000,
+                  "availableFrom": 1607446770000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -539,11 +524,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607385600000,
             "brand": {
               "pid": "p0340x2n",
               "title": "Amakuru ya Gahuzamiryango"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172xhgxz0c4j3p",
+            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172xp10z841313",
             "type": "ws_radio"
           }
         ]

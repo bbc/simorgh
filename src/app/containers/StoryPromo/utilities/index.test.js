@@ -1,4 +1,5 @@
 import { isMap, isPgl, getHeadingTagOverride } from '.';
+import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
 
 describe('isMap', () => {
   it('should return true if cpsType is MAP', () => {
@@ -41,11 +42,15 @@ describe('isPgl', () => {
 
 describe('getHeadingTagOverride', () => {
   it('should return h2 if page type is mostWatched', () => {
-    const pageType = 'mostWatched';
+    const pageType = MOST_WATCHED_PAGE;
     const isRecommendation = false;
     const isContentTypeGuide = false;
     expect(
-      getHeadingTagOverride({ pageType, isRecommendation, isContentTypeGuide }),
+      getHeadingTagOverride({
+        pageType,
+        isRecommendation,
+        isContentTypeGuide,
+      }),
     ).toEqual('h2');
   });
 
