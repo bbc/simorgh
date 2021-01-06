@@ -10,12 +10,12 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   .emotion-43 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-43 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -24,8 +24,6 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-43 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -34,8 +32,6 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-43 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -44,8 +40,6 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-43 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -54,8 +48,6 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-43 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -64,8 +56,6 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 @media (min-width:80rem) {
     .emotion-43 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -134,12 +124,12 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 @supports (display:grid) {
   .emotion-40 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-40 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -149,8 +139,6 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-40 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -160,8 +148,6 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-40 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -171,8 +157,6 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-40 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -182,8 +166,6 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-40 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -192,8 +174,6 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 @media (min-width:80rem) {
     .emotion-40 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -674,12 +654,12 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   .emotion-29 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-29 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -688,8 +668,6 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-29 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -698,8 +676,6 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-29 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -708,8 +684,6 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-29 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -718,8 +692,6 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-29 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -728,8 +700,6 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 
 @media (min-width:80rem) {
     .emotion-29 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -798,12 +768,12 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 @supports (display:grid) {
   .emotion-26 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -813,8 +783,6 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -824,8 +792,6 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -835,8 +801,6 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -846,8 +810,6 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -856,8 +818,6 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 
 @media (min-width:80rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
