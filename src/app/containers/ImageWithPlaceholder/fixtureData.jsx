@@ -89,11 +89,11 @@ export const AmpImageWithPlaceholder = () => {
 };
 
 // eslint-disable-next-line react/prop-types
-export const LazyLoadImageWithPlaceholder = ({ fallback }) => {
+export const LazyLoadImageWithPlaceholder = ({ fallback, lazyLoad = true }) => {
   const props = {
     ...baseFixture,
     fallback,
-    lazyLoad: true,
+    lazyLoad,
   };
 
   return <WrappedImageWithPlaceholder {...props} />;

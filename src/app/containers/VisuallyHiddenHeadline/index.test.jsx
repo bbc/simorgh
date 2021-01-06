@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'enzyme';
+import { render } from '@testing-library/react';
 import {
   shouldMatchSnapshot,
   isNull,
@@ -8,8 +8,6 @@ import {
 import VisuallyHiddenHeadlineContainer from '.';
 import { textBlock } from '#models/blocks';
 import blocksSingleFragment from '../Headings/testHelpers';
-
-const getId = enzymeWrapper => enzymeWrapper[0].attribs.id;
 
 describe('VisuallyHiddenHeadline', () => {
   describe('with no data', () => {
@@ -42,11 +40,11 @@ describe('VisuallyHiddenHeadline', () => {
       );
 
       it('should have an id for the skiplink with value "content"', () => {
-        const headlineHeading = render(
+        const { getByText } = render(
           <VisuallyHiddenHeadlineContainer {...data} />,
         );
 
-        expect(getId(headlineHeading)).toBe('content');
+        expect(getByText('Plain headline').getAttribute('id')).toBe('content');
       });
     });
   });
