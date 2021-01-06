@@ -33,7 +33,6 @@ const getBylineBlock = json => {
 const addBylineBlock = originalJson => {
   const json = deepClone(originalJson);
   const pageType = pathOr(null, ['metadata', 'type'], json);
-
   const blocks = pathOr(null, ['content', 'model', 'blocks'], json);
 
   if (!blocks || pageType !== STORY_PAGE) {
