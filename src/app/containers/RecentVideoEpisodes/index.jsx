@@ -48,16 +48,6 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
 
   if (!episodes.length) return null;
 
-  // We need to pass additioal props to the Episode.Image component if we're on amp
-  const additionalImageProps = isAmp
-    ? {
-        as: AmpImg,
-        layout: 'responsive',
-        width: 16,
-        height: 9,
-      }
-    : {};
-
   const formatDate = timestamp =>
     formatUnixTimestamp({
       timestamp,
@@ -103,7 +93,12 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
                 duration: episode.duration,
                 locale: datetimeLocale,
               })}
-              {...additionalImageProps}
+              {...(isAmp && {
+                as: AmpImg,
+                layout: 'responsive',
+                width: 16,
+                height: 9,
+              })}
             />
             {/* these must be concatenated for screen reader UX */}
             <EpisodeList.Link href={getUrl(episode.id)}>
