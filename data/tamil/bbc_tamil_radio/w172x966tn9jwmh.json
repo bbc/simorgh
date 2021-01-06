@@ -5,7 +5,7 @@
     "type": "WSRADIO",
     "createdBy": "bbc_tamil_radio",
     "language": "ta",
-    "lastUpdated": 1589529870679,
+    "lastUpdated": 1608295359992,
     "firstPublished": 1582557978000,
     "lastPublished": 1582557978000,
     "timestamp": 1582557978000,
@@ -18,15 +18,15 @@
       "producer": "TAMIL"
     },
     "tags": {},
-    "version": "v1.3.0",
+    "version": "v1.3.11",
     "blockTypes": ["media"],
     "title": "பிபிசி தமிழோசை செய்தியறிக்கை",
-    "releaseDateTimeStamp": 1583452800000
+    "releaseDateTimeStamp": 1583452800000,
+    "atiAnalytics": {}
   },
   "content": {
     "blocks": [
       {
-        "availability": "notAvailable",
         "id": "w172x966tn9jwmh",
         "subType": "episode",
         "format": "Audio",
@@ -39,6 +39,8 @@
         "embedding": false,
         "advertising": false,
         "versions": [],
+        "availability": "notAvailable",
+        "smpKind": "radioProgramme",
         "type": "media"
       }
     ]
@@ -59,6 +61,8 @@
       "embedding": false,
       "advertising": false,
       "versions": [],
+      "availability": "notAvailable",
+      "smpKind": "radioProgramme",
       "type": "media"
     },
     "indexImage": {
@@ -72,6 +76,7 @@
       "copyrightHolder": null,
       "type": "image"
     },
+    "releaseDateTimestamp": 1583452800000,
     "brand": { "pid": "p03412jh", "title": "பிபிசி தமிழோசை செய்தியறிக்கை" },
     "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172x966tn9jwmh",
     "type": "ws_radio"
@@ -89,12 +94,12 @@
         "promos": [
           {
             "headlines": { "headline": "பிபிசி தமிழோசை செய்தியறிக்கை" },
-            "locators": { "pid": "w172xjw6jkr1hz1", "brandPid": "p03412jh" },
+            "locators": { "pid": "w172xpgzvxpp2q7", "brandPid": "p03412jh" },
             "media": {
-              "id": "w172xjw6jkr1hz1",
+              "id": "w172xpgzvxpp2q7",
               "subType": "episode",
               "format": "Audio",
-              "title": "14/05/2020 GMT",
+              "title": "17/12/2020 GMT",
               "synopses": {
                 "short": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி",
                 "medium": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி"
@@ -104,7 +109,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshps93pkc3l4",
+                  "versionId": "w1mshwkhd2pg319",
                   "types": ["Original"],
                   "duration": 300,
                   "durationISO8601": "PT5M",
@@ -114,10 +119,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590075000000,
-                  "availableFrom": 1589470200000
+                  "availableUntil": 1608823800000,
+                  "availableFrom": 1608219000000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -131,21 +139,22 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608163200000,
             "brand": {
               "pid": "p03412jh",
               "title": "பிபிசி தமிழோசை செய்தியறிக்கை"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172xjw6jkr1hz1",
+            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172xpgzvxpp2q7",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "பிபிசி தமிழோசை செய்தியறிக்கை" },
-            "locators": { "pid": "w172xjw6jkqym1y", "brandPid": "p03412jh" },
+            "locators": { "pid": "w172xpgzvxpl5t4", "brandPid": "p03412jh" },
             "media": {
-              "id": "w172xjw6jkqym1y",
+              "id": "w172xpgzvxpl5t4",
               "subType": "episode",
               "format": "Audio",
-              "title": "13/05/2020 GMT",
+              "title": "16/12/2020 GMT",
               "synopses": {
                 "short": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி",
                 "medium": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி"
@@ -155,7 +164,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshps93pk86p1",
+                  "versionId": "w1mshwkhd2pc646",
                   "types": ["Original"],
                   "duration": 300,
                   "durationISO8601": "PT5M",
@@ -165,10 +174,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1589988600000,
-                  "availableFrom": 1589383800000
+                  "availableUntil": 1608737400000,
+                  "availableFrom": 1608132600000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -182,21 +194,22 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608076800000,
             "brand": {
               "pid": "p03412jh",
               "title": "பிபிசி தமிழோசை செய்தியறிக்கை"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172xjw6jkqym1y",
+            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172xpgzvxpl5t4",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "பிபிசி தமிழோசை செய்தியறிக்கை" },
-            "locators": { "pid": "w172xjw6jkqvq4v", "brandPid": "p03412jh" },
+            "locators": { "pid": "w172xpgzvxph8x1", "brandPid": "p03412jh" },
             "media": {
-              "id": "w172xjw6jkqvq4v",
+              "id": "w172xpgzvxph8x1",
               "subType": "episode",
               "format": "Audio",
-              "title": "12/05/2020 GMT",
+              "title": "15/12/2020 GMT",
               "synopses": {
                 "short": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி",
                 "medium": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி"
@@ -206,7 +219,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshps93pk59ry",
+                  "versionId": "w1mshwkhd2p8973",
                   "types": ["Original"],
                   "duration": 300,
                   "durationISO8601": "PT5M",
@@ -216,10 +229,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1589902200000,
-                  "availableFrom": 1589297400000
+                  "availableUntil": 1608651000000,
+                  "availableFrom": 1608046200000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -233,21 +249,22 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607990400000,
             "brand": {
               "pid": "p03412jh",
               "title": "பிபிசி தமிழோசை செய்தியறிக்கை"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172xjw6jkqvq4v",
+            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172xpgzvxph8x1",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "பிபிசி தமிழோசை செய்தியறிக்கை" },
-            "locators": { "pid": "w172xjw6jkqrt7r", "brandPid": "p03412jh" },
+            "locators": { "pid": "w172xpgzvxpdczy", "brandPid": "p03412jh" },
             "media": {
-              "id": "w172xjw6jkqrt7r",
+              "id": "w172xpgzvxpdczy",
               "subType": "episode",
               "format": "Audio",
-              "title": "11/05/2020 GMT",
+              "title": "14/12/2020 GMT",
               "synopses": {
                 "short": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி",
                 "medium": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி"
@@ -257,7 +274,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshps93pk2dvv",
+                  "versionId": "w1mshwkhd2p5db0",
                   "types": ["Original"],
                   "duration": 300,
                   "durationISO8601": "PT5M",
@@ -267,10 +284,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1589815800000,
-                  "availableFrom": 1589211000000
+                  "availableUntil": 1608564600000,
+                  "availableFrom": 1607959800000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -284,21 +304,22 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607904000000,
             "brand": {
               "pid": "p03412jh",
               "title": "பிபிசி தமிழோசை செய்தியறிக்கை"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172xjw6jkqrt7r",
+            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172xpgzvxpdczy",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "பிபிசி தமிழோசை செய்தியறிக்கை" },
-            "locators": { "pid": "w172xjw659fc889", "brandPid": "p03412jh" },
+            "locators": { "pid": "w172xpgzhnczv0h", "brandPid": "p03412jh" },
             "media": {
-              "id": "w172xjw659fc889",
+              "id": "w172xpgzhnczv0h",
               "subType": "episode",
               "format": "Audio",
-              "title": "08/05/2020 GMT",
+              "title": "11/12/2020 GMT",
               "synopses": {
                 "short": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி",
                 "medium": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி"
@@ -308,7 +329,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshps8rf7nvwd",
+                  "versionId": "w1mshwkh0tcrvbk",
                   "types": ["Original"],
                   "duration": 300,
                   "durationISO8601": "PT5M",
@@ -318,10 +339,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1589556600000,
-                  "availableFrom": 1588951800000
+                  "availableUntil": 1608305400000,
+                  "availableFrom": 1607700600000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -335,11 +359,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607644800000,
             "brand": {
               "pid": "p03412jh",
               "title": "பிபிசி தமிழோசை செய்தியறிக்கை"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172xjw659fc889",
+            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172xpgzhnczv0h",
             "type": "ws_radio"
           }
         ]
