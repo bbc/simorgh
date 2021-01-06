@@ -278,7 +278,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
                     , 
                   </span>
                   <span
-                    class="css-y494yu-Datestamp emotion-2"
+                    class="css-rlv2k2-Subheading emotion-2"
                   >
                     ۱ می ۲۰۲۰
                   </span>
@@ -619,7 +619,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
                     , 
                   </span>
                   <span
-                    class="css-y494yu-Datestamp emotion-2"
+                    class="css-rlv2k2-Subheading emotion-2"
                   >
                     ۱ می ۲۰۲۰
                   </span>
