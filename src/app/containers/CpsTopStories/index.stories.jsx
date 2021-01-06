@@ -6,6 +6,7 @@ import topStories from '#pages/StoryPage/topStories.json';
 import topStoriesRtl from '#pages/StoryPage/topStoriesRtl.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const getTopStories = platform => (service, dir, data) => (
   <div dir={dir}>
@@ -14,7 +15,7 @@ const getTopStories = platform => (service, dir, data) => (
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.com"
         isAmp={platform === 'amp'}
-        pageType="STY"
+        pageType={STORY_PAGE}
         pathname="/"
         service={service}
       >

@@ -9,6 +9,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import CpsAssetMediaPlayerContainer from '.';
 import videoBlock from './fixtures';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const defaultToggles = {
   mediaPlayer: {
@@ -40,7 +41,7 @@ platforms.forEach(platform => {
         <ServiceContextProvider service="pidgin">
           <RequestContextProvider
             isAmp={isAmp(platform)}
-            pageType="MAP"
+            pageType={MEDIA_ASSET_PAGE}
             origin="https://www.bbc.com"
             service="pidgin"
             pathname="/pathname"

@@ -3,6 +3,7 @@ import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 /**
  * withContexts is a higher-order component that returns a React component
@@ -16,7 +17,7 @@ const withContexts = (
 ) => props => (
   <RequestContextProvider
     isAmp={isAmp}
-    pageType="STY"
+    pageType={STORY_PAGE}
     service={service}
     pathname="/pathname"
   >

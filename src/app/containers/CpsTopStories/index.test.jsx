@@ -6,6 +6,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 
 import TopStories from '.';
 import topStories from '#pages/StoryPage/topStories.json';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 // eslint-disable-next-line react/prop-types
 const renderTopStories = ({
@@ -17,7 +18,7 @@ const renderTopStories = ({
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
         isAmp={false}
-        pageType="STY"
+        pageType={STORY_PAGE}
         pathname="/pidgin/tori-49450859"
         service="pidgin"
         statusCode={200}
@@ -36,7 +37,7 @@ const renderTopStoriesNull = ({
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
         isAmp={false}
-        pageType="STY"
+        pageType={STORY_PAGE}
         pathname="/pidgin/tori-49450859"
         service="pidgin"
         statusCode={200}
@@ -56,7 +57,7 @@ const renderTopStoriesNoTitle = ({
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
         isAmp={false}
-        pageType="STY"
+        pageType={STORY_PAGE}
         pathname="/pidgin/tori-49450859"
         service="pidgin"
         statusCode={200}

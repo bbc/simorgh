@@ -10,12 +10,16 @@ import {
   IndexAlsosLi,
 } from '@bbc/psammead-story-promo/index-alsos';
 import { ServiceContext } from '#contexts/ServiceContext';
+import {
+  MEDIA_ASSET_PAGE,
+  PHOTO_GALLERY_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 const MAX_NUM_INDEX_ALSOS = 3; // Cap the number of Index Alsos at 3.
 
 const getMediaType = (cpsType, mediaType) => {
-  const isPGL = cpsType === 'PGL';
-  const isMedia = cpsType === 'MAP';
+  const isPGL = cpsType === PHOTO_GALLERY_PAGE;
+  const isMedia = cpsType === MEDIA_ASSET_PAGE;
   const media = mediaType || 'Video';
 
   if (!isPGL && !isMedia) {
