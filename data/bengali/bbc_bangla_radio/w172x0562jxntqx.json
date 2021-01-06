@@ -5,7 +5,7 @@
     "type": "WSRADIO",
     "createdBy": "bbc_bangla_radio",
     "language": "bn",
-    "lastUpdated": 1589529753485,
+    "lastUpdated": 1608292380065,
     "firstPublished": 1583569000000,
     "lastPublished": 1583569000000,
     "timestamp": 1583569000000,
@@ -18,15 +18,15 @@
       "producer": "BENGALI"
     },
     "tags": {},
-    "version": "v1.3.0",
+    "version": "v1.3.11",
     "blockTypes": ["media"],
     "title": "প্রবাহ",
-    "releaseDateTimeStamp": 1583539200000
+    "releaseDateTimeStamp": 1583539200000,
+    "atiAnalytics": {}
   },
   "content": {
     "blocks": [
       {
-        "availability": "notAvailable",
         "id": "w172x0562jxntqx",
         "subType": "episode",
         "format": "Audio",
@@ -39,6 +39,8 @@
         "embedding": false,
         "advertising": false,
         "versions": [],
+        "availability": "notAvailable",
+        "smpKind": "radioProgramme",
         "type": "media"
       }
     ]
@@ -59,6 +61,8 @@
       "embedding": false,
       "advertising": false,
       "versions": [],
+      "availability": "notAvailable",
+      "smpKind": "radioProgramme",
       "type": "media"
     },
     "indexImage": {
@@ -72,6 +76,7 @@
       "copyrightHolder": null,
       "type": "image"
     },
+    "releaseDateTimestamp": 1583539200000,
     "brand": { "pid": "p030vjwg", "title": "প্রবাহ" },
     "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172x0562jxntqx",
     "type": "ws_radio"
@@ -89,12 +94,12 @@
         "promos": [
           {
             "headlines": { "headline": "প্রবাহ" },
-            "locators": { "pid": "w172xdwhxtlr99v", "brandPid": "p030vjwg" },
+            "locators": { "pid": "w172xmzz7rgkl6l", "brandPid": "p030vjwg" },
             "media": {
-              "id": "w172xdwhxtlr99v",
+              "id": "w172xmzz7rgkl6l",
               "subType": "episode",
               "format": "Audio",
-              "title": "14/05/2020 GMT",
+              "title": "17/12/2020 GMT",
               "synopses": {
                 "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
                 "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
@@ -104,7 +109,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshks1fcl72kc",
+                  "versionId": "w1mshv25p737dym",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -114,10 +119,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1592056770000,
-                  "availableFrom": 1589464770000
+                  "availableUntil": 1610805570000,
+                  "availableFrom": 1608213570000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -131,18 +139,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608163200000,
             "brand": { "pid": "p030vjwg", "title": "প্রবাহ" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xdwhxtlr99v",
+            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xmzz7rgkl6l",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "প্রবাহ" },
-            "locators": { "pid": "w172xdwhxtlnddr", "brandPid": "p030vjwg" },
+            "locators": { "pid": "w172xmzz7rggp9h", "brandPid": "p030vjwg" },
             "media": {
-              "id": "w172xdwhxtlnddr",
+              "id": "w172xmzz7rggp9h",
               "subType": "episode",
               "format": "Audio",
-              "title": "13/05/2020 GMT",
+              "title": "16/12/2020 GMT",
               "synopses": {
                 "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
                 "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
@@ -152,7 +161,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshks1fcl45n8",
+                  "versionId": "w1mshv25p734j1j",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -162,10 +171,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591970370000,
-                  "availableFrom": 1589378370000
+                  "availableUntil": 1610719170000,
+                  "availableFrom": 1608127170000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -179,18 +191,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608076800000,
             "brand": { "pid": "p030vjwg", "title": "প্রবাহ" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xdwhxtlnddr",
+            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xmzz7rggp9h",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "প্রবাহ" },
-            "locators": { "pid": "w172xdwhxtlkhhn", "brandPid": "p030vjwg" },
+            "locators": { "pid": "w172xmzz7rgcsdd", "brandPid": "p030vjwg" },
             "media": {
-              "id": "w172xdwhxtlkhhn",
+              "id": "w172xmzz7rgcsdd",
               "subType": "episode",
               "format": "Audio",
-              "title": "12/05/2020 GMT",
+              "title": "15/12/2020 GMT",
               "synopses": {
                 "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
                 "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
@@ -200,7 +213,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshks1fcl18r5",
+                  "versionId": "w1mshv25p731m4f",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -210,10 +223,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591883970000,
-                  "availableFrom": 1589291970000
+                  "availableUntil": 1610632770000,
+                  "availableFrom": 1608040770000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -227,18 +243,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607990400000,
             "brand": { "pid": "p030vjwg", "title": "প্রবাহ" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xdwhxtlkhhn",
+            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xmzz7rgcsdd",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "প্রবাহ" },
-            "locators": { "pid": "w172xdwhxtlgllk", "brandPid": "p030vjwg" },
+            "locators": { "pid": "w172xmzz7rg8wh9", "brandPid": "p030vjwg" },
             "media": {
-              "id": "w172xdwhxtlgllk",
+              "id": "w172xmzz7rg8wh9",
               "subType": "episode",
               "format": "Audio",
-              "title": "11/05/2020 GMT",
+              "title": "14/12/2020 GMT",
               "synopses": {
                 "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
                 "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
@@ -248,7 +265,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshks1fckycv2",
+                  "versionId": "w1mshv25p72yq7b",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -258,10 +275,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591797570000,
-                  "availableFrom": 1589205570000
+                  "availableUntil": 1610546370000,
+                  "availableFrom": 1607954370000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -275,18 +295,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607904000000,
             "brand": { "pid": "p030vjwg", "title": "প্রবাহ" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xdwhxtlgllk",
+            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xmzz7rg8wh9",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "প্রবাহ" },
-            "locators": { "pid": "w172xdwhkk97vf9", "brandPid": "p030vjwg" },
+            "locators": { "pid": "w172xmzywh524b1", "brandPid": "p030vjwg" },
             "media": {
-              "id": "w172xdwhkk97vf9",
+              "id": "w172xmzywh524b1",
               "subType": "episode",
               "format": "Audio",
-              "title": "10/05/2020 GMT",
+              "title": "13/12/2020 GMT",
               "synopses": {
                 "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
                 "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
@@ -296,7 +317,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshks1238qmnt",
+                  "versionId": "w1mshv259ysqz22",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -306,10 +327,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591711170000,
-                  "availableFrom": 1589119170000
+                  "availableUntil": 1610459970000,
+                  "availableFrom": 1607867970000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -323,18 +347,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607817600000,
             "brand": { "pid": "p030vjwg", "title": "প্রবাহ" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xdwhkk97vf9",
+            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xmzywh524b1",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "প্রবাহ" },
-            "locators": { "pid": "w172xdwhkk94yj6", "brandPid": "p030vjwg" },
+            "locators": { "pid": "w172xmzywh4z7dy", "brandPid": "p030vjwg" },
             "media": {
-              "id": "w172xdwhkk94yj6",
+              "id": "w172xmzywh4z7dy",
               "subType": "episode",
               "format": "Audio",
-              "title": "09/05/2020 GMT",
+              "title": "12/12/2020 GMT",
               "synopses": {
                 "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
                 "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
@@ -344,7 +369,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshks1238mqrq",
+                  "versionId": "w1mshv259ysn24z",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -354,10 +379,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591624770000,
-                  "availableFrom": 1589032770000
+                  "availableUntil": 1610373570000,
+                  "availableFrom": 1607781570000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -371,18 +399,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607731200000,
             "brand": { "pid": "p030vjwg", "title": "প্রবাহ" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xdwhkk94yj6",
+            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xmzywh4z7dy",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "প্রবাহ" },
-            "locators": { "pid": "w172xdwhkk921m3", "brandPid": "p030vjwg" },
+            "locators": { "pid": "w172xmzywh4wbhv", "brandPid": "p030vjwg" },
             "media": {
-              "id": "w172xdwhkk921m3",
+              "id": "w172xmzywh4wbhv",
               "subType": "episode",
               "format": "Audio",
-              "title": "08/05/2020 GMT",
+              "title": "11/12/2020 GMT",
               "synopses": {
                 "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
                 "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
@@ -392,7 +421,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshks1238jtvm",
+                  "versionId": "w1mshv259ysk57w",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -402,10 +431,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591538370000,
-                  "availableFrom": 1588946370000
+                  "availableUntil": 1610287170000,
+                  "availableFrom": 1607695170000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -419,18 +451,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607644800000,
             "brand": { "pid": "p030vjwg", "title": "প্রবাহ" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xdwhkk921m3",
+            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xmzywh4wbhv",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "প্রবাহ" },
-            "locators": { "pid": "w172xdwhkk8z4q0", "brandPid": "p030vjwg" },
+            "locators": { "pid": "w172xmzywh4sflr", "brandPid": "p030vjwg" },
             "media": {
-              "id": "w172xdwhkk8z4q0",
+              "id": "w172xmzywh4sflr",
               "subType": "episode",
               "format": "Audio",
-              "title": "07/05/2020 GMT",
+              "title": "10/12/2020 GMT",
               "synopses": {
                 "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
                 "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
@@ -440,7 +473,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshks1238fxyj",
+                  "versionId": "w1mshv259ysg8bs",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -450,10 +483,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591451970000,
-                  "availableFrom": 1588859970000
+                  "availableUntil": 1610200770000,
+                  "availableFrom": 1607608770000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -467,8 +503,9 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607558400000,
             "brand": { "pid": "p030vjwg", "title": "প্রবাহ" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xdwhkk8z4q0",
+            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xmzywh4sflr",
             "type": "ws_radio"
           }
         ]
