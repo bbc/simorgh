@@ -1,6 +1,5 @@
 import React from 'react';
-import { render as create, act } from '@testing-library/react';
-import { render, mount } from 'enzyme';
+import { render, act } from '@testing-library/react';
 import CanonicalATIAnalytics from '.';
 import * as beacon from '#lib/analyticsUtils/sendBeacon';
 
@@ -20,7 +19,7 @@ describe('Canonical ATI Analytics', () => {
     beacon.default = mockSendBeacon;
 
     act(() => {
-      create(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />);
+      render(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />);
     });
 
     expect(mockSendBeacon).toHaveBeenCalledTimes(1);
@@ -28,19 +27,9 @@ describe('Canonical ATI Analytics', () => {
   });
 
   it('should render a noscript image for non-JS users', () => {
-    const renderedATI = render(
+    const { container } = render(
       <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />,
     );
-    expect(renderedATI).toMatchSnapshot();
-  });
-
-  it('atiPageViewUrl should contain `x8=[simorgh-nojs]` for non-JS users', () => {
-    const mountedATI = mount(
-      <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />,
-    );
-
-    expect(mountedATI.find('img').prop('src')).toEqual(
-      'https://foobar.com?key=value&key2=value2&x8=[simorgh-nojs]',
-    );
+    expect(container.querySelector('noscript')).toBeInTheDocument();
   });
 });

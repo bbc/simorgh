@@ -112,12 +112,19 @@ Object {
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 7`] = `
 Object {
+  "text": "Відео",
+  "url": "/ukrainian/55425840",
+}
+`;
+
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 8`] = `
+Object {
   "text": "Книга року BBC",
   "url": "/ukrainian/features-50320117",
 }
 `;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 8`] = `
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "Поточна сторінка, РУС",
   "url": "/ukrainian/ukraine_in_russian",
