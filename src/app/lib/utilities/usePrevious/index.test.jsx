@@ -1,35 +1,26 @@
-import React from 'react';
-import { mount } from 'enzyme';
+import { renderHook } from '@testing-library/react-hooks';
 import usePrevious from '.';
 
-describe('usePrevious', () => {
-  let wrapper;
-  let value;
-  const initialProp = 'first';
-
-  const ComponentWithHook = ({ prop }) => {
-    value = usePrevious(prop);
-    return null;
-  };
-  beforeAll(() => {
-    wrapper = mount(<ComponentWithHook prop={initialProp} />);
+const setUp = () =>
+  renderHook(({ state }) => usePrevious(state), {
+    initialProps: { state: 'first' },
   });
 
-  it('should set initial value to null', () => {
-    expect(value).toBe(null);
-  });
+it('should return null on initial render', () => {
+  const { result } = setUp();
 
-  it('should return the previous value after dependency has changed', async () => {
-    wrapper.setProps({ prop: 'second' });
-    wrapper.mount();
-    expect(value).toBe('first');
+  expect(result.current).toBe(null);
+});
 
-    wrapper.setProps({ prop: 'third' });
-    wrapper.mount();
-    expect(value).toBe('second');
+it('should always return previous state after each update', () => {
+  const { result, rerender } = setUp();
 
-    wrapper.setProps({ prop: 'fourth' });
-    wrapper.mount();
-    expect(value).toBe('third');
-  });
+  rerender({ state: 'second' });
+  expect(result.current).toBe('first');
+
+  rerender({ state: 'third' });
+  expect(result.current).toBe('second');
+
+  rerender({ state: 'fourth' });
+  expect(result.current).toBe('third');
 });
