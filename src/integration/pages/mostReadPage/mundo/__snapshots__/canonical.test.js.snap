@@ -6,7 +6,7 @@ exports[`Canonical Most Read Page Analytics ATI 1`] = `"<img height=\\"1px\\" wi
 
 exports[`Canonical Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`Canonical Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`Canonical Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`Canonical Most Read Page Footer Link should match text and url 1`] = `
 Object {
