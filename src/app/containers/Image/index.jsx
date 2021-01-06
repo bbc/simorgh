@@ -35,6 +35,7 @@ const ImageContainer = ({ blocks, position }) => {
   const rawImageBlock = filterForBlockType(blocks, 'rawImage');
   const altTextBlock = filterForBlockType(blocks, 'altText');
   const captionBlock = filterForBlockType(blocks, 'caption');
+  const ShouldPreLoadLeadImage = position[0] <= 4;
 
   if (!rawImageBlock || !altTextBlock) {
     return null;
@@ -80,6 +81,7 @@ const ImageContainer = ({ blocks, position }) => {
         srcset={srcSet}
         showCopyright
         lazyLoad={lazyLoad}
+        preload={ShouldPreLoadLeadImage}
         fade
         type="image"
       />

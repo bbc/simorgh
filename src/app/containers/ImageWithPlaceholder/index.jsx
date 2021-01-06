@@ -3,6 +3,7 @@ import { string, number, bool, node } from 'prop-types';
 import LazyLoad from 'react-lazyload';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import Image, { AmpImg } from '@bbc/psammead-image';
+import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
@@ -27,6 +28,7 @@ const ImageWithPlaceholder = ({
   height,
   fallback, // only has an effect when lazyLoad == true
   lazyLoad,
+  preload,
   ratio,
   src,
   sizes,
@@ -40,23 +42,32 @@ const ImageWithPlaceholder = ({
     <Image onLoad={() => setIsLoaded(true)} {...imageProps} />
   );
 
+  const shouldPreload = !isAmp && preload;
+
   return (
-    <ImagePlaceholder css={isLoaded && `background: none`} ratio={ratio}>
-      {isAmp ? (
-        <AmpImg
-          alt={alt}
-          attribution={copyright || ''}
-          layout="responsive"
-          src={src}
-          srcset={srcset}
-          height={height}
-          width={width}
-        />
-      ) : (
-        renderImage(imageToRender, lazyLoad, fallback)
+    <>
+      {shouldPreload && (
+        <Helmet>
+          <link rel="preload" as="image" href={src} imagesrcset={srcset} />
+        </Helmet>
       )}
-      {children}
-    </ImagePlaceholder>
+      <ImagePlaceholder css={isLoaded && `background: none`} ratio={ratio}>
+        {isAmp ? (
+          <AmpImg
+            alt={alt}
+            attribution={copyright || ''}
+            layout="responsive"
+            src={src}
+            srcset={srcset}
+            height={height}
+            width={width}
+          />
+        ) : (
+          renderImage(imageToRender, lazyLoad, fallback)
+        )}
+        {children}
+      </ImagePlaceholder>
+    </>
   );
 };
 
@@ -68,6 +79,7 @@ ImageWithPlaceholder.propTypes = {
   fade: bool,
   fallback: bool,
   lazyLoad: bool,
+  preload: string,
   ratio: number.isRequired,
   src: string.isRequired,
   srcset: string,
@@ -82,6 +94,7 @@ ImageWithPlaceholder.defaultProps = {
   fade: false,
   fallback: true,
   lazyLoad: false,
+  preload: null,
   srcset: null,
   sizes: null,
 };
