@@ -255,7 +255,7 @@ export const service = {
       },
       {
         title: 'Eré ìdárayá',
-        url: '/yoruba/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592',
+        url: '/yoruba/topics/c340q0y3p5kt',
       },
       {
         title: 'Fídíò',

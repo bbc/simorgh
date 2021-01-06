@@ -15,6 +15,10 @@ import {
   ARTICLE_PAGE,
   FRONT_PAGE,
   MEDIA_PAGE,
+  MOST_READ_PAGE,
+  MOST_WATCHED_PAGE,
+  INDEX_PAGE,
+  FEATURE_INDEX_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 let isOnClient = false;
@@ -59,12 +63,12 @@ describe('Chartbeat utilities', () => {
       {
         pageType: 'index',
         expectedDefaultType: 'Index',
-        expectedShortType: 'IDX',
+        expectedShortType: INDEX_PAGE,
       },
       {
-        pageType: 'FIX',
-        expectedDefaultType: 'FIX',
-        expectedShortType: 'FIX',
+        pageType: FEATURE_INDEX_PAGE,
+        expectedDefaultType: FEATURE_INDEX_PAGE,
+        expectedShortType: FEATURE_INDEX_PAGE,
       },
       {
         pageType: 'MAP',
@@ -77,12 +81,12 @@ describe('Chartbeat utilities', () => {
         expectedShortType: 'Radio',
       },
       {
-        pageType: 'mostRead',
+        pageType: MOST_READ_PAGE,
         expectedDefaultType: 'Most Read',
         expectedShortType: 'Most Read',
       },
       {
-        pageType: 'mostWatched',
+        pageType: MOST_WATCHED_PAGE,
         expectedDefaultType: 'Most Watched',
         expectedShortType: 'Most Watched',
       },
@@ -248,7 +252,7 @@ describe('Chartbeat utilities', () => {
 
   describe('Chartbeat Title', () => {
     it('should return correct title when pageType is mostRead', () => {
-      const pageType = 'mostRead';
+      const pageType = MOST_READ_PAGE;
       const pageData = {};
       const brandName = 'BBC News 코리아';
       const title = 'TOP 뉴스';
@@ -259,7 +263,7 @@ describe('Chartbeat utilities', () => {
     });
 
     it('should return correct title when pageType is mostWatched', () => {
-      const pageType = 'mostWatched';
+      const pageType = MOST_WATCHED_PAGE;
       const pageData = {};
       const brandName = 'BBC News Afaan Oromoo';
       const title = 'Hedduu kan ilaalaman';
@@ -270,13 +274,13 @@ describe('Chartbeat utilities', () => {
     });
 
     test.each`
-      pageType        | brandName        | pageTitle                        | expectedNumberOfCalls
-      ${'index'}      | ${'BBC News'}    | ${'This is an index page title'} | ${1}
-      ${'IDX'}        | ${'BBC Persian'} | ${'This is an IDX page title'}   | ${1}
-      ${'FIX'}        | ${'BBC Afrique'} | ${'This is an FIX page title'}   | ${1}
-      ${FRONT_PAGE}   | ${'BBC News'}    | ${'This is a frontpage title'}   | ${1}
-      ${ARTICLE_PAGE} | ${null}          | ${'This is an article title'}    | ${1}
-      ${'foo'}        | ${'BBC News'}    | ${null}                          | ${0}
+      pageType              | brandName        | pageTitle                        | expectedNumberOfCalls
+      ${'index'}            | ${'BBC News'}    | ${'This is an index page title'} | ${1}
+      ${INDEX_PAGE}         | ${'BBC Persian'} | ${'This is an IDX page title'}   | ${1}
+      ${FEATURE_INDEX_PAGE} | ${'BBC Afrique'} | ${'This is an FIX page title'}   | ${1}
+      ${FRONT_PAGE}         | ${'BBC News'}    | ${'This is a frontpage title'}   | ${1}
+      ${ARTICLE_PAGE}       | ${null}          | ${'This is an article title'}    | ${1}
+      ${'foo'}              | ${'BBC News'}    | ${null}                          | ${0}
     `(
       'should call getPageTitle when pageType is $pageType',
       ({ brandName, pageType, pageTitle, expectedNumberOfCalls }) => {
@@ -691,7 +695,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'mostRead',
+      pageType: MOST_READ_PAGE,
       data: {
         name: 'Most Read Page Title',
       },
@@ -725,7 +729,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'mostWatched',
+      pageType: MOST_WATCHED_PAGE,
       data: {
         name: 'Most Watched Page Title',
       },
@@ -759,7 +763,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'IDX',
+      pageType: INDEX_PAGE,
       data: {},
       brandName: 'BBC-Persian',
       chartbeatDomain: 'bbc.co.uk',
@@ -799,7 +803,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'FIX',
+      pageType: FEATURE_INDEX_PAGE,
       data: {},
       brandName: 'BBC-Afique',
       chartbeatDomain: 'bbc.co.uk',
@@ -839,7 +843,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'IDX',
+      pageType: INDEX_PAGE,
       data: {},
       brandName: 'BBC-Persian',
       chartbeatDomain: 'bbc.co.uk',

@@ -4,6 +4,7 @@ import {
   ARTICLE_PAGE,
   FRONT_PAGE,
   MEDIA_PAGE,
+  INDEX_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 analyticsUtils.getAtUserId = jest.fn();
@@ -178,7 +179,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right IDX page url', () => {
       const url = buildATIUrl(
         idxPage,
-        { ...requestContext, pageType: 'IDX' },
+        { ...requestContext, pageType: INDEX_PAGE },
         serviceContext,
       );
       expect(url).toMatchInlineSnapshot(
@@ -310,7 +311,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right IDX page params', () => {
       const params = buildATIClickParams(
         idxPage,
-        { ...requestContext, pageType: 'IDX' },
+        { ...requestContext, pageType: INDEX_PAGE },
         serviceContext,
       );
       expect(params).toEqual({
