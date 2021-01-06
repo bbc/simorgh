@@ -11,6 +11,7 @@ import includeBlockData from './blocks/include/fixtures';
 import convertToOptimoBlocks from '.';
 import { optimoTextWithParagraph, optimoSubheadline } from './utils/helpers';
 import { UNSUPPORTED_BLOCK_TYPE } from '#lib/logger.const';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 describe('convertToOptimoBlocks', () => {
   it('should convert CPS data into Optimo format', async () => {
@@ -296,7 +297,7 @@ describe('convertToOptimoBlocks', () => {
   it('should log info if block type is unsupported', async () => {
     const url = '/service/path/to/asset';
     const type = 'unsupported-type-name-here';
-    const assetType = 'MAP';
+    const assetType = MEDIA_ASSET_PAGE;
     const input = {
       metadata: {
         locators: { assetUri: url },
