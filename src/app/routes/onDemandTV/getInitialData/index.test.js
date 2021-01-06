@@ -118,6 +118,7 @@ describe('Get initial data for on demand tv', () => {
       ['promo', 'media', 'imageUrl'],
       ['promo', 'brand', 'title'],
       ['content', 'blocks', 0, 'imageUrl'],
+      ['content', 'blocks', 0, 'episodeTitle'],
     ];
 
     const pageDataWithMissingFields = pipe(
