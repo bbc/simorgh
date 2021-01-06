@@ -6,6 +6,7 @@ import features from '#pages/StoryPage/featuresAnalysis.json';
 import featuresRtl from '#pages/StoryPage/featuresAnalysisRtl.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const getFeaturesAnalysis = platform => (service, dir, data) => (
   <div dir={dir}>
@@ -14,7 +15,7 @@ const getFeaturesAnalysis = platform => (service, dir, data) => (
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.com"
         isAmp={platform === 'amp'}
-        pageType="STY"
+        pageType={STORY_PAGE}
         pathname="/"
         service={service}
       >

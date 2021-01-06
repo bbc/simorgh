@@ -7,14 +7,14 @@ import StoryPromoContainer from '.';
 import fixture from '#data/pidgin/frontpage';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { guideLinkItem } from './helpers/fixtureData';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const mediaFixture = type =>
   pathOr(null, ['content', 'groups'], fixture)
     .flatMap(group => pathOr(null, ['items'], group))
     .find(
       item =>
-        pathOr(null, ['cpsType'], item) === 'MAP' &&
+        pathOr(null, ['cpsType'], item) === MEDIA_ASSET_PAGE &&
         pathOr(null, ['media', 'format'], item) === type,
     );
 
