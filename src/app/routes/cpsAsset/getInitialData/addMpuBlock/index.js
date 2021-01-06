@@ -3,6 +3,7 @@ import path from 'ramda/src/path';
 import splitAt from 'ramda/src/splitAt';
 import deepClone from '../../../utils/jsonClone';
 import { getNthCpsParagraphIndex } from '../helpers';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const mpuBlock = {
   type: 'mpu',
@@ -13,7 +14,7 @@ const addMpuBlock = json => {
   const { allowAdvertising } = path(['metadata', 'options'], json);
   const pageType = path(['metadata', 'type'], json);
 
-  if (!allowAdvertising || pageType !== 'STY') return json;
+  if (!allowAdvertising || pageType !== STORY_PAGE) return json;
 
   const pageData = deepClone(json);
 
