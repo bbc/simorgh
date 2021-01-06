@@ -79,7 +79,7 @@ ImageWithPlaceholder.propTypes = {
   fade: bool,
   fallback: bool,
   lazyLoad: bool,
-  preload: string,
+  preload: bool,
   ratio: number.isRequired,
   src: string.isRequired,
   srcset: string,
@@ -94,7 +94,7 @@ ImageWithPlaceholder.defaultProps = {
   fade: false,
   fallback: true,
   lazyLoad: false,
-  preload: null,
+  preload: false,
   srcset: null,
   sizes: null,
 };
