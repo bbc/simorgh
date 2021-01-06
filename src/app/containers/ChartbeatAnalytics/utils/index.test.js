@@ -215,7 +215,7 @@ describe('Chartbeat utilities', () => {
       },
       {
         service: 'mundo',
-        sectionName: 'STY',
+        sectionName: STORY_PAGE,
         categoryName: 'mundo',
         pageType: STORY_PAGE,
         description: 'should add section and category to STYs',
@@ -507,7 +507,7 @@ describe('Chartbeat utilities', () => {
           },
           relatedContent: {
             section: {
-              name: 'STY',
+              name: STORY_PAGE,
             },
           },
           metadata: {
@@ -527,7 +527,7 @@ describe('Chartbeat utilities', () => {
       };
 
       const expectedConfig = {
-        contentType: 'STY',
+        contentType: STORY_PAGE,
         domain: 'mundo.bbc.co.uk',
         idSync: {
           bbc_hid: 'foobar',
@@ -555,7 +555,7 @@ describe('Chartbeat utilities', () => {
           },
           relatedContent: {
             section: {
-              name: 'STY',
+              name: STORY_PAGE,
             },
           },
           metadata: {
@@ -582,7 +582,7 @@ describe('Chartbeat utilities', () => {
         path: '/',
         sections:
           'Mundo, Mundo - STY, Mundo - STY, Mundo - STY - STY, Mundo - mundo-category',
-        type: 'STY',
+        type: STORY_PAGE,
         title: 'STY Page Title',
         uid: 50924,
         useCanonical: true,
