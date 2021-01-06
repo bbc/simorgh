@@ -1,0 +1,998 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:news/business-55345826",
+    "locators": {
+      "assetUri": "/news/business-55345826",
+      "cpsUrn": "urn:bbc:content:assetUri:news/business-55345826",
+      "curie": "http://www.bbc.co.uk/asset/63ab04e8-9c71-42fb-be1e-5b03bfd4e3c5",
+      "assetId": "55345826"
+    },
+    "type": "CSP",
+    "createdBy": "news",
+    "language": "en-gb",
+    "lastUpdated": 1608205819944,
+    "firstPublished": 1608201745000,
+    "lastPublished": 1608201745000,
+    "timestamp": 1608201745000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "csp",
+      "counterName": "news.business.correspondent_story.55345826.page",
+      "cps_asset_id": "55345826"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "locator": "urn:bbc:cps:curie:asset:63ab04e8-9c71-42fb-be1e-5b03bfd4e3c5",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/733f9670-751f-4fb7-993f-15f913c6b7f4#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/382a3aa6-52f2-485d-9d10-e9e9888c48a0#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/6f694397-5780-47da-aaa9-fe9515e29eaf#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/dd516d2e-f5ce-49bf-b374-7fb2d278b242#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/58abf1c4-1034-46d5-94f4-4e1db624b5fa#id"
+        }
+      ],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED"
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "China-US relations",
+          "thingUri": "http://www.bbc.co.uk/things/382a3aa6-52f2-485d-9d10-e9e9888c48a0#id",
+          "thingId": "382a3aa6-52f2-485d-9d10-e9e9888c48a0",
+          "thingType": [
+            "core:Theme",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/China%E2%80%93United_States_relations"
+          ],
+          "topicName": "China-US relations",
+          "topicId": "cxw7qng7vx8t",
+          "curationList": [
+            {
+              "curationId": "d7b56edf-7f81-47d9-b495-87715dc336fa",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "China-US relations"
+        },
+        {
+          "thingLabel": "World Trade Organization",
+          "thingUri": "http://www.bbc.co.uk/things/58abf1c4-1034-46d5-94f4-4e1db624b5fa#id",
+          "thingId": "58abf1c4-1034-46d5-94f4-4e1db624b5fa",
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Organisation",
+            "tagging:AmbiguousTerm",
+            "core:Thing",
+            "tagging:Agent"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/World_Trade_Organization"
+          ],
+          "topicName": "World Trade Organization",
+          "topicId": "crr7mlg0gppt",
+          "curationList": [
+            {
+              "curationId": "58abf1c4-1034-46d5-94f4-4e1db624b5fa",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "World Trade Organization"
+        },
+        {
+          "thingLabel": "US economy",
+          "thingUri": "http://www.bbc.co.uk/things/6f694397-5780-47da-aaa9-fe9515e29eaf#id",
+          "thingId": "6f694397-5780-47da-aaa9-fe9515e29eaf",
+          "thingType": [
+            "core:Theme",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q188540",
+            "http://dbpedia.org/resource/Economy_of_the_United_States"
+          ],
+          "topicName": "US economy",
+          "topicId": "c1038wnxypvt",
+          "curationList": [
+            {
+              "curationId": "6f694397-5780-47da-aaa9-fe9515e29eaf",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "US economy"
+        },
+        {
+          "thingLabel": "Trade war",
+          "thingUri": "http://www.bbc.co.uk/things/733f9670-751f-4fb7-993f-15f913c6b7f4#id",
+          "thingId": "733f9670-751f-4fb7-993f-15f913c6b7f4",
+          "thingType": [
+            "core:Thing",
+            "core:Theme",
+            "tagging:TagConcept"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Trade_war",
+            "http://www.wikidata.org/entity/Q692412"
+          ],
+          "topicName": "Trade war",
+          "topicId": "ce25yderw6pt",
+          "curationList": [
+            {
+              "curationId": "42cfdd88-b8e2-49dd-9464-0b0708fb24fb",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Trade war"
+        },
+        {
+          "thingLabel": "Donald Trump",
+          "thingUri": "http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
+          "thingId": "78080d81-2849-497e-bc3a-bf364626456b",
+          "thingType": [
+            "tagging:AmbiguousTerm",
+            "core:Thing",
+            "tagging:TagConcept",
+            "core:Person",
+            "tagging:Agent"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Donald_Trump"
+          ],
+          "topicName": "Donald Trump",
+          "topicId": "cp7r8vgl2lgt",
+          "curationList": [
+            {
+              "curationId": "78080d81-2849-497e-bc3a-bf364626456b",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Donald Trump"
+        },
+        {
+          "thingLabel": "United States",
+          "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+          "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Place",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/6252001/"
+          ],
+          "topicName": "United States",
+          "topicId": "cx1m7zg01xyt",
+          "curationList": [
+            {
+              "curationId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "United States"
+        },
+        {
+          "thingLabel": "Trade",
+          "thingUri": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id",
+          "thingId": "cec5d136-f83d-4e00-a3be-d22a7b89401f",
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Theme",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Trade"
+          ],
+          "topicName": "Trade",
+          "topicId": "czed6gv89wrt",
+          "curationList": [
+            {
+              "curationId": "2edebbfd-d650-4ed8-887d-10c1bb966324",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Trade"
+        }
+      ]
+    },
+    "version": "v1.3.11",
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "list",
+      "crosshead"
+    ],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "NEWS",
+      "producerId": "64",
+      "chapter": "business"
+    },
+    "readTime": 6,
+    "siteUri": "/news",
+    "topics": [
+      {
+        "topicName": "US economy",
+        "topicId": "c1038wnxypvt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/6f694397-5780-47da-aaa9-fe9515e29eaf#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "6f694397-5780-47da-aaa9-fe9515e29eaf",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Theme",
+          "tagging:TagConcept",
+          "core:Thing"
+        ]
+      },
+      {
+        "topicName": "Trade war",
+        "topicId": "ce25yderw6pt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/733f9670-751f-4fb7-993f-15f913c6b7f4#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "42cfdd88-b8e2-49dd-9464-0b0708fb24fb",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Thing",
+          "core:Theme",
+          "tagging:TagConcept"
+        ]
+      },
+      {
+        "topicName": "Donald Trump",
+        "topicId": "cp7r8vgl2lgt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "78080d81-2849-497e-bc3a-bf364626456b",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:AmbiguousTerm",
+          "core:Thing",
+          "tagging:TagConcept",
+          "core:Person",
+          "tagging:Agent"
+        ]
+      },
+      {
+        "topicName": "World Trade Organization",
+        "topicId": "crr7mlg0gppt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/58abf1c4-1034-46d5-94f4-4e1db624b5fa#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "58abf1c4-1034-46d5-94f4-4e1db624b5fa",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:TagConcept",
+          "core:Organisation",
+          "tagging:AmbiguousTerm",
+          "core:Thing",
+          "tagging:Agent"
+        ]
+      },
+      {
+        "topicName": "United States",
+        "topicId": "cx1m7zg01xyt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:TagConcept",
+          "core:Place",
+          "core:Thing"
+        ]
+      },
+      {
+        "topicName": "China-US relations",
+        "topicId": "cxw7qng7vx8t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/382a3aa6-52f2-485d-9d10-e9e9888c48a0#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "d7b56edf-7f81-47d9-b495-87715dc336fa",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Theme",
+          "tagging:TagConcept",
+          "core:Thing"
+        ]
+      },
+      {
+        "topicName": "Trade",
+        "topicId": "czed6gv89wrt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "2edebbfd-d650-4ed8-887d-10c1bb966324",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:TagConcept",
+          "core:Theme",
+          "core:Thing"
+        ]
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "116131074",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/B7A5/production/_116131074_lighthizer2_reuters.jpg",
+        "path": "/cpsprodpb/B7A5/production/_116131074_lighthizer2_reuters.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Robert Lighthizer",
+        "copyrightHolder": "Reuters",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "&quot;Trade wars are good, and easy to win&quot; - the mantra of President Trump, the self-styled &quot;Mr Tariff Man&quot;, was inspired by his long-serving trade representative Robert Lighthizer.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "He rarely talks to the media, but mindful of the legacy of four years of ripping up the international trade system, he told the BBC he had fundamentally reoriented the trade system towards working Americans, and that President Trump's successor would not now change this sceptical stance to slow down and reverse globalisation.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;We want strong communities in the United States. And if that means that T-shirts cost another nickel, then T-shirts will cost another nickel,&quot; he said.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;We're proud of what we have done.... what we tried to do was reorient the purpose of international trade more towards working people in the United States and less towards outsourcing and corporations. And I think that was important.&quot; ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "He said another big achievement was taking on China, which he described as &quot;a great challenge&quot; not only for the US, but the UK too. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;We had lost millions of manufacturing jobs, we had enormous trade deficits, not just with individual countries... but with the whole world, going up every year to the point where it was $800bn, and really something that's not sustainable,&quot; he added. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>news/business-55341970</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "UK and US in talks over mini trade deal",
+                  "headline": "UK and US in talks over mini trade deal",
+                  "overtyped": "UK and US in talks over mini trade deal"
+                },
+                "locators": {
+                  "href": "https://www.bbc.co.uk/news/business-55341970"
+                },
+                "summary": "US trade chief Robert Lighthizer says he is working with Liz Truss on a deal to reduce trade tariffs.",
+                "timestamp": 1608167209000,
+                "language": "en-gb",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:news/business-55341970",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>news/business-55132425</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "China escalates tit-for-tat trade war with US",
+                  "headline": "China-US trade war: Beijing escalates tit-for-tat with Washington",
+                  "overtyped": "China escalates tit-for-tat trade war with US"
+                },
+                "locators": {
+                  "href": "https://www.bbc.co.uk/news/business-55132425"
+                },
+                "summary": "Beijing has introduced tough new laws which restrict the export of \"controlled items\".",
+                "timestamp": 1606791099000,
+                "language": "en-gb",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:news/business-55132425",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>news/business-54725681</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "US tries to block first African head of WTO",
+                  "headline": "US tries to block Ngozi Okonjo-Iweala, who would be first African WTO head",
+                  "overtyped": "US tries to block first African head of WTO"
+                },
+                "locators": {
+                  "href": "https://www.bbc.co.uk/news/business-54725681"
+                },
+                "summary": "The World Trade Organization's nominations team says member countries should back Ngozi Okonjo-Iweala.",
+                "timestamp": 1603920636000,
+                "language": "en-gb",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:news/business-54725681",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "The president's famous tweet on trade wars being both good and easy to win was not, says Mr Lighthizer &quot;a literal statement&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;I wouldn't really say that we started a lot of trade wars. I don't think that's accurate. We have really enforced our laws. We've insisted on fairness for American workers. But when you look... where would you really say we started a trade war?,&quot; he says.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "There was &quot;clearly no trade war&quot; in the improved Nafta deal - the US-Mexico-Canada Agreement, he says. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "But on China - the deficit is back up, and there is little chance of making the promised purchases of US goods agreed after his diplomacy.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Mr Lighthizer says that China has been tied into a number of &quot;massive substantial&quot; promises on its conduct in global trade by the US deal on financial services, currency and agricultural trade barriers. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;This is an agreement that is in writing, and that's specifically enforceable,&quot; he says.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "He acknowledges that he didn't get a deal on industrial subsidies but it was never going to be possible to change the state-run direction of their economy, he says. The plan to get the Chinese to buy $200bn more American goods is off target, but he blames that on the disruption to the world economy caused by the Covid pandemic.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "WTO reform",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Mr Lighthizer's history as a trade lawyer bred his long-standing scepticism about the World Trade Organization (WTO). One of the temptations for him to do this job for Donald Trump was to take on this bulwark of the multilateral trade system.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "His criticism of it has echoes of Eurosceptic criticism of the EU. His particular beef was that it had begun to make its own law to be interpreted by bureaucrats or rather appellate judges, rather than being a forum for negotiations. So the US stopped approving their appointment and <link><caption>is currently vetoing a new director general, a Nigerian former minister and World Bank official Ngozi Okonjo-Iweala. </caption><url href=\"https://www.bbc.co.uk/news/business-54725681\" platform=\"highweb\"/></link>",
+        "markupType": "candy_xml",
+        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/news/business-54725681",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;What you had really was an organisation that migrated from a negotiating organisation into a litigation organisation. And that was not healthy. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Now we have a situation where we're trying to create a new organisation, we have to massively reform the appellate body, we clearly need new leadership,",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Our view has been that we need someone with real experience in trade, not someone from the World Bank, or a development person, we need a real trade expert.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "115107315",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/C8AA/production/_115107315_p067k69d.jpg",
+        "path": "/cpsprodpb/C8AA/production/_115107315_p067k69d.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Ngozi Okonjo-Iweala",
+        "caption": "The US is opposing Ngozi Okonjo-Iweala's appointment as director general of the WTO",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Other WTO members have tried to reform the same function outside of the organisation while they wait for the approach of the new administration.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "The criticism of stymieing such institutions is that the world is left with a &quot;might is right&quot; way of running the global economy. Indeed it might be argued that by using tariffs as a way to gain leverage in negotiations, the US has set a bad example for other countries to follow, with China now taking a similar approach in its current dispute with Australia.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;If you're trying to suggest that China has become more protectionist because of something that the United States did, my view is that that's nonsense,&quot; Mr Lighthizer says.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;China has a very clear plan. They have a state controlled economy, and they do what's in China's interest.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "'Mini' trade deals",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Though he couldn't quite bring himself to refer to Joe Biden as President-elect, it is clear that Mr Lighthizer is in his last few weeks in post. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<link><caption>And he hopes to strike some &quot;mini-deals&quot;</caption><url href=\"https://www.bbc.co.uk/news/business-55341970\" platform=\"highweb\"/></link>. Settling the decade and a half-old Airbus-Boeing dispute is in the works in separate discussions with the UK and EU.",
+        "markupType": "candy_xml",
+        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/news/business-55341970",
+        "type": "paragraph"
+      },
+      {
+        "text": "But nothing comes for free with a US trade diplomat, especially Mr Lighthizer. Firstly he is trying to show that this arbitration is best done outside of the WTO. And while he accepted the signal and good will associated with last week's suspension of UK tariffs on Boeing aircraft by Liz Truss, his immediate response was that the UK had no authority to levy them anyway outside of the EU.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "A proper free trade agreement with the UK, however, is still up in the air. President-elect Biden has already said new deals will not be his priority.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "116131079",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/17AF5/production/_116131079_port_reuters.jpg",
+        "path": "/cpsprodpb/17AF5/production/_116131079_port_reuters.jpg",
+        "height": 600,
+        "width": 976,
+        "altText": "UK port",
+        "copyrightHolder": "Reuters",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "The UK has a deal ready that is in keeping with the Biden priorities around climate change and labour standards. There is no reason why a deal couldn't be done given the intensive work so far, but the window is tight, especially given UK resistance on agricultural standards, says Mr Lighthizer.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;We're both leaders in the world on digital trade on financial services. And I think we could do an awful lot to write the rules together, the best rules together.  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;There's a short period of time they're going to have to try to wrap this up. But I think it's something that can happen. It'll require compromise on both sides.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Indeed there is still the risk that trade barriers could increase rather than decrease as a result of US retaliatory action against digital services taxes, levied in France, the UK and several other nations and seen by the administration to &quot;unfairly&quot; target US Big Tech firms.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Shift in consensus",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Mr Lighthizer has fundamentally shifted a trend of decades of liberalisation in trade. Tariffs have become a tool of economic and geopolitical leverage. His successor won't put the genie back in the bottle now. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;There's pretty much a bipartisan consensus that we're moving in the right direction. I think that that the Democrats as well as the Republicans realise that we needed to shift the paradigm on trade more in the direction of working people in the United States. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;And that we needed to recognise that China is a real problem for our system, and that we had a very, very unbalanced relationship and we can't go back to where it was. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Now there'll be certain corporations who will want to immediately go back to the way it was. My hope is that the sensible people in both parties prevent that from happening.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "116131193",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/98C9/production/_116131193_usshoppers_epa.jpg",
+        "path": "/cpsprodpb/98C9/production/_116131193_usshoppers_epa.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "US shoppers",
+        "copyrightHolder": "EPA",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "I ask him though if he has not just scape-goated global trade for a more fundamental failure of the wealthiest country on the planet to look after its less affluent citizens.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "He replies: &quot;Understand that none of us are against trade. The real question is, 'What's the objective?', and the objective can't just be efficiency, the objective has to also be working men and women.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;And that's what President Trump has tried to do. This is a fundamental shift from the way people used to think about these things.&quot; ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "He almost sounds like a left wing economics lecturer, rather than the most important economic diplomat for an administration of the Republican right.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "And while his boss Mr Trump has indeed lost, at least some of his ideas have not, and they will continue to shape the world trade system for many years to come.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "We're proud of what we've done, says Trump's trade chief",
+      "headline": "We're proud of what we've done, says Trump's trade chief"
+    },
+    "locators": {
+      "assetUri": "/news/business-55345826",
+      "cpsUrn": "urn:bbc:content:assetUri:news/business-55345826",
+      "curie": "http://www.bbc.co.uk/asset/63ab04e8-9c71-42fb-be1e-5b03bfd4e3c5",
+      "assetId": "55345826"
+    },
+    "summary": "Robert Lighthizer says he has fundamentally reoriented the trade system towards working Americans.",
+    "timestamp": 1608201745000,
+    "language": "en-gb",
+    "byline": {
+      "name": "By Faisal Islam",
+      "title": "Economics editor",
+      "persons": [
+        {
+          "name": "Faisal Islam",
+          "function": "Economics editor",
+          "url": "/news/correspondents/faisalislam",
+          "correspondentId": "faisalislam",
+          "thumbnail": "http://c.files.bbci.co.uk/4A21/production/_107977981_faisal_islam_correspondent_page.png",
+          "correspondentImage": {
+            "height": 200,
+            "width": 200,
+            "href": "http://c.files.bbci.co.uk/A8B6/production/_112909134_faisalislam.jpg",
+            "originCode": "cpsprodpb",
+            "altText": "Faisal Islam",
+            "copyrightHolder": "BBC",
+            "allowSyndication": true
+          },
+          "twitterName": "faisalislam"
+        }
+      ]
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "locator": "urn:bbc:cps:curie:asset:63ab04e8-9c71-42fb-be1e-5b03bfd4e3c5",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/733f9670-751f-4fb7-993f-15f913c6b7f4#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/382a3aa6-52f2-485d-9d10-e9e9888c48a0#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/6f694397-5780-47da-aaa9-fe9515e29eaf#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/dd516d2e-f5ce-49bf-b374-7fb2d278b242#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/58abf1c4-1034-46d5-94f4-4e1db624b5fa#id"
+        }
+      ],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED"
+    },
+    "indexImage": {
+      "id": "116131075",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/DEB5/production/_116131075_lighthizer2_reuters.jpg",
+      "path": "/cpsprodpb/DEB5/production/_116131075_lighthizer2_reuters.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Robert Lighthizer",
+      "copyrightHolder": "Reuters",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:news/business-55345826",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Business",
+      "uri": "/news/business",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC News",
+      "uri": "/news",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "China escalates tit-for-tat trade war with US",
+              "headline": "China-US trade war: Beijing escalates tit-for-tat with Washington"
+            },
+            "locators": {
+              "assetUri": "/news/business-55132425",
+              "cpsUrn": "urn:bbc:content:assetUri:/news/business-55132425"
+            },
+            "summary": "Beijing has introduced tough new laws which restrict the export of \"controlled items\".",
+            "timestamp": 1606791099000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "115695155",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/D777/production/_115695155_chinesetechnology.jpg",
+              "path": "/cpsprodpb/D777/production/_115695155_chinesetechnology.jpg",
+              "height": 1152,
+              "width": 2048,
+              "altText": "China’s new rules primarily restrict the export of military technologies and other products.",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:news/business-55132425",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "UK and US in talks over mini trade deal",
+              "headline": "UK and US in talks over mini trade deal"
+            },
+            "locators": {
+              "assetUri": "/news/business-55341970",
+              "cpsUrn": "urn:bbc:content:assetUri:/news/business-55341970"
+            },
+            "summary": "US trade chief Robert Lighthizer says he is working with Liz Truss on a deal to reduce trade tariffs.",
+            "timestamp": 1608167209000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "116124764",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/B696/production/_116124764_p091nvt0.jpg",
+              "path": "/cpsprodpb/B696/production/_116124764_p091nvt0.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "US Trade Representative Robert Lighthizer",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:news/business-55341970",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "US tries to block first African head of WTO",
+              "headline": "US tries to block Ngozi Okonjo-Iweala, who would be first African WTO head"
+            },
+            "locators": {
+              "assetUri": "/news/business-54725681",
+              "cpsUrn": "urn:bbc:content:assetUri:/news/business-54725681"
+            },
+            "summary": "The World Trade Organization's nominations team says member countries should back Ngozi Okonjo-Iweala.",
+            "timestamp": 1603920636000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "115107318",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/13DDA/production/_115107318_p067k69d.jpg",
+              "path": "/cpsprodpb/13DDA/production/_115107318_p067k69d.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ngozi Okonjo-Iweala",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:news/business-54725681",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}
