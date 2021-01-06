@@ -5,7 +5,7 @@
     "type": "WSRADIO",
     "createdBy": "bbc_swahili_radio",
     "language": "sw",
-    "lastUpdated": 1589529870679,
+    "lastUpdated": 1608295189657,
     "firstPublished": 1582557978000,
     "lastPublished": 1582557978000,
     "timestamp": 1582557978000,
@@ -18,15 +18,15 @@
       "producer": "SWAHILI"
     },
     "tags": {},
-    "version": "v1.3.0",
+    "version": "v1.3.11",
     "blockTypes": ["media"],
     "title": "Dira Ya Dunia",
-    "releaseDateTimeStamp": 1583452800000
+    "releaseDateTimeStamp": 1583452800000,
+    "atiAnalytics": {}
   },
   "content": {
     "blocks": [
       {
-        "availability": "notAvailable",
         "id": "w172x94ky63591m",
         "subType": "episode",
         "format": "Audio",
@@ -39,6 +39,8 @@
         "embedding": false,
         "advertising": false,
         "versions": [],
+        "availability": "notAvailable",
+        "smpKind": "radioProgramme",
         "type": "media"
       }
     ]
@@ -59,6 +61,8 @@
       "embedding": false,
       "advertising": false,
       "versions": [],
+      "availability": "notAvailable",
+      "smpKind": "radioProgramme",
       "type": "media"
     },
     "indexImage": {
@@ -72,6 +76,7 @@
       "copyrightHolder": null,
       "type": "image"
     },
+    "releaseDateTimestamp": 1583452800000,
     "brand": { "pid": "p03411ml", "title": "Dira Ya Dunia" },
     "id": "urn:bbc:ares:ws_media:page:bbc_swahili_radio/w172x94ky63591m",
     "type": "ws_radio"
@@ -89,12 +94,12 @@
         "promos": [
           {
             "headlines": { "headline": "Dira Ya Dunia" },
-            "locators": { "pid": "w172xjtkn3jnxd5", "brandPid": "p03411ml" },
+            "locators": { "pid": "w172xpfbzgh9h4c", "brandPid": "p03411ml" },
             "media": {
-              "id": "w172xjtkn3jnxd5",
+              "id": "w172xpfbzgh9h4c",
               "subType": "episode",
               "format": "Audio",
-              "title": "14/05/2020 GMT",
+              "title": "17/12/2020 GMT",
               "synopses": {
                 "short": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
                 "medium": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki"
@@ -104,7 +109,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpqn77bzj08",
+                  "versionId": "w1mshwhryrf6km9",
                   "types": ["Original"],
                   "duration": 3600,
                   "durationISO8601": "PT1H",
@@ -114,10 +119,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1592065770000,
-                  "availableFrom": 1589473770000
+                  "availableUntil": 1610814570000,
+                  "availableFrom": 1608222570000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -131,18 +139,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608163200000,
             "brand": { "pid": "p03411ml", "title": "Dira Ya Dunia" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_radio/w172xjtkn3jnxd5",
+            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_radio/w172xpfbzgh9h4c",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Dira Ya Dunia" },
-            "locators": { "pid": "w172xjtkn3jl0h2", "brandPid": "p03411ml" },
+            "locators": { "pid": "w172xpfbzgh6l78", "brandPid": "p03411ml" },
             "media": {
-              "id": "w172xjtkn3jl0h2",
+              "id": "w172xpfbzgh6l78",
               "subType": "episode",
               "format": "Audio",
-              "title": "13/05/2020 GMT",
+              "title": "16/12/2020 GMT",
               "synopses": {
                 "short": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
                 "medium": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki"
@@ -152,7 +161,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpqn77bwm35",
+                  "versionId": "w1mshwhryrf3nq6",
                   "types": ["Original"],
                   "duration": 3600,
                   "durationISO8601": "PT1H",
@@ -162,10 +171,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591979370000,
-                  "availableFrom": 1589387370000
+                  "availableUntil": 1610728170000,
+                  "availableFrom": 1608136170000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -179,18 +191,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608076800000,
             "brand": { "pid": "p03411ml", "title": "Dira Ya Dunia" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_radio/w172xjtkn3jl0h2",
+            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_radio/w172xpfbzgh6l78",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Dira Ya Dunia" },
-            "locators": { "pid": "w172xjtkn3jh3kz", "brandPid": "p03411ml" },
+            "locators": { "pid": "w172xpfbzgh3pb5", "brandPid": "p03411ml" },
             "media": {
-              "id": "w172xjtkn3jh3kz",
+              "id": "w172xpfbzgh3pb5",
               "subType": "episode",
               "format": "Audio",
-              "title": "12/05/2020 GMT",
+              "title": "15/12/2020 GMT",
               "synopses": {
                 "short": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
                 "medium": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki"
@@ -200,7 +213,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpqn77bsq62",
+                  "versionId": "w1mshwhryrf0rt3",
                   "types": ["Original"],
                   "duration": 3600,
                   "durationISO8601": "PT1H",
@@ -210,10 +223,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591892970000,
-                  "availableFrom": 1589300970000
+                  "availableUntil": 1610641770000,
+                  "availableFrom": 1608049770000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -227,18 +243,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607990400000,
             "brand": { "pid": "p03411ml", "title": "Dira Ya Dunia" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_radio/w172xjtkn3jh3kz",
+            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_radio/w172xpfbzgh3pb5",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Dira Ya Dunia" },
-            "locators": { "pid": "w172xjtkn3jd6nw", "brandPid": "p03411ml" },
+            "locators": { "pid": "w172xpfbzgh0sf2", "brandPid": "p03411ml" },
             "media": {
-              "id": "w172xjtkn3jd6nw",
+              "id": "w172xpfbzgh0sf2",
               "subType": "episode",
               "format": "Audio",
-              "title": "11/05/2020 GMT",
+              "title": "14/12/2020 GMT",
               "synopses": {
                 "short": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
                 "medium": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki"
@@ -248,7 +265,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpqn77bpt8z",
+                  "versionId": "w1mshwhryrdxvx0",
                   "types": ["Original"],
                   "duration": 3600,
                   "durationISO8601": "PT1H",
@@ -258,10 +275,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591806570000,
-                  "availableFrom": 1589214570000
+                  "availableUntil": 1610555370000,
+                  "availableFrom": 1607963370000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -275,18 +295,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607904000000,
             "brand": { "pid": "p03411ml", "title": "Dira Ya Dunia" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_radio/w172xjtkn3jd6nw",
+            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_radio/w172xpfbzgh0sf2",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Dira Ya Dunia" },
-            "locators": { "pid": "w172xjtk8v6znpf", "brandPid": "p03411ml" },
+            "locators": { "pid": "w172xpfbm65m7fm", "brandPid": "p03411ml" },
             "media": {
-              "id": "w172xjtk8v6znpf",
+              "id": "w172xpfbm65m7fm",
               "subType": "episode",
               "format": "Audio",
-              "title": "08/05/2020 GMT",
+              "title": "11/12/2020 GMT",
               "synopses": {
                 "short": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
                 "medium": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki"
@@ -296,7 +317,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpqmvz1989j",
+                  "versionId": "w1mshwhrlh3j9xk",
                   "types": ["Original"],
                   "duration": 3600,
                   "durationISO8601": "PT1H",
@@ -306,10 +327,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591547370000,
-                  "availableFrom": 1588955370000
+                  "availableUntil": 1610296170000,
+                  "availableFrom": 1607704170000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -323,18 +347,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607644800000,
             "brand": { "pid": "p03411ml", "title": "Dira Ya Dunia" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_radio/w172xjtk8v6znpf",
+            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_radio/w172xpfbm65m7fm",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Dira Ya Dunia" },
-            "locators": { "pid": "w172xjtk8v6wrsb", "brandPid": "p03411ml" },
+            "locators": { "pid": "w172xpfbm65jbjj", "brandPid": "p03411ml" },
             "media": {
-              "id": "w172xjtk8v6wrsb",
+              "id": "w172xpfbm65jbjj",
               "subType": "episode",
               "format": "Audio",
-              "title": "07/05/2020 GMT",
+              "title": "10/12/2020 GMT",
               "synopses": {
                 "short": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
                 "medium": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki"
@@ -344,7 +369,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpqmvz16cdf",
+                  "versionId": "w1mshwhrlh3ff0g",
                   "types": ["Original"],
                   "duration": 3600,
                   "durationISO8601": "PT1H",
@@ -354,10 +379,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591460970000,
-                  "availableFrom": 1588868970000
+                  "availableUntil": 1610209770000,
+                  "availableFrom": 1607617770000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -371,18 +399,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607558400000,
             "brand": { "pid": "p03411ml", "title": "Dira Ya Dunia" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_radio/w172xjtk8v6wrsb",
+            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_radio/w172xpfbm65jbjj",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Dira Ya Dunia" },
-            "locators": { "pid": "w172xjtk8v6svw7", "brandPid": "p03411ml" },
+            "locators": { "pid": "w172xpfbm65ffmf", "brandPid": "p03411ml" },
             "media": {
-              "id": "w172xjtk8v6svw7",
+              "id": "w172xpfbm65ffmf",
               "subType": "episode",
               "format": "Audio",
-              "title": "06/05/2020 GMT",
+              "title": "09/12/2020 GMT",
               "synopses": {
                 "short": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
                 "medium": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki"
@@ -392,7 +421,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpqmvz13ghb",
+                  "versionId": "w1mshwhrlh3bj3c",
                   "types": ["Original"],
                   "duration": 3600,
                   "durationISO8601": "PT1H",
@@ -402,10 +431,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591374570000,
-                  "availableFrom": 1588782570000
+                  "availableUntil": 1610123370000,
+                  "availableFrom": 1607531370000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -419,18 +451,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607472000000,
             "brand": { "pid": "p03411ml", "title": "Dira Ya Dunia" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_radio/w172xjtk8v6svw7",
+            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_radio/w172xpfbm65ffmf",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "Dira Ya Dunia" },
-            "locators": { "pid": "w172xjtk8v6pyz4", "brandPid": "p03411ml" },
+            "locators": { "pid": "w172xpfbm65bjqb", "brandPid": "p03411ml" },
             "media": {
-              "id": "w172xjtk8v6pyz4",
+              "id": "w172xpfbm65bjqb",
               "subType": "episode",
               "format": "Audio",
-              "title": "05/05/2020 GMT",
+              "title": "08/12/2020 GMT",
               "synopses": {
                 "short": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
                 "medium": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki"
@@ -440,7 +473,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshpqmvz10kl7",
+                  "versionId": "w1mshwhrlh37m68",
                   "types": ["Original"],
                   "duration": 3600,
                   "durationISO8601": "PT1H",
@@ -450,10 +483,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591288170000,
-                  "availableFrom": 1588696170000
+                  "availableUntil": 1610036970000,
+                  "availableFrom": 1607444970000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -467,8 +503,9 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607385600000,
             "brand": { "pid": "p03411ml", "title": "Dira Ya Dunia" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_radio/w172xjtk8v6pyz4",
+            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_radio/w172xpfbm65bjqb",
             "type": "ws_radio"
           }
         ]

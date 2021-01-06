@@ -5,7 +5,7 @@
     "type": "WSRADIO",
     "createdBy": "bbc_somali_radio",
     "language": "so",
-    "lastUpdated": 1589529753485,
+    "lastUpdated": 1608294988841,
     "firstPublished": 1582565117000,
     "lastPublished": 1582565117000,
     "timestamp": 1582565117000,
@@ -18,15 +18,15 @@
       "producer": "SOMALI"
     },
     "tags": {},
-    "version": "v1.3.0",
+    "version": "v1.3.11",
     "blockTypes": ["media"],
     "title": "Caawa Iyo Caalamka",
-    "releaseDateTimeStamp": 1583452800000
+    "releaseDateTimeStamp": 1583452800000,
+    "atiAnalytics": {}
   },
   "content": {
     "blocks": [
       {
-        "availability": "notAvailable",
         "id": "w172x90wfxd2qh4",
         "subType": "episode",
         "format": "Audio",
@@ -39,6 +39,8 @@
         "embedding": false,
         "advertising": false,
         "versions": [],
+        "availability": "notAvailable",
+        "smpKind": "radioProgramme",
         "type": "media"
       }
     ]
@@ -59,6 +61,8 @@
       "embedding": false,
       "advertising": false,
       "versions": [],
+      "availability": "notAvailable",
+      "smpKind": "radioProgramme",
       "type": "media"
     },
     "indexImage": {
@@ -72,6 +76,7 @@
       "copyrightHolder": null,
       "type": "image"
     },
+    "releaseDateTimestamp": 1583452800000,
     "brand": { "pid": "p034117l", "title": "Caawa Iyo Caalamka" },
     "id": "urn:bbc:ares:ws_media:page:bbc_somali_radio/w172x90wfxd2qh4",
     "type": "ws_radio"
