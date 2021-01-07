@@ -21,6 +21,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 
 const StyledSectionLabel = styled(SectionLabel)`
   color: ${C_WHITE};
@@ -33,7 +34,7 @@ const StyledSectionLabel = styled(SectionLabel)`
   }
 `;
 
-const RecentVideoEpisodes = ({ episodes }) => {
+const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
   const {
     script,
     service,
@@ -42,6 +43,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
     datetimeLocale,
     translations,
   } = useContext(ServiceContext);
+  const { isAmp, variant } = useContext(RequestContext);
 
   if (!episodes.length) return null;
 
@@ -61,6 +63,12 @@ const RecentVideoEpisodes = ({ episodes }) => {
   );
   const durationLabel = pathOr('Duration', ['media', 'duration'], translations);
   const videoLabel = pathOr('Video', ['media', 'video'], translations);
+  const getUrl = episodeId =>
+    '/'.concat(
+      [service, variant, masterBrand, 'tv', episodeId]
+        .filter(Boolean)
+        .join('/'),
+    );
 
   return (
     <aside role="complimentary" aria-labelledby="recent-episodes">
@@ -84,13 +92,25 @@ const RecentVideoEpisodes = ({ episodes }) => {
                 duration: episode.duration,
                 locale: datetimeLocale,
               })}
+              {...(isAmp && {
+                as: () => (
+                  <amp-img
+                    layout="responsive"
+                    width="16"
+                    height="9"
+                    src={episode.image}
+                    alt={episode.altText}
+                  />
+                ),
+              })}
             />
             {/* these must be concatenated for screen reader UX */}
-            <EpisodeList.Link href={episode.url}>
+            <EpisodeList.Link href={getUrl(episode.id)}>
               <VisuallyHiddenText>{`${videoLabel}, `}</VisuallyHiddenText>
               <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">
                 {episode.brandTitle}
               </EpisodeList.Title>
+              <VisuallyHiddenText>, </VisuallyHiddenText>
               <EpisodeList.Description className="episode-list__description--hover episode-list__description--visited">
                 {episode.episodeTitle || formatDate(episode.timestamp)}
               </EpisodeList.Description>
@@ -104,7 +124,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
               </VisuallyHiddenText>
             </EpisodeList.Link>
             {episode.episodeTitle && (
-              <span role="text">
+              <div>
                 <EpisodeList.Metadata
                   as={Timestamp}
                   timestamp={episode.timestamp}
@@ -116,7 +136,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
                   service={service}
                   timezone={timezone}
                 />
-              </span>
+              </div>
             )}
           </EpisodeList.Episode>
         ))}
@@ -126,6 +146,7 @@ const RecentVideoEpisodes = ({ episodes }) => {
 };
 
 RecentVideoEpisodes.propTypes = {
+  masterBrand: string.isRequired,
   episodes: arrayOf(
     shape({
       id: string.isRequired,

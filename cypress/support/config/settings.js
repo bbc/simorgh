@@ -318,7 +318,7 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: ['/afrique/bbc_afrique_radio/w172x601yx5z2n1'],
+            paths: ['/afrique/bbc_afrique_radio/w172xqydyfv659p'],
             enabled: true,
           },
         },
@@ -344,7 +344,7 @@ module.exports = () => ({
             paths: [
               '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
@@ -9824,9 +9824,9 @@ module.exports = () => ({
           },
           local: {
             paths: [
-              '/zhongwen/simp/bbc_cantonese_radio/w172xf3r5x8hw4v', // Brand
+              '/zhongwen/simp/bbc_cantonese_radio/w172xn6l7ng41qb', // Brand
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
@@ -9866,7 +9866,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/zhongwen/simp/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/zhongwen/simp/media/video'],

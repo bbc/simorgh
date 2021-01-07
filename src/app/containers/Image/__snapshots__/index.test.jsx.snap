@@ -303,38 +303,38 @@ exports[`Image with data should render a lazyload container instead of an image 
   }
 }
 
-<div
-  class="emotion-8 emotion-3"
-  dir="ltr"
->
-  <figure
-    class="emotion-6 emotion-7"
+<div>
+  <div
+    class="emotion-8 emotion-3"
+    dir="ltr"
   >
-    <div
-      class="emotion-4 emotion-3"
-      dir="ltr"
+    <figure
+      class="emotion-6 emotion-7"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-4 emotion-3"
         dir="ltr"
       >
         <div
-          class="emotion-0 emotion-1"
+          class="emotion-2 emotion-3"
+          dir="ltr"
         >
           <div
-            class="lazyload-wrapper"
+            class="emotion-0 emotion-1"
           >
             <div
-              class="lazyload-placeholder"
-            />
+              class="lazyload-wrapper"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </div>
+            <noscript />
           </div>
-          <noscript>
-            &lt;img srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w" alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17." src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png" width="640" class="css-1a7chfn-StyledImg-fadeIn e1enwo3v0"/&gt;
-          </noscript>
         </div>
       </div>
-    </div>
-  </figure>
+    </figure>
+  </div>
 </div>
 `;
 

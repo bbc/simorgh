@@ -28,7 +28,7 @@ import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
 import indexPageJson from '#data/ukrainian/ukraine_in_russian';
 import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
 
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { FRONT_PAGE, ERROR_PAGE } from '#app/routes/utils/pageTypes';
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 
@@ -92,7 +92,7 @@ it('should have correct properties in each route', () => {
 
     // Last route should be catchall (no path specified) error page
     if (index === routes.length - 1) {
-      expect(route.pageType).toEqual('error');
+      expect(route.pageType).toEqual(ERROR_PAGE);
       expect(route).not.toHaveProperty('path');
     } else {
       expect(route).toHaveProperty('path');

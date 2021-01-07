@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
 import {
@@ -46,6 +47,7 @@ import {
   getMentions,
   getLang,
 } from '#lib/utilities/parseAssetData';
+import filterForBlockType from '#lib/utilities/blockHandlers';
 
 const componentsToRender = {
   headline: headings,
@@ -83,6 +85,22 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
 
+  const promoImageBlocks = pathOr(
+    [],
+    ['promo', 'images', 'defaultPromoImage', 'blocks'],
+    pageData,
+  );
+
+  const promoImageAltText = path(
+    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+    filterForBlockType(promoImageBlocks, 'altText'),
+  );
+
+  const promoImage = path(
+    ['model', 'locator'],
+    filterForBlockType(promoImageBlocks, 'rawImage'),
+  );
+
   const MostReadWrapper = ({ children }) => (
     <ArticlePageMostReadSection>
       <MostReadSectionLabel />
@@ -110,6 +128,8 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         mentionsTags={getMentions(pageData)}
         lang={getLang(pageData)}
         description={description}
+        imageLocator={promoImage}
+        imageAltText={promoImageAltText}
       />
       <LinkedData
         showAuthor
@@ -119,6 +139,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         datePublished={firstPublished}
         dateModified={lastPublished}
         aboutTags={aboutTags}
+        imageLocator={promoImage}
       />
       <main role="main">
         <GelPageGrid

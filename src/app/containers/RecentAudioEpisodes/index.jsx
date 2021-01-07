@@ -22,6 +22,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import EpisodeList from '@bbc/psammead-episode-list';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 
 const StyledSpan = styled.span`
   padding: 0 ${GEL_SPACING};
@@ -43,7 +44,7 @@ const StyledTimestamp = styled(Timestamp)`
   display: inline;
 `;
 
-const RecentAudioEpisodes = ({ episodes }) => {
+const RecentAudioEpisodes = ({ masterBrand, episodes }) => {
   const {
     translations,
     service,
@@ -52,6 +53,7 @@ const RecentAudioEpisodes = ({ episodes }) => {
     timezone,
     datetimeLocale,
   } = useContext(ServiceContext);
+  const { variant } = useContext(RequestContext);
 
   if (!episodes.length) return null;
 
@@ -71,6 +73,13 @@ const RecentAudioEpisodes = ({ episodes }) => {
   );
   const durationLabel = pathOr('Duration', ['media', 'duration'], translations);
   const audioLabel = pathOr('Audio', ['media', 'audio'], translations);
+  const getUrl = episodeId =>
+    '/'.concat(
+      [service, variant, masterBrand, episodeId].filter(Boolean).join('/'),
+    );
+
+  const ulProps = { 'data-e2e': 'recent-episodes-list' };
+  const liProps = { 'data-e2e': 'recent-episodes-list-item' };
 
   return (
     <Spacer role="complimentary" aria-labelledby="recent-episodes">
@@ -83,10 +92,16 @@ const RecentAudioEpisodes = ({ episodes }) => {
       >
         {recentEpisodesTranslation}
       </StyledSectionLabel>
-      <EpisodeList script={script} service={service} dir={dir}>
+      <EpisodeList
+        script={script}
+        service={service}
+        dir={dir}
+        ulProps={ulProps}
+        liProps={liProps}
+      >
         {episodes.map(episode => (
           <EpisodeList.Episode key={episode.id}>
-            <EpisodeList.Link href={episode.url}>
+            <EpisodeList.Link href={getUrl(episode.id)}>
               {/* these must be concatenated for screen reader UX */}
               <VisuallyHiddenText>{`${audioLabel}, `}</VisuallyHiddenText>
               <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">
@@ -143,6 +158,7 @@ const RecentAudioEpisodes = ({ episodes }) => {
 };
 
 RecentAudioEpisodes.propTypes = {
+  masterBrand: string.isRequired,
   episodes: arrayOf(
     shape({
       id: string.isRequired,

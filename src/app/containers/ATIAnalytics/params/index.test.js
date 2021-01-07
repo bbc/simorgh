@@ -4,6 +4,9 @@ import {
   ARTICLE_PAGE,
   FRONT_PAGE,
   MEDIA_PAGE,
+  INDEX_PAGE,
+  MEDIA_ASSET_PAGE,
+  PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 analyticsUtils.getAtUserId = jest.fn();
@@ -178,7 +181,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right IDX page url', () => {
       const url = buildATIUrl(
         idxPage,
-        { ...requestContext, pageType: 'IDX' },
+        { ...requestContext, pageType: INDEX_PAGE },
         serviceContext,
       );
       expect(url).toMatchInlineSnapshot(
@@ -200,7 +203,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right MAP url', () => {
       const url = buildATIUrl(
         MAP,
-        { ...requestContext, pageType: 'MAP' },
+        { ...requestContext, pageType: MEDIA_ASSET_PAGE },
         serviceContext,
       );
       expect(url).toMatchInlineSnapshot(
@@ -211,7 +214,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right PGL url', () => {
       const url = buildATIUrl(
         PGL,
-        { ...requestContext, pageType: 'PGL' },
+        { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
         serviceContext,
       );
       expect(url).toMatchInlineSnapshot(
@@ -310,7 +313,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right IDX page params', () => {
       const params = buildATIClickParams(
         idxPage,
-        { ...requestContext, pageType: 'IDX' },
+        { ...requestContext, pageType: INDEX_PAGE },
         serviceContext,
       );
       expect(params).toEqual({
@@ -354,7 +357,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right MAP params', () => {
       const params = buildATIClickParams(
         MAP,
-        { ...requestContext, pageType: 'MAP' },
+        { ...requestContext, pageType: MEDIA_ASSET_PAGE },
         serviceContext,
       );
       expect(params).toEqual({
@@ -384,7 +387,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right PGL params', () => {
       const params = buildATIClickParams(
         PGL,
-        { ...requestContext, pageType: 'PGL' },
+        { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
         serviceContext,
       );
       expect(params).toEqual({

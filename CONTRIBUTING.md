@@ -89,9 +89,7 @@ All pull requests need to have linting, unit tests and integration tests passing
 
 ### Writing tests
 
-For new components, we write Jest Snapshot tests, with a deep render, using the `shouldMatchSnapshot` test utility function.
-
-For new containers, we write Jest Snapshot tests with a shallow render, using the `shouldShallowMatchSnapshot` test utility function. We also write assertion-based enzyme tests to capture variations in prop values. [See the Article `getInitialProps` tests here as an example.](https://github.com/bbc/simorgh/blob/latest/src/app/containers/Article/index.test.jsx)
+We use React Testing Library for writing our React component and custom hook unit tests. An introduction to using React Testing Library can be found [here](https://testing-library.com/docs/react-testing-library/intro/).
 
 ### Run tests on your fork
 

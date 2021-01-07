@@ -1,6 +1,4 @@
-import { mount, render } from 'enzyme';
-import LazyLoad from 'react-lazyload';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { render } from '@testing-library/react';
 import {
   FigureImage,
   FigureAmpImage,
@@ -18,84 +16,89 @@ import {
 
 describe('ArticleFigure', () => {
   it('should load lazyload component when lazyLoad prop is set to true', () => {
-    const wrapper = mount(FigureLazyLoadImage).find(LazyLoad);
-    const {
-      offset,
-      once,
-      overflow,
-      resize,
-      scroll,
-      unmountIfInvisible,
-    } = wrapper.props();
+    const { container } = render(FigureLazyLoadImage);
 
-    expect(offset).toBe(250);
-    expect(once).toBe(true);
-    expect(overflow).toBe(false);
-    expect(resize).toBe(false);
-    expect(scroll).toBe(true);
-    expect(unmountIfInvisible).toBe(false);
-    expect(Object.keys(wrapper.props()).length).toBe(8);
+    const noScriptEl = container.querySelector('noscript');
+    const imageEl = container.querySelector('img');
+
+    expect(noScriptEl).toBeInTheDocument();
+    expect(imageEl).not.toBeInTheDocument();
   });
 
   it('should render a lazyloaded image when lazyLoad set to true', () => {
-    // Render using enzyme to capture noscript contents
-    const container = render(FigureLazyLoadImage);
+    const { container } = render(FigureLazyLoadImage);
+
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render an image with alt text', () => {
+    const { container } = render(FigureImage);
+
     expect(container).toMatchSnapshot();
   });
 
-  shouldMatchSnapshot('should render an image with alt text', FigureImage);
+  it('should render an AMP image with alt text', () => {
+    const { container } = render(FigureAmpImage);
 
-  shouldMatchSnapshot(
-    'should render an AMP image with alt text',
-    FigureAmpImage,
-  );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render an image with copyright text',
-    FigureImageWithCopyright,
-  );
+  it('should render an image with copyright text', () => {
+    const { container } = render(FigureImageWithCopyright);
 
-  shouldMatchSnapshot(
-    'should render an AMP image with copyright text',
-    FigureAmpImageWithCopyright,
-  );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render an image with caption text',
-    FigureImageWithCaption('news'),
-  );
+  it('should render an AMP image with copyright text', () => {
+    const { container } = render(FigureAmpImageWithCopyright);
 
-  shouldMatchSnapshot(
-    'should render an AMP image with caption text',
-    FigureAmpImageWithCaption('news'),
-  );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render an image with caption text with inline link',
-    FigureImageWithCaptionContainingLink,
-  );
+  it('should render an image with caption text', () => {
+    const { container } = render(FigureImageWithCaption('news'));
 
-  shouldMatchSnapshot(
-    'should render an AMP image with caption text with inline link',
-    FigureAmpImageWithCaptionContainingLink,
-  );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render an image with caption and copyright',
-    FigureImageWithCopyrightAndCaption,
-  );
+  it('should render an AMP image with caption text', () => {
+    const { container } = render(FigureAmpImageWithCaption('news'));
 
-  shouldMatchSnapshot(
-    'should render an AMP image with caption and copyright',
-    FigureAmpImageWithCopyrightAndCaption,
-  );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render an image and caption for a square with nested grid',
-    FigureImageWithNestedGrid(1240, 1240),
-  );
-  shouldMatchSnapshot(
-    'should render an image and caption for a portrait with nested grid',
-    FigureImageWithNestedGrid(600, 1240),
-  );
+  it('should render an image with caption text with inline link', () => {
+    const { container } = render(FigureImageWithCaptionContainingLink);
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render an AMP image with caption text with inline link', () => {
+    const { container } = render(FigureAmpImageWithCaptionContainingLink);
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render an image with caption and copyright', () => {
+    const { container } = render(FigureImageWithCopyrightAndCaption);
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render an AMP image with caption and copyright', () => {
+    const { container } = render(FigureAmpImageWithCopyrightAndCaption);
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render an image and caption for a square with nested grid', () => {
+    const { container } = render(FigureImageWithNestedGrid(1240, 1240));
+
+    expect(container).toMatchSnapshot();
+  });
+  it('should render an image and caption for a portrait with nested grid', () => {
+    const { container } = render(FigureImageWithNestedGrid(600, 1240));
+
+    expect(container).toMatchSnapshot();
+  });
 });

@@ -2062,7 +2062,7 @@ exports[`Story Page should render correctly when the secondary column data is no
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","inLanguage":{"@type":"Language","name":"Nigerian Pidgin","alternateName":"pcm"},"author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
+      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","inLanguage":{"@type":"Language","name":"Nigerian Pidgin","alternateName":"pcm"},"author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
     </script>
     <script
       type="application/ld+json"
@@ -2095,11 +2095,11 @@ exports[`Story Page should render correctly when the secondary column data is no
                   comscore
                 </div>
                 <div
-                  class="emotion-203 css-1rncctf-GridComponent-GelPageGrid-StoryPageGrid emotion-1"
+                  class="emotion-203 css-1pzzokf-GridComponent-GelPageGrid-StoryPageGrid emotion-1"
                   dir="ltr"
                 >
                   <div
-                    class="emotion-100 css-1fhb3ud-GridComponent-GridPrimaryColumn emotion-1"
+                    class="emotion-100 css-mgq4gj-GridComponent-GridPrimaryColumn emotion-1"
                     dir="ltr"
                   >
                     <main
@@ -3358,7 +3358,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","inLanguage":{"@type":"Language","name":"Nigerian Pidgin","alternateName":"pcm"},"author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
+      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","inLanguage":{"@type":"Language","name":"Nigerian Pidgin","alternateName":"pcm"},"author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
     </script>
     <script
       type="application/ld+json"
@@ -3391,11 +3391,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   comscore
                 </div>
                 <div
-                  class="emotion-345 css-1rncctf-GridComponent-GelPageGrid-StoryPageGrid emotion-1"
+                  class="emotion-345 css-1pzzokf-GridComponent-GelPageGrid-StoryPageGrid emotion-1"
                   dir="ltr"
                 >
                   <div
-                    class="emotion-100 css-1fhb3ud-GridComponent-GridPrimaryColumn emotion-1"
+                    class="emotion-100 css-mgq4gj-GridComponent-GridPrimaryColumn emotion-1"
                     dir="ltr"
                   >
                     <main
@@ -4018,10 +4018,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 dir="ltr"
                               >
                                 <h3
-                                  class="css-7051uk-Headline-StyledHeadline emotion-110"
+                                  class="css-1hm5gk9-Headline-StyledHeadline emotion-110"
                                 >
                                   <a
-                                    class="css-19eazla-Link-StyledLink emotion-109"
+                                    class="css-1jq7jmc-Link-StyledLink emotion-109"
                                     href="/pidgin/23248287"
                                   >
                                     ATMs across the country
@@ -4048,10 +4048,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 dir="ltr"
                               >
                                 <h3
-                                  class="css-7051uk-Headline-StyledHeadline emotion-110"
+                                  class="css-1hm5gk9-Headline-StyledHeadline emotion-110"
                                 >
                                   <a
-                                    class="css-19eazla-Link-StyledLink emotion-109"
+                                    class="css-1jq7jmc-Link-StyledLink emotion-109"
                                     href="/pidgin/tori-23146434"
                                   >
                                     Jacob Zuma: Staying!!!
@@ -4078,10 +4078,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 dir="ltr"
                               >
                                 <h3
-                                  class="css-7051uk-Headline-StyledHeadline emotion-110"
+                                  class="css-1hm5gk9-Headline-StyledHeadline emotion-110"
                                 >
                                   <a
-                                    class="css-19eazla-Link-StyledLink emotion-109"
+                                    class="css-1jq7jmc-Link-StyledLink emotion-109"
                                     href="https://www.bbc.co.uk/news"
                                   >
                                     Feature promo
@@ -4173,10 +4173,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 dir="ltr"
                               >
                                 <h3
-                                  class="css-15klqtn-Headline-StyledHeadline emotion-110"
+                                  class="css-wkdbel-Headline-StyledHeadline emotion-110"
                                 >
                                   <a
-                                    class="css-19eazla-Link-StyledLink emotion-109"
+                                    class="css-1jq7jmc-Link-StyledLink emotion-109"
                                     href="/pidgin/tori-23146625"
                                   >
                                     How Lagos Dey Fight Lassa Fever
@@ -4255,10 +4255,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 dir="ltr"
                               >
                                 <h3
-                                  class="css-15klqtn-Headline-StyledHeadline emotion-110"
+                                  class="css-wkdbel-Headline-StyledHeadline emotion-110"
                                 >
                                   <a
-                                    class="css-19eazla-Link-StyledLink emotion-109"
+                                    class="css-1jq7jmc-Link-StyledLink emotion-109"
                                     href="/pidgin/media-23267821"
                                   >
                                     <span
@@ -4351,10 +4351,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 dir="ltr"
                               >
                                 <h3
-                                  class="css-15klqtn-Headline-StyledHeadline emotion-110"
+                                  class="css-wkdbel-Headline-StyledHeadline emotion-110"
                                 >
                                   <a
-                                    class="css-19eazla-Link-StyledLink emotion-109"
+                                    class="css-1jq7jmc-Link-StyledLink emotion-109"
                                     href="/pidgin/23267823"
                                   >
                                     <span
@@ -4416,10 +4416,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 dir="ltr"
                               >
                                 <h3
-                                  class="css-15klqtn-Headline-StyledHeadline emotion-110"
+                                  class="css-wkdbel-Headline-StyledHeadline emotion-110"
                                 >
                                   <a
-                                    class="css-19eazla-Link-StyledLink emotion-109"
+                                    class="css-1jq7jmc-Link-StyledLink emotion-109"
                                     href="/pidgin/tori-23169387"
                                   >
                                     Libya: omo ile Ghana márùndínláàdóje pada sile
@@ -4469,10 +4469,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 dir="ltr"
                               >
                                 <h3
-                                  class="css-15klqtn-Headline-StyledHeadline emotion-110"
+                                  class="css-wkdbel-Headline-StyledHeadline emotion-110"
                                 >
                                   <a
-                                    class="css-19eazla-Link-StyledLink emotion-109"
+                                    class="css-1jq7jmc-Link-StyledLink emotion-109"
                                     href="/news/world-africa-23143884"
                                   >
                                     Like Scaramucci, Like Others
@@ -4522,10 +4522,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 dir="ltr"
                               >
                                 <h3
-                                  class="css-15klqtn-Headline-StyledHeadline emotion-110"
+                                  class="css-wkdbel-Headline-StyledHeadline emotion-110"
                                 >
                                   <a
-                                    class="css-19eazla-Link-StyledLink emotion-109"
+                                    class="css-1jq7jmc-Link-StyledLink emotion-109"
                                     href="/pidgin/tori-23146975"
                                   >
                                     Anambra Attack: 'My Friend Uchenna na Nice Girl'- Gabros
@@ -4575,10 +4575,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 dir="ltr"
                               >
                                 <h3
-                                  class="css-15klqtn-Headline-StyledHeadline emotion-110"
+                                  class="css-wkdbel-Headline-StyledHeadline emotion-110"
                                 >
                                   <a
-                                    class="css-19eazla-Link-StyledLink emotion-109"
+                                    class="css-1jq7jmc-Link-StyledLink emotion-109"
                                     href="https://www.bbc.com/pidgin/sport-51434980"
                                   >
                                     Man City vs West Ham: Bad weather force Premier League to cancel Sunday match
@@ -4628,10 +4628,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 dir="ltr"
                               >
                                 <h3
-                                  class="css-15klqtn-Headline-StyledHeadline emotion-110"
+                                  class="css-wkdbel-Headline-StyledHeadline emotion-110"
                                 >
                                   <a
-                                    class="css-19eazla-Link-StyledLink emotion-109"
+                                    class="css-1jq7jmc-Link-StyledLink emotion-109"
                                     href="/pidgin/tori-23145776"
                                   >
                                     Anambra Church: Police Arrest 3
@@ -4709,10 +4709,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 dir="ltr"
                               >
                                 <h3
-                                  class="css-15klqtn-Headline-StyledHeadline emotion-110"
+                                  class="css-wkdbel-Headline-StyledHeadline emotion-110"
                                 >
                                   <a
-                                    class="css-19eazla-Link-StyledLink emotion-109"
+                                    class="css-1jq7jmc-Link-StyledLink emotion-109"
                                     href="/pidgin/23146654"
                                   >
                                     <span
