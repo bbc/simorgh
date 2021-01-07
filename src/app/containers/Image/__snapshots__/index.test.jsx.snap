@@ -1037,10 +1037,15 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -1057,15 +1062,10 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-8 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
 @media (min-width:63rem) {
   .emotion-8 {
-    padding: 0.5rem 0 0;
+    width: 100%;
+    margin: 0.5rem 0 0;
   }
 }
 
@@ -1078,8 +1078,20 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   padding-bottom: 0;
 }
 
-.emotion-8 i {
-  font-style: normal;
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-8 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-8 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
 }
 
 <div>
@@ -1116,6 +1128,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
         >
           <figcaption
             class="emotion-8 emotion-9"
+            dir="ltr"
           >
             <span
               class="emotion-6 emotion-7"

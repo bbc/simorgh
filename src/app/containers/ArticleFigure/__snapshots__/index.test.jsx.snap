@@ -724,10 +724,15 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -744,15 +749,10 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-10 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
 @media (min-width:63rem) {
   .emotion-10 {
-    padding: 0.5rem 0 0;
+    width: 100%;
+    margin: 0.5rem 0 0;
   }
 }
 
@@ -765,8 +765,20 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   padding-bottom: 0;
 }
 
-.emotion-10 i {
-  font-style: normal;
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-10 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-10 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
 }
 
 <div>
@@ -811,6 +823,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
       >
         <figcaption
           class="emotion-10 emotion-11"
+          dir="ltr"
         >
           <span
             class="emotion-0 emotion-1"
@@ -1117,10 +1130,15 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -1137,15 +1155,10 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-6 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
 @media (min-width:63rem) {
   .emotion-6 {
-    padding: 0.5rem 0 0;
+    width: 100%;
+    margin: 0.5rem 0 0;
   }
 }
 
@@ -1158,8 +1171,20 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
   padding-bottom: 0;
 }
 
-.emotion-6 i {
-  font-style: normal;
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-6 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-6 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
 }
 
 <div>
@@ -1193,6 +1218,7 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
       >
         <figcaption
           class="emotion-6 emotion-7"
+          dir="ltr"
         >
           <span
             class="emotion-4 emotion-5"
@@ -1499,10 +1525,15 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -1519,15 +1550,10 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-8 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
 @media (min-width:63rem) {
   .emotion-8 {
-    padding: 0.5rem 0 0;
+    width: 100%;
+    margin: 0.5rem 0 0;
   }
 }
 
@@ -1540,8 +1566,20 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
   padding-bottom: 0;
 }
 
-.emotion-8 i {
-  font-style: normal;
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-8 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-8 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
 }
 
 .emotion-6 {
@@ -1593,6 +1631,7 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
       >
         <figcaption
           class="emotion-8 emotion-9"
+          dir="ltr"
         >
           <span
             class="emotion-4 emotion-5"
@@ -2819,10 +2858,15 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -2839,15 +2883,10 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-12 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
 @media (min-width:63rem) {
   .emotion-12 {
-    padding: 0.5rem 0 0;
+    width: 100%;
+    margin: 0.5rem 0 0;
   }
 }
 
@@ -2860,8 +2899,20 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   padding-bottom: 0;
 }
 
-.emotion-12 i {
-  font-style: normal;
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-12 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-12 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
 }
 
 <div>
@@ -2904,6 +2955,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
       >
         <figcaption
           class="emotion-12 emotion-13"
+          dir="ltr"
         >
           <span
             class="emotion-2 emotion-3"
@@ -3216,10 +3268,15 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -3236,15 +3293,10 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-8 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
 @media (min-width:63rem) {
   .emotion-8 {
-    padding: 0.5rem 0 0;
+    width: 100%;
+    margin: 0.5rem 0 0;
   }
 }
 
@@ -3257,8 +3309,20 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   padding-bottom: 0;
 }
 
-.emotion-8 i {
-  font-style: normal;
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-8 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-8 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
 }
 
 <div>
@@ -3290,6 +3354,7 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
       >
         <figcaption
           class="emotion-8 emotion-9"
+          dir="ltr"
         >
           <span
             class="emotion-6 emotion-7"
@@ -3602,10 +3667,15 @@ exports[`ArticleFigure should render an image with caption text with inline link
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -3622,15 +3692,10 @@ exports[`ArticleFigure should render an image with caption text with inline link
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-10 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
 @media (min-width:63rem) {
   .emotion-10 {
-    padding: 0.5rem 0 0;
+    width: 100%;
+    margin: 0.5rem 0 0;
   }
 }
 
@@ -3643,8 +3708,20 @@ exports[`ArticleFigure should render an image with caption text with inline link
   padding-bottom: 0;
 }
 
-.emotion-10 i {
-  font-style: normal;
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-10 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-10 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
 }
 
 .emotion-8 {
@@ -3694,6 +3771,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
       >
         <figcaption
           class="emotion-10 emotion-11"
+          dir="ltr"
         >
           <span
             class="emotion-6 emotion-7"
