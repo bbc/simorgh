@@ -5,6 +5,7 @@ import BylineContainer from './index';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 /* eslint-disable react/prop-types */
 const BylineContainerWithContext = ({
@@ -34,7 +35,7 @@ describe('Byline', () => {
   shouldMatchSnapshot(
     'should render correctly for STY pages with name and title',
     BylineContainerWithContext({
-      pageType: 'STY',
+      pageType: STORY_PAGE,
       service: 'pidgin',
       blocks: [{ name: 'John Smith', title: 'Art Editor' }],
     }),
@@ -43,7 +44,7 @@ describe('Byline', () => {
   it('should render nothing if name or title are null', () => {
     render(
       BylineContainerWithContext({
-        pageType: 'STY',
+        pageType: STORY_PAGE,
         service: 'pidgin',
         blocks: [{ name: 'John Smith' }],
       }),
@@ -55,7 +56,7 @@ describe('Byline', () => {
   it('should render nothing if blocks is null', () => {
     render(
       BylineContainerWithContext({
-        pageType: 'STY',
+        pageType: STORY_PAGE,
         service: 'pidgin',
         blocks: null,
       }),

@@ -14,6 +14,7 @@ import {
   ARTICLE_PAGE,
   FRONT_PAGE,
   MEDIA_PAGE,
+  MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 const defaultToggleState = {
@@ -87,7 +88,7 @@ describe(`Header`, () => {
 
   describe('Assertions', () => {
     it('should output a nav bar for media asset pages', () => {
-      render(HeaderContainerWithContext({ pageType: 'MAP' }));
+      render(HeaderContainerWithContext({ pageType: MEDIA_ASSET_PAGE }));
       expect(document.querySelector(`header nav`)).not.toBeNull();
     });
 

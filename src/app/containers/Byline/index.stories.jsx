@@ -5,6 +5,7 @@ import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import BylineContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const stories = storiesOf('Containers/Byline', module)
   .addParameters({
@@ -21,7 +22,7 @@ stories.add('default', ({ service }) => {
     <ServiceContextProvider service={service}>
       <RequestContextProvider
         isAmp={false}
-        pageType="STY"
+        pageType={STORY_PAGE}
         service={service}
         statusCode={200}
         bbcOrigin="https://www.test.bbc.com"

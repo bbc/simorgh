@@ -255,7 +255,7 @@ export const service = {
       },
       {
         title: 'Itoophiyaa',
-        url: '/afaanoromoo/topics/e986aff5-6b26-4638-b468-371d1d9617b4',
+        url: '/afaanoromoo/topics/c2dwqdy81y1t',
       },
       {
         title: 'Viidiyoo',
