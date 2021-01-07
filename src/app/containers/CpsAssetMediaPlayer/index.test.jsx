@@ -9,6 +9,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import CpsAssetMediaPlayerContainer from '.';
 import videoBlock from './fixtures';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const GenerateMediaPlayer = ({
   /* eslint-disable react/prop-types */
@@ -23,7 +24,7 @@ const GenerateMediaPlayer = ({
     statusCode={200}
     platform={platform}
     id="foo"
-    pageType="MAP"
+    pageType={MEDIA_ASSET_PAGE}
     pathname="/pathname"
   >
     <ServiceContextProvider service="news">

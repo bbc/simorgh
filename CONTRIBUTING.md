@@ -89,7 +89,7 @@ All pull requests need to have linting, unit tests and integration tests passing
 
 ### Writing tests
 
-We use React Testing Library for writing our React component and custom hook unit tests.. An introduction to using React Testing Library can be found [here](https://testing-library.com/docs/react-testing-library/intro/).
+We use React Testing Library for writing our React component and custom hook unit tests. An introduction to using React Testing Library can be found [here](https://testing-library.com/docs/react-testing-library/intro/).
 
 ### Run tests on your fork
 

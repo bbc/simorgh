@@ -5,6 +5,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 
 import FeaturesAnalysis from '.';
 import features from '#pages/StoryPage/featuresAnalysis.json';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 // eslint-disable-next-line react/prop-types
 const renderFeaturesAnalysis = ({
@@ -16,7 +17,7 @@ const renderFeaturesAnalysis = ({
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
         isAmp={false}
-        pageType="STY"
+        pageType={STORY_PAGE}
         pathname="/pidgin/tori-49450859"
         service="pidgin"
         statusCode={200}
@@ -35,7 +36,7 @@ const renderFeaturesAnalysisNull = ({
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
         isAmp={false}
-        pageType="STY"
+        pageType={STORY_PAGE}
         pathname="/pidgin/tori-49450859"
         service="pidgin"
         statusCode={200}
@@ -55,7 +56,7 @@ const renderFeaturesAnalysisNoTitle = ({
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
         isAmp={false}
-        pageType="STY"
+        pageType={STORY_PAGE}
         pathname="/pidgin/tori-49450859"
         service="pidgin"
         statusCode={200}

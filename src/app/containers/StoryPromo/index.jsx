@@ -26,6 +26,7 @@ import IndexAlsosContainer from './IndexAlsos';
 import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { getHeadingTagOverride } from './utilities';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const logger = loggerNode(__filename);
 
@@ -152,7 +153,7 @@ const StoryPromoContainer = ({
     !isRecommendation &&
     !isLive;
 
-  if (cpsType === 'MAP' && mediaStatuscode) {
+  if (cpsType === MEDIA_ASSET_PAGE && mediaStatuscode) {
     logger.warn(MEDIA_MISSING, {
       url: pathOr(null, ['section', 'uri'], item),
       mediaStatuscode,
