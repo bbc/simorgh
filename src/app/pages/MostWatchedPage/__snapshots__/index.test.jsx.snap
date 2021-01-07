@@ -228,11 +228,11 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
           class="css-1709bnj-IndexPageContainer-StyledIndexPageContainer emotion-57"
         >
           <div
-            class="emotion-55 css-py1rac-GridComponent-GelPageGrid emotion-16"
+            class="emotion-55 css-g9zqnx-GridComponent-GelPageGrid emotion-16"
             dir="ltr"
           >
             <div
-              class="css-udoza7-GridComponent emotion-16"
+              class="css-1yzn4yh-GridComponent emotion-16"
               dir="ltr"
             >
               <h1
@@ -248,13 +248,13 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                 data-e2e="most-watched-heading"
               >
                 <ol
-                  class="emotion-16 css-1fu4bbc-MostWatchedOl-GridComponent emotion-51"
+                  class="emotion-16 css-11c7o9h-MostWatchedOl-GridComponent emotion-51"
                   data-e2e="most-watched-ol"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="emotion-16 css-1c5rfcc-StoryPromoLiBase-StoryPromoLi-MediaStoryPromoLi-GridComponent emotion-17"
+                    class="emotion-16 css-8mfvl9-StoryPromoLiBase-StoryPromoLi-MediaStoryPromoLi-GridComponent emotion-17"
                     dir="ltr"
                   >
                     <div
@@ -343,7 +343,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                     </div>
                   </li>
                   <li
-                    class="emotion-16 css-1c5rfcc-StoryPromoLiBase-StoryPromoLi-MediaStoryPromoLi-GridComponent emotion-17"
+                    class="emotion-16 css-8mfvl9-StoryPromoLiBase-StoryPromoLi-MediaStoryPromoLi-GridComponent emotion-17"
                     dir="ltr"
                   >
                     <div
@@ -432,7 +432,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                     </div>
                   </li>
                   <li
-                    class="emotion-16 css-1c5rfcc-StoryPromoLiBase-StoryPromoLi-MediaStoryPromoLi-GridComponent emotion-17"
+                    class="emotion-16 css-8mfvl9-StoryPromoLiBase-StoryPromoLi-MediaStoryPromoLi-GridComponent emotion-17"
                     dir="ltr"
                   >
                     <div

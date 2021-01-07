@@ -88,7 +88,7 @@
     "@bbc/psammead-embed-error": "^3.0.6",
     "@bbc/psammead-episode-list": "0.1.0-alpha.22",
     "@bbc/psammead-figure": "^2.0.1",
-    "@bbc/psammead-grid": "^3.0.7",
+    "@bbc/psammead-grid": "^3.0.8",
     "@bbc/psammead-heading-index": "^3.0.5",
     "@bbc/psammead-headings": "^5.0.5",
     "@bbc/psammead-image": "^2.0.0",
