@@ -100,7 +100,7 @@
     "@bbc/psammead-media-indicator": "^6.0.7",
     "@bbc/psammead-media-player": "^5.0.11",
     "@bbc/psammead-most-read": "^6.0.11",
-    "@bbc/psammead-navigation": "^8.0.7",
+    "@bbc/psammead-navigation": "^8.0.8",
     "@bbc/psammead-paragraph": "^4.0.5",
     "@bbc/psammead-radio-schedule": "^5.0.16",
     "@bbc/psammead-rich-text-transforms": "^2.0.2",
