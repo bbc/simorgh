@@ -85,7 +85,8 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                       dir="ltr"
                     >
                       <figcaption
-                        class="css-1s76qn-Caption emotion-7"
+                        class="css-1lbbgjb-Caption emotion-7"
+                        dir="ltr"
                       >
                         <span
                           class="css-ow3j0s-VisuallyHiddenText emotion-6"
@@ -133,7 +134,8 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                       dir="ltr"
                     >
                       <figcaption
-                        class="css-1s76qn-Caption emotion-7"
+                        class="css-1lbbgjb-Caption emotion-7"
+                        dir="ltr"
                       >
                         <span
                           class="css-ow3j0s-VisuallyHiddenText emotion-6"
@@ -181,7 +183,8 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                       dir="ltr"
                     >
                       <figcaption
-                        class="css-1s76qn-Caption emotion-7"
+                        class="css-1lbbgjb-Caption emotion-7"
+                        dir="ltr"
                       >
                         <span
                           class="css-ow3j0s-VisuallyHiddenText emotion-6"
@@ -229,7 +232,8 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                       dir="ltr"
                     >
                       <figcaption
-                        class="css-1s76qn-Caption emotion-7"
+                        class="css-1lbbgjb-Caption emotion-7"
+                        dir="ltr"
                       >
                         <span
                           class="css-ow3j0s-VisuallyHiddenText emotion-6"
@@ -277,7 +281,8 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                       dir="ltr"
                     >
                       <figcaption
-                        class="css-1s76qn-Caption emotion-7"
+                        class="css-1lbbgjb-Caption emotion-7"
+                        dir="ltr"
                       >
                         <span
                           class="css-ow3j0s-VisuallyHiddenText emotion-6"
@@ -325,7 +330,8 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                       dir="ltr"
                     >
                       <figcaption
-                        class="css-1s76qn-Caption emotion-7"
+                        class="css-1lbbgjb-Caption emotion-7"
+                        dir="ltr"
                       >
                         <span
                           class="css-ow3j0s-VisuallyHiddenText emotion-6"
@@ -373,7 +379,8 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                       dir="ltr"
                     >
                       <figcaption
-                        class="css-1s76qn-Caption emotion-7"
+                        class="css-1lbbgjb-Caption emotion-7"
+                        dir="ltr"
                       >
                         <span
                           class="css-ow3j0s-VisuallyHiddenText emotion-6"
@@ -421,7 +428,8 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                       dir="ltr"
                     >
                       <figcaption
-                        class="css-1s76qn-Caption emotion-7"
+                        class="css-1lbbgjb-Caption emotion-7"
+                        dir="ltr"
                       >
                         <span
                           class="css-ow3j0s-VisuallyHiddenText emotion-6"
@@ -469,7 +477,8 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                       dir="ltr"
                     >
                       <figcaption
-                        class="css-1s76qn-Caption emotion-7"
+                        class="css-1lbbgjb-Caption emotion-7"
+                        dir="ltr"
                       >
                         <span
                           class="css-ow3j0s-VisuallyHiddenText emotion-6"
@@ -517,7 +526,8 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                       dir="ltr"
                     >
                       <figcaption
-                        class="css-1s76qn-Caption emotion-7"
+                        class="css-1lbbgjb-Caption emotion-7"
+                        dir="ltr"
                       >
                         <span
                           class="css-ow3j0s-VisuallyHiddenText emotion-6"
@@ -565,7 +575,8 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                       dir="ltr"
                     >
                       <figcaption
-                        class="css-1s76qn-Caption emotion-7"
+                        class="css-1lbbgjb-Caption emotion-7"
+                        dir="ltr"
                       >
                         <span
                           class="css-ow3j0s-VisuallyHiddenText emotion-6"
@@ -613,7 +624,8 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                       dir="ltr"
                     >
                       <figcaption
-                        class="css-1s76qn-Caption emotion-7"
+                        class="css-1lbbgjb-Caption emotion-7"
+                        dir="ltr"
                       >
                         <span
                           class="css-ow3j0s-VisuallyHiddenText emotion-6"
@@ -661,7 +673,8 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                       dir="ltr"
                     >
                       <figcaption
-                        class="css-1s76qn-Caption emotion-7"
+                        class="css-1lbbgjb-Caption emotion-7"
+                        dir="ltr"
                       >
                         <span
                           class="css-ow3j0s-VisuallyHiddenText emotion-6"
@@ -709,7 +722,8 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                       dir="ltr"
                     >
                       <figcaption
-                        class="css-1s76qn-Caption emotion-7"
+                        class="css-1lbbgjb-Caption emotion-7"
+                        dir="ltr"
                       >
                         <span
                           class="css-ow3j0s-VisuallyHiddenText emotion-6"
@@ -757,7 +771,8 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                       dir="ltr"
                     >
                       <figcaption
-                        class="css-1s76qn-Caption emotion-7"
+                        class="css-1lbbgjb-Caption emotion-7"
+                        dir="ltr"
                       >
                         <span
                           class="css-ow3j0s-VisuallyHiddenText emotion-6"
@@ -1116,7 +1131,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -1164,7 +1180,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -1212,7 +1229,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -1260,7 +1278,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -1308,7 +1327,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -1356,7 +1376,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -1404,7 +1425,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -1452,7 +1474,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -1500,7 +1523,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -1548,7 +1572,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -1596,7 +1621,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -1644,7 +1670,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -1692,7 +1719,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -1740,7 +1768,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -1788,7 +1817,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -2148,7 +2178,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -2196,7 +2227,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -2244,7 +2276,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -2292,7 +2325,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -2340,7 +2374,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -2388,7 +2423,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -2436,7 +2472,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -2484,7 +2521,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -2532,7 +2570,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -2580,7 +2619,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -2628,7 +2668,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-10"
+                            class="css-1lbbgjb-Caption emotion-10"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-9"
@@ -3187,7 +3228,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-12"
+                            class="css-1lbbgjb-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -3250,7 +3292,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-12"
+                            class="css-1lbbgjb-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -3313,7 +3356,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-12"
+                            class="css-1lbbgjb-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -3376,7 +3420,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-12"
+                            class="css-1lbbgjb-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -3439,7 +3484,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-12"
+                            class="css-1lbbgjb-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -3502,7 +3548,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-12"
+                            class="css-1lbbgjb-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -3565,7 +3612,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-1s76qn-Caption emotion-12"
+                            class="css-1lbbgjb-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -3969,7 +4017,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -4032,7 +4081,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -4095,7 +4145,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -4158,7 +4209,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -4221,7 +4273,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -4284,7 +4337,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -4347,7 +4401,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -4410,7 +4465,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -4473,7 +4529,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -4536,7 +4593,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -4599,7 +4657,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -4662,7 +4721,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -4725,7 +4785,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -4788,7 +4849,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -4851,7 +4913,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -4914,7 +4977,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -4977,7 +5041,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -5040,7 +5105,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
@@ -5103,7 +5169,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           dir="ltr"
                         >
                           <figcaption
-                            class="css-ho4rxk-Caption emotion-12"
+                            class="css-qy982f-Caption emotion-12"
+                            dir="ltr"
                           >
                             <span
                               class="css-ow3j0s-VisuallyHiddenText emotion-7"
