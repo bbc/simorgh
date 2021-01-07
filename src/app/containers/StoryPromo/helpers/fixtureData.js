@@ -1,4 +1,8 @@
-import { INDEX_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  INDEX_PAGE,
+  MEDIA_ASSET_PAGE,
+  STORY_PAGE,
+} from '#app/routes/utils/pageTypes';
 import relItems from '../IndexAlsos/relatedItems';
 
 export const completeItem = {
@@ -40,7 +44,7 @@ export const audioItem = {
     altText: 'Image Alt text',
     copyrightHolder: 'Image provider',
   },
-  cpsType: 'MAP',
+  cpsType: MEDIA_ASSET_PAGE,
   media: {
     format: 'audio',
     versions: [
@@ -67,7 +71,7 @@ export const videoItem = {
     altText: 'Image Alt text',
     copyrightHolder: 'Image provider',
   },
-  cpsType: 'MAP',
+  cpsType: MEDIA_ASSET_PAGE,
   media: {
     format: 'video',
     versions: [
@@ -113,7 +117,7 @@ export const audioItemNoDuration = {
     altText: 'Image Alt text',
     copyrightHolder: 'Image provider',
   },
-  cpsType: 'MAP',
+  cpsType: MEDIA_ASSET_PAGE,
   media: {
     format: 'audio',
     versions: [{}],
@@ -220,12 +224,12 @@ export const indexAlsosItem = {
     altText: 'Image Alt text',
     copyrightHolder: 'Image provider',
   },
-  cpsType: 'STY',
+  cpsType: STORY_PAGE,
   relatedItems: relItems,
 };
 
 export const mapWithMediaError = {
-  cpsType: 'MAP',
+  cpsType: MEDIA_ASSET_PAGE,
   headlines: {
     headline: 'کورونا وېروس او هوایي شرکتونه',
   },
@@ -275,7 +279,7 @@ export const mapWithMediaError = {
 };
 
 export const mapWithoutMediaError = {
-  cpsType: 'MAP',
+  cpsType: MEDIA_ASSET_PAGE,
   headlines: {
     headline: 'افغانستان کې د کورونا وېروس وروستی حال',
   },

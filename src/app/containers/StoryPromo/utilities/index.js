@@ -1,8 +1,11 @@
 import pathOr from 'ramda/src/pathOr';
-import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  MOST_WATCHED_PAGE,
+  MEDIA_ASSET_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 export const isMap = item => {
-  const isCpsTypeMap = pathOr(null, ['cpsType'], item) === 'MAP';
+  const isCpsTypeMap = pathOr(null, ['cpsType'], item) === MEDIA_ASSET_PAGE;
   const hasMedia = pathOr(false, ['media'], item);
 
   return isCpsTypeMap || Boolean(hasMedia);

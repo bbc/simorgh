@@ -2,6 +2,11 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import LinkContents from '.';
+import {
+  MEDIA_ASSET_PAGE,
+  STORY_PAGE,
+  PHOTO_GALLERY_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 const defaultProps = {
   summary: 'A summary',
@@ -20,7 +25,7 @@ const defaultProps = {
 
 const item = {
   ...defaultProps,
-  cpsType: 'STY',
+  cpsType: STORY_PAGE,
   headlines: {
     headline: 'A headline',
   },
@@ -28,7 +33,7 @@ const item = {
 
 const itemWithOvertypedHeadline = {
   ...defaultProps,
-  cpsType: 'STY',
+  cpsType: STORY_PAGE,
   headlines: {
     headline: 'A headline',
     overtyped: 'Overtyped headline',
@@ -37,7 +42,7 @@ const itemWithOvertypedHeadline = {
 
 const mediaItem = {
   ...defaultProps,
-  cpsType: 'MAP',
+  cpsType: MEDIA_ASSET_PAGE,
   headlines: {
     headline: 'A headline for a media item',
   },
@@ -58,7 +63,7 @@ const photogalleryItem = {
   locators: {
     assetUri: 'https://www.bbc.co.uk',
   },
-  cpsType: 'PGL',
+  cpsType: PHOTO_GALLERY_PAGE,
 };
 
 const mediaItemWithOvertyped = { ...mediaItem };
