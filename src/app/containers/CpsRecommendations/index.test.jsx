@@ -6,6 +6,7 @@ import { ToggleContext } from '#contexts/ToggleContext';
 
 import ltrRecommendationsData from '#data/mundo/recommendations/index.json';
 import rtlRecommendationsData from '#data/arabic/recommendations/index.json';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 import CpsRecommendations from '.';
 
@@ -29,7 +30,7 @@ const renderContainer = (items, service, toggleEnabled) => {
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"
         isAmp={false}
-        pageType="STY"
+        pageType={STORY_PAGE}
         pathname="/service/085965"
         service={service}
         statusCode={200}

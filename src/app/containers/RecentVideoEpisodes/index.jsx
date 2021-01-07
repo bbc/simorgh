@@ -43,7 +43,7 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
     datetimeLocale,
     translations,
   } = useContext(ServiceContext);
-  const { variant } = useContext(RequestContext);
+  const { isAmp, variant } = useContext(RequestContext);
 
   if (!episodes.length) return null;
 
@@ -100,6 +100,17 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
               duration={formatDuration({
                 duration: episode.duration,
                 locale: datetimeLocale,
+              })}
+              {...(isAmp && {
+                as: () => (
+                  <amp-img
+                    layout="responsive"
+                    width="16"
+                    height="9"
+                    src={episode.image}
+                    alt={episode.altText}
+                  />
+                ),
               })}
             />
             {/* these must be concatenated for screen reader UX */}
