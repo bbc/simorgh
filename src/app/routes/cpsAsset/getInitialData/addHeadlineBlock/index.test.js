@@ -6,9 +6,11 @@ import {
   getHeadlineBlock,
 } from './models';
 
+import { STORY_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+
 const input = {
   metadata: {
-    type: 'MAP',
+    type: MEDIA_ASSET_PAGE,
   },
   promo: {
     headlines: {
@@ -33,7 +35,7 @@ describe('addHeadlineBlock', () => {
   describe('when on MAP asset type', () => {
     it('should add an visuallyHiddenHeadline block as the first block and an fauxHeadline block after the video block', async () => {
       const expected = {
-        metadata: { type: 'MAP' },
+        metadata: { type: MEDIA_ASSET_PAGE },
         promo: {
           headlines: {
             headline: 'i am a headline',
@@ -63,7 +65,7 @@ describe('addHeadlineBlock', () => {
       inputMissingVideoBlock.content.model.blocks.splice(0, 1);
 
       const expected = {
-        metadata: { type: 'MAP' },
+        metadata: { type: MEDIA_ASSET_PAGE },
         promo: { headlines: { headline: 'i am a headline' } },
         content: {
           model: {
@@ -84,10 +86,10 @@ describe('addHeadlineBlock', () => {
   describe('when on STY asset type', () => {
     it('should add a headline block if the first blocks is a video', () => {
       const styInput = deepClone(input);
-      styInput.metadata.type = 'STY';
+      styInput.metadata.type = STORY_PAGE;
 
       const expected = {
-        metadata: { type: 'STY' },
+        metadata: { type: STORY_PAGE },
         promo: { headlines: { headline: 'i am a headline' } },
         content: {
           model: {
@@ -113,7 +115,7 @@ describe('addHeadlineBlock', () => {
     delete inputMissingBlocks.content.model.blocks;
 
     const expected = {
-      metadata: { type: 'MAP' },
+      metadata: { type: MEDIA_ASSET_PAGE },
       promo: { headlines: { headline: 'i am a headline' } },
       content: {
         model: {},
