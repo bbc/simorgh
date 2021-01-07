@@ -6,7 +6,6 @@ import pick from 'ramda/src/pick';
 import mergeAll from 'ramda/src/mergeAll';
 import path from 'ramda/src/path';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
-import usePrevious from '#lib/utilities/usePrevious';
 import getToggles from '#lib/utilities/getToggles';
 import routes from '#app/routes';
 
@@ -58,8 +57,7 @@ export const App = ({ location, initialData, bbcOrigin, history }) => {
   const { pathname } = location;
   const hasMounted = useRef(false);
   const routeProps = getRouteProps(pathname);
-  const previousLocationPath = usePrevious(pathname);
-  const previousPath = history.action === 'POP' ? null : previousLocationPath; // clear the previous path on back clicks
+  const previousPath = useRef(null);
   const { showAdsBasedOnLocation, toggles } = initialData;
   const [state, setState] = useState(
     mapToState({
@@ -70,6 +68,15 @@ export const App = ({ location, initialData, bbcOrigin, history }) => {
     }),
   );
   const routeHasChanged = state.pathname !== pathname;
+
+  useEffect(() => {
+    if (history.action === 'POP') {
+      previousPath.current = null; // clear the previous path on back clicks
+    }
+    return () => {
+      previousPath.current = pathname;
+    };
+  }, [pathname, history]);
 
   useEffect(() => {
     if (hasMounted.current) {
@@ -92,7 +99,7 @@ export const App = ({ location, initialData, bbcOrigin, history }) => {
   return renderRoutes(routes, {
     ...state,
     bbcOrigin,
-    previousPath,
+    previousPath: previousPath.current,
     loading: routeHasChanged,
     showAdsBasedOnLocation,
   });
