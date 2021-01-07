@@ -20,7 +20,6 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import { AmpImg } from '@bbc/psammead-image';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 
@@ -94,10 +93,15 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
                 locale: datetimeLocale,
               })}
               {...(isAmp && {
-                as: AmpImg,
-                layout: 'responsive',
-                width: 16,
-                height: 9,
+                as: () => (
+                  <amp-img
+                    layout="responsive"
+                    width="16"
+                    height="9"
+                    src={episode.image}
+                    alt={episode.altText}
+                  />
+                ),
               })}
             />
             {/* these must be concatenated for screen reader UX */}
