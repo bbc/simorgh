@@ -10,6 +10,7 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
     // if they are rendered in the browser following clientside render tree modification;
     // our story pages should not do this. The test checks the core content has been removed
     // following progressive enhancement by the include's inline scripts.
+    // This test specifically is targeted at this test asset: '/mundo/23263889'
     it('should load the eclipse VJ include successfully', () => {
       if (service === 'mundo') {
         cy.get(
