@@ -44,12 +44,12 @@ exports[`Headings with headline data should render correctly 1`] = `
 @supports (display:grid) {
   .emotion-2 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -59,8 +59,6 @@ exports[`Headings with headline data should render correctly 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -70,8 +68,6 @@ exports[`Headings with headline data should render correctly 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -81,8 +77,6 @@ exports[`Headings with headline data should render correctly 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -92,8 +86,6 @@ exports[`Headings with headline data should render correctly 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -102,8 +94,6 @@ exports[`Headings with headline data should render correctly 1`] = `
 
 @media (min-width:80rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -208,12 +198,12 @@ exports[`Headings with plain text headline should render h1 containing correct t
 @supports (display:grid) {
   .emotion-2 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -223,8 +213,6 @@ exports[`Headings with plain text headline should render h1 containing correct t
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -234,8 +222,6 @@ exports[`Headings with plain text headline should render h1 containing correct t
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -245,8 +231,6 @@ exports[`Headings with plain text headline should render h1 containing correct t
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -256,8 +240,6 @@ exports[`Headings with plain text headline should render h1 containing correct t
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -266,8 +248,6 @@ exports[`Headings with plain text headline should render h1 containing correct t
 
 @media (min-width:80rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -372,12 +352,12 @@ exports[`Headings with plain text subheadline should render h2 containing correc
 @supports (display:grid) {
   .emotion-2 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -387,8 +367,6 @@ exports[`Headings with plain text subheadline should render h2 containing correc
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -398,8 +376,6 @@ exports[`Headings with plain text subheadline should render h2 containing correc
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -409,8 +385,6 @@ exports[`Headings with plain text subheadline should render h2 containing correc
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -420,8 +394,6 @@ exports[`Headings with plain text subheadline should render h2 containing correc
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -430,8 +402,6 @@ exports[`Headings with plain text subheadline should render h2 containing correc
 
 @media (min-width:80rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -530,12 +500,12 @@ exports[`Headings with rich text headline with bold text should render h1 with <
 @supports (display:grid) {
   .emotion-2 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -545,8 +515,6 @@ exports[`Headings with rich text headline with bold text should render h1 with <
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -556,8 +524,6 @@ exports[`Headings with rich text headline with bold text should render h1 with <
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -567,8 +533,6 @@ exports[`Headings with rich text headline with bold text should render h1 with <
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -578,8 +542,6 @@ exports[`Headings with rich text headline with bold text should render h1 with <
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -588,8 +550,6 @@ exports[`Headings with rich text headline with bold text should render h1 with <
 
 @media (min-width:80rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -696,12 +656,12 @@ exports[`Headings with rich text headline with italic text should render h1 with
 @supports (display:grid) {
   .emotion-4 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -711,8 +671,6 @@ exports[`Headings with rich text headline with italic text should render h1 with
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -722,8 +680,6 @@ exports[`Headings with rich text headline with italic text should render h1 with
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -733,8 +689,6 @@ exports[`Headings with rich text headline with italic text should render h1 with
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -744,8 +698,6 @@ exports[`Headings with rich text headline with italic text should render h1 with
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -754,8 +706,6 @@ exports[`Headings with rich text headline with italic text should render h1 with
 
 @media (min-width:80rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -872,12 +822,12 @@ exports[`Headings with rich text should render headline with bold & italic text 
 @supports (display:grid) {
   .emotion-4 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -887,8 +837,6 @@ exports[`Headings with rich text should render headline with bold & italic text 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -898,8 +846,6 @@ exports[`Headings with rich text should render headline with bold & italic text 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -909,8 +855,6 @@ exports[`Headings with rich text should render headline with bold & italic text 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -920,8 +864,6 @@ exports[`Headings with rich text should render headline with bold & italic text 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -930,8 +872,6 @@ exports[`Headings with rich text should render headline with bold & italic text 
 
 @media (min-width:80rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -1050,12 +990,12 @@ exports[`Headings with rich text should render headline with italic & bold text 
 @supports (display:grid) {
   .emotion-4 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1065,8 +1005,6 @@ exports[`Headings with rich text should render headline with italic & bold text 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1076,8 +1014,6 @@ exports[`Headings with rich text should render headline with italic & bold text 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1087,8 +1023,6 @@ exports[`Headings with rich text should render headline with italic & bold text 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1098,8 +1032,6 @@ exports[`Headings with rich text should render headline with italic & bold text 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -1108,8 +1040,6 @@ exports[`Headings with rich text should render headline with italic & bold text 
 
 @media (min-width:80rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -1228,12 +1158,12 @@ exports[`Headings with rich text with different attributes should render headlin
 @supports (display:grid) {
   .emotion-4 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1243,8 +1173,6 @@ exports[`Headings with rich text with different attributes should render headlin
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1254,8 +1182,6 @@ exports[`Headings with rich text with different attributes should render headlin
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1265,8 +1191,6 @@ exports[`Headings with rich text with different attributes should render headlin
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1276,8 +1200,6 @@ exports[`Headings with rich text with different attributes should render headlin
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -1286,8 +1208,6 @@ exports[`Headings with rich text with different attributes should render headlin
 
 @media (min-width:80rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -1406,12 +1326,12 @@ exports[`Headings with subheadline data should render correctly 1`] = `
 @supports (display:grid) {
   .emotion-2 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1421,8 +1341,6 @@ exports[`Headings with subheadline data should render correctly 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1432,8 +1350,6 @@ exports[`Headings with subheadline data should render correctly 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1443,8 +1359,6 @@ exports[`Headings with subheadline data should render correctly 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -1454,8 +1368,6 @@ exports[`Headings with subheadline data should render correctly 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -1464,8 +1376,6 @@ exports[`Headings with subheadline data should render correctly 1`] = `
 
 @media (min-width:80rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
