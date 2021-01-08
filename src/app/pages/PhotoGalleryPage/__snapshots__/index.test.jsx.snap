@@ -11,12 +11,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   .emotion-250 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-250 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -25,8 +25,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-250 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -35,8 +33,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-250 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -45,8 +41,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-250 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -55,8 +49,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-250 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -65,8 +57,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:80rem) {
     .emotion-250 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -137,12 +127,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 @supports (display:grid) {
   .emotion-2 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -152,8 +142,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -163,8 +151,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -174,8 +160,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -185,8 +169,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -195,8 +177,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:80rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -284,12 +264,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 @supports (display:grid) {
   .emotion-6 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -299,8 +279,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -310,8 +288,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -321,8 +297,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -332,8 +306,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -342,8 +314,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:80rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -421,12 +391,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 @supports (display:grid) {
   .emotion-22 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-22 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -435,8 +405,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-22 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -445,8 +413,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-22 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -455,8 +421,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-22 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -465,8 +429,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-22 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -475,8 +437,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:80rem) {
     .emotion-22 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -494,12 +454,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   .emotion-18 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -508,8 +468,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -518,8 +476,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -528,8 +484,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -538,8 +492,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -548,8 +500,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:80rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -596,12 +546,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 @supports (display:grid) {
   .emotion-10 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -610,8 +560,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -620,8 +568,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -630,8 +576,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -640,8 +584,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -650,8 +592,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:80rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -735,12 +675,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 @supports (display:grid) {
   .emotion-16 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -749,8 +689,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -759,8 +697,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -769,8 +705,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -779,8 +713,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -789,8 +721,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:80rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -899,12 +829,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 @supports (display:grid) {
   .emotion-55 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-55 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -913,8 +843,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-55 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -923,8 +851,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-55 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-start: 1;
@@ -933,8 +859,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-55 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -943,8 +867,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-55 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-start: 2;
@@ -953,8 +875,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:80rem) {
     .emotion-55 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 5;
@@ -1008,12 +928,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   .emotion-50 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-50 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1022,8 +942,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-50 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1032,8 +950,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-50 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-gap: 0.5rem;
@@ -1042,8 +958,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-50 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-gap: 1rem;
@@ -1052,8 +966,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-50 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-gap: 1rem;
@@ -1062,8 +974,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:80rem) {
     .emotion-50 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -1110,12 +1020,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 @supports (display:grid) {
   .emotion-42 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-42 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1124,8 +1034,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-42 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1134,8 +1042,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-42 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-start: 1;
@@ -1144,8 +1050,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-42 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-start: 1;
@@ -1154,8 +1058,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-42 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-start: 1;
@@ -1164,8 +1066,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (min-width:80rem) {
     .emotion-42 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -2027,12 +1927,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   .emotion-255 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-255 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2041,8 +1941,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-255 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2051,8 +1949,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-255 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2061,8 +1957,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-255 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -2071,8 +1965,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-255 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -2081,8 +1973,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:80rem) {
     .emotion-255 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -2153,12 +2043,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 @supports (display:grid) {
   .emotion-2 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2168,8 +2058,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2179,8 +2067,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2190,8 +2076,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2201,8 +2085,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -2211,8 +2093,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:80rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -2300,12 +2180,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 @supports (display:grid) {
   .emotion-7 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2315,8 +2195,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2326,8 +2204,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2337,8 +2213,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -2348,8 +2222,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -2358,8 +2230,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:80rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -2451,12 +2321,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 @supports (display:grid) {
   .emotion-11 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2466,8 +2336,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2477,8 +2345,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2488,8 +2354,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -2499,8 +2363,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -2509,8 +2371,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:80rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -2588,12 +2448,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 @supports (display:grid) {
   .emotion-27 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2602,8 +2462,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2612,8 +2470,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2622,8 +2478,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2632,8 +2486,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -2642,8 +2494,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:80rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -2661,12 +2511,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   .emotion-23 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2675,8 +2525,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2685,8 +2533,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2695,8 +2541,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -2705,8 +2549,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -2715,8 +2557,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:80rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -2763,12 +2603,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 @supports (display:grid) {
   .emotion-15 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-15 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2777,8 +2617,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-15 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2787,8 +2625,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-15 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2797,8 +2633,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-15 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2807,8 +2641,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-15 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2817,8 +2649,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:80rem) {
     .emotion-15 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -2902,12 +2732,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 @supports (display:grid) {
   .emotion-21 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-21 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2916,8 +2746,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-21 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2926,8 +2754,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-21 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2936,8 +2762,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-21 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -2946,8 +2770,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-21 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -2956,8 +2778,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:80rem) {
     .emotion-21 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -3066,12 +2886,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 @supports (display:grid) {
   .emotion-60 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-60 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3080,8 +2900,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-60 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3090,8 +2908,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-60 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-start: 1;
@@ -3100,8 +2916,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-60 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -3110,8 +2924,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-60 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-start: 2;
@@ -3120,8 +2932,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:80rem) {
     .emotion-60 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 5;
@@ -3175,12 +2985,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   .emotion-55 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-55 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -3189,8 +2999,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-55 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -3199,8 +3007,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-55 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-gap: 0.5rem;
@@ -3209,8 +3015,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-55 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-gap: 1rem;
@@ -3219,8 +3023,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-55 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-gap: 1rem;
@@ -3229,8 +3031,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:80rem) {
     .emotion-55 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -3277,12 +3077,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 @supports (display:grid) {
   .emotion-47 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-47 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3291,8 +3091,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-47 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3301,8 +3099,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-47 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-start: 1;
@@ -3311,8 +3107,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-47 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-start: 1;
@@ -3321,8 +3115,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-47 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-start: 1;
@@ -3331,8 +3123,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (min-width:80rem) {
     .emotion-47 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -4206,12 +3996,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   .emotion-264 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-264 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -4220,8 +4010,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-264 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -4230,8 +4018,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-264 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -4240,8 +4026,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-264 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -4250,8 +4034,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-264 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -4260,8 +4042,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:80rem) {
     .emotion-264 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -4332,12 +4112,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 @supports (display:grid) {
   .emotion-2 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -4347,8 +4127,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -4358,8 +4136,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -4369,8 +4145,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -4380,8 +4154,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -4390,8 +4162,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:80rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -4479,12 +4249,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 @supports (display:grid) {
   .emotion-7 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -4494,8 +4264,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -4505,8 +4273,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -4516,8 +4282,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -4527,8 +4291,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -4537,8 +4299,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:80rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -4630,12 +4390,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 @supports (display:grid) {
   .emotion-11 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -4645,8 +4405,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -4656,8 +4414,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -4667,8 +4423,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -4678,8 +4432,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -4688,8 +4440,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:80rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -4767,12 +4517,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 @supports (display:grid) {
   .emotion-27 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4781,8 +4531,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4791,8 +4539,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4801,8 +4547,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4811,8 +4555,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -4821,8 +4563,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:80rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -4840,12 +4580,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   .emotion-23 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -4854,8 +4594,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -4864,8 +4602,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -4874,8 +4610,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -4884,8 +4618,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -4894,8 +4626,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:80rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -4942,12 +4672,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 @supports (display:grid) {
   .emotion-15 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-15 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4956,8 +4686,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-15 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4966,8 +4694,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-15 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4976,8 +4702,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-15 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4986,8 +4710,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-15 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4996,8 +4718,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:80rem) {
     .emotion-15 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -5081,12 +4801,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 @supports (display:grid) {
   .emotion-21 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-21 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5095,8 +4815,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-21 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5105,8 +4823,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-21 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5115,8 +4831,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-21 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -5125,8 +4839,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-21 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -5135,8 +4847,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:80rem) {
     .emotion-21 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -5214,12 +4924,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   .emotion-261 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-261 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5228,8 +4938,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-261 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5238,8 +4946,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-261 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5248,8 +4954,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-261 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -5258,8 +4962,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-261 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -5268,8 +4970,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:80rem) {
     .emotion-261 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -5338,12 +5038,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 @supports (display:grid) {
   .emotion-258 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-258 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -5353,8 +5053,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-258 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -5364,8 +5062,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-258 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -5375,8 +5071,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-258 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -5386,8 +5080,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-258 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -5396,8 +5088,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:80rem) {
     .emotion-258 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -5504,12 +5194,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   .emotion-255 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-255 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5518,8 +5208,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-255 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5528,8 +5216,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-255 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5538,8 +5224,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-255 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -5548,8 +5232,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-255 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -5558,8 +5240,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:80rem) {
     .emotion-255 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -5610,12 +5290,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 @supports (display:grid) {
   .emotion-223 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-223 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -5623,8 +5303,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-223 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -5632,8 +5310,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-223 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -5641,8 +5317,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-223 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -5650,8 +5324,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-223 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
@@ -5659,8 +5331,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:80rem) {
     .emotion-223 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
@@ -6778,12 +6448,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   .emotion-154 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-154 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -6792,8 +6462,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-154 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -6802,8 +6470,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-154 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -6812,8 +6478,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-154 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -6822,8 +6486,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-154 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -6832,8 +6494,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:80rem) {
     .emotion-154 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -6904,12 +6564,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 @supports (display:grid) {
   .emotion-2 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -6919,8 +6579,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -6930,8 +6588,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -6941,8 +6597,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -6952,8 +6606,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -6962,8 +6614,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:80rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -7051,12 +6701,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 @supports (display:grid) {
   .emotion-7 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -7066,8 +6716,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -7077,8 +6725,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -7088,8 +6734,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -7099,8 +6743,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -7109,8 +6751,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:80rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -7202,12 +6842,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 @supports (display:grid) {
   .emotion-11 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -7217,8 +6857,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -7228,8 +6866,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -7239,8 +6875,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -7250,8 +6884,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -7260,8 +6892,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:80rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -7339,12 +6969,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 @supports (display:grid) {
   .emotion-31 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -7353,8 +6983,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -7363,8 +6991,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -7373,8 +6999,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -7383,8 +7007,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -7393,8 +7015,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:80rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -7412,12 +7032,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   .emotion-27 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -7426,8 +7046,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -7436,8 +7054,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -7446,8 +7062,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -7456,8 +7070,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -7466,8 +7078,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:80rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -7514,12 +7124,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 @supports (display:grid) {
   .emotion-19 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -7528,8 +7138,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -7538,8 +7146,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -7548,8 +7154,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -7558,8 +7162,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -7568,8 +7170,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:80rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -7667,12 +7267,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 @supports (display:grid) {
   .emotion-25 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -7681,8 +7281,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -7691,8 +7289,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -7701,8 +7297,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -7711,8 +7305,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -7721,8 +7313,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 @media (min-width:80rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -8321,12 +7911,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   .emotion-617 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-617 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -8335,8 +7925,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-617 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -8345,8 +7933,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-617 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -8355,8 +7941,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-617 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -8365,8 +7949,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-617 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -8375,8 +7957,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:80rem) {
     .emotion-617 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -8447,12 +8027,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @supports (display:grid) {
   .emotion-2 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -8462,8 +8042,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -8473,8 +8051,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -8484,8 +8060,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -8495,8 +8069,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -8505,8 +8077,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:80rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -8557,12 +8127,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @supports (display:grid) {
   .emotion-7 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -8572,8 +8142,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -8583,8 +8151,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -8594,8 +8160,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -8605,8 +8169,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -8615,8 +8177,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:80rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -8708,12 +8268,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @supports (display:grid) {
   .emotion-11 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -8723,8 +8283,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -8734,8 +8292,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -8745,8 +8301,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -8756,8 +8310,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -8766,8 +8318,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:80rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -8845,12 +8395,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @supports (display:grid) {
   .emotion-31 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8859,8 +8409,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8869,8 +8417,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8879,8 +8425,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8889,8 +8433,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -8899,8 +8441,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:80rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -8918,12 +8458,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   .emotion-27 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -8932,8 +8472,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -8942,8 +8480,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -8952,8 +8488,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -8962,8 +8496,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -8972,8 +8504,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:80rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -9020,12 +8550,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @supports (display:grid) {
   .emotion-19 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -9034,8 +8564,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -9044,8 +8572,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -9054,8 +8580,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -9064,8 +8588,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -9074,8 +8596,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:80rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -9173,12 +8693,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @supports (display:grid) {
   .emotion-25 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -9187,8 +8707,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -9197,8 +8715,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -9207,8 +8723,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -9217,8 +8731,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -9227,8 +8739,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:80rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -9275,12 +8785,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @supports (display:grid) {
   .emotion-52 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-52 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -9289,8 +8799,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-52 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -9299,8 +8807,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-52 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-start: 1;
@@ -9309,8 +8815,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-52 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -9319,8 +8823,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-52 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-start: 2;
@@ -9329,8 +8831,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:80rem) {
     .emotion-52 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 5;
@@ -9384,12 +8884,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   .emotion-47 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-47 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -9398,8 +8898,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-47 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -9408,8 +8906,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-47 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-gap: 0.5rem;
@@ -9418,8 +8914,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-47 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-gap: 1rem;
@@ -9428,8 +8922,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-47 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-gap: 1rem;
@@ -9438,8 +8930,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:80rem) {
     .emotion-47 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -9486,12 +8976,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @supports (display:grid) {
   .emotion-39 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-39 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -9500,8 +8990,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-39 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -9510,8 +8998,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-39 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-start: 1;
@@ -9520,8 +9006,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-39 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-start: 1;
@@ -9530,8 +9014,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-39 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-start: 1;
@@ -9540,8 +9022,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:80rem) {
     .emotion-39 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -10031,12 +9511,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   .emotion-614 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-614 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -10045,8 +9525,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-614 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -10055,8 +9533,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-614 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -10065,8 +9541,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-614 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -10075,8 +9549,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-614 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -10085,8 +9557,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:80rem) {
     .emotion-614 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -10155,12 +9625,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @supports (display:grid) {
   .emotion-611 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-611 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -10170,8 +9640,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-611 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -10181,8 +9649,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-611 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -10192,8 +9658,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-611 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -10203,8 +9667,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-611 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -10213,8 +9675,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:80rem) {
     .emotion-611 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -10386,12 +9846,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   .emotion-608 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-608 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -10400,8 +9860,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-608 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -10410,8 +9868,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-608 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -10420,8 +9876,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-608 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -10430,8 +9884,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-608 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -10440,8 +9892,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:80rem) {
     .emotion-608 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -10492,12 +9942,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @supports (display:grid) {
   .emotion-435 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-435 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -10505,8 +9955,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-435 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -10514,8 +9962,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-435 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -10523,8 +9969,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-435 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -10532,8 +9976,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-435 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
@@ -10541,8 +9983,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:80rem) {
     .emotion-435 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
