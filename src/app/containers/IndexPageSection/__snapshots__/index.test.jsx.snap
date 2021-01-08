@@ -127,12 +127,12 @@ HTMLCollection [
   .emotion-130 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-130 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -141,8 +141,6 @@ HTMLCollection [
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-130 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -151,8 +149,6 @@ HTMLCollection [
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-130 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -161,8 +157,6 @@ HTMLCollection [
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-130 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -171,8 +165,6 @@ HTMLCollection [
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-130 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -181,8 +173,6 @@ HTMLCollection [
 
 @media (min-width:80rem) {
     .emotion-130 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -287,12 +277,12 @@ HTMLCollection [
 @supports (display:grid) {
   .emotion-35 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-35 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -300,8 +290,6 @@ HTMLCollection [
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-35 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -309,8 +297,6 @@ HTMLCollection [
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-35 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -318,8 +304,6 @@ HTMLCollection [
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-35 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -327,8 +311,6 @@ HTMLCollection [
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-35 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -336,8 +318,6 @@ HTMLCollection [
 
 @media (min-width:80rem) {
     .emotion-35 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -614,12 +594,12 @@ HTMLCollection [
 @supports (display:grid) {
   .emotion-58 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-58 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -627,8 +607,6 @@ HTMLCollection [
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-58 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -636,8 +614,6 @@ HTMLCollection [
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-58 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -645,8 +621,6 @@ HTMLCollection [
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-58 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -654,8 +628,6 @@ HTMLCollection [
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-58 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -663,8 +635,6 @@ HTMLCollection [
 
 @media (min-width:80rem) {
     .emotion-58 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -1471,12 +1441,12 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   .emotion-130 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-130 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1485,8 +1455,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-130 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1495,8 +1463,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-130 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1505,8 +1471,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-130 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -1515,8 +1479,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-130 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -1525,8 +1487,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:80rem) {
     .emotion-130 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -1631,12 +1591,12 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 @supports (display:grid) {
   .emotion-35 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-35 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1644,8 +1604,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-35 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1653,8 +1611,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-35 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1662,8 +1618,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-35 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1671,8 +1625,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-35 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -1680,8 +1632,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:80rem) {
     .emotion-35 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -2039,12 +1989,12 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 @supports (display:grid) {
   .emotion-58 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-58 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2052,8 +2002,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-58 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2061,8 +2009,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-58 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2070,8 +2016,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-58 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2079,8 +2023,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-58 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -2088,8 +2030,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:80rem) {
     .emotion-58 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -2732,12 +2672,12 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   .emotion-59 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-59 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2746,8 +2686,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-59 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2756,8 +2694,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-59 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2766,8 +2702,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-59 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -2776,8 +2710,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-59 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -2786,8 +2718,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:80rem) {
     .emotion-59 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -2986,12 +2916,12 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 @supports (display:grid) {
   .emotion-56 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-56 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2999,8 +2929,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-56 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -3008,8 +2936,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-56 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -3017,8 +2943,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-56 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -3026,8 +2950,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-56 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -3035,8 +2957,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:80rem) {
     .emotion-56 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -3323,12 +3243,12 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 @supports (display:grid) {
   .emotion-33 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-33 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -3336,8 +3256,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-33 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -3345,8 +3263,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-33 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -3354,8 +3270,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-33 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -3363,8 +3277,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-33 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -3372,8 +3284,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:80rem) {
     .emotion-33 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4295,12 +4205,12 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   .emotion-126 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-126 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -4309,8 +4219,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-126 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -4319,8 +4227,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-126 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -4329,8 +4235,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-126 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -4339,8 +4243,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-126 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -4349,8 +4251,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 @media (min-width:80rem) {
     .emotion-126 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -4455,12 +4355,12 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 @supports (display:grid) {
   .emotion-31 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4468,8 +4368,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4477,8 +4375,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4486,8 +4382,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4495,8 +4389,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -4504,8 +4396,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 @media (min-width:80rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -4857,12 +4747,12 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 @supports (display:grid) {
   .emotion-54 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-54 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4870,8 +4760,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-54 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4879,8 +4767,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-54 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4888,8 +4774,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-54 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4897,8 +4781,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-54 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -4906,8 +4788,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 @media (min-width:80rem) {
     .emotion-54 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
