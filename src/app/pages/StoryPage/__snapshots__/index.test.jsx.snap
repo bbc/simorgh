@@ -24,12 +24,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   .emotion-662 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-662 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 0.5rem;
@@ -38,8 +38,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-662 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 0.5rem;
@@ -48,8 +46,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-662 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 0.5rem;
@@ -58,8 +54,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-662 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -68,8 +62,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-662 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -79,8 +71,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:80rem) {
     .emotion-662 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -170,12 +160,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @supports (display:grid) {
   .emotion-195 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-195 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 1;
@@ -184,8 +174,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-195 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 1;
@@ -194,8 +182,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-195 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 1;
@@ -204,8 +190,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-195 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 1;
@@ -214,8 +198,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-195 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 1;
@@ -224,8 +206,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:80rem) {
     .emotion-195 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 1;
@@ -288,12 +268,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @supports (display:grid) {
   .emotion-2 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -303,8 +283,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -314,8 +292,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -325,8 +301,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -336,8 +310,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -346,8 +318,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:80rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -435,12 +405,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @supports (display:grid) {
   .emotion-13 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-13 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -450,8 +420,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-13 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -461,8 +429,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-13 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -472,8 +438,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-13 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -483,8 +447,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-13 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -493,8 +455,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:80rem) {
     .emotion-13 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -591,12 +551,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @supports (display:grid) {
   .emotion-33 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-33 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -605,8 +565,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-33 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -615,8 +573,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-33 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -625,8 +581,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-33 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -635,8 +589,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-33 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -645,8 +597,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:80rem) {
     .emotion-33 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -664,12 +614,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   .emotion-29 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-29 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -678,8 +628,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-29 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -688,8 +636,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-29 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -698,8 +644,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-29 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -708,8 +652,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-29 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -718,8 +660,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:80rem) {
     .emotion-29 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -766,12 +706,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @supports (display:grid) {
   .emotion-21 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-21 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -780,8 +720,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-21 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -790,8 +728,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-21 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -800,8 +736,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-21 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -810,8 +744,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-21 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -820,8 +752,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:80rem) {
     .emotion-21 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -919,12 +849,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @supports (display:grid) {
   .emotion-27 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -933,8 +863,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -943,8 +871,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -953,8 +879,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -963,8 +887,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -973,8 +895,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:80rem) {
     .emotion-27 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -987,10 +907,15 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -1007,15 +932,10 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-25 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
 @media (min-width:63rem) {
   .emotion-25 {
-    padding: 0.5rem 0 0;
+    width: 100%;
+    margin: 0.5rem 0 0;
   }
 }
 
@@ -1028,8 +948,20 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding-bottom: 0;
 }
 
-.emotion-25 i {
-  font-style: normal;
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-25 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-25 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
 }
 
 @media (max-width:14.9375rem) {
@@ -1075,12 +1007,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @supports (display:grid) {
   .emotion-39 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-39 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1090,8 +1022,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-39 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1101,8 +1031,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-39 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1112,8 +1040,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-39 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -1123,8 +1049,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-39 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -1133,8 +1057,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:80rem) {
     .emotion-39 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -1296,12 +1218,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @supports (display:grid) {
   .emotion-142 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-142 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1310,8 +1232,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-142 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1320,8 +1240,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-142 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1330,8 +1248,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-142 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1340,8 +1256,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-142 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -1350,8 +1264,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:80rem) {
     .emotion-142 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -1597,12 +1509,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   .emotion-187 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-187 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1611,8 +1523,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-187 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1621,8 +1531,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-187 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1631,8 +1539,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-187 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1641,8 +1547,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-187 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
       grid-column-gap: 1rem;
@@ -1651,8 +1555,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:80rem) {
     .emotion-187 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
       grid-column-gap: 1rem;
@@ -1711,12 +1613,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @supports (display:grid) {
   .emotion-659 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-659 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -1724,8 +1626,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-659 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -1733,8 +1633,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-659 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -1742,8 +1640,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-659 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -1751,8 +1647,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-659 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
@@ -1760,8 +1654,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:80rem) {
     .emotion-659 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
@@ -2190,12 +2082,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   .emotion-654 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-654 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2204,8 +2096,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-654 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2214,8 +2104,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-654 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2224,8 +2112,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-654 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -2234,8 +2120,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-654 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -2244,8 +2128,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:80rem) {
     .emotion-654 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -2261,12 +2143,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @supports (display:grid) {
   .emotion-498 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-498 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2274,8 +2156,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-498 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2283,8 +2163,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-498 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2292,8 +2170,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-498 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -2301,8 +2177,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-498 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -2310,8 +2184,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:80rem) {
     .emotion-498 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -4303,12 +4175,12 @@ exports[`Story Page should render correctly when the secondary column data is no
   .emotion-389 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-389 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 0.5rem;
@@ -4317,8 +4189,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-389 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 0.5rem;
@@ -4327,8 +4197,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-389 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 0.5rem;
@@ -4337,8 +4205,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-389 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -4347,8 +4213,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-389 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -4358,8 +4222,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:80rem) {
     .emotion-389 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -4449,12 +4311,12 @@ exports[`Story Page should render correctly when the secondary column data is no
 @supports (display:grid) {
   .emotion-196 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-196 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 1;
@@ -4463,8 +4325,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-196 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 1;
@@ -4473,8 +4333,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-196 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 1;
@@ -4483,8 +4341,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-196 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 1;
@@ -4493,8 +4349,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-196 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 1;
@@ -4503,8 +4357,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:80rem) {
     .emotion-196 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 1;
@@ -4567,12 +4419,12 @@ exports[`Story Page should render correctly when the secondary column data is no
 @supports (display:grid) {
   .emotion-2 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -4582,8 +4434,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -4593,8 +4443,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -4604,8 +4452,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -4615,8 +4461,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -4625,8 +4469,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:80rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -4714,12 +4556,12 @@ exports[`Story Page should render correctly when the secondary column data is no
 @supports (display:grid) {
   .emotion-13 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-13 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -4729,8 +4571,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-13 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -4740,8 +4580,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-13 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -4751,8 +4589,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-13 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -4762,8 +4598,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-13 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -4772,8 +4606,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:80rem) {
     .emotion-13 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -4874,12 +4706,12 @@ exports[`Story Page should render correctly when the secondary column data is no
 @supports (display:grid) {
   .emotion-18 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -4889,8 +4721,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -4900,8 +4730,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -4911,8 +4739,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -4922,8 +4748,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -4932,8 +4756,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:80rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -5021,12 +4843,12 @@ exports[`Story Page should render correctly when the secondary column data is no
 @supports (display:grid) {
   .emotion-38 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-38 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5035,8 +4857,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-38 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5045,8 +4865,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-38 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5055,8 +4873,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-38 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5065,8 +4881,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-38 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -5075,8 +4889,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:80rem) {
     .emotion-38 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -5094,12 +4906,12 @@ exports[`Story Page should render correctly when the secondary column data is no
   .emotion-34 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5108,8 +4920,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5118,8 +4928,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5128,8 +4936,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -5138,8 +4944,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -5148,8 +4952,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:80rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -5196,12 +4998,12 @@ exports[`Story Page should render correctly when the secondary column data is no
 @supports (display:grid) {
   .emotion-26 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5210,8 +5012,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5220,8 +5020,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5230,8 +5028,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5240,8 +5036,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5250,8 +5044,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:80rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -5349,12 +5141,12 @@ exports[`Story Page should render correctly when the secondary column data is no
 @supports (display:grid) {
   .emotion-32 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-32 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5363,8 +5155,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-32 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5373,8 +5163,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-32 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5383,8 +5171,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-32 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -5393,8 +5179,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-32 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -5403,8 +5187,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:80rem) {
     .emotion-32 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -5417,10 +5199,15 @@ exports[`Story Page should render correctly when the secondary column data is no
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -5437,15 +5224,10 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-30 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
 @media (min-width:63rem) {
   .emotion-30 {
-    padding: 0.5rem 0 0;
+    width: 100%;
+    margin: 0.5rem 0 0;
   }
 }
 
@@ -5458,8 +5240,20 @@ exports[`Story Page should render correctly when the secondary column data is no
   padding-bottom: 0;
 }
 
-.emotion-30 i {
-  font-style: normal;
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-30 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-30 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
 }
 
 @media (max-width:14.9375rem) {
@@ -5505,12 +5299,12 @@ exports[`Story Page should render correctly when the secondary column data is no
 @supports (display:grid) {
   .emotion-44 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-44 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -5520,8 +5314,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-44 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -5531,8 +5323,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-44 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -5542,8 +5332,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-44 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -5553,8 +5341,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-44 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -5563,8 +5349,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:80rem) {
     .emotion-44 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -5726,12 +5510,12 @@ exports[`Story Page should render correctly when the secondary column data is no
 @supports (display:grid) {
   .emotion-147 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-147 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5740,8 +5524,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-147 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5750,8 +5532,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-147 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5760,8 +5540,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-147 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5770,8 +5548,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-147 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -5780,8 +5556,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:80rem) {
     .emotion-147 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -6027,12 +5801,12 @@ exports[`Story Page should render correctly when the secondary column data is no
   .emotion-188 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-188 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -6041,8 +5815,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-188 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -6051,8 +5823,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-188 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -6061,8 +5831,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-188 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -6071,8 +5839,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-188 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
       grid-column-gap: 1rem;
@@ -6081,8 +5847,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:80rem) {
     .emotion-188 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
       grid-column-gap: 1rem;
@@ -6141,12 +5905,12 @@ exports[`Story Page should render correctly when the secondary column data is no
 @supports (display:grid) {
   .emotion-386 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-386 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -6154,8 +5918,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-386 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -6163,8 +5925,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-386 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -6172,8 +5932,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-386 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -6181,8 +5939,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-386 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
@@ -6190,8 +5946,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:80rem) {
     .emotion-386 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
@@ -6264,12 +6018,12 @@ exports[`Story Page should render correctly when the secondary column data is no
   .emotion-381 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-381 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -6278,8 +6032,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-381 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -6288,8 +6040,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-381 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -6298,8 +6048,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-381 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -6308,8 +6056,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-381 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -6318,8 +6064,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:80rem) {
     .emotion-381 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -6335,12 +6079,12 @@ exports[`Story Page should render correctly when the secondary column data is no
 @supports (display:grid) {
   .emotion-225 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-225 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -6348,8 +6092,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-225 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -6357,8 +6099,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-225 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -6366,8 +6106,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-225 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -6375,8 +6113,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-225 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -6384,8 +6120,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width:80rem) {
     .emotion-225 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -7602,12 +7336,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   .emotion-671 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-671 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 0.5rem;
@@ -7616,8 +7350,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-671 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 0.5rem;
@@ -7626,8 +7358,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-671 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 0.5rem;
@@ -7636,8 +7366,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-671 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -7646,8 +7374,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-671 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -7657,8 +7383,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:80rem) {
     .emotion-671 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -7748,12 +7472,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @supports (display:grid) {
   .emotion-196 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-196 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 1;
@@ -7762,8 +7486,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-196 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 1;
@@ -7772,8 +7494,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-196 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 1;
@@ -7782,8 +7502,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-196 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 1;
@@ -7792,8 +7510,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-196 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 1;
@@ -7802,8 +7518,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:80rem) {
     .emotion-196 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-start: 1;
@@ -7866,12 +7580,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @supports (display:grid) {
   .emotion-2 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -7881,8 +7595,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -7892,8 +7604,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -7903,8 +7613,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -7914,8 +7622,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -7924,8 +7630,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:80rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -8013,12 +7717,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @supports (display:grid) {
   .emotion-13 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-13 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -8028,8 +7732,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-13 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -8039,8 +7741,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-13 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -8050,8 +7750,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-13 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -8061,8 +7759,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-13 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -8071,8 +7767,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:80rem) {
     .emotion-13 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -8173,12 +7867,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @supports (display:grid) {
   .emotion-18 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -8188,8 +7882,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -8199,8 +7891,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -8210,8 +7900,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -8221,8 +7909,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -8231,8 +7917,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:80rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -8320,12 +8004,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @supports (display:grid) {
   .emotion-38 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-38 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8334,8 +8018,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-38 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8344,8 +8026,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-38 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8354,8 +8034,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-38 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8364,8 +8042,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-38 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -8374,8 +8050,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:80rem) {
     .emotion-38 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -8393,12 +8067,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   .emotion-34 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -8407,8 +8081,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -8417,8 +8089,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -8427,8 +8097,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -8437,8 +8105,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -8447,8 +8113,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:80rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -8495,12 +8159,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @supports (display:grid) {
   .emotion-26 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8509,8 +8173,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8519,8 +8181,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8529,8 +8189,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8539,8 +8197,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8549,8 +8205,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:80rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -8648,12 +8302,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @supports (display:grid) {
   .emotion-32 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-32 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8662,8 +8316,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-32 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8672,8 +8324,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-32 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8682,8 +8332,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-32 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -8692,8 +8340,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-32 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -8702,8 +8348,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:80rem) {
     .emotion-32 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -8716,10 +8360,15 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -8736,15 +8385,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-30 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
 @media (min-width:63rem) {
   .emotion-30 {
-    padding: 0.5rem 0 0;
+    width: 100%;
+    margin: 0.5rem 0 0;
   }
 }
 
@@ -8757,8 +8401,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 0;
 }
 
-.emotion-30 i {
-  font-style: normal;
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-30 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-30 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
 }
 
 @media (max-width:14.9375rem) {
@@ -8804,12 +8460,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @supports (display:grid) {
   .emotion-44 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-44 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -8819,8 +8475,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-44 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -8830,8 +8484,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-44 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -8841,8 +8493,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-44 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -8852,8 +8502,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-44 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -8862,8 +8510,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:80rem) {
     .emotion-44 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -9025,12 +8671,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @supports (display:grid) {
   .emotion-147 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-147 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -9039,8 +8685,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-147 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -9049,8 +8693,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-147 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -9059,8 +8701,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-147 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -9069,8 +8709,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-147 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -9079,8 +8717,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:80rem) {
     .emotion-147 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -9326,12 +8962,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   .emotion-188 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-188 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -9340,8 +8976,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-188 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -9350,8 +8984,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-188 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -9360,8 +8992,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-188 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -9370,8 +9000,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-188 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
       grid-column-gap: 1rem;
@@ -9380,8 +9008,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:80rem) {
     .emotion-188 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
       grid-column-gap: 1rem;
@@ -9440,12 +9066,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @supports (display:grid) {
   .emotion-668 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-668 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -9453,8 +9079,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-668 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -9462,8 +9086,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-668 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -9471,8 +9093,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-668 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -9480,8 +9100,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-668 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
@@ -9489,8 +9107,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:80rem) {
     .emotion-668 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
@@ -9937,12 +9553,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   .emotion-663 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-663 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -9951,8 +9567,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-663 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -9961,8 +9575,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-663 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -9971,8 +9583,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-663 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -9981,8 +9591,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-663 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -9991,8 +9599,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:80rem) {
     .emotion-663 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -10008,12 +9614,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @supports (display:grid) {
   .emotion-507 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-507 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -10021,8 +9627,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-507 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -10030,8 +9634,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-507 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -10039,8 +9641,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-507 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -10048,8 +9648,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-507 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -10057,8 +9655,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:80rem) {
     .emotion-507 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
