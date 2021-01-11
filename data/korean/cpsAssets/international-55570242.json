@@ -1,0 +1,730 @@
+{
+  "metadata":{
+    "id":"urn:bbc:ares::asset:korean/international-55570242",
+    "locators":{
+      "assetUri":"/korean/international-55570242",
+      "cpsUrn":"urn:bbc:content:assetUri:korean/international-55570242",
+      "curie":"http://www.bbc.co.uk/asset/f28254b3-2aae-4fa2-a11c-60e48130b8f5",
+      "assetId":"55570242"
+    },
+    "type":"STY",
+    "createdBy":"korean-v6",
+    "language":"ko",
+    "lastUpdated":1610020727417,
+    "firstPublished":1609988902000,
+    "lastPublished":1610002864000,
+    "timestamp":1610002864000,
+    "options":{
+      "isIgorSeoTagsEnabled":false,
+      "includeComments":false,
+      "allowRightHandSide":true,
+      "isFactCheck":false,
+      "allowDateStamp":true,
+      "suitableForSyndication":true,
+      "hasNewsTracker":false,
+      "allowRelatedStoriesBox":true,
+      "isKeyContent":false,
+      "allowHeadline":true,
+      "allowAdvertising":true,
+      "hasContentWarning":false,
+      "isBreakingNews":false,
+      "allowPrintingSharingLinks":true
+    },
+    "analyticsLabels":{
+      "cps_asset_type":"sty",
+      "counterName":"korean.international.story.55570242.page",
+      "cps_asset_id":"55570242"
+    },
+    "passport":{
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName":"News"
+      },
+      "campaigns":[
+        {
+          "campaignId":"5a988e4739461b000e9dabfc",
+          "campaignName":"WS - Update me"
+        }
+      ],
+      "language":"ko",
+      "home":"http://www.bbc.co.uk/ontologies/passport/home/Korean",
+      "locator":"urn:bbc:cps:curie:asset:f28254b3-2aae-4fa2-a11c-60e48130b8f5",
+      "availability":"AVAILABLE",
+      "taggings":[
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/format",
+          "value":"http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value":"http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/10f9cc6b-0a52-46d3-bce6-9cd78b34600f#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/b3ca5a45-59cf-4c5a-880a-e69a9ec96209#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value":"http://www.bbc.co.uk/things/520c3315-0c62-4b7d-9c12-b382578a7263#id"
+        }
+      ],
+      "schemaVersion":"1.2.0",
+      "publishedState":"PUBLISHED"
+    },
+    "tags":{
+      "about":[
+        {
+          "thingLabel":"미국 대선",
+          "thingUri":"http://www.bbc.co.uk/things/10f9cc6b-0a52-46d3-bce6-9cd78b34600f#id",
+          "thingId":"10f9cc6b-0a52-46d3-bce6-9cd78b34600f",
+          "thingType":[
+            "core:Thing",
+            "core:Event",
+            "tagging:TagConcept"
+          ],
+          "thingSameAs":[
+            "http://www.wikidata.org/entity/Q22019872",
+            "http://dbpedia.org/resource/2020_United_States_elections"
+          ],
+          "topicName":"미국 대선",
+          "topicId":"ckexek5ewjjt",
+          "curationList":[
+            {
+              "curationId":"15ec217d-b3b0-46ec-b6f1-dba34ddd0528",
+              "curationType":"vivo-stream"
+            }
+          ],
+          "thingEnglishLabel":"US election 2020"
+        },
+        {
+          "thingLabel":"미국",
+          "thingUri":"http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+          "thingId":"82857f8e-8134-462a-bb32-b7b14f4eab75",
+          "thingType":[
+            "tagging:TagConcept",
+            "core:Place",
+            "core:Thing"
+          ],
+          "thingSameAs":[
+            "http://sws.geonames.org/6252001/"
+          ],
+          "topicName":"미국",
+          "topicId":"cqywjk16v94t",
+          "curationList":[
+            {
+              "curationId":"9e31fef1-1557-454e-a53e-9d534f6e8fa4",
+              "curationType":"vivo-stream"
+            }
+          ],
+          "thingEnglishLabel":"United States"
+        },
+        {
+          "thingLabel":"데모",
+          "thingUri":"http://www.bbc.co.uk/things/b3ca5a45-59cf-4c5a-880a-e69a9ec96209#id",
+          "thingId":"b3ca5a45-59cf-4c5a-880a-e69a9ec96209",
+          "thingType":[
+            "core:Thing",
+            "core:Theme",
+            "tagging:TagConcept"
+          ],
+          "thingSameAs":[
+            "http://www.wikidata.org/entity/Q175331",
+            "http://dbpedia.org/resource/Demonstration_(protest)"
+          ],
+          "topicName":"데모",
+          "topicId":"cjgn7kx9z2pt",
+          "curationList":[
+            {
+              "curationId":"3e894c3b-0a6d-4a10-9685-57b3ff22bd92",
+              "curationType":"vivo-stream"
+            }
+          ],
+          "thingEnglishLabel":"Demonstration (protest)"
+        }
+      ]
+    },
+    "version":"v1.3.11",
+    "blockTypes":[
+      "image",
+      "paragraph",
+      "media",
+      "social_embed",
+      "crosshead"
+    ],
+    "includeComments":false,
+    "atiAnalytics":{
+      "producerName":"KOREAN",
+      "producerId":"57"
+    },
+    "readTime":2,
+    "siteUri":"/korean",
+    "topics":[
+      {
+        "topicName":"데모",
+        "topicId":"cjgn7kx9z2pt",
+        "subjectList":[
+          {
+            "subjectId":"http://www.bbc.co.uk/things/b3ca5a45-59cf-4c5a-880a-e69a9ec96209#id",
+            "subjectType":"tag"
+          }
+        ],
+        "curationList":[
+          {
+            "curationId":"3e894c3b-0a6d-4a10-9685-57b3ff22bd92",
+            "curationType":"vivo-stream",
+            "visualProminence":"NORMAL"
+          }
+        ],
+        "types":[
+          "core:Thing",
+          "core:Theme",
+          "tagging:TagConcept"
+        ]
+      },
+      {
+        "topicName":"미국 대선",
+        "topicId":"ckexek5ewjjt",
+        "subjectList":[
+          {
+            "subjectId":"http://www.bbc.co.uk/things/10f9cc6b-0a52-46d3-bce6-9cd78b34600f#id",
+            "subjectType":"tag"
+          }
+        ],
+        "curationList":[
+          {
+            "curationId":"15ec217d-b3b0-46ec-b6f1-dba34ddd0528",
+            "curationType":"vivo-stream",
+            "position":0,
+            "visualProminence":"NORMAL"
+          }
+        ],
+        "types":[
+          "core:Thing",
+          "core:Event",
+          "tagging:TagConcept"
+        ]
+      },
+      {
+        "topicName":"미국",
+        "topicId":"cqywjk16v94t",
+        "subjectList":[
+          {
+            "subjectId":"http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+            "subjectType":"tag"
+          }
+        ],
+        "curationList":[
+          {
+            "curationId":"9e31fef1-1557-454e-a53e-9d534f6e8fa4",
+            "curationType":"vivo-stream",
+            "visualProminence":"NORMAL"
+          }
+        ],
+        "types":[
+          "tagging:TagConcept",
+          "core:Place",
+          "core:Thing"
+        ]
+      }
+    ]
+  },
+  "content":{
+    "blocks":[
+      {
+        "id":"116374171",
+        "subType":"body",
+        "href":"http://c.files.bbci.co.uk/42FB/production/_116374171_1133f81f-5185-4ca3-ba75-dc9e2d87f70b.jpg",
+        "path":"/cpsprodpb/42FB/production/_116374171_1133f81f-5185-4ca3-ba75-dc9e2d87f70b.jpg",
+        "height":549,
+        "width":976,
+        "altText":"의사당에 운집한 시위대를 해산시키기 위해 최루가스가 동원됐다",
+        "caption":"의사당에 운집한 시위대를 해산시키기 위해 최루가스가 동원됐다",
+        "copyrightHolder":"Reuters",
+        "positionHint":"full-width",
+        "type":"image"
+      },
+      {
+        "text":"도널드 트럼프 미국 대통령의 지지자들이 6일(현지시간) 워싱턴DC 연방의회 의사당에 난입했다. 조 바이든 당선인의 대통령 선거 승리를 공식적으로 확정하기 위해 의원들이 의사당에 집결한 상태였다.",
+        "role":"introduction",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"시위대가 의사당에 운집한 가운데 의원들은 경찰의 호위를 받고 건물을 빠져나갔다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"바이든 당선인은 이를 두고 &quot;폭동&quot;이라 말했고, 트럼프 대통령은 지지자들에게 집으로 돌아갈 것을 촉구하는 영상 메시지를 내놓았다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"이날 예정된 바이든 당선인의 선거 승리 인증을 위한 양원 합동 회의는 휴회 처리됐다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "id":"p0939fyn",
+        "subType":"clip",
+        "format":"video",
+        "title":"트럼프 지지자들, 미국 의회 난입... 초유의 사태",
+        "synopses":{
+          "short":"트럼프 지지자들, 미국 의회 난입... 초유의 사태",
+          "long":"도널드 트럼프 미국 대통령의 지지자들이 6일(현지시간) 워싱턴 D.C. 연방 의회 의사당에 난입했다. \n시위대는 유리창을 깨고 의사당 건물 안으로 들어왔고, 일부는 상원의장석까지 점거했다.\n이날 바이든 당선인의 승리 확정을 위한 회의를 진행 중이던 상·하원은 전격 휴회했고, 의원들은 긴급 대피했다.\n바이든 당선인은 이날 기자회견을 통해 \"우리 민주주의는 전례 없는 공격을 받고 있다\"고 말했다. 또 트럼프 대통령에게 \"지금 전국 방송에 나가 선서를 이행하고, 헌법을 수호하며, 이 점거를 끝내라고 요구해야 한다\"고 촉구했다.\n트럼프 대통령은 의사당 난입 사태 발생 2시간여 뒤 트위터에 올린 동영상에서 \"여러분이 상처받은 것을 안다. 우리는 선거를 빼앗겼다. 하지만 이제는 집에 가야 할 때\"라고 말했다. \n트위터와 페이스북은 이 영상을 허위 사실 유포를 이유로 삭제했다.",
+          "medium":"시위대는 유리창을 깨고 의사당 건물 안으로 들어왔고, 일부는 상원의장석까지 점거했다."
+        },
+        "imageUrl":"ichef.bbci.co.uk/images/ic/$recipe/p0939g21.jpg",
+        "embedding":true,
+        "advertising":true,
+        "caption":"트럼프 지지자들, 미국 의회 난입... 초유의 사태",
+        "versions":[
+          {
+            "versionId":"p0939fys",
+            "types":[
+              "Original"
+            ],
+            "duration":42,
+            "durationISO8601":"PT42S",
+            "warnings":{
+
+            },
+            "availableTerritories":{
+              "uk":true,
+              "nonUk":true
+            },
+            "availableFrom":1609986361000
+          }
+        ],
+        "imageCopyright":"BBC",
+        "smpKind":"programme",
+        "type":"media"
+      },
+      {
+        "text":"워싱턴DC 경찰에 따르면 이번 사태로 4명이 사망했다. 여성 한 명은 의회 건물 내에서 바리케이드가 설치된 문을 부수려고 시도하던 중 경찰의 총에 맞았다. 이후 병원으로 이송됐지만 숨졌다. ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"또 다른 3명은 '의료적 응급상황'에서 숨졌다고 경찰은 밝혔다. ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"하원 본회의장에서 무력 충돌이 발생했으며 최루가스도 사용됐다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"시위대는 &quot;우린 트럼프를 원한다&quot;고 외치며 의사당 내로 진입했으며, 시위대 중 한 명이 상원 의장석에 앉아있는 모습이 카메라에 포착됐다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"경찰은 이들이 의사당에 난입하기 위해 화학 자극제를 사용하려 했음이 분명하다고 말했다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "id":"116373315",
+        "subType":"body",
+        "href":"http://c.files.bbci.co.uk/C889/production/_116373315_065084373-1.jpg",
+        "path":"/cpsprodpb/C889/production/_116373315_065084373-1.jpg",
+        "height":549,
+        "width":976,
+        "altText":"의사당 내에서 무력 충돌이 발생했으며 최루가스도 사용됐다",
+        "caption":"의사당 내에서 무력 충돌이 발생했으며 최루가스도 사용됐다",
+        "copyrightHolder":"Reuters",
+        "positionHint":"full-width",
+        "type":"image"
+      },
+      {
+        "text":"수시간 동안 지속된 점거 사태 끝에 상원 경호실은 당국이 의사당의 치안을 회복했다고 발표했다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"워싱턴시 전체에 오후 6시부터 오전 6시까지 통행금지령이 내려진 상태지만, 시위대가 집으로 돌아가라는 트럼프 대통령의 요청을 따르고 있다는 조짐은 보이지 않는다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"트럼프 대통령은 트위터에 올린 영상 <link><caption>메시지</caption><url href=\"https://twitter.com/realDonaldTrump/status/1346928882595885058\" platform=\"highweb\"/></link>에서 지지자들에게 의사당 건물을 떠날 것을 촉구했지만, 민주당이 사기로 대통령 선거에서 승리했다는 근거 없는 주장을 계속했다.",
+        "markupType":"candy_xml",
+        "type":"paragraph"
+      },
+      {
+        "text":"바이든 당선인은 이번 시위가 &quot;폭동에 가까우며 이제 종식돼야 한다&quot;며 &quot;지금 우리의 민주주의는 전례없는 공격을 받고 있다&quot;고 기자회견에서 말했다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"트럼프 대통령의 대변인 케일리 매커내니는 주방위군이 배치되고 있다고 트위터에 썼다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "href":"https://twitter.com/PressSec/status/1346918582832168964",
+        "source":"twitter",
+        "embed":{
+          "oembed":{
+            "version":"1.0",
+            "author_name":"Kayleigh McEnany",
+            "author_url":"https://twitter.com/PressSec",
+            "provider_name":"Twitter",
+            "provider_url":"https://twitter.com",
+            "url":"https://twitter.com/PressSec/status/1346918582832168964",
+            "html":"<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">At President <a href=\"https://twitter.com/realDonaldTrump?ref_src=twsrc%5Etfw\">@realDonaldTrump</a>’s direction, the National Guard is on the way along with other federal protective services. <br><br>We reiterate President Trump’s call against violence and to remain peaceful.</p>&mdash; Kayleigh McEnany (@PressSec) <a href=\"https://twitter.com/PressSec/status/1346918582832168964?ref_src=twsrc%5Etfw\">January 6, 2021</a></blockquote>\n",
+            "width":550
+          },
+          "fallback_image":{
+            "fallback_image_width":465,
+            "fallback_image_height":184,
+            "alt_text":"Twitter post by Kayleigh McEnany: At President @realDonaldTrump’s direction, the National Guard is on the way along with other federal protective services. We reiterate President Trump’s call against violence and to remain peaceful."
+          }
+        },
+        "id":"1346918582832168964",
+        "type":"social_embed"
+      },
+      {
+        "text":"인근 지역의 군경 병력이 동원되고 있으며 연방수사국(FBI) 요원들도 의사당 경찰을 돕기 위해 파견되고 있다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"시위대가 노리는 건 무엇인가?",
+        "markupType":"plain_text",
+        "type":"crosshead"
+      },
+      {
+        "text":"점거 사태가 발생하기 전 의회는 작년 11월 3일의 대통령 선거에서 조 바이든이 당선됐음을 공식적으로 인증하기 위한 양원 합동 회의를 치르고 있었다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"양원 합동 회의는 보통 간소하게 치러지고 대체로 의례적인 측면이 큰데 일부 공화당 의원들은 선거 결과에 반대하고 있었다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "id":"p0938b9s",
+        "subType":"clip",
+        "format":"video",
+        "title":"'We will never give up, we will never concede'",
+        "synopses":{
+          "short":"Trump: 'We will never give up, we will never concede'",
+          "long":"President Donald Trump has told supporters he will \"never concede\" the 2020 US election\n\nThousands of people gathered in Washington DC for a \"Save America\" rally, with Mr Trump addressing them.\n\n He urged them to march to the Capitol building to support legislators opposing Joe Biden's confirmation.",
+          "medium":"President Donald Trump spoke to thousands of supporters who'd gathered for the \"Save America\" rally."
+        },
+        "imageUrl":"ichef.bbci.co.uk/images/ic/$recipe/p0938dhc.jpg",
+        "embedding":true,
+        "advertising":true,
+        "caption":"트럼프 대통령은 지지자들에게 '우린 결코 포기하지 않으며 결코 선거 결과를 인정하지 않을 것'이라고 말했다",
+        "versions":[
+          {
+            "versionId":"p0938b9v",
+            "types":[
+              "Original"
+            ],
+            "duration":85,
+            "durationISO8601":"PT1M25S",
+            "warnings":{
+
+            },
+            "availableTerritories":{
+              "uk":true,
+              "nonUk":true
+            },
+            "availableFrom":1609962503000
+          }
+        ],
+        "imageCopyright":"EPA",
+        "smpKind":"programme",
+        "type":"media"
+      },
+      {
+        "text":"트럼프 대통령은 최근 며칠 간 양원 합동 회의를 주관하는 마이크 펜스 부통령에게 선거 결과의 인증을 막으라고 압박하고 있었다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"그러나 펜스 부통령은 지난 6일 의회에 보낸 서한에서 자신에게는 &quot;특정 지역 선거인단의 투표 수를 반영할지를 일방적으로 결정할 권한이 없다&quot;고 말했다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"트럼프 대통령은 작년 11월 3일 대선 결과에 승복하길 거부해왔으며 여러 차례 아무런 근거 없이 선거 부정이 있었다고 주장했다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"트럼프 대통령은 지난 6일에도 &quot;우린 결코 포기하지 않으며 결코 선거 결과를 인정하지 않을 것&quot;이라고 말했다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"대통령은 또한 지난 5일의 조지아주 상원 의원 결선투표의 신뢰성에 의문을 제기하기도 했다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"만일 조지아주 상원 의원 선거에서 민주당이 두 의석을 모두 차지하게 되면 민주당이 사실상 상원을 장악하게 된다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"오는 20일 취임 예정인 바이든 대통령은 이렇게 되면 차기 행정부에서 자신의 의제를 추진하기 훨씬 쉬워지게 된다.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      }
+    ]
+  },
+  "promo":{
+    "headlines":{
+      "shortHeadline":"트럼프 지지자들 초유의 의사당 점거...워싱턴 야간 통행금지령",
+      "headline":"트럼프 지지자들 초유의 의사당 점거...워싱턴 야간 통행금지령"
+    },
+    "locators":{
+      "assetUri":"/korean/international-55570242",
+      "cpsUrn":"urn:bbc:content:assetUri:korean/international-55570242",
+      "curie":"http://www.bbc.co.uk/asset/f28254b3-2aae-4fa2-a11c-60e48130b8f5",
+      "assetId":"55570242"
+    },
+    "summary":"조 바이든의 대통령 선거 승리를 공식적으로 확정짓기 위해 의원들이 의사당에 집결한 상태였다.",
+    "timestamp":1610002864000,
+    "language":"ko",
+    "passport":{
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName":"News"
+      },
+      "campaigns":[
+        {
+          "campaignId":"5a988e4739461b000e9dabfc",
+          "campaignName":"WS - Update me"
+        }
+      ],
+      "language":"ko",
+      "home":"http://www.bbc.co.uk/ontologies/passport/home/Korean",
+      "locator":"urn:bbc:cps:curie:asset:f28254b3-2aae-4fa2-a11c-60e48130b8f5",
+      "availability":"AVAILABLE",
+      "taggings":[
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/format",
+          "value":"http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value":"http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/10f9cc6b-0a52-46d3-bce6-9cd78b34600f#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/b3ca5a45-59cf-4c5a-880a-e69a9ec96209#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value":"http://www.bbc.co.uk/things/520c3315-0c62-4b7d-9c12-b382578a7263#id"
+        }
+      ],
+      "schemaVersion":"1.2.0",
+      "publishedState":"PUBLISHED"
+    },
+    "indexImage":{
+      "id":"116374168",
+      "subType":"index",
+      "href":"http://c.files.bbci.co.uk/15083/production/_116374168_mediaitem116374167.jpg",
+      "path":"/cpsprodpb/15083/production/_116374168_mediaitem116374167.jpg",
+      "height":549,
+      "width":976,
+      "altText":"Trump supporters inside Capitol building",
+      "copyrightHolder":"Reuters",
+      "type":"image"
+    },
+    "id":"urn:bbc:ares::asset:korean/international-55570242",
+    "type":"cps"
+  },
+  "relatedContent":{
+    "section":{
+      "subType":"index",
+      "name":"국제뉴스",
+      "uri":"/korean/international",
+      "type":"simple"
+    },
+    "site":{
+      "subType":"site",
+      "name":"BBC 코리아",
+      "uri":"/korean",
+      "type":"simple"
+    },
+    "groups":[
+      {
+        "type":"see-alsos",
+        "promos":[
+          {
+            "headlines":{
+              "shortHeadline":"트럼프가 바이든의 승리를 뒤집기 위해 표를 '찾아오라'고 말했다",
+              "headline":"트럼프가 조지아주 선관위원장에게 바이든의 승리를 뒤집기 위해 표를 '찾아오라'고 말했다"
+            },
+            "locators":{
+              "assetUri":"/korean/news-55526285",
+              "cpsUrn":"urn:bbc:content:assetUri:/korean/news-55526285"
+            },
+            "summary":"조지아주 선거관리위원장에게 선거 결과를 뒤집을 만한 수의 표를 \"찾아오라\"고 말한 녹취가 공개됐다.",
+            "timestamp":1609728687000,
+            "language":"ko",
+            "cpsType":"STY",
+            "indexImage":{
+              "id":"116337600",
+              "subType":"index",
+              "href":"http://c.files.bbci.co.uk/02A1/production/_116337600_mediaitem116337599.jpg",
+              "path":"/cpsprodpb/02A1/production/_116337600_mediaitem116337599.jpg",
+              "height":549,
+              "width":976,
+              "altText":"지난 11월 3일 대통령 선거 이래 트럼프는 별다른 증거 없이 대대적인 선거 부정이 있었다고 주장해왔다",
+              "copyrightHolder":"Reuters",
+              "type":"image"
+            },
+            "id":"urn:bbc:ares::asset:korean/news-55526285",
+            "type":"cps"
+          },
+          {
+            "headlines":{
+              "shortHeadline":"미국 상원에서 바이든의 승리를 막으려는 최후의 시도가 벌어진다",
+              "headline":"미국 대선: 상원에서 바이든의 대선 승리를 막으려는 최후의 시도가 벌어진다"
+            },
+            "locators":{
+              "assetUri":"/korean/international-55519836",
+              "cpsUrn":"urn:bbc:content:assetUri:/korean/international-55519836"
+            },
+            "summary":"테드 크루즈를 비롯한 11명의 상원의원들이 투표 부정 조사를 위한 위원회를 요구하고 나섰다.",
+            "timestamp":1609647129000,
+            "language":"ko",
+            "cpsType":"STY",
+            "indexImage":{
+              "id":"116331955",
+              "subType":"index",
+              "href":"http://c.files.bbci.co.uk/DA69/production/_116331955_mediaitem116331951.jpg",
+              "path":"/cpsprodpb/DA69/production/_116331955_mediaitem116331951.jpg",
+              "height":549,
+              "width":976,
+              "altText":"ted cruz",
+              "caption":"Mr Cruz says an audit would improve \"faith in the electoral process\"",
+              "copyrightHolder":"Reuters",
+              "type":"image"
+            },
+            "id":"urn:bbc:ares::asset:korean/international-55519836",
+            "type":"cps"
+          },
+          {
+            "headlines":{
+              "shortHeadline":"바이든 미 대선 선거인단 투표서 과반 확보",
+              "headline":"미국 대선: 바이든 선거인단 투표서 과반 확보...사실상 당선 공식화"
+            },
+            "locators":{
+              "assetUri":"/korean/international-55312926",
+              "cpsUrn":"urn:bbc:content:assetUri:/korean/international-55312926"
+            },
+            "summary":"트럼프 대통령은 결과를 받아들이지 않을 것으로 보인다.",
+            "timestamp":1608004847000,
+            "language":"ko",
+            "cpsType":"STY",
+            "indexImage":{
+              "id":"116066940",
+              "subType":"index",
+              "href":"http://c.files.bbci.co.uk/1366/production/_116066940_mediaitem116064709.jpg",
+              "path":"/cpsprodpb/1366/production/_116066940_mediaitem116064709.jpg",
+              "height":549,
+              "width":976,
+              "altText":"46대 미국 대선에서 승리한 조 바이든 당선인",
+              "caption":"46대 미국 대선에서 승리한 조 바이든 당선인",
+              "copyrightHolder":"Reuters",
+              "type":"image"
+            },
+            "id":"urn:bbc:ares::asset:korean/international-55312926",
+            "type":"cps"
+          },
+          {
+            "headlines":{
+              "shortHeadline":"트럼프 지지자들, 미국 의회 난입... 초유의 사태",
+              "headline":"트럼프 지지자들, 미국 의회 난입... 초유의 사태"
+            },
+            "locators":{
+              "assetUri":"/korean/55570129",
+              "cpsUrn":"urn:bbc:content:assetUri:/korean/55570129"
+            },
+            "summary":"시위대는 유리창을 깨고 의사당 건물 안으로 들어왔고, 일부는 상원의장석까지 점거했다.",
+            "timestamp":1609986648000,
+            "language":"ko",
+            "cpsType":"MAP",
+            "media":{
+              "id":"p0939fyn",
+              "subType":"clip",
+              "format":"video",
+              "title":"트럼프 지지자들, 미국 의회 난입... 초유의 사태",
+              "synopses":{
+                "short":"트럼프 지지자들, 미국 의회 난입... 초유의 사태",
+                "long":"도널드 트럼프 미국 대통령의 지지자들이 6일(현지시간) 워싱턴 D.C. 연방 의회 의사당에 난입했다. \n시위대는 유리창을 깨고 의사당 건물 안으로 들어왔고, 일부는 상원의장석까지 점거했다.\n이날 바이든 당선인의 승리 확정을 위한 회의를 진행 중이던 상·하원은 전격 휴회했고, 의원들은 긴급 대피했다.\n바이든 당선인은 이날 기자회견을 통해 \"우리 민주주의는 전례 없는 공격을 받고 있다\"고 말했다. 또 트럼프 대통령에게 \"지금 전국 방송에 나가 선서를 이행하고, 헌법을 수호하며, 이 점거를 끝내라고 요구해야 한다\"고 촉구했다.\n트럼프 대통령은 의사당 난입 사태 발생 2시간여 뒤 트위터에 올린 동영상에서 \"여러분이 상처받은 것을 안다. 우리는 선거를 빼앗겼다. 하지만 이제는 집에 가야 할 때\"라고 말했다. \n트위터와 페이스북은 이 영상을 허위 사실 유포를 이유로 삭제했다.",
+                "medium":"시위대는 유리창을 깨고 의사당 건물 안으로 들어왔고, 일부는 상원의장석까지 점거했다."
+              },
+              "imageUrl":"ichef.bbci.co.uk/images/ic/$recipe/p0939g21.jpg",
+              "embedding":true,
+              "advertising":true,
+              "caption":"트럼프 지지자들, 미국 의회 난입... 초유의 사태",
+              "versions":[
+                {
+                  "versionId":"p0939fys",
+                  "types":[
+                    "Original"
+                  ],
+                  "duration":42,
+                  "durationISO8601":"PT42S",
+                  "warnings":{
+
+                  },
+                  "availableTerritories":{
+                    "uk":true,
+                    "nonUk":true
+                  },
+                  "availableFrom":1609986361000
+                }
+              ],
+              "imageCopyright":"BBC",
+              "smpKind":"programme",
+              "type":"media"
+            },
+            "indexImage":{
+              "id":"116376114",
+              "subType":"index",
+              "href":"http://c.files.bbci.co.uk/A0CF/production/_116376114_p0939g21.jpg",
+              "path":"/cpsprodpb/A0CF/production/_116376114_p0939g21.jpg",
+              "height":549,
+              "width":976,
+              "altText":"시위대는 유리창을 깨고 의사당 건물 안으로 들어왔고, 일부는 상원의장석까지 점거했다",
+              "copyrightHolder":"BBC",
+              "type":"image"
+            },
+            "mediaType":"Video",
+            "id":"urn:bbc:ares::asset:korean/55570129",
+            "type":"cps"
+          }
+        ]
+      }
+    ]
+  }
+}
