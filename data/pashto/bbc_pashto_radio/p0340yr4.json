@@ -133,14 +133,14 @@
               "headline": "وروستي خبرونه"
             },
             "locators": {
-              "pid": "w172xjcjkv7gr9r",
+              "pid": "w172xqk2y7ktdkg",
               "brandPid": "p0340yr4"
             },
             "media": {
-              "id": "w172xjcjkv7gr9r",
+              "id": "w172xqk2y7ktdkg",
               "subType": "episode",
               "format": "Audio",
-              "title": "18/05/2020 GMT",
+              "title": "15/12/2020 GMT",
               "synopses": {
                 "short": "د نړۍ وروستي خبرونه",
                 "medium": "د نړۍ وروستي خبرونه"
@@ -150,7 +150,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshp8nm178qzh",
+                  "versionId": "w1mshxms8p8kz33",
                   "types": ["Original"],
                   "duration": 180,
                   "durationISO8601": "PT3M",
@@ -160,10 +160,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590400980000,
-                  "availableFrom": 1589796180000
+                  "availableUntil": 1608634980000,
+                  "availableFrom": 1608030180000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -177,11 +180,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607990400000,
             "brand": {
               "pid": "p0340yr4",
               "title": "وروستي خبرونه"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcjkv7gr9r",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xqk2y7ktdkg",
             "type": "ws_radio"
           },
           {
@@ -189,14 +193,14 @@
               "headline": "وروستي خبرونه"
             },
             "locators": {
-              "pid": "w172xjcjkv7gmkm",
+              "pid": "w172xqk2y7kt8tb",
               "brandPid": "p0340yr4"
             },
             "media": {
-              "id": "w172xjcjkv7gmkm",
+              "id": "w172xqk2y7kt8tb",
               "subType": "episode",
               "format": "Audio",
-              "title": "18/05/2020 GMT",
+              "title": "15/12/2020 GMT",
               "synopses": {
                 "short": "د نړۍ وروستي خبرونه",
                 "medium": "د نړۍ وروستي خبرونه"
@@ -206,7 +210,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshp8nm178m7c",
+                  "versionId": "w1mshxms8p8kvbz",
                   "types": ["Original"],
                   "duration": 180,
                   "durationISO8601": "PT3M",
@@ -216,10 +220,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590397380000,
-                  "availableFrom": 1589792580000
+                  "availableUntil": 1608631380000,
+                  "availableFrom": 1608026580000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -233,11 +240,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607990400000,
             "brand": {
               "pid": "p0340yr4",
               "title": "وروستي خبرونه"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcjkv7gmkm",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xqk2y7kt8tb",
             "type": "ws_radio"
           },
           {
@@ -245,14 +253,14 @@
               "headline": "وروستي خبرونه"
             },
             "locators": {
-              "pid": "w172xjcjkv7ghth",
+              "pid": "w172xqk2y7kt526",
               "brandPid": "p0340yr4"
             },
             "media": {
-              "id": "w172xjcjkv7ghth",
+              "id": "w172xqk2y7kt526",
               "subType": "episode",
               "format": "Audio",
-              "title": "18/05/2020 GMT",
+              "title": "15/12/2020 GMT",
               "synopses": {
                 "short": "د نړۍ وروستي خبرونه",
                 "medium": "د نړۍ وروستي خبرونه"
@@ -262,7 +270,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshp8nm178hh7",
+                  "versionId": "w1mshxms8p8kqlv",
                   "types": ["Original"],
                   "duration": 180,
                   "durationISO8601": "PT3M",
@@ -272,10 +280,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590393780000,
-                  "availableFrom": 1589788980000
+                  "availableUntil": 1608627780000,
+                  "availableFrom": 1608022980000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -289,11 +300,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607990400000,
             "brand": {
               "pid": "p0340yr4",
               "title": "وروستي خبرونه"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcjkv7ghth",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xqk2y7kt526",
             "type": "ws_radio"
           },
           {
@@ -301,14 +313,14 @@
               "headline": "وروستي خبرونه"
             },
             "locators": {
-              "pid": "w172xjcjkv7gd2c",
+              "pid": "w172xqk2y7kt1b2",
               "brandPid": "p0340yr4"
             },
             "media": {
-              "id": "w172xjcjkv7gd2c",
+              "id": "w172xqk2y7kt1b2",
               "subType": "episode",
               "format": "Audio",
-              "title": "18/05/2020 GMT",
+              "title": "15/12/2020 GMT",
               "synopses": {
                 "short": "د نړۍ وروستي خبرونه",
                 "medium": "د نړۍ وروستي خبرونه"
@@ -318,7 +330,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshp8nm178cr3",
+                  "versionId": "w1mshxms8p8klvq",
                   "types": ["Original"],
                   "duration": 180,
                   "durationISO8601": "PT3M",
@@ -328,10 +340,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590390180000,
-                  "availableFrom": 1589785380000
+                  "availableUntil": 1608624180000,
+                  "availableFrom": 1608019380000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -345,11 +360,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607990400000,
             "brand": {
               "pid": "p0340yr4",
               "title": "وروستي خبرونه"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcjkv7gd2c",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xqk2y7kt1b2",
             "type": "ws_radio"
           },
           {
@@ -357,14 +373,14 @@
               "headline": "وروستي خبرونه"
             },
             "locators": {
-              "pid": "w172xjcjkv7g8b7",
+              "pid": "w172xqk2y7ksxky",
               "brandPid": "p0340yr4"
             },
             "media": {
-              "id": "w172xjcjkv7g8b7",
+              "id": "w172xqk2y7ksxky",
               "subType": "episode",
               "format": "Audio",
-              "title": "18/05/2020 GMT",
+              "title": "15/12/2020 GMT",
               "synopses": {
                 "short": "د نړۍ وروستي خبرونه",
                 "medium": "د نړۍ وروستي خبرونه"
@@ -374,7 +390,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshp8nm1787zz",
+                  "versionId": "w1mshxms8p8kh3l",
                   "types": ["Original"],
                   "duration": 180,
                   "durationISO8601": "PT3M",
@@ -384,10 +400,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590386580000,
-                  "availableFrom": 1589781780000
+                  "availableUntil": 1608620580000,
+                  "availableFrom": 1608015780000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -401,11 +420,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607990400000,
             "brand": {
               "pid": "p0340yr4",
               "title": "وروستي خبرونه"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcjkv7g8b7",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xqk2y7ksxky",
             "type": "ws_radio"
           },
           {
@@ -413,14 +433,14 @@
               "headline": "وروستي خبرونه"
             },
             "locators": {
-              "pid": "w172xjcjkv7d2wx",
+              "pid": "w172xqk2y7ksstt",
               "brandPid": "p0340yr4"
             },
             "media": {
-              "id": "w172xjcjkv7d2wx",
+              "id": "w172xqk2y7ksstt",
               "subType": "episode",
               "format": "Audio",
-              "title": "17/05/2020 GMT",
+              "title": "15/12/2020 GMT",
               "synopses": {
                 "short": "د نړۍ وروستي خبرونه",
                 "medium": "د نړۍ وروستي خبرونه"
@@ -430,7 +450,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshp8nm1762kn",
+                  "versionId": "w1mshxms8p8kccg",
                   "types": ["Original"],
                   "duration": 180,
                   "durationISO8601": "PT3M",
@@ -440,10 +460,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590321780000,
-                  "availableFrom": 1589716980000
+                  "availableUntil": 1608616980000,
+                  "availableFrom": 1608012180000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -457,11 +480,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607990400000,
             "brand": {
               "pid": "p0340yr4",
               "title": "وروستي خبرونه"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcjkv7d2wx",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xqk2y7ksstt",
             "type": "ws_radio"
           },
           {
@@ -469,14 +493,14 @@
               "headline": "وروستي خبرونه"
             },
             "locators": {
-              "pid": "w172xjcjkv7cz4s",
+              "pid": "w172xqk2y7kqmdh",
               "brandPid": "p0340yr4"
             },
             "media": {
-              "id": "w172xjcjkv7cz4s",
+              "id": "w172xqk2y7kqmdh",
               "subType": "episode",
               "format": "Audio",
-              "title": "17/05/2020 GMT",
+              "title": "14/12/2020 GMT",
               "synopses": {
                 "short": "د نړۍ وروستي خبرونه",
                 "medium": "د نړۍ وروستي خبرونه"
@@ -486,7 +510,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshp8nm175ytj",
+                  "versionId": "w1mshxms8p8h5y4",
                   "types": ["Original"],
                   "duration": 180,
                   "durationISO8601": "PT3M",
@@ -496,10 +520,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590318180000,
-                  "availableFrom": 1589713380000
+                  "availableUntil": 1608552180000,
+                  "availableFrom": 1607947380000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -513,11 +540,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607904000000,
             "brand": {
               "pid": "p0340yr4",
               "title": "وروستي خبرونه"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcjkv7cz4s",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xqk2y7kqmdh",
             "type": "ws_radio"
           },
           {
@@ -525,14 +553,14 @@
               "headline": "وروستي خبرونه"
             },
             "locators": {
-              "pid": "w172xjcjkv7cvdn",
+              "pid": "w172xqk2y7kqhnc",
               "brandPid": "p0340yr4"
             },
             "media": {
-              "id": "w172xjcjkv7cvdn",
+              "id": "w172xqk2y7kqhnc",
               "subType": "episode",
               "format": "Audio",
-              "title": "17/05/2020 GMT",
+              "title": "14/12/2020 GMT",
               "synopses": {
                 "short": "د نړۍ وروستي خبرونه",
                 "medium": "د نړۍ وروستي خبرونه"
@@ -542,7 +570,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshp8nm175v2d",
+                  "versionId": "w1mshxms8p8h260",
                   "types": ["Original"],
                   "duration": 180,
                   "durationISO8601": "PT3M",
@@ -552,10 +580,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590314580000,
-                  "availableFrom": 1589709780000
+                  "availableUntil": 1608548580000,
+                  "availableFrom": 1607943780000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -569,11 +600,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607904000000,
             "brand": {
               "pid": "p0340yr4",
               "title": "وروستي خبرونه"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcjkv7cvdn",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xqk2y7kqhnc",
             "type": "ws_radio"
           }
         ]

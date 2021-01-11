@@ -9,12 +9,12 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
   .emotion-4 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -23,8 +23,6 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -33,8 +31,6 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -43,8 +39,6 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -53,8 +47,6 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -63,8 +55,6 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 
 @media (min-width:80rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -133,12 +123,12 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 @supports (display:grid) {
   .emotion-1 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-1 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -148,8 +138,6 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-1 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -159,8 +147,6 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-1 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -170,8 +156,6 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-1 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -181,8 +165,6 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-1 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -191,8 +173,6 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 
 @media (min-width:80rem) {
     .emotion-1 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -275,12 +255,12 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
   .emotion-6 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -289,8 +269,6 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -299,8 +277,6 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -309,8 +285,6 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -319,8 +293,6 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -329,8 +301,6 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 
 @media (min-width:80rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -399,12 +369,12 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 @supports (display:grid) {
   .emotion-3 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-3 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -414,8 +384,6 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-3 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -425,8 +393,6 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-3 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -436,8 +402,6 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-3 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -447,8 +411,6 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-3 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -457,8 +419,6 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 
 @media (min-width:80rem) {
     .emotion-3 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -525,12 +485,12 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
   .emotion-19 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -539,8 +499,6 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -549,8 +507,6 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -559,8 +515,6 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -569,8 +523,6 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -579,8 +531,6 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 
 @media (min-width:80rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -649,12 +599,12 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 @supports (display:grid) {
   .emotion-16 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -664,8 +614,6 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -675,8 +623,6 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -686,8 +632,6 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -697,8 +641,6 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -707,8 +649,6 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 
 @media (min-width:80rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -942,12 +882,12 @@ exports[`CpsOnwardJourney renders section label with with alternative background
   .emotion-19 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -956,8 +896,6 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -966,8 +904,6 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -976,8 +912,6 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -986,8 +920,6 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -996,8 +928,6 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 
 @media (min-width:80rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -1066,12 +996,12 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 @supports (display:grid) {
   .emotion-16 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1081,8 +1011,6 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1092,8 +1020,6 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1103,8 +1029,6 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1114,8 +1038,6 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -1124,8 +1046,6 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 
 @media (min-width:80rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -1359,12 +1279,12 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
   .emotion-17 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1373,8 +1293,6 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1383,8 +1301,6 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1393,8 +1309,6 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -1403,8 +1317,6 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -1413,8 +1325,6 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 
 @media (min-width:80rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -1483,12 +1393,12 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 @supports (display:grid) {
   .emotion-14 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1498,8 +1408,6 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1509,8 +1417,6 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1520,8 +1426,6 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1531,8 +1435,6 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -1541,8 +1443,6 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 
 @media (min-width:80rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -1753,12 +1653,12 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
   .emotion-23 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1767,8 +1667,6 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1777,8 +1675,6 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1787,8 +1683,6 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -1797,8 +1691,6 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -1807,8 +1699,6 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 
 @media (min-width:80rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -1877,12 +1767,12 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 @supports (display:grid) {
   .emotion-20 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-20 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1892,8 +1782,6 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-20 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1903,8 +1791,6 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-20 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1914,8 +1800,6 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-20 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1925,8 +1809,6 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-20 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -1935,8 +1817,6 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 
 @media (min-width:80rem) {
     .emotion-20 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -2263,12 +2143,12 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   .emotion-25 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2277,8 +2157,6 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2287,8 +2165,6 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2297,8 +2173,6 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -2307,8 +2181,6 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -2317,8 +2189,6 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 
 @media (min-width:80rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -2387,12 +2257,12 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 @supports (display:grid) {
   .emotion-22 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-22 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2402,8 +2272,6 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-22 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2413,8 +2281,6 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-22 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2424,8 +2290,6 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-22 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2435,8 +2299,6 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-22 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -2445,8 +2307,6 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 
 @media (min-width:80rem) {
     .emotion-22 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;

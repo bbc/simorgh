@@ -6,7 +6,7 @@ exports[`Canonical Story Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=
 
 exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
 
-exports[`Canonical Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
+exports[`Canonical Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
 exports[`Canonical Story Page Footer Link should match text and url 1`] = `
 Object {
@@ -261,7 +261,7 @@ Object {
         "name": "BBC News Кыргыз Кызматы",
         "publishingPrinciples": "https://www.bbc.com/kyrgyz/institutional-49677275",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+      "thumbnailUrl": "https://ichef.test.bbci.co.uk/news/1024/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg",
       "url": "http://localhost:7080/kyrgyz/23292889",
     },
   ],

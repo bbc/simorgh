@@ -9,6 +9,7 @@ import filterGroupsWithoutStraplines from '#app/routes/utils/sharedDataTransform
 import getConfig from '#app/routes/utils/getConfig';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
+import { INDEX_PAGE } from '#app/routes/utils/pageTypes';
 
 const transformJson = pipe(
   filterUnknownContentTypes,
@@ -47,7 +48,7 @@ export default async ({ path, service, variant, pageType }) => {
           service,
           path,
           radioService: 'dari',
-          pageType: 'IDX',
+          pageType: INDEX_PAGE,
         })
       : await pageDataPromise;
 

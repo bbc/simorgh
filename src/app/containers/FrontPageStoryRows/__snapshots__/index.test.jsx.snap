@@ -104,12 +104,12 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 @supports (display:grid) {
   .emotion-23 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -117,8 +117,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -126,8 +124,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -135,8 +131,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -144,8 +138,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -153,8 +145,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 @media (min-width:80rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -204,12 +194,12 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 @supports (display:grid) {
   .emotion-52 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-52 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -217,8 +207,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-52 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -226,8 +214,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-52 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -235,8 +221,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-52 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -244,8 +228,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-52 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -253,8 +235,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 @media (min-width:80rem) {
     .emotion-52 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -1079,12 +1059,12 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 @supports (display:grid) {
   .emotion-19 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1092,8 +1072,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1101,8 +1079,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1110,8 +1086,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1119,8 +1093,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1128,8 +1100,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 
 @media (min-width:80rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1316,12 +1286,12 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 @supports (display:grid) {
   .emotion-48 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-48 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1329,8 +1299,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-48 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1338,8 +1306,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-48 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1347,8 +1313,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-48 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1356,8 +1320,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-48 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -1365,8 +1327,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 
 @media (min-width:80rem) {
     .emotion-48 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -1830,12 +1790,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 @supports (display:grid) {
   .emotion-23 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1843,8 +1803,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1852,8 +1810,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1861,8 +1817,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1870,8 +1824,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -1879,8 +1831,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 
 @media (min-width:80rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -2813,12 +2763,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 @supports (display:grid) {
   .emotion-19 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2826,8 +2776,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2835,8 +2783,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2844,8 +2790,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2853,8 +2797,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -2862,8 +2804,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 
 @media (min-width:80rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -3451,12 +3391,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 @supports (display:grid) {
   .emotion-23 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -3464,8 +3404,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -3473,8 +3411,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -3482,8 +3418,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(3,1fr);
       grid-column-end: span 3;
     }
@@ -3491,8 +3425,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -3500,8 +3432,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 @media (min-width:80rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -3596,12 +3526,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 @supports (display:grid) {
   .emotion-55 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-55 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -3609,8 +3539,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-55 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -3618,8 +3546,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-55 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -3627,8 +3553,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-55 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(3,1fr);
       grid-column-end: span 3;
     }
@@ -3636,8 +3560,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-55 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -3645,8 +3567,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 @media (min-width:80rem) {
     .emotion-55 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -4353,12 +4273,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 @supports (display:grid) {
   .emotion-11 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4366,8 +4286,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4375,8 +4293,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4384,8 +4300,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(3,1fr);
       grid-column-end: span 3;
     }
@@ -4393,8 +4307,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -4402,8 +4314,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 
 @media (min-width:80rem) {
     .emotion-11 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -4551,12 +4461,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 @supports (display:grid) {
   .emotion-43 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-43 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4564,8 +4474,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-43 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4573,8 +4481,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-43 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4582,8 +4488,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-43 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(3,1fr);
       grid-column-end: span 3;
     }
@@ -4591,8 +4495,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-43 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -4600,8 +4502,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 
 @media (min-width:80rem) {
     .emotion-43 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -4805,12 +4705,12 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
 @supports (display:grid) {
   .emotion-23 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4818,8 +4718,6 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4827,8 +4725,6 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4836,8 +4732,6 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4845,8 +4739,6 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -4854,8 +4746,6 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
 
 @media (min-width:80rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -5270,12 +5160,12 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 @supports (display:grid) {
   .emotion-19 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -5283,8 +5173,6 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -5292,8 +5180,6 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -5301,8 +5187,6 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -5310,8 +5194,6 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -5319,8 +5201,6 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 
 @media (min-width:80rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }

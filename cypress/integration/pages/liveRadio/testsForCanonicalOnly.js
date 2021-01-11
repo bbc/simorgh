@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
 import getEmbedUrl from '../../../support/helpers/getEmbedUrl';
@@ -61,39 +62,41 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     });
     describe('Radio Schedule', () => {
       it('should be displayed if there is enough schedule data', function test() {
-        const scheduleIsEnabled = path(
-          ['liveRadioSchedule', 'enabled'],
-          this.toggles,
-        );
-        cy.log(
-          `Live Radio Page configured for Radio Schedule? ${scheduleIsEnabled}`,
-        );
+        cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
+          const scheduleIsEnabled = path(
+            ['liveRadioSchedule', 'enabled'],
+            toggles,
+          );
+          cy.log(
+            `Live Radio Page configured for Radio Schedule? ${scheduleIsEnabled}`,
+          );
 
-        if (scheduleIsEnabled) {
-          const schedulePath = Cypress.env('currentPath')
-            .replace('liveradio', 'schedule.json')
-            // the schedule call for afaanoromoo is made to bbc_oromo_radio
-            .replace('bbc_afaanoromoo_radio', 'bbc_oromo_radio');
+          if (scheduleIsEnabled) {
+            const schedulePath = Cypress.env('currentPath')
+              .replace('liveradio', 'schedule.json')
+              // the schedule call for afaanoromoo is made to bbc_oromo_radio
+              .replace('bbc_afaanoromoo_radio', 'bbc_oromo_radio');
 
-          cy.request(schedulePath).then(({ body: scheduleJson }) => {
-            const { schedules } = scheduleJson;
-            const validSchedules = schedules.map(isProgramValid);
+            cy.request(schedulePath).then(({ body: scheduleJson }) => {
+              const { schedules } = scheduleJson;
+              const validSchedules = schedules.map(isProgramValid);
 
-            const isRadioScheduleDataComplete = isScheduleDataComplete({
-              validSchedules,
+              const isRadioScheduleDataComplete = isScheduleDataComplete({
+                validSchedules,
+              });
+
+              cy.log(
+                `Radio Schedule is displayed? ${isRadioScheduleDataComplete}`,
+              );
+              if (scheduleIsEnabled && isRadioScheduleDataComplete) {
+                cy.log('Schedule has enough data');
+                cy.get('[data-e2e=radio-schedule]').should('exist');
+              } else {
+                cy.get('[data-e2e=radio-schedule]').should('not.exist');
+              }
             });
-
-            cy.log(
-              `Radio Schedule is displayed? ${isRadioScheduleDataComplete}`,
-            );
-            if (scheduleIsEnabled && isRadioScheduleDataComplete) {
-              cy.log('Schedule has enough data');
-              cy.get('[data-e2e=radio-schedule]').should('exist');
-            } else {
-              cy.get('[data-e2e=radio-schedule]').should('not.exist');
-            }
-          });
-        }
+          }
+        });
       });
     });
   });

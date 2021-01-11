@@ -20,7 +20,14 @@ import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  FEATURE_INDEX_PAGE,
+  MEDIA_ASSET_PAGE,
+  PHOTO_GALLERY_PAGE,
+  STORY_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
@@ -141,7 +148,7 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       render(
-        <ContextWrap platform="amp" pageType="MAP" service="news">
+        <ContextWrap platform="amp" pageType={MEDIA_ASSET_PAGE} service="news">
           <ATIAnalytics data={mapAssetData} />
         </ContextWrap>,
       );
@@ -160,7 +167,11 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType="PGL" service="news">
+        <ContextWrap
+          platform="canonical"
+          pageType={PHOTO_GALLERY_PAGE}
+          service="news"
+        >
           <ATIAnalytics data={pglAssetData} />
         </ContextWrap>,
       );
@@ -177,7 +188,11 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       render(
-        <ContextWrap platform="amp" pageType="PGL" service="news">
+        <ContextWrap
+          platform="amp"
+          pageType={PHOTO_GALLERY_PAGE}
+          service="news"
+        >
           <ATIAnalytics data={pglAssetData} />
         </ContextWrap>,
       );
@@ -196,7 +211,7 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType="STY" service="news">
+        <ContextWrap platform="canonical" pageType={STORY_PAGE} service="news">
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
@@ -213,7 +228,7 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       render(
-        <ContextWrap platform="amp" pageType="STY" service="news">
+        <ContextWrap platform="amp" pageType={STORY_PAGE} service="news">
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
@@ -230,7 +245,11 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType="STY" service="ukrainian">
+        <ContextWrap
+          platform="canonical"
+          pageType={STORY_PAGE}
+          service="ukrainian"
+        >
           <ATIAnalytics data={styUkrainianAssetData} />
         </ContextWrap>,
       );
@@ -247,7 +266,7 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       render(
-        <ContextWrap platform="amp" pageType="STY" service="ukrainian">
+        <ContextWrap platform="amp" pageType={STORY_PAGE} service="ukrainian">
           <ATIAnalytics data={styUkrainianAssetData} />
         </ContextWrap>,
       );
@@ -264,7 +283,11 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType="STY" service="ukrainian">
+        <ContextWrap
+          platform="canonical"
+          pageType={STORY_PAGE}
+          service="ukrainian"
+        >
           <ATIAnalytics data={styUkrainianInRussianAssetData} />
         </ContextWrap>,
       );
@@ -281,7 +304,7 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       render(
-        <ContextWrap platform="amp" pageType="STY" service="ukrainian">
+        <ContextWrap platform="amp" pageType={STORY_PAGE} service="ukrainian">
           <ATIAnalytics data={styUkrainianInRussianAssetData} />
         </ContextWrap>,
       );
@@ -319,7 +342,7 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType="STY" service="news">
+        <ContextWrap platform="canonical" pageType={STORY_PAGE} service="news">
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
@@ -338,7 +361,7 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType="STY" service="news">
+        <ContextWrap platform="canonical" pageType={STORY_PAGE} service="news">
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
@@ -356,7 +379,11 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType="FIX" service="afrique">
+        <ContextWrap
+          platform="canonical"
+          pageType={FEATURE_INDEX_PAGE}
+          service="afrique"
+        >
           <ATIAnalytics data={fixAssetData} />
         </ContextWrap>,
       );
@@ -373,7 +400,11 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       render(
-        <ContextWrap platform="amp" pageType="FIX" service="afrique">
+        <ContextWrap
+          platform="amp"
+          pageType={FEATURE_INDEX_PAGE}
+          service="afrique"
+        >
           <ATIAnalytics data={fixAssetData} />
         </ContextWrap>,
       );

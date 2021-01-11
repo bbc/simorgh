@@ -530,12 +530,12 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
   .emotion-257 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-257 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -544,8 +544,6 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-257 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -554,8 +552,6 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-257 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -564,8 +560,6 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-257 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -574,8 +568,6 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-257 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -584,8 +576,6 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 
 @media (min-width:80rem) {
     .emotion-257 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -690,12 +680,12 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 @supports (display:grid) {
   .emotion-87 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -703,8 +693,6 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -712,8 +700,6 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -721,8 +707,6 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -730,8 +714,6 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -739,8 +721,6 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 
 @media (min-width:80rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -2314,12 +2294,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
   .emotion-259 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-259 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2328,8 +2308,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-259 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2338,8 +2316,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-259 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2348,8 +2324,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-259 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -2358,8 +2332,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-259 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -2368,8 +2340,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:80rem) {
     .emotion-259 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -2474,12 +2444,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 @supports (display:grid) {
   .emotion-89 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-89 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2487,8 +2457,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-89 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2496,8 +2464,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-89 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2505,8 +2471,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-89 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2514,8 +2478,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-89 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -2523,8 +2485,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:80rem) {
     .emotion-89 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -2831,12 +2791,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
   .emotion-447 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-447 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2845,8 +2805,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-447 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2855,8 +2813,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-447 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2865,8 +2821,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-447 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -2875,8 +2829,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-447 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -2885,8 +2837,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:80rem) {
     .emotion-447 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -2956,12 +2906,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 @supports (display:grid) {
   .emotion-291 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-291 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2969,8 +2919,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-291 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2978,8 +2926,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-291 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2987,8 +2933,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-291 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(3,1fr);
       grid-column-end: span 3;
     }
@@ -2996,8 +2940,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-291 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
@@ -3005,8 +2947,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 
 @media (min-width:80rem) {
     .emotion-291 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }

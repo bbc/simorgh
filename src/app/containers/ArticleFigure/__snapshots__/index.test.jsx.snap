@@ -11,12 +11,12 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
   .emotion-4 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -25,8 +25,6 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -35,8 +33,6 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -45,8 +41,6 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -55,8 +49,6 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -65,8 +57,6 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 
 @media (min-width:80rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -113,12 +103,12 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 @supports (display:grid) {
   .emotion-2 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -127,8 +117,6 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -137,8 +125,6 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -147,8 +133,6 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -157,8 +141,6 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -167,8 +149,6 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 
 @media (min-width:80rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -222,9 +202,7 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
             class="lazyload-placeholder"
           />
         </div>
-        <noscript>
-          &lt;img alt="Pauline Clayton" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg" width="640" class="css-13lcmnl-StyledImg e1enwo3v0"/&gt;
-        </noscript>
+        <noscript />
       </div>
     </div>
   </div>
@@ -242,12 +220,12 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
   .emotion-4 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -256,8 +234,6 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -266,8 +242,6 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -276,8 +250,6 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -286,8 +258,6 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -296,8 +266,6 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 
 @media (min-width:80rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -344,12 +312,12 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 @supports (display:grid) {
   .emotion-2 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -358,8 +326,6 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -368,8 +334,6 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -378,8 +342,6 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -388,8 +350,6 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -398,8 +358,6 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 
 @media (min-width:80rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -473,12 +431,12 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   .emotion-14 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -487,8 +445,6 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -497,8 +453,6 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -507,8 +461,6 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -517,8 +469,6 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -527,8 +477,6 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:80rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -575,12 +523,12 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 @supports (display:grid) {
   .emotion-6 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -589,8 +537,6 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -599,8 +545,6 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -609,8 +553,6 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -619,8 +561,6 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -629,8 +569,6 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:80rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -728,12 +666,12 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 @supports (display:grid) {
   .emotion-12 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -742,8 +680,6 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -752,8 +688,6 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -762,8 +696,6 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -772,8 +704,6 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -782,8 +712,6 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:80rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -796,10 +724,15 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -816,15 +749,10 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-10 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
 @media (min-width:63rem) {
   .emotion-10 {
-    padding: 0.5rem 0 0;
+    width: 100%;
+    margin: 0.5rem 0 0;
   }
 }
 
@@ -837,8 +765,20 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   padding-bottom: 0;
 }
 
-.emotion-10 i {
-  font-style: normal;
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-10 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-10 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
 }
 
 <div>
@@ -883,6 +823,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
       >
         <figcaption
           class="emotion-10 emotion-11"
+          dir="ltr"
         >
           <span
             class="emotion-0 emotion-1"
@@ -910,12 +851,12 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
   .emotion-10 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -924,8 +865,6 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -934,8 +873,6 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -944,8 +881,6 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -954,8 +889,6 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -964,8 +897,6 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:80rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -1012,12 +943,12 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 @supports (display:grid) {
   .emotion-2 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1026,8 +957,6 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1036,8 +965,6 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1046,8 +973,6 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1056,8 +981,6 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1066,8 +989,6 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:80rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -1151,12 +1072,12 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 @supports (display:grid) {
   .emotion-8 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1165,8 +1086,6 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1175,8 +1094,6 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1185,8 +1102,6 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -1195,8 +1110,6 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -1205,8 +1118,6 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:80rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -1219,10 +1130,15 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -1239,15 +1155,10 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-6 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
 @media (min-width:63rem) {
   .emotion-6 {
-    padding: 0.5rem 0 0;
+    width: 100%;
+    margin: 0.5rem 0 0;
   }
 }
 
@@ -1260,8 +1171,20 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
   padding-bottom: 0;
 }
 
-.emotion-6 i {
-  font-style: normal;
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-6 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-6 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
 }
 
 <div>
@@ -1295,6 +1218,7 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
       >
         <figcaption
           class="emotion-6 emotion-7"
+          dir="ltr"
         >
           <span
             class="emotion-4 emotion-5"
@@ -1322,12 +1246,12 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
   .emotion-12 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1336,8 +1260,6 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1346,8 +1268,6 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1356,8 +1276,6 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -1366,8 +1284,6 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -1376,8 +1292,6 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:80rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -1424,12 +1338,12 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 @supports (display:grid) {
   .emotion-2 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1438,8 +1352,6 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1448,8 +1360,6 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1458,8 +1368,6 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1468,8 +1376,6 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1478,8 +1384,6 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:80rem) {
     .emotion-2 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -1563,12 +1467,12 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 @supports (display:grid) {
   .emotion-10 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1577,8 +1481,6 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1587,8 +1489,6 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1597,8 +1497,6 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -1607,8 +1505,6 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -1617,8 +1513,6 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:80rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -1631,10 +1525,15 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -1651,15 +1550,10 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-8 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
 @media (min-width:63rem) {
   .emotion-8 {
-    padding: 0.5rem 0 0;
+    width: 100%;
+    margin: 0.5rem 0 0;
   }
 }
 
@@ -1672,8 +1566,20 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
   padding-bottom: 0;
 }
 
-.emotion-8 i {
-  font-style: normal;
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-8 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-8 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
 }
 
 .emotion-6 {
@@ -1725,6 +1631,7 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
       >
         <figcaption
           class="emotion-8 emotion-9"
+          dir="ltr"
         >
           <span
             class="emotion-4 emotion-5"
@@ -1759,12 +1666,12 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
   .emotion-8 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1773,8 +1680,6 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1783,8 +1688,6 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1793,8 +1696,6 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -1803,8 +1704,6 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -1813,8 +1712,6 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 
 @media (min-width:80rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -1861,12 +1758,12 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 @supports (display:grid) {
   .emotion-6 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1875,8 +1772,6 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1885,8 +1780,6 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1895,8 +1788,6 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1905,8 +1796,6 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1915,8 +1804,6 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 
 @media (min-width:80rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -2058,12 +1945,12 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
   .emotion-6 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2072,8 +1959,6 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2082,8 +1967,6 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-gap: 0.5rem;
@@ -2092,8 +1975,6 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-gap: 1rem;
@@ -2102,8 +1983,6 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-gap: 1rem;
@@ -2112,8 +1991,6 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 
 @media (min-width:80rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -2160,12 +2037,12 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 @supports (display:grid) {
   .emotion-4 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2174,8 +2051,6 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2184,8 +2059,6 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-start: 1;
@@ -2194,8 +2067,6 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-start: 1;
@@ -2204,8 +2075,6 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-start: 1;
@@ -2214,8 +2083,6 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 
 @media (min-width:80rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -2297,12 +2164,12 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 @supports (display:grid) {
   .emotion-4 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2311,8 +2178,6 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2321,8 +2186,6 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2331,8 +2194,6 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2341,8 +2202,6 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2351,8 +2210,6 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 
 @media (min-width:80rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -2395,12 +2252,12 @@ exports[`ArticleFigure should render an image and caption for a square with nest
   .emotion-6 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-gap: 0.5rem;
@@ -2409,8 +2266,6 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-gap: 0.5rem;
@@ -2419,8 +2274,6 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-gap: 0.5rem;
@@ -2429,8 +2282,6 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-gap: 1rem;
@@ -2439,8 +2290,6 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-gap: 1rem;
@@ -2449,8 +2298,6 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 
 @media (min-width:80rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-gap: 1rem;
@@ -2497,12 +2344,12 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
   .emotion-6 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2511,8 +2358,6 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2521,8 +2366,6 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2531,8 +2374,6 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -2541,8 +2382,6 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -2551,8 +2390,6 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 
 @media (min-width:80rem) {
     .emotion-6 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -2599,12 +2436,12 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 @supports (display:grid) {
   .emotion-4 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2613,8 +2450,6 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2623,8 +2458,6 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2633,8 +2466,6 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2643,8 +2474,6 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2653,8 +2482,6 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 
 @media (min-width:80rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -2732,12 +2559,12 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   .emotion-16 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2746,8 +2573,6 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2756,8 +2581,6 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2766,8 +2589,6 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -2776,8 +2597,6 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -2786,8 +2605,6 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:80rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -2834,12 +2651,12 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 @supports (display:grid) {
   .emotion-8 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2848,8 +2665,6 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2858,8 +2673,6 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2868,8 +2681,6 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2878,8 +2689,6 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2888,8 +2697,6 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:80rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -2993,12 +2800,12 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 @supports (display:grid) {
   .emotion-14 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3007,8 +2814,6 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3017,8 +2822,6 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3027,8 +2830,6 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -3037,8 +2838,6 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -3047,8 +2846,6 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:80rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -3061,10 +2858,15 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -3081,15 +2883,10 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-12 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
 @media (min-width:63rem) {
   .emotion-12 {
-    padding: 0.5rem 0 0;
+    width: 100%;
+    margin: 0.5rem 0 0;
   }
 }
 
@@ -3102,8 +2899,20 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   padding-bottom: 0;
 }
 
-.emotion-12 i {
-  font-style: normal;
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-12 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-12 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
 }
 
 <div>
@@ -3146,6 +2955,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
       >
         <figcaption
           class="emotion-12 emotion-13"
+          dir="ltr"
         >
           <span
             class="emotion-2 emotion-3"
@@ -3173,12 +2983,12 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   .emotion-12 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -3187,8 +2997,6 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -3197,8 +3005,6 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -3207,8 +3013,6 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -3217,8 +3021,6 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -3227,8 +3029,6 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:80rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -3275,12 +3075,12 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 @supports (display:grid) {
   .emotion-4 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3289,8 +3089,6 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3299,8 +3097,6 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3309,8 +3105,6 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3319,8 +3113,6 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3329,8 +3121,6 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:80rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -3420,12 +3210,12 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 @supports (display:grid) {
   .emotion-10 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3434,8 +3224,6 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3444,8 +3232,6 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3454,8 +3240,6 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -3464,8 +3248,6 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -3474,8 +3256,6 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:80rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -3488,10 +3268,15 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -3508,15 +3293,10 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-8 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
 @media (min-width:63rem) {
   .emotion-8 {
-    padding: 0.5rem 0 0;
+    width: 100%;
+    margin: 0.5rem 0 0;
   }
 }
 
@@ -3529,8 +3309,20 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   padding-bottom: 0;
 }
 
-.emotion-8 i {
-  font-style: normal;
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-8 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-8 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
 }
 
 <div>
@@ -3562,6 +3354,7 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
       >
         <figcaption
           class="emotion-8 emotion-9"
+          dir="ltr"
         >
           <span
             class="emotion-6 emotion-7"
@@ -3589,12 +3382,12 @@ exports[`ArticleFigure should render an image with caption text with inline link
   .emotion-14 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -3603,8 +3396,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -3613,8 +3404,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -3623,8 +3412,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -3633,8 +3420,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -3643,8 +3428,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:80rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -3691,12 +3474,12 @@ exports[`ArticleFigure should render an image with caption text with inline link
 @supports (display:grid) {
   .emotion-4 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3705,8 +3488,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3715,8 +3496,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3725,8 +3504,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3735,8 +3512,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3745,8 +3520,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:80rem) {
     .emotion-4 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -3836,12 +3609,12 @@ exports[`ArticleFigure should render an image with caption text with inline link
 @supports (display:grid) {
   .emotion-12 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3850,8 +3623,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3860,8 +3631,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3870,8 +3639,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -3880,8 +3647,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -3890,8 +3655,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:80rem) {
     .emotion-12 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -3904,10 +3667,15 @@ exports[`ArticleFigure should render an image with caption text with inline link
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -3924,15 +3692,10 @@ exports[`ArticleFigure should render an image with caption text with inline link
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-10 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
 @media (min-width:63rem) {
   .emotion-10 {
-    padding: 0.5rem 0 0;
+    width: 100%;
+    margin: 0.5rem 0 0;
   }
 }
 
@@ -3945,8 +3708,20 @@ exports[`ArticleFigure should render an image with caption text with inline link
   padding-bottom: 0;
 }
 
-.emotion-10 i {
-  font-style: normal;
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-10 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-10 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
 }
 
 .emotion-8 {
@@ -3996,6 +3771,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
       >
         <figcaption
           class="emotion-10 emotion-11"
+          dir="ltr"
         >
           <span
             class="emotion-6 emotion-7"
@@ -4030,12 +3806,12 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
   .emotion-10 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -4044,8 +3820,6 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -4054,8 +3828,6 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -4064,8 +3836,6 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -4074,8 +3844,6 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -4084,8 +3852,6 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 
 @media (min-width:80rem) {
     .emotion-10 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -4132,12 +3898,12 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 @supports (display:grid) {
   .emotion-8 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4146,8 +3912,6 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4156,8 +3920,6 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4166,8 +3928,6 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4176,8 +3936,6 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4186,8 +3944,6 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 
 @media (min-width:80rem) {
     .emotion-8 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
