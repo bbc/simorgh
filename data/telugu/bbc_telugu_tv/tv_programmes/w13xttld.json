@@ -1,0 +1,547 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_telugu_tv/w13xttld",
+    "locators": { "pid": "w172xcsjyqlxb18", "brandPid": "w13xttld" },
+    "type": "WSTV",
+    "createdBy": "bbc_telugu_tv",
+    "language": "te",
+    "lastUpdated": 1608647669448,
+    "firstPublished": 1605545762000,
+    "lastPublished": 1605545762000,
+    "timestamp": 1605545762000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "ప్రపంచం - BBC News తెలుగు",
+      "pageIdentifier": "telugu.bbc_telugu_tv.tv_programmes.w13xttld.page",
+      "producerId": "89",
+      "contentType": "player-episode",
+      "producer": "TELUGU"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "ప్రపంచం",
+    "releaseDateTimeStamp": 1608508800000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w172xcsjyqlxb18",
+        "subType": "episode",
+        "format": "Video",
+        "title": "21/12/2020 GMT",
+        "synopses": {
+          "short": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం. ",
+          "medium": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం. "
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w1mshjnt33tjm72",
+            "types": ["Original"],
+            "duration": 1680,
+            "durationISO8601": "PT28M",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1618185600000,
+            "availableFrom": 1608571675000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "programme",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "ప్రపంచం" },
+    "locators": { "pid": "w172xcsjyqlxb18", "brandPid": "w13xttld" },
+    "media": {
+      "id": "w172xcsjyqlxb18",
+      "subType": "episode",
+      "format": "Video",
+      "title": "21/12/2020 GMT",
+      "synopses": {
+        "short": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం. ",
+        "medium": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం. "
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w1mshjnt33tjm72",
+          "types": ["Original"],
+          "duration": 1680,
+          "durationISO8601": "PT28M",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1618185600000,
+          "availableFrom": 1608571675000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "programme",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1608508800000,
+    "brand": { "pid": "w13xttld", "title": "ప్రపంచం" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_telugu_tv/w172xcsjyqlxb18",
+    "type": "ws_tv"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Telugu",
+      "uri": "/telugu",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": { "headline": "ప్రపంచం" },
+            "locators": { "pid": "w172xcsjlg9hs1t", "brandPid": "w13xttld" },
+            "media": {
+              "id": "w172xcsjlg9hs1t",
+              "subType": "episode",
+              "format": "Video",
+              "title": "18/12/2020 GMT",
+              "synopses": {
+                "short": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం. ",
+                "medium": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం. "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjnsqvj427m",
+                  "types": ["Original"],
+                  "duration": 1680,
+                  "durationISO8601": "PT28M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608312475000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608249600000,
+            "brand": { "pid": "w13xttld", "title": "ప్రపంచం" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_telugu_tv/w172xcsjlg9hs1t",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "ప్రపంచం" },
+            "locators": { "pid": "w172xcsjlg9dw4q", "brandPid": "w13xttld" },
+            "media": {
+              "id": "w172xcsjlg9dw4q",
+              "subType": "episode",
+              "format": "Video",
+              "title": "17/12/2020 GMT",
+              "synopses": {
+                "short": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం. ",
+                "medium": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం. "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjnsqvj15bj",
+                  "types": ["Original"],
+                  "duration": 1680,
+                  "durationISO8601": "PT28M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608226075000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608163200000,
+            "brand": { "pid": "w13xttld", "title": "ప్రపంచం" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_telugu_tv/w172xcsjlg9dw4q",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "ప్రపంచం" },
+            "locators": { "pid": "w172xcsjlg99z7m", "brandPid": "w13xttld" },
+            "media": {
+              "id": "w172xcsjlg99z7m",
+              "subType": "episode",
+              "format": "Video",
+              "title": "16/12/2020 GMT",
+              "synopses": {
+                "short": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం. ",
+                "medium": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం. "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjnsqvhy8ff",
+                  "types": ["Original"],
+                  "duration": 1680,
+                  "durationISO8601": "PT28M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608139675000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608076800000,
+            "brand": { "pid": "w13xttld", "title": "ప్రపంచం" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_telugu_tv/w172xcsjlg99z7m",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "ప్రపంచం" },
+            "locators": { "pid": "w172xcsjlg972bj", "brandPid": "w13xttld" },
+            "media": {
+              "id": "w172xcsjlg972bj",
+              "subType": "episode",
+              "format": "Video",
+              "title": "15/12/2020 GMT",
+              "synopses": {
+                "short": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం.",
+                "medium": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjnsqvhvcjb",
+                  "types": ["Original"],
+                  "duration": 1680,
+                  "durationISO8601": "PT28M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608053275000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607990400000,
+            "brand": { "pid": "w13xttld", "title": "ప్రపంచం" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_telugu_tv/w172xcsjlg972bj",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "ప్రపంచం" },
+            "locators": { "pid": "w172xcsjlg945ff", "brandPid": "w13xttld" },
+            "media": {
+              "id": "w172xcsjlg945ff",
+              "subType": "episode",
+              "format": "Video",
+              "title": "14/12/2020 GMT",
+              "synopses": {
+                "short": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం.",
+                "medium": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjnsqvhrgm7",
+                  "types": ["Original"],
+                  "duration": 1680,
+                  "durationISO8601": "PT28M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607966875000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607904000000,
+            "brand": { "pid": "w13xttld", "title": "ప్రపంచం" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_telugu_tv/w172xcsjlg945ff",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "ప్రపంచం" },
+            "locators": { "pid": "w172xcsj75zqmfz", "brandPid": "w13xttld" },
+            "media": {
+              "id": "w172xcsj75zqmfz",
+              "subType": "episode",
+              "format": "Video",
+              "title": "11/12/2020 GMT",
+              "synopses": {
+                "short": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం.",
+                "medium": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjnscl6bxms",
+                  "types": ["Original"],
+                  "duration": 1680,
+                  "durationISO8601": "PT28M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607707675000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607644800000,
+            "brand": { "pid": "w13xttld", "title": "ప్రపంచం" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_telugu_tv/w172xcsj75zqmfz",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "ప్రపంచం" },
+            "locators": { "pid": "w172xcsj75zmqjw", "brandPid": "w13xttld" },
+            "media": {
+              "id": "w172xcsj75zmqjw",
+              "subType": "episode",
+              "format": "Video",
+              "title": "10/12/2020 GMT",
+              "synopses": {
+                "short": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం.",
+                "medium": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjnscl680qp",
+                  "types": ["Original"],
+                  "duration": 1680,
+                  "durationISO8601": "PT28M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607621275000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607558400000,
+            "brand": { "pid": "w13xttld", "title": "ప్రపంచం" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_telugu_tv/w172xcsj75zmqjw",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "ప్రపంచం" },
+            "locators": { "pid": "w172xcsj75zjtms", "brandPid": "w13xttld" },
+            "media": {
+              "id": "w172xcsj75zjtms",
+              "subType": "episode",
+              "format": "Video",
+              "title": "09/12/2020 GMT",
+              "synopses": {
+                "short": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం.",
+                "medium": "రంగులద్దని వార్తలు-రాజీలేని రిపోర్టింగ్‌తో ‌అంతర్జాతీయ, జాతీయ విశేషాలను తెలుగు వారి చెంతకు తీసుకువస్తుంది బీబీసి ప్రపంచం."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjnscl653tl",
+                  "types": ["Original"],
+                  "duration": 1680,
+                  "durationISO8601": "PT28M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607534875000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nzn.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607472000000,
+            "brand": { "pid": "w13xttld", "title": "ప్రపంచం" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_telugu_tv/w172xcsj75zjtms",
+            "type": "ws_tv"
+          }
+        ]
+      }
+    ]
+  }
+}
