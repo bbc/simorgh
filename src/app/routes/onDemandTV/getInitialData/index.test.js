@@ -111,6 +111,7 @@ describe('Get initial data for on demand tv', () => {
       ['metadata', 'language'],
       ['metadata', 'title'],
       ['promo', 'media', 'synopses', 'short'],
+      ['promo', 'media', 'synopses', 'medium'],
       ['metadata', 'analyticsLabels', 'contentType'],
       ['metadata', 'analyticsLabels', 'pageTitle'],
       ['metadata', 'analyticsLabels', 'pageIdentifier'],

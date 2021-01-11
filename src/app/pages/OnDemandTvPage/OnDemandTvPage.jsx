@@ -235,6 +235,7 @@ OnDemandTvPage.propTypes = {
     language: string,
     headline: string,
     shortSynopsis: string,
+    mediumSynopsis: string,
     brandTitle: string,
     releaseDateTimeStamp: number,
     masterBrand: string,
@@ -243,6 +244,7 @@ OnDemandTvPage.propTypes = {
     promoBrandTitle: string,
     thumbnailImageUrl: string,
     durationISO8601: string,
+    episodeTitle: string,
   }).isRequired,
 };
 
