@@ -8,7 +8,6 @@ import {
 } from '../../../support/helpers/onDemandRadioTv';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import getDataUrl from '../../../support/helpers/getDataUrl';
-import config from '../../../support/config/services';
 
 export default ({ service, pageType, variant, isAmp }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
@@ -44,7 +43,7 @@ export default ({ service, pageType, variant, isAmp }) => {
     });
     describe(`Tests for ${service} ${pageType} ${variant} with toggle use`, () => {
       before(() => {
-        cy.getToggles(config[service].name);
+        cy.getToggles(service);
       });
       describe('Recent Episodes component', () => {
         it('should be displayed if the toggle is on, and shows the expected number of items', function test() {
@@ -83,34 +82,41 @@ export default ({ service, pageType, variant, isAmp }) => {
                   cy.get("ul[class*='css-1ddpce6-StyledEpisodeList']").should(
                     'exist',
                   );
+                  // More than one episode expected
+                  if (expectedNumberOfEpisodes > 1) {
+                    cy.get('[data-e2e=recent-episodes-list]').should('exist');
 
-                  cy.get("ul[class*='css-1ddpce6-StyledEpisodeList']").within(
-                    () => {
-                      cy.get("li[class*='css-9kvqqh-StyledEpisodeListItem']")
+                    cy.get('[data-e2e=recent-episodes-list]').within(() => {
+                      cy.get('[data-e2e=recent-episodes-list-item]')
                         .its('length')
                         .should('eq', expectedNumberOfEpisodes);
-                    },
-                  );
-                }
-                // If there is only one item, it is not in a list
-                else if (expectedNumberOfEpisodes === 1) {
-                  cy.get("div[class*='css-1sel12u-Wrapper emzt7w80']").should(
-                    'exist',
-                  );
-                } else {
-                  cy.get("ul[class*='css-1ddpce6-StyledEpisodeList']").should(
-                    'not.exist',
-                  );
-                  cy.log('No episodes present or available');
-                }
-              });
-            } else {
-              cy.get("ul[class*='css-1ddpce6-StyledEpisodeList']").should(
-                'not.exist',
-              );
-              cy.log('Recent episodes is not toggled on for this service');
-            }
-          });
+                    });
+                  }
+                  // If there is only one item, it is not in a list
+                  else if (expectedNumberOfEpisodes === 1) {
+                    cy.get('aside[aria-labelledby=recent-episodes]').within(
+                      () => {
+                        cy.get('div[class*="Wrapper"]').should('exist');
+                      },
+                    );
+                  }
+                  // No items expected
+                  else {
+                    cy.get('aside[aria-labelledby=recent-episodes]').should(
+                      'not.exist',
+                    );
+
+                    cy.log('No episodes present or available');
+                  }
+                });
+              }
+              // Not toggled on for this service
+              else {
+                cy.get('[data-e2e=recent-episodes-list]').should('not.exist');
+                cy.log('Recent episodes is not toggled on for this service');
+              }
+            });
+          }
         });
       });
     });
