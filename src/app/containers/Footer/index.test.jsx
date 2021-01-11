@@ -57,9 +57,8 @@ const FooterWithContext = stub => (
 
 describe(`FooterContainer`, () => {
   beforeEach(() => {
-    global.Date = class extends (
-      RealDate
-    ) {
+    // eslint-disable-next-line prettier/prettier
+    global.Date = class extends RealDate {
       constructor() {
         super();
         return new RealDate('3000-01-01T12:00:00');
