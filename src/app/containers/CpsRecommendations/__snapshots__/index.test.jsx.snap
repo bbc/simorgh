@@ -46,12 +46,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 @supports (display:grid) {
   .emotion-43 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-43 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -60,8 +60,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-43 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -70,8 +68,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-43 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -80,8 +76,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-43 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -90,8 +84,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-43 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -100,8 +92,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:80rem) {
     .emotion-43 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -314,12 +304,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   .emotion-31 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -328,8 +318,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -338,8 +326,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -348,8 +334,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -358,8 +342,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -368,8 +350,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:80rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -750,12 +730,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 @supports (display:grid) {
   .emotion-116 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-116 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -764,8 +744,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-116 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -774,8 +752,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-116 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -784,8 +760,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-116 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -794,8 +768,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-116 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -804,8 +776,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:80rem) {
     .emotion-116 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -1018,12 +988,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   .emotion-31 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1032,8 +1002,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1042,8 +1010,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1052,8 +1018,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1062,8 +1026,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1072,8 +1034,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:80rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1091,12 +1051,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   .emotion-106 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-106 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1105,8 +1065,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-106 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1115,8 +1073,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-106 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1125,8 +1081,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-106 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1135,8 +1089,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-106 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1145,8 +1097,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:80rem) {
     .emotion-106 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1161,12 +1111,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 @supports (display:grid) {
   .emotion-34 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -1174,8 +1124,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -1183,8 +1131,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -1192,8 +1138,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -1201,8 +1145,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -1210,8 +1152,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:80rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -1853,12 +1793,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   .emotion-31 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1867,8 +1807,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1877,8 +1815,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1887,8 +1823,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1897,8 +1831,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1907,8 +1839,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:80rem) {
     .emotion-31 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1926,12 +1856,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   .emotion-106 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-106 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1940,8 +1870,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-106 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1950,8 +1878,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-106 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1960,8 +1886,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-106 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1970,8 +1894,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-106 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1980,8 +1902,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:80rem) {
     .emotion-106 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1996,12 +1916,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 @supports (display:grid) {
   .emotion-34 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -2009,8 +1929,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -2018,8 +1936,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -2027,8 +1943,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -2036,8 +1950,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -2045,8 +1957,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:80rem) {
     .emotion-34 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -2276,12 +2186,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 @supports (display:grid) {
   .emotion-116 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-116 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2290,8 +2200,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-116 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2300,8 +2208,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-116 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2310,8 +2216,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-116 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -2320,8 +2224,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-116 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -2330,8 +2232,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:80rem) {
     .emotion-116 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;

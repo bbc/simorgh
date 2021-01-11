@@ -44,12 +44,12 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
 @supports (display:grid) {
   .emotion-5 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-5 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -58,8 +58,6 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-5 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -68,8 +66,6 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-5 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -78,8 +74,6 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-5 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -88,8 +82,6 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-5 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -98,8 +90,6 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
 
 @media (min-width:80rem) {
     .emotion-5 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -226,12 +216,12 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
 @supports (display:grid) {
   .emotion-7 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -240,8 +230,6 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -250,8 +238,6 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -260,8 +246,6 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -270,8 +254,6 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -280,8 +262,6 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
 
 @media (min-width:80rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -406,12 +386,12 @@ exports[`MediaPlayer render the amp player 1`] = `
 @supports (display:grid) {
   .emotion-5 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-5 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -420,8 +400,6 @@ exports[`MediaPlayer render the amp player 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-5 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -430,8 +408,6 @@ exports[`MediaPlayer render the amp player 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-5 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -440,8 +416,6 @@ exports[`MediaPlayer render the amp player 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-5 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -450,8 +424,6 @@ exports[`MediaPlayer render the amp player 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-5 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -460,8 +432,6 @@ exports[`MediaPlayer render the amp player 1`] = `
 
 @media (min-width:80rem) {
     .emotion-5 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -588,12 +558,12 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
 @supports (display:grid) {
   .emotion-7 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -602,8 +572,6 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -612,8 +580,6 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -622,8 +588,6 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -632,8 +596,6 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -642,8 +604,6 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
 
 @media (min-width:80rem) {
     .emotion-7 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;

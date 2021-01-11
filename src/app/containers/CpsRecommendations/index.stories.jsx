@@ -8,6 +8,7 @@ import { ToggleContext } from '#contexts/ToggleContext';
 
 import mundoRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.ltr.json';
 import arabicRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.rtl.json';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const renderRecommendations = (items, service, dir) => {
   const toggleState = {
@@ -28,7 +29,7 @@ const renderRecommendations = (items, service, dir) => {
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           isAmp={false}
-          pageType="STY"
+          pageType={STORY_PAGE}
           service={service}
           pathname="/pathname"
         >

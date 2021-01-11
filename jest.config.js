@@ -4,7 +4,7 @@ const unitTests = {
   setupFiles: ['./src/testHelpers/jest-setup.js'],
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   moduleNameMapper: jestDirAlias,
-  snapshotSerializers: ['jest-emotion', 'enzyme-to-json/serializer'],
+  snapshotSerializers: ['jest-emotion'],
   transform: {
     '^.+\\.js$': 'babel-jest',
     '^.+\\.jsx$': 'babel-jest',
