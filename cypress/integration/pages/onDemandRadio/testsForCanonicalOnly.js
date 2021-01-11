@@ -2,7 +2,7 @@ import path from 'ramda/src/path';
 import envConfig from '../../../support/config/envs';
 import {
   isScheduleDataComplete,
-  isProgramValid,
+  getIsProgramValid,
 } from '../../../../src/app/containers/RadioSchedule/utilities/evaluateScheduleData';
 
 export default ({ service, pageType, variant }) => {
@@ -47,6 +47,7 @@ export default ({ service, pageType, variant }) => {
 
             cy.request(schedulePath).then(({ body: scheduleJson }) => {
               const { schedules } = scheduleJson;
+              const isProgramValid = getIsProgramValid(() => {});
               const validSchedules = schedules.map(isProgramValid);
 
               const isRadioScheduleDataComplete = isScheduleDataComplete({

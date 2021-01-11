@@ -5,7 +5,7 @@ import envConfig from '../../../support/config/envs';
 import getEmbedUrl from '../../../support/helpers/getEmbedUrl';
 import {
   isScheduleDataComplete,
-  isProgramValid,
+  getIsProgramValid,
 } from '../../../../src/app/containers/RadioSchedule/utilities/evaluateScheduleData';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 
@@ -79,6 +79,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
             cy.request(schedulePath).then(({ body: scheduleJson }) => {
               const { schedules } = scheduleJson;
+              const isProgramValid = getIsProgramValid(() => {});
               const validSchedules = schedules.map(isProgramValid);
 
               const isRadioScheduleDataComplete = isScheduleDataComplete({
