@@ -111,6 +111,7 @@ describe('Get initial data for on demand tv', () => {
       ['metadata', 'language'],
       ['metadata', 'title'],
       ['promo', 'media', 'synopses', 'short'],
+      ['promo', 'media', 'synopses', 'medium'],
       ['metadata', 'analyticsLabels', 'contentType'],
       ['metadata', 'analyticsLabels', 'pageTitle'],
       ['metadata', 'analyticsLabels', 'pageIdentifier'],
@@ -118,6 +119,7 @@ describe('Get initial data for on demand tv', () => {
       ['promo', 'media', 'imageUrl'],
       ['promo', 'brand', 'title'],
       ['content', 'blocks', 0, 'imageUrl'],
+      ['content', 'blocks', 0, 'episodeTitle'],
     ];
 
     const pageDataWithMissingFields = pipe(
