@@ -19,8 +19,9 @@ export const isScheduleDataComplete = ({
   return schedules[latestProgramIndex - 2] && schedules[latestProgramIndex + 1];
 };
 
-export const isProgramValid = program => {
+export const getIsProgramValid = logError => program => {
   const {
+    urn,
     publishedTimeStart,
     publishedTimeEnd,
     publishedTimeDuration,
@@ -30,7 +31,7 @@ export const isProgramValid = program => {
   const brandPid = path(['brand', 'pid'], program);
   const pid = path(['episode', 'pid'], program);
 
-  const isValid = [
+  const requiredValues = {
     publishedTimeStart,
     publishedTimeEnd,
     publishedTimeDuration,
@@ -38,7 +39,16 @@ export const isProgramValid = program => {
     brandTitle,
     brandPid,
     pid,
-  ].every(Boolean);
+  };
+
+  const isValid = Object.keys(requiredValues).every(key => {
+    if (!requiredValues[key]) {
+      logError(`${key} is missing in program for ${urn} schedule`);
+      return false;
+    }
+
+    return true;
+  });
 
   return isValid;
 };

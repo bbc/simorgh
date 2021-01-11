@@ -4,7 +4,7 @@ import { RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR } from '#lib/logger.const';
 import {
   getLastProgramIndex,
   isScheduleDataComplete,
-  isProgramValid,
+  getIsProgramValid,
 } from './evaluateScheduleData';
 
 const logger = nodeLogger(__filename);
@@ -39,6 +39,9 @@ export default (data, service, currentTime) => {
     return null;
   }
 
+  const logServiceError = error => logProgramError({ error, service });
+
+  const isProgramValid = getIsProgramValid(logServiceError);
   const { initialSchedules = [] } = data;
   const schedules = initialSchedules.filter(isProgramValid);
   const latestProgramIndex = getLastProgramIndex({ schedules, currentTime });
@@ -49,7 +52,7 @@ export default (data, service, currentTime) => {
   });
 
   if (!scheduleDataIsComplete) {
-    logProgramError({ error: 'Incomplete program schedule', service });
+    logServiceError('Incomplete program schedule');
   }
 
   const programsToShow = scheduleDataIsComplete && [
@@ -69,20 +72,6 @@ export default (data, service, currentTime) => {
       } = program;
 
       const brandTitle = path(['brand', 'title'], program);
-
-      if (!publishedTimeStart) {
-        logProgramError({
-          error: 'publishTimeStart field is missing in program',
-          service,
-        });
-      }
-      if (!brandTitle) {
-        logProgramError({
-          error: 'title field is missing in program',
-          service,
-        });
-      }
-
       const currentState = getProgramState(
         currentTime,
         publishedTimeStart,
@@ -100,6 +89,5 @@ export default (data, service, currentTime) => {
       };
     });
 
-  console.log(processedSchedule);
   return processedSchedule;
 };
