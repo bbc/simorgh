@@ -1,8 +1,11 @@
-import { isProgramValid } from './evaluateScheduleData';
+import { getIsProgramValid } from './evaluateScheduleData';
 import persianRadioScheduleData from '#data/persian/bbc_persian_radio/schedule.json';
 
 describe('evaluateScheduleData', () => {
   describe('isProgramValid', () => {
+    const logFn = jest.fn();
+    const isProgramValid = getIsProgramValid(logFn);
+
     it('should return false without important fields', () => {
       const program = persianRadioScheduleData.schedules[0];
       const { publishedTimeStart, ...noPublishedTimeStart } = program;
@@ -37,6 +40,8 @@ describe('evaluateScheduleData', () => {
       expect(isProgramValid(noBrandPid)).toBe(false);
       expect(isProgramValid(noBroadcastPid)).toBe(false);
       expect(isProgramValid(noEpisodePid)).toBe(false);
+
+      expect(logFn).toHaveBeenCalledTimes(7);
     });
 
     it('should return true when all important fields are present', () => {
