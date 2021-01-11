@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
-import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
 import assocPath from 'ramda/src/assocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -112,7 +111,12 @@ describe('Photo Gallery Page', () => {
         path: 'some-cps-pgl-path',
         pageType,
       });
-      await matchSnapshotAsync(<Page pageData={pageData} service="pidgin" />);
+
+      const { container } = render(
+        <Page pageData={pageData} service="pidgin" />,
+      );
+
+      expect(container).toMatchSnapshot();
     });
 
     it('should match snapshot for PGL with about tags', async () => {
@@ -121,9 +125,12 @@ describe('Photo Gallery Page', () => {
         path: 'some-cps-pgl-path',
         pageType,
       });
-      await matchSnapshotAsync(
+
+      const { container } = render(
         <Page pageData={pageData} service="afaanoromoo" />,
       );
+
+      expect(container).toMatchSnapshot();
     });
 
     it('should match snapshot for PGL with non-CPS onward journeys filtered', async () => {
@@ -132,7 +139,11 @@ describe('Photo Gallery Page', () => {
         path: 'some-cps-pgl-path',
         pageType,
       });
-      await matchSnapshotAsync(<Page pageData={pageData} service="azeri" />);
+      const { container } = render(
+        <Page pageData={pageData} service="azeri" />,
+      );
+
+      expect(container).toMatchSnapshot();
     });
 
     it('should match snapshot for PGL with all CPS onward journeys', async () => {
@@ -141,7 +152,12 @@ describe('Photo Gallery Page', () => {
         path: 'some-cps-pgl-path',
         pageType,
       });
-      await matchSnapshotAsync(<Page pageData={pageData} service="pidgin" />);
+
+      const { container } = render(
+        <Page pageData={pageData} service="pidgin" />,
+      );
+
+      expect(container).toMatchSnapshot();
     });
   });
 
