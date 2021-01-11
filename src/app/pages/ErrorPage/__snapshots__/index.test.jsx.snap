@@ -10,12 +10,12 @@ exports[`ErrorPage should correctly render for 404 1`] = `
   .emotion-19 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -24,8 +24,6 @@ exports[`ErrorPage should correctly render for 404 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -34,8 +32,6 @@ exports[`ErrorPage should correctly render for 404 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -44,8 +40,6 @@ exports[`ErrorPage should correctly render for 404 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -54,8 +48,6 @@ exports[`ErrorPage should correctly render for 404 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -64,8 +56,6 @@ exports[`ErrorPage should correctly render for 404 1`] = `
 
 @media (min-width:80rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -130,12 +120,12 @@ exports[`ErrorPage should correctly render for 404 1`] = `
 @supports (display:grid) {
   .emotion-16 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -145,8 +135,6 @@ exports[`ErrorPage should correctly render for 404 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -156,8 +144,6 @@ exports[`ErrorPage should correctly render for 404 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -167,8 +153,6 @@ exports[`ErrorPage should correctly render for 404 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -178,8 +162,6 @@ exports[`ErrorPage should correctly render for 404 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -188,8 +170,6 @@ exports[`ErrorPage should correctly render for 404 1`] = `
 
 @media (min-width:80rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -361,12 +341,12 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
   .emotion-19 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -375,8 +355,6 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -385,8 +363,6 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -395,8 +371,6 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -405,8 +379,6 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -415,8 +387,6 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
 
 @media (min-width:80rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -499,12 +469,12 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
 @supports (display:grid) {
   .emotion-16 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -514,8 +484,6 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -525,8 +493,6 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -536,8 +502,6 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -547,8 +511,6 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -557,8 +519,6 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
 
 @media (min-width:80rem) {
     .emotion-16 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -712,12 +672,12 @@ exports[`ErrorPage should correctly render for 500 1`] = `
   .emotion-17 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -726,8 +686,6 @@ exports[`ErrorPage should correctly render for 500 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -736,8 +694,6 @@ exports[`ErrorPage should correctly render for 500 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -746,8 +702,6 @@ exports[`ErrorPage should correctly render for 500 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -756,8 +710,6 @@ exports[`ErrorPage should correctly render for 500 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -766,8 +718,6 @@ exports[`ErrorPage should correctly render for 500 1`] = `
 
 @media (min-width:80rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -832,12 +782,12 @@ exports[`ErrorPage should correctly render for 500 1`] = `
 @supports (display:grid) {
   .emotion-14 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -847,8 +797,6 @@ exports[`ErrorPage should correctly render for 500 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -858,8 +806,6 @@ exports[`ErrorPage should correctly render for 500 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -869,8 +815,6 @@ exports[`ErrorPage should correctly render for 500 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -880,8 +824,6 @@ exports[`ErrorPage should correctly render for 500 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -890,8 +832,6 @@ exports[`ErrorPage should correctly render for 500 1`] = `
 
 @media (min-width:80rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -1058,12 +998,12 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
   .emotion-17 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1072,8 +1012,6 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1082,8 +1020,6 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1092,8 +1028,6 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -1102,8 +1036,6 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -1112,8 +1044,6 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 
 @media (min-width:80rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -1196,12 +1126,12 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 @supports (display:grid) {
   .emotion-14 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1211,8 +1141,6 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1222,8 +1150,6 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1233,8 +1159,6 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1244,8 +1168,6 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -1254,8 +1176,6 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 
 @media (min-width:80rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -1404,12 +1324,12 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
   .emotion-17 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1418,8 +1338,6 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1428,8 +1346,6 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1438,8 +1354,6 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -1448,8 +1362,6 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -1458,8 +1370,6 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
 
 @media (min-width:80rem) {
     .emotion-17 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -1524,12 +1434,12 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
 @supports (display:grid) {
   .emotion-14 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1539,8 +1449,6 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1550,8 +1458,6 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1561,8 +1467,6 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1572,8 +1476,6 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -1582,8 +1484,6 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
 
 @media (min-width:80rem) {
     .emotion-14 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;

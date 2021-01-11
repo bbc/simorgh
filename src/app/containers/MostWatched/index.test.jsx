@@ -7,6 +7,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { storyItem } from '#models/propTypes/storyItem';
 import MostWatched from '.';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const promos = mostWatchedData.records.slice(0, 5).map(item => item.promo);
 const MostWatchedComponent = ({ data, isAmp, isMostWatchedPage }) => (
@@ -14,7 +15,7 @@ const MostWatchedComponent = ({ data, isAmp, isMostWatchedPage }) => (
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       isAmp={isAmp}
-      pageType="MAP"
+      pageType={MEDIA_ASSET_PAGE}
       pathname="/pidgin/tori-49450859"
       service="pidgin"
       statusCode={200}
