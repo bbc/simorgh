@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import MostReadPage from './MostReadPage';
@@ -39,8 +38,10 @@ const MostReadPageWithContext = () => (
 );
 
 describe('Most Read Page Main', () => {
-  it('should match snapshot for most read page', async () => {
-    await matchSnapshotAsync(<MostReadPageWithContext />);
+  it('should match snapshot for most read page', () => {
+    const { container } = render(<MostReadPageWithContext />);
+
+    expect(container).toMatchSnapshot();
   });
 
   it('shoulder render most read page', async () => {

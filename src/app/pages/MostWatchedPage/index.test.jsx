@@ -2,7 +2,6 @@ import React from 'react';
 import { render, act } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { bool } from 'prop-types';
-import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -48,7 +47,9 @@ MostWatchedPageWithContext.defaultProps = {
 
 describe('Most Watched Page Main', () => {
   it('should match snapshot for the Most Watched page', async () => {
-    await matchSnapshotAsync(<MostWatchedPageWithContext />);
+    const { container } = render(<MostWatchedPageWithContext />);
+
+    expect(container).toMatchSnapshot();
   });
 
   it('shoulder render the Most Watched component on Canonical', async () => {
