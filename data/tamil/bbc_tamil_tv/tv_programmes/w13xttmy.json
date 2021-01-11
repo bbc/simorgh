@@ -1,0 +1,557 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_tamil_tv/w13xttmy",
+    "locators": { "pid": "w172xcrb4x02rbc", "brandPid": "w13xttmy" },
+    "type": "WSTV",
+    "createdBy": "bbc_tamil_tv",
+    "language": "ta",
+    "lastUpdated": 1608647727958,
+    "firstPublished": 1605621343000,
+    "lastPublished": 1605621343000,
+    "timestamp": 1605621343000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "தொலைக்காட்சி செய்திகள் - BBC News தமிழ்",
+      "pageIdentifier": "tamil.bbc_tamil_tv.tv_programmes.w13xttmy.page",
+      "producerId": "87",
+      "contentType": "player-episode",
+      "producer": "TAMIL"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "தொலைக்காட்சி செய்திகள்",
+    "releaseDateTimeStamp": 1608595200000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w172xcrb4x02rbc",
+        "subType": "episode",
+        "format": "Video",
+        "title": "22/12/2020 GMT",
+        "synopses": {
+          "short": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+          "medium": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+          "long": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்—திங்கள், செவ்வாய், புதன், வியாழன் மற்றும் வெள்ளிக்கிழமைகளில் தினந்தோறும் ஒளிபரப்பாகிறது."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w1mshjml996q1j5",
+            "types": ["Original"],
+            "duration": 600,
+            "durationISO8601": "PT10M",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1618185600000,
+            "availableFrom": 1608646200000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "programme",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "தொலைக்காட்சி செய்திகள்" },
+    "locators": { "pid": "w172xcrb4x02rbc", "brandPid": "w13xttmy" },
+    "media": {
+      "id": "w172xcrb4x02rbc",
+      "subType": "episode",
+      "format": "Video",
+      "title": "22/12/2020 GMT",
+      "synopses": {
+        "short": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+        "medium": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+        "long": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்—திங்கள், செவ்வாய், புதன், வியாழன் மற்றும் வெள்ளிக்கிழமைகளில் தினந்தோறும் ஒளிபரப்பாகிறது."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w1mshjml996q1j5",
+          "types": ["Original"],
+          "duration": 600,
+          "durationISO8601": "PT10M",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1618185600000,
+          "availableFrom": 1608646200000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "programme",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1608595200000,
+    "brand": { "pid": "w13xttmy", "title": "தொலைக்காட்சி செய்திகள்" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_tamil_tv/w172xcrb4x02rbc",
+    "type": "ws_tv"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Tamil",
+      "uri": "/tamil",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": { "headline": "தொலைக்காட்சி செய்திகள்" },
+            "locators": { "pid": "w172xcrb4wzzvf8", "brandPid": "w13xttmy" },
+            "media": {
+              "id": "w172xcrb4wzzvf8",
+              "subType": "episode",
+              "format": "Video",
+              "title": "21/12/2020 GMT",
+              "synopses": {
+                "short": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+                "medium": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+                "long": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்—திங்கள், செவ்வாய், புதன், வியாழன் மற்றும் வெள்ளிக்கிழமைகளில் தினந்தோறும் ஒளிபரப்பாகிறது."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjml996m4m2",
+                  "types": ["Original"],
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608559800000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608508800000,
+            "brand": { "pid": "w13xttmy", "title": "தொலைக்காட்சி செய்திகள்" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_tv/w172xcrb4wzzvf8",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "தொலைக்காட்சி செய்திகள்" },
+            "locators": { "pid": "w172xcr9smpl9ft", "brandPid": "w13xttmy" },
+            "media": {
+              "id": "w172xcr9smpl9ft",
+              "subType": "episode",
+              "format": "Video",
+              "title": "18/12/2020 GMT",
+              "synopses": {
+                "short": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+                "medium": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+                "long": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்—திங்கள், செவ்வாய், புதன், வியாழன் மற்றும் வெள்ளிக்கிழமைகளில் தினந்தோறும் ஒளிபரப்பாகிறது."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjmky0x6lmm",
+                  "types": ["Original"],
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608300600000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608249600000,
+            "brand": { "pid": "w13xttmy", "title": "தொலைக்காட்சி செய்திகள்" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_tv/w172xcr9smpl9ft",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "தொலைக்காட்சி செய்திகள்" },
+            "locators": { "pid": "w172xcr9smphdjq", "brandPid": "w13xttmy" },
+            "media": {
+              "id": "w172xcr9smphdjq",
+              "subType": "episode",
+              "format": "Video",
+              "title": "17/12/2020 GMT",
+              "synopses": {
+                "short": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+                "medium": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+                "long": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்—திங்கள், செவ்வாய், புதன், வியாழன் மற்றும் வெள்ளிக்கிழமைகளில் தினந்தோறும் ஒளிபரப்பாகிறது."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjmky0x3pqj",
+                  "types": ["Original"],
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608214200000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608163200000,
+            "brand": { "pid": "w13xttmy", "title": "தொலைக்காட்சி செய்திகள்" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_tv/w172xcr9smphdjq",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "தொலைக்காட்சி செய்திகள்" },
+            "locators": { "pid": "w172xcr9smpdhmm", "brandPid": "w13xttmy" },
+            "media": {
+              "id": "w172xcr9smpdhmm",
+              "subType": "episode",
+              "format": "Video",
+              "title": "16/12/2020 GMT",
+              "synopses": {
+                "short": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+                "medium": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+                "long": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்—திங்கள், செவ்வாய், புதன், வியாழன் மற்றும் வெள்ளிக்கிழமைகளில் தினந்தோறும் ஒளிபரப்பாகிறது."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjmky0x0stf",
+                  "types": ["Original"],
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608127800000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608076800000,
+            "brand": { "pid": "w13xttmy", "title": "தொலைக்காட்சி செய்திகள்" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_tv/w172xcr9smpdhmm",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "தொலைக்காட்சி செய்திகள்" },
+            "locators": { "pid": "w172xcr9smp9lqj", "brandPid": "w13xttmy" },
+            "media": {
+              "id": "w172xcr9smp9lqj",
+              "subType": "episode",
+              "format": "Video",
+              "title": "15/12/2020 GMT",
+              "synopses": {
+                "short": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+                "medium": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+                "long": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்—திங்கள், செவ்வாய், புதன், வியாழன் மற்றும் வெள்ளிக்கிழமைகளில் தினந்தோறும் ஒளிபரப்பாகிறது."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjmky0wxwxb",
+                  "types": ["Original"],
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608041400000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607990400000,
+            "brand": { "pid": "w13xttmy", "title": "தொலைக்காட்சி செய்திகள்" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_tv/w172xcr9smp9lqj",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "தொலைக்காட்சி செய்திகள்" },
+            "locators": { "pid": "w172xcr9smp6ptf", "brandPid": "w13xttmy" },
+            "media": {
+              "id": "w172xcr9smp6ptf",
+              "subType": "episode",
+              "format": "Video",
+              "title": "14/12/2020 GMT",
+              "synopses": {
+                "short": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+                "medium": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+                "long": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்—திங்கள், செவ்வாய், புதன், வியாழன் மற்றும் வெள்ளிக்கிழமைகளில் தினந்தோறும் ஒளிபரப்பாகிறது."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjmky0wv007",
+                  "types": ["Original"],
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607955000000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607904000000,
+            "brand": { "pid": "w13xttmy", "title": "தொலைக்காட்சி செய்திகள்" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_tv/w172xcr9smp6ptf",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "தொலைக்காட்சி செய்திகள்" },
+            "locators": { "pid": "w172xcr9fcct4tz", "brandPid": "w13xttmy" },
+            "media": {
+              "id": "w172xcr9fcct4tz",
+              "subType": "episode",
+              "format": "Video",
+              "title": "11/12/2020 GMT",
+              "synopses": {
+                "short": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+                "medium": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+                "long": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்—திங்கள், செவ்வாய், புதன், வியாழன் மற்றும் வெள்ளிக்கிழமைகளில் தினந்தோறும் ஒளிபரப்பாகிறது."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjmkkrlfg0s",
+                  "types": ["Original"],
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607695800000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607644800000,
+            "brand": { "pid": "w13xttmy", "title": "தொலைக்காட்சி செய்திகள்" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_tv/w172xcr9fcct4tz",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "தொலைக்காட்சி செய்திகள்" },
+            "locators": { "pid": "w172xcr9fccq7xw", "brandPid": "w13xttmy" },
+            "media": {
+              "id": "w172xcr9fccq7xw",
+              "subType": "episode",
+              "format": "Video",
+              "title": "10/12/2020 GMT",
+              "synopses": {
+                "short": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+                "medium": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்",
+                "long": "பிபிசி தமிழ் தொலைக்காட்சியின் பத்து நிமிட சர்வதேச செய்தியறிக்கை வாரத்தில் ஐந்து நாட்கள்—திங்கள், செவ்வாய், புதன், வியாழன் மற்றும் வெள்ளிக்கிழமைகளில் தினந்தோறும் ஒளிபரப்பாகிறது."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjmkkrlbk3p",
+                  "types": ["Original"],
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607609400000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607558400000,
+            "brand": { "pid": "w13xttmy", "title": "தொலைக்காட்சி செய்திகள்" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_tv/w172xcr9fccq7xw",
+            "type": "ws_tv"
+          }
+        ]
+      }
+    ]
+  }
+}
