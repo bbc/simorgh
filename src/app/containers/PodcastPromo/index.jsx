@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { string } from 'prop-types';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import PodcastPromo from '@bbc/psammead-podcast-promo';
 
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -15,10 +14,7 @@ const Promo = ({
   linkHref,
   linkText,
 }) => {
-  const { translations, podcastPromo, script, service } = useContext(
-    ServiceContext,
-  );
-  const episodesTranslation = pathOr('Episodes', ['episodes'], translations);
+  const { podcastPromo, script, service } = useContext(ServiceContext);
   const title = brandTitle || pathOr('', ['brandTitle'], podcastPromo);
   const description =
     brandDescription || pathOr('', ['brandDescription'], podcastPromo);
@@ -34,10 +30,15 @@ const Promo = ({
 
   return (
     <div>
-      <PodcastPromo script={script} service={service} role="region" aria-labelledby="podcast-promo">
+      <PodcastPromo
+        script={script}
+        service={service}
+        role="region"
+        aria-labelledby="podcast-promo"
+      >
         <PodcastPromo.Title id="podcast-promo">{title}</PodcastPromo.Title>
         <PodcastPromo.Card>
-          <PodcastPromo.Card.Image>
+          <PodcastPromo.Card.ImageWrapper>
             <ImageWithPlaceholder
               src={img}
               alt={alt}
@@ -45,22 +46,21 @@ const Promo = ({
               ratio={100}
               lazyLoad
             />
-          </PodcastPromo.Card.Image>
+          </PodcastPromo.Card.ImageWrapper>
           <PodcastPromo.Card.Content>
             <PodcastPromo.Card.Title>
               <PodcastPromo.Card.Link href={url}>
                 <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
                   {label}
                 </span>
-                <VisuallyHiddenText>, {episodesTranslation}</VisuallyHiddenText>
               </PodcastPromo.Card.Link>
             </PodcastPromo.Card.Title>
             <PodcastPromo.Card.Description>
               {description}
             </PodcastPromo.Card.Description>
-            <PodcastPromo.Card.CallToAction>
-              {episodesTranslation}
-            </PodcastPromo.Card.CallToAction>
+            <PodcastPromo.Card.EpisodesText>
+              {label}
+            </PodcastPromo.Card.EpisodesText>
           </PodcastPromo.Card.Content>
         </PodcastPromo.Card>
       </PodcastPromo>
