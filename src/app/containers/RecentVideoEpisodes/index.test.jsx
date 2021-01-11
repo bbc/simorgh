@@ -3,11 +3,19 @@ import { render } from '@testing-library/react';
 import RecentVideoEpisodes from '.';
 import recentVideoFixtures from './fixtures';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
 
 /* eslint-disable react/prop-types */
-const RecentVideoEpisodesWithContext = ({ episodes }) => (
+const RecentVideoEpisodesWithContext = ({ episodes, isAmp = false }) => (
   <ServiceContextProvider service="afrique">
-    <RecentVideoEpisodes episodes={episodes} />
+    <RequestContextProvider
+      isAmp={isAmp}
+      pathname="test"
+      service="afrique"
+      pageType="media"
+    >
+      <RecentVideoEpisodes masterBrand="bbc_afrique_tv" episodes={episodes} />
+    </RequestContextProvider>
   </ServiceContextProvider>
 );
 
@@ -20,12 +28,29 @@ describe('RecentAudioEpisodes', () => {
     const recentEpisodesLabel = getByText('Editions Précédentes');
     expect(recentEpisodesLabel).toBeInTheDocument();
   });
+
   it('should render the list items', async () => {
     const { container } = render(
       <RecentVideoEpisodesWithContext episodes={recentVideoFixtures} />,
     );
 
     expect(container.querySelectorAll('li').length).toEqual(3);
+  });
+
+  it('should render the list item links', async () => {
+    const { getAllByText } = render(
+      <RecentVideoEpisodesWithContext episodes={recentVideoFixtures} />,
+    );
+
+    const links = getAllByText('BBC Info').map(
+      titleEl => titleEl.closest('a').href,
+    );
+
+    expect(links).toEqual([
+      'http://localhost/afrique/bbc_afrique_tv/tv/w172xc9xq2gllfk',
+      'http://localhost/afrique/bbc_afrique_tv/tv/w172xc9xq2ghpjg',
+      'http://localhost/afrique/bbc_afrique_tv/tv/w172xc9xq2gdsmc',
+    ]);
   });
 
   it('should include the visually hidden audio and date', () => {
@@ -48,5 +73,16 @@ describe('RecentAudioEpisodes', () => {
 
     expect(hiddenDuration).toBeDefined();
     expect(hiddenDuration).toContainHTML('15:00');
+  });
+
+  describe('on amp', () => {
+    it('should use amp-img rather than img', () => {
+      const { container } = render(
+        <RecentVideoEpisodesWithContext episodes={recentVideoFixtures} isAmp />,
+      );
+
+      expect(container.querySelector('amp-img')).toBeDefined();
+      expect(container.querySelector('img')).toBeNull();
+    });
   });
 });

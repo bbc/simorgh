@@ -5,7 +5,7 @@ import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import Footer from '.';
 
-storiesOf('Containers|Footer', module)
+storiesOf('Containers/Footer', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())

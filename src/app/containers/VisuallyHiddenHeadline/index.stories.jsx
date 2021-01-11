@@ -5,7 +5,7 @@ import blocksSingleFragment from '../Headings/testHelpers';
 
 const headline = blocksSingleFragment('This is a headline.', []);
 
-storiesOf('Containers|VisuallyHiddenHeadline', module)
+storiesOf('Containers/VisuallyHiddenHeadline', module)
   .addParameters({ chromatic: { disable: true } })
   .add('default VisuallyHiddenHeadline', () => (
     <VisuallyHiddenHeadlineContainer

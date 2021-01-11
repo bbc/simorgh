@@ -39,8 +39,6 @@ export default async ({ path: pathname, pageType, toggles }) => {
       ? processRecentEpisodes(json, {
           exclude: episodeId,
           recentEpisodesLimit,
-          urlFormatter: (service, id) =>
-            `/${service}/${id.split(':').pop().replace('/', '/tv/')}`,
         })
       : [];
 
@@ -54,6 +52,7 @@ export default async ({ path: pathname, pageType, toggles }) => {
         id: get(['metadata', 'id'], LOG_LEVELS.ERROR),
         headline: get(['promo', 'headlines', 'headline'], LOG_LEVELS.WARN),
         shortSynopsis: get(['promo', 'media', 'synopses', 'short']),
+        mediumSynopsis: get(['promo', 'media', 'synopses', 'medium']),
         contentType: get(['metadata', 'analyticsLabels', 'contentType']),
         pageTitle: get(['metadata', 'analyticsLabels', 'pageTitle']),
         pageIdentifier: get(['metadata', 'analyticsLabels', 'pageIdentifier']),
@@ -76,6 +75,7 @@ export default async ({ path: pathname, pageType, toggles }) => {
         episodeId,
         imageUrl: get(['content', 'blocks', 0, 'imageUrl']),
         episodeAvailability: getEpisodeAvailability(json),
+        episodeTitle: get(['content', 'blocks', 0, 'episodeTitle']),
         recentEpisodes,
       },
     };

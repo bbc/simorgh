@@ -139,7 +139,7 @@ Object {
 
 exports[`AMP On Demand Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
 
-exports[`AMP On Demand Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
+exports[`AMP On Demand Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
 exports[`AMP On Demand Radio Page Footer Link should match text and url 1`] = `
 Object {
@@ -282,6 +282,22 @@ exports[`AMP On Demand Radio Page Main heading should match text 1`] = `"ماښ�
 exports[`AMP On Demand Radio Page Media Player a11y assistive technology can read the media player title 1`] = `"اډیو پلیئر"`;
 
 exports[`AMP On Demand Radio Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps/amp?morph_env=live"`;
+
+exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 1`] = `"غږ, ماښامنۍ خپرونه, ۹ ډیسمبر ۲۰۲۰,  موده ۲۹،۳۰  موده ۲۹:۳۰"`;
+
+exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 2`] = `"/pashto/bbc_pashto_radio/w3ct155x"`;
+
+exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 3`] = `"غږ, ماښامنۍ خپرونه, ۸ ډیسمبر ۲۰۲۰,  موده ۲۹،۳۰  موده ۲۹:۳۰"`;
+
+exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 4`] = `"/pashto/bbc_pashto_radio/w3ct154s"`;
+
+exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 5`] = `"غږ, ماښامنۍ خپرونه, ۷ ډیسمبر ۲۰۲۰,  موده ۲۹،۳۰  موده ۲۹:۳۰"`;
+
+exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 6`] = `"/pashto/bbc_pashto_radio/w3ct1508"`;
+
+exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 7`] = `"غږ, ماښامنۍ خپرونه, ۶ ډیسمبر ۲۰۲۰,  موده ۲۹،۳۰  موده ۲۹:۳۰"`;
+
+exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 8`] = `"/pashto/bbc_pashto_radio/w3ct152h"`;
 
 exports[`AMP On Demand Radio Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {

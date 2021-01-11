@@ -578,12 +578,12 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
   .emotion-2907 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2907 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -592,8 +592,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2907 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -602,8 +600,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2907 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -612,8 +608,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2907 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -622,8 +616,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2907 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -632,8 +624,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:80rem) {
     .emotion-2907 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -738,12 +728,12 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 @supports (display:grid) {
   .emotion-87 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -751,8 +741,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -760,8 +748,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -769,8 +755,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -778,8 +762,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -787,8 +769,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:80rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -1143,12 +1123,12 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 @supports (display:grid) {
   .emotion-2944 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2944 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1156,8 +1136,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2944 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1165,8 +1143,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2944 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1174,8 +1150,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2944 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1183,8 +1157,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2944 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -1192,8 +1164,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:80rem) {
     .emotion-2944 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -1297,12 +1267,12 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 @supports (display:grid) {
   .emotion-3168 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-3168 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1310,8 +1280,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-3168 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1319,8 +1287,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-3168 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1328,8 +1294,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-3168 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1337,8 +1301,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-3168 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1346,8 +1308,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:80rem) {
     .emotion-3168 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -11624,12 +11584,12 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
   .emotion-2907 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2907 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -11638,8 +11598,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2907 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -11648,8 +11606,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2907 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -11658,8 +11614,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2907 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -11668,8 +11622,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2907 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -11678,8 +11630,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:80rem) {
     .emotion-2907 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -11784,12 +11734,12 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 @supports (display:grid) {
   .emotion-87 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -11797,8 +11747,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -11806,8 +11754,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -11815,8 +11761,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -11824,8 +11768,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -11833,8 +11775,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:80rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -12189,12 +12129,12 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 @supports (display:grid) {
   .emotion-2944 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2944 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -12202,8 +12142,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2944 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -12211,8 +12149,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2944 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -12220,8 +12156,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2944 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -12229,8 +12163,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2944 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -12238,8 +12170,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:80rem) {
     .emotion-2944 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -12343,12 +12273,12 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 @supports (display:grid) {
   .emotion-3168 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-3168 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -12356,8 +12286,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-3168 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -12365,8 +12293,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-3168 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -12374,8 +12300,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-3168 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -12383,8 +12307,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-3168 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -12392,8 +12314,6 @@ exports[`Feature Idx Page snapshots should render correctly on amp when withAds 
 
 @media (min-width:80rem) {
     .emotion-3168 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -22670,12 +22590,12 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
   .emotion-2909 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2909 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -22684,8 +22604,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2909 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -22694,8 +22612,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2909 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -22704,8 +22620,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2909 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -22714,8 +22628,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2909 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -22724,8 +22636,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:80rem) {
     .emotion-2909 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -22830,12 +22740,12 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 @supports (display:grid) {
   .emotion-89 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-89 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -22843,8 +22753,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-89 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -22852,8 +22760,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-89 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -22861,8 +22767,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-89 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -22870,8 +22774,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-89 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -22879,8 +22781,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:80rem) {
     .emotion-89 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -23235,12 +23135,12 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 @supports (display:grid) {
   .emotion-2946 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2946 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -23248,8 +23148,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2946 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -23257,8 +23155,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2946 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -23266,8 +23162,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2946 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -23275,8 +23169,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2946 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -23284,8 +23176,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:80rem) {
     .emotion-2946 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -23389,12 +23279,12 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 @supports (display:grid) {
   .emotion-3170 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-3170 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -23402,8 +23292,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-3170 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -23411,8 +23299,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-3170 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -23420,8 +23306,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-3170 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -23429,8 +23313,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-3170 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -23438,8 +23320,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:80rem) {
     .emotion-3170 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -33449,12 +33329,12 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
   .emotion-2914 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2914 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -33463,8 +33343,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2914 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -33473,8 +33351,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2914 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -33483,8 +33359,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2914 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -33493,8 +33367,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2914 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -33503,8 +33375,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:80rem) {
     .emotion-2914 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -33609,12 +33479,12 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 @supports (display:grid) {
   .emotion-94 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-94 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -33622,8 +33492,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-94 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -33631,8 +33499,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-94 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -33640,8 +33506,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-94 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -33649,8 +33513,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-94 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -33658,8 +33520,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:80rem) {
     .emotion-94 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -34014,12 +33874,12 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 @supports (display:grid) {
   .emotion-2951 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-2951 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -34027,8 +33887,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-2951 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -34036,8 +33894,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-2951 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -34045,8 +33901,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-2951 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -34054,8 +33908,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-2951 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -34063,8 +33915,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:80rem) {
     .emotion-2951 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -34168,12 +34018,12 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 @supports (display:grid) {
   .emotion-3175 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-3175 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -34181,8 +34031,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-3175 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -34190,8 +34038,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-3175 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -34199,8 +34045,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-3175 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -34208,8 +34052,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-3175 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -34217,8 +34059,6 @@ exports[`Feature Idx Page snapshots should render correctly on canonical when wi
 
 @media (min-width:80rem) {
     .emotion-3175 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }

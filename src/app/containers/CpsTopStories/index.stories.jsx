@@ -6,6 +6,7 @@ import topStories from '#pages/StoryPage/topStories.json';
 import topStoriesRtl from '#pages/StoryPage/topStoriesRtl.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const getTopStories = platform => (service, dir, data) => (
   <div dir={dir}>
@@ -14,7 +15,7 @@ const getTopStories = platform => (service, dir, data) => (
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.com"
         isAmp={platform === 'amp'}
-        pageType="STY"
+        pageType={STORY_PAGE}
         pathname="/"
         service={service}
       >
@@ -27,7 +28,7 @@ const getTopStories = platform => (service, dir, data) => (
 const canonicalTopStories = getTopStories('canonical');
 const ampTopStories = getTopStories('amp');
 
-storiesOf('Containers|CPS Top Stories/Canonical', module)
+storiesOf('Containers/CPS Top Stories/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .add('igbo (ltr)', () => canonicalTopStories('igbo', 'ltr', topStories))
   .add('arabic (rtl)', () =>
@@ -40,7 +41,7 @@ storiesOf('Containers|CPS Top Stories/Canonical', module)
     canonicalTopStories('arabic', 'rtl', [topStoriesRtl[0]]),
   );
 
-storiesOf('Containers|CPS Top Stories/AMP', module)
+storiesOf('Containers/CPS Top Stories/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
   .add('igbo (ltr) - amp', () => ampTopStories('igbo', 'ltr', topStories))

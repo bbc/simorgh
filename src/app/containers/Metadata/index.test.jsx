@@ -6,6 +6,7 @@ import {
   ARTICLE_PAGE,
   FRONT_PAGE,
   MEDIA_PAGE,
+  STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
@@ -729,7 +730,7 @@ describe('apple-itunes-app meta tag', () => {
       bbcOrigin={dotComOrigin}
       platform={platform}
       id="asset-12345678"
-      pageType="STY"
+      pageType={STORY_PAGE}
       pathname={`/${service}/asset-12345678`}
       {...newsArticleMetadataProps}
       hasAppleItunesAppBanner={hasAppleItunesAppBanner}

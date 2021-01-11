@@ -220,6 +220,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
       width: 100%;
     }
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      width: 100%;
+    }
     padding-bottom: ${GEL_SPACING_QUAD};
   `;
 

@@ -6,6 +6,7 @@ import features from '#pages/StoryPage/featuresAnalysis.json';
 import featuresRtl from '#pages/StoryPage/featuresAnalysisRtl.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const getFeaturesAnalysis = platform => (service, dir, data) => (
   <div dir={dir}>
@@ -14,7 +15,7 @@ const getFeaturesAnalysis = platform => (service, dir, data) => (
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.com"
         isAmp={platform === 'amp'}
-        pageType="STY"
+        pageType={STORY_PAGE}
         pathname="/"
         service={service}
       >
@@ -27,7 +28,7 @@ const getFeaturesAnalysis = platform => (service, dir, data) => (
 const canonicalFeaturesAnalysis = getFeaturesAnalysis('canonical');
 const ampFeaturesAnalysis = getFeaturesAnalysis('amp');
 
-storiesOf('Containers|CPS Features & Analysis/Canonical', module)
+storiesOf('Containers/CPS Features & Analysis/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .add('igbo (ltr)', () => canonicalFeaturesAnalysis('igbo', 'ltr', features))
   .add('arabic (rtl)', () =>
@@ -40,7 +41,7 @@ storiesOf('Containers|CPS Features & Analysis/Canonical', module)
     canonicalFeaturesAnalysis('arabic', 'rtl', [featuresRtl[0]]),
   );
 
-storiesOf('Containers|CPS Features & Analysis/AMP', module)
+storiesOf('Containers/CPS Features & Analysis/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
   .add('igbo (ltr) - amp', () => ampFeaturesAnalysis('igbo', 'ltr', features))

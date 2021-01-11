@@ -6,7 +6,7 @@ exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/scotland"`;
 
-exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
+exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
 exports[`Canonical Articles Footer Link should match text and url 1`] = `
 Object {

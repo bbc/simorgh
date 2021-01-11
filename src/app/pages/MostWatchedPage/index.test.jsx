@@ -2,12 +2,12 @@ import React from 'react';
 import { render, act } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { bool } from 'prop-types';
-import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import MostWatchedPage from './MostWatchedPage';
+import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
 
 const pageData = {
   mostWatched: mostWatchedData.records.slice(0, 3).map(item => item.promo),
@@ -24,7 +24,7 @@ const MostWatchedPageWithContext = ({ isAmp }) => (
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.com"
         isAmp={isAmp}
-        pageType="mostWatched"
+        pageType={MOST_WATCHED_PAGE}
         pathname="/pathname"
         service="pidgin"
         statusCode={200}
@@ -47,7 +47,9 @@ MostWatchedPageWithContext.defaultProps = {
 
 describe('Most Watched Page Main', () => {
   it('should match snapshot for the Most Watched page', async () => {
-    await matchSnapshotAsync(<MostWatchedPageWithContext />);
+    const { container } = render(<MostWatchedPageWithContext />);
+
+    expect(container).toMatchSnapshot();
   });
 
   it('shoulder render the Most Watched component on Canonical', async () => {

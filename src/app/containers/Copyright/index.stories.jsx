@@ -6,7 +6,7 @@ import CopyrightContainer from '.';
 import services from '#server/utilities/serviceConfigs';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-storiesOf('Containers|Copyright', module)
+storiesOf('Containers/Copyright', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())

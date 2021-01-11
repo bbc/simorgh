@@ -7,7 +7,7 @@ import { twitterBlock, twitterBlockNoEmbed } from './fixtures';
 import withContexts from './testHelper';
 import SocialEmbedContainer from '.';
 
-storiesOf('Containers|Social Embed/Canonical', module)
+storiesOf('Containers/Social Embed/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
@@ -30,7 +30,7 @@ storiesOf('Containers|Social Embed/Canonical', module)
     }),
   );
 
-storiesOf('Containers|Social Embed/AMP', module)
+storiesOf('Containers/Social Embed/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())

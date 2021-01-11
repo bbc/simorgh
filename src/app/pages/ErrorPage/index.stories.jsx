@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ErrorPage from './ErrorPage';
 
-storiesOf('Pages|Error Page', module)
+storiesOf('Pages/Error Page', module)
   .add('404', () => (
     <ServiceContextProvider service="news">
       <ErrorPage errorCode={404} />

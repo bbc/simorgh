@@ -10,9 +10,11 @@ import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import { service as serbianServiceConfig } from '#lib/config/services/serbian';
 import { service as ukrainianServiceConfig } from '#lib/config/services/ukrainian';
 import {
+  INDEX_PAGE,
   ARTICLE_PAGE,
   FRONT_PAGE,
   MEDIA_PAGE,
+  MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 const defaultToggleState = {
@@ -86,7 +88,7 @@ describe(`Header`, () => {
 
   describe('Assertions', () => {
     it('should output a nav bar for media asset pages', () => {
-      render(HeaderContainerWithContext({ pageType: 'MAP' }));
+      render(HeaderContainerWithContext({ pageType: MEDIA_ASSET_PAGE }));
       expect(document.querySelector(`header nav`)).not.toBeNull();
     });
 
@@ -138,7 +140,7 @@ describe(`Header`, () => {
     it('should render header with lang when serviceLang is defined', () => {
       const { container } = render(
         HeaderContainerWithContext({
-          pageType: 'IDX',
+          pageType: INDEX_PAGE,
           service: 'ukrainian',
           serviceContext: ukrainianServiceConfig,
           variant: 'ru-UA',
@@ -154,7 +156,7 @@ describe(`Header`, () => {
     it('should render a skip to content link with lang', async () => {
       render(
         HeaderContainerWithContext({
-          pageType: 'IDX',
+          pageType: INDEX_PAGE,
           service: 'ukrainian',
           serviceContext: ukrainianServiceConfig,
           variant: 'ru-UA',

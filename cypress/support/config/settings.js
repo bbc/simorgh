@@ -318,7 +318,7 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: ['/afrique/bbc_afrique_radio/w172x601yx5z2n1'],
+            paths: ['/afrique/bbc_afrique_radio/w172xqydyfv659p'],
             enabled: true,
           },
         },
@@ -344,7 +344,7 @@ module.exports = () => ({
             paths: [
               '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
@@ -1478,8 +1478,10 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/burmese/bbc_burmese_tv/tv/w172xbmg65lczy0', // Episode
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -2002,8 +2004,10 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/gujarati/bbc_gujarati_tv/tv_programmes/w13xttqr', // Brand
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -2250,8 +2254,10 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/hausa/bbc_hausa_tv/tv/w172xcg0kg6vph8', // Episode
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -2499,8 +2505,10 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw', // Brand
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -3587,8 +3595,10 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/kyrgyz/bbc_kyrgyz_tv/tv/w172xcgmgcj9864', // Episode
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -4941,8 +4951,10 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/persian/bbc_persian_tv/tv_programmes/w13xttnr', // Brand
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -6966,8 +6978,10 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/swahili/bbc_swahili_tv/tv/w172xcqnsxfj1bk', // Episode
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -7219,8 +7233,10 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/tamil/bbc_tamil_tv/tv_programmes/w13xttmy', // Brand
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -7434,8 +7450,10 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/telugu/bbc_telugu_tv/tv_programmes/w13xttld', // Brand
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -8707,13 +8725,15 @@ module.exports = () => ({
           test: {
             paths: [
               '/ukrainian/bbc_ukrainian_tv/tv_programmes/w13xttp9', // Brand
-              '/ukrainian/bbc_ukrainian_tv/tv/w172xct3dkn80sk', // Episode
+              '/ukrainian/bbc_ukrainian_tv/tv/w172xct4hclz27g', // Episode
             ],
             enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/ukrainian/bbc_ukrainian_tv/tv/w172xct4hclz27g', // Episode
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -8966,13 +8986,15 @@ module.exports = () => ({
           test: {
             paths: [
               '/urdu/bbc_urdu_tv/tv_programmes/w13xttn1', // Brand
-              '/urdu/bbc_urdu_tv/tv/w172xctq9gyscnk', // Episode
+              '/urdu/bbc_urdu_tv/tv/w172xctrrk6t25t', // Episode
             ],
             enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/urdu/bbc_urdu_tv/tv/w172xctrrk6t25t', // Episode
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -9219,13 +9241,15 @@ module.exports = () => ({
           test: {
             paths: [
               '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv', // Brand
-              '/uzbek/bbc_uzbek_tv/tv/w172xcvb6d87cgw', // Episode
+              '/uzbek/bbc_uzbek_tv/tv/w172xcvcngj8204', // Episode
             ],
             enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv', // Brand
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -9824,9 +9848,9 @@ module.exports = () => ({
           },
           local: {
             paths: [
-              '/zhongwen/simp/bbc_cantonese_radio/w172xf3r5x8hw4v', // Brand
+              '/zhongwen/simp/bbc_cantonese_radio/w172xn6l7ng41qb', // Brand
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
@@ -9866,7 +9890,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/zhongwen/simp/media/video'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/zhongwen/simp/media/video'],
