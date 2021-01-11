@@ -42,7 +42,7 @@ export default (data, service, currentTime) => {
   const logServiceError = error => logProgramError({ error, service });
 
   const isProgramValid = getIsProgramValid(logServiceError);
-  const { initialSchedules = [] } = data;
+  const { schedules: initialSchedules = [] } = data;
   const schedules = initialSchedules.filter(isProgramValid);
   const latestProgramIndex = getLastProgramIndex({ schedules, currentTime });
 
