@@ -83,7 +83,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               const validSchedules = schedules.map(isProgramValid);
 
               const isRadioScheduleDataComplete = isScheduleDataComplete({
-                validSchedules,
+                schedules: validSchedules,
               });
 
               cy.log(

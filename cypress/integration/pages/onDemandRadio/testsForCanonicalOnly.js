@@ -51,7 +51,7 @@ export default ({ service, pageType, variant }) => {
               const validSchedules = schedules.map(isProgramValid);
 
               const isRadioScheduleDataComplete = isScheduleDataComplete({
-                validSchedules,
+                schedules: validSchedules,
               });
 
               cy.log(
