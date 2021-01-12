@@ -59,7 +59,7 @@ export default ({ service, pageType, variant, isAmp }) => {
         cy.getToggles(service);
       });
       describe('Recent Episodes component', () => {
-        it('should be displayed if the toggle is on, and shows the expected number of items (does not run on local)', function test() {
+        it('should be displayed if the toggle is on, and shows the expected number of items', function test() {
           cy.fixture(`toggles/${service}.json`).then(toggles => {
             const recentEpisodesEnabled = path(
               ['recentAudioEpisodes', 'enabled'],

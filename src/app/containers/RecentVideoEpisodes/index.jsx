@@ -69,7 +69,6 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
         .filter(Boolean)
         .join('/'),
     );
-
   const ulProps = { 'data-e2e': 'recent-episodes-list' };
   const liProps = { 'data-e2e': 'recent-episodes-list-item' };
 
