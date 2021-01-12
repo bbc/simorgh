@@ -43,7 +43,7 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
     datetimeLocale,
     translations,
   } = useContext(ServiceContext);
-  const { variant } = useContext(RequestContext);
+  const { isAmp, variant } = useContext(RequestContext);
 
   if (!episodes.length) return null;
 
@@ -69,6 +69,8 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
         .filter(Boolean)
         .join('/'),
     );
+  const ulProps = { 'data-e2e': 'recent-episodes-list' };
+  const liProps = { 'data-e2e': 'recent-episodes-list-item' };
 
   return (
     <aside role="complimentary" aria-labelledby="recent-episodes">
@@ -81,7 +83,14 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
       >
         {recentEpisodesTranslation}
       </StyledSectionLabel>
-      <EpisodeList script={script} service={service} dir={dir} darkMode>
+      <EpisodeList
+        script={script}
+        service={service}
+        dir={dir}
+        darkMode
+        ulProps={ulProps}
+        liProps={liProps}
+      >
         {episodes.map(episode => (
           <EpisodeList.Episode key={episode.id} dir={dir}>
             <EpisodeList.Image
@@ -91,6 +100,17 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
               duration={formatDuration({
                 duration: episode.duration,
                 locale: datetimeLocale,
+              })}
+              {...(isAmp && {
+                as: () => (
+                  <amp-img
+                    layout="responsive"
+                    width="16"
+                    height="9"
+                    src={episode.image}
+                    alt={episode.altText}
+                  />
+                ),
               })}
             />
             {/* these must be concatenated for screen reader UX */}

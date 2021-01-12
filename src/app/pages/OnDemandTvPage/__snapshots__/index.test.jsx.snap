@@ -10,12 +10,12 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   .emotion-25 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -24,8 +24,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -34,8 +32,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -44,8 +40,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -54,8 +48,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -64,8 +56,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 
 @media (min-width:80rem) {
     .emotion-25 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -136,12 +126,12 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 @supports (display:grid) {
   .emotion-18 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -151,8 +141,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -162,8 +150,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -173,8 +159,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -184,8 +168,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -194,8 +176,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 
 @media (min-width:80rem) {
     .emotion-18 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -390,12 +370,12 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 @supports (display:grid) {
   .emotion-22 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-22 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -405,8 +385,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-22 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -416,8 +394,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-22 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -427,8 +403,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-22 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -438,8 +412,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-22 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -448,8 +420,6 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 
 @media (min-width:80rem) {
     .emotion-22 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -571,12 +541,12 @@ exports[`should show the expired content message if episode is expired 1`] = `
   .emotion-26 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -585,8 +555,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -595,8 +563,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -605,8 +571,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -615,8 +579,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -625,8 +587,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
 
 @media (min-width:80rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -697,12 +657,12 @@ exports[`should show the expired content message if episode is expired 1`] = `
 @supports (display:grid) {
   .emotion-19 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -712,8 +672,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -723,8 +681,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -734,8 +690,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -745,8 +699,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -755,8 +707,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
 
 @media (min-width:80rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -901,12 +851,12 @@ exports[`should show the expired content message if episode is expired 1`] = `
 @supports (display:grid) {
   .emotion-23 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -916,8 +866,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -927,8 +875,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -938,8 +884,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -949,8 +893,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -959,8 +901,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
 
 @media (min-width:80rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -1163,12 +1103,12 @@ exports[`should show the future content message if episode is not yet available 
   .emotion-26 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1177,8 +1117,6 @@ exports[`should show the future content message if episode is not yet available 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1187,8 +1125,6 @@ exports[`should show the future content message if episode is not yet available 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1197,8 +1133,6 @@ exports[`should show the future content message if episode is not yet available 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -1207,8 +1141,6 @@ exports[`should show the future content message if episode is not yet available 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -1217,8 +1149,6 @@ exports[`should show the future content message if episode is not yet available 
 
 @media (min-width:80rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -1289,12 +1219,12 @@ exports[`should show the future content message if episode is not yet available 
 @supports (display:grid) {
   .emotion-19 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1304,8 +1234,6 @@ exports[`should show the future content message if episode is not yet available 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1315,8 +1243,6 @@ exports[`should show the future content message if episode is not yet available 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1326,8 +1252,6 @@ exports[`should show the future content message if episode is not yet available 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1337,8 +1261,6 @@ exports[`should show the future content message if episode is not yet available 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -1347,8 +1269,6 @@ exports[`should show the future content message if episode is not yet available 
 
 @media (min-width:80rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -1493,12 +1413,12 @@ exports[`should show the future content message if episode is not yet available 
 @supports (display:grid) {
   .emotion-23 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1508,8 +1428,6 @@ exports[`should show the future content message if episode is not yet available 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1519,8 +1437,6 @@ exports[`should show the future content message if episode is not yet available 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1530,8 +1446,6 @@ exports[`should show the future content message if episode is not yet available 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1541,8 +1455,6 @@ exports[`should show the future content message if episode is not yet available 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -1551,8 +1463,6 @@ exports[`should show the future content message if episode is not yet available 
 
 @media (min-width:80rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -1755,12 +1665,12 @@ exports[`should show the future content message if episode is pending 1`] = `
   .emotion-26 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1769,8 +1679,6 @@ exports[`should show the future content message if episode is pending 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1779,8 +1687,6 @@ exports[`should show the future content message if episode is pending 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1789,8 +1695,6 @@ exports[`should show the future content message if episode is pending 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -1799,8 +1703,6 @@ exports[`should show the future content message if episode is pending 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -1809,8 +1711,6 @@ exports[`should show the future content message if episode is pending 1`] = `
 
 @media (min-width:80rem) {
     .emotion-26 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -1881,12 +1781,12 @@ exports[`should show the future content message if episode is pending 1`] = `
 @supports (display:grid) {
   .emotion-19 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1896,8 +1796,6 @@ exports[`should show the future content message if episode is pending 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1907,8 +1805,6 @@ exports[`should show the future content message if episode is pending 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1918,8 +1814,6 @@ exports[`should show the future content message if episode is pending 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1929,8 +1823,6 @@ exports[`should show the future content message if episode is pending 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -1939,8 +1831,6 @@ exports[`should show the future content message if episode is pending 1`] = `
 
 @media (min-width:80rem) {
     .emotion-19 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -2085,12 +1975,12 @@ exports[`should show the future content message if episode is pending 1`] = `
 @supports (display:grid) {
   .emotion-23 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2100,8 +1990,6 @@ exports[`should show the future content message if episode is pending 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2111,8 +1999,6 @@ exports[`should show the future content message if episode is pending 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2122,8 +2008,6 @@ exports[`should show the future content message if episode is pending 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2133,8 +2017,6 @@ exports[`should show the future content message if episode is pending 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -2143,8 +2025,6 @@ exports[`should show the future content message if episode is pending 1`] = `
 
 @media (min-width:80rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;

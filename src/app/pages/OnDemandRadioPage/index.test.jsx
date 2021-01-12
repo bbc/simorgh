@@ -3,7 +3,6 @@ import React from 'react';
 import assocPath from 'ramda/src/assocPath';
 import { render, act } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';
-import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import _OnDemandRadioPage from './OnDemandRadioPage';
@@ -102,7 +101,9 @@ describe('OnDemand Radio Page ', () => {
       toggles,
     });
 
-    await matchSnapshotAsync(<Page pageData={pageData} service="pashto" />);
+    const { container } = render(<Page pageData={pageData} service="pashto" />);
+
+    expect(container).toMatchSnapshot();
   });
 
   it('should match snapshot for AMP', async () => {
@@ -118,9 +119,11 @@ describe('OnDemand Radio Page ', () => {
       toggles,
     });
 
-    await matchSnapshotAsync(
+    const { container } = render(
       <Page pageData={pageData} service="pashto" isAmp />,
     );
+
+    expect(container).toMatchSnapshot();
   });
 
   it('should show the brand title for OnDemand Radio Pages', async () => {
