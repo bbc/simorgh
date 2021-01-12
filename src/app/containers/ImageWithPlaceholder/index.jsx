@@ -5,6 +5,7 @@ import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import Image, { AmpImg } from '@bbc/psammead-image';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
+import useToggle from '#hooks/useToggle';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
@@ -42,7 +43,9 @@ const ImageWithPlaceholder = ({
     <Image onLoad={() => setIsLoaded(true)} {...imageProps} />
   );
 
-  const shouldPreload = !isAmp && preload;
+  const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
+
+  const shouldPreload = !isAmp && preload && preloadLeadImageToggle;
 
   return (
     <>
