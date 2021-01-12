@@ -148,21 +148,33 @@ exports[`Canonical On Demand T V Page Media Player a11y assistive technology can
 
 exports[`Canonical On Demand T V Page Media Player iframe with valid URL should be rendered 1`] = `"https://test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"`;
 
-exports[`Canonical On Demand T V Page Recent Episodes should contain the list items 1`] = `"۲۶:۰۰ویډیو, نړۍ دا وخت, ۸ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰"`;
+exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 1`] = `
+Object {
+  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۸ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
+  "url": "/pashto/bbc_pashto_tv/tv/w172xclqp0l3zkq",
+}
+`;
 
-exports[`Canonical On Demand T V Page Recent Episodes should contain the list items 2`] = `"/pashto/bbc_pashto_tv/tv/w172xclqp0l3zkq"`;
+exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 2`] = `
+Object {
+  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۷ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
+  "url": "/pashto/bbc_pashto_tv/tv/w172xclqp0l12nm",
+}
+`;
 
-exports[`Canonical On Demand T V Page Recent Episodes should contain the list items 3`] = `"۲۶:۰۰ویډیو, نړۍ دا وخت, ۷ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰"`;
+exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 3`] = `
+Object {
+  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۶ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
+  "url": "/pashto/bbc_pashto_tv/tv/w172xclq9r8tbhc",
+}
+`;
 
-exports[`Canonical On Demand T V Page Recent Episodes should contain the list items 4`] = `"/pashto/bbc_pashto_tv/tv/w172xclqp0l12nm"`;
-
-exports[`Canonical On Demand T V Page Recent Episodes should contain the list items 5`] = `"۲۶:۰۰ویډیو, نړۍ دا وخت, ۶ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰"`;
-
-exports[`Canonical On Demand T V Page Recent Episodes should contain the list items 6`] = `"/pashto/bbc_pashto_tv/tv/w172xclq9r8tbhc"`;
-
-exports[`Canonical On Demand T V Page Recent Episodes should contain the list items 7`] = `"۲۶:۰۰ویډیو, نړۍ دا وخت, ۵ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰"`;
-
-exports[`Canonical On Demand T V Page Recent Episodes should contain the list items 8`] = `"/pashto/bbc_pashto_tv/tv/w172xclq9r8qfl8"`;
+exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 4`] = `
+Object {
+  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۵ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
+  "url": "/pashto/bbc_pashto_tv/tv/w172xclq9r8qfl8",
+}
+`;
 
 exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
