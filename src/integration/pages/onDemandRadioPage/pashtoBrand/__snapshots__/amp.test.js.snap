@@ -283,21 +283,33 @@ exports[`AMP On Demand Radio Page Media Player a11y assistive technology can rea
 
 exports[`AMP On Demand Radio Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w172xjcjkv7gw1w/ps/amp?morph_env=live"`;
 
-exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 1`] = `"غږ, وروستي خبرونه, ۱۵ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰"`;
+exports[`AMP On Demand Radio Page Recent Episodes List items should match text and url 1`] = `
+Object {
+  "href": "/pashto/bbc_pashto_radio/w172xqk2y7ktdkg",
+  "text": "غږ, وروستي خبرونه, ۱۵ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰",
+}
+`;
 
-exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 2`] = `"/pashto/bbc_pashto_radio/w172xqk2y7ktdkg"`;
+exports[`AMP On Demand Radio Page Recent Episodes List items should match text and url 2`] = `
+Object {
+  "href": "/pashto/bbc_pashto_radio/w172xqk2y7kt8tb",
+  "text": "غږ, وروستي خبرونه, ۱۵ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰",
+}
+`;
 
-exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 3`] = `"غږ, وروستي خبرونه, ۱۵ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰"`;
+exports[`AMP On Demand Radio Page Recent Episodes List items should match text and url 3`] = `
+Object {
+  "href": "/pashto/bbc_pashto_radio/w172xqk2y7kt526",
+  "text": "غږ, وروستي خبرونه, ۱۵ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰",
+}
+`;
 
-exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 4`] = `"/pashto/bbc_pashto_radio/w172xqk2y7kt8tb"`;
-
-exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 5`] = `"غږ, وروستي خبرونه, ۱۵ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰"`;
-
-exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 6`] = `"/pashto/bbc_pashto_radio/w172xqk2y7kt526"`;
-
-exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 7`] = `"غږ, وروستي خبرونه, ۱۵ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰"`;
-
-exports[`AMP On Demand Radio Page Recent Episodes should contain the list items 8`] = `"/pashto/bbc_pashto_radio/w172xqk2y7kt1b2"`;
+exports[`AMP On Demand Radio Page Recent Episodes List items should match text and url 4`] = `
+Object {
+  "href": "/pashto/bbc_pashto_radio/w172xqk2y7kt1b2",
+  "text": "غږ, وروستي خبرونه, ۱۵ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰",
+}
+`;
 
 exports[`AMP On Demand Radio Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
