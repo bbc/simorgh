@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
-.emotion-22 {
+.emotion-24 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -23,12 +23,12 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-22 {
+  .emotion-24 {
     display: block;
   }
 }
 
-.emotion-18 {
+.emotion-20 {
   display: inline-block;
   width: 100%;
   max-width: 14.880600000000001rem;
@@ -40,12 +40,12 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-18 {
+  .emotion-20 {
     display: block;
   }
 }
 
-.emotion-14 {
+.emotion-16 {
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
@@ -62,34 +62,34 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 }
 
 @media (min-width:25rem) {
-  .emotion-14 {
+  .emotion-16 {
     padding-top: 1rem;
     padding-bottom: 0.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-14 {
+  .emotion-16 {
     padding-top: 1.25rem;
     padding-bottom: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),print {
-  .emotion-14 {
+  .emotion-16 {
     fill: windowText;
   }
 }
 
-.emotion-19:hover .emotion-14,
-.emotion-19:focus .emotion-14 {
+.emotion-21:hover .emotion-16,
+.emotion-21:focus .emotion-16 {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
   margin-bottom: -0.25rem;
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -101,7 +101,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   margin: 0;
 }
 
-.emotion-20 {
+.emotion-22 {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -124,20 +124,20 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-20 {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-20 {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-20:focus {
+.emotion-22:focus {
   -webkit-clip-path: none;
   clip-path: none;
   -webkit-clip: auto;
@@ -149,38 +149,38 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 }
 
 @media (min-width:25rem) {
-  .emotion-20:focus {
+  .emotion-22:focus {
     top: 0.5rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-20 {
+  .emotion-22 {
     padding: 0.5rem;
   }
 }
 
-.emotion-108 {
+.emotion-110 {
   position: relative;
   background-color: #B80000;
   border-top: 0.0625rem solid #FFFFFF;
 }
 
-.emotion-108 .emotion-35::after {
+.emotion-110 .emotion-37::after {
   left: 0;
 }
 
-.emotion-106 {
+.emotion-108 {
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.emotion-68 {
+.emotion-70 {
   position: relative;
 }
 
-.emotion-30 {
+.emotion-32 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -191,14 +191,14 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   width: 2.75rem;
 }
 
-.emotion-30:hover,
-.emotion-30:focus {
+.emotion-32:hover,
+.emotion-32:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-30:hover::after,
-.emotion-30:focus::after {
+.emotion-32:hover::after,
+.emotion-32:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -209,30 +209,30 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-30 {
+  .emotion-32 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) {
-  .emotion-30 {
+  .emotion-32 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
-.emotion-30 svg {
+.emotion-32 svg {
   vertical-align: middle;
 }
 
-.emotion-26 {
+.emotion-28 {
   color: #fff;
   fill: currentColor;
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-66 {
+  .emotion-68 {
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-scroll-behavior: auto;
@@ -247,11 +247,11 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
     -ms-overflow-style: none;
   }
 
-  .emotion-66::-webkit-scrollbar {
+  .emotion-68::-webkit-scrollbar {
     display: none;
   }
 
-  .emotion-66:after {
+  .emotion-68:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -265,13 +265,13 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   }
 
 @media (min-width:25rem) {
-    .emotion-66:after {
+    .emotion-68:after {
       width: 6rem;
     }
 }
 }
 
-.emotion-64 {
+.emotion-66 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -279,25 +279,25 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-64 {
+  .emotion-66 {
     overflow: hidden;
   }
 }
 
-.emotion-34 {
+.emotion-36 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-34:last-child {
+  .emotion-36:last-child {
     margin-right: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-34::after {
+  .emotion-36::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -307,7 +307,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   }
 }
 
-.emotion-32 {
+.emotion-34 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -322,26 +322,26 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-32 {
+  .emotion-34 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-32 {
+  .emotion-34 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-32 {
+  .emotion-34 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-32:hover::after {
+.emotion-34:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -350,7 +350,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.emotion-32:focus::after {
+.emotion-34:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -361,7 +361,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.emotion-104 {
+.emotion-106 {
   background-color: #222222;
   clear: both;
   overflow: hidden;
@@ -374,37 +374,37 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-104 {
+  .emotion-106 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion:reduce) {
-  .emotion-104 {
+  .emotion-106 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-102 {
+.emotion-104 {
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
   border-bottom: 0.125rem solid #3F3F42;
 }
 
-.emotion-72 {
+.emotion-74 {
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #3F3F42;
 }
 
-.emotion-72:last-child {
+.emotion-74:last-child {
   padding-bottom: 1rem;
   border: 0;
 }
 
-.emotion-70 {
+.emotion-72 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -416,23 +416,31 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-70 {
+  .emotion-72 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-70 {
+  .emotion-72 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-70:hover,
-.emotion-70:focus {
+.emotion-72:hover,
+.emotion-72:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-14 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
 }
 
 .emotion-12 {
@@ -610,7 +618,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   color: #FFFFFF;
 }
 
-.emotion-24 {
+.emotion-26 {
   background-color: #B80000;
   min-height: 2.5rem;
   width: 100%;
@@ -618,7 +626,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 }
 
 @media (min-width:25rem) {
-  .emotion-24 {
+  .emotion-26 {
     min-height: 3.25rem;
     padding: 0 1rem;
   }
@@ -629,65 +637,69 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
     role="banner"
   >
     <div
-      class="emotion-12 emotion-13"
-      dir="ltr"
+      class="emotion-14 emotion-15"
     >
       <div
-        class="emotion-10 emotion-11"
+        class="emotion-12 emotion-13"
         dir="ltr"
       >
-        <h2
-          class="emotion-0 emotion-1"
+        <div
+          class="emotion-10 emotion-11"
           dir="ltr"
         >
-          We don update our Privacy and Cookies Policy
-        </h2>
-        <p
-          class="emotion-2 emotion-3"
-          dir="ltr"
-        >
-          We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
-        </p>
-        <ul
-          class="emotion-8 emotion-9"
-          dir="ltr"
-        >
-          <li
-            class="emotion-4 emotion-5"
+          <h2
+            class="emotion-0 emotion-1"
             dir="ltr"
           >
-            <button
-              type="button"
-            >
-              OK
-            </button>
-          </li>
-          <li
-            class="emotion-4 emotion-5"
+            We don update our Privacy and Cookies Policy
+          </h2>
+          <p
+            class="emotion-2 emotion-3"
             dir="ltr"
           >
-            <a
-              href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
+          </p>
+          <ul
+            class="emotion-8 emotion-9"
+            dir="ltr"
+          >
+            <li
+              class="emotion-4 emotion-5"
+              dir="ltr"
             >
-              Find out wetin don change
-            </a>
-          </li>
-        </ul>
+              <button
+                type="button"
+              >
+                OK
+              </button>
+            </li>
+            <li
+              class="emotion-4 emotion-5"
+              dir="ltr"
+            >
+              <a
+                href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+              >
+                Find out wetin don change
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div
-      class="emotion-24 emotion-25"
+      class="emotion-26 emotion-27"
     >
       <div
-        class="emotion-22 emotion-23"
+        class="emotion-24 emotion-25"
       >
         <a
-          class="emotion-18 emotion-19"
+          class="emotion-20 emotion-21"
           href="/pidgin"
         >
           <svg
             aria-hidden="true"
-            class="emotion-14 emotion-15"
+            class="emotion-16 emotion-17"
             focusable="false"
             height="24"
             viewBox="0 0 238 24"
@@ -715,7 +727,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
             </g>
           </svg>
           <span
-            class="emotion-16 emotion-17"
+            class="emotion-18 emotion-19"
             role="text"
           >
             <span
@@ -728,7 +740,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
           </span>
         </a>
         <a
-          class="emotion-20 emotion-21"
+          class="emotion-22 emotion-23"
           dir="ltr"
           href="#content"
         >
@@ -737,25 +749,25 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
       </div>
     </div>
     <nav
-      class="emotion-108 emotion-109"
+      class="emotion-110 emotion-111"
       dir="ltr"
       role="navigation"
     >
       <div
-        class="emotion-106 emotion-107"
+        class="emotion-108 emotion-109"
       >
         <div
-          class="emotion-68 emotion-69"
+          class="emotion-70 emotion-71"
         >
           <button
             aria-expanded="false"
-            class="emotion-30 emotion-31"
+            class="emotion-32 emotion-33"
             dir="ltr"
             type="button"
           >
             <svg
               aria-hidden="true"
-              class="emotion-26 emotion-27"
+              class="emotion-28 emotion-29"
               focusable="false"
               height="2.75rem"
               viewBox="0 0 44 44"
@@ -766,110 +778,110 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
               />
             </svg>
             <span
-              class="emotion-16 emotion-17"
+              class="emotion-18 emotion-19"
             >
               Plenti seshon
             </span>
           </button>
           <div
-            class="emotion-66 emotion-67"
+            class="emotion-68 emotion-69"
             dir="ltr"
           >
             <ul
-              class="emotion-64 emotion-65"
+              class="emotion-66 emotion-67"
               role="list"
             >
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin"
                 >
                   Home
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/topics/c2dwqd1zr92t"
                 >
                   Nigeria
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/topics/c404v061z85t"
                 >
                   Africa
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/topics/c0823e52dd0t"
                 >
                   World
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/media/video"
                 >
                   Video
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/topics/cjgn7gv77vrt"
                 >
                   Sport
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/topics/cqywjyzk2vyt"
                 >
                   Entertainment
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/popular/read"
                 >
                   Most popular
@@ -879,96 +891,96 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
           </div>
         </div>
         <div
-          class="emotion-104 emotion-105"
+          class="emotion-106 emotion-107"
           height="0"
         >
           <ul
-            class="emotion-102 emotion-103"
+            class="emotion-104 emotion-105"
             role="list"
           >
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin"
               >
                 Home
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/topics/c2dwqd1zr92t"
               >
                 Nigeria
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/topics/c404v061z85t"
               >
                 Africa
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/topics/c0823e52dd0t"
               >
                 World
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/media/video"
               >
                 Video
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/topics/cjgn7gv77vrt"
               >
                 Sport
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/topics/cqywjyzk2vyt"
               >
                 Entertainment
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/popular/read"
               >
                 Most popular
@@ -983,7 +995,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 `;
 
 exports[`Header Snapshots should render correctly for WS radio page 1`] = `
-.emotion-24 {
+.emotion-26 {
   background-color: #B80000;
   min-height: 2.5rem;
   width: 100%;
@@ -992,13 +1004,13 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width:25rem) {
-  .emotion-24 {
+  .emotion-26 {
     min-height: 3.25rem;
     padding: 0 1rem;
   }
 }
 
-.emotion-22 {
+.emotion-24 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1020,12 +1032,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-22 {
+  .emotion-24 {
     display: block;
   }
 }
 
-.emotion-18 {
+.emotion-20 {
   display: inline-block;
   width: 100%;
   max-width: 14.880600000000001rem;
@@ -1037,12 +1049,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-18 {
+  .emotion-20 {
     display: block;
   }
 }
 
-.emotion-14 {
+.emotion-16 {
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
@@ -1059,34 +1071,34 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width:25rem) {
-  .emotion-14 {
+  .emotion-16 {
     padding-top: 1rem;
     padding-bottom: 0.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-14 {
+  .emotion-16 {
     padding-top: 1.25rem;
     padding-bottom: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),print {
-  .emotion-14 {
+  .emotion-16 {
     fill: windowText;
   }
 }
 
-.emotion-19:hover .emotion-14,
-.emotion-19:focus .emotion-14 {
+.emotion-21:hover .emotion-16,
+.emotion-21:focus .emotion-16 {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
   margin-bottom: -0.25rem;
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -1098,7 +1110,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   margin: 0;
 }
 
-.emotion-20 {
+.emotion-22 {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -1121,20 +1133,20 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-20 {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-20 {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-20:focus {
+.emotion-22:focus {
   -webkit-clip-path: none;
   clip-path: none;
   -webkit-clip: auto;
@@ -1146,38 +1158,38 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width:25rem) {
-  .emotion-20:focus {
+  .emotion-22:focus {
     top: 0.5rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-20 {
+  .emotion-22 {
     padding: 0.5rem;
   }
 }
 
-.emotion-108 {
+.emotion-110 {
   position: relative;
   background-color: #B80000;
   border-top: 0.0625rem solid #FFFFFF;
 }
 
-.emotion-108 .emotion-35::after {
+.emotion-110 .emotion-37::after {
   left: 0;
 }
 
-.emotion-106 {
+.emotion-108 {
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.emotion-68 {
+.emotion-70 {
   position: relative;
 }
 
-.emotion-30 {
+.emotion-32 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -1188,14 +1200,14 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   width: 2.75rem;
 }
 
-.emotion-30:hover,
-.emotion-30:focus {
+.emotion-32:hover,
+.emotion-32:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-30:hover::after,
-.emotion-30:focus::after {
+.emotion-32:hover::after,
+.emotion-32:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1206,30 +1218,30 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-30 {
+  .emotion-32 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) {
-  .emotion-30 {
+  .emotion-32 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
-.emotion-30 svg {
+.emotion-32 svg {
   vertical-align: middle;
 }
 
-.emotion-26 {
+.emotion-28 {
   color: #fff;
   fill: currentColor;
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-66 {
+  .emotion-68 {
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-scroll-behavior: auto;
@@ -1244,11 +1256,11 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
     -ms-overflow-style: none;
   }
 
-  .emotion-66::-webkit-scrollbar {
+  .emotion-68::-webkit-scrollbar {
     display: none;
   }
 
-  .emotion-66:after {
+  .emotion-68:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -1262,13 +1274,13 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   }
 
 @media (min-width:25rem) {
-    .emotion-66:after {
+    .emotion-68:after {
       width: 6rem;
     }
 }
 }
 
-.emotion-64 {
+.emotion-66 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -1276,25 +1288,25 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-64 {
+  .emotion-66 {
     overflow: hidden;
   }
 }
 
-.emotion-34 {
+.emotion-36 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-34:last-child {
+  .emotion-36:last-child {
     margin-right: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-34::after {
+  .emotion-36::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -1304,7 +1316,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   }
 }
 
-.emotion-32 {
+.emotion-34 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1319,26 +1331,26 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-32 {
+  .emotion-34 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-32 {
+  .emotion-34 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-32 {
+  .emotion-34 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-32:hover::after {
+.emotion-34:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1347,7 +1359,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.emotion-32:focus::after {
+.emotion-34:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1358,7 +1370,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.emotion-104 {
+.emotion-106 {
   background-color: #222222;
   clear: both;
   overflow: hidden;
@@ -1371,37 +1383,37 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-104 {
+  .emotion-106 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion:reduce) {
-  .emotion-104 {
+  .emotion-106 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-102 {
+.emotion-104 {
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
   border-bottom: 0.125rem solid #3F3F42;
 }
 
-.emotion-72 {
+.emotion-74 {
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #3F3F42;
 }
 
-.emotion-72:last-child {
+.emotion-74:last-child {
   padding-bottom: 1rem;
   border: 0;
 }
 
-.emotion-70 {
+.emotion-72 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1413,23 +1425,31 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-70 {
+  .emotion-72 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-70 {
+  .emotion-72 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-70:hover,
-.emotion-70:focus {
+.emotion-72:hover,
+.emotion-72:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-14 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
 }
 
 .emotion-12 {
@@ -1612,65 +1632,69 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
     role="banner"
   >
     <div
-      class="emotion-12 emotion-13"
-      dir="ltr"
+      class="emotion-14 emotion-15"
     >
       <div
-        class="emotion-10 emotion-11"
+        class="emotion-12 emotion-13"
         dir="ltr"
       >
-        <h2
-          class="emotion-0 emotion-1"
+        <div
+          class="emotion-10 emotion-11"
           dir="ltr"
         >
-          We don update our Privacy and Cookies Policy
-        </h2>
-        <p
-          class="emotion-2 emotion-3"
-          dir="ltr"
-        >
-          We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
-        </p>
-        <ul
-          class="emotion-8 emotion-9"
-          dir="ltr"
-        >
-          <li
-            class="emotion-4 emotion-5"
+          <h2
+            class="emotion-0 emotion-1"
             dir="ltr"
           >
-            <button
-              type="button"
-            >
-              OK
-            </button>
-          </li>
-          <li
-            class="emotion-4 emotion-5"
+            We don update our Privacy and Cookies Policy
+          </h2>
+          <p
+            class="emotion-2 emotion-3"
             dir="ltr"
           >
-            <a
-              href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
+          </p>
+          <ul
+            class="emotion-8 emotion-9"
+            dir="ltr"
+          >
+            <li
+              class="emotion-4 emotion-5"
+              dir="ltr"
             >
-              Find out wetin don change
-            </a>
-          </li>
-        </ul>
+              <button
+                type="button"
+              >
+                OK
+              </button>
+            </li>
+            <li
+              class="emotion-4 emotion-5"
+              dir="ltr"
+            >
+              <a
+                href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+              >
+                Find out wetin don change
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div
-      class="emotion-24 emotion-25"
+      class="emotion-26 emotion-27"
     >
       <div
-        class="emotion-22 emotion-23"
+        class="emotion-24 emotion-25"
       >
         <a
-          class="emotion-18 emotion-19"
+          class="emotion-20 emotion-21"
           href="/pidgin"
         >
           <svg
             aria-hidden="true"
-            class="emotion-14 emotion-15"
+            class="emotion-16 emotion-17"
             focusable="false"
             height="24"
             viewBox="0 0 238 24"
@@ -1698,7 +1722,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             </g>
           </svg>
           <span
-            class="emotion-16 emotion-17"
+            class="emotion-18 emotion-19"
             role="text"
           >
             <span
@@ -1711,7 +1735,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
           </span>
         </a>
         <a
-          class="emotion-20 emotion-21"
+          class="emotion-22 emotion-23"
           dir="ltr"
           href="#content"
         >
@@ -1720,25 +1744,25 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
       </div>
     </div>
     <nav
-      class="emotion-108 emotion-109"
+      class="emotion-110 emotion-111"
       dir="ltr"
       role="navigation"
     >
       <div
-        class="emotion-106 emotion-107"
+        class="emotion-108 emotion-109"
       >
         <div
-          class="emotion-68 emotion-69"
+          class="emotion-70 emotion-71"
         >
           <button
             aria-expanded="false"
-            class="emotion-30 emotion-31"
+            class="emotion-32 emotion-33"
             dir="ltr"
             type="button"
           >
             <svg
               aria-hidden="true"
-              class="emotion-26 emotion-27"
+              class="emotion-28 emotion-29"
               focusable="false"
               height="2.75rem"
               viewBox="0 0 44 44"
@@ -1749,110 +1773,110 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
               />
             </svg>
             <span
-              class="emotion-16 emotion-17"
+              class="emotion-18 emotion-19"
             >
               Plenti seshon
             </span>
           </button>
           <div
-            class="emotion-66 emotion-67"
+            class="emotion-68 emotion-69"
             dir="ltr"
           >
             <ul
-              class="emotion-64 emotion-65"
+              class="emotion-66 emotion-67"
               role="list"
             >
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin"
                 >
                   Home
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/topics/c2dwqd1zr92t"
                 >
                   Nigeria
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/topics/c404v061z85t"
                 >
                   Africa
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/topics/c0823e52dd0t"
                 >
                   World
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/media/video"
                 >
                   Video
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/topics/cjgn7gv77vrt"
                 >
                   Sport
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/topics/cqywjyzk2vyt"
                 >
                   Entertainment
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/popular/read"
                 >
                   Most popular
@@ -1862,96 +1886,96 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
           </div>
         </div>
         <div
-          class="emotion-104 emotion-105"
+          class="emotion-106 emotion-107"
           height="0"
         >
           <ul
-            class="emotion-102 emotion-103"
+            class="emotion-104 emotion-105"
             role="list"
           >
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin"
               >
                 Home
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/topics/c2dwqd1zr92t"
               >
                 Nigeria
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/topics/c404v061z85t"
               >
                 Africa
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/topics/c0823e52dd0t"
               >
                 World
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/media/video"
               >
                 Video
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/topics/cjgn7gv77vrt"
               >
                 Sport
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/topics/cqywjyzk2vyt"
               >
                 Entertainment
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/popular/read"
               >
                 Most popular
@@ -1966,7 +1990,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 `;
 
 exports[`Header Snapshots should render correctly for news article 1`] = `
-.emotion-24 {
+.emotion-26 {
   background-color: #B80000;
   min-height: 2.5rem;
   width: 100%;
@@ -1975,13 +1999,13 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (min-width:25rem) {
-  .emotion-24 {
+  .emotion-26 {
     min-height: 3.25rem;
     padding: 0 1rem;
   }
 }
 
-.emotion-22 {
+.emotion-24 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2003,12 +2027,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-22 {
+  .emotion-24 {
     display: block;
   }
 }
 
-.emotion-18 {
+.emotion-20 {
   display: inline-block;
   width: 100%;
   max-width: 14.880600000000001rem;
@@ -2020,12 +2044,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-18 {
+  .emotion-20 {
     display: block;
   }
 }
 
-.emotion-14 {
+.emotion-16 {
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
@@ -2042,34 +2066,34 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (min-width:25rem) {
-  .emotion-14 {
+  .emotion-16 {
     padding-top: 1rem;
     padding-bottom: 0.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-14 {
+  .emotion-16 {
     padding-top: 1.25rem;
     padding-bottom: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),print {
-  .emotion-14 {
+  .emotion-16 {
     fill: windowText;
   }
 }
 
-.emotion-19:hover .emotion-14,
-.emotion-19:focus .emotion-14 {
+.emotion-21:hover .emotion-16,
+.emotion-21:focus .emotion-16 {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
   margin-bottom: -0.25rem;
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -2081,7 +2105,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   margin: 0;
 }
 
-.emotion-20 {
+.emotion-22 {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -2104,20 +2128,20 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-20 {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-20 {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-20:focus {
+.emotion-22:focus {
   -webkit-clip-path: none;
   clip-path: none;
   -webkit-clip: auto;
@@ -2129,38 +2153,38 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (min-width:25rem) {
-  .emotion-20:focus {
+  .emotion-22:focus {
     top: 0.5rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-20 {
+  .emotion-22 {
     padding: 0.5rem;
   }
 }
 
-.emotion-108 {
+.emotion-110 {
   position: relative;
   background-color: #B80000;
   border-top: 0.0625rem solid #FFFFFF;
 }
 
-.emotion-108 .emotion-35::after {
+.emotion-110 .emotion-37::after {
   left: 0;
 }
 
-.emotion-106 {
+.emotion-108 {
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.emotion-68 {
+.emotion-70 {
   position: relative;
 }
 
-.emotion-30 {
+.emotion-32 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -2171,14 +2195,14 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   width: 2.75rem;
 }
 
-.emotion-30:hover,
-.emotion-30:focus {
+.emotion-32:hover,
+.emotion-32:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-30:hover::after,
-.emotion-30:focus::after {
+.emotion-32:hover::after,
+.emotion-32:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -2189,30 +2213,30 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-30 {
+  .emotion-32 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) {
-  .emotion-30 {
+  .emotion-32 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
-.emotion-30 svg {
+.emotion-32 svg {
   vertical-align: middle;
 }
 
-.emotion-26 {
+.emotion-28 {
   color: #fff;
   fill: currentColor;
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-66 {
+  .emotion-68 {
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-scroll-behavior: auto;
@@ -2227,11 +2251,11 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
     -ms-overflow-style: none;
   }
 
-  .emotion-66::-webkit-scrollbar {
+  .emotion-68::-webkit-scrollbar {
     display: none;
   }
 
-  .emotion-66:after {
+  .emotion-68:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -2245,13 +2269,13 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   }
 
 @media (min-width:25rem) {
-    .emotion-66:after {
+    .emotion-68:after {
       width: 6rem;
     }
 }
 }
 
-.emotion-64 {
+.emotion-66 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -2259,25 +2283,25 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-64 {
+  .emotion-66 {
     overflow: hidden;
   }
 }
 
-.emotion-34 {
+.emotion-36 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-34:last-child {
+  .emotion-36:last-child {
     margin-right: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-34::after {
+  .emotion-36::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -2287,7 +2311,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   }
 }
 
-.emotion-32 {
+.emotion-34 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2302,26 +2326,26 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-32 {
+  .emotion-34 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-32 {
+  .emotion-34 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-32 {
+  .emotion-34 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-32:hover::after {
+.emotion-34:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -2330,7 +2354,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.emotion-32:focus::after {
+.emotion-34:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -2341,7 +2365,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.emotion-104 {
+.emotion-106 {
   background-color: #222222;
   clear: both;
   overflow: hidden;
@@ -2354,37 +2378,37 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-104 {
+  .emotion-106 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion:reduce) {
-  .emotion-104 {
+  .emotion-106 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-102 {
+.emotion-104 {
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
   border-bottom: 0.125rem solid #3F3F42;
 }
 
-.emotion-72 {
+.emotion-74 {
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #3F3F42;
 }
 
-.emotion-72:last-child {
+.emotion-74:last-child {
   padding-bottom: 1rem;
   border: 0;
 }
 
-.emotion-70 {
+.emotion-72 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2396,23 +2420,31 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-70 {
+  .emotion-72 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-70 {
+  .emotion-72 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-70:hover,
-.emotion-70:focus {
+.emotion-72:hover,
+.emotion-72:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-14 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
 }
 
 .emotion-12 {
@@ -2595,65 +2627,69 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
     role="banner"
   >
     <div
-      class="emotion-12 emotion-13"
-      dir="ltr"
+      class="emotion-14 emotion-15"
     >
       <div
-        class="emotion-10 emotion-11"
+        class="emotion-12 emotion-13"
         dir="ltr"
       >
-        <h2
-          class="emotion-0 emotion-1"
+        <div
+          class="emotion-10 emotion-11"
           dir="ltr"
         >
-          We don update our Privacy and Cookies Policy
-        </h2>
-        <p
-          class="emotion-2 emotion-3"
-          dir="ltr"
-        >
-          We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
-        </p>
-        <ul
-          class="emotion-8 emotion-9"
-          dir="ltr"
-        >
-          <li
-            class="emotion-4 emotion-5"
+          <h2
+            class="emotion-0 emotion-1"
             dir="ltr"
           >
-            <button
-              type="button"
-            >
-              OK
-            </button>
-          </li>
-          <li
-            class="emotion-4 emotion-5"
+            We don update our Privacy and Cookies Policy
+          </h2>
+          <p
+            class="emotion-2 emotion-3"
             dir="ltr"
           >
-            <a
-              href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
+          </p>
+          <ul
+            class="emotion-8 emotion-9"
+            dir="ltr"
+          >
+            <li
+              class="emotion-4 emotion-5"
+              dir="ltr"
             >
-              Find out wetin don change
-            </a>
-          </li>
-        </ul>
+              <button
+                type="button"
+              >
+                OK
+              </button>
+            </li>
+            <li
+              class="emotion-4 emotion-5"
+              dir="ltr"
+            >
+              <a
+                href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+              >
+                Find out wetin don change
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div
-      class="emotion-24 emotion-25"
+      class="emotion-26 emotion-27"
     >
       <div
-        class="emotion-22 emotion-23"
+        class="emotion-24 emotion-25"
       >
         <a
-          class="emotion-18 emotion-19"
+          class="emotion-20 emotion-21"
           href="/pidgin"
         >
           <svg
             aria-hidden="true"
-            class="emotion-14 emotion-15"
+            class="emotion-16 emotion-17"
             focusable="false"
             height="24"
             viewBox="0 0 238 24"
@@ -2681,7 +2717,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             </g>
           </svg>
           <span
-            class="emotion-16 emotion-17"
+            class="emotion-18 emotion-19"
             role="text"
           >
             <span
@@ -2694,7 +2730,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
           </span>
         </a>
         <a
-          class="emotion-20 emotion-21"
+          class="emotion-22 emotion-23"
           dir="ltr"
           href="#content"
         >
@@ -2703,25 +2739,25 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
       </div>
     </div>
     <nav
-      class="emotion-108 emotion-109"
+      class="emotion-110 emotion-111"
       dir="ltr"
       role="navigation"
     >
       <div
-        class="emotion-106 emotion-107"
+        class="emotion-108 emotion-109"
       >
         <div
-          class="emotion-68 emotion-69"
+          class="emotion-70 emotion-71"
         >
           <button
             aria-expanded="false"
-            class="emotion-30 emotion-31"
+            class="emotion-32 emotion-33"
             dir="ltr"
             type="button"
           >
             <svg
               aria-hidden="true"
-              class="emotion-26 emotion-27"
+              class="emotion-28 emotion-29"
               focusable="false"
               height="2.75rem"
               viewBox="0 0 44 44"
@@ -2732,110 +2768,110 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
               />
             </svg>
             <span
-              class="emotion-16 emotion-17"
+              class="emotion-18 emotion-19"
             >
               Plenti seshon
             </span>
           </button>
           <div
-            class="emotion-66 emotion-67"
+            class="emotion-68 emotion-69"
             dir="ltr"
           >
             <ul
-              class="emotion-64 emotion-65"
+              class="emotion-66 emotion-67"
               role="list"
             >
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin"
                 >
                   Home
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/topics/c2dwqd1zr92t"
                 >
                   Nigeria
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/topics/c404v061z85t"
                 >
                   Africa
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/topics/c0823e52dd0t"
                 >
                   World
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/media/video"
                 >
                   Video
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/topics/cjgn7gv77vrt"
                 >
                   Sport
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/topics/cqywjyzk2vyt"
                 >
                   Entertainment
                 </a>
               </li>
               <li
-                class="emotion-34 emotion-35"
+                class="emotion-36 emotion-37"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-32 emotion-33"
+                  class="emotion-34 emotion-35"
                   href="/pidgin/popular/read"
                 >
                   Most popular
@@ -2845,96 +2881,96 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
           </div>
         </div>
         <div
-          class="emotion-104 emotion-105"
+          class="emotion-106 emotion-107"
           height="0"
         >
           <ul
-            class="emotion-102 emotion-103"
+            class="emotion-104 emotion-105"
             role="list"
           >
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin"
               >
                 Home
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/topics/c2dwqd1zr92t"
               >
                 Nigeria
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/topics/c404v061z85t"
               >
                 Africa
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/topics/c0823e52dd0t"
               >
                 World
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/media/video"
               >
                 Video
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/topics/cjgn7gv77vrt"
               >
                 Sport
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/topics/cqywjyzk2vyt"
               >
                 Entertainment
               </a>
             </li>
             <li
-              class="emotion-72 emotion-73"
+              class="emotion-74 emotion-75"
               role="listitem"
             >
               <a
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
                 href="/pidgin/popular/read"
               >
                 Most popular
