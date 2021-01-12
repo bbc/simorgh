@@ -5,12 +5,12 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
   .emotion-20 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-20 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -19,8 +19,6 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-20 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -29,8 +27,6 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-20 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -39,8 +35,6 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-20 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -49,8 +43,6 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-20 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -59,8 +51,6 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 
 @media (min-width:80rem) {
     .emotion-20 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -78,12 +68,12 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
   .emotion-72 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-72 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -92,8 +82,6 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-72 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -102,8 +90,6 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-72 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -112,8 +98,6 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-72 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -122,8 +106,6 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-72 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -132,8 +114,6 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 
 @media (min-width:80rem) {
     .emotion-72 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -148,12 +128,12 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 @supports (display:grid) {
   .emotion-23 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -161,8 +141,6 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -170,8 +148,6 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -179,8 +155,6 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -188,8 +162,6 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }
@@ -197,8 +169,6 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 
 @media (min-width:80rem) {
     .emotion-23 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
     }

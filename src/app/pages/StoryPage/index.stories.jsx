@@ -7,6 +7,7 @@ import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { StoryPage } from '..';
 import mundoPageData from './fixtureData/mundo';
 import persianPageData from './fixtureData/persian';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const withSecondaryColumnsKnob = pageData => storyFn => {
   const options = {
@@ -57,7 +58,7 @@ const withSecondaryColumnsKnob = pageData => storyFn => {
       return (
         <BrowserRouter>
           <StoryPage
-            pageType="STY"
+            pageType={STORY_PAGE}
             isAmp={false}
             pathname="/path"
             status={200}

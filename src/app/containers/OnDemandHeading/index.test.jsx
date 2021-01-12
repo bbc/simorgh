@@ -1,19 +1,22 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render, getByText, getByRole } from '@testing-library/react';
+import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import OnDemandHeadingContainer from '.';
 
+const releaseDateTimeStamp = 1587945600000;
 // eslint-disable-next-line react/prop-types
-const Component = ({ ariaHidden, idAttr, darkMode }) => (
+const Component = ({ ariaHidden, idAttr, darkMode, episodeTitle }) => (
   <ServiceContextProvider service="news">
     <OnDemandHeadingContainer
       brandTitle="Dunia Pagi Ini"
-      releaseDateTimeStamp={1587945600000}
+      releaseDateTimeStamp={releaseDateTimeStamp}
       uuid="uuid"
       idAttr={idAttr}
       ariaHidden={ariaHidden}
       darkMode={darkMode}
+      episodeTitle={episodeTitle}
     />
   </ServiceContextProvider>
 );
@@ -70,5 +73,23 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
 
     expect(visuallyHiddenComma).toBeInTheDocument();
     expect(visuallyHiddenComma).toContainHTML(', ');
+  });
+
+  it('should show the episode title instead of timestamp when given', () => {
+    const { getByText: getElementByText, queryByText } = render(
+      <Component episodeTitle="Another one" />,
+    );
+
+    const timestamp = formatUnixTimestamp({
+      timestamp: releaseDateTimeStamp,
+      format: 'LL',
+      timezone: 'Europe/London',
+      locale: 'en-gb',
+      isRelative: false,
+    });
+    const episodeTitle = getElementByText('Another one');
+    const releaseDate = queryByText(timestamp);
+    expect(episodeTitle).toBeInTheDocument();
+    expect(releaseDate).toBeNull();
   });
 });

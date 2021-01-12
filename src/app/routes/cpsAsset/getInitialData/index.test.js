@@ -7,6 +7,8 @@ import getInitialData, { only } from '.';
 // mock data
 import mapJson from '#data/pidgin/cpsAssets/media-23256549.json';
 
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+
 describe('getInitialData', () => {
   afterEach(() => {
     jest.clearAllMocks();
@@ -44,11 +46,11 @@ describe('getInitialData', () => {
   it('should run transformer when page type matches', async () => {
     const pageData = {
       metadata: {
-        type: 'MAP',
+        type: MEDIA_ASSET_PAGE,
       },
     };
     const mockTransformer = jest.fn();
-    only('MAP', mockTransformer)(pageData);
+    only(MEDIA_ASSET_PAGE, mockTransformer)(pageData);
     expect(mockTransformer).toBeCalledTimes(1);
   });
 
@@ -59,7 +61,7 @@ describe('getInitialData', () => {
       },
     };
     const mockTransformer = jest.fn();
-    only('MAP', mockTransformer)(pageData);
+    only(MEDIA_ASSET_PAGE, mockTransformer)(pageData);
     expect(mockTransformer).toBeCalledTimes(0);
   });
 });

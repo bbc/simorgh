@@ -6,7 +6,7 @@ exports[`Canonical On Demand T V Page Analytics ATI 1`] = `"<img height=\\"1px\\
 
 exports[`Canonical On Demand T V Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/somali"`;
 
-exports[`Canonical On Demand T V Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
+exports[`Canonical On Demand T V Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
 
 exports[`Canonical On Demand T V Page Footer Link should match text and url 1`] = `
 Object {

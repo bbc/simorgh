@@ -2,7 +2,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
-import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import LiveRadioPage from './LiveRadioPage';
@@ -57,12 +56,15 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
 describe('Radio Page Main', () => {
   it('should match snapshot for Canonical', async () => {
     fetch.mockResponse(JSON.stringify(afriquePageData));
+    const { container } = render(<Page pageData={afriquePageData} />);
 
-    await matchSnapshotAsync(<Page pageData={afriquePageData} />);
+    expect(container).toMatchSnapshot();
   });
 
   it('should match snapshot for AMP', async () => {
-    await matchSnapshotAsync(<Page pageData={afriquePageData} isAmp />);
+    const { container } = render(<Page pageData={afriquePageData} isAmp />);
+
+    expect(container).toMatchSnapshot();
   });
 
   it('should show the title for the Live Radio page', async () => {
