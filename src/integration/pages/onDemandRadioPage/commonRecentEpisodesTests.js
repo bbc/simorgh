@@ -15,12 +15,12 @@ export default () => {
     describe('List items', () => {
       recentEpisodesListItems.forEach(listItemEl => {
         const text = listItemEl.textContent.trim();
-        const href = listItemEl.querySelector('a').getAttribute('href');
+        const url = listItemEl.querySelector('a').getAttribute('href');
 
         it('should match text and url', () => {
           expect({
             text,
-            href,
+            url,
           }).toMatchSnapshot();
         });
       });

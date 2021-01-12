@@ -285,29 +285,29 @@ exports[`AMP On Demand Radio Page Media Player iframe with valid URL should be r
 
 exports[`AMP On Demand Radio Page Recent Episodes List items should match text and url 1`] = `
 Object {
-  "href": "/pashto/bbc_pashto_radio/w172xqk2y7ktdkg",
   "text": "غږ, وروستي خبرونه, ۱۵ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰",
+  "url": "/pashto/bbc_pashto_radio/w172xqk2y7ktdkg",
 }
 `;
 
 exports[`AMP On Demand Radio Page Recent Episodes List items should match text and url 2`] = `
 Object {
-  "href": "/pashto/bbc_pashto_radio/w172xqk2y7kt8tb",
   "text": "غږ, وروستي خبرونه, ۱۵ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰",
+  "url": "/pashto/bbc_pashto_radio/w172xqk2y7kt8tb",
 }
 `;
 
 exports[`AMP On Demand Radio Page Recent Episodes List items should match text and url 3`] = `
 Object {
-  "href": "/pashto/bbc_pashto_radio/w172xqk2y7kt526",
   "text": "غږ, وروستي خبرونه, ۱۵ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰",
+  "url": "/pashto/bbc_pashto_radio/w172xqk2y7kt526",
 }
 `;
 
 exports[`AMP On Demand Radio Page Recent Episodes List items should match text and url 4`] = `
 Object {
-  "href": "/pashto/bbc_pashto_radio/w172xqk2y7kt1b2",
   "text": "غږ, وروستي خبرونه, ۱۵ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰",
+  "url": "/pashto/bbc_pashto_radio/w172xqk2y7kt1b2",
 }
 `;
 
