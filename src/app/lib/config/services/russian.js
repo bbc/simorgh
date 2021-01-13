@@ -78,7 +78,7 @@ export const mainTranslations = {
   },
   seeAll: 'Посмотреть все',
   skipLinkText: 'Перейти к содержанию',
-  relatedContent: 'Новости по теме',
+  relatedContent: 'Читайте также',
   mediaAssetPage: {
     mediaPlayer: 'Медиа плеер',
     audioPlayer: 'Аудио плеер',
