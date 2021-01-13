@@ -54,8 +54,8 @@ const Promo = ({
             <ImageWithPlaceholder
               src={img}
               alt={alt}
-              height={88}
-              width={88}
+              height={100}
+              width={100}
               ratio={100}
               lazyLoad
             />
