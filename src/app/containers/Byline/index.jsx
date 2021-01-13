@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import Byline from '@bbc/psammead-byline';
-import { string } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import bylineBlockPropTypes from '#models/propTypes/byline';
 import { GridItemMedium } from '#app/components/Grid';
@@ -23,8 +22,6 @@ const BylineContainer = ({ blocks, className }) => {
 
 BylineContainer.propTypes = {
   ...bylineBlockPropTypes,
-  name: string.isRequired,
-  title: string.isRequired,
 };
 
 export default BylineContainer;
