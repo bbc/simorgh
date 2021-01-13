@@ -14,14 +14,11 @@ const BylineContainer = ({ blocks, className }) => {
 
   const { name, title } = blocks[0];
 
-  if (name && title) {
-    return (
-      <GridItemMedium className={className}>
-        <Byline service={service} name={name} title={title} />
-      </GridItemMedium>
-    );
-  }
-  return null;
+  return (
+    <GridItemMedium className={className}>
+      <Byline service={service} name={name} title={title} />
+    </GridItemMedium>
+  );
 };
 
 BylineContainer.propTypes = {
