@@ -4,7 +4,6 @@
   "description": "Simorgh",
   "main": "./src/client.js",
   "resolutions": {
-    "prismjs": "1.22.0",
     "axios": "0.21.1"
   },
   "scripts": {
