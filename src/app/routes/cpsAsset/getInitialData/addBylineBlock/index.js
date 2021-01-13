@@ -42,14 +42,13 @@ const addBylineBlock = originalJson => {
   const bylineBlock = getBylineBlock(json);
   if (bylineBlock) {
     if (
-      bylineBlock.model.blocks.name != null ||
-      bylineBlock.model.blocks.title != null
+      bylineBlock.model.block.name !== undefined ||
+      bylineBlock.model.blocks.title !== undefined
     ) {
       json.content.model.blocks = insertBlockAfterHeadline(bylineBlock, blocks);
-      return json;
     }
   }
-  return null;
+  return json;
 };
 
 export default addBylineBlock;
