@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import { string } from 'prop-types';
 import PodcastPromo from '@bbc/psammead-podcast-promo';
 
@@ -16,15 +16,14 @@ const Promo = ({
   linkText,
 }) => {
   const { podcastPromo, script, service } = useContext(ServiceContext);
-  const podcastPromoTitle = title || pathOr('', ['title'], podcastPromo);
-  const podcastBrandTitle =
-    brandTitle || pathOr('', ['brandTitle'], podcastPromo);
+  const podcastPromoTitle = title || path(['title'], podcastPromo);
+  const podcastBrandTitle = brandTitle || path(['brandTitle'], podcastPromo);
   const description =
-    brandDescription || pathOr('', ['brandDescription'], podcastPromo);
-  const img = imageSrc || pathOr('', ['image', 'src'], podcastPromo);
-  const alt = imageAlt || pathOr('', ['image', 'alt'], podcastPromo);
-  const url = linkHref || pathOr('', ['link', 'href'], podcastPromo);
-  const label = linkText || pathOr('', ['link', 'text'], podcastPromo);
+    brandDescription || path(['brandDescription'], podcastPromo);
+  const img = imageSrc || path(['image', 'src'], podcastPromo);
+  const alt = imageAlt || path(['image', 'alt'], podcastPromo);
+  const url = linkHref || path(['linkLabel', 'href'], podcastPromo);
+  const label = linkText || path(['linkLabel', 'text'], podcastPromo);
 
   const showPromo = [
     podcastBrandTitle,
@@ -93,13 +92,13 @@ Promo.propTypes = {
 };
 
 Promo.defaultProps = {
-  title: '',
-  brandTitle: '',
-  brandDescription: '',
-  imageSrc: '',
-  imageAlt: '',
-  linkHref: '',
-  linkText: '',
+  title: null,
+  brandTitle: null,
+  brandDescription: null,
+  imageSrc: null,
+  imageAlt: null,
+  linkHref: null,
+  linkText: null,
 };
 
 export default Promo;
