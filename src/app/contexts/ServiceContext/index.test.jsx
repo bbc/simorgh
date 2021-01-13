@@ -82,7 +82,7 @@ describe('ServiceContextProvider', () => {
         service: 'ukrainian',
         variant: undefined,
         pageLang: 'ru',
-        expectedTranslation: 'Новости по теме',
+        expectedTranslation: 'Читайте также',
         assertionValue: 'relatedContent',
       },
       {
