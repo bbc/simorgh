@@ -7,6 +7,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
 
 const Promo = ({
+  title,
   brandTitle,
   brandDescription,
   imageSrc,
@@ -15,15 +16,25 @@ const Promo = ({
   linkText,
 }) => {
   const { podcastPromo, script, service } = useContext(ServiceContext);
-  const title = brandTitle || pathOr('', ['brandTitle'], podcastPromo);
+  const podcastPromoTitle = title || pathOr('', ['title'], podcastPromo);
+  const podcastBrandTitle =
+    brandTitle || pathOr('', ['brandTitle'], podcastPromo);
   const description =
     brandDescription || pathOr('', ['brandDescription'], podcastPromo);
-  const img = imageSrc || pathOr('', ['imageSrc'], podcastPromo);
-  const alt = imageAlt || pathOr('', ['imageAlt'], podcastPromo);
-  const url = linkHref || pathOr('', ['linkHref'], podcastPromo);
-  const label = linkText || pathOr('', ['linkText'], podcastPromo);
+  const img = imageSrc || pathOr('', ['image', 'src'], podcastPromo);
+  const alt = imageAlt || pathOr('', ['image', 'alt'], podcastPromo);
+  const url = linkHref || pathOr('', ['link', 'href'], podcastPromo);
+  const label = linkText || pathOr('', ['link', 'text'], podcastPromo);
 
-  const showPromo = title && description && img && alt && url && label;
+  const showPromo = [
+    podcastBrandTitle,
+    podcastPromoTitle,
+    description,
+    img,
+    alt,
+    url,
+    label,
+  ].every(Boolean);
   if (!showPromo) {
     return null;
   }
@@ -36,12 +47,15 @@ const Promo = ({
         role="region"
         aria-labelledby="podcast-promo"
       >
-        <PodcastPromo.Title id="podcast-promo">{title}</PodcastPromo.Title>
+        <PodcastPromo.Title id="podcast-promo">
+          {podcastPromoTitle}
+        </PodcastPromo.Title>
         <PodcastPromo.Card>
           <PodcastPromo.Card.ImageWrapper>
             <ImageWithPlaceholder
               src={img}
               alt={alt}
+              height={88}
               width={88}
               ratio={100}
               lazyLoad
@@ -51,7 +65,7 @@ const Promo = ({
             <PodcastPromo.Card.Title>
               <PodcastPromo.Card.Link href={url}>
                 <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
-                  {label}
+                  {podcastBrandTitle}
                 </span>
               </PodcastPromo.Card.Link>
             </PodcastPromo.Card.Title>
@@ -69,6 +83,7 @@ const Promo = ({
 };
 
 Promo.propTypes = {
+  title: string,
   brandTitle: string,
   brandDescription: string,
   imageSrc: string,
@@ -78,6 +93,7 @@ Promo.propTypes = {
 };
 
 Promo.defaultProps = {
+  title: '',
   brandTitle: '',
   brandDescription: '',
   imageSrc: '',

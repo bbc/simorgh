@@ -227,13 +227,18 @@ export const service = {
       hasMostWatched: true,
     },
     podcastPromo: {
+      title: 'Подкаст',
       brandTitle: 'Что это было?',
       brandDescription:
         'Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше. Никаких ненужных подробностей и передергиваний - только факты и взвешенная аналитика.',
-      imageSrc: 'http://ichef.bbci.co.uk/images/ic/3000x3000/p0776f5z.jpg',
-      imageAlt: 'Что это было?',
-      linkHref: 'https://www.bbc.com/russian/media-47937790',
-      linkText: 'эпизоды',
+      image: {
+        src: 'http://ichef.bbci.co.uk/images/ic/512x512/p0776f5z.jpg',
+        alt: 'Что это было?',
+      },
+      linkLabel: {
+        text: 'эпизоды',
+        href: 'https://www.bbc.com/russian/media-47937790',
+      },
     },
     radioSchedule: {
       hasRadioSchedule: false,
