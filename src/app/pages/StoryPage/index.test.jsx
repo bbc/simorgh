@@ -7,7 +7,6 @@ import deepClone from 'ramda/src/clone';
 import { render } from '@testing-library/react';
 import assocPath from 'ramda/src/assocPath';
 import fetchMock from 'fetch-mock';
-import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 
 // contexts
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -180,7 +179,11 @@ describe('Story Page', () => {
         pageType,
       });
 
-      await matchSnapshotAsync(<Page pageData={pageData} service="pidgin" />);
+      const { container } = render(
+        <Page pageData={pageData} service="pidgin" />,
+      );
+
+      expect(container).toMatchSnapshot();
     });
   });
 
@@ -241,7 +244,9 @@ describe('Story Page', () => {
       pageType,
     });
 
-    await matchSnapshotAsync(<Page pageData={pageData} service="pidgin" />);
+    const { container } = render(<Page pageData={pageData} service="pidgin" />);
+
+    expect(container).toMatchSnapshot();
   });
 
   it('should render secondary column with lang attribute of `serviceLang` when a language override is present', async () => {

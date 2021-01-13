@@ -523,12 +523,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   .emotion-228 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-228 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -537,8 +537,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-228 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -547,8 +545,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-228 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -557,8 +553,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-228 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -567,8 +561,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-228 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -577,8 +569,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:80rem) {
     .emotion-228 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -683,12 +673,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 @supports (display:grid) {
   .emotion-85 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-85 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -696,8 +686,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-85 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -705,8 +693,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-85 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -714,8 +700,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-85 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -723,8 +707,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-85 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -732,8 +714,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:80rem) {
     .emotion-85 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -899,12 +879,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 @supports (display:grid) {
   .emotion-120 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-120 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -912,8 +892,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-120 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -921,8 +899,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-120 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -930,8 +906,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-120 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -939,8 +913,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-120 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -948,8 +920,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:80rem) {
     .emotion-120 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -1271,12 +1241,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   .emotion-400 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-400 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-gap: 0.5rem;
@@ -1286,8 +1256,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-400 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
       grid-column-gap: 0.5rem;
@@ -1297,8 +1265,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-400 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1308,8 +1274,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-400 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -1318,8 +1282,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-400 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -1328,8 +1290,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:80rem) {
     .emotion-400 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -1405,12 +1365,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 @supports (display:grid) {
   .emotion-280 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-280 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
@@ -1418,8 +1378,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-280 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
@@ -1427,8 +1385,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-280 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -1436,8 +1392,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-280 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(3,1fr);
       grid-column-end: span 3;
     }
@@ -1445,8 +1399,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-280 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -1454,8 +1406,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:80rem) {
     .emotion-280 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -1917,12 +1867,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   .emotion-723 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-723 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1931,8 +1881,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-723 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1941,8 +1889,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-723 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1951,8 +1897,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-723 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -1961,8 +1905,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-723 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -1971,8 +1913,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:80rem) {
     .emotion-723 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -2042,12 +1982,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 @supports (display:grid) {
   .emotion-567 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-567 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2055,8 +1995,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-567 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2064,8 +2002,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-567 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -2073,8 +2009,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-567 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(3,1fr);
       grid-column-end: span 3;
     }
@@ -2082,8 +2016,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-567 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
@@ -2091,8 +2023,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (min-width:80rem) {
     .emotion-567 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
@@ -4705,12 +4635,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   .emotion-113 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-113 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -4719,8 +4649,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-113 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -4729,8 +4657,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-113 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -4739,8 +4665,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-113 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -4749,8 +4673,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-113 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -4759,8 +4681,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:80rem) {
     .emotion-113 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -4865,12 +4785,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 @supports (display:grid) {
   .emotion-401 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-401 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4878,8 +4798,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-401 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4887,8 +4805,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-401 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4896,8 +4812,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-401 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -4905,8 +4819,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-401 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -4914,8 +4826,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:80rem) {
     .emotion-401 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
     }
@@ -5031,12 +4941,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 @supports (display:grid) {
   .emotion-110 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-110 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -5044,8 +4954,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-110 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -5053,8 +4961,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-110 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -5062,8 +4968,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-110 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -5071,8 +4975,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-110 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -5080,8 +4982,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:80rem) {
     .emotion-110 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
@@ -5584,12 +5484,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 @supports (display:grid) {
   .emotion-87 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
 @media (max-width:14.9375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -5597,8 +5497,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -5606,8 +5504,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -5615,8 +5511,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -5624,8 +5518,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -5633,8 +5525,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width:80rem) {
     .emotion-87 {
-      width: initial;
-      margin: 0;
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
@@ -5980,7 +5870,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 <h4
                   class="emotion-32 emotion-33"
                 >
-                  Новости по теме
+                  Читайте также
                 </h4>
                 <div
                   class="emotion-38 emotion-39"
