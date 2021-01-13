@@ -41,10 +41,15 @@ const addBylineBlock = originalJson => {
 
   const bylineBlock = getBylineBlock(json);
   if (bylineBlock) {
-    json.content.model.blocks = insertBlockAfterHeadline(bylineBlock, blocks);
+    if (
+      bylineBlock.model.blocks.name != null ||
+      bylineBlock.model.blocks.title != null
+    ) {
+      json.content.model.blocks = insertBlockAfterHeadline(bylineBlock, blocks);
+      return json;
+    }
   }
-
-  return json;
+  return null;
 };
 
 export default addBylineBlock;
