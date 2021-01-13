@@ -165,6 +165,7 @@ export const service = {
         previousRadioShow: 'ఇంతకు ముందు రేడియో షో',
         nextRadioShow: 'తర్వాత రేడియో షో',
         duration: 'వ్యవధి',
+        recentEpisodes: 'ఇటీవలి ఎపిసోడ్లు',
       },
       socialEmbed: {
         caption: {
