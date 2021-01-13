@@ -5,7 +5,6 @@ export default () => {
         "div[class*='LoadingImageWrapper']",
       );
       expect(loadingImageWrapper).toBeInTheDocument();
-      expect(loadingImageWrapper).toMatchSnapshot();
     });
 
     it('outer iframe has z-index of 1', () => {
@@ -14,7 +13,6 @@ export default () => {
       expect(
         window.getComputedStyle(iframe).getPropertyValue('z-index'),
       ).toEqual('1');
-      expect(iframe).toMatchSnapshot();
     });
   });
 };
