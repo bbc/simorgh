@@ -41,10 +41,7 @@ const addBylineBlock = originalJson => {
 
   const bylineBlock = getBylineBlock(json);
   if (bylineBlock) {
-    if (
-      bylineBlock.model.blocks[0].name !== undefined ||
-      bylineBlock.model.blocks[0].title !== undefined
-    ) {
+    if (bylineBlock.model.blocks[0].name && bylineBlock.model.blocks[0].title) {
       json.content.model.blocks = insertBlockAfterHeadline(bylineBlock, blocks);
     }
   }
