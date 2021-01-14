@@ -38,6 +38,8 @@ const AVPlayer = ({
   skin,
   className,
   hasBottomPadding,
+  showLoadingImage,
+  darkMode,
 }) => {
   const { translations, service } = useContext(ServiceContext);
   const { isAmp, platform } = useContext(RequestContext);
@@ -69,6 +71,8 @@ const AVPlayer = ({
       ) : (
         <CanonicalMediaPlayer
           showPlaceholder={false}
+          showLoadingImage={showLoadingImage}
+          darkMode={darkMode}
           src={embedUrl}
           title={iframeTitle}
           skin={skin}
@@ -114,6 +118,8 @@ AVPlayer.propTypes = {
   className: string,
   skin: string,
   hasBottomPadding: bool,
+  showLoadingImage: bool,
+  darkMode: bool,
 };
 
 AVPlayer.defaultProps = {
@@ -126,4 +132,6 @@ AVPlayer.defaultProps = {
   className: '',
   skin: 'classic',
   hasBottomPadding: true,
+  showLoadingImage: false,
+  darkMode: false,
 };
