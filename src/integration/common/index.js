@@ -6,6 +6,7 @@ import runCoreCanonicalTests from './core.canonical';
 import runFooterTests from './footer';
 import runHeaderTests from './header';
 import runMainHeadingTests from './mainHeading';
+import runMediaPlaceholderTests from './mediaPlaceholder';
 import runMediaPlayerEmbedTests from './mediaPlayerEmbed';
 import runPerformanceTests from './performance';
 import runRadioScheduleTests from './radioSchedule';
@@ -37,6 +38,7 @@ export {
   runFooterTests,
   runHeaderTests,
   runMainHeadingTests,
+  runMediaPlaceholderTests,
   runMediaPlayerEmbedTests,
   runPerformanceTests,
   runRadioScheduleTests,
