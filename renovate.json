@@ -1,0 +1,17 @@
+{
+  "packageRules": [
+    {
+      "packagePatterns": ["*"],
+      "updateTypes": ["minor", "patch"],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "schedule": ["hourly"]
+    },
+    {
+      "packagePatterns": ["^@psammead/"],
+      "updateTypes": ["minor", "patch"],
+      "groupName": "psammead",
+      "schedule": ["hourly"]
+    }
+  ]
+}
