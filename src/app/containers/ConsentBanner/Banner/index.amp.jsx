@@ -32,9 +32,24 @@ const AmpConsentBannerContainer = ({
 
   return type === 'cookie' ? (
     <AmpCookieBanner
+      dir={dir}
       id={promptId}
-      hidden={hidden}
       title={consentBannerConfig.title}
+      text={BannerText(consentBannerConfig.description)}
+      accept={Accept(
+        consentBannerConfig.accept,
+        acceptAction,
+        dataAttribute('accept'),
+      )}
+      reject={Reject(
+        consentBannerConfig.reject,
+        consentBannerConfig.rejectUrl,
+        rejectAction,
+        dataAttribute('reject'),
+      )}
+      hidden={hidden}
+      script={script}
+      service={service}
     />
   ) : (
     <ConsentBanner
