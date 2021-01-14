@@ -2,13 +2,20 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { bool, string } from 'prop-types';
+import { bool, string, element, oneOf, shape } from 'prop-types';
+import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 
-const AMP_BIND_STYLES = `
-  .foo {}
-`;
-
-const AmpCookieBanner = ({ id, hidden, title }) => {
+const AmpCookieBanner = ({
+  dir,
+  id,
+  title,
+  text,
+  accept,
+  reject,
+  hidden,
+  script,
+  service,
+}) => {
   return (
     <div id={id} hidden={hidden}>
       <Helmet>
@@ -17,34 +24,51 @@ const AmpCookieBanner = ({ id, hidden, title }) => {
           custom-element="amp-bind"
           src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
         />
-        <style type="text/css">{AMP_BIND_STYLES}</style>
       </Helmet>
-      <amp-state id="consentBanner">
-        <script
-          type="application/json"
-          dangerouslySetInnerHTML={{
-            __html: `
-                {
-                  "isManagingSettings": true
-                }
-              `,
-          }}
-        />
-      </amp-state>
-      <div>
-        <h2>{title}</h2>
+      <div dir={dir}>
+        <div data-amp-bind-hidden="isManagingSettings">
+          <h2>{title}</h2>
+          {text}
+          <ul>
+            <li>{accept}</li>
+            <li>
+              <button
+                type="button"
+                on="tap:AMP.setState({ isManagingSettings: true })"
+              >
+                Manage my settings
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div hidden data-amp-bind-hidden="!isManagingSettings">
+          <h2>{title}</h2>
+          {text}
+          <ul>
+            <li>{accept}</li>
+            <li>{reject}</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
 };
 
 AmpCookieBanner.propTypes = {
-  id: string.isRequired,
-  hidden: bool,
+  dir: oneOf(['ltr', 'rtl']),
   title: string.isRequired,
+  text: element.isRequired,
+  accept: element.isRequired,
+  reject: element.isRequired,
+  id: string,
+  hidden: bool,
+  script: shape(scriptPropType).isRequired,
+  service: string.isRequired,
 };
 
 AmpCookieBanner.defaultProps = {
+  dir: 'ltr',
+  id: null,
   hidden: null,
 };
 
