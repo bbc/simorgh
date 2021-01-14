@@ -69,6 +69,8 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
         .filter(Boolean)
         .join('/'),
     );
+  const ulProps = { 'data-e2e': 'recent-episodes-list' };
+  const liProps = { 'data-e2e': 'recent-episodes-list-item' };
 
   return (
     <aside role="complimentary" aria-labelledby="recent-episodes">
@@ -81,7 +83,14 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
       >
         {recentEpisodesTranslation}
       </StyledSectionLabel>
-      <EpisodeList script={script} service={service} dir={dir} darkMode>
+      <EpisodeList
+        script={script}
+        service={service}
+        dir={dir}
+        darkMode
+        ulProps={ulProps}
+        liProps={liProps}
+      >
         {episodes.map(episode => (
           <EpisodeList.Episode key={episode.id} dir={dir}>
             <EpisodeList.Image
