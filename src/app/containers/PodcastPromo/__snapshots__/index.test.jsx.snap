@@ -77,10 +77,14 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 .emotion-8 {
-  -webkit-flex: 0 0 5.5rem;
-  -ms-flex: 0 0 5.5rem;
-  flex: 0 0 5.5rem;
   margin: 0.5rem 0 0 0.5rem;
+  display: none;
+}
+
+@media (min-width:20rem) {
+  .emotion-8 {
+    display: unset;
+  }
 }
 
 @media (min-width:25rem) {
