@@ -9,6 +9,7 @@ import runMainHeadingTests from './mainHeading';
 import runMediaPlayerEmbedTests from './mediaPlayerEmbed';
 import runPerformanceTests from './performance';
 import runRadioScheduleTests from './radioSchedule';
+import runRecentEpisodesTests from './recentEpisodes';
 import runCrossPlatformSEOTests from './SEO';
 import runSeoAmpTests from './SEO.amp';
 import runTimestampTests from './timestamp';
@@ -39,6 +40,7 @@ export {
   runMediaPlayerEmbedTests,
   runPerformanceTests,
   runRadioScheduleTests,
+  runRecentEpisodesTests,
   runCrossPlatformSEOTests,
   runSeoAmpTests,
   runTimestampTests,

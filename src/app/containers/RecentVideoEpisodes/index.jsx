@@ -87,9 +87,9 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
         script={script}
         service={service}
         dir={dir}
+        darkMode
         ulProps={ulProps}
         liProps={liProps}
-        darkMode
       >
         {episodes.map(episode => (
           <EpisodeList.Episode key={episode.id} dir={dir}>
