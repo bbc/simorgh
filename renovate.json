@@ -4,14 +4,12 @@
       "packagePatterns": ["*"],
       "updateTypes": ["minor", "patch"],
       "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch",
-      "schedule": ["every weekend"]
+      "groupSlug": "all-minor-patch"
     },
     {
       "packagePatterns": ["^@psammead/"],
       "updateTypes": ["minor", "patch"],
-      "groupName": "psammead",
-      "schedule": ["before 2am"]
+      "groupName": "psammead"
     }
   ]
 }
