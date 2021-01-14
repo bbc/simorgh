@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { bool, string } from 'prop-types';
 import { ConsentBanner } from '@bbc/psammead-consent-banner';
+import AmpCookieBanner from './cookie.amp';
 import { ServiceContext } from '#contexts/ServiceContext';
 import BannerText from './Text';
 import getDataAttribute from './getDataAttribute';
@@ -29,7 +30,13 @@ const AmpConsentBannerContainer = ({
 
   const dataAttribute = getDataAttribute(type);
 
-  return (
+  return type === 'cookie' ? (
+    <AmpCookieBanner
+      id={promptId}
+      hidden={hidden}
+      title={consentBannerConfig.title}
+    />
+  ) : (
     <ConsentBanner
       dir={dir}
       id={promptId}
