@@ -44,7 +44,7 @@
     "test:linkey:cleanup": "find src/app/lib/config/services -type f -name '*.test.js' -delete",
     "updateMinorPatch": "rm -rf node_modules/ && npm install && npm update && npm install",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
-    "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --env.config='server'"
+    "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --watch --env.config='server'"
   },
   "husky": {
     "hooks": {
