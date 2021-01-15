@@ -1,0 +1,19 @@
+{
+  "extends": ["config:base"],
+  "enabledManagers": ["npm"],
+  "packageRules": [
+    {
+      "packagePatterns": ["*"],
+      "excludePackagePatterns": ["^@bbc"],
+      "updateTypes": ["minor", "patch"],
+      "groupName": "all 3rd party non-major dependencies",
+      "groupSlug": "all-minor-patch"
+    },
+    {
+      "packagePatterns": ["^@bbc"],
+      "groupName": "all BBC non-major dependencies",
+      "updateTypes": ["minor", "patch"],
+      "groupSlug": "psammead-minor-patch"
+    }
+  ]
+}
