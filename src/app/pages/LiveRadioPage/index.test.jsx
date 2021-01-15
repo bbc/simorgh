@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { render, act } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import LiveRadioPage from './LiveRadioPage';
@@ -12,12 +12,7 @@ import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
-const Page = ({
-  pageData,
-  service = 'afrique',
-  lang = 'fr',
-  isAmp = false,
-}) => (
+const Page = ({ pageData, service, lang, isAmp = false }) => (
   <BrowserRouter>
     <ToggleContextProvider>
       <ServiceContextProvider service={service} lang={lang}>
@@ -36,16 +31,6 @@ const Page = ({
   </BrowserRouter>
 );
 
-const renderPage = async ({ pageData, service, isAmp = false }) => {
-  let result;
-  await act(async () => {
-    result = await render(
-      <Page pageData={pageData} service={service} isAmp={isAmp} />,
-    );
-  });
-
-  return result;
-};
 analyticsUtils.getAtUserId = jest.fn();
 
 jest.mock('../../containers/ChartbeatAnalytics', () => {
@@ -54,37 +39,62 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
 });
 
 describe('Radio Page Main', () => {
-  it('should match snapshot for Canonical', async () => {
-    fetch.mockResponse(JSON.stringify(afriquePageData));
-    const { container } = render(<Page pageData={afriquePageData} />);
+  it('should match snapshot for Canonical', () => {
+    const { container } = render(
+      <Page
+        pageData={afriquePageData}
+        service="afrique"
+        lang="fr"
+        isAmp={false}
+      />,
+    );
 
     expect(container).toMatchSnapshot();
   });
 
-  it('should match snapshot for AMP', async () => {
-    const { container } = render(<Page pageData={afriquePageData} isAmp />);
+  it('should match snapshot for AMP', () => {
+    const { container } = render(
+      <Page pageData={afriquePageData} service="afrique" lang="fr" isAmp />,
+    );
 
     expect(container).toMatchSnapshot();
   });
 
-  it('should show the title for the Live Radio page', async () => {
-    const { getByText } = await renderPage({
-      pageData: afriquePageData,
-    });
+  it('should show the title for the Live Radio page', () => {
+    const { getByText } = render(
+      <Page
+        pageData={afriquePageData}
+        service="afrique"
+        lang="fr"
+        isAmp={false}
+      />,
+    );
 
     expect(getByText('BBC Afrique Radio')).toBeInTheDocument();
   });
 
-  it('should show the summary for the Live Radio page', async () => {
-    const { getByText } = await renderPage({
-      pageData: afriquePageData,
-    });
+  it('should show the summary for the Live Radio page', () => {
+    const { getByText } = render(
+      <Page
+        pageData={afriquePageData}
+        service="afrique"
+        lang="fr"
+        isAmp={false}
+      />,
+    );
 
     expect(getByText('Infos, musique et sports')).toBeInTheDocument();
   });
 
-  it('should show the audio player on canonical', async () => {
-    const { container } = await renderPage({ pageData: afriquePageData });
+  it('should show the audio player on canonical', () => {
+    const { container } = render(
+      <Page
+        pageData={afriquePageData}
+        service="afrique"
+        lang="fr"
+        isAmp={false}
+      />,
+    );
     const audioPlayerIframeSrc = container
       .querySelector('iframe')
       .getAttribute('src');
@@ -94,11 +104,10 @@ describe('Radio Page Main', () => {
     );
   });
 
-  it('should show the audio player on AMP', async () => {
-    const { container } = await renderPage({
-      pageData: afriquePageData,
-      isAmp: true,
-    });
+  it('should show the audio player on AMP', () => {
+    const { container } = render(
+      <Page pageData={afriquePageData} service="afrique" lang="fr" isAmp />,
+    );
     const audioPlayerIframeSrc = container
       .querySelector('amp-iframe')
       .getAttribute('src');
@@ -108,12 +117,15 @@ describe('Radio Page Main', () => {
     );
   });
 
-  it('should show the radio schedule for the Live Radio page on canonical', async () => {
-    const { getByText } = await renderPage({
-      pageData: indonesianPageData,
-      service: 'indonesia',
-    });
-
+  it('should show the radio schedule for the Live Radio page on canonical', () => {
+    const { getByText } = render(
+      <Page
+        pageData={indonesianPageData}
+        service="indonesia"
+        lang="id"
+        isAmp={false}
+      />,
+    );
     const radioScheduleTitle = getByText('Siaran radio');
     const scheduleWrapper = document.querySelector(
       '[data-e2e="radio-schedule"]',
@@ -124,28 +136,30 @@ describe('Radio Page Main', () => {
   });
 
   it('should not show the radio schedule for the Live Radio page on AMP', async () => {
-    renderPage({
-      pageData: indonesianPageData,
-      service: 'indonesia',
-      lang: 'id',
-      isAmp: true,
-    });
+    const { container } = render(
+      <Page
+        pageData={indonesianPageData}
+        service="indonesia"
+        lang="id"
+        isAmp
+      />,
+    );
 
-    const scheduleWrapper = document.querySelector(
+    const scheduleWrapper = container.querySelector(
       '[data-e2e="radio-schedule"]',
     );
 
-    expect(scheduleWrapper).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(scheduleWrapper).not.toBeInTheDocument();
+    });
   });
 
   it('should not show the radio schedule for services without a schedule', async () => {
-    renderPage({
-      pageData: gahuzaPageData,
-      service: 'gahuza',
-      lang: 'rw',
-    });
+    const { container } = render(
+      <Page pageData={gahuzaPageData} service="gahuza" lang="rw" isAmp />,
+    );
 
-    const scheduleWrapper = document.querySelector(
+    const scheduleWrapper = container.querySelector(
       '[data-e2e="radio-schedule"]',
     );
 
