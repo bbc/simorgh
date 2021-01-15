@@ -1,9 +1,21 @@
 /* eslint-disable react/no-danger */
-
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { bool, string, element, oneOf, shape } from 'prop-types';
+import styled from '@emotion/styled';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { C_CONSENT_BACKGROUND } from '@bbc/psammead-styles/colours';
+import { getGreatPrimer } from '@bbc/gel-foundations/typography';
+import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+
+const Wrapper = styled.div`
+  ${({ service }) => getSansRegular(service)}
+  background-color: ${C_CONSENT_BACKGROUND};
+`;
+
+const Title = styled.h2`
+  ${({ script }) => script && getGreatPrimer(script)}
+`;
 
 const AmpCookieBanner = ({
   dir,
@@ -25,9 +37,9 @@ const AmpCookieBanner = ({
           src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
         />
       </Helmet>
-      <div dir={dir}>
+      <Wrapper dir={dir} service={service}>
         <div data-amp-bind-hidden="isManagingSettings">
-          <h2>{title}</h2>
+          <Title script={script}>{title}</Title>
           {text}
           <ul>
             <li>{accept}</li>
@@ -42,14 +54,14 @@ const AmpCookieBanner = ({
           </ul>
         </div>
         <div hidden data-amp-bind-hidden="!isManagingSettings">
-          <h2>{title}</h2>
+          <Title script={script}>{title}</Title>
           {text}
           <ul>
             <li>{accept}</li>
             <li>{reject}</li>
           </ul>
         </div>
-      </div>
+      </Wrapper>
     </div>
   );
 };
