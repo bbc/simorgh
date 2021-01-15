@@ -6,12 +6,6 @@
       "groupName": "Psammead monorepo packages",
       "updateTypes": ["minor", "patch"],
       "groupSlug": "psammead-minor-patch"
-    },
-    {
-      "packagePatterns": ["*"],
-      "updateTypes": ["minor", "patch"],
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch"
     }
   ]
 }
