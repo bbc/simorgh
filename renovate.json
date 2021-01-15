@@ -2,7 +2,7 @@
   "extends": ["config:base"],
   "packageRules": [
     {
-      "packagePatterns": ["^@bbc/psammead/"],
+      "packagePatterns": ["^\@bbc\/psammead"],
       "updateTypes": ["minor", "patch"],
       "groupName": "psammead"
     },
