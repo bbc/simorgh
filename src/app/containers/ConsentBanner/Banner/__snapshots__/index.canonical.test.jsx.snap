@@ -6,7 +6,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 20;
+  z-index: 2147483647;
 }
 
 .emotion-12 {
@@ -253,7 +253,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 20;
+  z-index: 2147483647;
 }
 
 .emotion-10 {
@@ -500,7 +500,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 20;
+  z-index: 2147483647;
 }
 
 .emotion-12 {
@@ -739,7 +739,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 20;
+  z-index: 2147483647;
 }
 
 .emotion-10 {
