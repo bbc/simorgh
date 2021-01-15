@@ -44,7 +44,6 @@ const ImageWithPlaceholder = ({
   );
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
-
   const shouldPreload = !isAmp && preload && preloadLeadImageToggle;
 
   return (
