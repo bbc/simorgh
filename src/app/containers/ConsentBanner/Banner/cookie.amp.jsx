@@ -7,10 +7,21 @@ import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { C_CONSENT_BACKGROUND, C_WHITE } from '@bbc/psammead-styles/colours';
 import { getGreatPrimer } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_MARGIN_BELOW_400PX,
+  GEL_MARGIN_ABOVE_400PX,
+  GEL_SPACING_DBL,
+} from '@bbc/gel-foundations/spacings';
 
 const Wrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
   background-color: ${C_CONSENT_BACKGROUND};
+  padding: ${GEL_SPACING_DBL} ${GEL_MARGIN_BELOW_400PX};
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    padding: ${GEL_MARGIN_ABOVE_400PX};
+  }
 `;
 
 const Title = styled.h2`
