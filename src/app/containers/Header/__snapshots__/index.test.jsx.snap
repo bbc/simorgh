@@ -302,7 +302,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #eab3b3;
+    border-bottom: 0.0625rem solid #EAB3B3;
     z-index: -1;
   }
 }
@@ -1311,7 +1311,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #eab3b3;
+    border-bottom: 0.0625rem solid #EAB3B3;
     z-index: -1;
   }
 }
@@ -2306,7 +2306,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #eab3b3;
+    border-bottom: 0.0625rem solid #EAB3B3;
     z-index: -1;
   }
 }
