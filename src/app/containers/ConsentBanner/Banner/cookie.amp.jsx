@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { bool, string, element, oneOf, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import { C_CONSENT_BACKGROUND } from '@bbc/psammead-styles/colours';
+import { C_CONSENT_BACKGROUND, C_WHITE } from '@bbc/psammead-styles/colours';
 import { getGreatPrimer } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 
@@ -15,6 +15,9 @@ const Wrapper = styled.div`
 
 const Title = styled.h2`
   ${({ script }) => script && getGreatPrimer(script)}
+  color: ${C_WHITE};
+  margin-top: 0;
+  margin-bottom: 0;
 `;
 
 const AmpCookieBanner = ({
