@@ -440,7 +440,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 20;
+  z-index: 2147483647;
 }
 
 .emotion-12 {
@@ -1449,7 +1449,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 20;
+  z-index: 2147483647;
 }
 
 .emotion-12 {
@@ -2444,7 +2444,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 20;
+  z-index: 2147483647;
 }
 
 .emotion-12 {
