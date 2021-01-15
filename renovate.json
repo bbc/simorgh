@@ -2,9 +2,10 @@
   "extends": ["config:base"],
   "packageRules": [
     {
-      "packagePatterns": [".*psammead.*"],
+      "sourceUrlPrefixes": ["https://github.com/bbc/psammead"],
+      "groupName": "Psammead monorepo packages"
       "updateTypes": ["minor", "patch"],
-      "groupName": "psammead"
+      "groupSlug": "psammead-minor-patch"
     },
     {
       "packagePatterns": ["*"],
