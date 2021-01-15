@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { imageModelPropTypes } from '#models/propTypes/image';
 import ArticleFigure from '../ArticleFigure';
@@ -10,8 +10,6 @@ import {
 import { createSrcset } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import urlWithPageAnchor from '#lib/utilities/pageAnchor';
-import { RequestContext } from '#contexts/RequestContext';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const DEFAULT_IMAGE_RES = 640;
 const LAZYLOAD_FROM_BLOCK = 3;
@@ -29,8 +27,7 @@ const getCopyright = copyrightHolder => {
 const shouldLazyLoad = position =>
   !!urlWithPageAnchor() || position[0] > LAZYLOAD_FROM_BLOCK;
 
-const ImageContainer = ({ blocks, position }) => {
-  const { pageType } = useContext(RequestContext);
+const ImageContainer = ({ blocks, position, shouldPreload }) => {
   if (!blocks) {
     return null;
   }
@@ -38,7 +35,7 @@ const ImageContainer = ({ blocks, position }) => {
   const rawImageBlock = filterForBlockType(blocks, 'rawImage');
   const altTextBlock = filterForBlockType(blocks, 'altText');
   const captionBlock = filterForBlockType(blocks, 'caption');
-  const ShouldPreLoadLeadImage = position[0] <= 4 && pageType === STORY_PAGE;
+  const ShouldPreLoadLeadImage = position[0] <= 4 && shouldPreload;
 
   if (!rawImageBlock || !altTextBlock) {
     return null;

@@ -22,7 +22,7 @@ import LinkedData from '#containers/LinkedData';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/CpsText';
-import image from '#containers/Image';
+import Image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
@@ -63,6 +63,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     serviceLang,
     lang,
   } = useContext(ServiceContext);
+  const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const category = path(
@@ -163,7 +164,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     headline: headings,
     subheadline: headings,
     text,
-    image,
+    image: props => <Image {...props} shouldPreload={preloadLeadImageToggle} />,
     timestamp: props =>
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
