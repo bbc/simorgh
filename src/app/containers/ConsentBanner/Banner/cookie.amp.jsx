@@ -5,7 +5,7 @@ import { bool, string, element, oneOf, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { C_CONSENT_BACKGROUND, C_WHITE } from '@bbc/psammead-styles/colours';
-import { getGreatPrimer } from '@bbc/gel-foundations/typography';
+import { getGreatPrimer, getLongPrimer } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import {
@@ -25,10 +25,20 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h2`
-  ${({ script }) => script && getGreatPrimer(script)}
+  ${({ script }) => getGreatPrimer(script)}
   color: ${C_WHITE};
   margin-top: 0;
   margin-bottom: 0;
+`;
+
+const OptionsList = styled.ul`
+  ${({ script }) => getLongPrimer(script)}
+`;
+
+const OptionsItem = styled.li`
+  button {
+    ${({ script }) => getGreatPrimer(script)}
+  }
 `;
 
 const AmpCookieBanner = ({
@@ -55,25 +65,25 @@ const AmpCookieBanner = ({
         <div data-amp-bind-hidden="isManagingSettings">
           <Title script={script}>{title}</Title>
           {text}
-          <ul>
-            <li>{accept}</li>
-            <li>
+          <OptionsList script={script}>
+            <OptionsItem script={script}>{accept}</OptionsItem>
+            <OptionsItem script={script}>
               <button
                 type="button"
                 on="tap:AMP.setState({ isManagingSettings: true })"
               >
                 Manage my settings
               </button>
-            </li>
-          </ul>
+            </OptionsItem>
+          </OptionsList>
         </div>
         <div hidden data-amp-bind-hidden="!isManagingSettings">
           <Title script={script}>{title}</Title>
           {text}
-          <ul>
-            <li>{accept}</li>
-            <li>{reject}</li>
-          </ul>
+          <OptionsList script={script}>
+            <OptionsItem script={script}>{accept}</OptionsItem>
+            <OptionsItem script={script}>{reject}</OptionsItem>
+          </OptionsList>
         </div>
       </Wrapper>
     </div>
