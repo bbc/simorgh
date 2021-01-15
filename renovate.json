@@ -1,6 +1,18 @@
 {
-  "extends": ["config:base", "group:allNonMajor"],
+  "extends": ["config:base"],
   "packageRules": [
+    {
+      "packagePatterns": [
+        "*"
+      ],
+      "excludePackagePatterns": ["^@bbc"],
+      "updateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch"
+    },
     {
       "sourceUrlPrefixes": ["https://github.com/bbc/psammead"],
       "groupName": "Psammead monorepo packages",
