@@ -7,15 +7,16 @@ import BannerText from './Text';
 import getDataAttribute from './getDataAttribute';
 
 // Styles to pin the consent banner to the bottom of the view port
-// The z-index ensures the banner is always at the front, the value of 20
-// was chosen to be higher than other absolute positioned elements such as
-// the SkipLink component: https://github.com/bbc/psammead/blob/latest/packages/components/psammead-social-embed/src/SkipLinkWrapper/index.jsx#L34
+// The z-index ensures the banner is always at the front, the value
+// being the max value for an integer, this avoiding issues where includes
+// use high z-indexes, showing in front of the consent banner:
+// https://github.com/bbc/simorgh/issues/8720
 const ConsentBannerWrapper = styled.div`
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 20;
+  z-index: 2147483647;
 `;
 
 const Accept = (message, onClick, dataAttribute) => {
