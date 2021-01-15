@@ -3,7 +3,7 @@
   "packageRules": [
     {
       "sourceUrlPrefixes": ["https://github.com/bbc/psammead"],
-      "groupName": "Psammead monorepo packages"
+      "groupName": "Psammead monorepo packages",
       "updateTypes": ["minor", "patch"],
       "groupSlug": "psammead-minor-patch"
     },
