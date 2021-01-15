@@ -1,5 +1,5 @@
 {
-  "extends": ["config:base"],
+  "extends": ["config:base", "group:allNonMajor"],
   "packageRules": [
     {
       "sourceUrlPrefixes": ["https://github.com/bbc/psammead"],
