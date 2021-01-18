@@ -644,7 +644,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 20;
+  z-index: 2147483647;
 }
 
 .emotion-12 {
