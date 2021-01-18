@@ -158,7 +158,7 @@
     "@babel/runtime": "7.12.5",
     "@bbc/apache2-license-checker": "1.1.4",
     "@bbc/psammead-storybook-helpers": "9.0.6",
-    "@bbc/psammead-test-helpers": "5.0.2",
+    "@bbc/psammead-test-helpers": "6.0.0",
     "@loadable/babel-plugin": "5.12.0",
     "@loadable/webpack-plugin": "5.14.0",
     "@storybook/addon-knobs": "6.1.11",
