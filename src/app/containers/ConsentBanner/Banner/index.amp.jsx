@@ -35,7 +35,7 @@ const AmpConsentBannerContainer = ({
       dir={dir}
       id={promptId}
       title={consentBannerConfig.title}
-      text={BannerText(consentBannerConfig.description)}
+      text={BannerText(consentBannerConfig.description.amp)}
       accept={Accept(
         consentBannerConfig.accept,
         acceptAction,
