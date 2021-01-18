@@ -46,7 +46,7 @@ const CanonicalConsentBannerContainer = ({ type, onReject, onAccept }) => {
       <ConsentBanner
         dir={dir}
         title={consentBannerConfig.title}
-        text={BannerText(consentBannerConfig.description)}
+        text={BannerText(consentBannerConfig.description.canonical)}
         accept={Accept(
           consentBannerConfig.accept,
           onAccept,
