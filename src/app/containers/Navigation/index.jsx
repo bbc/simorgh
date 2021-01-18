@@ -14,6 +14,9 @@ const renderListItems = (
   service,
   dir,
   activeIndex,
+  brandForegroundColour,
+  brandHighlightColour,
+  brandBorderColour,
 ) =>
   navigation.map((item, index) => {
     const { title, url } = item;
@@ -28,6 +31,9 @@ const renderListItems = (
         currentPageText={currentPage}
         service={service}
         dir={dir}
+        brandForegroundColour={brandForegroundColour}
+        brandHighlightColour={brandHighlightColour}
+        brandBorderColour={brandBorderColour}
       >
         {title}
       </Li>
@@ -37,9 +43,21 @@ const renderListItems = (
 const NavigationContainer = () => {
   const { isAmp } = useContext(RequestContext);
 
-  const { script, translations, navigation, service, dir } = useContext(
-    ServiceContext,
-  );
+  const {
+    script,
+    translations,
+    navigation,
+    service,
+    dir,
+    theming,
+  } = useContext(ServiceContext);
+
+  const {
+    brandBackgroundColour,
+    brandForegroundColour,
+    brandHighlightColour,
+    brandBorderColour,
+  } = theming;
 
   const { canonicalLink, origin } = useContext(RequestContext);
   const { currentPage, navMenuText } = translations;
@@ -62,6 +80,9 @@ const NavigationContainer = () => {
         service,
         dir,
         activeIndex,
+        brandForegroundColour,
+        brandHighlightColour,
+        brandBorderColour,
       )}
     </NavigationUl>
   );
@@ -90,6 +111,10 @@ const NavigationContainer = () => {
       dir={dir}
       script={script}
       service={service}
+      brandBackgroundColour={brandBackgroundColour}
+      brandForegroundColour={brandForegroundColour}
+      brandHighlightColour={brandHighlightColour}
+      brandBorderColour={brandBorderColour}
     />
   );
 };
