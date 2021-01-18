@@ -167,7 +167,7 @@
     "@testing-library/dom": "7.29.2",
     "@testing-library/jest-dom": "5.11.8",
     "@testing-library/react": "11.2.2",
-    "@testing-library/react-hooks": "3.7.0",
+    "@testing-library/react-hooks": "5.0.0",
     "amphtml-validator": "1.0.34",
     "babel-eslint": "10.1.0",
     "babel-jest": "26.6.3",
