@@ -226,7 +226,7 @@
     "stylelint-config-recommended": "3.0.0",
     "supertest": "6.0.1",
     "swagger-cli": "4.0.4",
-    "terser-webpack-plugin": "4.2.3",
+    "terser-webpack-plugin": "5.1.1",
     "timemachine": "0.3.2",
     "wait-on": "5.2.1",
     "webpack": "5.15.0",
