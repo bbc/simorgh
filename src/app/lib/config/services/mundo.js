@@ -139,21 +139,43 @@ export const service = {
         cookie: {
           title: 'Déjanos saber si aceptas las cookies',
           description: {
-            uk: {
-              first: 'Usamos ',
-              linkText: 'cookies',
-              last:
-                ' para ofrecerte la mejor experiencia online. Déjanos saber si aceptas todas estas cookies.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            amp: {
+              uk: {
+                first: 'Usamos ',
+                linkText: 'cookies',
+                last:
+                  ' para ofrecerte la mejor experiencia online. Déjanos saber si aceptas todas estas cookies.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first:
+                  'Nosotros y nuestros socios usamos tecnologías, como las ',
+                linkText: 'cookies',
+                last:
+                  ', y recogemos datos de búsqueda para ofrecerte la mejor experiencia online y personalizar el contenido y la publicidad que se te muestra. Por favor, déjanos saber si estás de acuerdo.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
             },
-            international: {
-              first: 'Nosotros y nuestros socios usamos tecnologías, como las ',
-              linkText: 'cookies',
-              last:
-                ', y recogemos datos de búsqueda para ofrecerte la mejor experiencia online y personalizar el contenido y la publicidad que se te muestra. Por favor, déjanos saber si estás de acuerdo.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            canonical: {
+              uk: {
+                first: 'Usamos ',
+                linkText: 'cookies',
+                last:
+                  ' para ofrecerte la mejor experiencia online. Déjanos saber si aceptas todas estas cookies.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first:
+                  'Nosotros y nuestros socios usamos tecnologías, como las ',
+                linkText: 'cookies',
+                last:
+                  ', y recogemos datos de búsqueda para ofrecerte la mejor experiencia online y personalizar el contenido y la publicidad que se te muestra. Por favor, déjanos saber si estás de acuerdo.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
             },
           },
           accept: 'Sí, estoy de acuerdo',
