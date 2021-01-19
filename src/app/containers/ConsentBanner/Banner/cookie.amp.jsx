@@ -47,6 +47,7 @@ const OptionsList = styled.ul`
 const OptionsItem = styled.li`
   button {
     ${({ script }) => getGreatPrimer(script)}
+    cursor: pointer;
   }
 `;
 
