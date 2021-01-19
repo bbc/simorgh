@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import {
@@ -53,6 +58,9 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
     translations: {
       ads: {
@@ -275,10 +283,6 @@ export const service = {
       {
         title: 'صفحه اول',
         url: '/persian',
-      },
-      {
-        title: 'انتخابات آمریکا',
-        url: '/persian/world-54468359',
       },
       {
         title: 'کرونا',
