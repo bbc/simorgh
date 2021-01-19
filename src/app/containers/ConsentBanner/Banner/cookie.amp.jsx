@@ -7,7 +7,10 @@ import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { C_CONSENT_BACKGROUND, C_WHITE } from '@bbc/psammead-styles/colours';
 import { getGreatPrimer, getLongPrimer } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_5_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
@@ -25,8 +28,11 @@ const Wrapper = styled.div`
 `;
 
 const Page = styled.div`
-  display: flex;
   align-items: flex-start;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
 `;
 
 const Title = styled.h2`
