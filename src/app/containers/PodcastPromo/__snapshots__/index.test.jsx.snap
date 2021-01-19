@@ -275,101 +275,99 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 <div>
-  <div>
-    <section
-      aria-labelledby="podcast-promo"
-      class="emotion-24 emotion-25"
-      role="region"
+  <section
+    aria-labelledby="podcast-promo"
+    class="emotion-24 emotion-25"
+    role="region"
+  >
+    <div
+      class="emotion-4 emotion-5"
+    >
+      <h2
+        class="emotion-2 emotion-3"
+        id="podcast-promo"
+      >
+        <svg
+          aria-hidden="true"
+          class="emotion-0 emotion-1"
+          focusable="false"
+          height="32"
+          viewBox="0 0 32 32"
+          width="32"
+        >
+          <path
+            d="M18.7,31h-5.3l-2.3-10.4C12.3,19.5,14,19,16,19s3.7,0.5,4.9,1.7L18.7,31z M22,8.2c-1.7-1.7-3.9-2.5-6.1-2.5s-4.4,0.9-6,2.5 l1.7,1.7c1.2-1.2,2.7-1.8,4.3-1.8s3.1,0.6,4.3,1.8L22,8.2z M25.5,4.9c-2.6-2.7-6.1-4-9.5-4S9.1,2.3,6.5,4.9l1.7,1.7 c2.1-2.1,4.9-3.2,7.7-3.2c2.8,0,5.6,1.1,7.8,3.2L25.5,4.9z M12.4,14c0,2,1.5,3.6,3.6,3.6c2,0,3.6-1.5,3.6-3.6 c0-2.1-1.5-3.6-3.6-3.6C13.9,10.4,12.4,11.9,12.4,14z"
+          />
+        </svg>
+        Подкаст
+      </h2>
+    </div>
+    <div
+      class="emotion-22 emotion-23"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-8 emotion-9"
       >
-        <h2
-          class="emotion-2 emotion-3"
-          id="podcast-promo"
+        <div
+          class="emotion-6 emotion-7"
+        >
+          <div
+            class="lazyload-wrapper"
+          >
+            <div
+              class="lazyload-placeholder"
+            />
+          </div>
+          <noscript />
+        </div>
+      </div>
+      <div
+        class="emotion-20 emotion-21"
+      >
+        <h3
+          class="emotion-12 emotion-13"
+        >
+          <a
+            class="emotion-10 emotion-11"
+            href="https://www.bbc.com/russian/media-47937790"
+          >
+            <span
+              class="podcast-promo--hover podcast-promo--focus podcast-promo--visited"
+            >
+              Что это было?
+            </span>
+          </a>
+        </h3>
+        <p
+          class="emotion-14 emotion-15"
+        >
+          Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше. Никаких ненужных подробностей и передергиваний - только факты и взвешенная аналитика.
+        </p>
+        <p
+          class="emotion-18 emotion-19"
         >
           <svg
             aria-hidden="true"
-            class="emotion-0 emotion-1"
+            class="emotion-16 emotion-17"
             focusable="false"
             height="32"
             viewBox="0 0 32 32"
             width="32"
           >
+            <polygon
+              points="4 6 11.1 6 26 6 26 28 28 28 28 4 4 4 4 6"
+            />
+            <polygon
+              points="8 0 8 2 30 2 30 24 32 24 32 0 8 0"
+            />
             <path
-              d="M18.7,31h-5.3l-2.3-10.4C12.3,19.5,14,19,16,19s3.7,0.5,4.9,1.7L18.7,31z M22,8.2c-1.7-1.7-3.9-2.5-6.1-2.5s-4.4,0.9-6,2.5 l1.7,1.7c1.2-1.2,2.7-1.8,4.3-1.8s3.1,0.6,4.3,1.8L22,8.2z M25.5,4.9c-2.6-2.7-6.1-4-9.5-4S9.1,2.3,6.5,4.9l1.7,1.7 c2.1-2.1,4.9-3.2,7.7-3.2c2.8,0,5.6,1.1,7.8,3.2L25.5,4.9z M12.4,14c0,2,1.5,3.6,3.6,3.6c2,0,3.6-1.5,3.6-3.6 c0-2.1-1.5-3.6-3.6-3.6C13.9,10.4,12.4,11.9,12.4,14z"
+              d="M0,32H24V8H0ZM4,12H20V28H4Z"
             />
           </svg>
-          Подкаст
-        </h2>
+          эпизоды
+        </p>
       </div>
-      <div
-        class="emotion-22 emotion-23"
-      >
-        <div
-          class="emotion-8 emotion-9"
-        >
-          <div
-            class="emotion-6 emotion-7"
-          >
-            <div
-              class="lazyload-wrapper"
-            >
-              <div
-                class="lazyload-placeholder"
-              />
-            </div>
-            <noscript />
-          </div>
-        </div>
-        <div
-          class="emotion-20 emotion-21"
-        >
-          <h3
-            class="emotion-12 emotion-13"
-          >
-            <a
-              class="emotion-10 emotion-11"
-              href="https://www.bbc.com/russian/media-47937790"
-            >
-              <span
-                class="podcast-promo--hover podcast-promo--focus podcast-promo--visited"
-              >
-                Что это было?
-              </span>
-            </a>
-          </h3>
-          <p
-            class="emotion-14 emotion-15"
-          >
-            Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше. Никаких ненужных подробностей и передергиваний - только факты и взвешенная аналитика.
-          </p>
-          <p
-            class="emotion-18 emotion-19"
-          >
-            <svg
-              aria-hidden="true"
-              class="emotion-16 emotion-17"
-              focusable="false"
-              height="32"
-              viewBox="0 0 32 32"
-              width="32"
-            >
-              <polygon
-                points="4 6 11.1 6 26 6 26 28 28 28 28 4 4 4 4 6"
-              />
-              <polygon
-                points="8 0 8 2 30 2 30 24 32 24 32 0 8 0"
-              />
-              <path
-                d="M0,32H24V8H0ZM4,12H20V28H4Z"
-              />
-            </svg>
-            эпизоды
-          </p>
-        </div>
-      </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </div>
 `;
