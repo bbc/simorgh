@@ -24,6 +24,11 @@ const Wrapper = styled.div`
   }
 `;
 
+const Page = styled.div`
+  display: flex;
+  align-items: flex-start;
+`;
+
 const Title = styled.h2`
   ${({ script }) => getGreatPrimer(script)}
   color: ${C_WHITE};
@@ -63,7 +68,7 @@ const AmpCookieBanner = ({
         />
       </Helmet>
       <Wrapper dir={dir} service={service}>
-        <div data-amp-bind-hidden="isManagingSettings">
+        <Page data-amp-bind-hidden="isManagingSettings">
           <Title script={script}>{title}</Title>
           {text}
           <OptionsList script={script}>
@@ -77,15 +82,15 @@ const AmpCookieBanner = ({
               </button>
             </OptionsItem>
           </OptionsList>
-        </div>
-        <div hidden data-amp-bind-hidden="!isManagingSettings">
+        </Page>
+        <Page hidden data-amp-bind-hidden="!isManagingSettings">
           <Title script={script}>{title}</Title>
           {text}
           <OptionsList script={script}>
             <OptionsItem script={script}>{accept}</OptionsItem>
             <OptionsItem script={script}>{reject}</OptionsItem>
           </OptionsList>
-        </div>
+        </Page>
       </Wrapper>
     </div>
   );
