@@ -1,7 +1,9 @@
 import articleJson from '#data/news/articles/c0000000003o.json';
 import addIdsToBlocks from '.';
 
-jest.mock('uuid', () => () => 'mockId');
+jest.mock('uuid', () => ({
+  v4: () => 'mockId',
+}));
 
 describe('addIdsToBlocks rule', () => {
   it('should recursively add ids to blocks in article data', () => {

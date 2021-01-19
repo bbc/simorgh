@@ -1,5 +1,5 @@
 import React from 'react';
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import ParagraphContainer from '.';
