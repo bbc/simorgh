@@ -33,12 +33,22 @@ jobs:
 
       - name: Chromatic UI Tests
         uses: chromaui/action@v1
-        if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }}
+        if: github.ref != 'refs/heads/latest' && github.event.pull_request.head.repo.full_name == 'bbc/simorgh'
         with:
           token: ${{ secrets.SIMORGH_DEV_STORYBOOK_RELEASE }}
           projectToken: ${{ secrets.CHROMATIC_APP_CODE }}
           buildScriptName: 'build:storybook'
           exitOnceUploaded: true
+
+      - name: Chromatic UI Tests - Latest
+        uses: chromaui/action@v1
+        if: github.ref == 'refs/heads/latest'
+        with:
+          token: ${{ secrets.SIMORGH_DEV_STORYBOOK_RELEASE }}
+          projectToken: ${{ secrets.CHROMATIC_APP_CODE }}
+          buildScriptName: 'build:storybook'
+          exitOnceUploaded: true
+          autoAcceptChanges: true
 
       - name: Apache License Checker
         run: npx apache2-license-checker
