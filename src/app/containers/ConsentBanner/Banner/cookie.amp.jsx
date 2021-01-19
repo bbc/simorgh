@@ -38,6 +38,10 @@ const Title = styled.h2`
 
 const OptionsList = styled.ul`
   ${({ script }) => getLongPrimer(script)}
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 `;
 
 const OptionsItem = styled.li`
