@@ -1,29 +1,27 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
-import { string } from 'prop-types';
 import PodcastPromo from '@bbc/psammead-podcast-promo';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
 
-const Promo = ({
-  title,
-  brandTitle,
-  brandDescription,
-  imageSrc,
-  imageAlt,
-  linkHref,
-  linkText,
-}) => {
+const getSrcFromSize = (url, size) => {
+  const src = url.replace('$recipe', `${size}x${size}`);
+  return `${src} ${size}w`;
+};
+
+const getSrcSet = (url, sizes) =>
+  sizes.map(size => getSrcFromSize(url, size)).join(',');
+
+const Promo = () => {
   const { podcastPromo, script, service } = useContext(ServiceContext);
-  const podcastPromoTitle = title || path(['title'], podcastPromo);
-  const podcastBrandTitle = brandTitle || path(['brandTitle'], podcastPromo);
-  const description =
-    brandDescription || path(['brandDescription'], podcastPromo);
-  const img = imageSrc || path(['image', 'src'], podcastPromo);
-  const alt = imageAlt || path(['image', 'alt'], podcastPromo);
-  const url = linkHref || path(['linkLabel', 'href'], podcastPromo);
-  const label = linkText || path(['linkLabel', 'text'], podcastPromo);
+  const podcastPromoTitle = path(['title'], podcastPromo);
+  const podcastBrandTitle = path(['brandTitle'], podcastPromo);
+  const description = path(['brandDescription'], podcastPromo);
+  const img = path(['image', 'src'], podcastPromo);
+  const alt = path(['image', 'alt'], podcastPromo);
+  const url = path(['linkLabel', 'href'], podcastPromo);
+  const label = path(['linkLabel', 'text'], podcastPromo);
 
   const showPromo = [
     podcastBrandTitle,
@@ -37,6 +35,10 @@ const Promo = ({
   if (!showPromo) {
     return null;
   }
+
+  const imgSrc = img.replace('$recipe', '512x512');
+  const srcset = getSrcSet(img, [128, 240, 480]);
+  const sizes = '(min-width: 1008px) 228px, 30vw';
 
   return (
     <div>
@@ -52,7 +54,9 @@ const Promo = ({
         <PodcastPromo.Card>
           <PodcastPromo.Card.ImageWrapper>
             <ImageWithPlaceholder
-              src={img}
+              src={imgSrc}
+              srcset={srcset}
+              sizes={sizes}
               alt={alt}
               height={1}
               width={1}
@@ -79,26 +83,6 @@ const Promo = ({
       </PodcastPromo>
     </div>
   );
-};
-
-Promo.propTypes = {
-  title: string,
-  brandTitle: string,
-  brandDescription: string,
-  imageSrc: string,
-  imageAlt: string,
-  linkHref: string,
-  linkText: string,
-};
-
-Promo.defaultProps = {
-  title: null,
-  brandTitle: null,
-  brandDescription: null,
-  imageSrc: null,
-  imageAlt: null,
-  linkHref: null,
-  linkText: null,
 };
 
 export default Promo;
