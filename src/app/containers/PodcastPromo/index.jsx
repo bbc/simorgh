@@ -41,47 +41,45 @@ const Promo = () => {
   const sizes = '(min-width: 1008px) 228px, 30vw';
 
   return (
-    <div>
-      <PodcastPromo
-        script={script}
-        service={service}
-        role="region"
-        aria-labelledby="podcast-promo"
-      >
-        <PodcastPromo.Title id="podcast-promo">
-          {podcastPromoTitle}
-        </PodcastPromo.Title>
-        <PodcastPromo.Card>
-          <PodcastPromo.Card.ImageWrapper>
-            <ImageWithPlaceholder
-              src={imgSrc}
-              srcset={srcset}
-              sizes={sizes}
-              alt={alt}
-              height={1}
-              width={1}
-              ratio={100}
-              lazyLoad
-            />
-          </PodcastPromo.Card.ImageWrapper>
-          <PodcastPromo.Card.Content>
-            <PodcastPromo.Card.Title>
-              <PodcastPromo.Card.Link href={url}>
-                <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
-                  {podcastBrandTitle}
-                </span>
-              </PodcastPromo.Card.Link>
-            </PodcastPromo.Card.Title>
-            <PodcastPromo.Card.Description>
-              {description}
-            </PodcastPromo.Card.Description>
-            <PodcastPromo.Card.EpisodesText>
-              {label}
-            </PodcastPromo.Card.EpisodesText>
-          </PodcastPromo.Card.Content>
-        </PodcastPromo.Card>
-      </PodcastPromo>
-    </div>
+    <PodcastPromo
+      script={script}
+      service={service}
+      role="region"
+      aria-labelledby="podcast-promo"
+    >
+      <PodcastPromo.Title id="podcast-promo">
+        {podcastPromoTitle}
+      </PodcastPromo.Title>
+      <PodcastPromo.Card>
+        <PodcastPromo.Card.ImageWrapper>
+          <ImageWithPlaceholder
+            src={imgSrc}
+            srcset={srcset}
+            sizes={sizes}
+            alt={alt}
+            height={1}
+            width={1}
+            ratio={100}
+            lazyLoad
+          />
+        </PodcastPromo.Card.ImageWrapper>
+        <PodcastPromo.Card.Content>
+          <PodcastPromo.Card.Title>
+            <PodcastPromo.Card.Link href={url}>
+              <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
+                {podcastBrandTitle}
+              </span>
+            </PodcastPromo.Card.Link>
+          </PodcastPromo.Card.Title>
+          <PodcastPromo.Card.Description>
+            {description}
+          </PodcastPromo.Card.Description>
+          <PodcastPromo.Card.EpisodesText>
+            {label}
+          </PodcastPromo.Card.EpisodesText>
+        </PodcastPromo.Card.Content>
+      </PodcastPromo.Card>
+    </PodcastPromo>
   );
 };
 
