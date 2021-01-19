@@ -1,6 +1,6 @@
 import {
   C_SPORT_YELLOW,
-  C_MIDNIGHT,
+  C_MIDNIGHT_BLACK,
   C_SPORT_YELLOW_30,
   C_BLACK,
 } from '@bbc/psammead-styles/colours';
@@ -55,7 +55,7 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_SPORT_YELLOW}`,
       brandLogoColour: `${C_BLACK}`,
-      brandForegroundColour: `${C_MIDNIGHT}`,
+      brandForegroundColour: `${C_MIDNIGHT_BLACK}`,
       brandBorderColour: `${C_SPORT_YELLOW_30}`,
       brandHighlightColour: `${C_BLACK}`,
     },
