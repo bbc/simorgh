@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import {
   latinDiacritics,
   cyrillicAndLatin,
@@ -34,6 +39,9 @@ const baseServiceConfig = {
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
     brandLogoColour: `${C_WHITE}`,
+    brandForegroundColour: `${C_GHOST}`,
+    brandHighlightColour: `${C_WHITE}`,
+    brandBorderColour: `${C_POSTBOX_30}`,
   },
   brandSVG,
   fonts: [],

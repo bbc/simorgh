@@ -52,6 +52,9 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_ARCHIVE_BLUE}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_WHITE}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_WHITE}`,
     },
     translations: {
       ads: {
