@@ -1,5 +1,5 @@
 import Cookie from 'js-cookie';
-import uuid from 'uuid/v4';
+import { v4 as uuid } from 'uuid';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import Url from 'url-parse';
