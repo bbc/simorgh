@@ -47,6 +47,7 @@ const AmpConsentBannerContainer = ({
         rejectAction,
         dataAttribute('reject'),
       )}
+      manage="Manage my settings"
       hidden={hidden}
       script={script}
       service={service}

@@ -48,6 +48,7 @@ const AmpCookieBanner = ({
   text,
   accept,
   reject,
+  manage,
   hidden,
   script,
   service,
@@ -72,7 +73,7 @@ const AmpCookieBanner = ({
                 type="button"
                 on="tap:AMP.setState({ isManagingSettings: true })"
               >
-                Manage my settings
+                {manage}
               </button>
             </OptionsItem>
           </OptionsList>
@@ -96,6 +97,7 @@ AmpCookieBanner.propTypes = {
   text: element.isRequired,
   accept: element.isRequired,
   reject: element.isRequired,
+  manage: string.isRequired,
   id: string,
   hidden: bool,
   script: shape(scriptPropType).isRequired,
