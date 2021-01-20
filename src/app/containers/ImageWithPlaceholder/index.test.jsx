@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import {
   ImageWithPlaceholder,
@@ -23,6 +23,30 @@ describe('ImageWithPlaceholder', () => {
 
     expect(queryByAltText('Pauline Clayton')).not.toBeInTheDocument();
     expect(container.querySelector('noscript')).toBeInTheDocument();
+  });
+
+  it('should add a link tag to the head of the document when shouldPreload is set to true', async () => {
+    render(<ImageWithPlaceholder shouldPreload />);
+
+    await waitFor(() => {
+      expect(document.querySelector('head link')).toBeInTheDocument();
+    });
+  });
+
+  it('should not add a link tag to the head of the document when shouldPreload is set to false', async () => {
+    render(<ImageWithPlaceholder />);
+
+    await waitFor(() => {
+      expect(document.querySelector('head link')).not.toBeInTheDocument();
+    });
+  });
+
+  it('should not add a link tag to the head of the document when rendering an AMP image', async () => {
+    render(<AmpImageWithPlaceholder />);
+
+    await waitFor(() => {
+      expect(document.querySelector('head link')).not.toBeInTheDocument();
+    });
   });
 
   shouldMatchSnapshot(
