@@ -3,7 +3,7 @@ import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ChunkExtractor } from '@loadable/server';
 import { CacheProvider } from '@emotion/react';
-import createEmotionServer from 'create-emotion-server';
+import createEmotionServer from '@emotion/server/create-instance';
 import createCache from '@emotion/cache';
 import { Helmet } from 'react-helmet';
 import { ServerApp } from '#app/containers/App';
