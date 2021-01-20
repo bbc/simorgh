@@ -35,7 +35,8 @@ const ImageContainer = ({ blocks, position, shouldPreload }) => {
   const rawImageBlock = filterForBlockType(blocks, 'rawImage');
   const altTextBlock = filterForBlockType(blocks, 'altText');
   const captionBlock = filterForBlockType(blocks, 'caption');
-  const ShouldPreLoadLeadImage = position[0] <= 4 && shouldPreload;
+  const ShouldPreLoadLeadImage =
+    position[0] < LAZYLOAD_FROM_BLOCK && shouldPreload;
 
   if (!rawImageBlock || !altTextBlock) {
     return null;
