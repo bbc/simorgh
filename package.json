@@ -7,8 +7,6 @@
     "axios": "0.21.1"
   },
   "scripts": {
-    "preci": "rm -rf node_modules",
-    "ci": "npm run preci && yarn install --frozen-lockfile",
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
     "bbcA11y": "wait-on -t 20000 http://localhost:7080/status && bbc-a11y",
     "bbcA11y:ci": "wait-on -t 20000 http://localhost:7080/status && xvfb-run -a bbc-a11y",
@@ -20,6 +18,8 @@
     "build:storybook": "build-storybook -s .storybook/static -c .storybook -o storybook_dist",
     "build:test": "cp envConfig/test.env .env && NODE_ENV=production webpack",
     "build:test:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/test.env > .env && NODE_ENV=production webpack",
+    "checkisyarn": "echo \"$npm_execpath\" | grep -q \"yarn\\.js$\" || (echo '⚠️ Please install dependencies with yarn not npm ⚠️ ' && echo && exit 1)",
+    "ci": "rm -rf node_modules && yarn install --frozen-lockfile",
     "cypress": "cypress run",
     "cypress:interactive": "cypress open",
     "cypress:3rdParty": "npm run cypress -- --project ./3rdPartyCypress/.",
@@ -27,6 +27,7 @@
     "dev": "rm -rf build && cp envConfig/local.env .env && run-p webpack:dev:client webpack:dev:server",
     "lighthouse": "./scripts/lighthouseRun.sh",
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
+    "preinstall": "$npm_execpath --silent run checkisyarn",
     "start": "NODE_ENV=production node build/server.js",
     "stop": "./scripts/killApp.sh",
     "storybook": "start-storybook -p 9001 -s .storybook/static -c .storybook",
