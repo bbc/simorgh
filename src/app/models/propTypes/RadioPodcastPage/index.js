@@ -1,6 +1,6 @@
 import { bool, shape, string, number } from 'prop-types';
 
-export const RadioPodcastPageDataPropTypes = shape({
+export const radioPodcastPageDataPropTypes = shape({
   brandTitle: string,
   headline: string,
   summary: string,
@@ -10,11 +10,11 @@ export const RadioPodcastPageDataPropTypes = shape({
   releaseDateTimeStamp: number,
 });
 
-const onDemandPagePropTypes = {
+const radioPodcastPagePropTypes = {
   isAmp: bool,
-  data: RadioPodcastPageDataPropTypes,
+  data: radioPodcastPageDataPropTypes,
   service: string,
   status: number,
 };
 
-export default onDemandPagePropTypes;
+export default radioPodcastPagePropTypes;
