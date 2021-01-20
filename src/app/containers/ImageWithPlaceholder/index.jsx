@@ -48,7 +48,13 @@ const ImageWithPlaceholder = ({
     <>
       {shouldPreload && (
         <Helmet>
-          <link rel="preload" as="image" href={src} imagesrcset={srcset} />
+          <link
+            rel="preload"
+            as="image"
+            href={src}
+            imagesrcset={srcset}
+            imagesizes={sizes}
+          />
         </Helmet>
       )}
       <ImagePlaceholder css={isLoaded && `background: none`} ratio={ratio}>
