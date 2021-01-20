@@ -160,7 +160,7 @@
     "@bbc/apache2-license-checker": "1.1.4",
     "@bbc/psammead-storybook-helpers": "9.0.6",
     "@bbc/psammead-test-helpers": "6.0.0",
-    "@loadable/babel-plugin": "5.12.0",
+    "@loadable/babel-plugin": "5.13.2",
     "@loadable/webpack-plugin": "5.14.0",
     "@storybook/addon-knobs": "6.1.11",
     "@storybook/react": "6.1.11",
