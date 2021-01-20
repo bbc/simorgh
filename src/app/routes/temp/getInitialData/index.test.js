@@ -21,7 +21,7 @@ describe('Get initial data for podcasts', () => {
       path: 'mock-podcast-path',
       pageType: MEDIA_PAGE,
       toggles: {
-        recentAudioEpisodes: { enabled: false, value: 4 },
+        recentPodcastEpisodes: { enabled: false, value: 4 },
       },
     });
 
@@ -47,7 +47,7 @@ describe('Get initial data for podcasts', () => {
       path: 'mock-podcast-path',
       pageType: MEDIA_PAGE,
       toggles: {
-        recentAudioEpisodes: null,
+        recentPodcastEpisodes: null,
       },
     });
 
@@ -73,7 +73,7 @@ describe('Get initial data for podcasts', () => {
       path: 'mock-podcast-path',
       pageType: MEDIA_PAGE,
       toggles: {
-        recentAudioEpisodes: { enabled: true, value: 4 },
+        recentPodcastEpisodes: { enabled: true, value: 4 },
       },
     });
 
@@ -150,7 +150,7 @@ describe('Get initial data for podcasts', () => {
       path: 'mock-podcast-path',
       pageType: MEDIA_PAGE,
       toggles: {
-        recentAudioEpisodes: { enabled: false, value: 4 },
+        recentPodcastEpisodes: { enabled: false, value: 4 },
       },
     });
 
