@@ -146,6 +146,7 @@ export const mainTranslations = {
     nextRadioShow: 'Следующая передача',
     duration: 'Продолжительность',
     recentEpisodes: 'Прошлые передачи',
+    episodes: 'передачи',
   },
   socialEmbed: {
     caption: {
@@ -232,6 +233,20 @@ export const service = {
       header: 'Самое популярное видео',
       numberOfItems: 10,
       hasMostWatched: true,
+    },
+    podcastPromo: {
+      title: 'Подкаст',
+      brandTitle: 'Что это было?',
+      brandDescription:
+        'Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше. Никаких ненужных подробностей и передергиваний - только факты и взвешенная аналитика.',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/512x512/p0776f5z.jpg',
+        alt: 'Что это было?',
+      },
+      linkLabel: {
+        text: 'эпизоды',
+        href: 'https://www.bbc.com/russian/media-47937790',
+      },
     },
     radioSchedule: {
       hasRadioSchedule: false,

@@ -44,7 +44,7 @@
     "test:linkey:cleanup": "find src/app/lib/config/services -type f -name '*.test.js' -delete",
     "updateMinorPatch": "rm -rf node_modules/ && npm install && npm update && npm install",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
-    "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --env.config='server'"
+    "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --watch --env.config='server'"
   },
   "husky": {
     "hooks": {
@@ -97,6 +97,7 @@
     "@bbc/psammead-most-read": "^6.0.17",
     "@bbc/psammead-navigation": "^9.0.2",
     "@bbc/psammead-paragraph": "^4.0.8",
+    "@bbc/psammead-podcast-promo": "0.1.0-alpha.12",
     "@bbc/psammead-radio-schedule": "^5.1.11",
     "@bbc/psammead-rich-text-transforms": "^2.0.2",
     "@bbc/psammead-script-link": "^3.0.9",
