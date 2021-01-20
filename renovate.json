@@ -4,7 +4,7 @@
   "packageRules": [
     {
       "packagePatterns": ["*"],
-      "excludePackagePatterns": ["^@bbc"],
+      "excludePackagePatterns": ["^@bbc", "^@loadable", "webpack"],
       "updateTypes": ["minor", "patch"],
       "groupName": "all 3rd party non-major dependencies",
       "groupSlug": "all-minor-patch"
