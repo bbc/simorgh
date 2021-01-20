@@ -114,7 +114,7 @@ export default server => {
         service,
         'podcasts',
         brandId,
-        mediaId,
+        mediaId || '',
       );
 
       sendDataFile(res, `${dataFilePath}.json`, next);

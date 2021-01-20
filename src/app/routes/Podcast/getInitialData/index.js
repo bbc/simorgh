@@ -82,6 +82,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
           LOG_LEVELS.INFO,
         ),
         episodeId,
+        brandId: get(['metadata', 'locators', 'brandPid'], LOG_LEVELS.ERROR),
         masterBrand: get(['metadata', 'createdBy'], LOG_LEVELS.ERROR),
         releaseDateTimeStamp: get(
           ['metadata', 'releaseDateTimeStamp'],

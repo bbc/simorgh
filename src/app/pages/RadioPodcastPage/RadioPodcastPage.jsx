@@ -61,6 +61,7 @@ const RadioPodcastPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     thumbnailImageUrl,
     radioScheduleData,
     recentEpisodes,
+    brandId,
   } = pageData;
 
   const { isAmp } = useContext(RequestContext);
@@ -179,6 +180,7 @@ const RadioPodcastPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             <RecentAudioEpisodes
               masterBrand={masterBrand}
               episodes={recentEpisodes}
+              brandId={brandId}
             />
           </Grid>
         </GelPageGrid>
