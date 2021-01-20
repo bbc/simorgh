@@ -1,0 +1,154 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "'Stop using scars or facial disfigurements to portray movie villains'"
+        },
+        "locators": {
+          "assetUri": "/newsround/46430690",
+          "cpsUrn": "urn:bbc:content:assetUri:newsround/46430690",
+          "curie": "http://www.bbc.co.uk/asset/c4df3443-081e-af43-8d5f-c78e5d01f389",
+          "assetId": "46430690"
+        },
+        "summary": "Charity Changing Faces calls for the way villains look in films to change.",
+        "timestamp": 1544423525000,
+        "language": "en-gb",
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "104713142",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/5E43/production/_104713142_de27.jpg",
+          "path": "/cpsprodpb/5E43/production/_104713142_de27.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Changing Faces",
+          "copyrightHolder": "Changing Faces",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "104713143",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/8553/production/_104713143_de27.jpg",
+          "path": "/cpsprodpb/8553/production/_104713143_de27.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Changing Faces",
+          "copyrightHolder": "Changing Faces",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "maximum",
+        "section": {
+          "subType": "IDX",
+          "name": "Newsround",
+          "uri": "/newsround/home",
+          "type": "simple"
+        },
+        "includeComments": true,
+        "id": "urn:bbc:ares::asset:newsround/46430690",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Which player should England be worried about?"
+        },
+        "locators": {
+          "assetUri": "/newsround/44632289",
+          "cpsUrn": "urn:bbc:content:assetUri:newsround/44632289",
+          "curie": "http://www.bbc.co.uk/asset/d0504ab2-b878-bf43-ab5b-58444be9661a",
+          "assetId": "44632289"
+        },
+        "summary": "England play their final group match against Belgium, but which star player should England be worried about?",
+        "timestamp": 1530108737000,
+        "language": "en-gb",
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "102223907",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/11514/production/_102223907_engvbelgium.jpg",
+          "path": "/cpsprodpb/11514/production/_102223907_engvbelgium.jpg",
+          "height": 1080,
+          "width": 1920,
+          "altText": "St Georges Flag and the Belgian flag",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "102223909",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/16334/production/_102223909_engvbelgium.jpg",
+          "path": "/cpsprodpb/16334/production/_102223909_engvbelgium.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "St Georges Flag and the Belgian flag",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "section": {
+          "subType": "IDX",
+          "name": "Newsround",
+          "uri": "/newsround/home",
+          "type": "simple"
+        },
+        "includeComments": true,
+        "id": "urn:bbc:ares::asset:newsround/44632289",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Should smoking be banned by the school gates?"
+        },
+        "locators": {
+          "assetUri": "/newsround/44614625",
+          "cpsUrn": "urn:bbc:content:assetUri:newsround/44614625",
+          "curie": "http://www.bbc.co.uk/asset/268a9f19-db55-384d-9110-b79f6fbc49ed",
+          "assetId": "44614625"
+        },
+        "summary": "A group of school children have had enough of adults smoking near school gates, so they decided to do something about it.",
+        "timestamp": 1530087722000,
+        "language": "en-gb",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "102221325",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/CC58/production/_102221325_gettyimages-629601205.jpg",
+          "path": "/cpsprodpb/CC58/production/_102221325_gettyimages-629601205.jpg",
+          "height": 536,
+          "width": 952,
+          "altText": "Picture of lots of cigarettes in an ashtray",
+          "caption": "Should smoking be banned?",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "section": {
+          "subType": "IDX",
+          "name": "Newsround",
+          "uri": "/newsround/home",
+          "type": "simple"
+        },
+        "includeComments": true,
+        "id": "urn:bbc:ares::asset:newsround/44614625",
+        "type": "cps"
+      }
+    ]
+  }
