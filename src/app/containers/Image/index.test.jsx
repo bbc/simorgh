@@ -86,13 +86,21 @@ describe('Image', () => {
       <ImageContainer {...data} />,
     );
 
-    it('should render a lazyload container instead of an image if the image is after the 3rd block', () => {
+    it('should render a lazyload container and not preload the image if the image is after the 3rd block', () => {
       const { container } = render(<ImageContainer position={[4]} {...data} />);
       const noScriptEl = document.querySelector('noscript');
       const imageEl = document.querySelector('img');
+      const linkPreload = document.querySelector('head link');
+      expect(linkPreload).not.toBeInTheDocument();
       expect(noScriptEl).toBeInTheDocument();
       expect(imageEl).not.toBeInTheDocument();
       expect(container).toMatchSnapshot();
+    });
+
+    it('should preload an image if the image is before the 4th block', () => {
+      render(<ImageContainer position={[3]} {...data} />);
+      const linkPreload = document.querySelector('head link');
+      expect(linkPreload).toBeInTheDocument();
     });
 
     const dataWithNonBbcCopyright = blockArrayModel([
