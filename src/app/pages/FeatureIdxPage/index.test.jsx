@@ -52,12 +52,13 @@ const FeatureIdxPageWithContext = ({
 
 jest.mock('uuid', () => {
   let x = 1;
-  return () => {
-    x += 1;
-    return `mockid-${x}`;
+  return {
+    v4: () => {
+      x += 1;
+      return `mockid-${x}`;
+    },
   };
 });
-
 jest.mock('#containers/ChartbeatAnalytics', () => {
   return () => <div>chartbeat</div>;
 });
