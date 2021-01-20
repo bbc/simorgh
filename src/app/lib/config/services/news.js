@@ -116,7 +116,8 @@ export const service = {
                 first:
                   'On this accelerated mobile page (AMP) we and our partners collect browsing data to provide you with the best online experience and to personalise the advertising shown to you.',
                 linkText: null,
-                last: null,
+                last:
+                  'Some of these technologies are essential to the running of this page, while others such as those for personalised advertising are optional and require your consent. You may be asked to set these preferences again if you visit non-AMP bbc.com pages.',
                 linkUrl: null,
               },
               international: {},
