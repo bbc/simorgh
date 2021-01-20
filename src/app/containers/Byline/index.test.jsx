@@ -41,18 +41,6 @@ describe('Byline', () => {
     }),
   );
 
-  it('should render nothing if name or title are null', () => {
-    render(
-      BylineContainerWithContext({
-        pageType: STORY_PAGE,
-        service: 'pidgin',
-        blocks: [{ name: 'John Smith' }],
-      }),
-    );
-
-    expect(document.querySelector(`div ul li`)).toBeNull();
-  });
-
   it('should render nothing if blocks is null', () => {
     render(
       BylineContainerWithContext({
