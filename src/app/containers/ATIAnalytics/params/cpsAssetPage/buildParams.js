@@ -24,6 +24,9 @@ export const buildCpsAssetPageATIParams = (
   const { metadata, promo } = pageData;
 
   const getChapter1 = pageIdentifier => {
+    if (service === 'news') {
+      return path(['atiAnaytics', 'chapter'], metadata);
+    }
     const chapter = pageIdentifier.split('.')[1];
     if (['media_asset', 'story'].includes(chapter)) {
       return null;
@@ -31,9 +34,17 @@ export const buildCpsAssetPageATIParams = (
     return chapter;
   };
 
+  const getProducer = defaultProducer => {
+    if (service === 'news') {
+      return path(['atiAnaytics', 'producerId'], metadata);
+    }
+    return defaultProducer;
+  };
+
   const page = path(['analyticsLabels', 'counterName'], metadata);
   const isValidPage = page && typeof page === 'string' && page.includes('.');
-  const chapter1 = isValidPage ? getChapter1(page) : false;
+  const chapter1 = isValidPage ? getChapter1(page, service, metadata) : false;
+  const producerId = getProducer(atiAnalyticsProducerId);
   const ldpThingIds = getThingAttributes('thingId', pageData);
   const ldpThingLabels = getThingAttributes('thingEnglishLabel', pageData);
   const isLegacyAsset = url => url.split('/').length > 7;
@@ -55,7 +66,7 @@ export const buildCpsAssetPageATIParams = (
     campaigns: path(['passport', 'campaigns'], metadata),
     ...(ldpThingIds && { ldpThingIds }),
     ...(ldpThingLabels && { ldpThingLabels }),
-    producerId: atiAnalyticsProducerId,
+    producerId,
     libraryVersion: LIBRARY_VERSION,
     statsDestination,
     platform,
