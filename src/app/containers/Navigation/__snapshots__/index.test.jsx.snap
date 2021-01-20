@@ -229,7 +229,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #eab3b3;
+    border-bottom: 0.0625rem solid #EAB3B3;
     z-index: -1;
   }
 }
@@ -944,7 +944,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #eab3b3;
+    border-bottom: 0.0625rem solid #EAB3B3;
     z-index: -1;
   }
 }
@@ -1572,7 +1572,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #eab3b3;
+    border-bottom: 0.0625rem solid #EAB3B3;
     z-index: -1;
   }
 }
@@ -2130,7 +2130,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #eab3b3;
+    border-bottom: 0.0625rem solid #EAB3B3;
     z-index: -1;
   }
 }
@@ -2820,7 +2820,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #eab3b3;
+    border-bottom: 0.0625rem solid #EAB3B3;
     z-index: -1;
   }
 }
@@ -3423,7 +3423,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #eab3b3;
+    border-bottom: 0.0625rem solid #EAB3B3;
     z-index: -1;
   }
 }
