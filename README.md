@@ -163,7 +163,7 @@ Then you can run the following commands to install Simorgh
 ```
 git clone git@github.com:bbc/simorgh.git
 cd simorgh
-npm install
+yarn install
 ```
 
 ## Local Development

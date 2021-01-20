@@ -28,7 +28,7 @@ jobs:
 
       - name: Install & Build Simorgh
         run: |
-          npm ci
+          npm run ci
           npm run build:local
 
       - name: Start Simorgh Server
@@ -45,5 +45,5 @@ jobs:
 
       - name: Run Puppeteer Tests
         run: |
-          npm install --no-save puppeteer
+          yarn add --no-save puppeteer
           npm run test:puppeteer

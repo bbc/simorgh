@@ -19,7 +19,7 @@ if [[ $(pwd) =~ .+simorgh ]]; then
     echo "\nOh no! You're not using our version of npm, please move to version $desired_npm_version in order to reduce bundling inconsistency"
     tput setaf 3
     echo "This can be done by running 'npm i -g npm@$desired_npm_version'"
-    echo "Once you have done this please run 'npm install' again and commit any changes to your package-lock.json\n"
+    echo "Once you have done this please run 'yarn install' again and commit any changes to your package-lock.json\n"
     tput sgr0
     exit 1
   fi

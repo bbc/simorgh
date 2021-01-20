@@ -7,7 +7,8 @@
     "axios": "0.21.1"
   },
   "scripts": {
-    "preinstall": "[ \"$npm_config_refer\" != \"ci\" ] && npx npm-force-resolutions || exit 0",
+    "preci": "rm -rf node_modules",
+    "ci": "npm run preci && yarn install --frozen-lockfile",
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
     "bbcA11y": "wait-on -t 20000 http://localhost:7080/status && bbc-a11y",
     "bbcA11y:ci": "wait-on -t 20000 http://localhost:7080/status && xvfb-run -a bbc-a11y",
@@ -42,7 +43,7 @@
     "test:integration:ci": "JEST_SILENT_REPORTER_DOTS=true npm run test:integration -- --ci --onlyRunTests --reporters=jest-silent-reporter",
     "test:linkey": "node scripts/linkeySetup.js && jest src/app/lib/config/services/*.test.js --verbose true; npm run test:linkey:cleanup",
     "test:linkey:cleanup": "find src/app/lib/config/services -type f -name '*.test.js' -delete",
-    "updateMinorPatch": "rm -rf node_modules/ && npm install && npm update && npm install",
+    "updateMinorPatch": "rm -rf node_modules/ && yarn install && npm update && yarn install",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
     "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --watch --env.config='server'"
   },
