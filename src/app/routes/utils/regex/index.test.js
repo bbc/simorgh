@@ -10,6 +10,7 @@ import {
   frontPageSwPath,
   cpsAssetPagePath,
   cpsAssetPageDataPath,
+  podcastPath,
   liveRadioPath,
   onDemandRadioPath,
   onDemandTvPath,
@@ -236,6 +237,23 @@ describe('liveRadioPath', () => {
     '/blah/bbc_hausa_radio/livetv', // live radio w/ unknown service
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, liveRadioPath);
+});
+
+describe('podcastPath', () => {
+  const validRoutes = [
+    '/arabic/podcasts/432rpk234',
+    '/arabic/podcasts/654joro456/j0r0r0j',
+    '/burmese/podcasts/987ger/ald321.amp',
+    '/burmese/podcasts/657mnayr.amp',
+  ];
+  shouldMatchValidRoutes(validRoutes, podcastPath);
+
+  const invalidRoutes = [
+    '/arabic/bbc_arabic_radio/6865933', // includes masterbrand
+    '/arabic/bbc_arabic_radio/podcasts/6865933', // includes masterbrand
+    '/burmese/98fjf9302/294fjfms', // podcast missing
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, podcastPath);
 });
 
 describe('mostReadDataRegexPath', () => {

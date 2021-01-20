@@ -44,7 +44,7 @@ const StyledGelWrapperGrid = styled(GelPageGrid)`
   }
 `;
 
-const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
+const RadioPodcastPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
     language,
@@ -190,7 +190,7 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   );
 };
 
-OnDemandRadioPage.propTypes = {
+RadioPodcastPage.propTypes = {
   MediaError: func.isRequired,
   mediaIsAvailable: bool.isRequired,
   pageData: shape({
@@ -203,4 +203,4 @@ OnDemandRadioPage.propTypes = {
   }).isRequired,
 };
 
-export default OnDemandRadioPage;
+export default RadioPodcastPage;

@@ -4,6 +4,7 @@ import home from './home';
 import liveRadio from './liveRadio';
 import mostRead from './mostRead';
 import mostWatched from './mostWatched';
+import Podcast from './Podcast';
 import onDemandRadio from './onDemandRadio';
 import onDemandTV from './onDemandTV';
 import idx from './idx';
@@ -16,6 +17,7 @@ export default [
   liveRadio,
   mostRead,
   mostWatched,
+  Podcast,
   onDemandRadio,
   onDemandTV,
   idx,

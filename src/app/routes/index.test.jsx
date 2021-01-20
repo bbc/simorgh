@@ -14,6 +14,7 @@ import routes from './index';
 
 // mock data
 import liveRadioPageJson from '#data/korean/bbc_korean_radio/liveradio.json';
+import podcastPageJson from '#data/arabic/podcasts/p02pc9qc.json';
 import onDemandRadioPageJson from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l.json';
 import onDemandTvPageJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
@@ -37,7 +38,7 @@ jest.mock('#pages/index.js', () => ({
   StoryPage: jest.requireActual('#pages/StoryPage').default,
   OnDemandTvPage: jest.requireActual('#pages/OnDemandTvPage').default,
   PhotoGalleryPage: jest.requireActual('#pages/PhotoGalleryPage').default,
-  OnDemandRadioPage: jest.requireActual('#pages/OnDemandRadioPage').default,
+  RadioPodcastPage: jest.requireActual('#pages/RadioPodcastPage').default,
   MostReadPage: jest.requireActual('#pages/MostReadPage').default,
   MostWatchedPage: jest.requireActual('#pages/MostWatchedPage').default,
   MediaAssetPage: jest.requireActual('#pages/MediaAssetPage').default,
@@ -123,6 +124,33 @@ it('should route to and render live radio page', async () => {
     service: 'korean',
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC 코리아 라디오';
+
+  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+});
+
+it('should route to and render the podcast page', async () => {
+  const pathname = '/arabic/podcasts/p02pc9qc';
+  fetchMock.mock(
+    `http://localhost${pathname}.json?renderer_env=live`,
+    podcastPageJson,
+  );
+
+  const { getInitialData, pageType } = getMatchingRoute(pathname);
+  const { pageData } = await getInitialData({
+    path: pathname,
+    pageType,
+    toggles: {
+      recentAudioEpisodes: { enabled: false, value: 4 },
+    },
+  });
+  const { getByText } = renderRouter({
+    pathname,
+    pageData,
+    pageType,
+    service: 'arabic',
+  });
+
+  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC Xtra';
 
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
@@ -221,7 +249,7 @@ it('should route to and render a front page', async () => {
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
 
-it('should route to and render a skeleton most watched page', async () => {
+it('should route to and render a most watched page', async () => {
   process.env.SIMORGH_APP_ENV = 'local';
   const pathname = '/pidgin/media/video';
   fetchMock.mock('http://localhost/pidgin/mostwatched.json', mostWatchedData);

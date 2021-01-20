@@ -15,6 +15,7 @@ import {
   secondaryColumnDataRegexPath,
   africaEyeTVDataPath,
   liveRadioDataPath,
+  podcastDataPath,
 } from '#app/routes/utils/regex';
 import { LOCAL_SENDFILE_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
@@ -103,6 +104,20 @@ export default server => {
       });
 
       sendDataFile(res, dataFilePath, next);
+    })
+    .get(podcastDataPath, async ({ params }, res, next) => {
+      const { service, brandId, mediaId } = params;
+
+      const dataFilePath = path.join(
+        process.cwd(),
+        'data',
+        service,
+        'podcasts',
+        brandId,
+        mediaId,
+      );
+
+      sendDataFile(res, `${dataFilePath}.json`, next);
     })
     .get(onDemandRadioDataPath, async ({ params }, res, next) => {
       const { service, serviceId, mediaId } = params;

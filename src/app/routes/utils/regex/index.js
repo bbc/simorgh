@@ -8,6 +8,7 @@ import {
   getManifestRegex,
   getCpsAssetRegex,
   getLiveRadioRegex,
+  getPodcastRegex,
   getOnDemandRadioRegex,
   getOnDemandTvRegex,
   getErrorPageRegex,
@@ -44,6 +45,9 @@ export const liveRadioDataPath = `${liveRadioPath}.json`;
 
 export const onDemandRadioPath = getOnDemandRadioRegex(allServices);
 export const onDemandRadioDataPath = `${onDemandRadioPath}.json`;
+
+export const podcastPath = getPodcastRegex(allServices);
+export const podcastDataPath = `${podcastPath}.json`;
 
 export const onDemandTvPath = getOnDemandTvRegex(allServices);
 export const onDemandTvDataPath = `${onDemandTvPath}.json`;
