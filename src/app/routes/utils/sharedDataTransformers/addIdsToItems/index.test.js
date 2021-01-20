@@ -1,6 +1,8 @@
 import addIdsToItems from '.';
 
-jest.mock('uuid', () => () => 'mockId');
+jest.mock('uuid', () => ({
+  v4: () => 'mockId',
+}));
 
 const noId = {
   content: {

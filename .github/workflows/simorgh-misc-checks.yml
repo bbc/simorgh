@@ -17,12 +17,14 @@ jobs:
         node-version: [12.x]
     env:
       CI: true
-      CHROMATIC_APP_CODE: ${{ secrets.CHROMATIC_APP_CODE }}
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: '0'
+
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -30,8 +32,23 @@ jobs:
         run: npm ci
 
       - name: Chromatic UI Tests
-        if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }}
-        run: npx chromatic test run --build-script-name build:storybook --exit-once-uploaded --no-interactive --project-token "$CHROMATIC_APP_CODE"
+        uses: chromaui/action@v1
+        if: github.ref != 'refs/heads/latest' && github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on latest or not a fork.
+        with:
+          token: ${{ secrets.SIMORGH_DEV_STORYBOOK_RELEASE }}
+          projectToken: ${{ secrets.CHROMATIC_APP_CODE }}
+          buildScriptName: 'build:storybook'
+          exitOnceUploaded: true
+
+      - name: Chromatic UI Tests - Latest
+        uses: chromaui/action@v1
+        if: github.ref == 'refs/heads/latest' # Only run on latest branch
+        with:
+          token: ${{ secrets.SIMORGH_DEV_STORYBOOK_RELEASE }}
+          projectToken: ${{ secrets.CHROMATIC_APP_CODE }}
+          buildScriptName: 'build:storybook'
+          exitOnceUploaded: true
+          autoAcceptChanges: true # Auto accept changes to accept a new baseline when merging to latest
 
       - name: Apache License Checker
         run: npx apache2-license-checker

@@ -1,4 +1,4 @@
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 import pipe from 'ramda/src/pipe';
 import path from 'ramda/src/path';
 

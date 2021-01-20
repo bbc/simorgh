@@ -1,15 +1,19 @@
 {
+  "extends": ["config:base"],
+  "enabledManagers": ["npm"],
   "packageRules": [
     {
       "packagePatterns": ["*"],
+      "excludePackagePatterns": ["^@bbc"],
       "updateTypes": ["minor", "patch"],
-      "groupName": "all non-major dependencies",
+      "groupName": "all 3rd party non-major dependencies",
       "groupSlug": "all-minor-patch"
     },
     {
-      "packagePatterns": ["^@psammead/"],
+      "packagePatterns": ["^@bbc"],
+      "groupName": "all BBC non-major dependencies",
       "updateTypes": ["minor", "patch"],
-      "groupName": "psammead"
+      "groupSlug": "psammead-minor-patch"
     }
   ]
 }

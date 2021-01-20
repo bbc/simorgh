@@ -82,110 +82,93 @@ Object {
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 2`] = `
 Object {
-  "text": "انتخابات آمریکا",
-  "url": "/persian/world-54468359",
-}
-`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 3`] = `
-Object {
   "text": "کرونا",
   "url": "/persian/science-52004647",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 4`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "پخش زنده",
   "url": "/persian/media-49522521",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "ویدیو",
   "url": "/persian/media/video",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "تلویزیون",
   "url": "/persian/tv-and-radio-37434377",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "رادیو",
   "url": "/persian/tv-and-radio-37434376",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "ايران",
   "url": "/persian/topics/ckdxnwvwwjnt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "افغانستان",
   "url": "/persian/afghanistan",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 10`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "جهان",
   "url": "/persian/topics/c1d8ye58xl8t",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 11`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 10`] = `
 Object {
   "text": "هنر",
   "url": "/persian/topics/c9wpm0epm45t",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 12`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "ورزش",
   "url": "/persian/topics/cnq6879k7yjt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 13`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 12`] = `
 Object {
   "text": "اقتصاد",
   "url": "/persian/topics/cl8l9mvlllqt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 14`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 13`] = `
 Object {
   "text": "دانش",
   "url": "/persian/topics/cp0e57wejkzt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 15`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 14`] = `
 Object {
   "text": "ناظران می‌گویند",
   "url": "/persian/blogs-54099951",
 }
-`;
-
-exports[`Canonical Media Asset Page I can see the placeholder loading image 1`] = `
-<div
-  class="css-z3isei-LoadingImageWrapper eqo19v60"
->
-  <div
-    class="css-oijotl-ImagePlaceholder e1whu0"
-  />
-</div>
 `;
 
 exports[`Canonical Media Asset Page Main heading should match text 1`] = `"Trump long headline"`;
@@ -382,15 +365,4 @@ Object {
   "date": "2019-02-15",
   "text": "۲۶ بهمن ۱۳۹۷ - ۱۵ فوریه ۲۰۱۹",
 }
-`;
-
-exports[`Canonical Media Asset Page outer iframe has z-index of 1 1`] = `
-<iframe
-  allow="autoplay"
-  allowfullscreen=""
-  class="css-4k1mri-StyledIframe eqo19v61"
-  scrolling="no"
-  src="https://test.bbc.com/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa"
-  title="پخش صدا و تصویر"
-/>
 `;

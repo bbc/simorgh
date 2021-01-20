@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
 import { ukchina as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -33,6 +38,9 @@ const baseServiceConfig = {
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
     brandLogoColour: `${C_WHITE}`,
+    brandForegroundColour: `${C_GHOST}`,
+    brandHighlightColour: `${C_WHITE}`,
+    brandBorderColour: `${C_POSTBOX_30}`,
   },
   fonts: [],
   timezone: 'GMT',

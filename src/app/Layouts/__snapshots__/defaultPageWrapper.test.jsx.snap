@@ -333,7 +333,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #eab3b3;
+    border-bottom: 0.0625rem solid #EAB3B3;
     z-index: -1;
   }
 }
@@ -644,7 +644,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 20;
+  z-index: 2147483647;
 }
 
 .emotion-12 {
