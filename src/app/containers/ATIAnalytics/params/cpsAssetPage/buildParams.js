@@ -25,7 +25,7 @@ export const buildCpsAssetPageATIParams = (
 
   const getChapter1 = pageIdentifier => {
     const chapter = pageIdentifier.split('.')[1];
-    if (['media_asset'].includes(chapter)) {
+    if (['media_asset', 'story'].includes(chapter)) {
       return null;
     }
     return chapter;
