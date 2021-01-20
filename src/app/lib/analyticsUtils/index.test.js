@@ -105,6 +105,16 @@ describe('getDestination', () => {
       summary: 'should return for test Scotland',
     },
     {
+      statsDestination: 'NEWSROUND',
+      expected: 598293,
+      summary: 'should return for live Scotland',
+    },
+    {
+      statsDestination: 'NEWSROUND_TEST',
+      expected: 598294,
+      summary: 'should return for test Scotland',
+    },
+    {
       statsDestination: undefined,
       expected: 598285,
       summary: 'should return for live uk statsDestination is undefined',
