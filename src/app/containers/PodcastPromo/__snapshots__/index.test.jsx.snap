@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PodcastPromo Should render correctly 1`] = `
-.emotion-24 {
+.emotion-0 {
   background-color: #F2F2F2;
   padding: 1rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   margin: 0 0 1rem;
 }
 
-.emotion-2 {
+.emotion-4 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -21,20 +21,20 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+  .emotion-4 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .emotion-4 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-2 > svg {
+.emotion-4>svg {
   margin-left: 0;
   width: 1.375rem;
   height: 1.375rem;
@@ -44,7 +44,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
   right: 0.1875rem;
 }
 
-.emotion-0 {
+.emotion-6 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -53,7 +53,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
   height: 1rem;
 }
 
-.emotion-22 {
+.emotion-8 {
   position: relative;
   background-color: #FDFDFD;
   display: -webkit-box;
@@ -64,31 +64,31 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width:63rem) {
-  .emotion-22 {
+  .emotion-8 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
   }
 }
 
-.emotion-22:hover .podcast-promo--hover {
+.emotion-8:hover .podcast-promo--hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-8 {
+.emotion-10 {
   margin: 0.5rem 0 0 0.5rem;
   display: none;
 }
 
 @media (min-width:20rem) {
-  .emotion-8 {
+  .emotion-10 {
     display: unset;
   }
 }
 
 @media (min-width:25rem) {
-  .emotion-8 {
+  .emotion-10 {
     -webkit-flex: 0 0 6.8125rem;
     -ms-flex: 0 0 6.8125rem;
     flex: 0 0 6.8125rem;
@@ -96,7 +96,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-8 {
+  .emotion-10 {
     -webkit-flex: 0 0 11.125rem;
     -ms-flex: 0 0 11.125rem;
     flex: 0 0 11.125rem;
@@ -105,13 +105,13 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width:63rem) {
-  .emotion-8 {
+  .emotion-10 {
     width: 100%;
     margin: 0;
   }
 }
 
-.emotion-6 {
+.emotion-12 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -125,18 +125,18 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width:25rem) {
-  .emotion-6 {
+  .emotion-12 {
     background-size: 77px 22px;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-6 {
+  .emotion-12 {
     background-size: 93px 27px;
   }
 }
 
-.emotion-20 {
+.emotion-14 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -144,18 +144,18 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width:25rem) {
-  .emotion-20 {
+  .emotion-14 {
     padding: 0.5rem 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-20 {
+  .emotion-14 {
     padding: 1rem;
   }
 }
 
-.emotion-12 {
+.emotion-16 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -167,26 +167,26 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-12 {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-12 {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-10 {
+.emotion-18 {
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-10:before {
+.emotion-18:before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -197,16 +197,16 @@ exports[`PodcastPromo Should render correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-10:visited .podcast-promo--visited {
+.emotion-18:visited .podcast-promo--visited {
   color: #6E6E73;
 }
 
-.emotion-10:focus .podcast-promo--focus {
+.emotion-18:focus .podcast-promo--focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-14 {
+.emotion-20 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -218,20 +218,20 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-14 {
+  .emotion-20 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-14 {
+  .emotion-20 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-18 {
+.emotion-22 {
   display: inline;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -242,20 +242,20 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-18 {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-18 {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-18 > svg {
+.emotion-22>svg {
   fill: currentColor;
   color: unset;
   width: 1rem;
@@ -265,7 +265,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
   right: 0.1875rem;
 }
 
-.emotion-16 {
+.emotion-24 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -277,19 +277,19 @@ exports[`PodcastPromo Should render correctly 1`] = `
 <div>
   <section
     aria-labelledby="podcast-promo"
-    class="emotion-24 emotion-25"
+    class="emotion-0 emotion-1"
     role="region"
   >
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-2 emotion-3"
     >
       <h2
-        class="emotion-2 emotion-3"
+        class="emotion-4 emotion-5"
         id="podcast-promo"
       >
         <svg
           aria-hidden="true"
-          class="emotion-0 emotion-1"
+          class="emotion-6 emotion-7"
           focusable="false"
           height="32"
           viewBox="0 0 32 32"
@@ -303,13 +303,13 @@ exports[`PodcastPromo Should render correctly 1`] = `
       </h2>
     </div>
     <div
-      class="emotion-22 emotion-23"
+      class="emotion-8 emotion-9"
     >
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-10 emotion-11"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-12 emotion-13"
         >
           <div
             class="lazyload-wrapper"
@@ -322,13 +322,13 @@ exports[`PodcastPromo Should render correctly 1`] = `
         </div>
       </div>
       <div
-        class="emotion-20 emotion-21"
+        class="emotion-14 emotion-15"
       >
         <h3
-          class="emotion-12 emotion-13"
+          class="emotion-16 emotion-17"
         >
           <a
-            class="emotion-10 emotion-11"
+            class="emotion-18 emotion-19"
             href="https://www.bbc.com/russian/media-47937790"
           >
             <span
@@ -339,16 +339,16 @@ exports[`PodcastPromo Should render correctly 1`] = `
           </a>
         </h3>
         <p
-          class="emotion-14 emotion-15"
+          class="emotion-20 emotion-21"
         >
           Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше. Никаких ненужных подробностей и передергиваний - только факты и взвешенная аналитика.
         </p>
         <p
-          class="emotion-18 emotion-19"
+          class="emotion-22 emotion-23"
         >
           <svg
             aria-hidden="true"
-            class="emotion-16 emotion-17"
+            class="emotion-24 emotion-25"
             focusable="false"
             height="32"
             viewBox="0 0 32 32"

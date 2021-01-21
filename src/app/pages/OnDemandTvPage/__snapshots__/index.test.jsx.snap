@@ -1,189 +1,189 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = `
-.emotion-29 {
+.emotion-0 {
   width: 100%;
   padding-bottom: 2rem;
 }
 
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    width: 100%;
+  }
+}
+
 @supports (display:grid) {
-  .emotion-29 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-29 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-29 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-29 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-29 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-29 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-29 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-29 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-29 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-29 {
-    width: 100%;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-22 {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-22 {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-22 {
+  .emotion-4 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-22 {
+  .emotion-4 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-22 {
+  .emotion-4 {
     margin-right: 16.666666666666668%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-22 {
+  .emotion-4 {
     margin-right: 33.333333333333336%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-22 {
+  .emotion-4 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-22 {
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-22 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-22 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-22 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-22 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-22 {
+  @media (min-width:80rem) {
+    .emotion-4 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -195,47 +195,47 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   margin: 0;
 }
 
-.emotion-11 {
+.emotion-9 {
   padding-bottom: 1rem;
 }
 
-@media (min-width:63rem) {
-  .emotion-11 {
+@media (min-width: 63rem) {
+  .emotion-9 {
     padding-bottom: 1.5rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-11 {
+@media (min-width: 63rem) {
+  .emotion-9 {
     margin: 2.5rem 0 0;
   }
 }
 
-@media (max-width:62.9375rem) {
-  .emotion-11 {
+@media (max-width: 62.9375rem) {
+  .emotion-9 {
     margin-top: 1rem;
   }
 }
 
-@media (max-width:37.4375rem) {
-  .emotion-11 {
+@media (max-width: 37.4375rem) {
+  .emotion-9 {
     margin: 1rem -1rem 0;
   }
 }
 
-@media (max-width:24.9375rem) {
-  .emotion-11 {
+@media (max-width: 24.9375rem) {
+  .emotion-9 {
     margin: 0.5rem -0.5rem 0;
   }
 }
 
-.emotion-8 {
+.emotion-11 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-2 {
+.emotion-13 {
   z-index: 1;
   border: 0;
   left: 0;
@@ -246,7 +246,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-15 {
   position: absolute;
   left: 0;
   top: 0;
@@ -254,7 +254,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   height: 100%;
 }
 
-.emotion-4 {
+.emotion-17 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -268,18 +268,30 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width:25rem) {
-  .emotion-4 {
+  .emotion-17 {
     background-size: 77px 22px;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-4 {
+  .emotion-17 {
     background-size: 93px 27px;
   }
 }
 
-.emotion-20 {
+@media (max-width: 62.9375rem) {
+  .emotion-19 {
+    padding: 0.5rem 0;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-19 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-21 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -292,53 +304,41 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-20 {
+  .emotion-21 {
     font-size: 1.75rem;
     line-height: 2.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-20 {
+  .emotion-21 {
     font-size: 2.5rem;
     line-height: 3.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-20 {
+  .emotion-21 {
     padding: 2.5rem 0;
   }
 }
 
-@media (max-width:62.9375rem) {
-  .emotion-20 {
-    padding: 0.5rem 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-20 {
-    padding: 1rem 0;
-  }
-}
-
-.emotion-13 {
+.emotion-23 {
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-13 {
+@media (min-width: 37.5rem) {
+  .emotion-23 {
     padding-bottom: 0;
     word-break: break-word;
     line-height: 3.5rem;
   }
 }
 
-.emotion-17 {
+.emotion-27 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -347,121 +347,121 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   margin: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-17 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-27 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-17 {
+@media (min-width: 37.5rem) {
+  .emotion-27 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-26 {
+  .emotion-29 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-26 {
+  .emotion-29 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-26 {
+  .emotion-29 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-26 {
+  .emotion-29 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-26 {
+  .emotion-29 {
     margin-right: 20%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-26 {
+  .emotion-29 {
     margin-right: 40%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-26 {
+  .emotion-29 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-26 {
+  @media (max-width:14.9375rem) {
+    .emotion-29 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-26 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-29 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-26 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-29 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-26 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-29 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-26 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-29 {
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-26 {
+  @media (min-width:80rem) {
+    .emotion-29 {
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-.emotion-24 {
+.emotion-31 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -472,22 +472,22 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   margin: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-24 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-31 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-24 {
+@media (min-width: 37.5rem) {
+  .emotion-31 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
-@media (max-width:62.9375rem) {
-  .emotion-24 {
+@media (max-width: 62.9375rem) {
+  .emotion-31 {
     padding-bottom: 0.5rem;
   }
 }
@@ -498,40 +498,40 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   </div>
   <noscript />
   <main
-    class="emotion-28 emotion-29 emotion-23"
+    class="emotion-0 emotion-1 emotion-2 emotion-3"
     dir="rtl"
     role="main"
   >
     <div
-      class="emotion-22 emotion-23"
+      class="emotion-4 emotion-3"
       dir="rtl"
     >
       <h1
-        class="emotion-0 emotion-1"
+        class="emotion-6 emotion-7"
         id="content"
         tabindex="-1"
       >
         نړۍ دا وخت, ۲۷ می ۲۰۲۰
       </h1>
       <div
-        class="emotion-10 emotion-11 emotion-12"
+        class="emotion-8 emotion-9 emotion-10"
       >
         <div
-          class="emotion-8 emotion-9"
+          class="emotion-11 emotion-12"
         >
           <iframe
             allow="autoplay"
             allowfullscreen=""
-            class="emotion-2 emotion-3"
+            class="emotion-13 emotion-14"
             scrolling="no"
             src="https://test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"
             title="ویډیو پلیئر"
           />
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-15 emotion-16"
           >
             <div
-              class="emotion-4 emotion-5"
+              class="emotion-17 emotion-18"
             />
           </div>
           <noscript />
@@ -539,31 +539,31 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
       </div>
       <strong
         aria-hidden="true"
-        class=" emotion-19 emotion-20 emotion-21"
+        class=" emotion-19 emotion-20 emotion-21 emotion-22"
       >
         <span
-          class="emotion-13 emotion-14"
+          class="emotion-23 emotion-24"
         >
           نړۍ دا وخت
         </span>
         <span
-          class="emotion-0 emotion-1"
+          class="emotion-6 emotion-7"
         >
           , 
         </span>
         <span
-          class="emotion-17 emotion-18"
+          class="emotion-27 emotion-28"
         >
           ۲۷ می ۲۰۲۰
         </span>
       </strong>
     </div>
     <div
-      class="emotion-26 emotion-23"
+      class="emotion-29 emotion-3"
       dir="rtl"
     >
       <p
-        class="emotion-24 emotion-25"
+        class="emotion-31 emotion-32"
       >
         د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
       </p>
@@ -573,189 +573,189 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 `;
 
 exports[`should show the expired content message if episode is expired 1`] = `
-.emotion-26 {
+.emotion-0 {
   width: 100%;
   padding-bottom: 2rem;
 }
 
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    width: 100%;
+  }
+}
+
 @supports (display:grid) {
-  .emotion-26 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-26 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-26 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-26 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-26 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-26 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-26 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-26 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-26 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-26 {
-    width: 100%;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-19 {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-19 {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-19 {
+  .emotion-4 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-19 {
+  .emotion-4 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-19 {
+  .emotion-4 {
     margin-right: 16.666666666666668%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-19 {
+  .emotion-4 {
     margin-right: 33.333333333333336%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-19 {
+  .emotion-4 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-19 {
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-19 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-19 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-19 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-19 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-19 {
+  @media (min-width:80rem) {
+    .emotion-4 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -767,219 +767,6 @@ exports[`should show the expired content message if episode is expired 1`] = `
   margin: 0;
 }
 
-.emotion-17 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #F2F2F2;
-  display: block;
-  margin: 0;
-  padding: 2rem 0;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-17 {
-    font-size: 1.75rem;
-    line-height: 2.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-17 {
-    font-size: 2.5rem;
-    line-height: 3.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-17 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .emotion-17 {
-    padding: 0.5rem 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-17 {
-    padding: 1rem 0;
-  }
-}
-
-.emotion-10 {
-  display: inline-block;
-  width: 100%;
-  padding-bottom: 0.5rem;
-  word-break: break-word;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-10 {
-    padding-bottom: 0;
-    word-break: break-word;
-    line-height: 3.5rem;
-  }
-}
-
-.emotion-14 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin: 0;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-14 {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-14 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .emotion-23 {
-    padding: 0 0.5rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-23 {
-    padding: 0 0.5rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-23 {
-    padding: 0 1rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-23 {
-    padding: 0 1rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-23 {
-    margin-right: 20%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-23 {
-    margin-right: 40%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-23 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-23 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-23 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-23 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-23 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-23 {
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-23 {
-      grid-template-columns: repeat(10,1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
-    }
-}
-}
-
-.emotion-21 {
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #F2F2F2;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-21 {
-    font-size: 1rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-21 {
-    font-size: 1rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .emotion-21 {
-    padding-bottom: 0.5rem;
-  }
-}
-
 .emotion-8 {
   margin: 2.5rem 0 1.5rem;
   padding-top: 56.25%;
@@ -987,25 +774,25 @@ exports[`should show the expired content message if episode is expired 1`] = `
   overflow: hidden;
 }
 
-@media (max-width:62.9375rem) {
+@media (max-width: 62.9375rem) {
   .emotion-8 {
     margin-top: 1rem;
   }
 }
 
-@media (max-width:37.4375rem) {
+@media (max-width: 37.4375rem) {
   .emotion-8 {
     margin: 1rem -1rem 0;
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (max-width: 24.9375rem) {
   .emotion-8 {
     margin: 0.5rem -0.5rem 0;
   }
 }
 
-.emotion-6 {
+.emotion-10 {
   position: absolute;
   top: 0;
   left: 0;
@@ -1013,7 +800,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
   height: 100%;
 }
 
-.emotion-4 {
+.emotion-12 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1030,18 +817,18 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 {
+  .emotion-12 {
     font-size: 0.875rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .emotion-4 {
+  .emotion-12 {
     background-color: transparent;
   }
 }
 
-.emotion-2 {
+.emotion-14 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -1050,14 +837,227 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .emotion-2 {
+  .emotion-14 {
     background-color: window;
   }
 }
 
 @media (min-width:25rem) {
-  .emotion-2 {
+  .emotion-14 {
     padding: 1rem;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-16 {
+    padding: 0.5rem 0;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-16 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-18 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #F2F2F2;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-18 {
+    font-size: 1.75rem;
+    line-height: 2.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-18 {
+    font-size: 2.5rem;
+    line-height: 3.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-18 {
+    padding: 2.5rem 0;
+  }
+}
+
+.emotion-20 {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-20 {
+    padding-bottom: 0;
+    word-break: break-word;
+    line-height: 3.5rem;
+  }
+}
+
+.emotion-24 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-24 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-24 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-26 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-26 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-26 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-26 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-26 {
+    margin-right: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-26 {
+    margin-right: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-26 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-26 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-26 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-26 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-26 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-26 {
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-26 {
+      grid-template-columns: repeat(10,1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-28 {
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #F2F2F2;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-28 {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-28 {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-28 {
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -1067,16 +1067,16 @@ exports[`should show the expired content message if episode is expired 1`] = `
   </div>
   <noscript />
   <main
-    class="emotion-25 emotion-26 emotion-20"
+    class="emotion-0 emotion-1 emotion-2 emotion-3"
     dir="rtl"
     role="main"
   >
     <div
-      class="emotion-19 emotion-20"
+      class="emotion-4 emotion-3"
       dir="rtl"
     >
       <h1
-        class="emotion-0 emotion-1"
+        class="emotion-6 emotion-7"
         id="content"
         tabindex="-1"
       >
@@ -1086,13 +1086,13 @@ exports[`should show the expired content message if episode is expired 1`] = `
         class="emotion-8 emotion-9"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-10 emotion-11"
         >
           <div
-            class="emotion-4 emotion-5"
+            class="emotion-12 emotion-13"
           >
             <strong
-              class="emotion-2 emotion-3"
+              class="emotion-14 emotion-15"
             >
               دغه فایل نور د لاسرسي وړ نه دی.
             </strong>
@@ -1101,31 +1101,31 @@ exports[`should show the expired content message if episode is expired 1`] = `
       </div>
       <strong
         aria-hidden="true"
-        class=" emotion-16 emotion-17 emotion-18"
+        class=" emotion-16 emotion-17 emotion-18 emotion-19"
       >
         <span
-          class="emotion-10 emotion-11"
+          class="emotion-20 emotion-21"
         >
           نړۍ دا وخت
         </span>
         <span
-          class="emotion-0 emotion-1"
+          class="emotion-6 emotion-7"
         >
           , 
         </span>
         <span
-          class="emotion-14 emotion-15"
+          class="emotion-24 emotion-25"
         >
           ۲۷ می ۲۰۲۰
         </span>
       </strong>
     </div>
     <div
-      class="emotion-23 emotion-20"
+      class="emotion-26 emotion-3"
       dir="rtl"
     >
       <p
-        class="emotion-21 emotion-22"
+        class="emotion-28 emotion-29"
       >
         د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
       </p>
@@ -1135,189 +1135,189 @@ exports[`should show the expired content message if episode is expired 1`] = `
 `;
 
 exports[`should show the future content message if episode is not yet available 1`] = `
-.emotion-26 {
+.emotion-0 {
   width: 100%;
   padding-bottom: 2rem;
 }
 
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    width: 100%;
+  }
+}
+
 @supports (display:grid) {
-  .emotion-26 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-26 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-26 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-26 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-26 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-26 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-26 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-26 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-26 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-26 {
-    width: 100%;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-19 {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-19 {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-19 {
+  .emotion-4 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-19 {
+  .emotion-4 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-19 {
+  .emotion-4 {
     margin-right: 16.666666666666668%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-19 {
+  .emotion-4 {
     margin-right: 33.333333333333336%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-19 {
+  .emotion-4 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-19 {
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-19 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-19 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-19 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-19 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-19 {
+  @media (min-width:80rem) {
+    .emotion-4 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -1329,219 +1329,6 @@ exports[`should show the future content message if episode is not yet available 
   margin: 0;
 }
 
-.emotion-17 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #F2F2F2;
-  display: block;
-  margin: 0;
-  padding: 2rem 0;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-17 {
-    font-size: 1.75rem;
-    line-height: 2.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-17 {
-    font-size: 2.5rem;
-    line-height: 3.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-17 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .emotion-17 {
-    padding: 0.5rem 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-17 {
-    padding: 1rem 0;
-  }
-}
-
-.emotion-10 {
-  display: inline-block;
-  width: 100%;
-  padding-bottom: 0.5rem;
-  word-break: break-word;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-10 {
-    padding-bottom: 0;
-    word-break: break-word;
-    line-height: 3.5rem;
-  }
-}
-
-.emotion-14 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin: 0;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-14 {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-14 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .emotion-23 {
-    padding: 0 0.5rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-23 {
-    padding: 0 0.5rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-23 {
-    padding: 0 1rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-23 {
-    padding: 0 1rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-23 {
-    margin-right: 20%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-23 {
-    margin-right: 40%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-23 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-23 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-23 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-23 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-23 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-23 {
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-23 {
-      grid-template-columns: repeat(10,1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
-    }
-}
-}
-
-.emotion-21 {
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #F2F2F2;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-21 {
-    font-size: 1rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-21 {
-    font-size: 1rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .emotion-21 {
-    padding-bottom: 0.5rem;
-  }
-}
-
 .emotion-8 {
   margin: 2.5rem 0 1.5rem;
   padding-top: 56.25%;
@@ -1549,25 +1336,25 @@ exports[`should show the future content message if episode is not yet available 
   overflow: hidden;
 }
 
-@media (max-width:62.9375rem) {
+@media (max-width: 62.9375rem) {
   .emotion-8 {
     margin-top: 1rem;
   }
 }
 
-@media (max-width:37.4375rem) {
+@media (max-width: 37.4375rem) {
   .emotion-8 {
     margin: 1rem -1rem 0;
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (max-width: 24.9375rem) {
   .emotion-8 {
     margin: 0.5rem -0.5rem 0;
   }
 }
 
-.emotion-6 {
+.emotion-10 {
   position: absolute;
   top: 0;
   left: 0;
@@ -1575,7 +1362,7 @@ exports[`should show the future content message if episode is not yet available 
   height: 100%;
 }
 
-.emotion-4 {
+.emotion-12 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1592,18 +1379,18 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 {
+  .emotion-12 {
     font-size: 0.875rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .emotion-4 {
+  .emotion-12 {
     background-color: transparent;
   }
 }
 
-.emotion-2 {
+.emotion-14 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -1612,14 +1399,227 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .emotion-2 {
+  .emotion-14 {
     background-color: window;
   }
 }
 
 @media (min-width:25rem) {
-  .emotion-2 {
+  .emotion-14 {
     padding: 1rem;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-16 {
+    padding: 0.5rem 0;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-16 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-18 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #F2F2F2;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-18 {
+    font-size: 1.75rem;
+    line-height: 2.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-18 {
+    font-size: 2.5rem;
+    line-height: 3.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-18 {
+    padding: 2.5rem 0;
+  }
+}
+
+.emotion-20 {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-20 {
+    padding-bottom: 0;
+    word-break: break-word;
+    line-height: 3.5rem;
+  }
+}
+
+.emotion-24 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-24 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-24 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-26 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-26 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-26 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-26 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-26 {
+    margin-right: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-26 {
+    margin-right: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-26 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-26 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-26 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-26 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-26 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-26 {
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-26 {
+      grid-template-columns: repeat(10,1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-28 {
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #F2F2F2;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-28 {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-28 {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-28 {
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -1629,16 +1629,16 @@ exports[`should show the future content message if episode is not yet available 
   </div>
   <noscript />
   <main
-    class="emotion-25 emotion-26 emotion-20"
+    class="emotion-0 emotion-1 emotion-2 emotion-3"
     dir="rtl"
     role="main"
   >
     <div
-      class="emotion-19 emotion-20"
+      class="emotion-4 emotion-3"
       dir="rtl"
     >
       <h1
-        class="emotion-0 emotion-1"
+        class="emotion-6 emotion-7"
         id="content"
         tabindex="-1"
       >
@@ -1648,13 +1648,13 @@ exports[`should show the future content message if episode is not yet available 
         class="emotion-8 emotion-9"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-10 emotion-11"
         >
           <div
-            class="emotion-4 emotion-5"
+            class="emotion-12 emotion-13"
           >
             <strong
-              class="emotion-2 emotion-3"
+              class="emotion-14 emotion-15"
             >
               دغه پروګرام د خپرولو لپاره چمتو نه دی.
             </strong>
@@ -1663,31 +1663,31 @@ exports[`should show the future content message if episode is not yet available 
       </div>
       <strong
         aria-hidden="true"
-        class=" emotion-16 emotion-17 emotion-18"
+        class=" emotion-16 emotion-17 emotion-18 emotion-19"
       >
         <span
-          class="emotion-10 emotion-11"
+          class="emotion-20 emotion-21"
         >
           نړۍ دا وخت
         </span>
         <span
-          class="emotion-0 emotion-1"
+          class="emotion-6 emotion-7"
         >
           , 
         </span>
         <span
-          class="emotion-14 emotion-15"
+          class="emotion-24 emotion-25"
         >
           ۲۷ می ۲۰۲۰
         </span>
       </strong>
     </div>
     <div
-      class="emotion-23 emotion-20"
+      class="emotion-26 emotion-3"
       dir="rtl"
     >
       <p
-        class="emotion-21 emotion-22"
+        class="emotion-28 emotion-29"
       >
         د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
       </p>
@@ -1697,189 +1697,189 @@ exports[`should show the future content message if episode is not yet available 
 `;
 
 exports[`should show the future content message if episode is pending 1`] = `
-.emotion-26 {
+.emotion-0 {
   width: 100%;
   padding-bottom: 2rem;
 }
 
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    width: 100%;
+  }
+}
+
 @supports (display:grid) {
-  .emotion-26 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-26 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-26 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-26 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-26 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-26 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-26 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-26 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-26 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-26 {
-    width: 100%;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-19 {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-19 {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-19 {
+  .emotion-4 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-19 {
+  .emotion-4 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-19 {
+  .emotion-4 {
     margin-right: 16.666666666666668%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-19 {
+  .emotion-4 {
     margin-right: 33.333333333333336%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-19 {
+  .emotion-4 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-19 {
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-19 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-19 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-19 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-19 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-19 {
+  @media (min-width:80rem) {
+    .emotion-4 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -1891,219 +1891,6 @@ exports[`should show the future content message if episode is pending 1`] = `
   margin: 0;
 }
 
-.emotion-17 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #F2F2F2;
-  display: block;
-  margin: 0;
-  padding: 2rem 0;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-17 {
-    font-size: 1.75rem;
-    line-height: 2.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-17 {
-    font-size: 2.5rem;
-    line-height: 3.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-17 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .emotion-17 {
-    padding: 0.5rem 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-17 {
-    padding: 1rem 0;
-  }
-}
-
-.emotion-10 {
-  display: inline-block;
-  width: 100%;
-  padding-bottom: 0.5rem;
-  word-break: break-word;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-10 {
-    padding-bottom: 0;
-    word-break: break-word;
-    line-height: 3.5rem;
-  }
-}
-
-.emotion-14 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin: 0;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-14 {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-14 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .emotion-23 {
-    padding: 0 0.5rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-23 {
-    padding: 0 0.5rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-23 {
-    padding: 0 1rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-23 {
-    padding: 0 1rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-23 {
-    margin-right: 20%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-23 {
-    margin-right: 40%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-23 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-23 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-23 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-23 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-23 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-23 {
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-23 {
-      grid-template-columns: repeat(10,1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
-    }
-}
-}
-
-.emotion-21 {
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #F2F2F2;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-21 {
-    font-size: 1rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-21 {
-    font-size: 1rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .emotion-21 {
-    padding-bottom: 0.5rem;
-  }
-}
-
 .emotion-8 {
   margin: 2.5rem 0 1.5rem;
   padding-top: 56.25%;
@@ -2111,25 +1898,25 @@ exports[`should show the future content message if episode is pending 1`] = `
   overflow: hidden;
 }
 
-@media (max-width:62.9375rem) {
+@media (max-width: 62.9375rem) {
   .emotion-8 {
     margin-top: 1rem;
   }
 }
 
-@media (max-width:37.4375rem) {
+@media (max-width: 37.4375rem) {
   .emotion-8 {
     margin: 1rem -1rem 0;
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (max-width: 24.9375rem) {
   .emotion-8 {
     margin: 0.5rem -0.5rem 0;
   }
 }
 
-.emotion-6 {
+.emotion-10 {
   position: absolute;
   top: 0;
   left: 0;
@@ -2137,7 +1924,7 @@ exports[`should show the future content message if episode is pending 1`] = `
   height: 100%;
 }
 
-.emotion-4 {
+.emotion-12 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -2154,18 +1941,18 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 {
+  .emotion-12 {
     font-size: 0.875rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .emotion-4 {
+  .emotion-12 {
     background-color: transparent;
   }
 }
 
-.emotion-2 {
+.emotion-14 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -2174,14 +1961,227 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .emotion-2 {
+  .emotion-14 {
     background-color: window;
   }
 }
 
 @media (min-width:25rem) {
-  .emotion-2 {
+  .emotion-14 {
     padding: 1rem;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-16 {
+    padding: 0.5rem 0;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-16 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-18 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #F2F2F2;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-18 {
+    font-size: 1.75rem;
+    line-height: 2.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-18 {
+    font-size: 2.5rem;
+    line-height: 3.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-18 {
+    padding: 2.5rem 0;
+  }
+}
+
+.emotion-20 {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-20 {
+    padding-bottom: 0;
+    word-break: break-word;
+    line-height: 3.5rem;
+  }
+}
+
+.emotion-24 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-24 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-24 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-26 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-26 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-26 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-26 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-26 {
+    margin-right: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-26 {
+    margin-right: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-26 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-26 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-26 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-26 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-26 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-26 {
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-26 {
+      grid-template-columns: repeat(10,1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-28 {
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #F2F2F2;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-28 {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-28 {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-28 {
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -2191,16 +2191,16 @@ exports[`should show the future content message if episode is pending 1`] = `
   </div>
   <noscript />
   <main
-    class="emotion-25 emotion-26 emotion-20"
+    class="emotion-0 emotion-1 emotion-2 emotion-3"
     dir="rtl"
     role="main"
   >
     <div
-      class="emotion-19 emotion-20"
+      class="emotion-4 emotion-3"
       dir="rtl"
     >
       <h1
-        class="emotion-0 emotion-1"
+        class="emotion-6 emotion-7"
         id="content"
         tabindex="-1"
       >
@@ -2210,13 +2210,13 @@ exports[`should show the future content message if episode is pending 1`] = `
         class="emotion-8 emotion-9"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-10 emotion-11"
         >
           <div
-            class="emotion-4 emotion-5"
+            class="emotion-12 emotion-13"
           >
             <strong
-              class="emotion-2 emotion-3"
+              class="emotion-14 emotion-15"
             >
               دغه پروګرام د خپرولو لپاره چمتو نه دی.
             </strong>
@@ -2225,31 +2225,31 @@ exports[`should show the future content message if episode is pending 1`] = `
       </div>
       <strong
         aria-hidden="true"
-        class=" emotion-16 emotion-17 emotion-18"
+        class=" emotion-16 emotion-17 emotion-18 emotion-19"
       >
         <span
-          class="emotion-10 emotion-11"
+          class="emotion-20 emotion-21"
         >
           نړۍ دا وخت
         </span>
         <span
-          class="emotion-0 emotion-1"
+          class="emotion-6 emotion-7"
         >
           , 
         </span>
         <span
-          class="emotion-14 emotion-15"
+          class="emotion-24 emotion-25"
         >
           ۲۷ می ۲۰۲۰
         </span>
       </strong>
     </div>
     <div
-      class="emotion-23 emotion-20"
+      class="emotion-26 emotion-3"
       dir="rtl"
     >
       <p
-        class="emotion-21 emotion-22"
+        class="emotion-28 emotion-29"
       >
         د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
       </p>

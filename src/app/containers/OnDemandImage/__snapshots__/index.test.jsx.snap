@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
-.emotion-4 {
+.emotion-0 {
   padding: 2rem 0 1.5rem;
   padding-right: 1rem;
 }
 
-@media (max-width:24.9375rem) {
-  .emotion-4 {
+@media (max-width: 24.9375rem) {
+  .emotion-0 {
     display: none;
   }
 }
@@ -37,7 +37,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
   }
 }
 
-.emotion-0 {
+.emotion-4 {
   display: block;
   width: 100%;
   visibility: visible;
@@ -45,7 +45,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
 
 <div>
   <div
-    class="emotion-4 emotion-5"
+    class="emotion-0 emotion-1"
     data-e2e="on-demand-image"
     dir="ltr"
   >
@@ -54,7 +54,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
     >
       <img
         alt="BBC News"
-        class="emotion-0 emotion-1"
+        class="emotion-4 emotion-5"
         sizes="(min-width: 1008px) 228px, 30vw"
         src="https://mock-url"
         srcset="https://mock-url 128w,https://mock-url 240w,https://mock-url 480w"

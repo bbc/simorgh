@@ -1,162 +1,162 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to true 1`] = `
-.emotion-6 {
+.emotion-0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
 @supports (display:grid) {
-  .emotion-4 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-4 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-4 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-4 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-4 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-4 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-4 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-2 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-2 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-2 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-2 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-2 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-2 {
+  .emotion-4 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-2 {
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-2 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-2 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-2 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-2 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-2 {
+  @media (min-width:80rem) {
+    .emotion-4 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
     }
-}
+  }
 }
 
-.emotion-0 {
+.emotion-6 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -170,30 +170,30 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 }
 
 @media (min-width:25rem) {
-  .emotion-0 {
+  .emotion-6 {
     background-size: 77px 22px;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-0 {
+  .emotion-6 {
     background-size: 93px 27px;
   }
 }
 
 <figure
-  class="emotion-6 emotion-7"
+  class="emotion-0 emotion-1"
 >
   <div
-    class="emotion-4 emotion-3"
+    class="emotion-2 emotion-3"
     dir="ltr"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-4 emotion-3"
       dir="ltr"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-6 emotion-7"
       >
         <div
           class="lazyload-wrapper"
@@ -210,162 +210,162 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 `;
 
 exports[`ArticleFigure should render an AMP image with alt text 1`] = `
-.emotion-6 {
+.emotion-0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
 @supports (display:grid) {
-  .emotion-4 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-4 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-4 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-4 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-4 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-4 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-4 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-2 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-2 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-2 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-2 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-2 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-2 {
+  .emotion-4 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-2 {
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-2 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-2 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-2 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-2 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-2 {
+  @media (min-width:80rem) {
+    .emotion-4 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
     }
-}
+  }
 }
 
-.emotion-0 {
+.emotion-6 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -379,31 +379,31 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 }
 
 @media (min-width:25rem) {
-  .emotion-0 {
+  .emotion-6 {
     background-size: 77px 22px;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-0 {
+  .emotion-6 {
     background-size: 93px 27px;
   }
 }
 
 <div>
   <figure
-    class="emotion-6 emotion-7"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-4 emotion-3"
+      class="emotion-2 emotion-3"
       dir="ltr"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-4 emotion-3"
         dir="ltr"
       >
         <div
-          class="emotion-0 emotion-1"
+          class="emotion-6 emotion-7"
         >
           <amp-img
             alt="Pauline Clayton"
@@ -421,162 +421,162 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 `;
 
 exports[`ArticleFigure should render an AMP image with caption and copyright 1`] = `
-.emotion-16 {
+.emotion-0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
 @supports (display:grid) {
-  .emotion-14 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-14 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-14 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-14 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-14 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-14 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-14 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-6 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-6 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-6 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-6 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-6 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-6 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-6 {
+  .emotion-4 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-6 {
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-6 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-6 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-6 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-6 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-6 {
+  @media (min-width:80rem) {
+    .emotion-4 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
     }
-}
+  }
 }
 
-.emotion-4 {
+.emotion-6 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -590,18 +590,18 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 }
 
 @media (min-width:25rem) {
-  .emotion-4 {
+  .emotion-6 {
     background-size: 77px 22px;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-4 {
+  .emotion-6 {
     background-size: 93px 27px;
   }
 }
 
-.emotion-2 {
+.emotion-8 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -615,7 +615,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   left: 0;
 }
 
-.emotion-0 {
+.emotion-10 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -670,53 +670,447 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
+  @media (max-width:14.9375rem) {
     .emotion-12 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-12 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-12 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-12 {
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-12 {
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:80rem) {
+  @media (min-width:80rem) {
     .emotion-12 {
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
     }
+  }
 }
+
+.emotion-14 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6E6E73;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  width: 100%;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-14 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-14 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-14 {
+    width: 100%;
+    margin: 0.5rem 0 0;
+  }
+}
+
+.emotion-14>p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.emotion-14>p:last-child {
+  padding-bottom: 0;
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .emotion-14 {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-14 {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
+}
+
+<div>
+  <figure
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      dir="ltr"
+    >
+      <div
+        class="emotion-4 emotion-3"
+        dir="ltr"
+      >
+        <div
+          class="emotion-6 emotion-7"
+        >
+          <amp-img
+            alt="Pauline Clayton"
+            attribution="Getty Images"
+            height="360"
+            layout="responsive"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width="640"
+          />
+          <p
+            class="emotion-8 emotion-9"
+            role="text"
+          >
+            <span
+              class="emotion-10 emotion-11"
+            >
+              Image source, 
+            </span>
+            Getty Images
+          </p>
+        </div>
+      </div>
+      <div
+        class="emotion-12 emotion-3"
+        dir="ltr"
+      >
+        <figcaption
+          class="emotion-14 emotion-15"
+          dir="ltr"
+        >
+          <span
+            class="emotion-10 emotion-11"
+          >
+            Image caption, 
+          </span>
+          <p>
+            Figure Amp Image with Copyright and Caption
+          </p>
+        </figcaption>
+      </div>
+    </div>
+  </figure>
+</div>
+`;
+
+exports[`ArticleFigure should render an AMP image with caption text 1`] = `
+.emotion-0 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+@supports (display:grid) {
+  .emotion-2 {
+    display: grid;
+    position: initial;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-gap: 1rem;
+    }
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-4 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 1;
+    }
+  }
+}
+
+.emotion-6 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 60px 17px;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+@media (min-width:25rem) {
+  .emotion-6 {
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-6 {
+    background-size: 93px 27px;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-8 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-8 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-8 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-8 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-8 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-8 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-8 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-8 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-8 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-8 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-8 {
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-8 {
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-8 {
+      grid-template-columns: repeat(10,1fr);
+      grid-column-end: span 10;
+      grid-column-start: 1;
+    }
+  }
 }
 
 .emotion-10 {
@@ -756,12 +1150,12 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   }
 }
 
-.emotion-10 > p {
+.emotion-10>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-10 > p:last-child {
+.emotion-10>p:last-child {
   padding-bottom: 0;
 }
 
@@ -781,247 +1175,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   }
 }
 
-<div>
-  <figure
-    class="emotion-16 emotion-17"
-  >
-    <div
-      class="emotion-14 emotion-7"
-      dir="ltr"
-    >
-      <div
-        class="emotion-6 emotion-7"
-        dir="ltr"
-      >
-        <div
-          class="emotion-4 emotion-5"
-        >
-          <amp-img
-            alt="Pauline Clayton"
-            attribution="Getty Images"
-            height="360"
-            layout="responsive"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width="640"
-          />
-          <p
-            class="emotion-2 emotion-3"
-            role="text"
-          >
-            <span
-              class="emotion-0 emotion-1"
-            >
-              Image source, 
-            </span>
-            Getty Images
-          </p>
-        </div>
-      </div>
-      <div
-        class="emotion-12 emotion-7"
-        dir="ltr"
-      >
-        <figcaption
-          class="emotion-10 emotion-11"
-          dir="ltr"
-        >
-          <span
-            class="emotion-0 emotion-1"
-          >
-            Image caption, 
-          </span>
-          <p>
-            Figure Amp Image with Copyright and Caption
-          </p>
-        </figcaption>
-      </div>
-    </div>
-  </figure>
-</div>
-`;
-
-exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 .emotion-12 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-@supports (display:grid) {
-  .emotion-10 {
-    display: grid;
-    position: initial;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-10 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-10 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-10 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-10 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-10 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-10 {
-      grid-template-columns: repeat(12,1fr);
-      grid-column-end: span 12;
-      grid-column-gap: 1rem;
-    }
-}
-}
-
-@media (max-width:14.9375rem) {
-  .emotion-2 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-2 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-2 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-2 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-2 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-2 {
-    margin-left: 0%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-2 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-2 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-2 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-2 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-2 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-2 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-2 {
-      grid-template-columns: repeat(12,1fr);
-      grid-column-end: span 12;
-      grid-column-start: 1;
-    }
-}
-}
-
-.emotion-0 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #F2F2F2;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 60px 17px;
-  padding-bottom: 56.25%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-@media (min-width:25rem) {
-  .emotion-0 {
-    background-size: 77px 22px;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-0 {
-    background-size: 93px 27px;
-  }
-}
-
-.emotion-4 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -1033,174 +1187,20 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
   margin: 0;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-8 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-8 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-8 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-8 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-8 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-8 {
-    margin-left: 0%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-8 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-8 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-8 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-8 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-8 {
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-8 {
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-8 {
-      grid-template-columns: repeat(10,1fr);
-      grid-column-end: span 10;
-      grid-column-start: 1;
-    }
-}
-}
-
-.emotion-6 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #6E6E73;
-  margin-top: 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  width: 100%;
-  width: calc(100% - 0.5rem);
-  margin-left: 0.5rem;
-  border-left: 1px solid #6E6E73;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-6 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-6 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-6 {
-    width: 100%;
-    margin: 0.5rem 0 0;
-  }
-}
-
-.emotion-6 > p {
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.emotion-6 > p:last-child {
-  padding-bottom: 0;
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-6 {
-    width: calc(100% - 1rem);
-    margin-left: 1rem;
-    padding-right: 1rem;
-    padding-left: 0.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-6 {
-    padding-right: 0;
-    padding-left: 0.5rem;
-  }
-}
-
 <div>
   <figure
-    class="emotion-12 emotion-13"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-10 emotion-3"
+      class="emotion-2 emotion-3"
       dir="ltr"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-4 emotion-3"
         dir="ltr"
       >
         <div
-          class="emotion-0 emotion-1"
+          class="emotion-6 emotion-7"
         >
           <amp-img
             alt="Pauline Clayton"
@@ -1217,11 +1217,11 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
         dir="ltr"
       >
         <figcaption
-          class="emotion-6 emotion-7"
+          class="emotion-10 emotion-11"
           dir="ltr"
         >
           <span
-            class="emotion-4 emotion-5"
+            class="emotion-12 emotion-13"
           >
             Image caption, 
           </span>
@@ -1236,162 +1236,162 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 `;
 
 exports[`ArticleFigure should render an AMP image with caption text with inline link 1`] = `
-.emotion-14 {
+.emotion-0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
 @supports (display:grid) {
-  .emotion-12 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-12 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-12 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-12 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-12 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-12 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-12 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-2 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-2 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-2 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-2 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-2 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-2 {
+  .emotion-4 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-2 {
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-2 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-2 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-2 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-2 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-2 {
+  @media (min-width:80rem) {
+    .emotion-4 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
     }
-}
+  }
 }
 
-.emotion-0 {
+.emotion-6 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1405,122 +1405,110 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 }
 
 @media (min-width:25rem) {
-  .emotion-0 {
+  .emotion-6 {
     background-size: 77px 22px;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-0 {
+  .emotion-6 {
     background-size: 93px 27px;
   }
 }
 
-.emotion-4 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
 @media (max-width:14.9375rem) {
-  .emotion-10 {
+  .emotion-8 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-10 {
+  .emotion-8 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-10 {
+  .emotion-8 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-10 {
+  .emotion-8 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-10 {
+  .emotion-8 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-10 {
+  .emotion-8 {
     margin-left: 0%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-10 {
+  .emotion-8 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-10 {
+  @media (max-width:14.9375rem) {
+    .emotion-8 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-10 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-8 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-10 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-8 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-10 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-8 {
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-10 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-8 {
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-10 {
+  @media (min-width:80rem) {
+    .emotion-8 {
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
     }
-}
+  }
 }
 
-.emotion-8 {
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1537,37 +1525,37 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-8 {
+  .emotion-10 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-8 {
+  .emotion-10 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-8 {
+  .emotion-10 {
     width: 100%;
     margin: 0.5rem 0 0;
   }
 }
 
-.emotion-8 > p {
+.emotion-10>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-8 > p:last-child {
+.emotion-10>p:last-child {
   padding-bottom: 0;
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-8 {
+  .emotion-10 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
     padding-right: 1rem;
@@ -1576,44 +1564,56 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 }
 
 @media (min-width:63rem) {
-  .emotion-8 {
+  .emotion-10 {
     padding-right: 0;
     padding-left: 0.5rem;
   }
 }
 
-.emotion-6 {
+.emotion-12 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-14 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-6:visited {
+.emotion-14:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-6:focus,
-.emotion-6:hover {
+.emotion-14:focus,
+.emotion-14:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
 <div>
   <figure
-    class="emotion-14 emotion-15"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-12 emotion-3"
+      class="emotion-2 emotion-3"
       dir="ltr"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-4 emotion-3"
         dir="ltr"
       >
         <div
-          class="emotion-0 emotion-1"
+          class="emotion-6 emotion-7"
         >
           <amp-img
             alt="Pauline Clayton"
@@ -1626,22 +1626,22 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
         </div>
       </div>
       <div
-        class="emotion-10 emotion-3"
+        class="emotion-8 emotion-3"
         dir="ltr"
       >
         <figcaption
-          class="emotion-8 emotion-9"
+          class="emotion-10 emotion-11"
           dir="ltr"
         >
           <span
-            class="emotion-4 emotion-5"
+            class="emotion-12 emotion-13"
           >
             Image caption, 
           </span>
           <p>
             This is a caption 
             <a
-              class="emotion-6 emotion-7"
+              class="emotion-14 emotion-15"
               href="https://www.bbc.com"
             >
               containing an inline link
@@ -1656,346 +1656,67 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 `;
 
 exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
-.emotion-10 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-@supports (display:grid) {
-  .emotion-8 {
-    display: grid;
-    position: initial;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-8 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-8 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-8 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-8 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-8 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-8 {
-      grid-template-columns: repeat(12,1fr);
-      grid-column-end: span 12;
-      grid-column-gap: 1rem;
-    }
-}
-}
-
-@media (max-width:14.9375rem) {
-  .emotion-6 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-6 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-6 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-6 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-6 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-6 {
-    margin-left: 0%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-6 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(12,1fr);
-      grid-column-end: span 12;
-      grid-column-start: 1;
-    }
-}
-}
-
-.emotion-4 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #F2F2F2;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 60px 17px;
-  padding-bottom: 56.25%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-@media (min-width:25rem) {
-  .emotion-4 {
-    background-size: 77px 22px;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-4 {
-    background-size: 93px 27px;
-  }
-}
-
-.emotion-2 {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  background-color: rgba(34,34,34,0.75);
-  text-transform: uppercase;
-  color: #FFFFFF;
-  padding: 0.25rem 0.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  position: absolute;
-  bottom: 0;
-  margin: 0;
-  left: 0;
-}
-
 .emotion-0 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-<div>
-  <figure
-    class="emotion-10 emotion-11"
-  >
-    <div
-      class="emotion-8 emotion-7"
-      dir="ltr"
-    >
-      <div
-        class="emotion-6 emotion-7"
-        dir="ltr"
-      >
-        <div
-          class="emotion-4 emotion-5"
-        >
-          <amp-img
-            alt="Pauline Clayton"
-            attribution="Getty Images"
-            height="360"
-            layout="responsive"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width="640"
-          />
-          <p
-            class="emotion-2 emotion-3"
-            role="text"
-          >
-            <span
-              class="emotion-0 emotion-1"
-            >
-              Image source, 
-            </span>
-            Getty Images
-          </p>
-        </div>
-      </div>
-    </div>
-  </figure>
-</div>
-`;
-
-exports[`ArticleFigure should render an image and caption for a portrait with nested grid 1`] = `
-.emotion-8 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.emotion-2 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #F2F2F2;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 60px 17px;
-  padding-bottom: 56.25%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-@media (min-width:25rem) {
-  .emotion-2 {
-    background-size: 77px 22px;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-2 {
-    background-size: 93px 27px;
-  }
-}
-
-.emotion-0 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
 @supports (display:grid) {
-  .emotion-6 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-6 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-6 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(4,1fr);
-      grid-column-end: span 4;
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(4,1fr);
-      grid-column-end: span 4;
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(8,1fr);
-      grid-column-end: span 8;
+  @media (min-width:80rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
 @media (max-width:14.9375rem) {
@@ -2041,667 +1762,53 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
+  @media (max-width:14.9375rem) {
     .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-4 {
-      grid-template-columns: repeat(4,1fr);
-      grid-column-end: span 4;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-4 {
-      grid-template-columns: repeat(4,1fr);
-      grid-column-end: span 4;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-4 {
-      grid-template-columns: repeat(4,1fr);
-      grid-column-end: span 4;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-4 {
-      grid-template-columns: repeat(10,1fr);
-      grid-column-end: span 10;
-      grid-column-start: 1;
-    }
-}
-}
-
-<div>
-  <figure
-    class="emotion-8 emotion-9"
-  >
-    <div
-      class="emotion-6 emotion-5"
-      dir="ltr"
-    >
-      <div
-        class="emotion-4 emotion-5"
-        dir="ltr"
-      >
-        <div
-          class="emotion-2 emotion-3"
-        >
-          <img
-            alt="Pauline Clayton"
-            class="emotion-0 emotion-1"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width="600"
-          />
-        </div>
-      </div>
-    </div>
-  </figure>
-</div>
-`;
-
-exports[`ArticleFigure should render an image and caption for a square with nested grid 1`] = `
-.emotion-8 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-@media (max-width:14.9375rem) {
-  .emotion-4 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-4 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-4 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-4 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-4 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-4 {
-    margin-left: 0%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-4 {
-    display: block;
-    width: initial;
-    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-4 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-4 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:80rem) {
+  @media (min-width:80rem) {
     .emotion-4 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
     }
-}
-}
-
-.emotion-2 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #F2F2F2;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 60px 17px;
-  padding-bottom: 56.25%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-@media (min-width:25rem) {
-  .emotion-2 {
-    background-size: 77px 22px;
   }
-}
-
-@media (min-width:63rem) {
-  .emotion-2 {
-    background-size: 93px 27px;
-  }
-}
-
-.emotion-0 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-@supports (display:grid) {
-  .emotion-6 {
-    display: grid;
-    position: initial;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(10,1fr);
-      grid-column-end: span 10;
-      grid-column-gap: 1rem;
-    }
-}
-}
-
-<div>
-  <figure
-    class="emotion-8 emotion-9"
-  >
-    <div
-      class="emotion-6 emotion-5"
-      dir="ltr"
-    >
-      <div
-        class="emotion-4 emotion-5"
-        dir="ltr"
-      >
-        <div
-          class="emotion-2 emotion-3"
-        >
-          <img
-            alt="Pauline Clayton"
-            class="emotion-0 emotion-1"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width="1240"
-          />
-        </div>
-      </div>
-    </div>
-  </figure>
-</div>
-`;
-
-exports[`ArticleFigure should render an image with alt text 1`] = `
-.emotion-8 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-@supports (display:grid) {
-  .emotion-6 {
-    display: grid;
-    position: initial;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-6 {
-      grid-template-columns: repeat(12,1fr);
-      grid-column-end: span 12;
-      grid-column-gap: 1rem;
-    }
-}
-}
-
-@media (max-width:14.9375rem) {
-  .emotion-4 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-4 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-4 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-4 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-4 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-4 {
-    margin-left: 0%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-4 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-4 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-4 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-4 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-4 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-4 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-4 {
-      grid-template-columns: repeat(12,1fr);
-      grid-column-end: span 12;
-      grid-column-start: 1;
-    }
-}
-}
-
-.emotion-2 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #F2F2F2;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 60px 17px;
-  padding-bottom: 56.25%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-@media (min-width:25rem) {
-  .emotion-2 {
-    background-size: 77px 22px;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-2 {
-    background-size: 93px 27px;
-  }
-}
-
-.emotion-0 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-<div>
-  <figure
-    class="emotion-8 emotion-9"
-  >
-    <div
-      class="emotion-6 emotion-5"
-      dir="ltr"
-    >
-      <div
-        class="emotion-4 emotion-5"
-        dir="ltr"
-      >
-        <div
-          class="emotion-2 emotion-3"
-        >
-          <img
-            alt="Pauline Clayton"
-            class="emotion-0 emotion-1"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-            width="640"
-          />
-        </div>
-      </div>
-    </div>
-  </figure>
-</div>
-`;
-
-exports[`ArticleFigure should render an image with caption and copyright 1`] = `
-.emotion-18 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-@supports (display:grid) {
-  .emotion-16 {
-    display: grid;
-    position: initial;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(12,1fr);
-      grid-column-end: span 12;
-      grid-column-gap: 1rem;
-    }
-}
-}
-
-@media (max-width:14.9375rem) {
-  .emotion-8 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-8 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-8 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-8 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-8 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-8 {
-    margin-left: 0%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-8 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-8 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-8 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-8 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-8 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-8 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-8 {
-      grid-template-columns: repeat(12,1fr);
-      grid-column-end: span 12;
-      grid-column-start: 1;
-    }
-}
 }
 
 .emotion-6 {
@@ -2729,13 +1836,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   }
 }
 
-.emotion-0 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.emotion-4 {
+.emotion-8 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -2749,7 +1850,906 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   left: 0;
 }
 
-.emotion-2 {
+.emotion-10 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <figure
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      dir="ltr"
+    >
+      <div
+        class="emotion-4 emotion-3"
+        dir="ltr"
+      >
+        <div
+          class="emotion-6 emotion-7"
+        >
+          <amp-img
+            alt="Pauline Clayton"
+            attribution="Getty Images"
+            height="360"
+            layout="responsive"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width="640"
+          />
+          <p
+            class="emotion-8 emotion-9"
+            role="text"
+          >
+            <span
+              class="emotion-10 emotion-11"
+            >
+              Image source, 
+            </span>
+            Getty Images
+          </p>
+        </div>
+      </div>
+    </div>
+  </figure>
+</div>
+`;
+
+exports[`ArticleFigure should render an image and caption for a portrait with nested grid 1`] = `
+.emotion-0 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+@supports (display:grid) {
+  .emotion-2 {
+    display: grid;
+    position: initial;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(4,1fr);
+      grid-column-end: span 4;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(4,1fr);
+      grid-column-end: span 4;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-4 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(4,1fr);
+      grid-column-end: span 4;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(4,1fr);
+      grid-column-end: span 4;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(4,1fr);
+      grid-column-end: span 4;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(10,1fr);
+      grid-column-end: span 10;
+      grid-column-start: 1;
+    }
+  }
+}
+
+.emotion-6 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 60px 17px;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+@media (min-width:25rem) {
+  .emotion-6 {
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-6 {
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-8 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
+<div>
+  <figure
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      dir="ltr"
+    >
+      <div
+        class="emotion-4 emotion-3"
+        dir="ltr"
+      >
+        <div
+          class="emotion-6 emotion-7"
+        >
+          <img
+            alt="Pauline Clayton"
+            class="emotion-8 emotion-9"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width="600"
+          />
+        </div>
+      </div>
+    </div>
+  </figure>
+</div>
+`;
+
+exports[`ArticleFigure should render an image and caption for a square with nested grid 1`] = `
+.emotion-0 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+@supports (display:grid) {
+  .emotion-2 {
+    display: grid;
+    position: initial;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(5,1fr);
+      grid-column-end: span 5;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(10,1fr);
+      grid-column-end: span 10;
+      grid-column-gap: 1rem;
+    }
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-4 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 1;
+    }
+  }
+}
+
+.emotion-6 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 60px 17px;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+@media (min-width:25rem) {
+  .emotion-6 {
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-6 {
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-8 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
+<div>
+  <figure
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      dir="ltr"
+    >
+      <div
+        class="emotion-4 emotion-3"
+        dir="ltr"
+      >
+        <div
+          class="emotion-6 emotion-7"
+        >
+          <img
+            alt="Pauline Clayton"
+            class="emotion-8 emotion-9"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width="1240"
+          />
+        </div>
+      </div>
+    </div>
+  </figure>
+</div>
+`;
+
+exports[`ArticleFigure should render an image with alt text 1`] = `
+.emotion-0 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+@supports (display:grid) {
+  .emotion-2 {
+    display: grid;
+    position: initial;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-gap: 1rem;
+    }
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-4 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 1;
+    }
+  }
+}
+
+.emotion-6 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 60px 17px;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+@media (min-width:25rem) {
+  .emotion-6 {
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-6 {
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-8 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
+<div>
+  <figure
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      dir="ltr"
+    >
+      <div
+        class="emotion-4 emotion-3"
+        dir="ltr"
+      >
+        <div
+          class="emotion-6 emotion-7"
+        >
+          <img
+            alt="Pauline Clayton"
+            class="emotion-8 emotion-9"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width="640"
+          />
+        </div>
+      </div>
+    </div>
+  </figure>
+</div>
+`;
+
+exports[`ArticleFigure should render an image with caption and copyright 1`] = `
+.emotion-0 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+@supports (display:grid) {
+  .emotion-2 {
+    display: grid;
+    position: initial;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-gap: 1rem;
+    }
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-4 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-4 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 1;
+    }
+  }
+}
+
+.emotion-6 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 60px 17px;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+@media (min-width:25rem) {
+  .emotion-6 {
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-6 {
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-8 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
+.emotion-10 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  background-color: rgba(34,34,34,0.75);
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 0.25rem 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+}
+
+.emotion-12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -2804,56 +2804,56 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
+  @media (max-width:14.9375rem) {
     .emotion-14 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-14 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-14 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-14 {
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-14 {
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:80rem) {
+  @media (min-width:80rem) {
     .emotion-14 {
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
     }
-}
+  }
 }
 
-.emotion-12 {
+.emotion-16 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2870,37 +2870,37 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-12 {
+  .emotion-16 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-12 {
+  .emotion-16 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-12 {
+  .emotion-16 {
     width: 100%;
     margin: 0.5rem 0 0;
   }
 }
 
-.emotion-12 > p {
+.emotion-16>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-12 > p:last-child {
+.emotion-16>p:last-child {
   padding-bottom: 0;
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-12 {
+  .emotion-16 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
     padding-right: 1rem;
@@ -2909,7 +2909,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 }
 
 @media (min-width:63rem) {
-  .emotion-12 {
+  .emotion-16 {
     padding-right: 0;
     padding-left: 0.5rem;
   }
@@ -2917,14 +2917,14 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 <div>
   <figure
-    class="emotion-18 emotion-19"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-16 emotion-9"
+      class="emotion-2 emotion-3"
       dir="ltr"
     >
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-4 emotion-3"
         dir="ltr"
       >
         <div
@@ -2932,16 +2932,16 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
         >
           <img
             alt="Pauline Clayton"
-            class="emotion-0 emotion-1"
+            class="emotion-8 emotion-9"
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
           />
           <p
-            class="emotion-4 emotion-5"
+            class="emotion-10 emotion-11"
             role="text"
           >
             <span
-              class="emotion-2 emotion-3"
+              class="emotion-12 emotion-13"
             >
               Image source, 
             </span>
@@ -2950,15 +2950,15 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
         </div>
       </div>
       <div
-        class="emotion-14 emotion-9"
+        class="emotion-14 emotion-3"
         dir="ltr"
       >
         <figcaption
-          class="emotion-12 emotion-13"
+          class="emotion-16 emotion-17"
           dir="ltr"
         >
           <span
-            class="emotion-2 emotion-3"
+            class="emotion-12 emotion-13"
           >
             Image caption, 
           </span>
@@ -2973,67 +2973,67 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 `;
 
 exports[`ArticleFigure should render an image with caption text 1`] = `
-.emotion-14 {
+.emotion-0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
 @supports (display:grid) {
-  .emotion-12 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-12 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-12 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-12 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-12 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-12 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-12 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
 @media (max-width:14.9375rem) {
@@ -3079,56 +3079,56 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
+  @media (max-width:14.9375rem) {
     .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:80rem) {
+  @media (min-width:80rem) {
     .emotion-4 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
     }
-}
+  }
 }
 
-.emotion-2 {
+.emotion-6 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -3142,33 +3142,21 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 }
 
 @media (min-width:25rem) {
-  .emotion-2 {
+  .emotion-6 {
     background-size: 77px 22px;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-2 {
+  .emotion-6 {
     background-size: 93px 27px;
   }
 }
 
-.emotion-0 {
+.emotion-8 {
   display: block;
   width: 100%;
   visibility: visible;
-}
-
-.emotion-6 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
 }
 
 @media (max-width:14.9375rem) {
@@ -3214,56 +3202,56 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
+  @media (max-width:14.9375rem) {
     .emotion-10 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-10 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-10 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-10 {
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-10 {
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:80rem) {
+  @media (min-width:80rem) {
     .emotion-10 {
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
     }
-}
+  }
 }
 
-.emotion-8 {
+.emotion-12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -3280,37 +3268,37 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-8 {
+  .emotion-12 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-8 {
+  .emotion-12 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-8 {
+  .emotion-12 {
     width: 100%;
     margin: 0.5rem 0 0;
   }
 }
 
-.emotion-8 > p {
+.emotion-12>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-8 > p:last-child {
+.emotion-12>p:last-child {
   padding-bottom: 0;
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-8 {
+  .emotion-12 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
     padding-right: 1rem;
@@ -3319,45 +3307,57 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 }
 
 @media (min-width:63rem) {
-  .emotion-8 {
+  .emotion-12 {
     padding-right: 0;
     padding-left: 0.5rem;
   }
 }
 
+.emotion-14 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 <div>
   <figure
-    class="emotion-14 emotion-15"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-12 emotion-5"
+      class="emotion-2 emotion-3"
       dir="ltr"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-4 emotion-3"
         dir="ltr"
       >
         <div
-          class="emotion-2 emotion-3"
+          class="emotion-6 emotion-7"
         >
           <img
             alt="Pauline Clayton"
-            class="emotion-0 emotion-1"
+            class="emotion-8 emotion-9"
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
           />
         </div>
       </div>
       <div
-        class="emotion-10 emotion-5"
+        class="emotion-10 emotion-3"
         dir="ltr"
       >
         <figcaption
-          class="emotion-8 emotion-9"
+          class="emotion-12 emotion-13"
           dir="ltr"
         >
           <span
-            class="emotion-6 emotion-7"
+            class="emotion-14 emotion-15"
           >
             Image caption, 
           </span>
@@ -3372,67 +3372,67 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 `;
 
 exports[`ArticleFigure should render an image with caption text with inline link 1`] = `
-.emotion-16 {
+.emotion-0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
 @supports (display:grid) {
-  .emotion-14 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-14 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-14 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-14 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-14 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-14 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-14 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
 @media (max-width:14.9375rem) {
@@ -3478,56 +3478,56 @@ exports[`ArticleFigure should render an image with caption text with inline link
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
+  @media (max-width:14.9375rem) {
     .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
     .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
     .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
     .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
     .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:80rem) {
+  @media (min-width:80rem) {
     .emotion-4 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
     }
-}
+  }
 }
 
-.emotion-2 {
+.emotion-6 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -3541,128 +3541,116 @@ exports[`ArticleFigure should render an image with caption text with inline link
 }
 
 @media (min-width:25rem) {
-  .emotion-2 {
+  .emotion-6 {
     background-size: 77px 22px;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-2 {
+  .emotion-6 {
     background-size: 93px 27px;
   }
 }
 
-.emotion-0 {
+.emotion-8 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.emotion-6 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
 @media (max-width:14.9375rem) {
-  .emotion-12 {
+  .emotion-10 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-12 {
+  .emotion-10 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-12 {
+  .emotion-10 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-12 {
+  .emotion-10 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-12 {
+  .emotion-10 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-12 {
+  .emotion-10 {
     margin-left: 0%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-12 {
+  .emotion-10 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-12 {
+  @media (max-width:14.9375rem) {
+    .emotion-10 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-12 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-10 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-12 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-10 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-12 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-10 {
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-12 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-10 {
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-12 {
+  @media (min-width:80rem) {
+    .emotion-10 {
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
     }
-}
+  }
 }
 
-.emotion-10 {
+.emotion-12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -3679,37 +3667,37 @@ exports[`ArticleFigure should render an image with caption text with inline link
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-10 {
+  .emotion-12 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-10 {
+  .emotion-12 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-10 {
+  .emotion-12 {
     width: 100%;
     margin: 0.5rem 0 0;
   }
 }
 
-.emotion-10 > p {
+.emotion-12>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-10 > p:last-child {
+.emotion-12>p:last-child {
   padding-bottom: 0;
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-10 {
+  .emotion-12 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
     padding-right: 1rem;
@@ -3718,70 +3706,82 @@ exports[`ArticleFigure should render an image with caption text with inline link
 }
 
 @media (min-width:63rem) {
-  .emotion-10 {
+  .emotion-12 {
     padding-right: 0;
     padding-left: 0.5rem;
   }
 }
 
-.emotion-8 {
+.emotion-14 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-16 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-8:visited {
+.emotion-16:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-8:focus,
-.emotion-8:hover {
+.emotion-16:focus,
+.emotion-16:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
 <div>
   <figure
-    class="emotion-16 emotion-17"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-14 emotion-5"
+      class="emotion-2 emotion-3"
       dir="ltr"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-4 emotion-3"
         dir="ltr"
       >
         <div
-          class="emotion-2 emotion-3"
+          class="emotion-6 emotion-7"
         >
           <img
             alt="Pauline Clayton"
-            class="emotion-0 emotion-1"
+            class="emotion-8 emotion-9"
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
           />
         </div>
       </div>
       <div
-        class="emotion-12 emotion-5"
+        class="emotion-10 emotion-3"
         dir="ltr"
       >
         <figcaption
-          class="emotion-10 emotion-11"
+          class="emotion-12 emotion-13"
           dir="ltr"
         >
           <span
-            class="emotion-6 emotion-7"
+            class="emotion-14 emotion-15"
           >
             Image caption, 
           </span>
           <p>
             This is a caption 
             <a
-              class="emotion-8 emotion-9"
+              class="emotion-16 emotion-17"
               href="https://www.bbc.com"
             >
               containing an inline link
@@ -3796,159 +3796,159 @@ exports[`ArticleFigure should render an image with caption text with inline link
 `;
 
 exports[`ArticleFigure should render an image with copyright text 1`] = `
-.emotion-12 {
+.emotion-0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
 @supports (display:grid) {
-  .emotion-10 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-10 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-10 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-10 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-10 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-10 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-10 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-8 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-8 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-8 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-8 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-8 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-8 {
+  .emotion-4 {
     margin-left: 0%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-8 {
+  .emotion-4 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-8 {
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-8 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-8 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-8 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-8 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-8 {
+  @media (min-width:80rem) {
+    .emotion-4 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
     }
-}
+  }
 }
 
 .emotion-6 {
@@ -3976,13 +3976,13 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
   }
 }
 
-.emotion-0 {
+.emotion-8 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.emotion-4 {
+.emotion-10 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -3996,7 +3996,7 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
   left: 0;
 }
 
-.emotion-2 {
+.emotion-12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -4010,14 +4010,14 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 
 <div>
   <figure
-    class="emotion-12 emotion-13"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-10 emotion-9"
+      class="emotion-2 emotion-3"
       dir="ltr"
     >
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-4 emotion-3"
         dir="ltr"
       >
         <div
@@ -4025,16 +4025,16 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
         >
           <img
             alt="Pauline Clayton"
-            class="emotion-0 emotion-1"
+            class="emotion-8 emotion-9"
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
           />
           <p
-            class="emotion-4 emotion-5"
+            class="emotion-10 emotion-11"
             role="text"
           >
             <span
-              class="emotion-2 emotion-3"
+              class="emotion-12 emotion-13"
             >
               Image source, 
             </span>

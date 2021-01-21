@@ -2,87 +2,87 @@
 
 exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid component 1`] = `
 @supports (display:grid) {
-  .emotion-22 {
+  .emotion-0 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-22 {
+  @media (max-width:14.9375rem) {
+    .emotion-0 {
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-22 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-0 {
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-22 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-0 {
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-22 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-0 {
       grid-template-columns: repeat(1,1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-22 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-0 {
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-22 {
+  @media (min-width:80rem) {
+    .emotion-0 {
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
-.emotion-20 {
+.emotion-2 {
   position: relative;
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-20 {
+  .emotion-2 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
   }
 
-@media (min-width:37.5rem) {
-    .emotion-20 {
+  @media (min-width:37.5rem) {
+    .emotion-2 {
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) {
-    .emotion-20 {
+  @media (min-width:63rem) {
+    .emotion-2 {
       display: block;
     }
-}
+  }
 }
 
-.emotion-6 {
+.emotion-4 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -90,24 +90,24 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
 }
 
 @media (min-width:63rem) {
-  .emotion-6 {
+  .emotion-4 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-6 {
+  .emotion-4 {
     width: initial;
-    grid-column: 1 / span 2;
+    grid-column: 1/span 2;
   }
 }
 
-.emotion-4 {
+.emotion-6 {
   position: relative;
 }
 
-.emotion-0 {
+.emotion-8 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -121,37 +121,37 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
 }
 
 @media (min-width:25rem) {
-  .emotion-0 {
+  .emotion-8 {
     background-size: 77px 22px;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-0 {
+  .emotion-8 {
     background-size: 93px 27px;
   }
 }
 
 @media (min-width:25rem) {
-  .emotion-2 {
+  .emotion-10 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-2 > * {
+.emotion-10>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width:24.9375rem) {
-  .emotion-2 > * {
+  .emotion-10>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-18 {
+.emotion-12 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -159,13 +159,13 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
 }
 
 @media (min-width:37.5rem) {
-  .emotion-18 {
+  .emotion-12 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-18 {
+  .emotion-12 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -173,21 +173,21 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-18 {
+  .emotion-12 {
     display: block;
     width: initial;
     padding: initial;
-    grid-column: 3 / span 4;
+    grid-column: 3/span 4;
   }
 
-@media (min-width:63rem) {
-    .emotion-18 {
+  @media (min-width:63rem) {
+    .emotion-12 {
       padding-top: 0.5rem;
     }
-}
+  }
 }
 
-.emotion-12 {
+.emotion-14 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -198,21 +198,21 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
   line-height: 1.25rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-12 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-14 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-12 {
+@media (min-width: 37.5rem) {
+  .emotion-14 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-10 {
+.emotion-16 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -221,7 +221,7 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
   overflow-wrap: anywhere;
 }
 
-.emotion-10:before {
+.emotion-16:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -233,17 +233,17 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
   z-index: 1;
 }
 
-.emotion-10:hover,
-.emotion-10:focus {
+.emotion-16:hover,
+.emotion-16:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-10:visited {
+.emotion-16:visited {
   color: #6E6E73;
 }
 
-.emotion-8 {
+.emotion-18 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -255,7 +255,7 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-20 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -267,34 +267,34 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-14 {
+  .emotion-20 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-14 {
+  .emotion-20 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-14 {
+  .emotion-20 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-14 {
+  .emotion-20 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-16 {
+.emotion-22 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -305,14 +305,14 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-16 {
+  .emotion-22 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-16 {
+  .emotion-22 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -320,22 +320,22 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
 
 <div>
   <div
-    class="emotion-22 emotion-23"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <div
-      class="emotion-20 emotion-21"
+      class="emotion-2 emotion-3"
       data-e2e="story-promo"
     >
       <div
-        class="emotion-6 emotion-7"
+        class="emotion-4 emotion-5"
         dir="ltr"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-6 emotion-7"
         >
           <div
-            class="emotion-0 emotion-1"
+            class="emotion-8 emotion-9"
           >
             <div
               class="lazyload-wrapper"
@@ -346,26 +346,26 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
             </div>
           </div>
           <div
-            class="emotion-2 emotion-3"
+            class="emotion-10 emotion-11"
           />
         </div>
       </div>
       <div
-        class="emotion-18 emotion-19"
+        class="emotion-12 emotion-13"
         dir="ltr"
       >
         <h3
-          class="emotion-12 emotion-13"
+          class="emotion-14 emotion-15"
         >
           <a
-            class="emotion-10 emotion-11"
+            class="emotion-16 emotion-17"
             href="/pidgin/44508901"
           >
             <span
               role="text"
             >
               <span
-                class="emotion-8 emotion-9"
+                class="emotion-18 emotion-19"
               >
                 , 
               </span>
@@ -376,12 +376,12 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
           </a>
         </h3>
         <p
-          class="emotion-14 emotion-15"
+          class="emotion-20 emotion-21"
         >
           James den Kwesi Ansah want convert most of Ghana's cassava waste into cheap electricity supply for schools, hospitals den villages.
         </p>
         <time
-          class="emotion-16 emotion-17"
+          class="emotion-22 emotion-23"
           datetime="1970-01-18"
         >
           18th January 1970

@@ -1,7 +1,197 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages 1`] = `
+@supports (display:grid) {
+  .emotion-0 {
+    display: grid;
+    position: initial;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+  }
+}
+
+.emotion-2 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@supports (display:grid) {
+  .emotion-4 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+    }
+  }
+}
+
 .emotion-6 {
+  padding: 0.5rem 0 1rem;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-6 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+.emotion-6:last-child {
+  border: none;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-6 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-6 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+.emotion-6:first-child {
+  padding-top: 0;
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-6:first-child {
+    padding-top: 1rem;
+  }
+}
+
+.emotion-6:last-child {
+  padding-bottom: 0;
+}
+
+@media (min-width: 63rem) {
+  .emotion-6 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-8 {
+    display: grid;
+  }
+}
+
+.emotion-10 {
+  position: relative;
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .emotion-10 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+
+  @media (min-width:37.5rem) {
+    .emotion-10 {
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width:63rem) {
+    .emotion-10 {
+      display: block;
+    }
+  }
+}
+
+.emotion-12 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -9,24 +199,24 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
 }
 
 @media (min-width:63rem) {
-  .emotion-6 {
+  .emotion-12 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-6 {
+  .emotion-12 {
     width: initial;
-    grid-column: 1 / span 2;
+    grid-column: 1/span 2;
   }
 }
 
-.emotion-4 {
+.emotion-14 {
   position: relative;
 }
 
-.emotion-0 {
+.emotion-16 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -40,37 +230,37 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
 }
 
 @media (min-width:25rem) {
-  .emotion-0 {
+  .emotion-16 {
     background-size: 77px 22px;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-0 {
+  .emotion-16 {
     background-size: 93px 27px;
   }
 }
 
 @media (min-width:25rem) {
-  .emotion-2 {
+  .emotion-18 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-2 > * {
+.emotion-18>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width:24.9375rem) {
-  .emotion-2 > * {
+  .emotion-18>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-16 {
+.emotion-20 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -78,13 +268,13 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
 }
 
 @media (min-width:37.5rem) {
-  .emotion-16 {
+  .emotion-20 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-16 {
+  .emotion-20 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -92,21 +282,21 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-16 {
+  .emotion-20 {
     display: block;
     width: initial;
     padding: initial;
-    grid-column: 3 / span 4;
+    grid-column: 3/span 4;
   }
 
-@media (min-width:63rem) {
-    .emotion-16 {
+  @media (min-width:63rem) {
+    .emotion-20 {
       padding-top: 0.5rem;
     }
-}
+  }
 }
 
-.emotion-12 {
+.emotion-22 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -117,21 +307,21 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
   line-height: 1.25rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-12 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-12 {
+@media (min-width: 37.5rem) {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-10 {
+.emotion-24 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -140,7 +330,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
   overflow-wrap: anywhere;
 }
 
-.emotion-10:before {
+.emotion-24:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -152,17 +342,17 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
   z-index: 1;
 }
 
-.emotion-10:hover,
-.emotion-10:focus {
+.emotion-24:hover,
+.emotion-24:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-10:visited {
+.emotion-24:visited {
   color: #6E6E73;
 }
 
-.emotion-8 {
+.emotion-26 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -174,7 +364,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-28 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -185,233 +375,43 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-14 {
+  .emotion-28 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-14 {
+  .emotion-28 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-69 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-@supports (display:grid) {
-  .emotion-69 {
-    display: grid;
-    position: initial;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-69 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-69 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-69 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-69 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-69 {
-      grid-template-columns: repeat(8,1fr);
-      grid-column-end: span 8;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-69 {
-      grid-template-columns: repeat(8,1fr);
-      grid-column-end: span 8;
-      grid-column-gap: 1rem;
-    }
-}
-}
-
-.emotion-22 {
-  padding: 0.5rem 0 1rem;
-}
-
-@media (max-width:62.9375rem) {
-  .emotion-22 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
-.emotion-22:last-child {
-  border: none;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-22 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-22 {
-    padding: 0 0 1.5rem;
-  }
-}
-
-.emotion-22:first-child {
-  padding-top: 0;
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-22:first-child {
-    padding-top: 1rem;
-  }
-}
-
-.emotion-22:last-child {
-  padding-bottom: 0;
-}
-
-@media (min-width:63rem) {
-  .emotion-22 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-    padding: 1rem 0 1rem;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-22 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-22 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-22 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-22 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-22 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-22 {
-      grid-template-columns: repeat(8,1fr);
-      grid-column-end: span 8;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-22 {
-      grid-template-columns: repeat(8,1fr);
-      grid-column-end: span 8;
-    }
-}
-}
-
-.emotion-19 {
-  position: relative;
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-19 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-
-@media (min-width:37.5rem) {
-    .emotion-19 {
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:63rem) {
-    .emotion-19 {
-      display: block;
-    }
-}
-}
-
-@media (min-width:63rem) {
-  .emotion-19 {
-    display: grid;
-  }
-}
-
 <div>
   <ol
-    class="emotion-21 emotion-69 emotion-70"
+    class="emotion-0 emotion-1 emotion-2 emotion-3"
     data-e2e="most-watched-ol"
     dir="ltr"
     role="list"
   >
     <li
-      class="emotion-21 emotion-22 emotion-23"
+      class="emotion-4 emotion-1 emotion-6 emotion-7"
       dir="ltr"
     >
       <div
-        class="emotion-18 emotion-19 emotion-20"
+        class="emotion-8 emotion-9 emotion-10 emotion-11"
         data-e2e="story-promo"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-12 emotion-13"
           dir="ltr"
         >
           <div
-            class="emotion-4 emotion-5"
+            class="emotion-14 emotion-15"
           >
             <div
-              class="emotion-0 emotion-1"
+              class="emotion-16 emotion-17"
             >
               <div
                 class="lazyload-wrapper"
@@ -422,26 +422,26 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3"
+              class="emotion-18 emotion-19"
             />
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17"
+          class="emotion-20 emotion-21"
           dir="ltr"
         >
           <h3
-            class="emotion-12 emotion-13"
+            class="emotion-22 emotion-23"
           >
             <a
-              class="emotion-10 emotion-11"
+              class="emotion-24 emotion-25"
               href="/pidgin/44508901"
             >
               <span
                 role="text"
               >
                 <span
-                  class="emotion-8 emotion-9"
+                  class="emotion-26 emotion-27"
                 >
                   , 
                 </span>
@@ -452,7 +452,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
             </a>
           </h3>
           <time
-            class="emotion-14 emotion-15"
+            class="emotion-28 emotion-29"
             datetime="1970-01-18"
           >
             18th January 1970
@@ -461,22 +461,22 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
       </div>
     </li>
     <li
-      class="emotion-21 emotion-22 emotion-23"
+      class="emotion-4 emotion-1 emotion-6 emotion-7"
       dir="ltr"
     >
       <div
-        class="emotion-18 emotion-19 emotion-20"
+        class="emotion-8 emotion-9 emotion-10 emotion-11"
         data-e2e="story-promo"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-12 emotion-13"
           dir="ltr"
         >
           <div
-            class="emotion-4 emotion-5"
+            class="emotion-14 emotion-15"
           >
             <div
-              class="emotion-0 emotion-1"
+              class="emotion-16 emotion-17"
             >
               <div
                 class="lazyload-wrapper"
@@ -487,26 +487,26 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3"
+              class="emotion-18 emotion-19"
             />
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17"
+          class="emotion-20 emotion-21"
           dir="ltr"
         >
           <h3
-            class="emotion-12 emotion-13"
+            class="emotion-22 emotion-23"
           >
             <a
-              class="emotion-10 emotion-11"
+              class="emotion-24 emotion-25"
               href="/pidgin/tori-46975713"
             >
               How light companies dey use estimated billing show Nigerians pepper
             </a>
           </h3>
           <time
-            class="emotion-14 emotion-15"
+            class="emotion-28 emotion-29"
             datetime="1970-01-18"
           >
             18th January 1970
@@ -515,22 +515,22 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
       </div>
     </li>
     <li
-      class="emotion-21 emotion-22 emotion-23"
+      class="emotion-4 emotion-1 emotion-6 emotion-7"
       dir="ltr"
     >
       <div
-        class="emotion-18 emotion-19 emotion-20"
+        class="emotion-8 emotion-9 emotion-10 emotion-11"
         data-e2e="story-promo"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-12 emotion-13"
           dir="ltr"
         >
           <div
-            class="emotion-4 emotion-5"
+            class="emotion-14 emotion-15"
           >
             <div
-              class="emotion-0 emotion-1"
+              class="emotion-16 emotion-17"
             >
               <div
                 class="lazyload-wrapper"
@@ -541,26 +541,26 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3"
+              class="emotion-18 emotion-19"
             />
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17"
+          class="emotion-20 emotion-21"
           dir="ltr"
         >
           <h3
-            class="emotion-12 emotion-13"
+            class="emotion-22 emotion-23"
           >
             <a
-              class="emotion-10 emotion-11"
+              class="emotion-24 emotion-25"
               href="/pidgin/tori-42494678"
             >
               Nigeria: Wetin 5,222 megawatts electric fit do?
             </a>
           </h3>
           <time
-            class="emotion-14 emotion-15"
+            class="emotion-28 emotion-29"
             datetime="1970-01-18"
           >
             18th January 1970
@@ -574,184 +574,184 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
 `;
 
 exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages 1`] = `
-.emotion-66 {
+.emotion-1 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 @supports (display:grid) {
-  .emotion-66 {
+  .emotion-1 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-66 {
+  @media (max-width:14.9375rem) {
+    .emotion-1 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-66 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-1 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-66 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-1 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-66 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-1 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-66 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-1 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-66 {
+  @media (min-width:80rem) {
+    .emotion-1 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
-.emotion-21 {
+.emotion-4 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width:62.9375rem) {
-  .emotion-21 {
+  .emotion-4 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-21:last-child {
+.emotion-4:last-child {
   border: none;
 }
 
 @media (min-width:37.5rem) {
-  .emotion-21 {
+  .emotion-4 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-21 {
+  .emotion-4 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-21:first-child {
+.emotion-4:first-child {
   padding-top: 0;
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-21:first-child {
+  .emotion-4:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-21:last-child {
+.emotion-4:last-child {
   padding-bottom: 0;
 }
 
 @supports (display:grid) {
-  .emotion-21 {
+  .emotion-4 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-21 {
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-21 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-21 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-21 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-21 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-21 {
+  @media (min-width:80rem) {
+    .emotion-4 {
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
-}
+  }
 }
 
-.emotion-18 {
+.emotion-6 {
   position: relative;
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-18 {
+  .emotion-6 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
   }
 
-@media (min-width:37.5rem) {
-    .emotion-18 {
+  @media (min-width:37.5rem) {
+    .emotion-6 {
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) {
-    .emotion-18 {
+  @media (min-width:63rem) {
+    .emotion-6 {
       display: block;
     }
-}
+  }
 }
 
-.emotion-6 {
+.emotion-8 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -759,24 +759,24 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
 }
 
 @media (min-width:63rem) {
-  .emotion-6 {
+  .emotion-8 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-6 {
+  .emotion-8 {
     width: initial;
-    grid-column: 1 / span 2;
+    grid-column: 1/span 2;
   }
 }
 
-.emotion-4 {
+.emotion-10 {
   position: relative;
 }
 
-.emotion-0 {
+.emotion-12 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -790,31 +790,31 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
 }
 
 @media (min-width:25rem) {
-  .emotion-0 {
+  .emotion-12 {
     background-size: 77px 22px;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-0 {
+  .emotion-12 {
     background-size: 93px 27px;
   }
 }
 
 @media (min-width:25rem) {
-  .emotion-2 {
+  .emotion-14 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-2 > * {
+.emotion-14>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width:24.9375rem) {
-  .emotion-2 > * {
+  .emotion-14>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
@@ -846,17 +846,17 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
     display: block;
     width: initial;
     padding: initial;
-    grid-column: 3 / span 4;
+    grid-column: 3/span 4;
   }
 
-@media (min-width:63rem) {
+  @media (min-width:63rem) {
     .emotion-16 {
       padding-top: 0.5rem;
     }
-}
+  }
 }
 
-.emotion-12 {
+.emotion-18 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -867,21 +867,21 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
   line-height: 1.25rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-12 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-18 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-12 {
+@media (min-width: 37.5rem) {
+  .emotion-18 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-10 {
+.emotion-20 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -890,7 +890,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
   overflow-wrap: anywhere;
 }
 
-.emotion-10:before {
+.emotion-20:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -902,17 +902,17 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
   z-index: 1;
 }
 
-.emotion-10:hover,
-.emotion-10:focus {
+.emotion-20:hover,
+.emotion-20:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-10:visited {
+.emotion-20:visited {
   color: #6E6E73;
 }
 
-.emotion-8 {
+.emotion-22 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -924,7 +924,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-24 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -935,14 +935,14 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-14 {
+  .emotion-24 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-14 {
+  .emotion-24 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -950,27 +950,27 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
 
 <div>
   <ul
-    class="emotion-20 emotion-66 emotion-67"
+    class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
     role="list"
   >
     <li
-      class="emotion-20 emotion-21 emotion-22"
+      class="emotion-0 emotion-4 emotion-5"
       dir="ltr"
     >
       <div
-        class="emotion-18 emotion-19"
+        class="emotion-6 emotion-7"
         data-e2e="story-promo"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-8 emotion-9"
           dir="ltr"
         >
           <div
-            class="emotion-4 emotion-5"
+            class="emotion-10 emotion-11"
           >
             <div
-              class="emotion-0 emotion-1"
+              class="emotion-12 emotion-13"
             >
               <div
                 class="lazyload-wrapper"
@@ -981,7 +981,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3"
+              class="emotion-14 emotion-15"
             />
           </div>
         </div>
@@ -990,17 +990,17 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
           dir="ltr"
         >
           <h3
-            class="emotion-12 emotion-13"
+            class="emotion-18 emotion-19"
           >
             <a
-              class="emotion-10 emotion-11"
+              class="emotion-20 emotion-21"
               href="/pidgin/44508901"
             >
               <span
                 role="text"
               >
                 <span
-                  class="emotion-8 emotion-9"
+                  class="emotion-22 emotion-23"
                 >
                   , 
                 </span>
@@ -1011,7 +1011,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
             </a>
           </h3>
           <time
-            class="emotion-14 emotion-15"
+            class="emotion-24 emotion-25"
             datetime="1970-01-18"
           >
             18th January 1970
@@ -1020,22 +1020,22 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
       </div>
     </li>
     <li
-      class="emotion-20 emotion-21 emotion-22"
+      class="emotion-0 emotion-4 emotion-5"
       dir="ltr"
     >
       <div
-        class="emotion-18 emotion-19"
+        class="emotion-6 emotion-7"
         data-e2e="story-promo"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-8 emotion-9"
           dir="ltr"
         >
           <div
-            class="emotion-4 emotion-5"
+            class="emotion-10 emotion-11"
           >
             <div
-              class="emotion-0 emotion-1"
+              class="emotion-12 emotion-13"
             >
               <div
                 class="lazyload-wrapper"
@@ -1046,7 +1046,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3"
+              class="emotion-14 emotion-15"
             />
           </div>
         </div>
@@ -1055,17 +1055,17 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
           dir="ltr"
         >
           <h3
-            class="emotion-12 emotion-13"
+            class="emotion-18 emotion-19"
           >
             <a
-              class="emotion-10 emotion-11"
+              class="emotion-20 emotion-21"
               href="/pidgin/tori-46975713"
             >
               How light companies dey use estimated billing show Nigerians pepper
             </a>
           </h3>
           <time
-            class="emotion-14 emotion-15"
+            class="emotion-24 emotion-25"
             datetime="1970-01-18"
           >
             18th January 1970
@@ -1074,22 +1074,22 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
       </div>
     </li>
     <li
-      class="emotion-20 emotion-21 emotion-22"
+      class="emotion-0 emotion-4 emotion-5"
       dir="ltr"
     >
       <div
-        class="emotion-18 emotion-19"
+        class="emotion-6 emotion-7"
         data-e2e="story-promo"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-8 emotion-9"
           dir="ltr"
         >
           <div
-            class="emotion-4 emotion-5"
+            class="emotion-10 emotion-11"
           >
             <div
-              class="emotion-0 emotion-1"
+              class="emotion-12 emotion-13"
             >
               <div
                 class="lazyload-wrapper"
@@ -1100,7 +1100,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3"
+              class="emotion-14 emotion-15"
             />
           </div>
         </div>
@@ -1109,17 +1109,17 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
           dir="ltr"
         >
           <h3
-            class="emotion-12 emotion-13"
+            class="emotion-18 emotion-19"
           >
             <a
-              class="emotion-10 emotion-11"
+              class="emotion-20 emotion-21"
               href="/pidgin/tori-42494678"
             >
               Nigeria: Wetin 5,222 megawatts electric fit do?
             </a>
           </h3>
           <time
-            class="emotion-14 emotion-15"
+            class="emotion-24 emotion-25"
             datetime="1970-01-18"
           >
             18th January 1970

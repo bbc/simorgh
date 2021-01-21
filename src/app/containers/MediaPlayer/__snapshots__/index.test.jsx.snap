@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MediaPlayer Calls the canonical placeholder when platform is canonical and showPlaceholder is true 1`] = `
-.emotion-23 {
+.emotion-0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.emotion-21 {
+.emotion-2 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-19 {
+.emotion-4 {
   position: absolute;
   top: 0;
   left: 0;
@@ -22,12 +22,12 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   cursor: default;
 }
 
-.emotion-19:hover .emotion-14,
-.emotion-19:focus .emotion-14 {
+.emotion-4:hover .emotion-12,
+.emotion-4:focus .emotion-12 {
   background-color: #B80000;
 }
 
-.emotion-4 {
+.emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -42,32 +42,32 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 {
+  .emotion-6 {
     font-size: 0.875rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .emotion-4 {
+  .emotion-6 {
     background-color: transparent;
   }
 }
 
-.no-js .emotion-4 {
+.no-js .emotion-6 {
   background-color: rgba(34,34,34,0.75);
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .no-js .emotion-4 {
+  .no-js .emotion-6 {
     background-color: transparent;
   }
 }
 
-.no-js .emotion-4 .guidance-message {
+.no-js .emotion-6 .guidance-message {
   display: none;
 }
 
-.emotion-0 {
+.emotion-8 {
   display: block;
   font-weight: normal;
   padding: 0.5rem;
@@ -75,23 +75,23 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .emotion-0 {
+  .emotion-8 {
     background-color: window;
   }
 }
 
 @media (min-width:25rem) {
-  .emotion-0 {
+  .emotion-8 {
     padding: 1rem;
   }
 }
 
-.emotion-2 {
+.emotion-10 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-15 {
+.emotion-13 {
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -111,18 +111,18 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   bottom: 0;
 }
 
-.emotion-15:hover,
-.emotion-15:focus {
+.emotion-13:hover,
+.emotion-13:focus {
   background-color: #B80000;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 
-.no-js .emotion-15 {
+.no-js .emotion-13 {
   display: none;
 }
 
-.emotion-6 {
+.emotion-15 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -134,7 +134,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   margin: 0;
 }
 
-.emotion-10 > svg {
+.emotion-17>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -142,7 +142,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   width: 1.5rem;
 }
 
-.emotion-8 {
+.emotion-19 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -151,12 +151,12 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   height: 0.75rem;
 }
 
-.emotion-12 {
+.emotion-21 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-17 {
+.emotion-23 {
   display: block;
   width: 100%;
   visibility: visible;
@@ -164,42 +164,42 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
 
 <div>
   <figure
-    class="emotion-23 emotion-24"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-21 emotion-22"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-19 emotion-20"
+        class="emotion-4 emotion-5"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-6 emotion-7"
         >
           <strong
             aria-hidden="true"
-            class="guidance-message emotion-0 emotion-1"
+            class="guidance-message emotion-8 emotion-9"
           >
             Contains strong language and adult humour.
           </strong>
           <noscript
-            class="emotion-2 emotion-3"
+            class="emotion-10 emotion-11"
           />
         </div>
         <button
-          class="emotion-14 emotion-15 emotion-16"
+          class="emotion-12 emotion-13 emotion-14"
         >
           <span
-            class="emotion-6 emotion-7"
+            class="emotion-15 emotion-16"
           >
             Contains strong language and adult humour. Play video, "Five things ants can teach us about management", Duration 3,11
           </span>
           <div
             aria-hidden="true"
-            class="emotion-10 emotion-11"
+            class="emotion-17 emotion-18"
           >
             <svg
               aria-hidden="true"
-              class="emotion-8 emotion-9"
+              class="emotion-19 emotion-20"
               focusable="false"
               height="12px"
               viewBox="0 0 32 32"
@@ -212,7 +212,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
           </div>
           <time
             aria-hidden="true"
-            class="emotion-12 emotion-13"
+            class="emotion-21 emotion-22"
             datetime="PT3M11S"
           >
             03:11
@@ -220,7 +220,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
         </button>
         <img
           alt=""
-          class="emotion-17 emotion-18"
+          class="emotion-23 emotion-24"
           src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
           srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
         />
@@ -231,7 +231,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
 `;
 
 exports[`MediaPlayer Does not Call the canonical placeholder when platform is canonical but showPlaceholder is false 1`] = `
-.emotion-4 {
+.emotion-0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -243,7 +243,7 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
   overflow: hidden;
 }
 
-.emotion-0 {
+.emotion-4 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -255,7 +255,7 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
 
 <div>
   <figure
-    class="emotion-4 emotion-5"
+    class="emotion-0 emotion-1"
   >
     <div
       class="emotion-2 emotion-3"
@@ -263,7 +263,7 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
       <iframe
         allow="autoplay"
         allowfullscreen=""
-        class="emotion-0 emotion-1"
+        class="emotion-4 emotion-5"
         scrolling="no"
         src="https://test.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"
         title="Media player"
@@ -275,13 +275,13 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
 `;
 
 exports[`MediaPlayer Renders the AMP player when platform is AMP 1`] = `
-.emotion-2 {
+.emotion-0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.emotion-0 {
+.emotion-2 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
@@ -289,10 +289,10 @@ exports[`MediaPlayer Renders the AMP player when platform is AMP 1`] = `
 
 <div>
   <figure
-    class="emotion-2 emotion-3"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="emotion-2 emotion-3"
     >
       <amp-iframe
         allowfullscreen="allowfullscreen"

@@ -1,183 +1,183 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ErrorMain should correctly render for an error page for News 1`] = `
-.emotion-17 {
+.emotion-0 {
   width: 100%;
   padding-bottom: 4rem;
 }
 
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @supports (display:grid) {
-  .emotion-17 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-17 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-17 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-17 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-17 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-17 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-17 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-17 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-17 {
-    margin: 0 auto;
-    max-width: 80rem;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-14 {
+  .emotion-4 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-14 {
+  .emotion-4 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-14 {
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-14 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-14 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-14 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-14 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-14 {
+  @media (min-width:80rem) {
+    .emotion-4 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-.emotion-0 {
+.emotion-6 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   color: #B80000;
@@ -187,21 +187,21 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
   padding: 2.5rem 0 0.5rem 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-6 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
-.emotion-2 {
+.emotion-8 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -211,21 +211,21 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
   margin-top: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-8 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
-.emotion-4 {
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -237,84 +237,84 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
   padding-top: 0.2rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-4 {
+@media (min-width: 37.5rem) {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-10 {
+.emotion-18 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-10:visited {
+.emotion-18:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-10:focus,
-.emotion-10:hover {
+.emotion-18:focus,
+.emotion-18:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
 <div>
   <main
-    class="emotion-16 emotion-17 emotion-15"
+    class="emotion-0 emotion-1 emotion-2 emotion-3"
     dir="ltr"
     role="main"
   >
     <div
-      class="emotion-14 emotion-15"
+      class="emotion-4 emotion-3"
       dir="ltr"
     >
       <span
-        class="emotion-0 emotion-1"
+        class="emotion-6 emotion-7"
         data-e2e="status-code"
       >
         StatusCode
       </span>
       <h1
-        class="emotion-2 emotion-3"
+        class="emotion-8 emotion-9"
         id="content"
         tabindex="-1"
       >
         A error has occured
       </h1>
       <p
-        class="emotion-4 emotion-5"
+        class="emotion-10 emotion-11"
       >
         Something happened, please try an option
       </p>
       <ul>
         <li
-          class="emotion-4 emotion-5"
+          class="emotion-10 emotion-11"
         >
           Option one
         </li>
         <li
-          class="emotion-4 emotion-5"
+          class="emotion-10 emotion-11"
         >
           Option two
         </li>
       </ul>
       <p
-        class="emotion-4 emotion-5"
+        class="emotion-10 emotion-11"
       >
         You can do 
         <a
-          class="emotion-10 emotion-11"
+          class="emotion-18 emotion-19"
           href="https://www.bbc.com"
         >
           this
@@ -327,201 +327,183 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
 `;
 
 exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
-.emotion-17 {
+.emotion-0 {
   width: 100%;
   padding-bottom: 4rem;
 }
 
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @supports (display:grid) {
-  .emotion-17 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-17 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-17 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-17 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-17 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-17 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-17 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-17 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-17 {
-    margin: 0 auto;
-    max-width: 80rem;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-14 {
+  .emotion-4 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-14 {
+  .emotion-4 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-14 {
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-14 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-14 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-14 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-14 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-14 {
+  @media (min-width:80rem) {
+    .emotion-4 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
-}
-
-.emotion-10 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  }
 }
 
-.emotion-10:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
-
-.emotion-10:focus,
-.emotion-10:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
-}
-
-.emotion-0 {
+.emotion-6 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   color: #B80000;
@@ -531,21 +513,21 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
   padding: 2.5rem 0 0.5rem 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
     font-size: 1.375rem;
     line-height: 1.875rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-6 {
     font-size: 1.75rem;
     line-height: 2.375rem;
   }
 }
 
-.emotion-2 {
+.emotion-8 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -555,21 +537,21 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
   margin-top: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
     font-size: 1.75rem;
     line-height: 2.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-8 {
     font-size: 2.5rem;
     line-height: 3.375rem;
   }
 }
 
-.emotion-4 {
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -581,66 +563,84 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
   padding-top: 0.2rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-4 {
+@media (min-width: 37.5rem) {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
+}
+
+.emotion-18 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-18:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.emotion-18:focus,
+.emotion-18:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
 }
 
 <div>
   <main
-    class="emotion-16 emotion-17 emotion-15"
+    class="emotion-0 emotion-1 emotion-2 emotion-3"
     dir="ltr"
     role="main"
   >
     <div
-      class="emotion-14 emotion-15"
+      class="emotion-4 emotion-3"
       dir="ltr"
     >
       <span
-        class="emotion-0 emotion-1"
+        class="emotion-6 emotion-7"
         data-e2e="status-code"
       >
         StatusCode
       </span>
       <h1
-        class="emotion-2 emotion-3"
+        class="emotion-8 emotion-9"
         id="content"
         tabindex="-1"
       >
         A error has occured
       </h1>
       <p
-        class="emotion-4 emotion-5"
+        class="emotion-10 emotion-11"
       >
         Something happened, please try an option
       </p>
       <ul>
         <li
-          class="emotion-4 emotion-5"
+          class="emotion-10 emotion-11"
         >
           Option one
         </li>
         <li
-          class="emotion-4 emotion-5"
+          class="emotion-10 emotion-11"
         >
           Option two
         </li>
       </ul>
       <p
-        class="emotion-4 emotion-5"
+        class="emotion-10 emotion-11"
       >
         You can do 
         <a
-          class="emotion-10 emotion-11"
+          class="emotion-18 emotion-19"
           href="https://www.bbc.com"
         >
           this
@@ -653,201 +653,183 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
 `;
 
 exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
-.emotion-17 {
+.emotion-0 {
   width: 100%;
   padding-bottom: 4rem;
 }
 
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @supports (display:grid) {
-  .emotion-17 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-17 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-17 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-17 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-17 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-17 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-17 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-17 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-17 {
-    margin: 0 auto;
-    max-width: 80rem;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-14 {
+  .emotion-4 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-14 {
+  .emotion-4 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-14 {
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-14 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-14 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-14 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-14 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-14 {
+  @media (min-width:80rem) {
+    .emotion-4 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
-}
-
-.emotion-10 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  }
 }
 
-.emotion-10:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
-
-.emotion-10:focus,
-.emotion-10:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
-}
-
-.emotion-0 {
+.emotion-6 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   color: #B80000;
@@ -857,21 +839,21 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
   padding: 2.5rem 0 0.5rem 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
     font-size: 1.375rem;
     line-height: 1.875rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-6 {
     font-size: 1.75rem;
     line-height: 2.375rem;
   }
 }
 
-.emotion-2 {
+.emotion-8 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -881,21 +863,21 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
   margin-top: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
     font-size: 1.75rem;
     line-height: 2.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-8 {
     font-size: 2.5rem;
     line-height: 3.375rem;
   }
 }
 
-.emotion-4 {
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -907,66 +889,84 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
   padding-top: 0.2rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-4 {
+@media (min-width: 37.5rem) {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
+}
+
+.emotion-18 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-18:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.emotion-18:focus,
+.emotion-18:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
 }
 
 <div>
   <main
-    class="emotion-16 emotion-17 emotion-15"
+    class="emotion-0 emotion-1 emotion-2 emotion-3"
     dir="ltr"
     role="main"
   >
     <div
-      class="emotion-14 emotion-15"
+      class="emotion-4 emotion-3"
       dir="ltr"
     >
       <span
-        class="emotion-0 emotion-1"
+        class="emotion-6 emotion-7"
         data-e2e="status-code"
       >
         StatusCode
       </span>
       <h1
-        class="emotion-2 emotion-3"
+        class="emotion-8 emotion-9"
         id="content"
         tabindex="-1"
       >
         A error has occured
       </h1>
       <p
-        class="emotion-4 emotion-5"
+        class="emotion-10 emotion-11"
       >
         Something happened, please try an option
       </p>
       <ul>
         <li
-          class="emotion-4 emotion-5"
+          class="emotion-10 emotion-11"
         >
           Option one
         </li>
         <li
-          class="emotion-4 emotion-5"
+          class="emotion-10 emotion-11"
         >
           Option two
         </li>
       </ul>
       <p
-        class="emotion-4 emotion-5"
+        class="emotion-10 emotion-11"
       >
         You can do 
         <a
-          class="emotion-10 emotion-11"
+          class="emotion-18 emotion-19"
           href="https://www.bbc.com"
         >
           this
@@ -979,201 +979,183 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
 `;
 
 exports[`ErrorMain should correctly render for an error page for persian 1`] = `
-.emotion-17 {
+.emotion-0 {
   width: 100%;
   padding-bottom: 4rem;
 }
 
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @supports (display:grid) {
-  .emotion-17 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-17 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-17 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-17 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-17 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-17 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-17 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-17 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-17 {
-    margin: 0 auto;
-    max-width: 80rem;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-14 {
+  .emotion-4 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-14 {
+  .emotion-4 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-14 {
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-14 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-14 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-14 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-14 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-14 {
+  @media (min-width:80rem) {
+    .emotion-4 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
-}
-
-.emotion-10 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  }
 }
 
-.emotion-10:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
-
-.emotion-10:focus,
-.emotion-10:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
-}
-
-.emotion-0 {
+.emotion-6 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   color: #B80000;
@@ -1183,21 +1165,21 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
   padding: 2.5rem 0 0.5rem 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
     font-size: 1.375rem;
     line-height: 1.875rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-6 {
     font-size: 1.75rem;
     line-height: 2.375rem;
   }
 }
 
-.emotion-2 {
+.emotion-8 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1207,21 +1189,21 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
   margin-top: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
     font-size: 1.75rem;
     line-height: 2.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-8 {
     font-size: 2.5rem;
     line-height: 3.375rem;
   }
 }
 
-.emotion-4 {
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1233,66 +1215,84 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
   padding-top: 0.2rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-4 {
+@media (min-width: 37.5rem) {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
+}
+
+.emotion-18 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-18:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.emotion-18:focus,
+.emotion-18:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
 }
 
 <div>
   <main
-    class="emotion-16 emotion-17 emotion-15"
+    class="emotion-0 emotion-1 emotion-2 emotion-3"
     dir="ltr"
     role="main"
   >
     <div
-      class="emotion-14 emotion-15"
+      class="emotion-4 emotion-3"
       dir="ltr"
     >
       <span
-        class="emotion-0 emotion-1"
+        class="emotion-6 emotion-7"
         data-e2e="status-code"
       >
         StatusCode
       </span>
       <h1
-        class="emotion-2 emotion-3"
+        class="emotion-8 emotion-9"
         id="content"
         tabindex="-1"
       >
         A error has occured
       </h1>
       <p
-        class="emotion-4 emotion-5"
+        class="emotion-10 emotion-11"
       >
         Something happened, please try an option
       </p>
       <ul>
         <li
-          class="emotion-4 emotion-5"
+          class="emotion-10 emotion-11"
         >
           Option one
         </li>
         <li
-          class="emotion-4 emotion-5"
+          class="emotion-10 emotion-11"
         >
           Option two
         </li>
       </ul>
       <p
-        class="emotion-4 emotion-5"
+        class="emotion-10 emotion-11"
       >
         You can do 
         <a
-          class="emotion-10 emotion-11"
+          class="emotion-18 emotion-19"
           href="https://www.bbc.com"
         >
           this
@@ -1305,201 +1305,183 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
 `;
 
 exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
-.emotion-17 {
+.emotion-0 {
   width: 100%;
   padding-bottom: 4rem;
 }
 
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @supports (display:grid) {
-  .emotion-17 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-17 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-17 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-17 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-17 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-17 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-17 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-17 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-17 {
-    margin: 0 auto;
-    max-width: 80rem;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-14 {
+  .emotion-4 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-14 {
+  .emotion-4 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-14 {
+  .emotion-4 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-14 {
+  @media (max-width:14.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-14 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-14 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-14 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-14 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-4 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-14 {
+  @media (min-width:80rem) {
+    .emotion-4 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
-}
-
-.emotion-10 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  }
 }
 
-.emotion-10:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
-
-.emotion-10:focus,
-.emotion-10:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
-}
-
-.emotion-0 {
+.emotion-6 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   color: #B80000;
@@ -1509,21 +1491,21 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
   padding: 2.5rem 0 0.5rem 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
     font-size: 1.375rem;
     line-height: 1.875rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-6 {
     font-size: 1.75rem;
     line-height: 2.375rem;
   }
 }
 
-.emotion-2 {
+.emotion-8 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1533,21 +1515,21 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
   margin-top: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
     font-size: 1.75rem;
     line-height: 2.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-8 {
     font-size: 2.5rem;
     line-height: 3.375rem;
   }
 }
 
-.emotion-4 {
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1559,66 +1541,84 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
   padding-top: 0.2rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-4 {
+@media (min-width: 37.5rem) {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
+}
+
+.emotion-18 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-18:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.emotion-18:focus,
+.emotion-18:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
 }
 
 <div>
   <main
-    class="emotion-16 emotion-17 emotion-15"
+    class="emotion-0 emotion-1 emotion-2 emotion-3"
     dir="ltr"
     role="main"
   >
     <div
-      class="emotion-14 emotion-15"
+      class="emotion-4 emotion-3"
       dir="ltr"
     >
       <span
-        class="emotion-0 emotion-1"
+        class="emotion-6 emotion-7"
         data-e2e="status-code"
       >
         StatusCode
       </span>
       <h1
-        class="emotion-2 emotion-3"
+        class="emotion-8 emotion-9"
         id="content"
         tabindex="-1"
       >
         A error has occured
       </h1>
       <p
-        class="emotion-4 emotion-5"
+        class="emotion-10 emotion-11"
       >
         Something happened, please try an option
       </p>
       <ul>
         <li
-          class="emotion-4 emotion-5"
+          class="emotion-10 emotion-11"
         >
           Option one
         </li>
         <li
-          class="emotion-4 emotion-5"
+          class="emotion-10 emotion-11"
         >
           Option two
         </li>
       </ul>
       <p
-        class="emotion-4 emotion-5"
+        class="emotion-10 emotion-11"
       >
         You can do 
         <a
-          class="emotion-10 emotion-11"
+          class="emotion-18 emotion-19"
           href="https://www.bbc.com"
         >
           this
