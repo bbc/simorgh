@@ -6,7 +6,7 @@ import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
 import pathWithLogging, {
   LOG_LEVELS,
 } from '../../../lib/utilities/logging/pathWithLogging';
-import { RADIO_MISSING_FIELD } from '#lib/logger.const';
+import { PODCAST_MISSING_FIELD } from '#lib/logger.const';
 import getEpisodeAvailability, {
   getUrl,
 } from '#lib/utilities/episodeAvailability';
@@ -49,7 +49,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
 
     const withLogging = pathWithLogging(
       getUrl(json),
-      RADIO_MISSING_FIELD,
+      PODCAST_MISSING_FIELD,
       json,
     );
     const get = (fieldPath, logLevel) =>
