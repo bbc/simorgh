@@ -7,8 +7,8 @@ export default service => {
     const h1El = document.querySelector('h1');
 
     expect(h1El).toBeInTheDocument();
-    expect(h1El.innerText).toBeTruthy();
-    expect(h1El.innerText).toMatchSnapshot();
+    expect(h1El.textContent).toBeTruthy();
+    expect(h1El.textContent).toMatchSnapshot();
   });
 
   it('I can see the list items', () => {
@@ -16,8 +16,8 @@ export default service => {
 
     listItemElements.forEach(itemEl => {
       expect(itemEl).toBeInTheDocument();
-      expect(itemEl.innerText).toBeTruthy();
-      expect(itemEl.innerText).toMatchSnapshot();
+      expect(itemEl.textContent).toBeTruthy();
+      expect(itemEl.textContent).toMatchSnapshot();
     });
   });
 };

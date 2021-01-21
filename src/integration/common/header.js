@@ -4,8 +4,8 @@ export default service => {
       const logo = document.querySelector('header svg');
 
       expect(logo).toBeInTheDocument();
-      expect(logo.parentNode.innerText).toBeTruthy();
-      expect(logo.parentNode.innerText).toMatchSnapshot();
+      expect(logo.parentNode.textContent).toBeTruthy();
+      expect(logo.parentNode.textContent).toMatchSnapshot();
     });
 
     if (service !== 'news' && service !== 'scotland') {
@@ -24,7 +24,7 @@ export default service => {
           .querySelectorAll('a');
 
         navigationLinks.forEach(navigationLink => {
-          const linkText = navigationLink.innerText;
+          const linkText = navigationLink.textContent;
           const linkUrl = navigationLink.getAttribute('href');
 
           it('should be in the document', () => {

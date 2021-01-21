@@ -9,8 +9,8 @@ export default service => {
 
     listItemElements.forEach(itemEl => {
       expect(itemEl).toBeInTheDocument();
-      expect(itemEl.innerText).toBeTruthy();
-      expect(itemEl.innerText).toMatchSnapshot();
+      expect(itemEl.textContent).toBeTruthy();
+      expect(itemEl.textContent).toMatchSnapshot();
     });
   });
 };

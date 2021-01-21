@@ -20,8 +20,8 @@ export default service => {
 
       const imageCaptionEl = document.querySelector('main figure figcaption');
       expect(imageCaptionEl).toBeInTheDocument();
-      expect(imageCaptionEl.innerText).toBeTruthy();
-      expect(imageCaptionEl.innerText).toMatchSnapshot();
+      expect(imageCaptionEl.textContent).toBeTruthy();
+      expect(imageCaptionEl.textContent).toMatchSnapshot();
     });
   });
 };

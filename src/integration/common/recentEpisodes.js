@@ -14,7 +14,7 @@ export default () => {
 
     describe('List items', () => {
       recentEpisodesListItems.forEach(listItemEl => {
-        const text = listItemEl.innerText.trim();
+        const text = listItemEl.textContent.trim();
         const url = listItemEl.querySelector('a').getAttribute('href');
 
         it('should match text and url', () => {

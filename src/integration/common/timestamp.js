@@ -2,7 +2,7 @@ export default () => {
   describe('Timestamp', () => {
     const timestampEl = document.querySelector('time');
     const date = timestampEl.getAttribute('datetime');
-    const text = timestampEl.innerText;
+    const text = timestampEl.textContent;
 
     it('should be in the document', () => {
       expect(timestampEl).toBeInTheDocument();

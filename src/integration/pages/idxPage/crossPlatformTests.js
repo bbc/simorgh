@@ -10,7 +10,7 @@ export default service => {
     if (indexAlsos) {
       const h4El = indexAlsos.querySelector('h4');
       it('should match visually hidden text', () => {
-        expect(h4El.innerText).toMatchSnapshot();
+        expect(h4El.textContent).toMatchSnapshot();
       });
 
       if (window.SIMORGH_DATA) {
@@ -46,7 +46,7 @@ export default service => {
       const links = usefulLinks.querySelectorAll('a');
 
       links.forEach(linkEl => {
-        const linkText = linkEl.innerText;
+        const linkText = linkEl.textContent;
         const linkUrl = linkEl.getAttribute('href');
         it('should be in the document', () => {
           expect(linkEl).toBeInTheDocument();
@@ -91,11 +91,11 @@ export default service => {
         });
 
         it('should have text', () => {
-          expect(h3El.innerText).toBeTruthy();
+          expect(h3El.textContent).toBeTruthy();
         });
 
         it('should match text', () => {
-          expect(h3El.innerText).toMatchSnapshot();
+          expect(h3El.textContent).toMatchSnapshot();
         });
       });
     }

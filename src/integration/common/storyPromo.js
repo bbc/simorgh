@@ -23,17 +23,17 @@ export default () => {
       });
 
       it('should have text', () => {
-        expect(h3El.innerText).toBeTruthy();
+        expect(h3El.textContent).toBeTruthy();
       });
 
       it('should match text', () => {
-        expect(h3El.innerText).toMatchSnapshot();
+        expect(h3El.textContent).toMatchSnapshot();
       });
     });
 
     describe('Link', () => {
       const linkEl = storyPromo.querySelector('a');
-      const text = linkEl.innerText;
+      const text = linkEl.textContent;
       const url = linkEl.getAttribute('href');
 
       it('should be in the promo', () => {
@@ -51,7 +51,7 @@ export default () => {
 
     describe('Timestamp', () => {
       const timestampEl = storyPromo.querySelector('time');
-      const text = timestampEl.innerText;
+      const text = timestampEl.textContent;
       const date = timestampEl.getAttribute('datetime');
 
       it('should be in the promo', () => {
