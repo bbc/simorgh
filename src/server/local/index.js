@@ -16,6 +16,7 @@ import {
   africaEyeTVDataPath,
   liveRadioDataPath,
   podcastDataPath,
+  podcastBrandDataPath,
 } from '#app/routes/utils/regex';
 import { LOCAL_SENDFILE_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
@@ -114,7 +115,21 @@ export default server => {
         service,
         'podcasts',
         brandId,
-        mediaId || '',
+        mediaId,
+      );
+
+      sendDataFile(res, `${dataFilePath}.json`, next);
+    })
+
+    .get(podcastBrandDataPath, async ({ params }, res, next) => {
+      const { service, brandId } = params;
+
+      const dataFilePath = path.join(
+        process.cwd(),
+        'data',
+        service,
+        'podcasts',
+        brandId,
       );
 
       sendDataFile(res, `${dataFilePath}.json`, next);
