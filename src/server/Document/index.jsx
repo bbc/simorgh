@@ -58,7 +58,6 @@ const renderDocument = async ({
 
   const scripts = extractor.getScriptElements({
     crossOrigin: 'anonymous',
-    type: 'text/javascript',
     defer: true,
   });
   const headHelmet = Helmet.renderStatic();
