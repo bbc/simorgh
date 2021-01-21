@@ -9,6 +9,7 @@ import { Helmet } from 'react-helmet';
 import { ServerApp } from '#app/containers/App';
 import getAssetOrigins from '../utilities/getAssetOrigins';
 import DocumentComponent from './component';
+import encodeChunkFilename from '../utilities/encodeChunkUri';
 
 const renderDocument = async ({
   bbcOrigin,
@@ -55,19 +56,6 @@ const renderDocument = async ({
      */
     return { redirectUrl: context.url, html: null };
   }
-
-  // const scripts = extractor.getScriptElements(chunk => {
-  //   console.log(chunk);
-  //   return <script src={chunk} />;
-  // });
-
-  const encodeChunkFilename = ({ url: chunkUrl }) => {
-    const pathParts = chunkUrl.split('/'); // Split full url at each `/`
-    const fileName = pathParts.pop(); // Feth the content after the last `/`
-    const encodedFileName = encodeURIComponent(fileName); // Encode the filename
-
-    return pathParts.join('/').concat(`/${encodedFileName}`); // reconstruct the full url with the encoded filename
-  };
 
   const scripts = extractor.getScriptElements(chunk => {
     const commonAttributes = {
