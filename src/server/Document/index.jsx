@@ -20,7 +20,7 @@ const renderDocument = async ({
   url,
 }) => {
   const cache = createCache({
-    key: 'simorgh',
+    key: 'bbc',
   });
   const { extractCritical } = createEmotionServer(cache);
 
