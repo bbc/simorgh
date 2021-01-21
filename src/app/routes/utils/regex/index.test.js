@@ -245,6 +245,8 @@ describe('podcastPath', () => {
     '/arabic/podcasts/654joro456/j0r0r0j',
     '/burmese/podcasts/987ger/ald321.amp',
     '/burmese/podcasts/657mnayr.amp',
+    '/zhongwen/trad/podcasts/457mcg155',
+    '/zhongwen/trad/podcasts/938495544/jf84hgf0sa.amp',
   ];
   shouldMatchValidRoutes(validRoutes, podcastPath);
 
@@ -252,6 +254,8 @@ describe('podcastPath', () => {
     '/arabic/bbc_arabic_radio/6865933', // includes masterbrand
     '/arabic/bbc_arabic_radio/podcasts/6865933', // includes masterbrand
     '/burmese/98fjf9302/294fjfms', // podcast missing
+    '/zhongwen/trad/94jf92oe', // variant without podcast
+    '/zhongwen/trad/39ddjd8d9/39djdwwiw.amp', // variant without podcast
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, podcastPath);
 });
