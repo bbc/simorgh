@@ -56,11 +56,31 @@ const renderDocument = async ({
     return { redirectUrl: context.url, html: null };
   }
 
-  const scripts = extractor.getScriptElements({
-    crossOrigin: 'anonymous',
-    type: 'text/javascript',
-    defer: true,
+  // const scripts = extractor.getScriptElements(chunk => {
+  //   console.log(chunk);
+  //   return <script src={chunk} />;
+  // });
+
+  const scripts = extractor.getScriptElements(chunk => {
+    const commonAttributes = {
+      crossOrigin: 'anonymous',
+      type: 'text/javascript',
+      defer: true,
+    };
+
+    if (!chunk) return commonAttributes;
+
+    const pathParts = chunk.url.split('/'); // Split full url at each `/`
+    const fileName = pathParts.pop(); // Feth the content after the last `/`
+    const encodedFileName = encodeURIComponent(fileName); // Encode the filename
+    const scriptUrl = pathParts.join('/').concat(`/${encodedFileName}`); // reconstruct the full url with the encoded filename
+
+    return {
+      ...commonAttributes,
+      src: scriptUrl,
+    };
   });
+
   const headHelmet = Helmet.renderStatic();
   const assetOrigins = getAssetOrigins(service);
   const doc = renderToStaticMarkup(
