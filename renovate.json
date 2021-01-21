@@ -17,7 +17,6 @@
     },
     {
       "packagePatterns": ["^webpack"],
-      "excludePackagePatterns": ["^webpack"],
       "updateTypes": ["minor", "patch"],
       "groupName": "webpack non-major dependencies",
       "groupSlug": "webpack-minor-patch"
