@@ -23,11 +23,11 @@ export default () => {
     });
 
     it('should contain text', () => {
-      expect(imageCaptionEl.textContent).toBeTruthy();
+      expect(imageCaptionEl.innerText).toBeTruthy();
     });
 
     it('should match text', () => {
-      expect(imageCaptionEl.textContent).toMatchSnapshot();
+      expect(imageCaptionEl.innerText).toMatchSnapshot();
     });
   });
 };
