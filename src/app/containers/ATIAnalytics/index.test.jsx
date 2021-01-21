@@ -148,7 +148,11 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       render(
-        <ContextWrap platform="amp" pageType={MEDIA_ASSET_PAGE} service="news">
+        <ContextWrap
+          platform="amp"
+          pageType={MEDIA_ASSET_PAGE}
+          service="pidgin"
+        >
           <ATIAnalytics data={mapAssetData} />
         </ContextWrap>,
       );
@@ -170,7 +174,7 @@ describe('ATI Analytics Container', () => {
         <ContextWrap
           platform="canonical"
           pageType={PHOTO_GALLERY_PAGE}
-          service="news"
+          service="azeri"
         >
           <ATIAnalytics data={pglAssetData} />
         </ContextWrap>,
@@ -191,7 +195,7 @@ describe('ATI Analytics Container', () => {
         <ContextWrap
           platform="amp"
           pageType={PHOTO_GALLERY_PAGE}
-          service="news"
+          service="azeri"
         >
           <ATIAnalytics data={pglAssetData} />
         </ContextWrap>,
@@ -211,7 +215,7 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType={STORY_PAGE} service="news">
+        <ContextWrap platform="canonical" pageType={STORY_PAGE} service="mundo">
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
@@ -228,7 +232,7 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       render(
-        <ContextWrap platform="amp" pageType={STORY_PAGE} service="news">
+        <ContextWrap platform="amp" pageType={STORY_PAGE} service="mundo">
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
@@ -342,7 +346,7 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType={STORY_PAGE} service="news">
+        <ContextWrap platform="canonical" pageType={STORY_PAGE} service="mundo">
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
@@ -361,7 +365,7 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType={STORY_PAGE} service="news">
+        <ContextWrap platform="canonical" pageType={STORY_PAGE} service="mundo">
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
