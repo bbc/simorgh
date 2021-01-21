@@ -48,7 +48,6 @@ export const buildCpsAssetPageATIParams = (
   const ldpThingIds = getThingAttributes('thingId', pageData);
   const ldpThingLabels = getThingAttributes('thingEnglishLabel', pageData);
   const isLegacyAsset = url => url.split('/').length > 7;
-  console.log(producerId);
 
   return {
     appName: atiAnalyticsAppName,
