@@ -61,6 +61,14 @@ const renderDocument = async ({
   //   return <script src={chunk} />;
   // });
 
+  const encodeChunkFilename = ({ url: chunkUrl }) => {
+    const pathParts = chunkUrl.split('/'); // Split full url at each `/`
+    const fileName = pathParts.pop(); // Feth the content after the last `/`
+    const encodedFileName = encodeURIComponent(fileName); // Encode the filename
+
+    return pathParts.join('/').concat(`/${encodedFileName}`); // reconstruct the full url with the encoded filename
+  };
+
   const scripts = extractor.getScriptElements(chunk => {
     const commonAttributes = {
       crossOrigin: 'anonymous',
@@ -68,17 +76,14 @@ const renderDocument = async ({
       defer: true,
     };
 
-    if (!chunk) return commonAttributes;
+    if (chunk && chunk.url) {
+      return {
+        ...commonAttributes,
+        src: encodeChunkFilename(chunk),
+      };
+    }
 
-    const pathParts = chunk.url.split('/'); // Split full url at each `/`
-    const fileName = pathParts.pop(); // Feth the content after the last `/`
-    const encodedFileName = encodeURIComponent(fileName); // Encode the filename
-    const scriptUrl = pathParts.join('/').concat(`/${encodedFileName}`); // reconstruct the full url with the encoded filename
-
-    return {
-      ...commonAttributes,
-      src: scriptUrl,
-    };
+    return commonAttributes;
   });
 
   const headHelmet = Helmet.renderStatic();
