@@ -28,6 +28,10 @@ export const getDestination = statsDestination => {
     BBC_ARCHIVE_PS_TEST: 605566,
     NEWSROUND: 598293,
     NEWSROUND_TEST: 598294,
+    SPORT_GNL: 598308,
+    SPORT_GNL_TEST: 598309,
+    SPORT_PS: 598310,
+    SPORT_PS_TEST: 598311,
   };
 
   return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
