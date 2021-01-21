@@ -60,7 +60,6 @@ const renderDocument = async ({
   const scripts = extractor.getScriptElements(chunk => {
     const commonAttributes = {
       crossOrigin: 'anonymous',
-      type: 'text/javascript',
       defer: true,
     };
 
