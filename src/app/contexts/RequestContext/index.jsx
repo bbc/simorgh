@@ -18,6 +18,7 @@ import {
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
+  CORRESPONDENT_STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 export const RequestContext = React.createContext({});
@@ -88,6 +89,7 @@ RequestContextProvider.propTypes = {
     MEDIA_ASSET_PAGE,
     FEATURE_INDEX_PAGE,
     STORY_PAGE,
+    CORRESPONDENT_STORY_PAGE,
     PHOTO_GALLERY_PAGE,
     INDEX_PAGE,
   ]).isRequired,
