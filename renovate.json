@@ -4,10 +4,22 @@
   "packageRules": [
     {
       "packagePatterns": ["*"],
-      "excludePackagePatterns": ["^@bbc"],
+      "excludePackagePatterns": ["^@bbc", "^@loadable", "webpack"],
       "updateTypes": ["minor", "patch"],
       "groupName": "all 3rd party non-major dependencies",
       "groupSlug": "all-minor-patch"
+    },
+    {
+      "packagePatterns": ["^@loadable"],
+      "updateTypes": ["minor", "patch"],
+      "groupName": "loadable non-major dependencies",
+      "groupSlug": "loadable-minor-patch"
+    },
+    {
+      "packagePatterns": ["^webpack"],
+      "updateTypes": ["minor", "patch"],
+      "groupName": "webpack non-major dependencies",
+      "groupSlug": "webpack-minor-patch"
     },
     {
       "packagePatterns": ["^@bbc"],
