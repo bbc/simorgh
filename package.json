@@ -4,7 +4,8 @@
   "description": "Simorgh",
   "main": "./src/client.js",
   "resolutions": {
-    "axios": "0.21.1"
+    "axios": "0.21.1",
+    "immer": "8.0.1"
   },
   "scripts": {
     "preinstall": "[ \"$npm_config_refer\" != \"ci\" ] && npx npm-force-resolutions || exit 0",
