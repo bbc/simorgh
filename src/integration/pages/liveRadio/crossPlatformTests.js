@@ -9,7 +9,7 @@ export default service => {
 
   describe('Summary', () => {
     const summaryEl = document.querySelector('main p');
-    const summaryText = summaryEl.innerText;
+    const summaryText = summaryEl.textContent;
 
     it('should be in the document', () => {
       expect(summaryEl).toBeInTheDocument();

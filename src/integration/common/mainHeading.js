@@ -1,7 +1,7 @@
 export default () => {
   describe('Main heading', () => {
     const mainHeadingEl = document.querySelector('h1');
-    const mainHeadingText = mainHeadingEl.innerText;
+    const mainHeadingText = mainHeadingEl.textContent;
     const idAttr = mainHeadingEl.getAttribute('id');
 
     it('should be in the document', () => {

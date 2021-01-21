@@ -8,8 +8,8 @@ export default () => {
       const contentNotAvailableEl = document.querySelector('main div strong');
 
       expect(contentNotAvailableEl).toBeInTheDocument();
-      expect(contentNotAvailableEl.innerText).toBeTruthy();
-      expect(contentNotAvailableEl.innerText).toMatchSnapshot();
+      expect(contentNotAvailableEl.textContent).toBeTruthy();
+      expect(contentNotAvailableEl.textContent).toMatchSnapshot();
     });
   });
 };
