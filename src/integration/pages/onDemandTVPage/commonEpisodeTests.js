@@ -3,24 +3,24 @@ export default () => {
     const brandTitleEl = document.querySelector('strong span:first-child');
 
     expect(brandTitleEl).toBeInTheDocument();
-    expect(brandTitleEl.textContent).toBeTruthy();
-    expect(brandTitleEl.textContent).toMatchSnapshot();
+    expect(brandTitleEl.innerText).toBeTruthy();
+    expect(brandTitleEl.innerText).toMatchSnapshot();
   });
 
   it('I can see the episode title', () => {
     const episodeTitleEl = document.querySelector('strong span:last-child');
 
     expect(episodeTitleEl).toBeInTheDocument();
-    expect(episodeTitleEl.textContent).toBeTruthy();
-    expect(episodeTitleEl.textContent).toMatchSnapshot();
+    expect(episodeTitleEl.innerText).toBeTruthy();
+    expect(episodeTitleEl.innerText).toMatchSnapshot();
   });
 
   it('I can see the episode summary', () => {
     const episodeSummaryEl = document.querySelector('main p');
 
     expect(episodeSummaryEl).toBeInTheDocument();
-    expect(episodeSummaryEl.textContent).toBeTruthy();
-    expect(episodeSummaryEl.textContent).toMatchSnapshot();
+    expect(episodeSummaryEl.innerText).toBeTruthy();
+    expect(episodeSummaryEl.innerText).toMatchSnapshot();
   });
 
   describe('a11y', () => {
@@ -30,8 +30,8 @@ export default () => {
       );
 
       expect(headlineEl).toBeInTheDocument();
-      expect(headlineEl.textContent).toBeTruthy();
-      expect(headlineEl.textContent).toMatchSnapshot();
+      expect(headlineEl.innerText).toBeTruthy();
+      expect(headlineEl.innerText).toMatchSnapshot();
     });
   });
 };

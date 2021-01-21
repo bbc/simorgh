@@ -17,7 +17,7 @@ export default () => {
         });
 
         it('should match headline text', () => {
-          expect(headlineEl.textContent).toMatchSnapshot();
+          expect(headlineEl.innerText).toMatchSnapshot();
         });
       });
     }

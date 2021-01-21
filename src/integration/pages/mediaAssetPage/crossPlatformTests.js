@@ -14,8 +14,8 @@ export default service => {
   if (bulletedListItem) {
     it('I can see a bulleted list item', () => {
       expect(bulletedListItem).toBeInTheDocument();
-      expect(bulletedListItem.textContent).toBeTruthy();
-      expect(bulletedListItem.textContent).toMatchSnapshot();
+      expect(bulletedListItem.innerText).toBeTruthy();
+      expect(bulletedListItem.innerText).toMatchSnapshot();
     });
   }
 
@@ -26,7 +26,7 @@ export default service => {
   if (bulletedListItemWithLink) {
     it('I can see a bulleted list item with link', () => {
       expect(bulletedListItemWithLink.getAttribute('href')).toMatchSnapshot(
-        bulletedListItemWithLink.textContent,
+        bulletedListItemWithLink.innerText,
       );
     });
   }
@@ -38,7 +38,7 @@ export default service => {
 
     if (relatedContentLinks) {
       relatedContentLinks.forEach(relatedContentLink => {
-        const relatedContentText = relatedContentLink.textContent;
+        const relatedContentText = relatedContentLink.innerText;
         const relatedContentUrl = relatedContentLink.getAttribute('href');
 
         it('should be in the document', () => {

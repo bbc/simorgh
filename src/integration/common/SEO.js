@@ -7,16 +7,16 @@ export default () => {
       const pageTitleEl = document.querySelector('title');
 
       expect(pageTitleEl).toBeInTheDocument();
-      expect(pageTitleEl.textContent).toBeTruthy();
-      expect(pageTitleEl.textContent).toMatchSnapshot();
+      expect(pageTitleEl.innerText).toBeTruthy();
+      expect(pageTitleEl.innerText).toMatchSnapshot();
     });
 
     it('Heading level 1', () => {
       const headingEl = document.querySelector('h1');
 
       expect(headingEl).toBeInTheDocument();
-      expect(headingEl.textContent).toBeTruthy();
-      expect(headingEl.textContent).toMatchSnapshot();
+      expect(headingEl.innerText).toBeTruthy();
+      expect(headingEl.innerText).toMatchSnapshot();
     });
 
     it('Canonical link', () => {
