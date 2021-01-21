@@ -19,7 +19,9 @@ const renderDocument = async ({
   service,
   url,
 }) => {
-  const cache = createCache();
+  const cache = createCache({
+    key: 'simorgh',
+  });
   const { extractCritical } = createEmotionServer(cache);
 
   const statsFile = path.resolve(
