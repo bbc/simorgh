@@ -10,6 +10,19 @@
       "groupSlug": "all-minor-patch"
     },
     {
+      "packagePatterns": ["^@loadable"],
+      "updateTypes": ["minor", "patch"],
+      "groupName": "loadable non-major dependencies",
+      "groupSlug": "loadable-minor-patch"
+    },
+    {
+      "packagePatterns": ["^webpack"],
+      "excludePackagePatterns": ["^webpack"],
+      "updateTypes": ["minor", "patch"],
+      "groupName": "webpack non-major dependencies",
+      "groupSlug": "webpack-minor-patch"
+    },
+    {
       "packagePatterns": ["^@bbc"],
       "groupName": "all BBC non-major dependencies",
       "updateTypes": ["minor", "patch"],
