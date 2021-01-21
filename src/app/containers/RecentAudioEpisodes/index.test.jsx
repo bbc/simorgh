@@ -1,13 +1,14 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import RecentAudioEpisodes from '.';
-import { indonesian, zhongwen } from './fixtures';
+import { indonesian, zhongwen, arabic } from './fixtures';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 
 /* eslint-disable react/prop-types */
 const RecentAudioEpisodesWithContext = ({
   masterBrand,
+  brandId,
   episodes,
   service,
   variant,
@@ -20,7 +21,11 @@ const RecentAudioEpisodesWithContext = ({
       isAmp={false}
       variant={variant}
     >
-      <RecentAudioEpisodes masterBrand={masterBrand} episodes={episodes} />
+      <RecentAudioEpisodes
+        masterBrand={masterBrand}
+        episodes={episodes}
+        brandId={brandId}
+      />
     </RequestContextProvider>
   </ServiceContextProvider>
 );
@@ -64,7 +69,7 @@ describe('RecentAudioEpisodes', () => {
     expect(episodeTitle).toBeInTheDocument();
   });
 
-  it('should render the list item links', async () => {
+  it('should render the correct list item links for OD Radio', async () => {
     const { getAllByText } = render(
       <RecentAudioEpisodesWithContext
         masterBrand="bbc_indonesian_radio"
@@ -85,7 +90,7 @@ describe('RecentAudioEpisodes', () => {
     ]);
   });
 
-  it('should render the correct list item links for services with variants', async () => {
+  it('should render the correct list item links for OD Radio services with variants', async () => {
     const { getAllByText } = render(
       <RecentAudioEpisodesWithContext
         masterBrand="bbc_cantonese_radio"
@@ -118,6 +123,53 @@ describe('RecentAudioEpisodes', () => {
     const visuallyHiddenDate = getAllByText('Durasi 15,30');
     expect(visuallyHiddenAudioLabel[0]).toBeInTheDocument();
     expect(visuallyHiddenDate[0]).toBeInTheDocument();
+  });
+
+  it('should render the correct list item links for podcasts', async () => {
+    const { getAllByText } = render(
+      <RecentAudioEpisodesWithContext
+        brandId="p02pc9qc"
+        masterBrand="bbc_arabic_radio"
+        episodes={arabic}
+        service="arabic"
+      />,
+    );
+
+    const links = getAllByText('BBC Xtra').map(
+      titleEl => titleEl.closest('a').href,
+    );
+
+    expect(links).toEqual([
+      'http://localhost/arabic/podcasts/p02pc9qc/p094gcc1',
+      'http://localhost/arabic/podcasts/p02pc9qc/p094c9sr',
+      'http://localhost/arabic/podcasts/p02pc9qc/p0940sdx',
+      'http://localhost/arabic/podcasts/p02pc9qc/p093szlg',
+      'http://localhost/arabic/podcasts/p02pc9qc/p093q652',
+      'http://localhost/arabic/podcasts/p02pc9qc/p093cdkh',
+      'http://localhost/arabic/podcasts/p02pc9qc/p09343mp',
+      'http://localhost/arabic/podcasts/p02pc9qc/p0930xyh',
+    ]);
+  });
+
+  it('should render the correct list item links for podcast services with variants', async () => {
+    const { getAllByText } = render(
+      <RecentAudioEpisodesWithContext
+        brandId="p0340tsy"
+        masterBrand="bbc_cantonese_radio"
+        episodes={zhongwen}
+        service="zhongwen"
+        variant="trad"
+      />,
+    );
+
+    const links = getAllByText('時事一周').map(
+      titleEl => titleEl.closest('a').href,
+    );
+
+    expect(links).toEqual([
+      'http://localhost/zhongwen/trad/podcasts/p0340tsy/w172xn6kwd4bx3h',
+      'http://localhost/zhongwen/trad/podcasts/p0340tsy/w172xn6kj3tkrhn',
+    ]);
   });
 
   it('should aria-hide the duration', () => {
