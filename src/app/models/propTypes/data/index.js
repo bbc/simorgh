@@ -3,14 +3,14 @@ import { frontPageDataPropTypes } from '../frontPage';
 import { articleDataPropTypes } from '../article';
 import { liveRadioPageDataPropTypes } from '../liveRadioPage';
 import { cpsAssetPageDataPropTypes } from '../cpsAssetPage';
-import { RadioPodcastPageDataPropTypes } from '../RadioPodcastPage';
+import { radioPodcastPageDataPropTypes } from '../radioPodcastPage';
 
 export const pageDataPropType = oneOfType([
   articleDataPropTypes,
   frontPageDataPropTypes,
   liveRadioPageDataPropTypes,
   cpsAssetPageDataPropTypes,
-  RadioPodcastPageDataPropTypes,
+  radioPodcastPageDataPropTypes,
 ]);
 
 export const dataPropType = shape({
