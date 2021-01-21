@@ -33,7 +33,6 @@ const getBylineBlock = json => {
 const addBylineBlock = originalJson => {
   const json = deepClone(originalJson);
   const pageType = pathOr(null, ['metadata', 'type'], json);
-
   const blocks = pathOr(null, ['content', 'model', 'blocks'], json);
 
   if (!blocks || pageType !== STORY_PAGE) {
@@ -42,9 +41,10 @@ const addBylineBlock = originalJson => {
 
   const bylineBlock = getBylineBlock(json);
   if (bylineBlock) {
-    json.content.model.blocks = insertBlockAfterHeadline(bylineBlock, blocks);
+    if (bylineBlock.model.blocks[0].name && bylineBlock.model.blocks[0].title) {
+      json.content.model.blocks = insertBlockAfterHeadline(bylineBlock, blocks);
+    }
   }
-
   return json;
 };
 
