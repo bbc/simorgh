@@ -9,6 +9,7 @@ import { Helmet } from 'react-helmet';
 import { ServerApp } from '#app/containers/App';
 import getAssetOrigins from '../utilities/getAssetOrigins';
 import DocumentComponent from './component';
+import encodeChunkFilename from '../utilities/encodeChunkUri';
 
 const renderDocument = async ({
   bbcOrigin,
@@ -56,10 +57,22 @@ const renderDocument = async ({
     return { redirectUrl: context.url, html: null };
   }
 
-  const scripts = extractor.getScriptElements({
-    crossOrigin: 'anonymous',
-    defer: true,
+  const scripts = extractor.getScriptElements(chunk => {
+    const commonAttributes = {
+      crossOrigin: 'anonymous',
+      defer: true,
+    };
+
+    if (chunk && chunk.url) {
+      return {
+        ...commonAttributes,
+        src: encodeChunkFilename(chunk),
+      };
+    }
+
+    return commonAttributes;
   });
+
   const headHelmet = Helmet.renderStatic();
   const assetOrigins = getAssetOrigins(service);
   const doc = renderToStaticMarkup(
