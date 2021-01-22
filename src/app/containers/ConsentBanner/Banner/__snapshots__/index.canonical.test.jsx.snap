@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Canonical Consent Banner Container should correctly render cookie banner - LTR layout 1`] = `
-.emotion-14 {
+.emotion-0 {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -9,7 +9,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   z-index: 2147483647;
 }
 
-.emotion-12 {
+.emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -18,17 +18,17 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 }
 
 @media (min-width:25rem) {
-  .emotion-12 {
+  .emotion-2 {
     padding: 1rem;
   }
 }
 
-.emotion-10 {
+.emotion-4 {
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.emotion-10::after {
+.emotion-4::after {
   content: '\\0020';
   display: block;
   height: 0;
@@ -37,7 +37,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   visibility: hidden;
 }
 
-.emotion-0 {
+.emotion-6 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #FFFFFF;
@@ -47,67 +47,67 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+  .emotion-6 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .emotion-6 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .emotion-6 {
     float: left;
     margin-right: 3.5%;
     width: 22%;
   }
 }
 
-.emotion-2 {
+.emotion-8 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #BEBEBE;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+  .emotion-8 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .emotion-8 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .emotion-8 {
     margin: 0;
     float: left;
     width: 53%;
   }
 }
 
-.emotion-2 a {
+.emotion-8 a {
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-2 a:focus,
-.emotion-2 a:hover {
+.emotion-8 a:focus,
+.emotion-8 a:hover {
   color: #FFFFFF;
 }
 
-.emotion-8 {
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #F6A21D;
@@ -118,31 +118,31 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-8 {
+  .emotion-10 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-8 {
+  .emotion-10 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-8 li + li {
+.emotion-10 li+li {
   padding-top: 0.5rem;
 }
 
 @media (min-width:37.5rem) {
-  .emotion-8 {
+  .emotion-10 {
     width: 18%;
     float: right;
   }
 }
 
-.emotion-4 button {
+.emotion-12 button {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #F6A21D;
@@ -155,55 +155,55 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 button {
+  .emotion-12 button {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 button {
+  .emotion-12 button {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-4 button:focus,
-.emotion-4 button:hover {
+.emotion-12 button:focus,
+.emotion-12 button:hover {
   color: #FFFFFF;
 }
 
-.emotion-4 a {
+.emotion-12 a {
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-4 a:focus,
-.emotion-4 a:hover {
+.emotion-12 a:focus,
+.emotion-12 a:hover {
   color: #FFFFFF;
 }
 
 <div>
   <div
-    class="emotion-14 emotion-15"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-12 emotion-13"
+      class="emotion-2 emotion-3"
       dir="ltr"
     >
       <div
-        class="emotion-10 emotion-11"
+        class="emotion-4 emotion-5"
         dir="ltr"
       >
         <h2
-          class="emotion-0 emotion-1"
+          class="emotion-6 emotion-7"
           dir="ltr"
         >
           Let us know you agree to cookies
         </h2>
         <p
-          class="emotion-2 emotion-3"
+          class="emotion-8 emotion-9"
           dir="ltr"
         >
           We and our partners use technologies, such as 
@@ -215,11 +215,11 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
           , and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.
         </p>
         <ul
-          class="emotion-8 emotion-9"
+          class="emotion-10 emotion-11"
           dir="ltr"
         >
           <li
-            class="emotion-4 emotion-5"
+            class="emotion-12 emotion-13"
             dir="ltr"
           >
             <button
@@ -230,7 +230,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
             </button>
           </li>
           <li
-            class="emotion-4 emotion-5"
+            class="emotion-12 emotion-13"
             dir="ltr"
           >
             <a
@@ -248,7 +248,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 `;
 
 exports[`Canonical Consent Banner Container should correctly render cookie banner - RTL layout 1`] = `
-.emotion-14 {
+.emotion-0 {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -256,21 +256,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   z-index: 2147483647;
 }
 
-.emotion-10 {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.emotion-10::after {
-  content: '\\0020';
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-.emotion-12 {
+.emotion-2 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -279,12 +265,26 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 }
 
 @media (min-width:25rem) {
-  .emotion-12 {
+  .emotion-2 {
     padding: 1rem;
   }
 }
 
-.emotion-0 {
+.emotion-4 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.emotion-4::after {
+  content: '\\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.emotion-6 {
   font-size: 1.125rem;
   line-height: 1.625rem;
   color: #FFFFFF;
@@ -294,67 +294,67 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+  .emotion-6 {
     font-size: 1.125rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .emotion-6 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .emotion-6 {
     float: right;
     margin-left: 3.5%;
     width: 22%;
   }
 }
 
-.emotion-2 {
+.emotion-8 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
   color: #BEBEBE;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+  .emotion-8 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .emotion-8 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .emotion-8 {
     margin: 0;
     float: right;
     width: 53%;
   }
 }
 
-.emotion-2 a {
+.emotion-8 a {
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-2 a:focus,
-.emotion-2 a:hover {
+.emotion-8 a:focus,
+.emotion-8 a:hover {
   color: #FFFFFF;
 }
 
-.emotion-8 {
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
   color: #F6A21D;
@@ -365,31 +365,31 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-8 {
+  .emotion-10 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-8 {
+  .emotion-10 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-8 li + li {
+.emotion-10 li+li {
   padding-top: 0.5rem;
 }
 
 @media (min-width:37.5rem) {
-  .emotion-8 {
+  .emotion-10 {
     width: 18%;
     float: left;
   }
 }
 
-.emotion-4 button {
+.emotion-12 button {
   font-size: 1.125rem;
   line-height: 1.625rem;
   color: #F6A21D;
@@ -402,55 +402,55 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 button {
+  .emotion-12 button {
     font-size: 1.125rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 button {
+  .emotion-12 button {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
-.emotion-4 button:focus,
-.emotion-4 button:hover {
+.emotion-12 button:focus,
+.emotion-12 button:hover {
   color: #FFFFFF;
 }
 
-.emotion-4 a {
+.emotion-12 a {
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-4 a:focus,
-.emotion-4 a:hover {
+.emotion-12 a:focus,
+.emotion-12 a:hover {
   color: #FFFFFF;
 }
 
 <div>
   <div
-    class="emotion-14 emotion-15"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-12 emotion-13"
+      class="emotion-2 emotion-3"
       dir="rtl"
     >
       <div
-        class="emotion-10 emotion-11"
+        class="emotion-4 emotion-5"
         dir="rtl"
       >
         <h2
-          class="emotion-0 emotion-1"
+          class="emotion-6 emotion-7"
           dir="rtl"
         >
           أخبرنا عما إذا كنت توافق على تحميل الكوكيز
         </h2>
         <p
-          class="emotion-2 emotion-3"
+          class="emotion-8 emotion-9"
           dir="rtl"
         >
           نستخدم نحن وشركاؤنا تقنيات مثل 
@@ -462,11 +462,11 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
           ، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولجعل المحتوى والاعلانات، الموجهة إليك، شخصية. الرجاء إعلامنا إذا كنت موافقا على ذلك.
         </p>
         <ul
-          class="emotion-8 emotion-9"
+          class="emotion-10 emotion-11"
           dir="rtl"
         >
           <li
-            class="emotion-4 emotion-5"
+            class="emotion-12 emotion-13"
             dir="rtl"
           >
             <button
@@ -477,7 +477,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
             </button>
           </li>
           <li
-            class="emotion-4 emotion-5"
+            class="emotion-12 emotion-13"
             dir="rtl"
           >
             <a
@@ -495,7 +495,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 `;
 
 exports[`Canonical Consent Banner Container should correctly render privacy banner - LTR layout 1`] = `
-.emotion-14 {
+.emotion-0 {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -503,7 +503,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   z-index: 2147483647;
 }
 
-.emotion-12 {
+.emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -512,17 +512,17 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 }
 
 @media (min-width:25rem) {
-  .emotion-12 {
+  .emotion-2 {
     padding: 1rem;
   }
 }
 
-.emotion-10 {
+.emotion-4 {
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.emotion-10::after {
+.emotion-4::after {
   content: '\\0020';
   display: block;
   height: 0;
@@ -531,7 +531,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   visibility: hidden;
 }
 
-.emotion-0 {
+.emotion-6 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #FFFFFF;
@@ -541,67 +541,67 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+  .emotion-6 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .emotion-6 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .emotion-6 {
     float: left;
     margin-right: 3.5%;
     width: 22%;
   }
 }
 
-.emotion-2 {
+.emotion-8 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #BEBEBE;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+  .emotion-8 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .emotion-8 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .emotion-8 {
     margin: 0;
     float: left;
     width: 53%;
   }
 }
 
-.emotion-2 a {
+.emotion-8 a {
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-2 a:focus,
-.emotion-2 a:hover {
+.emotion-8 a:focus,
+.emotion-8 a:hover {
   color: #FFFFFF;
 }
 
-.emotion-8 {
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #F6A21D;
@@ -612,31 +612,31 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-8 {
+  .emotion-10 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-8 {
+  .emotion-10 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-8 li + li {
+.emotion-10 li+li {
   padding-top: 0.5rem;
 }
 
 @media (min-width:37.5rem) {
-  .emotion-8 {
+  .emotion-10 {
     width: 18%;
     float: right;
   }
 }
 
-.emotion-4 button {
+.emotion-12 button {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #F6A21D;
@@ -649,65 +649,65 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 button {
+  .emotion-12 button {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 button {
+  .emotion-12 button {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-4 button:focus,
-.emotion-4 button:hover {
+.emotion-12 button:focus,
+.emotion-12 button:hover {
   color: #FFFFFF;
 }
 
-.emotion-4 a {
+.emotion-12 a {
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-4 a:focus,
-.emotion-4 a:hover {
+.emotion-12 a:focus,
+.emotion-12 a:hover {
   color: #FFFFFF;
 }
 
 <div>
   <div
-    class="emotion-14 emotion-15"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-12 emotion-13"
+      class="emotion-2 emotion-3"
       dir="ltr"
     >
       <div
-        class="emotion-10 emotion-11"
+        class="emotion-4 emotion-5"
         dir="ltr"
       >
         <h2
-          class="emotion-0 emotion-1"
+          class="emotion-6 emotion-7"
           dir="ltr"
         >
           We've updated our Privacy and Cookies Policy
         </h2>
         <p
-          class="emotion-2 emotion-3"
+          class="emotion-8 emotion-9"
           dir="ltr"
         >
           We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
         </p>
         <ul
-          class="emotion-8 emotion-9"
+          class="emotion-10 emotion-11"
           dir="ltr"
         >
           <li
-            class="emotion-4 emotion-5"
+            class="emotion-12 emotion-13"
             dir="ltr"
           >
             <button
@@ -717,7 +717,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
             </button>
           </li>
           <li
-            class="emotion-4 emotion-5"
+            class="emotion-12 emotion-13"
             dir="ltr"
           >
             <a
@@ -734,7 +734,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 `;
 
 exports[`Canonical Consent Banner Container should correctly render privacy banner - RTL layout 1`] = `
-.emotion-14 {
+.emotion-0 {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -742,21 +742,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   z-index: 2147483647;
 }
 
-.emotion-10 {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.emotion-10::after {
-  content: '\\0020';
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-.emotion-12 {
+.emotion-2 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -765,12 +751,26 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 }
 
 @media (min-width:25rem) {
-  .emotion-12 {
+  .emotion-2 {
     padding: 1rem;
   }
 }
 
-.emotion-0 {
+.emotion-4 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.emotion-4::after {
+  content: '\\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.emotion-6 {
   font-size: 1.125rem;
   line-height: 1.625rem;
   color: #FFFFFF;
@@ -780,67 +780,67 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+  .emotion-6 {
     font-size: 1.125rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .emotion-6 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .emotion-6 {
     float: right;
     margin-left: 3.5%;
     width: 22%;
   }
 }
 
-.emotion-2 {
+.emotion-8 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
   color: #BEBEBE;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+  .emotion-8 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .emotion-8 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .emotion-8 {
     margin: 0;
     float: right;
     width: 53%;
   }
 }
 
-.emotion-2 a {
+.emotion-8 a {
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-2 a:focus,
-.emotion-2 a:hover {
+.emotion-8 a:focus,
+.emotion-8 a:hover {
   color: #FFFFFF;
 }
 
-.emotion-8 {
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
   color: #F6A21D;
@@ -851,31 +851,31 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-8 {
+  .emotion-10 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-8 {
+  .emotion-10 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-8 li + li {
+.emotion-10 li+li {
   padding-top: 0.5rem;
 }
 
 @media (min-width:37.5rem) {
-  .emotion-8 {
+  .emotion-10 {
     width: 18%;
     float: left;
   }
 }
 
-.emotion-4 button {
+.emotion-12 button {
   font-size: 1.125rem;
   line-height: 1.625rem;
   color: #F6A21D;
@@ -888,65 +888,65 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 button {
+  .emotion-12 button {
     font-size: 1.125rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 button {
+  .emotion-12 button {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
-.emotion-4 button:focus,
-.emotion-4 button:hover {
+.emotion-12 button:focus,
+.emotion-12 button:hover {
   color: #FFFFFF;
 }
 
-.emotion-4 a {
+.emotion-12 a {
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-4 a:focus,
-.emotion-4 a:hover {
+.emotion-12 a:focus,
+.emotion-12 a:hover {
   color: #FFFFFF;
 }
 
 <div>
   <div
-    class="emotion-14 emotion-15"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-12 emotion-13"
+      class="emotion-2 emotion-3"
       dir="rtl"
     >
       <div
-        class="emotion-10 emotion-11"
+        class="emotion-4 emotion-5"
         dir="rtl"
       >
         <h2
-          class="emotion-0 emotion-1"
+          class="emotion-6 emotion-7"
           dir="rtl"
         >
           لقد حدّثنا سياستنا المتعلقة بالخصوصية وبالشروط الخاصة بملفات الارتباط Cookies
         </h2>
         <p
-          class="emotion-2 emotion-3"
+          class="emotion-8 emotion-9"
           dir="rtl"
         >
           لقد أدخلنا تغييرات مهمة على سياستنا المتعلقة بالخصوصية وعلى الشروط الخاصة بملفات الارتباط Cookies، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم
         </p>
         <ul
-          class="emotion-8 emotion-9"
+          class="emotion-10 emotion-11"
           dir="rtl"
         >
           <li
-            class="emotion-4 emotion-5"
+            class="emotion-12 emotion-13"
             dir="rtl"
           >
             <button
@@ -956,7 +956,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
             </button>
           </li>
           <li
-            class="emotion-4 emotion-5"
+            class="emotion-12 emotion-13"
             dir="rtl"
           >
             <a

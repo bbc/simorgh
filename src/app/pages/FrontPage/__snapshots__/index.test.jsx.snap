@@ -13,54 +13,54 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
   margin: 0;
 }
 
-.emotion-261 {
+.emotion-2 {
   margin: 0 0.5rem;
   padding-top: 0.5rem;
   padding-bottom: 2rem;
 }
 
-@media (min-width:25rem) {
-  .emotion-261 {
+@media (min-width: 25rem) {
+  .emotion-2 {
     margin: 0 1rem;
   }
 }
 
-@media (min-width:25rem) {
-  .emotion-261 {
+@media (min-width: 25rem) {
+  .emotion-2 {
     padding-top: 1rem;
   }
 }
 
-@media (max-width:37.4375rem) {
-  .emotion-261 {
+@media (max-width: 37.4375rem) {
+  .emotion-2 {
     padding-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-261 {
+@media (min-width: 37.5rem) {
+  .emotion-2 {
     padding-top: 0;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-261 {
+@media (min-width: 63rem) {
+  .emotion-2 {
     padding-bottom: 2.5rem;
   }
 }
 
-.emotion-54 {
+.emotion-4 {
   margin: 0 auto;
   width: 100%;
 }
 
-@media (min-width:63rem) {
-  .emotion-54 {
+@media (min-width: 63rem) {
+  .emotion-4 {
     max-width: 63rem;
   }
 }
 
-.emotion-12 {
+.emotion-6 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
@@ -76,30 +76,30 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-12 {
+  .emotion-6 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-12 {
+  .emotion-6 {
     margin-bottom: 1.5rem;
   }
 }
 
-.emotion-2 {
+.emotion-8 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .emotion-2 {
+  .emotion-8 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .emotion-8 {
     position: absolute;
     left: 0;
     right: 0;
@@ -112,7 +112,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
   padding: 0;
 }
 
-.emotion-8 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -122,7 +122,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
   flex-direction: column;
 }
 
-.emotion-6 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -142,7 +142,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-6 {
+  .emotion-14 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -150,7 +150,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
   }
 }
 
-.emotion-4 {
+.emotion-16 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -170,68 +170,68 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
+  .emotion-16 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 {
+  .emotion-16 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 {
+  .emotion-16 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 {
+  .emotion-16 {
     padding-right: 1rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-52 {
+@media (min-width: 37.5rem) {
+  .emotion-18 {
     margin-top: 1.5rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-52 {
+@media (min-width: 63rem) {
+  .emotion-18 {
     margin-top: 2rem;
   }
 }
 
-.emotion-50 {
+.emotion-20 {
   position: relative;
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-50 {
+  .emotion-20 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
   }
 
-@media (min-width:37.5rem) {
-    .emotion-50 {
+  @media (min-width:37.5rem) {
+    .emotion-20 {
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-50 {
+  @media (min-width:80rem) {
+    .emotion-20 {
       grid-template-columns: repeat(12,1fr);
     }
-}
+  }
 }
 
-.emotion-20 {
+.emotion-22 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -240,36 +240,36 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-20 {
+  .emotion-22 {
     width: calc(50% - 0.5rem);
     margin-bottom: 0;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-20 {
+  .emotion-22 {
     width: calc(50% - 0.5rem);
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-20 {
+  .emotion-22 {
     width: initial;
-    grid-column: 1 / span 6;
+    grid-column: 1/span 6;
   }
 
-@media (min-width:37.5rem) and (max-width:79.9375rem) {
-    .emotion-20 {
-      grid-column: 1 / span 3;
+  @media (min-width:37.5rem) and (max-width:79.9375rem) {
+    .emotion-22 {
+      grid-column: 1/span 3;
     }
-}
+  }
 }
 
-.emotion-18 {
+.emotion-24 {
   position: relative;
 }
 
-.emotion-14 {
+.emotion-26 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -283,67 +283,67 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 }
 
 @media (min-width:25rem) {
-  .emotion-14 {
+  .emotion-26 {
     background-size: 77px 22px;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-14 {
+  .emotion-26 {
     background-size: 93px 27px;
   }
 }
 
-.emotion-16 {
+.emotion-28 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-16 > * {
+.emotion-28>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.emotion-48 {
+.emotion-30 {
   display: inline-block;
   vertical-align: top;
 }
 
 @media (min-width:37.5rem) {
-  .emotion-48 {
+  .emotion-30 {
     width: 50%;
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-48 {
+  .emotion-30 {
     width: 50%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-48 {
+  .emotion-30 {
     display: block;
     width: initial;
     padding: initial;
-    grid-column: 1 / span 6;
+    grid-column: 1/span 6;
   }
 
-@media (min-width:37.5rem) {
-    .emotion-48 {
-      grid-column: 4 / span 3;
+  @media (min-width:37.5rem) {
+    .emotion-30 {
+      grid-column: 4/span 3;
     }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-30 {
+      grid-column: 7/span 6;
+    }
+  }
 }
 
-@media (min-width:80rem) {
-    .emotion-48 {
-      grid-column: 7 / span 6;
-    }
-}
-}
-
-.emotion-26 {
+.emotion-32 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -354,21 +354,21 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
   line-height: 1.5rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-26 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-32 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-26 {
+@media (min-width: 37.5rem) {
+  .emotion-32 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
-.emotion-24 {
+.emotion-34 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -377,7 +377,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
   overflow-wrap: anywhere;
 }
 
-.emotion-24:before {
+.emotion-34:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -387,99 +387,6 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
   top: 0;
   white-space: nowrap;
   z-index: 1;
-}
-
-.emotion-24:hover,
-.emotion-24:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-24:visited {
-  color: #6E6E73;
-}
-
-.emotion-22 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #B80000;
-  display: inline-block;
-  margin-right: 0.5rem;
-}
-
-.emotion-28 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-28 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-28 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-28 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-.emotion-46 {
-  position: relative;
-  z-index: 2;
-  padding: 1rem 0 0;
-}
-
-.emotion-44 {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-36 {
-  border-top: 1px solid #F2F2F2;
-  padding: 0.5rem 0;
-}
-
-.emotion-34 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-34 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-34 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
 }
 
 .emotion-34:hover,
@@ -492,16 +399,109 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
   color: #6E6E73;
 }
 
-.emotion-34 svg {
+.emotion-36 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #B80000;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.emotion-38 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-38 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-38 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-38 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.emotion-40 {
+  position: relative;
+  z-index: 2;
+  padding: 1rem 0 0;
+}
+
+.emotion-44 {
+  list-style-type: none;
+  padding: 0;
   margin: 0;
 }
 
-.emotion-32 {
+.emotion-46 {
+  border-top: 1px solid #F2F2F2;
+  padding: 0.5rem 0;
+}
+
+.emotion-48 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-48 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-48 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-48:hover,
+.emotion-48:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-48:visited {
+  color: #6E6E73;
+}
+
+.emotion-48 svg {
+  margin: 0;
+}
+
+.emotion-50 {
   display: inline;
   vertical-align: middle;
 }
 
-.emotion-66 {
+.emotion-60 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
@@ -509,122 +509,122 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-66 {
+  .emotion-60 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-66 {
+  .emotion-60 {
     margin-bottom: 1.5rem;
   }
 }
 
-.emotion-257 {
+.emotion-73 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 @supports (display:grid) {
-  .emotion-257 {
+  .emotion-73 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-257 {
+  @media (max-width:14.9375rem) {
+    .emotion-73 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-257 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-73 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-257 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-73 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-257 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-73 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-257 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-73 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-257 {
+  @media (min-width:80rem) {
+    .emotion-73 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
-.emotion-87 {
+.emotion-76 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width:62.9375rem) {
-  .emotion-87 {
+  .emotion-76 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-87:last-child {
+.emotion-76:last-child {
   border: none;
 }
 
 @media (min-width:37.5rem) {
-  .emotion-87 {
+  .emotion-76 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-87 {
+  .emotion-76 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-87:first-child {
+.emotion-76:first-child {
   padding-top: 0;
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-87:first-child {
+  .emotion-76:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-87:last-child {
+.emotion-76:last-child {
   padding-bottom: 0;
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-87 {
+  .emotion-76 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -633,7 +633,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-87 {
+  .emotion-76 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -642,7 +642,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-87 {
+  .emotion-76 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -651,7 +651,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-87 {
+  .emotion-76 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -660,7 +660,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-87 {
+  .emotion-76 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -669,7 +669,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 }
 
 @media (min-width:80rem) {
-  .emotion-87 {
+  .emotion-76 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -678,80 +678,80 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 }
 
 @supports (display:grid) {
-  .emotion-87 {
+  .emotion-76 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-87 {
+  @media (max-width:14.9375rem) {
+    .emotion-76 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-87 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-76 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-87 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-76 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-87 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-76 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-87 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-76 {
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-87 {
+  @media (min-width:80rem) {
+    .emotion-76 {
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
-}
+  }
 }
 
-.emotion-84 {
+.emotion-78 {
   position: relative;
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-84 {
+  .emotion-78 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
   }
 
-@media (min-width:37.5rem) {
-    .emotion-84 {
+  @media (min-width:37.5rem) {
+    .emotion-78 {
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) {
-    .emotion-84 {
+  @media (min-width:63rem) {
+    .emotion-78 {
       display: block;
     }
-}
+  }
 }
 
-.emotion-74 {
+.emotion-80 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -759,39 +759,39 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 }
 
 @media (min-width:63rem) {
-  .emotion-74 {
+  .emotion-80 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-74 {
+  .emotion-80 {
     width: initial;
-    grid-column: 1 / span 2;
+    grid-column: 1/span 2;
   }
 }
 
 @media (min-width:25rem) {
-  .emotion-70 {
+  .emotion-86 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-70 > * {
+.emotion-86>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width:24.9375rem) {
-  .emotion-70 > * {
+  .emotion-86>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-82 {
+.emotion-88 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -799,13 +799,13 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-82 {
+  .emotion-88 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-82 {
+  .emotion-88 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -813,21 +813,21 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-82 {
+  .emotion-88 {
     display: block;
     width: initial;
     padding: initial;
-    grid-column: 3 / span 4;
+    grid-column: 3/span 4;
   }
 
-@media (min-width:63rem) {
-    .emotion-82 {
+  @media (min-width:63rem) {
+    .emotion-88 {
       padding-top: 0.5rem;
     }
-}
+  }
 }
 
-.emotion-78 {
+.emotion-90 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -838,21 +838,21 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
   line-height: 1.25rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-78 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-90 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-78 {
+@media (min-width: 37.5rem) {
+  .emotion-90 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-80 {
+.emotion-94 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -863,20 +863,20 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-80 {
+  .emotion-94 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-80 {
+  .emotion-94 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-95 {
+.emotion-109 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -888,20 +888,20 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-95 {
+  .emotion-109 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-95 {
+  .emotion-109 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-93 {
+.emotion-111 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -913,7 +913,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
   height: 100%;
 }
 
-.emotion-91 {
+.emotion-113 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -922,7 +922,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
   height: 0.75rem;
 }
 
-.emotion-107 {
+.emotion-121 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -934,34 +934,34 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-107 {
+  .emotion-121 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-107 {
+  .emotion-121 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-107 {
+  .emotion-121 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-107 {
+  .emotion-121 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-183 {
+.emotion-205 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -970,7 +970,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
   height: 0.75rem;
 }
 
-.emotion-231 {
+.emotion-253 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1036,30 +1036,30 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                   </span>
                 </h1>
                 <div
-                  class="emotion-261 emotion-262"
+                  class="emotion-2 emotion-3"
                 >
                   <section
                     aria-labelledby="Top-stories"
-                    class="emotion-54 emotion-55"
+                    class="emotion-4 emotion-5"
                     role="region"
                   >
                     <div
-                      class="emotion-12 emotion-13"
+                      class="emotion-6 emotion-7"
                     >
                       <div
-                        class="emotion-2 emotion-3"
+                        class="emotion-8 emotion-9"
                       />
                       <h2
                         class="emotion-10 emotion-11"
                       >
                         <span
-                          class="emotion-8 emotion-9"
+                          class="emotion-12 emotion-13"
                         >
                           <span
-                            class="emotion-6 emotion-7"
+                            class="emotion-14 emotion-15"
                           >
                             <span
-                              class="emotion-4 emotion-5"
+                              class="emotion-16 emotion-17"
                               dir="ltr"
                               id="Top-stories"
                             >
@@ -1070,21 +1070,21 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       </h2>
                     </div>
                     <div
-                      class="emotion-52 emotion-53"
+                      class="emotion-18 emotion-19"
                     >
                       <div
-                        class="emotion-50 emotion-51"
+                        class="emotion-20 emotion-21"
                         data-e2e="story-promo"
                       >
                         <div
-                          class="emotion-20 emotion-21"
+                          class="emotion-22 emotion-23"
                           dir="ltr"
                         >
                           <div
-                            class="emotion-18 emotion-19"
+                            class="emotion-24 emotion-25"
                           >
                             <div
-                              class="emotion-14 emotion-15"
+                              class="emotion-26 emotion-27"
                             >
                               <amp-img
                                 alt="Senator Ahmad Lawan and Ali Ndume"
@@ -1097,26 +1097,26 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                               />
                             </div>
                             <div
-                              class="emotion-16 emotion-17"
+                              class="emotion-28 emotion-29"
                             />
                           </div>
                         </div>
                         <div
-                          class="emotion-48 emotion-49"
+                          class="emotion-30 emotion-31"
                           dir="ltr"
                         >
                           <h3
-                            class="emotion-26 emotion-27"
+                            class="emotion-32 emotion-33"
                           >
                             <a
-                              class="emotion-24 emotion-25"
+                              class="emotion-34 emotion-35"
                               href="/pidgin/live/tori-48591362"
                             >
                               <span
                                 role="text"
                               >
                                 <span
-                                  class="emotion-22 emotion-23"
+                                  class="emotion-36 emotion-37"
                                   dir="ltr"
                                 >
                                   AS E DE HAPPEN 
@@ -1126,12 +1126,12 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                             </a>
                           </h3>
                           <p
-                            class="emotion-28 emotion-29"
+                            class="emotion-38 emotion-39"
                           >
                             Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.
                           </p>
                           <div
-                            class="emotion-46 emotion-47"
+                            class="emotion-40 emotion-41"
                             data-e2e="index-alsos"
                           >
                             <h4
@@ -1144,30 +1144,30 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                               role="list"
                             >
                               <li
-                                class="emotion-36 emotion-37"
+                                class="emotion-46 emotion-47"
                                 role="listitem"
                               >
                                 <a
-                                  class="emotion-34 emotion-35"
+                                  class="emotion-48 emotion-49"
                                   href="/pidgin/tori-48591361"
                                 >
                                   <span
-                                    class="emotion-32 emotion-33"
+                                    class="emotion-50 emotion-51"
                                   >
                                     Who go lead di Ninth National Assembly?
                                   </span>
                                 </a>
                               </li>
                               <li
-                                class="emotion-36 emotion-37"
+                                class="emotion-46 emotion-47"
                                 role="listitem"
                               >
                                 <a
-                                  class="emotion-34 emotion-35"
+                                  class="emotion-48 emotion-49"
                                   href="/pidgin/tori-47603701"
                                 >
                                   <span
-                                    class="emotion-32 emotion-33"
+                                    class="emotion-50 emotion-51"
                                   >
                                     4 tins wey go determine who become di next Senate President, Speaker
                                   </span>
@@ -1181,26 +1181,26 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                   </section>
                   <section
                     aria-labelledby="Frequency-info"
-                    class="emotion-54 emotion-55"
+                    class="emotion-4 emotion-5"
                     role="region"
                   >
                     <div
-                      class="emotion-66 emotion-13"
+                      class="emotion-60 emotion-7"
                     >
                       <div
-                        class="emotion-2 emotion-3"
+                        class="emotion-8 emotion-9"
                       />
                       <h2
                         class="emotion-10 emotion-11"
                       >
                         <span
-                          class="emotion-8 emotion-9"
+                          class="emotion-12 emotion-13"
                         >
                           <span
-                            class="emotion-6 emotion-7"
+                            class="emotion-14 emotion-15"
                           >
                             <span
-                              class="emotion-4 emotion-5"
+                              class="emotion-16 emotion-17"
                               dir="ltr"
                               id="Frequency-info"
                             >
@@ -1211,27 +1211,27 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       </h2>
                     </div>
                     <ul
-                      class="emotion-86 emotion-257 emotion-258"
+                      class="emotion-72 emotion-73 emotion-74"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="emotion-86 emotion-87 emotion-88"
+                        class="emotion-72 emotion-76 emotion-77"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-84 emotion-51"
+                          class="emotion-78 emotion-21"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-74 emotion-21"
+                            class="emotion-80 emotion-23"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-18 emotion-19"
+                              class="emotion-24 emotion-25"
                             >
                               <div
-                                class="emotion-14 emotion-15"
+                                class="emotion-26 emotion-27"
                               >
                                 <amp-img
                                   alt="Messi, Iwobi, Ronaldo"
@@ -1244,26 +1244,26 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 />
                               </div>
                               <div
-                                class="emotion-70 emotion-17"
+                                class="emotion-86 emotion-29"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-82 emotion-49"
+                            class="emotion-88 emotion-31"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-78 emotion-27"
+                              class="emotion-90 emotion-33"
                             >
                               <a
-                                class="emotion-24 emotion-25"
+                                class="emotion-34 emotion-35"
                                 href="https://www.bbc.com/pidgin/sport-44416820"
                               >
                                 Take dis predictor choose who go reach World Cup final
                               </a>
                             </h3>
                             <time
-                              class="emotion-80 emotion-81"
+                              class="emotion-94 emotion-95"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -1272,22 +1272,22 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-86 emotion-87 emotion-88"
+                        class="emotion-72 emotion-76 emotion-77"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-84 emotion-51"
+                          class="emotion-78 emotion-21"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-74 emotion-21"
+                            class="emotion-80 emotion-23"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-18 emotion-19"
+                              class="emotion-24 emotion-25"
                             >
                               <div
-                                class="emotion-14 emotion-15"
+                                class="emotion-26 emotion-27"
                               >
                                 <amp-img
                                   alt="A lone Koala perches in a eucalyptus tree"
@@ -1300,19 +1300,19 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 />
                               </div>
                               <div
-                                class="emotion-70 emotion-17"
+                                class="emotion-86 emotion-29"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="emotion-95 emotion-96"
+                                  class="emotion-109 emotion-110"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="emotion-93 emotion-94"
+                                    class="emotion-111 emotion-112"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="emotion-91 emotion-92"
+                                      class="emotion-113 emotion-114"
                                       focusable="false"
                                       height="12px"
                                       viewBox="0 0 13 12"
@@ -1331,26 +1331,26 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                             </div>
                           </div>
                           <div
-                            class="emotion-82 emotion-49"
+                            class="emotion-88 emotion-31"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-78 emotion-27"
+                              class="emotion-90 emotion-33"
                             >
                               <a
-                                class="emotion-24 emotion-25"
+                                class="emotion-34 emotion-35"
                                 href="http://www.bbc.com/pidgin"
                               >
                                 Audio promo
                               </a>
                             </h3>
                             <p
-                              class="emotion-107 emotion-29"
+                              class="emotion-121 emotion-39"
                             >
                               Summary
                             </p>
                             <time
-                              class="emotion-80 emotion-81"
+                              class="emotion-94 emotion-95"
                               datetime="2019-08-06"
                             >
                               6th August 2019
@@ -1359,22 +1359,22 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-86 emotion-87 emotion-88"
+                        class="emotion-72 emotion-76 emotion-77"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-84 emotion-51"
+                          class="emotion-78 emotion-21"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-74 emotion-21"
+                            class="emotion-80 emotion-23"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-18 emotion-19"
+                              class="emotion-24 emotion-25"
                             >
                               <div
-                                class="emotion-14 emotion-15"
+                                class="emotion-26 emotion-27"
                               >
                                 <amp-img
                                   alt="Rashidi"
@@ -1387,26 +1387,26 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 />
                               </div>
                               <div
-                                class="emotion-70 emotion-17"
+                                class="emotion-86 emotion-29"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-82 emotion-49"
+                            class="emotion-88 emotion-31"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-78 emotion-27"
+                              class="emotion-90 emotion-33"
                             >
                               <a
-                                class="emotion-24 emotion-25"
+                                class="emotion-34 emotion-35"
                                 href="https://www.bbc.com/pidgin/sport-44439411"
                               >
                                 World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
                               </a>
                             </h3>
                             <time
-                              class="emotion-80 emotion-81"
+                              class="emotion-94 emotion-95"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -1415,22 +1415,22 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-86 emotion-87 emotion-88"
+                        class="emotion-72 emotion-76 emotion-77"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-84 emotion-51"
+                          class="emotion-78 emotion-21"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-74 emotion-21"
+                            class="emotion-80 emotion-23"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-18 emotion-19"
+                              class="emotion-24 emotion-25"
                             >
                               <div
-                                class="emotion-14 emotion-15"
+                                class="emotion-26 emotion-27"
                               >
                                 <amp-img
                                   alt="all-time African XI promo image"
@@ -1443,26 +1443,26 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 />
                               </div>
                               <div
-                                class="emotion-70 emotion-17"
+                                class="emotion-86 emotion-29"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-82 emotion-49"
+                            class="emotion-88 emotion-31"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-78 emotion-27"
+                              class="emotion-90 emotion-33"
                             >
                               <a
-                                class="emotion-24 emotion-25"
+                                class="emotion-34 emotion-35"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup
                               </a>
                             </h3>
                             <time
-                              class="emotion-80 emotion-81"
+                              class="emotion-94 emotion-95"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -1471,22 +1471,22 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-86 emotion-87 emotion-88"
+                        class="emotion-72 emotion-76 emotion-77"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-84 emotion-51"
+                          class="emotion-78 emotion-21"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-74 emotion-21"
+                            class="emotion-80 emotion-23"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-18 emotion-19"
+                              class="emotion-24 emotion-25"
                             >
                               <div
-                                class="emotion-14 emotion-15"
+                                class="emotion-26 emotion-27"
                               >
                                 <amp-img
                                   alt="all-time African XI promo image"
@@ -1499,26 +1499,26 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 />
                               </div>
                               <div
-                                class="emotion-70 emotion-17"
+                                class="emotion-86 emotion-29"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-82 emotion-49"
+                            class="emotion-88 emotion-31"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-78 emotion-27"
+                              class="emotion-90 emotion-33"
                             >
                               <a
-                                class="emotion-24 emotion-25"
+                                class="emotion-34 emotion-35"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup as a feature
                               </a>
                             </h3>
                             <time
-                              class="emotion-80 emotion-81"
+                              class="emotion-94 emotion-95"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -1527,22 +1527,22 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-86 emotion-87 emotion-88"
+                        class="emotion-72 emotion-76 emotion-77"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-84 emotion-51"
+                          class="emotion-78 emotion-21"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-74 emotion-21"
+                            class="emotion-80 emotion-23"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-18 emotion-19"
+                              class="emotion-24 emotion-25"
                             >
                               <div
-                                class="emotion-14 emotion-15"
+                                class="emotion-26 emotion-27"
                               >
                                 <amp-img
                                   alt="all-time African XI promo image"
@@ -1555,19 +1555,19 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 />
                               </div>
                               <div
-                                class="emotion-70 emotion-17"
+                                class="emotion-86 emotion-29"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="emotion-95 emotion-96"
+                                  class="emotion-109 emotion-110"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="emotion-93 emotion-94"
+                                    class="emotion-111 emotion-112"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="emotion-183 emotion-184"
+                                      class="emotion-205 emotion-206"
                                       focusable="false"
                                       height="12px"
                                       viewBox="0 0 32 32"
@@ -1583,21 +1583,21 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                             </div>
                           </div>
                           <div
-                            class="emotion-82 emotion-49"
+                            class="emotion-88 emotion-31"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-78 emotion-27"
+                              class="emotion-90 emotion-33"
                             >
                               <a
-                                class="emotion-24 emotion-25"
+                                class="emotion-34 emotion-35"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup - Video
                               </a>
                             </h3>
                             <time
-                              class="emotion-80 emotion-81"
+                              class="emotion-94 emotion-95"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -1606,22 +1606,22 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-86 emotion-87 emotion-88"
+                        class="emotion-72 emotion-76 emotion-77"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-84 emotion-51"
+                          class="emotion-78 emotion-21"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-74 emotion-21"
+                            class="emotion-80 emotion-23"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-18 emotion-19"
+                              class="emotion-24 emotion-25"
                             >
                               <div
-                                class="emotion-14 emotion-15"
+                                class="emotion-26 emotion-27"
                               >
                                 <amp-img
                                   alt="Sane"
@@ -1634,26 +1634,26 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 />
                               </div>
                               <div
-                                class="emotion-70 emotion-17"
+                                class="emotion-86 emotion-29"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-82 emotion-49"
+                            class="emotion-88 emotion-31"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-78 emotion-27"
+                              class="emotion-90 emotion-33"
                             >
                               <a
-                                class="emotion-24 emotion-25"
+                                class="emotion-34 emotion-35"
                                 href="https://www.bbc.com/pidgin/sport-44214129"
                               >
                                 World Cup 2018: Di top stars wey no dey go World Cup
                               </a>
                             </h3>
                             <time
-                              class="emotion-80 emotion-81"
+                              class="emotion-94 emotion-95"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -1662,22 +1662,22 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-86 emotion-87 emotion-88"
+                        class="emotion-72 emotion-76 emotion-77"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-84 emotion-51"
+                          class="emotion-78 emotion-21"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-74 emotion-21"
+                            class="emotion-80 emotion-23"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-18 emotion-19"
+                              class="emotion-24 emotion-25"
                             >
                               <div
-                                class="emotion-14 emotion-15"
+                                class="emotion-26 emotion-27"
                               >
                                 <amp-img
                                   alt="A lone Koala perches in a eucalyptus tree"
@@ -1690,19 +1690,19 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 />
                               </div>
                               <div
-                                class="emotion-70 emotion-17"
+                                class="emotion-86 emotion-29"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="emotion-95 emotion-96"
+                                  class="emotion-109 emotion-110"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="emotion-93 emotion-94"
+                                    class="emotion-111 emotion-112"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="emotion-231 emotion-232"
+                                      class="emotion-253 emotion-254"
                                       focusable="false"
                                       height="13px"
                                       viewBox="0 0 32 26"
@@ -1723,21 +1723,21 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                             </div>
                           </div>
                           <div
-                            class="emotion-82 emotion-49"
+                            class="emotion-88 emotion-31"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-78 emotion-27"
+                              class="emotion-90 emotion-33"
                             >
                               <a
-                                class="emotion-24 emotion-25"
+                                class="emotion-34 emotion-35"
                                 href="http://www.bbc.com/azeri"
                               >
                                 Gallery promo
                               </a>
                             </h3>
                             <time
-                              class="emotion-80 emotion-81"
+                              class="emotion-94 emotion-95"
                               datetime="2019-08-07"
                             >
                               7th August 2019
@@ -1771,54 +1771,54 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
   margin: 0;
 }
 
-.emotion-451 {
+.emotion-2 {
   margin: 0 0.5rem;
   padding-top: 0.5rem;
   padding-bottom: 2rem;
 }
 
-@media (min-width:25rem) {
-  .emotion-451 {
+@media (min-width: 25rem) {
+  .emotion-2 {
     margin: 0 1rem;
   }
 }
 
-@media (min-width:25rem) {
-  .emotion-451 {
+@media (min-width: 25rem) {
+  .emotion-2 {
     padding-top: 1rem;
   }
 }
 
-@media (max-width:37.4375rem) {
-  .emotion-451 {
+@media (max-width: 37.4375rem) {
+  .emotion-2 {
     padding-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-451 {
+@media (min-width: 37.5rem) {
+  .emotion-2 {
     padding-top: 0;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-451 {
+@media (min-width: 63rem) {
+  .emotion-2 {
     padding-bottom: 2.5rem;
   }
 }
 
-.emotion-56 {
+.emotion-4 {
   margin: 0 auto;
   width: 100%;
 }
 
-@media (min-width:63rem) {
-  .emotion-56 {
+@media (min-width: 63rem) {
+  .emotion-4 {
     max-width: 63rem;
   }
 }
 
-.emotion-12 {
+.emotion-6 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
@@ -1834,30 +1834,30 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-12 {
+  .emotion-6 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-12 {
+  .emotion-6 {
     margin-bottom: 1.5rem;
   }
 }
 
-.emotion-2 {
+.emotion-8 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .emotion-2 {
+  .emotion-8 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .emotion-8 {
     position: absolute;
     left: 0;
     right: 0;
@@ -1870,7 +1870,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
   padding: 0;
 }
 
-.emotion-8 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1880,7 +1880,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-6 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1900,7 +1900,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-6 {
+  .emotion-14 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1908,7 +1908,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
   }
 }
 
-.emotion-4 {
+.emotion-16 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1928,65 +1928,65 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
+  .emotion-16 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 {
+  .emotion-16 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 {
+  .emotion-16 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 {
+  .emotion-16 {
     padding-right: 1rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-54 {
+@media (min-width: 37.5rem) {
+  .emotion-18 {
     margin-top: 1.5rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-54 {
+@media (min-width: 63rem) {
+  .emotion-18 {
     margin-top: 2rem;
   }
 }
 
-.emotion-52 {
+.emotion-20 {
   position: relative;
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-52 {
+  .emotion-20 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
   }
 
-@media (min-width:37.5rem) {
-    .emotion-52 {
+  @media (min-width:37.5rem) {
+    .emotion-20 {
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-52 {
+  @media (min-width:80rem) {
+    .emotion-20 {
       grid-template-columns: repeat(12,1fr);
     }
-}
+  }
 }
 
 .emotion-22 {
@@ -2013,21 +2013,21 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 @supports (grid-template-columns:fit-content(200px)) {
   .emotion-22 {
     width: initial;
-    grid-column: 1 / span 6;
+    grid-column: 1/span 6;
   }
 
-@media (min-width:37.5rem) and (max-width:79.9375rem) {
+  @media (min-width:37.5rem) and (max-width:79.9375rem) {
     .emotion-22 {
-      grid-column: 1 / span 3;
+      grid-column: 1/span 3;
     }
-}
+  }
 }
 
-.emotion-20 {
+.emotion-24 {
   position: relative;
 }
 
-.emotion-16 {
+.emotion-26 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -2041,73 +2041,73 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:25rem) {
-  .emotion-16 {
+  .emotion-26 {
     background-size: 77px 22px;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-16 {
+  .emotion-26 {
     background-size: 93px 27px;
   }
 }
 
-.emotion-14 {
+.emotion-28 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.emotion-18 {
+.emotion-30 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-18 > * {
+.emotion-30>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.emotion-50 {
+.emotion-32 {
   display: inline-block;
   vertical-align: top;
 }
 
 @media (min-width:37.5rem) {
-  .emotion-50 {
+  .emotion-32 {
     width: 50%;
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-50 {
+  .emotion-32 {
     width: 50%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-50 {
+  .emotion-32 {
     display: block;
     width: initial;
     padding: initial;
-    grid-column: 1 / span 6;
+    grid-column: 1/span 6;
   }
 
-@media (min-width:37.5rem) {
-    .emotion-50 {
-      grid-column: 4 / span 3;
+  @media (min-width:37.5rem) {
+    .emotion-32 {
+      grid-column: 4/span 3;
     }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-32 {
+      grid-column: 7/span 6;
+    }
+  }
 }
 
-@media (min-width:80rem) {
-    .emotion-50 {
-      grid-column: 7 / span 6;
-    }
-}
-}
-
-.emotion-28 {
+.emotion-34 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2118,21 +2118,21 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
   line-height: 1.5rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-28 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-34 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-28 {
+@media (min-width: 37.5rem) {
+  .emotion-34 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
-.emotion-26 {
+.emotion-36 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -2141,7 +2141,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
   overflow-wrap: anywhere;
 }
 
-.emotion-26:before {
+.emotion-36:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -2151,99 +2151,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
   top: 0;
   white-space: nowrap;
   z-index: 1;
-}
-
-.emotion-26:hover,
-.emotion-26:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-26:visited {
-  color: #6E6E73;
-}
-
-.emotion-24 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #B80000;
-  display: inline-block;
-  margin-right: 0.5rem;
-}
-
-.emotion-30 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-30 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-30 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-30 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-.emotion-48 {
-  position: relative;
-  z-index: 2;
-  padding: 1rem 0 0;
-}
-
-.emotion-46 {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-38 {
-  border-top: 1px solid #F2F2F2;
-  padding: 0.5rem 0;
-}
-
-.emotion-36 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-36 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-36 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
 }
 
 .emotion-36:hover,
@@ -2256,16 +2163,109 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
   color: #6E6E73;
 }
 
-.emotion-36 svg {
+.emotion-38 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #B80000;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.emotion-40 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-40 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-40 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-40 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.emotion-42 {
+  position: relative;
+  z-index: 2;
+  padding: 1rem 0 0;
+}
+
+.emotion-46 {
+  list-style-type: none;
+  padding: 0;
   margin: 0;
 }
 
-.emotion-34 {
+.emotion-48 {
+  border-top: 1px solid #F2F2F2;
+  padding: 0.5rem 0;
+}
+
+.emotion-50 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-50 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-50 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-50:hover,
+.emotion-50:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-50:visited {
+  color: #6E6E73;
+}
+
+.emotion-50 svg {
+  margin: 0;
+}
+
+.emotion-52 {
   display: inline;
   vertical-align: middle;
 }
 
-.emotion-68 {
+.emotion-62 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
@@ -2273,122 +2273,122 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-68 {
+  .emotion-62 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-68 {
+  .emotion-62 {
     margin-bottom: 1.5rem;
   }
 }
 
-.emotion-259 {
+.emotion-75 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 @supports (display:grid) {
-  .emotion-259 {
+  .emotion-75 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-259 {
+  @media (max-width:14.9375rem) {
+    .emotion-75 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-259 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-75 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-259 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-75 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-259 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-75 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-259 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-75 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-259 {
+  @media (min-width:80rem) {
+    .emotion-75 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
-.emotion-89 {
+.emotion-78 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width:62.9375rem) {
-  .emotion-89 {
+  .emotion-78 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-89:last-child {
+.emotion-78:last-child {
   border: none;
 }
 
 @media (min-width:37.5rem) {
-  .emotion-89 {
+  .emotion-78 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-89 {
+  .emotion-78 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-89:first-child {
+.emotion-78:first-child {
   padding-top: 0;
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-89:first-child {
+  .emotion-78:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-89:last-child {
+.emotion-78:last-child {
   padding-bottom: 0;
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-89 {
+  .emotion-78 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -2397,7 +2397,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-89 {
+  .emotion-78 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -2406,7 +2406,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-89 {
+  .emotion-78 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -2415,7 +2415,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-89 {
+  .emotion-78 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -2424,7 +2424,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-89 {
+  .emotion-78 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -2433,7 +2433,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:80rem) {
-  .emotion-89 {
+  .emotion-78 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -2442,80 +2442,80 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @supports (display:grid) {
-  .emotion-89 {
+  .emotion-78 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-89 {
+  @media (max-width:14.9375rem) {
+    .emotion-78 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-89 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-78 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-89 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-78 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-89 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-78 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-89 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-78 {
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-89 {
+  @media (min-width:80rem) {
+    .emotion-78 {
       grid-template-columns: repeat(2,1fr);
       grid-column-end: span 2;
     }
-}
+  }
 }
 
-.emotion-86 {
+.emotion-80 {
   position: relative;
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-86 {
+  .emotion-80 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
   }
 
-@media (min-width:37.5rem) {
-    .emotion-86 {
+  @media (min-width:37.5rem) {
+    .emotion-80 {
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) {
-    .emotion-86 {
+  @media (min-width:63rem) {
+    .emotion-80 {
       display: block;
     }
-}
+  }
 }
 
-.emotion-76 {
+.emotion-82 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -2523,39 +2523,39 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:63rem) {
-  .emotion-76 {
+  .emotion-82 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-76 {
+  .emotion-82 {
     width: initial;
-    grid-column: 1 / span 2;
+    grid-column: 1/span 2;
   }
 }
 
 @media (min-width:25rem) {
-  .emotion-72 {
+  .emotion-88 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-72 > * {
+.emotion-88>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width:24.9375rem) {
-  .emotion-72 > * {
+  .emotion-88>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-84 {
+.emotion-90 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -2563,13 +2563,13 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-84 {
+  .emotion-90 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-84 {
+  .emotion-90 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -2577,21 +2577,21 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-84 {
+  .emotion-90 {
     display: block;
     width: initial;
     padding: initial;
-    grid-column: 3 / span 4;
+    grid-column: 3/span 4;
   }
 
-@media (min-width:63rem) {
-    .emotion-84 {
+  @media (min-width:63rem) {
+    .emotion-90 {
       padding-top: 0.5rem;
     }
-}
+  }
 }
 
-.emotion-80 {
+.emotion-92 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2602,21 +2602,21 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
   line-height: 1.25rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-80 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-92 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-80 {
+@media (min-width: 37.5rem) {
+  .emotion-92 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-82 {
+.emotion-96 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -2627,20 +2627,20 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-82 {
+  .emotion-96 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-82 {
+  .emotion-96 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-97 {
+.emotion-111 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2652,20 +2652,20 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-97 {
+  .emotion-111 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-97 {
+  .emotion-111 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-95 {
+.emotion-113 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2677,7 +2677,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
   height: 100%;
 }
 
-.emotion-93 {
+.emotion-115 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -2686,7 +2686,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
   height: 0.75rem;
 }
 
-.emotion-109 {
+.emotion-123 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2698,34 +2698,34 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-109 {
+  .emotion-123 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-109 {
+  .emotion-123 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-109 {
+  .emotion-123 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-109 {
+  .emotion-123 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-185 {
+.emotion-207 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -2734,7 +2734,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
   height: 0.75rem;
 }
 
-.emotion-233 {
+.emotion-255 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -2743,43 +2743,24 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
   height: 0.8125rem;
 }
 
-.emotion-449 {
+.emotion-265 {
   margin: 0 auto;
   width: 100%;
 }
 
-@media (min-width:63rem) {
-  .emotion-449 {
+@media (min-width: 63rem) {
+  .emotion-265 {
     max-width: 63rem;
   }
 }
 
-.emotion-274 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-274 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-274 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-274 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-267 {
     margin-bottom: 1rem;
   }
 }
 
-.emotion-447 {
+.emotion-282 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -2788,75 +2769,75 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @supports (display:grid) {
-  .emotion-447 {
+  .emotion-282 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-447 {
+  @media (max-width:14.9375rem) {
+    .emotion-282 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-447 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-282 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-447 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-282 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-447 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-282 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-447 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-282 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-447 {
+  @media (min-width:80rem) {
+    .emotion-282 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-447 {
+  .emotion-282 {
     grid-template-rows: repeat( 5,auto );
   }
 }
 
-.emotion-291 {
+.emotion-285 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-291 {
+  .emotion-285 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -2864,7 +2845,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-291 {
+  .emotion-285 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -2872,7 +2853,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-291 {
+  .emotion-285 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -2880,7 +2861,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-291 {
+  .emotion-285 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -2888,7 +2869,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-291 {
+  .emotion-285 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -2896,7 +2877,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:80rem) {
-  .emotion-291 {
+  .emotion-285 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -2904,56 +2885,56 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @supports (display:grid) {
-  .emotion-291 {
+  .emotion-285 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-291 {
+  @media (max-width:14.9375rem) {
+    .emotion-285 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-291 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-285 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-291 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-285 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-291 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-285 {
       grid-template-columns: repeat(3,1fr);
       grid-column-end: span 3;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-291 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-285 {
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-291 {
+  @media (min-width:80rem) {
+    .emotion-285 {
       grid-template-columns: repeat(4,1fr);
       grid-column-end: span 4;
     }
-}
+  }
 }
 
-.emotion-288 {
+.emotion-287 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2966,44 +2947,44 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-278 {
+  .emotion-289 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-278 {
+  .emotion-289 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-278 {
+  .emotion-289 {
     min-width: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-278 {
+  .emotion-289 {
     min-width: 4rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-278 {
+  .emotion-289 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-@media (min-width:37.5rem) {
-    .emotion-278 {
+  @media (min-width:37.5rem) {
+    .emotion-289 {
       min-width: 2rem;
     }
-}
+  }
 }
 
-.emotion-276 {
+.emotion-291 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -3016,32 +2997,32 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-276 {
+  .emotion-291 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-276 {
+  .emotion-291 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
 }
 
-.emotion-286 {
+.emotion-293 {
   padding-top: 0.375rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-286 {
+  .emotion-293 {
     padding-right: 0;
   }
 }
 
-.emotion-280 {
+.emotion-295 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3055,26 +3036,26 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-280 {
+  .emotion-295 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-280 {
+  .emotion-295 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-280:hover,
-.emotion-280:focus {
+.emotion-295:hover,
+.emotion-295:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-280:before {
+.emotion-295:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -3087,142 +3068,142 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 }
 
 @media (min-width:25rem) {
-  .emotion-280 {
+  .emotion-295 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-    .emotion-280 {
+  @media (min-width:20rem) and (max-width:37.4375rem) {
+    .emotion-295 {
       font-size: 1.125rem;
       line-height: 1.375rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) {
-    .emotion-280 {
+  @media (min-width:37.5rem) {
+    .emotion-295 {
       font-size: 1.25rem;
       line-height: 1.5rem;
     }
-}
+  }
 }
 
-.emotion-284 {
+.emotion-297 {
   padding-top: 0.5rem;
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-295 {
+  .emotion-306 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-295 {
+  .emotion-306 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-295 {
+  .emotion-306 {
     min-width: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-295 {
+  .emotion-306 {
     min-width: 4rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-295 {
+  .emotion-306 {
     min-width: 4rem;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-@media (min-width:37.5rem) {
-    .emotion-295 {
+  @media (min-width:37.5rem) {
+    .emotion-306 {
       min-width: 2rem;
     }
-}
+  }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-363 {
+  .emotion-374 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-363 {
+  .emotion-374 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-363 {
+  .emotion-374 {
     min-width: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-363 {
+  .emotion-374 {
     min-width: 4rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-363 {
+  .emotion-374 {
     min-width: 4rem;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-@media (min-width:37.5rem) {
-    .emotion-363 {
+  @media (min-width:37.5rem) {
+    .emotion-374 {
       min-width: 4rem;
     }
-}
+  }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-380 {
+  .emotion-391 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-380 {
+  .emotion-391 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-380 {
+  .emotion-391 {
     min-width: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-380 {
+  .emotion-391 {
     min-width: 4rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-380 {
+  .emotion-391 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-@media (min-width:37.5rem) {
-    .emotion-380 {
+  @media (min-width:37.5rem) {
+    .emotion-391 {
       min-width: 4rem;
     }
-}
+  }
 }
 
 <div>
@@ -3271,30 +3252,30 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </span>
                 </h1>
                 <div
-                  class="emotion-451 emotion-452"
+                  class="emotion-2 emotion-3"
                 >
                   <section
                     aria-labelledby="Top-stories"
-                    class="emotion-56 emotion-57"
+                    class="emotion-4 emotion-5"
                     role="region"
                   >
                     <div
-                      class="emotion-12 emotion-13"
+                      class="emotion-6 emotion-7"
                     >
                       <div
-                        class="emotion-2 emotion-3"
+                        class="emotion-8 emotion-9"
                       />
                       <h2
                         class="emotion-10 emotion-11"
                       >
                         <span
-                          class="emotion-8 emotion-9"
+                          class="emotion-12 emotion-13"
                         >
                           <span
-                            class="emotion-6 emotion-7"
+                            class="emotion-14 emotion-15"
                           >
                             <span
-                              class="emotion-4 emotion-5"
+                              class="emotion-16 emotion-17"
                               dir="ltr"
                               id="Top-stories"
                             >
@@ -3305,10 +3286,10 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       </h2>
                     </div>
                     <div
-                      class="emotion-54 emotion-55"
+                      class="emotion-18 emotion-19"
                     >
                       <div
-                        class="emotion-52 emotion-53"
+                        class="emotion-20 emotion-21"
                         data-e2e="story-promo"
                       >
                         <div
@@ -3316,14 +3297,14 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           dir="ltr"
                         >
                           <div
-                            class="emotion-20 emotion-21"
+                            class="emotion-24 emotion-25"
                           >
                             <div
-                              class="emotion-16 emotion-17"
+                              class="emotion-26 emotion-27"
                             >
                               <img
                                 alt="Senator Ahmad Lawan and Ali Ndume"
-                                class="emotion-14 emotion-15"
+                                class="emotion-28 emotion-29"
                                 sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
                                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 660w"
@@ -3331,26 +3312,26 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               />
                             </div>
                             <div
-                              class="emotion-18 emotion-19"
+                              class="emotion-30 emotion-31"
                             />
                           </div>
                         </div>
                         <div
-                          class="emotion-50 emotion-51"
+                          class="emotion-32 emotion-33"
                           dir="ltr"
                         >
                           <h3
-                            class="emotion-28 emotion-29"
+                            class="emotion-34 emotion-35"
                           >
                             <a
-                              class="emotion-26 emotion-27"
+                              class="emotion-36 emotion-37"
                               href="/pidgin/live/tori-48591362"
                             >
                               <span
                                 role="text"
                               >
                                 <span
-                                  class="emotion-24 emotion-25"
+                                  class="emotion-38 emotion-39"
                                   dir="ltr"
                                 >
                                   AS E DE HAPPEN 
@@ -3360,12 +3341,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             </a>
                           </h3>
                           <p
-                            class="emotion-30 emotion-31"
+                            class="emotion-40 emotion-41"
                           >
                             Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.
                           </p>
                           <div
-                            class="emotion-48 emotion-49"
+                            class="emotion-42 emotion-43"
                             data-e2e="index-alsos"
                           >
                             <h4
@@ -3378,30 +3359,30 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               role="list"
                             >
                               <li
-                                class="emotion-38 emotion-39"
+                                class="emotion-48 emotion-49"
                                 role="listitem"
                               >
                                 <a
-                                  class="emotion-36 emotion-37"
+                                  class="emotion-50 emotion-51"
                                   href="/pidgin/tori-48591361"
                                 >
                                   <span
-                                    class="emotion-34 emotion-35"
+                                    class="emotion-52 emotion-53"
                                   >
                                     Who go lead di Ninth National Assembly?
                                   </span>
                                 </a>
                               </li>
                               <li
-                                class="emotion-38 emotion-39"
+                                class="emotion-48 emotion-49"
                                 role="listitem"
                               >
                                 <a
-                                  class="emotion-36 emotion-37"
+                                  class="emotion-50 emotion-51"
                                   href="/pidgin/tori-47603701"
                                 >
                                   <span
-                                    class="emotion-34 emotion-35"
+                                    class="emotion-52 emotion-53"
                                   >
                                     4 tins wey go determine who become di next Senate President, Speaker
                                   </span>
@@ -3415,26 +3396,26 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </section>
                   <section
                     aria-labelledby="Frequency-info"
-                    class="emotion-56 emotion-57"
+                    class="emotion-4 emotion-5"
                     role="region"
                   >
                     <div
-                      class="emotion-68 emotion-13"
+                      class="emotion-62 emotion-7"
                     >
                       <div
-                        class="emotion-2 emotion-3"
+                        class="emotion-8 emotion-9"
                       />
                       <h2
                         class="emotion-10 emotion-11"
                       >
                         <span
-                          class="emotion-8 emotion-9"
+                          class="emotion-12 emotion-13"
                         >
                           <span
-                            class="emotion-6 emotion-7"
+                            class="emotion-14 emotion-15"
                           >
                             <span
-                              class="emotion-4 emotion-5"
+                              class="emotion-16 emotion-17"
                               dir="ltr"
                               id="Frequency-info"
                             >
@@ -3445,27 +3426,27 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       </h2>
                     </div>
                     <ul
-                      class="emotion-88 emotion-259 emotion-260"
+                      class="emotion-74 emotion-75 emotion-76"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="emotion-88 emotion-89 emotion-90"
+                        class="emotion-74 emotion-78 emotion-79"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-86 emotion-53"
+                          class="emotion-80 emotion-21"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-76 emotion-23"
+                            class="emotion-82 emotion-23"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-20 emotion-21"
+                              class="emotion-24 emotion-25"
                             >
                               <div
-                                class="emotion-16 emotion-17"
+                                class="emotion-26 emotion-27"
                               >
                                 <div
                                   class="lazyload-wrapper"
@@ -3476,26 +3457,26 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="emotion-72 emotion-19"
+                                class="emotion-88 emotion-31"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-84 emotion-51"
+                            class="emotion-90 emotion-33"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-80 emotion-29"
+                              class="emotion-92 emotion-35"
                             >
                               <a
-                                class="emotion-26 emotion-27"
+                                class="emotion-36 emotion-37"
                                 href="https://www.bbc.com/pidgin/sport-44416820"
                               >
                                 Take dis predictor choose who go reach World Cup final
                               </a>
                             </h3>
                             <time
-                              class="emotion-82 emotion-83"
+                              class="emotion-96 emotion-97"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -3504,22 +3485,22 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-88 emotion-89 emotion-90"
+                        class="emotion-74 emotion-78 emotion-79"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-86 emotion-53"
+                          class="emotion-80 emotion-21"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-76 emotion-23"
+                            class="emotion-82 emotion-23"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-20 emotion-21"
+                              class="emotion-24 emotion-25"
                             >
                               <div
-                                class="emotion-16 emotion-17"
+                                class="emotion-26 emotion-27"
                               >
                                 <div
                                   class="lazyload-wrapper"
@@ -3530,19 +3511,19 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="emotion-72 emotion-19"
+                                class="emotion-88 emotion-31"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="emotion-97 emotion-98"
+                                  class="emotion-111 emotion-112"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="emotion-95 emotion-96"
+                                    class="emotion-113 emotion-114"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="emotion-93 emotion-94"
+                                      class="emotion-115 emotion-116"
                                       focusable="false"
                                       height="12px"
                                       viewBox="0 0 13 12"
@@ -3561,26 +3542,26 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             </div>
                           </div>
                           <div
-                            class="emotion-84 emotion-51"
+                            class="emotion-90 emotion-33"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-80 emotion-29"
+                              class="emotion-92 emotion-35"
                             >
                               <a
-                                class="emotion-26 emotion-27"
+                                class="emotion-36 emotion-37"
                                 href="http://www.bbc.com/pidgin"
                               >
                                 Audio promo
                               </a>
                             </h3>
                             <p
-                              class="emotion-109 emotion-31"
+                              class="emotion-123 emotion-41"
                             >
                               Summary
                             </p>
                             <time
-                              class="emotion-82 emotion-83"
+                              class="emotion-96 emotion-97"
                               datetime="2019-08-06"
                             >
                               6th August 2019
@@ -3589,22 +3570,22 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-88 emotion-89 emotion-90"
+                        class="emotion-74 emotion-78 emotion-79"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-86 emotion-53"
+                          class="emotion-80 emotion-21"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-76 emotion-23"
+                            class="emotion-82 emotion-23"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-20 emotion-21"
+                              class="emotion-24 emotion-25"
                             >
                               <div
-                                class="emotion-16 emotion-17"
+                                class="emotion-26 emotion-27"
                               >
                                 <div
                                   class="lazyload-wrapper"
@@ -3615,26 +3596,26 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="emotion-72 emotion-19"
+                                class="emotion-88 emotion-31"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-84 emotion-51"
+                            class="emotion-90 emotion-33"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-80 emotion-29"
+                              class="emotion-92 emotion-35"
                             >
                               <a
-                                class="emotion-26 emotion-27"
+                                class="emotion-36 emotion-37"
                                 href="https://www.bbc.com/pidgin/sport-44439411"
                               >
                                 World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
                               </a>
                             </h3>
                             <time
-                              class="emotion-82 emotion-83"
+                              class="emotion-96 emotion-97"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -3643,22 +3624,22 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-88 emotion-89 emotion-90"
+                        class="emotion-74 emotion-78 emotion-79"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-86 emotion-53"
+                          class="emotion-80 emotion-21"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-76 emotion-23"
+                            class="emotion-82 emotion-23"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-20 emotion-21"
+                              class="emotion-24 emotion-25"
                             >
                               <div
-                                class="emotion-16 emotion-17"
+                                class="emotion-26 emotion-27"
                               >
                                 <div
                                   class="lazyload-wrapper"
@@ -3669,26 +3650,26 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="emotion-72 emotion-19"
+                                class="emotion-88 emotion-31"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-84 emotion-51"
+                            class="emotion-90 emotion-33"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-80 emotion-29"
+                              class="emotion-92 emotion-35"
                             >
                               <a
-                                class="emotion-26 emotion-27"
+                                class="emotion-36 emotion-37"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup
                               </a>
                             </h3>
                             <time
-                              class="emotion-82 emotion-83"
+                              class="emotion-96 emotion-97"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -3697,22 +3678,22 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-88 emotion-89 emotion-90"
+                        class="emotion-74 emotion-78 emotion-79"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-86 emotion-53"
+                          class="emotion-80 emotion-21"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-76 emotion-23"
+                            class="emotion-82 emotion-23"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-20 emotion-21"
+                              class="emotion-24 emotion-25"
                             >
                               <div
-                                class="emotion-16 emotion-17"
+                                class="emotion-26 emotion-27"
                               >
                                 <div
                                   class="lazyload-wrapper"
@@ -3723,26 +3704,26 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="emotion-72 emotion-19"
+                                class="emotion-88 emotion-31"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-84 emotion-51"
+                            class="emotion-90 emotion-33"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-80 emotion-29"
+                              class="emotion-92 emotion-35"
                             >
                               <a
-                                class="emotion-26 emotion-27"
+                                class="emotion-36 emotion-37"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup as a feature
                               </a>
                             </h3>
                             <time
-                              class="emotion-82 emotion-83"
+                              class="emotion-96 emotion-97"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -3751,22 +3732,22 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-88 emotion-89 emotion-90"
+                        class="emotion-74 emotion-78 emotion-79"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-86 emotion-53"
+                          class="emotion-80 emotion-21"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-76 emotion-23"
+                            class="emotion-82 emotion-23"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-20 emotion-21"
+                              class="emotion-24 emotion-25"
                             >
                               <div
-                                class="emotion-16 emotion-17"
+                                class="emotion-26 emotion-27"
                               >
                                 <div
                                   class="lazyload-wrapper"
@@ -3777,19 +3758,19 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="emotion-72 emotion-19"
+                                class="emotion-88 emotion-31"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="emotion-97 emotion-98"
+                                  class="emotion-111 emotion-112"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="emotion-95 emotion-96"
+                                    class="emotion-113 emotion-114"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="emotion-185 emotion-186"
+                                      class="emotion-207 emotion-208"
                                       focusable="false"
                                       height="12px"
                                       viewBox="0 0 32 32"
@@ -3805,21 +3786,21 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             </div>
                           </div>
                           <div
-                            class="emotion-84 emotion-51"
+                            class="emotion-90 emotion-33"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-80 emotion-29"
+                              class="emotion-92 emotion-35"
                             >
                               <a
-                                class="emotion-26 emotion-27"
+                                class="emotion-36 emotion-37"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup - Video
                               </a>
                             </h3>
                             <time
-                              class="emotion-82 emotion-83"
+                              class="emotion-96 emotion-97"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -3828,22 +3809,22 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-88 emotion-89 emotion-90"
+                        class="emotion-74 emotion-78 emotion-79"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-86 emotion-53"
+                          class="emotion-80 emotion-21"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-76 emotion-23"
+                            class="emotion-82 emotion-23"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-20 emotion-21"
+                              class="emotion-24 emotion-25"
                             >
                               <div
-                                class="emotion-16 emotion-17"
+                                class="emotion-26 emotion-27"
                               >
                                 <div
                                   class="lazyload-wrapper"
@@ -3854,26 +3835,26 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="emotion-72 emotion-19"
+                                class="emotion-88 emotion-31"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-84 emotion-51"
+                            class="emotion-90 emotion-33"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-80 emotion-29"
+                              class="emotion-92 emotion-35"
                             >
                               <a
-                                class="emotion-26 emotion-27"
+                                class="emotion-36 emotion-37"
                                 href="https://www.bbc.com/pidgin/sport-44214129"
                               >
                                 World Cup 2018: Di top stars wey no dey go World Cup
                               </a>
                             </h3>
                             <time
-                              class="emotion-82 emotion-83"
+                              class="emotion-96 emotion-97"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -3882,22 +3863,22 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-88 emotion-89 emotion-90"
+                        class="emotion-74 emotion-78 emotion-79"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-86 emotion-53"
+                          class="emotion-80 emotion-21"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-76 emotion-23"
+                            class="emotion-82 emotion-23"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-20 emotion-21"
+                              class="emotion-24 emotion-25"
                             >
                               <div
-                                class="emotion-16 emotion-17"
+                                class="emotion-26 emotion-27"
                               >
                                 <div
                                   class="lazyload-wrapper"
@@ -3908,19 +3889,19 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="emotion-72 emotion-19"
+                                class="emotion-88 emotion-31"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="emotion-97 emotion-98"
+                                  class="emotion-111 emotion-112"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="emotion-95 emotion-96"
+                                    class="emotion-113 emotion-114"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="emotion-233 emotion-234"
+                                      class="emotion-255 emotion-256"
                                       focusable="false"
                                       height="13px"
                                       viewBox="0 0 32 26"
@@ -3941,21 +3922,21 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             </div>
                           </div>
                           <div
-                            class="emotion-84 emotion-51"
+                            class="emotion-90 emotion-33"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-80 emotion-29"
+                              class="emotion-92 emotion-35"
                             >
                               <a
-                                class="emotion-26 emotion-27"
+                                class="emotion-36 emotion-37"
                                 href="http://www.bbc.com/azeri"
                               >
                                 Gallery promo
                               </a>
                             </h3>
                             <time
-                              class="emotion-82 emotion-83"
+                              class="emotion-96 emotion-97"
                               datetime="2019-08-07"
                             >
                               7th August 2019
@@ -3967,27 +3948,27 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </section>
                   <section
                     aria-labelledby="Most-Read"
-                    class=" emotion-449 emotion-450"
+                    class=" emotion-265 emotion-266"
                     data-e2e="most-read"
                     role="region"
                   >
                     <div
-                      class="emotion-273 emotion-274 emotion-13"
+                      class="emotion-267 emotion-268 emotion-62 emotion-7"
                     >
                       <div
-                        class="emotion-2 emotion-3"
+                        class="emotion-8 emotion-9"
                       />
                       <h2
                         class="emotion-10 emotion-11"
                       >
                         <span
-                          class="emotion-8 emotion-9"
+                          class="emotion-12 emotion-13"
                         >
                           <span
-                            class="emotion-6 emotion-7"
+                            class="emotion-14 emotion-15"
                           >
                             <span
-                              class="emotion-4 emotion-5"
+                              class="emotion-16 emotion-17"
                               dir="ltr"
                               id="Most-Read"
                             >
@@ -3998,43 +3979,43 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       </h2>
                     </div>
                     <ol
-                      class="emotion-446 emotion-447 emotion-88"
+                      class="emotion-281 emotion-282 emotion-74"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="emotion-290 emotion-291 emotion-88"
+                        class="emotion-284 emotion-285 emotion-74"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-288 emotion-289"
+                          class="emotion-287 emotion-288"
                         >
                           <div
-                            class="emotion-278 emotion-279"
+                            class="emotion-289 emotion-290"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-276 emotion-277"
+                              class="emotion-291 emotion-292"
                             >
                               1
                             </span>
                           </div>
                           <div
-                            class="emotion-286 emotion-287"
+                            class="emotion-293 emotion-294"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-280 emotion-281"
+                              class="emotion-295 emotion-296"
                               href="/pidgin/tori-46729879"
                             >
                               Public Holidays wey go happun for 2019
                             </a>
                             <div
-                              class="emotion-284 emotion-285"
+                              class="emotion-297 emotion-298"
                             >
                               <time
-                                class="emotion-82 emotion-83"
+                                class="emotion-96 emotion-97"
                                 datetime="2019-05-21"
                               >
                                 De one we dem update for: 21st May 2019
@@ -4044,38 +4025,38 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-290 emotion-291 emotion-88"
+                        class="emotion-284 emotion-285 emotion-74"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-288 emotion-289"
+                          class="emotion-287 emotion-288"
                         >
                           <div
-                            class="emotion-295 emotion-279"
+                            class="emotion-306 emotion-290"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-276 emotion-277"
+                              class="emotion-291 emotion-292"
                             >
                               2
                             </span>
                           </div>
                           <div
-                            class="emotion-286 emotion-287"
+                            class="emotion-293 emotion-294"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-280 emotion-281"
+                              class="emotion-295 emotion-296"
                               href="/pidgin/tori-50304653"
                             >
                               Liberia banks don run out of money
                             </a>
                             <div
-                              class="emotion-284 emotion-285"
+                              class="emotion-297 emotion-298"
                             >
                               <time
-                                class="emotion-82 emotion-83"
+                                class="emotion-96 emotion-97"
                                 datetime="2019-11-05"
                               >
                                 De one we dem update for: 5th November 2019
@@ -4085,38 +4066,38 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-290 emotion-291 emotion-88"
+                        class="emotion-284 emotion-285 emotion-74"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-288 emotion-289"
+                          class="emotion-287 emotion-288"
                         >
                           <div
-                            class="emotion-278 emotion-279"
+                            class="emotion-289 emotion-290"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-276 emotion-277"
+                              class="emotion-291 emotion-292"
                             >
                               3
                             </span>
                           </div>
                           <div
-                            class="emotion-286 emotion-287"
+                            class="emotion-293 emotion-294"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-280 emotion-281"
+                              class="emotion-295 emotion-296"
                               href="/pidgin/tori-50298882"
                             >
                               Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
                             </a>
                             <div
-                              class="emotion-284 emotion-285"
+                              class="emotion-297 emotion-298"
                             >
                               <time
-                                class="emotion-82 emotion-83"
+                                class="emotion-96 emotion-97"
                                 datetime="2019-11-05"
                               >
                                 De one we dem update for: 5th November 2019
@@ -4126,38 +4107,38 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-290 emotion-291 emotion-88"
+                        class="emotion-284 emotion-285 emotion-74"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-288 emotion-289"
+                          class="emotion-287 emotion-288"
                         >
                           <div
-                            class="emotion-295 emotion-279"
+                            class="emotion-306 emotion-290"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-276 emotion-277"
+                              class="emotion-291 emotion-292"
                             >
                               4
                             </span>
                           </div>
                           <div
-                            class="emotion-286 emotion-287"
+                            class="emotion-293 emotion-294"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-280 emotion-281"
+                              class="emotion-295 emotion-296"
                               href="/pidgin/tori-50315150"
                             >
                               Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
                             </a>
                             <div
-                              class="emotion-284 emotion-285"
+                              class="emotion-297 emotion-298"
                             >
                               <time
-                                class="emotion-82 emotion-83"
+                                class="emotion-96 emotion-97"
                                 datetime="2019-11-06"
                               >
                                 De one we dem update for: 6th November 2019
@@ -4167,38 +4148,38 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-290 emotion-291 emotion-88"
+                        class="emotion-284 emotion-285 emotion-74"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-288 emotion-289"
+                          class="emotion-287 emotion-288"
                         >
                           <div
-                            class="emotion-278 emotion-279"
+                            class="emotion-289 emotion-290"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-276 emotion-277"
+                              class="emotion-291 emotion-292"
                             >
                               5
                             </span>
                           </div>
                           <div
-                            class="emotion-286 emotion-287"
+                            class="emotion-293 emotion-294"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-280 emotion-281"
+                              class="emotion-295 emotion-296"
                               href="/pidgin/tori-50315157"
                             >
                               How Balogun market fire kill Policeman for Lagos
                             </a>
                             <div
-                              class="emotion-284 emotion-285"
+                              class="emotion-297 emotion-298"
                             >
                               <time
-                                class="emotion-82 emotion-83"
+                                class="emotion-96 emotion-97"
                                 datetime="2019-11-06"
                               >
                                 De one we dem update for: 6th November 2019
@@ -4208,38 +4189,38 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-290 emotion-291 emotion-88"
+                        class="emotion-284 emotion-285 emotion-74"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-288 emotion-289"
+                          class="emotion-287 emotion-288"
                         >
                           <div
-                            class="emotion-363 emotion-279"
+                            class="emotion-374 emotion-290"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-276 emotion-277"
+                              class="emotion-291 emotion-292"
                             >
                               6
                             </span>
                           </div>
                           <div
-                            class="emotion-286 emotion-287"
+                            class="emotion-293 emotion-294"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-280 emotion-281"
+                              class="emotion-295 emotion-296"
                               href="/pidgin/tori-50093818"
                             >
                               Labour, FG finally agree minimum wage salary adjustment
                             </a>
                             <div
-                              class="emotion-284 emotion-285"
+                              class="emotion-297 emotion-298"
                             >
                               <time
-                                class="emotion-82 emotion-83"
+                                class="emotion-96 emotion-97"
                                 datetime="2019-10-18"
                               >
                                 De one we dem update for: 18th October 2019
@@ -4249,38 +4230,38 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-290 emotion-291 emotion-88"
+                        class="emotion-284 emotion-285 emotion-74"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-288 emotion-289"
+                          class="emotion-287 emotion-288"
                         >
                           <div
-                            class="emotion-380 emotion-279"
+                            class="emotion-391 emotion-290"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-276 emotion-277"
+                              class="emotion-291 emotion-292"
                             >
                               7
                             </span>
                           </div>
                           <div
-                            class="emotion-286 emotion-287"
+                            class="emotion-293 emotion-294"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-280 emotion-281"
+                              class="emotion-295 emotion-296"
                               href="/pidgin/tori-50187218"
                             >
                               Naira Marley na 'Bad Influence'?
                             </a>
                             <div
-                              class="emotion-284 emotion-285"
+                              class="emotion-297 emotion-298"
                             >
                               <time
-                                class="emotion-82 emotion-83"
+                                class="emotion-96 emotion-97"
                                 datetime="2019-10-25"
                               >
                                 De one we dem update for: 25th October 2019
@@ -4290,38 +4271,38 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-290 emotion-291 emotion-88"
+                        class="emotion-284 emotion-285 emotion-74"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-288 emotion-289"
+                          class="emotion-287 emotion-288"
                         >
                           <div
-                            class="emotion-363 emotion-279"
+                            class="emotion-374 emotion-290"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-276 emotion-277"
+                              class="emotion-291 emotion-292"
                             >
                               8
                             </span>
                           </div>
                           <div
-                            class="emotion-286 emotion-287"
+                            class="emotion-293 emotion-294"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-280 emotion-281"
+                              class="emotion-295 emotion-296"
                               href="/pidgin/tori-48347911"
                             >
                               Tins you suppose know about Naira Marley
                             </a>
                             <div
-                              class="emotion-284 emotion-285"
+                              class="emotion-297 emotion-298"
                             >
                               <time
-                                class="emotion-82 emotion-83"
+                                class="emotion-96 emotion-97"
                                 datetime="2019-05-23"
                               >
                                 De one we dem update for: 23rd May 2019
@@ -4331,38 +4312,38 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-290 emotion-291 emotion-88"
+                        class="emotion-284 emotion-285 emotion-74"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-288 emotion-289"
+                          class="emotion-287 emotion-288"
                         >
                           <div
-                            class="emotion-380 emotion-279"
+                            class="emotion-391 emotion-290"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-276 emotion-277"
+                              class="emotion-291 emotion-292"
                             >
                               9
                             </span>
                           </div>
                           <div
-                            class="emotion-286 emotion-287"
+                            class="emotion-293 emotion-294"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-280 emotion-281"
+                              class="emotion-295 emotion-296"
                               href="/pidgin/sport-50312710"
                             >
                               Golden Eaglets crash out of Fifa U17 World Cup
                             </a>
                             <div
-                              class="emotion-284 emotion-285"
+                              class="emotion-297 emotion-298"
                             >
                               <time
-                                class="emotion-82 emotion-83"
+                                class="emotion-96 emotion-97"
                                 datetime="2019-11-06"
                               >
                                 De one we dem update for: 6th November 2019
@@ -4372,38 +4353,38 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-290 emotion-291 emotion-88"
+                        class="emotion-284 emotion-285 emotion-74"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-288 emotion-289"
+                          class="emotion-287 emotion-288"
                         >
                           <div
-                            class="emotion-363 emotion-279"
+                            class="emotion-374 emotion-290"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-276 emotion-277"
+                              class="emotion-291 emotion-292"
                             >
                               10
                             </span>
                           </div>
                           <div
-                            class="emotion-286 emotion-287"
+                            class="emotion-293 emotion-294"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-280 emotion-281"
+                              class="emotion-295 emotion-296"
                               href="/pidgin/tori-42945173"
                             >
                               Tiger nut drink fit wake up your sex drive - Nutritionist
                             </a>
                             <div
-                              class="emotion-284 emotion-285"
+                              class="emotion-297 emotion-298"
                             >
                               <time
-                                class="emotion-82 emotion-83"
+                                class="emotion-96 emotion-97"
                                 datetime="2019-05-21"
                               >
                                 De one we dem update for: 21st May 2019

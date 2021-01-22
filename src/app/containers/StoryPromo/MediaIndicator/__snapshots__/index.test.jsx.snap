@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Story Promo Media Indicator should render a photo gallery item correctly 1`] = `
-.emotion-4 {
+.emotion-0 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -13,14 +13,14 @@ exports[`Story Promo Media Indicator should render a photo gallery item correctl
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
+  .emotion-0 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 {
+  .emotion-0 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
@@ -38,7 +38,7 @@ exports[`Story Promo Media Indicator should render a photo gallery item correctl
   height: 100%;
 }
 
-.emotion-0 {
+.emotion-4 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -50,7 +50,7 @@ exports[`Story Promo Media Indicator should render a photo gallery item correctl
 <div>
   <div
     aria-hidden="true"
-    class="emotion-4 emotion-5"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <div
@@ -58,7 +58,7 @@ exports[`Story Promo Media Indicator should render a photo gallery item correctl
     >
       <svg
         aria-hidden="true"
-        class="emotion-0 emotion-1"
+        class="emotion-4 emotion-5"
         focusable="false"
         height="13px"
         viewBox="0 0 32 26"
@@ -79,7 +79,7 @@ exports[`Story Promo Media Indicator should render a photo gallery item correctl
 `;
 
 exports[`Story Promo Media Indicator should render a video item correctly 1`] = `
-.emotion-6 {
+.emotion-0 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -91,20 +91,20 @@ exports[`Story Promo Media Indicator should render a video item correctly 1`] = 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-6 {
+  .emotion-0 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-6 {
+  .emotion-0 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-4 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -116,11 +116,7 @@ exports[`Story Promo Media Indicator should render a video item correctly 1`] = 
   height: 100%;
 }
 
-.emotion-2 {
-  padding: 0 0.25rem;
-}
-
-.emotion-0 {
+.emotion-4 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -129,18 +125,22 @@ exports[`Story Promo Media Indicator should render a video item correctly 1`] = 
   height: 0.75rem;
 }
 
+.emotion-6 {
+  padding: 0 0.25rem;
+}
+
 <div>
   <div
     aria-hidden="true"
-    class="emotion-6 emotion-7"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-2 emotion-3"
     >
       <svg
         aria-hidden="true"
-        class="emotion-0 emotion-1"
+        class="emotion-4 emotion-5"
         focusable="false"
         height="12px"
         viewBox="0 0 32 32"
@@ -151,7 +151,7 @@ exports[`Story Promo Media Indicator should render a video item correctly 1`] = 
         />
       </svg>
       <time
-        class="emotion-2 emotion-3"
+        class="emotion-6 emotion-7"
         datetime="PT1H33M20S"
       >
         1:33:20
@@ -162,7 +162,7 @@ exports[`Story Promo Media Indicator should render a video item correctly 1`] = 
 `;
 
 exports[`Story Promo Media Indicator should render an audio item correctly 1`] = `
-.emotion-6 {
+.emotion-0 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -174,20 +174,20 @@ exports[`Story Promo Media Indicator should render an audio item correctly 1`] =
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-6 {
+  .emotion-0 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-6 {
+  .emotion-0 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-4 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -199,7 +199,7 @@ exports[`Story Promo Media Indicator should render an audio item correctly 1`] =
   height: 100%;
 }
 
-.emotion-0 {
+.emotion-4 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -208,22 +208,22 @@ exports[`Story Promo Media Indicator should render an audio item correctly 1`] =
   height: 0.75rem;
 }
 
-.emotion-2 {
+.emotion-6 {
   padding: 0 0.25rem;
 }
 
 <div>
   <div
     aria-hidden="true"
-    class="emotion-6 emotion-7"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-2 emotion-3"
     >
       <svg
         aria-hidden="true"
-        class="emotion-0 emotion-1"
+        class="emotion-4 emotion-5"
         focusable="false"
         height="12px"
         viewBox="0 0 13 12"
@@ -237,7 +237,7 @@ exports[`Story Promo Media Indicator should render an audio item correctly 1`] =
         />
       </svg>
       <time
-        class="emotion-2 emotion-3"
+        class="emotion-6 emotion-7"
         datetime="PT59S"
       >
         0:59
@@ -248,7 +248,7 @@ exports[`Story Promo Media Indicator should render an audio item correctly 1`] =
 `;
 
 exports[`Story Promo Media Indicator should render correctly even without duration 1`] = `
-.emotion-4 {
+.emotion-0 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -260,14 +260,14 @@ exports[`Story Promo Media Indicator should render correctly even without durati
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
+  .emotion-0 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 {
+  .emotion-0 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
@@ -285,7 +285,7 @@ exports[`Story Promo Media Indicator should render correctly even without durati
   height: 100%;
 }
 
-.emotion-0 {
+.emotion-4 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -297,7 +297,7 @@ exports[`Story Promo Media Indicator should render correctly even without durati
 <div>
   <div
     aria-hidden="true"
-    class="emotion-4 emotion-5"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <div
@@ -305,7 +305,7 @@ exports[`Story Promo Media Indicator should render correctly even without durati
     >
       <svg
         aria-hidden="true"
-        class="emotion-0 emotion-1"
+        class="emotion-4 emotion-5"
         focusable="false"
         height="12px"
         viewBox="0 0 32 32"
@@ -321,28 +321,7 @@ exports[`Story Promo Media Indicator should render correctly even without durati
 `;
 
 exports[`Story Promo Media Indicator should render video indicator correctly when inline 1`] = `
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
 .emotion-0 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-4 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -356,23 +335,44 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
+  .emotion-0 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 {
+  .emotion-0 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
 <div>
   <div
     aria-hidden="true"
-    class="emotion-4 emotion-5"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <div
@@ -380,7 +380,7 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
     >
       <svg
         aria-hidden="true"
-        class="emotion-0 emotion-1"
+        class="emotion-4 emotion-5"
         focusable="false"
         height="12px"
         viewBox="0 0 32 32"
@@ -396,28 +396,7 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
 `;
 
 exports[`Story Promo Media Indicator should render video indicator correctly when inline on RTL 1`] = `
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
 .emotion-0 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-4 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -431,23 +410,44 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
+  .emotion-0 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 {
+  .emotion-0 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
 <div>
   <div
     aria-hidden="true"
-    class="emotion-4 emotion-5"
+    class="emotion-0 emotion-1"
     dir="rtl"
   >
     <div
@@ -455,7 +455,7 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
     >
       <svg
         aria-hidden="true"
-        class="emotion-0 emotion-1"
+        class="emotion-4 emotion-5"
         focusable="false"
         height="12px"
         viewBox="0 0 32 32"

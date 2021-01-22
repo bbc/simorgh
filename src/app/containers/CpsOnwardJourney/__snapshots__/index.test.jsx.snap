@@ -1,215 +1,215 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
-.emotion-4 {
+.emotion-0 {
   width: 100%;
 }
 
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @supports (display:grid) {
-  .emotion-4 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-4 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-4 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-4 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-4 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-4 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-4 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-4 {
-    margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-4 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-.emotion-1 {
+.emotion-4 {
   margin-bottom: 1rem;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-1 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-1 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-1 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-1 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-1 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-1 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-1 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(12,1fr);
-      grid-column-end: span 12;
-      grid-column-start: 5;
-    }
-}
-}
-
-@media (min-width:37.5rem) {
-  .emotion-1 {
+@media (min-width: 37.5rem) {
+  .emotion-4 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-1 {
+@media (min-width: 37.5rem) {
+  .emotion-4 {
     padding-bottom: 1.5rem;
     margin-bottom: 2rem;
   }
 }
 
-@media (max-width:37.5rem) {
-  .emotion-1 {
+@media (max-width: 37.5rem) {
+  .emotion-4 {
     padding-bottom: 2rem;
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-6 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-6 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-6 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
   }
 }
 
 <div>
   <section
     aria-labelledby="heading-label"
-    class="emotion-3 emotion-4 emotion-2"
+    class="emotion-0 emotion-1 emotion-2 emotion-3"
     data-e2e="heading-label"
     dir="ltr"
     role="region"
   >
     <div
-      class="emotion-0 emotion-1 emotion-2"
+      class="emotion-4 emotion-5 emotion-6 emotion-3"
       dir="ltr"
     >
       <ul>
@@ -247,219 +247,219 @@ exports[`CpsOnwardJourney Creates multiple promos with minimal props 1`] = `
 `;
 
 exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
-.emotion-6 {
+.emotion-0 {
   width: 100%;
 }
 
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @supports (display:grid) {
-  .emotion-6 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-6 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-6 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-6 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-6 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-6 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-6 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-6 {
-    margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-6 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-.emotion-3 {
+.emotion-4 {
   margin-bottom: 1rem;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-3 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-3 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-3 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-3 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-3 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-3 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-3 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-3 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-3 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-3 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-3 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-3 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-3 {
-      grid-template-columns: repeat(12,1fr);
-      grid-column-end: span 12;
-      grid-column-start: 5;
-    }
-}
-}
-
-@media (min-width:37.5rem) {
-  .emotion-3 {
+@media (min-width: 37.5rem) {
+  .emotion-4 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-3 {
+@media (min-width: 37.5rem) {
+  .emotion-4 {
     padding-bottom: 1.5rem;
     margin-bottom: 2rem;
   }
 }
 
-@media (max-width:37.5rem) {
-  .emotion-3 {
+@media (max-width: 37.5rem) {
+  .emotion-4 {
     padding-bottom: 2rem;
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-6 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-6 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-6 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
   }
 }
 
 <div>
   <section
     aria-labelledby="heading-label"
-    class="emotion-5 emotion-6 emotion-4"
+    class="emotion-0 emotion-1 emotion-2 emotion-3"
     data-e2e="heading-label"
     dir="ltr"
     role="region"
   >
     <div
-      class="emotion-2 emotion-3 emotion-4"
+      class="emotion-4 emotion-5 emotion-6 emotion-3"
       dir="ltr"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-8 emotion-9"
       >
         <div
           dir="ltr"
@@ -477,251 +477,254 @@ exports[`CpsOnwardJourney Creates single promo with minimal props 1`] = `
 `;
 
 exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
-.emotion-19 {
+.emotion-0 {
   width: 100%;
 }
 
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @supports (display:grid) {
-  .emotion-19 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-19 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-19 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-19 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-19 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-19 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-19 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-19 {
-    margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-19 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-.emotion-16 {
+.emotion-4 {
   margin-bottom: 1rem;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-16 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-16 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-16 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-16 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-16 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-16 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-16 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(12,1fr);
-      grid-column-end: span 12;
-      grid-column-start: 5;
-    }
-}
-}
-
-@media (min-width:37.5rem) {
-  .emotion-16 {
+@media (min-width: 37.5rem) {
+  .emotion-4 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-16 {
+@media (min-width: 37.5rem) {
+  .emotion-4 {
     padding-bottom: 1.5rem;
     margin-bottom: 2rem;
   }
 }
 
-@media (max-width:37.5rem) {
-  .emotion-16 {
+@media (max-width: 37.5rem) {
+  .emotion-4 {
     padding-bottom: 2rem;
     margin-bottom: 1rem;
   }
 }
 
-.emotion-11 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
+@media (max-width:14.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-6 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-6 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-6 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-8 {
   margin-top: 0;
   margin: 0;
 }
 
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-10 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+}
+
 @media (min-width:37.5rem) {
-  .emotion-11 {
+  .emotion-10 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-11 {
+  .emotion-10 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-11 {
-    margin-top: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-11 {
-    padding: 1rem 0;
-  }
-}
-
-.emotion-0 {
+.emotion-12 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .emotion-0 {
+  .emotion-12 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .emotion-12 {
     position: absolute;
     left: 0;
     right: 0;
@@ -729,12 +732,12 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
   }
 }
 
-.emotion-8 {
+.emotion-14 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-6 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -744,7 +747,7 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
   flex-direction: column;
 }
 
-.emotion-4 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -764,7 +767,7 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 {
+  .emotion-18 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -772,7 +775,7 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
   }
 }
 
-.emotion-2 {
+.emotion-20 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -792,27 +795,27 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+  .emotion-20 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .emotion-20 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .emotion-20 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .emotion-20 {
     padding-right: 1rem;
   }
 }
@@ -820,32 +823,32 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 <div>
   <section
     aria-labelledby="heading-label"
-    class="emotion-18 emotion-19 emotion-17"
+    class="emotion-0 emotion-1 emotion-2 emotion-3"
     data-e2e="heading-label"
     dir="ltr"
     role="region"
   >
     <div
-      class="emotion-15 emotion-16 emotion-17"
+      class="emotion-4 emotion-5 emotion-6 emotion-3"
       dir="ltr"
     >
       <div
-        class="emotion-10 emotion-11 emotion-12"
+        class="emotion-8 emotion-9 emotion-10 emotion-11"
       >
         <div
-          class="emotion-0 emotion-1"
+          class="emotion-12 emotion-13"
         />
         <strong
-          class="emotion-8 emotion-9"
+          class="emotion-14 emotion-15"
         >
           <span
-            class="emotion-6 emotion-7"
+            class="emotion-16 emotion-17"
           >
             <span
-              class="emotion-4 emotion-5"
+              class="emotion-18 emotion-19"
             >
               <span
-                class="emotion-2 emotion-3"
+                class="emotion-20 emotion-21"
                 dir="ltr"
                 id="heading-label"
               >
@@ -856,7 +859,7 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
         </strong>
       </div>
       <div
-        class="emotion-13 emotion-14"
+        class="emotion-22 emotion-23"
       >
         <div
           dir="ltr"
@@ -874,251 +877,254 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 `;
 
 exports[`CpsOnwardJourney renders section label with with alternative background colour 1`] = `
-.emotion-19 {
+.emotion-0 {
   width: 100%;
 }
 
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @supports (display:grid) {
-  .emotion-19 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-19 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-19 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-19 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-19 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-19 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-19 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-19 {
-    margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-19 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-.emotion-16 {
+.emotion-4 {
   margin-bottom: 1rem;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-16 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-16 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-16 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-16 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-16 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-16 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-16 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(12,1fr);
-      grid-column-end: span 12;
-      grid-column-start: 5;
-    }
-}
-}
-
-@media (min-width:37.5rem) {
-  .emotion-16 {
+@media (min-width: 37.5rem) {
+  .emotion-4 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-16 {
+@media (min-width: 37.5rem) {
+  .emotion-4 {
     padding-bottom: 1.5rem;
     margin-bottom: 2rem;
   }
 }
 
-@media (max-width:37.5rem) {
-  .emotion-16 {
+@media (max-width: 37.5rem) {
+  .emotion-4 {
     padding-bottom: 2rem;
     margin-bottom: 1rem;
   }
 }
 
-.emotion-11 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
+@media (max-width:14.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-6 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-6 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-6 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-8 {
   margin-top: 0;
   margin: 0;
 }
 
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-10 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+}
+
 @media (min-width:37.5rem) {
-  .emotion-11 {
+  .emotion-10 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-11 {
+  .emotion-10 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-11 {
-    margin-top: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-11 {
-    padding: 1rem 0;
-  }
-}
-
-.emotion-0 {
+.emotion-12 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .emotion-0 {
+  .emotion-12 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .emotion-12 {
     position: absolute;
     left: 0;
     right: 0;
@@ -1126,12 +1132,12 @@ exports[`CpsOnwardJourney renders section label with with alternative background
   }
 }
 
-.emotion-8 {
+.emotion-14 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-6 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1141,7 +1147,7 @@ exports[`CpsOnwardJourney renders section label with with alternative background
   flex-direction: column;
 }
 
-.emotion-4 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1161,7 +1167,7 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 }
 
 @media (min-width:37.5rem) {
-  .emotion-4 {
+  .emotion-18 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1169,7 +1175,7 @@ exports[`CpsOnwardJourney renders section label with with alternative background
   }
 }
 
-.emotion-2 {
+.emotion-20 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1189,27 +1195,27 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+  .emotion-20 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .emotion-20 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .emotion-20 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .emotion-20 {
     padding-right: 1rem;
   }
 }
@@ -1217,32 +1223,32 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 <div>
   <section
     aria-labelledby="heading-label"
-    class="emotion-18 emotion-19 emotion-17"
+    class="emotion-0 emotion-1 emotion-2 emotion-3"
     data-e2e="heading-label"
     dir="ltr"
     role="region"
   >
     <div
-      class="emotion-15 emotion-16 emotion-17"
+      class="emotion-4 emotion-5 emotion-6 emotion-3"
       dir="ltr"
     >
       <div
-        class="emotion-10 emotion-11 emotion-12"
+        class="emotion-8 emotion-9 emotion-10 emotion-11"
       >
         <div
-          class="emotion-0 emotion-1"
+          class="emotion-12 emotion-13"
         />
         <h2
-          class="emotion-8 emotion-9"
+          class="emotion-14 emotion-15"
         >
           <span
-            class="emotion-6 emotion-7"
+            class="emotion-16 emotion-17"
           >
             <span
-              class="emotion-4 emotion-5"
+              class="emotion-18 emotion-19"
             >
               <span
-                class="emotion-2 emotion-3"
+                class="emotion-20 emotion-21"
                 dir="ltr"
                 id="heading-label"
               >
@@ -1253,7 +1259,7 @@ exports[`CpsOnwardJourney renders section label with with alternative background
         </h2>
       </div>
       <div
-        class="emotion-13 emotion-14"
+        class="emotion-22 emotion-23"
       >
         <div
           dir="ltr"
@@ -1271,244 +1277,247 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 `;
 
 exports[`CpsOnwardJourney renders section label with without bar under section label 1`] = `
-.emotion-17 {
+.emotion-0 {
   width: 100%;
 }
 
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @supports (display:grid) {
-  .emotion-17 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-17 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-17 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-17 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-17 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-17 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-17 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-17 {
-    margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-17 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-.emotion-14 {
+.emotion-4 {
   margin-bottom: 1rem;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-14 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-14 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-14 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-14 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-14 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-14 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-14 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-14 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-14 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-14 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-14 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-14 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-14 {
-      grid-template-columns: repeat(12,1fr);
-      grid-column-end: span 12;
-      grid-column-start: 5;
-    }
-}
-}
-
-@media (min-width:37.5rem) {
-  .emotion-14 {
+@media (min-width: 37.5rem) {
+  .emotion-4 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-14 {
+@media (min-width: 37.5rem) {
+  .emotion-4 {
     padding-bottom: 1.5rem;
     margin-bottom: 2rem;
   }
 }
 
-@media (max-width:37.5rem) {
-  .emotion-14 {
+@media (max-width: 37.5rem) {
+  .emotion-4 {
     padding-bottom: 2rem;
     margin-bottom: 1rem;
   }
 }
 
-.emotion-9 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
+@media (max-width:14.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-6 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width:80rem) {
+  .emotion-6 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display:grid) {
+  .emotion-6 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-8 {
   margin-top: 0;
   margin: 0;
 }
 
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-10 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+}
+
 @media (min-width:37.5rem) {
-  .emotion-9 {
+  .emotion-10 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-9 {
+  .emotion-10 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-9 {
-    margin-top: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-9 {
-    padding: 1rem 0;
-  }
-}
-
-.emotion-6 {
+.emotion-12 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-4 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1518,7 +1527,7 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
   flex-direction: column;
 }
 
-.emotion-2 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1538,7 +1547,7 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 }
 
 @media (min-width:37.5rem) {
-  .emotion-2 {
+  .emotion-16 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1546,7 +1555,7 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
   }
 }
 
-.emotion-0 {
+.emotion-18 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1566,27 +1575,27 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+  .emotion-18 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .emotion-18 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .emotion-18 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-0 {
+  .emotion-18 {
     padding-right: 1rem;
   }
 }
@@ -1594,29 +1603,29 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 <div>
   <section
     aria-labelledby="heading-label"
-    class="emotion-16 emotion-17 emotion-15"
+    class="emotion-0 emotion-1 emotion-2 emotion-3"
     data-e2e="heading-label"
     dir="ltr"
     role="region"
   >
     <div
-      class="emotion-13 emotion-14 emotion-15"
+      class="emotion-4 emotion-5 emotion-6 emotion-3"
       dir="ltr"
     >
       <div
-        class="emotion-8 emotion-9 emotion-10"
+        class="emotion-8 emotion-9 emotion-10 emotion-11"
       >
         <h2
-          class="emotion-6 emotion-7"
+          class="emotion-12 emotion-13"
         >
           <span
-            class="emotion-4 emotion-5"
+            class="emotion-14 emotion-15"
           >
             <span
-              class="emotion-2 emotion-3"
+              class="emotion-16 emotion-17"
             >
               <span
-                class="emotion-0 emotion-1"
+                class="emotion-18 emotion-19"
                 dir="ltr"
                 id="heading-label"
               >
@@ -1627,7 +1636,7 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
         </h2>
       </div>
       <div
-        class="emotion-11 emotion-12"
+        class="emotion-20 emotion-21"
       >
         <div
           dir="ltr"
@@ -1645,351 +1654,210 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 `;
 
 exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
-.emotion-23 {
+.emotion-0 {
   width: 100%;
 }
 
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @supports (display:grid) {
-  .emotion-23 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-23 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-23 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-23 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-23 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-23 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-23 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-23 {
-    margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-23 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-.emotion-20 {
+.emotion-4 {
   margin-bottom: 1rem;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-20 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-20 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-20 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-20 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-20 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-20 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-20 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-20 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-20 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-20 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-20 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-20 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-20 {
-      grid-template-columns: repeat(12,1fr);
-      grid-column-end: span 12;
-      grid-column-start: 5;
-    }
-}
-}
-
-@media (min-width:37.5rem) {
-  .emotion-20 {
+@media (min-width: 37.5rem) {
+  .emotion-4 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-20 {
+@media (min-width: 37.5rem) {
+  .emotion-4 {
     padding-bottom: 1.5rem;
     margin-bottom: 2rem;
   }
 }
 
-@media (max-width:37.5rem) {
-  .emotion-20 {
+@media (max-width: 37.5rem) {
+  .emotion-4 {
     padding-bottom: 2rem;
     margin-bottom: 1rem;
   }
 }
 
-.emotion-13 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-  margin-top: 0;
-  margin: 0;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-13 {
-    margin-top: 1.5rem;
+@media (max-width:14.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-13 {
-    margin-bottom: 1.5rem;
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-13 {
-    margin-top: 0;
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-13 {
-    padding: 1rem 0;
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
-.emotion-2 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .emotion-2 {
-    border-color: windowText;
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-6 {
+    margin-left: 16.666666666666668%;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.5rem;
+@media (min-width:80rem) {
+  .emotion-6 {
+    margin-left: 33.333333333333336%;
   }
 }
 
-.emotion-10 {
-  margin: 0;
-  padding: 0;
+@supports (display:grid) {
+  .emotion-6 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+  }
 }
 
 .emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-6 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-.emotion-4 {
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-4 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-4 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-4 {
-    padding-right: 1rem;
-  }
-}
-
-.emotion-17 {
   position: relative;
 }
 
-.emotion-0 {
+.emotion-10 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -2009,23 +1877,22 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
   z-index: 10;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-10 {
     font-size: 0.8125rem;
   }
 }
 
-.emotion-0:not(:focus):not(:active) {
+.emotion-10:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -2033,11 +1900,154 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
   margin: 0;
 }
 
-.emotion-15 {
+.emotion-12 {
+  margin-top: 0;
+  margin: 0;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-14 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-14 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-14 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-16 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .emotion-16 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-16 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.5rem;
+  }
+}
+
+.emotion-18 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-22 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-24 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-24 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-24 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-24 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-24 {
+    padding-right: 1rem;
+  }
+}
+
+.emotion-26 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -2048,41 +2058,41 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 <div>
   <section
     aria-labelledby="heading-label"
-    class="emotion-22 emotion-23 emotion-21"
+    class="emotion-0 emotion-1 emotion-2 emotion-3"
     data-e2e="heading-label"
     dir="ltr"
     role="region"
   >
     <div
-      class="emotion-19 emotion-20 emotion-21"
+      class="emotion-4 emotion-5 emotion-6 emotion-3"
       dir="ltr"
     >
       <div
-        class="emotion-17 emotion-18"
+        class="emotion-8 emotion-9"
       >
         <a
-          class="emotion-0 emotion-1"
+          class="emotion-10 emotion-11"
           href="#end-of-the-foo-section"
         >
           skip the foo section
         </a>
         <div
-          class="emotion-12 emotion-13 emotion-14"
+          class="emotion-12 emotion-13 emotion-14 emotion-15"
         >
           <div
-            class="emotion-2 emotion-3"
+            class="emotion-16 emotion-17"
           />
           <h2
-            class="emotion-10 emotion-11"
+            class="emotion-18 emotion-19"
           >
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-20 emotion-21"
             >
               <span
-                class="emotion-6 emotion-7"
+                class="emotion-22 emotion-23"
               >
                 <span
-                  class="emotion-4 emotion-5"
+                  class="emotion-24 emotion-25"
                   dir="ltr"
                   id="heading-label"
                 >
@@ -2122,7 +2132,7 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
           </li>
         </ul>
         <p
-          class="emotion-15 emotion-16"
+          class="emotion-26 emotion-27"
           id="end-of-the-foo-section"
           tabindex="-1"
         >
@@ -2135,351 +2145,210 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 `;
 
 exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
-.emotion-25 {
+.emotion-0 {
   width: 100%;
 }
 
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @supports (display:grid) {
-  .emotion-25 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-25 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-25 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-25 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-25 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-25 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-25 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-25 {
-    margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-25 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-.emotion-22 {
+.emotion-4 {
   margin-bottom: 1rem;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-22 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-22 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-22 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-22 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-22 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-22 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-22 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-22 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-22 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-22 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-22 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-22 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-22 {
-      grid-template-columns: repeat(12,1fr);
-      grid-column-end: span 12;
-      grid-column-start: 5;
-    }
-}
-}
-
-@media (min-width:37.5rem) {
-  .emotion-22 {
+@media (min-width: 37.5rem) {
+  .emotion-4 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-22 {
+@media (min-width: 37.5rem) {
+  .emotion-4 {
     padding-bottom: 1.5rem;
     margin-bottom: 2rem;
   }
 }
 
-@media (max-width:37.5rem) {
-  .emotion-22 {
+@media (max-width: 37.5rem) {
+  .emotion-4 {
     padding-bottom: 2rem;
     margin-bottom: 1rem;
   }
 }
 
-.emotion-13 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-  margin-top: 0;
-  margin: 0;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-13 {
-    margin-top: 1.5rem;
+@media (max-width:14.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-13 {
-    margin-bottom: 1.5rem;
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .emotion-6 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-13 {
-    margin-top: 0;
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-13 {
-    padding: 1rem 0;
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
-.emotion-2 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .emotion-2 {
-    border-color: windowText;
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .emotion-6 {
+    margin-left: 16.666666666666668%;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.5rem;
+@media (min-width:80rem) {
+  .emotion-6 {
+    margin-left: 33.333333333333336%;
   }
 }
 
-.emotion-10 {
-  margin: 0;
-  padding: 0;
+@supports (display:grid) {
+  .emotion-6 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width:14.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(12,1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+  }
 }
 
 .emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-6 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-.emotion-4 {
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-4 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-4 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-4 {
-    padding-right: 1rem;
-  }
-}
-
-.emotion-19 {
   position: relative;
 }
 
-.emotion-0 {
+.emotion-10 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -2499,23 +2368,22 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   z-index: 10;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-10 {
     font-size: 0.8125rem;
   }
 }
 
-.emotion-0:not(:focus):not(:active) {
+.emotion-10:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -2523,11 +2391,154 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   margin: 0;
 }
 
-.emotion-17 {
+.emotion-12 {
+  margin-top: 0;
+  margin: 0;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    padding: 1rem 0;
+  }
+}
+
+.emotion-14 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-14 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-14 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-16 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .emotion-16 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-16 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.5rem;
+  }
+}
+
+.emotion-18 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-22 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-24 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-24 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-24 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-24 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-24 {
+    padding-right: 1rem;
+  }
+}
+
+.emotion-28 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -2538,41 +2549,41 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 <div>
   <section
     aria-labelledby="heading-label"
-    class="emotion-24 emotion-25 emotion-23"
+    class="emotion-0 emotion-1 emotion-2 emotion-3"
     data-e2e="heading-label"
     dir="ltr"
     role="region"
   >
     <div
-      class="emotion-21 emotion-22 emotion-23"
+      class="emotion-4 emotion-5 emotion-6 emotion-3"
       dir="ltr"
     >
       <div
-        class="emotion-19 emotion-20"
+        class="emotion-8 emotion-9"
       >
         <a
-          class="emotion-0 emotion-1"
+          class="emotion-10 emotion-11"
           href="#end-of-the-foo-section"
         >
           skip the foo section
         </a>
         <div
-          class="emotion-12 emotion-13 emotion-14"
+          class="emotion-12 emotion-13 emotion-14 emotion-15"
         >
           <div
-            class="emotion-2 emotion-3"
+            class="emotion-16 emotion-17"
           />
           <h2
-            class="emotion-10 emotion-11"
+            class="emotion-18 emotion-19"
           >
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-20 emotion-21"
             >
               <span
-                class="emotion-6 emotion-7"
+                class="emotion-22 emotion-23"
               >
                 <span
-                  class="emotion-4 emotion-5"
+                  class="emotion-24 emotion-25"
                   dir="ltr"
                   id="heading-label"
                 >
@@ -2583,7 +2594,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
           </h2>
         </div>
         <div
-          class="emotion-15 emotion-16"
+          class="emotion-26 emotion-27"
         >
           <div
             dir="ltr"
@@ -2596,7 +2607,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
           </div>
         </div>
         <p
-          class="emotion-17 emotion-18"
+          class="emotion-28 emotion-29"
           id="end-of-the-foo-section"
           tabindex="-1"
         >

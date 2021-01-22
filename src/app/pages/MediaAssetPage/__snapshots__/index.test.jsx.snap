@@ -2,90 +2,90 @@
 
 exports[`Media Asset Page AV player should render version (live audio stream) 1`] = `
 <DocumentFragment>
-  .emotion-130 {
+  .emotion-0 {
   width: 100%;
   padding-bottom: 1.5rem;
 }
 
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+}
+
 @supports (display:grid) {
-  .emotion-130 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-130 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-130 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-130 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-130 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-130 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-130 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-130 {
-    margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-130 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-130 {
-    width: 100%;
-    padding-bottom: 2rem;
-  }
-}
-
-.emotion-0 {
+.emotion-4 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -97,132 +97,132 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   margin: 0;
 }
 
-.emotion-13 {
+.emotion-6 {
   margin-top: 0.5rem;
 }
 
+.emotion-6 figure {
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-6 {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-6 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-6 {
+    padding: 0.5rem 0 0;
+    margin-top: 2rem;
+  }
+
+  .emotion-6 figure {
+    padding-bottom: 1.5rem;
+  }
+}
+
 @media (max-width:14.9375rem) {
-  .emotion-13 {
+  .emotion-8 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-13 {
+  .emotion-8 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-13 {
+  .emotion-8 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-13 {
+  .emotion-8 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-13 {
+  .emotion-8 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-13 {
+  .emotion-8 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-13 {
+  .emotion-8 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-13 {
+  @media (max-width:14.9375rem) {
+    .emotion-8 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-13 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-8 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-13 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-8 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-13 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-8 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-13 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-8 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-13 {
+  @media (min-width:80rem) {
+    .emotion-8 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
-}
-
-.emotion-13 figure {
-  padding-bottom: 1rem;
-}
-
-@media (max-width:24.9375rem) {
-  .emotion-13 {
-    margin-top: 0.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .emotion-13 {
-    margin-top: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-13 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-13 {
-    padding: 0.5rem 0 0;
-    margin-top: 2rem;
-  }
-
-  .emotion-13 figure {
-    padding-bottom: 1.5rem;
   }
 }
 
@@ -232,13 +232,13 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   width: 100%;
 }
 
-.emotion-8 {
+.emotion-12 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-2 {
+.emotion-14 {
   z-index: 1;
   border: 0;
   left: 0;
@@ -249,7 +249,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-16 {
   position: absolute;
   left: 0;
   top: 0;
@@ -257,7 +257,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   height: 100%;
 }
 
-.emotion-4 {
+.emotion-18 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -271,118 +271,130 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 }
 
 @media (min-width:25rem) {
-  .emotion-4 {
+  .emotion-18 {
     background-size: 77px 22px;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-4 {
+  .emotion-18 {
     background-size: 93px 27px;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-18 {
+  .emotion-20 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-18 {
+  .emotion-20 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-18 {
+  .emotion-20 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-18 {
+  .emotion-20 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-18 {
+  .emotion-20 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-18 {
+  .emotion-20 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-18 {
+  .emotion-20 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-18 {
+  @media (max-width:14.9375rem) {
+    .emotion-20 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-18 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-20 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-18 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-20 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-18 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-20 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-18 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-20 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-18 {
+  @media (min-width:80rem) {
+    .emotion-20 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-.emotion-16 {
+@media (max-width: 62.9375rem) {
+  .emotion-22 {
+    padding: 0.5rem 0 2rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-22 {
+    padding: 1rem 0 2.5rem;
+  }
+}
+
+.emotion-24 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -395,150 +407,138 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-16 {
+  .emotion-24 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-16 {
+  .emotion-24 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-16 {
+  .emotion-24 {
     padding: 2.5rem 0;
   }
 }
 
-@media (max-width:62.9375rem) {
-  .emotion-16 {
-    padding: 0.5rem 0 2rem;
+@media (max-width: 62.9375rem) {
+  .emotion-26 {
+    padding-bottom: 1rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-16 {
-    padding: 1rem 0 2.5rem;
+@media (min-width: 63rem) {
+  .emotion-26 {
+    padding-bottom: 1.5rem;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-23 {
+  .emotion-28 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-23 {
+  .emotion-28 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-23 {
+  .emotion-28 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-23 {
+  .emotion-28 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-23 {
+  .emotion-28 {
     margin-left: 20%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-23 {
+  .emotion-28 {
     margin-left: 40%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-23 {
+  .emotion-28 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-23 {
+  @media (max-width:14.9375rem) {
+    .emotion-28 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-23 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-28 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-23 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-28 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-23 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-28 {
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-23 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-28 {
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-23 {
+  @media (min-width:80rem) {
+    .emotion-28 {
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
     }
-}
-}
-
-@media (max-width:62.9375rem) {
-  .emotion-23 {
-    padding-bottom: 1rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-23 {
-    padding-bottom: 1.5rem;
-  }
-}
-
-.emotion-20 {
+.emotion-30 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -550,124 +550,24 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-20 {
+  .emotion-30 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-20 {
+  .emotion-30 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-20:last-child {
+.emotion-30:last-child {
   padding-bottom: 1rem;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-27 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-27 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-27 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-27 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-27 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-27 {
-    margin-left: 40%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-27 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-27 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-27 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-27 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-27 {
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-27 {
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-27 {
-      grid-template-columns: repeat(10,1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
-    }
-}
-}
-
-.emotion-25 {
+.emotion-34 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -678,31 +578,57 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   margin: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-25 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-34 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-25 {
+@media (min-width: 37.5rem) {
+  .emotion-34 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-25 {
+@media (min-width: 63rem) {
+  .emotion-34 {
     padding-right: 2.5rem;
   }
 }
 
-.emotion-81 {
+.emotion-44 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.emotion-56 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-56:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.emotion-56:focus,
+.emotion-56:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.emotion-80 {
   margin-bottom: 1.5rem;
 }
 
-.emotion-79 {
+.emotion-82 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -713,24 +639,24 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-79 {
+  .emotion-82 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-79 {
+  .emotion-82 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-79 > li {
+.emotion-82>li {
   position: relative;
 }
 
-.emotion-79 > li::before {
+.emotion-82>li::before {
   top: 0.5rem;
   content: ' ';
   position: absolute;
@@ -741,278 +667,160 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   left: -1rem;
 }
 
-.emotion-71 {
+.emotion-84 {
   margin-bottom: 1rem;
 }
 
-.emotion-45 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-45:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
-
-.emotion-45:focus,
-.emotion-45:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
-}
-
-.emotion-33 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  font-family: inherit;
-  font-weight: inherit;
-}
-
-@media (max-width:14.9375rem) {
-  .emotion-119 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-119 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-119 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-119 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-119 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-119 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
 @supports (display:grid) {
-  .emotion-119 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-119 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-119 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-119 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-119 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-119 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-119 {
-      grid-template-columns: repeat(12,1fr);
-      grid-column-end: span 12;
-      grid-column-start: 5;
-    }
-}
-}
-
-@supports (display:grid) {
-  .emotion-115 {
+  .emotion-118 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-115 {
+  @media (max-width:14.9375rem) {
+    .emotion-118 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-115 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-118 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-115 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-118 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-115 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-118 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-115 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-118 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-115 {
+  @media (min-width:80rem) {
+    .emotion-118 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-113 {
+  .emotion-120 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-113 {
+  .emotion-120 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-113 {
+  .emotion-120 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-113 {
+  .emotion-120 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-113 {
+  .emotion-120 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-113 {
+  .emotion-120 {
     margin-left: 0%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-113 {
+  .emotion-120 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-113 {
+  @media (max-width:14.9375rem) {
+    .emotion-120 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-113 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-120 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-113 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-120 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-113 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-120 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-113 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-120 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-113 {
+  @media (min-width:80rem) {
+    .emotion-120 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
     }
-}
+  }
 }
 
-.emotion-109 {
+.emotion-124 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -1026,7 +834,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   left: 0;
 }
 
-.emotion-132 {
+.emotion-136 {
   padding-bottom: 2rem;
 }
 
@@ -1053,40 +861,40 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
             </div>
             <noscript />
             <main
-              class="emotion-129 emotion-130 emotion-14"
+              class="emotion-0 emotion-1 emotion-2 emotion-3"
               dir="ltr"
               role="main"
             >
               <h1
-                class="emotion-0 emotion-1"
+                class="emotion-4 emotion-5"
                 id="content"
                 tabindex="-1"
               >
                 Ўзбек деҳқонининг косаси нега оқармайдиshort
               </h1>
               <div
-                class="emotion-12 emotion-13 emotion-14"
+                class="emotion-6 emotion-7 emotion-8 emotion-3"
                 dir="ltr"
               >
                 <figure
                   class="emotion-10 emotion-11"
                 >
                   <div
-                    class="emotion-8 emotion-9"
+                    class="emotion-12 emotion-13"
                   >
                     <iframe
                       allow="autoplay"
                       allowfullscreen=""
-                      class="emotion-2 emotion-3"
+                      class="emotion-14 emotion-15"
                       scrolling="no"
                       src="https://test.bbc.com/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
                       title="Медиа плейер"
                     />
                     <div
-                      class="emotion-6 emotion-7"
+                      class="emotion-16 emotion-17"
                     >
                       <div
-                        class="emotion-4 emotion-5"
+                        class="emotion-18 emotion-19"
                       />
                     </div>
                     <noscript />
@@ -1094,33 +902,33 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </figure>
               </div>
               <div
-                class="emotion-18 emotion-14"
+                class="emotion-20 emotion-3"
                 dir="ltr"
               >
                 <strong
                   aria-hidden="true"
-                  class="emotion-15 emotion-16 emotion-17"
+                  class="emotion-22 emotion-23 emotion-24 emotion-25"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайдиshort
                 </strong>
               </div>
               <div
-                class="emotion-22 emotion-23 emotion-14"
+                class="emotion-26 emotion-27 emotion-28 emotion-3"
                 dir="ltr"
               >
                 <time
-                  class="emotion-20 emotion-21"
+                  class="emotion-30 emotion-31"
                   datetime="2019-09-13"
                 >
                   13 сентябр 2019
                 </time>
               </div>
               <div
-                class="emotion-27 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-25 emotion-26"
+                  class="emotion-34 emotion-35"
                   dir="ltr"
                 >
                   <b>
@@ -1129,11 +937,11 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="emotion-27 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-25 emotion-26"
+                  class="emotion-34 emotion-35"
                   dir="ltr"
                 >
                   <b>
@@ -1145,22 +953,22 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="emotion-27 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-25 emotion-26"
+                  class="emotion-34 emotion-35"
                   dir="ltr"
                 >
                   <i
-                    class="emotion-33 emotion-34"
+                    class="emotion-44 emotion-45"
                   >
                     <b>
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </b>
                   </i>
                   <i
-                    class="emotion-33 emotion-34"
+                    class="emotion-44 emotion-45"
                   >
                     <b>
                        heading
@@ -1169,11 +977,11 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="emotion-27 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-25 emotion-26"
+                  class="emotion-34 emotion-35"
                   dir="ltr"
                 >
                   <b>
@@ -1185,16 +993,16 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="emotion-27 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-25 emotion-26"
+                  class="emotion-34 emotion-35"
                   dir="ltr"
                 >
                   Шу йил апрел ойида Ўзбекистон Президенти Ислом 
                   <a
-                    class="emotion-45 emotion-46"
+                    class="emotion-56 emotion-57"
                     href="https://bbc.com/uzbek"
                   >
                     Каримов ўзининг
@@ -1203,11 +1011,11 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="emotion-27 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-25 emotion-26"
+                  class="emotion-34 emotion-35"
                   dir="ltr"
                 >
                   Шу вақтгача ҳам ўзбекистонлик деҳқонлар ўз маҳсулотларини хорижга олиб 
@@ -1218,75 +1026,75 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="emotion-27 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-25 emotion-26"
+                  class="emotion-34 emotion-35"
                   dir="ltr"
                 >
                   Ўз мева-сабзавотини Россияга олиб чиқишда бу компания ёрдамига умид қилган боғбонларнинг гилослари бузила бошлагани ҳақидаги хабарлар ҳам тарқалди..
                 </p>
               </div>
               <div
-                class="emotion-27 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-25 emotion-26"
+                  class="emotion-34 emotion-35"
                   dir="ltr"
                 >
                   Ҳозирда Ўзбекистонда айни пишиқчилик ва етиштирилган маҳсулот учун кенгроқ бозор топиш масаласи яна долзарб турар экан, мамлакат раҳбарининг сўзларидан сўнг вазият нақадар ўзгарган?
                 </p>
               </div>
               <div
-                class="emotion-27 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-25 emotion-26"
+                  class="emotion-34 emotion-35"
                   dir="ltr"
                 >
                   Би-би-си билан суҳбатда иқтисодий таҳлилчи Анвар Ҳусаиновнинг айтишича, юқори минбардан айтилган сўзларга қарамай, қишлоқ хўжалиги маҳсулотларини хорижга, жумладан Россия бозорига олиб чиқишда ҳануз кўплаб муаммолар мавжуд.
                 </p>
               </div>
               <div
-                class="emotion-27 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-25 emotion-26"
+                  class="emotion-34 emotion-35"
                   dir="ltr"
                 >
                   "Албатта ўтган йилларга қараганда маҳсулотлар экспорти анча кўпайган. Россиядан юк машиналари келиб, тўғридан-тўғри деҳқонлардан нақд пулга 
                 </p>
               </div>
               <div
-                class="emotion-27 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <div
-                  class="emotion-81 emotion-82"
+                  class="emotion-80 emotion-81"
                 >
                   <ul
-                    class="emotion-79 emotion-80"
+                    class="emotion-82 emotion-83"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="emotion-71 emotion-72"
+                      class="emotion-84 emotion-85"
                       role="listitem"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </li>
                     <li
-                      class="emotion-71 emotion-72"
+                      class="emotion-84 emotion-85"
                       role="listitem"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </li>
                     <li
-                      class="emotion-71 emotion-72"
+                      class="emotion-84 emotion-85"
                       role="listitem"
                     >
                       <b>
@@ -1294,7 +1102,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                       </b>
                     </li>
                     <li
-                      class="emotion-71 emotion-72"
+                      class="emotion-84 emotion-85"
                       role="listitem"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
@@ -1303,56 +1111,56 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </div>
               </div>
               <div
-                class="emotion-27 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <div
-                  class="emotion-81 emotion-82"
+                  class="emotion-80 emotion-81"
                 >
                   <ul
-                    class="emotion-79 emotion-80"
+                    class="emotion-82 emotion-83"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="emotion-71 emotion-72"
+                      class="emotion-84 emotion-85"
                       role="listitem"
                     >
                       <a
-                        class="emotion-45 emotion-46"
+                        class="emotion-56 emotion-57"
                         href="https://bbc.com/uzbek"
                       >
                         Ўзбек деҳқонининг косаси нега оқармайди
                       </a>
                     </li>
                     <li
-                      class="emotion-71 emotion-72"
+                      class="emotion-84 emotion-85"
                       role="listitem"
                     >
                       <a
-                        class="emotion-45 emotion-46"
+                        class="emotion-56 emotion-57"
                         href="https://bbc.com/uzbek"
                       >
                         Ўзбек деҳқонининг косаси нега оқармайди
                       </a>
                     </li>
                     <li
-                      class="emotion-71 emotion-72"
+                      class="emotion-84 emotion-85"
                       role="listitem"
                     >
                       <a
-                        class="emotion-45 emotion-46"
+                        class="emotion-56 emotion-57"
                         href="https://bbc.com/uzbek"
                       >
                         Ўзбек деҳқонининг косаси нега оқармайди
                       </a>
                     </li>
                     <li
-                      class="emotion-71 emotion-72"
+                      class="emotion-84 emotion-85"
                       role="listitem"
                     >
                       <a
-                        class="emotion-45 emotion-46"
+                        class="emotion-56 emotion-57"
                         href="https://bbc.com/uzbek"
                       >
                         Ўзбек деҳқонининг косаси нега оқармайди
@@ -1362,22 +1170,22 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </div>
               </div>
               <div
-                class="emotion-119 emotion-14"
+                class="emotion-8 emotion-3"
                 dir="ltr"
               >
                 <figure
                   class="emotion-10 emotion-11"
                 >
                   <div
-                    class="emotion-115 emotion-14"
+                    class="emotion-118 emotion-3"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-113 emotion-14"
+                      class="emotion-120 emotion-3"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-4 emotion-5"
+                        class="emotion-18 emotion-19"
                       >
                         <div
                           class="lazyload-wrapper"
@@ -1388,11 +1196,11 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                         </div>
                         <noscript />
                         <p
-                          class="emotion-109 emotion-110"
+                          class="emotion-124 emotion-125"
                           role="text"
                         >
                           <span
-                            class="emotion-0 emotion-1"
+                            class="emotion-4 emotion-5"
                           >
                             Сурат манбаси, 
                           </span>
@@ -1408,22 +1216,22 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </figure>
               </div>
               <div
-                class="emotion-27 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-25 emotion-26"
+                  class="emotion-34 emotion-35"
                   dir="ltr"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайди transmission info 
                 </p>
               </div>
               <div
-                class="emotion-27 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-25 emotion-26"
+                  class="emotion-34 emotion-35"
                   dir="ltr"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайди footer 
@@ -1431,7 +1239,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               </div>
             </main>
             <div
-              class="emotion-132 emotion-133"
+              class="emotion-136 emotion-137"
             />
           </div>
         </div>
@@ -1443,90 +1251,90 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 
 exports[`Media Asset Page should render component 1`] = `
 <DocumentFragment>
-  .emotion-224 {
+  .emotion-0 {
   width: 100%;
   padding-bottom: 1.5rem;
 }
 
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0.emotion-0 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+}
+
 @supports (display:grid) {
-  .emotion-224 {
+  .emotion-2 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-224 {
+  @media (max-width:14.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-224 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-224 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-224 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-224 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-2 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-224 {
+  @media (min-width:80rem) {
+    .emotion-2 {
       grid-template-columns: repeat(20,1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-224 {
-    margin: 0 auto;
-    max-width: 63rem;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-224 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-224 {
-    width: 100%;
-    padding-bottom: 2rem;
-  }
-}
-
-.emotion-0 {
+.emotion-4 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -1538,132 +1346,132 @@ exports[`Media Asset Page should render component 1`] = `
   margin: 0;
 }
 
-.emotion-13 {
+.emotion-6 {
   margin-top: 0.5rem;
 }
 
+.emotion-6 figure {
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-6 {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-6 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-6 {
+    padding: 0.5rem 0 0;
+    margin-top: 2rem;
+  }
+
+  .emotion-6 figure {
+    padding-bottom: 1.5rem;
+  }
+}
+
 @media (max-width:14.9375rem) {
-  .emotion-13 {
+  .emotion-8 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-13 {
+  .emotion-8 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-13 {
+  .emotion-8 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-13 {
+  .emotion-8 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-13 {
+  .emotion-8 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-13 {
+  .emotion-8 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-13 {
+  .emotion-8 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-13 {
+  @media (max-width:14.9375rem) {
+    .emotion-8 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-13 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-8 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-13 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-8 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-13 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-8 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-13 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-8 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-13 {
+  @media (min-width:80rem) {
+    .emotion-8 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
-}
-
-.emotion-13 figure {
-  padding-bottom: 1rem;
-}
-
-@media (max-width:24.9375rem) {
-  .emotion-13 {
-    margin-top: 0.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .emotion-13 {
-    margin-top: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-13 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-13 {
-    padding: 0.5rem 0 0;
-    margin-top: 2rem;
-  }
-
-  .emotion-13 figure {
-    padding-bottom: 1.5rem;
   }
 }
 
@@ -1673,13 +1481,13 @@ exports[`Media Asset Page should render component 1`] = `
   width: 100%;
 }
 
-.emotion-8 {
+.emotion-12 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-2 {
+.emotion-14 {
   z-index: 1;
   border: 0;
   left: 0;
@@ -1690,7 +1498,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-16 {
   position: absolute;
   left: 0;
   top: 0;
@@ -1698,7 +1506,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 100%;
 }
 
-.emotion-4 {
+.emotion-18 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1712,118 +1520,130 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:25rem) {
-  .emotion-4 {
+  .emotion-18 {
     background-size: 77px 22px;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-4 {
+  .emotion-18 {
     background-size: 93px 27px;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-18 {
+  .emotion-20 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-18 {
+  .emotion-20 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-18 {
+  .emotion-20 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-18 {
+  .emotion-20 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-18 {
+  .emotion-20 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-18 {
+  .emotion-20 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-18 {
+  .emotion-20 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-18 {
+  @media (max-width:14.9375rem) {
+    .emotion-20 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-18 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-20 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-18 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-20 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-18 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-20 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-18 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-20 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-18 {
+  @media (min-width:80rem) {
+    .emotion-20 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-.emotion-16 {
+@media (max-width: 62.9375rem) {
+  .emotion-22 {
+    padding: 0.5rem 0 2rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-22 {
+    padding: 1rem 0 2.5rem;
+  }
+}
+
+.emotion-24 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1836,150 +1656,138 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-16 {
+  .emotion-24 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-16 {
+  .emotion-24 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-16 {
+  .emotion-24 {
     padding: 2.5rem 0;
   }
 }
 
-@media (max-width:62.9375rem) {
-  .emotion-16 {
-    padding: 0.5rem 0 2rem;
+@media (max-width: 62.9375rem) {
+  .emotion-26 {
+    padding-bottom: 1rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-16 {
-    padding: 1rem 0 2.5rem;
+@media (min-width: 63rem) {
+  .emotion-26 {
+    padding-bottom: 1.5rem;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-25 {
+  .emotion-28 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-25 {
+  .emotion-28 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-25 {
+  .emotion-28 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-25 {
+  .emotion-28 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-25 {
+  .emotion-28 {
     margin-left: 20%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-25 {
+  .emotion-28 {
     margin-left: 40%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-25 {
+  .emotion-28 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-25 {
+  @media (max-width:14.9375rem) {
+    .emotion-28 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-25 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-28 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-25 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-28 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-25 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-28 {
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-25 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-28 {
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-25 {
+  @media (min-width:80rem) {
+    .emotion-28 {
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
     }
-}
-}
-
-@media (max-width:62.9375rem) {
-  .emotion-25 {
-    padding-bottom: 1rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-25 {
-    padding-bottom: 1.5rem;
-  }
-}
-
-.emotion-20 {
+.emotion-30 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -1991,124 +1799,24 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-20 {
+  .emotion-30 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-20 {
+  .emotion-30 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-20:last-child {
+.emotion-30:last-child {
   padding-bottom: 1rem;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-29 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-29 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-29 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-29 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-29 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-29 {
-    margin-left: 40%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-29 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-29 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-29 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-29 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-29 {
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-29 {
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-29 {
-      grid-template-columns: repeat(10,1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
-    }
-}
-}
-
-.emotion-27 {
+.emotion-36 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2119,27 +1827,27 @@ exports[`Media Asset Page should render component 1`] = `
   margin: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-27 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-36 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-27 {
+@media (min-width: 37.5rem) {
+  .emotion-36 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-27 {
+@media (min-width: 63rem) {
+  .emotion-36 {
     padding-right: 2.5rem;
   }
 }
 
-.emotion-31 {
+.emotion-40 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2151,30 +1859,30 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-31 {
+  .emotion-40 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-31 {
+  .emotion-40 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-31 {
+  .emotion-40 {
     padding-top: 2rem;
   }
 }
 
-.emotion-77 {
+.emotion-60 {
   margin-bottom: 1.5rem;
 }
 
-.emotion-75 {
+.emotion-62 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2185,24 +1893,24 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-75 {
+  .emotion-62 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-75 {
+  .emotion-62 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-75 > li {
+.emotion-62>li {
   position: relative;
 }
 
-.emotion-75 > li::before {
+.emotion-62>li::before {
   top: 0.5rem;
   content: ' ';
   position: absolute;
@@ -2213,29 +1921,29 @@ exports[`Media Asset Page should render component 1`] = `
   left: -1rem;
 }
 
-.emotion-53 {
+.emotion-64 {
   margin-bottom: 1rem;
 }
 
-.emotion-51 {
+.emotion-66 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-51:visited {
+.emotion-66:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-51:focus,
-.emotion-51:hover {
+.emotion-66:focus,
+.emotion-66:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.emotion-115 {
+.emotion-126 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -2243,248 +1951,156 @@ exports[`Media Asset Page should render component 1`] = `
   font-weight: inherit;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-179 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-179 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-179 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-179 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-179 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-179 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
 @supports (display:grid) {
-  .emotion-179 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-179 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-179 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-179 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-179 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-179 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-179 {
-      grid-template-columns: repeat(12,1fr);
-      grid-column-end: span 12;
-      grid-column-start: 5;
-    }
-}
-}
-
-@supports (display:grid) {
-  .emotion-175 {
+  .emotion-172 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-175 {
+  @media (max-width:14.9375rem) {
+    .emotion-172 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-175 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-172 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-175 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-172 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-175 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-172 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-175 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-172 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-175 {
+  @media (min-width:80rem) {
+    .emotion-172 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-167 {
+  .emotion-174 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-167 {
+  .emotion-174 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-167 {
+  .emotion-174 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-167 {
+  .emotion-174 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-167 {
+  .emotion-174 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-167 {
+  .emotion-174 {
     margin-left: 0%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-167 {
+  .emotion-174 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-167 {
+  @media (max-width:14.9375rem) {
+    .emotion-174 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-167 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-174 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-167 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-174 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-167 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-174 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-167 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-174 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-167 {
+  @media (min-width:80rem) {
+    .emotion-174 {
       grid-template-columns: repeat(12,1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
     }
-}
+  }
 }
 
-.emotion-163 {
+.emotion-178 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -2499,98 +2115,98 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (max-width:14.9375rem) {
-  .emotion-173 {
+  .emotion-182 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-173 {
+  .emotion-182 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-173 {
+  .emotion-182 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-173 {
+  .emotion-182 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-173 {
+  .emotion-182 {
     margin-left: 0%;
   }
 }
 
 @media (min-width:80rem) {
-  .emotion-173 {
+  .emotion-182 {
     margin-left: 0%;
   }
 }
 
 @supports (display:grid) {
-  .emotion-173 {
+  .emotion-182 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-173 {
+  @media (max-width:14.9375rem) {
+    .emotion-182 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-173 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-182 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-173 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-182 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-173 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-182 {
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-173 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-182 {
       grid-template-columns: repeat(5,1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-173 {
+  @media (min-width:80rem) {
+    .emotion-182 {
       grid-template-columns: repeat(10,1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
     }
-}
+  }
 }
 
-.emotion-171 {
+.emotion-184 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2607,37 +2223,37 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-171 {
+  .emotion-184 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-171 {
+  .emotion-184 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-171 {
+  .emotion-184 {
     width: 100%;
     margin: 0.5rem 0 0;
   }
 }
 
-.emotion-171 > p {
+.emotion-184>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-171 > p:last-child {
+.emotion-184>p:last-child {
   padding-bottom: 0;
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-171 {
+  .emotion-184 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
     padding-right: 1rem;
@@ -2646,250 +2262,96 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:63rem) {
-  .emotion-171 {
+  .emotion-184 {
     padding-right: 0;
     padding-left: 0.5rem;
   }
 }
 
-.emotion-354 {
+.emotion-230 {
   width: 100%;
 }
 
-@supports (display:grid) {
-  .emotion-354 {
-    display: grid;
-    position: initial;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-354 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-354 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-354 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-354 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-354 {
-      grid-template-columns: repeat(8,1fr);
-      grid-column-end: span 8;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-354 {
-      grid-template-columns: repeat(20,1fr);
-      grid-column-end: span 20;
-      grid-column-gap: 1rem;
-    }
-}
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-354 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-230.emotion-230 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-354 {
+@media (min-width: 80rem) {
+  .emotion-230.emotion-230 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
-.emotion-351 {
+.emotion-234 {
   margin-bottom: 1rem;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-351 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-351 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-351 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-351 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-351 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-351 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-351 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-351 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-351 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-351 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-351 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-351 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-351 {
-      grid-template-columns: repeat(12,1fr);
-      grid-column-end: span 12;
-      grid-column-start: 5;
-    }
-}
-}
-
-@media (min-width:37.5rem) {
-  .emotion-351 {
+@media (min-width: 37.5rem) {
+  .emotion-234 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-351 {
+@media (min-width: 37.5rem) {
+  .emotion-234 {
     padding-bottom: 1.5rem;
     margin-bottom: 2rem;
   }
 }
 
-@media (max-width:37.5rem) {
-  .emotion-351 {
+@media (max-width: 37.5rem) {
+  .emotion-234 {
     padding-bottom: 2rem;
     margin-bottom: 1rem;
   }
 }
 
-.emotion-237 {
+.emotion-238 {
+  margin-top: 0;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-238 {
+    margin-top: 0;
+  }
+}
+
+.emotion-240 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
   margin-top: 2rem;
-  margin-top: 0;
 }
 
 @media (min-width:37.5rem) {
-  .emotion-237 {
+  .emotion-240 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-237 {
+  .emotion-240 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-237 {
-    margin-top: 0;
-  }
-}
-
-.emotion-226 {
+.emotion-242 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .emotion-226 {
+  .emotion-242 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-226 {
+  .emotion-242 {
     position: absolute;
     left: 0;
     right: 0;
@@ -2897,12 +2359,12 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-.emotion-234 {
+.emotion-244 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-232 {
+.emotion-246 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2912,7 +2374,7 @@ exports[`Media Asset Page should render component 1`] = `
   flex-direction: column;
 }
 
-.emotion-230 {
+.emotion-248 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2932,7 +2394,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-230 {
+  .emotion-248 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -2940,7 +2402,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-.emotion-228 {
+.emotion-250 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2960,222 +2422,222 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-228 {
+  .emotion-250 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-228 {
+  .emotion-250 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-228 {
+  .emotion-250 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-228 {
+  .emotion-250 {
     padding-right: 1rem;
   }
 }
 
-.emotion-348 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
 @supports (display:grid) {
-  .emotion-348 {
+  .emotion-252 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-348 {
+  @media (max-width:14.9375rem) {
+    .emotion-252 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-348 {
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-252 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-348 {
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-252 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-348 {
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-252 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-348 {
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-252 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-348 {
+  @media (min-width:80rem) {
+    .emotion-252 {
       grid-template-columns: repeat(8,1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
-}
-
-.emotion-259 {
-  padding: 0.5rem 0 1rem;
-}
-
-@media (max-width:62.9375rem) {
-  .emotion-259 {
-    border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-259:last-child {
-  border: none;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-259 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-259 {
-    padding: 0 0 1.5rem;
-  }
-}
-
-.emotion-259:first-child {
-  padding-top: 0;
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-259:first-child {
-    padding-top: 1rem;
-  }
-}
-
-.emotion-259:last-child {
-  padding-bottom: 0;
-}
-
-@media (min-width:63rem) {
-  .emotion-259 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-    padding: 1rem 0 1rem;
-  }
+.emotion-254 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 @supports (display:grid) {
-  .emotion-259 {
+  .emotion-256 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-259 {
+  @media (max-width:14.9375rem) {
+    .emotion-256 {
       grid-template-columns: repeat(6,1fr);
       grid-column-end: span 6;
     }
+  }
+
+  @media (min-width:15rem) and (max-width:24.9375rem) {
+    .emotion-256 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width:25rem) and (max-width:37.4375rem) {
+    .emotion-256 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width:37.5rem) and (max-width:62.9375rem) {
+    .emotion-256 {
+      grid-template-columns: repeat(6,1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width:63rem) and (max-width:79.9375rem) {
+    .emotion-256 {
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width:80rem) {
+    .emotion-256 {
+      grid-template-columns: repeat(8,1fr);
+      grid-column-end: span 8;
+    }
+  }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-259 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-    }
+.emotion-258 {
+  padding: 0.5rem 0 1rem;
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-259 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-    }
+@media (max-width: 62.9375rem) {
+  .emotion-258 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+.emotion-258:last-child {
+  border: none;
+}
+
+@media (min-width:37.5rem) {
+  .emotion-258 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .emotion-258 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+.emotion-258:first-child {
+  padding-top: 0;
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-259 {
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-    }
+  .emotion-258:first-child {
+    padding-top: 1rem;
+  }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-259 {
-      grid-template-columns: repeat(8,1fr);
-      grid-column-end: span 8;
-    }
+.emotion-258:last-child {
+  padding-bottom: 0;
 }
 
-@media (min-width:80rem) {
-    .emotion-259 {
-      grid-template-columns: repeat(8,1fr);
-      grid-column-end: span 8;
-    }
-}
+@media (min-width: 63rem) {
+  .emotion-258 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+    padding: 1rem 0 1rem;
+  }
 }
 
-.emotion-256 {
+@media (min-width: 63rem) {
+  .emotion-260 {
+    display: grid;
+  }
+}
+
+.emotion-262 {
   position: relative;
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-256 {
+  .emotion-262 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
   }
 
-@media (min-width:37.5rem) {
-    .emotion-256 {
+  @media (min-width:37.5rem) {
+    .emotion-262 {
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) {
-    .emotion-256 {
+  @media (min-width:63rem) {
+    .emotion-262 {
       display: block;
     }
-}
-}
-
-@media (min-width:63rem) {
-  .emotion-256 {
-    display: grid;
   }
 }
 
-.emotion-245 {
+.emotion-264 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -3183,43 +2645,43 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:63rem) {
-  .emotion-245 {
+  .emotion-264 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-245 {
+  .emotion-264 {
     width: initial;
-    grid-column: 1 / span 2;
+    grid-column: 1/span 2;
   }
 }
 
-.emotion-243 {
+.emotion-266 {
   position: relative;
 }
 
 @media (min-width:25rem) {
-  .emotion-241 {
+  .emotion-270 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-241 > * {
+.emotion-270>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width:24.9375rem) {
-  .emotion-241 > * {
+  .emotion-270>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-253 {
+.emotion-272 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -3227,13 +2689,13 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .emotion-253 {
+  .emotion-272 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-253 {
+  .emotion-272 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -3241,21 +2703,21 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .emotion-253 {
+  .emotion-272 {
     display: block;
     width: initial;
     padding: initial;
-    grid-column: 3 / span 4;
+    grid-column: 3/span 4;
   }
 
-@media (min-width:63rem) {
-    .emotion-253 {
+  @media (min-width:63rem) {
+    .emotion-272 {
       padding-top: 0.5rem;
     }
-}
+  }
 }
 
-.emotion-249 {
+.emotion-274 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -3266,21 +2728,21 @@ exports[`Media Asset Page should render component 1`] = `
   line-height: 1.25rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-249 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-274 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-249 {
+@media (min-width: 37.5rem) {
+  .emotion-274 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-247 {
+.emotion-276 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -3289,7 +2751,7 @@ exports[`Media Asset Page should render component 1`] = `
   overflow-wrap: anywhere;
 }
 
-.emotion-247:before {
+.emotion-276:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -3301,17 +2763,17 @@ exports[`Media Asset Page should render component 1`] = `
   z-index: 1;
 }
 
-.emotion-247:hover,
-.emotion-247:focus {
+.emotion-276:hover,
+.emotion-276:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-247:visited {
+.emotion-276:visited {
   color: #6E6E73;
 }
 
-.emotion-251 {
+.emotion-278 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -3322,20 +2784,20 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-251 {
+  .emotion-278 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-251 {
+  .emotion-278 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-289 {
+.emotion-320 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3347,20 +2809,20 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-289 {
+  .emotion-320 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-289 {
+  .emotion-320 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-287 {
+.emotion-322 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3372,7 +2834,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 100%;
 }
 
-.emotion-285 {
+.emotion-324 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -3381,7 +2843,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 0.8125rem;
 }
 
-.emotion-315 {
+.emotion-356 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -3390,11 +2852,11 @@ exports[`Media Asset Page should render component 1`] = `
   height: 0.75rem;
 }
 
-.emotion-317 {
+.emotion-358 {
   padding: 0 0.25rem;
 }
 
-.emotion-356 {
+.emotion-372 {
   padding-bottom: 2rem;
 }
 
@@ -3421,40 +2883,40 @@ exports[`Media Asset Page should render component 1`] = `
             </div>
             <noscript />
             <main
-              class="emotion-223 emotion-224 emotion-14"
+              class="emotion-0 emotion-1 emotion-2 emotion-3"
               dir="ltr"
               role="main"
             >
               <h1
-                class="emotion-0 emotion-1"
+                class="emotion-4 emotion-5"
                 id="content"
                 tabindex="-1"
               >
                 Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & &lt; &gt;
               </h1>
               <div
-                class="emotion-12 emotion-13 emotion-14"
+                class="emotion-6 emotion-7 emotion-8 emotion-3"
                 dir="ltr"
               >
                 <figure
                   class="emotion-10 emotion-11"
                 >
                   <div
-                    class="emotion-8 emotion-9"
+                    class="emotion-12 emotion-13"
                   >
                     <iframe
                       allow="autoplay"
                       allowfullscreen=""
-                      class="emotion-2 emotion-3"
+                      class="emotion-14 emotion-15"
                       scrolling="no"
                       src="https://test.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
                       title="Media player"
                     />
                     <div
-                      class="emotion-6 emotion-7"
+                      class="emotion-16 emotion-17"
                     >
                       <div
-                        class="emotion-4 emotion-5"
+                        class="emotion-18 emotion-19"
                       />
                     </div>
                     <noscript />
@@ -3462,29 +2924,29 @@ exports[`Media Asset Page should render component 1`] = `
                 </figure>
               </div>
               <div
-                class="emotion-18 emotion-14"
+                class="emotion-20 emotion-3"
                 dir="ltr"
               >
                 <strong
                   aria-hidden="true"
-                  class="emotion-15 emotion-16 emotion-17"
+                  class="emotion-22 emotion-23 emotion-24 emotion-25"
                 >
                   Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & &lt; &gt;
                 </strong>
               </div>
               <div
-                class="emotion-24 emotion-25 emotion-14"
+                class="emotion-26 emotion-27 emotion-28 emotion-3"
                 dir="ltr"
               >
                 <time
-                  class="emotion-20 emotion-21"
+                  class="emotion-30 emotion-31"
                   datetime="2019-09-13"
                 >
                   13 September 2019
                 </time>
                 <div>
                   <time
-                    class="emotion-20 emotion-21"
+                    class="emotion-30 emotion-31"
                     datetime="2019-11-20"
                   >
                     New Informate 20 November 2019
@@ -3492,11 +2954,11 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-27 emotion-28"
+                  class="emotion-36 emotion-37"
                   dir="ltr"
                 >
                   <b>
@@ -3505,11 +2967,11 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <h2
-                  class="emotion-31 emotion-32"
+                  class="emotion-40 emotion-41"
                   id="This-is-a-heading-<->"
                   tabindex="-1"
                 >
@@ -3517,11 +2979,11 @@ exports[`Media Asset Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <h2
-                  class="emotion-31 emotion-32"
+                  class="emotion-40 emotion-41"
                   id="This-is-a-subheading-<->"
                   tabindex="-1"
                 >
@@ -3529,11 +2991,11 @@ exports[`Media Asset Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <h2
-                  class="emotion-31 emotion-32"
+                  class="emotion-40 emotion-41"
                   id="This-is-a-crosshead-<->"
                   tabindex="-1"
                 >
@@ -3541,100 +3003,100 @@ exports[`Media Asset Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-27 emotion-28"
+                  class="emotion-36 emotion-37"
                   dir="ltr"
                 >
                   This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-27 emotion-28"
+                  class="emotion-36 emotion-37"
                   dir="ltr"
                 >
                   Bulleted list:
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <div
-                  class="emotion-77 emotion-78"
+                  class="emotion-60 emotion-61"
                 >
                   <ul
-                    class="emotion-75 emotion-76"
+                    class="emotion-62 emotion-63"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-64 emotion-65"
                       role="listitem"
                     >
                       <a
-                        class="emotion-51 emotion-52"
+                        class="emotion-66 emotion-67"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-64 emotion-65"
                       role="listitem"
                     >
                       <a
-                        class="emotion-51 emotion-52"
+                        class="emotion-66 emotion-67"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-64 emotion-65"
                       role="listitem"
                     >
                       <a
-                        class="emotion-51 emotion-52"
+                        class="emotion-66 emotion-67"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-64 emotion-65"
                       role="listitem"
                     >
                       <a
-                        class="emotion-51 emotion-52"
+                        class="emotion-66 emotion-67"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
                       </a>
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-64 emotion-65"
                       role="listitem"
                     >
                       <a
-                        class="emotion-51 emotion-52"
+                        class="emotion-66 emotion-67"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
                       </a>
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-64 emotion-65"
                       role="listitem"
                     >
                       <a
-                        class="emotion-51 emotion-52"
+                        class="emotion-66 emotion-67"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
@@ -3644,89 +3106,89 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-27 emotion-28"
+                  class="emotion-36 emotion-37"
                   dir="ltr"
                 >
                   Numbered list:
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <div
-                  class="emotion-77 emotion-78"
+                  class="emotion-60 emotion-61"
                 >
                   <ul
-                    class="emotion-75 emotion-76"
+                    class="emotion-62 emotion-63"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-64 emotion-65"
                       role="listitem"
                     >
                       <a
-                        class="emotion-51 emotion-52"
+                        class="emotion-66 emotion-67"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-64 emotion-65"
                       role="listitem"
                     >
                       <a
-                        class="emotion-51 emotion-52"
+                        class="emotion-66 emotion-67"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-64 emotion-65"
                       role="listitem"
                     >
                       <a
-                        class="emotion-51 emotion-52"
+                        class="emotion-66 emotion-67"
                         href="http://www.bbc.com/afrique/23248423"
                       >
                         &lt;Media Asset Page&gt;
                       </a>
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-64 emotion-65"
                       role="listitem"
                     >
                       <a
-                        class="emotion-51 emotion-52"
+                        class="emotion-66 emotion-67"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
                       </a>
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-64 emotion-65"
                       role="listitem"
                     >
                       <a
-                        class="emotion-51 emotion-52"
+                        class="emotion-66 emotion-67"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
                       </a>
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-64 emotion-65"
                       role="listitem"
                     >
                       <a
-                        class="emotion-51 emotion-52"
+                        class="emotion-66 emotion-67"
                         href="https://bbc.com/pidgin"
                       >
                         this is the link text
@@ -3736,11 +3198,11 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-27 emotion-28"
+                  class="emotion-36 emotion-37"
                   dir="ltr"
                 >
                   Lorem ipsum dolor sit amet, 
@@ -3753,13 +3215,13 @@ exports[`Media Asset Page should render component 1`] = `
                   </b>
                   ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                   <i
-                    class="emotion-115 emotion-116"
+                    class="emotion-126 emotion-127"
                   >
                      in voluptate velit esse cillum 
                   </i>
                   dolore "eu fugiat nulla" pariatur. 
                   <a
-                    class="emotion-51 emotion-52"
+                    class="emotion-66 emotion-67"
                     href="https://bbc.com/pidgin"
                   >
                     Excepteur
@@ -3768,104 +3230,104 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-27 emotion-28"
+                  class="emotion-36 emotion-37"
                   dir="ltr"
                 >
                   Testing special characters: !"£$%^&*()_+=-{}[]:@~;'#&lt;&gt;?,./\\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-27 emotion-28"
+                  class="emotion-36 emotion-37"
                   dir="ltr"
                 >
                   ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-27 emotion-28"
+                  class="emotion-36 emotion-37"
                   dir="ltr"
                 >
                   Table:
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-27 emotion-28"
+                  class="emotion-36 emotion-37"
                   dir="ltr"
                 >
                   Social media embed:
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-27 emotion-28"
+                  class="emotion-36 emotion-37"
                   dir="ltr"
                 >
                   Quote box:
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-27 emotion-28"
+                  class="emotion-36 emotion-37"
                   dir="ltr"
                 >
                   Correspondent quote box:
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-27 emotion-28"
+                  class="emotion-36 emotion-37"
                   dir="ltr"
                 >
                   Fact box:
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-27 emotion-28"
+                  class="emotion-36 emotion-37"
                   dir="ltr"
                 >
                   ­
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-27 emotion-28"
+                  class="emotion-36 emotion-37"
                   dir="ltr"
                 >
                   Lorem ipsum
                   <a
-                    class="emotion-51 emotion-52"
+                    class="emotion-66 emotion-67"
                     href="https://bbc.com/pidgin"
                   >
                      dolor sit amet
@@ -3874,22 +3336,22 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="emotion-179 emotion-14"
+                class="emotion-8 emotion-3"
                 dir="ltr"
               >
                 <figure
                   class="emotion-10 emotion-11"
                 >
                   <div
-                    class="emotion-175 emotion-14"
+                    class="emotion-172 emotion-3"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-167 emotion-14"
+                      class="emotion-174 emotion-3"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-4 emotion-5"
+                        class="emotion-18 emotion-19"
                       >
                         <div
                           class="lazyload-wrapper"
@@ -3900,11 +3362,11 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                         <noscript />
                         <p
-                          class="emotion-163 emotion-164"
+                          class="emotion-178 emotion-179"
                           role="text"
                         >
                           <span
-                            class="emotion-0 emotion-1"
+                            class="emotion-4 emotion-5"
                           >
                             Wia dis foto come from, 
                           </span>
@@ -3917,15 +3379,15 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                     </div>
                     <div
-                      class="emotion-173 emotion-14"
+                      class="emotion-182 emotion-3"
                       dir="ltr"
                     >
                       <figcaption
-                        class="emotion-171 emotion-172"
+                        class="emotion-184 emotion-185"
                         dir="ltr"
                       >
                         <span
-                          class="emotion-0 emotion-1"
+                          class="emotion-4 emotion-5"
                         >
                           Wetin we call dis foto, 
                         </span>
@@ -3938,22 +3400,22 @@ exports[`Media Asset Page should render component 1`] = `
                 </figure>
               </div>
               <div
-                class="emotion-179 emotion-14"
+                class="emotion-8 emotion-3"
                 dir="ltr"
               >
                 <figure
                   class="emotion-10 emotion-11"
                 >
                   <div
-                    class="emotion-175 emotion-14"
+                    class="emotion-172 emotion-3"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-167 emotion-14"
+                      class="emotion-174 emotion-3"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-4 emotion-5"
+                        class="emotion-18 emotion-19"
                       >
                         <div
                           class="lazyload-wrapper"
@@ -3964,11 +3426,11 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                         <noscript />
                         <p
-                          class="emotion-163 emotion-164"
+                          class="emotion-178 emotion-179"
                           role="text"
                         >
                           <span
-                            class="emotion-0 emotion-1"
+                            class="emotion-4 emotion-5"
                           >
                             Wia dis foto come from, 
                           </span>
@@ -3981,15 +3443,15 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                     </div>
                     <div
-                      class="emotion-173 emotion-14"
+                      class="emotion-182 emotion-3"
                       dir="ltr"
                     >
                       <figcaption
-                        class="emotion-171 emotion-172"
+                        class="emotion-184 emotion-185"
                         dir="ltr"
                       >
                         <span
-                          class="emotion-0 emotion-1"
+                          class="emotion-4 emotion-5"
                         >
                           Wetin we call dis foto, 
                         </span>
@@ -4002,37 +3464,37 @@ exports[`Media Asset Page should render component 1`] = `
                 </figure>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <div
-                  class="emotion-77 emotion-78"
+                  class="emotion-60 emotion-61"
                 >
                   <ul
-                    class="emotion-75 emotion-76"
+                    class="emotion-62 emotion-63"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-64 emotion-65"
                       role="listitem"
                     >
                       sunt in culpa qui officia deserunt mollit anim id est laborum
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-64 emotion-65"
                       role="listitem"
                     >
                       sunt in culpa qui officia deserunt mollit anim id est laborum
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-64 emotion-65"
                       role="listitem"
                     >
                       sunt in culpa qui officia deserunt mollit anim id est laborum
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-64 emotion-65"
                       role="listitem"
                     >
                       v3 draft
@@ -4041,22 +3503,22 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-27 emotion-28"
+                  class="emotion-36 emotion-37"
                   dir="ltr"
                 >
                   This is transmission info 
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-14"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-27 emotion-28"
+                  class="emotion-36 emotion-37"
                   dir="ltr"
                 >
                   This is the footer 
@@ -4065,32 +3527,32 @@ exports[`Media Asset Page should render component 1`] = `
             </main>
             <section
               aria-labelledby="related-content-heading"
-              class="emotion-353 emotion-354 emotion-14"
+              class="emotion-230 emotion-231 emotion-2 emotion-3"
               data-e2e="related-content-heading"
               dir="ltr"
               role="region"
             >
               <div
-                class="emotion-350 emotion-351 emotion-14"
+                class="emotion-234 emotion-235 emotion-20 emotion-3"
                 dir="ltr"
               >
                 <div
-                  class="emotion-236 emotion-237 emotion-238"
+                  class="emotion-238 emotion-239 emotion-240 emotion-241"
                 >
                   <div
-                    class="emotion-226 emotion-227"
+                    class="emotion-242 emotion-243"
                   />
                   <h2
-                    class="emotion-234 emotion-235"
+                    class="emotion-244 emotion-245"
                   >
                     <span
-                      class="emotion-232 emotion-233"
+                      class="emotion-246 emotion-247"
                     >
                       <span
-                        class="emotion-230 emotion-231"
+                        class="emotion-248 emotion-249"
                       >
                         <span
-                          class="emotion-228 emotion-229"
+                          class="emotion-250 emotion-251"
                           dir="ltr"
                           id="related-content-heading"
                         >
@@ -4101,28 +3563,28 @@ exports[`Media Asset Page should render component 1`] = `
                   </h2>
                 </div>
                 <ol
-                  class="emotion-14 emotion-348 emotion-349"
+                  class="emotion-252 emotion-3 emotion-254 emotion-255"
                   data-e2e="most-watched-ol"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="emotion-14 emotion-259 emotion-260"
+                    class="emotion-256 emotion-3 emotion-258 emotion-259"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-255 emotion-256 emotion-257"
+                      class="emotion-260 emotion-261 emotion-262 emotion-263"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-245 emotion-246"
+                        class="emotion-264 emotion-265"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-243 emotion-244"
+                          class="emotion-266 emotion-267"
                         >
                           <div
-                            class="emotion-4 emotion-5"
+                            class="emotion-18 emotion-19"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -4133,26 +3595,26 @@ exports[`Media Asset Page should render component 1`] = `
                             </div>
                           </div>
                           <div
-                            class="emotion-241 emotion-242"
+                            class="emotion-270 emotion-271"
                           />
                         </div>
                       </div>
                       <div
-                        class="emotion-253 emotion-254"
+                        class="emotion-272 emotion-273"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-249 emotion-250"
+                          class="emotion-274 emotion-275"
                         >
                           <a
-                            class="emotion-247 emotion-248"
+                            class="emotion-276 emotion-277"
                             href="/pidgin/tori-23145776"
                           >
                             Police Arrest 3 ontop Anambra Church Attack
                           </a>
                         </h3>
                         <time
-                          class="emotion-251 emotion-21"
+                          class="emotion-278 emotion-31"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -4161,22 +3623,22 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="emotion-14 emotion-259 emotion-260"
+                    class="emotion-256 emotion-3 emotion-258 emotion-259"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-255 emotion-256 emotion-257"
+                      class="emotion-260 emotion-261 emotion-262 emotion-263"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-245 emotion-246"
+                        class="emotion-264 emotion-265"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-243 emotion-244"
+                          class="emotion-266 emotion-267"
                         >
                           <div
-                            class="emotion-4 emotion-5"
+                            class="emotion-18 emotion-19"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -4187,26 +3649,26 @@ exports[`Media Asset Page should render component 1`] = `
                             </div>
                           </div>
                           <div
-                            class="emotion-241 emotion-242"
+                            class="emotion-270 emotion-271"
                           />
                         </div>
                       </div>
                       <div
-                        class="emotion-253 emotion-254"
+                        class="emotion-272 emotion-273"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-249 emotion-250"
+                          class="emotion-274 emotion-275"
                         >
                           <a
-                            class="emotion-247 emotion-248"
+                            class="emotion-276 emotion-277"
                             href="/pidgin/tori-23143754"
                           >
                             Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
                           </a>
                         </h3>
                         <time
-                          class="emotion-251 emotion-21"
+                          class="emotion-278 emotion-31"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -4215,37 +3677,37 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="emotion-14 emotion-259 emotion-260"
+                    class="emotion-256 emotion-3 emotion-258 emotion-259"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-255 emotion-256 emotion-257"
+                      class="emotion-260 emotion-261 emotion-262 emotion-263"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-245 emotion-246"
+                        class="emotion-264 emotion-265"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-243 emotion-244"
+                          class="emotion-266 emotion-267"
                         >
                           <div
-                            class="emotion-4 emotion-5"
+                            class="emotion-18 emotion-19"
                           />
                           <div
-                            class="emotion-241 emotion-242"
+                            class="emotion-270 emotion-271"
                           >
                             <div
                               aria-hidden="true"
-                              class="emotion-289 emotion-290"
+                              class="emotion-320 emotion-321"
                               dir="ltr"
                             >
                               <div
-                                class="emotion-287 emotion-288"
+                                class="emotion-322 emotion-323"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="emotion-285 emotion-286"
+                                  class="emotion-324 emotion-325"
                                   focusable="false"
                                   height="13px"
                                   viewBox="0 0 32 26"
@@ -4266,21 +3728,21 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="emotion-253 emotion-254"
+                        class="emotion-272 emotion-273"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-249 emotion-250"
+                          class="emotion-274 emotion-275"
                         >
                           <a
-                            class="emotion-247 emotion-248"
+                            class="emotion-276 emotion-277"
                             href="/pidgin/23146654"
                           >
                             <span
                               role="text"
                             >
                               <span
-                                class="emotion-0 emotion-1"
+                                class="emotion-4 emotion-5"
                               >
                                 Image gallery, 
                               </span>
@@ -4291,7 +3753,7 @@ exports[`Media Asset Page should render component 1`] = `
                           </a>
                         </h3>
                         <time
-                          class="emotion-251 emotion-21"
+                          class="emotion-278 emotion-31"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -4300,22 +3762,22 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="emotion-14 emotion-259 emotion-260"
+                    class="emotion-256 emotion-3 emotion-258 emotion-259"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-255 emotion-256 emotion-257"
+                      class="emotion-260 emotion-261 emotion-262 emotion-263"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-245 emotion-246"
+                        class="emotion-264 emotion-265"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-243 emotion-244"
+                          class="emotion-266 emotion-267"
                         >
                           <div
-                            class="emotion-4 emotion-5"
+                            class="emotion-18 emotion-19"
                           >
                             <div
                               class="lazyload-wrapper"
@@ -4326,19 +3788,19 @@ exports[`Media Asset Page should render component 1`] = `
                             </div>
                           </div>
                           <div
-                            class="emotion-241 emotion-242"
+                            class="emotion-270 emotion-271"
                           >
                             <div
                               aria-hidden="true"
-                              class="emotion-289 emotion-290"
+                              class="emotion-320 emotion-321"
                               dir="ltr"
                             >
                               <div
-                                class="emotion-287 emotion-288"
+                                class="emotion-322 emotion-323"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="emotion-315 emotion-316"
+                                  class="emotion-356 emotion-357"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 13 12"
@@ -4352,7 +3814,7 @@ exports[`Media Asset Page should render component 1`] = `
                                   />
                                 </svg>
                                 <time
-                                  class="emotion-317 emotion-318"
+                                  class="emotion-358 emotion-359"
                                   datetime="PT15S"
                                 >
                                   0:15
@@ -4363,21 +3825,21 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="emotion-253 emotion-254"
+                        class="emotion-272 emotion-273"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-249 emotion-250"
+                          class="emotion-274 emotion-275"
                         >
                           <a
-                            class="emotion-247 emotion-248"
+                            class="emotion-276 emotion-277"
                             href="/pidgin/media-23147054"
                           >
                             <span
                               role="text"
                             >
                               <span
-                                class="emotion-0 emotion-1"
+                                class="emotion-4 emotion-5"
                               >
                                 Make you listen, 
                               </span>
@@ -4385,7 +3847,7 @@ exports[`Media Asset Page should render component 1`] = `
                                 BBC News Pidgin One Minute News
                               </span>
                               <span
-                                class="emotion-0 emotion-1"
+                                class="emotion-4 emotion-5"
                               >
                                 , Duration 0,15
                               </span>
@@ -4393,7 +3855,7 @@ exports[`Media Asset Page should render component 1`] = `
                           </a>
                         </h3>
                         <time
-                          class="emotion-251 emotion-21"
+                          class="emotion-278 emotion-31"
                           datetime="2017-08-17"
                         >
                           17th August 2017
@@ -4405,7 +3867,7 @@ exports[`Media Asset Page should render component 1`] = `
               </div>
             </section>
             <div
-              class="emotion-356 emotion-357"
+              class="emotion-372 emotion-373"
             />
           </div>
         </div>

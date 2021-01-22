@@ -8,7 +8,7 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
   padding: 0;
 }
 
-@media (min-width:18.75rem) {
+@media (min-width: 18.75rem) {
   .emotion-0 {
     min-height: 5.1875rem;
     display: -webkit-box;
@@ -19,20 +19,20 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
     -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
     -ms-flex-pack: center;
+    -webkit-justify-content: center;
     justify-content: center;
     visibility: visible;
   }
 }
 
-@media (min-width:19.75rem) {
+@media (min-width: 19.75rem) {
   .emotion-0 {
     padding: 0 0.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-0 {
     min-height: 17.6875rem;
   }
@@ -61,7 +61,7 @@ exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderb
   visibility: hidden;
 }
 
-@media (min-width:20rem) {
+@media (min-width: 20rem) {
   .emotion-0 {
     margin-top: 0.5rem;
     min-height: 5.1875rem;
@@ -73,32 +73,32 @@ exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderb
     -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
     -ms-flex-pack: center;
+    -webkit-justify-content: center;
     justify-content: center;
     visibility: visible;
   }
 }
 
-@media (min-width:21rem) {
+@media (min-width: 21rem) {
   .emotion-0 {
     padding: 0 0.5rem;
   }
 }
 
-@media (min-width:25rem) {
+@media (min-width: 25rem) {
   .emotion-0 {
     min-height: 5.8125rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-0 {
     min-height: 7.6875rem;
   }
 }
 
-@media (min-width:58.75rem) {
+@media (min-width: 58.75rem) {
   .emotion-0 {
     min-height: 17.6875rem;
     padding: 0.5rem 1rem;
