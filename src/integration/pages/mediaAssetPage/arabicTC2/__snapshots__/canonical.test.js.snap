@@ -17,7 +17,7 @@ exports[`Canonical Media Asset Page Footer I can see the footer copyright and ex
 
 exports[`Canonical Media Asset Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, عربي",
+  "text": "BBC News , عربي",
   "url": "/arabic",
 }
 `;
@@ -78,7 +78,7 @@ Object {
 }
 `;
 
-exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, عربي"`;
+exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News , عربي"`;
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 1`] = `
 Object {

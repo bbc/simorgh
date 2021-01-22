@@ -10,7 +10,7 @@ exports[`Canonical Feature Index page Footer I can see the footer copyright and 
 
 exports[`Canonical Feature Index page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, Afrique",
+  "text": "BBC News , Afrique",
   "url": "/afrique",
 }
 `;
@@ -71,7 +71,7 @@ Object {
 }
 `;
 
-exports[`Canonical Feature Index page Header I can see the branding 1`] = `"BBC News, Afrique"`;
+exports[`Canonical Feature Index page Header I can see the branding 1`] = `"BBC News , Afrique"`;
 
 exports[`Canonical Feature Index page Header Navigation link should match text and url 1`] = `
 Object {

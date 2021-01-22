@@ -143,7 +143,7 @@ exports[`AMP Media Asset Page Footer I can see the footer copyright and external
 
 exports[`AMP Media Asset Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, عربي",
+  "text": "BBC News , عربي",
   "url": "/arabic",
 }
 `;
@@ -204,7 +204,7 @@ Object {
 }
 `;
 
-exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, عربي"`;
+exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News , عربي"`;
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 1`] = `
 Object {

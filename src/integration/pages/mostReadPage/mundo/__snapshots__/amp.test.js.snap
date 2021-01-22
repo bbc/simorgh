@@ -143,7 +143,7 @@ exports[`AMP Most Read Page Footer I can see the footer copyright and external l
 
 exports[`AMP Most Read Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, Mundo",
+  "text": "BBC News , Mundo",
   "url": "/mundo",
 }
 `;
@@ -204,7 +204,7 @@ Object {
 }
 `;
 
-exports[`AMP Most Read Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
+exports[`AMP Most Read Page Header I can see the branding 1`] = `"BBC News , Mundo"`;
 
 exports[`AMP Most Read Page Header Navigation link should match text and url 1`] = `
 Object {
@@ -292,25 +292,25 @@ Object {
 
 exports[`AMP Most Read Page I can see the headline 1`] = `"Más leídas"`;
 
-exports[`AMP Most Read Page I can see the list items 1`] = `"1Cómo es posible que Uber sobreviva con pérdidas de US$1.200 millones y sin nunca haber obtenido beneficiosÚltima actualización: 6 noviembre 2019"`;
+exports[`AMP Most Read Page I can see the list items 1`] = `"1 Cómo es posible que Uber sobreviva con pérdidas de US$1.200 millones y sin nunca haber obtenido beneficios Última actualización: 6 noviembre 2019"`;
 
-exports[`AMP Most Read Page I can see the list items 2`] = `"2\\"Me han dicho que me devuelva a México en mi propio show\\": John Leguizamo, el premiado actor que pelea contra HollywoodÚltima actualización: 6 noviembre 2019"`;
+exports[`AMP Most Read Page I can see the list items 2`] = `"2 \\"Me han dicho que me devuelva a México en mi propio show\\": John Leguizamo, el premiado actor que pelea contra Hollywood Última actualización: 6 noviembre 2019"`;
 
-exports[`AMP Most Read Page I can see the list items 3`] = `"3\\"En Chile se cumplió lo que nuestros profesores de Chicago esperaban que ocurriese\\": entrevista con Rolf Luders, ministro de economía de PinochetÚltima actualización: 6 noviembre 2019"`;
+exports[`AMP Most Read Page I can see the list items 3`] = `"3 \\"En Chile se cumplió lo que nuestros profesores de Chicago esperaban que ocurriese\\": entrevista con Rolf Luders, ministro de economía de Pinochet Última actualización: 6 noviembre 2019"`;
 
-exports[`AMP Most Read Page I can see the list items 4`] = `"4Quiénes son los miembros de la familia LeBarón que fueron víctimas de la emboscada en México a que dejó al menos 9 muertosÚltima actualización: 6 noviembre 2019"`;
+exports[`AMP Most Read Page I can see the list items 4`] = `"4 Quiénes son los miembros de la familia LeBarón que fueron víctimas de la emboscada en México a que dejó al menos 9 muertos Última actualización: 6 noviembre 2019"`;
 
-exports[`AMP Most Read Page I can see the list items 5`] = `"5Los habitantes de Bosnia que hablan un \\"idioma especial\\" parecido al español de América LatinaÚltima actualización: 6 noviembre 2019"`;
+exports[`AMP Most Read Page I can see the list items 5`] = `"5 Los habitantes de Bosnia que hablan un \\"idioma especial\\" parecido al español de América Latina Última actualización: 6 noviembre 2019"`;
 
-exports[`AMP Most Read Page I can see the list items 6`] = `"6¿Desinstalar WhatsApp puede hacer que tu teléfono sea más seguro?Última actualización: 5 noviembre 2019"`;
+exports[`AMP Most Read Page I can see the list items 6`] = `"6 ¿Desinstalar WhatsApp puede hacer que tu teléfono sea más seguro? Última actualización: 5 noviembre 2019"`;
 
-exports[`AMP Most Read Page I can see the list items 7`] = `"7Por qué 1 de cada 5 personas en EE.UU. está ahorrando dinero debajo del colchónÚltima actualización: 4 noviembre 2019"`;
+exports[`AMP Most Read Page I can see the list items 7`] = `"7 Por qué 1 de cada 5 personas en EE.UU. está ahorrando dinero debajo del colchón Última actualización: 4 noviembre 2019"`;
 
-exports[`AMP Most Read Page I can see the list items 8`] = `"8\\"Asu mare\\", \\"qué palta\\", \\"estar misio\\"... Algunas de las expresiones que deberías aprender para entender a los peruanosÚltima actualización: 6 noviembre 2019"`;
+exports[`AMP Most Read Page I can see the list items 8`] = `"8 \\"Asu mare\\", \\"qué palta\\", \\"estar misio\\"... Algunas de las expresiones que deberías aprender para entender a los peruanos Última actualización: 6 noviembre 2019"`;
 
-exports[`AMP Most Read Page I can see the list items 9`] = `"9Apuñalan a tres turistas mexicanos en JordaniaÚltima actualización: 6 noviembre 2019"`;
+exports[`AMP Most Read Page I can see the list items 9`] = `"9 Apuñalan a tres turistas mexicanos en Jordania Última actualización: 6 noviembre 2019"`;
 
-exports[`AMP Most Read Page I can see the list items 10`] = `"10\\"Las iglesias evangélicas son un problema de seguridad nacional en América Latina\\"Última actualización: 6 noviembre 2019"`;
+exports[`AMP Most Read Page I can see the list items 10`] = `"10 \\"Las iglesias evangélicas son un problema de seguridad nacional en América Latina\\" Última actualización: 6 noviembre 2019"`;
 
 exports[`AMP Most Read Page Main heading should match text 1`] = `"Más leídas"`;
 

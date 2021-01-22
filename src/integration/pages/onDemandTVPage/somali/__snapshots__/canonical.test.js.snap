@@ -10,7 +10,7 @@ exports[`Canonical On Demand T V Page Footer I can see the footer copyright and 
 
 exports[`Canonical On Demand T V Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, Somali",
+  "text": "BBC News , Somali",
   "url": "/somali",
 }
 `;
@@ -71,7 +71,7 @@ Object {
 }
 `;
 
-exports[`Canonical On Demand T V Page Header I can see the branding 1`] = `"BBC News, Somali"`;
+exports[`Canonical On Demand T V Page Header I can see the branding 1`] = `"BBC News , Somali"`;
 
 exports[`Canonical On Demand T V Page Header Navigation link should match text and url 1`] = `
 Object {
@@ -122,28 +122,28 @@ exports[`Canonical On Demand T V Page Media Player iframe with valid URL should 
 
 exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 1`] = `
 Object {
-  "text": "26:30Muuqaal, Caawa Iyo Caalamka, 7 Disembar 2020, Muddada 26,30",
+  "text": "26:30 Muuqaal, Caawa Iyo Caalamka , 7 Disembar 2020 , Muddada 26,30",
   "url": "/somali/bbc_somali_tv/tv/w172xcmygv5ym4v",
 }
 `;
 
 exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 2`] = `
 Object {
-  "text": "26:30Muuqaal, Caawa Iyo Caalamka, 4 Disembar 2020, Muddada 26,30",
+  "text": "26:30 Muuqaal, Caawa Iyo Caalamka , 4 Disembar 2020 , Muddada 26,30",
   "url": "/somali/bbc_somali_tv/tv/w172xcmy3kwk25d",
 }
 `;
 
 exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 3`] = `
 Object {
-  "text": "26:30Muuqaal, Caawa Iyo Caalamka, 3 Disembar 2020, Muddada 26,30",
+  "text": "26:30 Muuqaal, Caawa Iyo Caalamka , 3 Disembar 2020 , Muddada 26,30",
   "url": "/somali/bbc_somali_tv/tv/w172xcmy3kwg589",
 }
 `;
 
 exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 4`] = `
 Object {
-  "text": "26:30Muuqaal, Caawa Iyo Caalamka, 2 Disembar 2020, Muddada 26,30",
+  "text": "26:30 Muuqaal, Caawa Iyo Caalamka , 2 Disembar 2020 , Muddada 26,30",
   "url": "/somali/bbc_somali_tv/tv/w172xcmy3kwc8c6",
 }
 `;

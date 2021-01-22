@@ -143,7 +143,7 @@ exports[`AMP On Demand T V Page Footer I can see the footer copyright and extern
 
 exports[`AMP On Demand T V Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, پښتو",
+  "text": "BBC News , پښتو",
   "url": "/pashto",
 }
 `;
@@ -204,7 +204,7 @@ Object {
 }
 `;
 
-exports[`AMP On Demand T V Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
+exports[`AMP On Demand T V Page Header I can see the branding 1`] = `"BBC News , پښتو"`;
 
 exports[`AMP On Demand T V Page Header Navigation link should match text and url 1`] = `
 Object {
@@ -283,28 +283,28 @@ exports[`AMP On Demand T V Page Media Player iframe with valid URL should be ren
 
 exports[`AMP On Demand T V Page Recent Episodes List items should match text and url 1`] = `
 Object {
-  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۸ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
+  "text": "۲۶:۰۰ ویډیو, نړۍ دا وخت , ۸ ډیسمبر ۲۰۲۰ , موده ۲۶،۰۰",
   "url": "/pashto/bbc_pashto_tv/tv/w172xclqp0l3zkq",
 }
 `;
 
 exports[`AMP On Demand T V Page Recent Episodes List items should match text and url 2`] = `
 Object {
-  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۷ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
+  "text": "۲۶:۰۰ ویډیو, نړۍ دا وخت , ۷ ډیسمبر ۲۰۲۰ , موده ۲۶،۰۰",
   "url": "/pashto/bbc_pashto_tv/tv/w172xclqp0l12nm",
 }
 `;
 
 exports[`AMP On Demand T V Page Recent Episodes List items should match text and url 3`] = `
 Object {
-  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۶ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
+  "text": "۲۶:۰۰ ویډیو, نړۍ دا وخت , ۶ ډیسمبر ۲۰۲۰ , موده ۲۶،۰۰",
   "url": "/pashto/bbc_pashto_tv/tv/w172xclq9r8tbhc",
 }
 `;
 
 exports[`AMP On Demand T V Page Recent Episodes List items should match text and url 4`] = `
 Object {
-  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۵ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
+  "text": "۲۶:۰۰ ویډیو, نړۍ دا وخت , ۵ ډیسمبر ۲۰۲۰ , موده ۲۶،۰۰",
   "url": "/pashto/bbc_pashto_tv/tv/w172xclq9r8qfl8",
 }
 `;

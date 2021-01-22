@@ -143,7 +143,7 @@ exports[`AMP Story Page Footer I can see the footer copyright and external linki
 
 exports[`AMP Story Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, Кыргыз КызMATы",
+  "text": "BBC News , Кыргыз КызMATы",
   "url": "/kyrgyz",
 }
 `;
@@ -204,7 +204,7 @@ Object {
 }
 `;
 
-exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
+exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News , Кыргыз КызMATы"`;
 
 exports[`AMP Story Page Header Navigation link should match text and url 1`] = `
 Object {

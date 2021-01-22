@@ -10,7 +10,7 @@ exports[`Canonical Most Watched Page Footer I can see the footer copyright and e
 
 exports[`Canonical Most Watched Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, Afrique",
+  "text": "BBC News , Afrique",
   "url": "/afrique",
 }
 `;
@@ -71,7 +71,7 @@ Object {
 }
 `;
 
-exports[`Canonical Most Watched Page Header I can see the branding 1`] = `"BBC News, Afrique"`;
+exports[`Canonical Most Watched Page Header I can see the branding 1`] = `"BBC News , Afrique"`;
 
 exports[`Canonical Most Watched Page Header Navigation link should match text and url 1`] = `
 Object {
@@ -150,17 +150,17 @@ Object {
 }
 `;
 
-exports[`Canonical Most Watched Page I can see the list items 1`] = `"0:16Vidéo, Test asset, Durée 0,1626 avril 2017"`;
+exports[`Canonical Most Watched Page I can see the list items 1`] = `"0:16 Vidéo, Test asset , Durée 0,16 26 avril 2017"`;
 
-exports[`Canonical Most Watched Page I can see the list items 2`] = `"Ecoutez, Gelila, miraculée des eaux 217 juin 2016"`;
+exports[`Canonical Most Watched Page I can see the list items 2`] = `"Ecoutez, Gelila, miraculée des eaux 2 17 juin 2016"`;
 
-exports[`Canonical Most Watched Page I can see the list items 3`] = `"Ecoutez, Gelila, miraculée des eaux17 juin 2016"`;
+exports[`Canonical Most Watched Page I can see the list items 3`] = `"Ecoutez, Gelila, miraculée des eaux 17 juin 2016"`;
 
-exports[`Canonical Most Watched Page I can see the list items 4`] = `"0:16Vidéo, Test asset, Durée 0,1626 avril 2017"`;
+exports[`Canonical Most Watched Page I can see the list items 4`] = `"0:16 Vidéo, Test asset , Durée 0,16 26 avril 2017"`;
 
-exports[`Canonical Most Watched Page I can see the list items 5`] = `"Vidéo, Test 2 - Magari yasiyotumia mafuta yaanza kazi Kenya9 août 2016"`;
+exports[`Canonical Most Watched Page I can see the list items 5`] = `"Vidéo, Test 2 - Magari yasiyotumia mafuta yaanza kazi Kenya 9 août 2016"`;
 
-exports[`Canonical Most Watched Page I can see the list items 6`] = `"Ecoutez, L’invité BBC Afrique 21/06/2016 : Ibrahim Maïga short24 juin 2016"`;
+exports[`Canonical Most Watched Page I can see the list items 6`] = `"Ecoutez, L’invité BBC Afrique 21/06/2016 : Ibrahim Maïga short 24 juin 2016"`;
 
 exports[`Canonical Most Watched Page Main heading should match text 1`] = `"Les plus vus"`;
 

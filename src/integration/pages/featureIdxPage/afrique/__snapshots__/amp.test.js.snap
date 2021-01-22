@@ -143,7 +143,7 @@ exports[`AMP Feature Index page Footer I can see the footer copyright and extern
 
 exports[`AMP Feature Index page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, Afrique",
+  "text": "BBC News , Afrique",
   "url": "/afrique",
 }
 `;
@@ -204,7 +204,7 @@ Object {
 }
 `;
 
-exports[`AMP Feature Index page Header I can see the branding 1`] = `"BBC News, Afrique"`;
+exports[`AMP Feature Index page Header I can see the branding 1`] = `"BBC News , Afrique"`;
 
 exports[`AMP Feature Index page Header Navigation link should match text and url 1`] = `
 Object {

@@ -10,7 +10,7 @@ exports[`Canonical Media Asset Page Footer I can see the footer copyright and ex
 
 exports[`Canonical Media Asset Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, Pidgin",
+  "text": "BBC News , Pidgin",
   "url": "/pidgin",
 }
 `;
@@ -71,7 +71,7 @@ Object {
 }
 `;
 
-exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
+exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News , Pidgin"`;
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 1`] = `
 Object {
@@ -162,7 +162,7 @@ Object {
 
 exports[`Canonical Media Asset Page Related Content should match text and url 4`] = `
 Object {
-  "text": "Make you listen, BBC News Pidgin One Minute News, Duration 0,15",
+  "text": "Make you listen, BBC News Pidgin One Minute News , Duration 0,15",
   "url": "/pidgin/media-23147054",
 }
 `;

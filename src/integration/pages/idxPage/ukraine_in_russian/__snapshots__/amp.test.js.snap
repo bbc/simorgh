@@ -143,7 +143,7 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Footer I can see the footer c
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, Україна",
+  "text": "BBC News , Україна",
   "url": "/ukrainian",
 }
 `;
@@ -199,7 +199,7 @@ Object {
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Footer lang code should match text 1`] = `"uk"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header I can see the branding 1`] = `"BBC News, Україна"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header I can see the branding 1`] = `"BBC News , Україна"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 1`] = `
 Object {
@@ -424,11 +424,11 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Twitter site 1`] = `"@BBC
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Twitter title 1`] = `"РУС - BBC News Україна"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 1`] = `"BBC ЖурналПосмотреть все"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 1`] = `"BBC Журнал Посмотреть все"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 2`] = `"Статьи"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 3`] = `"Фото дняПосмотреть все"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 3`] = `"Фото дня Посмотреть все"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 4`] = `"Подробно"`;
 

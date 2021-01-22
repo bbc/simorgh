@@ -17,7 +17,7 @@ exports[`Canonical Story Page Footer I can see the footer copyright and external
 
 exports[`Canonical Story Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, Mundo",
+  "text": "BBC News , Mundo",
   "url": "/mundo",
 }
 `;
@@ -78,7 +78,7 @@ Object {
 }
 `;
 
-exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
+exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News , Mundo"`;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 1`] = `
 Object {

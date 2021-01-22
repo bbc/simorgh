@@ -143,7 +143,7 @@ exports[`AMP Front Page Footer I can see the footer copyright and external linki
 
 exports[`AMP Front Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, عربي",
+  "text": "BBC News , عربي",
   "url": "/arabic",
 }
 `;
@@ -204,7 +204,7 @@ Object {
 }
 `;
 
-exports[`AMP Front Page Header I can see the branding 1`] = `"BBC News, عربي"`;
+exports[`AMP Front Page Header I can see the branding 1`] = `"BBC News , عربي"`;
 
 exports[`AMP Front Page Header Navigation link should match text and url 1`] = `
 Object {
@@ -278,7 +278,7 @@ Object {
 
 exports[`AMP Front Page Index Alsos should match visually hidden text 1`] = `"المزيد حول هذه القصة"`;
 
-exports[`AMP Front Page Main heading should match text 1`] = `"BBC News, عربي - الرئيسية"`;
+exports[`AMP Front Page Main heading should match text 1`] = `"BBC News , عربي - الرئيسية"`;
 
 exports[`AMP Front Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -358,7 +358,7 @@ exports[`AMP Front Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP Front Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`AMP Front Page SEO Heading level 1 1`] = `"BBC News, عربي - الرئيسية"`;
+exports[`AMP Front Page SEO Heading level 1 1`] = `"BBC News , عربي - الرئيسية"`;
 
 exports[`AMP Front Page SEO Lang attribute 1`] = `"ar"`;
 
@@ -438,39 +438,39 @@ exports[`AMP Front Page SEO Twitter title 1`] = `"الرئيسية - BBC News ع
 
 exports[`AMP Front Page Sections should match headline text 1`] = `"الخبر الرئيسي"`;
 
-exports[`AMP Front Page Sections should match headline text 2`] = `"فيديوالمزيد"`;
+exports[`AMP Front Page Sections should match headline text 2`] = `"فيديو المزيد"`;
 
-exports[`AMP Front Page Sections should match headline text 3`] = `"تقارير خاصةالمزيد"`;
+exports[`AMP Front Page Sections should match headline text 3`] = `"تقارير خاصة المزيد"`;
 
-exports[`AMP Front Page Sections should match headline text 4`] = `"مرأةالمزيد"`;
+exports[`AMP Front Page Sections should match headline text 4`] = `"مرأة المزيد"`;
 
-exports[`AMP Front Page Sections should match headline text 5`] = `"صحةالمزيد"`;
+exports[`AMP Front Page Sections should match headline text 5`] = `"صحة المزيد"`;
 
-exports[`AMP Front Page Sections should match headline text 6`] = `"اقتصادالمزيد"`;
+exports[`AMP Front Page Sections should match headline text 6`] = `"اقتصاد المزيد"`;
 
-exports[`AMP Front Page Sections should match headline text 7`] = `"علوم وتكنولوجياالمزيد"`;
+exports[`AMP Front Page Sections should match headline text 7`] = `"علوم وتكنولوجيا المزيد"`;
 
-exports[`AMP Front Page Sections should match headline text 8`] = `"ثقافة وفنونالمزيد"`;
+exports[`AMP Front Page Sections should match headline text 8`] = `"ثقافة وفنون المزيد"`;
 
-exports[`AMP Front Page Sections should match headline text 9`] = `"رياضةالمزيد"`;
+exports[`AMP Front Page Sections should match headline text 9`] = `"رياضة المزيد"`;
 
-exports[`AMP Front Page Sections should match headline text 10`] = `"برامجناالمزيد"`;
+exports[`AMP Front Page Sections should match headline text 10`] = `"برامجنا المزيد"`;
 
 exports[`AMP Front Page Sections should match headline text 11`] = `"عرض الصحف"`;
 
-exports[`AMP Front Page Sections should match headline text 12`] = `"مجلةالمزيد"`;
+exports[`AMP Front Page Sections should match headline text 12`] = `"مجلة المزيد"`;
 
-exports[`AMP Front Page Sections should match headline text 13`] = `"شارك برأيك:المزيد"`;
+exports[`AMP Front Page Sections should match headline text 13`] = `"شارك برأيك: المزيد"`;
 
-exports[`AMP Front Page Sections should match headline text 14`] = `"بي بي سي ترندالمزيد"`;
+exports[`AMP Front Page Sections should match headline text 14`] = `"بي بي سي ترند المزيد"`;
 
-exports[`AMP Front Page Sections should match headline text 15`] = `"بالصورالمزيد"`;
+exports[`AMP Front Page Sections should match headline text 15`] = `"بالصور المزيد"`;
 
 exports[`AMP Front Page Sections should match headline text 16`] = `"مباشر"`;
 
 exports[`AMP Front Page Sections should match headline text 17`] = `"اخترنا لكم"`;
 
-exports[`AMP Front Page Sections should match headline text 18`] = `"بطولة كأس العالم 2018المزيد"`;
+exports[`AMP Front Page Sections should match headline text 18`] = `"بطولة كأس العالم 2018 المزيد"`;
 
 exports[`AMP Front Page Sections should match headline text 19`] = `"روابط لبي بي سي"`;
 

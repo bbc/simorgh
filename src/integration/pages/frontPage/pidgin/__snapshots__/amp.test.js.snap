@@ -143,7 +143,7 @@ exports[`AMP Front Page Footer I can see the footer copyright and external linki
 
 exports[`AMP Front Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, Pidgin",
+  "text": "BBC News , Pidgin",
   "url": "/pidgin",
 }
 `;
@@ -204,7 +204,7 @@ Object {
 }
 `;
 
-exports[`AMP Front Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
+exports[`AMP Front Page Header I can see the branding 1`] = `"BBC News , Pidgin"`;
 
 exports[`AMP Front Page Header Navigation link should match text and url 1`] = `
 Object {
@@ -264,7 +264,7 @@ Object {
 
 exports[`AMP Front Page Index Alsos should match visually hidden text 1`] = `"Another thing we de for inside dis tori"`;
 
-exports[`AMP Front Page Main heading should match text 1`] = `"BBC News, Pidgin - Home"`;
+exports[`AMP Front Page Main heading should match text 1`] = `"BBC News , Pidgin - Home"`;
 
 exports[`AMP Front Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -344,7 +344,7 @@ exports[`AMP Front Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP Front Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`AMP Front Page SEO Heading level 1 1`] = `"BBC News, Pidgin - Home"`;
+exports[`AMP Front Page SEO Heading level 1 1`] = `"BBC News , Pidgin - Home"`;
 
 exports[`AMP Front Page SEO Lang attribute 1`] = `"pcm"`;
 

@@ -143,7 +143,7 @@ exports[`AMP Feature Index page Footer I can see the footer copyright and extern
 
 exports[`AMP Feature Index page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, اردو",
+  "text": "BBC News , اردو",
   "url": "/urdu",
 }
 `;
@@ -204,7 +204,7 @@ Object {
 }
 `;
 
-exports[`AMP Feature Index page Header I can see the branding 1`] = `"BBC News, اردو"`;
+exports[`AMP Feature Index page Header I can see the branding 1`] = `"BBC News , اردو"`;
 
 exports[`AMP Feature Index page Header Navigation link should match text and url 1`] = `
 Object {
@@ -422,7 +422,7 @@ exports[`AMP Feature Index page SEO Twitter title 1`] = `"کورونا وائر�
 
 exports[`AMP Feature Index page Sections should match headline text 1`] = `"اہم خبریں"`;
 
-exports[`AMP Feature Index page Sections should match headline text 2`] = `"ملٹی میڈیاسب دیکھیں"`;
+exports[`AMP Feature Index page Sections should match headline text 2`] = `"ملٹی میڈیا سب دیکھیں"`;
 
 exports[`AMP Feature Index page Sections should match headline text 3`] = `"فیچر اور تجزیے"`;
 

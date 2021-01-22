@@ -10,7 +10,7 @@ exports[`Canonical Feature Index page Footer I can see the footer copyright and 
 
 exports[`Canonical Feature Index page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, اردو",
+  "text": "BBC News , اردو",
   "url": "/urdu",
 }
 `;
@@ -71,7 +71,7 @@ Object {
 }
 `;
 
-exports[`Canonical Feature Index page Header I can see the branding 1`] = `"BBC News, اردو"`;
+exports[`Canonical Feature Index page Header I can see the branding 1`] = `"BBC News , اردو"`;
 
 exports[`Canonical Feature Index page Header Navigation link should match text and url 1`] = `
 Object {
@@ -289,7 +289,7 @@ exports[`Canonical Feature Index page SEO Twitter title 1`] = `"کورونا و�
 
 exports[`Canonical Feature Index page Sections should match headline text 1`] = `"اہم خبریں"`;
 
-exports[`Canonical Feature Index page Sections should match headline text 2`] = `"ملٹی میڈیاسب دیکھیں"`;
+exports[`Canonical Feature Index page Sections should match headline text 2`] = `"ملٹی میڈیا سب دیکھیں"`;
 
 exports[`Canonical Feature Index page Sections should match headline text 3`] = `"فیچر اور تجزیے"`;
 

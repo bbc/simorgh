@@ -143,7 +143,7 @@ exports[`AMP Korean Live Radio Page Footer I can see the footer copyright and ex
 
 exports[`AMP Korean Live Radio Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, 코리아",
+  "text": "BBC News , 코리아",
   "url": "/korean",
 }
 `;
@@ -204,7 +204,7 @@ Object {
 }
 `;
 
-exports[`AMP Korean Live Radio Page Header I can see the branding 1`] = `"BBC News, 코리아"`;
+exports[`AMP Korean Live Radio Page Header I can see the branding 1`] = `"BBC News , 코리아"`;
 
 exports[`AMP Korean Live Radio Page Header Navigation link should match text and url 1`] = `
 Object {

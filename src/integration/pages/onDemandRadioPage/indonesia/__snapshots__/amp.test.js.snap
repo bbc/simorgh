@@ -143,7 +143,7 @@ exports[`AMP On Demand Radio Page Footer I can see the footer copyright and exte
 
 exports[`AMP On Demand Radio Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, Indonesia",
+  "text": "BBC News , Indonesia",
   "url": "/indonesia",
 }
 `;
@@ -204,7 +204,7 @@ Object {
 }
 `;
 
-exports[`AMP On Demand Radio Page Header I can see the branding 1`] = `"BBC News, Indonesia"`;
+exports[`AMP On Demand Radio Page Header I can see the branding 1`] = `"BBC News , Indonesia"`;
 
 exports[`AMP On Demand Radio Page Header Navigation link should match text and url 1`] = `
 Object {
@@ -256,7 +256,7 @@ exports[`AMP On Demand Radio Page I can see the episode title 1`] = `"27 April 2
 
 exports[`AMP On Demand Radio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b4828.png"`;
 
-exports[`AMP On Demand Radio Page Main heading should match text 1`] = `"Dunia Pagi Ini, 27 April 2020"`;
+exports[`AMP On Demand Radio Page Main heading should match text 1`] = `"Dunia Pagi Ini , 27 April 2020"`;
 
 exports[`AMP On Demand Radio Page Media Player a11y assistive technology can read the media player title 1`] = `"Pemutar Audio"`;
 
@@ -264,28 +264,28 @@ exports[`AMP On Demand Radio Page Media Player iframe with valid URL should be r
 
 exports[`AMP On Demand Radio Page Recent Episodes List items should match text and url 1`] = `
 Object {
-  "text": "Audio, Dunia Pagi Ini, 14 Desember 2020,  Durasi 15,30  Durasi 15:30",
+  "text": "Audio, Dunia Pagi Ini , 14 Desember 2020 , Durasi 15,30 Durasi 15:30",
   "url": "/indonesia/bbc_indonesian_radio/w172xnm9z732xfp",
 }
 `;
 
 exports[`AMP On Demand Radio Page Recent Episodes List items should match text and url 2`] = `
 Object {
-  "text": "Audio, Dunia Pagi Ini, 14 Desember 2020,  Durasi 15,30  Durasi 15:30",
+  "text": "Audio, Dunia Pagi Ini , 14 Desember 2020 , Durasi 15,30 Durasi 15:30",
   "url": "/indonesia/bbc_indonesian_radio/w172xnm9z732spk",
 }
 `;
 
 exports[`AMP On Demand Radio Page Recent Episodes List items should match text and url 3`] = `
 Object {
-  "text": "Audio, Dunia Pagi Ini, 13 Desember 2020,  Durasi 15,30  Durasi 15:30",
+  "text": "Audio, Dunia Pagi Ini , 13 Desember 2020 , Durasi 15,30 Durasi 15:30",
   "url": "/indonesia/bbc_indonesian_radio/w172xnm9lysw58f",
 }
 `;
 
 exports[`AMP On Demand Radio Page Recent Episodes List items should match text and url 4`] = `
 Object {
-  "text": "Audio, Dunia Pagi Ini, 13 Desember 2020,  Durasi 15,30  Durasi 15:30",
+  "text": "Audio, Dunia Pagi Ini , 13 Desember 2020 , Durasi 15,30 Durasi 15:30",
   "url": "/indonesia/bbc_indonesian_radio/w172xnm9lysw1j9",
 }
 `;
@@ -368,7 +368,7 @@ exports[`AMP On Demand Radio Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP On Demand Radio Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`AMP On Demand Radio Page SEO Heading level 1 1`] = `"Dunia Pagi Ini, 27 April 2020"`;
+exports[`AMP On Demand Radio Page SEO Heading level 1 1`] = `"Dunia Pagi Ini , 27 April 2020"`;
 
 exports[`AMP On Demand Radio Page SEO Lang attribute 1`] = `"id"`;
 
@@ -455,4 +455,4 @@ exports[`AMP On Demand Radio Page SEO Twitter site 1`] = `"@bbcindonesia"`;
 
 exports[`AMP On Demand Radio Page SEO Twitter title 1`] = `"Dunia Pagi Ini - BBC News Indonesia"`;
 
-exports[`AMP On Demand Radio Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Dunia Pagi Ini, 27 April 2020"`;
+exports[`AMP On Demand Radio Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Dunia Pagi Ini , 27 April 2020"`;
