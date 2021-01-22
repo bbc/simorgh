@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import {
   shouldMatchSnapshot,
   isNull,
@@ -87,7 +87,9 @@ describe('Image', () => {
     );
 
     it('should render a lazyload container and not preload the image if the image is after the 3rd block', () => {
-      const { container } = render(<ImageContainer position={[4]} {...data} />);
+      const { container } = render(
+        <ImageContainer position={[4]} {...data} shouldPreload />,
+      );
       const noScriptEl = document.querySelector('noscript');
       const imageEl = document.querySelector('img');
       const linkPreload = document.querySelector('head link');
@@ -97,10 +99,22 @@ describe('Image', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should preload an image if the image is before the 4th block', () => {
-      render(<ImageContainer position={[3]} {...data} />);
-      const linkPreload = document.querySelector('head link');
-      expect(linkPreload).toBeInTheDocument();
+    it('should preload an image if the image is before the 4th block', async () => {
+      render(<ImageContainer position={[3]} {...data} shouldPreload />);
+
+      await waitFor(() => {
+        const linkPreload = document.querySelector('head link');
+        expect(linkPreload).toBeInTheDocument();
+      });
+    });
+
+    it('should not preload an image if the image is before the 4th block but shouldPreload is false', async () => {
+      render(<ImageContainer position={[3]} {...data} shouldPreload={false} />);
+
+      await waitFor(() => {
+        const linkPreload = document.querySelector('head link');
+        expect(linkPreload).not.toBeInTheDocument();
+      });
     });
 
     const dataWithNonBbcCopyright = blockArrayModel([
