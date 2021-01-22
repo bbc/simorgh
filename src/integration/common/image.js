@@ -1,3 +1,5 @@
+import getTextContent from '../utils/getTextContent';
+
 export default () => {
   describe('Image', () => {
     // This selects either a img tag or a noscript tag in the case of a
@@ -23,11 +25,11 @@ export default () => {
     });
 
     it('should contain text', () => {
-      expect(imageCaptionEl.textContent).toBeTruthy();
+      expect(getTextContent(imageCaptionEl)).toBeTruthy();
     });
 
     it('should match text', () => {
-      expect(imageCaptionEl.textContent).toMatchSnapshot();
+      expect(getTextContent(imageCaptionEl)).toMatchSnapshot();
     });
   });
 };

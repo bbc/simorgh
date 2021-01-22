@@ -1,3 +1,4 @@
+import getTextContent from '../../utils/getTextContent';
 import {
   runCoreCanonicalTests,
   runCanonicalAnalyticsTests,
@@ -20,8 +21,8 @@ export default service => {
 
       const imageCaptionEl = document.querySelector('main figure figcaption');
       expect(imageCaptionEl).toBeInTheDocument();
-      expect(imageCaptionEl.textContent).toBeTruthy();
-      expect(imageCaptionEl.textContent).toMatchSnapshot();
+      expect(getTextContent(imageCaptionEl)).toBeTruthy();
+      expect(getTextContent(imageCaptionEl)).toMatchSnapshot();
     });
   });
 };

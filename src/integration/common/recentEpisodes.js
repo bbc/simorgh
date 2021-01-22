@@ -1,3 +1,5 @@
+import getTextContent from '../utils/getTextContent';
+
 export default () => {
   describe('Recent Episodes', () => {
     const recentEpisodesList = document.querySelector(
@@ -14,7 +16,7 @@ export default () => {
 
     describe('List items', () => {
       recentEpisodesListItems.forEach(listItemEl => {
-        const text = listItemEl.textContent.trim();
+        const text = getTextContent(listItemEl).trim();
         const url = listItemEl.querySelector('a').getAttribute('href');
 
         it('should match text and url', () => {

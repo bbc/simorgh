@@ -1,3 +1,4 @@
+import getTextContent from '../../utils/getTextContent';
 import { runCommonCrossPlatformTests } from '../../common';
 
 export default service => {
@@ -7,8 +8,8 @@ export default service => {
     const h1El = document.querySelector('h1');
 
     expect(h1El).toBeInTheDocument();
-    expect(h1El.textContent).toBeTruthy();
-    expect(h1El.textContent).toMatchSnapshot();
+    expect(getTextContent(h1El)).toBeTruthy();
+    expect(getTextContent(h1El)).toMatchSnapshot();
   });
 
   it('I can see the list items', () => {
@@ -16,8 +17,8 @@ export default service => {
 
     listItemElements.forEach(itemEl => {
       expect(itemEl).toBeInTheDocument();
-      expect(itemEl.textContent).toBeTruthy();
-      expect(itemEl.textContent).toMatchSnapshot();
+      expect(getTextContent(itemEl)).toBeTruthy();
+      expect(getTextContent(itemEl)).toMatchSnapshot();
     });
   });
 };

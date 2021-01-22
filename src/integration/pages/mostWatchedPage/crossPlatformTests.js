@@ -1,3 +1,4 @@
+import getTextContent from '../../utils/getTextContent';
 import { runCommonCrossPlatformTests, runMainHeadingTests } from '../../common';
 
 export default service => {
@@ -9,8 +10,8 @@ export default service => {
 
     listItemElements.forEach(itemEl => {
       expect(itemEl).toBeInTheDocument();
-      expect(itemEl.textContent).toBeTruthy();
-      expect(itemEl.textContent).toMatchSnapshot();
+      expect(getTextContent(itemEl)).toBeTruthy();
+      expect(getTextContent(itemEl)).toMatchSnapshot();
     });
   });
 };

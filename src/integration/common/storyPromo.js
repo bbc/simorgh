@@ -1,3 +1,5 @@
+import getTextContent from '../utils/getTextContent';
+
 export default () => {
   describe('Story Promo', () => {
     const storyPromo = document.querySelector('[data-e2e="story-promo"]');
@@ -23,17 +25,17 @@ export default () => {
       });
 
       it('should have text', () => {
-        expect(h3El.textContent).toBeTruthy();
+        expect(getTextContent(h3El)).toBeTruthy();
       });
 
       it('should match text', () => {
-        expect(h3El.textContent).toMatchSnapshot();
+        expect(getTextContent(h3El)).toMatchSnapshot();
       });
     });
 
     describe('Link', () => {
       const linkEl = storyPromo.querySelector('a');
-      const text = linkEl.textContent;
+      const text = getTextContent(linkEl);
       const url = linkEl.getAttribute('href');
 
       it('should be in the promo', () => {
@@ -51,7 +53,7 @@ export default () => {
 
     describe('Timestamp', () => {
       const timestampEl = storyPromo.querySelector('time');
-      const text = timestampEl.textContent;
+      const text = getTextContent(timestampEl);
       const date = timestampEl.getAttribute('datetime');
 
       it('should be in the promo', () => {

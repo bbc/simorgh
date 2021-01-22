@@ -1,3 +1,5 @@
+import getTextContent from '../utils/getTextContent';
+
 const getMetaTagContent = selector =>
   document.querySelector(selector).getAttribute('content');
 
@@ -7,16 +9,16 @@ export default () => {
       const pageTitleEl = document.querySelector('title');
 
       expect(pageTitleEl).toBeInTheDocument();
-      expect(pageTitleEl.textContent).toBeTruthy();
-      expect(pageTitleEl.textContent).toMatchSnapshot();
+      expect(getTextContent(pageTitleEl)).toBeTruthy();
+      expect(getTextContent(pageTitleEl)).toMatchSnapshot();
     });
 
     it('Heading level 1', () => {
       const headingEl = document.querySelector('h1');
 
       expect(headingEl).toBeInTheDocument();
-      expect(headingEl.textContent).toBeTruthy();
-      expect(headingEl.textContent).toMatchSnapshot();
+      expect(getTextContent(headingEl)).toBeTruthy();
+      expect(getTextContent(headingEl)).toMatchSnapshot();
     });
 
     it('Canonical link', () => {
