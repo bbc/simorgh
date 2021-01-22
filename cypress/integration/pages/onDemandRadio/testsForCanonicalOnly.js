@@ -48,7 +48,7 @@ export default ({ service, pageType, variant }) => {
             cy.request(schedulePath).then(({ body: scheduleJson }) => {
               const { schedules } = scheduleJson;
               const isProgramValid = getIsProgramValid(() => {});
-              const validSchedules = schedules.map(isProgramValid);
+              const validSchedules = schedules.filter(isProgramValid);
 
               const isRadioScheduleDataComplete = isScheduleDataComplete({
                 schedules: validSchedules,
