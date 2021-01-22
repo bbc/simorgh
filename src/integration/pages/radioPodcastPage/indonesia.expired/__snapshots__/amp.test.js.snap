@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AMP On Demand Radio Page AMP Consent config 1`] = `
+exports[`AMP Radio Podcast Page AMP Consent config 1`] = `
 Object {
   "consents": Object {
     "user-consent": Object {
@@ -22,7 +22,7 @@ Object {
 }
 `;
 
-exports[`AMP On Demand Radio Page AMP Geo config 1`] = `
+exports[`AMP Radio Podcast Page AMP Geo config 1`] = `
 Object {
   "ISOCountryGroups": Object {
     "eea": Array [
@@ -91,11 +91,11 @@ Object {
 }
 `;
 
-exports[`AMP On Demand Radio Page Analytics ATI 1`] = `
+exports[`AMP Radio Podcast Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=40&p=gahuza.bbc_gahuza_radio.w172x7rkcj6v0vz.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Apips%3Aw172x7rkcj6v0vz]&x2=[amp]&x3=[news-gahuza]&x4=[rw]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[Amakuru%2Bya%2BGahuzamiryango%2B-%2BBBC%2BNews%2BGahuza]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=54&p=indonesian.bbc_indonesian_radio.w172x6r5000f38s.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Apips%3Aw172x6r5000f38s]&x2=[amp]&x3=[news-indonesia]&x4=[id]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[Dunia%2BPagi%2BIni%2B-%2BBBC%2BNews%2BIndonesia]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -111,20 +111,20 @@ Object {
 }
 `;
 
-exports[`AMP On Demand Radio Page Analytics chartbeat 1`] = `
+exports[`AMP Radio Podcast Page Analytics chartbeat 1`] = `
 Object {
   "vars": Object {
     "contentType": "player-episode",
     "domain": "test.bbc.co.uk",
-    "sections": "Gahuza, Gahuza - Radio",
-    "title": "Amakuru ya Gahuzamiryango - BBC News Gahuza",
+    "sections": "Indonesia, Indonesia - Radio",
+    "title": "Dunia Pagi Ini - BBC News Indonesia",
     "uid": 50924,
     "virtualReferrer": "\${documentReferrer}",
   },
 }
 `;
 
-exports[`AMP On Demand Radio Page Analytics comscore 1`] = `
+exports[`AMP Radio Podcast Page Analytics comscore 1`] = `
 Object {
   "extraUrlParams": Object {
     "comscorekw": "amp",
@@ -135,14 +135,14 @@ Object {
 }
 `;
 
-exports[`AMP On Demand Radio Page Expired Episode I can see the 'Content is not available' placeholder 1`] = `"Ibi ntibikiboneka."`;
+exports[`AMP Radio Podcast Page Expired Episode I can see the 'Content is not available' placeholder 1`] = `"Konten ini sudah tidak tersedia lagi."`;
 
-exports[`AMP On Demand Radio Page Expired Episode I can see the brand title 1`] = `"Amakuru ya Gahuzamiryango"`;
+exports[`AMP Radio Podcast Page Expired Episode I can see the brand title 1`] = `"Dunia Pagi Ini"`;
 
-exports[`AMP On Demand Radio Page Expired Episode I can see the episode summary 1`] = `"Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."`;
+exports[`AMP Radio Podcast Page Expired Episode I can see the episode summary 1`] = `"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."`;
 
-exports[`AMP On Demand Radio Page Expired Episode I can see the episode title 1`] = `"6 Ukwa gatatu 2020"`;
+exports[`AMP Radio Podcast Page Expired Episode I can see the episode title 1`] = `"5 Maret 2020"`;
 
-exports[`AMP On Demand Radio Page Expired Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b8lg4.png"`;
+exports[`AMP Radio Podcast Page Expired Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b4828.png"`;
 
-exports[`AMP On Demand Radio Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Amakuru ya Gahuzamiryango, 6 Ukwa gatatu 2020"`;
+exports[`AMP Radio Podcast Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Dunia Pagi Ini, 5 Maret 2020"`;

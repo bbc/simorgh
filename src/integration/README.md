@@ -156,14 +156,18 @@ Tests for pages are located in the `src/app/integration/pages` directory within 
 
 ```
 ├── pages
-|  ├── articlePage
-|  ├── errorPage
+|  ├── articles
+|  ├── featureIdxPage
 |  ├── frontPage
+|  ├── idxPage
+|  ├── liveRadio
 |  ├── mediaAssetPage
-|  ├── onDemandRadioPage
+|  ├── mostReadPage
+|  ├── mostWatchedPage
+|  ├── onDemandTVPage
 |  ├── photoGalleryPage
-|  ├── liveRadioPage
-|  ├── onDemandRadioPage
+|  ├── radioPodcastPage
+|  ├── storyPage
 ```
 
 within a page type directory we tell Jest where our test suites are by using the `.test.js` file extension, for example, `amp.test.js`, `canonical.test.js`. To test the `amharic` service we have created a directory specifically for this and located the AMP and canonical test files within.
