@@ -1,3 +1,4 @@
+import getTextContent from '../../utils/getTextContent';
 import {
   runCommonCrossPlatformTests,
   runMediaPlayerEmbedTests,
@@ -9,7 +10,7 @@ export default service => {
 
   describe('Summary', () => {
     const summaryEl = document.querySelector('main p');
-    const summaryText = summaryEl.textContent;
+    const summaryText = getTextContent(summaryEl);
 
     it('should be in the document', () => {
       expect(summaryEl).toBeInTheDocument();

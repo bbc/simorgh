@@ -1,10 +1,12 @@
+import getTextContent from '../utils/getTextContent';
+
 export default () => {
   describe('Footer', () => {
     it('I can see the footer copyright and external linking text', () => {
       const footerCopyrightEl = document.querySelector('footer div p');
       expect(footerCopyrightEl).toBeInTheDocument();
-      expect(footerCopyrightEl.textContent).toBeTruthy();
-      expect(footerCopyrightEl.textContent).toMatchSnapshot();
+      expect(getTextContent(footerCopyrightEl)).toBeTruthy();
+      expect(getTextContent(footerCopyrightEl)).toMatchSnapshot();
     });
 
     it('I can see the BBC branding', () => {
@@ -27,7 +29,7 @@ export default () => {
       const footerLinks = document.querySelectorAll('footer a');
 
       footerLinks.forEach(footerLink => {
-        const linkText = footerLink.textContent;
+        const linkText = getTextContent(footerLink);
         const linkUrl = footerLink.getAttribute('href');
 
         it('should be in the document', () => {

@@ -1,11 +1,13 @@
+import getTextContent from '../utils/getTextContent';
+
 export default service => {
   describe('Header', () => {
     it('I can see the branding', () => {
       const logo = document.querySelector('header svg');
 
       expect(logo).toBeInTheDocument();
-      expect(logo.parentNode.textContent).toBeTruthy();
-      expect(logo.parentNode.textContent).toMatchSnapshot();
+      expect(getTextContent(logo.parentNode)).toBeTruthy();
+      expect(getTextContent(logo.parentNode)).toMatchSnapshot();
     });
 
     if (service !== 'news' && service !== 'scotland') {
@@ -24,7 +26,7 @@ export default service => {
           .querySelectorAll('a');
 
         navigationLinks.forEach(navigationLink => {
-          const linkText = navigationLink.textContent;
+          const linkText = getTextContent(navigationLink);
           const linkUrl = navigationLink.getAttribute('href');
 
           it('should be in the document', () => {

@@ -1,8 +1,10 @@
+import getTextContent from '../utils/getTextContent';
+
 export default () => {
   describe('Timestamp', () => {
     const timestampEl = document.querySelector('time');
     const date = timestampEl.getAttribute('datetime');
-    const text = timestampEl.textContent;
+    const text = getTextContent(timestampEl);
 
     it('should be in the document', () => {
       expect(timestampEl).toBeInTheDocument();

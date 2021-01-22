@@ -1,3 +1,4 @@
+import getTextContent from '../../utils/getTextContent';
 import {
   runCommonCrossPlatformTests,
   runMediaPlayerEmbedTests,
@@ -14,8 +15,8 @@ export default service => {
   if (bulletedListItem) {
     it('I can see a bulleted list item', () => {
       expect(bulletedListItem).toBeInTheDocument();
-      expect(bulletedListItem.textContent).toBeTruthy();
-      expect(bulletedListItem.textContent).toMatchSnapshot();
+      expect(getTextContent(bulletedListItem)).toBeTruthy();
+      expect(getTextContent(bulletedListItem)).toMatchSnapshot();
     });
   }
 
@@ -26,7 +27,7 @@ export default service => {
   if (bulletedListItemWithLink) {
     it('I can see a bulleted list item with link', () => {
       expect(bulletedListItemWithLink.getAttribute('href')).toMatchSnapshot(
-        bulletedListItemWithLink.textContent,
+        getTextContent(bulletedListItemWithLink),
       );
     });
   }
@@ -38,7 +39,7 @@ export default service => {
 
     if (relatedContentLinks) {
       relatedContentLinks.forEach(relatedContentLink => {
-        const relatedContentText = relatedContentLink.textContent;
+        const relatedContentText = getTextContent(relatedContentLink);
         const relatedContentUrl = relatedContentLink.getAttribute('href');
 
         it('should be in the document', () => {

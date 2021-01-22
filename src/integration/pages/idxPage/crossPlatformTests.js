@@ -1,3 +1,4 @@
+import getTextContent from '../../utils/getTextContent';
 import { runCommonCrossPlatformTests, runSectionTests } from '../../common';
 
 export default service => {
@@ -10,7 +11,7 @@ export default service => {
     if (indexAlsos) {
       const h4El = indexAlsos.querySelector('h4');
       it('should match visually hidden text', () => {
-        expect(h4El.textContent).toMatchSnapshot();
+        expect(getTextContent(h4El)).toMatchSnapshot();
       });
 
       if (window.SIMORGH_DATA) {
@@ -46,7 +47,7 @@ export default service => {
       const links = usefulLinks.querySelectorAll('a');
 
       links.forEach(linkEl => {
-        const linkText = linkEl.textContent;
+        const linkText = getTextContent(linkEl);
         const linkUrl = linkEl.getAttribute('href');
         it('should be in the document', () => {
           expect(linkEl).toBeInTheDocument();
@@ -91,11 +92,11 @@ export default service => {
         });
 
         it('should have text', () => {
-          expect(h3El.textContent).toBeTruthy();
+          expect(getTextContent(h3El)).toBeTruthy();
         });
 
         it('should match text', () => {
-          expect(h3El.textContent).toMatchSnapshot();
+          expect(getTextContent(h3El)).toMatchSnapshot();
         });
       });
     }

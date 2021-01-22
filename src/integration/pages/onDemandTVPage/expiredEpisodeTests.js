@@ -1,3 +1,4 @@
+import getTextContent from '../../utils/getTextContent';
 import runCommonEpisodeTests from './commonEpisodeTests';
 
 export default () => {
@@ -8,8 +9,8 @@ export default () => {
       const contentNotAvailableEl = document.querySelector('main div strong');
 
       expect(contentNotAvailableEl).toBeInTheDocument();
-      expect(contentNotAvailableEl.textContent).toBeTruthy();
-      expect(contentNotAvailableEl.textContent).toMatchSnapshot();
+      expect(getTextContent(contentNotAvailableEl)).toBeTruthy();
+      expect(getTextContent(contentNotAvailableEl)).toMatchSnapshot();
     });
   });
 };

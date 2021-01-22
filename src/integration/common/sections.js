@@ -1,3 +1,5 @@
+import getTextContent from '../utils/getTextContent';
+
 export default () => {
   describe('Sections', () => {
     const sections = document.querySelectorAll(
@@ -17,7 +19,7 @@ export default () => {
         });
 
         it('should match headline text', () => {
-          expect(headlineEl.textContent).toMatchSnapshot();
+          expect(getTextContent(headlineEl)).toMatchSnapshot();
         });
       });
     }
