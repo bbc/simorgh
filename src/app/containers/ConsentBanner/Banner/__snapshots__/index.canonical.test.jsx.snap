@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Canonical Consent Banner Container should correctly render cookie banner - LTR layout 1`] = `
+.emotion-14 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2147483647;
+}
+
 .emotion-12 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -178,64 +186,76 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 
 <div>
   <div
-    class="emotion-12 emotion-13"
-    dir="ltr"
+    class="emotion-14 emotion-15"
   >
     <div
-      class="emotion-10 emotion-11"
+      class="emotion-12 emotion-13"
       dir="ltr"
     >
-      <h2
-        class="emotion-0 emotion-1"
+      <div
+        class="emotion-10 emotion-11"
         dir="ltr"
       >
-        Let us know you agree to cookies
-      </h2>
-      <p
-        class="emotion-2 emotion-3"
-        dir="ltr"
-      >
-        We and our partners use technologies, such as 
-        <a
-          href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
-        >
-          cookies
-        </a>
-        , and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.
-      </p>
-      <ul
-        class="emotion-8 emotion-9"
-        dir="ltr"
-      >
-        <li
-          class="emotion-4 emotion-5"
+        <h2
+          class="emotion-0 emotion-1"
           dir="ltr"
         >
-          <button
-            data-cookie-banner="accept"
-            type="button"
-          >
-            Yes, I agree
-          </button>
-        </li>
-        <li
-          class="emotion-4 emotion-5"
+          Let us know you agree to cookies
+        </h2>
+        <p
+          class="emotion-2 emotion-3"
           dir="ltr"
         >
+          We and our partners use technologies, such as 
           <a
-            data-cookie-banner="reject"
-            href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+            href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
           >
-            No, take me to settings
+            cookies
           </a>
-        </li>
-      </ul>
+          , and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.
+        </p>
+        <ul
+          class="emotion-8 emotion-9"
+          dir="ltr"
+        >
+          <li
+            class="emotion-4 emotion-5"
+            dir="ltr"
+          >
+            <button
+              data-cookie-banner="accept"
+              type="button"
+            >
+              Yes, I agree
+            </button>
+          </li>
+          <li
+            class="emotion-4 emotion-5"
+            dir="ltr"
+          >
+            <a
+              data-cookie-banner="reject"
+              href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+            >
+              No, take me to settings
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`Canonical Consent Banner Container should correctly render cookie banner - RTL layout 1`] = `
+.emotion-14 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2147483647;
+}
+
 .emotion-10 {
   max-width: 80rem;
   margin: 0 auto;
@@ -413,64 +433,76 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 
 <div>
   <div
-    class="emotion-12 emotion-13"
-    dir="rtl"
+    class="emotion-14 emotion-15"
   >
     <div
-      class="emotion-10 emotion-11"
+      class="emotion-12 emotion-13"
       dir="rtl"
     >
-      <h2
-        class="emotion-0 emotion-1"
+      <div
+        class="emotion-10 emotion-11"
         dir="rtl"
       >
-        أخبرنا عما إذا كنت توافق على تحميل الكوكيز
-      </h2>
-      <p
-        class="emotion-2 emotion-3"
-        dir="rtl"
-      >
-        نستخدم نحن وشركاؤنا تقنيات مثل 
-        <a
-          href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
-        >
-          ملفات الارتباط
-        </a>
-        ، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولجعل المحتوى والاعلانات، الموجهة إليك، شخصية. الرجاء إعلامنا إذا كنت موافقا على ذلك.
-      </p>
-      <ul
-        class="emotion-8 emotion-9"
-        dir="rtl"
-      >
-        <li
-          class="emotion-4 emotion-5"
+        <h2
+          class="emotion-0 emotion-1"
           dir="rtl"
         >
-          <button
-            data-cookie-banner="accept"
-            type="button"
-          >
-            نعم، موافق
-          </button>
-        </li>
-        <li
-          class="emotion-4 emotion-5"
+          أخبرنا عما إذا كنت توافق على تحميل الكوكيز
+        </h2>
+        <p
+          class="emotion-2 emotion-3"
           dir="rtl"
         >
+          نستخدم نحن وشركاؤنا تقنيات مثل 
           <a
-            data-cookie-banner="reject"
-            href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+            href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
           >
-            كلا، أعدني إلى الإعدادات
+            ملفات الارتباط
           </a>
-        </li>
-      </ul>
+          ، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولجعل المحتوى والاعلانات، الموجهة إليك، شخصية. الرجاء إعلامنا إذا كنت موافقا على ذلك.
+        </p>
+        <ul
+          class="emotion-8 emotion-9"
+          dir="rtl"
+        >
+          <li
+            class="emotion-4 emotion-5"
+            dir="rtl"
+          >
+            <button
+              data-cookie-banner="accept"
+              type="button"
+            >
+              نعم، موافق
+            </button>
+          </li>
+          <li
+            class="emotion-4 emotion-5"
+            dir="rtl"
+          >
+            <a
+              data-cookie-banner="reject"
+              href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+            >
+              كلا، أعدني إلى الإعدادات
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`Canonical Consent Banner Container should correctly render privacy banner - LTR layout 1`] = `
+.emotion-14 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2147483647;
+}
+
 .emotion-12 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -648,56 +680,68 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 
 <div>
   <div
-    class="emotion-12 emotion-13"
-    dir="ltr"
+    class="emotion-14 emotion-15"
   >
     <div
-      class="emotion-10 emotion-11"
+      class="emotion-12 emotion-13"
       dir="ltr"
     >
-      <h2
-        class="emotion-0 emotion-1"
+      <div
+        class="emotion-10 emotion-11"
         dir="ltr"
       >
-        We've updated our Privacy and Cookies Policy
-      </h2>
-      <p
-        class="emotion-2 emotion-3"
-        dir="ltr"
-      >
-        We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
-      </p>
-      <ul
-        class="emotion-8 emotion-9"
-        dir="ltr"
-      >
-        <li
-          class="emotion-4 emotion-5"
+        <h2
+          class="emotion-0 emotion-1"
           dir="ltr"
         >
-          <button
-            type="button"
-          >
-            OK
-          </button>
-        </li>
-        <li
-          class="emotion-4 emotion-5"
+          We've updated our Privacy and Cookies Policy
+        </h2>
+        <p
+          class="emotion-2 emotion-3"
           dir="ltr"
         >
-          <a
-            href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+          We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
+        </p>
+        <ul
+          class="emotion-8 emotion-9"
+          dir="ltr"
+        >
+          <li
+            class="emotion-4 emotion-5"
+            dir="ltr"
           >
-            Find out what's changed
-          </a>
-        </li>
-      </ul>
+            <button
+              type="button"
+            >
+              OK
+            </button>
+          </li>
+          <li
+            class="emotion-4 emotion-5"
+            dir="ltr"
+          >
+            <a
+              href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            >
+              Find out what's changed
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`Canonical Consent Banner Container should correctly render privacy banner - RTL layout 1`] = `
+.emotion-14 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2147483647;
+}
+
 .emotion-10 {
   max-width: 80rem;
   margin: 0 auto;
@@ -875,50 +919,54 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 
 <div>
   <div
-    class="emotion-12 emotion-13"
-    dir="rtl"
+    class="emotion-14 emotion-15"
   >
     <div
-      class="emotion-10 emotion-11"
+      class="emotion-12 emotion-13"
       dir="rtl"
     >
-      <h2
-        class="emotion-0 emotion-1"
+      <div
+        class="emotion-10 emotion-11"
         dir="rtl"
       >
-        لقد حدّثنا سياستنا المتعلقة بالخصوصية وبالشروط الخاصة بملفات الارتباط Cookies
-      </h2>
-      <p
-        class="emotion-2 emotion-3"
-        dir="rtl"
-      >
-        لقد أدخلنا تغييرات مهمة على سياستنا المتعلقة بالخصوصية وعلى الشروط الخاصة بملفات الارتباط Cookies، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم
-      </p>
-      <ul
-        class="emotion-8 emotion-9"
-        dir="rtl"
-      >
-        <li
-          class="emotion-4 emotion-5"
+        <h2
+          class="emotion-0 emotion-1"
           dir="rtl"
         >
-          <button
-            type="button"
-          >
-            موافق
-          </button>
-        </li>
-        <li
-          class="emotion-4 emotion-5"
+          لقد حدّثنا سياستنا المتعلقة بالخصوصية وبالشروط الخاصة بملفات الارتباط Cookies
+        </h2>
+        <p
+          class="emotion-2 emotion-3"
           dir="rtl"
         >
-          <a
-            href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+          لقد أدخلنا تغييرات مهمة على سياستنا المتعلقة بالخصوصية وعلى الشروط الخاصة بملفات الارتباط Cookies، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم
+        </p>
+        <ul
+          class="emotion-8 emotion-9"
+          dir="rtl"
+        >
+          <li
+            class="emotion-4 emotion-5"
+            dir="rtl"
           >
-            إطلع على التغييرات
-          </a>
-        </li>
-      </ul>
+            <button
+              type="button"
+            >
+              موافق
+            </button>
+          </li>
+          <li
+            class="emotion-4 emotion-5"
+            dir="rtl"
+          >
+            <a
+              href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            >
+              إطلع على التغييرات
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

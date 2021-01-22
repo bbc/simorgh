@@ -1,0 +1,261 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "Covid: Galw am flaenoriaethu brechu athrawon"
+        },
+        "locators": {
+          "assetUri": "/newyddion/55534483",
+          "cpsUrn": "urn:bbc:content:assetUri:newyddion/55534483",
+          "curie": "http://www.bbc.co.uk/asset/aad84f8c-845f-4320-a94f-2ab90ed76ed2",
+          "assetId": "55534483"
+        },
+        "summary": "Gwrthbleidiau yn y Senedd yn galw ar Lywodraeth Cymru i frechu athrawon er mwyn ailagor ysgolion.",
+        "timestamp": 1609827542000,
+        "language": "cy",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "114186874",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/BAFC/production/_114186874_1.png",
+          "path": "/cpsprodpb/BAFC/production/_114186874_1.png",
+          "height": 549,
+          "width": 976,
+          "altText": "Disgyblion",
+          "caption": "Fe wnaeth ysgolion uwchradd a cholegau gau eu drysau wythnos yn gynnar cyn y Nadolig",
+          "copyrightHolder": "PA Media",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "Gwleidyddiaeth",
+          "uri": "/newyddion/gwleidyddiaeth",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:newyddion/55534483",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Beth ydy rheolau'r cyfnod clo yng Nghymru?"
+        },
+        "locators": {
+          "assetUri": "/newyddion/55544978",
+          "cpsUrn": "urn:bbc:content:assetUri:newyddion/55544978",
+          "curie": "http://www.bbc.co.uk/asset/329234ba-651d-4663-9266-95e3645d819f",
+          "assetId": "55544978"
+        },
+        "summary": "Aeth Cymru i gyfnod clo cenedlaethol ychydig ddyddiau cyn y Nadolig, ond beth ydy'r rheolau bellach?",
+        "timestamp": 1609847857000,
+        "language": "cy",
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "116351988",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/15B53/production/_116351988_waleshut_get.jpg",
+          "path": "/cpsprodpb/15B53/production/_116351988_waleshut_get.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Arwydd",
+          "caption": "Mae Cymru wedi bod mewn cyfnod clo lefel 4 ers cyn y Nadolig",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "Newyddion a mwy",
+          "uri": "/newyddion/hafan",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:newyddion/55544978",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Covid-19: Cofnodi 17 marwolaeth yn rhagor"
+        },
+        "locators": {
+          "assetUri": "/newyddion/55544530",
+          "cpsUrn": "urn:bbc:content:assetUri:newyddion/55544530",
+          "curie": "http://www.bbc.co.uk/asset/c59ef0e8-daa8-4718-aab8-e88112d99978",
+          "assetId": "55544530"
+        },
+        "summary": "Roedd dros 2,000 o achosion positif newydd hefyd, sy'n gynnydd ers dydd Llun.",
+        "timestamp": 1609850141000,
+        "language": "cy",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "116350649",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1718D/production/_116350649_gettyimages-1215439595.jpg",
+          "path": "/cpsprodpb/1718D/production/_116350649_gettyimages-1215439595.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Meddyg mewn ysbyty",
+          "copyrightHolder": "Pool",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "Newyddion a mwy",
+          "uri": "/newyddion/hafan",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:newyddion/55544530",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "name": "Ateb y Galw: Y canwr Myrddin Owen",
+        "indexImage": {
+          "id": "116133259",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/17401/production/_116133259_arwel_jones.jpg",
+          "path": "/cpsprodpb/17401/production/_116133259_arwel_jones.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Myrddin Owen",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "uri": "https://www.bbc.co.uk/cymrufyw/55347691",
+        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/55347691",
+        "contentType": "Feature",
+        "assetTypeCode": "PRO",
+        "timestamp": 1608205439000,
+        "type": "link"
+      },
+      {
+        "name": "Oriel fy milltir sgwar: Treharris, Methyr Tudful",
+        "indexImage": {
+          "id": "116210494",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/C0F9/production/_116210494_forestabovetreharris.jpg",
+          "path": "/cpsprodpb/C0F9/production/_116210494_forestabovetreharris.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Treharris",
+          "caption": "Coedwig uwchben Treharris",
+          "copyrightHolder": "LeeDare",
+          "type": "image"
+        },
+        "indexThumbnail": {
+          "id": "116216139",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/16BE9/production/_116216139_forestabovetreharris.jpg",
+          "path": "/cpsprodpb/16BE9/production/_116216139_forestabovetreharris.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Treharris",
+          "caption": "Coedwig uwchben Treharris",
+          "copyrightHolder": "LeeDare",
+          "type": "image"
+        },
+        "uri": "https://www.bbc.co.uk/cymrufyw/55411413",
+        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/55411413",
+        "contentType": "Feature",
+        "assetTypeCode": "PRO",
+        "timestamp": 1608645458000,
+        "type": "link"
+      },
+      {
+        "name": "Ysbrydoliaeth ar gyfer meddwl iach yn 2021",
+        "indexImage": {
+          "id": "116273828",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/14395/production/_116273828_alysonjenkins.jpg",
+          "path": "/cpsprodpb/14395/production/_116273828_alysonjenkins.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Alyson Jenkins",
+          "caption": "Mae Alyson Jenkins yn helpu pobl i ffynnu yn eu bywydau personol a phroffesiynol ac yn arbenigo mewn hyfforddiant rhaglennu newroieithyddol",
+          "copyrightHolder": "Alyson Jenkins",
+          "type": "image"
+        },
+        "uri": "http://www.bbc.co.uk/cymrufyw/55461911",
+        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/55461911",
+        "contentType": "Feature",
+        "assetTypeCode": "PRO",
+        "timestamp": 1609089470000,
+        "type": "link"
+      },
+      {
+        "name": "5 o eiriau'r flwyddyn newydd",
+        "indexImage": {
+          "id": "116209688",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/15A72/production/_116209688_gettyimages-1195253750.jpg",
+          "path": "/cpsprodpb/15A72/production/_116209688_gettyimages-1195253750.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Nos Calan",
+          "copyrightHolder": "shironosov",
+          "type": "image"
+        },
+        "uri": "https://www.bbc.co.uk/cymrufyw/55400976",
+        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/55400976",
+        "contentType": "Feature",
+        "assetTypeCode": "PRO",
+        "timestamp": 1608634962000,
+        "type": "link"
+      },
+      {
+        "name": "2021... Blwyddyn well i chwaraeon?",
+        "indexImage": {
+          "id": "116200615",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/C990/production/_116200615_lowriroberts1.jpg",
+          "path": "/cpsprodpb/C990/production/_116200615_lowriroberts1.jpg",
+          "height": 1152,
+          "width": 2048,
+          "altText": "lowri",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "indexThumbnail": {
+          "id": "116200617",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/117B0/production/_116200617_lowriroberts1.jpg",
+          "path": "/cpsprodpb/117B0/production/_116200617_lowriroberts1.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "lowri",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "uri": "https://www.bbc.co.uk/cymrufyw/55369329",
+        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/55369329",
+        "contentType": "Feature",
+        "assetTypeCode": "PRO",
+        "timestamp": 1608563559000,
+        "type": "link"
+      }
+    ]
+  }

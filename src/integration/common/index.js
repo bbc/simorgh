@@ -6,9 +6,11 @@ import runCoreCanonicalTests from './core.canonical';
 import runFooterTests from './footer';
 import runHeaderTests from './header';
 import runMainHeadingTests from './mainHeading';
+import runMediaPlaceholderTests from './mediaPlaceholder';
 import runMediaPlayerEmbedTests from './mediaPlayerEmbed';
 import runPerformanceTests from './performance';
 import runRadioScheduleTests from './radioSchedule';
+import runRecentEpisodesTests from './recentEpisodes';
 import runCrossPlatformSEOTests from './SEO';
 import runSeoAmpTests from './SEO.amp';
 import runTimestampTests from './timestamp';
@@ -36,9 +38,11 @@ export {
   runFooterTests,
   runHeaderTests,
   runMainHeadingTests,
+  runMediaPlaceholderTests,
   runMediaPlayerEmbedTests,
   runPerformanceTests,
   runRadioScheduleTests,
+  runRecentEpisodesTests,
   runCrossPlatformSEOTests,
   runSeoAmpTests,
   runTimestampTests,

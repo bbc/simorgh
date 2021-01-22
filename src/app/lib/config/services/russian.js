@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import {
   F_REITH_SANS_BOLD,
@@ -78,7 +83,7 @@ export const mainTranslations = {
   },
   seeAll: 'Посмотреть все',
   skipLinkText: 'Перейти к содержанию',
-  relatedContent: 'Новости по теме',
+  relatedContent: 'Читайте также',
   mediaAssetPage: {
     mediaPlayer: 'Медиа плеер',
     audioPlayer: 'Аудио плеер',
@@ -141,6 +146,7 @@ export const mainTranslations = {
     nextRadioShow: 'Следующая передача',
     duration: 'Продолжительность',
     recentEpisodes: 'Прошлые передачи',
+    episodes: 'передачи',
   },
   socialEmbed: {
     caption: {
@@ -212,6 +218,9 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
     brandSVG,
     mostRead: {
@@ -224,6 +233,20 @@ export const service = {
       header: 'Самое популярное видео',
       numberOfItems: 10,
       hasMostWatched: true,
+    },
+    podcastPromo: {
+      title: 'Подкаст',
+      brandTitle: 'Что это было?',
+      brandDescription:
+        'Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше. Никаких ненужных подробностей и передергиваний - только факты и взвешенная аналитика.',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/512x512/p0776f5z.jpg',
+        alt: 'Что это было?',
+      },
+      linkLabel: {
+        text: 'эпизоды',
+        href: 'https://www.bbc.com/russian/media-47937790',
+      },
     },
     radioSchedule: {
       hasRadioSchedule: false,

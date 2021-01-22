@@ -12,13 +12,17 @@ export default () => {
       expect(recentEpisodesList).toBeInTheDocument();
     });
 
-    it('should contain the list items', () => {
-      recentEpisodesListItems.forEach(itemEl => {
-        expect(itemEl).toBeInTheDocument();
-        expect(itemEl.textContent.trim()).toMatchSnapshot();
-        expect(
-          itemEl.querySelector('a').getAttribute('href'),
-        ).toMatchSnapshot();
+    describe('List items', () => {
+      recentEpisodesListItems.forEach(listItemEl => {
+        const text = listItemEl.textContent.trim();
+        const url = listItemEl.querySelector('a').getAttribute('href');
+
+        it('should match text and url', () => {
+          expect({
+            text,
+            url,
+          }).toMatchSnapshot();
+        });
       });
     });
   });
