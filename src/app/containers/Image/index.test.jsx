@@ -86,9 +86,9 @@ describe('Image', () => {
       <ImageContainer {...data} />,
     );
 
-    it('should render a lazyload container and not preload the image if the image is after the 3rd block', () => {
+    it('should render a lazyload container and not preload the image if the image is after the 4th block', () => {
       const { container } = render(
-        <ImageContainer position={[4]} {...data} shouldPreload />,
+        <ImageContainer position={[5]} {...data} shouldPreload />,
       );
       const noScriptEl = document.querySelector('noscript');
       const imageEl = document.querySelector('img');
@@ -99,8 +99,8 @@ describe('Image', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should preload an image if the image is before the 4th block', async () => {
-      render(<ImageContainer position={[3]} {...data} shouldPreload />);
+    it('should preload an image if the image is before the 5th block', async () => {
+      render(<ImageContainer position={[4]} {...data} shouldPreload />);
 
       await waitFor(() => {
         const linkPreload = document.querySelector('head link');
@@ -108,8 +108,8 @@ describe('Image', () => {
       });
     });
 
-    it('should not preload an image if the image is before the 4th block but shouldPreload is false', async () => {
-      render(<ImageContainer position={[3]} {...data} shouldPreload={false} />);
+    it('should not preload an image if the image is before the 5th block but shouldPreload is false', async () => {
+      render(<ImageContainer position={[4]} {...data} shouldPreload={false} />);
 
       await waitFor(() => {
         const linkPreload = document.querySelector('head link');

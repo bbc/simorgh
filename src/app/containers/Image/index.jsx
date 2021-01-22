@@ -12,7 +12,7 @@ import buildIChefURL from '#lib/utilities/ichefURL';
 import urlWithPageAnchor from '#lib/utilities/pageAnchor';
 
 const DEFAULT_IMAGE_RES = 640;
-const LAZYLOAD_FROM_BLOCK = 3;
+const LAZYLOAD_FROM_BLOCK = 4;
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
@@ -36,7 +36,8 @@ const ImageContainer = ({ blocks, position, shouldPreload }) => {
   const altTextBlock = filterForBlockType(blocks, 'altText');
   const captionBlock = filterForBlockType(blocks, 'caption');
 
-  const ShouldPreLoadLeadImage = position[0] <= 4 && shouldPreload;
+  const ShouldPreLoadLeadImage =
+    position[0] <= LAZYLOAD_FROM_BLOCK && shouldPreload;
 
   if (!rawImageBlock || !altTextBlock) {
     return null;
