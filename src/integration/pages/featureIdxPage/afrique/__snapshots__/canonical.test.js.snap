@@ -6,11 +6,11 @@ exports[`Canonical Feature Index page Analytics ATI 1`] = `"<img height=\\"1px\\
 
 exports[`Canonical Feature Index page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/afrique"`;
 
-exports[`Canonical Feature Index page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. La BBC n'est pas responsable du contenu des sites externes. Découvrez notre approche en matière de liens externes."`;
+exports[`Canonical Feature Index page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. La BBC n'est pas responsable du contenu des sites externes.  Découvrez notre approche en matière de liens externes."`;
 
 exports[`Canonical Feature Index page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, Afrique",
+  "text": "BBC News,  Afrique",
   "url": "/afrique",
 }
 `;
@@ -71,7 +71,7 @@ Object {
 }
 `;
 
-exports[`Canonical Feature Index page Header I can see the branding 1`] = `"BBC News, Afrique"`;
+exports[`Canonical Feature Index page Header I can see the branding 1`] = `"BBC News,  Afrique"`;
 
 exports[`Canonical Feature Index page Header Navigation link should match text and url 1`] = `
 Object {

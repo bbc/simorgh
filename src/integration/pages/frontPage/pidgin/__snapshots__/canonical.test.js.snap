@@ -6,11 +6,11 @@ exports[`Canonical Front Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=
 
 exports[`Canonical Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
-exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. De external site no concern BBC.  De way wey we de take go external link."`;
 
 exports[`Canonical Front Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, Pidgin",
+  "text": "BBC News,  Pidgin",
   "url": "/pidgin",
 }
 `;
@@ -71,7 +71,7 @@ Object {
 }
 `;
 
-exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
+exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News,  Pidgin"`;
 
 exports[`Canonical Front Page Header Navigation link should match text and url 1`] = `
 Object {
@@ -131,7 +131,7 @@ Object {
 
 exports[`Canonical Front Page Index Alsos should match visually hidden text 1`] = `"Another thing we de for inside dis tori"`;
 
-exports[`Canonical Front Page Main heading should match text 1`] = `"BBC News, Pidgin - Home"`;
+exports[`Canonical Front Page Main heading should match text 1`] = `"BBC News,  Pidgin  -  Home"`;
 
 exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -211,7 +211,7 @@ exports[`Canonical Front Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`Canonical Front Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Front Page SEO Heading level 1 1`] = `"BBC News, Pidgin - Home"`;
+exports[`Canonical Front Page SEO Heading level 1 1`] = `"BBC News,  Pidgin  -  Home"`;
 
 exports[`Canonical Front Page SEO Lang attribute 1`] = `"pcm"`;
 

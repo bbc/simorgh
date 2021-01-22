@@ -128,11 +128,11 @@ Object {
 
 exports[`AMP Most Watched Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/urdu"`;
 
-exports[`AMP Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
+exports[`AMP Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں  بیرونی لنکس کے بارے میں ہماری پالیسی."`;
 
 exports[`AMP Most Watched Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, اردو",
+  "text": "BBC News,  اردو",
   "url": "/urdu",
 }
 `;
@@ -193,7 +193,7 @@ Object {
 }
 `;
 
-exports[`AMP Most Watched Page Header I can see the branding 1`] = `"BBC News, اردو"`;
+exports[`AMP Most Watched Page Header I can see the branding 1`] = `"BBC News,  اردو"`;
 
 exports[`AMP Most Watched Page Header Navigation link should match text and url 1`] = `
 Object {

@@ -139,11 +139,11 @@ Object {
 
 exports[`AMP Live Radio Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
 
-exports[`AMP Live Radio Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
+exports[`AMP Live Radio Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC ntibazwa ibivuye ku zindi mbuga.  Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
 
 exports[`AMP Live Radio Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, Gahuza",
+  "text": "BBC News,  Gahuza",
   "url": "/gahuza",
 }
 `;
@@ -204,7 +204,7 @@ Object {
 }
 `;
 
-exports[`AMP Live Radio Header I can see the branding 1`] = `"BBC News, Gahuza"`;
+exports[`AMP Live Radio Header I can see the branding 1`] = `"BBC News,  Gahuza"`;
 
 exports[`AMP Live Radio Header Navigation link should match text and url 1`] = `
 Object {

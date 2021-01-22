@@ -139,11 +139,11 @@ Object {
 
 exports[`AMP On Demand Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
 
-exports[`AMP On Demand Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
+exports[`AMP On Demand Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal.  Baca tentang peraturan baru terkait link eksternal."`;
 
 exports[`AMP On Demand Radio Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, Indonesia",
+  "text": "BBC News,  Indonesia",
   "url": "/indonesia",
 }
 `;
@@ -204,7 +204,7 @@ Object {
 }
 `;
 
-exports[`AMP On Demand Radio Page Header I can see the branding 1`] = `"BBC News, Indonesia"`;
+exports[`AMP On Demand Radio Page Header I can see the branding 1`] = `"BBC News,  Indonesia"`;
 
 exports[`AMP On Demand Radio Page Header Navigation link should match text and url 1`] = `
 Object {

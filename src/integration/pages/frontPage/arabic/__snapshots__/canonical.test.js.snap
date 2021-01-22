@@ -6,11 +6,11 @@ exports[`Canonical Front Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=
 
 exports[`Canonical Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
-exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
+exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.  سياستنا بخصوص الروابط الخارجية."`;
 
 exports[`Canonical Front Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News, عربي",
+  "text": "BBC News,  عربي",
   "url": "/arabic",
 }
 `;
@@ -71,7 +71,7 @@ Object {
 }
 `;
 
-exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, عربي"`;
+exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News,  عربي"`;
 
 exports[`Canonical Front Page Header Navigation link should match text and url 1`] = `
 Object {
@@ -145,7 +145,7 @@ Object {
 
 exports[`Canonical Front Page Index Alsos should match visually hidden text 1`] = `"المزيد حول هذه القصة"`;
 
-exports[`Canonical Front Page Main heading should match text 1`] = `"BBC News, عربي - الرئيسية"`;
+exports[`Canonical Front Page Main heading should match text 1`] = `"BBC News,  عربي  -  الرئيسية"`;
 
 exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -225,7 +225,7 @@ exports[`Canonical Front Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`Canonical Front Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Front Page SEO Heading level 1 1`] = `"BBC News, عربي - الرئيسية"`;
+exports[`Canonical Front Page SEO Heading level 1 1`] = `"BBC News,  عربي  -  الرئيسية"`;
 
 exports[`Canonical Front Page SEO Lang attribute 1`] = `"ar"`;
 
