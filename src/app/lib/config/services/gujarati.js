@@ -171,6 +171,7 @@ export const service = {
         previousRadioShow: 'આ પહેલાંનો રેડિયો શો',
         nextRadioShow: 'આગામી રેડિયો શો',
         duration: 'અવધિ',
+        recentEpisodes: 'તાજેતરનાં એપિસોડ્સ',
       },
       socialEmbed: {
         caption: {
