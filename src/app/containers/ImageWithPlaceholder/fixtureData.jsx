@@ -74,6 +74,7 @@ const baseFixture = {
   width: 640,
 };
 
+// eslint-disable-next-line react/prop-types
 export const ImageWithPlaceholder = ({ preload = false }) => {
   const props = {
     ...baseFixture,
