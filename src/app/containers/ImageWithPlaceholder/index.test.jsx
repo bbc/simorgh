@@ -25,16 +25,21 @@ describe('ImageWithPlaceholder', () => {
     expect(container.querySelector('noscript')).toBeInTheDocument();
   });
 
-  it('should add a link tag to the head of the document when shouldPreload is set to true', async () => {
-    render(<ImageWithPlaceholder shouldPreload />);
+  it('should add a link tag to the head of the document when preload is set to true', async () => {
+    render(<ImageWithPlaceholder preload />);
 
     await waitFor(() => {
-      expect(document.querySelector('head link')).toBeInTheDocument();
+      const preloadLink = document.querySelector('head link');
+      expect(preloadLink).toBeInTheDocument();
+      expect(preloadLink.rel).toEqual('preload');
+      expect(preloadLink.href).toEqual(
+        'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg',
+      );
     });
   });
 
-  it('should not add a link tag to the head of the document when shouldPreload is set to false', async () => {
-    render(<ImageWithPlaceholder />);
+  it('should not add a link tag to the head of the document when preload is set to false', async () => {
+    render(<ImageWithPlaceholder preload={false} />);
 
     await waitFor(() => {
       expect(document.querySelector('head link')).not.toBeInTheDocument();
