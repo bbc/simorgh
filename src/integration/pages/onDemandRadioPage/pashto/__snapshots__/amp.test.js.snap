@@ -139,11 +139,11 @@ Object {
 
 exports[`AMP On Demand Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
 
-exports[`AMP On Demand Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.  د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
+exports[`AMP On Demand Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
 exports[`AMP On Demand Radio Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News,  پښتو",
+  "text": "BBC News, پښتو",
   "url": "/pashto",
 }
 `;
@@ -204,7 +204,7 @@ Object {
 }
 `;
 
-exports[`AMP On Demand Radio Page Header I can see the branding 1`] = `"BBC News,  پښتو"`;
+exports[`AMP On Demand Radio Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
 exports[`AMP On Demand Radio Page Header Navigation link should match text and url 1`] = `
 Object {

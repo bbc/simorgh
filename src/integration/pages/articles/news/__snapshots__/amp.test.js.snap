@@ -95,7 +95,7 @@ Object {
 
 exports[`AMP Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/news"`;
 
-exports[`AMP Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. The BBC is not responsible for the content of external sites.  Read about our approach to external linking."`;
+exports[`AMP Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
 exports[`AMP Articles Footer Link should match text and url 1`] = `
 Object {

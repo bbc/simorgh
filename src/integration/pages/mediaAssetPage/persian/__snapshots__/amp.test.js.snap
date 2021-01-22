@@ -139,11 +139,11 @@ Object {
 
 exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
-exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.  سیاست ما درباره لینک دادن به سایت های دیگر."`;
+exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
 exports[`AMP Media Asset Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News,  فارسی",
+  "text": "BBC News, فارسی",
   "url": "/persian",
 }
 `;
@@ -204,7 +204,7 @@ Object {
 }
 `;
 
-exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News,  فارسی"`;
+exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 1`] = `
 Object {

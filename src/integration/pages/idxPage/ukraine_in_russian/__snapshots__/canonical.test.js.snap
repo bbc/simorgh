@@ -6,11 +6,11 @@ exports[`Canonical ukrainian/ukraine_in_russian IDX page Analytics ATI 1`] = `"<
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/ukrainian"`;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC не несе відповідальності за контент інших сайтів.  Ознайомтеся з нашими правилами зовнішніх посилань."`;
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC не несе відповідальності за контент інших сайтів. Ознайомтеся з нашими правилами зовнішніх посилань."`;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News,  Україна",
+  "text": "BBC News, Україна",
   "url": "/ukrainian",
 }
 `;
@@ -66,7 +66,7 @@ Object {
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer lang code should match text 1`] = `"uk"`;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Header I can see the branding 1`] = `"BBC News,  Україна"`;
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Header I can see the branding 1`] = `"BBC News, Україна"`;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 1`] = `
 Object {

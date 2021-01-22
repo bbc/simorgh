@@ -6,11 +6,11 @@ exports[`Canonical Sinhala Live Radio Page Analytics ATI 1`] = `"<img height=\\"
 
 exports[`Canonical Sinhala Live Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/sinhala"`;
 
-exports[`Canonical Sinhala Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ.  බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න."`;
+exports[`Canonical Sinhala Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ. බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න."`;
 
 exports[`Canonical Sinhala Live Radio Page Footer Link should match text and url 1`] = `
 Object {
-  "text": "BBC News,  සිංහල",
+  "text": "BBC News, සිංහල",
   "url": "/sinhala",
 }
 `;
@@ -64,7 +64,7 @@ Object {
 }
 `;
 
-exports[`Canonical Sinhala Live Radio Page Header I can see the branding 1`] = `"BBC News,  සිංහල"`;
+exports[`Canonical Sinhala Live Radio Page Header I can see the branding 1`] = `"BBC News, සිංහල"`;
 
 exports[`Canonical Sinhala Live Radio Page Header Navigation link should match text and url 1`] = `
 Object {
