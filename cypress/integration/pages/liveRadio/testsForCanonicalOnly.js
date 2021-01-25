@@ -3,7 +3,10 @@ import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
 import getEmbedUrl from '../../../support/helpers/getEmbedUrl';
-import { isScheduleDataComplete } from '../../../../src/app/containers/RadioSchedule/utilities/evaluateScheduleData';
+import {
+  isScheduleDataComplete,
+  getIsProgramValid,
+} from '../../../../src/app/containers/RadioSchedule/utilities/evaluateScheduleData';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 
 // For testing important features that differ between services, e.g. Timestamps.
@@ -76,9 +79,11 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
             cy.request(schedulePath).then(({ body: scheduleJson }) => {
               const { schedules } = scheduleJson;
+              const isProgramValid = getIsProgramValid(() => {});
+              const validSchedules = schedules.filter(isProgramValid);
 
               const isRadioScheduleDataComplete = isScheduleDataComplete({
-                schedules,
+                schedules: validSchedules,
               });
 
               cy.log(
