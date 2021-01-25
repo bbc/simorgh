@@ -5,7 +5,7 @@ import { bool, string, element, oneOf, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { C_CONSENT_BACKGROUND, C_WHITE } from '@bbc/psammead-styles/colours';
-import { getGreatPrimer, getLongPrimer } from '@bbc/gel-foundations/typography';
+import { getDoublePica, getLongPrimer } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -34,7 +34,7 @@ const Page = styled.div`
 `;
 
 const Title = styled.h2`
-  ${({ script }) => getGreatPrimer(script)}
+  ${({ script }) => getDoublePica(script)}
   color: ${C_WHITE};
   margin-top: 0;
   margin-bottom: 0;
@@ -52,7 +52,7 @@ const OptionsList = styled.ul`
 
 const OptionsItem = styled.li`
   button {
-    ${({ script }) => getGreatPrimer(script)}
+    ${({ script }) => getLongPrimer(script)}
     cursor: pointer;
   }
 `;
