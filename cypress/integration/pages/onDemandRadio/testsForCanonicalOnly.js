@@ -1,6 +1,9 @@
 import path from 'ramda/src/path';
 import envConfig from '../../../support/config/envs';
-import { isScheduleDataComplete } from '../../../../src/app/containers/RadioSchedule/utilities/evaluateScheduleData';
+import {
+  isScheduleDataComplete,
+  getIsProgramValid,
+} from '../../../../src/app/containers/RadioSchedule/utilities/evaluateScheduleData';
 
 export default ({ service, pageType, variant }) => {
   describe('Chartbeat', () => {
@@ -44,9 +47,11 @@ export default ({ service, pageType, variant }) => {
 
             cy.request(schedulePath).then(({ body: scheduleJson }) => {
               const { schedules } = scheduleJson;
+              const isProgramValid = getIsProgramValid(() => {});
+              const validSchedules = schedules.filter(isProgramValid);
 
               const isRadioScheduleDataComplete = isScheduleDataComplete({
-                schedules,
+                schedules: validSchedules,
               });
 
               cy.log(
