@@ -1,58 +1,65 @@
 import getTextContent from './getTextContent';
 
-it('should handle a basic node', () => {
-  const doc = new DOMParser().parseFromString('<div>foo</div>', 'text/html');
-  const el = doc.querySelector('div');
+const createDiv = innerContent =>
+  new DOMParser()
+    .parseFromString(`<div>${innerContent}</div>`, 'text/html')
+    .querySelector('div');
+
+it('should handle a basic element', () => {
+  const el = createDiv('foo');
 
   expect(getTextContent(el)).toEqual('foo');
 });
 
-it('should handle a nested node', () => {
-  const doc = new DOMParser().parseFromString(
-    '<div><span>foo</span></div>',
-    'text/html',
-  );
-  const el = doc.querySelector('div');
+it('should handle a nested element', () => {
+  const el = createDiv('<span>foo</span>');
 
   expect(getTextContent(el)).toEqual('foo');
 });
 
-it('should handle a node with a style tag', () => {
-  const doc = new DOMParser().parseFromString(
-    '<div>foo <style>.class { display: inline }</style>baz</div>',
-    'text/html',
-  );
-  const el = doc.querySelector('div');
+it('should handle an element with a nested style element', () => {
+  const el = createDiv(`
+    foo
+    <style>.class { display: inline }</style>
+    baz
+  `);
 
   expect(getTextContent(el)).toEqual('foo baz');
 });
 
-it('should handle a node with nested text tags', () => {
-  const doc = new DOMParser().parseFromString(
-    '<div>foo <style>.class { display: inline }</style>baz <span>bar</span></div>',
-    'text/html',
-  );
-  const el = doc.querySelector('div');
+it('should handle an element with multiple nested style elements', () => {
+  const el = createDiv(`
+    foo
+    <style>.class { display: inline }</style>
+    baz
+    <style>div { display: inline }</style>
+    <style>#id { display: inline }</style>
+    <span>bar</span>
+  `);
 
   expect(getTextContent(el)).toEqual('foo baz bar');
 });
 
-it('should handle a node with nested styles tags', () => {
-  const doc = new DOMParser().parseFromString(
-    '<div>foo <style>.class { display: inline; }</style>baz <span>bar</span></div>',
-    'text/html',
+it('should handle a node with attributes', () => {
+  const el = createDiv(
+    '<span data-emotion-css=".class { display: inline }">foo</span>',
   );
-  const el = doc.querySelector('div');
 
-  expect(getTextContent(el)).toEqual('foo baz bar');
+  expect(getTextContent(el)).toEqual('foo');
 });
 
 it('should handle a node with media queries', () => {
-  const doc = new DOMParser().parseFromString(
-    '<div>foo <style>.class { display: inline; }@media (max-width: 20px) { .class { display: block }}</style>baz <span>bar</span></div>',
-    'text/html',
-  );
-  const el = doc.querySelector('div');
+  const el = createDiv(`
+    foo
+    <style>
+      .class { display: inline; }
+      @media (max-width: 20px) {
+        .class { display: block }
+      }
+    </style>
+    baz
+    <span>bar</span>
+  `);
 
   expect(getTextContent(el)).toEqual('foo baz bar');
 });
