@@ -142,6 +142,13 @@ describe('addBylineBlock', () => {
     expect(addBylineBlock(input)).toEqual(input);
   });
 
+  it('should return input if page type is not CSP', () => {
+    const input = deepClone(styInput);
+    input.metadata.type = 'PGL';
+
+    expect(addBylineBlock(input)).toEqual(input);
+  });
+
   it('should return input if promo has no byline property', () => {
     const input = deepClone(styInput);
     delete input.promo.byline;
