@@ -28,8 +28,6 @@ const Wrapper = styled.div`
 `;
 
 const Page = styled.div`
-  align-items: flex-start;
-  display: flex;
   margin-left: auto;
   margin-right: auto;
   max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
@@ -44,6 +42,8 @@ const Title = styled.h2`
 
 const OptionsList = styled.ul`
   ${({ script }) => getLongPrimer(script)}
+  align-items: flex-start;
+  display: flex;
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
