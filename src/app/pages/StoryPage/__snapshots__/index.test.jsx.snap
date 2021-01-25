@@ -9,15 +9,15 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 63rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 80rem;
   }
 }
@@ -3952,15 +3952,15 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 63rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 80rem;
   }
 }
@@ -6805,15 +6805,15 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 63rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 80rem;
   }
 }

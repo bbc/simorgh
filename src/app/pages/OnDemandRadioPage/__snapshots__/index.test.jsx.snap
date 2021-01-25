@@ -6,15 +6,15 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 63rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 80rem;
   }
 }
@@ -181,15 +181,15 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-6.emotion-6 {
-    margin: 0 auto;
+  .emotion-6 {
+    margin: 0 auto!important;
     max-width: 63rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-6.emotion-6 {
-    margin: 0 auto;
+  .emotion-6 {
+    margin: 0 auto!important;
     max-width: 80rem;
   }
 }
@@ -674,15 +674,15 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 63rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 80rem;
   }
 }
@@ -849,15 +849,15 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-6.emotion-6 {
-    margin: 0 auto;
+  .emotion-6 {
+    margin: 0 auto!important;
     max-width: 63rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-6.emotion-6 {
-    margin: 0 auto;
+  .emotion-6 {
+    margin: 0 auto!important;
     max-width: 80rem;
   }
 }
@@ -1331,15 +1331,15 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 63rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 80rem;
   }
 }
@@ -1506,15 +1506,15 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-6.emotion-6 {
-    margin: 0 auto;
+  .emotion-6 {
+    margin: 0 auto!important;
     max-width: 63rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-6.emotion-6 {
-    margin: 0 auto;
+  .emotion-6 {
+    margin: 0 auto!important;
     max-width: 80rem;
   }
 }
@@ -2014,15 +2014,15 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 63rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 80rem;
   }
 }
@@ -2189,15 +2189,15 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-6.emotion-6 {
-    margin: 0 auto;
+  .emotion-6 {
+    margin: 0 auto!important;
     max-width: 63rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-6.emotion-6 {
-    margin: 0 auto;
+  .emotion-6 {
+    margin: 0 auto!important;
     max-width: 80rem;
   }
 }

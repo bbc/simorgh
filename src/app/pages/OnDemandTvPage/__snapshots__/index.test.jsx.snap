@@ -7,15 +7,15 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 63rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 80rem;
   }
 }
@@ -579,15 +579,15 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 63rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 80rem;
   }
 }
@@ -1141,15 +1141,15 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 63rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 80rem;
   }
 }
@@ -1703,15 +1703,15 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 63rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-0.emotion-0 {
-    margin: 0 auto;
+  .emotion-0 {
+    margin: 0 auto!important;
     max-width: 80rem;
   }
 }
