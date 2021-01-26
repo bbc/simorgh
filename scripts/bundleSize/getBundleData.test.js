@@ -11,7 +11,7 @@ jest.mock('fs', () => ({
     'MediaAssetPage-88a3c260.b7ec8c9c.js',
     'MostReadPage-31ecd969.7484ff05.js',
     'MostWatchedPage-31ecd969.7484rr05.js',
-    'OnDemandRadioPage-31ecd969.ec6af2d0.js',
+    'RadioPodcastPage-31ecd969.ec6af2d0.js',
     'OnDemandTvPage-31ecd969.de41ab7f.js',
     'PhotoGalleryPage-e94df663.a733283a.js',
     'StoryPage-31ecd969.ca0d676d.js',
