@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Page = styled.div`
+const BannerPage = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
@@ -79,7 +79,7 @@ const AmpCookieBanner = ({
         />
       </Helmet>
       <Wrapper dir={dir} service={service}>
-        <Page data-amp-bind-hidden="isManagingSettings">
+        <BannerPage data-amp-bind-hidden="isManagingSettings">
           <Title script={script}>{title}</Title>
           {text}
           <OptionsList script={script}>
@@ -93,15 +93,15 @@ const AmpCookieBanner = ({
               </button>
             </OptionsItem>
           </OptionsList>
-        </Page>
-        <Page hidden data-amp-bind-hidden="!isManagingSettings">
+        </BannerPage>
+        <BannerPage hidden data-amp-bind-hidden="!isManagingSettings">
           <Title script={script}>{title}</Title>
           {text}
           <OptionsList script={script}>
             <OptionsItem script={script}>{accept}</OptionsItem>
             <OptionsItem script={script}>{reject}</OptionsItem>
           </OptionsList>
-        </Page>
+        </BannerPage>
       </Wrapper>
     </div>
   );
