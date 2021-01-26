@@ -53,8 +53,9 @@ const Title = styled.h2`
 
 const OptionsList = styled.ul`
   ${({ script }) => getLongPrimer(script)}
-  align-items: flex-start;
+  align-items: center;
   display: flex;
+  justify-content: space-between;
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
