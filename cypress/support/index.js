@@ -14,14 +14,15 @@ Cypress.on(`window:before:load`, win => {
 // Workaround for AMP Analytics bug - there is a pending fix here: https://github.com/ampproject/amphtml/pull/28448
 // Can be removed when this is resolved.
 // eslint-disable-next-line consistent-return
-Cypress.on('uncaught:exception', err => {
+Cypress.on('uncaught:exception', () => {
   // returning false here prevents Cypress from failing the test
-  if (
-    err.message &&
-    err.message.includes(
-      'Inline or remote config should not overwrite vendor transport settings',
-    )
-  ) {
-    return false;
-  }
+  // if (
+  //   err.message &&
+  //   err.message.includes(
+  //     'Inline or remote config should not overwrite vendor transport settings',
+  //   )
+  // ) {
+  //   return false;
+  // }
+  return false;
 });
