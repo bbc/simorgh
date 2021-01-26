@@ -26,7 +26,6 @@ const AmpConsentBannerContainer = ({
   hidden,
 }) => {
   const { dir, translations, script, service } = useContext(ServiceContext);
-  const consentBannerConfig = translations.consentBanner[type];
 
   const dataAttribute = getDataAttribute(type);
 
@@ -34,20 +33,7 @@ const AmpConsentBannerContainer = ({
     <AmpCookieBanner
       dir={dir}
       id={promptId}
-      title={consentBannerConfig.title}
-      text={BannerText(consentBannerConfig.description.amp)}
-      accept={Accept(
-        consentBannerConfig.accept,
-        acceptAction,
-        dataAttribute('accept'),
-      )}
-      reject={Reject(
-        consentBannerConfig.reject,
-        consentBannerConfig.rejectUrl,
-        rejectAction,
-        dataAttribute('reject'),
-      )}
-      manage="Manage my settings"
+      config={translations.consentBanner.cookie.amp}
       hidden={hidden}
       script={script}
       service={service}
@@ -56,16 +42,16 @@ const AmpConsentBannerContainer = ({
     <ConsentBanner
       dir={dir}
       id={promptId}
-      title={consentBannerConfig.title}
-      text={BannerText(consentBannerConfig.description)}
+      title={translations.consentBanner[type].title}
+      text={BannerText(translations.consentBanner[type].description)}
       accept={Accept(
-        consentBannerConfig.accept,
+        translations.consentBanner[type].accept,
         acceptAction,
         dataAttribute('accept'),
       )}
       reject={Reject(
-        consentBannerConfig.reject,
-        consentBannerConfig.rejectUrl,
+        translations.consentBanner[type].reject,
+        translations.consentBanner[type].rejectUrl,
         rejectAction,
         dataAttribute('reject'),
       )}

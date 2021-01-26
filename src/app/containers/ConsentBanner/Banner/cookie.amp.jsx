@@ -69,18 +69,9 @@ const OptionsItem = styled.li`
   }
 `;
 
-const AmpCookieBanner = ({
-  dir,
-  id,
-  title,
-  text,
-  accept,
-  reject,
-  manage,
-  hidden,
-  script,
-  service,
-}) => {
+const AmpCookieBanner = ({ dir, id, config, hidden, script, service }) => {
+  const { initial, manage } = config;
+
   return (
     <div id={id} hidden={hidden}>
       <Helmet>
@@ -92,26 +83,26 @@ const AmpCookieBanner = ({
       </Helmet>
       <Wrapper dir={dir} service={service}>
         <BannerPage data-amp-bind-hidden="isManagingSettings">
-          <Title script={script}>{title}</Title>
-          {text}
+          <Title script={script}>Title</Title>
+          <p>Text.</p>
           <OptionsList script={script}>
-            <OptionsItem script={script}>{accept}</OptionsItem>
+            <OptionsItem script={script}>Accept</OptionsItem>
             <OptionsItem script={script}>
               <button
                 type="button"
                 on="tap:AMP.setState({ isManagingSettings: true })"
               >
-                {manage}
+                Manage my settings
               </button>
             </OptionsItem>
           </OptionsList>
         </BannerPage>
         <BannerPage hidden data-amp-bind-hidden="!isManagingSettings">
-          <Title script={script}>{title}</Title>
-          {text}
+          <Title script={script}>Title</Title>
+          <p>Text.</p>
           <OptionsList script={script}>
-            <OptionsItem script={script}>{accept}</OptionsItem>
-            <OptionsItem script={script}>{reject}</OptionsItem>
+            <OptionsItem script={script}>Accept</OptionsItem>
+            <OptionsItem script={script}>Reject</OptionsItem>
           </OptionsList>
         </BannerPage>
       </Wrapper>
@@ -121,11 +112,7 @@ const AmpCookieBanner = ({
 
 AmpCookieBanner.propTypes = {
   dir: oneOf(['ltr', 'rtl']),
-  title: string.isRequired,
-  text: element.isRequired,
-  accept: element.isRequired,
-  reject: element.isRequired,
-  manage: string.isRequired,
+  config: shape({}).isRequired,
   id: string,
   hidden: bool,
   script: shape(scriptPropType).isRequired,
