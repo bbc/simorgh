@@ -4,7 +4,12 @@ import { Helmet } from 'react-helmet';
 import { bool, string, element, oneOf, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import { C_CONSENT_BACKGROUND, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_CONSENT_BACKGROUND,
+  C_CONSENT_ACTION,
+  C_PEBBLE,
+  C_WHITE,
+} from '@bbc/psammead-styles/colours';
 import { getDoublePica, getLongPrimer } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import {
@@ -31,6 +36,12 @@ const BannerPage = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
+
+  a {
+    color: ${C_CONSENT_ACTION};
+    text-decoration: underline;
+    text-decoration-color: ${C_PEBBLE};
+  }
 `;
 
 const Title = styled.h2`
