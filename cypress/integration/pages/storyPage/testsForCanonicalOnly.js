@@ -11,7 +11,7 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
     // our story pages should not do this. The test checks the core content has been removed
     // following progressive enhancement by the include's inline scripts.
     // This test specifically is targeted at this test asset: '/mundo/23263889'
-    it.only('should load the eclipse VJ include successfully', () => {
+    it('should load the eclipse VJ include successfully', () => {
       if (service === 'mundo') {
         cy.get('.bbc-news-vj-shadow-dom', { includeShadowDom: true }).should(
           'exist',
