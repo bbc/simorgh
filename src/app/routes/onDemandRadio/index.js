@@ -1,6 +1,6 @@
 import { RadioPodcastPage } from '#pages';
 import { onDemandRadioPath } from '#utils/regex';
-import getInitialData from './getInitialData';
+import getInitialData from '../radioPodcast/getInitialData';
 import { MEDIA_PAGE } from '#utils/pageTypes';
 
 export default {
