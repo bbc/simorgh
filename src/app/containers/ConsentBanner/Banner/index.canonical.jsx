@@ -37,7 +37,11 @@ const Reject = (message, href, onClick, dataAttribute) => {
 
 const CanonicalConsentBannerContainer = ({ type, onReject, onAccept }) => {
   const { dir, translations, script, service } = useContext(ServiceContext);
-  const consentBannerConfig = translations.consentBanner[type];
+
+  const consentBannerConfig =
+    type === 'cookie'
+      ? translations.consentBanner.cookie.canonical
+      : translations.consentBanner[type];
 
   const dataAttribute = getDataAttribute(type);
 
@@ -46,7 +50,7 @@ const CanonicalConsentBannerContainer = ({ type, onReject, onAccept }) => {
       <ConsentBanner
         dir={dir}
         title={consentBannerConfig.title}
-        text={BannerText(consentBannerConfig.description.canonical)}
+        text={BannerText(consentBannerConfig.description)}
         accept={Accept(
           consentBannerConfig.accept,
           onAccept,
