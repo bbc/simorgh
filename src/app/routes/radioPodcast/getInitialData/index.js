@@ -15,23 +15,25 @@ import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 import getRadioService from '../../utils/getRadioService';
 import processRecentEpisodes from '../../utils/processRecentEpisodes';
 
-const DEFAULT_TOGGLE_VALUE = { enabled: false, value: 4 };
-
 const getRadioScheduleData = path(['radioScheduleData']);
 const getScheduleToggle = path(['onDemandRadioSchedule', 'enabled']);
-const getRecentEpisodesToggle = pathOr(DEFAULT_TOGGLE_VALUE, [
-  'recentAudioEpisodes',
-]);
 
 export default async ({ path: pathname, pageType, service, toggles }) => {
   try {
     const detailPageType = pathname.includes('podcast')
       ? 'Podcast'
       : 'On Demand Radio';
-    const isPodcast = detailPageType === 'On Demand Radio';
+    const isPodcast = detailPageType === 'Podcast';
     const RADIO_PODCAST_MISSING_FIELD = isPodcast
       ? PODCAST_MISSING_FIELD
       : RADIO_MISSING_FIELD;
+    const DEFAULT_TOGGLE_VALUE = { enabled: false, value: isPodcast ? 8 : 4 };
+    const recentEpisodesKey = isPodcast
+      ? 'recentPodcastEpisodes'
+      : 'recentAudioEpisodes';
+    const getRecentEpisodesToggle = pathOr(DEFAULT_TOGGLE_VALUE, [
+      recentEpisodesKey,
+    ]);
 
     const radioPodcastDataPath = overrideRendererOnTest(pathname);
     const pageDataPromise = await fetchPageData({
@@ -67,7 +69,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
     const recentEpisodes = showRecentEpisodes
       ? processRecentEpisodes(json, {
           exclude: episodeId,
-          recentEpisodesLimit: isPodcast ? 4 : recentEpisodesLimit,
+          recentEpisodesLimit,
         })
       : [];
 
