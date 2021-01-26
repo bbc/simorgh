@@ -114,6 +114,82 @@ export const service = {
         },
       },
       consentBanner: {
+        // ===========
+        // DEPRECATED.
+        // ===========
+        // privacy: {
+        //   title: 'Hemos actualizado nuestra política de privacidad y cookies',
+        //   description: {
+        //     uk: {
+        //       first:
+        //         'Hemos realizado cambios importantes a nuestra política de privacidad y cookies y queremos que sepas lo que esto significa para ti y tus datos.',
+        //       linkText: null,
+        //       last: null,
+        //       linkUrl: null,
+        //     },
+        //     international: {
+        //       first:
+        //         'Hemos realizado cambios importantes a nuestra política de privacidad y cookies y queremos que sepas lo que esto significa para ti y tus datos.',
+        //       linkText: null,
+        //       last: null,
+        //       linkUrl: null,
+        //     },
+        //   },
+        //   accept: 'Ok',
+        //   reject: 'Descubre lo que ha cambiado',
+        //   rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+        // },
+        // cookie: {
+        //   title: 'Déjanos saber si aceptas las cookies',
+        //   description: {
+        //     amp: {
+        //       uk: {
+        //         first: 'Usamos ',
+        //         linkText: 'cookies',
+        //         last:
+        //           ' para ofrecerte la mejor experiencia online. Déjanos saber si aceptas todas estas cookies.',
+        //         linkUrl:
+        //           'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+        //       },
+        //       international: {
+        //         first:
+        //           'Nosotros y nuestros socios usamos tecnologías, como las ',
+        //         linkText: 'cookies',
+        //         last:
+        //           ', y recogemos datos de búsqueda para ofrecerte la mejor experiencia online y personalizar el contenido y la publicidad que se te muestra. Por favor, déjanos saber si estás de acuerdo.',
+        //         linkUrl:
+        //           'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+        //       },
+        //     },
+        //     canonical: {
+        //       uk: {
+        //         first: 'Usamos ',
+        //         linkText: 'cookies',
+        //         last:
+        //           ' para ofrecerte la mejor experiencia online. Déjanos saber si aceptas todas estas cookies.',
+        //         linkUrl:
+        //           'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+        //       },
+        //       international: {
+        //         first:
+        //           'Nosotros y nuestros socios usamos tecnologías, como las ',
+        //         linkText: 'cookies',
+        //         last:
+        //           ', y recogemos datos de búsqueda para ofrecerte la mejor experiencia online y personalizar el contenido y la publicidad que se te muestra. Por favor, déjanos saber si estás de acuerdo.',
+        //         linkUrl:
+        //           'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+        //       },
+        //     },
+        //   },
+        //   accept: 'Sí, estoy de acuerdo',
+        //   reject: 'No, llévame a la configuración',
+        //   rejectUrl:
+        //     'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+        // },
+        // =========
+        // PROPOSED.
+        // =========
+        // `privacy` remains unchanged.
         privacy: {
           title: 'Hemos actualizado nuestra política de privacidad y cookies',
           description: {
@@ -137,51 +213,80 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Déjanos saber si aceptas las cookies',
-          description: {
-            amp: {
-              uk: {
-                first: 'Usamos ',
-                linkText: 'cookies',
-                last:
-                  ' para ofrecerte la mejor experiencia online. Déjanos saber si aceptas todas estas cookies.',
-                linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            // Do these pages (initial, manage) need `uk` and `international` translations/children?
+            initial: {
+              title: 'Let us know you agree to data collection on AMP',
+              description: {
+                para1:
+                  'On this accelerated mobile page (AMP) we and our partners collect browsing data to provide you with the best online experience and to personalise the advertising shown to you.',
+                para2:
+                  '"Some of these technologies are essential to the running of this page, while others such as those for personalised advertising are optional and require your consent.\nYou may be asked to set these preferences again if you visit non-AMP bbc.com pages.  "',
               },
-              international: {
-                first:
-                  'Nosotros y nuestros socios usamos tecnologías, como las ',
-                linkText: 'cookies',
-                last:
-                  ', y recogemos datos de búsqueda para ofrecerte la mejor experiencia online y personalizar el contenido y la publicidad que se te muestra. Por favor, déjanos saber si estás de acuerdo.',
-                linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
-              },
+              accept: 'Accept data collection and continue',
+              reject: 'Manage settings',
             },
-            canonical: {
-              uk: {
-                first: 'Usamos ',
-                linkText: 'cookies',
-                last:
-                  ' para ofrecerte la mejor experiencia online. Déjanos saber si aceptas todas estas cookies.',
-                linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'Manage consent settings on AMP pages',
+              description: {
+                para1:
+                  'These settings apply to AMP pages only. You may be asked to set these preferences again when you visit non-AMP BBC pages.',
+                para2:
+                  'The lightweight mobile page you have visited has been built using Google AMP technology.',
+                heading2: 'Strictly necessary data collection',
+                para3:
+                  'To make our web pages work, we store some limited information on your device without your consent.',
+                para4: {
+                  text:
+                    'Read more about the essential information we store on your device to make our web pages work.',
+                  url: 'blah',
+                },
+                para5:
+                  'We use local storage to store your consent preferences on your device.',
+                heading3: 'Optional data collection',
+                para6:
+                  'When you consent to data collection on AMP pages you are consenting to allow us to display personalised ads that are relevant to you when you are outside of the UK.',
+                para7: {
+                  text:
+                    'Read more about how we personalise ads in the BBC and our advertising partners.',
+                  url: 'blah',
+                },
+                para8:
+                  '"You can choose not to receive personalised ads by clicking "Reject data collection and continue" below. Please note that you will still see advertising, but it will not be personalised to you.',
+                para9:
+                  'You can change these settings by clicking "Ad Choices / Do not sell my info" in the footer at any time.',
               },
-              international: {
-                first:
-                  'Nosotros y nuestros socios usamos tecnologías, como las ',
-                linkText: 'cookies',
-                last:
-                  ', y recogemos datos de búsqueda para ofrecerte la mejor experiencia online y personalizar el contenido y la publicidad que se te muestra. Por favor, déjanos saber si estás de acuerdo.',
-                linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
-              },
+              accept: 'Accept data collection and continue',
+              reject: 'Reject data collection and continue',
             },
           },
-          accept: 'Sí, estoy de acuerdo',
-          reject: 'No, llévame a la configuración',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          // `canonical` remains unchanged.
+          canonical: {
+            title: 'Déjanos saber si aceptas las cookies',
+            description: {
+              uk: {
+                first: 'Usamos ',
+                linkText: 'cookies',
+                last:
+                  ' para ofrecerte la mejor experiencia online. Déjanos saber si aceptas todas estas cookies.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first:
+                  'Nosotros y nuestros socios usamos tecnologías, como las ',
+                linkText: 'cookies',
+                last:
+                  ', y recogemos datos de búsqueda para ofrecerte la mejor experiencia online y personalizar el contenido y la publicidad que se te muestra. Por favor, déjanos saber si estás de acuerdo.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Sí, estoy de acuerdo',
+            reject: 'No, llévame a la configuración',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
