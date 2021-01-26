@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import path from 'ramda/src/path';
 import styled from '@emotion/styled';
 import { shape, string, number, bool, func } from 'prop-types';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
@@ -63,6 +64,8 @@ const RadioPodcastPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     recentEpisodes,
     brandId,
   } = pageData;
+
+  const pageType = path(['metadata', 'type'], pageData);
 
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
@@ -181,6 +184,7 @@ const RadioPodcastPage = ({ pageData, mediaIsAvailable, MediaError }) => {
               masterBrand={masterBrand}
               episodes={recentEpisodes}
               brandId={brandId}
+              pageType={pageType}
             />
           </Grid>
         </GelPageGrid>
