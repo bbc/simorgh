@@ -3,7 +3,7 @@ import loggerMock from '#testHelpers/loggerMock';
 import getInitialData from '.';
 import * as fetchPageData from '../../utils/fetchPageData';
 import podcastJson from '#data/arabic/podcasts/p02pc9qc/p08wtg4d';
-import { RADIO_MISSING_FIELD } from '#lib/logger.const';
+import { PODCAST_MISSING_FIELD } from '#lib/logger.const';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 fetch.mockResponse(JSON.stringify(podcastJson));
