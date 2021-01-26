@@ -65,9 +65,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
 
 @media (min-width:63rem) {
   .emotion-22 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    display: block;
   }
 }
 
@@ -83,30 +81,36 @@ exports[`PodcastPromo Should render correctly 1`] = `
 
 @media (min-width:20rem) {
   .emotion-8 {
-    display: unset;
+    display: block;
   }
 }
 
 @media (min-width:25rem) {
   .emotion-8 {
-    -webkit-flex: 0 0 6.8125rem;
-    -ms-flex: 0 0 6.8125rem;
-    flex: 0 0 6.8125rem;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-flex-basis: 6.8125rem;
+    -ms-flex-preferred-size: 6.8125rem;
+    flex-basis: 6.8125rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-8 {
-    -webkit-flex: 0 0 11.125rem;
-    -ms-flex: 0 0 11.125rem;
-    flex: 0 0 11.125rem;
+    -webkit-flex-basis: 11.125rem;
+    -ms-flex-preferred-size: 11.125rem;
+    flex-basis: 11.125rem;
     margin: 0;
   }
 }
 
 @media (min-width:63rem) {
   .emotion-8 {
-    width: 100%;
     margin: 0;
   }
 }
