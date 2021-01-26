@@ -44,7 +44,7 @@ const StyledTimestamp = styled(Timestamp)`
   display: inline;
 `;
 
-const RecentAudioEpisodes = ({ masterBrand, episodes, brandId }) => {
+const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
   const {
     translations,
     service,
@@ -78,8 +78,8 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId }) => {
       [
         service,
         variant,
-        brandId ? 'podcasts' : '',
-        brandId || masterBrand,
+        pageType === 'Podcast' ? 'podcasts' : '',
+        pageType === 'Podcast' ? brandId : masterBrand,
         episodeId,
       ]
         .filter(Boolean)
@@ -168,6 +168,7 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId }) => {
 RecentAudioEpisodes.propTypes = {
   masterBrand: string.isRequired,
   brandId: string,
+  pageType: string.isRequired,
   episodes: arrayOf(
     shape({
       id: string.isRequired,

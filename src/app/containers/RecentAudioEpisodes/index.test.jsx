@@ -9,6 +9,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 const RecentAudioEpisodesWithContext = ({
   masterBrand,
   brandId,
+  pageType,
   episodes,
   service,
   variant,
@@ -25,6 +26,7 @@ const RecentAudioEpisodesWithContext = ({
         masterBrand={masterBrand}
         episodes={episodes}
         brandId={brandId}
+        pageType={pageType}
       />
     </RequestContextProvider>
   </ServiceContextProvider>
@@ -37,6 +39,7 @@ describe('RecentAudioEpisodes', () => {
         masterBrand="bbc_indonesian_radio"
         episodes={indonesian}
         service="indonesia"
+        pageType="On Demand Radio"
       />,
     );
 
@@ -50,6 +53,7 @@ describe('RecentAudioEpisodes', () => {
         masterBrand="bbc_indonesian_radio"
         episodes={indonesian}
         service="indonesia"
+        pageType="On Demand Radio"
       />,
     );
 
@@ -62,6 +66,7 @@ describe('RecentAudioEpisodes', () => {
         masterBrand="bbc_indonesian_radio"
         episodes={indonesian}
         service="indonesia"
+        pageType="On Demand Radio"
       />,
     );
 
@@ -75,6 +80,7 @@ describe('RecentAudioEpisodes', () => {
         masterBrand="bbc_indonesian_radio"
         episodes={indonesian}
         service="indonesia"
+        pageType="On Demand Radio"
       />,
     );
 
@@ -97,6 +103,7 @@ describe('RecentAudioEpisodes', () => {
         episodes={zhongwen}
         service="zhongwen"
         variant="trad"
+        pageType="On Demand Radio"
       />,
     );
 
@@ -116,6 +123,7 @@ describe('RecentAudioEpisodes', () => {
         masterBrand="bbc_indonesian_radio"
         episodes={indonesian}
         service="indonesia"
+        pageType="On Demand Radio"
       />,
     );
 
@@ -132,6 +140,7 @@ describe('RecentAudioEpisodes', () => {
         masterBrand="bbc_arabic_radio"
         episodes={arabic}
         service="arabic"
+        pageType="Podcast"
       />,
     );
 
@@ -159,6 +168,7 @@ describe('RecentAudioEpisodes', () => {
         episodes={zhongwen}
         service="zhongwen"
         variant="trad"
+        pageType="Podcast"
       />,
     );
 
@@ -178,6 +188,7 @@ describe('RecentAudioEpisodes', () => {
         masterBrand="bbc_indonesian_radio"
         episodes={indonesian}
         service="indonesia"
+        pageType="On Demand Radio"
       />,
     );
 

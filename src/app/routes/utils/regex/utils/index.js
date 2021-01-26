@@ -58,7 +58,7 @@ export const getLiveRadioRegex = services => {
   return `/:service(${serviceRegex})/:masterBrand(${radioMasterBrandRegex})/:mediaId(liveRadio):amp(${ampRegex})?`;
 };
 
-export const getPodcastRegex = services => {
+export const getPodcastEpisodeRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex}):variant(${variantRegex})?/podcasts/:brandId(${mediaIdRegex})/:mediaId(${mediaIdRegex}):amp(${ampRegex})?`;
 };
