@@ -15,7 +15,7 @@ import {
   secondaryColumnDataRegexPath,
   africaEyeTVDataPath,
   liveRadioDataPath,
-  podcastDataPath,
+  podcastEpisodeDataPath,
   podcastBrandDataPath,
 } from '#app/routes/utils/regex';
 import { LOCAL_SENDFILE_ERROR } from '#lib/logger.const';
@@ -106,7 +106,7 @@ export default server => {
 
       sendDataFile(res, dataFilePath, next);
     })
-    .get(podcastDataPath, async ({ params }, res, next) => {
+    .get(podcastEpisodeDataPath, async ({ params }, res, next) => {
       const { service, brandId, mediaId } = params;
 
       const dataFilePath = path.join(
