@@ -156,7 +156,7 @@ describe('Get initial data for podcasts', () => {
 
     const countMissingFieldCalls = mockedFunction => {
       return mockedFunction.mock.calls.filter(([logCategory]) => {
-        return logCategory === RADIO_MISSING_FIELD;
+        return logCategory === PODCAST_MISSING_FIELD;
       }).length;
     };
 
