@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import { RadioPodcastPage } from '..';
+import { OnDemandAudioPage } from '..';
 import indonesia from './fixtureData/indonesia';
 import pashto from './fixtureData/pashto';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
@@ -37,7 +37,7 @@ storiesOf('Pages/OnDemand Radio Page', module)
   )
   .add('default', ({ service }) => (
     <BrowserRouter>
-      <RadioPodcastPage
+      <OnDemandAudioPage
         match={matchFixtures(service)}
         pageData={onDemandRadioFixtures[service]}
         status={status}

@@ -5,7 +5,7 @@ import { render, act } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import _RadioPodcastPage from './RadioPodcastPage';
+import _OnDemandAudioPage from './OnDemandAudioPage';
 import pashtoPageData from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
 import koreanPageData from '#data/korean/bbc_korean_radio/w3ct0kn5';
 import koreanPageWithScheduleData from './fixtureData/korean.json';
@@ -18,7 +18,7 @@ import getInitialData from '#app/routes/onDemandRadio/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
-const RadioPodcastPage = withMediaError(_RadioPodcastPage);
+const OnDemandAudioPage = withMediaError(_OnDemandAudioPage);
 
 const toggles = {
   recentAudioEpisodes: {
@@ -39,7 +39,7 @@ const Page = ({ pageData, service, isAmp = false, variant, lang }) => (
           service={service}
           statusCode={200}
         >
-          <RadioPodcastPage service={service} pageData={pageData} />
+          <OnDemandAudioPage service={service} pageData={pageData} />
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>
