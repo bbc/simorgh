@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AMP On Demand Radio Page AMP Consent config 1`] = `
+exports[`AMP On Demand Audio Page AMP Consent config 1`] = `
 Object {
   "consents": Object {
     "user-consent": Object {
@@ -22,7 +22,7 @@ Object {
 }
 `;
 
-exports[`AMP On Demand Radio Page AMP Geo config 1`] = `
+exports[`AMP On Demand Audio Page AMP Geo config 1`] = `
 Object {
   "ISOCountryGroups": Object {
     "eea": Array [
@@ -91,7 +91,7 @@ Object {
 }
 `;
 
-exports[`AMP On Demand Radio Page Analytics ATI 1`] = `
+exports[`AMP On Demand Audio Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
@@ -111,7 +111,7 @@ Object {
 }
 `;
 
-exports[`AMP On Demand Radio Page Analytics chartbeat 1`] = `
+exports[`AMP On Demand Audio Page Analytics chartbeat 1`] = `
 Object {
   "vars": Object {
     "contentType": "player-episode",
@@ -124,7 +124,7 @@ Object {
 }
 `;
 
-exports[`AMP On Demand Radio Page Analytics comscore 1`] = `
+exports[`AMP On Demand Audio Page Analytics comscore 1`] = `
 Object {
   "extraUrlParams": Object {
     "comscorekw": "amp",
@@ -135,14 +135,14 @@ Object {
 }
 `;
 
-exports[`AMP On Demand Radio Page Expired Episode I can see the 'Content is not available' placeholder 1`] = `"Ibi ntibikiboneka."`;
+exports[`AMP On Demand Audio Page Expired Episode I can see the 'Content is not available' placeholder 1`] = `"Ibi ntibikiboneka."`;
 
-exports[`AMP On Demand Radio Page Expired Episode I can see the brand title 1`] = `"Amakuru ya Gahuzamiryango"`;
+exports[`AMP On Demand Audio Page Expired Episode I can see the brand title 1`] = `"Amakuru ya Gahuzamiryango"`;
 
-exports[`AMP On Demand Radio Page Expired Episode I can see the episode summary 1`] = `"Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."`;
+exports[`AMP On Demand Audio Page Expired Episode I can see the episode summary 1`] = `"Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."`;
 
-exports[`AMP On Demand Radio Page Expired Episode I can see the episode title 1`] = `"6 Ukwa gatatu 2020"`;
+exports[`AMP On Demand Audio Page Expired Episode I can see the episode title 1`] = `"6 Ukwa gatatu 2020"`;
 
-exports[`AMP On Demand Radio Page Expired Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b8lg4.png"`;
+exports[`AMP On Demand Audio Page Expired Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b8lg4.png"`;
 
-exports[`AMP On Demand Radio Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Amakuru ya Gahuzamiryango, 6 Ukwa gatatu 2020"`;
+exports[`AMP On Demand Audio Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Amakuru ya Gahuzamiryango, 6 Ukwa gatatu 2020"`;
