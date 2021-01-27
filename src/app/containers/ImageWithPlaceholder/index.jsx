@@ -1,9 +1,16 @@
 import React, { useContext, useState } from 'react';
+import styled from '@emotion/styled';
 import { string, number, bool, node } from 'prop-types';
 import LazyLoad from 'react-lazyload';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import Image, { AmpImg } from '@bbc/psammead-image';
 import { RequestContext } from '#contexts/RequestContext';
+
+const StyledImagePlaceholder = styled(ImagePlaceholder)`
+  img {
+    max-width: 100%;
+  }
+`;
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
@@ -41,7 +48,7 @@ const ImageWithPlaceholder = ({
   );
 
   return (
-    <ImagePlaceholder css={isLoaded && `background: none`} ratio={ratio}>
+    <StyledImagePlaceholder css={isLoaded && `background: none`} ratio={ratio}>
       {isAmp ? (
         <AmpImg
           alt={alt}
@@ -56,7 +63,7 @@ const ImageWithPlaceholder = ({
         renderImage(imageToRender, lazyLoad, fallback)
       )}
       {children}
-    </ImagePlaceholder>
+    </StyledImagePlaceholder>
   );
 };
 

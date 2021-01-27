@@ -33,8 +33,10 @@ const logger = loggerNode(__filename);
 const PROMO_TYPES = ['top', 'regular', 'leading'];
 
 const SingleColumnStoryPromo = styled(StoryPromo)`
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    display: grid !important;
+  && {
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      display: grid;
+    }
   }
 `;
 
