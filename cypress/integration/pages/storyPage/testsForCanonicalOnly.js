@@ -3,7 +3,7 @@ import runCanonicalAdsTests from '../../../support/helpers/adsTests/testsForCano
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
-export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
+export const testsThatAlwaysRunForCanonicalOnly = () => {
   describe(`Include initialisation only on Mundo on specific page`, () => {
     // This test ensures that inline scripts used in includes execute successfully and
     // progressively enhance the include. These scripts can be supressed by the browser
@@ -11,12 +11,17 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service }) => {
     // our story pages should not do this. The test checks the core content has been removed
     // following progressive enhancement by the include's inline scripts.
     // This test specifically is targeted at this test asset: '/mundo/23263889'
-    it.skip('should load the eclipse VJ include successfully', () => {
-      if (service === 'mundo') {
-        cy.get(
-          '#responsive-embed-vjamericas-176-eclipse-lookup-app-core-content',
-        ).should('not.exist');
-      }
+    it('should load the eclipse VJ include successfully', () => {
+      cy.window().then(win => {
+        if (win.location.pathname.includes('/mundo/23263889')) {
+          cy.get('.bbc-news-vj-shadow-dom', { includeShadowDom: true }).should(
+            'exist',
+          );
+          cy.get(
+            '#responsive-embed-vjamericas-176-eclipse-lookup-app-core-content',
+          ).should('not.exist');
+        }
+      });
     });
   });
 };
