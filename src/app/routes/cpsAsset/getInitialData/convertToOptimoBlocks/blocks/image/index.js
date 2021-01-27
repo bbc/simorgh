@@ -1,3 +1,4 @@
+import { path as pathRamda } from 'ramda/src/path';
 import { getImageParts } from './helpers';
 import {
   blockContainingText,
@@ -27,9 +28,32 @@ const rawImage = ({ copyrightHolder, height, path, width }) => {
   });
 };
 
-const convertImage = block =>
+const leadImage = (pageData, block) => {
+  const blocks = pathRamda(['content', 'blocks'], pageData);
+  const leadImageMap = blocks.reduce((map, _block) => {
+    const { type, id } = _block;
+    if (type === 'image') {
+      map.push(id);
+    }
+    return map;
+  }, {});
+
+  const { id } = block;
+
+  if (leadImageMap[0] === id) {
+    return blockContainingText('leadImage', 'yes');
+  }
+  return false;
+};
+
+const convertImage = (block, pageData) =>
   imageBlocks(
-    [captionBlock(block), altTextBlock(block), rawImage(block)].filter(Boolean),
+    [
+      captionBlock(block),
+      altTextBlock(block),
+      rawImage(block),
+      leadImage(block, pageData),
+    ].filter(Boolean),
   );
 
 export default convertImage;
