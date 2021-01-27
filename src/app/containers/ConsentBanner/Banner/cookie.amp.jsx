@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { bool, string, element, oneOf, shape } from 'prop-types';
+import { bool, string, arrayOf, element, oneOf, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import {
@@ -69,8 +69,17 @@ const OptionsItem = styled.li`
   }
 `;
 
-const AmpCookieBanner = ({ dir, id, config, hidden, script, service }) => {
-  const { initial, manage } = config;
+const AmpCookieBanner = ({
+  dir,
+  id,
+  pages,
+  accept,
+  reject,
+  hidden,
+  script,
+  service,
+}) => {
+  const [initial, manage] = pages;
 
   return (
     <div id={id} hidden={hidden}>
@@ -83,26 +92,28 @@ const AmpCookieBanner = ({ dir, id, config, hidden, script, service }) => {
       </Helmet>
       <Wrapper dir={dir} service={service}>
         <BannerPage data-amp-bind-hidden="isManagingSettings">
-          <Title script={script}>Title</Title>
-          <p>Text.</p>
+          <Title script={script}>{initial.title}</Title>
+          <p>{initial.description.international.para1}</p>
+          <p>{initial.description.international.para2}</p>
           <OptionsList script={script}>
-            <OptionsItem script={script}>Accept</OptionsItem>
+            <OptionsItem script={script}>{accept}</OptionsItem>
             <OptionsItem script={script}>
               <button
                 type="button"
                 on="tap:AMP.setState({ isManagingSettings: true })"
               >
-                Manage my settings
+                {initial.manage}
               </button>
             </OptionsItem>
           </OptionsList>
         </BannerPage>
         <BannerPage hidden data-amp-bind-hidden="!isManagingSettings">
-          <Title script={script}>Title</Title>
-          <p>Text.</p>
+          <Title script={script}>{manage.title}</Title>
+          <p>{manage.description.international.para1}</p>
+          <p>{manage.description.international.para2}</p>
           <OptionsList script={script}>
-            <OptionsItem script={script}>Accept</OptionsItem>
-            <OptionsItem script={script}>Reject</OptionsItem>
+            <OptionsItem script={script}>{accept}</OptionsItem>
+            <OptionsItem script={script}>{reject}</OptionsItem>
           </OptionsList>
         </BannerPage>
       </Wrapper>
@@ -112,7 +123,9 @@ const AmpCookieBanner = ({ dir, id, config, hidden, script, service }) => {
 
 AmpCookieBanner.propTypes = {
   dir: oneOf(['ltr', 'rtl']),
-  config: shape({}).isRequired,
+  pages: arrayOf(shape({})).isRequired,
+  accept: element.isRequired,
+  reject: element.isRequired,
   id: string,
   hidden: bool,
   script: shape(scriptPropType).isRequired,

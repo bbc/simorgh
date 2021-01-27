@@ -33,7 +33,21 @@ const AmpConsentBannerContainer = ({
     <AmpCookieBanner
       dir={dir}
       id={promptId}
-      config={translations.consentBanner.cookie.amp}
+      pages={[
+        translations.consentBanner.cookie.amp.initial,
+        translations.consentBanner.cookie.amp.manage,
+      ]}
+      accept={Accept(
+        translations.consentBanner[type].accept,
+        acceptAction,
+        dataAttribute('accept'),
+      )}
+      reject={Reject(
+        translations.consentBanner[type].reject,
+        translations.consentBanner[type].rejectUrl,
+        rejectAction,
+        dataAttribute('reject'),
+      )}
       hidden={hidden}
       script={script}
       service={service}
