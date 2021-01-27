@@ -26,6 +26,11 @@
       "groupName": "all BBC non-major dependencies",
       "updateTypes": ["minor", "patch"],
       "groupSlug": "psammead-minor-patch"
+    },
+    {
+      "packageNames": ["@bbc/psammead"],
+      "updateTypes": ["major"],
+      "enabled": false
     }
   ]
 }
