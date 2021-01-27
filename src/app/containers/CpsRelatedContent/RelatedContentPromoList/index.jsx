@@ -20,6 +20,9 @@ const MostWatchedOl = styled.ol`
   list-style-type: none;
   margin: 0;
   padding: 0;
+  > li:first-of-type {
+    padding-top: 0;
+  }
 `;
 
 MostWatchedOl.defaultProps = {
