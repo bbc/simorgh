@@ -97,7 +97,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const recommendationsInitialData = path(['recommendations'], pageData);
-
   const gridColumns = {
     group0: 8,
     group1: 8,

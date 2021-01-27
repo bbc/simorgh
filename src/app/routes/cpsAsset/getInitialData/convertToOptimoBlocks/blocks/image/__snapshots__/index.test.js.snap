@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`convertImage should display an image 1`] = `
+Object {
+  "model": Object {
+    "blocks": Array [
+      Object {
+        "model": Object {
+          "blocks": Array [
+            Object {
+              "model": Object {
+                "blocks": Array [
+                  Object {
+                    "model": Object {
+                      "blocks": Array [
+                        Object {
+                          "model": Object {
+                            "attributes": Array [],
+                            "text": "Бег в упряжке - это прежде всего игра, ведь собака не получает немедленного вознаграждения",
+                          },
+                          "type": "fragment",
+                        },
+                      ],
+                      "text": "Бег в упряжке - это прежде всего игра, ведь собака не получает немедленного вознаграждения",
+                    },
+                    "type": "paragraph",
+                  },
+                ],
+              },
+              "type": "text",
+            },
+          ],
+        },
+        "type": "caption",
+      },
+      Object {
+        "model": Object {
+          "blocks": Array [
+            Object {
+              "model": Object {
+                "blocks": Array [
+                  Object {
+                    "model": Object {
+                      "blocks": Array [
+                        Object {
+                          "model": Object {
+                            "attributes": Array [],
+                            "text": "Бег в упряжке - это прежде всего игра, ведь собака не получает немедленного вознаграждения",
+                          },
+                          "type": "fragment",
+                        },
+                      ],
+                      "text": "Бег в упряжке - это прежде всего игра, ведь собака не получает немедленного вознаграждения",
+                    },
+                    "type": "paragraph",
+                  },
+                ],
+              },
+              "type": "text",
+            },
+          ],
+        },
+        "type": "altText",
+      },
+      Object {
+        "model": Object {
+          "copyrightHolder": "Getty Images",
+          "height": 549,
+          "locator": "61FB/test/_63738052__111923538_gettyimages-645263470.jpg",
+          "originCode": "cpsdevpb",
+          "width": 976,
+        },
+        "type": "rawImage",
+      },
+      Object {
+        "positionImage": 0,
+      },
+    ],
+  },
+  "type": "image",
+}
+`;

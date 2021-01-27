@@ -1,4 +1,4 @@
-import { path as pathRamda } from 'ramda/src/path';
+import pathRamda from 'ramda/src/path';
 import { getImageParts } from './helpers';
 import {
   blockContainingText,
@@ -28,22 +28,18 @@ const rawImage = ({ copyrightHolder, height, path, width }) => {
   });
 };
 
-const leadImage = (pageData, block) => {
+const positionImage = (pageData, block) => {
   const blocks = pathRamda(['content', 'blocks'], pageData);
-  const leadImageMap = blocks.reduce((map, _block) => {
+  const positionImageMap = blocks.reduce((map, _block) => {
     const { type, id } = _block;
     if (type === 'image') {
       map.push(id);
     }
     return map;
-  }, {});
+  }, []);
 
   const { id } = block;
-
-  if (leadImageMap[0] === id) {
-    return blockContainingText('leadImage', 'yes');
-  }
-  return false;
+  return positionImageMap.indexOf(id);
 };
 
 const convertImage = (block, pageData) =>
@@ -52,7 +48,7 @@ const convertImage = (block, pageData) =>
       captionBlock(block),
       altTextBlock(block),
       rawImage(block),
-      leadImage(block, pageData),
+      { positionImage: positionImage(pageData, block) },
     ].filter(Boolean),
   );
 
