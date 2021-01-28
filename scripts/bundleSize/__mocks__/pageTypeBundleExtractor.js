@@ -82,9 +82,9 @@ const extractBundlesForPageType = pageType => {
       'shared-3333.js',
     ];
   }
-  if (pageType === 'OnDemandRadioPage') {
+  if (pageType === 'OnDemandAudioPage') {
     return [
-      'OnDemandRadioPage-31ecd969.ec6af2d0.js',
+      'OnDemandAudioPage-31ecd969.ec6af2d0.js',
       'commons-1111.js',
       'commons-2222.js',
       '1111-lib-1111.js',

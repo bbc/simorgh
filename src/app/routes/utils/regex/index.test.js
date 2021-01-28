@@ -10,6 +10,8 @@ import {
   frontPageSwPath,
   cpsAssetPagePath,
   cpsAssetPageDataPath,
+  podcastEpisodePath,
+  podcastBrandPath,
   liveRadioPath,
   onDemandRadioPath,
   onDemandTvPath,
@@ -236,6 +238,40 @@ describe('liveRadioPath', () => {
     '/blah/bbc_hausa_radio/livetv', // live radio w/ unknown service
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, liveRadioPath);
+});
+
+describe('podcastEpisodePath', () => {
+  const validRoutes = [
+    '/arabic/podcasts/654joro456/j0r0r0j',
+    '/burmese/podcasts/987ger/ald321.amp',
+    '/zhongwen/trad/podcasts/938495544/jf84hgf0sa.amp',
+  ];
+  shouldMatchValidRoutes(validRoutes, podcastEpisodePath);
+
+  const invalidRoutes = [
+    '/burmese/podcast/98fjf9302/294fjfms', // podcast brand page
+    '/burmese/98fjf9302/294fjfms', // podcast missing
+    '/zhongwen/trad/39ddjd8d9/39djdwwiw.amp', // variant without podcast
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, podcastEpisodePath);
+});
+
+describe('podcastBrandPath', () => {
+  const validRoutes = [
+    '/arabic/podcasts/432rpk234',
+    '/burmese/podcasts/657mnayr.amp',
+    '/zhongwen/trad/podcasts/457mcg155',
+    '/zhongwen/trad/podcasts/938495544.amp',
+  ];
+  shouldMatchValidRoutes(validRoutes, podcastBrandPath);
+
+  const invalidRoutes = [
+    '/arabic/bbc_arabic_radio/6865933', // includes masterbrand
+    '/arabic/bbc_arabic_radio/podcasts/6865933', // includes masterbrand
+    '/zhongwen/trad/94jf92oe', // variant without podcast
+    '/zhongwen/trad/39ddjd8d9amp', // variant without podcast
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, podcastBrandPath);
 });
 
 describe('mostReadDataRegexPath', () => {
