@@ -132,6 +132,8 @@ export const service = {
         },
         cookie: {
           amp: {
+            accept: 'Accept data collection and continue',
+            reject: 'Reject data collection and continue',
             initial: {
               title: 'Let us know you agree to data collection on AMP',
               description: {
