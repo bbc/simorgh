@@ -79,6 +79,7 @@ export const buildSections = ({
 
   const mediaSectionLabel = {
     'On Demand Radio': 'Radio',
+    'Live Radio': 'Radio',
     'On Demand TV': 'TV',
     Podcast: 'Podcast',
   };
