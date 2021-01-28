@@ -141,13 +141,13 @@ export const service = {
                   para1:
                     'On this accelerated mobile page (AMP) we and our partners collect browsing data to provide you with the best online experience and to personalise the advertising shown to you.',
                   para2:
-                    'Some of these technologies are essential to the running of this page, while others such as those for personalised advertising are optional and require your consent.\nYou may be asked to set these preferences again if you visit non-AMP bbc.com pages.  "',
+                    'Some of these technologies are essential to the running of this page, while others such as those for personalised advertising are optional and require your consent.\nYou may be asked to set these preferences again if you visit non-AMP bbc.com pages.',
                 },
                 international: {
                   para1:
                     'On this accelerated mobile page (AMP) we and our partners collect browsing data to provide you with the best online experience and to personalise the advertising shown to you.',
                   para2:
-                    'Some of these technologies are essential to the running of this page, while others such as those for personalised advertising are optional and require your consent.\nYou may be asked to set these preferences again if you visit non-AMP bbc.com pages.  "',
+                    'Some of these technologies are essential to the running of this page, while others such as those for personalised advertising are optional and require your consent.\nYou may be asked to set these preferences again if you visit non-AMP bbc.com pages.',
                 },
               },
               manage: 'Manage settings',
@@ -166,7 +166,8 @@ export const service = {
                   para4: {
                     text:
                       'Read more about the essential information we store on your device to make our web pages work.',
-                    url: 'blah',
+                    url:
+                      'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                   },
                   para5:
                     'We use local storage to store your consent preferences on your device.',
@@ -176,10 +177,11 @@ export const service = {
                   para7: {
                     text:
                       'Read more about how we personalise ads in the BBC and our advertising partners.',
-                    url: 'blah',
+                    url:
+                      'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                   },
                   para8:
-                    '"You can choose not to receive personalised ads by clicking “Reject data collection and continue” below. Please note that you will still see advertising, but it will not be personalised to you.',
+                    'You can choose not to receive personalised ads by clicking “Reject data collection and continue” below. Please note that you will still see advertising, but it will not be personalised to you.\n',
                   para9:
                     'You can change these settings by clicking “Ad Choices / Do not sell my info” in the footer at any time.',
                 },
@@ -194,7 +196,8 @@ export const service = {
                   para4: {
                     text:
                       'Read more about the essential information we store on your device to make our web pages work.',
-                    url: 'blah',
+                    url:
+                      'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                   },
                   para5:
                     'We use local storage to store your consent preferences on your device.',
@@ -204,10 +207,11 @@ export const service = {
                   para7: {
                     text:
                       'Read more about how we personalise ads in the BBC and our advertising partners.',
-                    url: 'blah',
+                    url:
+                      'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                   },
                   para8:
-                    '"You can choose not to receive personalised ads by clicking “Reject data collection and continue” below. Please note that you will still see advertising, but it will not be personalised to you.',
+                    'You can choose not to receive personalised ads by clicking “Reject data collection and continue” below. Please note that you will still see advertising, but it will not be personalised to you.\n',
                   para9:
                     'You can change these settings by clicking “Ad Choices / Do not sell my info” in the footer at any time.',
                 },
