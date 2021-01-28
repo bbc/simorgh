@@ -131,8 +131,6 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          accept: 'Accept data collection and continue',
-          reject: 'Reject data collection and continue',
           amp: {
             initial: {
               title: 'Let us know you agree to data collection on AMP',
