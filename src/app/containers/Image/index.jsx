@@ -12,7 +12,7 @@ import buildIChefURL from '#lib/utilities/ichefURL';
 import urlWithPageAnchor from '#lib/utilities/pageAnchor';
 
 const DEFAULT_IMAGE_RES = 640;
-const LAZYLOAD_FROM_BLOCK = 3;
+const LAZYLOAD_FROM_BLOCK = 4;
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
@@ -27,7 +27,7 @@ const getCopyright = copyrightHolder => {
 const shouldLazyLoad = position =>
   !!urlWithPageAnchor() || position[0] > LAZYLOAD_FROM_BLOCK;
 
-const ImageContainer = ({ blocks, position }) => {
+const ImageContainer = ({ blocks, position, shouldPreload }) => {
   if (!blocks) {
     return null;
   }
@@ -35,6 +35,9 @@ const ImageContainer = ({ blocks, position }) => {
   const rawImageBlock = filterForBlockType(blocks, 'rawImage');
   const altTextBlock = filterForBlockType(blocks, 'altText');
   const captionBlock = filterForBlockType(blocks, 'caption');
+
+  const ShouldPreLoadLeadImage =
+    position[0] <= LAZYLOAD_FROM_BLOCK && shouldPreload;
 
   if (!rawImageBlock || !altTextBlock) {
     return null;
@@ -80,6 +83,7 @@ const ImageContainer = ({ blocks, position }) => {
         srcset={srcSet}
         showCopyright
         lazyLoad={lazyLoad}
+        preload={ShouldPreLoadLeadImage}
         fade
         type="image"
       />
