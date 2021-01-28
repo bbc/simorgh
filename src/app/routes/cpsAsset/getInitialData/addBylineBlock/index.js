@@ -2,7 +2,10 @@ import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import { insertBlockAfterHeadline } from '../helpers';
 import deepClone from '../../../utils/jsonClone';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  STORY_PAGE,
+  CORRESPONDENT_STORY_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 const getBylineBlock = json => {
   const byline = pathOr(null, ['promo', 'byline'], json);
@@ -34,8 +37,9 @@ const addBylineBlock = originalJson => {
   const json = deepClone(originalJson);
   const pageType = pathOr(null, ['metadata', 'type'], json);
   const blocks = pathOr(null, ['content', 'model', 'blocks'], json);
+  const supportedPageTypes = [STORY_PAGE, CORRESPONDENT_STORY_PAGE];
 
-  if (!blocks || pageType !== STORY_PAGE) {
+  if (!blocks || !supportedPageTypes.includes(pageType)) {
     return json;
   }
 
