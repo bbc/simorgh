@@ -9,6 +9,7 @@ export default {
   MEDIA_PLAYER: 'mediaPlayer',
   MOST_READ: 'mostRead',
   NAVIGATION_ON_ARTICLES: 'navOnArticles',
+  PRELOAD_LEAD_IMAGE: 'preloadLeadImage',
   PREROLL_ADS: 'prerollAds',
   RADIO_SCHEDULE: 'radioSchedule',
   SCRIPT_SWITCH_LINK: 'scriptLink',

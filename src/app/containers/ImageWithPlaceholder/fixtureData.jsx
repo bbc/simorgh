@@ -74,8 +74,12 @@ const baseFixture = {
   width: 640,
 };
 
-export const ImageWithPlaceholder = () => {
-  const props = baseFixture;
+// eslint-disable-next-line react/prop-types
+export const ImageWithPlaceholder = ({ preload = false }) => {
+  const props = {
+    ...baseFixture,
+    preload,
+  };
   return <WrappedImageWithPlaceholder {...props} />;
 };
 
