@@ -196,21 +196,21 @@ describe('Chartbeat utilities', () => {
         service: 'korean',
         pageType: MEDIA_PAGE,
         description: 'should return expected section for live radio',
-        masterBrand: 'bbc_korean_radio',
+        mediaPageType: 'On Demand Radio',
         expected: 'Korean, Korean - Radio',
       },
       {
         service: 'indonesia',
         pageType: MEDIA_PAGE,
         description: 'should return expected section for onDemand radio',
-        masterBrand: 'bbc_indonesian_radio',
+        mediaPageType: 'On Demand Radio',
         expected: 'Indonesia, Indonesia - Radio',
       },
       {
         service: 'pashto',
         pageType: MEDIA_PAGE,
         description: 'should return expected section for ondemand TV',
-        masterBrand: 'bbc_pashto_tv',
+        mediaPageType: 'On Demand TV',
         expected: 'Pashto, Pashto - TV',
       },
       {
@@ -234,7 +234,7 @@ describe('Chartbeat utilities', () => {
         expected,
         sectionName,
         categoryName,
-        masterBrand,
+        mediaPageType,
       }) => {
         it(description, () => {
           expect(
@@ -245,7 +245,7 @@ describe('Chartbeat utilities', () => {
               chapter,
               sectionName,
               categoryName,
-              masterBrand,
+              mediaPageType,
             }),
           ).toBe(expected);
         });
@@ -469,7 +469,7 @@ describe('Chartbeat utilities', () => {
         data: {
           pageTitle: 'Live Radio Page Title',
           contentType: 'player-live',
-          masterBrand: 'bbc_korean_radio',
+          metadata: { type: 'On Demand Radio' },
         },
         brandName: '',
         chartbeatDomain: 'korean.bbc.co.uk',
@@ -601,7 +601,7 @@ describe('Chartbeat utilities', () => {
       data: {
         pageTitle: 'OnDemand Radio Page Title',
         contentType: 'player-episode',
-        masterBrand: 'bbc_korean_radio',
+        metadata: { type: 'On Demand Radio' },
       },
       brandName: '',
       chartbeatDomain: 'korean.bbc.co.uk',
@@ -632,9 +632,9 @@ describe('Chartbeat utilities', () => {
       platform: 'amp',
       pageType: MEDIA_PAGE,
       data: {
+        metadata: { type: 'On Demand TV' },
         pageTitle: 'OnDemand TV Page Title',
         contentType: 'player-episode',
-        masterBrand: 'bbc_pashto_tv',
       },
       brandName: '',
       chartbeatDomain: 'pashto.bbc.co.uk',
@@ -667,7 +667,7 @@ describe('Chartbeat utilities', () => {
       data: {
         pageTitle: 'OnDemand TV Page Title',
         contentType: 'player-episode',
-        masterBrand: 'bbc_pashto_tv',
+        metadata: { type: 'On Demand TV' },
       },
       brandName: '',
       chartbeatDomain: 'pashto.bbc.co.uk',
@@ -684,6 +684,41 @@ describe('Chartbeat utilities', () => {
       },
       sections: 'Pashto, Pashto - TV',
       title: 'OnDemand TV Page Title',
+      type: 'player-episode',
+      uid: 50924,
+      virtualReferrer: 'bbc.com/previous-path',
+      useCanonical: true,
+      path: '/',
+    };
+
+    expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+  });
+
+  it('should return config for canonical pages when page type is podcast and env is live', () => {
+    const fixtureData = {
+      isAmp: false,
+      platform: 'canonical',
+      pageType: MEDIA_PAGE,
+      data: {
+        pageTitle: 'Podcast Page Title',
+        contentType: 'player-episode',
+        metadata: { type: 'Podcast' },
+      },
+      brandName: '',
+      chartbeatDomain: 'arabic.bbc.co.uk',
+      env: 'live',
+      service: 'arabic',
+      origin: 'bbc.com',
+      previousPath: '/previous-path',
+    };
+
+    const expectedConfig = {
+      domain: 'arabic.bbc.co.uk',
+      idSync: {
+        bbc_hid: 'foobar',
+      },
+      sections: 'Arabic, Arabic - Podcast',
+      title: 'Podcast Page Title',
       type: 'player-episode',
       uid: 50924,
       virtualReferrer: 'bbc.com/previous-path',
