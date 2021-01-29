@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Image with data should render a lazyload container instead of an image if the image is after the 3rd block 1`] = `
+exports[`Image with data should render a lazyload container and not preload the image if the image is after the 4th block 1`] = `
 @media (max-width:14.9375rem) {
   .emotion-8 {
     margin-left: 0%;
