@@ -78,7 +78,7 @@
     "@bbc/psammead-byline": "3.0.5",
     "@bbc/psammead-calendars": "^2.0.19",
     "@bbc/psammead-caption": "^4.1.1",
-    "@bbc/psammead-consent-banner": "^4.0.5",
+    "@bbc/psammead-consent-banner": "^5.1.0",
     "@bbc/psammead-copyright": "^3.0.5",
     "@bbc/psammead-detokeniser": "^1.0.0",
     "@bbc/psammead-embed-error": "^3.0.6",
