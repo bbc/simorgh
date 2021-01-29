@@ -149,7 +149,7 @@ export const service = {
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
-              manage: 'Manage settings',
+              manage: 'مدیریت تنظیمات ',
             },
             manage: {
               title: 'رد کردن جمع آوری داده ها و ادامه دادن',
