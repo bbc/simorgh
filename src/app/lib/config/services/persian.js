@@ -133,30 +133,83 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'آیا با دریافت کوکی‌های ما موافقید؟',
-          description: {
-            uk: {
-              first: 'ما برای بهبود استفاده شما از خدمات بی‌بی‌سی از ',
-              linkText: 'کوکی',
-              last:
-                ' استفاده می‌کنیم. اگر موافق هستید دریافت کوکی‌ها را تایید کنید',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept:
+              'اگر به صفحات غیر ای ام پی در bbc.com مراجعه کنید، از شما خواسته می شود که این تنظیمات را دوباره انجام کنید.',
+            reject: 'مدیریت تنظیمات',
+            initial: {
+              title:
+                'به ما اطلاع دهید که موافق جمع آوری داده ها در صفحات موبایلی پرشتاب (AMP)  هستید',
+              description: {
+                first:
+                  'ما و شریکانمان برای اینکه خدمات آنلاین بهتری به شما ارائه کنیم و محتوای مورد نظرتان را به شما نشان دهیم از تکنولوژی‌هایی مانند ',
+                linkText: 'کوکی ها',
+                last:
+                  ' یا برداشت از داده‌های مرورگر شما استفاده می‌کنیم؛ اگر موافق هستید تایید کنید',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Manage settings',
             },
-            international: {
-              first:
-                'ما و شریکانمان برای اینکه خدمات آنلاین بهتری به شما ارائه کنیم و محتوای مورد نظرتان را به شما نشان دهیم از تکنولوژی‌هایی مانند ',
-              linkText: 'کوکی ها',
-              last:
-                ' یا برداشت از داده‌های مرورگر شما استفاده می‌کنیم؛ اگر موافق هستید تایید کنید',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'رد کردن جمع آوری داده ها و ادامه دادن',
+              description: {
+                para1: 'مدیریت تنظیمات مربوط به رضایت در صفحات AMP',
+                para2:
+                  'این تنظیمات فقط برای صفحات AMP اعمال می شود. هنگامی که از صفحات غیر AMP در بی بی سی بازدید می کنید ممکن است از شما بخواهند که این تنظیمات را دوباره انجام دهید.',
+                heading2:
+                  'صفحه موبایل سبک که از آن بازدید کرده اید با استفاده از فناوری Google AMP ساخته شده است.',
+                para3: 'جمع آوری اطلاعات کاملاً ضروری',
+                para4: {
+                  text:
+                    'برای کار با صفحات وب ما، ما اطلاعات محدودی را بدون رضایت شما در دستگاه شما ذخیره می کنیم.',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'درباره اطلاعات اساسی که برای کار با صفحات وب ما در دستگاه شما ذخیره می کنیم بیشتر بخوانید.',
+                heading3:
+                  'ما اطلاعات مربوط به  رضایت یا عدم رضایت شما را به صورت محلی در دستگاهتان  ذخیره می کنیم.',
+                para6: 'جمع آوری اطلاعات اختیاری',
+                para7: {
+                  text:
+                    'وقتی موافقت خود را برای جمع آوری داده ها در صفحات AMP اعلام می کنید، به ما اجازه می دهید تبلیغات شخصی شده مربوط به شما را هنگامی که خارج از بریتانیا هستنید، نمایش دهیم.',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'درباره نحوه شخصی سازی تبلیغات در بی بی سی و شرکای تبلیغاتی ما بیشتر بخوانید.',
+                para9:
+                  'شما می توانید با کلیک "رد کردن جمع آوری داده ها و ادامه دادن" در زیر، تبلیغات شخصی را دریافت نکنید. لطفاً توجه داشته باشید که همچنان تبلیغات را مشاهده خواهید کرد، اما برای شما شخصی نخواهد شد.',
+              },
             },
           },
-          accept: 'بله، موافقم',
-          reject: 'خیر، بازگشت به صفحه تنظیمات',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'آیا با دریافت کوکی‌های ما موافقید؟',
+            description: {
+              uk: {
+                first: 'ما برای بهبود استفاده شما از خدمات بی‌بی‌سی از ',
+                linkText: 'کوکی',
+                last:
+                  ' استفاده می‌کنیم. اگر موافق هستید دریافت کوکی‌ها را تایید کنید',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first:
+                  'ما و شریکانمان برای اینکه خدمات آنلاین بهتری به شما ارائه کنیم و محتوای مورد نظرتان را به شما نشان دهیم از تکنولوژی‌هایی مانند ',
+                linkText: 'کوکی ها',
+                last:
+                  ' یا برداشت از داده‌های مرورگر شما استفاده می‌کنیم؛ اگر موافق هستید تایید کنید',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'بله، موافقم',
+            reject: 'خیر، بازگشت به صفحه تنظیمات',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
