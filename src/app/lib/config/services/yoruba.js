@@ -127,29 +127,80 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Ẹ jẹ́ ká mọ̀ pé ẹ faramọ́ ìlànà òpó ìtàkún àgbáyé wa',
-          description: {
-            uk: {
-              first: 'À ń lo ',
-              linkText: 'fún ìlànà òpó ìtàkùn àgbáyé',
-              last:
-                ' láti jẹ́ kẹ ní ìrírí tó dára jùlọ lójú òpó ìtàkùn àgbáyé. Ẹ jọ̀wọ́, ẹ jẹ́ ká mọ tẹ bá faramọ gbogbo àwọn ìlàná òpó ìtàkùn àgbáyé wọnyí.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept:
+              'Diẹ lara awọn imọ ẹrọ yii ṣe pataki fun iṣẹ oju opo yii, amọ iru ipoowo ti o fẹ ẹ ri, ko jẹ dandan, o si nilo ki o faramọ.O ṣe e ṣe ki o tun eto yii ṣe ti o ba lo oju opo bbc.com ti ko ni AMP.',
+            reject: 'Mojuto eto mi',
+            initial: {
+              title: 'Sọ fun wa, ti o ba faramọ gbigba akọsilẹ lori AMP',
+              description: {
+                first: 'Àwa àti àwọn alábàáṣiṣẹ́pọ̀ wa ń lo àwọn ìmọ̀ ẹ̀rọ, bíi ',
+                linkText: 'ìlànà òpó ìtàkùn àgbáyé',
+                last:
+                  ', láti mọ détà tí ẹ̀ ń lò, ká le è fun yín ní ìrírí lílo ojú òpó yélujára tó dára jùlọ, ká sì tún ri dájú pé ẹyin ìkan ló ń rí àwọn ohun ta kọ àti ìpolówó ọjà tí á ń fi hàn yín.Ẹ jọ̀wọ́, ẹ jẹ́ ká mọ̀ tẹ bá fara mọ́ ọ.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Faramọ gbigba akọsilẹ rẹ, ki o si tẹsiwaju',
             },
-            international: {
-              first: 'Àwa àti àwọn alábàáṣiṣẹ́pọ̀ wa ń lo àwọn ìmọ̀ ẹ̀rọ, bíi ',
-              linkText: 'ìlànà òpó ìtàkùn àgbáyé',
-              last:
-                ', láti mọ détà tí ẹ̀ ń lò, ká le è fun yín ní ìrírí lílo ojú òpó yélujára tó dára jùlọ, ká sì tún ri dájú pé ẹyin ìkan ló ń rí àwọn ohun ta kọ àti ìpolówó ọjà tí á ń fi hàn yín.Ẹ jọ̀wọ́, ẹ jẹ́ ká mọ̀ tẹ bá fara mọ́ ọ.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'Kọ gbigba akọsilẹ rẹ, ki o si tẹsiwaju',
+              description: {
+                para1: 'Mojuto eto ifaramọ lori AMP',
+                para2:
+                  'Awọn eto yii ni i ṣe pẹlu oju opo AMP nikan. O ṣe e ṣe ki o tun eto yii ṣe ti o ba lo oju opo bbc.com ti ko ni AMP.',
+                heading2:
+                  'Imọ ẹrọ Google AMP ni a fi ṣe agbekalẹ ojuopo ayelujara ori foonu ti o ṣẹṣẹ wo tan.',
+                para3: 'Awọn akọsilẹ to ṣe dandan lati gba',
+                para4: {
+                  text:
+                    'Ki oju opo wa ba a le ṣiṣẹ, a ma n fi awọn akọsilẹ kan pamọ lori foonu rẹ, lai gba aṣẹ lọwọ rẹ.',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Ka si nipa awọn akọsilẹ to sẹ koko ti a fi pamọ si ori foonu rẹ, ki oju opo wa le ṣiṣẹ.',
+                heading3:
+                  'A n lo aaye labẹle, lati fi awsn nakn ti o fọwọ si, lori foonu rẹ.',
+                para6: 'Akọsilẹ ti o le yan',
+                para7: {
+                  text:
+                    'Ti o ba faramọ gbigba akọsilẹ lori AMP, o tumọ si pe o gba lati faaye gba wa ki a ṣe afihan ipolowo to ba ọ mu, ti o ko ba si ni UK.',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'Ka si nipa bi a ṣe n ṣeto iru ipolowo ti o n rini BBC ati lọdọ awọn onibaara wa',
+                para9:
+                  'O le yan iru ipolowo ti o ba fẹ ẹ ma ri nipa titẹ “Reject data collection and continue” nisalẹ. Jẹ ko ye ọ pe wa a ma ri ipolowo, amọ ko ni jẹ eyi ti o yan.\nO le ṣe ayipada eto yii nipa titẹ “Ad Choices/Do not sell my info” si isalẹ nigbakuugba.',
+              },
             },
           },
-          accept: 'Bẹ́ẹ̀ni, mo fara mọ́ ọ',
-          reject: 'Rárá, ẹ gbé mi padà sí ojú òpó àtúntò (setting)',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Ẹ jẹ́ ká mọ̀ pé ẹ faramọ́ ìlànà òpó ìtàkún àgbáyé wa',
+            description: {
+              uk: {
+                first: 'À ń lo ',
+                linkText: 'fún ìlànà òpó ìtàkùn àgbáyé',
+                last:
+                  ' láti jẹ́ kẹ ní ìrírí tó dára jùlọ lójú òpó ìtàkùn àgbáyé. Ẹ jọ̀wọ́, ẹ jẹ́ ká mọ tẹ bá faramọ gbogbo àwọn ìlàná òpó ìtàkùn àgbáyé wọnyí.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'Àwa àti àwọn alábàáṣiṣẹ́pọ̀ wa ń lo àwọn ìmọ̀ ẹ̀rọ, bíi ',
+                linkText: 'ìlànà òpó ìtàkùn àgbáyé',
+                last:
+                  ', láti mọ détà tí ẹ̀ ń lò, ká le è fun yín ní ìrírí lílo ojú òpó yélujára tó dára jùlọ, ká sì tún ri dájú pé ẹyin ìkan ló ń rí àwọn ohun ta kọ àti ìpolówó ọjà tí á ń fi hàn yín.Ẹ jọ̀wọ́, ẹ jẹ́ ká mọ̀ tẹ bá fara mọ́ ọ.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Bẹ́ẹ̀ni, mo fara mọ́ ọ',
+            reject: 'Rárá, ẹ gbé mi padà sí ojú òpó àtúntò (setting)',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
