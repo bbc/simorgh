@@ -140,7 +140,7 @@ export const service = {
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
-              manage: 'Manage settings',
+              manage: 'Manage my settings',
             },
             manage: {
               title: 'Manage consent settings on AMP pages',
@@ -170,7 +170,7 @@ export const service = {
                     'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
-                  'You can choose not to receive personalised ads by clicking “Reject data collection and continue” below. Please note that you will still see advertising, but it will not be personalised to you.\n',
+                  'You can choose not to receive personalised ads by clicking “Reject data collection and continue” below. Please note that you will still see advertising, but it will not be personalised to you.',
                 para9:
                   'You can change these settings by clicking “Ad Choices / Do not sell my info” in the footer at any time.',
               },
