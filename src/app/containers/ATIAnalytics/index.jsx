@@ -40,6 +40,13 @@ const ATIAnalytics = ({ data }) => {
       ),
     STY: () =>
       buildCpsAssetPageATIUrl(data, requestContext, serviceContext, 'article'),
+    CSP: () =>
+      buildCpsAssetPageATIUrl(
+        data,
+        requestContext,
+        serviceContext,
+        'article-correspondent',
+      ),
   };
 
   const isValidPageType = Object.keys(pageTypeHandlers).includes(pageType);
