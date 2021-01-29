@@ -21,6 +21,7 @@ import {
 
 const ARTICLE_MEDIA_ASSET = 'article-media-asset';
 const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
+const ARTICLE_CORRESPONDENT_PIECE = 'article-correspondent';
 
 const pageTypeUrlBuilders = {
   article: buildArticleATIUrl,
@@ -41,6 +42,13 @@ const pageTypeUrlBuilders = {
       requestContext,
       serviceContext,
       ARTICLE_PHOTO_GALLERY,
+    ),
+  CSP: (data, requestContext, serviceContext) =>
+    buildCpsAssetPageATIUrl(
+      data,
+      requestContext,
+      serviceContext,
+      ARTICLE_CORRESPONDENT_PIECE,
     ),
 };
 
@@ -63,6 +71,13 @@ const pageTypeParamBuilders = {
       requestContext,
       serviceContext,
       ARTICLE_PHOTO_GALLERY,
+    ),
+  CSP: (data, requestContext, serviceContext) =>
+    buildCpsAssetPageATIParams(
+      data,
+      requestContext,
+      serviceContext,
+      ARTICLE_CORRESPONDENT_PIECE,
     ),
 };
 

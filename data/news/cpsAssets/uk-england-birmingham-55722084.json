@@ -1,0 +1,689 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:news/uk-england-birmingham-55722084",
+    "locators": {
+      "assetUri": "/news/uk-england-birmingham-55722084",
+      "cpsUrn": "urn:bbc:content:assetUri:news/uk-england-birmingham-55722084",
+      "curie": "http://www.bbc.co.uk/asset/c48f2671-4e84-45d4-976f-643734a6cc11",
+      "assetId": "55722084"
+    },
+    "type": "STY",
+    "createdBy": "news",
+    "language": "en-gb",
+    "lastUpdated": 1611093909311,
+    "firstPublished": 1611093900000,
+    "lastPublished": 1611093900000,
+    "timestamp": 1611093900000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "news.england.birmingham_and_black_country.story.55722084.page",
+      "cps_asset_id": "55722084"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "locator": "urn:bbc:cps:curie:asset:c48f2671-4e84-45d4-976f-643734a6cc11",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/41e7afa8-4158-4dc7-84e2-53a563ba4bc6#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/aae25024-ce46-488e-8e60-6f792c6b5317#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/5ae1f167-989d-425a-9232-3de98c086575#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/dd73abb3-70c8-45b9-9b67-515c60b37638#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/ea0aacda-0e5b-4fa2-9f94-dfe775b321a4#id"
+        }
+      ],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED"
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Birmingham",
+          "thingUri": "http://www.bbc.co.uk/things/41e7afa8-4158-4dc7-84e2-53a563ba4bc6#id",
+          "thingId": "41e7afa8-4158-4dc7-84e2-53a563ba4bc6",
+          "thingType": [
+            "core:Place",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/2655603/"
+          ],
+          "topicName": "Birmingham",
+          "topicId": "cerlz4j5m67t",
+          "curationList": [
+            {
+              "curationId": "2655603",
+              "curationType": "location-stream"
+            }
+          ],
+          "thingEnglishLabel": "Birmingham"
+        },
+        {
+          "thingLabel": "Pollution",
+          "thingUri": "http://www.bbc.co.uk/things/5ae1f167-989d-425a-9232-3de98c086575#id",
+          "thingId": "5ae1f167-989d-425a-9232-3de98c086575",
+          "thingType": [
+            "core:Theme",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Pollution"
+          ],
+          "topicName": "Pollution",
+          "topicId": "c40rjmqdq4xt",
+          "curationList": [
+            {
+              "curationId": "5ae1f167-989d-425a-9232-3de98c086575",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Pollution"
+        },
+        {
+          "thingLabel": "Birmingham City Council",
+          "thingUri": "http://www.bbc.co.uk/things/aae25024-ce46-488e-8e60-6f792c6b5317#id",
+          "thingId": "aae25024-ce46-488e-8e60-6f792c6b5317",
+          "thingType": [
+            "tagging:Agent",
+            "tagging:AmbiguousTerm",
+            "tagging:TagConcept",
+            "core:Organisation",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://opendatacommunities.org/id/metropolitan-district-council/birmingham"
+          ],
+          "topicName": "Birmingham City Council",
+          "topicId": "cpr6g35nne1t",
+          "curationList": [
+            {
+              "curationId": "706c2e3b-ddbe-4337-bc2c-64f92068b2cf",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Birmingham City Council"
+        },
+        {
+          "thingLabel": "West Midlands",
+          "thingUri": "http://www.bbc.co.uk/things/dd73abb3-70c8-45b9-9b67-515c60b37638#id",
+          "thingId": "dd73abb3-70c8-45b9-9b67-515c60b37638",
+          "thingType": [
+            "core:CeremonialCounty",
+            "tagging:TagConcept",
+            "core:Thing",
+            "core:Place"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/West_Midlands_(county)"
+          ],
+          "thingEnglishLabel": "West Midlands"
+        }
+      ]
+    },
+    "version": "v1.3.11",
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "media"
+    ],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "NEWS_ENGLISH_REGIONS",
+      "producerId": "108",
+      "chapter": "birmingham_and_black_country"
+    },
+    "readTime": 2,
+    "siteUri": "/news",
+    "topics": [
+      {
+        "topicName": "Pollution",
+        "topicId": "c40rjmqdq4xt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/5ae1f167-989d-425a-9232-3de98c086575#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "5ae1f167-989d-425a-9232-3de98c086575",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Theme",
+          "tagging:TagConcept",
+          "core:Thing"
+        ]
+      },
+      {
+        "topicName": "Birmingham",
+        "topicId": "cerlz4j5m67t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/41e7afa8-4158-4dc7-84e2-53a563ba4bc6#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "2655603",
+            "curationType": "location-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Place",
+          "tagging:TagConcept",
+          "core:Thing"
+        ]
+      },
+      {
+        "topicName": "Birmingham City Council",
+        "topicId": "cpr6g35nne1t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/aae25024-ce46-488e-8e60-6f792c6b5317#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "706c2e3b-ddbe-4337-bc2c-64f92068b2cf",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:Agent",
+          "tagging:AmbiguousTerm",
+          "tagging:TagConcept",
+          "core:Organisation",
+          "core:Thing"
+        ]
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "116578901",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/2AEB/production/_116578901_1birmingham.jpg",
+        "path": "/cpsprodpb/2AEB/production/_116578901_1birmingham.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Birmingham",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Birmingham's Clean Air Zone (CAZ) remains on course to be introduced on 1 June despite the challenges of the Covid-19 pandemic, the leader of the city council has said.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;The government has made it crystal clear it will not tolerate any further delay,&quot; Ian Ward told a meeting.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "He said it followed ministerial discussions over whether rollout should be postponed amid the virus's toll.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "One councillor said carrying on was being &quot;tone deaf&quot; to people's needs.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Under the CAZ - originally due to launch in January - <link><caption>high-polluting vehicles driven in the city centre will be subject to daily fees.</caption><url href=\"https://www.bbc.co.uk/news/uk-england-birmingham-54461908\" platform=\"highweb\"/></link>",
+        "markupType": "candy_xml",
+        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/news/uk-england-birmingham-54461908",
+        "type": "paragraph"
+      },
+      {
+        "text": "Rollout was delayed by issues with vehicle-checking software and then the economic impact of the coronavirus on residents and business.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "But tests on the system are due to begin in weeks, with additional delay not an option, according to Mr Ward, Labour.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "The CAZ was among several city centre issues discussed by the city's cabinet in a meeting on Tuesday, during which approval was granted to restore Victoria Square fountain The River - commonly referred to as The Floozy in the Jacuzzi; a hangover to a name coined in the 1990s when the piece was created.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "p07rq7wp",
+        "subType": "clip",
+        "format": "video",
+        "title": "The 'Floozy' fountain coming back to life",
+        "synopses": {
+          "short": "Birmingham's 'Floozy in the Jacuzzi' fountain to be restored",
+          "long": "Birmingham's famous 'Floozy in the Jacuzzi' fountain to be restored as part of a £25m city centre scheme.\n\nThe fountain, officially called The River, sprung a leak in 2013 and is now filled with bedding plants.\n\nBirmingham City Council has announced plans to refresh and update the area around Victoria Square ahead of the Commonwealth Games in 2022.",
+          "medium": "Birmingham's famous fountain to be restored as part of £25m city centre scheme."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07rq870.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Birmingham's 'Floozy in the Jacuzzi' fountain to be restored",
+        "versions": [
+          {
+            "versionId": "p07rq7wr",
+            "types": [
+              "Original"
+            ],
+            "duration": 61,
+            "durationISO8601": "PT1M1S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
+            },
+            "availableFrom": 1571744582000
+          }
+        ],
+        "imageCopyright": "BBC",
+        "smpKind": "programme",
+        "type": "media"
+      },
+      {
+        "text": "A total of £8.3m in CAZ revenue had been earmarked for the first stage of redeveloping part of the city centre, including fixing the broken fountain.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "But Mr Ward on Tuesday said the whole amount may no longer be available from CAZ income.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "According to council documents, revenue across the decade is expected to be tens of millions of pounds less than originally envisioned amid the scheme's six-month delay and other complicating factors.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "The same documents state that making Birmingham's air cleaner is the project's chief purpose, not revenue.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Referring to the pandemic, opposition member Ewan Mackay said charging motorists was &quot;tone deaf to what people are experiencing at this time&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Mr Ward confirmed last week that the use of venue Millennium Point, inside the charging zone, as a vaccination centre would not hinder rollout plans.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Birmingham's air pollution is &quot;a public health risk&quot; thought to contribute to 900 deaths a year, the council said in October. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "98171732",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/5CA5/production/_98171732_line976.jpg",
+        "path": "/cpsprodpb/5CA5/production/_98171732_line976.jpg",
+        "height": 2,
+        "width": 464,
+        "altText": "Presentational grey line",
+        "copyrightHolder": "BBC",
+        "positionHint": "body-width",
+        "type": "image"
+      },
+      {
+        "text": "<italic>Follow BBC West Midlands on </italic><link><caption>Facebook</caption><url href=\"https://www.facebook.com/MidlandsBBC/\" platform=\"highweb\"/></link><italic>, </italic><link><caption>Twitter</caption><url href=\"https://twitter.com/bbcmtd\" platform=\"highweb\"/></link><italic> and </italic><link><caption>Instagram</caption><url href=\"https://www.instagram.com/bbc_midlands/?hl=en\" platform=\"highweb\"/></link><italic>. Send your story ideas to: </italic><link><caption>newsonline.westmidlands@bbc.co.uk </caption><url href=\"mailto:newsonline.westmidlands@bbc.co.uk\" platform=\"highweb\"/></link>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Further delay to city car charges 'not tolerated'",
+      "headline": "Birmingham Clean Air Zone: Delay 'not tolerated'"
+    },
+    "locators": {
+      "assetUri": "/news/uk-england-birmingham-55722084",
+      "cpsUrn": "urn:bbc:content:assetUri:news/uk-england-birmingham-55722084",
+      "curie": "http://www.bbc.co.uk/asset/c48f2671-4e84-45d4-976f-643734a6cc11",
+      "assetId": "55722084"
+    },
+    "summary": "The government demands Birmingham's Clean Air Zone launches in June, the council leader says.",
+    "timestamp": 1611093900000,
+    "language": "en-gb",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "locator": "urn:bbc:cps:curie:asset:c48f2671-4e84-45d4-976f-643734a6cc11",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/41e7afa8-4158-4dc7-84e2-53a563ba4bc6#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/aae25024-ce46-488e-8e60-6f792c6b5317#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/5ae1f167-989d-425a-9232-3de98c086575#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/dd73abb3-70c8-45b9-9b67-515c60b37638#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/ea0aacda-0e5b-4fa2-9f94-dfe775b321a4#id"
+        }
+      ],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED"
+    },
+    "indexImage": {
+      "id": "111398990",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/2705/production/_111398990_whatsubject.jpg",
+      "path": "/cpsprodpb/2705/production/_111398990_whatsubject.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Cars in Birmingham",
+      "caption": "Cars in Birmingham",
+      "copyrightHolder": "Getty Images",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:news/uk-england-birmingham-55722084",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Birmingham & Black Country",
+      "uri": "/news/england/birmingham_and_black_country",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC News",
+      "uri": "/news",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "June 2021 date for city's delayed Clean Air Zone",
+              "headline": "Birmingham Clean Air Zone to launch in June 2021"
+            },
+            "locators": {
+              "assetUri": "/news/uk-england-birmingham-54461908",
+              "cpsUrn": "urn:bbc:content:assetUri:/news/uk-england-birmingham-54461908"
+            },
+            "summary": "Councillors say the Birmingham charging zone, originally due in January, will be in place next year.",
+            "timestamp": 1602165445000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "111398990",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/2705/production/_111398990_whatsubject.jpg",
+              "path": "/cpsprodpb/2705/production/_111398990_whatsubject.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Cars in Birmingham",
+              "caption": "Cars in Birmingham",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:news/uk-england-birmingham-54461908",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Coronavirus delays clean air zone plan",
+              "headline": "Coronavirus delays Birmingham's clean air zone plan"
+            },
+            "locators": {
+              "assetUri": "/news/uk-england-birmingham-52185819",
+              "cpsUrn": "urn:bbc:content:assetUri:/news/uk-england-birmingham-52185819"
+            },
+            "summary": "The government has agreed to postpone the introduction of the zone until January 2021.",
+            "timestamp": 1586178153000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "111398990",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/2705/production/_111398990_whatsubject.jpg",
+              "path": "/cpsprodpb/2705/production/_111398990_whatsubject.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Cars in Birmingham",
+              "caption": "Cars in Birmingham",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:news/uk-england-birmingham-52185819",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Coronavirus hits clean air zone plan",
+              "headline": "Coronavirus hits Birmingham's clean air zone plan"
+            },
+            "locators": {
+              "assetUri": "/news/uk-england-birmingham-52011785",
+              "cpsUrn": "urn:bbc:content:assetUri:/news/uk-england-birmingham-52011785"
+            },
+            "summary": "Birmingham is seeking to delay its crackdown on cars entering the city centre.",
+            "timestamp": 1584990855000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "111398990",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/2705/production/_111398990_whatsubject.jpg",
+              "path": "/cpsprodpb/2705/production/_111398990_whatsubject.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Cars in Birmingham",
+              "caption": "Cars in Birmingham",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:news/uk-england-birmingham-52011785",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Clean Air Zones 'delayed by government'",
+              "headline": "Leeds and Birmingham Clean Air Zones 'delayed by government'"
+            },
+            "locators": {
+              "assetUri": "/news/uk-england-48679008",
+              "cpsUrn": "urn:bbc:content:assetUri:/news/uk-england-48679008"
+            },
+            "summary": "Birmingham and Leeds councils say a software delay means Clean Air Zones will not begin in January.",
+            "timestamp": 1560866948000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "102130025",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/CB23/production/_102130025_29083455291_9184b11328_o.jpg",
+              "path": "/cpsprodpb/CB23/production/_102130025_29083455291_9184b11328_o.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Cameras look at Birmingham tunnels",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:news/uk-england-48679008",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "The 'Floozy' fountain sprinkles back to life",
+              "headline": "Birmingham's 'Floozy in the Jacuzzi' fountain to be restored"
+            },
+            "locators": {
+              "assetUri": "/news/uk-england-birmingham-50141991",
+              "cpsUrn": "urn:bbc:content:assetUri:/news/uk-england-birmingham-50141991"
+            },
+            "summary": "'Floozy' fountain to be restored as part of £25m city centre scheme after it sprung a leak.",
+            "timestamp": 1571746776000,
+            "language": "en-gb",
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07rq7wp",
+              "subType": "clip",
+              "format": "video",
+              "title": "The 'Floozy' fountain coming back to life",
+              "synopses": {
+                "short": "Birmingham's 'Floozy in the Jacuzzi' fountain to be restored",
+                "long": "Birmingham's famous 'Floozy in the Jacuzzi' fountain to be restored as part of a £25m city centre scheme.\n\nThe fountain, officially called The River, sprung a leak in 2013 and is now filled with bedding plants.\n\nBirmingham City Council has announced plans to refresh and update the area around Victoria Square ahead of the Commonwealth Games in 2022.",
+                "medium": "Birmingham's famous fountain to be restored as part of £25m city centre scheme."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07rq870.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "Birmingham's 'Floozy in the Jacuzzi' fountain to be restored",
+              "versions": [
+                {
+                  "versionId": "p07rq7wr",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 61,
+                  "durationISO8601": "PT1M1S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1571744582000
+                }
+              ],
+              "imageCopyright": "BBC",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "109326896",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/110E6/production/_109326896_p07rq870.jpg",
+              "path": "/cpsprodpb/110E6/production/_109326896_p07rq870.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "The River is better known as the 'Floozy in the Jacuzzi'",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "mediaType": "Video",
+            "id": "urn:bbc:ares::asset:news/uk-england-birmingham-50141991",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "'Floozy' fountain to become flowerbed",
+              "headline": "Birmingham's 'floozy' fountain to become flowerbed"
+            },
+            "locators": {
+              "assetUri": "/news/uk-england-birmingham-33286671",
+              "cpsUrn": "urn:bbc:content:assetUri:/news/uk-england-birmingham-33286671"
+            },
+            "summary": "The \"Floozy in the Jacuzzi\" fountain in Victoria Square is to be come a flowerbed.",
+            "timestamp": 1435319038000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "83878023",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/7D57/production/_83878023_floozie-post.jpg",
+              "path": "/cpsprodpb/7D57/production/_83878023_floozie-post.jpg",
+              "height": 351,
+              "width": 624,
+              "altText": "Computer generated image of plants in fountain",
+              "caption": "Birmingham City Council plans to plant flowers in the broken fountain in Victoria Square",
+              "copyrightHolder": "Birmingham City Council",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:news/uk-england-birmingham-33286671",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}
