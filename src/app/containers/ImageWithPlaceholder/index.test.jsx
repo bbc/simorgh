@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import {
   ImageWithPlaceholder,
@@ -23,6 +23,35 @@ describe('ImageWithPlaceholder', () => {
 
     expect(queryByAltText('Pauline Clayton')).not.toBeInTheDocument();
     expect(container.querySelector('noscript')).toBeInTheDocument();
+  });
+
+  it('should add a link tag to the head of the document when preload is set to true', async () => {
+    render(<ImageWithPlaceholder preload />);
+
+    await waitFor(() => {
+      const preloadLink = document.querySelector('head link');
+      expect(preloadLink).toBeInTheDocument();
+      expect(preloadLink.rel).toEqual('preload');
+      expect(preloadLink.href).toEqual(
+        'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg',
+      );
+    });
+  });
+
+  it('should not add a link tag to the head of the document when preload is set to false', async () => {
+    render(<ImageWithPlaceholder preload={false} />);
+
+    await waitFor(() => {
+      expect(document.querySelector('head link')).not.toBeInTheDocument();
+    });
+  });
+
+  it('should not add a link tag to the head of the document when rendering an AMP image', async () => {
+    render(<AmpImageWithPlaceholder />);
+
+    await waitFor(() => {
+      expect(document.querySelector('head link')).not.toBeInTheDocument();
+    });
   });
 
   shouldMatchSnapshot(
