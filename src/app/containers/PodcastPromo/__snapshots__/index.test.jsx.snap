@@ -82,11 +82,6 @@ exports[`PodcastPromo Should render correctly 1`] = `
 @media (min-width:20rem) {
   .emotion-8 {
     display: block;
-  }
-}
-
-@media (min-width:25rem) {
-  .emotion-8 {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
     -ms-flex-positive: 0;
@@ -94,6 +89,14 @@ exports[`PodcastPromo Should render correctly 1`] = `
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
+    -webkit-flex-basis: 6.5rem;
+    -ms-flex-preferred-size: 6.5rem;
+    flex-basis: 6.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .emotion-8 {
     -webkit-flex-basis: 6.8125rem;
     -ms-flex-preferred-size: 6.8125rem;
     flex-basis: 6.8125rem;
