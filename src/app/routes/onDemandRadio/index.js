@@ -1,4 +1,4 @@
-import { RadioPodcastPage } from '#pages';
+import { OnDemandAudioPage } from '#pages';
 import { onDemandRadioPath } from '#utils/regex';
 import getInitialData from '../radioPodcast/getInitialData';
 import { MEDIA_PAGE } from '#utils/pageTypes';
@@ -6,7 +6,7 @@ import { MEDIA_PAGE } from '#utils/pageTypes';
 export default {
   path: onDemandRadioPath,
   exact: true,
-  component: RadioPodcastPage,
+  component: OnDemandAudioPage,
   getInitialData,
   pageType: MEDIA_PAGE,
 };

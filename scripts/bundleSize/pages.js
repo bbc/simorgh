@@ -8,7 +8,7 @@ exports.pages = [
   'MediaAssetPage',
   'MostReadPage',
   'MostWatchedPage',
-  'RadioPodcastPage',
+  'OnDemandAudioPage',
   'OnDemandTvPage',
   'PhotoGalleryPage',
   'StoryPage',

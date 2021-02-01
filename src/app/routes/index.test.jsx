@@ -38,7 +38,7 @@ jest.mock('#pages/index.js', () => ({
   StoryPage: jest.requireActual('#pages/StoryPage').default,
   OnDemandTvPage: jest.requireActual('#pages/OnDemandTvPage').default,
   PhotoGalleryPage: jest.requireActual('#pages/PhotoGalleryPage').default,
-  RadioPodcastPage: jest.requireActual('#pages/RadioPodcastPage').default,
+  OnDemandAudioPage: jest.requireActual('#pages/OnDemandAudioPage').default,
   MostReadPage: jest.requireActual('#pages/MostReadPage').default,
   MostWatchedPage: jest.requireActual('#pages/MostWatchedPage').default,
   MediaAssetPage: jest.requireActual('#pages/MediaAssetPage').default,

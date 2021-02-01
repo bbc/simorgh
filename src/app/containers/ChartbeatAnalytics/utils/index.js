@@ -1,5 +1,6 @@
 import Cookie from 'js-cookie';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import onClient from '#lib/utilities/onClient';
 import { getPromoHeadline } from '#lib/analyticsUtils/article';
 import { getPageTitle } from '#lib/analyticsUtils/indexPage';
@@ -69,12 +70,19 @@ export const buildSections = ({
   chapter,
   sectionName,
   categoryName,
-  masterBrand,
+  mediaPageType,
 }) => {
   const addProducer = producer && service !== producer;
   const serviceCap = capitalize(service);
   const type = getType(pageType, true);
   const appendCategory = name => `${name}-category`;
+
+  const mediaSectionLabel = {
+    'On Demand Radio': 'Radio',
+    'Live Radio': 'Radio',
+    'On Demand TV': 'TV',
+    Podcast: 'Podcast',
+  };
 
   switch (pageType) {
     case MEDIA_ASSET_PAGE:
@@ -89,10 +97,7 @@ export const buildSections = ({
       return [
         serviceCap,
         ...(pageType
-          ? buildSectionItem(
-              serviceCap,
-              masterBrand.includes('_tv') ? 'TV' : 'Radio',
-            )
+          ? buildSectionItem(serviceCap, mediaSectionLabel[mediaPageType])
           : []),
         ...(addProducer ? buildSectionArr(serviceCap, producer, type) : []),
         ...(chapter ? buildSectionArr(serviceCap, chapter, type) : []),
@@ -174,14 +179,14 @@ export const getConfig = ({
     data,
   );
 
-  const masterBrand = path(['masterBrand'], data);
+  const mediaPageType = pathOr('', ['metadata', 'type'], data);
 
   const sections = buildSections({
     service,
     pageType,
     sectionName,
     categoryName,
-    masterBrand,
+    mediaPageType,
   });
   const cookie = getSylphidCookie();
   const type = getType(pageType);
