@@ -797,11 +797,16 @@ module.exports = () => ({
               '/arabic/bbc_arabic_radio/programmes/p030vh25', // On Demand Brand
               '/arabic/bbc_arabic_radio/w172xrrwdl3rhck', // On Demand Episode
               '/arabic/podcasts/p02pc9qc', // Podcast Brand
+              '/arabic/podcasts/p02pc9qc/p08wtg4d', // Podcast Episode
             ],
             enabled: true,
           },
           local: {
-            paths: ['/arabic/bbc_arabic_radio/w3ct01yb'],
+            paths: [
+              '/arabic/bbc_arabic_radio/w3ct01yb', // On Demand Episode
+              '/arabic/podcasts/p02pc9qc', // Podcast Brand
+              '/arabic/podcasts/p02pc9qc/p08wtg4d', // Podcast Episode
+            ],
             enabled: true,
           },
         },
