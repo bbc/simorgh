@@ -72,6 +72,9 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
           recentEpisodesLimit,
         })
       : [];
+    const brandId = isPodcast
+      ? get(['metadata', 'locators', 'brandPid'], LOG_LEVELS.ERROR)
+      : undefined;
 
     return {
       status,
@@ -92,6 +95,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
           LOG_LEVELS.INFO,
         ),
         episodeId,
+        brandId,
         masterBrand: get(['metadata', 'createdBy'], LOG_LEVELS.ERROR),
         releaseDateTimeStamp: get(
           ['metadata', 'releaseDateTimeStamp'],
