@@ -60,9 +60,15 @@ export default ({ service, pageType, variant, isAmp }) => {
       });
       describe('Recent Episodes component', () => {
         it('should be displayed if the toggle is on, and shows the expected number of items', function test() {
+          let toggleName;
+          if (getDataUrl(Cypress.env('currentPath')).includes('podcasts')) {
+            toggleName = 'recentPodcastEpisodes';
+          } else {
+            toggleName = 'recentAudioEpisodes';
+          }
           cy.fixture(`toggles/${service}.json`).then(toggles => {
             const recentEpisodesEnabled = path(
-              ['recentAudioEpisodes', 'enabled'],
+              [toggleName, 'enabled'],
               toggles,
             );
             cy.log(
@@ -71,7 +77,7 @@ export default ({ service, pageType, variant, isAmp }) => {
             // There cannot be more episodes shown than the max allowed
             if (recentEpisodesEnabled) {
               const recentEpisodesMaxNumber = path(
-                ['recentAudioEpisodes', 'value'],
+                [toggleName, 'value'],
                 toggles,
               );
               const currentPath = Cypress.env('currentPath');

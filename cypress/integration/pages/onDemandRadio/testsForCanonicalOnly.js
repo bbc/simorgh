@@ -1,5 +1,6 @@
 import path from 'ramda/src/path';
 import envConfig from '../../../support/config/envs';
+import { overrideRendererOnTest } from '../../../support/helpers/onDemandRadioTv';
 import {
   isScheduleDataComplete,
   getIsProgramValid,
@@ -23,51 +24,52 @@ export default ({ service, pageType, variant }) => {
 
     describe('Radio Schedule', () => {
       it('should be displayed if there is enough schedule data', function test() {
-        cy.fixture(`toggles/${service}.json`).then(toggles => {
-          const scheduleIsEnabled = path(
-            ['onDemandRadioSchedule', 'enabled'],
-            toggles,
-          );
-          cy.log(
-            `On Demand Radio Page configured for Radio Schedule? ${scheduleIsEnabled}`,
-          );
+        const currentPath = `${Cypress.env(
+          'currentPath',
+        )}.json${overrideRendererOnTest()}`;
 
-          if (scheduleIsEnabled) {
-            const currentPath = Cypress.env('currentPath');
-
-            const masterBrand = currentPath.split('/')[2];
-
-            let schedulePath = `/${service}/${masterBrand}/schedule.json`.replace(
-              'bbc_afaanoromoo_radio',
-              'bbc_oromo_radio',
+        cy.request(currentPath).then(({ body: jsonData }) => {
+          cy.fixture(`toggles/${service}.json`).then(toggles => {
+            const scheduleIsEnabled = path(
+              ['onDemandRadioSchedule', 'enabled'],
+              toggles,
             );
-            if (Cypress.env('APP_ENV') === 'test') {
-              schedulePath += '?renderer_env=live';
-            }
+            cy.log(
+              `On Demand Radio Page configured for Radio Schedule? ${scheduleIsEnabled}`,
+            );
 
-            cy.request(schedulePath).then(({ body: scheduleJson }) => {
-              const { schedules } = scheduleJson;
-              const isProgramValid = getIsProgramValid(() => {});
-              const validSchedules = schedules.filter(isProgramValid);
+            if (scheduleIsEnabled) {
+              const masterBrand = jsonData.metadata.createdBy;
 
-              const isRadioScheduleDataComplete = isScheduleDataComplete({
-                schedules: validSchedules,
-              });
-
-              cy.log(
-                `Radio Schedule is displayed? ${isRadioScheduleDataComplete}`,
+              const schedulePath = `/${service}/${masterBrand}/schedule.json${overrideRendererOnTest()}`.replace(
+                'bbc_afaanoromoo_radio',
+                'bbc_oromo_radio',
               );
-              if (scheduleIsEnabled && isRadioScheduleDataComplete) {
-                cy.log('Schedule has enough data');
-                cy.get('[data-e2e=radio-schedule]').should('exist');
-                // cy.get('[data-e2e=live]').should('exist');
-              } else {
-                cy.get('[data-e2e=radio-schedule]').should('not.exist');
-              }
-            });
-          } else {
-            cy.get('[data-e2e=radio-schedule]').should('not.exist');
-          }
+
+              cy.request(schedulePath).then(({ body: scheduleJson }) => {
+                const { schedules } = scheduleJson;
+                const isProgramValid = getIsProgramValid(() => {});
+                const validSchedules = schedules.filter(isProgramValid);
+
+                const isRadioScheduleDataComplete = isScheduleDataComplete({
+                  schedules: validSchedules,
+                });
+
+                cy.log(
+                  `Radio Schedule is displayed? ${isRadioScheduleDataComplete}`,
+                );
+                if (scheduleIsEnabled && isRadioScheduleDataComplete) {
+                  cy.log('Schedule has enough data');
+                  cy.get('[data-e2e=radio-schedule]').should('exist');
+                  // cy.get('[data-e2e=live]').should('exist');
+                } else {
+                  cy.get('[data-e2e=radio-schedule]').should('not.exist');
+                }
+              });
+            } else {
+              cy.get('[data-e2e=radio-schedule]').should('not.exist');
+            }
+          });
         });
       });
     });
