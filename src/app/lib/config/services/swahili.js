@@ -126,29 +126,81 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Tufahamishe iwapo unakubali kupokea cookies',
-          description: {
-            uk: {
-              first: 'Tunatumia ',
-              linkText: 'kuki',
-              last:
-                ' kukufanya ufurahie mtandao. Tafadhali tufahamishe iwapo unakubali kupokea cookies au vidakuzi vyote hivi',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Kubali kukusanywa taarifa zako na uendelee',
+            reject: 'Kataa kukusanywa taarifa zako na uendelee',
+            initial: {
+              title:
+                'Tufahamishe iwapo unakubali taarifa zako kukusanywa kupitia AMP',
+              description: {
+                first: 'Sisi na washirika wetu tunatumia teknolojia kama vile ',
+                linkText: 'vidakuzi au cookies',
+                last:
+                  ', na tunakusanya data katika mtandao kukufanya ufurahie matumizi ya mtandao na kukupa taarifa zinazokuvutia na matangazo unayoyaona. Tafadhali tufahamishe iwapo unakubali.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Wezesha mpangilio wangu',
             },
-            international: {
-              first: 'Sisi na washirika wetu tunatumia teknolojia kama vile ',
-              linkText: 'vidakuzi au cookies',
-              last:
-                ', na tunakusanya data katika mtandao kukufanya ufurahie matumizi ya mtandao na kukupa taarifa zinazokuvutia na matangazo unayoyaona. Tafadhali tufahamishe iwapo unakubali.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'Wezesha mpangilio wa ridhaa katika kurasa za AMP',
+              description: {
+                para1:
+                  'Mpangilio huu utahusisha kurasa za AMP pekee. Unaweza kuulizwa juu ya mpangilio wako ukitembelea kurasa nyengine za bbc.com ambazo si za AMP.',
+                para2:
+                  'Ukurasa huu mwepesi wa simu uliotembelea umetengenezwa kutumia teknolojia ya Google AMP.',
+                heading2: 'Ni lazima kukusanya taarifa',
+                para3:
+                  'Ili kuwezesha kurasa zetu kufanya kazi, tunahifadhi baadhi ya taarifa katika kifaa chako pasi na ridhaa yako.',
+                para4: {
+                  text:
+                    'Soma zaidi kuhusu taarifa muhimu tunazohifadhi katika kifaa chako ili kuwezesha kurasa zetu kufanya kazi.',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Tunatumia hifadhi ya kifaa chako kuhifadhi mapendekezo yako ya ridhaa kwa kifaa hicho.',
+                heading3: 'Ukusanyaji wa taarifa kwa hiyari',
+                para6:
+                  'Unaporidhia kukusanywa kwa taarifa kupitia kurasa za AMP, pia unaridhia tukuoneshe matangazo ambayo yanaendana nawe ukiwa nje ya Uingereza.',
+                para7: {
+                  text:
+                    'Soma zaidi jinsi gani BBC na washirika wetu tunavyokuletea matangazo yanayoendana nawe.',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'Unaweza kukataa kupokea matangazo kwa kubofya "Kataa kukusanywa taarifa zako na uendelee" chini. Zingatia kuwa utaendelea kuona matangazo lakini hayatakuwa yale unayoendana nayo.',
+                para9:
+                  'Unaweza kubadili mpangilio kwa kubofya "machuguo ya matangazo / Usiuze taarifa zangu" muda wowote ule.',
+              },
             },
           },
-          accept: 'Ndio, ninakubali',
-          reject: 'Hapana, nipeleke kwa mpangilio',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Tufahamishe iwapo unakubali kupokea cookies',
+            description: {
+              uk: {
+                first: 'Tunatumia ',
+                linkText: 'kuki',
+                last:
+                  ' kukufanya ufurahie mtandao. Tafadhali tufahamishe iwapo unakubali kupokea cookies au vidakuzi vyote hivi',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'Sisi na washirika wetu tunatumia teknolojia kama vile ',
+                linkText: 'vidakuzi au cookies',
+                last:
+                  ', na tunakusanya data katika mtandao kukufanya ufurahie matumizi ya mtandao na kukupa taarifa zinazokuvutia na matangazo unayoyaona. Tafadhali tufahamishe iwapo unakubali.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Ndio, ninakubali',
+            reject: 'Hapana, nipeleke kwa mpangilio',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
