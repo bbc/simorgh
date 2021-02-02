@@ -97,12 +97,42 @@ describe('getDestination', () => {
     {
       statsDestination: 'BBC_ARCHIVE_PS',
       expected: 605565,
-      summary: 'should return for live Scotland',
+      summary: 'should return for live Archive',
     },
     {
       statsDestination: 'BBC_ARCHIVE_PS_TEST',
       expected: 605566,
-      summary: 'should return for test Scotland',
+      summary: 'should return for test Archive',
+    },
+    {
+      statsDestination: 'NEWSROUND',
+      expected: 598293,
+      summary: 'should return for live Newsround',
+    },
+    {
+      statsDestination: 'NEWSROUND_TEST',
+      expected: 598294,
+      summary: 'should return for test Newsround',
+    },
+    {
+      statsDestination: 'SPORT_PS',
+      expected: 598310,
+      summary: 'should return for live uk for Sport',
+    },
+    {
+      statsDestination: 'SPORT_GNL',
+      expected: 598308,
+      summary: 'should return for live international for Sport',
+    },
+    {
+      statsDestination: 'SPORT_PS_TEST',
+      expected: 598311,
+      summary: 'should return for test uk for Sport',
+    },
+    {
+      statsDestination: 'SPORT_GNL_TEST',
+      expected: 598309,
+      summary: 'should return for test international for Sport',
     },
     {
       statsDestination: undefined,
