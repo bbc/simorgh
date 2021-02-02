@@ -128,30 +128,80 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'हमें बताएं कि आप कुकीज़ को लेकर सहमत हैं',
-          description: {
-            uk: {
-              first: 'हम ',
-              linkText: 'कुकीज़',
-              last:
-                ' का इस्तेमाल आपको बेहतर ऑनलाइन सेवाएं देने के लिए करते हैं. हमें बताएं कि आप इन सभी कुकीज़ से सहमत हैं.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'initial": {',
+            reject: 'description": {',
+            initial: {
+              title: '{',
+              description: {
+                first:
+                  'हम और हमारे पार्टनर इस तरह की कुछ तकनीकों का इस्तेमाल करते हैं ',
+                linkText: 'कुकीज़',
+                last:
+                  ' का इस्तेमाल करके हम आपके ब्राउज़िंग डेटा की ज़रिए आपको बेहतर और ख़ास तौर पर आपके लिए सेवाएं देेते हैं. इससे हमें आपको सही कंटेंट और उपयुक्त विज्ञापन दिखाने में मदद मिलती है. हमें बताएं कि क्या आप इस पर राज़ी हैं.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage:
+                'title": "हमें बताएँ कि आप एएमपी पर डेटा क्लेक्शन की सहमति दे रहे हैं",',
             },
-            international: {
-              first:
-                'हम और हमारे पार्टनर इस तरह की कुछ तकनीकों का इस्तेमाल करते हैं ',
-              linkText: 'कुकीज़',
-              last:
-                ' का इस्तेमाल करके हम आपके ब्राउज़िंग डेटा की ज़रिए आपको बेहतर और ख़ास तौर पर आपके लिए सेवाएं देेते हैं. इससे हमें आपको सही कंटेंट और उपयुक्त विज्ञापन दिखाने में मदद मिलती है. हमें बताएं कि क्या आप इस पर राज़ी हैं.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title:
+                'first": "हम और हमारे पार्टनर इस तरह की कुछ तकनीकों का इस्तेमाल करते हैं ",',
+              description: {
+                para1: 'linkText": "कुकीज़",',
+                para2:
+                  'last": " का इस्तेमाल करके हम आपके ब्राउज़िंग डेटा की ज़रिए आपको बेहतर और ख़ास तौर पर आपके लिए सेवाएं देेते हैं. इससे हमें आपको सही कंटेंट और उपयुक्त विज्ञापन दिखाने में मदद मिलती है. हमें बताएं कि क्या आप इस पर राज़ी हैं.",',
+                heading2:
+                  'linkUrl": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                para3: '},',
+                para4: {
+                  text: 'manage": "सेटिंग्स मैनेज करें',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5: '},',
+                heading3: 'manage": {',
+                para6:
+                  'title": "एएमपी पेज की सेटिंग्स पर जाकर अपनी मंज़ूरी को मैनेज करें",',
+                para7: {
+                  text: 'description": {',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'para1": "ये सेटिंग्स सिर्फ़ एएमपी पन्नों के लिए ही है, आपसे आपकी पसंद दोबारा पूछी जा सकती है अगर आप बिना एएमपी वाले बीबीसी पन्ने पर जाते हैं.",',
+                para9:
+                  'para2": "जो हल्का मोबाइल पन्ना आप देख रहे हैं उसे गूगल की एएमपी टेक्नोलॉजी के ज़रिए बनाया गया है.",',
+              },
             },
           },
-          accept: 'हां, मैं राज़ी हूं',
-          reject: 'नहीं, मुझे सेटिंग्स पर ले चलें',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'हमें बताएं कि आप कुकीज़ को लेकर सहमत हैं',
+            description: {
+              uk: {
+                first: 'हम ',
+                linkText: 'कुकीज़',
+                last:
+                  ' का इस्तेमाल आपको बेहतर ऑनलाइन सेवाएं देने के लिए करते हैं. हमें बताएं कि आप इन सभी कुकीज़ से सहमत हैं.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first:
+                  'हम और हमारे पार्टनर इस तरह की कुछ तकनीकों का इस्तेमाल करते हैं ',
+                linkText: 'कुकीज़',
+                last:
+                  ' का इस्तेमाल करके हम आपके ब्राउज़िंग डेटा की ज़रिए आपको बेहतर और ख़ास तौर पर आपके लिए सेवाएं देेते हैं. इससे हमें आपको सही कंटेंट और उपयुक्त विज्ञापन दिखाने में मदद मिलती है. हमें बताएं कि क्या आप इस पर राज़ी हैं.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'हां, मैं राज़ी हूं',
+            reject: 'नहीं, मुझे सेटिंग्स पर ले चलें',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
