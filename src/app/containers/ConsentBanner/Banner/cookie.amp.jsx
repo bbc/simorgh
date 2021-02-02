@@ -116,6 +116,22 @@ const AmpCookieBanner = ({
           <Title script={script}>{manage.title}</Title>
           <p>{manage.description.para1}</p>
           <p>{manage.description.para2}</p>
+          <h3>{manage.description.heading2}</h3>
+          <p>{manage.description.para3}</p>
+          <p>
+            <a href={manage.description.para4.url}>
+              {manage.description.para4.text}
+            </a>
+          </p>
+          <p>{manage.description.para5}</p>
+          <p>{manage.description.para6}</p>
+          <p>
+            <a href={manage.description.para7.url}>
+              {manage.description.para7.text}
+            </a>
+          </p>
+          <p>{manage.description.para8}</p>
+          <p>{manage.description.para9}</p>
           <OptionsList script={script}>
             <OptionsItem script={script}>{accept}</OptionsItem>
             <OptionsItem script={script}>{reject}</OptionsItem>
