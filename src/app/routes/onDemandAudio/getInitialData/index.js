@@ -37,8 +37,7 @@ const getConfig = pathname => {
   return {
     isPodcast,
     missingFieldCode,
-    DEFAULT_TOGGLE_VALUE,
-    recentEpisodesKey,
+    detailPageType,
     getRecentEpisodesToggle,
   };
 };
