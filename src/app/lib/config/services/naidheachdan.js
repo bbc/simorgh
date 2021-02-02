@@ -133,33 +133,83 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title:
-            'Leig fios dhuinn gu bheil sibh ag aontachadh ri dàta-brabhsair',
-          description: {
-            uk: {
-              first: "Bidh sinn a' cleachdadh ",
-              linkText: 'dàta-brabhsair',
-              last:
-                " 'son an t-seirbheis as fheàrr air loidhne a thoirt dhuibh. Leig fios dhuinn ma tha sibh ag aontachadh ris an dàta-brabhsair uile.",
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Accept data collection and continue',
+            reject: 'Reject data collection and continue',
+            initial: {
+              title: 'Let us know you agree to data collection on AMP',
+              description: {
+                first: 'We and our partners use technologies, such as ',
+                linkText: 'cookies',
+                last:
+                  ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Manage my settings',
             },
-            international: {
-              first:
-                "Bidh sinn agus ar luchd-pàirt a' cur teicneòlais an sàs, a leithid ",
-              linkText: 'dàta-brabhsair',
-              last:
-                ", agus fiosrachadh mu bhrabhsadh 'son an t-seirbheis air loidhne as fheàrr a thoirt seachad agus 'son duilleagan agus sanasachd anns am bi ùidh agaibh a lìbhrigeadh. Leig fios dhuinn ma tha sibh ag aontachadh.",
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'Manage consent settings on AMP pages',
+              description: {
+                para1:
+                  'These settings apply to AMP pages only. You may be asked to set these preferences again when you visit non-AMP BBC pages.',
+                para2:
+                  'The lightweight mobile page you have visited has been built using Google AMP technology.',
+                heading2: 'Strictly necessary data collection',
+                para3:
+                  'To make our web pages work, we store some limited information on your device without your consent.',
+                para4: {
+                  text:
+                    'Read more about the essential information we store on your device to make our web pages work.',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'We use local storage to store your consent preferences on your device.',
+                heading3: 'Optional data collection',
+                para6:
+                  'When you consent to data collection on AMP pages you are consenting to allow us to display personalised ads that are relevant to you when you are outside of the UK.',
+                para7: {
+                  text:
+                    'Read more about how we personalise ads in the BBC and our advertising partners.',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'You can choose not to receive personalised ads by clicking “Reject data collection and continue” below. Please note that you will still see advertising, but it will not be personalised to you.',
+                para9:
+                  'You can change these settings by clicking “Ad Choices / Do not sell my info” in the footer at any time.',
+              },
             },
           },
-          accept: 'Tha mi ag aontachadh',
-          reject: 'Chan eil mi ag aontachadh, fosgail roghainnean',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title:
+              'Leig fios dhuinn gu bheil sibh ag aontachadh ri dàta-brabhsair',
+            description: {
+              uk: {
+                first: "Bidh sinn a' cleachdadh ",
+                linkText: 'dàta-brabhsair',
+                last:
+                  " 'son an t-seirbheis as fheàrr air loidhne a thoirt dhuibh. Leig fios dhuinn ma tha sibh ag aontachadh ris an dàta-brabhsair uile.",
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first:
+                  "Bidh sinn agus ar luchd-pàirt a' cur teicneòlais an sàs, a leithid ",
+                linkText: 'dàta-brabhsair',
+                last:
+                  ", agus fiosrachadh mu bhrabhsadh 'son an t-seirbheis air loidhne as fheàrr a thoirt seachad agus 'son duilleagan agus sanasachd anns am bi ùidh agaibh a lìbhrigeadh. Leig fios dhuinn ma tha sibh ag aontachadh.",
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Tha mi ag aontachadh',
+            reject: 'Chan eil mi ag aontachadh, fosgail roghainnean',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
-      },
       media: {
         noJs:
           'To play this content, please enable JavaScript, or try a different browser',
