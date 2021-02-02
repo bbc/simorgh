@@ -29,6 +29,9 @@ export default {
   navOnArticles: {
     enabled: true,
   },
+  preloadLeadImage: {
+    enabled: true,
+  },
   prerollAds: {
     enabled: true,
   },

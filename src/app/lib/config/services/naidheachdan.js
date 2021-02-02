@@ -53,7 +53,6 @@ export const service = {
     isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/articles/manifest.json',
-    swPath: '/articles/sw.js',
     frontPageTitle: 'Dachaigh',
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,

@@ -27,6 +27,7 @@ import {
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
+  CORRESPONDENT_STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 analyticsUtils.getAtUserId = jest.fn();
@@ -148,14 +149,18 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       render(
-        <ContextWrap platform="amp" pageType={MEDIA_ASSET_PAGE} service="news">
+        <ContextWrap
+          platform="amp"
+          pageType={MEDIA_ASSET_PAGE}
+          service="pidgin"
+        >
           <ATIAnalytics data={mapAssetData} />
         </ContextWrap>,
       );
 
       expect(mockAmp.mock.calls[0][0]).toMatchInlineSnapshot(`
         Object {
-          "pageviewParams": "s=598286&s2=64&p=pidgin.media_asset.23248703.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]&x2=[amp]&x3=[news]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-media-asset]&x8=[simorgh]&x9=[Simorgh%3A%2BMedia%2BPod%2BBuild%2BFirst%2BCPS%2BMedia%2BAsset%2BPage%2Bin%2BSimorgh%2B%26%2B%3C%2B%3E%2B-%2BBBC%2BNews]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]&x17=[Opinion]&ref=\${documentReferrer}",
+          "pageviewParams": "s=598343&s2=70&p=pidgin.media_asset.23248703.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-media-asset]&x8=[simorgh]&x9=[Simorgh%3A%2BMedia%2BPod%2BBuild%2BFirst%2BCPS%2BMedia%2BAsset%2BPage%2Bin%2BSimorgh%2B%26%2B%3C%2B%3E%2B-%2BBBC%2BNews%2BPidgin]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]&x17=[Opinion]&ref=\${documentReferrer}",
         }
       `);
     });
@@ -170,7 +175,7 @@ describe('ATI Analytics Container', () => {
         <ContextWrap
           platform="canonical"
           pageType={PHOTO_GALLERY_PAGE}
-          service="news"
+          service="azeri"
         >
           <ATIAnalytics data={pglAssetData} />
         </ContextWrap>,
@@ -178,7 +183,7 @@ describe('ATI Analytics Container', () => {
 
       expect(mockCanonical.mock.calls[0][0]).toMatchInlineSnapshot(`
         Object {
-          "pageviewParams": "s=598286&s2=64&p=azerbaijan%3A%3Aazeri.azerbaijan.photo_gallery.44208474.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A38229308-a0fb-654a-a274-19bec0414560]&x2=[responsive]&x3=[news]&x4=[az]&x5=[https%253A%252F%252Flocalhost]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[Az%C9%99rbaycan%2BXalq%2BC%C3%BCmhuriyy%C9%99ti%2B-%2BFotolarda%2B-%2BBBC%2BNews]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[History~Azerbaijan~Society~Culture~Politics~Human%2Brights~Azerbaijan%2BDemocratic%2BRepublic%2B100th%2Banniversary~Caucasus~Law%2Band%2Border]&x14=[03eb3674-6190-4cd7-8104-1a00991d67a3~0f8e45e2-6499-44b1-be1f-1a3dd81e8af7~5307a8d9-f620-40f5-92d4-f99c919a6ffa~6a73afa3-ea6b-45c1-80bb-49060b99f864~75612fa6-147c-4a43-97fa-fcf70d9cced3~8b04c2e8-5409-4e7d-9877-3ccaf04727af~9e6f8e15-894a-45cb-9db9-d8881e8e6ae2~a86bc15e-ccd0-4ea9-9903-df3d4575a176~d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa]&x17=[News]",
+          "pageviewParams": "s=598343&s2=6&p=azerbaijan%3A%3Aazeri.azerbaijan.photo_gallery.44208474.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A38229308-a0fb-654a-a274-19bec0414560]&x2=[responsive]&x3=[news-azeri]&x4=[az]&x5=[https%253A%252F%252Flocalhost]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[Az%C9%99rbaycan%2BXalq%2BC%C3%BCmhuriyy%C9%99ti%2B-%2BFotolarda%2B-%2BBBC%2BNews%2BAz%C9%99rbaycanca]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[History~Azerbaijan~Society~Culture~Politics~Human%2Brights~Azerbaijan%2BDemocratic%2BRepublic%2B100th%2Banniversary~Caucasus~Law%2Band%2Border]&x14=[03eb3674-6190-4cd7-8104-1a00991d67a3~0f8e45e2-6499-44b1-be1f-1a3dd81e8af7~5307a8d9-f620-40f5-92d4-f99c919a6ffa~6a73afa3-ea6b-45c1-80bb-49060b99f864~75612fa6-147c-4a43-97fa-fcf70d9cced3~8b04c2e8-5409-4e7d-9877-3ccaf04727af~9e6f8e15-894a-45cb-9db9-d8881e8e6ae2~a86bc15e-ccd0-4ea9-9903-df3d4575a176~d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa]&x17=[News]",
         }
       `);
     });
@@ -191,7 +196,7 @@ describe('ATI Analytics Container', () => {
         <ContextWrap
           platform="amp"
           pageType={PHOTO_GALLERY_PAGE}
-          service="news"
+          service="azeri"
         >
           <ATIAnalytics data={pglAssetData} />
         </ContextWrap>,
@@ -199,7 +204,7 @@ describe('ATI Analytics Container', () => {
 
       expect(mockAmp.mock.calls[0][0]).toMatchInlineSnapshot(`
         Object {
-          "pageviewParams": "s=598286&s2=64&p=azerbaijan%3A%3Aazeri.azerbaijan.photo_gallery.44208474.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A38229308-a0fb-654a-a274-19bec0414560]&x2=[amp]&x3=[news]&x4=[az]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[Az%C9%99rbaycan%2BXalq%2BC%C3%BCmhuriyy%C9%99ti%2B-%2BFotolarda%2B-%2BBBC%2BNews]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[History~Azerbaijan~Society~Culture~Politics~Human%2Brights~Azerbaijan%2BDemocratic%2BRepublic%2B100th%2Banniversary~Caucasus~Law%2Band%2Border]&x14=[03eb3674-6190-4cd7-8104-1a00991d67a3~0f8e45e2-6499-44b1-be1f-1a3dd81e8af7~5307a8d9-f620-40f5-92d4-f99c919a6ffa~6a73afa3-ea6b-45c1-80bb-49060b99f864~75612fa6-147c-4a43-97fa-fcf70d9cced3~8b04c2e8-5409-4e7d-9877-3ccaf04727af~9e6f8e15-894a-45cb-9db9-d8881e8e6ae2~a86bc15e-ccd0-4ea9-9903-df3d4575a176~d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa]&x17=[News]&ref=\${documentReferrer}",
+          "pageviewParams": "s=598343&s2=6&p=azerbaijan%3A%3Aazeri.azerbaijan.photo_gallery.44208474.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A38229308-a0fb-654a-a274-19bec0414560]&x2=[amp]&x3=[news-azeri]&x4=[az]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[Az%C9%99rbaycan%2BXalq%2BC%C3%BCmhuriyy%C9%99ti%2B-%2BFotolarda%2B-%2BBBC%2BNews%2BAz%C9%99rbaycanca]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[History~Azerbaijan~Society~Culture~Politics~Human%2Brights~Azerbaijan%2BDemocratic%2BRepublic%2B100th%2Banniversary~Caucasus~Law%2Band%2Border]&x14=[03eb3674-6190-4cd7-8104-1a00991d67a3~0f8e45e2-6499-44b1-be1f-1a3dd81e8af7~5307a8d9-f620-40f5-92d4-f99c919a6ffa~6a73afa3-ea6b-45c1-80bb-49060b99f864~75612fa6-147c-4a43-97fa-fcf70d9cced3~8b04c2e8-5409-4e7d-9877-3ccaf04727af~9e6f8e15-894a-45cb-9db9-d8881e8e6ae2~a86bc15e-ccd0-4ea9-9903-df3d4575a176~d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa]&x17=[News]&ref=\${documentReferrer}",
         }
       `);
     });
@@ -211,14 +216,14 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType={STORY_PAGE} service="news">
+        <ContextWrap platform="canonical" pageType={STORY_PAGE} service="mundo">
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
 
       expect(mockCanonical.mock.calls[0][0]).toMatchInlineSnapshot(`
         Object {
-          "pageviewParams": "s=598286&s2=64&p=story%3A%3Amundo.story.23263889.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3Af776ad93-e486-b14a-b5ea-55955dd0644f]&x2=[responsive]&x3=[news]&x4=[es]&x5=[https%253A%252F%252Flocalhost]&x7=[article]&x8=[simorgh]&x9=[WS%2BSTY%2BTEST%2B-%2BFull%2BHeadline%2B-%2BBBC%2BNews]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Life~Fake%2Bnews]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]",
+          "pageviewParams": "s=598343&s2=62&p=mundo.story.23263889.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3Af776ad93-e486-b14a-b5ea-55955dd0644f]&x2=[responsive]&x3=[news-mundo]&x4=[es]&x5=[https%253A%252F%252Flocalhost]&x7=[article]&x8=[simorgh]&x9=[WS%2BSTY%2BTEST%2B-%2BFull%2BHeadline%2B-%2BBBC%2BNews%2BMundo]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Life~Fake%2Bnews]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]",
         }
       `);
     });
@@ -228,14 +233,35 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       render(
-        <ContextWrap platform="amp" pageType={STORY_PAGE} service="news">
+        <ContextWrap platform="amp" pageType={STORY_PAGE} service="mundo">
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
 
       expect(mockAmp.mock.calls[0][0]).toMatchInlineSnapshot(`
         Object {
-          "pageviewParams": "s=598286&s2=64&p=story%3A%3Amundo.story.23263889.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3Af776ad93-e486-b14a-b5ea-55955dd0644f]&x2=[amp]&x3=[news]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[WS%2BSTY%2BTEST%2B-%2BFull%2BHeadline%2B-%2BBBC%2BNews]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Life~Fake%2Bnews]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]&ref=\${documentReferrer}",
+          "pageviewParams": "s=598343&s2=62&p=mundo.story.23263889.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3Af776ad93-e486-b14a-b5ea-55955dd0644f]&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[WS%2BSTY%2BTEST%2B-%2BFull%2BHeadline%2B-%2BBBC%2BNews%2BMundo]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Life~Fake%2Bnews]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]&ref=\${documentReferrer}",
+        }
+      `);
+    });
+
+    it('should call AmpATIAnalytics when platform is Amp and pageType is CSP', () => {
+      const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+      amp.default = mockAmp;
+
+      render(
+        <ContextWrap
+          platform="amp"
+          pageType={CORRESPONDENT_STORY_PAGE}
+          service="mundo"
+        >
+          <ATIAnalytics data={styAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockAmp.mock.calls[0][0]).toMatchInlineSnapshot(`
+        Object {
+          "pageviewParams": "s=598343&s2=62&p=mundo.story.23263889.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3Af776ad93-e486-b14a-b5ea-55955dd0644f]&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-correspondent]&x8=[simorgh]&x9=[WS%2BSTY%2BTEST%2B-%2BFull%2BHeadline%2B-%2BBBC%2BNews%2BMundo]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Life~Fake%2Bnews]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]&ref=\${documentReferrer}",
         }
       `);
     });
@@ -342,14 +368,14 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType={STORY_PAGE} service="news">
+        <ContextWrap platform="canonical" pageType={STORY_PAGE} service="mundo">
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
 
       expect(mockCanonical.mock.calls[0][0]).toMatchInlineSnapshot(`
         Object {
-          "pageviewParams": "s=598286&s2=64&p=story%3A%3Amundo.story.23263889.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3Af776ad93-e486-b14a-b5ea-55955dd0644f]&x2=[responsive]&x3=[news]&x4=[es]&x5=[https%253A%252F%252Flocalhost%253Fat_medium%253Demail%2526at_emailtype%253Dacquisition%2526at_creation%253Dmy_creation]&x7=[article]&x8=[simorgh]&x9=[WS%2BSTY%2BTEST%2B-%2BFull%2BHeadline%2B-%2BBBC%2BNews]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Life~Fake%2Bnews]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]&xto=EREC--%5Bmy_creation%5D---%40",
+          "pageviewParams": "s=598343&s2=62&p=mundo.story.23263889.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3Af776ad93-e486-b14a-b5ea-55955dd0644f]&x2=[responsive]&x3=[news-mundo]&x4=[es]&x5=[https%253A%252F%252Flocalhost%253Fat_medium%253Demail%2526at_emailtype%253Dacquisition%2526at_creation%253Dmy_creation]&x7=[article]&x8=[simorgh]&x9=[WS%2BSTY%2BTEST%2B-%2BFull%2BHeadline%2B-%2BBBC%2BNews%2BMundo]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Life~Fake%2Bnews]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]&xto=EREC--%5Bmy_creation%5D---%40",
         }
       `);
     });
@@ -361,14 +387,14 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType={STORY_PAGE} service="news">
+        <ContextWrap platform="canonical" pageType={STORY_PAGE} service="mundo">
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
 
       expect(mockCanonical.mock.calls[0][0]).toMatchInlineSnapshot(`
         Object {
-          "pageviewParams": "s=598286&s2=64&p=story%3A%3Amundo.story.23263889.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3Af776ad93-e486-b14a-b5ea-55955dd0644f]&x2=[responsive]&x3=[news]&x4=[es]&x5=[http%253A%252F%252Flocalhost%253Ffoo%253Dbar]&x7=[article]&x8=[simorgh]&x9=[WS%2BSTY%2BTEST%2B-%2BFull%2BHeadline%2B-%2BBBC%2BNews]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Life~Fake%2Bnews]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]",
+          "pageviewParams": "s=598343&s2=62&p=mundo.story.23263889.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3Af776ad93-e486-b14a-b5ea-55955dd0644f]&x2=[responsive]&x3=[news-mundo]&x4=[es]&x5=[http%253A%252F%252Flocalhost%253Ffoo%253Dbar]&x7=[article]&x8=[simorgh]&x9=[WS%2BSTY%2BTEST%2B-%2BFull%2BHeadline%2B-%2BBBC%2BNews%2BMundo]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Life~Fake%2Bnews]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]",
         }
       `);
     });

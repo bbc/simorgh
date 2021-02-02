@@ -13,6 +13,7 @@
 | `mostRead`              | Display Most Read | | |
 | `mostPopularMedia`      | Display Most Popular Media (Most Watched) component on Media Asset (MAP) Pages | Number of most popular media items to display (integer between 1 and 20) | 10 |
 | `navOnArticles`         | Display Navigation on Article Pages | | |
+| `preloadLeadImage`      | Display preload image tag on Story (STY) Pages | | |
 | `preroll`               | Display Preroll Advertisements on Media Asset (MAP) Pages | | |
 | `scriptLink`            | Display Script Switching link for services with variants | | |
 | `socialEmbed`           | Display Social Embeds on Story (STY) Pages | | |
