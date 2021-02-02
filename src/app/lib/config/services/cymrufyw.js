@@ -53,7 +53,6 @@ export const service = {
     isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/articles/manifest.json',
-    swPath: '/articles/sw.js',
     frontPageTitle: 'Newyddion a mwy',
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
