@@ -41,7 +41,7 @@ jobs:
       - name: Install & Build Simorgh
         run: |
           echo ${GITHUB_REF##*/}
-          npm run ci
+          yarn run ci
           npm run build
 
       - name: Setup Code Climate Test Coverage

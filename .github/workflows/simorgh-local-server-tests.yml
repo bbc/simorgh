@@ -28,7 +28,7 @@ jobs:
 
       - name: Install & Build Simorgh
         run: |
-          npm run ci
+          yarn run ci
           npm run build:local
 
       - name: Start Simorgh Server

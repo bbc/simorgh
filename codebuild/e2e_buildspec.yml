@@ -10,7 +10,7 @@ phases:
       nodejs: 12
   pre_build:
     commands:
-      - npm run ci
+      - yarn run ci
       - npm run build
   build:
     commands:
