@@ -126,6 +126,52 @@ const headerFooterTranslations = {
       },
     },
   },
+};
+
+// Translations used in the main element of the page
+export const mainTranslations = {
+  ads: {
+    advertisementLabel: 'Реклама',
+  },
+  seeAll: 'Посмотреть все',
+  skipLinkText: 'Перейти к содержанию',
+  relatedContent: 'Читайте также',
+  mediaAssetPage: {
+    mediaPlayer: 'Медиа плеер',
+    audioPlayer: 'Аудио плеер',
+    videoPlayer: 'Видео плеер',
+  },
+  error: {
+    404: {
+      statusCode: '404',
+      title: 'Страница не найдена',
+      message:
+        'Извините, мы не нашли страницу, которую вы искали. Попробуйте это:',
+      solutions: [
+        'Проверьте еще раз адрес ссылки',
+        'Нажмите на кнопку "обновить" в браузере',
+        'Искать страницу в поисковом окне Би-би-си',
+      ],
+      callToActionFirst: 'Попробуйте зайти на ',
+      callToActionLinkText: 'главную страницу Русской службы',
+      callToActionLast: '',
+      callToActionLinkUrl: 'https://www.bbc.com/russian',
+    },
+    500: {
+      statusCode: '500',
+      title: 'Ошибка сервера',
+      message:
+        'Извините, мы не смогли найти страницу, которую вы искали. Попробуйте:',
+      solutions: [
+        'Нажать кнопку "обновить" в вашем браузере',
+        'Попытайтесь позже',
+      ],
+      callToActionFirst: 'Попробуйте зайти на ',
+      callToActionLinkText: 'главную страницу Русской службы',
+      callToActionLast: '',
+      callToActionLinkUrl: 'https://www.bbc.com/russian',
+    },
+  },
   media: {
     noJs:
       'Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер',
