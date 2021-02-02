@@ -18,22 +18,39 @@ import processRecentEpisodes from '../../utils/processRecentEpisodes';
 const getRadioScheduleData = path(['radioScheduleData']);
 const getScheduleToggle = path(['onDemandRadioSchedule', 'enabled']);
 
+const getConfig = pathname => {
+  const detailPageType = pathname.includes('podcast')
+    ? 'Podcast'
+    : 'On Demand Radio';
+  const isPodcast = detailPageType === 'Podcast';
+  const missingFieldCode = isPodcast
+    ? PODCAST_MISSING_FIELD
+    : RADIO_MISSING_FIELD;
+  const DEFAULT_TOGGLE_VALUE = { enabled: false, value: isPodcast ? 8 : 4 };
+  const recentEpisodesKey = isPodcast
+    ? 'recentPodcastEpisodes'
+    : 'recentAudioEpisodes';
+  const getRecentEpisodesToggle = pathOr(DEFAULT_TOGGLE_VALUE, [
+    recentEpisodesKey,
+  ]);
+
+  return {
+    isPodcast,
+    missingFieldCode,
+    DEFAULT_TOGGLE_VALUE,
+    recentEpisodesKey,
+    getRecentEpisodesToggle,
+  };
+};
+
 export default async ({ path: pathname, pageType, service, toggles }) => {
   try {
-    const detailPageType = pathname.includes('podcast')
-      ? 'Podcast'
-      : 'On Demand Radio';
-    const isPodcast = detailPageType === 'Podcast';
-    const RADIO_PODCAST_MISSING_FIELD = isPodcast
-      ? PODCAST_MISSING_FIELD
-      : RADIO_MISSING_FIELD;
-    const DEFAULT_TOGGLE_VALUE = { enabled: false, value: isPodcast ? 8 : 4 };
-    const recentEpisodesKey = isPodcast
-      ? 'recentPodcastEpisodes'
-      : 'recentAudioEpisodes';
-    const getRecentEpisodesToggle = pathOr(DEFAULT_TOGGLE_VALUE, [
-      recentEpisodesKey,
-    ]);
+    const {
+      isPodcast,
+      getRecentEpisodesToggle,
+      detailPageType,
+      missingFieldCode,
+    } = getConfig(pathname);
 
     const radioPodcastDataPath = overrideRendererOnTest(pathname);
     const pageDataPromise = await fetchPageData({
@@ -57,11 +74,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
         })
       : await pageDataPromise;
 
-    const withLogging = pathWithLogging(
-      getUrl(json),
-      RADIO_PODCAST_MISSING_FIELD,
-      json,
-    );
+    const withLogging = pathWithLogging(getUrl(json), missingFieldCode, json);
     const get = (fieldPath, logLevel) =>
       logLevel ? withLogging(fieldPath, logLevel) : path(fieldPath, json);
 
