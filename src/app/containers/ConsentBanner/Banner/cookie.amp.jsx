@@ -93,8 +93,8 @@ const AmpCookieBanner = ({
       <Wrapper dir={dir} service={service}>
         <BannerPage data-amp-bind-hidden="isManagingSettings">
           <Title script={script}>{initial.title}</Title>
-          <p>{initial.description.international.para1}</p>
-          <p>{initial.description.international.para2}</p>
+          <p>{initial.description.para1}</p>
+          <p>{initial.description.para2}</p>
           <OptionsList script={script}>
             <OptionsItem script={script}>{accept}</OptionsItem>
             <OptionsItem script={script}>
@@ -109,8 +109,8 @@ const AmpCookieBanner = ({
         </BannerPage>
         <BannerPage hidden data-amp-bind-hidden="!isManagingSettings">
           <Title script={script}>{manage.title}</Title>
-          <p>{manage.description.international.para1}</p>
-          <p>{manage.description.international.para2}</p>
+          <p>{manage.description.para1}</p>
+          <p>{manage.description.para2}</p>
           <OptionsList script={script}>
             <OptionsItem script={script}>{accept}</OptionsItem>
             <OptionsItem script={script}>{reject}</OptionsItem>
