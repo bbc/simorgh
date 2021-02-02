@@ -209,6 +209,7 @@ export const service = {
               'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
+      },
       media: {
         noJs:
           'To play this content, please enable JavaScript, or try a different browser',
