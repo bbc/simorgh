@@ -53,7 +53,6 @@ export const service = {
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/articles/manifest.json',
-    swPath: '/articles/sw.js',
     frontPageTitle: 'Home',
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,

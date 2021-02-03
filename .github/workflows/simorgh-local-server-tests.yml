@@ -26,10 +26,19 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install & Build Simorgh
-        run: |
-          npm ci
-          npm run build:local
+      - name: Cache Node Modules
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+
+      - name: Install Node Modules
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - name: Build Simorgh
+        run: npm run build:local
 
       - name: Start Simorgh Server
         run: nohup node build/server.js > /dev/null 2>&1 &

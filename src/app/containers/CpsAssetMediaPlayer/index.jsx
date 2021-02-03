@@ -22,6 +22,7 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 import filterForBlockType from '#lib/utilities/blockHandlers';
+import getAssetUri from './utils/getAssetUri';
 
 const Wrapper = styled(GridItemLargeNoMargin)`
   margin-top: ${GEL_SPACING};
@@ -72,12 +73,11 @@ const CpsAssetMediaPlayer = ({
   );
 
   const available = path(['model', 'available'], metadataBlock);
-
   return (
     <Wrapper hasBottomPadding={hasBottomPadding} dir={dir}>
       <MediaPlayerContainer
         blocks={blocks}
-        assetId={assetUri.substr(1)}
+        assetId={getAssetUri(assetUri.substr(1))}
         assetType={isLegacyMedia ? 'legacy' : 'cps'}
         showPlaceholder={false}
         available={available}

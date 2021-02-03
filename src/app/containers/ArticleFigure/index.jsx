@@ -29,6 +29,7 @@ const ArticleFigure = ({
   ratio,
   fade,
   lazyLoad,
+  preload,
   captionBlock,
   type,
   srcset,
@@ -94,6 +95,7 @@ const ArticleFigure = ({
             height={height}
             width={width}
             lazyLoad={lazyLoad}
+            preload={preload}
             fade={fade}
             srcset={srcset}
           >
@@ -139,6 +141,7 @@ ArticleFigure.propTypes = {
   height: number,
   fade: bool,
   lazyLoad: bool,
+  preload: bool,
   ratio: number.isRequired,
   src: string.isRequired,
   type: string,
@@ -153,6 +156,7 @@ ArticleFigure.defaultProps = {
   height: null,
   fade: false,
   lazyLoad: false,
+  preload: false,
   type: '',
   srcset: null,
   showCopyright: false,

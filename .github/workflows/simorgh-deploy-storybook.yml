@@ -16,9 +16,19 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install and Build
+      - name: Cache Node Modules
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+
+      - name: Install Node Modules
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - name: Build Storybook
         run: |
-          npm ci
           npm run build:storybook
           git config --global user.name "simorgh-bbc"
           git config --global user.email "DENewsSimorghDev@bbc.co.uk"

@@ -26,6 +26,7 @@ const logCodes = {
   MEDIA_MISSING_FIELD: 'media_missing_field',
   MEDIA_PLAYER_STATUS: 'media_player_status',
   RADIO_MISSING_FIELD: 'radio_missing_field',
+  PODCAST_MISSING_FIELD: 'podcast_missing_field',
   EPISODE_EXPIRED: 'episode_expired',
   EPISODE_NOT_YET_AVAILABLE: 'episode_not_yet_available',
   UNRECOGNISED_EPISODE_AVAILABILITY: 'unrecognised_episode_availability',

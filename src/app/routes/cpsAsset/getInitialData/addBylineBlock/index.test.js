@@ -31,11 +31,87 @@ const styInput = {
   },
 };
 
+const cspInput = {
+  metadata: { type: 'CSP' },
+  promo: {
+    byline: {
+      name: 'Foo Bar',
+      title: 'BBC News Title',
+      persons: [
+        {
+          name: 'Foo Bar',
+        },
+      ],
+    },
+  },
+  content: {
+    model: {
+      blocks: [
+        {
+          type: 'headline',
+        },
+        {
+          type: 'image',
+        },
+        {
+          type: 'timestamp',
+        },
+      ],
+    },
+  },
+};
+
 describe('addBylineBlock', () => {
-  it('should add a block of type byline after the first headline block', async () => {
+  it('should add a block of type byline after the first headline block for an STY asset', async () => {
     const input = deepClone(styInput);
     const expected = {
       metadata: { type: 'STY' },
+      promo: {
+        byline: {
+          name: 'Foo Bar',
+          title: 'BBC News Title',
+          persons: [
+            {
+              name: 'Foo Bar',
+            },
+          ],
+        },
+      },
+      content: {
+        model: {
+          blocks: [
+            {
+              type: 'headline',
+            },
+            {
+              type: 'byline',
+              model: {
+                blocks: [
+                  {
+                    name: 'Foo Bar',
+                    title: 'BBC News Title',
+                  },
+                ],
+              },
+            },
+            {
+              type: 'image',
+            },
+            {
+              type: 'timestamp',
+            },
+          ],
+        },
+      },
+    };
+
+    expect(addBylineBlock(input)).toEqual(expected);
+  });
+
+  it('should add a block of type byline after the first headline block for an CSP asset', async () => {
+    const input = deepClone(cspInput);
+    const expected = {
+      metadata: { type: 'CSP' },
       promo: {
         byline: {
           name: 'Foo Bar',
