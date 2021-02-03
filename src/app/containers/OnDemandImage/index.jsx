@@ -6,7 +6,6 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_1_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
@@ -15,7 +14,7 @@ const paddingDir = ({ dir }) => `padding-${dir === 'rtl' ? 'left' : 'right'}`;
 const ImageContainer = styled.div`
   padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_TRPL};
   ${paddingDir}: ${GEL_SPACING_DBL};
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+  @media (max-width: 22.5rem) {
     display: none;
   }
 `;

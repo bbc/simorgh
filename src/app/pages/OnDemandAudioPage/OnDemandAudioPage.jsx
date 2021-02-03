@@ -45,6 +45,20 @@ const StyledGelWrapperGrid = styled(GelPageGrid)`
   }
 `;
 
+const StyledGridItemParagraph = styled(Grid)`
+  @media (min-width: 22.5625rem) and (max-width: 37.4375rem) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-end: span 4;
+  }
+`;
+
+const StyledGridItemImage = styled(Grid)`
+  @media (min-width: 22.5rem) and (max-width: 37.4375rem) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-end: span 2;
+  }
+`;
+
 const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
@@ -125,17 +139,17 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             columns={getGroups(6, 6, 6, 6, 6, 6)}
             enableGelGutters
           >
-            <Grid item columns={getGroups(6, 6, 4, 4, 4, 4)}>
+            <StyledGridItemParagraph item columns={getGroups(6, 6, 4, 4, 4, 4)}>
               <StyledRadioHeadingContainer
                 idAttr={idAttr}
                 brandTitle={brandTitle}
                 releaseDateTimeStamp={releaseDateTimeStamp}
               />
               <OnDemandParagraphContainer text={summary} />
-            </Grid>
-            <Grid item columns={getGroups(0, 0, 2, 2, 2, 2)}>
+            </StyledGridItemParagraph>
+            <StyledGridItemImage item columns={getGroups(0, 0, 2, 2, 2, 2)}>
               <EpisodeImage imageUrl={imageUrl} />
-            </Grid>
+            </StyledGridItemImage>
           </StyledGelWrapperGrid>
           {mediaIsAvailable ? (
             <AVPlayer
