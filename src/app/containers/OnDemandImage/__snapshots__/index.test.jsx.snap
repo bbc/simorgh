@@ -6,7 +6,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
   padding-right: 1rem;
 }
 
-@media (max-width:24.9375rem) {
+@media (max-width:22.5rem) {
   .emotion-4 {
     display: none;
   }
