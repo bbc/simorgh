@@ -4,6 +4,7 @@ import LazyLoad from 'react-lazyload';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import Image, { AmpImg } from '@bbc/psammead-image';
 import { Helmet } from 'react-helmet';
+import { C_GHOST } from '@bbc/psammead-styles/colours';
 import { RequestContext } from '#contexts/RequestContext';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
@@ -70,6 +71,7 @@ const ImageWithPlaceholder = ({
             srcset={srcset}
             height={height}
             width={width}
+            style={{ backgroundColor: C_GHOST }}
           />
         ) : (
           renderImage(imageToRender, lazyLoad, fallback)
