@@ -11,13 +11,13 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
 
 @media (max-width:24.9375rem) {
   .emotion-12 {
-    padding: calc(1rem - 0.0625rem) 0.5rem 1rem 0.5rem;
+    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .emotion-12 {
-    padding: calc(1rem - 0.0625rem) 1rem 1rem 1rem;
+    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
   }
 }
 
@@ -321,13 +321,13 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
 
 @media (max-width:24.9375rem) {
   .emotion-12 {
-    padding: calc(1rem - 0.0625rem) 0.5rem 1rem 0.5rem;
+    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .emotion-12 {
-    padding: calc(1rem - 0.0625rem) 1rem 1rem 1rem;
+    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
   }
 }
 
@@ -585,13 +585,13 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
 
 @media (max-width:24.9375rem) {
   .emotion-12 {
-    padding: calc(1rem - 0.0625rem) 0.5rem 1rem 0.5rem;
+    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .emotion-12 {
-    padding: calc(1rem - 0.0625rem) 1rem 1rem 1rem;
+    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
   }
 }
 
@@ -887,13 +887,13 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
 
 @media (max-width:24.9375rem) {
   .emotion-12 {
-    padding: calc(1rem - 0.0625rem) 0.5rem 1rem 0.5rem;
+    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .emotion-12 {
-    padding: calc(1rem - 0.0625rem) 1rem 1rem 1rem;
+    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
   }
 }
 
