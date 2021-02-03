@@ -26,6 +26,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install Node Modules
-        run: yarn run ci
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
       - name: Integration Tests
-        run: npm run test:integration -- --ci
+        run: yarn run test:integration -- --ci

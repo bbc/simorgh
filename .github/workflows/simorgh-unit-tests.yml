@@ -38,11 +38,13 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         run: echo "GIT_BRANCH=${{ github.head_ref }}" >> $GITHUB_ENV
 
-      - name: Install & Build Simorgh
+      - name: Install Node Modules
+        run: yarn install --frozen-lockfile
+
+      - name: Build Simorgh
         run: |
           echo ${GITHUB_REF##*/}
-          yarn run ci
-          npm run build
+          yarn run build
 
       - name: Setup Code Climate Test Coverage
         if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }} # Only run if PR originates from the Simorgh repo
@@ -54,7 +56,7 @@ jobs:
           ./cc-test-reporter before-build
 
       - name: Unit Tests
-        run: npm run test:unit
+        run: yarn run test:unit
 
       - name: Report Code Climate Test Coverage
         if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }} # Only run if PR originates from the Simorgh repo

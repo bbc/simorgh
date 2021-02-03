@@ -29,7 +29,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install Node Modules
-        run: yarn run ci
+        run: yarn install --frozen-lockfile
 
       - name: Chromatic UI Tests
         uses: chromaui/action@v1

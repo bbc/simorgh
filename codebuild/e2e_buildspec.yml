@@ -10,11 +10,11 @@ phases:
       nodejs: 12
   pre_build:
     commands:
-      - yarn run ci
-      - npm run build
+      - yarn install --frozen-lockfile
+      - yarn run build
   build:
     commands:
-      - npm run cypress:ci
+      - yarn run cypress:ci
 reports:
   JunitReportsTest:
     files:

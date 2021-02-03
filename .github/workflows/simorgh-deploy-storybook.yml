@@ -18,8 +18,8 @@ jobs:
 
       - name: Install and Build
         run: |
-          yarn run ci
-          npm run build:storybook
+          yarn install --frozen-lockfile
+          yarn run build:storybook
           git config --global user.name "simorgh-bbc"
           git config --global user.email "DENewsSimorghDev@bbc.co.uk"
 
