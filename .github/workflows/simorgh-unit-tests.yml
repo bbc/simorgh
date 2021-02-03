@@ -64,7 +64,6 @@ jobs:
           ./cc-test-reporter before-build
 
       - name: Unit Tests
-        if: steps.cache.outputs.cache-hit != 'true'
         run: npm run test:unit
 
       - name: Report Code Climate Test Coverage
