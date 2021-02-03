@@ -23,6 +23,11 @@ const getRecentEpisodesToggle = pathOr(DEFAULT_TOGGLE_VALUE, [
   'recentPodcastEpisodes',
 ]);
 
+const getPodcastPageIdentifier = pageIdentifier => {
+  const [service, masterbrand, ...rest] = pageIdentifier.split('.');
+  return [service, masterbrand, 'podcasts', ...rest].join('.');
+};
+
 export default async ({ path: pathname, pageType, service, toggles }) => {
   try {
     const podcastDataPath = overrideRendererOnTest(pathname);
@@ -63,6 +68,13 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
         })
       : [];
 
+    const pageIdentifier = get([
+      'metadata',
+      'analyticsLabels',
+      'pageIdentifier',
+    ]);
+    const podcastPageIdentifier = getPodcastPageIdentifier(pageIdentifier);
+
     return {
       status,
       pageData: {
@@ -89,7 +101,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
           LOG_LEVELS.WARN,
         ),
         pageTitle: get(['metadata', 'analyticsLabels', 'pageTitle']),
-        pageIdentifier: get(['metadata', 'analyticsLabels', 'pageIdentifier']),
+        pageIdentifier: podcastPageIdentifier,
         imageUrl: get(['content', 'blocks', 0, 'imageUrl'], LOG_LEVELS.INFO),
         promoBrandTitle: get(['promo', 'brand', 'title']),
         durationISO8601: get(
