@@ -119,7 +119,7 @@ Pick a JSON file under `data/news/articles/[id].json`, and:
 1. add an example of your block somewhere in the `content.model.blocks` array.
 2. add your new component to the `blockTypes` array.
 
-Run `npm run dev` and you should see your component at your article of choice, eg http://localhost:7080/news/articles/c0000000001o
+Run `yarn run dev` and you should see your component at your article of choice, eg http://localhost:7080/news/articles/c0000000001o
 
 #### Update the schema
 
