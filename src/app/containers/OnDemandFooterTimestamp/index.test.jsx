@@ -12,7 +12,7 @@ const RenderTimestamp = ({ releaseDateTimeStamp }) => (
   </ServiceContextProvider>
 );
 
-describe('OnDemandTvFooterTimestamp', () => {
+describe('OnDemandFooterTimestamp', () => {
   it('should show with the expected styling and spacing', async () => {
     const releaseDateTimeStamp = 1603065600000;
     const formattedTimestamp = formatUnixTimestamp({
