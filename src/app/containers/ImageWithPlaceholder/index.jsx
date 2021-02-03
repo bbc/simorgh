@@ -4,6 +4,8 @@ import LazyLoad from 'react-lazyload';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import Image, { AmpImg } from '@bbc/psammead-image';
 import { Helmet } from 'react-helmet';
+import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
+import { C_LUNAR } from '@bbc/psammead-styles/colours';
 import { RequestContext } from '#contexts/RequestContext';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
@@ -57,11 +59,8 @@ const ImageWithPlaceholder = ({
           />
         </Helmet>
       )}
-      <ImagePlaceholder
-        style={{ background: isLoaded && 'none' }}
-        ratio={ratio}
-      >
-        {isAmp ? (
+      {isAmp ? (
+        <>
           <AmpImg
             alt={alt}
             attribution={copyright || ''}
@@ -70,12 +69,32 @@ const ImageWithPlaceholder = ({
             srcset={srcset}
             height={height}
             width={width}
-          />
-        ) : (
-          renderImage(imageToRender, lazyLoad, fallback)
-        )}
-        {children}
-      </ImagePlaceholder>
+          >
+            <div style={{ backgroundColor: C_LUNAR }} placeholder>
+              <amp-img
+                width="77px"
+                height="22px"
+                src={`data:image/svg+xml;base64,${BBC_BLOCKS}`}
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                }}
+              />
+            </div>
+          </AmpImg>
+          {children}
+        </>
+      ) : (
+        <ImagePlaceholder
+          style={{ background: isLoaded && 'none' }}
+          ratio={ratio}
+        >
+          {renderImage(imageToRender, lazyLoad, fallback)}
+          {children}
+        </ImagePlaceholder>
+      )}
     </>
   );
 };
