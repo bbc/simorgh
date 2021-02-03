@@ -45,8 +45,8 @@ cd simorgh
 git remote add upstream https://github.com/bbc/simorgh
 # Use recommended version of node for the project, listed in `.nvmrc`
 nvm use
-# Install latest version of npm
-yarn global add npm@latest
+# Install yarn
+npm install --global yarn
 # Install the project dependencies
 yarn install
 ```
