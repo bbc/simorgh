@@ -1,0 +1,525 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p08wkzvd",
+    "locators": { "pid": "p08wkzvd", "brandPid": "p02pc9qc" },
+    "type": "WSRADIO",
+    "createdBy": "bbc_arabic_radio",
+    "language": "ar",
+    "lastUpdated": 1611165485072,
+    "firstPublished": 1603812552000,
+    "lastPublished": 1603812552000,
+    "timestamp": 1603812552000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "BBC Xtra - BBC News Arabic",
+      "pageIdentifier": "arabic.bbc_arabic_radio.p08wkzvd.page",
+      "producerId": "5",
+      "contentType": "player-episode",
+      "producer": "ARABIC"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "BBC Xtra",
+    "releaseDateTimeStamp": 1603756800000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p08wkzvd",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "كيف نضمن حق الاعتقاد والتعبد للأقليات الدينية؟",
+          "long": "في هذه الحلقة من بي بي سي إكسترا:\n-\tهل تقبل الجزائر على تحسن لواقع الحريات الدينية؟\n-\tانقسام في بولندا بشأن قوانين الإجهاض.\n-\tتفاؤل بين أصحاب الشركات الكبرى في السودان بعد شطبه من قائمة الدول الراعية للإرهاب.\n-\tومحلات كويتية تقاطع المنتجات الفرنسية.\nإكسترا اليوم مع هالة صالح."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+        "embedding": true,
+        "advertising": false,
+        "versions": [],
+        "availability": "notAvailable",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "كيف نضمن حق الاعتقاد والتعبد للأقليات الدينية؟",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "BBC Xtra" },
+    "locators": { "pid": "p08wkzvd", "brandPid": "p02pc9qc" },
+    "media": {
+      "id": "p08wkzvd",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "كيف نضمن حق الاعتقاد والتعبد للأقليات الدينية؟",
+        "long": "في هذه الحلقة من بي بي سي إكسترا:\n-\tهل تقبل الجزائر على تحسن لواقع الحريات الدينية؟\n-\tانقسام في بولندا بشأن قوانين الإجهاض.\n-\tتفاؤل بين أصحاب الشركات الكبرى في السودان بعد شطبه من قائمة الدول الراعية للإرهاب.\n-\tومحلات كويتية تقاطع المنتجات الفرنسية.\nإكسترا اليوم مع هالة صالح."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+      "embedding": true,
+      "advertising": false,
+      "versions": [],
+      "availability": "notAvailable",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "كيف نضمن حق الاعتقاد والتعبد للأقليات الدينية؟",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1603756800000,
+    "brand": { "pid": "p02pc9qc", "title": "BBC Xtra" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p08wkzvd",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Arabic",
+      "uri": "/arabic",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": { "headline": "BBC Xtra" },
+            "locators": { "pid": "p094gcc1", "brandPid": "p02pc9qc" },
+            "media": {
+              "id": "p094gcc1",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "هل سمعتم ب \" زواج التجربة \" في مصر ؟",
+                "long": "ما هو هذا الزواج ؟ و هل يقلل من حالات  الطلاق ؟\nغياب ترمب عن حفل تنصيب بايدن .. هل له تأثير؟\nونتعرف على سبب انخفاض أحكام الإعدام في السعودية\nحلقة اليوم يقدمها لكم  : محمد مطر"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p094fyt4",
+                  "types": ["Podcast"],
+                  "duration": 2742,
+                  "durationISO8601": "PT45M42S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1613662980000,
+                  "availableFrom": 1611070980000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "هل سمعتم ب \" زواج التجربة \" في مصر ؟",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1611014400000,
+            "brand": { "pid": "p02pc9qc", "title": "BBC Xtra" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p094gcc1",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "BBC Xtra" },
+            "locators": { "pid": "p094c9sr", "brandPid": "p02pc9qc" },
+            "media": {
+              "id": "p094c9sr",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "لماذا يلجأ المستخدمون إلى تطبيقات دردشة دون أخرى؟",
+                "long": "في حلقة اليوم من بي بي سي إكسترا:\n-\tهجرة جماعية من تطبيق الواتساب إلى تطبيقات أخرى. لماذا؟\n-\tمبيدات تضر بالنحل عندما يمتص الرحيق.\n-\tوالأردن أولى الدول التي باشرت بتلقيح اللاجئين.\nإكسترا مع هالة صالح."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p094c442",
+                  "types": ["Podcast"],
+                  "duration": 2667,
+                  "durationISO8601": "PT44M27S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1613574240000,
+                  "availableFrom": 1610982240000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "لماذا يلجأ المستخدمون إلى تطبيقات دردشة دون أخرى؟",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1610928000000,
+            "brand": { "pid": "p02pc9qc", "title": "BBC Xtra" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p094c9sr",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "BBC Xtra" },
+            "locators": { "pid": "p0940sdx", "brandPid": "p02pc9qc" },
+            "media": {
+              "id": "p0940sdx",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "ضحايا الثورة التونسية  و أهاليهم يطالبون بالاعتراف و التعويضات",
+                "long": "في الذكرى العاشرة لتنحي بن علي ‘ ضحايا الثورة التونسية  و أهاليهم يطالبون بالاعتراف و التعويضات \nو نتذكر اليوم من يلقبها التونسيون بأيقونة ثورتهم ؟\n \nومعلمون غاضبون في موريتانيا ! لماذا؟\nحلقة اليوم تقدمها لكم ، كريمة كواح"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0940kxz",
+                  "types": ["Podcast"],
+                  "duration": 2479,
+                  "durationISO8601": "PT41M19S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1613230500000,
+                  "availableFrom": 1610638500000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "في الذكرى العاشرة لتنحي بن علي ‘ ضحايا الثورة التونسية  و أهاليهم يطالبون بالاعتراف و التعويضات",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1610582400000,
+            "brand": { "pid": "p02pc9qc", "title": "BBC Xtra" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p0940sdx",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "BBC Xtra" },
+            "locators": { "pid": "p093szlg", "brandPid": "p02pc9qc" },
+            "media": {
+              "id": "p093szlg",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "طبق الكسكي يزين احتفالات السنة الأمازيغية الجديدة",
+                "long": "فما الذي يمثله هذا الطبق التراثي لعموم الجزائريين\n\nهل تتحمل إسرائيل مسؤولية إمداد الفلسطينيين باللقاح؟\n\nولماذا يميل الكوريون في الجنوب إلى تجنب الإنجاب؟\n\nحلقة اليوم من تقديم : محمد مطر"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p093sty4",
+                  "types": ["Podcast"],
+                  "duration": 2526,
+                  "durationISO8601": "PT42M6S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1613056380000,
+                  "availableFrom": 1610464380000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "طبق الكسكي يزين احتفالات السنة الأمازيغية الجديدة",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1610409600000,
+            "brand": { "pid": "p02pc9qc", "title": "BBC Xtra" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p093szlg",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "BBC Xtra" },
+            "locators": { "pid": "p093q652", "brandPid": "p02pc9qc" },
+            "media": {
+              "id": "p093q652",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "\"يا شوكولاتة، سنشتري لك مشط، يا ديناصور\" كلمات التجريح كثيرة والعيب في المجرِّح",
+                "long": "في هذه الحلقة من #بي_بي_سي #إكسترا \nأثر التعليقات الجارحة على نظرة ضحاياها لذواتهم؟\nونتعرف الوظائف التي ما زالت محظورة على المرأة في #روسيا؟\nونغطي إدراج #المغرب للتراث اليهودي المحلي ضمن المناهج الدراسية.\nيصحبكم في هذه الحلقة محمد مطر"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p093q12j",
+                  "types": ["Podcast"],
+                  "duration": 2492,
+                  "durationISO8601": "PT41M32S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1612972920000,
+                  "availableFrom": 1610380920000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "\"يا شوكولاتة، سنشتري لك مشط، يا ديناصور\" كلمات التجريح كثيرة والعيب في المجرِّح",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1610323200000,
+            "brand": { "pid": "p02pc9qc", "title": "BBC Xtra" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p093q652",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "BBC Xtra" },
+            "locators": { "pid": "p093cdkh", "brandPid": "p02pc9qc" },
+            "media": {
+              "id": "p093cdkh",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "اقتحام مبنى الكابتول في الولايات المتحدة للمرة الثانية بعد قرنين",
+                "long": "أهلا بكم في بي بي سي اكسترا\nاقتحام مبنى الكابتول في الولايات المتحدة للمرة الثانية بعد قرنين\nوالقلق موجود بين الأمريكيين لكن الثقة حاضرة   \nوفي اكسترا أيضا \nكيف يعبر البحرينيون المعارضون للتطبيع عن موقفهم في بلدهم اليوم؟ \nوصورة لوحة لمايكل أنجلو في كتاب مدرسي تثير جدلا كبيرا حول المناهج التعليمية في السودان."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p093cbrq",
+                  "types": ["Podcast"],
+                  "duration": 2613,
+                  "durationISO8601": "PT43M33S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1612623840000,
+                  "availableFrom": 1610031840000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "اقتحام مبنى الكابتول في الولايات المتحدة للمرة الثانية بعد قرنين",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1609977600000,
+            "brand": { "pid": "p02pc9qc", "title": "BBC Xtra" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p093cdkh",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "BBC Xtra" },
+            "locators": { "pid": "p09343mp", "brandPid": "p02pc9qc" },
+            "media": {
+              "id": "p09343mp",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "هل يثق المواطنون في جودة الخدمات الصحية العامة؟",
+                "long": "في حلقة اليوم من بي بي سي إكسترا:\n-\tما الذي يدفع البعض إلى معالجة نفسه من كورونا في المنزل بدلاً من المستشفى؟\n-\tما رأي الاختصاصيين في استخدام العلاج بالأكسجين في المنازل؟\n-\tهل تغلبت الصين على الفقر المدقع؟\n-\tونسلط الضوء على أهم إنجازات الموسيقار الراحل إلياس الرحباني.\n\nهذه الحلقة من تقديم داليا محمد."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0933lzb",
+                  "types": ["Podcast"],
+                  "duration": 2606,
+                  "durationISO8601": "PT43M26S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1612451940000,
+                  "availableFrom": 1609859940000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "هل يثق المواطنون في جودة الخدمات الصحية العامة؟",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1609804800000,
+            "brand": { "pid": "p02pc9qc", "title": "BBC Xtra" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p09343mp",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "BBC Xtra" },
+            "locators": { "pid": "p0930xyh", "brandPid": "p02pc9qc" },
+            "media": {
+              "id": "p0930xyh",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "ما أفضل السبل لإنقاص الوزن الزائد؟",
+                "long": "في بي بي سي إكسترا اليوم:\nلإنقاص الوزن وسائلُ كثيرة يلجأ إليها البعض، منها الوصفات.\nونتعرف على حي القصبة التاريخي الجزائري الذي يشهد الانهيار.\nوما الذي يمكن أن تصلحه المصالحة الخليجية؟\nبي بي سي إكسترا مع محمد مطر"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0930nbv",
+                  "types": ["Podcast"],
+                  "duration": 2503,
+                  "durationISO8601": "PT41M43S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1612364820000,
+                  "availableFrom": 1609772820000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "ما أفضل السبل لإنقاص الوزن الزائد؟",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1609718400000,
+            "brand": { "pid": "p02pc9qc", "title": "BBC Xtra" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p0930xyh",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}

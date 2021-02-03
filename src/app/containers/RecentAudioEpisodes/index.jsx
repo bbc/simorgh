@@ -44,7 +44,7 @@ const StyledTimestamp = styled(Timestamp)`
   display: inline;
 `;
 
-const RecentAudioEpisodes = ({ masterBrand, episodes }) => {
+const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
   const {
     translations,
     service,
@@ -75,7 +75,15 @@ const RecentAudioEpisodes = ({ masterBrand, episodes }) => {
   const audioLabel = pathOr('Audio', ['media', 'audio'], translations);
   const getUrl = episodeId =>
     '/'.concat(
-      [service, variant, masterBrand, episodeId].filter(Boolean).join('/'),
+      [
+        service,
+        variant,
+        pageType === 'Podcast' ? 'podcasts' : '',
+        pageType === 'Podcast' ? brandId : masterBrand,
+        episodeId,
+      ]
+        .filter(Boolean)
+        .join('/'),
     );
 
   const ulProps = { 'data-e2e': 'recent-episodes-list' };
@@ -159,6 +167,8 @@ const RecentAudioEpisodes = ({ masterBrand, episodes }) => {
 
 RecentAudioEpisodes.propTypes = {
   masterBrand: string.isRequired,
+  brandId: string,
+  pageType: string.isRequired,
   episodes: arrayOf(
     shape({
       id: string.isRequired,
@@ -169,6 +179,10 @@ RecentAudioEpisodes.propTypes = {
       duration: string.isRequired,
     }),
   ).isRequired,
+};
+
+RecentAudioEpisodes.defaultProps = {
+  brandId: '',
 };
 
 export default RecentAudioEpisodes;
