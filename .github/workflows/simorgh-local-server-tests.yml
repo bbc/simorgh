@@ -45,5 +45,6 @@ jobs:
 
       - name: Run Puppeteer Tests
         run: |
-          yarn add --no-save puppeteer
+          yarn add puppeteer
           yarn run test:puppeteer
+          yarn remove puppeteer
