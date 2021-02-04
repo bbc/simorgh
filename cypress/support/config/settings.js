@@ -4132,8 +4132,8 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: ['/mundo/articles/ce42wzqr2mko'],
+            enabled: true,
           },
         },
         smoke: false,
