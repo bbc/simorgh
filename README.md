@@ -158,6 +158,14 @@ Install Node. [https://nodejs.org/en/](https://nodejs.org/en/). We use the versi
 nvm use
 ```
 
+#### Install Yarn
+
+The Simorgh project uses Yarn for package management. It is recommended to install Yarn through the npm package manager, which comes bundled with Node.js when you install it on your system. To install Yarn, run this command:
+
+```
+npm install --global yarn
+```
+
 Then you can run the following commands to install Simorgh
 
 ```

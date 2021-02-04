@@ -4,10 +4,10 @@ const ensureYarn = () => {
     console.log(
       [
         '\n',
-        '┌────────────────────────────────────────────────────────────────────────────────────┐',
-        '│ The Simorgh project now uses Yarn for package management:                          │',
-        '│ https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md#installing-dependencies │',
-        '└────────────────────────────────────────────────────────────────────────────────────┘',
+        '┌───────────────────────────────────────────────────────────────────┐',
+        '│ The Simorgh project now uses Yarn for package management:         │',
+        '│ https://github.com/bbc/simorgh/blob/latest/README.md#install-yarn │',
+        '└───────────────────────────────────────────────────────────────────┘',
         '\n',
       ].join('\n'),
     );
