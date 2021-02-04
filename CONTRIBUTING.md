@@ -13,7 +13,6 @@ Please familiarise yourself with our:
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md) (you are here)
 - [Guide to Code Reviews](https://github.com/bbc/simorgh/blob/latest/docs/Code-Reviews.md)
 - [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.md)
-- [GPG Signing Guide](docs/GPG-Signing-Guide.md)
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md)
 
 NB there is further documentation colocated with relevant code. The above list is an index of the top-level documentation of our repo.
@@ -59,8 +58,6 @@ git pull upstream latest
 ```
 
 ### Your work
-
-> Make sure you have a valid GPG key set up in GitHub. **All commits must be GPG signed** We do have a very small [guide](docs/GPG-Signing-Guide.md) for setting up GPG signing on MacOS.
 
 Create a new topic branch (off the main project `latest` branch) that will contain your feature, change, or fix:
 
