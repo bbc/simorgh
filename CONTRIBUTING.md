@@ -54,14 +54,10 @@ Fork the project, clone your fork, configure the remotes and install the depende
    git remote add upstream https://github.com/bbc/simorgh
    ```
 
-4. Use recommended version of node for the project, listed in [`.nvmrc`](https://github.com/bbc/simorgh/blob/latest/.nvmrc). For example for v12.18.4 run these commands:
+4. Use recommended version of node for the project, listed in [`.nvmrc`](https://github.com/bbc/simorgh/blob/latest/.nvmrc)
 
    ```
-   nvm install 12.18.4
-   ```
-
-   ```
-   nvm use 12.18.4
+   nvm use
    ```
 
 ### Installing dependencies
