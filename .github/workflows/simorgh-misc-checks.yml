@@ -28,7 +28,15 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Cache Node Modules
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+
       - name: Install Node Modules
+        if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
 
       - name: Chromatic UI Tests

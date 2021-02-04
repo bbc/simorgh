@@ -26,10 +26,19 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install & Build Simorgh
-        run: |
-          yarn install --frozen-lockfile
-          yarn run build:local
+      - name: Cache Node Modules
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+
+      - name: Install Node Modules
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+
+      - name: Build Simorgh
+        run: yarn run build:local
 
       - name: Start Simorgh Server
         run: nohup node build/server.js > /dev/null 2>&1 &

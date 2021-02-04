@@ -21,11 +21,22 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+
+      - name: Cache Node Modules
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+
       - name: Install Node Modules
+        if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
+
       - name: Integration Tests
         run: yarn run test:integration -- --ci
