@@ -3,11 +3,12 @@ const ensureYarn = () => {
   if (!process.env.npm_execpath.includes('yarn')) {
     console.log(
       [
-        '\n\n',
-        '************************************************************',
-        '* The Simorgh project now uses Yarn for package management *',
-        '************************************************************',
-        '\n\n',
+        '\n',
+        '┌────────────────────────────────────────────────────────────────────────────────────┐',
+        '│ The Simorgh project now uses Yarn for package management:                          │',
+        '│ https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md#installing-dependencies │',
+        '└────────────────────────────────────────────────────────────────────────────────────┘',
+        '\n',
       ].join('\n'),
     );
     process.exit(1);

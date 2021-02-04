@@ -36,18 +36,47 @@ If you never created a pull request before, [here is a great tutorial on how to 
 
 Fork the project, clone your fork, configure the remotes and install the dependencies:
 
+1. Clone your fork of the repo into the current directory
+
+   ```
+   git clone https://github.com/<YOUR ACCOUNT>/simorgh.git
+   ```
+
+2. Navigate to the newly cloned directory
+
+   ```
+   cd simorgh
+   ```
+
+3. Assign the original repo to a remote called "upstream"
+
+   ```
+   git remote add upstream https://github.com/bbc/simorgh
+   ```
+
+4. Use recommended version of node for the project, listed in [`.nvmrc`](https://github.com/bbc/simorgh/blob/latest/.nvmrc). For example for v12.18.4 run these commands:
+
+   ```
+   nvm install 12.18.4
+   ```
+
+   ```
+   nvm use 12.18.4
+   ```
+
+### Installing dependencies
+
+**Install Yarn**
+
+The Simorgh project uses Yarn for package management. To install Yarn, run this command:
+
 ```
-# Clone your fork of the repo into the current directory
-git clone https://github.com/<YOUR ACCOUNT>/simorgh.git
-# Navigate to the newly cloned directory
-cd simorgh
-# Assign the original repo to a remote called "upstream"
-git remote add upstream https://github.com/bbc/simorgh
-# Use recommended version of node for the project, listed in `.nvmrc`
-nvm use
-# Install yarn
 npm install --global yarn
-# Install the project dependencies
+```
+
+**Install the project dependencies with Yarn**
+
+```
 yarn install
 ```
 
