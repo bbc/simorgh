@@ -126,29 +126,82 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Өзгөрүүлөргө макулсузбу?',
-          description: {
-            uk: {
-              first: 'Биздин сайтыбызда иштөөнү жакшыртуу үчүн ',
-              linkText: 'cookies',
-              last: ' колдонобуз. Cookies боюнча эрежелерге макулсузбу?',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Маалымат топтоого уруксат берип, улантуу',
+            reject: 'Маалымат топтоого уруксат бербей улантуу',
+            initial: {
+              title: 'AMP баракчаларынан маалымат топтоого уруксатпы?',
+              description: {
+                first:
+                  'Биз жана өнөктөштөрүбүз сайтыбызда иштөөнү жакшыртуу үчүн ',
+                linkText: 'cookies',
+                last:
+                  ' колдонуп, браузердеги маалыматты топтойт. Бул аркылуу сиз жактырган контент жана жарнамалар көрсөтүлөт. Буга макулсузбу?',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Тескөө',
             },
-            international: {
-              first:
-                'Биз жана өнөктөштөрүбүз сайтыбызда иштөөнү жакшыртуу үчүн ',
-              linkText: 'cookies',
-              last:
-                ' колдонуп, браузердеги маалыматты топтойт. Бул аркылуу сиз жактырган контент жана жарнамалар көрсөтүлөт. Буга макулсузбу?',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'AMP баракчаларын тескөө',
+              description: {
+                para1:
+                  'Сиз тандаган тескөөлөр AMP баракчасына таандык. Би-Би-Синин AMP саналбаган баракчасына кирип калсаңыз, кайра тескөөгө туура келиши мүмкүн.',
+                para2:
+                  'Уюлдук телефондо тез жүктөлгөн атайын баракча Google AMP технологиясы менен жасалган.',
+                heading2:
+                  'Баракчаны иштетүүгө маанилүү болгон маалымат гана топтолду',
+                para3:
+                  'Баракча тез жүктөлүшү үчүн сизден уруксат албай туруп телефонуңузга маалымат сакталат.',
+                para4: {
+                  text:
+                    'Баракча тез жүктөлүшү үчүн кандай маалымат сакталып жатканы тууралуу кеңири маалымат алыңыз.',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Ылайыктуу контент тууралуу маалымат телефонуңузда сакталат.',
+                heading3: 'Кошумча маалымат чогултуу',
+                para6:
+                  'AMP баракчаларынан маалымат топтоого уруксат бергенде, Британиядан  тышкары мамлекеттерде жеке өзүңүзгө ылайыктуу жарнама сунуштоого дагы уруксат берип жатасыз.',
+                para7: {
+                  text:
+                    'Би-Би-Си баракчаларында жарнамалар жеке сизге ылайыктуу болгудай тандалганы тууралуу кеңири маалымат алыңыз.',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'Жеке сизге ылайыктуу жарнамалардан баш тарткыңыз келсе "Маалымат топтоого уруксат бербей улантууну" тандаңыз. Сиз жарнамаларды көрө бересиз, бирок алар жеке сизге ылайыкталган эмес.',
+                para9:
+                  'Тескөөнү каалаган учурда өзгөртсөңүз болот. Ал үчүн баракчанын астындагы “Ad Choices / Do not sell my info” бөлүмүн каалаган учурда басып, өзүңүзгө ылайыктуу болгондой тескеп алууга мүмкүн.',
+              },
             },
           },
-          accept: 'Ооба, мен макулмун',
-          reject: 'Жок, мени жөндөө баракчасына алып бар',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Өзгөрүүлөргө макулсузбу?',
+            description: {
+              uk: {
+                first: 'Биздин сайтыбызда иштөөнү жакшыртуу үчүн ',
+                linkText: 'cookies',
+                last: ' колдонобуз. Cookies боюнча эрежелерге макулсузбу?',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first:
+                  'Биз жана өнөктөштөрүбүз сайтыбызда иштөөнү жакшыртуу үчүн ',
+                linkText: 'cookies',
+                last:
+                  ' колдонуп, браузердеги маалыматты топтойт. Бул аркылуу сиз жактырган контент жана жарнамалар көрсөтүлөт. Буга макулсузбу?',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Ооба, мен макулмун',
+            reject: 'Жок, мени жөндөө баракчасына алып бар',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {

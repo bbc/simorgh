@@ -9,8 +9,13 @@ import {
   C_CONSENT_ACTION,
   C_PEBBLE,
   C_WHITE,
+  C_CONSENT_CONTENT,
 } from '@bbc/psammead-styles/colours';
-import { getDoublePica, getLongPrimer } from '@bbc/gel-foundations/typography';
+import {
+  getDoublePica,
+  getLongPrimer,
+  getBodyCopy,
+} from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -21,6 +26,12 @@ import {
   GEL_MARGIN_ABOVE_400PX,
   GEL_SPACING_DBL,
 } from '@bbc/gel-foundations/spacings';
+
+const HEADING_STYLES = `
+  color: ${C_WHITE};
+  margin-top: 0;
+  margin-bottom: 0;
+`;
 
 const Wrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
@@ -46,9 +57,16 @@ const BannerPage = styled.div`
 
 const Title = styled.h2`
   ${({ script }) => getDoublePica(script)}
-  color: ${C_WHITE};
-  margin-top: 0;
-  margin-bottom: 0;
+  ${HEADING_STYLES}
+`;
+
+const Heading = styled.h3`
+  ${HEADING_STYLES}
+`;
+
+const Text = styled.p`
+  ${({ script }) => script && getBodyCopy(script)}
+  color: ${C_CONSENT_CONTENT};
 `;
 
 const OptionsList = styled.ul`
@@ -93,8 +111,13 @@ const AmpCookieBanner = ({
       <Wrapper dir={dir} service={service}>
         <BannerPage data-amp-bind-hidden="isManagingSettings">
           <Title script={script}>{initial.title}</Title>
-          <p>{initial.description.international.para1}</p>
-          <p>{initial.description.international.para2}</p>
+          <Text script={script}>
+            {initial.description.first}{' '}
+            <a href={initial.description.linkUrl}>
+              {initial.description.linkText}
+            </a>{' '}
+            {initial.description.last}
+          </Text>
           <OptionsList script={script}>
             <OptionsItem script={script}>{accept}</OptionsItem>
             <OptionsItem script={script}>
@@ -109,8 +132,24 @@ const AmpCookieBanner = ({
         </BannerPage>
         <BannerPage hidden data-amp-bind-hidden="!isManagingSettings">
           <Title script={script}>{manage.title}</Title>
-          <p>{manage.description.international.para1}</p>
-          <p>{manage.description.international.para2}</p>
+          <Text script={script}>{manage.description.para1}</Text>
+          <Text script={script}>{manage.description.para2}</Text>
+          <Heading>{manage.description.heading2}</Heading>
+          <Text script={script}>{manage.description.para3}</Text>
+          <Text script={script}>
+            <a href={manage.description.para4.url}>
+              {manage.description.para4.text}
+            </a>
+          </Text>
+          <Text script={script}>{manage.description.para5}</Text>
+          <Text script={script}>{manage.description.para6}</Text>
+          <Text script={script}>
+            <a href={manage.description.para7.url}>
+              {manage.description.para7.text}
+            </a>
+          </Text>
+          <Text script={script}>{manage.description.para8}</Text>
+          <Text script={script}>{manage.description.para9}</Text>
           <OptionsList script={script}>
             <OptionsItem script={script}>{accept}</OptionsItem>
             <OptionsItem script={script}>{reject}</OptionsItem>

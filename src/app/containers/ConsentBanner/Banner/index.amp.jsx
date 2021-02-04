@@ -38,13 +38,13 @@ const AmpConsentBannerContainer = ({
         translations.consentBanner.cookie.amp.manage,
       ]}
       accept={Accept(
-        translations.consentBanner[type].accept,
+        translations.consentBanner.cookie.amp.accept,
         acceptAction,
         dataAttribute('accept'),
       )}
       reject={Reject(
-        translations.consentBanner[type].reject,
-        translations.consentBanner[type].rejectUrl,
+        translations.consentBanner.cookie.amp.reject,
+        null,
         rejectAction,
         dataAttribute('reject'),
       )}
