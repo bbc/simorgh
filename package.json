@@ -121,7 +121,6 @@
     "aws-embedded-metrics": "^2.0.0",
     "compression": "^1.7.4",
     "core-js": "^3.6.5",
-    "create-emotion-server": "^10.0.27",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-static-gzip": "^2.0.8",
