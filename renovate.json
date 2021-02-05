@@ -1,5 +1,5 @@
 {
-  "extends": ["config:base", ":pinVersions"],
+  "extends": ["config:base", ":pinDependencies"],
   "enabledManagers": ["npm"],
   "packageRules": [
     {
