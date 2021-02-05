@@ -30,23 +30,24 @@ const renderDocument = async ({
 
   const context = {};
 
-  const app = extractCritical(
-    renderToString(
-      extractor.collectChunks(
-        <CacheProvider value={cache}>
-          <ServerApp
-            location={url}
-            routes={routes}
-            data={data}
-            bbcOrigin={bbcOrigin}
-            context={context}
-            service={service}
-            isAmp={isAmp}
-          />
-        </CacheProvider>,
-      ),
+  const inputString = renderToString(
+    extractor.collectChunks(
+      <CacheProvider value={cache}>
+        <ServerApp
+          location={url}
+          routes={routes}
+          data={data}
+          bbcOrigin={bbcOrigin}
+          context={context}
+          service={service}
+          isAmp={isAmp}
+        />
+      </CacheProvider>,
     ),
   );
+
+  const app = extractCritical(inputString);
+  app.input = inputString;
 
   if (context.url) {
     /**

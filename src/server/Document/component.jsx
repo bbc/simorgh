@@ -80,6 +80,9 @@ const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
       </head>
       <body {...ampGeoPendingAttrs}>
         <div id="root" dangerouslySetInnerHTML={{ __html: html }} />
+        <textarea rows="30" cols="50" value={app.input} />
+        <textarea rows="30" cols="50" value={app.html} />
+        <textarea rows="30" cols="50" value={app.css} />
         {scriptsAllowed && (
           <script
             dangerouslySetInnerHTML={{

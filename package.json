@@ -148,6 +148,7 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
+    "babel-plugin-emotion": "10.0.33",
     "@babel/core": "7.12.10",
     "@babel/plugin-proposal-object-rest-spread": "7.12.1",
     "@babel/plugin-proposal-throw-expressions": "7.12.1",
