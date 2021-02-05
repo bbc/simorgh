@@ -2,7 +2,7 @@ import path from 'path';
 import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ChunkExtractor } from '@loadable/server';
-import { CacheProvider } from '@emotion/core';
+import { CacheProvider } from '@emotion/react';
 import createEmotionServer from 'create-emotion-server';
 import createCache from '@emotion/cache';
 import { Helmet } from 'react-helmet';
@@ -19,7 +19,7 @@ const renderDocument = async ({
   service,
   url,
 }) => {
-  const cache = createCache();
+  const cache = createCache({ key: 'bbc' });
   const { extractCritical } = createEmotionServer(cache);
 
   const statsFile = path.resolve(
