@@ -257,11 +257,6 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   cursor: default;
 }
 
-.emotion-19:hover .emotion-14,
-.emotion-19:focus .emotion-14 {
-  background-color: #B80000;
-}
-
 .emotion-4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -355,6 +350,11 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 
 .no-js .emotion-15 {
   display: none;
+}
+
+.emotion-20:hover .emotion-15,
+.emotion-20:focus .emotion-15 {
+  background-color: #B80000;
 }
 
 .emotion-6 {
