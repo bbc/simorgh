@@ -315,7 +315,7 @@ exports[`Canonical Feature Index page Story Promo Headline should match text 1`]
 exports[`Canonical Feature Index page Story Promo Image should match image 1`] = `
 <img
   alt="CAN 2019 : le Sénégal en huitième de finale"
-  class="css-13lcmnl-StyledImg e1enwo3v0"
+  class="bbc-13lcmnl-StyledImg e1enwo3v0"
   sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg"
   srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 660w"
