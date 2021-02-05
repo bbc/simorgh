@@ -18,7 +18,7 @@ if [[ $(pwd) =~ .+simorgh ]]; then
     tput setaf 1
     echo "\nOh no! You're not using our version of yarn, please move to version $desired_yarn_version in order to reduce bundling inconsistency"
     tput setaf 3
-    echo "This can be done by running 'yarn i -g yarn@$desired_yarn_version'"
+    echo "This can be done by running 'npm i -g yarn@$desired_yarn_version'"
     echo "Once you have done this please run 'yarn install' again and commit any changes to your package-lock.json\n"
     tput sgr0
     exit 1
