@@ -11,6 +11,9 @@ https://github.com/bbc/simorgh/blob/bf3961e69a98f42410a80622bd9e9855f1145ed1/ren
 
 We also choose to [only enable renovate](https://github.com/bbc/simorgh/blob/bf3961e69a98f42410a80622bd9e9855f1145ed1/renovate.json#L3) for npm packages, it supports many dependency types include github actions and nvm to keep our version of node up-to-date but at this stage we chose to stick to npm packages and do other dependencies manually.
 
+## Pinning Dependencies
+We have configured renovate to [pin dependencies](https://github.com/bbc/simorgh/blob/09dbe8614cb6931765f2ddc61299d1fa2bbb6564/renovate.json#L2) based on their guidance on the subject [here](https://docs.renovatebot.com/dependency-pinning/#so-whats-best).
+
 ## Group All 3rd Party Non-Major Deps
 https://github.com/bbc/simorgh/blob/bf3961e69a98f42410a80622bd9e9855f1145ed1/renovate.json#L6..L10
 
@@ -26,3 +29,6 @@ In [this PR](https://github.com/bbc/simorgh/pull/8774) upgrading loadable caused
 
 ## Group BBC (mostly psammead) Non-Major Deps
 We chose to [group updates to BBC packages](https://github.com/bbc/simorgh/blob/bf3961e69a98f42410a80622bd9e9855f1145ed1/renovate.json#L25) into one PR for minor and patch updates. We made this choice as we should update psammead packages following semver rules and it should be safe to integrate psammead packages in one PR for minor and patch updates. Major package updates will generate seperate PRs as you would expect allowing you to bring them in seperately for the feature/breaking change you are introducing. It should be noted that you are very welcome to bring in psammead upgrades; minor, patch or major, in other PRs related to features being worked on, renovate will update the grouped PR accordingly as dependencies are updated in other PRs and merged into latest.
+
+## Disable BBC Psammead Major Deps
+We chose to disable major updates as we handle these manually in seperate PRs.

@@ -10,6 +10,7 @@ import {
   C_PEBBLE,
   C_WHITE,
   C_CONSENT_CONTENT,
+  C_EBON,
 } from '@bbc/psammead-styles/colours';
 import {
   getDoublePica,
@@ -25,6 +26,7 @@ import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
   GEL_SPACING_DBL,
+  GEL_SPACING,
 } from '@bbc/gel-foundations/spacings';
 
 const HEADING_STYLES = `
@@ -33,19 +35,28 @@ const HEADING_STYLES = `
   margin-bottom: 0;
 `;
 
-const Wrapper = styled.div`
-  ${({ service }) => getSansRegular(service)}
-  background-color: ${C_CONSENT_BACKGROUND};
-  padding: ${GEL_SPACING_DBL} ${GEL_MARGIN_BELOW_400PX};
+const CONTAINER_STYLES = `
+  padding-left: ${GEL_MARGIN_BELOW_400PX};
+  padding-right: ${GEL_MARGIN_BELOW_400PX};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding: ${GEL_MARGIN_ABOVE_400PX};
+    padding-left: ${GEL_MARGIN_ABOVE_400PX};
+    padding-right: ${GEL_MARGIN_ABOVE_400PX};
   }
 `;
 
+const Wrapper = styled.div`
+  ${({ service }) => getSansRegular(service)}
+  background-color: ${C_CONSENT_BACKGROUND};
+  max-height: 100vh;
+`;
+
 const BannerPage = styled.div`
+  display: flex;
+  flex-direction: column;
   margin-left: auto;
   margin-right: auto;
+  max-height: 100vh;
   max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
 
   a {
@@ -58,6 +69,15 @@ const BannerPage = styled.div`
 const Title = styled.h2`
   ${({ script }) => getDoublePica(script)}
   ${HEADING_STYLES}
+  ${CONTAINER_STYLES}
+  background-color: ${C_EBON};
+  padding-top: ${GEL_SPACING_DBL};
+  padding-bottom: ${GEL_SPACING_DBL};
+`;
+
+const ScrollBox = styled.div`
+  ${CONTAINER_STYLES}
+  overflow-y: auto;
 `;
 
 const Heading = styled.h3`
@@ -71,16 +91,22 @@ const Text = styled.p`
 
 const OptionsList = styled.ul`
   ${({ script }) => getLongPrimer(script)}
+  ${CONTAINER_STYLES}
   align-items: center;
+  background-color: ${C_EBON};
   display: flex;
   justify-content: space-between;
   list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 -${GEL_SPACING};
+  padding-top: ${GEL_SPACING_DBL};
+  padding-bottom: ${GEL_SPACING_DBL};
   padding-left: 0;
 `;
 
 const OptionsItem = styled.li`
+  margin-right: ${GEL_SPACING};
+  margin-left: ${GEL_SPACING};
+
   button {
     ${({ script }) => getLongPrimer(script)}
     cursor: pointer;
@@ -111,13 +137,15 @@ const AmpCookieBanner = ({
       <Wrapper dir={dir} service={service}>
         <BannerPage data-amp-bind-hidden="isManagingSettings">
           <Title script={script}>{initial.title}</Title>
-          <Text script={script}>
-            {initial.description.first}{' '}
-            <a href={initial.description.linkUrl}>
-              {initial.description.linkText}
-            </a>{' '}
-            {initial.description.last}
-          </Text>
+          <ScrollBox>
+            <Text script={script}>
+              {initial.description.first}{' '}
+              <a href={initial.description.linkUrl}>
+                {initial.description.linkText}
+              </a>{' '}
+              {initial.description.last}
+            </Text>
+          </ScrollBox>
           <OptionsList script={script}>
             <OptionsItem script={script}>{accept}</OptionsItem>
             <OptionsItem script={script}>
@@ -132,24 +160,26 @@ const AmpCookieBanner = ({
         </BannerPage>
         <BannerPage hidden data-amp-bind-hidden="!isManagingSettings">
           <Title script={script}>{manage.title}</Title>
-          <Text script={script}>{manage.description.para1}</Text>
-          <Text script={script}>{manage.description.para2}</Text>
-          <Heading>{manage.description.heading2}</Heading>
-          <Text script={script}>{manage.description.para3}</Text>
-          <Text script={script}>
-            <a href={manage.description.para4.url}>
-              {manage.description.para4.text}
-            </a>
-          </Text>
-          <Text script={script}>{manage.description.para5}</Text>
-          <Text script={script}>{manage.description.para6}</Text>
-          <Text script={script}>
-            <a href={manage.description.para7.url}>
-              {manage.description.para7.text}
-            </a>
-          </Text>
-          <Text script={script}>{manage.description.para8}</Text>
-          <Text script={script}>{manage.description.para9}</Text>
+          <ScrollBox>
+            <Text script={script}>{manage.description.para1}</Text>
+            <Text script={script}>{manage.description.para2}</Text>
+            <Heading>{manage.description.heading2}</Heading>
+            <Text script={script}>{manage.description.para3}</Text>
+            <Text script={script}>
+              <a href={manage.description.para4.url}>
+                {manage.description.para4.text}
+              </a>
+            </Text>
+            <Text script={script}>{manage.description.para5}</Text>
+            <Text script={script}>{manage.description.para6}</Text>
+            <Text script={script}>
+              <a href={manage.description.para7.url}>
+                {manage.description.para7.text}
+              </a>
+            </Text>
+            <Text script={script}>{manage.description.para8}</Text>
+            <Text script={script}>{manage.description.para9}</Text>
+          </ScrollBox>
           <OptionsList script={script}>
             <OptionsItem script={script}>{accept}</OptionsItem>
             <OptionsItem script={script}>{reject}</OptionsItem>
