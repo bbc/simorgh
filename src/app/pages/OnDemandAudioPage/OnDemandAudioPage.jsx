@@ -3,7 +3,10 @@ import path from 'ramda/src/path';
 import styled from '@emotion/styled';
 import { shape, string, number, bool, func } from 'prop-types';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+} from '@bbc/gel-foundations/breakpoints';
 import { useLocation } from 'react-router-dom';
 import pathOr from 'ramda/src/pathOr';
 import MetadataContainer from '../../containers/Metadata';
@@ -46,14 +49,14 @@ const StyledGelWrapperGrid = styled(GelPageGrid)`
 `;
 
 const StyledGridItemParagraph = styled(Grid)`
-  @media (min-width: 22.5625rem) and (max-width: 37.4375rem) {
+  @media (min-width: 22.5625rem) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     grid-template-columns: repeat(4, 1fr);
     grid-column-end: span 4;
   }
 `;
 
 const StyledGridItemImage = styled(Grid)`
-  @media (min-width: 22.5rem) and (max-width: 37.4375rem) {
+  @media (min-width: 22.5rem) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     grid-template-columns: repeat(2, 1fr);
     grid-column-end: span 2;
   }
