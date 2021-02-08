@@ -105,7 +105,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
         metadata: { type: detailPageType },
         language: get(['metadata', 'language'], LOG_LEVELS.INFO),
         brandTitle: get(['metadata', 'title'], LOG_LEVELS.INFO),
-        episodeTitle: get(['content', 'blocks', 0, 'title']),
+        episodeTitle: get(['content', 'blocks', 0, 'episodeTitle']),
         headline: get(['promo', 'headlines', 'headline'], LOG_LEVELS.WARN),
         shortSynopsis: get(['promo', 'media', 'synopses', 'short']),
         id: get(['metadata', 'id']),
