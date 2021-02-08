@@ -93,6 +93,20 @@ describe('Get initial data for on demand radio', () => {
     );
   });
 
+  it('should return the correct page identifier used for analytics', async () => {
+    const { pageData } = await getInitialData({
+      path: 'mock-podcast-path',
+      pageType: MEDIA_PAGE,
+      toggles: {
+        recentPodcastEpisodes: { enabled: false, value: 4 },
+      },
+    });
+
+    expect(pageData.pageIdentifier).toEqual(
+      'arabic.bbc_arabic_radio.podcasts.p08wtg4d.page',
+    );
+  });
+
   it('should return on demand recent episode data when recentEpisode toggle is enabled', async () => {
     fetch.mockResponse(JSON.stringify(onDemandRadioJson));
     const { pageData } = await getInitialData({
