@@ -346,11 +346,33 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   }
 }
 
+@media (max-width:62.9375rem) {
+  .emotion-7 {
+    padding: 2rem 0 0.5rem 1rem;
+  }
+}
+
 .emotion-0 {
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-0 {
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    font-size: 1.75rem;
+    line-height: 2.375rem;
+  }
 }
 
 @media (min-width:37.5rem) {
@@ -405,6 +427,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
+  color: #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -1011,11 +1034,33 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   }
 }
 
+@media (max-width:62.9375rem) {
+  .emotion-7 {
+    padding: 2rem 0 0.5rem 1rem;
+  }
+}
+
 .emotion-0 {
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-0 {
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    font-size: 1.75rem;
+    line-height: 2.375rem;
+  }
 }
 
 @media (min-width:37.5rem) {
@@ -1070,6 +1115,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
+  color: #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -1526,21 +1572,6 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 }
 
-.emotion-0 {
-  display: inline-block;
-  width: 100%;
-  padding-bottom: 0.5rem;
-  word-break: break-word;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-0 {
-    padding-bottom: 0;
-    word-break: break-word;
-    line-height: 3.5rem;
-  }
-}
-
 .emotion-2 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -1784,6 +1815,43 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   }
 }
 
+@media (max-width:62.9375rem) {
+  .emotion-7 {
+    padding: 2rem 0 0.5rem 1rem;
+  }
+}
+
+.emotion-0 {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  word-break: break-word;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-0 {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    font-size: 1.75rem;
+    line-height: 2.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    padding-bottom: 0;
+    word-break: break-word;
+    line-height: 3.5rem;
+  }
+}
+
 .emotion-4 {
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -1816,6 +1884,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
+  color: #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -2206,21 +2275,6 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 }
 
-.emotion-0 {
-  display: inline-block;
-  width: 100%;
-  padding-bottom: 0.5rem;
-  word-break: break-word;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-0 {
-    padding-bottom: 0;
-    word-break: break-word;
-    line-height: 3.5rem;
-  }
-}
-
 .emotion-2 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -2464,6 +2518,43 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   }
 }
 
+@media (max-width:62.9375rem) {
+  .emotion-7 {
+    padding: 2rem 0 0.5rem 1rem;
+  }
+}
+
+.emotion-0 {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  word-break: break-word;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .emotion-0 {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    font-size: 1.75rem;
+    line-height: 2.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-0 {
+    padding-bottom: 0;
+    word-break: break-word;
+    line-height: 3.5rem;
+  }
+}
+
 .emotion-4 {
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -2496,6 +2587,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
+  color: #6E6E73;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {

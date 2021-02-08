@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import assocPath from 'ramda/src/assocPath';
-import { render, act } from '@testing-library/react';
+import { render, act, waitFor } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -155,12 +155,25 @@ describe('OnDemand Radio Page ', () => {
       pageType: MEDIA_PAGE,
       toggles,
     });
-    const { getByText } = await renderPage({
+    const { getAllByText } = await renderPage({
       pageData,
       service: 'arabic',
     });
+    const elements = getAllByText(
+      'التصويت عبر البريد في الانتخابات الرئاسية الأميركية',
+    );
+    const elementTypes = elements.map(el => el.tagName);
 
-    expect(getByText('ماښامنۍ خپرونه')).toBeInTheDocument();
+    expect(elements.length).toBe(2);
+    expect(elementTypes).toEqual(['SPAN', 'P']);
+
+    await waitFor(() => {
+      const actual = document.querySelector('head > title').innerHTML;
+
+      expect(actual).toEqual(
+        'التصويت عبر البريد في الانتخابات الرئاسية الأميركية - BBC Xtra - Arabic - BBC News عربي',
+      );
+    });
   });
 
   it('should show the datestamp correctly for Pashto OnDemand Radio Pages', async () => {
