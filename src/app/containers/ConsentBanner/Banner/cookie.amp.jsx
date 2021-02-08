@@ -10,6 +10,7 @@ import {
   C_PEBBLE,
   C_WHITE,
   C_CONSENT_CONTENT,
+  C_EBON,
 } from '@bbc/psammead-styles/colours';
 import {
   getDoublePica,
@@ -25,12 +26,23 @@ import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
   GEL_SPACING_DBL,
+  GEL_SPACING,
 } from '@bbc/gel-foundations/spacings';
 
 const HEADING_STYLES = `
   color: ${C_WHITE};
   margin-top: 0;
   margin-bottom: 0;
+`;
+
+const CONTAINER_STYLES = `
+  padding-left: ${GEL_MARGIN_BELOW_400PX};
+  padding-right: ${GEL_MARGIN_BELOW_400PX};
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    padding-left: ${GEL_MARGIN_ABOVE_400PX};
+    padding-right: ${GEL_MARGIN_ABOVE_400PX};
+  }
 `;
 
 const Wrapper = styled.div`
@@ -46,11 +58,6 @@ const BannerPage = styled.div`
   margin-right: auto;
   max-height: 100vh;
   max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
-  padding: ${GEL_SPACING_DBL} ${GEL_MARGIN_BELOW_400PX};
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding: ${GEL_MARGIN_ABOVE_400PX};
-  }
 
   a {
     color: ${C_CONSENT_ACTION};
@@ -62,9 +69,14 @@ const BannerPage = styled.div`
 const Title = styled.h2`
   ${({ script }) => getDoublePica(script)}
   ${HEADING_STYLES}
+  ${CONTAINER_STYLES}
+  background-color: ${C_EBON};
+  padding-top: ${GEL_SPACING_DBL};
+  padding-bottom: ${GEL_SPACING_DBL};
 `;
 
 const ScrollBox = styled.div`
+  ${CONTAINER_STYLES}
   overflow-y: auto;
 `;
 
@@ -79,16 +91,22 @@ const Text = styled.p`
 
 const OptionsList = styled.ul`
   ${({ script }) => getLongPrimer(script)}
+  ${CONTAINER_STYLES}
   align-items: center;
+  background-color: ${C_EBON};
   display: flex;
   justify-content: space-between;
   list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 -${GEL_SPACING};
+  padding-top: ${GEL_SPACING_DBL};
+  padding-bottom: ${GEL_SPACING_DBL};
   padding-left: 0;
 `;
 
 const OptionsItem = styled.li`
+  margin-right: ${GEL_SPACING};
+  margin-left: ${GEL_SPACING};
+
   button {
     ${({ script }) => getLongPrimer(script)}
     cursor: pointer;
@@ -119,13 +137,15 @@ const AmpCookieBanner = ({
       <Wrapper dir={dir} service={service}>
         <BannerPage data-amp-bind-hidden="isManagingSettings">
           <Title script={script}>{initial.title}</Title>
-          <Text script={script}>
-            {initial.description.first}{' '}
-            <a href={initial.description.linkUrl}>
-              {initial.description.linkText}
-            </a>{' '}
-            {initial.description.last}
-          </Text>
+          <ScrollBox>
+            <Text script={script}>
+              {initial.description.first}{' '}
+              <a href={initial.description.linkUrl}>
+                {initial.description.linkText}
+              </a>{' '}
+              {initial.description.last}
+            </Text>
+          </ScrollBox>
           <OptionsList script={script}>
             <OptionsItem script={script}>{accept}</OptionsItem>
             <OptionsItem script={script}>
