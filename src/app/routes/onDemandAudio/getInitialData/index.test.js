@@ -93,12 +93,28 @@ describe('Get initial data for on demand radio', () => {
     );
   });
 
-  it('should return the correct page identifier used for analytics', async () => {
+  it('should return the correct page identifier used for on demand radio analytics', async () => {
+    fetch.mockResponse(JSON.stringify(onDemandRadioJson));
+    const { pageData } = await getInitialData({
+      path: 'mock-on-demand-radio-path',
+      pageType: MEDIA_PAGE,
+      toggles: {
+        recentAudioEpisodes: { enabled: false, value: 4 },
+      },
+    });
+
+    expect(pageData.pageIdentifier).toEqual(
+      'pashto.bbc_pashto_radio.w3ct0lz1.page',
+    );
+  });
+
+  it('should return the correct page identifier used for podcast analytics', async () => {
+    fetch.mockResponse(JSON.stringify(podcastJson));
     const { pageData } = await getInitialData({
       path: 'mock-podcast-path',
       pageType: MEDIA_PAGE,
       toggles: {
-        recentPodcastEpisodes: { enabled: false, value: 4 },
+        recentPodcastEpisodes: { enabled: false, value: 8 },
       },
     });
 
