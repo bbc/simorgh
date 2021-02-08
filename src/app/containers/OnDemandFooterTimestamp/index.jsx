@@ -6,8 +6,15 @@ import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import { getLongPrimer } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
+import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 
 import { ServiceContext } from '#contexts/ServiceContext';
+
+const smallScreenMargin = `
+  @media(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    margin-top: 0;
+  }
+`;
 
 const Wrapper = styled.time`
   ${({ script }) => script && getLongPrimer(script)}
@@ -15,6 +22,8 @@ const Wrapper = styled.time`
   color: ${({ darkMode }) => (darkMode ? C_PEBBLE : C_METAL)};
   margin-top: ${GEL_SPACING};
   display: inline-block;
+
+  ${({ darkMode }) => !darkMode && smallScreenMargin}
 `;
 
 const OnDemandFooterTimestamp = ({ releaseDateTimeStamp, darkMode }) => {
