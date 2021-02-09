@@ -49,7 +49,7 @@ const StyledGelWrapperGrid = styled(GelPageGrid)`
 `;
 
 const StyledGridItemParagraph = styled(Grid)`
-  @media (min-width: 22.5625rem) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+  @media (min-width: 22.5rem) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     grid-template-columns: repeat(4, 1fr);
     grid-column-end: span 4;
   }

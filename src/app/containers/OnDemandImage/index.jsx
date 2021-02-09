@@ -14,7 +14,7 @@ const paddingDir = ({ dir }) => `padding-${dir === 'rtl' ? 'left' : 'right'}`;
 const ImageContainer = styled.div`
   padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_TRPL};
   ${paddingDir}: ${GEL_SPACING_DBL};
-  @media (max-width: 22.5rem) {
+  @media (max-width: 22.4375rem) {
     display: none;
   }
 `;
