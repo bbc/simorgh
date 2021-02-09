@@ -7,7 +7,7 @@ import crossPlatformTests from './tests';
 import visitPage from '../../../support/helpers/visitPage';
 import { overrideRendererOnTest } from '../../../support/helpers/onDemandRadioTv';
 
-const pageType = 'onDemandRadio';
+const pageType = 'onDemandAudio';
 Object.keys(config)
   .filter(service => serviceHasPageType(service, pageType))
   .forEach(serviceId => {
