@@ -81,7 +81,7 @@ export const buildSections = ({
     'On Demand Radio': 'Radio',
     'Live Radio': 'Radio',
     'On Demand TV': 'TV',
-    Podcast: 'Podcast',
+    Podcast: 'Podcasts',
   };
 
   switch (pageType) {
