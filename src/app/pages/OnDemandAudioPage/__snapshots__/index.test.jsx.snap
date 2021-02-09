@@ -307,7 +307,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 }
 
-@media (min-width:22.5625rem) and (max-width:37.4375rem) {
+@media (min-width:22.5rem) and (max-width:37.4375rem) {
   .emotion-12 {
     grid-template-columns: repeat(4,1fr);
     grid-column-end: span 4;
@@ -496,7 +496,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   padding-right: 1rem;
 }
 
-@media (max-width:22.5rem) {
+@media (max-width:22.4375rem) {
   .emotion-16 {
     display: none;
   }
@@ -986,7 +986,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 }
 
-@media (min-width:22.5625rem) and (max-width:37.4375rem) {
+@media (min-width:22.5rem) and (max-width:37.4375rem) {
   .emotion-12 {
     grid-template-columns: repeat(4,1fr);
     grid-column-end: span 4;
@@ -1175,7 +1175,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   padding-right: 1rem;
 }
 
-@media (max-width:22.5rem) {
+@media (max-width:22.4375rem) {
   .emotion-18 {
     display: none;
   }
@@ -1554,7 +1554,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 }
 
-@media (min-width:22.5625rem) and (max-width:37.4375rem) {
+@media (min-width:22.5rem) and (max-width:37.4375rem) {
   .emotion-12 {
     grid-template-columns: repeat(4,1fr);
     grid-column-end: span 4;
@@ -1650,7 +1650,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   padding-right: 1rem;
 }
 
-@media (max-width:22.5rem) {
+@media (max-width:22.4375rem) {
   .emotion-18 {
     display: none;
   }
@@ -2248,7 +2248,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 }
 
-@media (min-width:22.5625rem) and (max-width:37.4375rem) {
+@media (min-width:22.5rem) and (max-width:37.4375rem) {
   .emotion-12 {
     grid-template-columns: repeat(4,1fr);
     grid-column-end: span 4;
@@ -2344,7 +2344,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   padding-right: 1rem;
 }
 
-@media (max-width:22.5rem) {
+@media (max-width:22.4375rem) {
   .emotion-18 {
     display: none;
   }
