@@ -61,7 +61,7 @@ export default ({ service, pageType, variant, isAmp }) => {
       describe('Recent Episodes component', () => {
         it('should be displayed if the toggle is on, and shows the expected number of items', function test() {
           let toggleName;
-          if (getDataUrl(Cypress.env('currentPath')).includes('podcasts')) {
+          if (Cypress.env('currentPath')).includes('podcasts') {
             toggleName = 'recentPodcastEpisodes';
           } else {
             toggleName = 'recentAudioEpisodes';
