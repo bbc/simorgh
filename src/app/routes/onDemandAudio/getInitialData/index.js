@@ -6,7 +6,7 @@ import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
 import pathWithLogging, {
   LOG_LEVELS,
 } from '../../../lib/utilities/logging/pathWithLogging';
-import { PODCAST_MISSING_FIELD } from '#lib/logger.const';
+import { RADIO_MISSING_FIELD, PODCAST_MISSING_FIELD } from '#lib/logger.const';
 import getEpisodeAvailability, {
   getUrl,
 } from '#lib/utilities/episodeAvailability';
@@ -15,13 +15,32 @@ import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 import getRadioService from '../../utils/getRadioService';
 import processRecentEpisodes from '../../utils/processRecentEpisodes';
 
-const DEFAULT_TOGGLE_VALUE = { enabled: false, value: 8 };
-
 const getRadioScheduleData = path(['radioScheduleData']);
 const getScheduleToggle = path(['onDemandRadioSchedule', 'enabled']);
-const getRecentEpisodesToggle = pathOr(DEFAULT_TOGGLE_VALUE, [
-  'recentPodcastEpisodes',
-]);
+
+const getConfig = pathname => {
+  const detailPageType = pathname.includes('podcast')
+    ? 'Podcast'
+    : 'On Demand Radio';
+  const isPodcast = detailPageType === 'Podcast';
+  const missingFieldCode = isPodcast
+    ? PODCAST_MISSING_FIELD
+    : RADIO_MISSING_FIELD;
+  const DEFAULT_TOGGLE_VALUE = { enabled: false, value: isPodcast ? 8 : 4 };
+  const recentEpisodesKey = isPodcast
+    ? 'recentPodcastEpisodes'
+    : 'recentAudioEpisodes';
+  const getRecentEpisodesToggle = pathOr(DEFAULT_TOGGLE_VALUE, [
+    recentEpisodesKey,
+  ]);
+
+  return {
+    isPodcast,
+    missingFieldCode,
+    detailPageType,
+    getRecentEpisodesToggle,
+  };
+};
 
 const getPodcastPageIdentifier = pageIdentifier => {
   const [service, masterbrand, ...rest] = pageIdentifier.split('.');
@@ -30,9 +49,16 @@ const getPodcastPageIdentifier = pageIdentifier => {
 
 export default async ({ path: pathname, pageType, service, toggles }) => {
   try {
-    const podcastDataPath = overrideRendererOnTest(pathname);
+    const {
+      isPodcast,
+      getRecentEpisodesToggle,
+      detailPageType,
+      missingFieldCode,
+    } = getConfig(pathname);
+
+    const radioPodcastDataPath = overrideRendererOnTest(pathname);
     const pageDataPromise = await fetchPageData({
-      path: podcastDataPath,
+      path: radioPodcastDataPath,
       pageType,
     });
     const scheduleIsEnabled = getScheduleToggle(toggles);
@@ -48,15 +74,11 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
           service,
           path: pathname,
           radioService: getRadioService({ service, pathname }),
-          pageType: 'Podcast',
+          pageType: detailPageType.replace(/ /g, ''),
         })
       : await pageDataPromise;
 
-    const withLogging = pathWithLogging(
-      getUrl(json),
-      PODCAST_MISSING_FIELD,
-      json,
-    );
+    const withLogging = pathWithLogging(getUrl(json), missingFieldCode, json);
     const get = (fieldPath, logLevel) =>
       logLevel ? withLogging(fieldPath, logLevel) : path(fieldPath, json);
 
@@ -67,18 +89,20 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
           recentEpisodesLimit,
         })
       : [];
+    const brandId = isPodcast
+      ? get(['metadata', 'locators', 'brandPid'], LOG_LEVELS.ERROR)
+      : undefined;
 
     const pageIdentifier = get([
       'metadata',
       'analyticsLabels',
       'pageIdentifier',
     ]);
-    const podcastPageIdentifier = getPodcastPageIdentifier(pageIdentifier);
 
     return {
       status,
       pageData: {
-        metadata: { type: 'Podcast' },
+        metadata: { type: detailPageType },
         language: get(['metadata', 'language'], LOG_LEVELS.INFO),
         brandTitle: get(['metadata', 'title'], LOG_LEVELS.INFO),
         episodeTitle: get(['content', 'blocks', 0, 'title']),
@@ -94,14 +118,16 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
           LOG_LEVELS.INFO,
         ),
         episodeId,
-        brandId: get(['metadata', 'locators', 'brandPid'], LOG_LEVELS.ERROR),
+        brandId,
         masterBrand: get(['metadata', 'createdBy'], LOG_LEVELS.ERROR),
         releaseDateTimeStamp: get(
           ['metadata', 'releaseDateTimeStamp'],
           LOG_LEVELS.WARN,
         ),
         pageTitle: get(['metadata', 'analyticsLabels', 'pageTitle']),
-        pageIdentifier: podcastPageIdentifier,
+        pageIdentifier: isPodcast
+          ? getPodcastPageIdentifier(pageIdentifier)
+          : pageIdentifier,
         imageUrl: get(['content', 'blocks', 0, 'imageUrl'], LOG_LEVELS.INFO),
         promoBrandTitle: get(['promo', 'brand', 'title']),
         durationISO8601: get(
