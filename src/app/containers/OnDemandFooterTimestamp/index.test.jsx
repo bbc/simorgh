@@ -36,31 +36,7 @@ describe('OnDemandFooterTimestamp', () => {
       <RenderTimestamp releaseDateTimeStamp={releaseDateTimeStamp} />,
     );
     const el = getByText(formattedTimestamp);
-    const style = window.getComputedStyle(el);
     expect(el.tagName).toBe('TIME');
     expect(el.getAttribute('dateTime')).toBe(dateTime);
-    expect(style.color).toBe('rgb(110, 110, 115)');
-    expect(style.display).toBe('inline-block');
-    expect(style.marginTop).toBe('0.5rem');
-  });
-
-  it('should have the right styling on dark mode', async () => {
-    const releaseDateTimeStamp = 1603065600000;
-    const formattedTimestamp = formatUnixTimestamp({
-      timestamp: releaseDateTimeStamp,
-      format: 'LL',
-      timezone: 'GMT',
-      locale: 'fr',
-      isRelative: false,
-    });
-    const { getByText } = await render(
-      <RenderTimestamp releaseDateTimeStamp={releaseDateTimeStamp} darkMode />,
-    );
-    const el = getByText(formattedTimestamp);
-    const style = window.getComputedStyle(el);
-    expect(el.tagName).toBe('TIME');
-    expect(style.color).toBe('rgb(174, 174, 181)');
-    expect(style.display).toBe('inline-block');
-    expect(style.marginTop).toBe('0.5rem');
   });
 });
