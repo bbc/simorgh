@@ -10,7 +10,7 @@ import {
   C_PEBBLE,
   C_WHITE,
   C_CONSENT_CONTENT,
-  C_EBON,
+  C_METAL,
 } from '@bbc/psammead-styles/colours';
 import {
   getDoublePica,
@@ -20,7 +20,7 @@ import {
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_5_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_MARGIN_BELOW_400PX,
@@ -35,13 +35,15 @@ const HEADING_STYLES = `
   margin-bottom: 0;
 `;
 
+const KEYLINE_STYLE = `0.0625rem solid ${C_METAL}`;
+
 const CONTAINER_STYLES = `
-  padding-left: ${GEL_MARGIN_BELOW_400PX};
-  padding-right: ${GEL_MARGIN_BELOW_400PX};
+  margin-left: ${GEL_MARGIN_BELOW_400PX};
+  margin-right: ${GEL_MARGIN_BELOW_400PX};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding-left: ${GEL_MARGIN_ABOVE_400PX};
-    padding-right: ${GEL_MARGIN_ABOVE_400PX};
+    margin-left: ${GEL_MARGIN_ABOVE_400PX};
+    margin-right: ${GEL_MARGIN_ABOVE_400PX};
   }
 `;
 
@@ -57,7 +59,7 @@ const BannerPage = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-height: 100vh;
-  max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
+  max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX};
 
   a {
     color: ${C_CONSENT_ACTION};
@@ -70,13 +72,14 @@ const Title = styled.h2`
   ${({ script }) => getDoublePica(script)}
   ${HEADING_STYLES}
   ${CONTAINER_STYLES}
-  background-color: ${C_EBON};
   padding-top: ${GEL_SPACING_DBL};
   padding-bottom: ${GEL_SPACING_DBL};
 `;
 
 const ScrollBox = styled.div`
   ${CONTAINER_STYLES}
+  border-top: ${KEYLINE_STYLE};
+  border-bottom: ${KEYLINE_STYLE};
   overflow-y: auto;
 `;
 
@@ -87,29 +90,59 @@ const Heading = styled.h3`
 const Text = styled.p`
   ${({ script }) => script && getBodyCopy(script)}
   color: ${C_CONSENT_CONTENT};
+  margin-top: ${GEL_SPACING_DBL};
+  margin-bottom: ${GEL_SPACING_DBL};
 `;
 
 const OptionsList = styled.ul`
   ${({ script }) => getLongPrimer(script)}
   ${CONTAINER_STYLES}
-  align-items: center;
-  background-color: ${C_EBON};
+  align-items: stretch;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   list-style: none;
-  margin: 0 -${GEL_SPACING};
-  padding-top: ${GEL_SPACING_DBL};
-  padding-bottom: ${GEL_SPACING_DBL};
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: ${GEL_SPACING};
   padding-left: 0;
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    flex-direction: row;
+  }
 `;
 
 const OptionsItem = styled.li`
-  margin-right: ${GEL_SPACING};
-  margin-left: ${GEL_SPACING};
+  margin-bottom: ${GEL_SPACING};
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    width: calc(50% - ${GEL_SPACING});
+    margin-bottom: ${GEL_SPACING};
+  }
+
+  a {
+    cursor: pointer;
+    display: block;
+    padding-top: ${GEL_SPACING};
+    padding-bottom: ${GEL_SPACING};
+    text-align: center;
+  }
 
   button {
     ${({ script }) => getLongPrimer(script)}
+    background: ${C_WHITE};
+    border: none;
+    display: block;
     cursor: pointer;
+    height: 100%;
+    padding: ${GEL_SPACING};
+    width: 100%;
+  }
+
+  button[on='tap:AMP.setState({ isManagingSettings: true })'] {
+    background: none;
+    border: 0.0625rem solid ${C_CONSENT_ACTION};
+    color: ${C_CONSENT_ACTION};
   }
 `;
 
