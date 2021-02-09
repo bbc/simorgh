@@ -14,7 +14,7 @@ import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn
 import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttnw';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import getInitialData from '#app/routes/onDemandRadio/getInitialData';
+import getInitialData from '#app/routes/onDemandAudio/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
