@@ -33,7 +33,7 @@ import {
 
 const MIN_TAP_HEIGHT = '2.75rem';
 
-const HEADING_STYLES = `
+const COMMON_HEADING_STYLES = `
   color: ${C_WHITE};
   margin-top: 0;
   margin-bottom: 0;
@@ -43,7 +43,6 @@ const Wrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
   background-color: ${C_CONSENT_BACKGROUND};
   max-height: 100vh;
-
   padding-left: ${GEL_MARGIN_BELOW_400PX};
   padding-right: ${GEL_MARGIN_BELOW_400PX};
 
@@ -70,7 +69,7 @@ const BannerPage = styled.div`
 
 const Title = styled.h2`
   ${({ script }) => getDoublePica(script)}
-  ${HEADING_STYLES}
+  ${COMMON_HEADING_STYLES}
   padding-top: ${GEL_SPACING_DBL};
   padding-bottom: ${GEL_SPACING_DBL};
 `;
@@ -81,7 +80,7 @@ const ScrollBox = styled.div`
 `;
 
 const Heading = styled.h3`
-  ${HEADING_STYLES}
+  ${COMMON_HEADING_STYLES}
 `;
 
 const Paragraph = styled.p`
