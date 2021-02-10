@@ -78,7 +78,7 @@ const pageTypes = {
     "//div[@id='ns_datapic_env-test-2']",
     "//div[@id='responsive-embed-newsspec-21841-green-diet-app-core-content']",
   ],
-  onDemandRadio: [
+  onDemandAudio: [
     ...mediaEmbedErrorsToSuppress,
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
     '/iframe',
