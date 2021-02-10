@@ -717,7 +717,7 @@ describe('Chartbeat utilities', () => {
       idSync: {
         bbc_hid: 'foobar',
       },
-      sections: 'Arabic, Arabic - Podcast',
+      sections: 'Arabic, Arabic - Podcasts',
       title: 'Podcast Page Title',
       type: 'player-episode',
       uid: 50924,
