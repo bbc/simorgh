@@ -38,10 +38,20 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         run: echo "GIT_BRANCH=${{ github.head_ref }}" >> $GITHUB_ENV
 
-      - name: Install & Build Simorgh
+      - name: Cache Node Modules
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+
+      - name: Install Node Modules
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - name: Build Simorgh
         run: |
           echo ${GITHUB_REF##*/}
-          npm ci
           npm run build
 
       - name: Setup Code Climate Test Coverage
