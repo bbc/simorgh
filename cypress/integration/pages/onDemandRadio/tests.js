@@ -11,13 +11,13 @@ import getDataUrl from '../../../support/helpers/getDataUrl';
 
 export default ({ service, pageType, variant, isAmp }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
-    describe('Brand image visible above 400px, not visible below 400px', () => {
+    describe('Brand image visible above 360px, not visible below 360px device width', () => {
       it(`Should display image on default viewport (1000x660))`, () => {
         cy.get('div[data-e2e="on-demand-image"]').find('img');
       });
 
-      it(`Should not display image on iphone-6 screen (375x667)`, () => {
-        cy.viewport('iphone-6');
+      it(`Should not display image below 360px device width`, () => {
+        cy.viewport(359, 760);
 
         cy.get('div[data-e2e="on-demand-image"]')
           .find('img')
