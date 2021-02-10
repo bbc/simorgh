@@ -1,0 +1,571 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0967thw",
+    "locators": { "pid": "p0967thw", "brandPid": "p02pc9lh" },
+    "type": "WSRADIO",
+    "createdBy": "bbc_burmese_radio",
+    "language": "my",
+    "lastUpdated": 1612888943662,
+    "firstPublished": 1612620834000,
+    "lastPublished": 1612620834000,
+    "timestamp": 1612620834000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "Burmese Evening Broadcast - BBC News မြန်မာ",
+      "pageIdentifier": "burmese.bbc_burmese_radio.p0967thw.page",
+      "producerId": "35",
+      "contentType": "player-episode",
+      "producer": "BURMESE"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "Burmese Evening Broadcast",
+    "releaseDateTimeStamp": 1612569600000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p0967thw",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "Myanmar coup: Internet shutdown as thousands of people protest against military"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+        "embedding": true,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p0967t2j",
+            "types": ["Podcast"],
+            "duration": 931,
+            "durationISO8601": "PT15M31S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableUntil": 1613225580000,
+            "availableFrom": 1612620780000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "Saturday Evening",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "Burmese Evening Broadcast" },
+    "locators": { "pid": "p0967thw", "brandPid": "p02pc9lh" },
+    "media": {
+      "id": "p0967thw",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "Myanmar coup: Internet shutdown as thousands of people protest against military"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+      "embedding": true,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p0967t2j",
+          "types": ["Podcast"],
+          "duration": 931,
+          "durationISO8601": "PT15M31S",
+          "warnings": {},
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableUntil": 1613225580000,
+          "availableFrom": 1612620780000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "Saturday Evening",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1612569600000,
+    "brand": { "pid": "p02pc9lh", "title": "Burmese Evening Broadcast" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0967thw",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Burmese",
+      "uri": "/burmese",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": { "headline": "Burmese Evening Broadcast" },
+            "locators": { "pid": "p096cz7m", "brandPid": "p02pc9lh" },
+            "media": {
+              "id": "p096cz7m",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Coup leader Min Aung Hlaing gives a speech while night curfew is declared in cities."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p096cyj3",
+                  "types": ["Podcast"],
+                  "duration": 905,
+                  "durationISO8601": "PT15M5S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1615386120000,
+                  "availableFrom": 1612794120000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Monday Evening",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1612742400000,
+            "brand": {
+              "pid": "p02pc9lh",
+              "title": "Burmese Evening Broadcast"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p096cz7m",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "Burmese Evening Broadcast" },
+            "locators": { "pid": "p0969mdh", "brandPid": "p02pc9lh" },
+            "media": {
+              "id": "p0969mdh",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "More than 70 cities in Burma have held anti-military protests on the streets.",
+                "medium": "Up to one hundred thousand demonstrators have gathered on the streets of Myanmar's largest city, Yangon."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0969l7f",
+                  "types": ["Podcast"],
+                  "duration": 939,
+                  "durationISO8601": "PT15M39S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1615300560000,
+                  "availableFrom": 1612708560000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Sunday Evening",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1612656000000,
+            "brand": {
+              "pid": "p02pc9lh",
+              "title": "Burmese Evening Broadcast"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0969mdh",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "Burmese Evening Broadcast" },
+            "locators": { "pid": "p0965f5d", "brandPid": "p02pc9lh" },
+            "media": {
+              "id": "p0965f5d",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Hundreds of teachers, students and workers in Yangon, protested against military coup.",
+                "medium": "Hundreds of teachers, students and workers in Yangon, Myanmar, protested against military coup."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0965ck7",
+                  "types": ["Podcast"],
+                  "duration": 936,
+                  "durationISO8601": "PT15M36S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1615127160000,
+                  "availableFrom": 1612535160000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Burmese Evening Broadcast",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1612483200000,
+            "brand": {
+              "pid": "p02pc9lh",
+              "title": "Burmese Evening Broadcast"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0965f5d",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "Burmese Evening Broadcast" },
+            "locators": { "pid": "p0961yr1", "brandPid": "p02pc9lh" },
+            "media": {
+              "id": "p0961yr1",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Myanmar blocks access to Facebook. UN chief says coup must fail."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0961v9r",
+                  "types": ["Podcast"],
+                  "duration": 928,
+                  "durationISO8601": "PT15M28S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1615041780000,
+                  "availableFrom": 1612449780000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Thursday Evening",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1612396800000,
+            "brand": {
+              "pid": "p02pc9lh",
+              "title": "Burmese Evening Broadcast"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0961yr1",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "Burmese Evening Broadcast" },
+            "locators": { "pid": "p095xqj5", "brandPid": "p02pc9lh" },
+            "media": {
+              "id": "p095xqj5",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Myanmar coup: Detained Daw Aung San Suu Kyi and U Win Myint face charges."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p095xnyn",
+                  "types": ["Podcast"],
+                  "duration": 934,
+                  "durationISO8601": "PT15M34S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1614953520000,
+                  "availableFrom": 1612361520000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Wednesday Evening",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1612310400000,
+            "brand": {
+              "pid": "p02pc9lh",
+              "title": "Burmese Evening Broadcast"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p095xqj5",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "Burmese Evening Broadcast" },
+            "locators": { "pid": "p095nlr9", "brandPid": "p02pc9lh" },
+            "media": {
+              "id": "p095nlr9",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Thousands of people protests to demand the release of Alexei Navalny.",
+                "medium": "Thousands of people across Russia have been taking part in unauthorised protests to demand the release of the jailed opposition activist Alexei Navalny."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p095nlgb",
+                  "types": ["Podcast"],
+                  "duration": 938,
+                  "durationISO8601": "PT15M38S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1614694080000,
+                  "availableFrom": 1612102080000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Sunday Evening",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1612051200000,
+            "brand": {
+              "pid": "p02pc9lh",
+              "title": "Burmese Evening Broadcast"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p095nlr9",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "Burmese Evening Broadcast" },
+            "locators": { "pid": "p095lwty", "brandPid": "p02pc9lh" },
+            "media": {
+              "id": "p095lwty",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Army says chief's constitution abrogation remark was taken out of context.",
+                "medium": "Army says chief's constitution abrogation remark was misinterpreted and pledged to abide by it. WHO urges nations which started vaccination for fair share of doses."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p095lwj9",
+                  "types": ["Podcast"],
+                  "duration": 937,
+                  "durationISO8601": "PT15M37S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1614607560000,
+                  "availableFrom": 1612015560000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Saturday Evening",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1611964800000,
+            "brand": {
+              "pid": "p02pc9lh",
+              "title": "Burmese Evening Broadcast"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p095lwty",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "Burmese Evening Broadcast" },
+            "locators": { "pid": "p095j7yr", "brandPid": "p02pc9lh" },
+            "media": {
+              "id": "p095j7yr",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "United Nations and a dozen foreign embassies have urged the army to respect democracy."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p095j7vx",
+                  "types": ["Podcast"],
+                  "duration": 2057,
+                  "durationISO8601": "PT34M17S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1614523320000,
+                  "availableFrom": 1611931320000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Friday Evening",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2n5.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1611878400000,
+            "brand": {
+              "pid": "p02pc9lh",
+              "title": "Burmese Evening Broadcast"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p095j7yr",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}

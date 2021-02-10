@@ -1457,11 +1457,17 @@ module.exports = () => ({
             paths: [
               '/burmese/bbc_burmese_radio/programmes/p0340rnm', // On Demand Brand
               '/burmese/bbc_burmese_radio/w3ct0ylp', // On Demand Episode
+              '/burmese/podcasts/p02pc9lh', // Podcast brand
+              '/burmese/podcasts/p02pc9lh/p0967thw', // Podcast Episode
             ],
             enabled: true,
           },
           local: {
-            paths: ['/burmese/bbc_burmese_radio/w3csz62h'],
+            paths: [
+              '/burmese/bbc_burmese_radio/w3csz62h', // On Demand Brand
+              '/burmese/podcasts/p02pc9lh', // Podcast brand
+              '/burmese/podcasts/p02pc9lh/p0967thw', // Podcast Episode
+            ],
             enabled: true,
           },
         },
@@ -1787,11 +1793,17 @@ module.exports = () => ({
             paths: [
               '/gahuza/bbc_gahuza_radio/programmes/p0340x2m', // On Demand Brand
               '/gahuza/bbc_gahuza_radio/w3ct11fw', // On Demand Episode
+              '/gahuza/podcasts/p07yh8hb', // Podcast Brand
+              '/gahuza/podcasts/p07yh8hb/p094vs2n', // Podcast Episode
             ],
             enabled: true,
           },
           local: {
-            paths: ['/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz'],
+            paths: [
+              '/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz',
+              '/gahuza/podcasts/p07yh8hb', // Podcast Brand
+              '/gahuza/podcasts/p07yh8hb/p094vs2n', // Podcast Episode
+            ],
             enabled: true,
           },
         },
