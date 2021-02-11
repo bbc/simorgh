@@ -203,6 +203,7 @@ const AmpCookieBanner = ({
             </a>
           </Paragraph>
           <Paragraph script={script}>{manage.description.para5}</Paragraph>
+          <Heading>{manage.description.heading3}</Heading>
           <Paragraph script={script}>{manage.description.para6}</Paragraph>
           <Paragraph script={script}>
             <a href={manage.description.para7.url}>
