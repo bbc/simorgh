@@ -9,7 +9,6 @@ import {
   C_CONSENT_ACTION,
   C_PEBBLE,
   C_CONSENT_CONTENT,
-  C_METAL,
   C_WHITE,
   C_EBON,
   C_GHOST,
@@ -43,8 +42,8 @@ const Wrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
   background-color: ${C_CONSENT_BACKGROUND};
   max-height: 100vh;
-  padding-left: ${GEL_MARGIN_BELOW_400PX};
   padding-right: ${GEL_MARGIN_BELOW_400PX};
+  padding-left: ${GEL_MARGIN_BELOW_400PX};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding-left: ${GEL_MARGIN_ABOVE_400PX};
@@ -53,12 +52,12 @@ const Wrapper = styled.div`
 `;
 
 const BannerPage = styled.div`
-  display: flex;
-  flex-direction: column;
   margin-left: auto;
   margin-right: auto;
   max-height: 100vh;
   max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX};
+  overflow-y: auto;
+  padding-top: ${GEL_SPACING_DBL};
 
   a {
     color: ${C_CONSENT_ACTION};
@@ -70,13 +69,6 @@ const BannerPage = styled.div`
 const Title = styled.h2`
   ${({ script }) => getDoublePica(script)}
   ${COMMON_HEADING_STYLES}
-  padding-top: ${GEL_SPACING_DBL};
-  padding-bottom: ${GEL_SPACING_DBL};
-`;
-
-const ScrollBox = styled.div`
-  border-top: 0.0625rem solid ${C_METAL};
-  overflow-y: auto;
 `;
 
 const Heading = styled.h3`
@@ -84,7 +76,7 @@ const Heading = styled.h3`
 `;
 
 const Paragraph = styled.p`
-  ${({ script }) => script && getBodyCopy(script)}
+  ${({ script }) => getBodyCopy(script)}
   color: ${C_CONSENT_CONTENT};
   margin-top: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_DBL};
@@ -99,6 +91,7 @@ const OptionsList = styled.ul`
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
+  padding-right: 0;
   padding-bottom: ${GEL_SPACING};
   padding-left: 0;
 
@@ -169,59 +162,55 @@ const AmpCookieBanner = ({
       <Wrapper dir={dir} service={service}>
         <BannerPage data-amp-bind-hidden="isManagingSettings">
           <Title script={script}>{initial.title}</Title>
-          <ScrollBox>
-            <Paragraph script={script}>
-              {initial.description.first}{' '}
-              <a href={initial.description.linkUrl}>
-                {initial.description.linkText}
-              </a>{' '}
-              {initial.description.last}
-            </Paragraph>
-            <OptionsList script={script}>
-              <OptionsItem script={script} service={service}>
-                {accept}
-              </OptionsItem>
-              <OptionsItem script={script} service={service}>
-                <button
-                  type="button"
-                  on="tap:AMP.setState({ isManagingSettings: true })"
-                >
-                  {initial.manage}
-                </button>
-              </OptionsItem>
-            </OptionsList>
-          </ScrollBox>
+          <Paragraph script={script}>
+            {initial.description.first}{' '}
+            <a href={initial.description.linkUrl}>
+              {initial.description.linkText}
+            </a>{' '}
+            {initial.description.last}
+          </Paragraph>
+          <OptionsList script={script}>
+            <OptionsItem script={script} service={service}>
+              {accept}
+            </OptionsItem>
+            <OptionsItem script={script} service={service}>
+              <button
+                type="button"
+                on="tap:AMP.setState({ isManagingSettings: true })"
+              >
+                {initial.manage}
+              </button>
+            </OptionsItem>
+          </OptionsList>
         </BannerPage>
         <BannerPage hidden data-amp-bind-hidden="!isManagingSettings">
           <Title script={script}>{manage.title}</Title>
-          <ScrollBox>
-            <Paragraph script={script}>{manage.description.para1}</Paragraph>
-            <Paragraph script={script}>{manage.description.para2}</Paragraph>
-            <Heading>{manage.description.heading2}</Heading>
-            <Paragraph script={script}>{manage.description.para3}</Paragraph>
-            <Paragraph script={script}>
-              <a href={manage.description.para4.url}>
-                {manage.description.para4.text}
-              </a>
-            </Paragraph>
-            <Paragraph script={script}>{manage.description.para5}</Paragraph>
-            <Paragraph script={script}>{manage.description.para6}</Paragraph>
-            <Paragraph script={script}>
-              <a href={manage.description.para7.url}>
-                {manage.description.para7.text}
-              </a>
-            </Paragraph>
-            <Paragraph script={script}>{manage.description.para8}</Paragraph>
-            <Paragraph script={script}>{manage.description.para9}</Paragraph>
-            <OptionsList script={script}>
-              <OptionsItem script={script} service={service}>
-                {accept}
-              </OptionsItem>
-              <OptionsItem script={script} service={service}>
-                {reject}
-              </OptionsItem>
-            </OptionsList>
-          </ScrollBox>
+          <Paragraph script={script}>{manage.description.para1}</Paragraph>
+          <Paragraph script={script}>{manage.description.para2}</Paragraph>
+          <Heading>{manage.description.heading2}</Heading>
+          <Paragraph script={script}>{manage.description.para3}</Paragraph>
+          <Paragraph script={script}>
+            <a href={manage.description.para4.url}>
+              {manage.description.para4.text}
+            </a>
+          </Paragraph>
+          <Paragraph script={script}>{manage.description.para5}</Paragraph>
+          <Paragraph script={script}>{manage.description.para6}</Paragraph>
+          <Paragraph script={script}>
+            <a href={manage.description.para7.url}>
+              {manage.description.para7.text}
+            </a>
+          </Paragraph>
+          <Paragraph script={script}>{manage.description.para8}</Paragraph>
+          <Paragraph script={script}>{manage.description.para9}</Paragraph>
+          <OptionsList script={script}>
+            <OptionsItem script={script} service={service}>
+              {accept}
+            </OptionsItem>
+            <OptionsItem script={script} service={service}>
+              {reject}
+            </OptionsItem>
+          </OptionsList>
         </BannerPage>
       </Wrapper>
     </div>
