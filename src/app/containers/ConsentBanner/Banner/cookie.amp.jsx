@@ -28,6 +28,8 @@ import {
   GEL_MARGIN_ABOVE_400PX,
   GEL_SPACING_DBL,
   GEL_SPACING,
+  GEL_SPACING_QUAD,
+  GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
 
 const MIN_TAP_HEIGHT = '2.75rem';
@@ -58,6 +60,10 @@ const BannerPage = styled.div`
   max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX};
   overflow-y: auto;
   padding-top: ${GEL_SPACING_DBL};
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    padding-top: ${GEL_SPACING_QUAD};
+  }
 
   a {
     color: ${C_CONSENT_ACTION};
@@ -97,6 +103,8 @@ const OptionsList = styled.ul`
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     flex-direction: row;
+    padding-top: ${GEL_SPACING};
+    padding-bottom: ${GEL_SPACING_TRPL};
   }
 `;
 
