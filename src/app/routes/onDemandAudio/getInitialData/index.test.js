@@ -3,10 +3,10 @@ import loggerMock from '#testHelpers/loggerMock';
 import getInitialData from '.';
 import * as fetchPageData from '../../utils/fetchPageData';
 import onDemandRadioJson from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
+import podcastJson from '#data/arabic/podcasts/p02pc9qc/p08wtg4d';
 import { RADIO_MISSING_FIELD } from '#lib/logger.const';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
-fetch.mockResponse(JSON.stringify(onDemandRadioJson));
 const { env } = process;
 const spy = jest.spyOn(fetchPageData, 'default');
 
@@ -16,7 +16,8 @@ describe('Get initial data for on demand radio', () => {
     jest.clearAllMocks();
   });
 
-  it('should return essential data for a page to render', async () => {
+  it('should return essential data for an on demand page to render', async () => {
+    fetch.mockResponse(JSON.stringify(onDemandRadioJson));
     const { pageData } = await getInitialData({
       path: 'mock-on-demand-radio-path',
       pageType: MEDIA_PAGE,
@@ -40,7 +41,35 @@ describe('Get initial data for on demand radio', () => {
     );
   });
 
+  it('should return essential data for a podcast page to render', async () => {
+    fetch.mockResponse(JSON.stringify(podcastJson));
+    const { pageData } = await getInitialData({
+      path: 'mock-podcast-path',
+      pageType: MEDIA_PAGE,
+      toggles: {
+        recentPodcastEpisodes: { enabled: false, value: 8 },
+      },
+    });
+
+    expect(pageData.headline).toEqual('BBC Xtra');
+    expect(pageData.releaseDateTimeStamp).toEqual(1603929600000);
+    expect(pageData.summary).toEqual(
+      'التصويت عبر البريد في الانتخابات الرئاسية الأميركية',
+    );
+    expect(pageData.language).toEqual('ar');
+    expect(pageData.metadata.type).toEqual('Podcast');
+    expect(pageData.imageUrl).toEqual(
+      'ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg',
+    );
+    expect(pageData.promoBrandTitle).toEqual('BBC Xtra');
+    expect(pageData.durationISO8601).toEqual('PT6M50S');
+    expect(pageData.thumbnailImageUrl).toEqual(
+      'https://ichef.bbci.co.uk/images/ic/1024x576/p02rt7vj.jpg',
+    );
+  });
+
   it('should return essential data for a page to render when the episode toggle is null', async () => {
+    fetch.mockResponse(JSON.stringify(onDemandRadioJson));
     const { pageData } = await getInitialData({
       path: 'mock-on-demand-radio-path',
       pageType: MEDIA_PAGE,
@@ -64,7 +93,38 @@ describe('Get initial data for on demand radio', () => {
     );
   });
 
-  it('should return recent episode data when recentEpisode toggle is enabled', async () => {
+  it('should return the correct page identifier used for on demand radio analytics', async () => {
+    fetch.mockResponse(JSON.stringify(onDemandRadioJson));
+    const { pageData } = await getInitialData({
+      path: 'mock-on-demand-radio-path',
+      pageType: MEDIA_PAGE,
+      toggles: {
+        recentAudioEpisodes: { enabled: false, value: 4 },
+      },
+    });
+
+    expect(pageData.pageIdentifier).toEqual(
+      'pashto.bbc_pashto_radio.w3ct0lz1.page',
+    );
+  });
+
+  it('should return the correct page identifier used for podcast analytics', async () => {
+    fetch.mockResponse(JSON.stringify(podcastJson));
+    const { pageData } = await getInitialData({
+      path: 'mock-podcast-path',
+      pageType: MEDIA_PAGE,
+      toggles: {
+        recentPodcastEpisodes: { enabled: false, value: 8 },
+      },
+    });
+
+    expect(pageData.pageIdentifier).toEqual(
+      'arabic.bbc_arabic_radio.podcasts.p08wtg4d.page',
+    );
+  });
+
+  it('should return on demand recent episode data when recentEpisode toggle is enabled', async () => {
+    fetch.mockResponse(JSON.stringify(onDemandRadioJson));
     const { pageData } = await getInitialData({
       path: 'mock-on-demand-radio-path',
       pageType: MEDIA_PAGE,
@@ -77,8 +137,23 @@ describe('Get initial data for on demand radio', () => {
     expect(pageData.recentEpisodes[0].id).toEqual('w3ct155x');
   });
 
+  it('should return podcast recent episode data when recentEpisode toggle is enabled', async () => {
+    fetch.mockResponse(JSON.stringify(podcastJson));
+    const { pageData: podcastPageData } = await getInitialData({
+      path: 'mock-podcast-path',
+      pageType: MEDIA_PAGE,
+      toggles: {
+        recentPodcastEpisodes: { enabled: true, value: 8 },
+      },
+    });
+
+    expect(podcastPageData.recentEpisodes.length).toEqual(8);
+    expect(podcastPageData.recentEpisodes[0].id).toEqual('p08wkzvd');
+  });
+
   it('should override renderer on test', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
+    fetch.mockResponse(JSON.stringify(onDemandRadioJson));
     await getInitialData({
       path: 'mock-live-radio-path',
       pageType: MEDIA_PAGE,
@@ -91,6 +166,7 @@ describe('Get initial data for on demand radio', () => {
 
   it('should not override renderer on live', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
+    fetch.mockResponse(JSON.stringify(onDemandRadioJson));
     await getInitialData({
       path: 'mock-live-radio-path',
       pageType: MEDIA_PAGE,
