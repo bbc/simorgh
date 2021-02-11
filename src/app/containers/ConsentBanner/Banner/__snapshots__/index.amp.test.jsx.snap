@@ -6,27 +6,48 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   font-weight: 400;
   font-style: normal;
   background-color: #323232;
-  padding: 1rem 0.5rem;
+  border-top: solid 0.0625rem transparent;
 }
 
-@media (min-width:25rem) {
+@media (max-width:24.9375rem) {
   .emotion-12 {
-    padding: 1rem;
+    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-12 {
+    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-12 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
   }
 }
 
 .emotion-10 {
-  max-width: 80rem;
+  max-width: 37.4375rem;
   margin: 0 auto;
 }
 
-.emotion-10::after {
-  content: '\\0020';
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
+.emotion-10 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: solid 0.0625rem #AEAEB5;
+}
+
+.emotion-10 a:focus,
+.emotion-10 a:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-10 a:hover,
+.emotion-10 a:focus {
+  border-bottom: solid 0.125rem transparent;
 }
 
 .emotion-0 {
@@ -40,13 +61,6 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-0 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-0 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
@@ -54,54 +68,53 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
 
 @media (min-width:37.5rem) {
   .emotion-0 {
-    float: left;
-    margin-right: 3.5%;
-    width: 22%;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
 .emotion-2 {
   font-size: 0.9375rem;
-  line-height: 1.125rem;
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   color: #BEBEBE;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-2 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-2 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-2 {
-    margin: 0;
-    float: left;
-    width: 53%;
+    margin-top: 1.5rem;
   }
-}
-
-.emotion-2 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2 a:focus,
-.emotion-2 a:hover {
-  color: #FFFFFF;
 }
 
 .emotion-8 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #F6A21D;
   font-weight: 600;
   padding: 0;
@@ -124,56 +137,88 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
 }
 
 .emotion-8 li + li {
-  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 @media (min-width:37.5rem) {
   .emotion-8 {
-    width: 18%;
-    float: right;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .emotion-8 li + li {
+    margin-top: 0;
   }
 }
 
+.emotion-4 {
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
+
 .emotion-4 button {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #F6A21D;
-  font-weight: 700;
-  background: none;
-  border: none;
-  padding: 0;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  min-height: 2.75rem;
+  color: #222222;
+  font-weight: bold;
+  background-color: #FDFDFD;
+  border: solid 0.0625rem transparent;
   margin: 0;
   cursor: pointer;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-4 button {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-4 button {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
   }
+}
+
+.emotion-4 button:hover,
+.emotion-4 button:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .emotion-4 button:focus,
 .emotion-4 button:hover {
-  color: #FFFFFF;
+  color: #222222;
+  background-color: #F6A21D;
 }
 
-.emotion-4 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-4 a:focus,
-.emotion-4 a:hover {
-  color: #FFFFFF;
+@media (min-width:25rem) {
+  .emotion-4 {
+    width: 17.3125rem;
+  }
 }
 
 <div>
@@ -208,6 +253,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
       <ul
         class="emotion-8 emotion-9"
         dir="ltr"
+        role="list"
       >
         <li
           class="emotion-4 emotion-5"
@@ -225,13 +271,15 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
           class="emotion-4 emotion-5"
           dir="ltr"
         >
-          <a
-            data-cookie-banner="reject"
-            href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
-            on="tap:parentId.reject"
-          >
-            No, take me to settings
-          </a>
+          <span>
+            <a
+              data-cookie-banner="reject"
+              href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+              on="tap:parentId.reject"
+            >
+              No, take me to settings
+            </a>
+          </span>
         </li>
       </ul>
     </div>
@@ -241,17 +289,26 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
 
 exports[`Amp Consent Banner Container should correctly render cookie banner - RTL layout 1`] = `
 .emotion-10 {
-  max-width: 80rem;
+  max-width: 37.4375rem;
   margin: 0 auto;
 }
 
-.emotion-10::after {
-  content: '\\0020';
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
+.emotion-10 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: solid 0.0625rem #AEAEB5;
+}
+
+.emotion-10 a:focus,
+.emotion-10 a:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-10 a:hover,
+.emotion-10 a:focus {
+  border-bottom: solid 0.125rem transparent;
 }
 
 .emotion-12 {
@@ -259,18 +316,30 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   font-weight: 400;
   font-style: normal;
   background-color: #323232;
-  padding: 1rem 0.5rem;
+  border-top: solid 0.0625rem transparent;
 }
 
-@media (min-width:25rem) {
+@media (max-width:24.9375rem) {
   .emotion-12 {
-    padding: 1rem;
+    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-12 {
+    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-12 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
   }
 }
 
 .emotion-0 {
-  font-size: 1.125rem;
-  line-height: 1.625rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   color: #FFFFFF;
   font-weight: 700;
   padding: 0;
@@ -279,13 +348,6 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-0 {
-    font-size: 1.125rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-0 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
@@ -293,54 +355,53 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
 
 @media (min-width:37.5rem) {
   .emotion-0 {
-    float: right;
-    margin-left: 3.5%;
-    width: 22%;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
 .emotion-2 {
   font-size: 0.9375rem;
-  line-height: 1.375rem;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   color: #BEBEBE;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-2 {
-    font-size: 0.9375rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-2 {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-2 {
-    margin: 0;
-    float: right;
-    width: 53%;
+    margin-top: 1.5rem;
   }
-}
-
-.emotion-2 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2 a:focus,
-.emotion-2 a:hover {
-  color: #FFFFFF;
 }
 
 .emotion-8 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #F6A21D;
   font-weight: 600;
   padding: 0;
@@ -363,56 +424,88 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
 }
 
 .emotion-8 li + li {
-  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 @media (min-width:37.5rem) {
   .emotion-8 {
-    width: 18%;
-    float: left;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .emotion-8 li + li {
+    margin-top: 0;
   }
 }
 
+.emotion-4 {
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
+
 .emotion-4 button {
-  font-size: 1.125rem;
-  line-height: 1.625rem;
-  color: #F6A21D;
-  font-weight: 700;
-  background: none;
-  border: none;
-  padding: 0;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  width: 100%;
+  min-height: 2.75rem;
+  color: #222222;
+  font-weight: bold;
+  background-color: #FDFDFD;
+  border: solid 0.0625rem transparent;
   margin: 0;
   cursor: pointer;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-4 button {
-    font-size: 1.125rem;
-    line-height: 1.625rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-4 button {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
+}
+
+.emotion-4 button:hover,
+.emotion-4 button:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .emotion-4 button:focus,
 .emotion-4 button:hover {
-  color: #FFFFFF;
+  color: #222222;
+  background-color: #F6A21D;
 }
 
-.emotion-4 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-4 a:focus,
-.emotion-4 a:hover {
-  color: #FFFFFF;
+@media (min-width:25rem) {
+  .emotion-4 {
+    width: 17.3125rem;
+  }
 }
 
 <div>
@@ -447,6 +540,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
       <ul
         class="emotion-8 emotion-9"
         dir="rtl"
+        role="list"
       >
         <li
           class="emotion-4 emotion-5"
@@ -464,13 +558,15 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
           class="emotion-4 emotion-5"
           dir="rtl"
         >
-          <a
-            data-cookie-banner="reject"
-            href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
-            on="tap:parentId.reject"
-          >
-            كلا، أعدني إلى الإعدادات
-          </a>
+          <span>
+            <a
+              data-cookie-banner="reject"
+              href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+              on="tap:parentId.reject"
+            >
+              كلا، أعدني إلى الإعدادات
+            </a>
+          </span>
         </li>
       </ul>
     </div>
@@ -484,27 +580,48 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
   font-weight: 400;
   font-style: normal;
   background-color: #323232;
-  padding: 1rem 0.5rem;
+  border-top: solid 0.0625rem transparent;
 }
 
-@media (min-width:25rem) {
+@media (max-width:24.9375rem) {
   .emotion-12 {
-    padding: 1rem;
+    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-12 {
+    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-12 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
   }
 }
 
 .emotion-10 {
-  max-width: 80rem;
+  max-width: 37.4375rem;
   margin: 0 auto;
 }
 
-.emotion-10::after {
-  content: '\\0020';
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
+.emotion-10 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: solid 0.0625rem #AEAEB5;
+}
+
+.emotion-10 a:focus,
+.emotion-10 a:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-10 a:hover,
+.emotion-10 a:focus {
+  border-bottom: solid 0.125rem transparent;
 }
 
 .emotion-0 {
@@ -518,13 +635,6 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-0 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-0 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
@@ -532,54 +642,53 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
 
 @media (min-width:37.5rem) {
   .emotion-0 {
-    float: left;
-    margin-right: 3.5%;
-    width: 22%;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
 .emotion-2 {
   font-size: 0.9375rem;
-  line-height: 1.125rem;
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   color: #BEBEBE;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-2 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-2 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-2 {
-    margin: 0;
-    float: left;
-    width: 53%;
+    margin-top: 1.5rem;
   }
-}
-
-.emotion-2 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2 a:focus,
-.emotion-2 a:hover {
-  color: #FFFFFF;
 }
 
 .emotion-8 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #F6A21D;
   font-weight: 600;
   padding: 0;
@@ -602,56 +711,88 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
 }
 
 .emotion-8 li + li {
-  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 @media (min-width:37.5rem) {
   .emotion-8 {
-    width: 18%;
-    float: right;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .emotion-8 li + li {
+    margin-top: 0;
   }
 }
 
+.emotion-4 {
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
+
 .emotion-4 button {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #F6A21D;
-  font-weight: 700;
-  background: none;
-  border: none;
-  padding: 0;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  min-height: 2.75rem;
+  color: #222222;
+  font-weight: bold;
+  background-color: #FDFDFD;
+  border: solid 0.0625rem transparent;
   margin: 0;
   cursor: pointer;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-4 button {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-4 button {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
   }
+}
+
+.emotion-4 button:hover,
+.emotion-4 button:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .emotion-4 button:focus,
 .emotion-4 button:hover {
-  color: #FFFFFF;
+  color: #222222;
+  background-color: #F6A21D;
 }
 
-.emotion-4 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-4 a:focus,
-.emotion-4 a:hover {
-  color: #FFFFFF;
+@media (min-width:25rem) {
+  .emotion-4 {
+    width: 17.3125rem;
+  }
 }
 
 <div>
@@ -680,6 +821,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
       <ul
         class="emotion-8 emotion-9"
         dir="ltr"
+        role="list"
       >
         <li
           class="emotion-4 emotion-5"
@@ -696,12 +838,14 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
           class="emotion-4 emotion-5"
           dir="ltr"
         >
-          <a
-            href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
-            on="tap:cookieId.show, privacyId.hide"
-          >
-            Find out what's changed
-          </a>
+          <span>
+            <a
+              href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+              on="tap:cookieId.show, privacyId.hide"
+            >
+              Find out what's changed
+            </a>
+          </span>
         </li>
       </ul>
     </div>
@@ -711,17 +855,26 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
 
 exports[`Amp Consent Banner Container should correctly render privacy banner - RTL layout 1`] = `
 .emotion-10 {
-  max-width: 80rem;
+  max-width: 37.4375rem;
   margin: 0 auto;
 }
 
-.emotion-10::after {
-  content: '\\0020';
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
+.emotion-10 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: solid 0.0625rem #AEAEB5;
+}
+
+.emotion-10 a:focus,
+.emotion-10 a:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-10 a:hover,
+.emotion-10 a:focus {
+  border-bottom: solid 0.125rem transparent;
 }
 
 .emotion-12 {
@@ -729,18 +882,30 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
   font-weight: 400;
   font-style: normal;
   background-color: #323232;
-  padding: 1rem 0.5rem;
+  border-top: solid 0.0625rem transparent;
 }
 
-@media (min-width:25rem) {
+@media (max-width:24.9375rem) {
   .emotion-12 {
-    padding: 1rem;
+    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .emotion-12 {
+    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .emotion-12 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
   }
 }
 
 .emotion-0 {
-  font-size: 1.125rem;
-  line-height: 1.625rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   color: #FFFFFF;
   font-weight: 700;
   padding: 0;
@@ -749,13 +914,6 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-0 {
-    font-size: 1.125rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-0 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
@@ -763,54 +921,53 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
 
 @media (min-width:37.5rem) {
   .emotion-0 {
-    float: right;
-    margin-left: 3.5%;
-    width: 22%;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
 .emotion-2 {
   font-size: 0.9375rem;
-  line-height: 1.375rem;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   color: #BEBEBE;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-2 {
-    font-size: 0.9375rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-2 {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-2 {
-    margin: 0;
-    float: right;
-    width: 53%;
+    margin-top: 1.5rem;
   }
-}
-
-.emotion-2 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2 a:focus,
-.emotion-2 a:hover {
-  color: #FFFFFF;
 }
 
 .emotion-8 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #F6A21D;
   font-weight: 600;
   padding: 0;
@@ -833,56 +990,88 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
 }
 
 .emotion-8 li + li {
-  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 @media (min-width:37.5rem) {
   .emotion-8 {
-    width: 18%;
-    float: left;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .emotion-8 li + li {
+    margin-top: 0;
   }
 }
 
+.emotion-4 {
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
+
 .emotion-4 button {
-  font-size: 1.125rem;
-  line-height: 1.625rem;
-  color: #F6A21D;
-  font-weight: 700;
-  background: none;
-  border: none;
-  padding: 0;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  width: 100%;
+  min-height: 2.75rem;
+  color: #222222;
+  font-weight: bold;
+  background-color: #FDFDFD;
+  border: solid 0.0625rem transparent;
   margin: 0;
   cursor: pointer;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .emotion-4 button {
-    font-size: 1.125rem;
-    line-height: 1.625rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .emotion-4 button {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
+}
+
+.emotion-4 button:hover,
+.emotion-4 button:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .emotion-4 button:focus,
 .emotion-4 button:hover {
-  color: #FFFFFF;
+  color: #222222;
+  background-color: #F6A21D;
 }
 
-.emotion-4 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-4 a:focus,
-.emotion-4 a:hover {
-  color: #FFFFFF;
+@media (min-width:25rem) {
+  .emotion-4 {
+    width: 17.3125rem;
+  }
 }
 
 <div>
@@ -911,6 +1100,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
       <ul
         class="emotion-8 emotion-9"
         dir="rtl"
+        role="list"
       >
         <li
           class="emotion-4 emotion-5"
@@ -927,12 +1117,14 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
           class="emotion-4 emotion-5"
           dir="rtl"
         >
-          <a
-            href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
-            on="tap:cookieId.show, privacyId.hide"
-          >
-            إطلع على التغييرات
-          </a>
+          <span>
+            <a
+              href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+              on="tap:cookieId.show, privacyId.hide"
+            >
+              إطلع على التغييرات
+            </a>
+          </span>
         </li>
       </ul>
     </div>
