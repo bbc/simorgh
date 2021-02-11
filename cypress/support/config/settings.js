@@ -6401,46 +6401,8 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/sinhala/bbc_sinhala_radio/liveradio'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/sinhala/bbc_sinhala_radio/liveradio?renderer_env=live'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/sinhala/bbc_sinhala_radio/liveradio'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      onDemandAudio: {
-        environments: {
-          live: {
-            paths: [
-              '/sinhala/bbc_sinhala_radio/programmes/w13xtv4q', // On Demand Brand
-              '/sinhala/bbc_sinhala_radio/w3ct1c7d', // On Demand Episode
-            ],
-            enabled: true,
-          },
-          test: {
-            paths: [
-              '/sinhala/bbc_sinhala_radio/programmes/w13xtv4q', // On Demand Brand
-              '/sinhala/bbc_sinhala_radio/w3ct1c7d', // On Demand Episode
-            ],
-            enabled: true,
-          },
-          local: {
-            paths: ['/sinhala/bbc_sinhala_radio/w172x8zn8th1lwb'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
+      liveRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
