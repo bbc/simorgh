@@ -394,6 +394,8 @@ describe('cpsAssetPagePath', () => {
     '/zhongwen/simp/test-12345678',
     '/zhongwen/trad/test-12345678',
     '/zhongwen/simp/test-12345678.amp',
+    '/cymrufyw/etholiad-2017-39407507',
+    '/cymrufyw/etholiad-2017-39407507.amp',
   ];
 
   shouldMatchValidRoutes(validRoutes, cpsAssetPagePath);
