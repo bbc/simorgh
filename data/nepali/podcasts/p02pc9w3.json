@@ -1,0 +1,534 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_nepali_radio/p02pc9w3",
+    "locators": { "pid": "p086v2bv", "brandPid": "p02pc9w3" },
+    "type": "WSRADIO",
+    "createdBy": "bbc_nepali_radio",
+    "language": "ne",
+    "lastUpdated": 1613053579216,
+    "firstPublished": 1584422108000,
+    "lastPublished": 1584422108000,
+    "timestamp": 1584422108000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "बीबीसी नेपाली पडकास्ट - BBC News नेपाली",
+      "pageIdentifier": "nepali.bbc_nepali_radio.programmes.p02pc9w3.page",
+      "producerId": "63",
+      "contentType": "player-episode",
+      "producer": "NEPALI"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "बीबीसी नेपाली पडकास्ट",
+    "releaseDateTimeStamp": 1584403200000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p086v2bv",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "हजुरआमा पुस्ताकी कवयित्री खुमादेवी पाण्डे र नातिनी पुस्ताकी आख्यानकार दुर्गा कार्की"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p086v284",
+            "types": ["Podcast"],
+            "duration": 944,
+            "durationISO8601": "PT15M44S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1584422040000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "हजुरआमा पुस्ता र नातिनी पुस्ताको कुरो",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "बीबीसी नेपाली पडकास्ट" },
+    "locators": { "pid": "p086v2bv", "brandPid": "p02pc9w3" },
+    "media": {
+      "id": "p086v2bv",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "हजुरआमा पुस्ताकी कवयित्री खुमादेवी पाण्डे र नातिनी पुस्ताकी आख्यानकार दुर्गा कार्की"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p086v284",
+          "types": ["Podcast"],
+          "duration": 944,
+          "durationISO8601": "PT15M44S",
+          "warnings": {},
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1584422040000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "हजुरआमा पुस्ता र नातिनी पुस्ताको कुरो",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1584403200000,
+    "brand": { "pid": "p02pc9w3", "title": "बीबीसी नेपाली पडकास्ट" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/p086v2bv",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Nepali",
+      "uri": "/nepali",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": { "headline": "बीबीसी नेपाली पडकास्ट" },
+            "locators": { "pid": "p085v7k3", "brandPid": "p02pc9w3" },
+            "media": {
+              "id": "p085v7k3",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "कोरोनाभाइरसजस्ता भवितव्यले निम्त्याउने जोखिमलाई नेपाली अर्थतन्त्र र योजनाले बहन गर्न सक्छ",
+                "medium": "कोरोनाभाइरस प्रकोपजस्ता भवितव्यले ल्याउने जोखिमलाई नेपाली अर्थतन्त्र र योजनाले बहन गर्न सक्छ? राष्ट्रिय योजना आयोगका उपाध्यक्ष डा पुष्प कँडेल र पूर्वउपाध्यक्ष डा शंकर शर्माको बहस"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p085v5bn",
+                  "types": ["Podcast"],
+                  "duration": 925,
+                  "durationISO8601": "PT15M25S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1583632440000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "बीबीसी बहस: कोरोनाभाइरसजस्ता जोखिम र नेपाली अर्थतन्त्र",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1583625600000,
+            "brand": { "pid": "p02pc9w3", "title": "बीबीसी नेपाली पडकास्ट" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/p085v7k3",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "बीबीसी नेपाली पडकास्ट" },
+            "locators": { "pid": "p085tj8w", "brandPid": "p02pc9w3" },
+            "media": {
+              "id": "p085tj8w",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "नेपाली काङ्ग्रेसभित्र देखिएको विवादबारे असन्तुष्ट पक्षका वरिष्ठ नेता रामचन्द्र पौडेल"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p085thmg",
+                  "types": ["Podcast"],
+                  "duration": 509,
+                  "durationISO8601": "PT8M29S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1583467620000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "नेपाली काङ्ग्रेसको विवादबारे रामचन्द्र पौडेल",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1583452800000,
+            "brand": { "pid": "p02pc9w3", "title": "बीबीसी नेपाली पडकास्ट" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/p085tj8w",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "बीबीसी नेपाली पडकास्ट" },
+            "locators": { "pid": "p0855v24", "brandPid": "p02pc9w3" },
+            "media": {
+              "id": "p0855v24",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "वर्तमान सरकार सफल कि असफल? प्रमका प्रेस सल्लाहकार सूर्य थापा र प्रतिपक्षी सांसद गगन थापा"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0855v2p.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0855tnl",
+                  "types": ["Podcast"],
+                  "duration": 955,
+                  "durationISO8601": "PT15M55S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1582952940000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "ओली सरकारको काम कारबाही",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0855v2p.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0855v2p.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1582934400000,
+            "brand": { "pid": "p02pc9w3", "title": "बीबीसी नेपाली पडकास्ट" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/p0855v24",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "बीबीसी नेपाली पडकास्ट" },
+            "locators": { "pid": "p084wysn", "brandPid": "p02pc9w3" },
+            "media": {
+              "id": "p084wysn",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "नेपाल ट्रस्टको मातातीर्थको जग्गा वितरण छानबिन गर्ने सरकारको भनाइबारे डा. बाबुराम भट्टराई"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p084wxd3",
+                  "types": ["Podcast"],
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1582773720000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "मातातीर्थ जग्गा छानबिन सम्बन्धमा डा. बाबुराम भट्टराई",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1582761600000,
+            "brand": { "pid": "p02pc9w3", "title": "बीबीसी नेपाली पडकास्ट" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/p084wysn",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "बीबीसी नेपाली पडकास्ट" },
+            "locators": { "pid": "p084dyml", "brandPid": "p02pc9w3" },
+            "media": {
+              "id": "p084dyml",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "सरकारका समीक्षा गर्दै प्रमका प्रमुख सल्लाहकार विष्णु रिमाल र नेकाका नेता मीनेन्द्र रिजाल"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p084dydg",
+                  "types": ["Podcast"],
+                  "duration": 941,
+                  "durationISO8601": "PT15M41S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1582433220000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "ओली सरकारका दुई वर्ष",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1582416000000,
+            "brand": { "pid": "p02pc9w3", "title": "बीबीसी नेपाली पडकास्ट" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/p084dyml",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "बीबीसी नेपाली पडकास्ट" },
+            "locators": { "pid": "p0840gqz", "brandPid": "p02pc9w3" },
+            "media": {
+              "id": "p0840gqz",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "नेपाल सन्दर्भ: विवादित बनेको अमेरिकी सहयोग सम्झौताबारे अमेरिकी राजदूतसँग कुराकानी।"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0840grl.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0840gft",
+                  "types": ["Podcast"],
+                  "duration": 619,
+                  "durationISO8601": "PT10M19S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1582188300000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "MCC बारे अमेरिकी राजदूत र्‍यान्डी बेरी",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0840grl.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0840grl.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1582156800000,
+            "brand": { "pid": "p02pc9w3", "title": "बीबीसी नेपाली पडकास्ट" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/p0840gqz",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "बीबीसी नेपाली पडकास्ट" },
+            "locators": { "pid": "p0835k74", "brandPid": "p02pc9w3" },
+            "media": {
+              "id": "p0835k74",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "सेतोपाटी डिजिटल पत्रिकाका सम्पादक अमित ढकाल र सांसद यज्ञ सुनुवारबीच बहस"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0835k57",
+                  "types": ["Podcast"],
+                  "duration": 918,
+                  "durationISO8601": "PT15M18S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1581572700000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "सूचनाप्रविधि विधेयकको 'विवाद'",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1581552000000,
+            "brand": { "pid": "p02pc9w3", "title": "बीबीसी नेपाली पडकास्ट" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/p0835k74",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "बीबीसी नेपाली पडकास्ट" },
+            "locators": { "pid": "p0835hr2", "brandPid": "p02pc9w3" },
+            "media": {
+              "id": "p0835hr2",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "सांसद ठगेन्द्रप्रकाश पुरी र नेपाल पत्रकार महासङ्घका उपाध्यक्ष विपुल पोखरेलबीच बहस।"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0835hcd",
+                  "types": ["Podcast"],
+                  "duration": 898,
+                  "durationISO8601": "PT14M58S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1581570780000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "पत्रकारलाई लाइसेन्स चाहिन्छ?",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc2nq.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1581552000000,
+            "brand": { "pid": "p02pc9w3", "title": "बीबीसी नेपाली पडकास्ट" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/p0835hr2",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}
