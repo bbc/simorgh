@@ -6401,40 +6401,8 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      liveRadio: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      onDemandAudio: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      liveRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
