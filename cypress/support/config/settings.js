@@ -4963,6 +4963,8 @@ module.exports = () => ({
               '/persian/bbc_persian_radio/programmes/p0340vyw', // On Demand Brand Persian
               '/persian/bbc_dari_radio/w172xpxh6wd849q', // On Demand Episode Dari
               '/persian/bbc_persian_radio/w3ct1cl0', // On Demand Episode Persian
+              '/persian/podcasts/p02pc9wf', // Podcast Brand
+              '/persian/podcasts/p02pc9wf/p095lyj1', // Podcast Episode
             ],
             enabled: true,
           },
@@ -4970,6 +4972,8 @@ module.exports = () => ({
             paths: [
               '/persian/bbc_persian_radio/w172x32355t5635',
               '/persian/bbc_dari_radio/w3csz7mf',
+              '/persian/podcasts/p02pc9wf', // Podcast Brand
+              '/persian/podcasts/p02pc9wf/p095lyj1', // Podcast Episode
             ],
             enabled: true,
           },
