@@ -115,25 +115,25 @@ export const service = {
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title: 'Hemos actualizado nuestra política de privacidad y cookies',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Hemos realizado cambios importantes a nuestra política de privacidad y cookies y queremos que sepas lo que esto significa para ti y tus datos.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Hemos realizado cambios importantes a nuestra política de privacidad y cookies y queremos que sepas lo que esto significa para ti y tus datos.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
-          accept: 'OK',
-          reject: "Find out what's changed",
+          accept: 'Ok',
+          reject: 'Descubre lo que ha cambiado',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
@@ -190,27 +190,28 @@ export const service = {
             },
           },
           canonical: {
-            title: 'Let us know you agree to cookies',
+            title: 'Déjanos saber si aceptas las cookies',
             description: {
               uk: {
-                first: 'We use ',
+                first: 'Usamos ',
                 linkText: 'cookies',
                 last:
-                  ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                  ' para ofrecerte la mejor experiencia online. Déjanos saber si aceptas todas estas cookies.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
-                first: 'We and our partners use technologies, such as ',
+                first:
+                  'Nosotros y nuestros socios usamos tecnologías, como las ',
                 linkText: 'cookies',
                 last:
-                  ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                  ', y recogemos datos de búsqueda para ofrecerte la mejor experiencia online y personalizar el contenido y la publicidad que se te muestra. Por favor, déjanos saber si estás de acuerdo.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
-            accept: 'Yes, I agree',
-            reject: 'No, take me to settings',
+            accept: 'Sí, estoy de acuerdo',
+            reject: 'No, llévame a la configuración',
             rejectUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
