@@ -52,7 +52,7 @@ jobs:
       - name: Build Simorgh
         run: |
           echo ${GITHUB_REF##*/}
-          yarn run build
+          yarn build
 
       - name: Setup Code Climate Test Coverage
         if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }} # Only run if PR originates from the Simorgh repo
@@ -64,7 +64,7 @@ jobs:
           ./cc-test-reporter before-build
 
       - name: Unit Tests
-        run: yarn run test:unit
+        run: yarn test:unit
 
       - name: Report Code Climate Test Coverage
         if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }} # Only run if PR originates from the Simorgh repo

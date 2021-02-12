@@ -10,10 +10,10 @@ The purpose of this test suite is to allow for testing of ad-hoc functionality w
 
 ## Running Ad Hoc Tests
 
-| Environment | Command                                        |
-| ----------- | ---------------------------------------------- |
-| local       | `CYPRESS_APP_ENV=local yarn run cypress:adhoc` |
-| test        | `CYPRESS_APP_ENV=test yarn run cypress:adhoc`  |
-| live        | `CYPRESS_APP_ENV=live yarn run cypress:adhoc`  |
+| Environment | Command                                    |
+| ----------- | ------------------------------------------ |
+| local       | `CYPRESS_APP_ENV=local yarn cypress:adhoc` |
+| test        | `CYPRESS_APP_ENV=test yarn cypress:adhoc`  |
+| live        | `CYPRESS_APP_ENV=live yarn cypress:adhoc`  |
 
 As with the primary Cypress tests, the same [environment variables](https://github.com/bbc/simorgh#environment-variables) can also be used with the `cypress:adhoc` command

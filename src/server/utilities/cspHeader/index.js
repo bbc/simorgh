@@ -5,7 +5,7 @@ import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
 
 /*
  * On localhost these CSP headers currently only apply on the production build.
- * `yarn run build && yarn run start` & visit a localhost URL.
+ * `yarn build && yarn start` & visit a localhost URL.
  * View the developer console for errors.
  */
 

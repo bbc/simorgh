@@ -38,22 +38,22 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build Simorgh
-        run: yarn run build:local
+        run: yarn build:local
 
       - name: Start Simorgh Server
         run: nohup node build/server.js > /dev/null 2>&1 &
 
       - name: Run AMP Validator
-        run: yarn run amp:validate
+        run: yarn amp:validate
 
       - name: Run bbc-a11y
-        run: yarn run bbcA11y:ci
+        run: yarn bbcA11y:ci
 
       - name: Run Lighthouse
-        run: yarn run lighthouse
+        run: yarn lighthouse
 
       - name: Run Puppeteer Tests
         run: |
           yarn add puppeteer
-          yarn run test:puppeteer
+          yarn test:puppeteer
           yarn remove puppeteer

@@ -11,10 +11,10 @@ phases:
   pre_build:
     commands:
       - yarn install --frozen-lockfile
-      - yarn run build
+      - yarn build
   build:
     commands:
-      - yarn run cypress:ci
+      - yarn cypress:ci
 reports:
   JunitReportsTest:
     files:
